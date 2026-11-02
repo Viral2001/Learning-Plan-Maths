@@ -49,6 +49,13 @@ uploadable plan the first time.
 
 ## Quickstart
 
+**One command:** in Claude Code, from this folder, `/lp <chapter>, <path to the book pdf>, <teacher instruction (optional)>`
+(for example `/lp class 7 ch 3, C:ooks\gemh103.pdf, use cricket examples`). The skill is
+`.claude/skills/lp/SKILL.md`; its first step is `core/lp_start.py`, which scaffolds the chapter folder and cuts the chapter
+out of the book. It stops at a validated local plan and never uploads.
+
+By hand:
+
 Read `docs/01_runbook.md` for the exact build order, start to finish. Read
 `docs/00_overview.md` first if you want the shape of the system before the
 steps.
