@@ -49,7 +49,7 @@ Apply the **teacher instruction** inside these rules. Where it clashes with one 
 
 ## 4. HARD STOP: show the plan, wait for approval
 
-Before any media, video or solution work, run `python -B build.py --worklist` (it must already assemble) and show the user: chapter name and ids, modules / topics / concept counts, the number of questions (every one will carry solution text + question image + solution image: say so), tools (names, where), images (where), how the teacher instruction was applied, every clash or judgement call, and every book error found. Wait for approval. Do not author videos before it.
+Before any media, video or solution work, run `python -B build.py --worklist` (it must already assemble) and show the user: chapter name and ids, modules / topics / concept counts, the number of questions (every one will carry solution text + question image + solution image: say so; each becomes its own concept with its own video in a "Figure it Out" topic, so questions = question concepts = videos for them: state that count), tools (names, where), images (where), how the teacher instruction was applied, every clash or judgement call, and every book error found. Wait for approval. Do not author videos before it.
 
 ## 5. Media, videos, solutions (runbook steps 5, 6, 6b)
 

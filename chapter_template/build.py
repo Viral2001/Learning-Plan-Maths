@@ -513,7 +513,10 @@ def main():
                         labels.setdefault(i, "Book item: %s" % text)
                 plan["video_coverage"] = VH.coverage(wl["videos"], labels)
 
-                QT.apply(plan, wl["videos"], cfg["media_tag"], {})
+                # enrichment_qt: the shape every Class 6-7 chapter ships - a "Figure it Out" topic with one
+                # concept per question, each holding its own question video (<concept>.VID1). Without it the
+                # question concepts get no video and solution_content fails them.
+                QT.apply(plan, wl["videos"], cfg["media_tag"], {}, enrichment_qt=True)
 
                 # QT moves each exercise ref off its teaching concept; rebuild ncert_coverage from the final
                 # concept ncert_refs so the forward and reverse maps agree.
