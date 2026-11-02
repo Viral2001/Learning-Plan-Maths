@@ -96,6 +96,15 @@ def load_config():
         raise SystemExit("chapter.config.json phase must be 2 - this pipeline is Phase 2 only")
     if "_V3" in cfg["chapter_id"] or "_v3" in cfg["chapter_id"].lower():
         raise SystemExit("chapter_id must not carry a _V3 suffix in this pipeline")
+    # Every question carries its step-by-step solution in the concept AND a question image + a solution image.
+    # That is the default for a new chapter, so the key must be decided: true, or an explicit false to opt out.
+    if "solutions" not in cfg:
+        raise SystemExit('chapter.config.json has no "solutions" key. Add "solutions": true (every question gets '
+                         'working + answer in the concept, a question image and a solution image), or an '
+                         'explicit false only if the teacher asked for a chapter without them.')
+    if cfg["solutions"] not in (True, False):
+        raise SystemExit('chapter.config.json "solutions" must be true or false (the text-only mode is not '
+                         'allowed for new chapters: both the written solution and the two images are required)')
     return cfg
 
 
@@ -521,6 +530,14 @@ def main():
         # solutions: check solutions.json + its scene files, then hang the question and solution images on
         # each question concept as media_ids = [question image, video(s), solution image].
         mode = cfg.get("solutions")
+        if mode:
+            todo = SB.missing(CP.TOPICS, sols)
+            if todo:
+                print("%d QUESTION(S) HAVE NO SOLUTION in solutions.json (run build.py --solution-worklist):"
+                      % len(todo))
+                for t in todo[:25]:
+                    print("  -", t["cov"], t["book"] or "")
+                return 1
         if mode and sols:
             errs, warns = SC.check(HERE)
             for w in warns:
@@ -530,16 +547,12 @@ def main():
                 for e in errs:
                     print("  -", e)
                 return 1
-            if mode != "text":
-                problems = SA.attach(plan, HERE, SA.key_dir_for(cfg))
-                if problems:
-                    print("%d SOLUTION ATTACH PROBLEM(S):" % len(problems))
-                    for p in problems:
-                        print("  -", p)
-                    return 1
-        elif mode:
-            print("WARNING: chapter.config.json has solutions but there is no solutions.json yet - "
-                  "run build.py --solution-worklist")
+            problems = SA.attach(plan, HERE, SA.key_dir_for(cfg))
+            if problems:
+                print("%d SOLUTION ATTACH PROBLEM(S):" % len(problems))
+                for p in problems:
+                    print("  -", p)
+                return 1
 
         with io.open(out_path(cfg), "w", encoding="utf-8") as f:
             json.dump(plan, f, ensure_ascii=False, indent=1)

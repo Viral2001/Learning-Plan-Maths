@@ -76,7 +76,11 @@ An exercise video names, in `callback_to`, the solved example whose method it
 uses (`method_from` in the worklist). Its solution beats must agree with the
 item's `solutions.json` entry.
 
-## 6b. Author the question solutions (when `chapter.config.json` has `"solutions": true`)
+## 6b. Author the question solutions (always: `chapter.config.json` has `"solutions": true`)
+
+This step is not optional for a new chapter: `build.py` stops if the config has no `"solutions"` key, and
+stops again if any question has no `solutions.json` entry. Every question ends up with the question plus its
+numbered step-by-step solution and `Answer:` in the concept, AND a question image and a solution image.
 
 Every question gets its board-format solution, written once in `solutions.json` and used three times:
 the plan's `steps`/`answer`, the video worklist items, and a question image plus a solution image
@@ -106,9 +110,10 @@ reports it). Figure labels are math mode: write `6\,\text{cm}`.
    `--include-draft` to override), then continue with step 9 onward. Ask before the first real upload.
 
 Class 9/10 (`docs/Yash_9&10/tools/build_std10_lp.py`) reads `std10_ch<N>/solutions.json` and
-`std10_ch<N>/solution_images/` the same way: a covered question gets `solution_status: "authored"`; the
-others stay `to_author`. Question videos are held for Class 10, so set `"solutions_video": false` in its
-config.
+`std10_ch<N>/solution_images/` the same way: a covered question gets `solution_status: "authored"`, its
+numbered steps and `Answer:` in the block text, and both image ids on the block. A question with no entry
+stops the build (`--allow-stubs` writes a review-only draft that `check_std10_lp.py` flags). Question
+videos are held for Class 10, so set `"solutions_video": false` in its config.
 
 ## 7. Run build.py's full build, including gates and QT
 

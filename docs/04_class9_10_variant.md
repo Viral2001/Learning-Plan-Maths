@@ -17,6 +17,12 @@ alone.
 2. **One video and one hint-free question image per exercise question.**
    The image shows the statement only - no hints, no working, no answer. A
    question the book pairs with its own figure shows only that figure.
+   **Every question also carries its written solution and a solution
+   image** (`gates/solution_content.py`, config `"solutions": true`): the
+   concept text is the question, the numbered steps and `Answer:`, and
+   `media_ids` runs question image, video (held for Class 10, so
+   `"solutions_video": false`), solution image. A `to_author` stub is not a
+   finished Class 9/10 plan.
 3. **End-of-chapter exercises get their own topic, just before the
    Summary**, with exactly 2 concepts - core and starred - kept apart. The
    student attempts first; hint, solution and video open afterwards.

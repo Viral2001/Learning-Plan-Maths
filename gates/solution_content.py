@@ -2,10 +2,11 @@
 """Every question has its solution: working and answer in the plan, and (by default) a question image,
 the video and a solution image in that order.
 
-Runs only when chapter.config.json has `"solutions"`: `true` (or "images") for working + answer + the
-three media, "text" for working + answer only. `"solutions_video": false` drops the video requirement
-(Class 10 holds its question videos for now: media_ids is then question image, any videos, solution image).
-A chapter that has not adopted solutions.json is untouched.
+Runs when chapter.config.json has a truthy `"solutions"`. New chapters must have it (chapter_template/build.py
+stops without the key): the concept text shows the question, numbered steps and "Answer:", and media_ids is
+question image, video, solution image. `"text"` (working + answer only) is kept for old callers.
+`"solutions_video": false` drops the video requirement (Class 10 holds its question videos for now).
+A chapter that predates solutions.json and has no such key is untouched.
 
 A "question block" is a content block of block_kind `exercise` or `exercise_question`, or a
 `worked_example` carrying an `item_kind` (the shape core/qt.py gives a moved or fallback exercise).
@@ -26,6 +27,7 @@ which build.py runs: a plan alone does not carry them.
 from __future__ import annotations
 
 import json
+import re
 import sys
 
 try:
@@ -34,6 +36,21 @@ except ImportError:                      # run as a script
     from theorem_variant import HINT_WORDS_RE
 
 QUESTION_KINDS = ("exercise", "exercise_question")
+PLACEHOLDER_RE = re.compile(r"read the question in the book|attempt it before watching|\bTODO\b|to be authored"
+                            r"|placeholder", re.I)
+
+
+def ids_missing(block, concept):
+    """The question block names both cards (image_media_id / solution_image_media_id) and they are the first
+    and last of the concept's media_ids. '' when fine."""
+    ids = concept.get("media_ids") or []
+    if not ids:
+        return ""
+    if block.get("image_media_id") != ids[0]:
+        return "image_media_id must be the question image (first media_id)"
+    if block.get("solution_image_media_id") != ids[-1]:
+        return "solution_image_media_id must be the solution image (last media_id)"
+    return ""
 
 
 def walk_topics(plan):
@@ -76,6 +93,15 @@ def check(plan, config=None):
                     problems.append("%s/%s: no answer" % (cid, ref))
                 if b.get("solution_status") == "to_author":
                     problems.append("%s/%s: solution_status is still 'to_author'" % (cid, ref))
+                text = b.get("text") or ""
+                if steps and (b.get("answer") or "").strip() and \
+                        not (steps[0] in text and steps[-1] in text and b["answer"].strip() in text):
+                    problems.append("%s/%s: the concept text must show the question with its numbered steps and "
+                                    "'Answer:' (the working is only in the steps field)" % (cid, ref))
+                if PLACEHOLDER_RE.search(" ".join(steps) + " " + (b.get("answer") or "") + " " + (b.get("text") or "")):
+                    problems.append("%s/%s: the working is a placeholder, not an authored solution" % (cid, ref))
+                if with_images and ids_missing(b, concept):
+                    problems.append("%s/%s: %s" % (cid, ref, ids_missing(b, concept)))
             if not with_images:
                 continue
             ids = concept.get("media_ids") or []

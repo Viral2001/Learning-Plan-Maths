@@ -13,7 +13,7 @@ Work folder: `C:\Users\DELL\Desktop\maths_new_design_pipeline\docs\Yash_9&10\` (
 
 ## Standing decisions (do not re-ask)
 1. No tools: all old tool media are held, never attached.
-2. Exercise-question videos are held; each question concept gets one hint-free placeholder image spec (`solution_status: to_author`, empty steps/answer).
+2. Exercise-question videos are held. Every question concept carries its written solution (numbered steps + answer, from `std10_ch<N>/solutions.json`) AND two images: a hint-free question image (IMG1) and a solution image (IMG2), made with `core/solutions/gen_scenes.py` + `render.py` (LaTeX + Manim). A `to_author` stub or a missing IMG2 is not an acceptable result: the builder stops and `check_std10_lp.py` flags it. `--allow-stubs` is only for a review draft.
 3. One concept per question, in textbook order, no grouping. Name `<Set name>, Q<n>`; separate sub-parts become `<Set name>, Q<n> (<roman>)`, each keeping the parent's objectives. Sub-parts that build on each other stay one concept (note under the topic).
 4. Questions topic opens with one line `Objectives for this set: ...`; exercise-question concepts are `exercise` with `attempt_first: true`.
 5. Nothing deleted: media/objectives that leave go to Appendix B / "not carried" notes. Identity: attached + held = old media total.
@@ -28,7 +28,8 @@ Work folder: `C:\Users\DELL\Desktop\maths_new_design_pipeline\docs\Yash_9&10\` (
 2. Write `maths10_ch<N>_representative_lp.md` (format below). Subagents may draft; give them the decisions above.
 3. **HARD STOP**: show the user the md summary (counts, judgement calls, loose media fits) and wait for approval. Do not build JSON before that.
 4. Add the chapter to `tools\chapter_config.json`: `exercises` (book exercise numbers in order), `examples` (concept number → `"<N>.ex<k>"`), optional `topic_map` (old topic → new topic, needed when Appendix C has no table).
-5. `python -I -X utf8 tools\build_std10_lp.py <N>` → `learning_plan_std10_chap<N>_version2.json` (`_activate: false`).
+4b. Author `std10_ch<N>/solutions.json` for every question (Write tool, not a heredoc; schema `core/solutions/schema.py`, rules `math_solutions/skill/references/format-rules.md`; key = question id `<exercise>.Q<n>[.<part>]`), then `python -B core/solutions/gen_scenes.py "docs/Yash_9&10/std10_ch<N>"`, `render.py`, `check.py` on the same folder. Images stay `draft` until the user approves them in `core/image_editor`.
+5. `python -I -X utf8 tools\build_std10_lp.py <N>` → `learning_plan_std10_chap<N>_version2.json` (`_activate: false`). It stops, listing the ids, when a question has no solutions.json entry.
 6. `python -I -X utf8 tools\check_std10_lp.py <N>`: must show `problems: none` and `0` leak hits. Fix the md, rebuild, recheck.
 7. Report counts, files, drafted decisions, flagged items. Do not upload.
 

@@ -60,8 +60,16 @@ def check(n):
                     if c["concept_kind"] == "exercise" and c["content"][0]["block_kind"] == "exercise_question":
                         vids = [x for x in t["media"] if x["concept_id"] == c["concept_id"] and x["type"] == "video"]
                         imgs = [x for x in t["media"] if x["concept_id"] == c["concept_id"] and x["type"] == "image"]
-                        if vids or len(imgs) != 1:
-                            bad.append(f"question {c['concept_id']}: {len(vids)} videos, {len(imgs)} images")
+                        roles = sorted(x.get("image_role", "") for x in imgs)
+                        if vids or roles != ["question", "solution"]:
+                            bad.append(f"question {c['concept_id']}: {len(vids)} videos, images {roles} "
+                                       "(need exactly a question image and a solution image, no video)")
+                        b = c["content"][0]
+                        if b.get("solution_status") == "to_author" or not b.get("steps") or not b.get("answer"):
+                            bad.append(f"question {c['concept_id']}: no written solution (steps/answer empty or to_author)")
+                        elif not (b.get("image_media_id") == c["media_ids"][0]
+                                  and b.get("solution_image_media_id") == c["media_ids"][-1]):
+                            bad.append(f"question {c['concept_id']}: block does not name the question and solution image")
     # leaks, groups
     leaks = [(w, s[:80]) for w, s in student_strings(new) if LEAK.search(s)]
     txt = json.dumps(new)

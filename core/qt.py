@@ -384,6 +384,8 @@ def apply(plan: dict, vslots_all: list, media_tag: str, strand_map: dict,  # noq
                         b["video_media_id"] = fix(b["video_media_id"])
                     if b.get("image_media_id"):
                         b["image_media_id"] = fix(b["image_media_id"])
+                    if b.get("solution_image_media_id"):
+                        b["solution_image_media_id"] = fix(b["solution_image_media_id"])
 
         if not t.get("_qt"):
             t["depends_on"] = _fix_list(t.get("depends_on", []), fix)

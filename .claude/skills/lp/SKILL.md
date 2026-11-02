@@ -49,13 +49,13 @@ Apply the **teacher instruction** inside these rules. Where it clashes with one 
 
 ## 4. HARD STOP: show the plan, wait for approval
 
-Before any media, video or solution work, run `python -B build.py --worklist` (it must already assemble) and show the user: chapter name and ids, modules / topics / concept counts, the number of questions, tools (names, where), images (where), how the teacher instruction was applied, every clash or judgement call, and every book error found. Wait for approval. Do not author videos before it.
+Before any media, video or solution work, run `python -B build.py --worklist` (it must already assemble) and show the user: chapter name and ids, modules / topics / concept counts, the number of questions (every one will carry solution text + question image + solution image: say so), tools (names, where), images (where), how the teacher instruction was applied, every clash or judgement call, and every book error found. Wait for approval. Do not author videos before it.
 
 ## 5. Media, videos, solutions (runbook steps 5, 6, 6b)
 
 1. `python -B build.py --worklist` -> author `media_specs/<key>.json` for each entry (image specs; see `MEDIA_BRIEF.md`).
 2. `python -B build.py --video-worklist` -> one `video_scripts/<key>.json` per slot, written by the rules in `core/video_script/AUTHOR_BRIEF.md` and `docs/02_video_script_schema.md`: Keeko format, `{{NAME_n}}` placeholders (list them in `name_slots.json`), Keeko only at the end of concept videos, exactly one think-and-tell with a 3-second pause, no recap, board-format solutions, book fidelity (same objects, colours, people). Check them with `python -B core/video_script/check.py --worklist video_worklist.json --dir video_scripts`, then fill the five final names from the repo root with `python -B core/video_script/fill_names.py chapters/maths<G>_ch<N>/new_design`.
-3. Solutions (`"solutions": true` in the config): `python -B build.py --solution-worklist`, author `solutions.json` with the **Write tool, never a shell heredoc** (backslashes get eaten), then `python -B core/solutions/gen_scenes.py .`, `render.py .`, `check.py .`. The user approves images in `core/image_editor`; they stay `draft` until then. Rules: `math_solutions/skill/references/format-rules.md`.
+3. **Solutions, always** (`"solutions": true` is in the config and build.py stops without it). Every question concept ends up with BOTH: the question and its step-by-step solution (numbered steps + answer) in the concept content, AND a question image (IMG1) and a solution image (IMG2). `python -B build.py --solution-worklist`, author `solutions.json` for every item with the **Write tool, never a shell heredoc** (backslashes get eaten), then `python -B core/solutions/gen_scenes.py .`, `render.py .`, `check.py .`. The user approves images in `core/image_editor`; they stay `draft` until then. Rules: `math_solutions/skill/references/format-rules.md`. Only an explicit "no solutions for this chapter" from the user allows `"solutions": false`; a teacher instruction like "keep it short" does not.
 4. Parallelise the video and solution authoring with subagents in batches; each reports the checker output, not just "done".
 
 ## 6. Build and gate
@@ -75,4 +75,4 @@ If `.env` / `DATABASE_URL` is missing the first two cannot run: say so and stop 
 
 ## 8. Report
 
-Say plainly what exists and what does not: files written, gate result, stamp status, counts (concepts, videos, tools, images, questions), what is still placeholder (tool code, image PNGs, rendered videos), every judgement call, and how the teacher instruction was handled. **Upload only if the user then asks for it** (use the `upload` skill; staging first, ask before anything else). Never claim a check passed that did not run.
+Say plainly what exists and what does not: files written, gate result, stamp status, counts (concepts, videos, tools, images, questions; and `questions with solution text + IMG1 + IMG2 = X of Y`, with how many of those images are still `draft` awaiting approval), what is still placeholder (tool code, image PNGs, rendered videos), every judgement call, and how the teacher instruction was handled. **Upload only if the user then asks for it** (use the `upload` skill; staging first, ask before anything else). Never claim a check passed that did not run.

@@ -1,18 +1,19 @@
 """Build a Class 10 concept-level learning plan from its representative plan (md) and the phase-1 plan.
 
-Usage (from anywhere):  python -I -X utf8 build_std10_lp.py <chapter number>
+Usage (from anywhere):  python -I -X utf8 build_std10_lp.py <chapter number> [--allow-stubs]
 Reads  ..\\std10_ch<N>\\maths10_ch<N>_representative_lp.md          structure and concept content
        ..\\std10_ch<N>\\learning_plan_std10_chap<N>_version1.json   old plan: media objects, topic fields, header
 Writes ..\\std10_ch<N>\\learning_plan_std10_chap<N>_version2.json   (local only, `_activate` false, never uploaded)
 
 Per-chapter values that cannot be read from the md live in CONFIG below.
 
-Solutions: when ../std10_ch<N>/solutions.json exists (core/solutions/schema.py; keys are the question ids
-"<exercise>.Q<n>[.<part>]"), each question it covers gets its working and answer from there (solution_status
-"authored" instead of "to_author"), and, if ../std10_ch<N>/solution_images/ was generated
+Solutions (required): every question concept needs an entry in ../std10_ch<N>/solutions.json
+(core/solutions/schema.py; keys are the question ids "<exercise>.Q<n>[.<part>]"). The build takes the question's
+working and answer from there (solution_status "authored"), and, from ../std10_ch<N>/solution_images/
 (core/solutions/gen_scenes.py), its question and solution images: media_ids = [question image, video if any,
-solution image]. Question videos are held for Class 10 for now, so enforce with chapter.config.json
-{"solutions": true, "solutions_video": false}.
+solution image]; the block names both (image_media_id, solution_image_media_id). A question without an entry
+stops the build; --allow-stubs writes a DRAFT plan for review (solution_status "to_author"), which
+check_std10_lp.py reports as a problem. Question videos are held for Class 10 for now.
 """
 import os as _os
 PLAN_VERSION = int(_os.environ.get('LP_VERSION', '2'))  # v1 already exists on staging
@@ -172,7 +173,7 @@ def topic_map_from_md(md, modules):
 
 
 # ---------------------------------------------------------------- build
-def main(n):
+def main(n, allow_stubs=False):
     cfg = CONFIG[n]
     folder = os.path.join(ROOT, f"std10_ch{n}")
     MD = os.path.join(folder, f"maths10_ch{n}_representative_lp.md")
@@ -184,6 +185,7 @@ def main(n):
     if bad:
         raise SystemExit("solutions.json has problems:\n  " + "\n  ".join(bad))
     sols_used = set()
+    no_solution = []   # question ids with no solutions.json entry
 
     old = json.load(open(OLD, encoding="utf8"))
     modules = parse_md(MD)
@@ -354,10 +356,16 @@ def main(n):
                     cmedia.append(spec)
                     new_media_index[nid] = "NEW"
                     sol = sols.get(ex_id)
+                    if not sol:
+                        no_solution.append(ex_id)
                     if sol:
                         sols_used.add(ex_id)
                         sol_steps, sol_answer = SS.plan_fields(sol)
-                    add("exercise_question", f"{label}: {qtext}", hint=hint,
+                    # the concept shows the question AND its step-by-step solution (Class 9 Ch5 reference shape)
+                    qblock_text = "\n".join([f"{label}: {qtext}"]
+                                            + [f"{i}. {st}" for i, st in enumerate(sol_steps, 1)]
+                                            + [f"Answer: {sol_answer}"]) if sol else f"{label}: {qtext}"
+                    add("exercise_question", qblock_text, hint=hint,
                         steps=sol_steps if sol else [], answer=sol_answer if sol else "",
                         starred=False, question=qtext, item_kind="exercise", has_figure=has_figure,
                         ncert_refs=[ex_id], exercise_id=ex_id, attempt_first=True,
@@ -584,6 +592,14 @@ def main(n):
         },
         "chapter_master_id": old["chapter_master_id"], "strand_to_objective_map": s2o,
     }
+    if no_solution:
+        msg = ("%d of %d question concept(s) have no solutions.json entry (steps + answer + question and solution "
+               "image): %s" % (len(no_solution), q_count, ", ".join(no_solution[:12]) + (" ..." if len(no_solution) > 12 else "")))
+        if not allow_stubs:
+            raise SystemExit(msg + "\nEvery question needs its solution. Author std10_ch%d/solutions.json "
+                             "(core/solutions/schema.py), run gen_scenes.py + render.py, or pass --allow-stubs "
+                             "to write a DRAFT plan for review only (check_std10_lp.py will flag it)." % n)
+        print("DRAFT (--allow-stubs): " + msg)
     if sols:
         unused = sorted(set(sols) - sols_used)
         if unused:
@@ -610,4 +626,4 @@ def main(n):
 
 
 if __name__ == "__main__":
-    main(int(sys.argv[1]))
+    main(int(sys.argv[1]), allow_stubs="--allow-stubs" in sys.argv)

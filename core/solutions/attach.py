@@ -28,6 +28,7 @@ from core.solutions import schema  # noqa: E402
 FOLDER = "solution_images"
 BUCKET_PREFIX = "https://media.singularity-learn.com/learning_plan_assets/"
 HINT = re.compile(r"\s*\[Hint:.*?\]", re.S)
+QUESTION_KINDS = ("exercise", "exercise_question")
 
 
 def key_dir_for(cfg, version="v1"):
@@ -140,6 +141,18 @@ def attach(plan, new_design, key_dir):
     problems, by_cov = [], {}
     for e in manifest["images"]:
         by_cov.setdefault(e["cov"], []).append(e)
+    # one question per concept: a concept holding two questions would keep only the last pair of cards
+    owner = {}
+    for cov in by_cov:
+        _, concept = find_concept(plan, cov)
+        if concept is not None:
+            owner.setdefault(concept["concept_id"], []).append(cov)
+    for cid, covs in owner.items():
+        if len(covs) > 1:
+            problems.append("%s: holds %d questions (%s); give each question its own concept (one concept, one "
+                            "video, one question and solution image each)" % (cid, len(covs), ", ".join(covs)))
+    if problems:
+        return problems
     for cov, entries in by_cov.items():
         sol = sols.get(cov)
         topic, concept = find_concept(plan, cov)
@@ -166,6 +179,13 @@ def attach(plan, new_design, key_dir):
         mine = {nodes["question"]["id"], nodes["solution"]["id"]}
         rest = [m for m in concept.get("media_ids") or [] if m not in mine]
         concept["media_ids"] = [nodes["question"]["id"]] + rest + [nodes["solution"]["id"]]
+        # the question block itself names both cards (Class 9 Ch5 shape: image_media_id), not only the concept
+        for b in concept.get("content") or []:
+            if b.get("block_kind") in QUESTION_KINDS or (b.get("block_kind") == "worked_example" and b.get("item_kind")):
+                b["image_media_id"] = nodes["question"]["id"]
+                b["solution_image_media_id"] = nodes["solution"]["id"]
+        if "image_media_id" in concept:
+            concept["image_media_id"] = nodes["question"]["id"]
         concept["image_decision"] = {
             "needed": True,
             "why": "A question concept: one image shows the question and its figure for the attempt, "
