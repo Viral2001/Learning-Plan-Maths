@@ -1,0 +1,151 @@
+\section*{Part A: Solved Examples 1 to 5 (Section 7.2, Distance Formula)}
+
+%---------------------------------------------------------------
+\subsection*{Example 1}
+\textbf{Question.} Do the points $(3,2)$, $(-2,-3)$ and $(2,3)$ form a triangle? If so, name the type of triangle formed.
+
+\textbf{Solution.} Let $P(3,2)$, $Q(-2,-3)$ and $R(2,3)$.
+
+\textbf{Step 1: find the three sides.} By the distance formula, the distance between $(x_1,y_1)$ and $(x_2,y_2)$ is
+\[d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}.\]
+\distnote
+\begin{align*}
+\dist{PQ}{3}{2}{-2}{-3}{5\sqrt2\approx 7.07}\\
+\dist{QR}{-2}{-3}{2}{3}{2\sqrt{13}\approx 7.21}\\
+\distn{PR}{3}{2}{2}{3}\approx 1.41
+\end{align*}
+\slip{A negative number squared is positive: $(-5)^2=25$, not $-25$. Also $-2-3=-5$ (not $1$), and $2-(-2)=2+2=4$.}
+
+\textbf{Step 2: do the points form a triangle?} Three points form a triangle only if the sum of any two of the distances is greater than the third. Using the values above ($PQ\approx7.07$, $QR\approx7.21$, $PR\approx1.41$):
+\begin{align*}
+PQ+PR&\approx 7.07+1.41=8.48>QR\ (\approx7.21)\\
+QR+PR&\approx 7.21+1.41=8.62>PQ\ (\approx7.07)\\
+PQ+QR&\approx 7.07+7.21=14.28>PR\ (\approx1.41)
+\end{align*}
+All three hold, so $P,Q,R$ are not in a straight line and form a triangle.
+
+\textbf{Step 3: what type of triangle?} By the converse of the Pythagoras theorem (if $a^2+b^2=c^2$ for the sides of a triangle, the angle opposite $c$ is $90^\circ$). The square of each side is the number under its square root in Step 1: $PQ^2=50$, $PR^2=2$, $QR^2=52$. The longest side is $QR$, so test it:
+\[
+PQ^2+PR^2=50+2=52=QR^2 .
+\]
+So the angle opposite $QR$, which is $\angle P$, is $90^\circ$. The sides $PQ,QR,PR$ are all different, so the triangle is not isosceles; it is a right-angled triangle.
+
+\ans{The points form a triangle. It is a right-angled triangle, with the right angle at $P$.}
+
+%---------------------------------------------------------------
+\subsection*{Example 2}
+\textbf{Question.} Show that the points $(1,7)$, $(4,2)$, $(-1,-1)$ and $(-4,4)$ are the vertices of a square.
+
+\textbf{Solution.} Let $A(1,7)$, $B(4,2)$, $C(-1,-1)$, $D(-4,4)$.
+
+A quadrilateral is a square if all four sides are equal and both diagonals are equal. By the distance formula $d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$, find the four sides and the two diagonals.
+
+\distnote
+\begin{align*}
+\distn{AB}{1}{7}{4}{2}\\
+\distn{BC}{4}{2}{-1}{-1}\\
+\distn{CD}{-1}{-1}{-4}{4}\\
+\distn{DA}{-4}{4}{1}{7}\\
+\dist{AC}{1}{7}{-1}{-1}{2\sqrt{17}}\\
+\dist{BD}{4}{2}{-4}{4}{2\sqrt{17}}
+\end{align*}
+Here $\sqrt{34}$ cannot be simplified, and $\sqrt{68}=\sqrt{4\times17}=2\sqrt{17}$.
+
+Since $AB=BC=CD=DA=\sqrt{34}$ and $AC=BD=2\sqrt{17}$, all four sides are equal and the two diagonals are equal.
+
+\ans{$ABCD$ is a square.}
+
+\textbf{Alternative solution.} Using the converse of the Pythagoras theorem in $\triangle ADC$: $AD^2+DC^2=34+34=68=AC^2$ (the values $34$, $34$, $68$ are the numbers under the square roots above), so $\angle D=90^\circ$. A quadrilateral with all four sides equal and one angle $90^\circ$ is a square.
+
+%---------------------------------------------------------------
+\subsection*{Example 3}
+\textbf{Question.} Fig.\ 7.6 shows the arrangement of desks in a classroom. Ashima, Bharti and Camella are seated at $A(3,1)$, $B(6,4)$ and $C(8,6)$ respectively. Do you think they are seated in a line? Give reasons for your answer.
+
+\begin{center}
+\ncertgrid{\fill (3,1) circle (3pt) node[above left]{$A$};
+\fill (6,4) circle (3pt) node[above left]{$B$};
+\fill (8,6) circle (3pt) node[above left]{$C$};}\\
+{\small Fig.\ 7.6 (redrawn)}
+\end{center}
+
+\textbf{Solution.} The coordinates of the seats are given in the question: $A(3,1)$, $B(6,4)$, $C(8,6)$.
+
+Three points are collinear if the largest of the three distances equals the sum of the other two. By the distance formula $d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$:
+
+\distnote
+\begin{align*}
+\dist{AB}{3}{1}{6}{4}{3\sqrt2}\\
+\dist{BC}{6}{4}{8}{6}{2\sqrt2}\\
+\dist{AC}{3}{1}{8}{6}{5\sqrt2}
+\end{align*}
+Here $\sqrt{18}=\sqrt{9\times2}=3\sqrt2$, $\sqrt8=\sqrt{4\times2}=2\sqrt2$ and $\sqrt{50}=\sqrt{25\times2}=5\sqrt2$.
+
+The largest distance is $AC=5\sqrt2$. Add the other two:
+\[
+AB+BC=3\sqrt2+2\sqrt2=(3+2)\sqrt2=5\sqrt2=AC .
+\]
+\ans{Since $AB+BC=AC$, the points $A$, $B$, $C$ are collinear. Ashima, Bharti and Camella are seated in a line.}
+
+%---------------------------------------------------------------
+\subsection*{Example 4}
+\textbf{Question.} Find a relation between $x$ and $y$ such that the point $(x,y)$ is equidistant from the points $(7,1)$ and $(3,5)$.
+
+\textbf{Solution.} Let $P(x,y)$ be equidistant from $A(7,1)$ and $B(3,5)$, so $AP=BP$ and therefore $AP^2=BP^2$ (squaring removes the square roots).
+
+By the distance formula, $d^2=(x_2-x_1)^2+(y_2-y_1)^2$, so
+\[
+AP^2=(x-7)^2+(y-1)^2,\qquad BP^2=(x-3)^2+(y-5)^2 .
+\]
+Equate them and expand each bracket with $(a-b)^2=a^2-2ab+b^2$:
+\begin{align*}
+(x-7)^2+(y-1)^2&=(x-3)^2+(y-5)^2\\
+(x^2-14x+49)+(y^2-2y+1)&=(x^2-6x+9)+(y^2-10y+25)\\
+x^2+y^2-14x-2y+50&=x^2+y^2-6x-10y+34
+\end{align*}
+Cancel $x^2+y^2$ from both sides and collect the terms on the left:
+\begin{align*}
+-14x-2y+50&=-6x-10y+34\\
+-14x+6x-2y+10y+50-34&=0\\
+-8x+8y+16&=0\\
+x-y&=2\qquad(\text{dividing by }-8)
+\end{align*}
+\slip{When expanding $(x-7)^2$ the middle term $-14x$ is often forgotten; $(x-7)^2\neq x^2-49$.}
+
+\textbf{Verification.} The point $(4,2)$ satisfies $x-y=4-2=2$. Its distances from $A(7,1)$ and $B(3,5)$ are
+\begin{align*}
+\distn{AP}{7}{1}{4}{2}\\
+\distn{BP}{3}{5}{4}{2}
+\end{align*}
+Both are $\sqrt{10}$, so the point is equidistant, as required.
+
+\ans{The required relation is $x-y=2$.}
+
+%---------------------------------------------------------------
+\subsection*{Example 5}
+\textbf{Question.} Find a point on the $y$-axis which is equidistant from the points $A(6,5)$ and $B(-4,3)$.
+
+\textbf{Solution.} A point on the $y$-axis has the form $(0,y)$ (its $x$-coordinate is $0$). Let $P(0,y)$ be equidistant from $A$ and $B$, so $PA=PB$ and $PA^2=PB^2$.
+
+By the distance formula $d^2=(x_2-x_1)^2+(y_2-y_1)^2$:
+\[
+PA^2=(6-0)^2+(5-y)^2,\qquad PB^2=(-4-0)^2+(3-y)^2 .
+\]
+Equate them and expand with $(a-b)^2=a^2-2ab+b^2$:
+\begin{align*}
+(6-0)^2+(5-y)^2&=(-4-0)^2+(3-y)^2\\
+36+(25-10y+y^2)&=16+(9-6y+y^2)\\
+61-10y+y^2&=25-6y+y^2\\
+61-10y&=25-6y\\
+36&=4y\\
+y&=9
+\end{align*}
+So $P=(0,9)$.
+
+\textbf{Verification.} With $P(0,9)$:
+\begin{align*}
+\dist{PA}{0}{9}{6}{5}{2\sqrt{13}}\\
+\dist{PB}{0}{9}{-4}{3}{2\sqrt{13}}
+\end{align*}
+Both distances are $\sqrt{52}=2\sqrt{13}$.
+
+\ans{The required point is $(0,9)$.}

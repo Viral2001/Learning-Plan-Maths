@@ -1,0 +1,257 @@
+# -*- coding: utf-8 -*-
+"""Tool specs for Class 8 Chapter 7 (Proportional Reasoning). One tool per doer that has one, each used once.
+
+Seven of them are carried over from the live built tools of maths8_ch7_live_v15 (see live_tools.json and build.py's
+carry-over step): the spec below is only the local placeholder that build_tool_node needs; build.py replaces each
+node with a copy of the live node (new id, concept_id and home_concept_id kept).
+
+Two are new placeholders in the Converting Units topic (not carried): unit_bridge on its doer and temperature_twin on
+its temperature teaching concept (A(..., tool=) in this chapter's topics_common.py)."""
+from topics_common import T
+
+TOOLS = {
+    "scale_stretcher": T(
+        "tool_c8pr_scale_stretcher", "Picture Stretcher", "simulation",
+        "A resized picture keeps its shape only when its width and height are multiplied by the same factor; taking "
+        "the same amount off both sides stretches or squashes it.",
+        "A picture in a rectangle with two sliders, one for the width factor and one for the height factor, the "
+        "original and new measurements, and a switch between multiplying and subtracting.",
+        ["Choose a width factor and a height factor.",
+         "Watch the picture stretch, squash or keep its shape.",
+         "Switch to subtracting the same amount from both sides and compare.",
+         "Answer a card by naming the factor that keeps the shape."],
+        ["Make a copy of a 60 by 40 picture that is half as wide and keeps its shape.",
+         "Make a copy 90 mm wide that keeps its shape.",
+         "Take 20 mm off both sides and say why the picture looks stretched.",
+         "Make a square copy and say which factor changed.",
+         "Draw a 6 by 4 rectangle smaller and bigger with the same ratio.",
+         "Decide which of five rectangles are similar by comparing ratios."],
+        ["The two factors are shown side by side and glow green when they match.",
+         "A subtract answer shows the two different factors it really used.",
+         "A shape-keeping copy is outlined over the original to show the same shape."],
+        "All six cards are done and the subtract card has been explained with the two factors.",
+        ["widthFactor", "heightFactor", "mode", "cardIndex"],
+        ["M_ADD_SAME", "M_ONE_TERM_SCALED"],
+        ["What happened to the width, and what happened to the height?",
+         "Divide new by old for each side and compare the two factors.",
+         "For 60 by 40 to 30 by 20, both factors are 30 ÷ 60 = 1/2 and 20 ÷ 40 = 1/2.",
+         "Both sliders are set to the same factor and the picture keeps its shape."]),
+
+    "ratio_mixer": T(
+        "tool_c8pr_ratio_mixer", "Ratio Mixer", "simulation",
+        "Mixtures taste the same when the ratio of their parts is the same in simplest form; more of both in the same "
+        "ratio makes a bigger batch of the same drink.",
+        "Two jugs, decoction and milk, with pour buttons, a cup that shows the colour of the mixture, the ratio and its "
+        "simplest form, and a strength meter for regular, strong and light.",
+        ["Pour amounts of each part.",
+         "Read the ratio and its simplest form.",
+         "Compare the colour with regular coffee.",
+         "Sort a card as regular, strong or light, or a statement as true or false."],
+        ["Mix regular coffee with 15 mL of decoction and 35 mL of milk.",
+         "Make a stronger coffee and say why it is stronger.",
+         "Decide whether 24 mL with 56 mL is regular.",
+         "Decide whether 150 mL with 500 mL is strong or light.",
+         "Check whether 21 : 6 :: 35 : 10 is true.",
+         "Write 600 : 900 in simplest form."],
+        ["The simplest form appears next to the ratio after each pour.",
+         "A wrong sort shows both simplest forms side by side.",
+         "The cup colour matches only when the simplest forms match."],
+        "All six cards are done and the strong card has been explained by comparing ratios.",
+        ["decoction", "milk", "cardIndex"],
+        ["M_RATIO_ORDER", "M_ADD_SAME"],
+        ["Which part makes the coffee strong?",
+         "Reduce both ratios to simplest form and compare.",
+         "15 : 35 is 3 : 7 and 24 : 56 is 3 : 7, so they taste the same.",
+         "The two simplest forms are shown and the matching cup is lit."]),
+
+    "ratio_table": T(
+        "tool_c8pr_ratio_table", "Ratio Table", "simulation",
+        "Columns of a ratio table are made by multiplying both terms by one factor; a missing term is found by using "
+        "the same factor on the other row.",
+        "A two-row table with a starting column, buttons to add a column by a chosen factor, blank cells to fill, and "
+        "an arrow that shows the factor between columns.",
+        ["Choose a factor and add a column.",
+         "Fill a blank cell by finding the factor from the full row.",
+         "Use a fraction as the factor when needed.",
+         "Check each column against the simplest form."],
+        ["Give three ratios proportional to 4 : 9.",
+         "Fill 12 : ___ proportional to 18 : 24.",
+         "Fill 20 : ___ proportional to 18 : 24.",
+         "Fill 6 : ___ proportional to 14 : 21.",
+         "Find the sugar for 18 glasses if 6 glasses take 10 spoons.",
+         "Decide whether 5 : 170 and your school's ratio are proportional."],
+        ["The factor arrow shows the same factor on both rows.",
+         "An answer that adds instead of multiplies shows the two different factors.",
+         "A fraction factor is shown with its working when the factor is not whole."],
+        "All six cards are done, including one with a fractional factor.",
+        ["columns", "factor", "cardIndex"],
+        ["M_FACTOR_INTEGER", "M_ADD_SAME"],
+        ["Which row has both terms known?",
+         "Divide the known new term by its old term to get the factor.",
+         "For 6 : ___ from 14 : 21, the factor is 6 ÷ 14 = 3/7 and 21 × 3/7 = 9.",
+         "The missing term is filled with the factor shown on both rows."]),
+
+    "double_line": T(
+        "tool_c8pr_double_line", "Double Number Line", "simulation",
+        "Two quantities that are proportional sit on two number lines that stretch together; three known marks fix "
+        "the fourth by the factor of change or by cross multiplication.",
+        "Two parallel number lines with movable marks, unit labels, a unit-convert button, and the proportion "
+        "a : b :: c : d with its cross products.",
+        ["Place the known pair on the two lines.",
+         "Place the third quantity and drag to find the fourth.",
+         "Convert units when the lines use different units.",
+         "Check that the cross products are equal."],
+        ["Find the rice for 80 students if 120 students need 15 kg.",
+         "Find the distance in 4 hours if 90 km takes 150 minutes.",
+         "Find the bricks for 108 ft of wall if 10 ft needs 1450.",
+         "Find the distance the Earth travels in a week.",
+         "Find the saffron for 9 niskas.",
+         "Find the time to fill a 10 litre bucket.",
+         "Find the buses for 204 students."],
+        ["Equal cross products light up when the proportion is right.",
+         "Mixed units are flagged before the lines can stretch.",
+         "The factor of change is shown on both lines."],
+        "All seven cards are done and one has needed a unit conversion.",
+        ["a", "b", "c", "d", "units", "cardIndex"],
+        ["M_MIXED_UNITS", "M_ALWAYS_PROPORTIONAL"],
+        ["Which three quantities do you know?",
+         "Write a : b :: c : d with the same units on each line.",
+         "For the rice, 120 : 15 :: 80 : d, so d = 15 × 80 ÷ 120 = 10.",
+         "The fourth mark is placed and the cross products are shown equal."]),
+
+    "add_mult_judge": T(
+        "tool_c8pr_add_mult_judge", "Additive or Multiplicative", "simulation",
+        "Some changes multiply both quantities by one factor and keep a ratio; others add the same amount or go in "
+        "opposite directions, and the Rule of Three does not fit them.",
+        "A card with two quantities, two bins labelled multiplying change and adding or other change, a graph of the "
+        "two quantities, and a solve panel that opens after the sort.",
+        ["Read the situation.",
+         "Sort it into a bin.",
+         "Watch the graph of the two quantities.",
+         "Solve it with the right method."],
+        ["Neelima's and her mother's ages over 9 years.",
+         "Speed and time for the same journey.",
+         "Harmain's and her brother's ages.",
+         "Area ploughed and hours taken by oxen.",
+         "A tractor 4 times faster than oxen.",
+         "Glasses of lemonade and spoons of sugar."],
+        ["The graph shows a straight line through zero only for proportional quantities.",
+         "A wrong sort shows the ratio at two moments so the change can be seen.",
+         "The solve panel accepts the Rule of Three only for proportional cards."],
+        "All six cards are sorted and solved, including the speed card.",
+        ["cardIndex", "bin"],
+        ["M_ALWAYS_PROPORTIONAL", "M_ADD_SAME"],
+        ["Do both quantities get multiplied, or does one get added to?",
+         "Compare the ratio at two moments; if it changes, it is not proportional.",
+         "Ages: 3 : 30 is 1 : 10 but 12 : 39 is 4 : 13, so adding years changes the ratio.",
+         "The card is placed in the adding bin and solved by the age difference."]),
+
+    "unit_rate": T(
+        "tool_c8pr_unit_rate", "Unit Rate Finder", "simulation",
+        "Two offers are compared by the amount for one unit: divide to get the rate, using the same units, and the "
+        "bigger total is not always the bigger rate.",
+        "Two packs or places side by side with their amounts and totals, a divide button that shows the rate for one "
+        "unit, a unit switch and a balance that tips toward the better buy.",
+        ["Read the two offers.",
+         "Convert to the same unit.",
+         "Divide to get each rate.",
+         "Choose the better buy or the more crowded place."],
+        ["Compare 200 g of tea for ₹200 with 1 kg for ₹800.",
+         "Compare a 6 mL sachet for ₹2 with a 1000 mL bottle for ₹540.",
+         "Compare a 180 mL bottle for ₹154 with a 340 mL bottle for ₹276.",
+         "Compare the people per sq. km in Delhi and Mumbai.",
+         "Compare two rice packs of 5 kg and 10 kg."],
+        ["Each rate is shown with its unit, such as rupees per kg.",
+         "A choice made on totals alone shows the two rates side by side.",
+         "Mixed units are flagged before the rates are found."],
+        "All five cards are done and one has needed a unit conversion.",
+        ["leftAmount", "leftTotal", "rightAmount", "rightTotal", "unit", "cardIndex"],
+        ["M_BIGGER_COSTS_MORE", "M_MIXED_UNITS"],
+        ["What is the amount for one unit in each offer?",
+         "Use the same unit, then divide the total by the amount.",
+         "Tea: 200 g is 1/5 kg, so 1 kg costs 200 × 5 = 1000 rupees, more than 800.",
+         "Both rates are shown and the balance tips to the cheaper one."]),
+
+    "ratio_sharer": T(
+        "tool_c8pr_ratio_sharer", "Ratio Sharer", "simulation",
+        "To share a whole in the ratio m : n, split it into m + n equal groups; one part takes m groups and the other "
+        "takes n groups.",
+        "A bar for the whole with a field for its size, fields for m and n, a split button that cuts the bar into "
+        "m + n equal groups, and two colours for the parts.",
+        ["Enter the whole and the ratio.",
+         "Split the bar into equal groups.",
+         "Colour m groups and n groups.",
+         "Read the two parts and check their ratio."],
+        ["Share 12 counters in the ratio 3 : 1.",
+         "Share 42 counters in the ratio 4 : 3.",
+         "Share ₹4500 in the ratio 2 : 3.",
+         "Share 240 mL of solution in the ratio 1 : 5.",
+         "Share 6 cups of idli mixture in the ratio 2 : 1.",
+         "Find the copper and nickel in a 7.74 g coin in the ratio 3 : 1."],
+        ["The size of one group is shown on every piece of the bar.",
+         "An answer that gives m and n themselves shows the parts falling short of the whole.",
+         "The two parts are checked to add up to the whole."],
+        "All six cards are done and each part has been checked against the whole.",
+        ["whole", "m", "n", "cardIndex"],
+        ["M_SHARE_BY_TERMS"],
+        ["How many equal groups does the ratio make?",
+         "Add the terms, then divide the whole by that number.",
+         "For 42 in 4 : 3, there are 7 groups of 42 ÷ 7 = 6, so 24 and 18.",
+         "The bar is split and coloured, and the two parts are shown."]),
+
+    "unit_bridge": T(
+        "tool_c8pr_unit_bridge", "Unit Bridge", "simulation",
+        "To convert an area or a length, choose the reference ratio that links the two units, such as 1 acre : 43560 "
+        "square feet, and multiply by it; converting first makes both quantities of a proportion use one unit.",
+        "A reference card of conversions for length, area and volume, a bridge with the old unit on the left and the "
+        "new unit on the right, an amount field, and a second bridge for the Rule of Three that opens after the "
+        "conversion.",
+        ["Read the amount and its unit.",
+         "Pick the reference conversion that links the two units.",
+         "Drag the amount across the bridge to get the new unit.",
+         "Use the converted amount in a Rule of Three bridge when the card asks for it."],
+        ["Convert 2 hectares to acres.",
+         "Convert 5 acres to square feet.",
+         "Convert a 100 m by 50 m plot to hectares.",
+         "Find the area of a 200 ft by 500 ft plot in acres.",
+         "Find the manure for that plot if 1 acre needs 10 tonnes.",
+         "Find the cost of 2400 square feet if 1 acre costs ₹1500000."],
+        ["The chosen conversion is shown as a ratio on the bridge, so the unit that is crossed is always visible.",
+         "A conversion applied the wrong way round shows the amount landing far from the expected size.",
+         "The Rule of Three bridge opens only when both ratios use the same unit."],
+        "All six cards are done and the plot cards have been converted before the Rule of Three was used.",
+        ["amount", "fromUnit", "toUnit", "conversion", "cardIndex"],
+        ["M_MIXED_UNITS"],
+        ["Which two units does this card connect?",
+         "Pick the conversion that links them, then decide whether to multiply or divide by it.",
+         "For the plot, 200 × 500 = 100000 square feet, and 1 acre is 43560 square feet, so the plot is about "
+         "2.30 acres.",
+         "The reference ratio is placed on the bridge and the converted amount is shown on the new unit."]),
+
+    "temperature_twin": T(
+        "tool_c8pr_temperature_twin", "Temperature Twins", "simulation",
+        "Fahrenheit is 9/5 of the Celsius reading plus 32, so the two scales have different starting points: doubling "
+        "the Celsius reading does not double the Fahrenheit reading, and the two are not in a fixed ratio.",
+        "Two thermometers side by side, one in Celsius and one in Fahrenheit, a slider for the Celsius reading, a "
+        "double button that doubles it, and a table of the readings with their ratio.",
+        ["Predict the Fahrenheit reading for a Celsius reading.",
+         "Move the slider and watch both thermometers.",
+         "Press double and compare the two readings with the first pair.",
+         "Convert back from a Fahrenheit reading to Celsius."],
+        ["Set 25 degrees Celsius and read the Fahrenheit value.",
+         "Set 0 degrees Celsius and read the Fahrenheit value.",
+         "Double 10 degrees Celsius and say whether the Fahrenheit value doubles.",
+         "Check whether 50 degrees Celsius is 64 degrees Fahrenheit.",
+         "Find the Celsius reading for 77 degrees Fahrenheit.",
+         "Find the Celsius reading for 98.6 degrees Fahrenheit."],
+        ["Both readings and their ratio are shown, so a ratio that keeps changing can be seen.",
+         "A doubled answer shows the true Fahrenheit value next to the doubled guess.",
+         "A conversion back shows the subtraction of 32 before the multiplication by 5/9."],
+        "All six cards are done and the double card has been explained by the added 32.",
+        ["celsius", "fahrenheit", "cardIndex"],
+        ["M_ALWAYS_PROPORTIONAL"],
+        ["What does each thermometer read when the Celsius slider moves?",
+         "Multiply by 9/5 and add 32 to go to Fahrenheit; subtract 32 first to come back.",
+         "For 10 degrees Celsius, 9/5 × 10 + 32 is 50, and for 20 degrees it is 68, not 100.",
+         "The doubled reading is shown at 68 degrees Fahrenheit next to the guess of 100."]),
+}

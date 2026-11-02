@@ -1,0 +1,81 @@
+# -*- coding: utf-8 -*-
+"""Tool specs for modules M1 and M2 (tally tables, pictographs). Doer tools only."""
+from topics_common import T
+
+TOOLS = {
+    "tally_table": T(
+        "tool_m1s2t3c3", "Tally Table Maker", "simulation",
+        "Tallying turns a stream of answers into bundles of five, and the total of each row is its frequency.",
+        "A row of sweet names; answers appear one at a time as speech bubbles; a Tally button under each row adds "
+        "a stroke, and the fifth stroke crosses the four; a total box and a most-chosen marker.",
+        ["Predict which sweet will be chosen most.",
+         "Tap a row for each answer; the fifth stroke crosses four.",
+         "Type each row's total."],
+        ["Tally 12 answers over 3 sweets and give each total (for example 5, 4 and 3).",
+         "Read a row of one bundle and 3 strokes (8).",
+         "Read a row of two bundles and 2 strokes (12).",
+         "Which sweet has the greatest frequency in a 20-answer stream? (the highest total)",
+         "Totals of all rows must equal the number of answers: 6 + 9 + 13 + 3 + 7 (38).",
+         "Which sweet has the least frequency, and by how much is it below the most? (3 and 10 fewer than 13)"],
+        ["A fifth stroke tapped beside the four, not across, snaps into a bundle of five with a short note.",
+         "A wrong total lights up the bundles one by one with a count in fives.",
+         "A solved card shows the frequency table with the tally and the total side by side."],
+        "All six cards are solved.",
+        ["tallies", "rowTotal", "answer", "cardIndex"],
+        ["M_TALLY_SINGLES", "M_LIST_ENOUGH"],
+        ["What does one stroke stand for?",
+         "Count the crossed bundles in fives, then the loose strokes.",
+         "Add 5 for each bundle and 1 for each loose stroke.",
+         "The bundles are lit and counted, the total is shown, and a similar card follows."]),
+
+    "pictograph_reader": T(
+        "tool_m2s1t5c3", "Pictograph Reader", "simulation",
+        "A pictograph is read by multiplying the number of symbols by the key, and a half symbol is half the "
+        "key.",
+        "A pictograph with category rows of symbols and half symbols; a key box that can change between 1, 2, 5 "
+        "and 10; a Reveal button that shows the count under a tapped row; a question strip.",
+        ["Read the key before counting.",
+         "Tap a row to count its symbols.",
+         "Type the frequency or pick the row."],
+        ["Key 1 student: which row has the most (the longest row).",
+         "Key 10 children, 5 symbols (50).",
+         "Key 10 children, 2 symbols and a half symbol (25).",
+         "Key 2 books, 3 symbols and a half symbol (7).",
+         "An empty row (0).",
+         "Same symbols under key 5 and key 10: how many more under the bigger key (double the count)."],
+        ["Counting symbols without reading the key makes the key box flash before the count is accepted.",
+         "A half symbol is shown beside a full symbol so its size is seen as half.",
+         "A solved card shows the symbols times the key as a short sum."],
+        "All six cards are solved.",
+        ["key", "symbols", "halfSymbol", "answer", "cardIndex"],
+        ["M_KEY_IGNORED", "M_HALF_SYMBOL", "M_ONE_SYMBOL_ONE"],
+        ["What does one symbol stand for?",
+         "Count the full symbols, then see whether there is a half symbol.",
+         "Multiply the full symbols by the key and add half the key for a half symbol.",
+         "The sum is shown step by step and a similar card follows."]),
+
+    "pictograph_builder": T(
+        "tool_m2s2t6c3", "Pictograph Builder", "manipulative",
+        "A key is chosen so that each frequency becomes a few symbols, and a half symbol shows half of the key.",
+        "A table of categories and numbers; a key picker for 1, 2, 5, 10 and 100; empty rows into which symbols "
+        "and half symbols are dropped; a check strip that multiplies the symbols by the key.",
+        ["Pick a key that suits the numbers.",
+         "Drop symbols and half symbols into each row.",
+         "Press Check to compare with the table."],
+        ["Draw dogs 18, 36, 12, 48, 18, 24 with the key 6 (3, 6, 2, 8, 3, 4 symbols).",
+         "Draw kites 250, 300, 100 with the key 100 (2 and a half, 3, 1 symbols).",
+         "Draw 25 students with the key 10 (2 symbols and a half).",
+         "Why is the key 10 a poor choice for 33 students? (3 students cannot be shown)",
+         "Pick a good key for 20, 30, 45 (5 or 15).",
+         "Draw 7 books with the key 2 (3 symbols and a half)."],
+        ["A key that leaves a remainder other than half a key shows the leftover and asks for a better key.",
+         "Too many symbols in a row show a crowded warning that suggests a bigger key.",
+         "A solved card shows symbols times the key beside the table number."],
+        "All six cards are solved.",
+        ["key", "rows", "symbolsPlaced", "answer", "cardIndex"],
+        ["M_HALF_SYMBOL", "M_ONE_SYMBOL_ONE"],
+        ["Which key divides most of the numbers?",
+         "Frequency divided by the key gives the symbols; half a key is a half symbol.",
+         "Divide each number by the key you chose and place that many symbols.",
+         "The symbols are placed for you and checked against the table; a similar card follows."]),
+}

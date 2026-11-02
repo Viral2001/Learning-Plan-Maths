@@ -1,0 +1,17 @@
+{
+  "_comment": "Template only. Copy to config.json at this pipeline's root and paste in the REAL Google service-account key - never commit the real file (it is gitignored). core/config.py loads this whole file and exports it as GOOGLE_APPLICATION_CREDENTIALS, so it must be a standard Google service-account JSON shape, with one extra app_config block the pipeline reads for batch sizes and worker counts.",
+  "type": "service_account",
+  "project_id": "PASTE-YOUR-OWN-PROJECT-ID-HERE",
+  "private_key_id": "PASTE-YOUR-OWN-KEY-ID-HERE",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nPASTE-YOUR-OWN-KEY-HERE\n-----END PRIVATE KEY-----\n",
+  "client_email": "PASTE-YOUR-OWN-SERVICE-ACCOUNT-EMAIL-HERE",
+  "client_id": "PASTE-YOUR-OWN-CLIENT-ID-HERE",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "PASTE-YOUR-OWN-CERT-URL-HERE",
+  "app_config": {
+    "_comment": "Each entry is {default, max}; core/config.py's app_setting() resolves an explicit argument, else the env var of the same name (upper-cased), else default, and clamps to max. No app_config name is read by this pipeline's scripts yet - this block is here for the shape only. Add real entries (e.g. image batch sizes, worker counts) as the image-generation steps are wired in.",
+    "example_batch_size": {"default": 10, "max": 50}
+  }
+}

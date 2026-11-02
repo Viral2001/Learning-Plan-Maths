@@ -1,0 +1,174 @@
+# -*- coding: utf-8 -*-
+"""TEMPLATE - the chapter's modules -> topics -> concepts skeleton, and its tool specs.
+
+Copy to concept_plan.py and fill in every TODO. Modelled on the reference chapters' own
+concept_plan.py + topics_common.py (maths7_ch10, maths8_ch9 new_design): authored concept dicts
+that build.py turns directly into the Phase 2 plan's concepts, and a TOOLS dict of "spec +
+placeholder" tool definitions (see tools_spec/TOOL_SPEC_GUIDE.md for what that means).
+
+This is the spec + placeholder style used by maths7_ch10/maths8_ch9 - NOT the full Tools/_core
+HTML-building system maths6_ch3 uses. A tool here is fully specified (its idea, screen, controls,
+challenges, hints) but its .tsx is built later; build.py (via tools_spec.tool_node_builder) emits
+a 2d_tool media node with a reserved, not-yet-live url and build_status "placeholder".
+
+Minus signs are U+2212 (−), never an ASCII hyphen, anywhere in authored mathematical text. No em
+dash or en dash anywhere (gates/media_content.py's DASHES check scans the whole built plan).
+"""
+from __future__ import annotations
+
+import content as K  # noqa: E402  (TODO: this import only resolves once content.py exists beside this file)
+
+# ---------------------------------------------------------------------------
+# authoring helpers - plain dicts; build.py reads these fields directly.
+# ---------------------------------------------------------------------------
+
+
+def WE(q, steps, answer, *, ncert=(), fact=None, expect=None):
+    """A worked example, one step per line.
+
+    fact    the facts.py entry name that independently recomputes this answer (TODO: write facts.py
+            once you have real numbers; a template has none to recompute)
+    expect  the value the answer text states, checked against fact's result
+    """
+    return {"q": q, "steps": list(steps), "answer": answer, "ncert": list(ncert), "fact": fact, "expect": expect}
+
+
+def FIO(cov, book, question, steps, answer, *, expect=None):
+    """A Figure It Out / Try This item, homed in the DOER concept of the topic whose idea it practises.
+    cov is its coverage id (must appear in content.NCERT_ITEMS)."""
+    return {"cov": cov, "book": book, "question": question, "steps": list(steps), "answer": answer, "expect": expect}
+
+
+def A(key, name, bloom, objective, *, textbook=(), teach=(), examples=(), ncert=(), key_terms=(),
+      misconceptions=(), video_focus=(), enrichment=False, minutes=10, role=None):
+    """A teaching concept.
+
+    textbook      the book's own lines, quoted verbatim (dashes normalised to −, commas or "to")
+    teach         the plan's own teaching lines; put the prediction step first (predict, then reveal)
+    enrichment    True means build.py emits NO objective for this concept (user rule: enrichment
+                  carries no objective)
+    role          build.py auto-derives gates/skeleton.py's `source_segment_role` ("hook" when
+                  "HOOK" is in video_focus, otherwise none) - set this explicitly only to override
+                  that, e.g. role="try_it" for the framing topic's second (free-try) concept.
+    """
+    return {"key": key, "kind": "teach", "name": name, "bloom": bloom, "objective": objective,
+            "textbook": list(textbook), "teach": list(teach), "examples": list(examples), "ncert": list(ncert),
+            "key_terms": list(key_terms), "misconceptions": list(misconceptions), "video_focus": list(video_focus),
+            "enrichment": enrichment, "minutes": minutes, "role": role}
+
+
+def DOER(key, name, tool, bloom, objective, recap, *, items=(), textbook=(), ncert=(), misconceptions=(),
+         enrichment=False, role=None):
+    """The LAST concept of an instructional topic: the recap, this idea's exercises, then exactly ONE tool
+    (from TOOLS below, by its dict key). Never put more than one tool on a topic (tool-pruning policy:
+    keep a tool only where the manipulation IS the concept).
+
+    name    must start with "Pull it together and do it: " or "Practice: " (gates/skeleton.py's
+            `doer_name_prefixes`) unless chapter.config.json overrides that list.
+    role    build.py auto-derives source_segment_role "doer" for every DOER; override only for the
+            framing topic's free-try concept (role="try_it", still built with DOER so it gets a tool).
+    """
+    return {"key": key, "kind": "doer", "name": name, "tool": tool, "bloom": bloom, "objective": objective,
+            "recap": list(recap), "items": list(items), "textbook": list(textbook), "ncert": list(ncert),
+            "misconceptions": list(misconceptions), "enrichment": enrichment, "role": role}
+
+
+def TOPIC(key, module, name, sections, bloom, objective, summary, concepts, *, topic_type="instructional",
+          key_terms=()):
+    """topic_type: 'framing' (the chapter opener, exactly one), 'instructional' (the normal case,
+    ends in a DOER), or 'summary' (the chapter recap, exactly one). core.qt only inserts a QT
+    sibling after an 'instructional' topic; framing and summary topics are excluded by design."""
+    return {"key": key, "module": module, "name": name, "ncert_sections": list(sections), "bloom": bloom,
+            "objective": objective, "summary": summary, "concepts": list(concepts), "topic_type": topic_type,
+            "key_terms": list(key_terms)}
+
+
+# ---------------------------------------------------------------------------
+# TOOLS: one "spec + placeholder" tool per DOER concept that has one, keyed by the DOER's
+# `tool` field. build() returns the dict tools_spec.tool_node_builder.build_tool_node() expects.
+# ---------------------------------------------------------------------------
+
+HINT_LADDER_NOTE = ("Hints climb one rung per request or per unsuccessful try: orienting (what is the question "
+                    "asking?), strategic (which move or rule applies?), specific (the next step with these "
+                    "numbers), bottom-out after 3 tries (the step is shown, then a similar card follows).")
+
+
+def T(tool_id, title, subtype, idea, screen, student_does, challenges, feedback, done_when, shared_state,
+      misconceptions, hints):
+    """One tool spec. 5 to 7 challenges; exactly 4 hints (orienting, strategic, specific, bottom-out)."""
+    assert 5 <= len(challenges) <= 7, title
+    assert len(hints) == 4, title
+    return {"tool_id": tool_id, "title": title, "subtype": subtype, "idea": idea, "screen": screen,
+            "student_does": list(student_does), "challenges": list(challenges), "feedback": list(feedback),
+            "done_when": done_when, "shared_state": list(shared_state), "misconceptions": list(misconceptions),
+            "hint_ladder": [{"rung": r, "text": t} for r, t in
+                            zip(("orienting", "strategic", "specific", "bottom-out"), hints)]}
+
+
+TOOLS = {
+    # TODO: one entry per DOER's `tool` key, e.g.:
+    # "example_tool": T(
+    #     "tool_example_name", "Example Tool Title", "manipulative",
+    #     "TODO: the one mathematical idea this tool makes manipulable, one sentence.",
+    #     "TODO: what is on screen - every control and read-out, described plainly.",
+    #     ["TODO: predict first.", "TODO: the main manipulation.", "TODO: a second control.",
+    #      "TODO: a check or compare step."],
+    #     ["TODO challenge 1 (with its answer).", "TODO challenge 2.", "TODO challenge 3.", "TODO challenge 4.",
+    #      "TODO challenge 5."],
+    #     ["TODO: what happens on a wrong-but-allowed move.", "TODO: what a solved card shows."],
+    #     "TODO: the done condition in one sentence.",
+    #     ["TODO", "shared", "state", "fields", "cardIndex"],
+    #     ["M_TODO_1"],
+    #     ["TODO orienting hint.", "TODO strategic hint.", "TODO specific hint.", "TODO bottom-out hint."]),
+}
+
+# ---------------------------------------------------------------------------
+# QT (Question Topic) pattern: FIO/exercise items get pulled into a sibling practice topic by
+# core/qt.py. This dict is only a hint to the chapter author about which topics carry FIO items
+# that core.qt will act on automatically once build.py calls core.qt.apply() - it does not need
+# to be read by build.py itself (core.qt discovers exercise video slots on its own), but keeping
+# the mapping here documents intent and matches the reference chapters' own bookkeeping.
+# ---------------------------------------------------------------------------
+QT_TOPICS = set()          # TODO: topic keys ("T2", "T3", ...) whose DOER carries FIO items
+FIO_HOME = {
+    # TODO: "<coverage_id>": "<topic key>"   e.g. "2.1.FiO": "T2"
+}
+
+# ---------------------------------------------------------------------------
+# the actual topics. One module's worth per TOPICS.append() call; split across several files
+# (topics_1.py, topics_2.py, ...) once this grows past a page or two, importing them from
+# content.py the way the reference chapters do - this template keeps everything in one file.
+# ---------------------------------------------------------------------------
+TOPICS = []
+
+TOPICS.append(TOPIC(
+    "T1", "M1", "TODO Introduction Topic Name", ["TODO book section"], "Understand",
+    "",  # framing topics carry NO topic_objective (gates/skeleton.py bans one here)
+    "TODO: one or two sentence summary of what the student does in this topic.",
+    [A("T1.C1", "TODO Concept Name", "Remember",
+       "TODO: the concept objective sentence (omit if this concept is enrichment=True).",
+       textbook=["TODO: the book's own opening lines, verbatim."],
+       teach=["TODO: the plan's own teaching line, prediction first."],
+       ncert=["opening"], key_terms=["TODO"], video_focus=["HOOK"], minutes=6,
+       enrichment=True)],
+    topic_type="framing"))
+
+# TOPICS.append(TOPIC(
+#     "T2", "M1", "TODO Instructional Topic Name", ["TODO book section"], "Apply",
+#     "TODO topic objective.", "TODO topic summary.",
+#     [A("T2.C1", "TODO teaching concept name", "Apply", "TODO concept objective.",
+#        textbook=["TODO"], teach=["TODO"],
+#        examples=[WE("TODO question", ["TODO step 1", "TODO step 2"], "TODO answer", ncert=["TODO.example1"])],
+#        key_terms=["TODO"], misconceptions=["M_TODO_1"], minutes=12),
+#      DOER("T2.C2", "example_tool", "Apply", "TODO doer objective.",
+#           ["TODO recap point 1", "TODO recap point 2"],
+#           items=[FIO("TODO.FiO", "Figure it Out (TODO section)", "TODO question text",
+#                      ["TODO step 1", "TODO step 2"], "TODO answer")])],
+#     topic_type="instructional"))
+
+# TOPICS.append(TOPIC(
+#     "TN", "MLAST", "TODO Summary Topic Name", ["Summary"], "Understand", "TODO topic objective.",
+#     "TODO topic summary.",
+#     [A("TN.C1", "TODO recap concept name", "Understand", "TODO concept objective.",
+#        textbook=[], teach=["TODO recap line."], minutes=6)],   # no video_focus: there is no recap video
+#     topic_type="summary"))

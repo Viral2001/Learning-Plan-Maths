@@ -1,0 +1,22 @@
+{
+  "_note": "TODO sample only - see book_rules.README below (this file has no comments of its own; keep this _note key as the one place a human-readable pointer lives, same convention as the reference chapters' own book_rules.json). Copy to book_rules.json next to content.py/concept_plan.py and fill in every TODO before running build.py --video-worklist or core/video_script's check.py.",
+
+  "_note_names": "names: every person name used anywhere in this chapter's video scripts, mapped to a one-line note. core/video_script/check.py's book_numbers()/script checks require every name a script uses to be a key here (rule 3 of the four script rules, 1 Oct 2026: nothing outside the textbook) - a name not listed here fails the gate. Vary names across regions, religions and genders; by convention one fixed name owns every wrong idea/misconception across the chapter (see contract.py's names_note pattern in reference build.py files) so the student learns to recognise that character's errors.",
+  "names": {
+    "TODO_Name_1": "TODO: who this is in the chapter (e.g. 'owns every wrong idea/misconception')",
+    "TODO_Name_2": "TODO: who this is in the chapter"
+  },
+
+  "_note_banned_words": "banned_words: words/phrases that must NEVER appear in any video script or student-facing text for this chapter - trivia, analogies or framing the book itself does not use. Distinct from core/video_script/contract.py's own BANNED_WORDS/BANNED_PHRASES (filler words banned chapter-wide, e.g. 'just', 'simply') - this list is PER CHAPTER and should hold only this book's specific out-of-scope words (e.g. a named historical anecdote the book does not tell, a unit the book does not use).",
+  "banned_words": [
+    "TODO: a word or short phrase this chapter's book never uses, stated exactly as it would appear"
+  ],
+
+  "_note_theorems": "theorems: REQUIRED only when chapter.config.json's theorem_chapter is true. One entry per theorem video script key (the video_scripts/<key>.json 'key' field, NOT the concept id); its value is the exact list of phrases that script's beat keyed 'state' (core/video_script/contract.py THEOREM_STATE_BEAT) must say, word for word, somewhere in that beat's narration (checked by core/video_script/check.py). Leave this key OUT ENTIRELY for a non-theorem chapter - do not include it as an empty object, since its mere presence is read by check.py as 'this chapter has theorem scripts to validate'.",
+  "theorems": {
+    "TODO_video_script_key": [
+      "TODO: exact required phrase 1, verbatim",
+      "TODO: exact required phrase 2, verbatim"
+    ]
+  }
+}

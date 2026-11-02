@@ -1,0 +1,118 @@
+# -*- coding: utf-8 -*-
+"""TEMPLATE - chapter-level authored content. Copy to content.py and fill in every TODO.
+
+Modelled on the reference chapters' own content.py (maths7_ch10, maths8_ch9 new_design): this is
+the one place the book's own facts live - module names, the chapter's misconceptions, printed-book
+errata, and the figures each concept's media may need. The topics themselves (modules -> segments ->
+topics -> concepts) belong in concept_plan.py, not here; this module only holds chapter-wide data
+every topic can refer to by key.
+
+No em dash and no en dash anywhere in any string here (gates/media_content.py's DASHES check scans
+every authored text in the built plan, this module included once build.py pulls strings from it).
+Minus is U+2212, never an ASCII hyphen, in any mathematical content.
+"""
+from __future__ import annotations
+
+# ---------------------------------------------------------------------------
+# chapter identity (also set in chapter.config.json - keep the two in sync by hand;
+# nothing here is read by gates/gate_runner.py, this is author-facing documentation
+# plus data build.py pulls into plan["source_metadata"])
+# ---------------------------------------------------------------------------
+CHAPTER = {
+    "grade": 0,                      # TODO: same as chapter.config.json "grade"
+    "label": "Class N",              # TODO
+    "chapter_no": 0,                 # TODO: same as chapter.config.json "chapter_no"
+    "name": "TODO Chapter Name",     # TODO: same as chapter.config.json "chapter_name"
+    "book_part": "TODO Part/Section",
+    "source_pdf": "textbooks/classN/TODO.pdf",
+}
+CHAPTER_NAME = CHAPTER["name"]
+
+# ---------------------------------------------------------------------------
+# modules: (module_id, module_name, summary) - the top level of the hierarchy.
+# Keep summaries short; they are shown to the student via plan["modules"][i]["summary"].
+# ---------------------------------------------------------------------------
+MODULES = [
+    ("M1", "TODO Module 1 Name", "TODO one or two sentences the student sees as the module summary."),
+    # ("M2", "TODO Module 2 Name", "TODO summary."),
+]
+
+# ---------------------------------------------------------------------------
+# how this chapter is taught: shown once, at the top of the built HTML/plan metadata.
+# "points" is the short list of design decisions a reviewer should know before reading topics.
+# ---------------------------------------------------------------------------
+CHAPTER_APPROACH = {
+    "heading": "How this chapter is taught",
+    "intro": "TODO: 2-4 sentences on the teaching arc this chapter follows (e.g. play first, notice, "
+             "name, reason, apply) and what is new relative to the grade before.",
+    "points": [
+        {"title": "TODO design decision title",
+         "text": "TODO: what this decision is and why, in the authored voice (not generic boilerplate)."},
+        # add one entry per real decision; do not pad this list with filler.
+    ],
+}
+
+# ---------------------------------------------------------------------------
+# every textbook item this chapter must cover, as the ids used throughout concept_plan.py's
+# ncert_refs / exercises. build.py should fail if any id here is never attached to a concept
+# (100% coverage is the playbook rule - docs/25_new_design_learning_plan_playbook.md).
+# Use the book's own section numbering as the id prefix, e.g. "2.1.example1", "end.Q4".
+# ---------------------------------------------------------------------------
+NCERT_ITEMS = [
+    "opening",
+    # TODO: one entry per worked example, Try This/Figure It Out item, and end-of-chapter question.
+]
+
+# ---------------------------------------------------------------------------
+# misconceptions this chapter specifically targets: (id, one-sentence description of the wrong idea).
+# Referenced from concept_plan.py concepts and from tools_spec tool specs by id only.
+# ---------------------------------------------------------------------------
+MISCONCEPTIONS = [
+    ("M_TODO_1", "TODO: the wrong idea a student commonly holds, stated plainly."),
+]
+
+# ---------------------------------------------------------------------------
+# printed-book errors this plan corrects (not errata to silence - see ERRATA below for the
+# difference). Each entry documents what the book printed and what this plan actually teaches.
+# Shown in the built HTML under "Printed-book notes"; not read by any gate.
+# ---------------------------------------------------------------------------
+SOLUTION_NOTES = [
+    # {"item": "TODO: which book item", "printed_solution": "TODO: what the book prints",
+    #  "correct": "TODO: the correct working and why the book's is wrong"},
+]
+
+# ---------------------------------------------------------------------------
+# ERRATA: exact false-equation chain strings that are DELIBERATELY kept verbatim in a
+# textbook_text block (quoting the book's own printed error) and must be exempted from
+# gates/eqcheck_*'s arithmetic-truth check. Copy each string into chapter.config.json's
+# "eqcheck_errata" too - gate_runner reads it from the config, not from here; this list is the
+# authored record of WHY each one is there. gate_runner fails the build if a config errata entry
+# is never matched in the plan's text, so a stale entry cannot linger silently - keep both lists
+# in sync by hand and delete from both the moment the matching textbook_text block is removed.
+# ---------------------------------------------------------------------------
+ERRATA = [
+    # "TODO: the exact false chain as it is quoted verbatim in a textbook_text block",
+]
+
+# ---------------------------------------------------------------------------
+# design references: where this chapter's structure/decisions come from (the playbook,
+# any grade-specific design notes supplied with the build request, explicit user rules with
+# their date). Shown in the built HTML; purely documentation.
+# ---------------------------------------------------------------------------
+DESIGN_REFERENCES = [
+    {"text": "docs/25_new_design_learning_plan_playbook.md: TODO which sections this chapter follows.",
+     "url": ""},
+]
+
+# ---------------------------------------------------------------------------
+# FIGURES: the book's own figures that carry mathematics, keyed by authored concept key
+# (e.g. "T3.C1", matching concept_plan.py's own topic/concept keys, NOT the final concept_id -
+# those are only assigned once build.py numbers the plan). A hint for whoever specs the image in
+# media_specs/<key>.json; never shown to the student directly, and never quoted with page numbers
+# or figure numbers in anything student-facing (gates/media_content.py's branding check bans
+# "page N" in STUDENT_FACING_FIELDS, and the user's own content rule bans "Fig." references in
+# anything the student reads).
+# ---------------------------------------------------------------------------
+FIGURES = {
+    # "T1.C1": ["TODO: plain description of what the book's figure shows, numbers and all."],
+}

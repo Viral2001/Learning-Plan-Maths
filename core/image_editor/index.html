@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Question Image Editor</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+<style>
+  :root { --ink:#1f2937; --muted:#6b7280; --line:#d1d5db; --bg:#f3f4f6; --teal:#0f766e; --amber:#b45309; --red:#b91c1c; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.45 system-ui,Segoe UI,sans-serif; }
+  header { padding:16px 24px; background:#fff; border-bottom:1px solid var(--line); }
+  h1 { margin:0; font-size:20px; }
+  header p { margin:2px 0 0; color:var(--muted); }
+  #gallery { padding:20px 24px; display:grid; gap:18px; }
+  .row { background:#fff; border:1px solid var(--line); border-radius:8px; padding:12px 14px; }
+  .row h2 { margin:0 0 10px; font-size:15px; }
+  .pair { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .card { cursor:pointer; user-select:none; }
+  .card img { width:100%; display:block; border:1px solid var(--line); border-radius:6px; background:#fff; }
+  .meta { display:flex; justify-content:space-between; margin-top:5px; font-size:13px; color:var(--muted); }
+  .badge { font-weight:600; color:var(--amber); }
+  .badge.approved { color:var(--teal); }
+  #editor { position:fixed; inset:0; display:none; flex-direction:column; background:#fff; }
+  #editor.open { display:flex; }
+  .bar { display:flex; align-items:center; gap:8px; padding:10px 14px; border-bottom:1px solid var(--line); }
+  .bar strong { margin-right:auto; }
+  button { padding:7px 14px; font:inherit; border:1px solid var(--line); border-radius:6px; background:#fff; cursor:pointer; }
+  button:disabled { opacity:.45; cursor:default; }
+  button.primary { background:var(--teal); border-color:var(--teal); color:#fff; }
+  .work { flex:1; min-height:0; display:grid; grid-template-columns:1fr 1fr; }
+  .left { min-height:0; border-right:1px solid var(--line); display:flex; flex-direction:column; }
+  .left .CodeMirror, #fallback { flex:1; height:auto; min-height:0; width:100%; font:13px/1.5 Consolas,monospace; }
+  #fallback { border:0; padding:8px; resize:none; }
+  .right { min-height:0; overflow:auto; padding:12px 14px; }
+  .right img { width:100%; border:1px solid var(--line); border-radius:6px; }
+  #state { margin:8px 0; font-weight:600; }
+  #state.bad { color:var(--red); }
+  #state.good { color:var(--teal); }
+  #log { display:none; max-height:220px; overflow:auto; padding:8px; background:#111827; color:#f9fafb; font:12px/1.4 Consolas,monospace; white-space:pre-wrap; }
+  #plan { margin-top:10px; padding-top:8px; border-top:1px solid var(--line); }
+  #plan h3 { margin:8px 0 2px; font-size:13px; color:var(--muted); }
+  #plan p, #plan ol { margin:0; }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">Question Image Editor</h1>
+  <p>Double-click an image to open its code.</p>
+</header>
+<main id="gallery"></main>
+
+<section id="editor">
+  <div class="bar">
+    <strong id="name"></strong>
+    <button id="render" class="primary">Render</button>
+    <button id="save" disabled>Save</button>
+    <button id="approve">Approve</button>
+    <button id="upload">Upload to staging</button>
+    <button id="close">Close</button>
+  </div>
+  <div class="work">
+    <div class="left"><textarea id="fallback" spellcheck="false"></textarea></div>
+    <div class="right">
+      <img id="preview" alt="Image preview">
+      <div id="state"></div>
+      <pre id="log"></pre>
+      <div id="plan"></div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+let images = [], current = null, rendered = null, saved = "", busy = false;
+
+const cm = window.CodeMirror
+  ? CodeMirror.fromTextArea($("fallback"), { mode:"python", lineNumbers:true, indentUnit:4 })
+  : null;
+const getCode = () => cm ? cm.getValue() : $("fallback").value;
+const setCode = text => { if (cm) { cm.setValue(text); cm.clearHistory(); setTimeout(() => cm.refresh()); } else $("fallback").value = text; };
+
+async function post(action, body) {
+  const r = await fetch("/api/" + action, { method:"POST", headers:{ "Content-Type":"application/json" }, body:JSON.stringify(body) });
+  return r.json();
+}
+
+function say(text, kind) {
+  $("state").textContent = text;
+  $("state").className = kind || "";
+}
+
+function showLog(text) {
+  $("log").textContent = text || "";
+  $("log").style.display = text ? "block" : "none";
+  if (text) $("log").scrollTop = $("log").scrollHeight;
+}
+
+function refreshButtons() {
+  const dirty = getCode() !== saved;
+  $("render").disabled = busy;
+  $("save").disabled = busy || !dirty || rendered !== getCode();
+  $("approve").disabled = busy || dirty || current.status === "approved";
+  $("upload").disabled = busy || dirty || current.status !== "approved";
+}
+
+async function step(label, work) {
+  busy = true; refreshButtons(); say(label); showLog("");
+  try { await work(); }
+  catch (e) { say("Could not reach the server: " + e.message, "bad"); }
+  busy = false; refreshButtons();
+}
+
+async function loadGallery() {
+  images = (await (await fetch("/api/images")).json()).images;
+  const groups = new Map();
+  images.forEach(i => { if (!groups.has(i.concept_id)) groups.set(i.concept_id, []); groups.get(i.concept_id).push(i); });
+  const gallery = $("gallery");
+  gallery.replaceChildren();
+  for (const [concept, list] of groups) {
+    const row = document.createElement("section");
+    row.className = "row";
+    const h = document.createElement("h2");
+    h.textContent = concept + "  " + (list[0].plan.name || "");
+    const pair = document.createElement("div");
+    pair.className = "pair";
+    list.forEach(i => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.title = "Double-click to edit";
+      card.dataset.id = i.id;
+      const img = document.createElement("img");
+      img.src = "/png/" + i.id + ".png?v=" + i.version;
+      img.alt = i.role + " image " + i.id;
+      img.loading = "lazy";
+      const meta = document.createElement("div");
+      meta.className = "meta";
+      const left = document.createElement("span");
+      left.textContent = i.role;
+      const badge = document.createElement("span");
+      badge.className = "badge " + i.status;
+      badge.textContent = i.status;
+      meta.append(left, badge);
+      card.append(img, meta);
+      card.addEventListener("dblclick", () => openEditor(i.id));
+      pair.append(card);
+    });
+    row.append(h, pair);
+    gallery.append(row);
+  }
+}
+
+function fillPlan(plan) {
+  const box = $("plan");
+  box.replaceChildren();
+  const add = (title, node) => {
+    const h = document.createElement("h3");
+    h.textContent = title;
+    box.append(h, node);
+  };
+  const text = value => { const p = document.createElement("p"); p.textContent = value || ""; return p; };
+  add("Question in the plan", text(plan.q));
+  const ol = document.createElement("ol");
+  (plan.steps || []).forEach(s => { const li = document.createElement("li"); li.textContent = s; ol.append(li); });
+  add("Steps in the plan", ol);
+  add("Answer in the plan", text(plan.ans));
+}
+
+async function openEditor(id) {
+  current = images.find(i => i.id === id);
+  saved = (await (await fetch("/api/code/" + encodeURIComponent(id))).json()).code;
+  rendered = null;
+  setCode(saved);
+  $("name").textContent = id + "  (" + current.role + ")";
+  $("preview").src = "/png/" + id + ".png?v=" + Date.now();
+  fillPlan(current.plan);
+  say("Status: " + current.status); showLog("");
+  $("editor").classList.add("open");
+  refreshButtons();
+}
+
+$("render").onclick = () => step("Rendering, this takes a few seconds...", async () => {
+  const code = getCode();
+  const out = await post("render", { id:current.id, code });
+  if (out.ok) {
+    rendered = code;
+    $("preview").src = "/draft/" + current.id + ".png?v=" + Date.now();
+    say(code === saved ? "Rendered." : "Rendered. Not saved yet.", "good");
+  } else {
+    say("Render failed. The saved image is unchanged.", "bad");
+    showLog(out.log);
+  }
+});
+
+$("save").onclick = () => step("Saving...", async () => {
+  const code = getCode();
+  const out = await post("save", { id:current.id, code });
+  if (!out.ok) { say("Save failed.", "bad"); showLog(out.log); return; }
+  saved = code; current.status = "draft";
+  $("preview").src = "/png/" + current.id + ".png?v=" + Date.now();
+  say("Saved. The old version is in .bak. Approve it again before upload.", "good");
+});
+
+$("approve").onclick = () => step("Approving...", async () => {
+  const out = await post("approve", { id:current.id });
+  if (!out.ok) { say("Approve failed.", "bad"); showLog(out.log); return; }
+  current.status = "approved";
+  say("Approved.", "good");
+});
+
+$("upload").onclick = () => step("Uploading...", async () => {
+  const out = await post("upload", { id:current.id });
+  if (!out.ok) { say("Upload failed.", "bad"); showLog(out.log); return; }
+  say("Uploaded and checked on the bucket. The CDN can show the old image for up to 1 hour.", "good");
+});
+
+$("close").onclick = () => {
+  if (getCode() !== saved && !confirm("Discard unsaved changes?")) return;
+  $("editor").classList.remove("open");
+  loadGallery();
+};
+
+if (cm) cm.on("change", () => { if (current) refreshButtons(); });
+else $("fallback").addEventListener("input", () => { if (current) refreshButtons(); });
+
+loadGallery();
+</script>
+</body>
+</html>

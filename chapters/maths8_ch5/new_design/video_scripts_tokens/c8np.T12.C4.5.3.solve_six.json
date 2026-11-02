@@ -1,0 +1,362 @@
+{
+  "key": "c8np.T12.C4.5.3.solve_six",
+  "title": "Which digits hide behind the letters in six puzzles?",
+  "description": "Six letter puzzles with multiplication are solved one after another, the way the book's solved examples do it. Each puzzle is cut down first by the number of digits in its answer, then by the last digit, and then the few choices left are tried. Every answer is put back into its puzzle to check.",
+  "teaching_notes": "One idea: use the number of digits in the answer to bound the numbers, use the last digits to narrow the choices, and test what is left. Watch for students who guess digits without checking the size of the answer.",
+  "video_script": {
+    "kind": "exercise",
+    "chapter": "cbse_eng_maths8_ch5",
+    "source": [
+      "Digits in Disguise: solve the six"
+    ],
+    "placement": "after",
+    "unlock": "after_attempt",
+    "callback_to": "c8np.T12.C2.E0",
+    "why": "The child can multiply, and now uses units digits and the size of numbers to crack letter puzzles.",
+    "substitution": "Fix the units digit first, then use the count of digits to bound the rest.",
+    "shape": "procedure",
+    "promise": "",
+    "anchor": "the six letter multiplication puzzles of the book: UT × 3 = PUT, AB × 5 = BC, L2N × 2 = 2NP, XY × 4 = ZX, PP × QQ = PRP and JK × 6 = KKK",
+    "misconception_id": "",
+    "wrong_answer": "",
+    "wrong_move": "",
+    "payoff_line": "Fifty times three is one hundred and fifty.",
+    "final_answer": {
+      "value": "(i) 50 × 3 = 150 (ii) 19 × 5 = 95 (iii) 124 × 2 = 248 or 125 × 2 = 250 (iv) 23 × 4 = 92 (v) 22 × 11 = 242, 33 × 11 = 363 or 44 × 11 = 484 (vi) 74 × 6 = 444",
+      "spoken": "fifty times three is one hundred and fifty, nineteen times five is ninety five, one hundred and twenty four times two is two hundred and forty eight or one hundred and twenty five times two is two hundred and fifty, twenty three times four is ninety two, twenty two, thirty three or forty four times eleven, and seventy four times six is four hundred and forty four",
+      "units": ""
+    },
+    "answer_verified": true,
+    "terms": [],
+    "fraction_reading": "not used",
+    "names": {},
+    "hold_back": [
+      "Answer: (i) 50 × 3 = 150"
+    ],
+    "never_show": [],
+    "maths_rules": [
+      "(i) UT × 3 = PUT: 3 × T ends in T, so T is 0 or 5; T = 5 gives carry 1 and 3 × U + 1 is odd, so it cannot end in U; T = 0 needs 3 × U to end in U, so U = 5 (U is not 0); 50 × 3 = 150, P = 1",
+      "(ii) AB × 5 = BC has two digits, so AB is at most 19 and A = 1; 5 × (10 + B) = 50 + 5B must have tens digit B; only B = 9 works, 19 × 5 = 95, C = 5",
+      "(iii) L2N × 2 = 2NP: the answer is under 300, so L2N is under 150 and L = 1; 2 × 2 + carry = N, so N = 4 (no carry, 2 × 4 = 8) or N = 5 (carry 1, 2 × 5 = 10); 124 × 2 = 248 (P = 8), 125 × 2 = 250 (P = 0)",
+      "(iv) XY × 4 = ZX has two digits, so XY is at most 24; 4 × Y is even and ends in X, so X = 2; 4 × Y ends in 2 for Y = 3 or 8; 28 is too big; 23 × 4 = 92, Z = 9",
+      "(v) PP × QQ = 11P × 11Q = 121 × P × Q; three digits needs P × Q at most 8; the last digit is P × Q and must be P, so Q = 1; P = 1 repeats Q; P = 5 or more gives 121 × P with the wrong first digit; 22 × 11 = 242, 33 × 11 = 363, 44 × 11 = 484",
+      "(vi) JK × 6 = KKK = 111 × K; K is even; K = 2: 222 / 6 = 37, K = 4: 444 / 6 = 74, K = 6: 666 / 6 = 111, K = 8: 888 / 6 = 148; only 74 has two digits and ends in K = 4; 74 × 6 = 444"
+    ],
+    "design": "Six puzzles in the book's order. Each is cut by the size of its answer, narrowed by the last digit, and the few cases left are tried. The check puts the answers back.",
+    "open_questions": [],
+    "keeko_end": "",
+    "beats": [
+      {
+        "key": "hook_pose",
+        "part": "hook",
+        "role": "connect objects",
+        "meaning": "SHOW",
+        "region": "anchor",
+        "on_screen": "a small title card From your book; six letter puzzles in boxes: UT × 3 = PUT, AB × 5 = BC, L2N × 2 = 2NP, XY × 4 = ZX, PP × QQ = PRP, JK × 6 = KKK; question marks glow over the letters",
+        "marks": {
+          "book": "the small title card From your book appears",
+          "six": "six puzzle boxes appear",
+          "rule": "the line different letters, different digits appears",
+          "ask": "question marks glow over the letters"
+        },
+        "carries_over": [],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "nothing",
+        "pause_after": 0,
+        "block": "question_pose",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='book'/>This is a question from your book.",
+          "<bookmark mark='six'/>It has six letter puzzles, each with a multiplication.",
+          "<bookmark mark='rule'/>Different letters hide different digits.",
+          "<bookmark mark='ask'/>Which digits are hidden?"
+        ]
+      },
+      {
+        "key": "hook_stop",
+        "part": "hook",
+        "role": "connect objects",
+        "meaning": "FOCUS",
+        "region": "anchor",
+        "on_screen": "the six puzzles stay on the board; Keeko sits at the corner of the board",
+        "marks": {
+          "think": "Keeko sits at the corner of the board"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "nothing",
+        "pause_after": 3,
+        "block": "",
+        "keeko": "think",
+        "narration": [
+          "<bookmark mark='think'/>Think and tell."
+        ]
+      },
+      {
+        "key": "ground_method",
+        "part": "ground",
+        "role": "visualise a concept",
+        "meaning": "BUILD",
+        "region": "working",
+        "on_screen": "a multiplication with its answer's digit boxes counted, and an arrow from the last digits of the factors to the last digit of the answer",
+        "marks": {
+          "same": "the line the same way as the example in your book appears",
+          "size": "the digit boxes of the answer are counted and an arrow runs from the last digits of the factors to the last digit of the answer"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "nothing",
+        "pause_after": 0,
+        "block": "worked_example_board",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='same'/>We solve these the same way as the example in your book.",
+          "<bookmark mark='size'/>The digits in the answer tell us how big the numbers can be."
+        ]
+      },
+      {
+        "key": "given",
+        "part": "idea",
+        "role": "visualise a process",
+        "meaning": "SHOW",
+        "region": "working",
+        "on_screen": "Given: six puzzles UT × 3 = PUT, AB × 5 = BC, L2N × 2 = 2NP, XY × 4 = ZX, PP × QQ = PRP, JK × 6 = KKK; different letters are different digits",
+        "marks": {
+          "given": "the six puzzles are written as Given"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "nothing",
+        "pause_after": 0,
+        "block": "equation_board",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='given'/>Given, six letter multiplications, where different letters hide different digits."
+        ]
+      },
+      {
+        "key": "find",
+        "part": "idea",
+        "role": "visualise a process",
+        "meaning": "FOCUS",
+        "region": "working",
+        "on_screen": "To find: the digits of the letters in each puzzle",
+        "marks": {
+          "find": "the line To find: the digits of the letters in each puzzle is written"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "nothing",
+        "pause_after": 0,
+        "block": "equation_board",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='find'/>We have to find the digits of the letters in each puzzle."
+        ]
+      },
+      {
+        "key": "step_1",
+        "part": "idea",
+        "role": "visualise a process",
+        "meaning": "TRANSFORM",
+        "region": "working",
+        "on_screen": "UT × 3 = PUT: 3 × T ends in T, so T is 0 or 5; T = 5 crossed, 3 × U + 1 cannot end in U; T = 0 gives U = 5, UT = 50. AB × 5 = BC: AB is at most 19, A = 1; only 19 fits",
+        "marks": {
+          "first": "the puzzle UT × 3 = PUT lights up and T is 0 or 5 appears",
+          "five": "T = 5 is tried with 3 × U + 1 and crossed",
+          "zero": "T = 0 is kept, U = 5 appears and UT = 50 appears",
+          "second": "the puzzle AB × 5 = BC lights up and AB is at most 19 appears with A = 1",
+          "nineteen": "the tens digit B is matched and only 19 is kept"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "nothing",
+        "pause_after": 0,
+        "block": "equation_board",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='first'/>Step one, take U T times three equals P U T. Three times T ends in T, so T is zero or five.",
+          "<bookmark mark='five'/>T as five fails, because three times U plus one cannot end in U.",
+          "<bookmark mark='zero'/>T as zero needs U as five, so U T is fifty.",
+          "<bookmark mark='second'/>Next take eigh B times five equals B C. The answer has two digits, so eigh B is at most nineteen.",
+          "<bookmark mark='nineteen'/>The answer starts with B, and only nineteen fits."
+        ]
+      },
+      {
+        "key": "step_2",
+        "part": "idea",
+        "role": "visualise a process",
+        "meaning": "TRANSFORM",
+        "region": "working",
+        "on_screen": "L2N × 2 = 2NP: the answer is under 300, so L = 1; N = 4 + carry, so N is 4 or 5; 124 × 2 = 248 and 125 × 2 = 250. XY × 4 = ZX: XY is at most 24; X = 2; Y is 3 or 8, 28 too big; Y = 3",
+        "marks": {
+          "third": "the puzzle L2N × 2 = 2NP lights up and L = 1 appears",
+          "tens": "N = 4 + carry appears, so N is 4 or 5",
+          "n4": "124 × 2 = 248 is written",
+          "n5": "125 × 2 = 250 is written",
+          "fourth": "the puzzle XY × 4 = ZX lights up and XY is at most 24 appears",
+          "x": "X = 2 appears",
+          "y": "Y is 3 or 8 appears, 28 is crossed and Y = 3 is kept"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "nothing",
+        "pause_after": 0,
+        "block": "equation_board",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='third'/>Step two, take L two N times two equals two N P. The answer is under three hundred, so L is one.",
+          "<bookmark mark='tens'/>N is four plus the carry, so N is four or five.",
+          "<bookmark mark='n4'/>One hundred and twenty four times two is two hundred and forty eight.",
+          "<bookmark mark='n5'/>One hundred and twenty five times two is two hundred and fifty.",
+          "<bookmark mark='fourth'/>Next take X Y times four equals Z X. X Y is at most twenty four.",
+          "<bookmark mark='x'/>Four times Y is even and ends in X, so X is two.",
+          "<bookmark mark='y'/>Y is three or eight, and twenty eight is too big."
+        ]
+      },
+      {
+        "key": "step_3",
+        "part": "idea",
+        "role": "visualise a process",
+        "meaning": "TRANSFORM",
+        "region": "working",
+        "on_screen": "PP × QQ = PRP: PP = 11 × P, QQ = 11 × Q, so the answer is 121 × P × Q; P × Q is at most 8; the last digit P × Q must be P, so Q = 1; P is not 1; P = 5 or more has a wrong first digit; P is 2, 3 or 4",
+        "marks": {
+          "fifth": "the puzzle PP × QQ = PRP lights up and PP = 11 × P, QQ = 11 × Q appear",
+          "all": "121 × P × Q appears",
+          "size": "P × Q is at most 8 appears",
+          "last": "the last digit P × Q must be P appears and Q = 1 is written",
+          "p": "P = 1 is crossed because Q = 1, and P = 5 or more is crossed",
+          "three": "P is 2, 3 or 4 is written"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "nothing",
+        "pause_after": 0,
+        "block": "equation_board",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='fifth'/>Step three, take P P times Q Q equals P R P. P P is eleven times P, and Q Q is eleven times Q.",
+          "<bookmark mark='all'/>Together they give one hundred and twenty one times P times Q.",
+          "<bookmark mark='size'/>Three digits need P times Q to be at most eight.",
+          "<bookmark mark='last'/>The last digit is P times Q, and it must be P. That makes Q equal to one.",
+          "<bookmark mark='p'/>P is not one, and P as five or more makes the answer too big.",
+          "<bookmark mark='three'/>That leaves P as two, three or four."
+        ]
+      },
+      {
+        "key": "step_4",
+        "part": "idea",
+        "role": "visualise a process",
+        "meaning": "TRANSFORM",
+        "region": "working",
+        "on_screen": "JK × 6 = KKK = 111 × K; K is even; K = 2: 222 / 6 = 37; K = 4: 444 / 6 = 74; K = 6: 666 / 6 = 111; K = 8: 888 / 6 = 148; only 74 has two digits and ends in K = 4",
+        "marks": {
+          "sixth": "the puzzle JK × 6 = KKK lights up and KKK = 111 × K appears",
+          "even": "K is even appears",
+          "a": "K = 2 gives 37 and K = 4 gives 74",
+          "b": "K = 6 gives 111 and K = 8 gives 148, both crossed",
+          "only": "only 74 is kept and its last digit 4 is matched with K"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "nothing",
+        "pause_after": 0,
+        "block": "equation_board",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='sixth'/>Step four, take J K times six equals K K K. K K K is one hundred and eleven times K.",
+          "<bookmark mark='even'/>K must be even.",
+          "<bookmark mark='a'/>K as two gives thirty seven, and K as four gives seventy four.",
+          "<bookmark mark='b'/>K as six gives one hundred and eleven, and K as eight gives a three digit number.",
+          "<bookmark mark='only'/>Only seventy four ends in K, which is four."
+        ]
+      },
+      {
+        "key": "step_5",
+        "part": "idea",
+        "role": "visualise a process",
+        "meaning": "SHOW",
+        "region": "working",
+        "on_screen": "Check: 50 × 3 gives 150; 19 × 5 gives 95; 23 × 4 gives 92; 74 × 6 gives 444; 22 × 11 gives 242 and the other two pairs work the same way; different letters are different digits",
+        "marks": {
+          "check": "the answers go back into the puzzles",
+          "c1": "50 × 3 gives 150 and 19 × 5 gives 95 are ticked",
+          "c2": "23 × 4 gives 92, 74 × 6 gives 444 and 22 × 11 gives 242 are ticked, and the other pairs are ticked",
+          "c3": "the letters of each puzzle glow as different digits"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "nothing",
+        "pause_after": 0,
+        "block": "equation_board",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='check'/>Step five, put each answer back in its puzzle to check.",
+          "<bookmark mark='c1'/>Fifty times three makes one hundred and fifty, and nineteen times five makes ninety five.",
+          "<bookmark mark='c2'/>The other answers fit their puzzles too.",
+          "<bookmark mark='c3'/>Different letters hide different digits."
+        ]
+      },
+      {
+        "key": "answer",
+        "part": "idea",
+        "role": "visualise a process",
+        "meaning": "SHOW",
+        "region": "working",
+        "on_screen": "Answer: (i) 50 × 3 = 150 (ii) 19 × 5 = 95 (iii) 124 × 2 = 248 or 125 × 2 = 250 (iv) 23 × 4 = 92 (v) 22 × 11 = 242, 33 × 11 = 363 or 44 × 11 = 484 (vi) 74 × 6 = 444",
+        "marks": {
+          "a1": "the first answer is boxed",
+          "a2": "the second and fourth answers are boxed",
+          "a3": "the two answers of the third puzzle are boxed",
+          "a4": "the three answers of the fifth puzzle are boxed",
+          "a5": "the sixth answer is boxed"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "nothing",
+        "pause_after": 0,
+        "block": "equation_board",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='a1'/>Fifty times three is one hundred and fifty.",
+          "<bookmark mark='a2'/>Nineteen times five is ninety five, and twenty three times four is ninety two.",
+          "<bookmark mark='a3'/>The third has two answers, two hundred and forty eight or two hundred and fifty.",
+          "<bookmark mark='a4'/>The fifth has three. They are two hundred and forty two, three hundred and sixty three, and four hundred and eighty four.",
+          "<bookmark mark='a5'/>Seventy four times six is four hundred and forty four."
+        ]
+      }
+    ]
+  }
+}

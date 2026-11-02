@@ -1,0 +1,309 @@
+{
+  "key": "c8g.T3.C3.FiO1.q3",
+  "title": "How much area is left at the nth step of each pattern?",
+  "description": "The video finds the fraction of area that each step keeps in the carpet and in the triangle, and multiplies it step by step. It writes the area at Step n for both patterns and checks the rule at Step two.",
+  "teaching_notes": "One idea: the area at each step is the area before it multiplied by the fraction the step keeps. Watch for students who subtract the removed fraction once instead of multiplying at every step.",
+  "video_script": {
+    "kind": "exercise",
+    "chapter": "cbse_eng_maths8_ch11",
+    "source": [
+      "Figure it Out (sierpinski fractals, question 3)"
+    ],
+    "placement": "after",
+    "unlock": "after_attempt",
+    "callback_to": "c8g.T3.C2.E0",
+    "why": "The child finds the area left with the method of the example in the book, once for the carpet and once for the triangle.",
+    "substitution": "Find the fraction of area that one step keeps, and multiply by it once for every step.",
+    "shape": "procedure",
+    "promise": "",
+    "anchor": "the {{NAME_2}} Carpet and the {{NAME_2}} Triangle of the book, each starting with an area of one square unit",
+    "misconception_id": "",
+    "wrong_answer": "",
+    "wrong_move": "",
+    "payoff_line": "Both areas shrink towards zero as n grows",
+    "final_answer": {
+      "value": "Carpet: (8/9) to the power n square unit. Triangle: (3/4) to the power n square unit. Both shrink towards 0",
+      "spoken": "the carpet has eight ninths, all to the power n, of a square unit, the triangle has three quarters, all to the power n, and both shrink towards zero",
+      "units": "square unit"
+    },
+    "answer_verified": true,
+    "terms": [],
+    "fraction_reading": "8/9 is read eight ninths and 3/4 is read three quarters",
+    "names": {
+      "{{NAME_2}}": "Polish mathematician who discovered the carpet and the triangle"
+    },
+    "hold_back": [
+      "Answer: carpet (8/9) to the power n square unit, triangle (3/4) to the power n square unit, both shrink towards 0"
+    ],
+    "never_show": [
+      "1 - n/9 as the carpet area"
+    ],
+    "maths_rules": [
+      "carpet: 8 of the 9 equal parts stay, so the area is multiplied by 8/9 each step",
+      "Step 2 carpet: 8/9 x 8/9 = 64/81",
+      "triangle: 3 of the 4 equal parts stay, so the area is multiplied by 3/4 each step",
+      "Step 2 triangle: 3/4 x 3/4 = 9/16",
+      "Step n: carpet (8/9) to the power n, triangle (3/4) to the power n",
+      "both fractions are less than 1, so the areas shrink towards 0"
+    ],
+    "design": "Two rows on the board, one for the carpet and one for the triangle. Each row shows the fraction kept, then the area at Step one, Step two and Step n.",
+    "open_questions": [],
+    "keeko_end": "",
+    "beats": [
+      {
+        "key": "hook_scene",
+        "part": "hook",
+        "role": "connect objects",
+        "meaning": "SHOW",
+        "region": "stage",
+        "on_screen": "a small title card From your book; the {{NAME_2}} Carpet and the {{NAME_2}} Triangle side by side, each with the note: starting area 1 square unit",
+        "marks": {
+          "book": "the title card, the carpet and the triangle appear",
+          "area": "the starting area is written beside each shape",
+          "ask": "a question mark appears between the two shapes"
+        },
+        "carries_over": [],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "plain",
+        "pause_after": 0,
+        "block": "",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='book'/>This is a question from your book about the carpet and the triangle of {{NAME_2}}.",
+          "<bookmark mark='area'/>Each one starts with an area of one square unit.",
+          "<bookmark mark='ask'/>How much area is left in each, at Step n?"
+        ]
+      },
+      {
+        "key": "hook_think",
+        "part": "hook",
+        "role": "connect objects",
+        "meaning": "FOCUS",
+        "region": "stage",
+        "on_screen": "the two shapes stay on the board with the question mark underlined",
+        "marks": {
+          "think": "Keeko sits at the corner of the board"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "plain",
+        "pause_after": 3,
+        "block": "",
+        "keeko": "think",
+        "narration": [
+          "<bookmark mark='think'/>Think and tell."
+        ]
+      },
+      {
+        "key": "ground_rule",
+        "part": "ground",
+        "role": "visualise a process",
+        "meaning": "BUILD",
+        "region": "stage",
+        "on_screen": "a square cut into 9 equal squares with the middle removed, 8 of 9 stay; a triangle cut into 4 equal triangles with the middle removed, 3 of 4 stay",
+        "marks": {
+          "carpet": "the square is cut into nine and the middle square fades, leaving eight",
+          "triangle": "the triangle is cut into four and the middle triangle fades, leaving three",
+          "same": "the words the area is multiplied by the part that stays are written"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "the middle square and the middle triangle",
+        "moves_through": "plain",
+        "pause_after": 0,
+        "block": "",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='carpet'/>Each step cuts every square of the carpet into nine equal parts and removes the middle one.",
+          "<bookmark mark='triangle'/>Each step cuts every triangle into four equal parts and removes the middle one.",
+          "<bookmark mark='same'/>Like the example in your book, we multiply the area by the part that stays."
+        ]
+      },
+      {
+        "key": "given",
+        "part": "idea",
+        "role": "connect objects",
+        "meaning": "SHOW",
+        "region": "working",
+        "on_screen": "Given: carpet and triangle, each of starting area 1 square unit. Carpet keeps 8 of 9 parts; triangle keeps 3 of 4 parts.",
+        "marks": {
+          "given": "the starting areas are written",
+          "kept": "the parts kept by each shape are written"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "plain",
+        "pause_after": 0,
+        "block": "",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='given'/>Given, both shapes start with an area of one square unit.",
+          "<bookmark mark='kept'/>Each step keeps eight of nine parts of the carpet and three of four parts of the triangle."
+        ]
+      },
+      {
+        "key": "find",
+        "part": "idea",
+        "role": "connect objects",
+        "meaning": "FOCUS",
+        "region": "working",
+        "on_screen": "To find: the area left at Step n, for the carpet and for the triangle",
+        "marks": {
+          "find": "the words area at Step n are written for both shapes"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "plain",
+        "pause_after": 0,
+        "block": "",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='find'/>We have to find the area left at Step n, for the carpet and for the triangle."
+        ]
+      },
+      {
+        "key": "step_1",
+        "part": "idea",
+        "role": "visualise a process",
+        "meaning": "TRANSFORM",
+        "region": "working",
+        "on_screen": "Carpet: each step keeps 8/9. Step 2: 8/9 x 8/9 = 64/81 square unit",
+        "marks": {
+          "rule": "the line each step multiplies the area by 8/9 is written",
+          "calc": "8/9 x 8/9 = 64/81 is written for Step 2"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "plain",
+        "pause_after": 0,
+        "block": "",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='rule'/>Step one, take the carpet. Each step keeps eight ninths of the area, so we multiply by eight ninths each step.",
+          "<bookmark mark='calc'/>At Step two, eight ninths times eight ninths is sixty four over eighty one of a square unit."
+        ]
+      },
+      {
+        "key": "step_2",
+        "part": "idea",
+        "role": "visualise a process",
+        "meaning": "TRANSFORM",
+        "region": "working",
+        "on_screen": "Triangle: each step keeps 3/4. Step 2: 3/4 x 3/4 = 9/16 square unit",
+        "marks": {
+          "rule": "the line each step multiplies the area by 3/4 is written",
+          "calc": "3/4 x 3/4 = 9/16 is written for Step 2"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "plain",
+        "pause_after": 0,
+        "block": "",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='rule'/>Step two, take the triangle. Each step keeps three quarters of the area, so we multiply by three quarters each step.",
+          "<bookmark mark='calc'/>At Step two, three quarters times three quarters is nine over sixteen of a square unit."
+        ]
+      },
+      {
+        "key": "step_3",
+        "part": "idea",
+        "role": "visualise a process",
+        "meaning": "TRANSFORM",
+        "region": "working",
+        "on_screen": "Step n: multiply n times. Carpet (8/9) to the power n. Triangle (3/4) to the power n. Both fractions are less than 1.",
+        "marks": {
+          "power": "the words multiply n times are written",
+          "carpet": "the carpet rule (8/9) to the power n is written",
+          "triangle": "the triangle rule (3/4) to the power n is written",
+          "less": "both fractions are marked less than 1"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "plain",
+        "pause_after": 0,
+        "block": "",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='power'/>Step three, go to Step n. We multiply n times.",
+          "<bookmark mark='carpet'/>The carpet has eight ninths, all to the power n.",
+          "<bookmark mark='triangle'/>The triangle has three quarters, all to the power n.",
+          "<bookmark mark='less'/>Both fractions are less than one, so each step makes the area smaller."
+        ]
+      },
+      {
+        "key": "step_4",
+        "part": "idea",
+        "role": "visualise a process",
+        "meaning": "FOCUS",
+        "region": "working",
+        "on_screen": "Check: n = 2 gives (8/9) to the power 2 = 64/81 and (3/4) to the power 2 = 9/16. Both match.",
+        "marks": {
+          "carpet": "n = 2 is put in the carpet rule and 64/81 is ticked",
+          "triangle": "n = 2 is put in the triangle rule and 9/16 is ticked"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "plain",
+        "pause_after": 0,
+        "block": "",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='carpet'/>Step four, put two in place of n. For the carpet we get sixty four over eighty one, as before.",
+          "<bookmark mark='triangle'/>For the triangle we get nine over sixteen, as before. Both rules match the counts."
+        ]
+      },
+      {
+        "key": "answer",
+        "part": "idea",
+        "role": "generalise",
+        "meaning": "SHOW",
+        "region": "working",
+        "on_screen": "Answer: carpet (8/9) to the power n square unit, triangle (3/4) to the power n square unit, both shrink towards 0",
+        "marks": {
+          "ans": "the answer is boxed",
+          "tri": "the triangle rule is lit",
+          "shrink": "both rules fade towards 0"
+        },
+        "carries_over": [
+          "anchor"
+        ],
+        "colours": "plain",
+        "removed": "nothing",
+        "moves_through": "plain",
+        "pause_after": 0,
+        "block": "",
+        "keeko": "",
+        "narration": [
+          "<bookmark mark='ans'/>At Step n the carpet has eight ninths, all to the power n, of a square unit.",
+          "<bookmark mark='tri'/>The triangle has three quarters, all to the power n, of a square unit.",
+          "<bookmark mark='shrink'/>Both areas shrink towards zero as n grows."
+        ]
+      }
+    ]
+  }
+}

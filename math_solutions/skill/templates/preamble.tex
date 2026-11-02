@@ -1,0 +1,78 @@
+% preamble.tex -- shared preamble for NCERT board-style solution books.
+% Use:  \documentclass[11pt,a4paper]{article}  \input{preamble}  \begin{document} ... \end{document}
+% Compile with pdflatex (run twice: longtable and cross-references need a second pass).
+
+\usepackage{amsmath,amssymb,graphicx,enumitem,tikz,xcolor,tabularx,array,needspace,longtable}
+\usetikzlibrary{calc,angles,quotes}
+\usepackage[margin=2.2cm]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\renewcommand{\arraystretch}{1.2}
+
+% ---- shorthand for geometry write-ups ----
+\renewcommand{\deg}{^\circ}          % \deg already exists in LaTeX, so \renewcommand
+\newcommand{\ang}{\angle}
+\newcommand{\tri}{\triangle}
+
+% ---- never leave a question heading stranded at the foot of a page ----
+\let\oldsubsection\subsection
+\renewcommand{\subsection}{\Needspace{12\baselineskip}\oldsubsection}
+
+% ---- "Proof:" heading that stays with the table that follows ----
+\newcommand{\proofhd}{\par\Needspace{6\baselineskip}\textbf{Proof:}}
+
+% ---- board-style proof table: Step | Statement | Reason ----
+% Usage:  \begin{prf} 1 & statement & reason \\ 2 & ... \end{prf}      (no trailing \\)
+% longtable, so a long proof may break across pages (the header repeats).
+\setlength{\LTpre}{2pt}\setlength{\LTpost}{4pt}
+\newenvironment{prf}
+  {\par\noindent\renewcommand{\arraystretch}{1.4}%
+   \longtable{@{}c|>{\raggedright\arraybackslash}p{0.46\linewidth}|>{\raggedright\arraybackslash}p{0.38\linewidth}@{}}%
+   \hline \textbf{Step} & \textbf{Statement} & \textbf{Reason}\\ \hline \endfirsthead
+   \hline \textbf{Step} & \textbf{Statement} & \textbf{Reason (continued)}\\ \hline \endhead}
+  {\\ \hline\endlongtable}
+
+% ---- figure helpers ----
+% \dotat{P}{above}  : a dot at coordinate (P) with the label placed above it
+% \figcap{text}     : caption line under a figure (the \\* keeps it on the same page)
+\newcommand{\dotat}[2]{\fill (#1) circle (1.6pt) node[#2]{\small $#1$};}
+\newcommand{\figcap}[1]{\\*[-2pt]{\small #1}}
+
+% ---- final result of a solution, highlighted at the END of the Solution ----
+% Solution and answer are ONE block: write the working, then \ans{...}. No separate "Answer." heading.
+\newcommand{\ans}[1]{\par\vspace{4pt}\noindent\fcolorbox{black!55}{blue!6}{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\raggedright\textbf{Answer:} #1}}\par\vspace{2pt}}
+
+% ---- common-mistake note for the student who went wrong at this step ----
+% Usage: \slip{what is usually done wrongly, and why it is wrong}
+\newcommand{\slip}[1]{\par\noindent{\small\itshape\textbf{Common mistake.} #1}\par}
+
+% ---- distance formula written out in full, so every substituted value can be checked ----
+% \bk{n}  : n, in brackets when n is negative
+% \dist{AB}{x1}{y1}{x2}{y2}{simplified value}  : one row group of an align* (add \\ after it)
+% \distn{AB}{x1}{y1}{x2}{y2}                   : same, but stops at the unsimplified root
+% Rows: (1) substitute into the formula, (2) work out each bracket,
+%       (3) square each difference, (4) add the squares and take the root.
+% The numbers are computed by TeX (\numexpr), so the displayed values cannot disagree with the formula.
+% Use \distnote once before the first block to tell the student how to read the rows.
+\newcommand{\bk}[1]{\ifnum#1<0 (#1)\else #1\fi}
+\newcommand{\distcore}[5]{#1&=\sqrt{(#4-\bk{#2})^2+(#5-\bk{#3})^2}\\
+&=\sqrt{\bk{\the\numexpr#4-#2\relax}^2+\bk{\the\numexpr#5-#3\relax}^2}\\
+&=\sqrt{\the\numexpr(#4-#2)*(#4-#2)\relax+\the\numexpr(#5-#3)*(#5-#3)\relax}
+=\sqrt{\the\numexpr(#4-#2)*(#4-#2)+(#5-#3)*(#5-#3)\relax}}
+\newcommand{\distnote}{\textit{How to read the working below:} in each pair the first point named is $(x_1,y_1)$ and the second is $(x_2,y_2)$. Line 1 puts the values into the formula, line 2 works out each bracket, line 3 squares the brackets, and then the squares are added and the square root is taken.}
+\newcommand{\dist}[6]{\distcore{#1}{#2}{#3}{#4}{#5}=#6}
+\newcommand{\distn}[5]{\distcore{#1}{#2}{#3}{#4}{#5}}
+
+% ---- NCERT-style 10 x 10 grid with Columns along the bottom and Rows up the side ----
+% \ncertgrid{ <tikz commands drawing only the GIVEN points> }  -- never print solved coordinates
+\newcommand{\ncertgrid}[1]{%
+\begin{tikzpicture}[scale=0.5]
+\fill[cyan!12] (0,0) rectangle (10,10);
+\draw[step=1,gray!60,very thin] (0,0) grid (10,10);
+\draw[thick] (0,0) rectangle (10,10);
+\foreach \i in {0,...,10}{\node[below,font=\scriptsize] at (\i,0) {\i};}
+\foreach \i in {1,...,10}{\node[left,font=\scriptsize] at (0,\i) {\i};}
+\node[below,font=\small\bfseries] at (5,-0.8) {Columns};
+\node[rotate=90,above,font=\small\bfseries] at (-1.0,5) {Rows};
+#1
+\end{tikzpicture}}
