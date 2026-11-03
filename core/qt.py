@@ -75,7 +75,7 @@ def _concept_name(slot: dict) -> str:
 
 def apply(plan: dict, vslots_all: list, media_tag: str, strand_map: dict,  # noqa: C901
           enrichment_qt: bool = False, own_video: bool = False, keep_first: bool = False,
-          name_fn=None) -> dict:
+          name_fn=None, topic_prefix: str = None) -> dict:
     """Insert QT topics, renumber the chapter, rebuild objectives.
 
     enrichment_qt=True (opt-in; the default keeps the old shape) builds the maths7_ch10 "Figure it
@@ -88,6 +88,8 @@ def apply(plan: dict, vslots_all: list, media_tag: str, strand_map: dict,  # noq
     taught concept with an objective but OWNS its exercise video (moved as <QT concept id>.VID1), so every
     concept carries one video. keep_first=True leaves each topic's first exercise (with its video) on the
     teaching topic's practice concept. name_fn(slot) -> str names a question concept (e.g. "Unit, Q3").
+    topic_prefix="Questions" names every inserted topic "Questions: <parent>" whatever the shape (the question
+    layout of chapter_template: enrichment_qt=True, topic_prefix="Questions"; see docs/00_overview.md).
     Returns cid_map (old_cid -> new_cid) for the caller to rekey pin files.
     Modifies plan and vslots_all in-place.
     """
@@ -249,7 +251,8 @@ def apply(plan: dict, vslots_all: list, media_tag: str, strand_map: dict,  # noq
         qt_stubs[old_tid] = {
             "_qt": True,
             "topic_id": "PLACEHOLDER",
-            "topic_name": (f"Figure it Out: {parent_name}" if enrichment_qt
+            "topic_name": (f"{topic_prefix}: {parent_name}" if topic_prefix
+                           else f"Figure it Out: {parent_name}" if enrichment_qt
                            else f"Questions: {parent_name}" if own_video else f"Practise: {parent_name}"),
             "topic_type": "instructional",
             "summary": f"Practice problems for {parent_name}.",

@@ -57,10 +57,24 @@ CHAPTER_APPROACH = {
 # ncert_refs / exercises. build.py should fail if any id here is never attached to a concept
 # (100% coverage is the playbook rule - docs/25_new_design_learning_plan_playbook.md).
 # Use the book's own section numbering as the id prefix, e.g. "2.1.example1", "end.Q4".
+#
+# An entry is "id", or ("id", kind) so the question layout gate (gates/question_layout.py) can check that each
+# book question sits in its own concept of a "Questions: <topic>" topic. kind is one of
+#   "example"   a solved example printed in the book        -> FIO(kind="example")
+#   "exercise"  a Figure it Out / exercise question         -> FIO(kind="exercise")
+#   "prompt"    an answerable in-text question (Try This with an answer, "answer the following", a blank)
+#                                                           -> FIO(kind="prompt")
+#   "talk"      a Math Talk discussion prompt: not a question, stays in the teaching text
+#   "text"      anything else (rules, history, figures, summary points)
+# The first three are the chapter's question scope (chapter.config "question_scope").
 # ---------------------------------------------------------------------------
 NCERT_ITEMS = [
     "opening",
-    # TODO: one entry per worked example, Try This/Figure It Out item, and end-of-chapter question.
+    # TODO: one entry per book item, e.g.
+    # ("2.1.example1", "example"),
+    # ("2.1.FiO", "exercise"),
+    # ("2.1.TryThis", "prompt"),
+    # ("2.1.MathTalk.a", "talk"),
 ]
 
 # ---------------------------------------------------------------------------

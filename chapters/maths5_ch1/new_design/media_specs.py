@@ -63,7 +63,7 @@ IMAGE_TREATMENT = (
     "negative/contrasting idea, {first} for a first set or step, {second} for a second set or "
     "step, {focus} for the focus or highlight, {construction} for construction lines and for "
     "anything struck out. 16:9 landscape, 1456 by 816 pixels."
-).format(grade_band="primary-school", **PALETTE)
+).format(grade_band="primary-school (Class 5)", **PALETTE)
 HOUSE_REJECTIONS = [
     "any count of objects, cells, ticks or rows that differs from the numbers stated in the spec",
     "any text beyond the listed visible text, or any listed text misspelled or altered",
@@ -83,7 +83,7 @@ FLAT_NEGATIVE = (
 )
 
 IMAGE_FIELDS = ["key", "title", "purpose", "composition", "exact_structure", "labels", "rejection",
-                "takeaway", "description", "context", "teaching_notes"]
+                "takeaway", "description", "context", "teaching_notes", "image_role", "render_source"]
 DECISION_FIELDS = ["key", "needs_image", "why"]
 
 DASHES = "—–"
@@ -119,7 +119,8 @@ def load_all():
         with open(p, encoding="utf-8-sig") as f:
             d = json.load(f)
         for im in d.get("images", []):
-            images.setdefault(im.get("key"), []).append(im)
+            # indexed by the concept key ("T3.C1" for image "T3.C1.IMG1"), which is what build.py looks up
+            images.setdefault(re.sub(r"\.IMG\d+$", "", im.get("key") or ""), []).append(im)
         for dc in d.get("image_decisions", []):
             if dc.get("key") in decisions:
                 raise SystemExit("duplicate image decision %s in %s" % (dc.get("key"), p))

@@ -10,11 +10,22 @@ content.py, concept_plan.py, media_specs.py and book_rules.json next to it).
     python -B build.py --video-worklist (re)write video_worklist.json (video scripts still to author), then stop
     python -B build.py --solution-worklist  (re)write solution_worklist.json (exercise items with no entry in
                                         solutions.json yet), then stop
+    python -B build.py --placeholders   build the plan with its question layout and the image PLACEHOLDERS of every
+                                        question (question card, solution card, a second solution card for a long
+                                        working), without requiring solutions.json yet. Questions that already have
+                                        a solutions.json entry get their real cards; the rest keep placeholders.
+
+Question layout (chapter.config.json "question_layout": true): every concept topic is followed by its own
+"Questions: <topic>" topic with ONE concept per book question - each solved example, Figure it Out / exercise item
+and answerable in-text prompt, written as an `items` entry (concept_plan.FIO, kind="example" | "exercise" |
+"prompt") - and core/qt.py does the moving. See docs/00_overview.md "Question layout".
 
 Solutions (chapter.config.json "solutions": true): solutions.json (core/solutions/schema.py) holds each
 question's board-format solution. build.py writes its working and answer into the plan, and into the video
 worklist's items; core/solutions/gen_scenes.py + render.py make the question and solution images
-(solution_images/), which build.py attaches as media_ids = [question image, video, solution image].
+(solution_images/), which build.py attaches as media_ids = [question image, video, solution image (, solution
+image continued)]. Before any solution exists, core/solutions/placeholders.py has already put the same image
+nodes on every question as placeholders, so the structure can be reviewed first.
 
 This pipeline is Phase-2-only, direct build (user preference): the output plan has "phase": 2 and
 "chapter_id" with NO "_V3" suffix, written straight to <chapter_id>.json - there is no separate
@@ -64,6 +75,7 @@ from core.video_script import check as VC   # noqa: E402
 from core.video_script import node as VN    # noqa: E402
 from core.video_script import plan_hook as VH  # noqa: E402
 from core.solutions import attach as SA     # noqa: E402
+from core.solutions import placeholders as SP  # noqa: E402
 from core.solutions import bind as SB       # noqa: E402
 from core.solutions import check as SC      # noqa: E402
 from core.solutions import schema as SS     # noqa: E402
@@ -112,6 +124,19 @@ def out_path(cfg):
     return os.path.join(HERE, "%s.json" % cfg["chapter_id"])
 
 
+def book_item_kinds():
+    """{book id: kind} from content.NCERT_ITEMS. An entry is "id" (kind unknown, not checked), ("id", "kind") or
+    {"id": ..., "kind": ...}; kind is example | exercise | prompt | talk | text. gates/question_layout.py checks
+    that every item whose kind is in the chapter's question_scope sits in a concept of a Questions topic."""
+    kinds = {}
+    for entry in getattr(K, "NCERT_ITEMS", []) or []:
+        if isinstance(entry, dict):
+            kinds[entry["id"]] = entry.get("kind")
+        elif isinstance(entry, (list, tuple)) and len(entry) == 2:
+            kinds[entry[0]] = entry[1]
+    return {k: v for k, v in kinds.items() if v}
+
+
 # ---------------------------------------------------------------------------
 # assembling modules -> segments -> topics -> concepts from concept_plan.TOPICS
 # ---------------------------------------------------------------------------
@@ -143,9 +168,14 @@ def _teach_blocks(concept):
                          + ["Answer: %s" % it["answer"]])
         # worked_example + item_kind "exercise", the question-block shape every built chapter uses; core.qt
         # moves only worked_example blocks into the practice topic.
+        # book_kind: "example" (a solved example of the book), "exercise" (Figure it Out / exercise question) or
+        # "prompt" (an answerable in-text question); q_figure / s_figure: one plain sentence for the diagram the
+        # question card / solution card needs (core/solutions/placeholders.py), left out when the card is text only.
+        extra = {k: it[k] for k in ("q_figure", "s_figure") if it.get(k)}
         blocks.append(_content_block("worked_example", text, item_kind="exercise", coverage_id=it["cov"],
                                      exercise_id=it["cov"], book_number=it["book"], question=it["question"],
-                                     steps=it["steps"], answer=it["answer"], ncert_refs=[it["cov"]]))
+                                     steps=it["steps"], answer=it["answer"], ncert_refs=[it["cov"]],
+                                     book_kind=it.get("kind", "exercise"), **extra))
     return blocks
 
 
@@ -448,9 +478,11 @@ def main():
                             topic["available_content_types"] = sorted(
                                 set(topic["available_content_types"]) | {"image"})
 
-        # fold in any authored video scripts (video_scripts/*.json) via core.video_script.
-        if os.path.isdir(VIDEO_SCRIPT_DIR):
-            scripts = VH.load_scripts(VIDEO_SCRIPT_DIR)
+        # fold in any authored video scripts (video_scripts/*.json) via core.video_script. --placeholders runs
+        # before any script exists, so an absent video_scripts/ folder is fine there (the Questions topics and
+        # their image placeholders still need this pass).
+        if os.path.isdir(VIDEO_SCRIPT_DIR) or "--placeholders" in sys.argv:
+            scripts = VH.load_scripts(VIDEO_SCRIPT_DIR) if os.path.isdir(VIDEO_SCRIPT_DIR) else {}
             wl = VH.load_worklist(VIDEO_WORKLIST_PATH)
             if wl:
                 nodes, missing = VH.build_nodes(wl["videos"], scripts, asset_base=asset_base,
@@ -516,7 +548,8 @@ def main():
                 # enrichment_qt: the shape every Class 6-7 chapter ships - a "Figure it Out" topic with one
                 # concept per question, each holding its own question video (<concept>.VID1). Without it the
                 # question concepts get no video and solution_content fails them.
-                QT.apply(plan, wl["videos"], cfg["media_tag"], {}, enrichment_qt=True)
+                QT.apply(plan, wl["videos"], cfg["media_tag"], {}, enrichment_qt=True,
+                         topic_prefix="Questions" if cfg.get("question_layout") else None)
 
                 # QT moves each exercise ref off its teaching concept; rebuild ncert_coverage from the final
                 # concept ncert_refs so the forward and reverse maps agree.
@@ -530,16 +563,32 @@ def main():
                                         cov[r].append(concept["concept_id"])
                 plan["source_metadata"]["ncert_coverage"] = cov
 
+                # question and solution image PLACEHOLDERS on every question concept (nothing is drawn): the
+                # structure is reviewable before any solution is authored, and attach() below swaps in the real
+                # cards for the questions that have a solutions.json entry.
+                if cfg.get("solutions"):
+                    img_report = SP.add(plan, cfg)
+                    with io.open(os.path.join(HERE, "question_images_report.json"), "w", encoding="utf-8") as f:
+                        json.dump(img_report, f, ensure_ascii=False, indent=1)
+                    print("question images: %d question concepts, %d solution card(s) in all, %d with a diagram on "
+                          "the question card, %d without a video yet (question_images_report.json)"
+                          % (len(img_report), sum(r["solution_images"] for r in img_report),
+                             sum(1 for r in img_report if r["question_diagram"]),
+                             sum(1 for r in img_report if not r["has_video"])))
+
         # solutions: check solutions.json + its scene files, then hang the question and solution images on
         # each question concept as media_ids = [question image, video(s), solution image].
         mode = cfg.get("solutions")
         if mode:
             todo = SB.missing(CP.TOPICS, sols)
-            if todo:
+            if todo and "--placeholders" in sys.argv:
+                print("placeholders: %d question(s) have no solutions.json entry yet and keep their image "
+                      "placeholders (build.py --solution-worklist lists them)" % len(todo))
+            elif todo:
                 print("%d QUESTION(S) HAVE NO SOLUTION in solutions.json (run build.py --solution-worklist):"
                       % len(todo))
                 for t in todo[:25]:
-                    print("  -", t["cov"], t["book"] or "")
+                    print("  -", t["cov"], t["book"] or "", t.get("note") or "")
                 return 1
         if mode and sols:
             errs, warns = SC.check(HERE)
@@ -561,8 +610,20 @@ def main():
             json.dump(plan, f, ensure_ascii=False, indent=1)
         print("wrote %s" % out_path(cfg))
 
-    errors, counts = gate_runner.run(plan, cfg)
+    gate_cfg = dict(cfg, book_item_kinds=book_item_kinds()) if cfg.get("question_layout") else cfg
+    errors, counts = gate_runner.run(plan, gate_cfg)
     warnings = counts.pop("warnings", [])
+    expected = []
+    if "--placeholders" in sys.argv:
+        # structure stage: no video script exists yet, so the video gates (no hook video, video_coverage pointing at
+        # videos not made, a question concept with no video between its two cards) cannot pass yet. Show them apart
+        # from the failures that need fixing now.
+        has_scripts = os.path.isdir(VIDEO_SCRIPT_DIR) and any(
+            f.endswith(".json") for f in os.listdir(VIDEO_SCRIPT_DIR))
+        if not has_scripts:
+            expected = [e for e in errors if e.startswith("video_script_rules:")
+                        or ("solution_content:" in e and "needs the question video" in e)]
+            errors = [e for e in errors if e not in expected]
     print("counts:", counts)
     if warnings:
         # Advisory only - see gates/gate_runner.py's "Blocking errors vs advisory warnings".
@@ -575,6 +636,11 @@ def main():
         for e in errors:
             print("  -", e)
         return 1
+    if expected:
+        print("structure stage OK: the question layout and the image placeholders pass every gate that can pass "
+              "now. %d video gate message(s) are expected until video_scripts/ exist, and the solutions are still "
+              "to author. This plan is NOT ready to validate or upload." % len(expected))
+        return 0
     print("all gates passed (blocking)")
     return 0
 

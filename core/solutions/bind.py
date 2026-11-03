@@ -42,12 +42,22 @@ def fill(topics, sols):
 
 
 def missing(topics, sols):
-    """Exercise items with no entry in solutions.json (examples keep their authored text, so are not listed)."""
+    """Question items with no usable entry in solutions.json (teaching examples keep their authored text, so are
+    not listed). Every question item - a solved example of the book and an answerable prompt included - is
+    `kind: "exercise"` in solutions.json; an entry of another kind would be skipped by fill(), so it is listed
+    here with a note instead of passing silently."""
     out = []
     for kind, it, cov, key in _items(topics):
-        if kind == "exercise" and cov not in sols:
-            out.append({"cov": cov, "book": it.get("book", ""), "concept": key, "question": it["question"],
-                        "existing_steps": it.get("steps") or [], "existing_answer": it.get("answer") or ""})
+        if kind != "exercise":
+            continue
+        sol = sols.get(cov)
+        if sol is not None and sol.get("kind") == "exercise":
+            continue
+        note = "" if sol is None else ("solutions.json has this as kind %r; a question item (solved example, "
+                                       "exercise or prompt) is kind 'exercise'" % sol.get("kind"))
+        out.append({"cov": cov, "book": it.get("book", ""), "concept": key, "question": it["question"],
+                    "existing_steps": it.get("steps") or [], "existing_answer": it.get("answer") or "",
+                    "note": note})
     return out
 
 

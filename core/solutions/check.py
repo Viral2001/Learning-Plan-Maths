@@ -10,7 +10,10 @@ The plan gate (gates/solution_content.py) sees only the plan; this sees the file
             in the answer but not in the question (the answer leaking into the card); a step does not use
             the numbers of the answer.
   warnings  an image is still draft (the editor approves it); its PNG is not rendered; solutions.json changed
-            after its scene was generated; an answer number never appears in the working.
+            after its scene was generated; an answer number never appears in the working; solutions.json now
+            needs a different number of solution cards than the manifest has.
+A working over two cards (manifest entries with part 1 and 2) keeps the highlighted answer and the
+common-mistake note on the LAST card only.
 """
 from __future__ import annotations
 
@@ -23,8 +26,8 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(os.path.dirname(HERE)))
-from core.solutions import schema                                    # noqa: E402
-from core.solutions.gen_scenes import FOLDER, sol_sha               # noqa: E402
+from core.solutions import layout, schema                           # noqa: E402
+from core.solutions.gen_scenes import FOLDER, cards_for, sol_sha    # noqa: E402
 
 LEAK_WORDS = re.compile(r"\b(hint|answer|solution|therefore|hence|thus|proof|working)\b", re.I)
 NUM = re.compile(r"(?<![\w.])\d+(?:\.\d+)?(?![\w])")
@@ -66,7 +69,8 @@ def check(new_design):
     if os.path.exists(mpath):
         with io.open(mpath, encoding="utf-8") as f:
             entries = json.load(f)["images"]
-    by_key = {(e["cov"], e["role"]): e for e in entries}
+    by_key = {(e["cov"], e["role"], e.get("part", 1)): e for e in entries}
+    cfg = layout.chapter_config(new_design)
 
     for cov, sol in sols.items():
         steps_text = " ".join([sol.get("given", ""), sol.get("find", "")] + list(sol.get("steps") or [])
@@ -76,8 +80,14 @@ def check(new_design):
             warnings.append("%s: the answer has %s, which the working never reaches" % (cov, missing_nums))
         if not schema.wants_images(sol):
             continue
-        for role in ("question", "solution"):
-            e = by_key.get((cov, role))
+        have = sorted(p for (c, r, p) in by_key if c == cov and r == "solution")
+        want = cards_for(sol, cfg)
+        if have and len(have) != want:
+            warnings.append("%s: solutions.json needs %d solution card(s) but manifest.json has %d; re-run "
+                            "gen_scenes.py (--force replaces edits made in the image editor)" % (cov, want, len(have)))
+        cards = max(len(have), 1)
+        for role, part in [("question", 1)] + [("solution", p) for p in range(1, cards + 1)]:
+            e = by_key.get((cov, role, part))
             if not e:
                 errors.append("%s: no %s image in %s/manifest.json (run core/solutions/gen_scenes.py)"
                               % (cov, role, FOLDER))
@@ -93,10 +103,14 @@ def check(new_design):
             if e["scene_class"] not in classes:
                 errors.append("%s: %s has no class %s" % (cov, e["scene_file"], e["scene_class"]))
             if role == "solution":
-                if "answer_box(" not in src:
-                    errors.append("%s: solution scene has no highlighted answer box" % cov)
-                if "Common mistake" not in src:
-                    errors.append("%s: solution scene has no Common mistake note" % cov)
+                if part == cards:
+                    if "answer_box(" not in src:
+                        errors.append("%s: solution scene has no highlighted answer box" % cov)
+                    if "Common mistake" not in src:
+                        errors.append("%s: solution scene has no Common mistake note" % cov)
+                elif "answer_box(" in src:
+                    errors.append("%s: solution card %d of %d shows the answer box; it belongs on the last card"
+                                  % (cov, part, cards))
             else:
                 shown = [s for s in strings if s != sol["question_tex"]]
                 for s in shown:

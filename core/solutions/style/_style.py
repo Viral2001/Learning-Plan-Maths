@@ -49,10 +49,11 @@ def header(role, label):
     return VGroup(left, ref)
 
 
-def steps(items, width=7.2, size=30, gap=0.22):
-    """Numbered working, one line of thought per item."""
+def steps(items, width=7.2, size=30, gap=0.22, start=1):
+    """Numbered working, one line of thought per item. `start` numbers the first item (a solution that
+    continues on a second card starts there at the step after the last one on the first card)."""
     rows = VGroup()
-    for n, text in enumerate(items, 1):
+    for n, text in enumerate(items, start):
         num = Tex(r"\textbf{%d.}" % n, tex_template=_TEX, font_size=size, color=TEAL)
         body = para(text, width - 0.5, size)
         body.next_to(num, RIGHT, buff=0.16, aligned_edge=UP)

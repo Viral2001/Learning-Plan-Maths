@@ -35,7 +35,7 @@ ROOT = os.path.dirname(HERE)
 TEMPLATE = os.path.join(ROOT, "chapter_template")
 MASTER_IDS = os.path.join(ROOT, "upload", "chapter_master_ids.md")
 PART2_OFFSET = {7: 8, 8: 7}          # Part II chapter N is filed as ch(offset+N)
-GRADES = (6, 7, 8, 9, 10)
+GRADES = (5, 6, 7, 8, 9, 10)         # Class 5 uses the Class 6-8 shape (grade_band 6_8, photo_rule_band default)
 ASSET_BASE = ("https://media.singularity-learn.com/learning_plan_assets/V2/cbse/cbse/english/"
               "class_{grade}/mathematics/ch_{chapter_no}")
 
@@ -88,7 +88,7 @@ def parse_chapter(text):
 
 def _finish(grade, named, part2, folder_no=None):
     if grade not in GRADES:
-        raise NeedInput("could not read a class (6 to 10) from the chapter reference; write it like "
+        raise NeedInput("could not read a class (5 to 10) from the chapter reference; write it like "
                         "'class 7 ch 3'.")
     if folder_no is None:
         folder_no = named
@@ -321,7 +321,8 @@ def write_brief(out_dir, ref, cfg, info, book, instruction, pdf, master_id, flag
     ] + ["- p%d  %s" % (o["page"], o["heading"]) for o in book["outline"]] + [
         "",
         "## Scaffold (all unfinished: every TODO must go before build.py will pass)",
-        "- `chapter.config.json` filled from the facts above (eqcheck defaults to `signed`; `solutions` is on)",
+        "- `chapter.config.json` filled from the facts above (eqcheck defaults to `signed`; `solutions` is on; Class 6-8 also "
+        "`question_layout`: every solved example, exercise and answerable prompt of the book is its own question concept)",
         "- `content.py`, `concept_plan.py`, `media_specs.py`, `book_rules.json`, `name_slots.json`, `MEDIA_BRIEF.md`: templates",
         "- `book/`: `chapter.pdf`, `pages.json`, `chapter_text.md`, `outline.json`, `page_NNN.png`",
         "",
@@ -422,12 +423,19 @@ def main(argv=None):
         "intro_requires_free_try_tool": True,
         "allow_words": [],
         "interactive_video_variant": True,
-        "photo_rule_band": "none" if g >= 9 else "need_basis",
+        "photo_rule_band": "none" if g >= 9 else ("default" if g <= 5 else "need_basis"),
         "solutions": True,
         "asset_base_template": ASSET_BASE,
     }
     if g >= 9:
         cfg["solutions_video"] = False if g == 10 else True
+    else:
+        # Class 6-8 question layout: each concept topic is followed by its "Questions: <topic>" topic with one
+        # concept per book question (solved example, exercise, answerable prompt), each with a question image,
+        # a solution image and, for a long working, a second solution image (docs/00_overview.md).
+        cfg.update({"solution_continuation": True, "question_layout": True,
+                    "question_scope": ["example", "exercise", "prompt"], "question_image_max_lines": 8,
+                    "image_engine": "manim"})
     flags = []
     if not master_id:
         flags.append("chapter_master_id is not known: ask the user for the issued id (a wrong id uploads good "

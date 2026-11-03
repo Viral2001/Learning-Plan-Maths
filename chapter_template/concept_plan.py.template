@@ -24,7 +24,8 @@ import content as K  # noqa: E402  (TODO: this import only resolves once content
 
 
 def WE(q, steps, answer, *, ncert=(), fact=None, expect=None):
-    """A worked example, one step per line.
+    """A worked example of the PLAN's own, one step per line: it teaches inside the teaching concept, with its
+    own numbers. A solved example PRINTED IN THE BOOK is not a WE; it is a question, so it is a FIO(kind="example").
 
     fact    the facts.py entry name that independently recomputes this answer (TODO: write facts.py
             once you have real numbers; a template has none to recompute)
@@ -33,10 +34,29 @@ def WE(q, steps, answer, *, ncert=(), fact=None, expect=None):
     return {"q": q, "steps": list(steps), "answer": answer, "ncert": list(ncert), "fact": fact, "expect": expect}
 
 
-def FIO(cov, book, question, steps, answer, *, expect=None):
-    """A Figure It Out / Try This item, homed in the DOER concept of the topic whose idea it practises.
-    cov is its coverage id (must appear in content.NCERT_ITEMS)."""
-    return {"cov": cov, "book": book, "question": question, "steps": list(steps), "answer": answer, "expect": expect}
+def FIO(cov, book, question, steps, answer, *, kind="exercise", q_figure=None, s_figure=None, expect=None):
+    """A BOOK QUESTION, homed in the DOER concept of the topic whose idea it practises. core/qt.py moves it into
+    its own concept of the "Questions: <topic>" topic that follows (question layout), with its own video, a
+    question image and a solution image.
+
+    cov       its coverage id (must appear in content.NCERT_ITEMS)
+    book      its label, as the student sees it: "Example 1", "Figure it Out (division), Q3", "Carrom coins, Try This"
+    kind      "exercise" a Figure it Out / exercise question (default)
+              "example"  a SOLVED EXAMPLE printed in the book (the student attempts it, then watches the solution)
+              "prompt"   an answerable in-text question: a Try This with an answer, "answer the following", a blank
+              Math Talk discussion prompts are not questions: leave them in the teaching text.
+    q_figure  one plain sentence for the diagram the QUESTION card needs: only what the question gives, no working,
+              answer or hint. Leave out when the card is text only.
+    s_figure  the same for the SOLUTION card (it may show the answer). Leave out when text only.
+    A question whose working is long gets a second solution card on its own (chapter.config "solution_continuation").
+    """
+    d = {"cov": cov, "book": book, "question": question, "steps": list(steps), "answer": answer, "expect": expect,
+         "kind": kind}
+    if q_figure:
+        d["q_figure"] = q_figure
+    if s_figure:
+        d["s_figure"] = s_figure
+    return d
 
 
 def A(key, name, bloom, objective, *, textbook=(), teach=(), examples=(), ncert=(), key_terms=(),
@@ -59,7 +79,8 @@ def A(key, name, bloom, objective, *, textbook=(), teach=(), examples=(), ncert=
 
 def DOER(key, name, tool, bloom, objective, recap, *, items=(), textbook=(), ncert=(), misconceptions=(),
          enrichment=False, role=None):
-    """The LAST concept of an instructional topic: the recap, this idea's exercises, then exactly ONE tool
+    """The LAST concept of an instructional topic: the recap, this idea's book questions (`items`, FIO above:
+    solved examples, exercises and answerable prompts of the book), then exactly ONE tool
     (from TOOLS below, by its dict key). Never put more than one tool on a topic (tool-pruning policy:
     keep a tool only where the manipulation IS the concept).
 
@@ -123,8 +144,9 @@ TOOLS = {
 }
 
 # ---------------------------------------------------------------------------
-# QT (Question Topic) pattern: FIO/exercise items get pulled into a sibling practice topic by
-# core/qt.py. This dict is only a hint to the chapter author about which topics carry FIO items
+# QT (Question Topic) pattern: every FIO item - solved example, exercise or prompt - gets pulled into its own
+# concept of the sibling "Questions: <topic>" topic by core/qt.py. This dict is only a hint to the chapter author
+# about which topics carry FIO items
 # that core.qt will act on automatically once build.py calls core.qt.apply() - it does not need
 # to be read by build.py itself (core.qt discovers exercise video slots on its own), but keeping
 # the mapping here documents intent and matches the reference chapters' own bookkeeping.

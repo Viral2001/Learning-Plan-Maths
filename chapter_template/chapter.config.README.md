@@ -53,6 +53,16 @@ blocking.
 | `asset_base_template` | string with `{grade}`/`{chapter_no}` placeholders | `build.py` calls `.format(grade=..., chapter_no=...)` on this to build `ASSET_BASE`, the prefix every `2d_tool_url`/`video_url`/`image_url`/`planned_url` is built from. **Subject folder is always `mathematics`, never `maths`** - `upload/SKILL.md`'s rule, already baked into the sample's default value. |
 | `solutions` | **required**: `true` \| `false` (a missing key stops `build.py`; `"text"` is refused) | `gates/solution_content.py` (registered in `gates/gate_runner.py` when truthy); `chapter_template/build.py` (`core/solutions/{bind,check,attach}.py`) | the default for every new chapter is `true`: each question carries, in its concept, the question + numbered step-by-step solution + `Answer:` (from `solutions.json`, schema `core/solutions/schema.py`) AND a question image and a solution image (`media_ids = [question image, video, solution image]`, the block names both in `image_media_id` / `solution_image_media_id`; Manim scenes in `solution_images/` via `core/solutions/gen_scenes.py`, `render.py`, approved in `core/image_editor`). A question with no `solutions.json` entry, placeholder working, a missing solution image, or two questions in one concept fails the build. `false` only when the user explicitly wants a chapter without solutions. Chapters that predate `solutions.json` keep their own `build.py` and config and are unaffected. |
 
+### Question layout and question images (Class 6-8; all optional, absent = the old behaviour)
+
+| field | type | what it does |
+|---|---|---|
+| `question_layout` | bool, sample `true` | every concept topic is followed by its "Questions: <topic>" topic with one concept per book question (solved example, exercise, answerable prompt); `build.py` names the topics that way and `gates/question_layout.py` checks the order, the names and (from `content.NCERT_ITEMS` kinds) that every in-scope item sits in a Questions topic. |
+| `question_scope` | list, sample `["example", "exercise", "prompt"]` | which `NCERT_ITEMS` kinds the layout gate forces into a Questions topic. Math Talk (`"talk"`) and plain text stay out. |
+| `solution_continuation` | bool, sample `true` | a working too long for one card gets a second solution card (IMG3), in the placeholders and in `gen_scenes.py`. Off = one card always (what a chapter built earlier, and the Class 9/10 builder that reads the same `solutions.json`, expect). |
+| `question_image_max_lines` | int, sample `8` | wrapped lines of working one solution card holds before it continues (`core/solutions/layout.py`). |
+| `image_engine` | string, sample `"manim"` | written into every question/solution placeholder's `render_source.engine`; set another name only if the cards are made by another route. |
+
 ## Not included here on purpose
 
 `version` and `plan_id` are deliberately absent: `core/set_version.py` sets them by asking the live

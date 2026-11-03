@@ -1,288 +1,262 @@
 # -*- coding: utf-8 -*-
-"""Topics T10 to T13 (module M3). Large numbers around us, Pastime Mathematics (river crossing, pile of pebbles, Mira's
-puzzle), the King's Horses, and the chapter summary."""
+"""Topics T10 and T11 (module M3): Travelling in Different Vehicles, and Finding Large Numbers Around Us.
+T10.C1 is a real teaching concept (it replaces the priority doc's short recap video). Every number is checked in the
+self-check; every real-world number is the book's, every WE number is the plan's own practice value."""
 from topics_common import A, DOER, FIO, TOPIC, WE
 
 TOPICS = []
 
-# ============================== T10 Finding large numbers around us ========================================
+# ============================== T10 Travelling in Different Vehicles ========================================
 TOPICS.append(TOPIC(
-    "T10", "M3", "Finding Large Numbers Around Us", ["Finding Large Numbers Around Us"], "Apply",
-    "Students estimate the count of a thing from a part and a number of parts, and find 4-digit and 5-digit counts in "
-    "the school, the classroom, a tree and a village.",
-    "Large counts are everywhere. A book with 200 pages and about 50 words on each page has about 10,000 words. "
-    "Counting a part and multiplying finds a big number quickly.",
-    [A("T10.C1", "How many words in a book?", "Understand",
-       "Students estimate the number of words in a book from the pages and words on a page, getting a 5-digit number.",
-       textbook=["We saw that the distance (in kilometre) covered by different means of transport in an hour can range "
-                 "from a 1-digit number to a 5-digit number. Can we find other contexts around us that contain numbers "
-                 "in this range?",
-                 "A book has around 200 pages, and each page has about 50 words. The book therefore has about 10,000 "
-                 "words in all.",
-                 "Find something in the textbook whose count is a 4-digit number."],
-       teach=["Predict first: a book has about 200 pages and about 50 words on each page. About how many words is that?",
-              "50 words on 1 page, 100 on 2 pages, 500 on 10 pages, 5,000 on 100 pages, so 10,000 on 200 pages.",
-              "200 × 50 = 10,000. When we count a small part and multiply, we do not need to count every word."],
-       examples=[WE("A book has around 200 pages and each page has about 50 words. About how many words are in the book?",
-                    ["100 pages have 100 × 50 = 5,000 words.",
-                     "200 pages are 2 times as many: 5,000 × 2 = 10,000 words.",
-                     "10,000 is a 5-digit number."],
-                    "About 10,000 words, a 5-digit number",
-                    ncert=["ar.book"])],
-       key_terms=["estimate", "about"], minutes=6),
-     A("T10.C2", "Counts in school, classroom, tree and village", "Apply",
-       "Students name quantities in the school, the classroom, a tree and their village or town whose counts are "
-       "4-digit or 5-digit numbers.",
-       teach=["Predict first: is the number of leaves on a big tree a 2-digit, 4-digit or 5-digit number?",
-              "Ask how many classrooms, students in a class, and books in a classroom, and use a part to estimate the "
-              "whole.",
-              "For a tree, count the leaves on one branch and multiply by the number of branches.",
-              "For a village or town, think of people, houses, or vehicles."],
-       examples=[WE("A branch has about 150 leaves and a tree has about 40 such branches. About how many leaves does "
-                    "the tree have?",
-                    ["150 leaves on 1 branch.",
-                     "40 branches: 150 × 40 = 6,000.",
-                     "6,000 is a 4-digit number."],
-                    "About 6,000 leaves, a 4-digit number")],
-       key_terms=["estimate", "count"], minutes=6),
-     DOER("T10.C3", "Practice: find the big counts", None, "Apply",
-          "Students name and estimate 4-digit and 5-digit counts in their school, classroom, a tree and a village.",
-          ["A part times the number of parts estimates a big count.",
-           "A 4-digit count is from 1,000 to 9,999 and a 5-digit count is from 10,000 to 99,999.",
-           "Many answers are right when they are reasoned."],
-          examples=[WE("Your turn: a classroom shelf has about 40 books and there are 30 such shelves in the school "
-                       "library. About how many books are in the library, and how many digits does it have?",
-                       ["40 books on 1 shelf, 30 shelves.",
-                        "40 × 30 = 1,200."],
-                       "About 1,200 books, a 4-digit number")],
-          items=[FIO("ar.school", "Finding large numbers, our school",
-                     "Our school has __ classrooms. There are __ students in my class. Our classroom has __ books in "
-                     "total.",
-                     ["A sample school has 24 classrooms.",
-                      "A sample class has 40 students.",
-                      "A sample classroom has 120 books in total."],
-                     "Sample answer: 24 classrooms, 40 students, 120 books in a classroom (answers will differ)"),
-                 FIO("ar.classroom", "Finding large numbers, the classroom",
+    "T10", "M3", "Travelling in Different Vehicles", ["Travelling, Now and Then"], "Apply",
+    "Students describe how people travelled then and now, read how far each means of travel goes in one hour, and "
+    "find the distance covered in several hours and the number of vehicles needed for a group.",
+    "People travelled on foot, on animals and in boats long ago, and now they use cycles, cars, trains, ships, "
+    "aeroplanes and spacecraft. The book gives how far a person generally travels in one hour, from a 1-digit number "
+    "to a 5-digit number of kilometres. The distance in many hours is the distance in one hour times the number of "
+    "hours, and the vehicles needed for a group are the people divided by the people in one vehicle.",
+    [A("T10.C1", "Travelling, Now and Then", "Understand",
+       "Students match a travel condition, such as a desert, a snow-covered hill, deep water or outer space, to the "
+       "animal or vehicle that the book names for it.",
+       textbook=["We learnt that people in the past travelled on foot, on animals, and used boats and sailing ships. "
+                 "The animals that have been used for travelling include bullocks, horses, donkeys, mules, and "
+                 "elephants. In hilly and snow-covered regions, yaks, dogs, and reindeers have been used, while camels "
+                 "have been used in deserts.",
+                 "Now, people use bicycles, motorbikes, cars, buses, trains, ships, and aeroplanes to travel from one "
+                 "place to another. Submarines are used to go deep under water. Humans are also using spacecraft to "
+                 "travel to outer space."],
+       teach=["Predict first: you must cross a desert and your friend must cross a snow-covered hill. Which animal "
+              "would each of you choose?",
+              "In the past, people travelled on foot, on animals, and in boats and sailing ships. Bullocks, horses, "
+              "donkeys, mules and elephants have carried people.",
+              "Camels have been used in deserts. Yaks, dogs and reindeer have been used in hilly and snow-covered "
+              "regions.",
+              "Now, people use bicycles, motorbikes, cars, buses, trains, ships and aeroplanes. Submarines go deep "
+              "under water, and spacecraft take humans to outer space.",
+              "Rule: the place we want to travel in decides which animal or vehicle we use."],
+       examples=[WE("Mira makes a travel card for four places. Which means of travel from the book fits each place? "
+                    "(a) crossing water in the past, (b) a desert, (c) deep under water, (d) outer space.",
+                    ["(a) Crossing water in the past: people used boats and sailing ships.",
+                     "(b) A desert: camels have been used in deserts.",
+                     "(c) Deep under water: submarines are used to go deep under water.",
+                     "(d) Outer space: humans use spacecraft to travel to outer space.",
+                     "Check: each answer names a place from the book and its own means of travel."],
+                    "(a) boats and sailing ships, (b) camels, (c) submarines, (d) spacecraft")],
+       ncert=["tr.now_then"],
+       key_terms=["travel", "transport", "past"], minutes=6),
+
+     A("T10.C2", "How far in one hour?", "Apply",
+       "Students read how far a person generally travels in one hour by each means of travel, say how many digits the "
+       "distance has, and find which means can cover a given distance in an hour.",
+       textbook=["In an hour a person can generally travel",
+                 "(a) 3 to 5 km on foot.",
+                 "(b) 10 to 15 km on horseback.",
+                 "(c) 12 to 20 km by cycle.",
+                 "(d) 40 to 60 km by motorbike.",
+                 "(e) 40 to 160 km by train.",
+                 "(f) 25 to 45 km by ship.",
+                 "(g) 750 to 920 km by aircraft.",
+                 "(h) minimum 28,000 km by spacecraft.",
+                 "Usually, we measure distances in sea and air using nautical miles. For now, we will use 1 km = "
+                 "1,000 m. By now, you know different units of measuring length. We will study the units for "
+                 "measuring length, kilometre, in detail in a later chapter."],
+       teach=["Predict first: in one hour, how far can a person go on foot, and how far in a spacecraft? Guess one "
+              "number for each.",
+              "The book says a person can generally travel 3 to 5 km on foot, 10 to 15 km on horseback, 12 to 20 km "
+              "by cycle and 40 to 60 km by motorbike in an hour.",
+              "By train 40 to 160 km, by ship 25 to 45 km and by aircraft 750 to 920 km. By spacecraft the minimum is "
+              "28,000 km.",
+              "So the distance in an hour runs from a 1-digit number, 3 km on foot, to a 5-digit number, 28,000 km by "
+              "spacecraft.",
+              "At sea and in the air, distances are usually measured in nautical miles. For now we use kilometres, and "
+              "1 km = 1,000 m.",
+              "Rule: a distance fits a means of travel when it is at least the first number and at most the last "
+              "number of its range."],
+       examples=[WE("Suppose a traveller covers 50 km in one hour. Which means of travel in the book's list can do "
+                    "that, and how many digits does 50 have?",
+                    ["A means fits when 50 is at least its first number and at most its last number.",
+                     "On foot (3 to 5), on horseback (10 to 15), by cycle (12 to 20) and by ship (25 to 45): 50 is "
+                     "more than the last number each time, so none fits.",
+                     "By aircraft (750 to 920) and by spacecraft (minimum 28,000): 50 is less than the first number, "
+                     "so neither fits.",
+                     "By motorbike (40 to 60): 40 is less than 50 and 50 is less than 60, so it fits.",
+                     "By train (40 to 160): 40 is less than 50 and 50 is less than 160, so it fits.",
+                     "50 has 2 digits."],
+                    "A motorbike or a train; 50 is a 2-digit number")],
+       ncert=["tr.speeds", "tr.note"],
+       key_terms=["distance", "kilometre", "hour", "range"], minutes=7),
+
+     A("T10.C3", "How many vehicles for a group?", "Apply",
+       "Students find the number of vehicles needed for a group by dividing the number of people by the number of "
+       "people one vehicle carries, and check the answer by multiplying.",
+       teach=["Predict first: 12 children go on a trip in cars that carry 4 children each. How many cars do they "
+              "need, 3, 4 or 8?",
+              "Each car takes 4 children. Count in 4s: 4, 8, 12. That is 3 cars, and 12 ÷ 4 = 3.",
+              "The number of vehicles is the number of people divided by the number of people in one vehicle.",
+              "A vehicle that carries more people needs fewer vehicles. The same 12 children need 3 cars of 4, but "
+              "only 2 big cars of 6, because 12 ÷ 6 = 2.",
+              "Check by multiplying: 3 × 4 = 12 and 2 × 6 = 12.",
+              "Rule: divide the people by the number one vehicle carries, then check by multiplying."],
+       examples=[WE("A group of 120 people goes on a trip. How many vehicles are needed if each car carries 4 people? "
+                    "How many if each big car carries 6 people?",
+                    ["People in the group: 120. People in one car: 4.",
+                     "Cars needed: 120 ÷ 4 = 30.",
+                     "Check: 30 × 4 = 120, so 30 cars carry all 120 people.",
+                     "People in one big car: 6. Big cars needed: 120 ÷ 6 = 20.",
+                     "Check: 20 × 6 = 120, so 20 big cars carry all 120 people.",
+                     "A big car carries more people, so fewer vehicles are needed."],
+                    "30 cars, or 20 big cars")],
+       key_terms=["vehicles", "group", "divide"], minutes=6),
+
+     DOER("T10.C4", "Practice: Transport Explorer", "transport_explorer", "Apply",
+          "Students use the book's distances and vehicle sizes on a transport map to find how far a cyclist goes in "
+          "4 hours and how many vehicles carry 900 people, and check each answer.",
+          ["The distance in many hours is the distance in one hour times the number of hours.",
+           "The vehicles needed are the number of people divided by the number of people in one vehicle.",
+           "A vehicle that carries more people means fewer vehicles are needed."],
+          items=[FIO("LUDb.Q1", "Let Us Do (travelling), Q1 cyclist",
+                     "A cyclist can cover 15 km in one hour. How much distance will she cover in 4 hours, if she "
+                     "maintains the same speed?",
+                     ["In 1 hour the cyclist covers 15 km.",
+                      "In 2 hours: 15 + 15 = 30 km.",
+                      "In 3 hours: 30 + 15 = 45 km.",
+                      "In 4 hours: 45 + 15 = 60 km.",
+                      "Check by multiplying: 15 × 4 = 60 km."],
+                     "60 km",
+                     q_figure="A cyclist at the start of a straight road that is divided into 4 equal stretches, one "
+                              "for each hour, with the first stretch marked 15 km.",
+                     s_figure="The same road with the end of each hour marked 0, 15, 30, 45 and 60 km."),
+                 FIO("LUDb.Q2ad", "Let Us Do (travelling), Q2 (a) to (d) vehicles",
+                     "A school has 461 girls and 439 boys. How many vehicles are needed for all of them to go on a "
+                     "trip using the following modes of travel? The numbers in the bracket indicate the number of "
+                     "people that can travel in one vehicle. (a) Bicycle (2) (b) Autorickshaw (3) (c) Car (4) "
+                     "(d) Big car (6)",
+                     ["Add the girls and the boys: 461 + 439 = 900 people.",
+                      "Vehicles needed = 900 ÷ the number of people in one vehicle.",
+                      "(a) Bicycle: 900 ÷ 2 = 450.",
+                      "(b) Autorickshaw: 900 ÷ 3 = 300.",
+                      "(c) Car: 900 ÷ 4 = 225.",
+                      "(d) Big car: 900 ÷ 6 = 150.",
+                      "Check: 450 × 2 = 900, 300 × 3 = 900, 225 × 4 = 900 and 150 × 6 = 900."],
+                     "(a) 450 (b) 300 (c) 225 (d) 150",
+                     q_figure="A school group of 461 girls and 439 boys beside four vehicles, a bicycle marked 2, an "
+                              "autorickshaw marked 3, a car marked 4 and a big car marked 6, each mark showing the "
+                              "people in one vehicle.",
+                     s_figure="The 900 people as equal groups for each vehicle: 450 groups of 2, 300 groups of 3, "
+                              "225 groups of 4 and 150 groups of 6."),
+                 FIO("LUDb.Q2eh", "Let Us Do (travelling), Q2 (e) to (h) vehicles",
+                     "A school has 461 girls and 439 boys. How many vehicles are needed for all of them to go on a "
+                     "trip using the following modes of travel? The numbers in the bracket indicate the number of "
+                     "people that can travel in one vehicle. (e) Tempo traveller (10) (f) Boat (20) (g) Minibus (25) "
+                     "(h) Aeroplane (180)",
+                     ["The school has 461 + 439 = 900 people, as before.",
+                      "(e) Tempo traveller: 900 ÷ 10 = 90.",
+                      "(f) Boat: 900 ÷ 20 = 45.",
+                      "(g) Minibus: 900 ÷ 25 = 36.",
+                      "(h) Aeroplane: 900 ÷ 180 = 5.",
+                      "Check: 90 × 10 = 900, 45 × 20 = 900, 36 × 25 = 900 and 5 × 180 = 900."],
+                     "(e) 90 (f) 45 (g) 36 (h) 5",
+                     q_figure="A school group of 461 girls and 439 boys beside four vehicles, a tempo traveller "
+                              "marked 10, a boat marked 20, a minibus marked 25 and an aeroplane marked 180.",
+                     s_figure="The 900 people as equal groups for each vehicle: 90 groups of 10, 45 groups of 20, "
+                              "36 groups of 25 and 5 groups of 180.")])],
+    key_terms=["travel", "distance", "vehicles"]))
+
+# ============================== T11 Finding Large Numbers Around Us ========================================
+TOPICS.append(TOPIC(
+    "T11", "M3", "Finding Large Numbers Around Us", ["Finding Large Numbers Around Us"], "Apply",
+    "Students estimate large counts around them by multiplying the count in one part by the number of parts, and "
+    "find things in a book, a classroom, a tree and a town whose counts are 4-digit or 5-digit numbers.",
+    "Large numbers are not only about travel. When we count one small part and multiply by the number of parts, we "
+    "can find a big count without counting one by one, and then say how many digits it has.",
+    [A("T11.C1", "Where do large numbers hide?", "Apply",
+       "Students estimate a large count around them by multiplying the count in one part by the number of parts, and "
+       "say whether the count is a 4-digit or a 5-digit number.",
+       textbook=["We saw that the distance (in kilometre) covered by different means of transport in an hour can "
+                 "range from a 1-digit number to a 5-digit number. Can we find other contexts around us that contain "
+                 "numbers in this range? Let us consider the situation below.",
+                 "Now, let us try this with our school.",
+                 "(a) Our school has ________ classrooms.",
+                 "(b) There are ________ students in my class.",
+                 "(c) Our classroom has ________ books in total."],
+       teach=["Predict first: a box holds 40 sheets of stickers and each sheet has 100 stickers. Will the number of "
+              "stickers have 3 digits, 4 digits or 5 digits?",
+              "The distances in an hour that we met run from a 1-digit number, 3 km on foot, to a 5-digit number, "
+              "at least 28,000 km by spacecraft. Large numbers hide in many other places too.",
+              "Count one small part, then multiply by the number of parts. The stickers are 100 × 40 = 4,000, a "
+              "4-digit number.",
+              "Now try it with your school: our school has ___ classrooms, there are ___ students in my class, and "
+              "our classroom has ___ books in total. Say how many digits each count has.",
+              "Rule: count one small part, multiply by the number of parts, then count the digits."],
+       examples=[WE("Suppose each sheet has 100 stickers and a box holds 40 sheets. How many stickers are in the box? "
+                    "Is the count a 4-digit or a 5-digit number?",
+                    ["One sheet has 100 stickers.",
+                     "10 sheets have 100 × 10 = 1,000 stickers.",
+                     "40 sheets are 4 groups of 10 sheets: 4 × 1,000 = 4,000 stickers.",
+                     "Check: 100 × 40 = 4,000.",
+                     "4,000 has 4 digits, so the count is a 4-digit number."],
+                    "4,000 stickers, a 4-digit number")],
+       ncert=["ar.intro", "ar.school"],
+       key_terms=["estimate", "count", "digits"], minutes=6),
+
+     DOER("T11.C2", "Pull it together and do it: Large Numbers Around Us", None, "Apply",
+          "Students find things in a book, a classroom, a tree and a town whose counts are 4-digit or 5-digit "
+          "numbers, and explain each count by grouping and multiplying.",
+          ["Count one small part, then multiply by the number of parts.",
+           "A 4-digit count is from 1,000 to 9,999. A 5-digit count is from 10,000 to 99,999.",
+           "These are estimates, so your answer may differ."],
+          items=[FIO("ar.book", "Finding Large Numbers Around Us, Example (words in a book)",
+                     "A book has around 200 pages, and each page has about 50 words. About how many words does the "
+                     "book have in all?",
+                     ["The book has about 200 pages.",
+                      "Each page has about 50 words.",
+                      "100 pages have 100 × 50 = 5,000 words.",
+                      "200 pages are 2 times as many: 5,000 × 2 = 10,000 words.",
+                      "Check: 200 × 50 = 10,000, and 10,000 has 5 digits."],
+                     "About 10,000 words, a 5-digit number",
+                     kind="example",
+                     q_figure="An open book with the labels: about 200 pages in the book, about 50 words on each "
+                              "page.",
+                     s_figure="Two stacks of 100 pages, each stack holding 5,000 words, joined to make 10,000 "
+                              "words."),
+                 FIO("ar.mathsbook", "Finding Large Numbers Around Us, Try It (maths book)",
+                     "Find something in the maths book whose count is a 4-digit number.",
+                     ["Pick a thing to count: the words in one chapter of the maths book.",
+                      "Estimate one part: a page has about 150 words.",
+                      "Count the parts: the chapter has about 16 pages.",
+                      "10 pages have 10 × 150 = 1,500 words.",
+                      "6 pages have 6 × 150 = 900 words.",
+                      "Add the parts: 1,500 + 900 = 2,400 words.",
+                      "Check: 2,400 has 4 digits, so it is a 4-digit number."],
+                     "Sample answer: the words in one chapter, about 2,400 (16 pages with about 150 words each), a "
+                     "4-digit number. Your answer may differ.",
+                     kind="prompt"),
+                 FIO("ar.classroom", "Finding Large Numbers Around Us, Try It (classroom)",
                      "Find something in the classroom whose count is a (i) 4-digit number (ii) 5-digit number.",
-                     ["(i) The number of pages in the notebooks of the class: 40 notebooks with 100 pages is 4,000, a "
-                      "4-digit number.",
-                      "(ii) The number of words in the textbook: about 100 pages with 120 words a page is 12,000 words, "
-                      "a 5-digit number."],
-                     "Sample answer: pages in notebooks, 4,000 (4-digit); words in a textbook, 12,000 (5-digit)"),
-                 FIO("ar.tree_village", "Finding large numbers, a tree and a village",
+                     ["(i) Count the pages in one notebook from each child. Suppose the class has 40 children and a "
+                      "notebook has about 100 pages.",
+                      "10 notebooks have 10 × 100 = 1,000 pages.",
+                      "40 notebooks are 4 groups of 10: 4 × 1,000 = 4,000 pages, a 4-digit number.",
+                      "(ii) Count all the notebooks. Suppose each child has 5 notebooks: 40 × 5 = 200 notebooks.",
+                      "200 notebooks with about 100 pages each: 200 × 100 = 20,000 pages, a 5-digit number.",
+                      "Check the digits: 4,000 has 4 digits and 20,000 has 5 digits."],
+                     "Sample answer: (i) pages in 40 notebooks, about 4,000, a 4-digit number; (ii) pages in 200 "
+                     "notebooks, about 20,000, a 5-digit number. Your answer may differ.",
+                     kind="prompt"),
+                 FIO("ar.tree_village", "Finding Large Numbers Around Us, Try It (tree, village or town)",
                      "List some quantities whose count is a 4-digit or a 5-digit number in the context of (i) a tree "
-                     "(ii) your village, town or city, or any other place of your choice.",
-                     ["(i) Leaves on a tree: about 6,000, a 4-digit number. Leaves on a big banyan tree: more than "
-                      "10,000, a 5-digit number.",
-                      "(ii) People in a village: about 2,500, a 4-digit number. Vehicles in a town: about 15,000, a "
-                      "5-digit number."],
-                     "Sample answer: leaves on a tree, 6,000; people in a village, 2,500; vehicles in a town, 15,000 "
-                     "(answers will differ)")])],
-    key_terms=["estimate", "4-digit", "5-digit"]))
-
-# ============================== T11 Pastime mathematics ====================================================
-TOPICS.append(TOPIC(
-    "T11", "M3", "Pastime Mathematics: Puzzles on the Train", ["Pastime Mathematics"], "Analyze",
-    "Students solve the river crossing puzzle, find the winning strategy of the pile of pebbles, and explain why "
-    "Mira's two-digit subtraction puzzle always ends in 9.",
-    "Puzzles train us to think logically and strategically. The river crossing needs the right order, the pebbles game "
-    "needs a mirror strategy, and Mira's puzzle always ends in 9 because every difference is a multiple of 9.",
-    [A("T11.C1", "The river crossing", "Analyze",
-       "Students plan the trips of a boatman who must carry a lion, a sheep and a bundle of grass across a river safely "
-       "in the fewest trips.",
-       textbook=["Sanju and Mira are traveling on a train. To pass time, they challenge each other with games and "
-                 "puzzles.",
-                 "Mira poses the river crossing puzzle to Sanju. A boatman wants to cross a river in a boat. He has to "
-                 "take a lion, a sheep, and a bundle of grass with him. He can take one of them at a time. If the sheep "
-                 "and grass are left on the shore, the sheep will eat the grass. And, if the sheep and lion are left on "
-                 "the shore, the lion will eat the sheep.",
-                 "How can the boatman take the lion, sheep, and grass across the river? Help him so that he can ferry "
-                 "the lion, sheep, and grass across the river safely, and in the minimum number of trips."],
-       teach=["Predict first: which of the three should the boatman take first, so that nothing is eaten?",
-              "The sheep is the problem: it cannot be left with the grass, and it cannot be left with the lion.",
-              "Take the sheep first. The lion and the grass can be left together, because the lion does not eat grass.",
-              "Then bring something back so that the sheep is never alone with the lion or the grass."],
-       examples=[WE("How can the boatman take the lion, the sheep and the grass across the river safely in the fewest "
-                    "trips?",
-                    ["Trip 1: take the sheep across. The lion and the grass are safe together on the first shore.",
-                     "Trip 2: come back alone. Trip 3: take the lion across. The lion and the sheep cannot be left "
-                     "together when the boatman leaves.",
-                     "Trip 4: bring the sheep back. Trip 5: take the grass across. The lion and the grass are safe "
-                     "together on the far shore.",
-                     "Trip 6: come back alone. Trip 7: take the sheep across.",
-                     "Seven crossings in all: sheep, back, lion, sheep back, grass, back, sheep."],
-                    "Take the sheep, return, take the lion, bring the sheep back, take the grass, return, take the "
-                    "sheep: 7 crossings",
-                    ncert=["pm.river"])],
-       key_terms=["puzzle", "trip"], minutes=8, enrichment=True),
-     A("T11.C2", "The pile of pebbles", "Analyze",
-       "Students find a winning strategy for two equal piles of pebbles by trying small piles and then mirroring the "
-       "other player's move.",
-       textbook=["Sanju introduces a game called pile of pebbles to Mira.",
-                 "There are two piles of pebbles. Each pile contains 7 pebbles. Each player can pick as many pebbles "
-                 "they want from either of the piles. The player who picks the last pebble wins.",
-                 "Try this game with your friends. Now, how do you play so that you win?",
-                 "To find a winning strategy, try playing with 1 pebble in each pile, two in each, three in each, and so "
-                 "on."],
-       teach=["Predict first: with two piles of 1 pebble each, does the first player or the second player win?",
-              "With 1 and 1: the first player takes one pile, the second takes the last pebble and wins.",
-              "With 2 and 2, 3 and 3, and so on, the second player wins by copying: whatever the first player takes "
-              "from one pile, take the same amount from the other pile.",
-              "Equal piles always stay equal after the second player's move, and the second player takes the last "
-              "pebble."],
-       examples=[WE("Two piles have 7 pebbles each. You play second. The first player takes 3 from the first pile. What "
-                    "do you do, and who wins?",
-                    ["Mirror the move: take 3 from the other pile. Now the piles are 4 and 4.",
-                     "If the first player takes 4 from a pile, take 4 from the other: 0 and 0 and you win.",
-                     "Equal piles after your move, every time, so you take the last pebble."],
-                    "Take the same number from the other pile; the second player wins",
-                    ncert=["pm.pebbles"])],
-       key_terms=["strategy", "mirror"], minutes=8, enrichment=True),
-     A("T11.C3", "Mira's puzzle that always ends in 9", "Analyze",
-       "Students follow Mira's steps, record the digits, the difference of the digits and the difference of the "
-       "numbers, and see that every difference is 9 times the difference of the digits.",
-       textbook=["Now, it's Mira's turn. She gives a fun puzzle to Sanju with the following steps: (a) Take any two "
-                 "different digits. For example 3 and 7. (b) Make two 2-digit numbers using them: 37 and 73. (c) "
-                 "Subtract the smaller number from the bigger number: 73 − 37 = 36.",
-                 "Now, use the two digits in the difference and repeat steps (b) and (c). Continue this process until you "
-                 "get a 1-digit number. Even before everyone could finish, Mira exclaimed, \"Mind you! No matter which "
-                 "two numbers you choose, you will get 9 in the end.\"",
-                 "How did Mira know what the 1-digit number in the end would be? Let us explore."],
-       teach=["Predict first: take 3 and 7. What do you think you will get at the end?",
-              "73 − 37 = 36. Use 3 and 6: 63 − 36 = 27. Use 2 and 7: 72 − 27 = 45. Use 4 and 5: 54 − 45 = 9.",
-              "Look at the differences: 36, 27, 45, 9. All are in the table of 9.",
-              "The reason: the difference of the numbers is 9 times the difference of the digits. For 3 and 7, the "
-              "digits differ by 4, and 36 is 9 times 4."],
-       examples=[WE("Follow Mira's steps for the digits 3 and 7 and say why each difference is a multiple of 9.",
-                    ["73 − 37 = 36, and 36 = 9 × 4, where 7 − 3 = 4.",
-                     "63 − 36 = 27, and 27 = 9 × 3, where 6 − 3 = 3.",
-                     "72 − 27 = 45, and 45 = 9 × 5, where 7 − 2 = 5.",
-                     "54 − 45 = 9, and 9 = 9 × 1, where 5 − 4 = 1."],
-                    "73 − 37 = 36, 63 − 36 = 27, 72 − 27 = 45 and 54 − 45 = 9; every difference is 9 times the "
-                    "difference of the digits",
-                    ncert=["pm.mira_steps"])],
-       key_terms=["difference", "multiple of 9"], misconceptions=["M_DIGIT_DIFF"], minutes=9),
-     DOER("T11.C4", "Practice: run the digit difference machine", "digit_difference_machine", "Analyze",
-          "Students run Mira's process on different pairs of digits, fill the table of digits and differences, and "
-          "explain why the answer is always 9.",
-          ["Each difference of the numbers is 9 times the difference of the digits.",
-           "A 1-digit answer in the first step needs digits that differ by 1.",
-           "The process always ends in 9."],
-          items=[FIO("pm.mira_explore", "Mira's puzzle, explore (1) to (4)",
-                     "Observe the differences in each step. Try the puzzle using another pair of digits. What digits "
-                     "give a 1-digit number in the first step itself? Find different digits such that the difference "
-                     "between the numbers is 27.",
-                     ["(1) 36, 27, 45 and 9 are all in the table of 9.",
-                      "(2) Digits 2 and 8: 82 − 28 = 54, then 54 − 45 = 9. The differences are multiples of 9 and the "
-                      "end is 9.",
-                      "(3) Digits that are next to each other, like 4 and 5: 54 − 45 = 9. Their difference is 1.",
-                      "(4) 27 = 9 × 3, so the digits must differ by 3: 1 and 4, 2 and 5, 3 and 6, 4 and 7, 5 and 8, 6 "
-                      "and 9, 0 and 3."],
-                     "(1) all in the table of 9 (2) ends in 9 (3) digits that differ by 1, such as 4 and 5 (4) digits "
-                     "that differ by 3, such as 2 and 5"),
-                 FIO("pm.mira_table", "Mira's puzzle, extend the table",
-                     "Extend Mira's table by choosing digits so that the resulting differences are 2, 3, 5 and 7.",
-                     ["Difference 2: digits 1 and 3, 3 − 1 = 2, 31 − 13 = 18.",
-                      "Difference 3: digits 2 and 5, 5 − 2 = 3, 52 − 25 = 27.",
-                      "Difference 5: digits 1 and 6, 6 − 1 = 5, 61 − 16 = 45.",
-                      "Difference 7: digits 2 and 9, 9 − 2 = 7, 92 − 29 = 63."],
-                     "1, 3: 18. 2, 5: 27. 1, 6: 45. 2, 9: 63"),
-                 FIO("pm.mira_asks", "Mira's puzzle, the three questions",
-                     "What do the differences between the digits indicate? List the numbers that give a 1-digit number "
-                     "in the third subtraction. Identify pairs of digits that lead to the 1-digit number after the "
-                     "maximum possible number of subtractions.",
-                     ["The difference of the numbers is 9 times the difference of the digits.",
-                      "Third subtraction gives 9: after the second step the difference must be 9 times 1, from digits "
-                      "that differ by 1, like 45, 56, 67 and 78.",
-                      "The longest run: 3 and 7 (36, 27, 45, 9), the run in the book, takes four subtractions."],
-                     "The number difference is 9 times the digit difference; the longest runs, like 3 and 7, take four "
-                     "subtractions")])],
-    key_terms=["difference", "multiple of 9", "digits"]))
-
-# ============================== T12 King's Horses ==========================================================
-TOPICS.append(TOPIC(
-    "T12", "M3", "King's Horses", ["King's Horses"], "Analyze",
-    "Students find the caretaker's counting mistake, arrange 19 and 18 horses with 5 on each side, and find how many "
-    "more horses the thief can steal.",
-    "A horse at a corner of the square stable is counted on two sides. Counting 5 on each of the 4 sides gives 20, but "
-    "each corner horse is counted twice, so there are fewer real horses.",
-    [A("T12.C1", "The caretaker's counting mistake", "Analyze",
-       "Students count the horses one by one and find that 5 on each side of 4 sides does not mean 20 horses when "
-       "corner horses are counted twice.",
-       textbook=["Once upon a time, there was a king who was very fond of horses. He had 20 horses of the best breed. The "
-                 "horses were kept in the royal stable, and cared for by a caretaker.",
-                 "One night, a thief stole one of the horses. Fearing punishment, the caretaker arranged the horses in "
-                 "the stable as shown in the picture here.",
-                 "The king counted 5 horses along each side. \"We have 5 horses along each side and there are 4 sides. "
-                 "So there are a total of 20 horses, your majesty,\" the caretaker explained.",
-                 "But wait, were there really 20 horses in the stable? Count the horses one by one and check! What was "
-                 "the mistake in the caretaker's explanation?"],
-       teach=["Predict first: 5 horses on each of 4 sides, so is it always 20 horses?",
-              "A horse at a corner stands on two sides, so it is counted once for each side.",
-              "In the caretaker's stable, one corner horse is counted twice. 20 counted − 1 counted twice = 19 horses.",
-              "The caretaker added 5 + 5 + 5 + 5 without noticing that a corner horse was in two of the fives."],
-       examples=[WE("The caretaker says 5 horses on each of 4 sides makes 20. One horse stands at a corner and is counted "
-                    "on two sides. How many horses are really there?",
-                    ["5 + 5 + 5 + 5 = 20 counts every corner horse twice.",
-                     "One corner horse is counted twice, so subtract 1: 20 − 1 = 19.",
-                     "There are only 19 horses."],
-                    "19 horses, because the corner horse was counted twice",
-                    ncert=["kh.story", "kh.mistake"])],
-       key_terms=["corner", "counted twice"], misconceptions=["M_CORNER_TWICE"], minutes=8, enrichment=True),
-     A("T12.C2", "Eighteen horses and how many more can go", "Analyze",
-       "Students arrange 18 horses with 5 on each side by placing 2 horses at corners, and find that the thief can "
-       "steal up to 2 more horses before the count of 5 on each side fails.",
-       textbook=["The following night, the thief stole another horse from the stable. Now, only 18 horses remained. The "
-                 "caretaker once again cleverly arranged the 18 horses, so that there were 5 horses on each side of the "
-                 "square stable. How do you think he was able to do it? Arrange the 18 horses in the stable with 5 on "
-                 "each side.",
-                 "How many more horses can the thief steal before the king notices something is wrong? Try making the "
-                 "arrangements yourself."],
-       teach=["Predict first: if 19 horses had 1 corner horse, how many corner horses will 18 horses need?",
-              "Counted total is 20. Real horses = 20 − (number of corner horses). For 18 horses, 20 − 18 = 2 corner "
-              "horses.",
-              "Put horses on 2 corners, and fill the sides so that each side still counts 5.",
-              "There are 4 corners, so the most corner horses is 4 and the fewest horses is 20 − 4 = 16. The thief can "
-              "steal 18 − 16 = 2 more horses from 18."],
-       examples=[WE("There are 18 horses. How many corner horses are needed so that each side shows 5, and how many more "
-                    "horses can the thief steal?",
-                    ["The count of 20 minus the corner horses is the real number: 20 − 18 = 2 corner horses.",
-                     "All 4 corners hold horses at most, so the fewest horses is 20 − 4 = 16.",
-                     "From 18, the thief can steal 18 − 16 = 2 more horses."],
-                    "2 corner horses are needed, and the thief can steal 2 more horses",
-                    ncert=["kh.eighteen"])],
-       key_terms=["arrangement"], misconceptions=["M_CORNER_TWICE"], minutes=8, enrichment=True),
-     DOER("T12.C3", "Practice: fill the stable", "square_stable", "Analyze",
-          "Students arrange 19, 18, 17 and 16 horses in the square stable with 5 on each side, and find the fewest "
-          "horses that still show 5 on every side.",
-          ["A corner horse is counted on two sides.",
-           "Real horses = 20 minus the number of corner horses.",
-           "The fewest horses is when all 4 corners have horses."],
-          items=[FIO("kh.more", "King's Horses, how many more can be stolen",
-                     "How many more horses can the thief steal before the king notices something is wrong? Try making "
-                     "the arrangements yourself.",
-                     ["19 horses: 1 corner horse. 18 horses: 2 corner horses. 17 horses: 3 corner horses. 16 horses: "
-                      "4 corner horses.",
-                      "With 15 horses, 20 − 15 = 5 corner horses would be needed, but there are only 4 corners.",
-                      "So 5 on every side is possible down to 16 horses. The thief can steal 2 more from 18."],
-                     "2 more horses, down to 16; with 15 the king would find 5 on a side is no longer possible")])],
-    key_terms=["corner", "arrangement"]))
-
-# ============================== T13 Summary ================================================================
-TOPICS.append(TOPIC(
-    "T13", "M3", "Summary: We the Travellers - I", ["Chapter summary"], "Understand",
-    "",
-    "Ten thousand needs a new TTh place. Five-digit numbers are read, written and compared place by place; numbers "
-    "are rounded to the nearest ten, hundred and thousand; and large numbers describe journeys, counts and puzzles.",
-    [A("T13.C1", "What we learned in We the Travellers - I", "Understand",
-       "",
-       teach=["Ten thousand is 10 thousands, written 10,000, in a new TTh column.",
-              "Five-digit numbers are read from the thousands part and written with commas and number names.",
-              "To compare numbers, count the digits first; with equal digits, compare from the left.",
-              "The nearest ten, hundred or thousand is the neighbour with the fewest jumps.",
-              "Distance in many hours is the distance in one hour times the hours, and vehicles needed come from "
-              "dividing people by seats.",
-              "Puzzles teach us to think strategically: the pile of pebbles is won by mirroring, and a corner horse is "
-              "counted twice."],
-       ncert=["summary"], video_focus=["RECAP"], key_terms=["place value", "comparing", "nearest"], minutes=5, enrichment=True)],
-    topic_type="summary"))
+                     "(ii) your village/town/city, or any other place of your choice.",
+                     ["(i) A tree: count the leaves. Suppose a twig has 30 leaves and the tree has 90 twigs.",
+                      "10 twigs have 30 × 10 = 300 leaves.",
+                      "90 twigs are 9 groups of 10 twigs: 300 × 9 = 2,700 leaves, a 4-digit number.",
+                      "A garden of 10 such trees has 2,700 × 10 = 27,000 leaves, a 5-digit number.",
+                      "(ii) A town: count the windows. Suppose a street has 50 houses and a house has 4 windows: "
+                      "50 × 4 = 200 windows on a street.",
+                      "30 streets have 200 × 30 = 6,000 windows, a 4-digit number.",
+                      "100 streets have 200 × 100 = 20,000 windows, a 5-digit number.",
+                      "Check the digits: 2,700 and 6,000 have 4 digits; 27,000 and 20,000 have 5 digits."],
+                     "Sample answer: (i) leaves on a tree, about 2,700 (4-digit), and in a garden of 10 trees, about "
+                     "27,000 (5-digit); (ii) windows in a town, about 6,000 (4-digit) or 20,000 (5-digit). Your "
+                     "answer may differ.",
+                     kind="prompt")])],
+    key_terms=["estimate", "count", "digits"]))

@@ -104,6 +104,39 @@ old-id-to-new-id map so a caller can re-key its pin files
 (`qt.remap_pin_file`, run once, only when QT is first turned on for a chapter
 that already has pin files).
 
+## Question layout (Class 6-8)
+
+With `"question_layout": true` in `chapter.config.json` (the sample and `lp_start.py` set it for Class 6-8) the
+chapter reads
+
+    concept topic -> "Questions: <that topic>" -> next concept topic -> "Questions: <next topic>" -> ...
+
+and the Questions topic holds **one concept per book question**, in the book's order, each with its own video:
+every solved example printed in the book, every Figure it Out / exercise question and every answerable in-text
+prompt (a Try This with an answer, "answer the following", a blank to fill). Math Talk discussion prompts are
+not questions and stay in the teaching text. The author writes each as an `FIO(..., kind="example" |
+"exercise" | "prompt")` item in the topic's DOER; `build.py` calls
+`qt.apply(..., enrichment_qt=True, topic_prefix="Questions")`, which moves the item out of the teaching topic.
+A concept topic keeps only the plan's own teaching examples (`WE`, with their own numbers).
+
+Every question concept also carries its two image cards, as placeholders from the first build:
+
+    media_ids = [IMG1 question card, VID1 video, IMG2 solution card (, IMG3 solution continued)]
+
+IMG1 shows the question and, only when the question needs one, a diagram (`q_figure`); IMG2 is the numbered
+working and highlighted answer (`s_figure` for a diagram); IMG3 exists only when the working is too long for one
+card (`core/solutions/layout.py`: more than `question_image_max_lines`, default 8, wrapped lines; the chapter must
+set `solution_continuation`). `core/solutions/placeholders.py` writes these nodes (`build_status: "placeholder"`,
+reserved urls, Manim scene names, the diagram sentence in the description), `build.py --placeholders` builds the
+plan at this stage with no `solutions.json` yet, and `gen_scenes.py` / `render.py` / `attach.attach` later replace
+a placeholder with the real card, a second scene `<stem>_sol2.py` for a continued working. The answer box and the
+common-mistake note sit on the last solution card only.
+
+`gates/question_layout.py` checks the order and naming of the topics, that no book question is left in a concept
+topic, and (from the kinds in `content.NCERT_ITEMS`) that every example / exercise / prompt is in a Questions
+topic; `gates/solution_content.py` checks the cards. `reference_rebuild/layout_toy/run_smoke.py` is the
+end-to-end test of all of this. Chapters built before the layout keep their own config and are unaffected.
+
 The inserted topic is written straight as `topic_type: "instructional"`,
 because this pipeline's Phase 2 API has never accepted `"question_topic"` as
 a `topic_type` and there is no later patch step to demote it (unlike the

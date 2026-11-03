@@ -8,6 +8,24 @@ content.py, concept_plan.py, media_specs.py and book_rules.json next to it).
     python -B build.py --check          run the gates only, against the <chapter_id>.json already on disk
     python -B build.py --worklist       (re)write media_worklist.json (image specs still to author), then stop
     python -B build.py --video-worklist (re)write video_worklist.json (video scripts still to author), then stop
+    python -B build.py --solution-worklist  (re)write solution_worklist.json (exercise items with no entry in
+                                        solutions.json yet), then stop
+    python -B build.py --placeholders   build the plan with its question layout and the image PLACEHOLDERS of every
+                                        question (question card, solution card, a second solution card for a long
+                                        working), without requiring solutions.json yet. Questions that already have
+                                        a solutions.json entry get their real cards; the rest keep placeholders.
+
+Question layout (chapter.config.json "question_layout": true): every concept topic is followed by its own
+"Questions: <topic>" topic with ONE concept per book question - each solved example, Figure it Out / exercise item
+and answerable in-text prompt, written as an `items` entry (concept_plan.FIO, kind="example" | "exercise" |
+"prompt") - and core/qt.py does the moving. See docs/00_overview.md "Question layout".
+
+Solutions (chapter.config.json "solutions": true): solutions.json (core/solutions/schema.py) holds each
+question's board-format solution. build.py writes its working and answer into the plan, and into the video
+worklist's items; core/solutions/gen_scenes.py + render.py make the question and solution images
+(solution_images/), which build.py attaches as media_ids = [question image, video, solution image (, solution
+image continued)]. Before any solution exists, core/solutions/placeholders.py has already put the same image
+nodes on every question as placeholders, so the structure can be reviewed first.
 
 This pipeline is Phase-2-only, direct build (user preference): the output plan has "phase": 2 and
 "chapter_id" with NO "_V3" suffix, written straight to <chapter_id>.json - there is no separate
@@ -56,6 +74,11 @@ from core import qt as QT                   # noqa: E402
 from core.video_script import check as VC   # noqa: E402
 from core.video_script import node as VN    # noqa: E402
 from core.video_script import plan_hook as VH  # noqa: E402
+from core.solutions import attach as SA     # noqa: E402
+from core.solutions import placeholders as SP  # noqa: E402
+from core.solutions import bind as SB       # noqa: E402
+from core.solutions import check as SC      # noqa: E402
+from core.solutions import schema as SS     # noqa: E402
 
 import content as K          # noqa: E402  (chapter author's content.py, same folder)
 import concept_plan as CP    # noqa: E402  (chapter author's concept_plan.py, same folder)
@@ -66,6 +89,7 @@ CONFIG_PATH = os.path.join(HERE, "chapter.config.json")
 WORKLIST_PATH = os.path.join(HERE, "media_worklist.json")
 VIDEO_WORKLIST_PATH = os.path.join(HERE, "video_worklist.json")
 VIDEO_SCRIPT_DIR = os.path.join(HERE, "video_scripts")
+SOLUTION_WORKLIST_PATH = os.path.join(HERE, "solution_worklist.json")
 PHOTO_DIR = os.path.join(HERE, "photos")
 
 
@@ -84,11 +108,33 @@ def load_config():
         raise SystemExit("chapter.config.json phase must be 2 - this pipeline is Phase 2 only")
     if "_V3" in cfg["chapter_id"] or "_v3" in cfg["chapter_id"].lower():
         raise SystemExit("chapter_id must not carry a _V3 suffix in this pipeline")
+    # Every question carries its step-by-step solution in the concept AND a question image + a solution image.
+    # That is the default for a new chapter, so the key must be decided: true, or an explicit false to opt out.
+    if "solutions" not in cfg:
+        raise SystemExit('chapter.config.json has no "solutions" key. Add "solutions": true (every question gets '
+                         'working + answer in the concept, a question image and a solution image), or an '
+                         'explicit false only if the teacher asked for a chapter without them.')
+    if cfg["solutions"] not in (True, False):
+        raise SystemExit('chapter.config.json "solutions" must be true or false (the text-only mode is not '
+                         'allowed for new chapters: both the written solution and the two images are required)')
     return cfg
 
 
 def out_path(cfg):
     return os.path.join(HERE, "%s.json" % cfg["chapter_id"])
+
+
+def book_item_kinds():
+    """{book id: kind} from content.NCERT_ITEMS. An entry is "id" (kind unknown, not checked), ("id", "kind") or
+    {"id": ..., "kind": ...}; kind is example | exercise | prompt | talk | text. gates/question_layout.py checks
+    that every item whose kind is in the chapter's question_scope sits in a concept of a Questions topic."""
+    kinds = {}
+    for entry in getattr(K, "NCERT_ITEMS", []) or []:
+        if isinstance(entry, dict):
+            kinds[entry["id"]] = entry.get("kind")
+        elif isinstance(entry, (list, tuple)) and len(entry) == 2:
+            kinds[entry[0]] = entry[1]
+    return {k: v for k, v in kinds.items() if v}
 
 
 # ---------------------------------------------------------------------------
@@ -120,8 +166,16 @@ def _teach_blocks(concept):
         text = "\n".join(["%s: %s" % (it["book"], it["question"])]
                          + ["%d. %s" % (i, s) for i, s in enumerate(it["steps"], 1)]
                          + ["Answer: %s" % it["answer"]])
-        blocks.append(_content_block("exercise", text, coverage_id=it["cov"], question=it["question"],
-                                     steps=it["steps"], answer=it["answer"]))
+        # worked_example + item_kind "exercise", the question-block shape every built chapter uses; core.qt
+        # moves only worked_example blocks into the practice topic.
+        # book_kind: "example" (a solved example of the book), "exercise" (Figure it Out / exercise question) or
+        # "prompt" (an answerable in-text question); q_figure / s_figure: one plain sentence for the diagram the
+        # question card / solution card needs (core/solutions/placeholders.py), left out when the card is text only.
+        extra = {k: it[k] for k in ("q_figure", "s_figure") if it.get(k)}
+        blocks.append(_content_block("worked_example", text, item_kind="exercise", coverage_id=it["cov"],
+                                     exercise_id=it["cov"], book_number=it["book"], question=it["question"],
+                                     steps=it["steps"], answer=it["answer"], ncert_refs=[it["cov"]],
+                                     book_kind=it.get("kind", "exercise"), **extra))
     return blocks
 
 
@@ -227,7 +281,6 @@ def assemble(cfg):
                     "is_enrichment": is_enrichment_c,
                     "source_segment_role": _concept_role(c),
                     "objective_id": objective_id,
-                    **({"_is_thin_extra": True} if c.get("thin") else {}),
                 })
             is_enrichment_t = t["topic_type"] == "framing"
             topic_objective = None
@@ -309,59 +362,56 @@ def write_media_worklist(concept_lookup):
     return len(entries)
 
 
-def _exercise_numbers(slots):
-    """Numbers of every book question, for the book guard (hook, recap and 'your turn' reuse none of them)."""
-    import re as _re
-    out = {}
-    for sl in slots:
-        for it in sl.get("items") or []:
-            out[it["id"]] = [int(n) for n in _re.findall(r"\d+", it["question"])]
-    return out
-
-
-def _qt_name(slot):
-    """The book's own label for the question, such as 'Let Us Do 2, write the names'."""
-    src = (slot.get("source") or [""])[0].strip()
-    return src or None
-
-
 def write_video_worklist(concept_lookup, cfg):
-    """One slot per concept that needs a video: a hook for the framing topic, a worked slot per
-    worked example, an exercise slot per FIO/exercise item, a theorem slot where content.py's
-    THEOREMS-equivalent marks one. Kept deliberately simple here - a real chapter's build.py may
-    need to add story/recap slots by hand the way the reference chapters' own build.py does."""
+    """One slot per concept that needs a video, in the Keeko design (28 Oct 2026): a hook (once, for the
+    chapter's first video_focus HOOK), a worked slot per worked example (the concept video; it ends with
+    Keeko's raised hand), an exercise slot per FIO/exercise item (the question video; `method_from` names
+    the solved examples of the same concept whose method it uses), a theorem slot for video_focus
+    "THEOREM". "RECAP" is ignored: there is no recap video. Authors fill `{{NAME_n}}` name tokens; see
+    name_slots.json.sample. A real chapter's build.py may add story slots by hand."""
     slots = []
+    hook_done = False
     for key, info in concept_lookup.items():
         c, cid = info["concept"], info["concept_id"]
         cslots = []
         if c.get("kind") == "teach" and c.get("video_focus"):
             for focus in c["video_focus"]:
-                kind = {"HOOK": "hook", "RECAP": "recap"}.get(focus, "worked")
+                if focus == "RECAP":
+                    continue    # Keeko design: no recap video
+                if focus == "HOOK":
+                    if hook_done:
+                        continue    # one hook per chapter
+                    hook_done = True
+                kind = {"HOOK": "hook", "THEOREM": "theorem"}.get(focus, "worked")
                 cslots.append(VH.slot("%s.%s.%s" % (cfg["media_tag"], key, focus.lower()),
-                                                        kind, source=[c.get("name", key)],
-                                                        **({"handover": "The free-try tool 'Odometer Reader' opens next: turn the wheels and read the distance.",
-                                                            "note": "The chapter opener: a trip and its distance, left open."}
-                                                           if kind == "hook" else {})))
+                                      kind, source=[c.get("name", key)],
+                                      misconceptions=c.get("misconceptions") or []))
         for i, ex in enumerate(c.get("examples") or []):
             cslots.append(VH.slot("%s.%s.E%d" % (cfg["media_tag"], key, i),
-                                                    "worked", source=[ex["q"][:60]], item_ids=ex.get("ncert") or [],
-                                                    items=[{"id": "E%d" % i, "question": ex["q"],
-                                                            "steps": ex["steps"], "answer": ex["answer"]}],
-                                                    answer=ex["answer"]))
+                                  "worked", source=[ex["q"][:60]], item_ids=ex.get("ncert") or [],
+                                  items=[{"id": "E%d" % i, "question": ex["q"],
+                                          "steps": ex["steps"], "answer": ex["answer"]}],
+                                  answer=ex["answer"], misconceptions=c.get("misconceptions") or []))
         for it in c.get("items") or []:
             cslots.append(VH.slot("%s.%s.%s" % (cfg["media_tag"], key, it["cov"]),
-                                                    "exercise", source=[it["book"]], item_ids=[it["cov"]],
-                                                    items=[{"id": it["cov"], "question": it["question"],
-                                                            "steps": it["steps"], "answer": it["answer"]}],
-                                                    answer=it["answer"]))
+                                  "exercise", source=[it["book"]], item_ids=[it["cov"]],
+                                  items=[{"id": it["cov"], "question": it["question"],
+                                          "steps": it["steps"], "answer": it["answer"]}],
+                                  answer=it["answer"]))
         slots += VH.number_slots(cid, cslots)
+    # exercise videos name the solved examples of the same concept whose method they use
+    worked = [s for s in slots if s["kind"] in ("worked", "theorem")]
+    for s in slots:
+        if s["kind"] == "exercise":
+            stem = s["key"].rsplit(".", 1)[0]
+            s["method_from"] = [w["key"] for w in worked if w["key"].rsplit(".", 1)[0] == stem]
     header = {"chapter_id": cfg["chapter_id"], "grade": cfg["grade"], "name": cfg["chapter_name"],
-              "chapter_no": cfg["chapter_no"],
-              "allow_words": sorted(set(cfg.get("allow_words") or [])),
-              "hard_words": ["odometer (define it)", "TTh (define it)", "expanded form (define it)", "mirror strategy (define it)"],
-              "names_note": "Vary names across regions, religions and genders; Chintu owns every wrong idea.",
-              "length_override": {},
-              "exercise_numbers": _exercise_numbers(slots)}
+              "chapter_no": cfg["chapter_no"], "allow_words": sorted(set(cfg.get("allow_words") or [])),
+              "hard_words": [], "length_override": {},
+              "names_note": "Vary names across regions, religions and genders; use {{NAME_n}} tokens "
+                            "(n up to 10, one character = one token) and list them in name_slots.json; "
+                            "Keeko raises the wrong idea or a real-life link at the end of a concept video.",
+              "exercise_numbers": VH.exercise_numbers([i for s in slots for i in s.get("items") or []])}
     return VH.write_worklist(VIDEO_WORKLIST_PATH, header, slots)
 
 
@@ -371,6 +421,18 @@ def write_video_worklist(concept_lookup, cfg):
 def main():
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     cfg = load_config()
+    sols = SS.load(HERE)
+    if "--solution-worklist" in sys.argv:
+        n = SB.write_worklist(SOLUTION_WORKLIST_PATH, {"chapter_id": cfg["chapter_id"], "grade": cfg["grade"],
+                                                       "chapter_no": cfg["chapter_no"],
+                                                       "schema": "core/solutions/schema.py",
+                                                       "rules": "math_solutions/skill/references/format-rules.md"},
+                              CP.TOPICS, sols)
+        print("wrote %s (%d exercise items without a solution) - add each to solutions.json, then run "
+              "core/solutions/gen_scenes.py" % (SOLUTION_WORKLIST_PATH, n))
+        return 0
+    if sols:
+        print("solutions.json: %d solution(s) written into the items" % SB.fill(CP.TOPICS, sols))
     plan, concept_lookup, asset_base = assemble(cfg)
 
     if "--worklist" in sys.argv:
@@ -394,11 +456,6 @@ def main():
     else:
         # fold in any authored images (media_specs/*.json) as image media nodes, keyed by concept.
         images, decisions = MS.load_all() if os.path.isdir(os.path.join(HERE, "media_specs")) else ({}, {})
-        # specs are keyed by image key ("T2.C1.IMG1"); regroup by the authored concept key ("T2.C1")
-        by_ckey = {}
-        for ik, ims in images.items():
-            by_ckey.setdefault(ik.rsplit(".IMG", 1)[0] if ".IMG" in ik else ik, []).extend(ims)
-        images = by_ckey
         for module in plan["modules"]:
             for segment in module["segments"]:
                 for topic in segment["topics"]:
@@ -422,10 +479,16 @@ def main():
                             topic["available_content_types"] = sorted(
                                 set(topic["available_content_types"]) | {"image"})
 
-        # fold in any authored video scripts (video_scripts/*.json) via core.video_script.
-        if os.path.isdir(VIDEO_SCRIPT_DIR):
-            scripts = VH.load_scripts(VIDEO_SCRIPT_DIR)
+        # fold in any authored video scripts (video_scripts/*.json) via core.video_script. --placeholders runs
+        # before any script exists, so an absent video_scripts/ folder is fine there (the Questions topics and
+        # their image placeholders still need this pass).
+        if os.path.isdir(VIDEO_SCRIPT_DIR) or "--placeholders" in sys.argv:
+            scripts = VH.load_scripts(VIDEO_SCRIPT_DIR) if os.path.isdir(VIDEO_SCRIPT_DIR) else {}
             wl = VH.load_worklist(VIDEO_WORKLIST_PATH)
+            if wl and cfg.get("media_placeholders"):
+                # user decision 2026-11-03: placeholders for media; scripts and videos are made elsewhere
+                import media_placeholders as MP  # noqa: E402
+                scripts = MP.with_stubs(wl["videos"], scripts, concept_lookup)
             if wl:
                 nodes, missing = VH.build_nodes(wl["videos"], scripts, asset_base=asset_base,
                                                 chapter_label=cfg["chapter_name"])
@@ -465,46 +528,130 @@ def main():
                 # instructional topic whose exercise slots were just tagged above. strand_map is
                 # left empty here (no cross-chapter strand grouping in this template); a real
                 # chapter wires it the way maths6_ch3/new_design's own build.py does if it needs one.
-                _lab = {}
-                for _v in wl["videos"]:
-                    _txt = (_v.get("items") or [{}])[0].get("question") or (_v.get("source") or [""])[0]
-                    for _i in _v.get("item_ids") or []:
-                        _lab.setdefault(_i, "Book item: %s" % _txt)
-                plan["video_coverage"] = VH.coverage(wl["videos"], _lab)
-                QT.apply(plan, wl["videos"], cfg["media_tag"], {}, own_video=True, keep_first=True, name_fn=_qt_name)
+                # every concept lists its own media, as the built chapters do: images, videos, then its tool
+                for module in plan["modules"]:
+                    for segment in module["segments"]:
+                        for topic in segment["topics"]:
+                            for concept in topic["concepts"]:
+                                own = [x for x in topic["media"] if x.get("concept_id") == concept["concept_id"]]
+                                vids = [x["id"] for x in own if x.get("type") == "video"]
+                                concept["media_ids"] = ([x["id"] for x in own if x.get("type") == "image"] + vids
+                                                        + [x["id"] for x in own if x.get("type") == "2d_tool"])
+                                concept["video_media_ids"] = vids
+                                if vids:
+                                    concept["walkthrough_video_id"] = vids[0]
+                                concept["source_media"] = ("video" if vids else "2d_tool" if concept.get("tool_media_id")
+                                                           else "image" if concept["media_ids"] else None)
+
+                labels = {}
+                for v in wl["videos"]:
+                    text = (v.get("items") or [{}])[0].get("question") or (v.get("source") or [""])[0]
+                    for i in v.get("item_ids") or []:
+                        labels.setdefault(i, "Book item: %s" % text)
+                plan["video_coverage"] = VH.coverage(wl["videos"], labels)
+
+                # enrichment_qt: the shape every Class 6-7 chapter ships - a "Figure it Out" topic with one
+                # concept per question, each holding its own question video (<concept>.VID1). Without it the
+                # question concepts get no video and solution_content fails them.
+                QT.apply(plan, wl["videos"], cfg["media_tag"], {}, enrichment_qt=True,
+                         topic_prefix="Questions" if cfg.get("question_layout") else None)
+
+                if cfg.get("media_placeholders"):
+                    # QT renumbered the concepts after the video nodes were made: the planned url takes the final id
+                    for module in plan["modules"]:
+                        for segment in module["segments"]:
+                            for topic in segment["topics"]:
+                                for nd in topic["media"]:
+                                    if nd.get("type") == "video" and nd.get("build_status") == "placeholder":
+                                        nd["planned_url"] = "%s/video_v3/%s.mp4" % (asset_base, nd["id"])
+                                    elif (nd.get("type") == "image" and nd.get("build_status") == "placeholder"
+                                          and topic.get("source_type") not in ("exercise", "question_topic")):
+                                        # a concept image: its planned url takes the final id as well
+                                        nd["planned_url"] = "%s/image_v3/%s.png" % (asset_base, nd["id"])
+
                 # QT moves each exercise ref off its teaching concept; rebuild ncert_coverage from the final
                 # concept ncert_refs so the forward and reverse maps agree.
-                _cov = {}
-                for _m in plan["modules"]:
-                    for _s in _m["segments"]:
-                        for _t in _s["topics"]:
-                            for _c in _t["concepts"]:
-                                for _r in _c.get("ncert_refs") or []:
-                                    _cov.setdefault(_r, [])
-                                    if _c["concept_id"] not in _cov[_r]:
-                                        _cov[_r].append(_c["concept_id"])
-                plan["source_metadata"]["ncert_coverage"] = _cov
+                cov = {}
+                for module in plan["modules"]:
+                    for segment in module["segments"]:
+                        for topic in segment["topics"]:
+                            for concept in topic["concepts"]:
+                                for r in concept.get("ncert_refs") or []:
+                                    if concept["concept_id"] not in cov.setdefault(r, []):
+                                        cov[r].append(concept["concept_id"])
+                plan["source_metadata"]["ncert_coverage"] = cov
 
-        # Server-required fields the template does not set (publication 1 as in the Ch10 plan).
-        plan.setdefault("publication_id", 1)
-        for _m in plan["modules"]:
-            for _s in _m["segments"]:
-                for _t in _s["topics"]:
-                    for _x in _t.get("media") or []:
-                        if _x.get("type") == "2d_tool":
-                            _x.setdefault("2d_tool_json", "")
-                    # ch9 shape: each concept lists all its media (IMG, VID, 2D order).
-                    _rank = {"image": 0, "video": 1, "2d_tool": 2}
-                    for _c in _t["concepts"]:
-                        _own = [x for x in _t.get("media") or [] if x.get("home_concept_id") == _c["concept_id"]]
-                        _ids = [x["id"] for x in sorted(_own, key=lambda x: _rank.get(x.get("type"), 3))]
-                        _c["media_ids"] = _ids + [i for i in _c.get("media_ids") or [] if i not in _ids]
+                # question and solution image PLACEHOLDERS on every question concept (nothing is drawn): the
+                # structure is reviewable before any solution is authored, and attach() below swaps in the real
+                # cards for the questions that have a solutions.json entry.
+                if cfg.get("solutions"):
+                    img_report = SP.add(plan, cfg)
+                    with io.open(os.path.join(HERE, "question_images_report.json"), "w", encoding="utf-8") as f:
+                        json.dump(img_report, f, ensure_ascii=False, indent=1)
+                    print("question images: %d question concepts, %d solution card(s) in all, %d with a diagram on "
+                          "the question card, %d without a video yet (question_images_report.json)"
+                          % (len(img_report), sum(r["solution_images"] for r in img_report),
+                             sum(1 for r in img_report if r["question_diagram"]),
+                             sum(1 for r in img_report if not r["has_video"])))
+
+        # solutions: check solutions.json + its scene files, then hang the question and solution images on
+        # each question concept as media_ids = [question image, video(s), solution image].
+        mode = cfg.get("solutions")
+        if mode:
+            todo = SB.missing(CP.TOPICS, sols)
+            if todo and "--placeholders" in sys.argv:
+                print("placeholders: %d question(s) have no solutions.json entry yet and keep their image "
+                      "placeholders (build.py --solution-worklist lists them)" % len(todo))
+            elif todo:
+                print("%d QUESTION(S) HAVE NO SOLUTION in solutions.json (run build.py --solution-worklist):"
+                      % len(todo))
+                for t in todo[:25]:
+                    print("  -", t["cov"], t["book"] or "", t.get("note") or "")
+                return 1
+        if mode and sols:
+            errs, warns = SC.check(HERE)
+            for w in warns:
+                print("  ~ solutions:", w)
+            if errs:
+                print("%d SOLUTION PROBLEM(S):" % len(errs))
+                for e in errs:
+                    print("  -", e)
+                return 1
+            problems = SA.attach(plan, HERE, SA.key_dir_for(cfg))
+            if problems:
+                print("%d SOLUTION ATTACH PROBLEM(S):" % len(problems))
+                for p in problems:
+                    print("  -", p)
+                return 1
+
+        if cfg.get("publication_id"):
+            # the LP2 upload endpoint requires a top-level publication_id (CBSE = 1) and a 2d_tool_json on every
+            # tool node (empty until the tool is built), as the live chapters carry them
+            plan["publication_id"] = cfg["publication_id"]
+            for module in plan["modules"]:
+                for segment in module["segments"]:
+                    for topic in segment["topics"]:
+                        for nd in topic["media"]:
+                            if nd.get("type") == "2d_tool":
+                                nd.setdefault("2d_tool_json", "")
         with io.open(out_path(cfg), "w", encoding="utf-8") as f:
             json.dump(plan, f, ensure_ascii=False, indent=1)
         print("wrote %s" % out_path(cfg))
 
-    errors, counts = gate_runner.run(plan, cfg)
+    gate_cfg = dict(cfg, book_item_kinds=book_item_kinds()) if cfg.get("question_layout") else cfg
+    errors, counts = gate_runner.run(plan, gate_cfg)
     warnings = counts.pop("warnings", [])
+    expected = []
+    if "--placeholders" in sys.argv:
+        # structure stage: no video script exists yet, so the video gates (no hook video, video_coverage pointing at
+        # videos not made, a question concept with no video between its two cards) cannot pass yet. Show them apart
+        # from the failures that need fixing now.
+        has_scripts = os.path.isdir(VIDEO_SCRIPT_DIR) and any(
+            f.endswith(".json") for f in os.listdir(VIDEO_SCRIPT_DIR))
+        if not has_scripts:
+            expected = [e for e in errors if e.startswith("video_script_rules:")
+                        or ("solution_content:" in e and "needs the question video" in e)]
+            errors = [e for e in errors if e not in expected]
     print("counts:", counts)
     if warnings:
         # Advisory only - see gates/gate_runner.py's "Blocking errors vs advisory warnings".
@@ -517,6 +664,11 @@ def main():
         for e in errors:
             print("  -", e)
         return 1
+    if expected:
+        print("structure stage OK: the question layout and the image placeholders pass every gate that can pass "
+              "now. %d video gate message(s) are expected until video_scripts/ exist, and the solutions are still "
+              "to author. This plan is NOT ready to validate or upload." % len(expected))
+        return 0
     print("all gates passed (blocking)")
     return 0
 

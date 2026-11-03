@@ -63,31 +63,45 @@ def node(entry, sol, concept_id, key_dir, has_png):
     short = sol["label"]
     url = _public_url(key_dir, entry["id"] + ".png")
     fig = figure_words(sol.get("figure"), role)
+    part, parts = entry.get("part", 1), entry.get("parts", 1)     # a long working runs over two solution cards
     if role == "question":
         question = HINT.sub("", sol["question"])
         text = "Question card: %s %s Only the question and its figure are shown." % (question, fig)
         instruction = "Try this question yourself before you watch the video."
         notes = "Let the student attempt this before showing the video or the solution image."
     else:
-        text = "Solution card with Given, To find, numbered working, a highlighted answer and a common-mistake " \
-               "note: %s %s" % (re.sub(r"\s+", " ", schema.tex_to_plain(sol["answer_tex"])).rstrip("."), fig)
-        instruction = "Compare this with your own working, step by step."
+        answer = re.sub(r"\s+", " ", schema.tex_to_plain(sol["answer_tex"])).rstrip(".")
+        if parts > 1 and part == 1:
+            text = "Solution card, part 1 of %d: Given, To find, method and the first numbered steps of the " \
+                   "working, carried on to the next card. %s" % (parts, fig)
+            instruction = "Compare this with your own working, step by step."
+        elif parts > 1:
+            text = "Solution card, part %d of %d: the rest of the numbered working, a highlighted answer and a " \
+                   "common-mistake note: %s %s" % (part, parts, answer, fig)
+            instruction = "This card carries on from the previous solution card; compare the rest of your working."
+        else:
+            text = "Solution card with Given, To find, numbered working, a highlighted answer and a common-mistake " \
+                   "note: %s %s" % (answer, fig)
+            instruction = "Compare this with your own working, step by step."
         notes = "Show only after the student has attempted the question."
-    n = 1 if role == "question" else 2
+    n = 1 if role == "question" else 1 + part
+    render_source = {
+        "engine": "manim",
+        "scene": entry["scene_class"],
+        "code_url": _public_url(key_dir + "/code", entry["id"] + ".py"),
+        "style_url": _public_url(key_dir + "/code", "_style.py"),
+    }
+    if parts > 1:
+        render_source["part"], render_source["parts"] = part, parts
     return {
         "id": "%s.IMG%d" % (concept_id, n),
         "type": "image",
         "subtype": "illustration",
-        "title": "%s: %s" % (short, role),
+        "title": "%s: %s%s" % (short, role, " (continued)" if part > 1 else ""),
         "image_url": url,
         "planned_url": url,
         "image_role": role,
-        "render_source": {
-            "engine": "manim",
-            "scene": entry["scene_class"],
-            "code_url": _public_url(key_dir + "/code", entry["id"] + ".py"),
-            "style_url": _public_url(key_dir + "/code", "_style.py"),
-        },
+        "render_source": render_source,
         "concept_id": concept_id,
         "home_concept_id": concept_id,
         "related_concept_ids": [],
@@ -163,34 +177,47 @@ def attach(plan, new_design, key_dir):
             problems.append("%s: no concept in the plan cites it in ncert_refs" % cov)
             continue
         cid = concept["concept_id"]
-        have = {e["role"]: e for e in entries}
-        if set(have) != {"question", "solution"}:
-            problems.append("%s: manifest needs one question and one solution image" % cov)
+        # one question card, and one solution card or (a long working, chapter.config "solution_continuation")
+        # two, numbered by `part`
+        q_entries = [e for e in entries if e["role"] == "question"]
+        s_entries = sorted((e for e in entries if e["role"] == "solution"), key=lambda e: e.get("part", 1))
+        if len(q_entries) != 1 or not s_entries or [e.get("part", 1) for e in s_entries] != list(range(1, len(s_entries) + 1)):
+            problems.append("%s: manifest needs one question image and one solution image (or solution parts 1 to n)"
+                            % cov)
             continue
-        topic["media"] = [m for m in topic.get("media", [])
-                          if not (m.get("type") == "image" and m.get("image_role") in ("question", "solution")
-                                  and m.get("concept_id") == cid)]
-        nodes = {}
-        for role, e in have.items():
-            has_png = os.path.exists(os.path.join(out, "png", e["id"] + ".png"))
-            nodes[role] = node(e, sol, cid, key_dir, has_png)
-        topic["media"].extend([nodes["question"], nodes["solution"]])
+        is_card = lambda m: (m.get("type") == "image" and m.get("image_role") in ("question", "solution")
+                             and m.get("concept_id") == cid)
+        removed = {m["id"] for m in topic.get("media", []) if is_card(m)}      # earlier cards, placeholders included
+        topic["media"] = [m for m in topic.get("media", []) if not is_card(m)]
+        q_node = node(q_entries[0], sol, cid, key_dir,
+                      os.path.exists(os.path.join(out, "png", q_entries[0]["id"] + ".png")))
+        s_nodes = [node(e, sol, cid, key_dir, os.path.exists(os.path.join(out, "png", e["id"] + ".png")))
+                   for e in s_entries]
+        topic["media"].extend([q_node] + s_nodes)
         topic["available_content_types"] = sorted(set(topic.get("available_content_types") or []) | {"image"})
-        mine = {nodes["question"]["id"], nodes["solution"]["id"]}
-        rest = [m for m in concept.get("media_ids") or [] if m not in mine]
-        concept["media_ids"] = [nodes["question"]["id"]] + rest + [nodes["solution"]["id"]]
-        # the question block itself names both cards (Class 9 Ch5 shape: image_media_id), not only the concept
+        mine = {q_node["id"]} | {n["id"] for n in s_nodes}
+        rest = [m for m in concept.get("media_ids") or [] if m not in mine and m not in removed]
+        concept["media_ids"] = [q_node["id"]] + rest + [n["id"] for n in s_nodes]
+        # the question block itself names the cards (Class 9 Ch5 shape: image_media_id), not only the concept
         for b in concept.get("content") or []:
             if b.get("block_kind") in QUESTION_KINDS or (b.get("block_kind") == "worked_example" and b.get("item_kind")):
-                b["image_media_id"] = nodes["question"]["id"]
-                b["solution_image_media_id"] = nodes["solution"]["id"]
+                b["image_media_id"] = q_node["id"]
+                b["solution_image_media_id"] = s_nodes[0]["id"]
+                if len(s_nodes) > 1:
+                    b["solution_image_media_ids"] = [n["id"] for n in s_nodes]
+                else:
+                    b.pop("solution_image_media_ids", None)
         if "image_media_id" in concept:
-            concept["image_media_id"] = nodes["question"]["id"]
-        concept["image_decision"] = {
+            concept["image_media_id"] = q_node["id"]
+        decision = dict(concept.get("image_decision") or {})      # keep a placeholder pass's diagram notes
+        decision.update({
             "needed": True,
-            "why": "A question concept: one image shows the question and its figure for the attempt, "
-                   "and one shows the worked solution.",
-        }
+            "why": "A question concept: one image shows the question and its figure for the attempt, and %s the "
+                   "worked solution." % ("two images carry" if len(s_nodes) > 1 else "one shows"),
+        })
+        if len(s_nodes) > 1:
+            decision["solution_images"] = len(s_nodes)
+        concept["image_decision"] = decision
     # the manifest records where the files go; the plan nodes point there
     if manifest.get("key_dir") != key_dir:
         manifest["key_dir"] = key_dir

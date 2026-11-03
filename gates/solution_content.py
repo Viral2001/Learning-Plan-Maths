@@ -15,7 +15,8 @@ Per question concept:
   1. every question block has non-empty `steps` and `answer`, and `solution_status` (Class 9/10) is not
      "to_author";
   2. media_ids is [question image, video(s), solution image]: first an image with image_role "question",
-     last an image with image_role "solution", at least one video between (images mode);
+     last an image with image_role "solution", at least one video between (images mode). A working too long
+     for one card may end with a second solution image (the block then lists `solution_image_media_ids`);
   3. both images carry `render_source` (Manim code the editor can open), and the question image's own
      fields hold no hint, answer or solution words (the question text itself is exempt, as in
      theorem_variant rule 2).
@@ -42,12 +43,22 @@ PLACEHOLDER_RE = re.compile(r"read the question in the book|attempt it before wa
 
 def ids_missing(block, concept):
     """The question block names both cards (image_media_id / solution_image_media_id) and they are the first
-    and last of the concept's media_ids. '' when fine."""
+    and last of the concept's media_ids. '' when fine.
+
+    A working too long for one card may carry on to a second solution image. Then the block also lists
+    `solution_image_media_ids` (the trailing solution images, in order, the last of them the last media_id)
+    and `solution_image_media_id` is the first of them. A block without that list is checked exactly as before."""
     ids = concept.get("media_ids") or []
     if not ids:
         return ""
     if block.get("image_media_id") != ids[0]:
         return "image_media_id must be the question image (first media_id)"
+    more = block.get("solution_image_media_ids")
+    if more:
+        if list(more) != ids[-len(more):] or block.get("solution_image_media_id") != more[0]:
+            return ("solution_image_media_ids must be the trailing media_ids, led by solution_image_media_id "
+                    "(the solution image and its continuation)")
+        return ""
     if block.get("solution_image_media_id") != ids[-1]:
         return "solution_image_media_id must be the solution image (last media_id)"
     return ""
@@ -116,7 +127,13 @@ def check(plan, config=None):
             if need_video and not any(n.get("type") == "video" for n in middle):
                 problems.append("%s: media_ids needs the question video between the question and solution "
                                 "images" % cid)
-            for n in (first, last):
+            for b in blocks:
+                for i in b.get("solution_image_media_ids") or []:
+                    if (media.get(i) or {}).get("image_role") != "solution":
+                        problems.append("%s: %s in solution_image_media_ids is not a solution image "
+                                        "(image_role 'solution')" % (cid, i))
+            # the question and solution images, and a solution continued on a second card, all carry Manim code
+            for n in [first, last] + [x for x in nodes[1:-1] if x and x.get("image_role") == "solution"]:
                 if n and n.get("image_role") in ("question", "solution") and not (n.get("render_source") or {}).get("code_url"):
                     problems.append("%s: image %s has no render_source.code_url (Manim code)" % (cid, n.get("id")))
             if first and first.get("image_role") == "question":

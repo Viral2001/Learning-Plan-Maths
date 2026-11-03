@@ -17,6 +17,10 @@
                                                           # side labels are math mode: write 6\\,\\text{cm}
         "source":      "book" | "authored",
         "images":      true | false                # optional override of the kind default
+        "cards":       1 | 2                        # optional: solution cards. Default 1; 2 when the chapter config
+                                                    # has "solution_continuation" and the working is long
+                                                    # (core/solutions/layout.py)
+        "cut":         k                            # optional: steps kept on card 1 when there are two cards
     }}
 
 The format rules are the teacher's board-solution rules (math_solutions/skill/references/format-rules.md):
@@ -66,6 +70,10 @@ def validate(sol_map):
             errs.append("%s: source must be one of %s" % (cov, SOURCES))
         if not isinstance(s.get("steps"), list) or not all(isinstance(x, str) and x.strip() for x in s.get("steps") or []):
             errs.append("%s: steps must be a list of non-empty strings" % cov)
+        if "cards" in s and s["cards"] not in (1, 2):
+            errs.append("%s: cards must be 1 or 2" % cov)
+        if "cut" in s and not (isinstance(s["cut"], int) and 1 <= s["cut"] < len(s.get("steps") or [])):
+            errs.append("%s: cut must be a whole number from 1 to the number of steps minus 1" % cov)
         fig = s.get("figure")
         if fig and fig.get("type") not in FIGURE_TYPES:
             errs.append("%s: figure.type must be one of %s" % (cov, FIGURE_TYPES))

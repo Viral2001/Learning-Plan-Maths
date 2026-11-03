@@ -9,6 +9,8 @@ maths8_ch9). Every gate family in the approved plan is wired in:
 `plan` is the built plan dict (already in Phase 2 shape - no _V3, phase: 2).
 `config` is the chapter.config.json dict (needs at least "eqcheck": "plain"|"signed"|"powers").
 
+question_layout runs only when config has a truthy `question_layout` (the "Questions: <topic>" layout: every
+book question in its own concept right after its concept topic; see gates/question_layout.py).
 coverage/video_script_rules always run (plan-shape and video-contract checks that hold
 regardless of grade band). solution_content runs only when config has `solutions` (true/"images"/"text":
 every question block has its steps and answer, and by default the media_ids order question image, video,
@@ -57,7 +59,8 @@ import io
 import json
 import sys
 
-from . import coverage, media_content, objectives, skeleton, solution_content, theorem_variant, video_script_rules
+from . import (coverage, media_content, objectives, question_layout, skeleton, solution_content, theorem_variant,
+               video_script_rules)
 
 EQCHECK_MODULES = {}
 
@@ -180,6 +183,8 @@ def run(plan, config):
         gate_families += [("skeleton", skeleton), ("objectives", objectives)]
     if config.get("solutions"):
         gate_families.append(("solution_content", solution_content))
+    if config.get("question_layout"):
+        gate_families.append(("question_layout", question_layout))
 
     for name, mod in gate_families:
         gate_messages = ["%s: %s" % (name, e) for e in mod.check(plan, config)]

@@ -5,6 +5,9 @@
 
 Writes into <chapter>/solution_images/:
     scenes/<stem>_q.py, scenes/<stem>_sol.py   one question card and one solution card per question
+    scenes/<stem>_sol2.py                      the solution continued, only for a working too long for one card
+                                               (chapter.config.json "solution_continuation": true, or "cards": 2 in
+                                               solutions.json; core/solutions/layout.py decides, "cut" moves the cut)
     _style.py                                  copy of core/solutions/style/_style.py
     render.py                                  thin shim over core/solutions/render.py (the editor loads it)
     manifest.json, plan_text.json              what core/image_editor/server.py reads
@@ -24,7 +27,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(os.path.dirname(HERE)))
-from core.solutions import schema  # noqa: E402
+from core.solutions import layout, schema  # noqa: E402
 
 FOLDER = "solution_images"
 SHIM = '''"""Editor shim: the renderer lives in core/solutions/render.py."""
@@ -93,29 +96,72 @@ def question_scene(stem, sol):
     return "\n".join(lines) + "\n"
 
 
-def solution_scene(stem, sol):
-    fig = sol.get("figure") if (sol.get("figure") or {}).get("type", "none") != "none" else None
+def has_figure(sol):
+    return (sol.get("figure") or {}).get("type", "none") != "none"
+
+
+def cards_for(sol, cfg=None):
+    """1 or 2 solution cards: solutions.json "cards" wins; otherwise 2 only when the chapter turned continuation
+    on and the working is longer than one card holds (core/solutions/layout.py)."""
+    if sol.get("cards") in (1, 2):
+        return sol["cards"]
+    if not layout.continuation_enabled(cfg):
+        return 1
+    steps = [schema.tex_to_plain(x) for x in sol["steps"]]
+    return layout.cards_needed(steps, with_figure=has_figure(sol),
+                               max_lines=(cfg or {}).get("question_image_max_lines") or layout.MAX_LINES)
+
+
+def cut_for(sol, cfg=None):
+    """How many steps stay on card 1 when the working runs over two cards."""
+    if sol.get("cut"):
+        return sol["cut"]
+    steps = [schema.tex_to_plain(x) for x in sol["steps"]]
+    return layout.split_point(steps, with_figure=has_figure(sol),
+                              max_lines=(cfg or {}).get("question_image_max_lines") or layout.MAX_LINES)
+
+
+def solution_scene(stem, sol, part=None, k=None):
+    """The solution card. part=None: the whole working on one card. A working over two cards is cut after step k:
+    part 1 holds Given / To find / Method, the diagram and steps 1..k; part 2 the rest of the steps (numbered on
+    from k + 1), the check, the highlighted answer and the common-mistake note."""
+    fig = sol.get("figure") if has_figure(sol) else None
+    if part == 2:
+        fig = None                      # the diagram stays on card 1; card 2 has the full width for the working
     w = 7.6 if fig else 12.4
-    lines = ["from _style import *", "", "", "class %s_sol(Scene):" % stem, "    def construct(self):",
-             "        self.add(header(\"Solution\", %s))" % rs(sol["label"]), ""]
+    first, last = part in (None, 1), part in (None, 2)
+    lines = ["from _style import *", "", "", "class %s_%s(Scene):" % (stem, "sol2" if part == 2 else "sol"),
+             "    def construct(self):",
+             "        self.add(header(\"%s\", %s))" % ("Solution, continued" if part == 2 else "Solution", rs(sol["label"])),
+             ""]
     if fig:
         lines += ["        FIG = %r" % (fig,),
                   "        self.add(figure_from_spec(FIG, \"solution\", centre=(-3.4, -0.3)))", ""]
-    lines.append("        parts = VGroup()")
-    for tag, key in (("Given", "given"), ("To find", "find"), ("Method", "method")):
-        if sol.get(key):
-            lines.append("        parts.add(para(%s, %s, 24))" % (rs(r"\textbf{%s:} %s" % (tag, sol[key])), w))
-    lines.append("        parts.arrange(DOWN, aligned_edge=LEFT, buff=0.1)")
+    blocks = []
+    if first:
+        lines.append("        parts = VGroup()")
+        for tag, key in (("Given", "given"), ("To find", "find"), ("Method", "method")):
+            if sol.get(key):
+                lines.append("        parts.add(para(%s, %s, 24))" % (rs(r"\textbf{%s:} %s" % (tag, sol[key])), w))
+        lines.append("        parts.arrange(DOWN, aligned_edge=LEFT, buff=0.1)")
+        blocks.append("parts")
     lines.append("        work = steps([")
-    for s in sol["steps"]:
-        lines.append("            %s," % rs(s))
-    lines.append("        ], width=%s, size=24, gap=0.08)" % w)
-    if sol.get("verification"):
-        lines.append("        check = note(\"Check\", %s, width=%s, size=22, fill=TEAL_BG, colour=TEAL)"
-                     % (rs(sol["verification"]), w))
-    lines.append("        ans = answer_box(%s, width=%s, size=26, pad=0.2)" % (rs(sol["answer_tex"]), w))
-    lines.append("        slip = note(\"Common mistake\", %s, width=%s, size=22)" % (rs(sol["common_mistake"]), w))
-    blocks = ["parts", "work"] + (["check"] if sol.get("verification") else []) + ["ans", "slip"]
+    mine = sol["steps"] if part is None else (sol["steps"][:k] if part == 1 else sol["steps"][k:])
+    for step in mine:
+        lines.append("            %s," % rs(step))
+    lines.append("        ], width=%s, size=24, gap=0.08%s)" % (w, ", start=%d" % (k + 1) if part == 2 else ""))
+    blocks.append("work")
+    if part == 1:
+        lines.append("        more = word(r\"\\textit{The working continues on the next card.}\", size=22, color=MUTED)")
+        blocks.append("more")
+    if last:
+        if sol.get("verification"):
+            lines.append("        check = note(\"Check\", %s, width=%s, size=22, fill=TEAL_BG, colour=TEAL)"
+                         % (rs(sol["verification"]), w))
+            blocks.append("check")
+        lines.append("        ans = answer_box(%s, width=%s, size=26, pad=0.2)" % (rs(sol["answer_tex"]), w))
+        lines.append("        slip = note(\"Common mistake\", %s, width=%s, size=22)" % (rs(sol["common_mistake"]), w))
+        blocks += ["ans", "slip"]
     lines += ["        column = VGroup(%s).arrange(DOWN, aligned_edge=LEFT, buff=0.14)" % ", ".join(blocks),
               "        fit_column(column)"]
     if fig:
@@ -148,22 +194,33 @@ def generate(nd, force=False):
         with io.open(mpath, encoding="utf-8") as f:
             prev_manifest = json.load(f)
         key_dir = prev_manifest.get("key_dir", "")
-        old = {(e["cov"], e["role"]): e for e in prev_manifest["images"] if "cov" in e}
+        old = {(e["cov"], e["role"], e.get("part", 1)): e for e in prev_manifest["images"] if "cov" in e}
     images, plan_text, written = [], {}, 0
+    cfg = layout.chapter_config(nd)
     for cov, sol in sols.items():
         if not schema.wants_images(sol):
             continue
         stem = stem_of(cov)
         plan_text[cov] = plan_text_entry(cov, sol)
-        for n, role, tag, build in ((1, "question", "q", question_scene), (2, "solution", "sol", solution_scene)):
+        cards = cards_for(sol, cfg)
+        k = cut_for(sol, cfg) if cards == 2 else None
+        # a solution that now needs another card (or one fewer) than its scenes were made for is regenerated
+        prev_cards = 2 if (cov, "solution", 2) in old else 1 if (cov, "solution", 1) in old else cards
+        scenes = [(1, "question", "q", 1, lambda: question_scene(stem, sol))]
+        if cards == 1:
+            scenes.append((2, "solution", "sol", 1, lambda: solution_scene(stem, sol)))
+        else:
+            scenes += [(2, "solution", "sol", 1, lambda: solution_scene(stem, sol, 1, k)),
+                       (3, "solution", "sol2", 2, lambda: solution_scene(stem, sol, 2, k))]
+        for n, role, tag, part, build in scenes:
             scene_file = "%s_%s.py" % (stem, tag)
             path = os.path.join(out, "scenes", scene_file)
-            regenerated = force or not os.path.exists(path)
+            regenerated = force or not os.path.exists(path) or (role == "solution" and cards != prev_cards)
             if regenerated:
                 with io.open(path, "w", encoding="utf-8", newline="\n") as f:
-                    f.write(build(stem, sol))
+                    f.write(build())
                 written += 1
-            prev = old.get((cov, role), {})
+            prev = old.get((cov, role, part), {})
             entry = {"id": prev.get("id") or "%s.IMG%d" % (stem, n), "cov": cov, "concept_id": cov,
                      "concept_short": stem, "role": role, "scene_file": scene_file,
                      "scene_class": "%s_%s" % (stem, tag),
@@ -172,6 +229,8 @@ def generate(nd, force=False):
                      "sol_sha": sol_sha(sol) if regenerated else (prev.get("sol_sha") or sol_sha(sol))}
             if prev.get("uploaded_sha") and not regenerated:
                 entry["uploaded_sha"] = prev["uploaded_sha"]
+            if cards == 2 and role == "solution":
+                entry["part"], entry["parts"] = part, 2
             images.append(entry)
     with io.open(mpath, "w", encoding="utf-8") as f:
         json.dump({"key_dir": key_dir, "images": images}, f, ensure_ascii=False, indent=1)

@@ -82,6 +82,13 @@ This step is not optional for a new chapter: `build.py` stops if the config has 
 stops again if any question has no `solutions.json` entry. Every question ends up with the question plus its
 numbered step-by-step solution and `Answer:` in the concept, AND a question image and a solution image.
 
+Before any solution exists, `python -B build.py --placeholders` builds the plan with the question layout (a
+"Questions: <topic>" topic after every concept topic, one concept per book question: solved examples, exercises
+and answerable prompts) and a question image, a solution image and, for a long working, a second solution image
+on every question as placeholders; it prints `structure stage OK` when every gate that can pass without video
+scripts passes, and writes `question_images_report.json`. Review the structure there first. Everything below
+then fills the placeholders in.
+
 Every question gets its board-format solution, written once in `solutions.json` and used three times:
 the plan's `steps`/`answer`, the video worklist items, and a question image plus a solution image
 (LaTeX + Manim). Schema and field rules: `core/solutions/schema.py`; the writing rules are
@@ -95,7 +102,11 @@ reports it). Figure labels are math mode: write `6\,\text{cm}`.
    yet (with whatever steps and answer `content.py` already holds). Add one entry per item; the key is the
    item's coverage id (`cov`). Class 9/10: the key is the question id `<exercise>.Q<n>[.<part>]`.
 2. `python -B core/solutions/gen_scenes.py <new_design>` writes `solution_images/` (one question scene and
-   one solution scene per question, `manifest.json`, `plan_text.json`). An existing scene file is kept
+   one solution scene per question, `manifest.json`, `plan_text.json`). With `"solution_continuation": true` in
+   the config, a working longer than one card gets a second scene `<stem>_sol2.py` (manifest entries with `part`
+   1 and 2; the first card is cut after `cut` steps, the second numbers on from there and carries the check, the
+   answer box and the common-mistake note); `"cards"` / `"cut"` in a solutions.json entry override the automatic
+   split. An existing scene file is kept
    (it may hold a teacher's edits from the editor); `--force` regenerates and resets it to draft.
 3. `python -B core/solutions/render.py <new_design>` renders the missing PNGs (Manim, interpreter from
    `MANIM_PYTHON` in `.env`). An image that touches the frame edge is reported as a failure.
