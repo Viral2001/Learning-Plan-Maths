@@ -53,6 +53,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, ROOT)
 from core.solutions import layout, placeholders          # noqa: E402
+from core import question_naming as QN                   # noqa: E402
 
 QT_TYPES = ("exercise", "question_topic")
 TIERS = ("example", "exercise", "prompt")
@@ -79,6 +80,25 @@ def topics_of(plan):
 def is_qt(t):
     """A Questions topic: typed so (exercise / question_topic) or, in the chapters typed otherwise, named so."""
     return t.get("source_type") in QT_TYPES or (t.get("topic_name") or "").startswith("Questions:")
+
+
+def qt_topic_name(t, base_name):
+    """"Questions: <base>" (every chapter's shape until now), or, when every question block inside
+    carries a book label and they all agree on one category, the category-based name
+    (core/question_naming.py) a topic_prefix="Questions" build now produces, e.g. "Questions:
+    Exercise Set 5.1". This engine does not split a Questions topic by category (core/qt.py does, for
+    a fresh build): a topic whose questions span more than one category keeps the plain "Questions:
+    <base>" name, since there is nothing single to name it by."""
+    labels = []
+    for c in t.get("concepts") or []:
+        block = next((b for b in c.get("content") or [] if b.get("block_kind") in MOVABLE), None)
+        if block is None:
+            continue
+        cov = block.get("coverage_id") or next(iter(block.get("ncert_refs") or []), None)
+        labels.append(QN.classify(block.get("book_number") or "", cov))
+    if labels and len({(cat, suf) for cat, suf, _ in labels}) == 1:
+        return QN.topic_title(labels[0][1])
+    return "Questions: " + base_name
 
 
 def video_of(c):
@@ -688,7 +708,7 @@ def apply(live, spec, *, add_placeholders=True):
     for i, (mid, t, is_new, orig) in enumerate(topic_nodes):
         parent = nodes_only[i - 1] if is_qt(t) else None
         if is_qt(t):
-            t["topic_name"] = "Questions: " + parent["topic_name"]
+            t["topic_name"] = qt_topic_name(t, parent["topic_name"])
             t["summary"] = t["brief_summary"] = t["detailed_summary"] = "Practise: " + parent["topic_name"] + "."
             t["original_chunk"] = t["publication_chunk"] = t["summary"]
             if is_new or True:
@@ -827,7 +847,7 @@ def integrity(live, plan, report):
     for i, t in enumerate(T):
         if is_qt(t):
             prev = T[i - 1] if i else None
-            if prev is None or is_qt(prev) or t["topic_name"] != "Questions: " + prev["topic_name"]:
+            if prev is None or is_qt(prev) or t["topic_name"] != qt_topic_name(t, prev["topic_name"]):
                 errs.append("%s: not directly after its concept topic or misnamed" % t["topic_id"])
     # every question concept: question image first, solution image last
     media = {x["id"]: x for t in T for x in t.get("media", [])}

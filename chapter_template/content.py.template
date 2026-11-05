@@ -38,6 +38,20 @@ MODULES = [
 ]
 
 # ---------------------------------------------------------------------------
+# {module_id: strand letter} - the subject-knowledge-strand catalog every objective's `strand`/
+# `legacy_id` is built from (core/qt.py's apply(), passed this dict as its strand_map argument via
+# build.py's `getattr(K, "MODULE_STRANDS", {})`). A strand is a pedagogical category (which part of
+# the subject this objective belongs to), NOT the module id itself - pick one letter per module from
+# the catalog below (several modules may share a strand) and fill every module in. A module left out
+# falls back to "G" (general), which is a safe default but not a real taxonomy entry.
+# CBSE maths strand catalog: N=Number, A=Algebra, G=Geometry, M=Measurement/Mensuration, D=Data
+# Handling, S=Statistics and Probability.
+# ---------------------------------------------------------------------------
+MODULE_STRANDS = {
+    # "M1": "N",   # TODO: one entry per module in MODULES above
+}
+
+# ---------------------------------------------------------------------------
 # how this chapter is taught: shown once, at the top of the built HTML/plan metadata.
 # "points" is the short list of design decisions a reviewer should know before reading topics.
 # ---------------------------------------------------------------------------
@@ -59,7 +73,8 @@ CHAPTER_APPROACH = {
 # Use the book's own section numbering as the id prefix, e.g. "2.1.example1", "end.Q4".
 #
 # An entry is "id", or ("id", kind) so the question layout gate (gates/question_layout.py) can check that each
-# book question sits in its own concept of a "Questions: <topic>" topic. kind is one of
+# book question sits in its own concept of a "Questions: <category>" topic (core/question_naming.py). kind is
+# one of
 #   "example"   a solved example printed in the book        -> FIO(kind="example")
 #   "exercise"  a Figure it Out / exercise question         -> FIO(kind="exercise")
 #   "prompt"    an answerable in-text question (Try This with an answer, "answer the following", a blank)

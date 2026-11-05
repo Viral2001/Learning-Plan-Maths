@@ -65,6 +65,12 @@ def build_tool_node(media_id, concept_id, tool_name, tool_config, tool_questions
     if not same_as:
         conf["tool_questions"] = list(tool_questions)
     conf.setdefault("same_as", same_as)
+    # placement: the one genuinely new, non-redundant field carried over from the external field
+    # reference's tool_config shape (see tools_spec/TOOL_SPEC_GUIDE.md) - every Doer tool in this
+    # pipeline sits at the same beat by convention (last concept of its topic, after the teaching,
+    # worked examples and videos), so it is a fixed default here rather than an authoring field.
+    conf.setdefault("placement", {"beat": "Apply",
+                                  "where": "last concept of the topic, after its teaching and worked examples"})
 
     node = {
         "id": media_id,
@@ -74,6 +80,7 @@ def build_tool_node(media_id, concept_id, tool_name, tool_config, tool_questions
         "tool_name": tool_name,
         "concept_id": concept_id,
         "home_concept_id": concept_id,
+        "related_concept_ids": [],  # a 2d_tool is never shared across concepts
         "2d_tool_url": tool_2d_url,
         "tool_config": conf,
         "instructions_for_student": instructions_for_student or tool_config.get("idea", ""),

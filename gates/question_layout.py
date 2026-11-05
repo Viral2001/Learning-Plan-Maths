@@ -23,7 +23,15 @@ Checks, on the plan:
 from __future__ import annotations
 
 import json
+import os
 import sys
+
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_ROOT = os.path.dirname(_HERE)
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
+
+from core import question_naming as QN  # noqa: E402
 
 QT_SOURCE_TYPES = ("exercise", "question_topic")
 QUESTION_KINDS = ("exercise", "exercise_question")
@@ -42,6 +50,26 @@ def is_question_block(b):
     return kind in QUESTION_KINDS or (kind == "worked_example" and bool(b.get("item_kind")))
 
 
+def _expected_names(t, base_name):
+    """Valid topic_name values for a Questions topic that practises the concept topic named
+    `base_name`: the old "Questions: <base>" form (every pre-category-split chapter), or, when every
+    question block inside carries a book label and they all agree, the category-based form
+    (core/question_naming.py) a topic-prefix="Questions" build now produces, e.g. "Questions: Exercise
+    Set 5.1". A topic may legitimately be one of several Questions topics after the same base topic
+    (one per category), so this does not require the base's exact name alone."""
+    names = {"Questions: %s" % base_name}
+    labels = []
+    for c in t.get("concepts") or []:
+        block = next((b for b in c.get("content") or [] if is_question_block(b)), None)
+        if block is None:
+            continue
+        cov = block.get("coverage_id") or next(iter(block.get("ncert_refs") or []), None)
+        labels.append(QN.classify(block.get("book_number") or "", cov))
+    if labels and len({(cat, suf) for cat, suf, _ in labels}) == 1:
+        names.add(QN.topic_title(labels[0][1]))
+    return names
+
+
 def check(plan, config=None):
     config = config or {}
     if not config.get("question_layout"):
@@ -53,14 +81,20 @@ def check(plan, config=None):
         tid = t.get("topic_id")
         is_qt = t.get("source_type") in QT_SOURCE_TYPES
         if is_qt:
-            prev = topics[i - 1] if i else None
-            if prev is None or prev.get("source_type") in QT_SOURCE_TYPES or \
-                    prev.get("topic_type") in ("framing", "summary"):
+            # A run of one or more Questions topics (one per book category) can follow one concept
+            # topic, so walk back over any already-seen Questions topics to find the one they practise.
+            j = i - 1
+            while j >= 0 and topics[j].get("source_type") in QT_SOURCE_TYPES:
+                j -= 1
+            base = topics[j] if j >= 0 else None
+            if base is None or base.get("topic_type") in ("framing", "summary"):
                 problems.append("%s: a Questions topic must come directly after the concept topic it practises"
                                 % tid)
-            elif t.get("topic_name") != "Questions: %s" % prev.get("topic_name"):
-                problems.append("%s: named %r, want %r" % (tid, t.get("topic_name"),
-                                                            "Questions: %s" % prev.get("topic_name")))
+            else:
+                expected = _expected_names(t, base.get("topic_name"))
+                if t.get("topic_name") not in expected:
+                    problems.append("%s: named %r, want one of %r" % (tid, t.get("topic_name"),
+                                                                        sorted(expected)))
             for c in t.get("concepts") or []:
                 in_qt[c.get("concept_id")] = True
                 if not any(is_question_block(b) for b in c.get("content") or []):

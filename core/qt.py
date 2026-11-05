@@ -23,6 +23,8 @@ from __future__ import annotations
 
 import re
 
+from core import question_naming as QN
+
 _MID_PAT = re.compile(r'^(M\d+\.S\d+\.T\d+\.C\d+)(\..+)$')
 
 
@@ -69,6 +71,63 @@ def _concept_name(slot: dict) -> str:
     return src[0] if src else slot["key"]
 
 
+_BLOCK_COMMON_FIELDS = ("block_kind", "item_kind", "book_kind", "coverage_id", "exercise_id",
+                        "ncert_refs", "book_number", "example_id")
+
+
+def _question_answer_blocks(blocks: list) -> tuple:
+    """Split each combined question+solution block into a question-only block (just the question, no
+    working) and an answer-only block (the numbered working and the answer, no video on the question
+    side - core/question_naming.py's two concepts attach to these). Both keep the book-item fields
+    (coverage_id, item_kind, ...) so per-block gates still find them. question_tex/steps_tex/answer_tex
+    (core/solutions/bind.py's inline-LaTeX text, once solutions.json has this item) carry over too, and
+    the displayed text is built from them when present - core/solutions/placeholders.py and attach.py
+    tag it with "[Image: <title>]" markers if the working ends up on more than one solution card.
+
+    This split is not pure field-copying. Before trusting the source block's own `question`/`steps`/
+    `answer` separation, read it: the question side must be the problem exactly as asked, with no part
+    of the method or the result folded into it; the answer side must be every step of the working, in
+    order, ending in the result. When the source has no worked method or printed answer at all (`steps`
+    and `answer` both empty - an open "make your own"/"do you agree"/reader-estimate item, or a genuinely
+    unsolved exploration), author an accurate one from the question and the chapter's own content before
+    splitting - never hand the answer concept an empty block. Same policy, same wording, as
+    math_solutions/skill/references/format-rules.md rule 9 ("solve it yourself... never skip the item or
+    submit an unverified guess"), which this mirrors for the learning plan's own Q/A concepts rather than
+    a standalone solutions.json document."""
+    q_blocks, a_blocks = [], []
+    for b in blocks:
+        common = {k: b[k] for k in _BLOCK_COMMON_FIELDS if k in b}
+        question, steps, answer = b.get("question") or "", list(b.get("steps") or []), b.get("answer") or ""
+        q_disp = b.get("question_tex") or question
+        steps_disp = b.get("steps_tex") or steps
+        answer_disp = b.get("answer_tex") or answer
+        qb = dict(common, type="paragraph", question=question, steps=[], answer="",
+                  text=q_disp, publication_text=q_disp)
+        if b.get("question_tex"):
+            qb["question_tex"] = b["question_tex"]
+        if b.get("q_figure"):
+            qb["q_figure"] = b["q_figure"]
+        q_blocks.append(qb)
+        # The step index itself is wrapped as "$N$." per LATEX_REFERENCE.md's step-identification rule
+        # only when steps_tex is actually present - a plain-text fallback (no solutions.json entry yet)
+        # must stay bare, since nothing else in that fallback text is LaTeX either.
+        _idx_fmt = "$%d$. %s" if b.get("steps_tex") else "%d. %s"
+        a_text = "\n".join([_idx_fmt % (i, st) for i, st in enumerate(steps_disp, 1)]
+                            + (["Answer: %s" % answer_disp] if answer_disp else []))
+        ab = dict(common, type="paragraph", question=question, steps=steps, answer=answer,
+                  text=a_text, publication_text=a_text)
+        if b.get("steps_tex"):
+            ab["steps_tex"] = b["steps_tex"]
+        if b.get("answer_tex"):
+            ab["answer_tex"] = b["answer_tex"]
+        if b.get("s_figure"):
+            ab["s_figure"] = b["s_figure"]
+        if b.get("video_media_id"):
+            ab["video_media_id"] = b["video_media_id"]
+        a_blocks.append(ab)
+    return q_blocks, a_blocks
+
+
 # ---------------------------------------------------------------------------
 # main entry point
 # ---------------------------------------------------------------------------
@@ -88,8 +147,13 @@ def apply(plan: dict, vslots_all: list, media_tag: str, strand_map: dict,  # noq
     taught concept with an objective but OWNS its exercise video (moved as <QT concept id>.VID1), so every
     concept carries one video. keep_first=True leaves each topic's first exercise (with its video) on the
     teaching topic's practice concept. name_fn(slot) -> str names a question concept (e.g. "Unit, Q3").
-    topic_prefix="Questions" names every inserted topic "Questions: <parent>" whatever the shape (the question
-    layout of chapter_template: enrichment_qt=True, topic_prefix="Questions"; see docs/00_overview.md).
+    topic_prefix="Questions" (the question layout of chapter_template: enrichment_qt=True,
+    topic_prefix="Questions"; see docs/00_overview.md) names topics and concepts by book category instead
+    (core/question_naming.py), from each item's own book label: a teaching topic's exercise slots are
+    grouped by category (exercise set / Figure it Out / example / Let us do / anything else), each group
+    becoming its own "Questions: <category>" topic (e.g. "Questions: Exercise Set 5.1", "Questions:
+    Example") in book order, with concepts named "Exercise Set 5.1: Q1", "Example 3: Q", etc. A topic whose
+    slots span more than one category gets one Questions topic per category, not one mixed topic.
     Returns cid_map (old_cid -> new_cid) for the caller to rekey pin files.
     Modifies plan and vslots_all in-place.
     """
@@ -159,139 +223,205 @@ def apply(plan: dict, vslots_all: list, media_tag: str, strand_map: dict,  # noq
             qt_raw.setdefault(tid, []).append((s, moved, vnode))
 
     # ---- 5. build QT topic stubs -----------------------------------------
-    qt_stubs: dict = {}  # old_topic_id -> qt_topic_dict
+    # topic_prefix="Questions" (chapter_template's question_layout) groups a topic's exercise slots by
+    # book category (core/question_naming.py) instead of lumping them into one bucket, so a topic with
+    # both an Example and a Figure it Out question gets two Questions topics, in book order. Every other
+    # caller keeps its old single-bucket-per-topic shape untouched (gkey falls back to old_tid itself).
+    use_new_naming = bool(topic_prefix)
+
+    qt_stubs: dict = {}  # old_topic_id -> [qt_topic_dict, ...]
     for old_tid, slot_block_pairs in qt_raw.items():
         mid = tid_to_mid[old_tid]
         parent_name = flat_by_tid[old_tid][1]["topic_name"]
 
-        qt_concepts = []
-        qt_media = []
+        groups: dict = {}    # gkey -> {"category", "topic_suffix", "items": [(s, moved, vnode, concept_prefix)]}
+        group_order: list = []
         for s, moved, vnode in slot_block_pairs:
-            ik = _item_kind(s.get("item_ids", []))
-            concept_name = _concept_name(s)
-            if enrichment_qt and moved and moved[0].get("book_number"):
-                concept_name = moved[0]["book_number"]
-            if name_fn:
-                concept_name = name_fn(s) or concept_name
-            if moved:
-                blocks = list(moved)
+            if use_new_naming:
+                label = (moved[0].get("book_number") if moved else None) or (s.get("source") or [None])[0] or ""
+                cov = (moved[0].get("coverage_id") if moved else None) or next(iter(s.get("item_ids") or []), None)
+                category, topic_suffix, concept_prefix = QN.classify(label, cov)
+                gkey = (category, topic_suffix)
             else:
-                # Fallback for X.{r} slots (no paired worked example in plan text). When the slot carries
-                # its book item with a solution (steps + answer, e.g. from solutions.json) the block holds
-                # that; otherwise it is the placeholder that sends the student to the book.
-                it = next((i for i in s.get("items") or [] if i.get("question") and i.get("steps")
-                           and i.get("answer")), None)
-                if it:
-                    text = "\n".join(["Practice problem: %s" % it["question"]]
-                                     + ["%d. %s" % (n, st) for n, st in enumerate(it["steps"], 1)]
-                                     + ["Answer: %s" % it["answer"]])
-                else:
-                    text = ("Work through the practice problem. Read the question in the book and attempt "
-                            "it before watching the video solution.")
-                blocks = [{
-                    "type": "paragraph",
-                    "block_kind": "worked_example",
-                    "question": it["question"] if it else "",
-                    "steps": list(it["steps"]) if it else [],
-                    "answer": it["answer"] if it else "",
-                    "text": text,
-                    "publication_text": text,
-                    "video_media_id": s["video_id"],
-                    "example_id": f"{s['key']}.qt.1",
-                    "item_kind": ik,
-                }]
-                if it:
-                    blocks[0]["coverage_id"] = it.get("id") or (s.get("item_ids") or [""])[0]
-            authored_key = f"qt.{s['key']}"
-            obj_text = ("Attempt each practice question independently, working through "
-                        "every step before viewing the video solution and checking the answer.")
-            qt_concepts.append({
-                "concept_id": "PLACEHOLDER",
-                "concept_name": concept_name,
-                "content": blocks,
-                "key_terms": [],
-                "objective_id": None,
-                "objective_ids": [],
-                "source_segment_role": "practice",
-                "source_media": "video",
-                "media_ids": [],
-                "ncert_refs": list(s.get("item_ids", [])),
-                "authored_key": authored_key,
-                "tier": None,
-                "misconceptions": [],
-                "predict_first": "",
-                "estimated_minutes": 5 * max(len(moved), 1),
-                "media_key": f"qt.{s['key']}",
-                "enrichment_type": "content",
-                "is_enrichment": False,
-                "mixed_objective_ids": [],
-                "recap_objective_ids": [],
-                "adaptive": {
-                    "tier": None, "discovery": False, "hint_ladder": False,
-                    "rescue": False, "say": False, "check_my_thinking": False,
-                    "added_for_tier": [],
-                },
-                "_qt": True,
-                "_qt_obj_text": obj_text,
-                "_vnode": vnode,
-                "_slot": s,
-            })
-            if enrichment_qt:
-                qt_concepts[-1].update({"is_enrichment": True, "enrichment_type": "enrichment",
-                                        "authored_key": None,
-                                        "source_media": "video" if vnode is not None else None})
-                if vnode is not None:
-                    qt_media.append(vnode)
-            elif own_video:
-                if vnode is not None:
-                    qt_media.append(vnode)
-                else:
-                    qt_concepts[-1]["_vnode"] = None
+                category, topic_suffix, concept_prefix, gkey = None, None, None, old_tid
+            if gkey not in groups:
+                groups[gkey] = {"category": category, "topic_suffix": topic_suffix, "items": []}
+                group_order.append(gkey)
+            groups[gkey]["items"].append((s, moved, vnode, concept_prefix))
 
-        qt_stubs[old_tid] = {
-            "_qt": True,
-            "topic_id": "PLACEHOLDER",
-            "topic_name": (f"{topic_prefix}: {parent_name}" if topic_prefix
-                           else f"Figure it Out: {parent_name}" if enrichment_qt
-                           else f"Questions: {parent_name}" if own_video else f"Practise: {parent_name}"),
-            "topic_type": "instructional",
-            "summary": f"Practice problems for {parent_name}.",
-            "brief_summary": f"Practice problems for {parent_name}.",
-            "detailed_summary": f"Practice problems for {parent_name}.",
-            "topic_objective": None,
-            "concepts": qt_concepts,
-            "media": qt_media,
-            "key_terms": [],
-            "depends_on": [],
-            "difficulty": "",
-            "objective_ids": [],
-            "learning_objectives": [],
-            "important_points": [],
-            "recall_questions": [],
-            "concept_bullets": [c["concept_name"] for c in qt_concepts],
-            "source_type": "exercise" if enrichment_qt else "question_topic",
-            "topic_category": "enrichment" if enrichment_qt else "practice",
-            "is_enrichment": bool(enrichment_qt),
-            "source_content_flow": "Practice problems with video solutions.",
-            "ncert_sections": [],
-            "session_minutes": None,
-            "estimated_minutes": sum(c["estimated_minutes"] for c in qt_concepts),
-            "original_chunk": f"Practice problems for {parent_name}.",
-            "publication_chunk": f"Practice problems for {parent_name}.",
-            "primary_content_type": "video",
-            "secondary_content_type": None,
-            "tertiary_content_type": None,
-            "available_content_types": ["video", "paragraph"],
-            "estimated_exchanges": 0,
-            "word_count": {"original": 0},
-        }
+        stubs_for_topic = []
+        for gkey in group_order:
+            grp = groups[gkey]
+            subject = grp["topic_suffix"] if use_new_naming else parent_name
+
+            qt_concepts = []
+            qt_media = []
+            for seq, (s, moved, vnode, concept_prefix) in enumerate(grp["items"], 1):
+                ik = _item_kind(s.get("item_ids", []))
+                concept_name = _concept_name(s)
+                if enrichment_qt and moved and moved[0].get("book_number"):
+                    concept_name = moved[0]["book_number"]
+                if name_fn:
+                    concept_name = name_fn(s) or concept_name
+                if moved:
+                    blocks = list(moved)
+                else:
+                    # Fallback for X.{r} slots (no paired worked example in plan text). When the slot carries
+                    # its book item with a solution (steps + answer, e.g. from solutions.json) the block holds
+                    # that; otherwise it is the placeholder that sends the student to the book.
+                    it = next((i for i in s.get("items") or [] if i.get("question") and i.get("steps")
+                               and i.get("answer")), None)
+                    if it:
+                        text = "\n".join(["Practice problem: %s" % it["question"]]
+                                         + ["%d. %s" % (n, st) for n, st in enumerate(it["steps"], 1)]
+                                         + ["Answer: %s" % it["answer"]])
+                    else:
+                        text = ("Work through the practice problem. Read the question in the book and attempt "
+                                "it before watching the video solution.")
+                    blocks = [{
+                        "type": "paragraph",
+                        "block_kind": "worked_example",
+                        "question": it["question"] if it else "",
+                        "steps": list(it["steps"]) if it else [],
+                        "answer": it["answer"] if it else "",
+                        "text": text,
+                        "publication_text": text,
+                        "video_media_id": s["video_id"],
+                        "example_id": f"{s['key']}.qt.1",
+                        "item_kind": ik,
+                    }]
+                    if it:
+                        blocks[0]["coverage_id"] = it.get("id") or (s.get("item_ids") or [""])[0]
+                authored_key = f"qt.{s['key']}"
+                obj_text = ("Attempt each practice question independently, working through "
+                            "every step before viewing the video solution and checking the answer.")
+
+                # topic_prefix="Questions" also splits each question into its own concept (titled with
+                # "Q"/"Qn") and a paired answer concept (titled with "Ans"/"Ansn", core/question_naming.py):
+                # the answer concept carries the video and the solution card(s), the question concept
+                # carries only the question card. Every other caller keeps one concept per question.
+                if use_new_naming:
+                    q_blocks, a_blocks = _question_answer_blocks(blocks)
+                    base = {
+                        "key_terms": [], "objective_id": None, "objective_ids": [],
+                        "source_segment_role": "practice", "media_ids": [],
+                        "ncert_refs": list(s.get("item_ids", [])), "authored_key": authored_key,
+                        "tier": None, "misconceptions": [], "predict_first": "",
+                        "media_key": f"qt.{s['key']}", "enrichment_type": "content", "is_enrichment": False,
+                        "mixed_objective_ids": [], "recap_objective_ids": [],
+                        "adaptive": {"tier": None, "discovery": False, "hint_ladder": False, "rescue": False,
+                                     "say": False, "check_my_thinking": False, "added_for_tier": []},
+                        "_qt": True, "_qt_obj_text": obj_text,
+                    }
+                    q_concept = {**base, "concept_id": "PLACEHOLDER",
+                                 "concept_name": QN.concept_title(grp["category"], concept_prefix, seq,
+                                                                   role="question"),
+                                 "content": q_blocks, "source_media": None,
+                                 "estimated_minutes": 2 * max(len(moved), 1), "qt_part": "question",
+                                 "_vnode": None, "_slot": None}
+                    a_concept = {**base, "concept_id": "PLACEHOLDER",
+                                 "concept_name": QN.concept_title(grp["category"], concept_prefix, seq,
+                                                                   role="answer"),
+                                 "content": a_blocks, "source_media": "video" if vnode is not None else None,
+                                 "estimated_minutes": 5 * max(len(moved), 1), "qt_part": "answer",
+                                 "_vnode": vnode, "_slot": s}
+                    if enrichment_qt:
+                        for c in (q_concept, a_concept):
+                            c.update({"is_enrichment": True, "enrichment_type": "enrichment", "authored_key": None})
+                    if vnode is not None:
+                        qt_media.append(vnode)
+                    qt_concepts.append(q_concept)
+                    qt_concepts.append(a_concept)
+                    continue
+
+                qt_concepts.append({
+                    "concept_id": "PLACEHOLDER",
+                    "concept_name": concept_name,
+                    "content": blocks,
+                    "key_terms": [],
+                    "objective_id": None,
+                    "objective_ids": [],
+                    "source_segment_role": "practice",
+                    "source_media": "video",
+                    "media_ids": [],
+                    "ncert_refs": list(s.get("item_ids", [])),
+                    "authored_key": authored_key,
+                    "tier": None,
+                    "misconceptions": [],
+                    "predict_first": "",
+                    "estimated_minutes": 5 * max(len(moved), 1),
+                    "media_key": f"qt.{s['key']}",
+                    "enrichment_type": "content",
+                    "is_enrichment": False,
+                    "mixed_objective_ids": [],
+                    "recap_objective_ids": [],
+                    "adaptive": {
+                        "tier": None, "discovery": False, "hint_ladder": False,
+                        "rescue": False, "say": False, "check_my_thinking": False,
+                        "added_for_tier": [],
+                    },
+                    "_qt": True,
+                    "_qt_obj_text": obj_text,
+                    "_vnode": vnode,
+                    "_slot": s,
+                })
+                if enrichment_qt:
+                    qt_concepts[-1].update({"is_enrichment": True, "enrichment_type": "enrichment",
+                                            "authored_key": None,
+                                            "source_media": "video" if vnode is not None else None})
+                    if vnode is not None:
+                        qt_media.append(vnode)
+                elif own_video:
+                    if vnode is not None:
+                        qt_media.append(vnode)
+                    else:
+                        qt_concepts[-1]["_vnode"] = None
+
+            stubs_for_topic.append({
+                "_qt": True,
+                "topic_id": "PLACEHOLDER",
+                "topic_name": (QN.topic_title(grp["topic_suffix"]) if use_new_naming
+                               else f"{topic_prefix}: {parent_name}" if topic_prefix
+                               else f"Figure it Out: {parent_name}" if enrichment_qt
+                               else f"Questions: {parent_name}" if own_video else f"Practise: {parent_name}"),
+                "topic_type": "instructional",
+                "summary": f"Practice problems for {subject}.",
+                "brief_summary": f"Practice problems for {subject}.",
+                "detailed_summary": f"Practice problems for {subject}.",
+                "topic_objective": None,
+                "concepts": qt_concepts,
+                "media": qt_media,
+                "key_terms": [],
+                "depends_on": [],
+                "difficulty": "",
+                "objective_ids": [],
+                "learning_objectives": [],
+                "important_points": [],
+                "recall_questions": [],
+                "concept_bullets": [c["concept_name"] for c in qt_concepts],
+                "source_type": "exercise" if enrichment_qt else "question_topic",
+                "topic_category": "enrichment" if enrichment_qt else "practice",
+                "is_enrichment": bool(enrichment_qt),
+                "source_topic_ids": [],
+                "session_minutes": None,
+                "estimated_minutes": sum(c["estimated_minutes"] for c in qt_concepts),
+                "original_chunk": f"Practice problems for {subject}.",
+                "publication_chunk": f"Practice problems for {subject}.",
+                "primary_content_type": "video",
+                "secondary_content_type": None,
+                "tertiary_content_type": None,
+                "available_content_types": ["video"],
+                "estimated_exchanges": 0,
+                "word_count": {"original": 0},
+            })
+        qt_stubs[old_tid] = stubs_for_topic
 
     # ---- 6. build new ordered flat list -----------------------------------
     new_flat = []   # [(mid, topic_node)]
     for mid, t in flat:
         new_flat.append((mid, t))
-        if t["topic_id"] in qt_stubs:
-            new_flat.append((mid, qt_stubs[t["topic_id"]]))
+        for stub in qt_stubs.get(t["topic_id"], []):
+            new_flat.append((mid, stub))
 
     # ---- 7. assign new topic/concept IDs; build rename maps ---------------
     cid_map: dict = {}   # old_cid -> new_cid
@@ -457,7 +587,12 @@ def apply(plan: dict, vslots_all: list, media_tag: str, strand_map: dict,  # noq
 
     new_objectives = []
     onum = 0
-    oid_remap = {}  # old_oid -> new_oid (for teaching concepts)
+    # legacy_id is a strand-code (e.g. "N2", "A5"): a letter from strand_map (the chapter's own
+    # subject-knowledge-strand catalog, see content.py.template's MODULE_STRANDS) plus a running
+    # count WITHIN that strand, assigned in final document order - never the raw authored key or
+    # module id, which are locators, not a strand taxonomy. A module with no strand_map entry falls
+    # back to "G" (general) rather than leaking its module id into a field meant to hold a letter.
+    strand_seq = {}
 
     cid_to_topic_final = {c["concept_id"]: t
                           for t in all_topics_final
@@ -471,33 +606,37 @@ def apply(plan: dict, vslots_all: list, media_tag: str, strand_map: dict,  # noq
 
         onum += 1
         new_oid = f"O{onum}"
+        t_for_c = cid_to_topic_final[c["concept_id"]]
+        mid_for_c = t_for_c["topic_id"].split(".")[0]
+        strand = strand_map.get(mid_for_c, "G")
 
         if c.get("_qt"):
-            t_for_c = cid_to_topic_final[c["concept_id"]]
-            mid_for_c = t_for_c["topic_id"].split(".")[0]
+            strand_seq[strand] = strand_seq.get(strand, 0) + 1
             obj_text = c.pop("_qt_obj_text", "")
             new_objectives.append({
                 "objective_id": new_oid,
                 "objective_text": obj_text,
                 "anchor": [c["concept_id"]],
                 "status": "taught",
-                "strand": strand_map.get(mid_for_c, mid_for_c),
+                "strand": strand,
                 "strand_name": mod_names.get(mid_for_c, ""),
                 "bloom_level": "apply",
                 "home_topic_id": t_for_c["topic_id"],
-                "legacy_id": c["authored_key"],
-                "objective_level": "concept",
+                "legacy_id": "%s%d" % (strand, strand_seq[strand]),
             })
         else:
             old_oid = c.get("objective_id")
             if not old_oid:
                 onum -= 1
                 continue
+            strand_seq[strand] = strand_seq.get(strand, 0) + 1
             o = dict(old_objs_by_oid[old_oid])
             o["objective_id"] = new_oid
             # Fix anchor (it was fixed in step 8, so it now has the new concept id)
             o["anchor"] = [c["concept_id"]]
-            oid_remap[old_oid] = new_oid
+            o.setdefault("strand", strand)
+            o.setdefault("strand_name", mod_names.get(mid_for_c, ""))
+            o["legacy_id"] = "%s%d" % (strand, strand_seq[strand])
             new_objectives.append(o)
 
         c["objective_id"] = new_oid
@@ -529,14 +668,12 @@ def apply(plan: dict, vslots_all: list, media_tag: str, strand_map: dict,  # noq
                             cov[item_id].append(c["concept_id"])
 
     # ---- 12. update strand_to_objective_map ------------------------------
-    # Remap existing entries with new objective IDs, then add QT entries
-    s2o = plan.get("strand_to_objective_map", {})
+    # Keyed by each objective's own legacy_id (a strand-code like "N2"), the way the field
+    # reference defines it - never by the concept's authored key, which is a build-time locator,
+    # not a strand-taxonomy provenance id.
     plan["strand_to_objective_map"] = {
-        k: oid_remap.get(v, v) for k, v in s2o.items()
+        o["legacy_id"]: o["objective_id"] for o in new_objectives if o.get("legacy_id")
     }
-    for c in all_concepts_final:
-        if c.get("authored_key") and c.get("objective_id"):
-            plan["strand_to_objective_map"][c["authored_key"]] = c["objective_id"]
 
     # ---- 13. update estimated_time and summary_stats ----------------------
     all_media = [x for t in all_topics_final for x in t.get("media", [])]

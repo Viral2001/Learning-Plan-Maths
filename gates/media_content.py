@@ -73,11 +73,15 @@ def preflight(plan):
         if nums and nums != list(range(1, len(nums) + 1)):
             problems.append("%s ids are not contiguous in document order" % label)
 
-    empty = [t.get("topic_id") for t in walk_topics(plan)
-             if not t.get("available_content_types")]
-    if empty:
-        problems.append("%d topic(s) with no available_content_types: %s"
-                        % (len(empty), empty[:5]))
+    # A genuinely blank topic (no concept carries any content, and no media exists) is the real
+    # "hand the student a blank topic" risk this check guards against - NOT a topic that legitimately
+    # has no media (available_content_types is media-types-only; a text-only summary/recap topic,
+    # which by this pipeline's own Keeko design never gets a video, has real content and is not blank).
+    blank = [t.get("topic_id") for t in walk_topics(plan)
+            if not t.get("media") and not any(c.get("content") for c in t.get("concepts") or [])]
+    if blank:
+        problems.append("%d topic(s) with no content or media (blank topic): %s"
+                        % (len(blank), blank[:5]))
 
     by_id = {n.get("id"): n for n in walk_media(plan)}
     for node in walk_media(plan):

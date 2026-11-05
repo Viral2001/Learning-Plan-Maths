@@ -8,13 +8,16 @@ CURRENT chapter_template/build.py and the helpers of chapter_template/concept_pl
 toy content, then checks:
 
   A. video_worklist: one "exercise" video slot per book question (solved example, prompt, exercise);
-  B. build.py --placeholders, no solutions.json yet: each concept topic is followed by "Questions: <topic>" with
-     one concept per book question, in the author's order; no book question is left in a concept topic; every
-     question concept has a question image first and a solution image last; the long working gets a second
-     solution image; a diagram sentence reaches the question card; the layout and solution gates agree;
+  B. build.py --placeholders, no solutions.json yet: each concept topic is followed by one Questions topic per
+     book category, each book question split into its own question concept ("...: Q...") and answer concept
+     ("...: Ans..."), in the author's order; no book question is left in a concept topic; every question concept
+     has only its question image, every answer concept ends with its solution image; the long working gets a
+     second solution image; a diagram sentence reaches the question card; the layout and solution gates agree;
   C. with solutions.json for two of the questions: gen_scenes.py makes a second solution scene only for the long
-     one (answer box and common-mistake note on the last card only), check.py is clean, and build.py --placeholders
-     swaps in the real cards for those two while the others keep their placeholders;
+     one (answer box and common-mistake note on the last card only), check.py is clean, build.py --placeholders
+     swaps in the real cards for those two while the others keep their placeholders, the displayed text for
+     those two is inline LaTeX ($...$) and the long working's answer concept is tagged "[Image: <title>]" at
+     each solution card's own step range, while questions with no solutions.json entry stay plain text;
   D. the build is deterministic.
 
 Nothing is rendered: Manim is not needed.
@@ -94,13 +97,19 @@ def main():
     plan = load(plan_path)
     ts = topics_of(plan)
     names = [t["topic_name"] for t in ts]
-    check(names == ["A Coin on a Line", "Adding on a Number Line", "Questions: Adding on a Number Line",
-                    "Taking Away on a Number Line", "Questions: Taking Away on a Number Line", "What We Found"],
-          "each concept topic is followed by its Questions topic: %s" % names)
+    check(names == ["A Coin on a Line", "Adding on a Number Line",
+                    "Questions: Example", "Questions: Try This (2.1)", "Questions: Figure it Out 2.1",
+                    "Taking Away on a Number Line", "Questions: Figure it Out 2.2", "What We Found"],
+          "each concept topic is followed by one Questions topic per book category: %s" % names)
     qt = {t["topic_name"]: t for t in ts if t["source_type"] == "exercise"}
-    q1 = qt["Questions: Adding on a Number Line"]
-    check([c["concept_name"] for c in q1["concepts"]] == ["Example 1", "Try This (2.1)", "Figure it Out (2.1), Q1"],
-          "one concept per book question, in the author's order: %s" % [c["concept_name"] for c in q1["concepts"]])
+    q1_names = [c["concept_name"] for tn in ("Questions: Example", "Questions: Try This (2.1)",
+                                             "Questions: Figure it Out 2.1") for c in qt[tn]["concepts"]]
+    check(q1_names == ["Example 1: Q", "Example 1: Ans", "Try This (2.1): Q1", "Try This (2.1): Ans1",
+                       "Figure it out: Q1", "Figure it out: Ans1"],
+          "one question concept and one answer concept per book question, named by category: %s" % q1_names)
+    check(all(c.get("qt_part") in ("question", "answer") for t in qt.values() for c in t["concepts"]),
+          "every concept of a Questions topic is tagged question or answer: %s"
+          % [c.get("qt_part") for t in qt.values() for c in t["concepts"]])
     check(all(not (b.get("item_kind") and b.get("block_kind") == "worked_example")
               for t in ts if t["source_type"] != "exercise" for c in t["concepts"] for b in c["content"]),
           "no book question is left in a concept topic")
@@ -110,23 +119,30 @@ def main():
         for c in t["concepts"]:
             ids = c["media_ids"]
             roles = [media[i].get("image_role") for i in ids]
-            shapes[c["concept_name"]] = (roles[0], roles[-1], len([r for r in roles if r == "solution"]))
-            check(roles[0] == "question" and roles[-1] == "solution",
-                  "%s: question image first, solution image last (%s)" % (c["concept_name"], ids[0].split(".")[-1]))
-    check(shapes["Figure it Out (2.1), Q1"][2] == 2, "the long working has a second solution image")
-    check(shapes["Example 1"][2] == 1 and shapes["Try This (2.1)"][2] == 1, "short workings keep one solution image")
-    c_ex = next(c for c in q1["concepts"] if c["concept_name"] == "Example 1")
-    c_try = next(c for c in q1["concepts"] if c["concept_name"] == "Try This (2.1)")
-    c_long = next(c for c in q1["concepts"] if c["concept_name"].startswith("Figure it Out (2.1)"))
+            shapes[(t["topic_name"], c["concept_name"])] = roles
+            if c["qt_part"] == "question":
+                check(roles == ["question"],
+                      "%s/%s: only the question image (%s)" % (t["topic_name"], c["concept_name"], roles))
+            else:
+                check(roles and roles[-1] == "solution" and all(r == "solution" for r in roles),
+                      "%s/%s: ends with the solution image (%s)" % (t["topic_name"], c["concept_name"], roles))
+    check(len(shapes[("Questions: Figure it Out 2.1", "Figure it out: Ans1")]) == 2,
+          "the long working has a second solution image")
+    check(len(shapes[("Questions: Example", "Example 1: Ans")]) == 1 and
+          len(shapes[("Questions: Try This (2.1)", "Try This (2.1): Ans1")]) == 1,
+          "short workings keep one solution image")
+    c_ex, c_ex_a = qt["Questions: Example"]["concepts"]
+    c_try, c_try_a = qt["Questions: Try This (2.1)"]["concepts"]
+    c_long, c_long_a = qt["Questions: Figure it Out 2.1"]["concepts"]
     check("number line from −5 to 5" in media[c_ex["media_ids"][0]]["description"],
           "the diagram sentence reaches the question card of Example 1")
     check("No diagram is needed" in media[c_try["media_ids"][0]]["description"], "a text-only question says so")
     check(all(m["build_status"] == "placeholder" for m in media.values() if m.get("image_role")),
           "every question/solution image is a placeholder")
-    check(c_long["content"][0].get("solution_image_media_ids") == c_long["media_ids"][-2:],
-          "the block lists both solution cards: %s" % c_long["content"][0].get("solution_image_media_ids"))
-    check(c_ex["content"][0]["image_media_id"] == c_ex["media_ids"][0], "the block names its question image")
-    url = media[c_long["media_ids"][-1]]["image_url"]
+    check(c_long_a["content"][0].get("solution_image_media_ids") == c_long_a["media_ids"][-2:],
+          "the answer block lists both solution cards: %s" % c_long_a["content"][0].get("solution_image_media_ids"))
+    check(c_ex["content"][0]["image_media_id"] == c_ex["media_ids"][0], "the question block names its question image")
+    url = media[c_long_a["media_ids"][-1]]["image_url"]
     check(url.endswith("c2_1_FiO1.IMG3.png") and "class_7/" in url, "reserved url uses the stable coverage stem: " + url[-40:])
     from importlib import util
     spec = util.spec_from_file_location("gate_runner_probe", os.path.join(ROOT, "gates", "question_layout.py"))
@@ -137,8 +153,8 @@ def main():
                                 "2.2.FiO1": "exercise", "2.1.MathTalk": "talk"})
     check(gl.check(plan, cfg) == [], "gates/question_layout: no problems %s" % gl.check(plan, cfg)[:2])
     rep = load(os.path.join(WORK, "question_images_report.json"))
-    check(len(rep) == 4 and sum(1 for r in rep if r["solution_images"] == 2) == 1,
-          "question_images_report.json: 4 question concepts, 1 with a continuation card")
+    check(len(rep) == 8 and sum(1 for r in rep if r.get("solution_images") == 2) == 1,
+          "question_images_report.json: 8 concepts (4 question + 4 answer), 1 answer with a continuation card")
 
     print("C. real solutions for two of the questions")
     shutil.copy(os.path.join(HERE, "solutions.json"), WORK)
@@ -168,19 +184,31 @@ def main():
     plan2 = load(plan_path)
     ts2 = topics_of(plan2)
     media2 = {x["id"]: x for t in ts2 for x in t["media"]}
-    q12 = [t for t in ts2 if t["topic_name"] == "Questions: Adding on a Number Line"][0]
-    cl = next(c for c in q12["concepts"] if c["concept_name"].startswith("Figure it Out (2.1)"))
-    sols = [media2[i] for i in cl["media_ids"] if media2[i].get("image_role") == "solution"]
+    qt2 = {t["topic_name"]: t for t in ts2 if t["source_type"] == "exercise"}
+    cl, cl_a = qt2["Questions: Figure it Out 2.1"]["concepts"]
+    sols = [media2[i] for i in cl_a["media_ids"] if media2[i].get("image_role") == "solution"]
     check(len(sols) == 2 and [s["render_source"].get("part") for s in sols] == [1, 2],
           "real attach: two solution cards, parts 1 and 2")
-    check(cl["media_ids"][0].endswith(".IMG1") and cl["media_ids"][-1].endswith(".IMG3"), "real attach: media order")
-    check(len([i for i in cl["media_ids"]]) == len(set(cl["media_ids"])), "no duplicate or dangling id after the swap")
+    check(cl["media_ids"][0].endswith(".IMG1") and cl_a["media_ids"][-1].endswith(".IMG3"), "real attach: media order")
+    check(len([i for i in cl_a["media_ids"]]) == len(set(cl_a["media_ids"])), "no duplicate or dangling id after the swap")
     check(all(i in media2 for t in ts2 for c in t["concepts"] for i in c.get("media_ids", [])),
           "every media_id of every concept has a node")
-    ce = next(c for c in q12["concepts"] if c["concept_name"] == "Example 1")
-    check("PLACEHOLDER" in media2[ce["media_ids"][0]]["context"], "a question with no solution yet keeps its placeholder")
-    cs = next(c for t in ts2 if t["topic_name"] == "Questions: Taking Away on a Number Line" for c in t["concepts"])
-    check(len([i for i in cs["media_ids"] if media2[i].get("image_role") == "solution"]) == 1,
+    cl_text = cl["content"][0]["text"]
+    cl_a_text = cl_a["content"][0]["text"]
+    check(cl_text.count("$") >= 2 and "$3 + (-8)$" in cl_text, "question text is inline LaTeX: %r" % cl_text[:60])
+    check(cl_a_text.count("$") >= 2 and "$3 + (-8) = -5$" in cl_a_text, "answer text is inline LaTeX")
+    titles = [media2[i]["title"] for i in cl_a["media_ids"] if media2[i].get("image_role") == "solution"]
+    check(cl_a_text.count("[Image:") == 2 and all("[Image: %s]" % t in cl_a_text for t in titles),
+          "the long working tags both solution cards by title: %s" % titles)
+    cs2, cs2_a = qt2["Questions: Figure it Out 2.2"]["concepts"]
+    check("[Image:" not in cs2_a["content"][0]["text"], "a single solution card needs no image tag")
+    check("$8$" in cs2_a["content"][0]["text"], "the short answer is inline LaTeX too")
+    ce_text = qt2["Questions: Example"]["concepts"][0]["content"][0]["text"]
+    check("$" not in ce_text, "a question with no solutions.json entry yet stays plain text: %r" % ce_text)
+    ce, ce_a = qt2["Questions: Example"]["concepts"]
+    check("PLACEHOLDER" in media2[ce_a["media_ids"][0]]["context"], "a question with no solution yet keeps its placeholder")
+    cs, cs_a = qt2["Questions: Figure it Out 2.2"]["concepts"]
+    check(len([i for i in cs_a["media_ids"] if media2[i].get("image_role") == "solution"]) == 1,
           "the short working has one solution card")
 
     print("D. determinism")

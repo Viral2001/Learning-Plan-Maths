@@ -90,10 +90,8 @@ def node(concept_id, n, role, name, description, stem, key_dir, *, part=1, parts
         "build_status": "placeholder",
         "context": "%s image for %s. PLACEHOLDER: specified, not generated yet." % (role.capitalize(), name),
         "description": " ".join(description.split()), "instructions_for_student": instruction,
-        "teaching_notes": notes, "labels": [], "regions": [], "tutor_can_highlight": [],
+        "teaching_notes": notes, "labels": [],
         "accuracy_constraints": "", "generation_prompt": "", "negative_prompt": "",
-        "source_image": {"note": "Rendered from %s code; see render_source." % engine.capitalize()},
-        "source_image_key": "",
     }
 
 
@@ -178,68 +176,124 @@ def add(plan, cfg, *, max_lines=None):
                     others = [m for m in own if not is_card(m)]
                     # a concept may already carry other images named IMG1, IMG2 ...: the cards take the next free numbers
                     taken = {int(mo.group(1)) for mo in (re.search(r"\.IMG(\d+)$", m["id"]) for m in others) if mo}
-                    free = iter(k for k in range(1, 100) if k not in taken)
-                    q_no = next(free)
-                    q_fig, s_fig = _first(blocks, "q_figure"), _first(blocks, "s_figure")
-                    steps = [s for b in blocks for s in (b.get("steps") or []) if isinstance(s, str)]
-                    cards = layout.cards_needed(steps, with_figure=bool(s_fig), max_lines=max_lines) \
-                        if continuation else 1
-                    k = layout.split_point(steps, with_figure=bool(s_fig), max_lines=max_lines) if cards == 2 \
-                        else len(steps)
-                    qs = []
-                    for b in blocks:
-                        q = b.get("question") or ""
-                        q = q if q and "[Hint:" not in q else _clean(q)
-                        if q and q not in qs:
-                            qs.append(q)
-                    answers = []
-                    for b in blocks:
-                        a = _clean(b.get("answer"))
-                        if a and a not in answers:
-                            answers.append(a)
-                    answers = [a for a in answers if not any(a != o and a in o for o in answers)]
-                    answer = " / ".join(answers)[:220]
                     cov = (c.get("ncert_refs") or [name])[0]
                     stem = stem_of(cov)
-                    q_node = node(cid, q_no, "question", name,
-                                  "Question card: %s %s Only the question and its figure are shown."
-                                  % (" ".join(qs), q_fig or NO_DIAGRAM), stem, key_dir, engine=engine)
-                    diagram = (" Diagram: %s" % s_fig) if s_fig else ""
-                    if cards == 2:
-                        sol_nodes = [
-                            node(cid, next(free), "solution", name,
-                                 "Solution card, part 1 of 2: numbered working, steps 1 to %d, with the working carried "
-                                 "on to the next card.%s" % (k, diagram), stem, key_dir,
-                                 part=1, parts=2, engine=engine),
-                            node(cid, next(free), "solution", name,
-                                 "Solution card, part 2 of 2: numbered working, steps %d to %d, and a highlighted "
-                                 "answer: %s" % (k + 1, len(steps), answer), stem, key_dir,
-                                 part=2, parts=2, engine=engine)]
-                    else:
-                        sol_nodes = [node(cid, next(free), "solution", name,
-                                          "Solution card with numbered working steps and a highlighted answer: %s%s"
-                                          % (answer, diagram), stem, key_dir, engine=engine)]
-                    media_out += [q_node] + others + sol_nodes
-                    used.update(m["id"] for m in own)
-                    c["media_ids"] = [q_node["id"]] + [m["id"] for m in others] + [n["id"] for n in sol_nodes]
-                    c["image_decision"] = {
-                        "needed": True,
-                        "why": "A question concept: one image shows the question%s for the attempt, and %s the "
-                               "worked solution." % (" and its figure" if q_fig else "",
-                                                    "two images carry" if cards == 2 else "one shows"),
-                        "question_diagram": q_fig, "solution_diagram": s_fig, "solution_images": cards,
-                        "engine": engine}
-                    for b in blocks:
-                        b["image_media_id"] = q_node["id"]
-                        b["solution_image_media_id"] = sol_nodes[0]["id"]
+                    # qt_part (core/qt.py's question/answer split): "question" and "answer" are two sibling
+                    # concepts of one book question, each getting only its own card; a concept with no
+                    # qt_part is the older, single-concept shape and keeps both cards as before. The reserved
+                    # url is <stem>.IMGn.png regardless of which concept holds the card (gen_scenes.py always
+                    # numbers question=1, solution=1+part, by stem, with no notion of qt_part) - so an answer
+                    # concept's numbering must start at 2, leaving IMG1 reserved for its sibling's question card.
+                    role = c.get("qt_part")
+                    if role == "answer":
+                        taken = taken | {1}
+                    free = iter(k for k in range(1, 100) if k not in taken)
+
+                    if role != "answer":
+                        q_fig = _first(blocks, "q_figure")
+                        qs = []
+                        for b in blocks:
+                            q = b.get("question") or ""
+                            q = q if q and "[Hint:" not in q else _clean(q)
+                            if q and q not in qs:
+                                qs.append(q)
+                        q_node = node(cid, next(free), "question", name,
+                                      "Question card: %s %s Only the question and its figure are shown."
+                                      % (" ".join(qs), q_fig or NO_DIAGRAM), stem, key_dir, engine=engine)
+
+                    if role != "question":
+                        s_fig = _first(blocks, "s_figure")
+                        steps = [s for b in blocks for s in (b.get("steps") or []) if isinstance(s, str)]
+                        steps_disp = [s for b in blocks for s in (b.get("steps_tex") or b.get("steps") or [])
+                                      if isinstance(s, str)]
+                        cards = layout.cards_needed(steps, with_figure=bool(s_fig), max_lines=max_lines) \
+                            if continuation else 1
+                        k = layout.split_point(steps, with_figure=bool(s_fig), max_lines=max_lines) if cards == 2 \
+                            else len(steps)
+                        answers = []
+                        for b in blocks:
+                            a = _clean(b.get("answer"))
+                            if a and a not in answers:
+                                answers.append(a)
+                        answers = [a for a in answers if not any(a != o and a in o for o in answers)]
+                        answer = " / ".join(answers)[:220]
+                        answers_disp = []
+                        for b in blocks:
+                            a = b.get("answer_tex") or _clean(b.get("answer") or "")
+                            if a and a not in answers_disp:
+                                answers_disp.append(a)
+                        answers_disp = [a for a in answers_disp if not any(a != o and a in o for o in answers_disp)]
+                        answer_disp = " / ".join(answers_disp)[:220]
+                        diagram = (" Diagram: %s" % s_fig) if s_fig else ""
                         if cards == 2:
-                            b["solution_image_media_ids"] = [n["id"] for n in sol_nodes]
+                            sol_nodes = [
+                                node(cid, next(free), "solution", name,
+                                     "Solution card, part 1 of 2: numbered working, steps 1 to %d, with the working "
+                                     "carried on to the next card.%s" % (k, diagram), stem, key_dir,
+                                     part=1, parts=2, engine=engine),
+                                node(cid, next(free), "solution", name,
+                                     "Solution card, part 2 of 2: numbered working, steps %d to %d, and a highlighted "
+                                     "answer: %s" % (k + 1, len(steps), answer), stem, key_dir,
+                                     part=2, parts=2, engine=engine)]
                         else:
-                            b.pop("solution_image_media_ids", None)
-                    report.append({"concept_id": cid, "question": name, "refs": c.get("ncert_refs") or [],
-                                   "question_diagram": bool(q_fig), "solution_diagram": bool(s_fig),
-                                   "steps": len(steps), "est_lines": layout.total_lines(steps, bool(s_fig)),
-                                   "solution_images": cards, "has_video": any(m.get("type") == "video" for m in others)})
+                            sol_nodes = [node(cid, next(free), "solution", name,
+                                              "Solution card with numbered working steps and a highlighted answer: %s%s"
+                                              % (answer, diagram), stem, key_dir, engine=engine)]
+
+                    used.update(m["id"] for m in own)
+                    if role == "question":
+                        media_out += [q_node] + others
+                        c["media_ids"] = [q_node["id"]] + [m["id"] for m in others]
+                        c["image_decision"] = {
+                            "needed": True,
+                            "why": "The question concept of a question/answer pair: one image shows the question%s "
+                                   "for the attempt." % (" and its figure" if q_fig else ""),
+                            "question_diagram": q_fig, "engine": engine}
+                        for b in blocks:
+                            b["image_media_id"] = q_node["id"]
+                        report.append({"concept_id": cid, "question": name, "refs": c.get("ncert_refs") or [],
+                                       "question_diagram": bool(q_fig)})
+                    elif role == "answer":
+                        media_out += others + sol_nodes
+                        c["media_ids"] = [m["id"] for m in others] + [n["id"] for n in sol_nodes]
+                        c["image_decision"] = {
+                            "needed": True,
+                            "why": "The answer concept of a question/answer pair: %s the worked solution."
+                                   % ("two images carry" if cards == 2 else "one image shows"),
+                            "solution_diagram": s_fig, "solution_images": cards, "engine": engine}
+                        tagged = layout.tagged_text(steps_disp, answer_disp, k, [n["title"] for n in sol_nodes])
+                        for b in blocks:
+                            b["solution_image_media_id"] = sol_nodes[0]["id"]
+                            if cards == 2:
+                                b["solution_image_media_ids"] = [n["id"] for n in sol_nodes]
+                            else:
+                                b.pop("solution_image_media_ids", None)
+                            b["text"] = b["publication_text"] = tagged
+                        report.append({"concept_id": cid, "question": name, "refs": c.get("ncert_refs") or [],
+                                       "solution_diagram": bool(s_fig), "steps": len(steps),
+                                       "est_lines": layout.total_lines(steps, bool(s_fig)), "solution_images": cards,
+                                       "has_video": any(m.get("type") == "video" for m in others)})
+                    else:
+                        media_out += [q_node] + others + sol_nodes
+                        c["media_ids"] = [q_node["id"]] + [m["id"] for m in others] + [n["id"] for n in sol_nodes]
+                        c["image_decision"] = {
+                            "needed": True,
+                            "why": "A question concept: one image shows the question%s for the attempt, and %s the "
+                                   "worked solution." % (" and its figure" if q_fig else "",
+                                                        "two images carry" if cards == 2 else "one shows"),
+                            "question_diagram": q_fig, "solution_diagram": s_fig, "solution_images": cards,
+                            "engine": engine}
+                        for b in blocks:
+                            b["image_media_id"] = q_node["id"]
+                            b["solution_image_media_id"] = sol_nodes[0]["id"]
+                            if cards == 2:
+                                b["solution_image_media_ids"] = [n["id"] for n in sol_nodes]
+                            else:
+                                b.pop("solution_image_media_ids", None)
+                        report.append({"concept_id": cid, "question": name, "refs": c.get("ncert_refs") or [],
+                                       "question_diagram": bool(q_fig), "solution_diagram": bool(s_fig),
+                                       "steps": len(steps), "est_lines": layout.total_lines(steps, bool(s_fig)),
+                                       "solution_images": cards, "has_video": any(m.get("type") == "video" for m in others)})
                 media_out += [m for m in old_media if m.get("id") not in used and not (
                     is_card(m) and m.get("concept_id") not in built)]
                 topic["media"] = media_out

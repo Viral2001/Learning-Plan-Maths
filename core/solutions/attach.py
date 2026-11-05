@@ -23,7 +23,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(os.path.dirname(HERE)))
-from core.solutions import schema  # noqa: E402
+from core.solutions import layout, schema  # noqa: E402
 
 FOLDER = "solution_images"
 BUCKET_PREFIX = "https://media.singularity-learn.com/learning_plan_assets/"
@@ -114,13 +114,9 @@ def node(entry, sol, concept_id, key_dir, has_png):
         "instructions_for_student": instruction,
         "teaching_notes": notes,
         "labels": [],
-        "regions": [],
-        "tutor_can_highlight": [],
         "accuracy_constraints": "",
         "generation_prompt": "",
         "negative_prompt": "",
-        "source_image": {"note": "Rendered from Manim code; see render_source."},
-        "source_image_key": "",
     }
 
 
@@ -136,9 +132,18 @@ def _concepts(plan):
                     yield topic, concept
 
 
-def find_concept(plan, cov):
-    """(topic, concept) for a coverage id: a question-topic concept first, else any concept citing it."""
+def find_concept(plan, cov, role=None):
+    """(topic, concept) for a coverage id: a question-topic concept first, else any concept citing it.
+    When a book question is split into a question concept and an answer concept (qt_part, core/qt.py),
+    `role` picks the right one: role="question" wants the qt_part "question" concept, anything else
+    wants the qt_part "answer" concept. An older, unsplit chapter has no qt_part and role is ignored -
+    both roles resolve to the same one concept."""
     hits = [(t, c) for t, c in _concepts(plan) if cov in (c.get("ncert_refs") or [])]
+    if role is not None:
+        want = "question" if role == "question" else "answer"
+        by_role = [(t, c) for t, c in hits if c.get("qt_part") == want]
+        if by_role:
+            hits = by_role
     qt = [(t, c) for t, c in hits if str(c.get("authored_key") or "").startswith("qt.")]
     return (qt or hits or [(None, None)])[0]
 
@@ -152,31 +157,36 @@ def attach(plan, new_design, key_dir):
     with io.open(mpath, encoding="utf-8") as f:
         manifest = json.load(f)
     sols = schema.load(new_design)
+    img_cfg = layout.chapter_config(new_design)
     problems, by_cov = [], {}
     for e in manifest["images"]:
         by_cov.setdefault(e["cov"], []).append(e)
-    # one question per concept: a concept holding two questions would keep only the last pair of cards
+    # one question per concept: a concept holding two questions would keep only the last pair of cards.
+    # A split question/answer pair (qt_part, core/qt.py) resolves both roles to their own concept, each
+    # with exactly one cov - only a genuine misconfiguration puts more than one cov on one concept.
     owner = {}
     for cov in by_cov:
-        _, concept = find_concept(plan, cov)
-        if concept is not None:
-            owner.setdefault(concept["concept_id"], []).append(cov)
+        for role in ("question", "solution"):
+            _, concept = find_concept(plan, cov, role=role)
+            if concept is not None:
+                owner.setdefault(concept["concept_id"], set()).add(cov)
     for cid, covs in owner.items():
         if len(covs) > 1:
             problems.append("%s: holds %d questions (%s); give each question its own concept (one concept, one "
-                            "video, one question and solution image each)" % (cid, len(covs), ", ".join(covs)))
+                            "video, one question and solution image each)"
+                            % (cid, len(covs), ", ".join(sorted(covs))))
     if problems:
         return problems
     for cov, entries in by_cov.items():
         sol = sols.get(cov)
-        topic, concept = find_concept(plan, cov)
         if sol is None:
             problems.append("%s: in manifest.json but not in solutions.json" % cov)
             continue
-        if concept is None:
+        q_topic, q_concept = find_concept(plan, cov, role="question")
+        s_topic, s_concept = find_concept(plan, cov, role="solution")
+        if q_concept is None or s_concept is None:
             problems.append("%s: no concept in the plan cites it in ncert_refs" % cov)
             continue
-        cid = concept["concept_id"]
         # one question card, and one solution card or (a long working, chapter.config "solution_continuation")
         # two, numbered by `part`
         q_entries = [e for e in entries if e["role"] == "question"]
@@ -185,39 +195,110 @@ def attach(plan, new_design, key_dir):
             problems.append("%s: manifest needs one question image and one solution image (or solution parts 1 to n)"
                             % cov)
             continue
-        is_card = lambda m: (m.get("type") == "image" and m.get("image_role") in ("question", "solution")
-                             and m.get("concept_id") == cid)
-        removed = {m["id"] for m in topic.get("media", []) if is_card(m)}      # earlier cards, placeholders included
-        topic["media"] = [m for m in topic.get("media", []) if not is_card(m)]
-        q_node = node(q_entries[0], sol, cid, key_dir,
+
+        if q_concept is s_concept:
+            # legacy: one concept holds both the question and solution card(s)
+            topic, concept = q_topic, q_concept
+            cid = concept["concept_id"]
+            is_card = lambda m: (m.get("type") == "image" and m.get("image_role") in ("question", "solution")
+                                 and m.get("concept_id") == cid)
+            removed = {m["id"] for m in topic.get("media", []) if is_card(m)}      # earlier cards, placeholders included
+            topic["media"] = [m for m in topic.get("media", []) if not is_card(m)]
+            q_node = node(q_entries[0], sol, cid, key_dir,
+                          os.path.exists(os.path.join(out, "png", q_entries[0]["id"] + ".png")))
+            s_nodes = [node(e, sol, cid, key_dir, os.path.exists(os.path.join(out, "png", e["id"] + ".png")))
+                       for e in s_entries]
+            topic["media"].extend([q_node] + s_nodes)
+            topic["available_content_types"] = sorted(set(topic.get("available_content_types") or []) | {"image"})
+            mine = {q_node["id"]} | {n["id"] for n in s_nodes}
+            rest = [m for m in concept.get("media_ids") or [] if m not in mine and m not in removed]
+            concept["media_ids"] = [q_node["id"]] + rest + [n["id"] for n in s_nodes]
+            # the question block itself names the cards (Class 9 Ch5 shape: image_media_id), not only the concept
+            for b in concept.get("content") or []:
+                if b.get("block_kind") in QUESTION_KINDS or (b.get("block_kind") == "worked_example" and b.get("item_kind")):
+                    b["image_media_id"] = q_node["id"]
+                    b["solution_image_media_id"] = s_nodes[0]["id"]
+                    if len(s_nodes) > 1:
+                        b["solution_image_media_ids"] = [n["id"] for n in s_nodes]
+                    else:
+                        b.pop("solution_image_media_ids", None)
+            if "image_media_id" in concept:
+                concept["image_media_id"] = q_node["id"]
+            decision = dict(concept.get("image_decision") or {})      # keep a placeholder pass's diagram notes
+            decision.update({
+                "needed": True,
+                "why": "A question concept: one image shows the question and its figure for the attempt, and %s the "
+                       "worked solution." % ("two images carry" if len(s_nodes) > 1 else "one shows"),
+            })
+            if len(s_nodes) > 1:
+                decision["solution_images"] = len(s_nodes)
+            concept["image_decision"] = decision
+            continue
+
+        # split: a question concept (image only) and a sibling answer concept (video + solution card(s))
+        q_cid, s_cid = q_concept["concept_id"], s_concept["concept_id"]
+        is_q_card = lambda m: (m.get("type") == "image" and m.get("image_role") == "question"
+                               and m.get("concept_id") == q_cid)
+        q_removed = {m["id"] for m in q_topic.get("media", []) if is_q_card(m)}
+        q_topic["media"] = [m for m in q_topic.get("media", []) if not is_q_card(m)]
+        q_node = node(q_entries[0], sol, q_cid, key_dir,
                       os.path.exists(os.path.join(out, "png", q_entries[0]["id"] + ".png")))
-        s_nodes = [node(e, sol, cid, key_dir, os.path.exists(os.path.join(out, "png", e["id"] + ".png")))
-                   for e in s_entries]
-        topic["media"].extend([q_node] + s_nodes)
-        topic["available_content_types"] = sorted(set(topic.get("available_content_types") or []) | {"image"})
-        mine = {q_node["id"]} | {n["id"] for n in s_nodes}
-        rest = [m for m in concept.get("media_ids") or [] if m not in mine and m not in removed]
-        concept["media_ids"] = [q_node["id"]] + rest + [n["id"] for n in s_nodes]
-        # the question block itself names the cards (Class 9 Ch5 shape: image_media_id), not only the concept
-        for b in concept.get("content") or []:
+        q_topic["media"].append(q_node)
+        q_topic["available_content_types"] = sorted(set(q_topic.get("available_content_types") or []) | {"image"})
+        rest_q = [m for m in q_concept.get("media_ids") or [] if m != q_node["id"] and m not in q_removed]
+        q_concept["media_ids"] = [q_node["id"]] + rest_q
+        for b in q_concept.get("content") or []:
             if b.get("block_kind") in QUESTION_KINDS or (b.get("block_kind") == "worked_example" and b.get("item_kind")):
                 b["image_media_id"] = q_node["id"]
-                b["solution_image_media_id"] = s_nodes[0]["id"]
-                if len(s_nodes) > 1:
-                    b["solution_image_media_ids"] = [n["id"] for n in s_nodes]
-                else:
-                    b.pop("solution_image_media_ids", None)
-        if "image_media_id" in concept:
-            concept["image_media_id"] = q_node["id"]
-        decision = dict(concept.get("image_decision") or {})      # keep a placeholder pass's diagram notes
-        decision.update({
+        if "image_media_id" in q_concept:
+            q_concept["image_media_id"] = q_node["id"]
+        q_decision = dict(q_concept.get("image_decision") or {})
+        q_decision.update({"needed": True,
+                            "why": "The question concept of a question/answer pair: one image shows the question "
+                                   "and its figure for the attempt."})
+        q_concept["image_decision"] = q_decision
+
+        is_s_card = lambda m: (m.get("type") == "image" and m.get("image_role") == "solution"
+                               and m.get("concept_id") == s_cid)
+        s_removed = {m["id"] for m in s_topic.get("media", []) if is_s_card(m)}
+        s_topic["media"] = [m for m in s_topic.get("media", []) if not is_s_card(m)]
+        s_nodes = [node(e, sol, s_cid, key_dir, os.path.exists(os.path.join(out, "png", e["id"] + ".png")))
+                   for e in s_entries]
+        s_topic["media"].extend(s_nodes)
+        s_topic["available_content_types"] = sorted(set(s_topic.get("available_content_types") or []) | {"image"})
+        mine_s = {n["id"] for n in s_nodes}
+        rest_s = [m for m in s_concept.get("media_ids") or [] if m not in mine_s and m not in s_removed]
+        s_concept["media_ids"] = rest_s + [n["id"] for n in s_nodes]
+        s_blocks = [b for b in s_concept.get("content") or []
+                    if b.get("block_kind") in QUESTION_KINDS
+                    or (b.get("block_kind") == "worked_example" and b.get("item_kind"))]
+        for b in s_blocks:
+            b["solution_image_media_id"] = s_nodes[0]["id"]
+            if len(s_nodes) > 1:
+                b["solution_image_media_ids"] = [n["id"] for n in s_nodes]
+            else:
+                b.pop("solution_image_media_ids", None)
+        # "[Image: <title>]" markers in the displayed text, at the step where a long working moves to a
+        # second solution card - sol["cut"] is the author's override, else the same split gen_scenes.py
+        # already rendered the cards with (core/solutions/layout.py).
+        steps_disp = [st for b in s_blocks for st in (b.get("steps_tex") or b.get("steps") or []) if isinstance(st, str)]
+        answer_disp = next((b["answer_tex"] for b in s_blocks if b.get("answer_tex")), None) \
+            or (s_blocks[0].get("answer") if s_blocks else "")
+        k = sol.get("cut") or layout.split_point(
+            [schema.tex_to_plain(x) for x in sol["steps"]], with_figure=bool(sol.get("figure")),
+            max_lines=img_cfg.get("question_image_max_lines") or layout.MAX_LINES)
+        tagged = layout.tagged_text(steps_disp, answer_disp, k, [n["title"] for n in s_nodes])
+        for b in s_blocks:
+            b["text"] = b["publication_text"] = tagged
+        s_decision = dict(s_concept.get("image_decision") or {})
+        s_decision.update({
             "needed": True,
-            "why": "A question concept: one image shows the question and its figure for the attempt, and %s the "
-                   "worked solution." % ("two images carry" if len(s_nodes) > 1 else "one shows"),
+            "why": "The answer concept of a question/answer pair: %s the worked solution."
+                   % ("two images carry" if len(s_nodes) > 1 else "one image shows"),
         })
         if len(s_nodes) > 1:
-            decision["solution_images"] = len(s_nodes)
-        concept["image_decision"] = decision
+            s_decision["solution_images"] = len(s_nodes)
+        s_concept["image_decision"] = s_decision
     # the manifest records where the files go; the plan nodes point there
     if manifest.get("key_dir") != key_dir:
         manifest["key_dir"] = key_dir

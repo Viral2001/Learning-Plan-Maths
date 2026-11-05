@@ -59,8 +59,8 @@ import io
 import json
 import sys
 
-from . import (coverage, media_content, objectives, question_layout, skeleton, solution_content, theorem_variant,
-               video_script_rules)
+from . import (coverage, latex_content, media_content, objectives, question_layout, skeleton, solution_content,
+               theorem_variant, video_script_rules)
 
 EQCHECK_MODULES = {}
 
@@ -71,6 +71,7 @@ ADVISORY_MARKERS = (
     "shares no key term with its own concept",
     "mapped to more than one concept",
     "cannot be verified for it",
+    latex_content.ADVISORY_MARKER,
 )
 
 
@@ -183,6 +184,7 @@ def run(plan, config):
         gate_families += [("skeleton", skeleton), ("objectives", objectives)]
     if config.get("solutions"):
         gate_families.append(("solution_content", solution_content))
+        gate_families.append(("latex_content", latex_content))
     if config.get("question_layout"):
         gate_families.append(("question_layout", question_layout))
 

@@ -109,28 +109,71 @@ that already has pin files).
 With `"question_layout": true` in `chapter.config.json` (the sample and `lp_start.py` set it for Class 6-8) the
 chapter reads
 
-    concept topic -> "Questions: <that topic>" -> next concept topic -> "Questions: <next topic>" -> ...
+    concept topic -> one "Questions: <category>" topic per book category found there -> next concept topic -> ...
 
-and the Questions topic holds **one concept per book question**, in the book's order, each with its own video:
-every solved example printed in the book, every Figure it Out / exercise question and every answerable in-text
-prompt (a Try This with an answer, "answer the following", a blank to fill). Math Talk discussion prompts are
-not questions and stay in the teaching text. The author writes each as an `FIO(..., kind="example" |
-"exercise" | "prompt")` item in the topic's DOER; `build.py` calls
-`qt.apply(..., enrichment_qt=True, topic_prefix="Questions")`, which moves the item out of the teaching topic.
+and each Questions topic holds, for every book question of its own category, in the book's order, **two
+sibling concepts**: a question concept (just the question) and an answer concept (the working, the answer
+and the video) - every solved example printed in the book, every Figure it Out / exercise question and every
+answerable in-text prompt (a Try This with an answer, "answer the following", a blank to fill). Math Talk
+discussion prompts are not questions and stay in the teaching text. The author writes each as an `FIO(...,
+kind="example" | "exercise" | "prompt")` item in the topic's DOER; `build.py` calls `qt.apply(...,
+enrichment_qt=True, topic_prefix="Questions")`, which moves the item out of the teaching topic and splits it.
 A concept topic keeps only the plan's own teaching examples (`WE`, with their own numbers).
 
-Every question concept also carries its two image cards, as placeholders from the first build:
+`core/question_naming.py` names the topic and both concepts from the item's own printed book label (`FIO`'s
+`book` argument), by category:
 
-    media_ids = [IMG1 question card, VID1 video, IMG2 solution card (, IMG3 solution continued)]
+    category        topic                           question concept       answer concept
+    exercise        Questions: Exercise Set 5.1      Exercise Set 5.1: Q1   Exercise Set 5.1: Ans1
+    figure_it_out   Questions: Figure it Out 5.1      Figure it out: Q1     Figure it out: Ans1
+    example         Questions: Example               Example 1: Q          Example 1: Ans
+    let_us_do       Questions: Let us do             Let us do: Q1         Let us do: Ans1
+    other           Questions: <the label's heading> <heading>: Q1         <heading>: Ans1
 
-IMG1 shows the question and, only when the question needs one, a diagram (`q_figure`); IMG2 is the numbered
-working and highlighted answer (`s_figure` for a diagram); IMG3 exists only when the working is too long for one
-card (`core/solutions/layout.py`: more than `question_image_max_lines`, default 8, wrapped lines; the chapter must
-set `solution_continuation`). `core/solutions/placeholders.py` writes these nodes (`build_status: "placeholder"`,
-reserved urls, Manim scene names, the diagram sentence in the description), `build.py --placeholders` builds the
-plan at this stage with no `solutions.json` yet, and `gen_scenes.py` / `render.py` / `attach.attach` later replace
-a placeholder with the real card, a second scene `<stem>_sol2.py` for a continued working. The answer box and the
-common-mistake note sit on the last solution card only.
+A teaching topic whose questions span more than one category gets one Questions topic per category, in book
+order, immediately after the teaching topic and after each other - never one topic mixing categories.
+`gates/skeleton.py` and `gates/question_layout.py` both allow a run of several Questions topics after one
+teaching topic for exactly this reason. "example" concepts keep the book's own example number in the title
+itself and need no running count; every other category counts "Q1"/"Ans1", "Q2"/"Ans2", ... in book order
+within its own topic. This naming and splitting is chapter_template's own (`topic_prefix="Questions"`); other,
+older per-chapter build scripts (`own_video`/`keep_first`/`name_fn`, no `topic_prefix`) keep one concept per
+question, untouched. `core/question_layout_live.py` (retrofitting an already-live chapter) picks up the
+category-based topic name automatically when every question under one Questions topic happens to share a
+category, but does not split a mixed topic or split a question into two concepts - that engine's concept
+names are still typed by the author directly, in this same convention
+(`core/question_layout_AUTHOR_BRIEF.md`).
+
+The question concept carries only its question card, as a placeholder from the first build:
+
+    media_ids = [IMG1 question card]
+
+The answer concept carries the video and the solution card(s):
+
+    media_ids = [VID1 video (if authored yet), IMG1 solution card (, IMG2 solution continued)]
+
+The question card shows the question and, only when the question needs one, a diagram (`q_figure`); the
+solution card is the numbered working and highlighted answer (`s_figure` for a diagram); a second solution
+card exists only when the working is too long for one (`core/solutions/layout.py`: more than
+`question_image_max_lines`, default 8, wrapped lines; the chapter must set `solution_continuation`).
+`core/solutions/placeholders.py` writes these nodes (`build_status: "placeholder"`, reserved urls - the
+bucket file is always `<coverage stem>.IMG1/2/3.png` regardless of which concept the card lives on, so the
+numbering a chapter author sees in the plan still runs IMG1 (question), IMG2, IMG3 (answer) even though IMG1
+is now on a different concept than IMG2/IMG3 - Manim scene names, the diagram sentence in the description),
+`build.py --placeholders` builds the plan at this stage with no `solutions.json` yet, and `gen_scenes.py` /
+`render.py` / `attach.attach` later replace a placeholder with the real card, a second scene `<stem>_sol2.py`
+for a continued working. The answer box and the common-mistake note sit on the last solution card only.
+
+**Displayed text is LaTeX once a question has a solutions.json entry.** solutions.json already authors
+`question_tex`/`given`/`find`/`method`/`steps`/`answer_tex` as prose with inline maths in `$...$`
+(`core/solutions/schema.py`); `bind.fill()` sets these, unflattened, as `question_tex`/`steps_tex`/`answer_tex`
+alongside the plain `question`/`steps`/`answer` it has always set (from `schema.plan_fields`, which flattens
+the same LaTeX to plain text) - `gates/eqcheck_*` keep reading the plain fields, unaffected. The question and
+answer concepts' own displayed text (`chapter_template/build.py`, `core/qt.py`) is built from the `_tex` fields
+when present, so the student reads the maths as `$...$` LaTeX instead; a question with no solutions.json entry
+yet stays plain text. When the working spans two solution cards, the answer concept's text is tagged
+`[Image: <title>]` right after the steps shown on each card (`core/solutions/layout.py:tagged_text`, called by
+`placeholders.py` and by `attach.py` once the real cards and their titles exist) - a single-card answer needs
+no tag.
 
 `gates/question_layout.py` checks the order and naming of the topics, that no book question is left in a concept
 topic, and (from the kinds in `content.NCERT_ITEMS`) that every example / exercise / prompt is in a Questions

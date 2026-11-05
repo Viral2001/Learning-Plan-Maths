@@ -82,8 +82,9 @@ This step is not optional for a new chapter: `build.py` stops if the config has 
 stops again if any question has no `solutions.json` entry. Every question ends up with the question plus its
 numbered step-by-step solution and `Answer:` in the concept, AND a question image and a solution image.
 
-Before any solution exists, `python -B build.py --placeholders` builds the plan with the question layout (a
-"Questions: <topic>" topic after every concept topic, one concept per book question: solved examples, exercises
+Before any solution exists, `python -B build.py --placeholders` builds the plan with the question layout (one
+"Questions: <category>" topic per book category after every concept topic - Exercise Set / Figure it Out /
+Example / Let us do / other, `core/question_naming.py` - one concept per book question: solved examples, exercises
 and answerable prompts) and a question image, a solution image and, for a long working, a second solution image
 on every question as placeholders; it prints `structure stage OK` when every gate that can pass without video
 scripts passes, and writes `question_images_report.json`. Review the structure there first. Everything below

@@ -165,7 +165,13 @@ def check(plan, config=None):
                     problems.append("%s: %s maps to %d exercise/FIO item(s) via %s (want exactly 1)"
                                     % (tid, c.get("concept_id"), len(refs), ref_field))
             if _cfg(config, "qt_must_follow_idea_topic"):
-                prev = topics[i - 1] if i > 0 else None
+                # A run of several question topics (one per book category: Exercise Set, Figure it
+                # Out, Example, ...) can sit back to back after one idea topic - walk back over any
+                # of them already seen to find the idea topic the whole run practises.
+                j = i - 1
+                while j >= 0 and topics[j].get("source_type") in qt_types:
+                    j -= 1
+                prev = topics[j] if j >= 0 else None
                 if prev is None or prev.get("source_type") != idea_t:
                     problems.append("%s: a question topic must come immediately after its idea topic "
                                     "(previous topic's source_type is %r)" % (tid, prev and prev.get("source_type")))

@@ -10,7 +10,12 @@ Read this whole file first. The spec format is in the docstring of `core/questio
     concept topic -> "Questions: <that topic>" -> next concept topic -> "Questions: <next topic>" -> ...
 
 and the Questions topic holds **one concept per book question**, in the book's order, each with its own video and its
-own question image and solution image (placeholders, made by the engine).
+own question image and solution image (placeholders, made by the engine). The engine names the Questions topic
+"Questions: <that topic>" unless every question concept inside it turns out to share one book category (see
+"Names" below), in which case it names it after that category instead (e.g. "Questions: Figure it Out 5.1"). This
+engine does not split one topic's questions into several Questions topics by category the way a fresh build
+(`core/qt.py`, `topic_prefix="Questions"`) does - name concepts by category anyway (below), so a later full
+rebuild of this chapter lines up with chapters built fresh.
 
 ## What is a book question
 
@@ -60,9 +65,14 @@ content.** A book question the plan does not contain goes in `notes.md` under *G
    blocks in `from`, in reading order. A multi-part question stays one concept.
 6. **Which Questions topic.** Normally the Questions topic of the concept topic the block sits in. Put it in another
    topic's only when the book clearly places it there.
-7. **Names.** Match this chapter's existing question-concept style. For new ones: `Example 3: <3 to 6 word subject>`,
-   `Try This (<section>): <subject>`, or `<Topic short>: <subject>`. No "NCERT", "textbook", "page N", "Fig.". No em or
-   en dash. A minus sign is U+2212.
+7. **Names.** The standard going forward (`core/question_naming.py`, matching a fresh chapter_template build) is
+   by category, from the book's own label: `Exercise Set 5.1: Q1`, `Figure it out: Q1`, `Example 3: Q` (no
+   running number - the book's own example number already distinguishes it), `Let us do: Q1`, or, for anything
+   else (a Try This, a named puzzle, ...), `<the book's own heading>: Q1`. Use this for every new question
+   concept you add, even inside a chapter whose existing ones are still in the older subject-style (`Example 3:
+   <3 to 6 word subject>`, `Try This (<section>): <subject>`, `<Topic short>: <subject>`) - note the mix in
+   `notes.md` rather than matching the old style, so the chapter converges on the one convention over time. No
+   "NCERT", "textbook", "page N", "Fig.". No em or en dash. A minus sign is U+2212.
 8. **Teaching concepts named after a moved example** (their name is "Example 1: ..." or similar): give them a teaching
    name in `rename_teach` so the example is not named twice.
 9. **Diagrams.** When the question as printed depends on a diagram, table, number line, grid, token picture or shape,

@@ -8,7 +8,9 @@
 solutions.json is keyed by coverage id (`cov` of a concept_plan item, or an example's `ncert` id). `fill`
 overwrites the item's `steps` and `answer` with the plain text of the board-format solution
 (schema.plan_fields), so the plan blocks, the video worklist's items and the question-topic fallback block
-all carry the same working, and gates/eqcheck_* read plain text as before.
+all carry the same working, and gates/eqcheck_* read plain text as before. It also sets `question_tex` /
+`steps_tex` / `answer_tex` (schema.display_question / display_fields) alongside them, unflattened, so the
+concept's displayed text (chapter_template/build.py, core/qt.py) can show the maths as LaTeX instead.
 """
 from __future__ import annotations
 
@@ -30,13 +32,16 @@ def _items(topics):
 
 
 def fill(topics, sols):
-    """Overwrite steps/answer of every item and example that has a solutions.json entry. Returns the count."""
+    """Overwrite steps/answer of every item and example that has a solutions.json entry, and set its
+    display-only question_tex/steps_tex/answer_tex alongside them. Returns the count."""
     n = 0
     for kind, owner, cov, _ in _items(topics):
         sol = sols.get(cov)
         if not sol or sol.get("kind") != kind:
             continue
         owner["steps"], owner["answer"] = schema.plan_fields(sol)
+        owner["question_tex"] = schema.display_question(sol)
+        owner["steps_tex"], owner["answer_tex"] = schema.display_fields(sol)
         n += 1
     return n
 

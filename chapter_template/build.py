@@ -15,10 +15,12 @@ content.py, concept_plan.py, media_specs.py and book_rules.json next to it).
                                         working), without requiring solutions.json yet. Questions that already have
                                         a solutions.json entry get their real cards; the rest keep placeholders.
 
-Question layout (chapter.config.json "question_layout": true): every concept topic is followed by its own
-"Questions: <topic>" topic with ONE concept per book question - each solved example, Figure it Out / exercise item
-and answerable in-text prompt, written as an `items` entry (concept_plan.FIO, kind="example" | "exercise" |
-"prompt") - and core/qt.py does the moving. See docs/00_overview.md "Question layout".
+Question layout (chapter.config.json "question_layout": true): every concept topic is followed by one
+"Questions: <category>" topic per book category found there (core/question_naming.py), each with a question
+concept and a sibling answer concept per book question of that category - each solved example, Figure it Out
+/ exercise item and answerable in-text prompt, written as an `items` entry (concept_plan.FIO, kind="example" |
+"exercise" | "prompt") - and core/qt.py does the moving, categorising, splitting and naming. See
+docs/00_overview.md "Question layout".
 
 Solutions (chapter.config.json "solutions": true): solutions.json (core/solutions/schema.py) holds each
 question's board-format solution. build.py writes its working and answer into the plan, and into the video
@@ -163,15 +165,24 @@ def _teach_blocks(concept):
     if concept.get("recap"):
         blocks.append(_content_block("recap", "\n".join(concept["recap"])))
     for it in concept.get("items") or []:
-        text = "\n".join(["%s: %s" % (it["book"], it["question"])]
-                         + ["%d. %s" % (i, s) for i, s in enumerate(it["steps"], 1)]
-                         + ["Answer: %s" % it["answer"]])
+        # question_tex/steps_tex/answer_tex (core/solutions/bind.py, once solutions.json has this item) are
+        # the same working, kept as the inline-LaTeX ($...$) text it was authored with; the displayed text
+        # uses them when present, so the student reads the maths as LaTeX, not the plain/eqcheck form.
+        q_disp = it.get("question_tex") or it["question"]
+        steps_disp = it.get("steps_tex") or it["steps"]
+        answer_disp = it.get("answer_tex") or it["answer"]
+        # Step index wrapped as "$N$." per LATEX_REFERENCE.md's step-identification rule, but only
+        # when steps_tex is actually authored - a plain-text fallback must stay bare.
+        _idx_fmt = "$%d$. %s" if it.get("steps_tex") else "%d. %s"
+        text = "\n".join(["%s: %s" % (it["book"], q_disp)]
+                         + [_idx_fmt % (i, s) for i, s in enumerate(steps_disp, 1)]
+                         + ["Answer: %s" % answer_disp])
         # worked_example + item_kind "exercise", the question-block shape every built chapter uses; core.qt
         # moves only worked_example blocks into the practice topic.
         # book_kind: "example" (a solved example of the book), "exercise" (Figure it Out / exercise question) or
         # "prompt" (an answerable in-text question); q_figure / s_figure: one plain sentence for the diagram the
         # question card / solution card needs (core/solutions/placeholders.py), left out when the card is text only.
-        extra = {k: it[k] for k in ("q_figure", "s_figure") if it.get(k)}
+        extra = {k: it[k] for k in ("q_figure", "s_figure", "question_tex", "steps_tex", "answer_tex") if it.get(k)}
         blocks.append(_content_block("worked_example", text, item_kind="exercise", coverage_id=it["cov"],
                                      exercise_id=it["cov"], book_number=it["book"], question=it["question"],
                                      steps=it["steps"], answer=it["answer"], ncert_refs=[it["cov"]],
@@ -181,6 +192,22 @@ def _teach_blocks(concept):
 
 # topic_type -> gates/skeleton.py's `source_type` vocabulary (DEFAULTS in that file).
 SOURCE_TYPE = {"framing": "framing", "instructional": "instructional/exploration", "summary": "summary"}
+
+# primary_/secondary_/tertiary_content_type: priority image > video > 2d_tool > 3d_tool, except the
+# chapter's very first topic (its Introduction video), where video is primary.
+CONTENT_TYPE_PRIORITY = ("image", "video", "2d_tool", "3d_tool")
+
+
+def _content_type_triad(available_content_types, is_first_topic):
+    order = list(CONTENT_TYPE_PRIORITY)
+    if is_first_topic and "video" in available_content_types:
+        order.remove("video")
+        order.insert(0, "video")
+    present = [t for t in order if t in available_content_types]
+    primary = present[0] if present else None
+    secondary = present[1] if len(present) > 1 else None
+    tertiary = present[2] if len(present) > 2 else None
+    return primary, secondary, tertiary
 
 
 def _concept_role(c):
@@ -235,7 +262,11 @@ def assemble(cfg):
                 full_cid = "%s.%s" % (full_topic_id, cid)
                 concept_lookup[c["key"]] = {"concept": c, "concept_id": full_cid, "topic": t}
                 blocks = _teach_blocks(c)
-                available_types.add("text")
+                # NOTE: "text" is deliberately NOT added to available_types here - that field is
+                # "distinct media types present" (image/video/2d_tool/3d_tool only); a topic's own
+                # paragraph/worked-example content is not a media type and must never leak into it
+                # (every concept always has content[], so seeding this would make the field
+                # permanently non-empty and useless as a signal of what media actually exists).
                 tool_media_id = None
                 if c.get("kind") == "doer" and c.get("tool"):
                     spec = CP.TOOLS.get(c["tool"])
@@ -276,7 +307,6 @@ def assemble(cfg):
                     "bloom_level": c.get("bloom"),
                     "key_terms": c.get("key_terms") or [],
                     "misconceptions": c.get("misconceptions") or [],
-                    "tool_media_id": tool_media_id,
                     "ncert_refs": ncert_refs,
                     "is_enrichment": is_enrichment_c,
                     "source_segment_role": _concept_role(c),
@@ -291,6 +321,10 @@ def assemble(cfg):
                     "home_topic_id": full_topic_id,
                 }
             summary_text = t.get("summary", "")
+            # word_count is a simple, honest metric derived from the topic's own concept text - not
+            # authored, so it can never drift from the content it's measuring.
+            topic_words = " ".join(b.get("text", "") for c in concepts_out for b in c["content"]
+                                   if isinstance(b.get("text"), str)).split()
             topics_out = [{
                 "topic_id": full_topic_id,
                 "topic_name": t["name"],
@@ -302,13 +336,15 @@ def assemble(cfg):
                 "summary": summary_text,
                 "brief_summary": summary_text,
                 "detailed_summary": summary_text,
-                "ncert_sections": t.get("ncert_sections") or [],
+                "source_topic_ids": t.get("ncert_sections") or [],
                 "key_terms": t.get("key_terms") or [],
                 "concepts": concepts_out,
                 "media": media_out,
                 "available_content_types": sorted(available_types),
                 "depends_on": [],
                 "objective_ids": topic_objective_ids,
+                "recall_questions": [],
+                "word_count": {"original": len(topic_words)},
             }]
             segments_out.append({
                 "segment_id": "%s.S%d" % (module_id, topic_n),
@@ -462,17 +498,29 @@ def main():
                     for concept in topic["concepts"]:
                         key = next((k for k, v in concept_lookup.items()
                                    if v["concept_id"] == concept["concept_id"]), None)
+                        figures = getattr(K, "FIGURES", {})
                         for im in images.get(key, []):
                             topic["media"].append({
-                                "id": im["key"], "type": "image", "subtype": "generated",
+                                "id": im["key"], "type": "image", "subtype": "illustration",
                                 "title": im["title"], "concept_id": concept["concept_id"],
+                                "related_concept_ids": [],
                                 "home_concept_id": concept["concept_id"], "image_url": "",
                                 "planned_url": "%s/image_v3/%s.png" % (asset_base, im["key"]),
                                 "generation_prompt": im["exact_structure"], "labels": im["labels"],
                                 "negative_prompt": MS.FLAT_NEGATIVE,
                                 "accuracy_constraints": im["rejection"],
+                                "grounding_quote": "",
                                 "description": im["description"], "context": im["context"],
                                 "teaching_notes": im["teaching_notes"],
+                                "heading": "", "heading_style": "standard", "label_style": "standard",
+                                "aspect_ratio": "16:9", "image_dimensions": "1456x816",
+                                "objects": [], "scientific_facts": [],
+                                "composition": im.get("composition", ""),
+                                "predict_then_reveal": False,
+                                "enrichment": bool(concept.get("is_enrichment")),
+                                "source_figure": "; ".join(figures.get(key, []) or []),
+                                "source_topic_no": (topic.get("source_topic_ids") or [""])[0],
+                                "source_page": None,
                                 "build_status": "placeholder",
                             })
                             topic["available_content_types"] = sorted(
@@ -520,9 +568,7 @@ def main():
                                             b["video_media_id"] = s["video_id"]
 
                 # QT (question-topic) pass: insert a sibling practice topic after every
-                # instructional topic whose exercise slots were just tagged above. strand_map is
-                # left empty here (no cross-chapter strand grouping in this template); a real
-                # chapter wires it the way maths6_ch3/new_design's own build.py does if it needs one.
+                # instructional topic whose exercise slots were just tagged above.
                 # every concept lists its own media, as the built chapters do: images, videos, then its tool
                 for module in plan["modules"]:
                     for segment in module["segments"]:
@@ -530,12 +576,11 @@ def main():
                             for concept in topic["concepts"]:
                                 own = [x for x in topic["media"] if x.get("concept_id") == concept["concept_id"]]
                                 vids = [x["id"] for x in own if x.get("type") == "video"]
+                                has_tool = any(x.get("type") == "2d_tool" for x in own)
                                 concept["media_ids"] = ([x["id"] for x in own if x.get("type") == "image"] + vids
                                                         + [x["id"] for x in own if x.get("type") == "2d_tool"])
                                 concept["video_media_ids"] = vids
-                                if vids:
-                                    concept["walkthrough_video_id"] = vids[0]
-                                concept["source_media"] = ("video" if vids else "2d_tool" if concept.get("tool_media_id")
+                                concept["source_media"] = ("video" if vids else "2d_tool" if has_tool
                                                            else "image" if concept["media_ids"] else None)
 
                 labels = {}
@@ -548,8 +593,8 @@ def main():
                 # enrichment_qt: the shape every Class 6-7 chapter ships - a "Figure it Out" topic with one
                 # concept per question, each holding its own question video (<concept>.VID1). Without it the
                 # question concepts get no video and solution_content fails them.
-                QT.apply(plan, wl["videos"], cfg["media_tag"], {}, enrichment_qt=True,
-                         topic_prefix="Questions" if cfg.get("question_layout") else None)
+                QT.apply(plan, wl["videos"], cfg["media_tag"], getattr(K, "MODULE_STRANDS", {}),
+                         enrichment_qt=True, topic_prefix="Questions" if cfg.get("question_layout") else None)
 
                 # QT moves each exercise ref off its teaching concept; rebuild ncert_coverage from the final
                 # concept ncert_refs so the forward and reverse maps agree.
@@ -570,11 +615,14 @@ def main():
                     img_report = SP.add(plan, cfg)
                     with io.open(os.path.join(HERE, "question_images_report.json"), "w", encoding="utf-8") as f:
                         json.dump(img_report, f, ensure_ascii=False, indent=1)
-                    print("question images: %d question concepts, %d solution card(s) in all, %d with a diagram on "
+                    # a split question/answer concept (core/qt.py) gives one report row per concept: a
+                    # question-role row has no solution_images/has_video, an answer-role row has no
+                    # question_diagram - .get() keeps this summary accurate either shape.
+                    print("question images: %d concept(s), %d solution card(s) in all, %d with a diagram on "
                           "the question card, %d without a video yet (question_images_report.json)"
-                          % (len(img_report), sum(r["solution_images"] for r in img_report),
-                             sum(1 for r in img_report if r["question_diagram"]),
-                             sum(1 for r in img_report if not r["has_video"])))
+                          % (len(img_report), sum(r.get("solution_images", 0) for r in img_report),
+                             sum(1 for r in img_report if r.get("question_diagram")),
+                             sum(1 for r in img_report if r.get("has_video") is False)))
 
         # solutions: check solutions.json + its scene files, then hang the question and solution images on
         # each question concept as media_ids = [question image, video(s), solution image].
@@ -605,6 +653,14 @@ def main():
                 for p in problems:
                     print("  -", p)
                 return 1
+
+        all_topics_in_order = [topic for module in plan["modules"] for segment in module["segments"]
+                               for topic in segment["topics"]]
+        for i, topic in enumerate(all_topics_in_order):
+            primary, secondary, tertiary = _content_type_triad(topic["available_content_types"], i == 0)
+            topic["primary_content_type"] = primary
+            topic["secondary_content_type"] = secondary
+            topic["tertiary_content_type"] = tertiary
 
         with io.open(out_path(cfg), "w", encoding="utf-8") as f:
             json.dump(plan, f, ensure_ascii=False, indent=1)

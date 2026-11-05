@@ -11,6 +11,21 @@
         "method":      "the general formula or property used, named, in LaTeX text",
         "steps":       ["LaTeX text, one operation per line; show values before squaring/rooting", ...],
         "answer_tex":  "LaTeX text; the highlighted answer",
+        # Every *_tex / given / find / method / steps / answer_tex field above is written in STRICT
+        # inline LaTeX per core/solutions/LATEX_REFERENCE.md: every number, variable, operator, unit
+        # and step index is wrapped in its own $...$ (or merged into one coherent equation span),
+        # units sit inside \text{}, fractions are \frac{a}{b}, and ordinary prose stays outside the
+        # dollars. core/solutions/latex_convert.py's latex_wrap()/wrap_steps_and_answer() implement
+        # this conversion programmatically from plain text and are tested against that reference's
+        # own worked examples - use them (or follow the same rules by hand) whenever authoring these
+        # fields, rather than preserving raw unicode symbols or bare "a/b" fractions. gates/latex_content.py
+        # checks every one of these fields automatically inside gate_runner.run() (plain build.py, no extra
+        # step) and fails the build on a mistake a converter OR a person can make (an exponent swallowing a
+        # fraction that belongs to the whole term, e.g. a^2/4 meaning a^(2/4) instead of the intended
+        # (a^2)/4; a command glued to the next letter; a lone "(" wrapped on its own) while downgrading
+        # genuinely ambiguous findings (a bare unit letter, a variable wrapped in some places but not
+        # others) to warnings for a human to check. core/solutions/latex_checker.py is the same logic,
+        # runnable directly on one field or a whole plan for faster feedback while still authoring.
         "common_mistake": "LaTeX text",            # the slip a student who got it wrong makes
         "verification": "LaTeX text, optional",
         "figure":      {"type": "right_triangle", ...},   # optional, see figure_from_spec in style/_style.py;
@@ -138,3 +153,31 @@ def plan_fields(sol):
     if sol.get("verification"):
         steps.append("Check: " + tex_to_plain(sol["verification"]))
     return steps, tex_to_plain(sol["answer_tex"])
+
+
+# ---------------------------------------------------------------------------
+# display text for the plan's concept text (what the student reads): the same shape as plan_fields,
+# but keeping each field's own inline LaTeX ($...$, already how given/find/method/steps/question_tex/
+# answer_tex are authored above) instead of flattening it with tex_to_plain - so a reader can tell the
+# maths from the prose. gates/eqcheck_* keep reading plan_fields()'s plain steps/answer, unaffected.
+# ---------------------------------------------------------------------------
+
+def display_fields(sol):
+    """(steps, answer) for display: one entry per plan_fields() entry, same order, each kept as the
+    inline-LaTeX text it was authored with."""
+    steps = []
+    if sol.get("given"):
+        steps.append("Given: " + sol["given"])
+    if sol.get("find"):
+        steps.append("To find: " + sol["find"])
+    if sol.get("method"):
+        steps.append("Use: " + sol["method"])
+    steps += list(sol["steps"])
+    if sol.get("verification"):
+        steps.append("Check: " + sol["verification"])
+    return steps, sol["answer_tex"]
+
+
+def display_question(sol):
+    """The question for display: question_tex (inline LaTeX) when authored, else the plain question."""
+    return sol.get("question_tex") or sol.get("question", "")

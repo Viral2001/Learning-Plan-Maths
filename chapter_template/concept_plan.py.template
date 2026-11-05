@@ -36,11 +36,16 @@ def WE(q, steps, answer, *, ncert=(), fact=None, expect=None):
 
 def FIO(cov, book, question, steps, answer, *, kind="exercise", q_figure=None, s_figure=None, expect=None):
     """A BOOK QUESTION, homed in the DOER concept of the topic whose idea it practises. core/qt.py moves it into
-    its own concept of the "Questions: <topic>" topic that follows (question layout), with its own video, a
-    question image and a solution image.
+    a "Questions: <category>" topic that follows (question layout) - one such topic per book category found
+    here (core/question_naming.py classifies `book` below: Exercise Set / Figure it Out / Example / Let us do
+    / anything else) - splitting it into a question concept (just the question, a question image) and a
+    sibling answer concept (the steps and answer, its video, a solution image).
 
     cov       its coverage id (must appear in content.NCERT_ITEMS)
     book      its label, as the student sees it: "Example 1", "Figure it Out (division), Q3", "Carrom coins, Try This"
+              (this also drives the category/name of the "Questions: ..." topic and the question/answer concept
+              titles, e.g. "Example 1: Q" / "Example 1: Ans" or "Figure it out: Q3" / "Figure it out: Ans3" -
+              see core/question_naming.py)
     kind      "exercise" a Figure it Out / exercise question (default)
               "example"  a SOLVED EXAMPLE printed in the book (the student attempts it, then watches the solution)
               "prompt"   an answerable in-text question: a Try This with an answer, "answer the following", a blank
@@ -145,8 +150,8 @@ TOOLS = {
 
 # ---------------------------------------------------------------------------
 # QT (Question Topic) pattern: every FIO item - solved example, exercise or prompt - gets pulled into its own
-# concept of the sibling "Questions: <topic>" topic by core/qt.py. This dict is only a hint to the chapter author
-# about which topics carry FIO items
+# concept of a sibling "Questions: <category>" topic by core/qt.py (one per book category under that topic -
+# core/question_naming.py). This dict is only a hint to the chapter author about which topics carry FIO items
 # that core.qt will act on automatically once build.py calls core.qt.apply() - it does not need
 # to be read by build.py itself (core.qt discovers exercise video slots on its own), but keeping
 # the mapping here documents intent and matches the reference chapters' own bookkeeping.

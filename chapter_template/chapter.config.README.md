@@ -57,7 +57,7 @@ blocking.
 
 | field | type | what it does |
 |---|---|---|
-| `question_layout` | bool, sample `true` | every concept topic is followed by its "Questions: <topic>" topic with one concept per book question (solved example, exercise, answerable prompt); `build.py` names the topics that way and `gates/question_layout.py` checks the order, the names and (from `content.NCERT_ITEMS` kinds) that every in-scope item sits in a Questions topic. |
+| `question_layout` | bool, sample `true` | every concept topic is followed by one "Questions: <category>" topic per book category found there (Exercise Set / Figure it Out / Example / Let us do / other - `core/question_naming.py`), each book question of that category (solved example, exercise, answerable prompt) split into a question concept and a sibling answer concept; `build.py` names the topics and concepts that way and `gates/question_layout.py` checks the order, the names and (from `content.NCERT_ITEMS` kinds) that every in-scope item sits in a Questions topic. |
 | `question_scope` | list, sample `["example", "exercise", "prompt"]` | which `NCERT_ITEMS` kinds the layout gate forces into a Questions topic. Math Talk (`"talk"`) and plain text stay out. |
 | `solution_continuation` | bool, sample `true` | a working too long for one card gets a second solution card (IMG3), in the placeholders and in `gen_scenes.py`. Off = one card always (what a chapter built earlier, and the Class 9/10 builder that reads the same `solutions.json`, expect). |
 | `question_image_max_lines` | int, sample `8` | wrapped lines of working one solution card holds before it continues (`core/solutions/layout.py`). |

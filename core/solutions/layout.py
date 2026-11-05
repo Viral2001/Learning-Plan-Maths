@@ -59,6 +59,21 @@ def split_point(steps, *, with_figure=False, max_lines=MAX_LINES):
     return min(max(k, 1), len(steps) - 1)
 
 
+def tagged_text(steps, answer, k, titles):
+    """The displayed text (numbered steps, then "Answer: ..."), marked with "[Image: <title>]" after
+    the steps shown on each solution card - only when the working spans more than one card (len(titles)
+    > 1; `titles` is each card's own node title, in order). `steps`/`answer` are whichever display text
+    the caller is using (LaTeX or plain); `k` is split_point()'s cut (steps 1..k on the first card)."""
+    lines = ["%d. %s" % (i, s) for i, s in enumerate(steps, 1)]
+    if len(titles) < 2:
+        return "\n".join(lines + (["Answer: %s" % answer] if answer else []))
+    out = lines[:k] + ["[Image: %s]" % titles[0]] + lines[k:]
+    if answer:
+        out.append("Answer: %s" % answer)
+    out.append("[Image: %s]" % titles[1])
+    return "\n".join(out)
+
+
 def chapter_config(folder):
     """chapter.config.json beside solutions.json ({} when there is none: the old, single-card behaviour)."""
     path = os.path.join(folder, "chapter.config.json")
