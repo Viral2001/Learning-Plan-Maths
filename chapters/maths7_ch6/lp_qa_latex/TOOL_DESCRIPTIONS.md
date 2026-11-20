@@ -1,0 +1,159 @@
+# maths7_ch6 - tool descriptions (10 tools)
+
+Tool Name: Line-Up Builder
+
+Tool Description:
+
+Seven stick children of clearly different heights stand on one ground line. Above every head is a speech bubble showing that child's live number: how many children standing in front of them, to their left, are taller. A target card sits above the line and a strip of buttons switches between the tasks. The student can drag any child to a new place, and the others slide aside to make room.
+
+At first the student simply plays. After every move the bubbles update, and tapping a child lights up the taller children in front so the count can be seen. The student soon notices that the first child always says 0, that the tallest child always says 0, and that the child in position k can never say more than k minus 1. The first card asks for the numbers of the line in the figure, where the heights from the left are 1, 5, 3, 6, 2, 7 and 4. The student writes a number in every bubble before pressing reveal. The right answer is 0, 0, 1, 0, 3, 0, 3. A wrong bubble lights the taller children in front of that child so the student can recount.
+
+Then the roles reverse. A target card shows only numbers, and the student rebuilds the line from the front, one child at a time, slotting each child just below the c tallest children already standing. The six targets are 0, 1, 1, 2, 4, 1, 5; then 0, 0, 0, 0, 0, 0, 0; then 0, 1, 2, 3, 4, 5, 6; then 0, 1, 0, 1, 0, 1, 0; then 0, 1, 1, 1, 1, 1, 1; and 0, 0, 0, 3, 3, 3, 3. All zeros turn out to be shortest to tallest, and 0 to 6 tallest to shortest. Each bubble turns green when it matches, and each target has only one line of heights that fits.
+
+Next come five statement cards, such as 'If a person says 0, then they are the tallest' and 'The person who calls out the largest number is the shortest'. The student presses Always, Sometimes or Never and must arrange a line as evidence. A wrong verdict is answered with a counterexample line. The last task widens the line to 8 children and asks for the largest number that can appear. It is 7, and it appears when the shortest child stands last. Hints ask who the first child could be comparing with, then which children in front are taller, then where this child slots below the tallest ones already standing. Through doing, the student learns that numbers can describe how heights are arranged without knowing the heights, and that one counterexample is enough to rule out 'always'.
+
+(tool id M1.S2.T2.C5.2D1, concept M1.S2.T2.C5, topic: Numbers Tell us Things)
+
+---
+
+Tool Name: Parity Pairing Board
+
+Tool Description:
+
+The student opens a pairing board with a tray of number cards beside it: the odd numbers 1, 3, 5, 7, 9, 11 and 13, and some even numbers. Dropping a card on the board draws that number as columns of paired dots, with any extra dot in a different colour. Above the board is a prediction switch marked odd or even, and below it is a Join button. Two counters let the student say how many odd numbers and how many even numbers to add, without choosing exact values.
+
+The student first adds two even numbers, predicts the total, and presses Join. The pairs stay pairs and no dot is left over, so the total is even. Then comes two odd numbers: the two extra dots slide together and make a new pair, so odd plus odd is even. With three, four, five and six odd numbers the student predicts each time and watches. Three leave one extra dot, four pair up completely, five leave one, six pair up. A glowing leftover dot marks an odd total, and a wrong prediction replays the join slowly, pairing the extra dots one at a time. Soon the student can say that a sum is odd exactly when it holds an odd number of odd numbers.
+
+The board then settles four puzzles. In Kishor's puzzle the student picks five cards from 1, 3, 5, 7, 9, 11 and 13, trying to reach 30. Every try leaves one extra dot, and the board shows that five odd numbers can never make the even total 30. For Martin and Maria the student drops two consecutive numbers such as 51 and 52. One is even and one is odd, so one dot is left over and 112 is impossible. For Lakpa's coins an odd number of Rs 1 coins, an odd number of Rs 5 coins and an even number of Rs 10 coins are added. Odd, odd and even leave two extra dots that pair up, so the total is even and Rs 205 cannot be right. For Dorjee's bulb, 77 toggles are drawn as 38 pairs and one extra dot. Each pair of toggles returns the bulb to ON, and the lone dot is the toggle left over, so the bulb is OFF.
+
+A Take Away mode removes dots instead. The student predicts even minus even, odd minus odd, even minus odd and odd minus even, then watches pairs come off pairs, two extra dots cancel, or a single dot stay behind. Hints ask how many extra dots there are, then whether they can all pair up, then to count only the odd numbers. Through doing, the student learns that parity depends only on the count of odd numbers, and that when parity says no, no amount of trying will find a way.
+
+(tool id M2.S5.T5.C34.2D1, concept M2.S5.T5.C34, topic: Picking Parity: Odd and Even Sums)
+
+---
+
+Tool Name: Expression Parity Machine
+
+Tool Description:
+
+A machine with a conveyor belt fills the middle of the screen. On the left an expression builder reads a times n plus b, or a times n minus b, with one dial for a and one for b. The conveyor feeds n = 1, 2, 3 and on up to 10 into the machine one at a time, and each output drops onto a card coloured odd or even. A verdict panel has three buttons: Always even, Always odd and Either. A second tab holds a grid with adjustable sides.
+
+The student begins with 3n + 4 and runs the conveyor. The cards read 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, switching between odd and even, so the verdict is Either. Next come 100p and 48w - 2, which give only even cards however far the belt runs. A wrong verdict brings up the output card that disproves it. Then the student must build an expression that is always odd, and finds that an even times n plus an odd, such as 2n + 1 or 8n + 3, always works. Tapping a card shows the parity of each part: 3n has the parity of n, and adding 4 does not change it.
+
+The expression 6k + 2 is always even, yet its cards are 8, 14, 20, 26 and so on, so the student types even numbers that never come out, such as 4, 6, 10 and 12. Four statement cards follow: 4m - 1, 6j - 4, 2p + 1 together with 2q - 1, and 2f + 3. For each the student sets the dials, reads the cards and answers True or False. 4m - 1 is always odd, so it is true. 6j - 4 gives 2, 8, 14 and never 4, so it does not give all even numbers. 2p + 1 starts at 3 and misses 1, while 2q - 1 starts at 1. 2f + 3 is always odd, never both.
+
+On the grid tab the student sets the two sides, for 27 by 13, 42 by 78 and 135 by 654, and predicts odd or even before the squares are counted. The squares are then paired off. If one side is even they pair up completely, and if both sides are odd one square glows unpaired. The last card lines up the even numbers 2, 4, 6, 8 beside the odd numbers 1, 3, 5, 7, so each odd number sits one below the even number at the same position. A box lets the student feed n = 100 into 2n and 2n - 1 to find the 100th even number, 200, and the 100th odd number, 199. Hints ask which part of the expression is always even, then what the cards show, then what the leftover square says. Through doing, the student learns that parity comes from the parts, that a product is odd only when every factor is odd, and that the nth even number is 2n and the nth odd number is 2n - 1.
+
+(tool id M2.S8.T8.C54.2D1, concept M2.S8.T8.C54, topic: Parity of Products and Expressions)
+
+---
+
+Tool Name: Sum Grid Solver
+
+Tool Description:
+
+The student faces a 3 by 3 grid with a circled number beside each row and below each column. A tray holds the tiles 1 to 9, and each tile can be used once. Next to every circle a live sum shows what that row or column holds at the moment, and the sum turns green when it meets its circle. An Impossible button with a reason picker waits at the side.
+
+The first grid has rows 13, 14 and 18 and columns 24, 9 and 12, with 9 already fixed in the top-left corner and 5 in the bottom-right corner. The student starts where the choices are fewest. Column 1 must be 24 and already holds 9, so the two cells below it add to 15 and can only be 7 and 8. The grid has only one answer: 9, 1, 3 / 8, 2, 4 / 7, 6, 5. The second grid has rows 24, 15 and 6 and columns 12, 16 and 17, with 4 at the start of the middle row and 3 in the bottom-right corner. It has two answers, 7, 8, 9 / 4, 6, 5 / 1, 2, 3 and 7, 9, 8 / 4, 5, 6 / 1, 2, 3, and when the student finds one the tool says there is another still hiding.
+
+The third grid has rows 5, 21 and 19 and columns 9, 11 and 26. However the student places tiles, some live sum never turns green. The student presses Impossible and picks the reason. The smallest line sum is 1 + 2 + 3 = 6 and the largest is 9 + 8 + 7 = 24, so a circled 5 or 26 can never be met, and the tool rings them. A second reason is also true here. The three row circles add to 45, as the rows hold every tile from 1 to 9 once, but the three column circles add to 46. A running total beside the grid adds the six circles. It is 90 for every grid that can be filled, and 91 for this one.
+
+Last, in Make Your Own mode the student fills a grid with the tiles, the tool writes the six circled sums, and the student locks a few tiles as clues and shares the puzzle with a friend. Hints say to start with the biggest or smallest circle, then to look at a row or column that already has a known number, then to check which tiles are left. Through doing, the student learns that every line sum lies between 6 and 24, that the rows and the columns each add to 45, and that these limits can prove a grid impossible.
+
+(tool id M3.S10.T10.C64.2D1, concept M3.S10.T10.C64, topic: Grids with Row and Column Sums)
+
+---
+
+Tool Name: Magic Square Builder
+
+Tool Description:
+
+An empty 3 by 3 board sits in the middle of the screen with a tray of tiles 1 to 9 beside it. Eight small boxes, one for each row, column and diagonal, show a live sum. Below the board are four transform buttons: add k, multiply by k, rotate and reflect.
+
+First the student puts 9 in the centre and drops 8 on any other cell. The line through 8 and the centre turns red, because 8 + 9 would need a third number of minus 2. With 1 in the centre and 2 on a line, the third number would have to be 12. The student then tries centres from 2 to 4 and from 6 to 8, where the line through 1 or through 9 breaks, and only 5 stays green. Placing 1 in a corner lights the three lines it must complete. The student finds that 1 makes 15 in only two ways, 1 + 5 + 9 and 1 + 6 + 8, and 9 in only two ways, 9 + 5 + 1 and 9 + 4 + 2, so neither can fill three lines. They belong in the middle of edges, opposite each other through 5.
+
+Now the student builds a magic square from 1 to 9, filling the line with 1 first. With 1 at the top middle its neighbours must add to 14, so they are 6 and 8, and the rest follows. The finished square, for example 8, 1, 6 / 3, 5, 7 / 4, 9, 2, turns all eight sums green at 15. Rotate and reflect then give new squares, and a shelf counts them up to the 8 magic squares there are. A square already found is rejected with a flash of its earlier copy.
+
+In the transform part the student types a prediction before every change. Add 1 and the sums should become 18, giving a square with 2 to 10. Add 8 for a square with 9 to 17, and the magic sum becomes 39, which is 3 times the centre 13. Double every number, and the student should predict 30. A wrong prediction shows how much each line gained. Hints ask which cell sits on the most lines, then what the lines through 1 and 9 allow, then to fill the line with 1 first. Through doing, the student learns that the magic sum 15, the centre 5 and the edge places of 1 and 9 fix the square, and that adding or multiplying every cell keeps it magic.
+
+(tool id M3.S12.T12.C72.2D1, concept M3.S12.T12.C72, topic: Making a 3 × 3 Magic Square)
+
+---
+
+Tool Name: Magic Square Generator
+
+Tool Description:
+
+On the screen is a 3 by 3 magic square whose cells are written twice: once as a number, and once as m plus or minus an amount. A centre dial sets m and a spacing dial sets the gap between neighbouring numbers. Beside the grid is a target magic sum card.
+
+The grid opens with centre 5 and spacing 1. The numbers read 8, 1, 6 / 3, 5, 7 / 4, 9, 2, and the forms read m + 3, m - 4, m + 1 / m - 2, m, m + 2 / m - 1, m + 4, m - 3. The student turns the centre dial and every number changes at once, while the amounts stay put. Then the student taps any of the eight lines. A line shows its sum in two ways side by side. For the top row, m + 3, m - 4 and m + 1 make 3m once the plus and minus parts cancel, and the same line as numbers shows the total. Whatever centre is chosen, all eight lines add to 3m.
+
+The spacing dial multiplies every amount, so with spacing 3 the forms become m + 9, m - 12, m + 3 and so on. The numbers are no longer consecutive, yet every line still adds to 3m. Four challenges follow. For centre 25 the student finds 28, 21, 26 / 23, 25, 27 / 24, 29, 22 with magic sum 75. For magic sum 60 the student types the centre needed. A wrong centre such as 25 shows the magic sum it reaches instead, 75, and the right centre 20 gives 23, 16, 21 / 18, 20, 22 / 19, 24, 17. For magic sum 0 the centre is 0 and negative numbers appear: 3, -4, 1 / -2, 0, 2 / -1, 4, -3. For nine non-consecutive numbers the student uses spacing 3, for example with centre 15, which gives 24, 3, 18 / 9, 15, 21 / 12, 27, 6. Each challenge ends only after the student has checked all eight lines.
+
+Hints ask what happens to the plus and minus parts when a line is added, then what every line is left with, then what number times 3 gives the target. Through doing, the student learns that every cell is the centre plus or minus a fixed amount, that every line adds to 3m, and that the magic sum therefore decides the centre.
+
+(tool id M3.S15.T15.C82.2D1, concept M3.S15.T15.C82, topic: Generalising a 3 × 3 Magic Square)
+
+---
+
+Tool Name: Find the 34s
+
+Tool Description:
+
+The Chautisa Yantra fills the screen as a 4 by 4 grid: 7, 12, 1, 14 / 2, 13, 8, 11 / 16, 3, 10, 5 / 9, 6, 15, 4. A running total at the side shows the sum of the cells tapped so far, and a shelf below collects the groups found, sorted by type. A second tab holds the nine Navagraha squares and the Kubera square.
+
+The student taps any four cells and reads the total. A group that adds to 34 is saved and named on the shelf, as a row, column, diagonal, corners, 2 by 2 block or broken diagonal, and a group of 34 that fits no named type goes onto an other shelf. A group that misses 34 shows how far off it is. The first target is the ten lines, 4 rows, 4 columns and 2 diagonals. The student then looks for more: the four corners, 7 + 14 + 9 + 4, and the centre block, 13 + 8 + 3 + 10. Next come at least five 2 by 2 blocks, for example 7 + 12 + 2 + 13, and two broken diagonals. A broken diagonal wraps around the edge, such as 12 + 8 + 5 + 9, and the tool draws an outline that leaves one side and returns at the other. The shelf counter climbs towards 20 different groups, far more than the ten lines a magic square needs.
+
+On the Navagraha tab the student checks the lines of a square and types its magic sum. The sums are Sun 15, Moon 18, Mars 21, Mercury 24, Jupiter 27, Venus 30, Saturn 33, Rahu 36 and Ketu 39. A wrong sum highlights the line that disagrees. Then the student compares each graha's square with the Sun square and finds the number added to every cell. The Moon square has 1 added, since each line gains 3, and the Mars square has 2 added, and so on up to 8 for Ketu. The Kubera square, 27, 20, 25 / 22, 24, 26 / 23, 28, 21, has the magic sum 72, and the student checks that this is 3 times its centre 24.
+
+Hints say to start with the rows, then to look at the corners and the middle, then to try 2 by 2 blocks, then to follow a line off the edge and back in. Through doing, the student learns that a magic square hides many more patterns than its lines, and that for the 3 by 3 yantras the magic sum is always 3 times the centre.
+
+(tool id M3.S18.T18.C97.2D1, concept M3.S18.T18.C97, topic: Magic Squares in History and Culture)
+
+---
+
+Tool Name: Rhythm Builder
+
+Tool Description:
+
+A beat track of n boxes runs across the top of the screen. Below it are two tiles: a short tile worth 1 beat and a long tile worth 2 beats that fills two boxes. Two shelves, starts with 1 and starts with 2, collect saved rhythms and each has a counter. A sound button plays any rhythm, with a quick tap for a short tile and a longer tap for a long one.
+
+The student chooses 4 beats, fills the track with tiles and presses Save. The five rhythms are 1 + 1 + 1 + 1, 1 + 1 + 2, 1 + 2 + 1, 2 + 1 + 1 and 2 + 2. A repeated rhythm is rejected with a flash of its earlier copy. When the set is complete the shelves show 3 rhythms starting with 1 and 2 starting with 2. Then the student chooses 5 beats and finds all 8 rhythms: 5 on the starts-with-1 shelf and 3 on the starts-with-2 shelf. When a shelf is complete it shows the matching count from the smaller beats. Taking the first tile off the 5 rhythms that start with 1 leaves the 5 rhythms of 4 beats, and taking the first tile off the other 3 leaves the 3 rhythms of 3 beats. So 5 + 3 = 8.
+
+Before building 6 beats, the student types a prediction. The shelves suggest 8 + 5, which is 13, and the student then builds all 13 to check. A wrong prediction shows the two earlier counts that should have been added. A count strip shows 1, 2, 3, 5, 8, 13 for 1 to 6 beats, and the student continues it by adding the last two, which gives 21 for 7 beats.
+
+The last task is Angaan's 8-step staircase, climbed by taking 1 or 2 steps at a time. The tool notes that each way up is a way of writing 8 as a sum of 1s and 2s. The student predicts 34 from the strip without listing, since 21 + 13 = 34. Hints ask how every rhythm starts, then what is left when the first tile is taken away, then how many beats that leftover rhythm has. Through doing, the student learns that the count for n beats is the sum of the counts for n - 1 and n - 2, which is how each Virahanka number is built from the two before it.
+
+(tool id M4.S20.T20.C103.2D1, concept M4.S20.T20.C103, topic: Nature's Favourite Sequence: The Virahanka-Fibonacci Numbers)
+
+---
+
+Tool Name: Parity Tracker
+
+Tool Description:
+
+A row of fifteen round beads, one for each of the first fifteen terms of the Virahanka sequence, runs across the screen with the numbers hidden. The first two beads show 1 and 2, coloured odd and even. Below are an odd button and an even button, a position counter, and a Jump box for far terms.
+
+The student colours the third bead using only the colours of the two before it. Odd plus even is odd, so it is odd. The fourth is even plus odd, so odd again. The fifth is odd plus odd, so even. No adding is allowed. Pressing Reveal shows the real numbers, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, so the student can check each colour. A wrong colour shows the two beads before it and the matching parity rule. After nine beads are coloured correctly, the repeating block of three, odd, even, odd, is outlined, and the student sees that the colours repeat in threes.
+
+Next the student predicts the term after 377 without adding. It is the 14th term, and the even terms sit at positions 2, 5, 8, 11 and 14, so it is even. Revealing it shows 233 + 377 = 610. Then the Jump box takes a far position. For the 20th term the student predicts, and the tool writes 20 = 2 + 3 times 6, so it is even, and reveals 10946. For the 30th term, taking away 2 leaves 28, which is not a multiple of 3, so the term is odd. The student can type any other position and test the same idea.
+
+Hints ask what the two beads before it are, then which pairs of colours give odd and which give even, then where the block of three repeats. Through doing, the student learns that the colours of two neighbours fix the next one, so the pattern repeats in threes for ever, and that a term is even exactly when its position is 2, 5, 8, 11 and so on.
+
+(tool id M4.S22.T22.C111.2D1, concept M4.S22.T22.C111, topic: Parity in the Virahanka Sequence)
+
+---
+
+Tool Name: Cryptarithm Cracker
+
+Tool Description:
+
+A column addition written in letters fills the screen, for example T + T + T = UT. Under every letter is a digit dial, above each column is a small carry arrow, and a clash panel sits at the bottom. A strip of seven cards chooses the puzzle.
+
+The student turns a letter's dial to a digit and each column checks its own sum and carry. A column turns green when its digits and carry agree. Two letters on the same digit, or a zero at the front of a number, are flagged in red in the clash panel. The student begins with the units column, as the chapter suggests. In T + T + T = UT, 3 times T must end in T, so T is 5 and U is 1, giving 15. In K2 + K2 = HMM the units give 2 + 2 = 4, so M is 4. K + K must then end in 4 and carry, so K is 7. Two 2-digit numbers add to less than 200, so H is 1. The sum is 72 + 72 = 144.
+
+The other cards bring in new ideas. In YY + Z = ZOO a sum with one more digit than the numbers added starts with 1, so Z is 1, YY + 1 must be 100, and so YY is 99 and O is 0. In B5 + 3D = ED5 the units column needs D to be 0, and then 75 + 30 = 105. In KP + KP = PRR two 2-digit numbers make less than 200, so P is 1, then R is 2 and K is 6, giving 61 + 61 = 122. In C1 + C = 1FF the sum is at least 100 and C is at most 9, so C1 must be at least 91, which makes C 9 and F 0. In UT + TA = TAT the sum starts with 1 so T is 1, then A is 0 and U is 9, giving 91 + 10 = 101.
+
+After a puzzle is solved the student presses Explain and picks a reason for every letter from a short list, such as the units column, a carry, the sum starts with 1, or different letters need different digits. A letter with the wrong reason is sent back to be re-explained. Hints ask which column to start with, then what the units digits tell about one letter, then whether the sum has one more digit than the numbers added. Through doing, the student learns to crack a cryptarithm by reasoning, using units digits, carries and the size of the sum, and not by trying all the digits.
+
+(tool id M5.S24.T24.C119.2D1, concept M5.S24.T24.C119, topic: Digits in Disguise: Cryptarithms)

@@ -1,0 +1,127 @@
+# maths7_ch7 - tool descriptions (8 tools)
+
+Tool Name: Compass Triangle Builder
+
+Tool Description:
+
+A construction sheet opens with a horizontal base line AB. A handle sits at each end, and a length readout in centimetres floats above the line. At the right are two radius sliders, one for the arc that will be drawn from A and one for the arc from B. Under the sheet a strip shows the three sides of the current card, for example 4, 5 and 6, next to a readout of each side of the figure drawn so far. Nothing else is drawn, so the third corner is still a question.
+
+On every card the student first predicts where the third corner will fall, then builds it. They drag B until the base reads one of the given lengths, set the radius at A to the second length and the radius at B to the third. Each arc is drawn as its slider moves, and a label on the arc shows its radius. When the two arcs cross, the crossing point is marked C and the student joins it to A and B. A faint second crossing below the base shows that the same three sides also build a mirror triangle. The three side readouts are checked against the card, and a radius that does not match its length shows up as the readout that differs. Equal radii light the two equal sides in one colour, so 4, 4 and 6 comes out isosceles and 5, 5 and 5 comes out equilateral with all three sides lit. On 3, 4 and 5 a small square marks the right angle between the sides of 3 and 4.
+
+The six cards are 4, 5 and 6 (the arcs cross above the base), 4, 4 and 6, 5, 5 and 5, 3, 4 and 5, 3, 4 and 8, and 2, 5 and 6, where the student chooses the base and both radii alone. On 3, 4 and 8 with a base of 8, the arcs reach only 3 and 4 from the two ends, which is 7 in all, and the tool shows the gap of 1 between them. The student marks the card as impossible and gives the reason. Choosing a shorter base for the same card, such as 3, still leaves the arcs apart, so the failure does not depend on which side is the base.
+
+Hints come in order. First: which two lengths set the arcs, and from which ends? Then: draw an arc from each end of the base; the vertex is where they cross. Then: set the radii to the two given sides and look for the crossing. Last, the arcs and the crossing are shown for this card, and a new card follows. Through doing, the student learns that the crossing point is the one place that is the right distance from both ends, that equal radii give equal sides, and that three lengths do not always have a crossing point.
+
+(tool id M1.S4.T4.C10.2D1, concept M1.S4.T4.C10, topic: Triangles from Three Given Sides)
+
+---
+
+Tool Name: Triangle Inequality Checker
+
+Tool Description:
+
+Three length sliders stand in a column on the left, and each has a coloured bar beside it that grows and shrinks as the slider moves. In the middle are three comparison lines, one for each length, each written as that length against the other two added together, for example 8 against 3 plus 4. On the right is a verdict panel, and below it a small picture of a plot of land with a tent and two poles at its three corners, joined by cords.
+
+For each card the student sets the three lengths and predicts whether a triangle exists. Next the student reads the three comparison lines, ticks the ones that hold, and presses Check. Each line turns green when the length is smaller than the other two added and red when it is not. Tapping a line makes that length the direct cord in the picture, with the other two lengths as the roundabout cord through the second pole. When the direct length is smaller, the roundabout cord hangs with slack and the pole sits off the line. When it is larger, the roundabout cord is pulled to full stretch and still cannot reach. When the two are equal, the cord lies straight along the direct one and a flat figure of three points on a line is drawn. The verdict names the comparison that failed, for example 8 is more than 3 plus 4.
+
+The six sets are 3, 4 and 8 (the longest is too long, while the other two lines hold), 5, 5 and 8 (a triangle exists), 3, 6 and 9 (the sum equals the longest, so only a flat figure appears), 10, 20 and 25 (all three lines hold), 1, 100 and 100 (a very thin triangle exists), and 6, 7 and 12. For the last set the student uses a Longest only switch to compare 12 with 6 plus 7, then opens the other two lines and sees that they hold with plenty to spare. After any card the student can drag one slider to find the exact length at which the verdict flips. With 3 and 4 fixed, the third length stops working at exactly 7, and again as it shrinks down to 1.
+
+Hints come in order. First: which length is the biggest, and what do the other two add up to? Then: compare the longest length with the sum of the other two. Then: add the two shorter lengths and see if the total is more than the longest. Last, the sums for this set are shown beside the longest length and the verdict is given, then a new set follows. Through doing, the student learns that every length must be smaller than the sum of the other two, that an equal sum is not enough, and that only the longest length can fail.
+
+(tool id M1.S7.T7.C22.2D1, concept M1.S7.T7.C22, topic: Do Three Lengths Always Make a Triangle?)
+
+---
+
+Tool Name: Two Circles Explorer
+
+Tool Description:
+
+Two circles sit on a fixed segment AB, one centred at A and one centred at B, and each has a handle on its edge that the student drags to change its radius. The base is fixed for each card, for example AB = 8. Along the side are four readouts: the base length, the sum of the two radii, the difference of the radii, and the number of points the circles have in common, which starts as a question mark.
+
+For every card the student first predicts whether the circles will touch, miss or cross, then drags the radii to check. When the circles touch, the single meeting point is marked on the base line itself, so A, that point and B are three points on a line. When they miss, the gap between the two edges is shaded along AB and its length is written. When they cross, both crossing points are marked, one above and one below the base, and each is labelled as a possible third vertex. The student can join one of them to A and B and see a triangle whose sides are the base and the two radii. If one circle grows large enough to swallow the other, the circles miss with one inside the other, and the difference readout is seen to be more than the base.
+
+The six cards are: base 8 with radii 3 and 5 (they touch, since 3 plus 5 is 8); base 8 with radii 2 and 5 (they miss, with a gap of 1); base 8 with radii 5 and 6 (they cross twice); base 9 with radii 3.5 and 6 (3.5 plus 6 is 9.5, more than 9, so they cross, but only just); base 11 with radii 4 and 7 (they touch); and base 7, where the student chooses radii that make the circles cross. The student also starts one radius small and grows it to find the value at which the circles first touch. A wrong answer shows the sum of the radii beside the base, with the circles drawn at that setting.
+
+Hints come in order. First: where do the two circles end up relative to each other? Then: compare the base with the sum of the two radii. Then: add the radii and see whether the total is more than the base. Last, the sum and the number of common points are shown, then a new card follows. Through doing, the student learns that with the longest length as the base and the two smaller lengths as radii, the circles cross, and a triangle exists, exactly when the radii add up to more than the base. A third length must be less than the sum of the other two and more than their difference.
+
+(tool id M1.S13.T13.C44.2D1, concept M1.S13.T13.C44, topic: When Circles Touch, Miss or Cross)
+
+---
+
+Tool Name: Two Angle Ray Explorer
+
+Tool Description:
+
+A base AB runs along the lower part of the screen. Above each end is an angle slider, one for the angle at A and one for the angle at B, and each draws a long ray rising from its end at that angle to the base. A readout shows the sum of the two angles, a second slider changes the length of the base, and a verdict line says whether the rays meet.
+
+The student predicts first, then drags. With the angle at A set to 40 degrees, they raise the angle at B a little at a time. While the rays meet, the meeting point is marked C and the triangle is filled in. As the angle at B grows, C moves higher and farther out, until at one setting the two rays run side by side and the tool marks them parallel. Past that setting they lean apart and never meet. The student reads the sum of the two angles at the moment the rays stop meeting and finds it is 180 degrees. Repeating this with 30 degrees at A and then 70 degrees at A, the student finds the failing angle at B to be 150 and 110, and notices that the sum is 180 again.
+
+The remaining cards test the idea on pairs: 90 and 85 degrees (the rays meet, very far up, because the sum is 175) and 50 and 150 degrees (the rays never meet, because the sum is 200, even though one of the angles is acute). A wrong decision shows the sum of the two angles beside 180. For a failing pair the student then drags the base-length slider from short to long and sees that the rays still never meet, while for a pair that does meet, the length only moves C nearer or farther. At the end the student completes the sentence: two angles can be the angles of a triangle when their sum is less than 180, and for a given angle the other must be less than 180 minus it.
+
+Hints come in order. First: what do the two rays do as the angles grow? Then: look at the sum of the two angles when the rays stop meeting. Then: find the second angle that makes the sum exactly 180. Last, the failing angle for this card is shown with the sum, then a new card follows. Through doing, the student learns that whether two rays meet depends only on the sum of the two angles and never on the length of the base.
+
+(tool id M2.S21.T21.C68.2D1, concept M2.S21.T21.C68, topic: When Do Two Angles Fail to Make a Triangle?)
+
+---
+
+Tool Name: Angle Sum with a Parallel Line
+
+Tool Description:
+
+A triangle ABC stands on a base BC with its top vertex at A. Two angle sliders at B and C set the base angles. A line passes through A and can swivel about it, and below the triangle sits a straight-angle bar marked from 0 to 180 degrees. The angle at A is hidden and shown as a question mark.
+
+The student sets the base angles for a card, for example 36 and 72, then swivels the line through A until it is parallel to BC. When it is parallel the line turns green and locks. Two angles now appear at A, one on each side of the triangle, between the line and the sides AB and AC. They flash in matching colours with the base angles at B and C, and the student matches each one: the angle on the B side equals angle B and the angle on the C side equals angle C, because they are alternate angles. A wrong match lights up the Z shape of the pair so the student can see which angles are alternate. Each matched angle then drops into the straight-angle bar, and the part of the bar left over is the angle at A. The student reads it and types it.
+
+The six cards are 36 and 72 (the third angle is 72), 150 and 15 (15, with the bar almost full), 90 and 30 (60), 75 and 45 (60), 70 and 70 (40, and a short extra step lets the student try making all three angles 70, which makes the bar overflow past 180), and a last card with 50 at the top and equal base angles (65 each), where the two linked sliders are moved until the bar leaves exactly 50. A pair that adds to 180 or more is stopped with a note that the two angles already fill the line and the rays from the ends would not meet. Dragging the base end to make the triangle larger leaves every angle and the bar unchanged, so the third angle does not depend on the side length.
+
+Hints come in order. First: which angles at the top are equal to the base angles? Then: the three angles at the top fill a straight line of 180 degrees. Then: take the two base angles away from 180. Last, the sums for this card are shown and the third angle is given, then a new card follows. Through doing, the student learns that the parallel line turns the two base angles into angles at the top, so that all three angles of a triangle together make a straight angle of 180 degrees.
+
+(tool id M2.S24.T24.C79.2D1, concept M2.S24.T24.C79, topic: Finding the Third Angle)
+
+---
+
+Tool Name: Exterior Angle Explorer
+
+Tool Description:
+
+A triangle ABC is drawn with its base BC extended beyond C to a point D, and the angle outside the triangle at C, angle ACD, is shaded in a bold colour. Two sliders set angle A and angle B. Below the figure two readouts stand side by side: the exterior angle ACD and the sum of angle A and angle B. The angle ACB inside the triangle at C is shown in a lighter shade.
+
+The student first goes the long way. For angle A = 50 and angle B = 60 they find the third interior angle ACB from the angle sum, which is 70, and then subtract it from 180 to get ACD = 110. A straight-angle bar at C splits into ACB and ACD, so the student sees the two make a half turn. Then a Slide button moves a copy of angle A and a copy of angle B out of the triangle and sets them side by side inside the exterior angle, where they fill it exactly, and the readouts show 50 plus 60 matching 110. A typed answer that does not match is flagged, and the tool shows the angle sum 50 plus 60 plus ACB = 180 so the student can find the slip.
+
+Next the student moves both sliders and tries 35 and 45 (exterior angle 80), 90 and 30 (120) and 70 and 20 (90), watching whether the match holds each time. One card runs the other way: given an exterior angle of 120 and one opposite angle of 80, the student finds the other opposite angle, 40, and the interior angle at C, 60, and checks that 80 plus 40 plus 60 is 180. In the last card the student predicts the exterior angle for 25 and 65 before touching the sliders, then checks that it is 90. At the end the student completes the sentence: the exterior angle equals the sum of the two opposite interior angles.
+
+Hints come in order. First: which angle makes a straight angle with the exterior angle? Then: use the angle sum to find the third interior angle first. Then: subtract the third interior angle from 180. Last, the steps are shown and the exterior angle is seen to match the sum of the two opposite angles, then a new card follows. Through doing, the student learns that the exterior angle and the interior angle next to it make 180, and that this is why it equals the sum of the two interior angles that are not next to it.
+
+(tool id M2.S27.T27.C92.2D1, concept M2.S27.T27.C92, topic: Angle Sum and Exterior Angles)
+
+---
+
+Tool Name: Altitude Explorer
+
+Tool Description:
+
+A triangle ABC lies on a drawing board, and its three vertices can be dragged. Tapping a side chooses it as the base, and a transparent set square then rests on the line of that side and slides along it. A height readout gives the length of the altitude once it is drawn, and a small label tells whether the foot of the altitude is on the side, at a vertex, or outside the triangle.
+
+To draw an altitude the student chooses a base and slides the set square along the base line until its upright edge touches the opposite vertex, which lights up when touched. Pressing Draw puts in the altitude with a right-angle mark at its foot. If the set square stops short, the edge misses the vertex and the gap is shown. When the foot would fall beyond the end of the side, the base is extended with a dotted line and the foot sits on the dotted part. By dragging a vertex the student can turn the same triangle from acute to right to obtuse and watch the foot slide along the base and then off its end. When the angle at B is exactly 90 degrees, the altitude from A lies along the side AB, which is highlighted as being both a side and an altitude.
+
+The six cards are: an acute triangle, where the student draws all three altitudes by choosing each side as the base and sees every foot fall inside; a right triangle with the right angle at B, where AB and BC are marked as altitudes and the student draws the third one, from B to the side opposite, by careful sliding; an obtuse triangle, where the altitude from A to BC falls outside and the student extends the base to place its foot; the altitude from the obtuse vertex of that triangle, which falls inside, unlike the other two; a card where the student tries all three sides as the base and picks the one that gives the shortest altitude by comparing the height readouts; and a last card where the student draws all three altitudes of a triangle of their own, after which a summary lists for each one whether it fell inside, along a side, or outside.
+
+Hints come in order. First: which line must the altitude be perpendicular to? Then: slide the set square along the base line until it touches the top vertex. Then: if the foot would fall beyond the base, extend the base. Last, the altitude is drawn for this card and a new card follows. Through doing, the student learns that an altitude is the perpendicular from a vertex to the line of the opposite side, that every triangle has three of them, and that an altitude can fall inside the triangle, along a side, or outside it.
+
+(tool id M3.S29.T29.C100.2D1, concept M3.S29.T29.C100, topic: Altitudes of a Triangle)
+
+---
+
+Tool Name: Triangle Classifier
+
+Tool Description:
+
+A triangle with three draggable vertices fills the middle of the screen. Its three side lengths are written along the sides and its three angles at the corners, and all of them update as a vertex moves. Lengths and angles snap to whole numbers so that equal sides and a right angle can really be reached. Beside the triangle are two label slots, one for the name by sides (equilateral, isosceles, scalene) and one for the name by angles (acute-angled, right-angled, obtuse-angled). On the right is a table of nine empty cells, with the side names down the left and the angle names across the top.
+
+The student drags the vertices into a shape, reads the sides and angles, and chooses both names. The tool compares the choice with the numbers on the figure and reports a name that disagrees with what is drawn. As the vertices move, the correct names change at once, so the student sees a name flip exactly when two sides become equal or an angle passes 90. A right angle is marked with a small square, and acute angles and an obtuse angle are coloured differently. A matching pair of names fills its cell of the table with a small copy of the triangle. If the student calls a triangle acute-angled because it has one acute angle, such as one with angles 90, 50 and 40, the tool points out that it also has a right angle and that every triangle has at least two acute angles, so acute-angled means all three angles are acute.
+
+The six cards are: make an equilateral triangle and name its angles (60, 60 and 60, so acute-angled); make an isosceles triangle with a right angle (45, 45 and 90); make an isosceles triangle with an obtuse angle (for instance 30, 30 and 120); try to make an equilateral triangle with a right angle; make a scalene triangle with all angles acute (for instance 50, 60 and 70); and fill the table. On the fourth card every attempt to make the three sides equal gives angles of 60, and a note uses the angle sum: a right angle leaves only 90 for the other two, so they cannot both be 60. Two right angles or two obtuse angles would use up 180 or more, so a triangle never has two. The cells for an equilateral triangle that is right-angled or obtuse are marked impossible with this reason, and the student fills the other seven.
+
+Hints come in order. First: what do the sides tell you, and what do the angles tell you? Then: add the three angles and think about what the biggest one can be. Then: if two angles are equal, check the third with the angle sum. Last, the angles for this card are shown with the names, then a new card follows. Through doing, the student learns that a triangle has one name from its sides and another from its angles, and that the angle sum decides which pairs of names can go together.
+
+(tool id M3.S31.T31.C109.2D1, concept M3.S31.T31.C109, topic: Types of Triangles)

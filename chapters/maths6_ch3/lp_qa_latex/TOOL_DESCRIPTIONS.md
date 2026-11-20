@@ -1,0 +1,223 @@
+# maths6_ch3 - tool descriptions (14 tools)
+
+Tool Name: Line-Up Lab
+
+Tool Description:
+
+Five children of different heights stand on one ground line, with each height in centimetres written at the feet and a speech bubble above each head. The bubble shows how many of that child's neighbours are taller, and it updates live while the student drags a child along the line, the others sliding aside to make room. The tallest child wears a soft glow and that child's bubble stays pinned at 0. When a card is met, the matching bubbles turn green together.
+
+The first card shows six children in a park line saying 0, 2, 1, 1, 0, 1. The student drags them into other orders, sees how the numbers move, and chooses what the numbers mean from three options. The first hint is only the question 'Could their heights be playing a role?', and the tool states the rule only after this card. Then come the build cards. Make the line say 1, 1, 1, 1, 0, which the student finds by standing the children from shortest to tallest. Make it say 0, 1, 2, 1, 0, with a short child in the middle and taller children at the ends. Get as many children as possible to say 2, with a live count under the ground; the most is two of five, in the order tall, short, tall, short, tall.
+
+Two cards cannot be met: both end children saying 2, and every child saying 1. The student tries, then taps Impossible and picks a reason, 'An end child has only one neighbour' or 'The tallest child always says 0'. On the second card the tallest child's bubble looks like every other bubble, so the student has to find the tallest by height. A wrong tap shows one arrangement that does meet the card. On the card 'can everyone say only 0' the student first tries five different heights and sees that the shortest child always has a taller neighbour, then answers 'Yes, if all the children are the same height', and the five children stand at 132 cm each with every bubble at 0. The last card asks for two neighbours who say the same number, like the 1, 1 in the park line.
+
+A finish card lists what each card showed, and free play lines up three to six children with nothing to get right. Through doing, the student learns that the number a child says describes the child's place in the line and not the child, and that checking the tallest child and the two ends settles whether a pattern is possible.
+
+(tool id M1.S2.T2.C4.2D1, concept M1.S2.T2.C4, topic: Numbers that Tell us Things)
+
+---
+
+Tool Name: Supercell Builder
+
+Tool Description:
+
+A row of cells sits on the screen with a tray of number cards below it. A small crown appears above every supercell, a cell whose number is bigger than every number next to it. The student types a number into a cell or drags a card into it, and the crowns are worked out again after every change, so they appear and vanish as the numbers change. Cells that must end up crowned are shaded. The tool opens on the chapter's two rows, 43, 79, 75, 63, 10, 29, 28, 34 and 200, 577, 626, 345, 790, 694, 109, 198, where 626 beats 577 and 345 and the end cell 198 beats its one neighbour, 109.
+
+Eight levels follow. Level 1: tap every supercell in 6828, 670, 9435, 3780, 3708, 7308, 8000, 5583, 52 and press Check; an end cell has only one neighbour, so 6828 wins and 52 cannot. Level 2: fill 5346, _, _, 1258, _, _, _, 9635, _ with 4-digit numbers so the crowns sit exactly on the shaded 2nd, 4th and 9th cells; any valid filling is accepted. Level 3: place nine different numbers from 100 to 1000 for as many crowns as possible, with a counter showing crowns out of the maximum, reach 5, and type how many supercells the table has. Level 4: for rows of 2 to 7 cells type the most supercells possible (1, 2, 2, 3, 3, 4); each answer draws a big-small row that proves it and fills a pattern table, and the student then picks the method, start with a supercell and alternate. Level 5: three reasoned choices (can a table have no supercell, is the largest always one, can the smallest be one), then cards with the numbers 1 to 9: make 8 lose by putting it beside 9, and make 8 lose while 2 wins with 2, 1, 3, 4, 5, 6, 7, 9, 8.
+
+Levels 6 to 8 move to grids, where neighbours are left, right, top and bottom. Level 6: tap the four neighbours of 8632 (4580, 8280, 4795, 1944), then every supercell of Table 1. Level 7: build each empty cell of Table 2 from arrangements of the digits 1, 0, 6, 3, 9 so that only the coloured cells win; the top left must be 96,310 because it touches 96,301. Then tap the biggest number, the smallest even number and the smallest number above 50,000, and put the comma after the thousands digit. Level 8: the grid 16,200, 39,344, 29,765 / 23,609, 62,871, 45,306 / 19,381, 50,319, 38,408 has one supercell, and one swap of two digits of one number must give four; swapping the 6 and 1 of 62,871 gives 12,876.
+
+A miss never says wrong. A crown on an unshaded cell flashes and the neighbour it beats is outlined; a shaded cell with no crown shows an arrow to the neighbour that beats it; hints climb step by step. Free play offers a row of 9 or a 3 by 3 grid for any numbers. Through doing, the student learns that a supercell beats every neighbour, that two supercells can never touch, that the largest number always wins and the smallest never does, and that designing a table means controlling who beats whom.
+
+(tool id M1.S4.T4.C22.2D1, concept M1.S4.T4.C22, topic: Supercells)
+
+---
+
+Tool Name: Tick Detective
+
+Tool Description:
+
+One horizontal number line with ten ticks fills the screen. Only two ticks, or three on one line, carry labels; the rest are blank. Under the line sit a step dial with the settings 1, 2, 5, 10, 100 and 1000, and later a tray of number chips. The student must find the step before labelling anything.
+
+On each line the student first taps every gap between the labelled ticks. A 'Finding the step' card counts the gaps and shows the difference, for example 2020 minus 2010 = 10 over 2 gaps. The student then turns the dial. A trial step counts on from the first label in blue. A step that does not fit rings the label it misses and shows, above that tick, the value the step would have put there: on the first line, step 10 puts 2030 on the tick that is labelled 2020. The right step shows difference divided by gaps = step. The four lines are 2010 and 2020 two gaps apart (step 5, the line reads 1990 to 2035), 9996 and 9997 on neighbouring ticks (step 1, running past 10,000), 15,077, 15,078 and 15,083 on ticks 1, 2 and 7 (6 gaps, difference 6, step 1, and the neighbouring label confirms it), and 86,705 and 87,705 on neighbouring ticks (step 1000).
+
+Once the step fits, the student types the number for each blank tick into a blue box that moves from tick to tick, 31 entries across the four lines. Each entry is judged exactly. A number that belongs on another tick is named, for example '2020 belongs on tick 7, not on tick 6', and any other wrong number gets the reminder that neighbouring ticks differ by the step. The hints never give a tick's number. The student then circles the smallest number and boxes the largest on each line, finding them at the two ends.
+
+Last, nine chips (1500, 3600, 9950, 9590, 1050, 3050, 5030, 5300, 8400) are dragged onto a line from 1000 to 10,000 with a mark at every thousand and 2180 and 2754 already placed. While a chip is dragged, a zoom strip shows a small mark every 100, and after the drop a bracket shows how far off it was. When a chip lands on the spot of a number with the same digits, such as 9590 and 9950 or 5030 and 5300, the tool names that number. Free play offers any start label and step. Through doing, the student learns that the step of a line comes from two labels, difference divided by gaps, and that numbers sit in order with the smaller on the left.
+
+(tool id M1.S7.T7.C47.2D1, concept M1.S7.T7.C47, topic: Patterns of Numbers on the Number Line)
+
+---
+
+Tool Name: Digit Hunt Grid
+
+Tool Description:
+
+A hundred grid of the numbers 1 to 100 fills the left of the screen, with place counters for ones, tens and hundreds and a sum beside it. The student taps a row to open it as a large zoomed strip, then taps every digit 7 on the digit itself. A 7 in the ones place fills the ones counter, a 7 in the tens place fills the tens counter, and 77 needs two taps. The counters add up to 10 + 10 + 0 = 20. Pressing Done with a 7 still missing makes the missed digits glow until they are tapped.
+
+A switch then opens the 1 to 1000 wheel. For each place the student types a prediction on a keypad, and a place wheel, a four-digit odometer, runs from 1 to 1000 and tallies that place hundred by hundred along a number line. A prediction that is not right runs the wheel through only the first hundred (up to 720 for the hundreds place) as the reason, and the student types again. The three places add to 100 + 100 + 100 = 300, and 1000 has no 7.
+
+Next the student counts numbers by their digits. For a 2-digit number the student switches on the digits that can stand in the tens place (1 to 9) and in the ones place (0 to 9), since 07 is just 7, presses Check, and types 9 times 10 = 90. In the table the nine 1-digit numbers are given, and the student taps each empty cell and types how many numbers have 2, 3, 4 and 5 digits: 90, 900, 9000 and 90000. A solved cell shows its range, from 10 to 99 and so on, and a times 10 chip links neighbours. A value that is not right keeps the cell open, and the hints ask for the smallest and largest number of that length, give 100 and 999, then say largest minus smallest plus 1, then point to the times 10 pattern.
+
+Finally the student chooses any digit to see where it is written on the grid and how often, building a table of counts from 1 to 100, and answers which digit is written least often. It is 0, 11 times: 10 in the ones place and one in the tens place of 100. The surprise is 1, written 21 times because of the 1 in 100, while every other digit is written 20 times. Free play counts any digit in either range. Through doing, the student learns that a digit is counted place by place and that each place adds its own share.
+
+(tool id M2.S10.T10.C62.2D1, concept M2.S10.T10.C62, topic: Counting with Place Value)
+
+---
+
+Tool Name: Digit-Sum Dials
+
+Tool Description:
+
+Five vertical digit dials stand side by side to form a number. Each dial has an up and a down arrow, can be dragged, or tapped on its faint upper or lower digit, and the four left dials have on and off switches because a 0 at the front is not written. A goal card sits above, a live meter shows the digit sum from 0 to 45, and a panel shows the number, how many digits it has and its digit sum written as a sum of digits. The intro shows Komal's 68, 176 and 545, all with digit sum 14.
+
+Goal 1: make three different numbers of the student's own with digit sum 14; Komal's numbers and repeats are pointed out and not counted. Goal 2: make the smallest number with digit sum 14, starting from 194. A Submit with the right digit sum but not the smallest makes the dial to change glow, and the next time shows 59 beside the student's number. Goal 3: make the largest 5-digit number with digit sum 14, 95,000, the same way. Goal 4: make a 5-digit number with digit sum 14 that has a 0 in it, then type three ever bigger numbers with digit sum 14 past 95,000 on a keypad. They appear as a ladder of digit boxes with the zeros pale. The student then answers 'Is there a biggest number with digit sum 14?' with No.
+
+Goal 5: the number steps from 40 to 70, and the student types the digit sum of every number from 41 to 70 before the machine steps to it, with 40 (4 + 0 = 4) as the worked start. A sawtooth chart grows bar by bar and the meter shows each fall. The student then answers what happens to the digit sum each time a new ten starts; it drops by 8, as 49 gives 13 and 50 gives 5. The minus 8 marks appear only after that answer. Goal 6: 123, 234, 345, 456, 567, 678 and 789 have consecutive digits. The student types the digit sum of each (6, 9, 12, 15, 18, 21, 24) into a table with a staircase chart, then answers 'Do you see a pattern?' (up by 3 each time, three times the middle digit) and 'Will this pattern continue?' (No, because after 7, 8, 9 the next digit would be 10).
+
+Every wrong answer shows why and allows a retry, and hints climb a three-rung ladder. A finish card gives stars and what was found, and free play stays on the dials. Through doing, the student learns that a digit sum depends on the digits and not their order or their zeros, that the smallest number uses the fewest digits with the big digit last, the largest puts the big digit first, and that no largest number with a given digit sum exists.
+
+(tool id M2.S12.T12.C69.2D1, concept M2.S12.T12.C69, topic: Digit Sums)
+
+---
+
+Tool Name: Reverse-and-Add Machine
+
+Tool Description:
+
+Five number cards, 66, 848, 575, 797 and 1111, stand on the screen when the tool opens. Tapping a card drops its digits read from the right underneath it, with a mirror line through the middle. The student then answers 'What pattern do you see?' from three choices: each reads the same from both sides is right, while 'each is even' fails because 575, 797 and 1111 are odd, and 'each has 3 digits' fails because 66 has two and 1111 has four. The student then types every 3-digit palindrome made with the digits 1, 2 and 3 into a 3 by 3 board where 121, 313 and 222 are already placed. Each entry is checked for the allowed digits, for reading the same reversed, and for not being on the board, until all nine are found.
+
+The machine proper has a row of digit tiles, a Flip button that mirrors them into a second row, a column addition frame, a palindrome lamp, a round counter and a record shelf. The student types a start and presses Flip. The sum is filled from the right one digit at a time, each digit checked as it is typed, with a carry shown above the next column. The lamp lights and a mirror line splits the sum when a palindrome appears; otherwise Send back makes the sum the new start. The student reproduces 34, 29, 48 and 76 from the chapter: 34 + 43 = 77 and 29 + 92 = 121 finish in one round, while 48 + 84 = 132 and 132 + 231 = 363, and 76 + 67 = 143 and 143 + 341 = 484, take two.
+
+The student then looks for a 2-digit start that needs more than 3 rounds, such as 69, 78, 79, 87, 88, 89, 96, 97, 98 or 99. The record is 89 or 98, which runs 24 rounds to 8813200023188. A board of all 90 two-digit starters, each cell coloured by the rounds it needed, lets the student answer whether every 2-digit start reaches a palindrome (yes). Starting at 196, the machine stops at its 30-round cap with no palindrome, and the student answers the chapter's question about numbers that never reach one: nobody knows for sure.
+
+A puzzle closes the tool. Four clues and five place boxes (tth, th, h, t, u) wait for a 5-digit number, and each clue is checked as the student types, so 12321 shows that h is 3 and not double 2. Only 12421 meets all four clues, and the student then picks it in words. Through doing, the student learns that a palindrome mirrors about its middle, that reversing and adding drives 2-digit numbers to one, and that some questions about numbers are still open.
+
+(tool id M2.S14.T14.C85.2D1, concept M2.S14.T14.C85, topic: Pretty Palindromic Patterns)
+
+---
+
+Tool Name: Palindrome Clock
+
+Tool Description:
+
+A large digital 12-hour clock in seven-segment digits fills the left of the screen. Step buttons minus 10, minus 1, plus 1, plus 10 and plus 1 hour move it, the keyboard arrows move it one minute, and a green Stamp button records a time. A strip keeps every stamp in order with the minutes between them and marks in coral any wanted time the student steps past. Eight steps can be opened from the intro chips or the step bar, and Next always opens the first step not yet solved.
+
+Steps 1 to 4 work on the clock. From 10:01 the student stamps the next two palindromic times, 11:11 and 12:21, and types the minutes between them (70, 70) and the minutes from 10:01 to the second (140). The student then stamps every palindromic time from 1:00 to 2:00 (1:01 to 1:51), and finds how many the whole clock has: 6 in each of the nine one-digit hours is 54, plus 10:01, 11:11 and 12:21 gives 57. A note appears when 1:10, 2:20, 3:30, 4:40 or 5:50 is stamped, because this clock writes the hour without a 0 in front. Then come the times like 4:44 with all digits the same (1:11 to 5:55 and 11:11), and the times like 10:10 where the minutes repeat the hour, each 61 minutes after the last, with matching bars under the hour and the minutes.
+
+Steps 5 and 6 move to dates. The student predicts whether three printed dates, 11/02/2011, 01/02/2001 and 10/02/2001, are palindromes, then a mirror writes the eight digits backwards; 01/02/2001 is not one. The student types years and the mirror writes each year backwards as a day and month, to find every palindromic date since 2000, eight so far and all in February, such as 10/02/2001 and 12/02/2021. A year before 2000, a date that does not exist or one still to come prints its reason and is not counted as a slip. Then the student types full dates to find two dates like Manish's 20/12/2012, whose day and month make the year.
+
+Step 7 shows this year's calendar beside a second year the student steps through. The student compares 1 January's weekday and whether the year has 365 or 366 days, and the calendars match when both agree. 2026 matches 2015 and 2037, while 2032 starts on the same weekday but is a leap year. Step 8 is a table of the smallest and largest 5-digit palindromes, 10001 and 99999, with their sum and difference typed cell by cell, a rejected entry keeping its reason. Through doing, the student learns the patterns of palindromic times and dates and why a calendar returns only when the weekday shifts add to whole weeks.
+
+(tool id M2.S17.T17.C95.2D1, concept M2.S17.T17.C95, topic: Clock and Calendar Numbers)
+
+---
+
+Tool Name: Kaprekar Machine
+
+Tool Description:
+
+A number machine shows a tray of four digit tiles, row A and row B of four boxes each, a subtraction window, a round counter and a trail of every difference so far. The student types a start, or taps My birth year, and taps or drags the tiles into A with the largest digit first and into B with the smallest first. A row that is not in order is questioned with the out-of-order tile ringed, and tapping a tile in the row sends it back. Pressing Subtract writes C = A minus B with its leading zeros kept, and the digits of C drop back into the tray for the next round. After two rounds by hand, Auto may run the rest. Every finished run is shown as the chapter's table of A, B and C per round.
+
+First the student reproduces the chapter's 6382: 8632 minus 2368 = 6264, 6642 minus 2466 = 4176, 7641 minus 1467 = 6174. The chapter's fourth column is blank, so the student runs it and finds 7641 minus 1467 = 6174 again, which shows the machine is stuck. Next come 5683, which takes 7 rounds (5085, 7992, 7173, 6354, 3087, 8352, 6174) and where the 0558 in round 2 shows why four digits are kept, and the student's own birth year, with the round count checked against the machine's own. 2013 has a 0, so the 0 goes last in A and first in B: 3210 minus 0123 = 3087, 3 rounds. For 3333 the machine reaches 0000 and the student chooses why it stops: all four digits the same make A equal to B. The tempting reasons 'the number is odd' and 'the number is too small' are answered with 5683 and 2013, which both reach 6174.
+
+A 3-digit mode runs 321 to 198, 792, 693, 594, 495, then a 3-digit start of the student's own, and asks which number starts repeating, 495. The last part is Pratibha's question: her digits 4, 7, 3 and 2 give 7432 minus 2347 = 5085 and 7432 plus 2347 = 9779. For each of four parts the student types 4 digits, builds the largest number A and the smallest 4-digit number B, which cannot start with 0 here, and presses Subtract or Add. The result is checked against the part's condition, greater or less than 5085 or 9779, so every valid choice is accepted.
+
+Reaching 6174 or 495 makes the trail glow and repeats the last round once to show it is stuck. Free play runs any start in either mode. Through doing, the student learns the largest-minus-smallest routine, to keep four digits at every step, and that every start with two different digits reaches 6174 within 7 rounds, and 3-digit starts reach 495.
+
+(tool id M3.S19.T19.C100.2D1, concept M3.S19.T19.C100, topic: The Magic Number of Kaprekar)
+
+---
+
+Tool Name: Target Builder
+
+Tool Description:
+
+The chapter's figure is on screen when the tool opens. The middle column 25,000, 400, 13,000, 1500 and 60,000 stands between eight side numbers, 38,800, 28,000, 61,600, 31,000 on the left and 3400, 63,000, 19,500, 20,900 on the right, with arrows for the chapter's two worked examples. The student chooses one of three statements about the lines. The right one shows 38,800 = 25,000 + 400 times 2 + 13,000 and 3400 = 1500 + 1500 + 400, so a middle number can be used again and again. A wrong statement gets a 'look again' line pointing at the lines.
+
+The student then builds each side number by tapping blocks, any block, any number of times. A Target card, a Total card that says over or under by how much, a number bar with the target's flag and a Steps panel (repeats grouped, such as 1500 times 3) follow every tap. Any build that reaches the target exactly is accepted. Undo, start over and an Impossible? button with a reason chooser are always there. The idea is to match the big part first and then fill the gap, for example 61,600 = 60,000 + 400 times 4 and 20,900 = 13,000 + 1500 times 5 + 400. The student then makes 14,000, 15,000 and 16,000 from the same blocks, such as 15,000 = 13,000 + 400 times 5.
+
+Then 1000. The steps of 400 land on 400 and 800 and jump past 1000 to 1200 on the bar. The student taps Impossible? and picks the reason. A reason that is not right draws the three jumps on the bar, and the hints ask which blocks are below 1000 and to count up in 400s. Next, 'What thousands cannot be made?' The student makes 2000 and 3000, then taps every thousand from 1000 to 10,000 that cannot be made and presses Check. A thousand marked that can be made turns green with its recipe, for example 7000 = 3000 + 2000 + 2000, and only 1000 is left.
+
+In the last part new blocks 40,000, 7000, 300, 1500, 12,000 and 800 come with a plus and minus switch, or the student holds a block to take it away. The chapter's example is 39,800 = 40,000 minus 800 + 300 + 300, and the student then makes 45,000, 5900, 17,500 and 21,400, going past a target and coming back. Hints point at the nearest block, then at taking a block away, then at the last three digits. Free play offers either set of blocks and any target from 100 to 99,900. Through doing, the student learns to match the big part first, to reuse and subtract blocks, and that a target is impossible when the small blocks cannot fill the gap exactly.
+
+(tool id M3.S22.T22.C128.2D1, concept M3.S22.T22.C128, topic: Mental Math: Building Numbers)
+
+---
+
+Tool Name: Digit-Count Lab
+
+Tool Description:
+
+Two number rows, A and B, make up the lab. Each is locked to a number of digits from 2 to 5 and has an entry slot for the keypad or keyboard, Min and Max buttons that jump to the smallest and the largest number with that many digits, and a slider. An operation toggle chooses plus or minus. A result row shows the sum or difference with a badge for how many digits it has, and a table on the right lists the smallest and largest 2- to 5-digit numbers. The lab opens on 50,000 + 50,000 = 1,00,000, a 6-digit answer, and 50,000 minus 50,000 = 0, so the digit count of an answer is clearly not fixed.
+
+First the student rebuilds the chapter's two examples, 12,350 + 24,545 = 36,895 and 48,952 minus 24,547 = 24,405, types them in and freezes them. After each freeze the extremes appear: 20,000 to 1,99,998 for the sum and 0 to 89,999 for the difference. Next come ten scenario cards. For each, the student either types or jumps to an example and freezes it, or taps Impossible. After a right Impossible the student taps which case proves it, the smallest or the largest, and after every verdict the two extreme cases are shown side by side. Three cards are impossible: 4-digit + 4-digit never reaches 6 digits (the largest case is 9999 + 9999 = 19,998), 5-digit + 5-digit never gives 18,500 (the smallest is 10,000 + 10,000 = 20,000), and 5-digit minus 5-digit never gives 91,500 (the largest is 99,999 minus 10,000 = 89,999).
+
+Then five statements, each judged Always, Sometimes or Never. Adding 5-digit and 5-digit to get 5 digits, 4-digit + 2-digit giving 4 digits, and 5-digit minus 5-digit giving 5 digits are only sometimes true. 4-digit + 2-digit giving 6 digits is never true, since 9999 + 99 = 10,098 has only 5 digits. 5-digit minus 2-digit giving 3 digits is never true, since 10,000 minus 99 = 9901 already has 4. A wrong verdict loads a counterexample into the lab: a wrong Never gets a working example and a wrong Always gets a counterexample.
+
+A last task uses three rows: one 5-digit and two 3-digit numbers that add up to 18,670, where any valid triple is accepted, for example 18,000 + 300 + 370. Free play lets the student lock any digit counts, choose plus or minus and make up cards, with the extremes always shown. Through doing, the student learns that the smallest and largest cases fix the range of every answer, so they decide at once whether a card can happen; an example proves 'possible' and an extreme proves 'impossible'.
+
+(tool id M3.S24.T24.C140.2D1, concept M3.S24.T24.C140, topic: How Many Digits? Sums and Differences)
+
+---
+
+Tool Name: Group-and-Sum Board
+
+Tool Description:
+
+The student faces a patterned arrangement of number tiles, a lasso for drawing around tiles, and a panel of groups with a running total. The student draws a stroke over tiles that show the same number, or taps them, and presses Group. A group that mixes numbers is refused and the odd tile is ringed in red with the reason. Grouped tiles fade, so none is counted twice or missed, and the panel lists each group as count times value, for example 12 times 40 = 480. When every tile is grouped, the keypad wakes, and the student adds the lines and types the total. A total that is not right gets a reason and a hint ladder, and the student types again.
+
+The figures come in order. The first is staggered 40s and 50s: 12 times 40 + 10 times 50 = 980. The second is four rows of eight 32s above four rows of four 64s: 32 times 32 + 16 times 64 = 1024 + 1024 = 2048, and the finish card asks why the two halves match. Then the rings round a centre of 1000: 1000 + 4 times 500 + 8 times 250 + 18 times 125 = 7250; the outer ring has 18, which children often miscount. Next the dice, where each die counts as its dots: an 8 by 8 board of dice showing 1 and 5 gives 20 times 5 + 44 times 1 = 144, and a 7 by 5 board of dice showing 3 and 4 gives 17 times 3 + 18 times 4 = 123. Last is the big hexagon of seven hexagons and six rhombi with a 15, 25 or 35 in each of 66 corners. Each number is written 22 times, so the total is 330 + 550 + 770 = 1650, and one stroke round a hexagon picks its six numbers.
+
+In the create task the student sets a target from 210 to 390 with minus 10 and plus 10 buttons, then builds a pattern on a mirrored 4 by 5 board. A tile placed on one side appears on the other, and the middle line holds single tiles. Each pair counts twice and each middle tile once, so the board is quick to add. Any board whose sum equals the target is accepted; for 250, the rows 25, 25 / 50, 50, 50 / 25, 25 work. A board that misses says what it adds up to.
+
+A finish card lists what each figure showed, and free play builds any mirrored pattern and shows its sum. Through doing, the student learns that a patterned sum is groups times value, and that repetition and symmetry let the student add one part and repeat it instead of adding one by one.
+
+(tool id M3.S27.T27.C171.2D1, concept M3.S27.T27.C171, topic: Playing with Number Patterns)
+
+---
+
+Tool Name: Collatz Path Explorer
+
+Tool Description:
+
+The screen holds a Now card with the current number and its step count, two big move buttons, divide by 2 and times 3 plus 1, and a bar trail of the path. Powers of 2 are drawn in their own colour, the peak is labelled, and an inset shows the last 20 steps when a huge peak flattens the rest. At every step the student chooses the move. A move that does not fit the number is refused with the question 'Is this number even or odd?' and the hint ladder, never the answer.
+
+The student first rebuilds the chapter's four sequences from 12, 17, 21 and 22. The printed row stays on screen and each move turns one more of its numbers bold, so the student sees how each sequence was formed: halve an even number, and times 3 plus 1 for an odd one. A side list marks the four with their step counts, 9, 12, 7 and 15. Next the student checks the conjecture for 100 by hand, all 25 steps, and the whole path is printed. Then the student halves 64 down to 1 and chooses why every power of 2 falls straight to 1: it is 2 times 2 times ... times 2, so halving keeps it even all the way down. The tempting reasons 'they are even' and 'they are big' are answered with 12, which goes up at 3, and with 100.
+
+Then 27. The student starts it with five moves by hand and Auto finishes its 111 steps. The student slides along the trail and types its peak, 9232, on the keypad, and a value off the path or above the peak each gets its own reason. In Race mode the student predicts which of 12 and 22 takes more steps, then runs both by hand and finds 22 takes 15 and 12 takes 9, so size alone does not decide the length. The final question is the chapter's: do you believe Collatz's conjecture, and why? The tool shows the evidence of seven starts and Collatz's 1937 guess, still unproved. Both reasoned views are accepted, that every start tested reaches 1 and that trying is not proving, but 'every step makes the number smaller' is answered with 27.
+
+Free play takes any start up to 9999 and explains why 0 halves to 0 for ever. Through doing, the student learns that the rule depends only on even or odd, that paths can climb high before they fall, and that many examples reaching 1 do not make a proof.
+
+(tool id M3.S30.T30.C180.2D1, concept M3.S30.T30.C180, topic: An Unsolved Mystery: the Collatz Conjecture)
+
+---
+
+Tool Name: Estimate Builder
+
+Tool Description:
+
+Each part of the tool shows a question, a number line, a chain of up to three rows and a palette of blocks. Every block is a unit fraction such as students per section or kilometres in an hour. The student taps blocks into the chain, and the units are worked out live: unit words that cancel are struck through, and what is left must read the question's units, or the chain shows 'units clash' with the clashing words in coral. Rough blocks carry a slider for the student's own value, such as the students in their section or their breaths in a minute. Exact blocks, such as 60 minutes in an hour or 1000 m in a km, do not. Chains multiply, add (costs, holidays) or divide, where a divisor's unit words turn over.
+
+Once the units match, the estimate appears on the number line and the student answers. The student judges a claim Too high, About right or Too low, picks more or less than a number after a quick guess first, chooses the nearest of 150, 400 or a thousand, or presses Check my estimate. A green band then shows the sensible range, with a line saying how it was built. An answer about the student's own world is checked against the student's own chain, so every sensible value is accepted.
+
+There are six phases and 23 parts. At school: Paromita's sections of 32, 29 and 35 children, about 33 times 3 sections times 5 classes is about 500, so her claim is About right; the student's own school; bus riders against 200; and Sheetal's 13,000 hours, since 6 hours times 200 days is 1200 hours a year, which makes about 11 years against the 8 she has had, Too high. Steps to walk, in four journeys, where metres are multiplied by about 2 steps a metre and the kilometres from school to home first become metres. Breaths in a minute, an hour and a day, about 15 times 60 times 24 = 21,600, so a friend's 2000 a day is Too low. A few thousand or more, for grains of rice on a plate and in a 1 kg bag, with a quick guess for the words in the maths book against 5000. Near and far, with Gandhinagar to Kohima on a map line of 250 km gaps and walking times that divide distance by speed and by hours walked a day. At home: Roshan's custard, where Rs 100 is About right only with small servings and cheap fruit, the holidays in a year, then the exact number from the school calendar on a keypad, and the litres in a mug, a bucket and an overhead tank, each built from the one before.
+
+A part that is not right says why, a hint ladder climbs on every miss, and the part stays open. Free play offers eight block sets to make up estimation questions. Through doing, the student learns to break a quantity into known parts, to round each, and that an estimate is a range of sensible answers used to judge a claim.
+
+(tool id M4.S32.T32.C187.2D1, concept M4.S32.T32.C187, topic: Simple Estimation)
+
+---
+
+Tool Name: Race-to-N Arena
+
+Tool Description:
+
+The student steps into an arena with a number track running from 0 to the target and a settings strip above it for the target, the largest move and who starts. Move buttons from 1 up to the largest move sit below the track. A Mark Safe pencil lets the student colour squares on the track before playing. Everything starts from the chapter's game of 21, where each player adds 1, 2 or 3 and the first to reach 21 wins.
+
+The student plays against the computer. The computer plays at random at first and then perfectly after the student has lost twice, so luck stops working and the strategy must be found. Before and during play the student marks the squares believed to be safe, the numbers that guarantee a win. After each game the true safe squares are revealed beside the student's marks, so the student sees where the guess differed. For 21 the safe squares are 21, 17, 13, 9, 5 and 1, four apart, because whatever the opponent adds, the student adds the rest of 4. The student wins by saying 1 first and then landing on 5, 9, 13, 17 and 21.
+
+The challenges follow. Win the race to 22 from 0 with moves 1 to 3 going first; the safe squares are 22, 18, 14, 10, 6 and 2, so the first move is 2. Race to 99 with moves 1 to 10: the safe squares are 99, 88, 77, 66, 55, 44, 33, 22 and 11, eleven apart. The student finds out why winning going first is not possible, since the first player may say only 1 to 10 and cannot say 11, and the second player then keeps landing on the safe numbers. Going second instead, the student lands on 11 whatever the computer says first, and wins. After each game the student states which player can always win. The last challenge is to design a game by choosing a target and a largest move, predict the winner, and then play to check.
+
+If the student is stuck, the hints follow the chapter's own reasoning: which number must you say to be sure of reaching the target, which number must you say to be sure of reaching that one, and then the first safe squares are lit counting back from the target. Through doing, the student learns to work backwards from the target to find the safe numbers, that they are spaced by the largest move plus one, and that the first player wins when the first safe number can be reached on the first move and otherwise the second player wins.
+
+(tool id M4.S35.T35.C208.2D1, concept M4.S35.T35.C208, topic: Games and Winning Strategies)

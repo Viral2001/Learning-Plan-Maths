@@ -1,0 +1,170 @@
+# -*- coding: utf-8 -*-
+"""Tool write-ups (description field) for Fractions. Keyed by tool media id."""
+DESCRIPTIONS = {
+
+"M1.S2.T2.C5.2D1": (
+"A round roti sits in the middle of the screen with a rail under it that always reads 1 whole. "
+"At the side are a sharer stepper that runs from 2 to 12 and a Cut and Deal button, and a row of children waits for their shares. "
+"The same board becomes a bag of rice, a glass of juice or a fish when a card needs it. "
+"The student never cuts by hand: the tool makes only equal pieces, so an unequal share can never appear.\n\n"
+"Every card starts with a prediction and then a test. For 1 roti among 3 children, the student sets the stepper to 3 and presses Cut and Deal. "
+"The roti splits into 3 equal pieces, one goes to each child, one share lights up with the label 1/3, and the rail still reads 1 whole. "
+"The student types the fraction for one share. The rice card works the same way: 1 kg of rice is poured into 4 equal packets and each packet is named 1/4 kg.\n\n"
+"The card on 1/5 and 1/9 shows two identical rotis side by side. The student predicts which share is bigger, deals one roti among 5 children and the other among 9, and picks the bigger share. "
+"A student who picks 1/9 because 9 is the bigger number sees the two shares laid on top of each other, with the 1/9 piece plainly the smaller. "
+"On the juice card, 3 glasses are shared among 4 friends: each glass is cut into 4 and every friend collects three quarter-glass pieces, which the student counts as 3 times 1/4 = 3/4 glass. "
+"On the fish card, a 1/2 kg fish and a 1/4 kg fish are put together by cutting the whole kilogram into 4 equal parts, so the half shows as two quarters and the total reads 3/4 kg. "
+"The last card asks the student to drag a quarter, a half and three quarters into order from smallest to largest.\n\n"
+"Hints come in order. First: how many people share the one whole? Then: one whole shared equally among n people gives each the fractional unit 1/n. "
+"Then: set the sharers to the number on the card and look at one share. Last, the share is shown with its fraction and the count of sharers, and a similar card follows. "
+"Through doing, the student learns that a fractional unit comes from sharing equally, that more sharers means a smaller share, and that several shares of 1/n are counted as that many times 1/n."
+),
+
+"M1.S4.T4.C13.2D1": (
+"A whole chikki is drawn as 24 small squares, six across and four down, with a dashed ghost of the whole always visible behind it. "
+"One piece has been lifted off and sits on its own beside the chikki. "
+"A Stamp button lays copies of that piece across the ghost one at a time, numbering each copy as it lands, and a counter and a fraction read-out wait at the side.\n\n"
+"On each card the student first guesses how many copies of the piece will fill the whole. Then the student presses Stamp and the copies march across the ghost, numbered 1, 2, 3 and so on, "
+"turning or flipping where needed so that a triangle sits snugly beside another triangle. When the whole is full, the student types the name of the piece as 1 over the count. "
+"If copies would overlap or leave a gap, the tool shows the gap instead of naming the piece. "
+"A wrong name shows the number of squares in the piece beside 24, the squares in the whole, so the student can see how many such pieces fit.\n\n"
+"The six pieces are a 1 by 2 rectangle (2 squares, 12 copies, so 1/12); a strip 1 square across and 4 down (6 copies, 1/6); "
+"a triangle that is half of a 3 by 4 block (6 squares, 4 copies, 1/4); a triangle that is half of a 3 by 2 block (3 squares, 8 copies, 1/8); a single small square (1/24); "
+"and a 3 by 2 rectangle (1/4) followed by the L-shaped rest of the chikki, which the student measures with the same rectangle: three copies fill the L, so it is 3 times 1/4 = 3/4. "
+"Pieces of very different shapes can share one name, because only the amount of the whole they cover matters.\n\n"
+"Hints go in order. First: how many small squares make the whole chikki? Then: count the squares in the piece, and remember a triangle is half of its rectangle. "
+"Then: divide 24 by the squares in the piece to find the number of copies. Last, the copies are shown across the whole and a similar piece follows. "
+"Through doing, the student learns that a piece is 1/n when n equal copies of it make the whole, whatever its shape."
+),
+
+"M1.S6.T6.C19.2D1": (
+"A paper strip, one unit long, lies across the top of the screen. Below it a row of dashed hollow outlines marks the parts that are still empty. "
+"A Fold button halves every part of the strip, a second control sets a number of equal parts from 2 to 12, and a read-out at the side waits to show k times 1/n = k/n.\n\n"
+"The student begins by folding. One press of Fold gives halves, a second press halves every half to give quarters, and a third gives eighths, with the creases drawn each time. "
+"The number control gives other folds, such as three equal parts. Then the student adds blocks one at a time from the left. "
+"Each block is one part, numbered 1, 2, 3 as it lands, and the read-out updates. Three blocks of 1/8 read 3 times 1/8 = 3/8, and the student types the fraction the blocks make. "
+"A student who counts the fold lines instead of the blocks sees the blocks numbered beside the creases, so the difference between creases and parts is visible.\n\n"
+"The six cards are: fold in 2 and then in 2 again and name each part (1/4); lay 3 blocks of 1/8 (3/8); make 1/3 and then fold again to make 1/6; "
+"lay 5 blocks of 1/4; lay 9 blocks of 1/4; and lay 7 blocks of 1/2. Once the first strip is full, a second strip appears, so 5/4 shows one full strip and one block more and is written 1 + 1/4. "
+"The 9 blocks give 2 + 1/4 and the 7 blocks of 1/2 give 7/2, which is 3 + 1/2. A solved card writes the addition, for example 1/4 + 1/4 + 1/4 = 3 times 1/4 = 3/4.\n\n"
+"Hints come in order. First: what is one part of the strip called? Then: count the blocks laid, not the folds. Then: write the count of blocks over the number of equal parts. "
+"Last, the blocks are numbered and the fraction k/n is shown, and a similar card follows. "
+"Through doing, the student learns that folding into n equal parts makes the unit 1/n, that k blocks make k/n, and that when k is more than n the length is more than one whole."
+),
+
+"M1.S8.T8.C28.2D1": (
+"A number line from 0 to 2 stretches across the screen with 0, 1 and 2 labelled. A parts stepper from 2 to 10 cuts every unit into that many equal gaps, and each gap is shaded as a band. "
+"A Hop button moves a point one gap at a time from 0, the point can also be dragged along the line, and a fraction box sits underneath.\n\n"
+"On the first card the student sets the stepper to 2 to mark 1/2: each unit now has 2 gaps. One press of Hop sends the point over the first gap, an arc is drawn, and the student types 1/2. "
+"For 2/3 the stepper goes to 3 and the point hops twice. Some cards turn the task around and give a fraction, and the student drags the point to the place where it belongs. "
+"A point dropped in the wrong gap is labelled with its own fraction beside the target, so the student can see how far off it is. "
+"A student who counts tick marks from 0 sees the marks numbered against the gaps, and the extra count from the tick at 0 is clear.\n\n"
+"The six cards are: mark 1/2 with each unit in 2 parts; mark 2/3 with each unit in 3 parts; "
+"with fifths, write the lengths ending at the 2nd and 4th marks (2/5 and 4/5); with tenths, draw 3/10 and 4/5, where the student must work out that 4/5 sits at the 8th gap and the tool prints 4/5 and 8/10 at the same point; "
+"with halves, mark the line that ends halfway between 1 and 2 (3/2); and with fifths, name the four marks between 1 and 2 (6/5, 7/5, 8/5 and 9/5). "
+"The last two cards carry the hops past 1 into the second unit.\n\n"
+"Hints go in order. First: how many equal gaps is 0 to 1 cut into? Then: the bottom number is the gaps in one unit and the top number is how many gaps from 0. "
+"Then: hop that many gaps from 0, counting past 1 if needed. Last, the point is shown with its hops and its fraction, and a similar card follows. "
+"Through doing, the student learns that a fraction on the number line is a count of equal gaps from 0, and that the same counting carries on past 1."
+),
+
+"M2.S10.T10.C45.2D1": (
+"Along the screen runs a number line from 0 to 10, with a stepper that cuts every unit into n equal gaps. A Hop button moves 1/n at a time from 0. "
+"Whenever n hops fill a unit, the gaps merge into a solid whole block, so the line slowly turns into a row of wholes followed by a few loose hops. "
+"A two-way read-out shows the fraction on one side and whole + part on the other.\n\n"
+"The first card asks how many wholes are in 7/2. The student predicts, sets halves and hops seven times. A whole block locks after every 2 hops, and after 7 hops there are 3 wholes and one half left over, so 7/2 = 3 + 1/2. "
+"Next come 8/3 (2 wholes and 2/3, written 2 2/3), 11/5 (2 1/5) and 19/6 (3 1/6). "
+"A student who gives the wrong number of wholes sees the hops grouped n at a time, with the leftover hops counted at the end. "
+"The student also sees why the grouping works: dividing the numerator by the denominator gives the wholes, and the remainder over the denominator is the fractional part.\n\n"
+"Then the direction turns round. For 3 + 3/4 the student builds 3 solid wholes and 3 quarter hops, then counts every quarter: 3 wholes are 12 quarters, and with 3 more that is 15/4. "
+"For 2 3/11 the 2 wholes are 22 elevenths, so the number is 25/11. A student who reads 2 1/2 as 2 times 1/2 is shown 2 full wholes and one half block on the line. "
+"The seventh card asks whether 8/4 is a mixed number. The hops fill two wholes with nothing left over, so it is exactly 2 and not a mixed number.\n\n"
+"Hints come in order. First: how many parts make one whole here? Then: group the units in fives, threes or whatever the denominator is, and each group is one whole. "
+"Then: divide the numerator by the denominator, where the quotient is the wholes and the remainder is the part. Last, the grouping is shown with the wholes and the leftover, and a similar card follows. "
+"Through doing, the student learns that a fraction whose numerator is bigger than its denominator holds whole units plus a part, and how to move between the two forms in both directions."
+),
+
+"M2.S12.T12.C59.2D1": (
+"A fraction wall fills the screen. The top row is a single whole, and below it come rows of halves, thirds, quarters and so on down to tenths and twelfths. "
+"Every row is the same length and all rows start flush at 0. Tapping cells shades a run from the left. "
+"A vertical line drops from the end of each run through the rows below, and when two runs end on the same line a shared label prints both names, for example 1/2 = 2/4.\n\n"
+"The student first predicts whether two fractions will reach the same length. For 1/2 and 2/4 the student shades one cell in the halves row and two cells in the quarters row, and the two lines meet. "
+"Then 2/4 against 4/8, and the shared labels grow into a chain. A run placed in the wrong row shows its own line beside the target line, so the gap is visible. "
+"A student who adds the same number to the top and bottom, turning 2/3 into 3/4, sees two lines that do not meet.\n\n"
+"The seven cards are: are 1/2 and 2/4 equal, and are 2/4 and 4/8; how many sixths make 1/2 (3); are 2/3 and 4/6 equivalent (yes); "
+"write two fractions equal to 2/6 (1/3, 3/9 or 4/12); fill in 5/4 = ?/8 (10); fill in 4/3 = 12/? (9); and write as many as possible equal to 4/6, such as 2/3, 6/9 and 8/12. "
+"For the cards that go past one whole, such as 5/4, the wall extends into a second whole. "
+"As matching pairs pile up, the student sees that the numbers on each pair are linked by one multiplier applied to both the numerator and the denominator.\n\n"
+"Hints come in order. First: do the two runs have to be on the same whole? Then: equal fractions end on the same vertical line of the wall. "
+"Then: multiply the numerator and the denominator by the same number, and check the line. Last, the two runs are shown ending on one line with both names, and a similar card follows. "
+"Through doing, the student learns that equivalent fractions are the same length written with different numbers, and that multiplying top and bottom by the same number keeps the length."
+),
+
+"M2.S14.T14.C75.2D1": (
+"A large fraction card sits in the middle of the screen and opens on 16/20. Under it lies a strip with the fraction shaded as a length. "
+"A row of divisor buttons 2, 3, 5 and 7 and a box for any other divisor sit beneath the strip, with a log of steps on one side and a Done button.\n\n"
+"The student looks at the top and bottom numbers, spots a common factor and presses a divisor, or types one into the box, such as 4. "
+"The top and bottom divide together, and the step is logged, for example 16/20 gives 4/5. "
+"The strip is re-cut into fewer, larger parts, but the shaded length stays exactly the same after every step, which shows that dividing both numbers keeps the fraction equal. "
+"A divisor that does not divide both numbers is refused with the remainder shown. "
+"When the student presses Done too early, the common factor that is left is named, for example 18/30 still shares 6.\n\n"
+"The six cards are 16/20 (4/5), 36/60 (3/5), 17/51 (1/3), 64/144 (4/9), 126/147 (6/7) and 525/112 (75/16). "
+"The 36/60 card is done twice: first in steps, dividing by 2, then 2, then 3, and then again in one go with a single divisor of 12, so the student sees that both routes reach 3/5. "
+"The 17/51 card needs the custom box, because 17 is not on a button. The last card is more than one whole, so its strip runs past one whole. "
+"A solved card shows the steps, the strip of unchanged length, and the one-go divisor, which is the highest common factor.\n\n"
+"Hints come in order. First: what does lowest terms mean? Then: find a number that divides both the numerator and the denominator. "
+"Then: try 2, then 3, then 5 and 7 until none divides both. Last, the divisions are shown step by step down to lowest terms, and a similar card follows. "
+"Through doing, the student learns to divide top and bottom by the same common factor, to repeat until the only common factor is 1, and that dividing by the highest common factor does the whole job in one step."
+),
+
+"M3.S16.T16.C83.2D1": (
+"Two bars of exactly the same whole lie one above the other, each shaded from the left to show one of the fractions. "
+"Beside them are a common-unit stepper that re-cuts both bars into the same number of equal cells, and a picker with the signs greater than, less than and equal to. "
+"An edge line drops from the end of each shaded run, so the student can see which run reaches further.\n\n"
+"On the first card the student predicts which is greater, 4/5 or 7/9. The bars begin cut in fifths and ninths, so the shaded runs are hard to compare. "
+"The student then moves the stepper. It stops only at a common multiple of 5 and 9, and any other number is refused because the cells do not line up. "
+"At 45 the bars show 36 cells and 35 cells, the edge lines separate, and the student picks greater than, since 36/45 is more than 35/45. "
+"A student who compares only the numerators, 4 against 7, sees the two bars cut into different units, where the cells are not the same size.\n\n"
+"The next cards compare 3/4 with 7/10 (in twentieths, 15/20 and 14/20), 8/3 with 5/2 (in sixths, 16/6 and 15/6, with the bars running past one whole) and 9/4 with 5/2 (in quarters, 9/4 and 10/4, so 9/4 is less). "
+"The last two cards use three and four bars. The student re-cuts them all into a common unit and drags the fractions into order. "
+"7/10, 11/15 and 2/5 become 21/30, 22/30 and 12/30, giving 2/5, 7/10, 11/15 from smallest. "
+"3/4, 12/5, 7/12 and 5/4 become 45/60, 144/60, 35/60 and 75/60, giving 12/5, 5/4, 3/4, 7/12 from largest. A solved card shows each fraction in the common unit with the sign between them.\n\n"
+"Hints come in order. First: are the two fractions in the same fractional unit? Then: find a common multiple of the two denominators. "
+"Then: rewrite both with that denominator and compare the numerators. Last, both are shown in the common unit with the sign, and a similar card follows. "
+"Through doing, the student learns that fractions are compared by making the fractional units the same and then seeing which has more units."
+),
+
+"M3.S20.T20.C109.2D1": (
+"One long bar of the same whole shows the first fraction with its units shaded. "
+"A common-unit stepper re-cuts that bar and the fraction to be taken away at the same time. "
+"A Remove button lifts away shaded units one at a time, numbering each as it leaves, and a result box beside the bar checks whether the answer is in lowest terms.\n\n"
+"The first card is 6/7 minus 4/7. Both fractions are in sevenths, so the student presses Remove four times, watches units 1 to 4 lift away, and reads what is left: 2/7. "
+"Next comes 5/8 minus 3/8, which leaves 2/8. The result box shows that 2 and 8 share a factor of 2, and the student reduces it to 1/4.\n\n"
+"The third card, 3/4 minus 2/3, has units of different sizes: quarters and thirds. A student who presses Remove at once is refused, because the pieces do not fit. "
+"A student who subtracts the tops and the bottoms is shown the two units drawn at different sizes. "
+"The student moves the stepper to 12, a common multiple of 4 and 3. The bar and the fraction to be removed re-cut into twelfths, and the tool writes 3/4 = 9/12 and 2/3 = 8/12 with the multiplier beside each, so the student sees why 3/4 was multiplied by 3/3 and 2/3 by 4/4. "
+"Removing 8 units leaves 1, so the answer is 1/12. 5/6 minus 4/9 is done in eighteenths, 15/18 minus 8/18 = 7/18. "
+"Two word problems end the set: 7/10 km minus 1/2 km walked, in tenths, which leaves 2/10 and reduces to 1/5 km, and 10/3 minutes minus 13/4 minutes, in twelfths, which leaves 1/12 minute. "
+"The bars for these two run past one whole.\n\n"
+"Hints come in order. First: are the pieces of the two fractions the same size? Then: use a common multiple of the denominators as the new unit. "
+"Then: rewrite both, subtract the numerators and keep the denominator. Last, the units taken away and the units left are shown, and a similar card follows. "
+"Through doing, the student learns that fractions can be subtracted only when they are in the same unit, and that the answer should be reduced to lowest terms."
+),
+
+"M4.S22.T22.C118.2D1": (
+"A blank circle stands for one whole and sits in the middle of the screen. Along the bottom is a tray of unit fraction tiles from 1/2 to 1/42. "
+"Dragging a tile onto the circle fills a sector of exactly that size. A running sum, written in a common unit, shows what the circle holds, and a board at the side waits to record the solutions the student finds.\n\n"
+"The rules are the puzzle. The units must all be different, so a tile that is already on the circle cannot be used again. "
+"If the tiles overfill the circle, the overlap is shown and the sum goes past 1. "
+"Because the sum is written in a common unit, adding 1/2 and 1/3 reads 3/6 plus 2/6 = 5/6, not 2/5, which corrects the idea of adding tops and bottoms.\n\n"
+"On the first card the student tries to fill the circle with two different units. Every pair either leaves a gap or overfills it, and 1/2 plus 1/2 is refused as a repeat. After trying, the student concludes that it cannot be done. "
+"On the second card three different units are needed, and the student discovers 1/2 + 1/3 + 1/6, which goes on the board with its sum of 3/6 + 2/6 + 1/6 = 6/6. "
+"The third card starts with 1/2 and 1/3 already placed, so the student finds the remainder, 1/6. "
+"The fourth card starts with 1/2 and 1/4 and asks for two more units to fill the last quarter: 1/6 + 1/12 or 1/5 + 1/20. "
+"The fifth starts with 1/2 and 1/3 and fills the last sixth, for example with 1/7 + 1/42. "
+"The sixth card asks for all six ways to make 1 from four different units: with 1/2 and 1/3 they are 1/7 + 1/42, 1/8 + 1/24, 1/9 + 1/18 and 1/10 + 1/15, and with 1/2 and 1/4 they are 1/5 + 1/20 and 1/6 + 1/12.\n\n"
+"Hints come in order. First: what is the largest fractional unit? Then: start with 1/2 and see how much of the circle is left. "
+"Then: write the remainder in a common unit and look for a unit fraction that fits. Last, one solution is shown filled in, and a similar card follows. "
+"Through doing, the student learns that two different units can never make 1, that three different units make 1 in only one way, and that four different units make 1 in six ways."
+),
+}

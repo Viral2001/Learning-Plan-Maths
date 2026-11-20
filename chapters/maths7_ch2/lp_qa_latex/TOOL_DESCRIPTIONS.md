@@ -1,0 +1,97 @@
+# maths7_ch2 - tool descriptions (6 tools)
+
+Tool Name: Gap Comparer
+
+Tool Description:
+
+Two expressions sit side by side above a balance beam that rests level, and the student has to say which side is heavier without adding anything up. In each expression the numbers that differ from the other side are highlighted in colour, and beside each highlighted number a small arrow shows whether it went up or down compared with its partner. Under the beam are three large buttons, less than, equal to and greater than, and a switch named Check by working out that stays locked until one of the buttons has been pressed.
+
+The student reads the pair and asks two things about every highlighted number: how much did it change, and does that make its side bigger or smaller? On the first card, 57 + 30 and 56 + 31, the 57 is one more than 56 and the 30 is one less than 31, so a rise on one side is paid back by a fall on the other. The student presses a sign button to commit. A choice made without touching any highlighted number is accepted, but the tool then asks which number changed and by how much. Only after the choice is committed does the Check switch unlock. Switching it on shows both values, 87 and 87 here, and the beam tips toward the larger side or stays level.
+
+A wrong choice does not show the values. It puts the highlighted changes and the direction arrows back on screen and lets the student try again. The five cards are 57 + 30 and 56 + 31 (equal), 200 - 45 and 200 - 47 (the second takes away more, so it is smaller), 18 times 6 and 18 times 7 (the second has one more lot of 18, so it is bigger), 91 - 35 + 12 and 91 - 35 + 14 (the second is two more), and 40 + 25 and 41 + 24 (equal).
+
+Hints come in order. First: which numbers are different in the two expressions? Then: is each changed number added or taken away, and did it go up or down? Then: work out how much bigger or smaller each side becomes because of its change. Last, the two changes are drawn with arrows and their effect on each side, the choice is confirmed and a new pair follows. Through doing, the student learns that two expressions can be compared by looking at what changed, a bigger number added makes a bigger value and a bigger number taken away leaves a smaller one, and that the values are only a way to check.
+
+(tool id M1.S5.T5.C15.2D1, concept M1.S5.T5.C15, topic: Comparing Without Working Out)
+
+---
+
+Tool Name: Term Splitter
+
+Tool Description:
+
+A long strip of paper with an expression printed along it lies across the screen, and the student is the one who cuts it into terms. Small scissor marks wait above the plus and minus signs that are not inside a bracket. The student first decides where the cuts belong, then drags the marks down onto those signs. Each cut splits the strip, and the pieces become labelled term cards. A minus sign travels with the number after it, so a piece reading minus 2 shows its sign on the card. Every card has a value slot, and a total slot sits at the end of the row.
+
+Take 30 + 5 times 4. The student cuts once, before the plus, and gets the cards 30 and 5 times 4. The times sign has no scissor mark because a times sign stays inside one term. The student types 30 and 20 into the slots and the total slot opens to show 50. On 100 - (15 + 56) the student may try to cut at the plus inside the bracket. The cut is refused, the bracket glows and a line explains that a bracket stays together. The cards are 100 and minus (15 + 56), the second worth minus 71, and the total is 29.
+
+The next cards are 13 - 2 + 6 (terms 13, minus 2 and 6, value 17), 2 - 10 + 4 times 6 (terms 2, minus 10 and 4 times 6, value 16), 5 times (3 + 2) + 7 times 8 + 3 (three terms, value 84) and 40 - 6 times 3 + 12 divided by 4 (terms 40, minus 6 times 3 and 12 divided by 4, value 25). If a card is typed without its sign, the sign is circled. The total slot opens only when every card has its correct value, so the student must work out each term before adding.
+
+Hints come in order. First: which signs separate the terms, and which sit inside a bracket? Then: cut before every plus or minus outside brackets and keep the sign with the number after it. Then: work out each card by itself first, then add the card values. Last, the cuts appear in place, every card is filled with its signed value, the total is added and a new expression follows. Through doing, the student learns that an expression is a sum of terms, each term keeps its sign, a times sign or a bracket does not split a term, and the value comes from working out each term and then adding.
+
+(tool id M2.S8.T8.C25.2D1, concept M2.S8.T8.C25, topic: Reading Expressions: Terms and Order)
+
+---
+
+Tool Name: Hop and Reorder
+
+Tool Description:
+
+A runner stands on a number line at zero. Under the line is a row of term cards, each showing a signed number, and every card can be dragged into any order. Bracket handles let the student join two neighbouring cards into a group. A running total updates after each hop, and a home mark waits on the line for the place where the runner will finish.
+
+Before moving anything, the student predicts the final position by touching the line. Then Run sends the runner hopping once for each card: a positive card hops to the right, a negative card hops to the left. The first card is 6 + (-4), with a hop of 6 right and 4 back, ending at 2. The student drags the cards into (-4) + 6 and runs again. The path is different, since the runner now goes to minus 4 first, but it lands on the same home mark. The home mark keeps one fixed colour, so every new order visibly finishes in the same place.
+
+Next come (-7) + 10 + (-11), which finishes at minus 8 whichever two cards are grouped first, then 47 + 18 + (-47) and 25 + 38 + 75. Here the student looks for two cards that cancel or make a round number, 47 and minus 47, or 25 and 75, groups them first and sees the sum become 18 or 100 + 38 = 138. A quick order of this kind is praised. The number line rescales for the larger cards.
+
+On the fifth card the student writes 12 - 5 as the terms 12 and minus 5, swaps them and lands on 7. Then the student tries to drag the 5 away from its minus sign. The sign stays behind, the cards read 5 - 12, the runner finishes at minus 7 and the card is flagged and snaps back with its sign. On the last card the student chooses five signed terms and rearranges them to a quick order.
+
+Hints come in order. First: where will the runner finish for this order? Then: keep each sign with its number and move the whole card. Then: look for two cards that cancel or make a round number and group them first. Last, the best order is shown with the grouped pair, the running total and the same final position, and a new card set follows. Through doing, the student learns that the terms of a sum can be swapped and regrouped without changing the value as long as each term moves with its sign, and that a good order makes the adding quick.
+
+(tool id M2.S11.T11.C37.2D1, concept M2.S11.T11.C37, topic: Swapping and Grouping Terms)
+
+---
+
+Tool Name: Story to Expression
+
+Tool Description:
+
+The left half of the screen shows a short picture story, for example four dosa plates with a price tag of 23 rupees on each and a 5 rupee coin placed beside them as a tip. On the right is a row of empty term slots with a sign chooser, plus or minus, in front of each slot. Below sits a tray of number chips and a times chip and a divided-by chip, so a slot can hold a single number or a pair joined by one of those signs. A value strip underneath works out each term as it is built and shows the total.
+
+The student reads the story and spots what is repeated and what is added or taken away once. The four plates become one term, 4 times 23, and the tip becomes a separate term, 5, so the expression is 4 times 23 + 5 and the strip reads 92, 5 and a total of 97. A term with the wrong sign is highlighted against the sentence in the story that gives the sign. A times term is checked against the group count in the picture, so a student who types 3 times 23 sees the picture count four plates, not three.
+
+The cards run in order. Packets of 2 kg made from 100 kg with 4 packets already there give 4 + 100 divided by 2 = 54. Thirty-three children in groups of 5 give six full groups and 3 left over, 6 times 5 + 3 = 33. A shop with 89 items, 21 more arriving and 10 sold needs three terms, and the sold items become a negative term, 89 + 21 - 10 = 100. Two cards run in reverse. The expressions 5 times 12 - 6 and 4 times 9 + 2 times 6 are given, and the student picks the story that fits from a few offered, such as five packets of 12 with 6 eaten, or four boxes of 9 and two bags of 6. A wrong story is replayed with the unmatched term marked.
+
+Hints come in order. First: what is repeated in the story, and what is added or taken away once? Then: each repeated group is one times term, and each extra or loss is one more term with its sign. Then: check the number in each term against the picture. Last, the terms are built in place with their signs and values and the total is shown, and a new story follows. Through doing, the student learns to turn a story into an expression and an expression back into a story, with equal groups as times terms and extras and losses as separate signed terms.
+
+(tool id M2.S14.T14.C45.2D1, concept M2.S14.T14.C45, topic: More Expressions and Their Terms)
+
+---
+
+Tool Name: Bracket Signs
+
+Tool Description:
+
+One expression with a single bracket lies on a long strip, such as 28 + (35 - 10). The numbers inside the bracket are small round tokens, each showing its sign, and each token turns over when tapped. Below the strip are a Drop bracket button and a value check strip with two boxes, Before and After. Before holds the value when the bracket is worked out first, After holds the value of the opened form. A Fix it mode sits beside the button for expressions that someone has already opened.
+
+The student looks at the sign right before the bracket and predicts what will appear when it opens, setting each token to the sign it expects. Then Drop bracket opens the strip. On 28 + (35 - 10) the signs stay, so 28 + 35 - 10, and both boxes read 53. On 200 - (40 + 3) the student sees that taking away 43 is the same as taking away 40 and then taking away 3, so both tokens turn over and the result is 200 - 40 - 3 = 157. If a token fails to turn over after a minus, it is circled and the two boxes disagree, which is the signal that the opened form is wrong. After a plus, turning a token over makes the value strip stop matching and the tool flags the flip. A correct opening shows equal values in both boxes.
+
+The next cards are 500 - (250 - 100), which opens to 500 - 250 + 100 = 350, and 14 - (12 + 10), which gives minus 8. The last two are Fix it cards. 500 - (250 - 100) has been opened as 500 - 250 - 100 with value 150, and the student sees it should be 350. 27 - (8 - 3) has been opened as 27 - 8 - 3, and the student repairs it to 27 - 8 + 3. The student first works out both forms and sees which one disagrees.
+
+Hints come in order. First: which sign comes right before the bracket? Then: after a plus nothing changes, and after a minus every sign inside turns over. Then: work out both forms and see whether the two values agree. Last, the bracket opens with the right signs, the two values are shown equal and a new expression follows. Through doing, the student learns that a bracket after a plus can be dropped with the signs kept, a bracket after a minus flips every sign because a whole group is being taken away, and the check is that both forms have one value.
+
+(tool id M3.S17.T17.C65.2D1, concept M3.S17.T17.C65, topic: Removing Brackets: After Minus and Plus)
+
+---
+
+Tool Name: Array Sharer
+
+Tool Description:
+
+A block of equal rows of dots fills the screen, with a thin divider line the student can slide anywhere across it. The divider cuts the block into two coloured parts, and each part is labelled with its own times term. Under the block, the bracket form and the opened form are written one above the other. A difference mode switch lets the student shade a part to be taken away instead of joined.
+
+The first card shows 4 rows of 5 and 3 rows of 5 side by side. The student joins them and the tool shows 7 rows of 5, so 4 times 5 + 3 times 5 = (4 + 3) times 5 = 35. The second shows two friends, each with a 43 rupee cutlet and a 24 rupee rasgulla. The divider splits each row into a 43 part and a 24 part, giving 2 times (43 + 24) = 2 times 43 + 2 times 24 = 134. A student who writes 2 times 43 + 24 sees the 24 left out and the count that goes missing is flagged. On the third card the student splits 6 columns of 8 into 4 and 2 columns, 6 times 8 = 4 times 8 + 2 times 8 = 48. A split whose two parts do not join back to the whole is flagged.
+
+In difference mode, 14 rows of 10 are shown and the student takes away 6 rows, 14 times 10 - 6 times 10 = (14 - 6) times 10 = 80. The fifth card is 97 times 25, drawn as a scaled block with row counts written along the side. The student uses 100 - 3, takes 3 rows away from 100 rows and gets 100 times 25 - 3 times 25 = 2425. The last card works the other way: 9 times 12 + 9 times 8 is gathered back into 9 times (12 + 8) = 180.
+
+Hints come in order. First: how many equal rows or columns are there, and where does the divider sit? Then: each part gets its own times term, with the same multiplier. Then: add or take away the two parts and compare with the bracket form. Last, the two parts, the bracket form and the opened form are shown with equal totals, and a new grid follows. Through doing, the student learns that a number outside a bracket multiplies every term inside, that gathering a common multiplier undoes it, and that a sum and a difference work the same way.
+
+(tool id M3.S21.T21.C96.2D1, concept M3.S21.T21.C96, topic: Removing Brackets: Multiplying a Sum)

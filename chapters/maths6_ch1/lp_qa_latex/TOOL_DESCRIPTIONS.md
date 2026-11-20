@@ -1,0 +1,111 @@
+# maths6_ch1 - tool descriptions (7 tools)
+
+Tool Name: Sequence Rule Finder
+
+Tool Description:
+
+A strip of six number boxes runs across the screen, followed by three empty boxes for the next terms. Beneath it is a rule picker with four choices: add the same number, add a growing number, multiply by a number, and add the two terms before. A Test button sits beside the picker. The first card shows 1, 3, 5, 7, 9, 11.
+
+The student first predicts the rule by looking at how each term changes from the one before, then picks a rule and presses Test. The tool tries the rule on every term shown, not only the first two, and draws a small arc over each jump with the result written on it. A rule that works turns every arc green. A rule that fits only the first jump is caught: on 1, 3, 6, 10, 15, 21 the choice 'add 2' passes the first jump, fails at 3 to 6, and that term is marked in red. For add a growing number the tool lays the jumps in a row, 2, 3, 4, 5, 6, so the student can see that each one is one bigger. On 1, 2, 4, 8, 16, 32 the jumps 1, 2, 4, 8, 16 do not grow by a steady amount, so adding fails and the student is led to multiply by 2.
+
+Once the rule is accepted, the student types the next three terms. A wrong term shows the rule applied once to the last term, for example 21 plus 7 for the term after 21 in the triangular numbers. The six cards are 1, 3, 5, 7, 9, 11 (add 2, then 13, 15, 17); 1, 3, 6, 10, 15, 21 (jumps 2, 3, 4, 5, 6, then 28, 36, 45); 1, 4, 9, 16, 25, 36 (the squares, jumps 3, 5, 7, 9, 11, which the solved card also writes as 1 times 1, 2 times 2 and so on, then 49, 64, 81); 1, 2, 3, 5, 8, 13 (add the two before, then 21, 34, 55); 1, 2, 4, 8, 16, 32 (multiply by 2, then 64, 128, 256); and 1, 3, 9, 27, 81, 243 (multiply by 3, then 729, 2187, 6561). A solved card writes the rule under each jump.
+
+Hints come in order. First: look at how each term changes from the one before. Then: try add, add a growing number, multiply, or add the two before, and press Test. Then: find the jump between the last two terms and apply the rule once. Last, the rule is shown under each jump with the next terms filled in, and a similar sequence follows. Through doing, the student learns that a number sequence is an ordered list made by a rule, that rules come in different kinds, and that a rule is right only when it fits every term shown.
+
+(tool id M1.S4.T4.C12.2D1, concept M1.S4.T4.C12, topic: Number Sequences)
+
+---
+
+Tool Name: Dot Picture Builder
+
+Tool Description:
+
+A dot board fills the screen. Along its top edge sit the first five pictures of a sequence, drawn small and numbered 1 to 5. Below them is a large empty building area with a picture-number stepper set to 6, two buttons named Add Dots and Add Layer, and a live count under the area that starts at zero.
+
+Before touching anything, the student looks at the five pictures and predicts how picture 6 will differ from picture 5. Then picture 5 is copied into the building area and the student grows it. Add Dots places one dot at a time, which is how the counting numbers grow (one more dot in the row) and how the odd numbers grow (two more dots each time). Add Layer puts down a whole row, column or layer in one move. New dots always appear in a different colour from the old ones, and the live count rises as they land, so the student can see exactly what the picture gained.
+
+The six cards each ask for the sixth picture and the number it shows: the counting numbers (6), the odd numbers (11), the triangular numbers (21, a bottom row of 6 under rows of 1 to 5), the square numbers (36, a 6 by 6 grid), the cube numbers (216, a sixth 6 by 6 layer of blocks on top of five layers) and the even numbers (12, two rows of 6). The student types the number the finished picture shows. A picture that is not a triangle, a square or a cube is marked with the dots that are missing, and a wrong count numbers the dots one by one so the student can recount.
+
+The hints go in order: what does each new picture add to the last one? Then: look at how many dots were added between pictures 4 and 5. Then: add one more row, layer or ring in the same way and count. Last, the new dots are shown in colour and counted, and a similar picture follows. Through doing, the student learns that every number sequence can be drawn, that triangular, square and cube numbers get their names from the shapes their dots make, and that the next picture comes from following the same rule.
+
+(tool id M2.S6.T6.C19.2D1, concept M2.S6.T6.C19, topic: Dot Pictures of Number Sequences)
+
+---
+
+Tool Name: Odd Number L-Shape Builder
+
+Tool Description:
+
+The student faces a square grid of faint dots with one corner dot lit, like an empty tray waiting to be filled. A Wrap Next L button sits below the grid, a size chooser offers grids from 4 by 4 up to 10 by 10, and a running sum under the grid starts at 1.
+
+Before each press, the student predicts what the sum will be after the next layer, so the number is a guess that the picture then tests. Each press wraps an L-shape around the lit corner in a new colour: first 3 dots, then 5, then 7, every L having two more dots than the one before. The running sum reads 1, then 1 + 3 = 4, then 1 + 3 + 5 = 9, and the lit part is always a complete square. The student can also place the dots of an L by hand along the two open edges. An L with the wrong number of dots does not fit, and the gap or the overlap is shown. The sums 4, 9, 16 swing between even and odd, so the student sees that odd or even does not decide the answer, the grid does.
+
+The six cards ask for 1 + 3 + 5 (9), 1 + 3 + 5 + 7 (16), the first 6 odd numbers (36), the first 8 (64), the first 10 (100, filling the 10 by 10 grid) and the first 100, by imagining the grid (10000). Because the grid stops at 10 by 10, the last card asks the student to carry on the same wrapping in the mind: the side is the number of layers, so 100 layers make 100 times 100. A wrong sum shows the side length of the grid beside the count of layers. A solved card writes the sum as the grid side times itself.
+
+Hints go in order: how many layers have been wrapped so far? Then: count the layers, since that is also the side of the square. Then: multiply the side by itself. Last, the grid is shown with its side counted, and a similar sum follows. Through doing, the student learns why adding the first n odd numbers gives n times n, and sees that the same picture can be made for a square of any size, so the pattern goes on forever.
+
+(tool id M2.S10.T10.C35.2D1, concept M2.S10.T10.C35, topic: Adding Odd Numbers Gives Squares)
+
+---
+
+Tool Name: Diamond Dot Builder
+
+Tool Description:
+
+A diamond of dots glows in the middle of the screen: one dot at the top, then rows of 2, 3 and more, and back down to a single dot at the bottom. Beside it a stepper sets n from 1 to 10, a row-by-row sum is written next to the diamond, and a Show Grid button waits underneath.
+
+The student predicts the total before touching Show Grid. With n set to 3 the rows read 1, 2, 3, 2, 1 and the sum beside the diamond grows as 1 + 2 + 3 + 2 + 1. The student can also build a diamond row by row, tapping rows in the order 1, 2, up to n and back down. A diamond with a missing row is marked, and the sum shows which row was left out. Pressing Show Grid tilts the diamond a quarter turn, and its rows turn into the diagonals of a square grid with n dots on each side. The student then types the total.
+
+The six cards are 1 + 2 + 1 (4), 1 + 2 + 3 + 2 + 1 (9), 1 + 2 + 3 + 4 + 3 + 2 + 1 (16), up to 7 and back down (49), up to 10 and back down (100), and up to 100 and back down, by imagining (10000). For the last card the stepper stops at 10, so the student carries the picture in the mind: the middle row is 100, the grid is 100 by 100. A wrong total, such as one that doubles the up-sum, shows the grid side n beside the total. A solved card shows the diamond tilted into its n by n grid.
+
+The hints go in order: how many dots are in the middle row? Then: the middle row is n, and the grid is n by n. Then: multiply n by itself. Last, the diamond is tilted into the grid and counted, and a similar sum follows. Through doing, the student learns that adding the counting numbers up to n and back down always gives n times n, because the diamond is an n by n grid seen along its diagonals, and that this is a second picture-reason for square numbers.
+
+(tool id M2.S13.T13.C48.2D1, concept M2.S13.T13.C48, topic: Adding Up and Down Gives Squares)
+
+---
+
+Tool Name: Sequence Relations Lab
+
+Tool Description:
+
+Two long strips of boxes lie one above the other on a lab bench. The upper strip is the source and the lower strip is the result, which starts empty. A Source picker offers the all 1s sequence, the counting numbers, the triangular numbers, the powers of 2 and the hexagonal numbers. An Operation picker offers running total, add neighbours, and times 6 plus 1. A Name It box and an Apply button complete the bench.
+
+The student chooses a source and an operation and first predicts the first few terms of the result. Pressing Apply fills the lower strip term by term, with a bracket showing which source terms made each result: for a running total, a bracket from the first box up to the current one; for add neighbours, a bracket over each pair. The student then names the sequence that appears, using the names of Table 1 (counting numbers, odd, square, cube, triangular and so on). A result whose first term alone matches a sequence is not accepted, and the tool shows the next terms to compare. A wrong name puts the result strip beside Table 1 so the student can match it, and a solved card shows the first five terms of both strips.
+
+The six cards are: all 1s with a running total (1, 2, 3, 4, 5, the counting numbers); the counting numbers with a running total (1, 3, 6, 10, 15, the triangular numbers); the triangular numbers with add neighbours (4, 9, 16, 25, the squares); the powers of 2 with a running total, then a plus 1 on each term (1, 3, 7, 15, 31 becomes 2, 4, 8, 16, 32, the powers of 2 again); the triangular numbers with times 6 plus 1 (7, 19, 37, 61, which line up with the hexagonal numbers 1, 7, 19, 37, 61 after the first); and the hexagonal numbers with a running total (1, 8, 27, 64, 125, the cubes).
+
+The hints go in order: what does the operation do to each term? Then: compare the result strip with the sequences in Table 1. Then: check the first five terms of the result against one sequence. Last, the result is lined up against the matching sequence, and a similar relation follows. Through doing, the student learns that a running total or a sum of neighbours makes a new sequence, that different sources give different results, and that matching a few terms is a check that a picture or a reason must still explain.
+
+(tool id M2.S15.T15.C55.2D1, concept M2.S15.T15.C55, topic: More Relations Among Sequences)
+
+---
+
+Tool Name: Next Shape Drawer
+
+Tool Description:
+
+The student starts at a sequence picker listing five shape sequences: regular polygons, complete graphs, stacked squares, stacked triangles and the Koch snowflake. Choosing one shows its shapes so far in a row, with an empty drawing board waiting for the next one. Four buttons, Add Side, Add Point, Add Row and Add Bump, and a Check button sit below the board.
+
+Before drawing, the student predicts the rule by looking at what changed between the last two shapes. Add Side turns a regular polygon into one with one more side, all sides equal. Add Point drops a new point on the board and the student joins it to every point already there, as a complete graph needs. Add Row adds a row and a column to a stack of squares, or a new bottom row of little triangles to a stack of triangles. Add Bump replaces a straight segment of the snowflake by a speed bump. Check compares the drawing with the rule, and a shape that breaks the rule is marked where it differs from the previous one. After Check the student writes the rule in one short sentence. A wrong rule is shown next to the last two shapes so the student can compare.
+
+The six cards are the pentagon in the regular polygons, the shape after K4 in the complete graphs (K5, with its new point joined to all four others), the next stack of squares (4 by 4), the next stack of triangles (5 rows), the next stage of the snowflake (every segment gets a speed bump) and the shape after the decagon (11 sides). On the snowflake the new segments soon become tiny, and the tool points out that some next shapes are very hard to draw by hand. A solved card lists the change from one shape to the next.
+
+Hints go in order: what changed between the third and the fourth shape? Then: describe the change in one short sentence, then repeat it. Then: use the button that matches the change and draw one step. Last, the next shape is drawn and the rule written, and a similar sequence follows. Through doing, the student learns that every shape sequence has a rule for going from one shape to the next, that the snowflake replaces segments instead of adding on, and that a rule can be clear even when the next shape is hard to draw.
+
+(tool id M3.S17.T17.C72.2D1, concept M3.S17.T17.C72, topic: Shape Sequences)
+
+---
+
+Tool Name: Shape Count Table
+
+Tool Description:
+
+A table fills the middle of the screen with one row for each shape of a sequence and an empty count column beside it. Above the table is a Part picker (sides, corners, lines, little squares, little triangles, segments), and below it a Fill In button and a Name It box. The shapes sit in a column at the left of the table, so every row has its own shape in view.
+
+The student picks a part and predicts what the counts will do. Tapping a shape lights up the chosen part, for example every side in colour, and a counter ticks as the student taps. The student fills the count into that shape's row. A count that skips a shape is marked on its table row. Once a few rows are filled, the student reads the jumps between the counts and then names the number sequence in the Name It box. A wrong name puts the counts beside Table 1 so the student can compare, and a solved card shows how each count comes from the one before.
+
+The six cards are: regular polygons, sides (3, 4, 5, 6, 7, the counting numbers from 3); regular polygons, corners (3, 4, 5, 6, 7, the same, so sides and corners give one sequence); complete graphs, lines (1, 3, 6, 10, 15, the triangular numbers); stacked squares, little squares (1, 4, 9, 16, 25, the squares); stacked triangles, with rows of 1, 3, 5, 7, 9 little triangles (1, 4, 9, 16, 25, the squares again); and the Koch snowflake, segments (3, 12, 48, 192, 768, which is 3 times the powers of 4).
+
+Hints go in order: which part of the shape are you counting? Then: fill in the first few rows and look at the jumps. Then: compare the counts with the sequences in Table 1. Last, the counts are matched with a sequence and the reason is shown, and a similar table follows. Through doing, the student learns that counting a part of each shape in a sequence gives a number sequence, that different shape sequences can lead to the same number sequence, and that shapes and numbers explain each other.
+
+(tool id M3.S19.T19.C79.2D1, concept M3.S19.T19.C79, topic: Shape Sequences Hide Number Sequences)
