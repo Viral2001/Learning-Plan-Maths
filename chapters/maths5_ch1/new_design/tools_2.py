@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Tool specs for T7 (Tool 4, digit_swap) and T9 (Tool 5, rounding_line). Specs only; the tool pages are built
-later. Phase 1 recalls the video idea, Phase 2 is play, Phase 3 is the book's own question with its own values."""
+later. Each tool is made from its concept description: the idea, the screen, what the student does, the practice cards (practice values the plan adds, and the book's own questions with their own wording and values), feedback and hints."""
 from topics_common import T
 
 TOOLS = {
@@ -18,22 +18,22 @@ TOOLS = {
         "selected coach glows and shows 1 or 2), Swap (the two coaches glide past each other), Undo, Reset, "
         "Check, Hint, Back and Next in the same place on every card, and a row of progress dots, one for each of "
         "the 6 cards.",
-        ["Phase 1, Recall and get ready: the train shows 6,142 with the place name under each coach; before any "
+        ["The train shows 6,142 with the place name under each coach; before any "
          "swap the student predicts whether swapping the first two coaches will make the number bigger, smaller or "
          "the same, and then the swap happens.",
-         "Phase 2, Play and apply: the student selects two coaches, presses Swap, reads the Before and After "
+         "The student selects two coaches, presses Swap, reads the Before and After "
          "cards, and chooses swaps to make a number bigger, smaller, unchanged, the biggest or the smallest, or to "
          "land in a given range.",
-         "Phase 3, Challenge: the book's digit swap question with the numbers 1,478, 10,593 and 48,247, exactly as "
+         "The book's digit swap question with the numbers 1,478, 10,593 and 48,247, exactly as "
          "the book gives it, shown as a train for each number."],
-        ["Play card 1: the train shows 2,614. Swap the coaches 2 and 6 and compare the new number with 2,614. "
+        ["Card 1: the train shows 2,614. Swap the coaches 2 and 6 and compare the new number with 2,614. "
          "Answer: 6,214, which is bigger, because 6,214 − 2,614 = 3,600.",
-         "Play card 2: the train shows 4,552. Swap the two coaches that hold the digit 5, then swap the coach 4 "
+         "Card 2: the train shows 4,552. Swap the two coaches that hold the digit 5, then swap the coach 4 "
          "with the first coach 5. Answer: the first swap leaves 4,552 as it was, because the two digits are the "
          "same; the second swap gives 5,452, which is bigger.",
-         "Play card 3: the train shows 36,172. Make the biggest number you can with one swap, then the smallest. "
+         "Card 3: the train shows 36,172. Make the biggest number you can with one swap, then the smallest. "
          "Answer: biggest 76,132 (swap 3 and 7); smallest 16,372 (swap 3 and 1).",
-         "Play card 4: the train shows 52,430. Swap two coaches to make a number between 25,000 and 30,000. "
+         "Card 4: the train shows 52,430. Swap two coaches to make a number between 25,000 and 30,000. "
          "Answer: 25,430 (swap 5 and 2).",
          "Challenge card 1: (a) In the number 1,478, interchanging the digits 7 and 4 gives 1,748. Now, "
          "interchange any two digits in the number 1,478 to make a number that is larger than 5,500. (b) "
@@ -78,26 +78,26 @@ TOOLS = {
         "Back and Next in the same place on every card, and progress dots, one for each of the 7 cards. Only one "
         "road is shown at a time. Every target is nearer to one carrot than to the other, so no card ever puts the "
         "rabbit on the halfway milestone.",
-        ["Phase 1, Recall and get ready: the rabbit stands on a short tens road between two carrots with the "
+        ["The rabbit stands on a short tens road between two carrots with the "
          "halfway milestone lit; the student points to the carrot that looks nearer, and then the jump counts "
          "appear to confirm it.",
-         "Phase 2, Play and apply: the student picks Tens, Hundreds or Thousands, drags the rabbit to the target "
+         "The student picks Tens, Hundreds or Thousands, drags the rabbit to the target "
          "number, reads the jumps to the two carrots, taps the nearer carrot, and then repeats on all three roads "
          "for one number.",
-         "Phase 3, Challenge: the book's rabbit at 2,346 on the tens, hundreds and thousands roads with its "
+         "The book's rabbit at 2,346 on the tens, hundreds and thousands roads with its "
          "blanks to fill, then the book's table of nearest tens, hundreds and thousands for 3,176, 4,017, 5,789 "
          "and 8,203."],
-        ["Play card 1, nearest ten: the rabbit is at 7,863 and the carrots are at 7,860 and 7,870. Place the "
+        ["Card 1, nearest ten: the rabbit is at 7,863 and the carrots are at 7,860 and 7,870. Place the "
          "rabbit, read the jumps and choose the nearer carrot. Answer: 7,860, 3 jumps (the other carrot needs 7 "
          "jumps).",
-         "Play card 2, nearest ten: the rabbit is at 3,298 and the carrots are at 3,290 and 3,300. Answer: 3,300, "
+         "Card 2, nearest ten: the rabbit is at 3,298 and the carrots are at 3,290 and 3,300. Answer: 3,300, "
          "2 jumps (the other carrot needs 8 jumps).",
-         "Play card 3, nearest hundred: the rabbit is at 4,618 and the carrots are at 4,600 and 4,700. Answer: "
+         "Card 3, nearest hundred: the rabbit is at 4,618 and the carrots are at 4,600 and 4,700. Answer: "
          "4,600, 18 jumps (the other carrot needs 82 jumps).",
-         "Play card 4, three roads for one number: the rabbit is at 8,327. Switch between the Tens, Hundreds and "
+         "Card 4, three roads for one number: the rabbit is at 8,327. Switch between the Tens, Hundreds and "
          "Thousands roads and choose the nearer carrot on each. Answer: tens 8,330 (3 jumps), hundreds 8,300 (27 "
          "jumps), thousands 8,000 (327 jumps).",
-         "Play card 5, one carrot for two numbers: place the rabbit at 6,298 and then at 6,303 on the Tens road. "
+         "Card 5, one carrot for two numbers: place the rabbit at 6,298 and then at 6,303 on the Tens road. "
          "Answer: both go to 6,300 (2 jumps and 3 jumps), so they have the same nearest ten.",
          "Challenge card 1: The rabbit is at 2,346. Its food has been kept at its neighbouring tens. On which "
          "tens should the rabbit go to get its food, with the least number of steps? Then do the same for the "

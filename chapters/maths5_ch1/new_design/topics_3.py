@@ -205,7 +205,7 @@ TOPICS.append(TOPIC(
           ["Count one small part, then multiply by the number of parts.",
            "A 4-digit count is from 1,000 to 9,999. A 5-digit count is from 10,000 to 99,999.",
            "These are estimates, so your answer may differ."],
-          items=[FIO("ar.book", "Finding Large Numbers Around Us, Example (words in a book)",
+          items=[FIO("ar.book", "Example 1: words in a book",
                      "A book has around 200 pages, and each page has about 50 words. About how many words does the "
                      "book have in all?",
                      ["The book has about 200 pages.",
@@ -219,7 +219,7 @@ TOPICS.append(TOPIC(
                               "page.",
                      s_figure="Two stacks of 100 pages, each stack holding 5,000 words, joined to make 10,000 "
                               "words."),
-                 FIO("ar.mathsbook", "Finding Large Numbers Around Us, Try It (maths book)",
+                 FIO("ar.mathsbook", "Finding Large Numbers Around Us: your maths book",
                      "Find something in the maths book whose count is a 4-digit number.",
                      ["Pick a thing to count: the words in one chapter of the maths book.",
                       "Estimate one part: a page has about 150 words.",
@@ -231,7 +231,7 @@ TOPICS.append(TOPIC(
                      "Sample answer: the words in one chapter, about 2,400 (16 pages with about 150 words each), a "
                      "4-digit number. Your answer may differ.",
                      kind="prompt"),
-                 FIO("ar.classroom", "Finding Large Numbers Around Us, Try It (classroom)",
+                 FIO("ar.classroom", "Finding Large Numbers Around Us: your classroom",
                      "Find something in the classroom whose count is a (i) 4-digit number (ii) 5-digit number.",
                      ["(i) Count the pages in one notebook from each child. Suppose the class has 40 children and a "
                       "notebook has about 100 pages.",
@@ -243,7 +243,7 @@ TOPICS.append(TOPIC(
                      "Sample answer: (i) pages in 40 notebooks, about 4,000, a 4-digit number; (ii) pages in 200 "
                      "notebooks, about 20,000, a 5-digit number. Your answer may differ.",
                      kind="prompt"),
-                 FIO("ar.tree_village", "Finding Large Numbers Around Us, Try It (tree, village or town)",
+                 FIO("ar.tree_village", "Finding Large Numbers Around Us: a tree, a village or a town",
                      "List some quantities whose count is a 4-digit or a 5-digit number in the context of (i) a tree "
                      "(ii) your village/town/city, or any other place of your choice.",
                      ["(i) A tree: count the leaves. Suppose a twig has 30 leaves and the tree has 90 twigs.",
@@ -255,8 +255,8 @@ TOPICS.append(TOPIC(
                       "30 streets have 200 × 30 = 6,000 windows, a 4-digit number.",
                       "100 streets have 200 × 100 = 20,000 windows, a 5-digit number.",
                       "Check the digits: 2,700 and 6,000 have 4 digits; 27,000 and 20,000 have 5 digits."],
-                     "Sample answer: (i) leaves on a tree, about 2,700 (4-digit), and in a garden of 10 trees, about "
-                     "27,000 (5-digit); (ii) windows in a town, about 6,000 (4-digit) or 20,000 (5-digit). Your "
-                     "answer may differ.",
+                     "Sample answer: (i) about 2,700 leaves on a tree, a 4-digit number, and about 27,000 on 10 "
+                     "trees, a 5-digit number; (ii) about 6,000 windows in a town, a 4-digit number. Your answer may "
+                     "differ.",
                      kind="prompt")])],
     key_terms=["estimate", "count", "digits"]))

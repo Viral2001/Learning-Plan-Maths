@@ -43,9 +43,7 @@
 - Strong central visual; active objects large, readable, easy to select.
 - Short, age-appropriate instructions; show only the information needed for the current step.
 - Immediate, specific feedback, hints, retry and reset support. Students always know what to do next.
-- Phase 1: Recall & Get Ready. Reconnect with the video concept through a short visual prompt; do not repeat the full video.
-- Phase 2: Play & Apply. Students actively manipulate, arrange, compare, construct, experiment or solve.
-- Phase 3: NCERT Challenge. Use the exact relevant textbook question, figure, activity or puzzle without changing its values, wording or conditions.
+- A tool is made from its concept description: the idea, the screen, what the student does, the practice cards, feedback and hints. Students actively manipulate, arrange, compare, construct, experiment or solve; a card that quotes the textbook uses its exact question, figure, activity or puzzle without changing its values, wording or conditions.
 - Do not invent transport facts or numerical datasets. Every displayed number must come from the textbook or be clearly identified as a non-factual practice value used only where permitted.
 - Verify the exact NCERT edition and page before implementing question content, diagrams, rounding rules or puzzle conditions.
 

@@ -499,7 +499,7 @@ TOPICS.append(TOPIC(
            "Count the jumps to each mark. The nearer mark has fewer jumps.",
            "Check the tens, hundreds and thousands lines one by one. The nearest mark can be below or above the "
            "number."],
-          items=[FIO("rab.tens", "Nearest Numbers (rabbit), the neighbouring tens",
+          items=[FIO("rab.tens", "Example 1: the rabbit and the neighbouring tens",
                      "A rabbit is hungry. The rabbit is at 2,346. Its food has been kept at its neighbouring tens, "
                      "2,340 and 2,350. On which tens should the rabbit go to get its food, with the least number of "
                      "steps?",
@@ -516,7 +516,7 @@ TOPICS.append(TOPIC(
                               "that mark at 2,346.",
                      s_figure="The same road with an arrow of 4 jumps from the rabbit to the carrot at 2,350 and an "
                               "arrow of 6 jumps to the carrot at 2,340."),
-                 FIO("rab.hundreds", "Nearest Numbers (rabbit), the neighbouring hundreds",
+                 FIO("rab.hundreds", "Nearest Numbers: the neighbouring hundreds",
                      "The rabbit is at 2,346. Its food has been kept at its neighbouring hundreds, 2,300 and 2,400. "
                      "Which of the two hundreds should the rabbit go to? ___ is the nearest hundred of 2,346. It "
                      "will need ___ jumps to reach ___.",
@@ -532,7 +532,7 @@ TOPICS.append(TOPIC(
                               "that mark at 2,346.",
                      s_figure="The same road with an arrow of 46 jumps from the rabbit to the carrot at 2,300 and an "
                               "arrow of 54 jumps to the carrot at 2,400."),
-                 FIO("rab.thousands", "Nearest Numbers (rabbit), the neighbouring thousands",
+                 FIO("rab.thousands", "Nearest Numbers: the neighbouring thousands",
                      "The rabbit is at 2,346. Its food has been kept at its neighbouring thousands, 2,000 and 3,000. "
                      "Which number should the rabbit go to? ___ is the nearest thousand of 2,346. It will need ___ "
                      "jumps to reach ___.",
@@ -548,7 +548,7 @@ TOPICS.append(TOPIC(
                               "road at 2,346.",
                      s_figure="The same road with an arrow of 346 jumps from the rabbit to the carrot at 2,000 and "
                               "an arrow of 654 jumps to the carrot at 3,000."),
-                 FIO("rab.table", "Nearest Numbers (table), tens, hundreds and thousands",
+                 FIO("rab.table", "Nearest Numbers: the table of tens, hundreds and thousands",
                      "Fill in the boxes appropriately. Find the nearest tens, nearest hundreds and nearest "
                      "thousands of 3,176, 4,017, 5,789 and 8,203.",
                      ["3,176, tens: 3,176 − 3,170 = 6 jumps and 3,180 − 3,176 = 4 jumps, so 3,180.",
@@ -569,7 +569,7 @@ TOPICS.append(TOPIC(
                               "Thousands, four rows 3,176, 4,017, 5,789 and 8,203, and an empty box in every other "
                               "column.",
                      s_figure="The same table with every box filled."),
-                 FIO("LUT.Q1", "Let Us Think (nearest numbers), Q1 Vijay and Suma",
+                 FIO("LUT.Q1", "Let Us Think: Q1 Vijay and Suma",
                      "Vijay rounded off a number to the nearest hundred. Suma rounded off the same number to the "
                      "nearest thousand. Both got the same result. Circle the numbers they might have used. 7,126, "
                      "7,835, 7,030, 6,999.",
@@ -585,7 +585,7 @@ TOPICS.append(TOPIC(
                       "Check: 7,030 is 30 above 7,000 and 6,999 is 1 below 7,000, so both stand right next to 7,000."],
                      "7,030 and 6,999 (both give 7,000)",
                      kind="exercise"),
-                 FIO("LUT.Q2", "Let Us Think (nearest numbers), Q2 same nearest ten, hundred, thousand",
+                 FIO("LUT.Q2", "Let Us Think: Q2 same nearest ten, hundred or thousand",
                      "Think and write two numbers that have the same (a) Nearest ten. (b) Nearest hundred. (c) "
                      "Nearest thousand. For example, 19 and 21 have the same nearest ten, that is, 20.",
                      ["(a) Pick the ten 3,140. 3,138 is 2 jumps below it and 3,142 is 2 jumps above it.",
@@ -602,7 +602,7 @@ TOPICS.append(TOPIC(
                      "Sample answer: (a) 3,138 and 3,142; (b) 4,480 and 4,520; (c) 5,900 and 6,200. Your answer may "
                      "differ.",
                      kind="exercise"),
-                 FIO("LUT.Q3", "Let Us Think (nearest numbers), Q3 same in two or three places",
+                 FIO("LUT.Q3", "Let Us Think: Q3 same in two or three places",
                      "Think and write the numbers that have the same (a) Nearest ten and nearest hundred. (b) "
                      "Nearest hundred and nearest thousand. (c) Nearest ten, hundred and thousand.",
                      ["(a) Pick the hundred 5,300 and numbers right next to it: 5,297 is 3 jumps below it and 5,302 "

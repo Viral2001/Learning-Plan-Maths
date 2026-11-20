@@ -56,6 +56,11 @@ CHAPTER_APPROACH = {
     ],
 }
 
+# {module_id: strand letter}: the subject strand each module belongs to (core/qt.py builds every objective's
+# strand / legacy_id from it). CBSE maths catalog: N Number, A Algebra, G Geometry, M Measurement, D Data,
+# S Statistics and Probability. All three modules of this chapter are about numbers.
+MODULE_STRANDS = {"M1": "N", "M2": "N", "M3": "N"}
+
 # every book item, with its kind. Home concepts are listed in DESIGN.md section 3.
 NCERT_ITEMS = [
     # chapter opening

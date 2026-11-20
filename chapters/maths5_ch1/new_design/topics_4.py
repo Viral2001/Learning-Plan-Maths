@@ -129,7 +129,7 @@ TOPICS.append(TOPIC(
            "player's move.",
            "In Mira's puzzle, write every step. The differences are in the table of 9, and the end is 9."],
           items=[
-              FIO("pm.river", "Pastime Mathematics (river crossing), Q1",
+              FIO("pm.river", "Pastime Mathematics: river crossing",
                   "A boatman wants to cross a river in a boat. He has to take a lion, a sheep, and a bundle of grass with "
                   "him. He can take one of them at a time. If the sheep and grass are left on the shore, the sheep will "
                   "eat the grass. And, if the sheep and lion are left on the shore, the lion will eat the sheep. How can "
@@ -161,7 +161,7 @@ TOPICS.append(TOPIC(
                            "boat with the boatman on the water, and an empty right bank.",
                   s_figure="Seven small pictures of the river, one after each trip, showing who stands on the left bank "
                            "and who on the right bank, with the boat on the side where the trip ends."),
-              FIO("pm.pebbles", "Pastime Mathematics (pile of pebbles), Q2",
+              FIO("pm.pebbles", "Pastime Mathematics: pile of pebbles",
                   "There are two piles of pebbles. Each pile contains 7 pebbles. Each player can pick as many pebbles "
                   "they want from either of the piles. The player who picks the last pebble wins. Try this game with "
                   "your friends. Now, how do you play so that you win? To find a winning strategy, try playing with 1 "
@@ -185,7 +185,7 @@ TOPICS.append(TOPIC(
                   q_figure="Two piles of pebbles side by side, each pile with 7 pebbles.",
                   s_figure="The two piles after each move of a sample game: 7 and 7, 4 and 7, 4 and 4, 4 and 3, 3 and 3, "
                            "0 and 3, 0 and 0."),
-              FIO("pm.mira_process", "Pastime Mathematics (Mira's puzzle), Q3 the process",
+              FIO("pm.mira_process", "Example 1: Mira's puzzle with 3 and 7",
                   "(a) Take any two different digits, for example 3 and 7. (b) Make two 2-digit numbers using them: 37 "
                   "and 73. (c) Subtract the smaller number from the bigger number: 73 − 37 = 36. Now, use the two digits "
                   "in the difference and repeat steps (b) and (c). Continue this process until you get a 1-digit number. "
@@ -205,7 +205,7 @@ TOPICS.append(TOPIC(
                            "the numbers 37 and 73, and the first subtraction 73 − 37 = 36.",
                   s_figure="The four subtractions of the whole process written in columns and joined by arrows: 73 − 37 = "
                            "36, 63 − 36 = 27, 72 − 27 = 45, 54 − 45 = 9."),
-              FIO("pm.mira_explore", "Pastime Mathematics (Mira's puzzle), Q3 explore (1) to (4)",
+              FIO("pm.mira_explore", "Pastime Mathematics: Mira's puzzle, explore (1) to (4)",
                   "How did Mira know what the 1-digit number in the end would be? Let us explore. (1) Observe the "
                   "differences you get in each step of the process for the digits 3 and 7: 36, 27, 45 and 9. Do you "
                   "notice anything in common? (2) Try the puzzle using any other pair of digits. What is common to these "
@@ -231,7 +231,7 @@ TOPICS.append(TOPIC(
                   kind="prompt",
                   q_figure="Mira's process for the digits 3 and 7 in four columns joined by arrows: 73 − 37 = 36, 63 − 36 "
                            "= 27, 72 − 27 = 45, 54 − 45 = 9."),
-              FIO("pm.mira_table", "Pastime Mathematics (Mira's puzzle), Q3 (5) the table",
+              FIO("pm.mira_table", "Pastime Mathematics: Mira's puzzle, the table",
                   "Mira found an interesting relationship between the two digits and the difference obtained. Can you see "
                   "it in the table that Mira made? Digits 3, 7: 7 − 3 = 4 and 73 − 37 = 36. Digits 1, 9: 9 − 1 = 8 and "
                   "91 − 19 = 72. Digits 2, 8: 8 − 2 = 6 and 82 − 28 = 54. Digits 4, 5: 5 − 4 = 1 and 54 − 45 = 9. Extend "
@@ -256,7 +256,7 @@ TOPICS.append(TOPIC(
                   s_figure="Mira's table with the four new rows filled: 1, 3 with 3 − 1 = 2 and 31 − 13 = 18; 1, 4 with "
                            "4 − 1 = 3 and 41 − 14 = 27; 1, 6 with 6 − 1 = 5 and 61 − 16 = 45; 1, 8 with 8 − 1 = 7 and "
                            "81 − 18 = 63."),
-              FIO("pm.mira_asks", "Pastime Mathematics (Mira's puzzle), Q3 three questions",
+              FIO("pm.mira_asks", "Pastime Mathematics: Mira's puzzle, three questions",
                   "List the numbers that give a 1-digit number in the third subtraction. Identify pairs of digits that "
                   "lead to the 1-digit number after the maximum possible number of subtractions. Compare your answers "
                   "with your friends.",
@@ -281,9 +281,8 @@ TOPICS.append(TOPIC(
                    "and 8, 7 and 9.",
                    "Check with 2 and 4: 42 − 24 = 18, 81 − 18 = 63, 63 − 36 = 27, 72 − 27 = 45, 54 − 45 = 9. That is 5 "
                    "subtractions."],
-                  "Third subtraction: digits that differ by 3 (1 and 4, 2 and 5, 3 and 6, 4 and 7, 5 and 8, 6 and 9) or "
-                  "by 8 (1 and 9). Most subtractions, 5: digits that differ by 2 (1 and 3, 2 and 4, 3 and 5, 4 and 6, "
-                  "5 and 7, 6 and 8, 7 and 9)",
+                  "Third subtraction: digits that differ by 3 or by 8. Most subtractions, 5: digits that differ by 2. "
+                  "The pairs are in the steps",
                   kind="prompt")],
           misconceptions=["M_RIVER_BOTH", "M_DIGIT_DIFF"]),
      ],
@@ -337,7 +336,7 @@ TOPICS.append(TOPIC(
            "The horses in the stable = 4 × 5 − the horses in the corner stalls.",
            "Count the horses one by one to check the total."],
           items=[
-              FIO("kh.mistake", "King's Horses (the count), Q1",
+              FIO("kh.mistake", "King's Horses: the count",
                   "The king counted 5 horses along each side. \"We have 5 horses along each side and there are 4 sides. So "
                   "there are a total of 20 horses, your majesty,\" the caretaker explained. But wait, were there really "
                   "20 horses in the stable? Count the horses one by one and check! What was the mistake in the "
@@ -360,7 +359,7 @@ TOPICS.append(TOPIC(
                            "on the right have 2 and 3; the bottom row has 0, 2, 3 and 0.",
                   s_figure="The same stable with each side marked by a bracket showing 5, the top left corner stall "
                            "circled, and the total 19 written below."),
-              FIO("kh.eighteen", "King's Horses (18 horses), Q2",
+              FIO("kh.eighteen", "King's Horses: 18 horses",
                   "The following night, the thief stole another horse from the stable. Now, only 18 horses remained. The "
                   "caretaker once again cleverly arranged the 18 horses, so that there were 5 horses on each side of the "
                   "square stable. How do you think he was able to do it? Arrange the 18 horses in the stable with 5 on "
@@ -386,7 +385,7 @@ TOPICS.append(TOPIC(
                   s_figure="The stable with 1 horse in the top left corner stall, 1 horse in the bottom right corner "
                            "stall, 2 horses in each of the 8 middle stalls, each side marked 5 and the total 18 written "
                            "below."),
-              FIO("kh.more", "King's Horses (how many more), Q3",
+              FIO("kh.more", "King's Horses: how many more",
                   "How many more horses can the thief steal before the king notices something is wrong? Try making the "
                   "arrangements yourself.",
                   ["Counting 5 along each of the 4 sides gives 4 × 5 = 20 counts.",

@@ -29,32 +29,32 @@ TOOLS = {
         "number and the difference), Use these digits (feeds the two digits of the difference into the slots for the "
         "next round), Undo, Reset. Read-outs: a growing list of every round, and a stamp when one digit is left. "
         "On every scene: Hint, Back and Next in the same place, progress dots and a Restart button.",
-        ["Phase 1, Recall and get ready: each door card shows one small picture and one question from the videos, which "
+        ["Each door card shows one small picture and one question from the videos, which "
          "pair can be left alone on a bank, what stays the same after the second player's move, and what is common in "
          "the differences. The student taps an answer to open the door.",
-         "Phase 2, Play and apply: the student moves the lion, sheep and grass into the boat and across the river and "
+         "The student moves the lion, sheep and grass into the boat and across the river and "
          "watches the Safe or Not safe banner, plays small piles of pebbles against the computer, and runs Mira's steps "
          "on digits of their own choice while reading each difference.",
-         "Phase 3, Challenge: the student solves each puzzle exactly as the book gives it: the river crossing with the "
+         "The student solves each puzzle exactly as the book gives it: the river crossing with the "
          "lion, sheep and grass in the fewest trips, the two piles of 7 pebbles played so that they win, and Mira's "
          "process with the digits 3 and 7, then digits whose numbers differ by 27."],
-        ["Phase 2, river: tick the pairs that can be left alone on a bank: lion and sheep, sheep and grass, lion and "
+        ["River: tick the pairs that can be left alone on a bank: lion and sheep, sheep and grass, lion and "
          "grass. Answer: only the lion and the grass.",
-         "Phase 2, river: make the first crossing so that nothing is eaten. Answer: take the sheep across, because the "
+         "River: make the first crossing so that nothing is eaten. Answer: take the sheep across, because the "
          "lion and the grass can stay together.",
-         "Phase 2, pebbles: choose 2 pebbles in each pile and let the computer play first. Whatever the computer takes "
+         "Pebbles: choose 2 pebbles in each pile and let the computer play first. Whatever the computer takes "
          "from one pile, take the same number from the other pile. Answer: you take the last pebble and win.",
-         "Phase 2, digits: choose the digits 1 and 6, then press Make numbers, Subtract and Use these digits until one "
+         "Digits: choose the digits 1 and 6, then press Make numbers, Subtract and Use these digits until one "
          "digit is left. Answer: 61 − 16 = 45, then 54 − 45 = 9.",
-         "Phase 3, river: How can the boatman take the lion, sheep, and grass across the river? Help him so that he can "
+         "River: How can the boatman take the lion, sheep, and grass across the river? Help him so that he can "
          "ferry the lion, sheep, and grass across the river safely, and in the minimum number of trips. Answer: 7 trips: "
          "take the sheep across, go back alone, take the lion across, bring the sheep back, take the grass across, go "
          "back alone, take the sheep across.",
-         "Phase 3, pebbles: There are two piles of pebbles. Each pile contains 7 pebbles. Each player can pick as many "
+         "Pebbles: There are two piles of pebbles. Each pile contains 7 pebbles. Each player can pick as many "
          "pebbles they want from either of the piles. The player who picks the last pebble wins. Try this game with "
          "your friends. Now, how do you play so that you win? Answer: let the other player go first, and whatever they "
          "take from one pile, take the same number from the other pile. You take the last pebble.",
-         "Phase 3, Mira's puzzle: take any two different digits, make two 2-digit numbers using them, subtract the "
+         "Mira's puzzle: take any two different digits, make two 2-digit numbers using them, subtract the "
          "smaller number from the bigger number, then use the two digits in the difference and repeat until you get a "
          "1-digit number. Start with the digits 3 and 7. Then find different digits such that the difference between "
          "the numbers is 27. Answer: 73 − 37 = 36, 63 − 36 = 27, 72 − 27 = 45, 54 − 45 = 9. Digits that differ by 3 "
@@ -97,29 +97,29 @@ TOOLS = {
         "picture (a practice value, not from the book) shows 12 children in a ring around a square, 4 on each side; "
         "tapping a corner child lights its two sides. On every scene: Back and Next in the same place, progress dots and "
         "a Restart button.",
-        ["Phase 1, Recall and get ready: a small ring of 12 children stands around a square, 4 on each side. The student "
+        ["A small ring of 12 children stands around a square, 4 on each side. The student "
          "taps a corner child to see two sides light up and says why adding the four sides gives more than 12.",
-         "Phase 2, Play and apply: the student places horse tokens in the stalls, watches the four side counters and "
+         "The student places horse tokens in the stalls, watches the four side counters and "
          "the total, copies the caretaker's arrangement from the story, counts the horses one by one, and makes "
          "arrangements with no horse in any corner stall.",
-         "Phase 3, Challenge: the student arranges the 18 horses with 5 on each side, then tries fewer horses and finds "
+         "The student arranges the 18 horses with 5 on each side, then tries fewer horses and finds "
          "how many more horses the thief can steal before the king notices something is wrong."],
-        ["Phase 2, corner stall: put one horse in the top left corner stall and nowhere else. Which side counters change, "
+        ["Corner stall: put one horse in the top left corner stall and nowhere else. Which side counters change, "
          "and what does the total show? Answer: the Top and Left counters both show 1, but the total shows only 1 "
          "horse.",
-         "Phase 2, the caretaker's stable: place the horses as the caretaker did: top row 1, 2, 2, 0; the two middle "
+         "The caretaker's stable: place the horses as the caretaker did: top row 1, 2, 2, 0; the two middle "
          "stalls on the left 1 and 3; the two middle stalls on the right 2 and 3; bottom row 0, 2, 3, 0. Read the four "
          "side counters and the total. Answer: every side shows 5 and the total is 19.",
-         "Phase 2, count one by one: press Count one by one on the caretaker's stable. Answer: 1 + 2 + 2 + 0 + 1 + 3 + "
+         "Count one by one: press Count one by one on the caretaker's stable. Answer: 1 + 2 + 2 + 0 + 1 + 3 + "
          "2 + 3 + 0 + 2 + 3 + 0 = 19 horses, not 20.",
-         "Phase 2, no corner horses: put no horse in any corner stall and make every side show 5. How many horses are "
+         "No corner horses: put no horse in any corner stall and make every side show 5. How many horses are "
          "there? Answer: 20, because no horse is counted twice.",
-         "Phase 3, the 18 horses: The following night, the thief stole another horse from the stable. Now, only 18 horses "
+         "The 18 horses: The following night, the thief stole another horse from the stable. Now, only 18 horses "
          "remained. The caretaker once again cleverly arranged the 18 horses, so that there were 5 horses on each side "
          "of the square stable. How do you think he was able to do it? Arrange the 18 horses in the stable with 5 on "
          "each side. Answer: 1 horse in the top left and 1 horse in the bottom right corner stall, and 2 horses in each "
          "of the 8 middle stalls. Every side shows 5 and 1 + 1 + 8 × 2 = 18. Other arrangements can work too.",
-         "Phase 3, how many more: How many more horses can the thief steal before the king notices something is wrong? "
+         "How many more: How many more horses can the thief steal before the king notices something is wrong? "
          "Try making the arrangements yourself. Answer: the horses = 20 − the horses in the corner stalls. With one "
          "horse in each corner stall there are 16 horses, so 2 more after the 18. Taking more means crowding the corner "
          "stalls, which the king would notice."],

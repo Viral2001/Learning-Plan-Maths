@@ -156,7 +156,7 @@ TOPICS.append(TOPIC(
            "10 thousands make 1 ten thousand: 10,000. TTh is the new column.",
            "A digit's value depends on its place.",
            "A comma helps us read large numbers."],
-          items=[FIO("r.thousands", "Reading and writing large numbers (thousands), the boxes",
+          items=[FIO("r.thousands", "Reading and writing large numbers: counting in thousands",
                      "Let us start with 1,000. What numbers do we get when we keep adding a thousand? Fill the boxes: "
                      "1,000, 2,000, then six empty boxes, then 9,000. What number do we get when we add a thousand to "
                      "9,000? How do we write this number?",
@@ -233,7 +233,7 @@ TOPICS.append(TOPIC(
            "Say the part before the comma and add thousand. Then say the hundreds, tens and ones.",
            "A zero holds a place. Do not say it.",
            "Check by writing the number back from its name."],
-          items=[FIO("r.tok_a", "Token table (large numbers), first two rows",
+          items=[FIO("r.tok_a", "Reading and writing large numbers: token table, first rows",
                      "Fill in the token table. Write the number and write its digits in the TTh, Th, H, T and O "
                      "columns. Row 1: the tokens are one 10,000, three 10s and three 1s, and the number name is Ten "
                      "thousand thirty-three. Row 2: the number is 10,458 and the number name is Ten thousand four "
@@ -251,7 +251,7 @@ TOPICS.append(TOPIC(
                               "tokens and eight 1 tokens with the number 10,458 and the name Ten thousand four "
                               "hundred fifty-eight; the number and digit cells that are not given are empty.",
                      s_figure="The same two rows with the number and every digit cell filled."),
-                 FIO("r.tok_b", "Token table (large numbers), last four rows",
+                 FIO("r.tok_b", "Reading and writing large numbers: token table, last rows",
                      "Fill in the token table. (a) The tokens are one 10,000, one 1,000, two 100s, one 10 and four "
                      "1s, and the digits are TTh 1, Th 1, H 2, T 1, O 4: write the number and its number name. "
                      "(b) The number is 13,520, Thirteen thousand five hundred twenty: write its digits. (c) The "
@@ -287,9 +287,8 @@ TOPICS.append(TOPIC(
                       "26,050: the Hundreds and Ones places are 0: Twenty-six thousand fifty.",
                       "81,200: the Tens and Ones places are 0: Eighty-one thousand two hundred.",
                       "Check one: 26,000 + 50 = 26,050, which is twenty-six thousand fifty."],
-                     "Seven thousand two hundred nine; Ten thousand five hundred ninety-nine; Thirteen thousand five "
-                     "hundred seventy-nine; Forty-five thousand forty-five; Thirty-nine thousand five hundred "
-                     "ninety-three; Fifty thousand five; Twenty-six thousand fifty; Eighty-one thousand two hundred",
+                     "The eight number names are in steps 2 to 9, from Seven thousand two hundred nine to "
+                     "Eighty-one thousand two hundred",
                      q_figure="A two-column table, Number and Number Name, with eight rows that show a number and an "
                               "empty name: 7,209, 10,599, 13,579, 45,045, 39,593, 50,005, 26,050 and 81,200.")],
           misconceptions=["M_ZERO_NAME", "M_COMMA_PLACE"])],

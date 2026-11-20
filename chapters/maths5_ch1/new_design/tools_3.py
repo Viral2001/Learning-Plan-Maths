@@ -31,27 +31,27 @@ TOOLS = {
         "a Check button. (7) Hint, Undo and Reset buttons, a progress strip of dots with one dot for each card, Back "
         "and Next buttons in the same bottom corners on every card, and a Restart button. Only the controls the "
         "current card needs are shown.",
-        ["Phase 1, Recall and get ready: a cycle, a train and a spacecraft wait at the Start flag. Tap each one and "
+        ["A cycle, a train and a spacecraft wait at the Start flag. Tap each one and "
          "read its card: the distance in one hour and how many digits it has.",
-         "Phase 2, Play and apply: tap a vehicle and read its card, find the means whose card holds a given "
+         "Tap a vehicle and read its card, find the means whose card holds a given "
          "distance, set the hours and watch the vehicle hop the same distance each hour while the card shows the "
          "multiplication, and load a group of people into one kind of vehicle to count the vehicles.",
-         "Phase 3, Challenge: the book's own questions, unchanged: the cyclist who covers 15 km in one hour (how far "
+         "The book's own questions, unchanged: the cyclist who covers 15 km in one hour (how far "
          "in 4 hours), and the school of 461 girls and 439 boys with the eight vehicles from the bicycle (2) to the "
          "aeroplane (180)."],
-        ["Card 1 (Phase 2, read): Tap Foot, then Spacecraft. How many digits does the number on each card have? "
+        ["Card 1 (read): Tap Foot, then Spacecraft. How many digits does the number on each card have? "
          "Answer: foot, 3 to 5 km, 1 digit; spacecraft, at least 28,000 km, 5 digits.",
-         "Card 2 (Phase 2, find the means): Practice value: a traveller covers 30 km in one hour. Tap the vehicles "
+         "Card 2 (find the means): Practice value: a traveller covers 30 km in one hour. Tap the vehicles "
          "and find the one whose card holds 30. Answer: the ship, 25 to 45 km, because 25 is less than 30 and 30 is "
          "less than 45; every other card misses 30.",
-         "Card 3 (Phase 2, hours): Pick Horseback and set 3 hours. Fill in both ends of the range for 3 hours, with "
+         "Card 3 (hours): Pick Horseback and set 3 hours. Fill in both ends of the range for 3 hours, with "
          "the same distance every hour (practice). Answer: 10 × 3 = 30 and 15 × 3 = 45, so 30 to 45 km.",
-         "Card 4 (Phase 2, vehicles): Practice value: a group of 120 people. Load them into boats (20 each) and then "
+         "Card 4 (vehicles): Practice value: a group of 120 people. Load them into boats (20 each) and then "
          "into tempo travellers (10 each). How many of each, and which needs fewer? Answer: 120 ÷ 20 = 6 boats and "
          "120 ÷ 10 = 12 tempo travellers; the boat carries more people, so fewer boats are needed.",
-         "Card 5 (Phase 3, the book's question): A cyclist can cover 15 km in one hour. How much distance will she "
+         "Card 5 (the book's question): A cyclist can cover 15 km in one hour. How much distance will she "
          "cover in 4 hours, if she maintains the same speed? Answer: 15 + 15 + 15 + 15 = 60, so 15 × 4 = 60 km.",
-         "Card 6 (Phase 3, the book's question): A school has 461 girls and 439 boys. How many vehicles are needed "
+         "Card 6 (the book's question): A school has 461 girls and 439 boys. How many vehicles are needed "
          "for all of them to go on a trip using the following modes of travel? The numbers in the bracket indicate "
          "the number of people that can travel in one vehicle. (a) Bicycle (2) (b) Autorickshaw (3) (c) Car (4) "
          "(d) Big car (6) (e) Tempo traveller (10) (f) Boat (20) (g) Minibus (25) (h) Aeroplane (180). Answer: "
