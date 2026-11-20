@@ -213,7 +213,9 @@ def check_chain(s):
 
 def find_chains(text):
     """Yield candidate chain strings from text, with the glue rules applied."""
-    text = re.sub(r"(?<=\d),(?=\d{3}(?!\d))", "", text or "")
+    # Indian grouping (lakh / crore: 2,60,000 and 1,10,00,000) is one number too, like the western 260,000 below
+    text = re.sub(r"(?<![\d,])\d{1,2}(?:,\d{2})+,\d{3}(?![\d,])", lambda m: m.group(0).replace(",", ""), text or "")
+    text = re.sub(r"(?<=\d),(?=\d{3}(?!\d))", "", text)
     text = re.sub(r"\.(?=\s)", ".\n", text)   # a sentence-ending period never joins two chains ("= 6. 4 × 5")
     for m in CHAIN.finditer(text):
         raw = m.group(0)

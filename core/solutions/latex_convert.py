@@ -21,7 +21,7 @@ _SUP_DIGITS = "⁰¹²³⁴⁵⁶⁷⁸⁹"
 _MATH_FUNC_WORDS = {"sin", "cos", "tan", "cot", "sec", "csc", "log", "ln", "lim", "gcd", "lcm"}
 _STOPWORDS = {
     "is", "it", "in", "on", "of", "to", "or", "as", "be", "by", "we", "he", "so", "if", "no", "do", "am", "us", "an",
-    "at", "up", "go", "rs",
+    "at", "up", "go", "rs", "my", "me", "oh", "ok",
     "the", "and", "for", "are", "not", "all", "its", "this", "that", "with", "from", "then", "than", "such", "both",
     "let", "has", "have", "can", "will", "each", "every", "find", "answer", "given",
 }
@@ -127,8 +127,16 @@ def _convert_fractions(s):
 
 
 _UNIT_RE = re.compile(
-    r"(?<=[0-9A-Za-z\}])(\s?)((?:sq\.?\s*)?(?:units?|cm2|cm|mm|km|kg|m2|sec|min|hr))\b(?!\w)(?!\s*\\text)"
+    r"(?<=[0-9A-Za-z\}])(\s?)((?:sq\.?\s*)?(?:cm2|cm|mm|km|kg|m2))\b(?!\w)(?!\s*\\text)"
 )
+# "unit(s)", "sec", "min", "hr" are also ordinary English words ("the length of units", "the min of two numbers"),
+# so, unlike cm / mm / km / kg, they are a unit ONLY directly after a number (or the closing } ) of a quantity):
+# after a word the old rule produced "of$\text{ units}$ here" (found on Class 6-8 question text, Nov 2026).
+_WORD_UNIT_RE = re.compile(
+    r"(?<=[0-9\}\)])(\s?)((?:sq\.?\s*)?(?:units?|sec|min|hr|ft|ml|mL|km/h|kmph))\b(?!\w)(?!\s*\\text)"
+)
+# grams: a single letter, so only "<number> g" followed by a space and a word or by punctuation - never "5 g = ...", "2 g + 3"
+_GRAM_RE = re.compile(r"(?<=[0-9])(\s)(g)(?=[\s,.;:)]|$)(?!\s*[=+\-\u2212*/^\u00d7\u00f7<>])(?!\s*\\text)")
 # bare "m" (metres) needs its OWN, much stricter rule, kept separate from the general unit regex
 # above: that regex's lookbehind only requires "preceded by any alnum character", which is fine for
 # multi-letter units (no English word coincidentally ends in "cm" or "mm") but catastrophic for a
@@ -147,6 +155,8 @@ _BARE_M_RE = re.compile(r"(?<=[0-9\}\)])(\s)(m)\b(?!\w)(?!\s*\\text)")
 
 def _convert_units(s):
     s = _UNIT_RE.sub(lambda m: r"\text{%s%s}" % (m.group(1) or " ", m.group(2)), s)
+    s = _WORD_UNIT_RE.sub(lambda m: r"\text{%s%s}" % (m.group(1) or " ", m.group(2)), s)
+    s = _GRAM_RE.sub(lambda m: r"\text{%s%s}" % m.groups(), s)
     s = _BARE_M_RE.sub(lambda m: r"\text{%s%s}" % m.groups(), s)
     return s
 
@@ -187,18 +197,36 @@ def _convert_symbols(s):
     s = re.sub(r"\s*≤\s*", r" \\leq ", s)
     s = re.sub(r"\s*≥\s*", r" \\geq ", s)
     s = re.sub(r"\s*⊥\s*", r" \\perp ", s)
+    s = re.sub(r"\s*≅\s*", r" \\cong ", s)
+    s = re.sub(r"\s*(?:∥|\|\|)\s*", r" \\parallel ", s)
+    s = s.replace("\u2206", "Δ")                 # the increment sign U+2206 is how some sources write the triangle sign
     s = s.replace("−", "-")
     s = re.sub(r"(\d)\s*°(?=[A-Za-z])", r"\1^\\circ ", s)
     s = re.sub(r"(\d)\s*°", r"\1^\\circ", s)
     s = re.sub(r"Δ\s*([A-Z][A-Za-z0-9]*)", r"\\triangle \1", s)
     s = re.sub(r"∠\s*([A-Z][A-Za-z0-9]*)", r"\\angle \1", s)
-    for i, ch in enumerate(_SUP_DIGITS):
-        s = re.sub(r"(?<=[0-9A-Za-z)}])" + ch, "^" + str(i), s)
-    for i, ch in enumerate(_SUB_DIGITS):
-        s = re.sub(r"(?<=[A-Za-z0-9)}])" + ch, "_" + str(i), s)
+    # a RUN of superscript / subscript digits is one exponent / index: "2¹⁰" is 2^{10}, not 2^1 followed by a stray
+    # "⁰" (str.isdigit() is True for it, so the digit tokenizer below crashed on it).
+    sup = {ch: str(i) for i, ch in enumerate(_SUP_DIGITS)}
+    sub = {ch: str(i) for i, ch in enumerate(_SUB_DIGITS)}
+
+    def _run(prefix, table):
+        return lambda m: prefix + (table[m.group(1)] if len(m.group(1)) == 1
+                                   else "{%s}" % "".join(table[c] for c in m.group(1)))
+    s = re.sub(r"(?<=[0-9A-Za-z)}])([%s]+)" % _SUP_DIGITS, _run("^", sup), s)
+    s = re.sub(r"(?<=[A-Za-z0-9)}])([%s]+)" % _SUB_DIGITS, _run("_", sub), s)
     s = _convert_sqrt(s)
     s = _fix_exponent_fraction(s)
+    # a rate unit written with a slash ("40 km/h", "5 m/s") is a unit, not the fraction km over h: hide it from the
+    # fraction rule behind a placeholder and put it back as \text{ km/h} afterwards
+    rates = []
+
+    def _hide_rate(m):
+        rates.append(m.group(1))
+        return "\x01%d\x01" % (len(rates) - 1)
+    s = re.sub(r"(?<=[0-9])\s*(km/h|km/hr|m/s|cm/s)(?![A-Za-z])", _hide_rate, s)
     s = _convert_fractions(s)
+    s = re.sub("\x01(\\d+)\x01", lambda m: r"\text{ %s}" % rates[int(m.group(1))], s)
     s = _convert_units(s)
     s = re.sub(r"[ \t]+", " ", s)
     return s
@@ -264,7 +292,16 @@ def _a_enum_context(text, start, end):
     words = re.findall(r"[A-Za-z]+", clause.lower())
     if not words:
         return False
-    if words[-1] in _ENUM_CUE_WORDS:
+    nk = end
+    while nk < len(text) and text[nk] == " ":
+        nk += 1
+    nm = re.match(r"[a-z]{3,}", text[nk:])
+    # a plain noun right after "a" ("the other side a flower", "a point, a segment") means the article, not a letter named
+    # by the cue word; a verb ("Side a has", "Path a is") or punctuation after it means the letter.
+    noun_follows = bool(nm) and nm.group(0) not in _A_NOT_NOUN and nm.group(0) not in _A_VERBS
+    # the cue must be the word immediately before "a": "a point, a segment" has a comma between them
+    cue_adjacent = re.search(r"[A-Za-z]+\s*$", clause) is not None
+    if words[-1] in _ENUM_CUE_WORDS and cue_adjacent and not noun_follows:
         return True
     k = end
     while k < len(text) and text[k] == " ":
@@ -320,7 +357,7 @@ def _is_a_mathy(text, start, end):
     # too ("an A by a square", "p by a"); "divided"/"multiplied"/"bounded" are not short.
     if prev_word.lower() == "by":
         word_before_by, _ = _word_before(text, prev_word_start)
-        if 1 <= len(word_before_by) <= 2:
+        if 1 <= len(word_before_by) <= 2 and word_before_by.lower() not in _PRONOUN_BEFORE_BY:
             return True
     # "legs be a and b": an article is never directly followed by the conjunction "and" either.
     if nxt_word.lower() == "and":
@@ -336,7 +373,13 @@ def _is_a_mathy(text, start, end):
     # not a variable - the single most common way this shape actually occurs, since \text{} is this
     # converter's own unit wrapping, always followed by ordinary prose, never a glued variable).
     prev_glued = text[start - 1] if start > 0 else ""
-    return (prev in "=+-*/^_()" or prev_glued in "}" or prev_glued.isdigit() or nxt in "=+-*/^_(){}"
+    if prev == "":                          # "a" opens the text: a letter only if what follows is not an ordinary noun
+        return bool(nxt == "" or nxt in ",;:.)=+-*/^_({}" or nxt.isdigit()
+                    or nxt_word in _A_NOT_NOUN or nxt_word in _A_VERBS)
+    if prev == "(" and text[end:k] == " " and len(nxt_word) >= 3 and nxt_word.islower() \
+            and nxt_word not in _A_NOT_NOUN and nxt_word not in _A_VERBS:
+        return False                       # "(a positive and a negative)", "(a quarter turn)": the article
+    return ((prev != "" and prev in "=+-*/^_()") or (prev_glued != "" and prev_glued in "}") or prev_glued.isdigit() or nxt in "=+-*/^_(){}"
             or _a_enum_context(text, start, end))
 
 
@@ -352,6 +395,14 @@ _ABBREV_RE = re.compile(r"(?:i\.e\.|e\.g\.)", re.IGNORECASE)
 _ORDINAL_SUFFIX_RE = re.compile(r"(st|nd|rd|th)(?![A-Za-z])", re.IGNORECASE)
 
 
+_PROSE_ACRONYMS = {"HCF", "LCM", "GCF", "GCD", "LCD", "BCE", "BODMAS", "PEMDAS", "UPI", "ATM", "PIN"}
+_PAREN_OP_WORDS = {"times", "plus", "minus", "mod", "cm", "mm", "km", "kg", "sq"}
+_A_VERBS = {"is", "are", "was", "were", "has", "had", "equals", "gives", "makes", "means", "stands", "denotes",
+            "increases", "decreases", "must", "can", "will", "should", "then", "times", "plus", "minus",
+            # a function word after the letter means it is a letter ("the angle a between them", "side a of the square")
+            "between", "at", "on", "in", "of", "for", "with", "from", "to", "by", "as", "if", "when", "so", "than",
+            "that", "which", "where", "while", "does", "do", "did", "would", "could", "also", "now"}
+_PRONOUN_BEFORE_BY = {"it", "us", "me", "up", "on", "in", "as", "at", "to", "so", "go", "do", "we", "he", "be"}
 _A_NOT_NOUN = {
     "and", "or", "but", "was", "are", "lies", "lie", "has", "have", "touches", "touching",
     "subtends", "meets", "passes", "bisects", "divides", "cuts", "joins", "coincides",
@@ -449,6 +500,14 @@ def _tokenize(text):
                     tokens.append(("PROSE", word))
                     i = j
                     continue
+            if word in _PROSE_ACRONYMS:
+                tokens.append(("PROSE", word))
+                i = j
+                continue
+            if word == "I" and re.match(r"\s+(?:am|have|will|think|can|would|do|did|was|see|get|need|want|know|like)\b", text[j:]):
+                tokens.append(("PROSE", word))                   # the pronoun, not a point named I
+                i = j
+                continue
             if word.isupper() and len(word) <= 4:
                 dm = re.match(r"\d+", text[j:])
                 if dm:
@@ -520,6 +579,18 @@ def _tokenize(text):
                 continue
             wm = re.match(r"[A-Za-z]+", text[i + 1:])
             is_prose_open = bool(wm and _looks_prose_word(wm.group(0)))
+            if not is_prose_open:
+                # "(3 is a common factor)", "(4 parts)", "(12 fails, 48 works)": a bracket that opens on a NUMBER followed
+                # by an English word is an aside too - the number is maths, the bracket is not (the old rule left "(3"
+                # as one span). "(2 + 3)", "(-5)", "(3 cm)", "(2 times 3)" have no English word after the number.
+                dm = re.match(r"\(\s*\d[\d,]*(?:\.\d+)?\s+([a-z]{2,})\b", text[i:])
+                if dm and (_looks_prose_word(dm.group(1)) or dm.group(1) in _STOPWORDS) \
+                        and dm.group(1) not in _PAREN_OP_WORDS:
+                    tokens.append(("BREAK", ""))
+                    tokens.append(("PROSE", c))
+                    paren_stack.append(True)
+                    i += 1
+                    continue
             if is_prose_open:
                 # "(using 22/7)", "(the left side)", "(twice)": an ordinary English word right after
                 # "(" means this paren opens an aside, not a math grouping - force-close whatever math

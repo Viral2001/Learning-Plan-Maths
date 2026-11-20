@@ -62,6 +62,13 @@ import sys
 from . import (coverage, latex_content, media_content, objectives, question_layout, skeleton, solution_content,
                theorem_variant, video_script_rules)
 
+try:
+    from ..core.solutions.schema import tex_to_plain as _tex_to_plain
+except ImportError:                      # imported as the top-level package `gates` (build.py, validate_local.py)
+    import os as _os
+    sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), ".."))
+    from core.solutions.schema import tex_to_plain as _tex_to_plain
+
 EQCHECK_MODULES = {}
 
 # See the module docstring's "Blocking errors vs advisory warnings" section: a gate message
@@ -110,8 +117,14 @@ def _authored_texts(plan):
     texts = []
     for topic in walk_topics(plan):
         for concept in topic.get("concepts") or []:
+            # A question is not an assertion that its own equation holds ("Add brackets so that 34 - 9 + 12 = 13",
+            # "Is 24 + (6 - 4) = 24 + 6 ?"), so the question half of a question/answer pair is not scanned, and the
+            # answer half does not re-scan the question it repeats. Its working and answer are scanned as before.
+            qpart = concept.get("qt_part")
+            if qpart == "question":
+                continue
             for block in concept.get("content") or []:
-                for field in ("text", "question", "answer"):
+                for field in (("text", "answer") if qpart == "answer" else ("text", "question", "answer")):
                     v = block.get(field)
                     if isinstance(v, str):
                         texts.append(v)
@@ -125,7 +138,10 @@ def _authored_texts(plan):
                 texts.append(json.dumps(tool["tool_config"], ensure_ascii=False))
     for obj in plan.get("objectives") or []:
         texts.append(obj.get("objective_text", ""))
-    return texts
+    # a question or answer concept's displayed text is inline LaTeX ($...$, core/solutions/latex_convert.py): the
+    # arithmetic checkers read plain text, where "4 \times 5 - 1 = 19" would split at the command and look false.
+    # Text without a dollar sign is passed through untouched.
+    return [_tex_to_plain(t) if isinstance(t, str) and "$" in t else t for t in texts]
 
 
 def run_eqcheck(plan, variant, errata=None):

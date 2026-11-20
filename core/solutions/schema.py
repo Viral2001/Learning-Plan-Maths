@@ -123,6 +123,9 @@ def tex_to_plain(t):
     """LaTeX text -> the plain text the plan's steps/answer carry. Not a full LaTeX parser: it covers the
     commands the solution rules use (\\times \\div \\cdot \\sqrt \\frac \\text \\textbf ^n \\, and $)."""
     s = t
+    # a whole number written straight against a fraction is a MIXED number, "2 \\frac{1}{3}" = 2 and 1/3: plain "2 1/3",
+    # the form the eqcheck gates read. Left to the \\frac rule below it became "2 (1)/(3)", which they read as 2 x 1/3.
+    s = re.sub(r"(?<![\w.^_{])(\d+)\s*\\frac\{(\d+)\}\{(\d+)\}", r"\1 \2/\3", s)
     for _ in range(3):
         s = re.sub(r"\\(?:text|textbf|mathrm|textit)\{([^{}]*)\}", r"\1", s)
         s = re.sub(r"\\frac\{([^{}]*)\}\{([^{}]*)\}", r"(\1)/(\2)", s)
@@ -136,7 +139,10 @@ def tex_to_plain(t):
     s = re.sub(r"\\\\(\[[^\]]*\])?", " ", s)
     s = s.replace("$", "").replace("{", "").replace("}", "")
     s = re.sub(r"\\([a-zA-Z]+)", r"\1", s)
-    return re.sub(r"\s+", " ", s).strip()
+    # keep the line breaks: the eqcheck gates read a capitalised word after a number on the SAME line as a place-value
+    # phrase ("90 Tens"), so "... = 5 x 17 x 23" + newline + "Answer: ..." must not run together into "23 Answer"
+    s = re.sub(r"[^\S\n]+", " ", s)
+    return "\n".join(line.strip() for line in s.split("\n")).strip()
 
 
 def plan_fields(sol):

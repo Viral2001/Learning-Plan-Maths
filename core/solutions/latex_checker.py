@@ -77,18 +77,29 @@ _KNOWN_COMMANDS = (
     "cdot", "cdots", "ldots", "sin", "cos", "tan", "cot", "sec", "csc", "log", "ln", "lim",
     "gcd", "lcm",
 )
-_GLUED_CMD_RE = re.compile(r"\\(%s)(?=[A-Za-z])" % "|".join(
-    sorted(_KNOWN_COMMANDS, key=len, reverse=True)))
+_GLUED_CMD_RE = re.compile(r"\\([A-Za-z]+)")
+_KNOWN_SET = set(_KNOWN_COMMANDS) | {"perp", "left", "right", "underline", "overline", "hspace", "sim", "cong",
+                                     "parallel", "therefore", "because", "infty", "rightarrow", "leftarrow",
+                                     "Rightarrow", "Leftarrow", "bar", "hat", "vec", "mathrm", "mathbf"}
+_PREFIXES = sorted(_KNOWN_COMMANDS, key=len, reverse=True)
 
 
 def _fix_glued_command(math, issues):
+    """A command name that is not itself a known command but STARTS with one ("\\pir" = "\\pi" + "r") is a command glued to
+    the next letter. The name is read in full first: matching the known names with a lookahead instead let "\\neq P"
+    backtrack to "\\ne" + "q" and flag a perfectly good \\neq / \\leq / \\geq (found on Class 7, Nov 2026)."""
     def repl(m):
-        cmd = "\\" + m.group(1)
-        tail = math[m.end():m.end() + 3]
-        issues.append(Issue("glued_command",
-                             "LaTeX command runs straight into the next letter: '%s%s...'"
-                             % (cmd, tail), cmd, True, True))
-        return cmd + " "
+        name = m.group(1)
+        if name in _KNOWN_SET:
+            return m.group(0)
+        for k in _PREFIXES:
+            if name.startswith(k):
+                rest = name[len(k):]
+                issues.append(Issue("glued_command",
+                                     "LaTeX command runs straight into the next letter: '%s%s...'"
+                                     % ("\\" + k, rest[:3]), "\\" + k, True, True))
+                return "\\" + k + " " + rest
+        return m.group(0)
     return _GLUED_CMD_RE.sub(repl, math)
 
 
