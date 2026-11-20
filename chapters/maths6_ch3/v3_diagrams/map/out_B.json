@@ -1,0 +1,961 @@
+{
+ "meta": {
+  "chapter": "Number Play",
+  "class": 6,
+  "textbook": "Ganita Prakash Grade 6, Chapter 3",
+  "lp_plan_id": "cbse_eng_maths6_ch3_v108",
+  "prompt": "diagram_identification_prompt.md v1",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "none": 21,
+    "required": 1
+   },
+   "solution": {
+    "none": 21,
+    "required": 1
+   },
+   "worked_example": {
+    "none": 6
+   }
+  },
+  "notes": [
+   "Chunk B: modules M2 (from Questions: Counting with Place Value) and M4; 28 units = 22 pairs and 6 worked examples.",
+   "Only one real figure in this chunk: Puzzle time (M2.S15.T15.C88 / C89), five place boxes tth, th, h, t, u; the solution fills them with 1, 2, 4, 2, 1.",
+   "M2.S15.T15.C88 question_tex has no clues. The four clues (5-digit palindrome, odd, t digit double the u digit, h digit double the t digit) are only in the old q_figure hint; the question text must carry them, otherwise the box labels have no meaning. Flagged with needs_lp_text_sync.",
+   "Six worked examples reuse existing concept images of their own topic (C81.IMG1 for the four reverse-and-add examples, C93.IMG1 and C93.IMG2 for the date and calendar examples); no new image is added for them.",
+   "Several question/solution items sit in a later 'Questions' topic than the lesson image that already draws the same thing (Counting with Place Value, Clock and Calendar, Simple Estimation, Games and Winning Strategies). Reuse is only allowed inside one topic, so these are 'none' (text/LaTeX); they are not near-copies to add.",
+   "M4.S34.T34.C198/C199 (Roshan's custard): the LP solution disagrees with the printed book answer (LP: do not agree, about 165 rupees; book: yes it is possible with small servings and one cheap fruit of each type). LP followed.",
+   "M4.S33.T33.C193 (litres): the LP takes a mug as about 1 litre (like a big bottle); an ordinary mug holds about a quarter of a litre. Not a diagram matter, left to the content reviewer."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "items": [
+  {
+   "lp_concept_id": "M2.S11.T11.C63",
+   "role": "question",
+   "lp_book_number": "Counting Numbers: how many have 1 to 5 digits",
+   "ncert_ref": "Section 3.4 - digit counts table",
+   "question_text": "Complete the table of how many numbers have 1, 2, 3, 4 and 5 digits.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The book table is a plain 5-column table (headings 1-digit to 5-digit numbers, 9 given, four blank cells) with no colour meaning.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S11.T11.C63.IMG1",
+   "text_alternative": "LaTeX array with headers 1-digit, 2-digit, 3-digit, 4-digit, 5-digit numbers; first entry 9, the other four entries left blank."
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C64",
+   "role": "solution",
+   "lp_book_number": "Counting Numbers: how many have 1 to 5 digits",
+   "ncert_ref": "Section 3.4 - digit counts table",
+   "question_text": "Complete the table of how many numbers have 1, 2, 3, 4 and 5 digits.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The solution only fills the same plain table; the working 9 x 10 x ... already has a lesson image in the Counting with Place Value topic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S11.T11.C64.IMG1",
+   "text_alternative": "Same LaTeX array with the entries 9, 90, 900, 9000, 90,000 written in."
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C65",
+   "role": "question",
+   "lp_book_number": "Digit Detectives: counting the digit 7",
+   "ncert_ref": "Section 3.4 - Digit Detectives",
+   "question_text": "How many times is the digit 7 written from 1 to 1000?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "DECORATIVE_ONLY"
+   ],
+   "reason": "Words only; the book picture (Dinesh's note with numbers like 237, 877, 1799 and a magnifying glass on a 7) is decoration and carries no data.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S11.T11.C65.IMG1"
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C66",
+   "role": "solution",
+   "lp_book_number": "Digit Detectives: counting the digit 7",
+   "ncert_ref": "Section 3.4 - Digit Detectives",
+   "question_text": "How many times is the digit 7 written from 1 to 1000?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three counts of 100 added to 300 are plain arithmetic; the lesson topic already has the place-by-place picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S11.T11.C66.IMG1"
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C70",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 3.4 - FiO Q1a",
+   "question_text": "Write other numbers whose digits add up to 14.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Open question (any numbers whose digits add up to 14); the book picture (6+8=14, 1+7+6=14, 5+4+5=14 on a board) is decoration.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S13.T13.C70.IMG1"
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C71",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 3.4 - FiO Q1a",
+   "question_text": "Write other numbers whose digits add up to 14.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Sample numbers with their digit sums are a text list; nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S13.T13.C71.IMG1",
+   "text_alternative": "List the sample numbers 77, 86, 149, 266, 3254, 20,543 each with its digit sum 14."
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C72",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 3.4 - FiO Q1b",
+   "question_text": "What is the smallest number with digit sum 14?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "One-line text question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S13.T13.C72.IMG1"
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C73",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 3.4 - FiO Q1b",
+   "question_text": "What is the smallest number with digit sum 14?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two short reasoning steps ending in 14 - 9 = 5 and the answer 59; text and LaTeX are enough.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S13.T13.C73.IMG1"
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C74",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 3.4 - FiO Q1c",
+   "question_text": "What is the largest 5-digit number with digit sum 14?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "One-line text question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S13.T13.C74.IMG1"
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C75",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 3.4 - FiO Q1c",
+   "question_text": "What is the largest 5-digit number with digit sum 14?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three short steps (9, then 5, then zeros) giving 95,000; text and LaTeX are enough.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S13.T13.C75.IMG1"
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C76",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "Section 3.4 - FiO Q1d",
+   "question_text": "How big a number can have digit sum 14?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Reasoning question in words; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S13.T13.C76.IMG1"
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C77",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "Section 3.4 - FiO Q1d",
+   "question_text": "How big a number can have digit sum 14?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The sequence 95, 9005, 900005, 90000005 is a text list; nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S13.T13.C77.IMG1"
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C78",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "Section 3.4 - FiO Q3 (consecutive digits)",
+   "question_text": "Find the digit sums of 123, 234, ..., 789.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Text question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S13.T13.C78.IMG1"
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C79",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "Section 3.4 - FiO Q3 (consecutive digits)",
+   "question_text": "Find the digit sums of 123, 234, ..., 789.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Seven numbers with their digit sums form a plain list/table of sums with no colour meaning.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S13.T13.C79.IMG1",
+   "text_alternative": "LaTeX array: 123 gives 6, 234 gives 9, 345 gives 12, 456 gives 15, 567 gives 18, 678 gives 21, 789 gives 24."
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C81",
+   "role": "worked_example",
+   "lp_book_number": "Reverse-and-add, example 1 (34)",
+   "ncert_ref": "Section 3.5 - reverse-and-add",
+   "question_text": "Reverse and add, starting with 34.",
+   "decision": "none",
+   "reason_codes": [
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "The concept image C81.IMG1 of this topic already shows the column additions 34 + 43 = 77, 29 + 92 = 121, 48 + 84 then + 231 = 363 and 76 + 67 then + 341 = 484; nothing new is added.",
+   "lp_placeholder_action": "reuse_concept_image",
+   "reuse_media_id": "M2.S14.T14.C81.IMG1",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C82",
+   "role": "worked_example",
+   "lp_book_number": "Reverse-and-add, example 4 (76)",
+   "ncert_ref": "Section 3.5 - reverse-and-add (76)",
+   "question_text": "Reverse and add, starting with 76.",
+   "decision": "none",
+   "reason_codes": [
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "C81.IMG1 already shows 76 + 67 = 143 and 143 + 341 = 484 in column form; same topic, so reuse and add nothing.",
+   "lp_placeholder_action": "reuse_concept_image",
+   "reuse_media_id": "M2.S14.T14.C81.IMG1",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C83",
+   "role": "worked_example",
+   "lp_book_number": "Reverse-and-add, example 3 (48)",
+   "ncert_ref": "Section 3.5 - reverse-and-add (48)",
+   "question_text": "Reverse and add, starting with 48.",
+   "decision": "none",
+   "reason_codes": [
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "C81.IMG1 already shows 48 + 84 = 132 and 132 + 231 = 363 in column form; same topic, so reuse and add nothing.",
+   "lp_placeholder_action": "reuse_concept_image",
+   "reuse_media_id": "M2.S14.T14.C81.IMG1",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C84",
+   "role": "worked_example",
+   "lp_book_number": "Reverse-and-add, example 2 (29)",
+   "ncert_ref": "Section 3.5 - reverse-and-add (29)",
+   "question_text": "Reverse and add, starting with 29.",
+   "decision": "none",
+   "reason_codes": [
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "C81.IMG1 already shows 29 + 92 = 121 in column form; same topic, so reuse and add nothing.",
+   "lp_placeholder_action": "reuse_concept_image",
+   "reuse_media_id": "M2.S14.T14.C81.IMG1",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C86",
+   "role": "question",
+   "lp_book_number": "Palindromes: all 3-digit ones from 1, 2, 3",
+   "ncert_ref": "Section 3.5 - all 3-digit palindromes from 1, 2, 3",
+   "question_text": "Write all 3-digit palindromes using the digits 1, 2, 3.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Text question; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S15.T15.C86.IMG1"
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C87",
+   "role": "solution",
+   "lp_book_number": "Palindromes: all 3-digit ones from 1, 2, 3",
+   "ncert_ref": "Section 3.5 - all 3-digit palindromes from 1, 2, 3",
+   "question_text": "Write all 3-digit palindromes using the digits 1, 2, 3.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Nine numbers in three groups and 3 x 3 = 9 are a plain list; the earlier lesson topic already has the 3 x 3 grid picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S15.T15.C87.IMG1"
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C88",
+   "role": "question",
+   "lp_book_number": "Puzzle Time: the 5-digit palindrome",
+   "ncert_ref": "Section 3.5 - Puzzle time",
+   "question_text": "Find the number and write it in words.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The five place boxes tth, th, h, t, u exist only in the book picture; the clues speak of the t, h and u digits and the student writes one digit in each box.",
+   "needs_lp_text_sync": true,
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S15.T15.C88.IMG1",
+   "manim_scene": "c3_5_puzzle_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S15.T15.C88.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_row",
+    "aspect_ratio": "4:1",
+    "derived_from": null,
+    "content": {
+     "type": "cell_row",
+     "cells": 5,
+     "canvas_px": [
+      1920,
+      480
+     ],
+     "box_side_px": 240,
+     "gap_px": 60,
+     "box_top_px": 150,
+     "label_centre_y_px": 90,
+     "cells_left_to_right": [
+      {
+       "pos": 1,
+       "place_label": "tth",
+       "value": "",
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "text_colour": "INK",
+       "left_x_px": 240
+      },
+      {
+       "pos": 2,
+       "place_label": "th",
+       "value": "",
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "text_colour": "INK",
+       "left_x_px": 540
+      },
+      {
+       "pos": 3,
+       "place_label": "h",
+       "value": "",
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "text_colour": "INK",
+       "left_x_px": 840
+      },
+      {
+       "pos": 4,
+       "place_label": "t",
+       "value": "",
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "text_colour": "INK",
+       "left_x_px": 1140
+      },
+      {
+       "pos": 5,
+       "place_label": "u",
+       "value": "",
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "text_colour": "INK",
+       "left_x_px": 1440
+      }
+     ]
+    },
+    "manim_description": "On a plain BG canvas of 1920 by 480 px, draw one row of 5 equal empty square boxes from left to right. Each box is 240 px wide and 240 px tall with a 3 px INK outline and a CELL_FILL fill; the top edge of every box is at y = 150 px. The left edges of boxes 1 to 5 are at x = 240, 540, 840, 1140 and 1440 px (gap 60 px). Centre one INK label above each box at y = 90 px, 44 px high, sans-serif: 'tth' over box 1, 'th' over box 2, 'h' over box 3, 't' over box 4, 'u' over box 5. Leave all 5 boxes empty. Draw nothing else.",
+    "visible_text": [
+     "tth",
+     "th",
+     "h",
+     "t",
+     "u"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any digit inside the boxes",
+     "the clue sentences",
+     "the 'write the number in words' box"
+    ],
+    "accuracy_checks": [
+     "exactly 5 boxes, labelled left to right tth, th, h, t, u (ten-thousands, thousands, hundreds, tens, ones)",
+     "all 5 boxes empty (no digit, no pre-shading)",
+     "box edges and label centres on the pixel positions in content"
+    ],
+    "alt_text": "A row of five empty boxes labelled tth, th, h, t and u from left to right."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C89",
+   "role": "solution",
+   "lp_book_number": "Puzzle Time: the 5-digit palindrome",
+   "ncert_ref": "Section 3.5 - Puzzle time",
+   "question_text": "Find the number and write it in words.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The answer is the filled-in boxes 1, 2, 4, 2, 1 (the book's printed answer shows exactly this); the palindrome is seen at a glance.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S15.T15.C89.IMG1",
+   "manim_scene": "c3_5_puzzle_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S15.T15.C89.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "after_step_4"
+   },
+   "diagram": {
+    "diagram_type": "cell_row",
+    "aspect_ratio": "4:1",
+    "derived_from": "M2.S15.T15.C88.IMG1",
+    "content": {
+     "type": "cell_row",
+     "cells": 5,
+     "canvas_px": [
+      1920,
+      480
+     ],
+     "box_side_px": 240,
+     "gap_px": 60,
+     "box_top_px": 150,
+     "label_centre_y_px": 90,
+     "cells_left_to_right": [
+      {
+       "pos": 1,
+       "place_label": "tth",
+       "value": "1",
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "text_colour": "ANSWER",
+       "left_x_px": 240
+      },
+      {
+       "pos": 2,
+       "place_label": "th",
+       "value": "2",
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "text_colour": "ANSWER",
+       "left_x_px": 540
+      },
+      {
+       "pos": 3,
+       "place_label": "h",
+       "value": "4",
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "text_colour": "ANSWER",
+       "left_x_px": 840
+      },
+      {
+       "pos": 4,
+       "place_label": "t",
+       "value": "2",
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "text_colour": "ANSWER",
+       "left_x_px": 1140
+      },
+      {
+       "pos": 5,
+       "place_label": "u",
+       "value": "1",
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "text_colour": "ANSWER",
+       "left_x_px": 1440
+      }
+     ]
+    },
+    "manim_description": "Redraw the question diagram exactly: a plain BG canvas of 1920 by 480 px with one row of 5 square boxes, each 240 by 240 px, 3 px INK outline, CELL_FILL fill, top edge at y = 150 px and left edges at x = 240, 540, 840, 1140 and 1440 px. Keep the INK labels at y = 90 px, 44 px high: 'tth' over box 1, 'th' over box 2, 'h' over box 3, 't' over box 4, 'u' over box 5. Then write one digit centred in each box in ANSWER colour, bold, 120 px high: 1 in box 1, 2 in box 2, 4 in box 3, 2 in box 4 and 1 in box 5. Draw nothing else.",
+    "visible_text": [
+     "tth",
+     "th",
+     "h",
+     "t",
+     "u",
+     "1",
+     "2",
+     "4",
+     "2",
+     "1"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the number written in words",
+     "the clue sentences"
+    ],
+    "accuracy_checks": [
+     "digits left to right 1, 2, 4, 2, 1 read the same backwards: a palindrome",
+     "the number is 12421: 5 digits and odd because the u digit is 1",
+     "t digit 2 = 2 x u digit 1; h digit 4 = 2 x t digit 2",
+     "tth equals u (1) and th equals t (2)",
+     "labels, box sizes and positions identical to the question diagram"
+    ],
+    "alt_text": "The five boxes tth, th, h, t and u filled with 1, 2, 4, 2 and 1, giving 12421."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C90",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 3.7 - FiO Q2",
+   "question_text": "What are the sum and the difference of the smallest and largest 5-digit palindromes?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Text question; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S16.T16.C90.IMG1"
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C91",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 3.7 - FiO Q2",
+   "question_text": "What are the sum and the difference of the smallest and largest 5-digit palindromes?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Smallest 10001 and largest 99999, then one sum and one difference: LaTeX arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S16.T16.C91.IMG1"
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C93",
+   "role": "worked_example",
+   "lp_book_number": "Palindromic dates, example 1 (10/02/2001)",
+   "ncert_ref": "Section 3.7 - palindromic dates",
+   "question_text": "Is 10/02/2001 a palindromic date?",
+   "decision": "none",
+   "reason_codes": [
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "C93.IMG1 already shows the eight digits of 10/02/2001 against their reverse, and the contrast with 01/02/2001; same topic, so reuse and add nothing.",
+   "lp_placeholder_action": "reuse_concept_image",
+   "reuse_media_id": "M2.S17.T17.C93.IMG1",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C94",
+   "role": "worked_example",
+   "lp_book_number": "Calendar reuse, example 2 (2025 to 2031)",
+   "ncert_ref": "Section 3.7 - calendar repeat",
+   "question_text": "Will the calendar for 2025 (an ordinary year) be reused, and when?",
+   "decision": "none",
+   "reason_codes": [
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "C93.IMG2 already shows the weekday shifts from 2025 to 2031 (+1, +1, +1, +2, +1, +1 = 7); same topic, so reuse and add nothing.",
+   "lp_placeholder_action": "reuse_concept_image",
+   "reuse_media_id": "M2.S17.T17.C93.IMG2",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S18.T18.C96",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 3.7 - FiO Q3",
+   "question_text": "The time is 10:01. How many minutes until the next palindromic time? And the one after that?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Text question; the book prints no clock face for it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S18.T18.C96.IMG1"
+  },
+  {
+   "lp_concept_id": "M2.S18.T18.C97",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 3.7 - FiO Q3",
+   "question_text": "The time is 10:01. How many minutes until the next palindromic time? And the one after that?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Times and minute gaps (60 + 10 = 70, then 70, total 140) are LaTeX arithmetic; the timeline picture C92.IMG1 sits in the lesson topic just before and would be a near-copy.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M2.S18.T18.C97.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S33.T33.C188",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 3.11 - Paromita's estimate",
+   "question_text": "Paromita estimates the number of students in her school.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question; the numbers (32, 29, 35) belong to the teaching text, and the book prints no figure for it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S33.T33.C188.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S33.T33.C189",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 3.11 - Paromita's estimate",
+   "question_text": "Paromita estimates the number of students in her school.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "32 + 29 + 35 is about 100, then 5 x 100 = 500: LaTeX arithmetic; the lesson topic already has the class-by-class picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S33.T33.C189.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S33.T33.C190",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 3.11 - FiO Q4 (holidays)",
+   "question_text": "Estimate the number of holidays in a year, then count exactly.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Personal estimation question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S33.T33.C190.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S33.T33.C191",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 3.11 - FiO Q4 (holidays)",
+   "question_text": "Estimate the number of holidays in a year, then count exactly.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "52 + 15 + 50 is a short sum in text; nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S33.T33.C191.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S33.T33.C192",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 3.11 - FiO Q5 (litres)",
+   "question_text": "Estimate how many litres a mug, a bucket and an overhead tank hold.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "Estimation question about a mug, a bucket and a tank; no figure in the book and a picture of the objects would be clip-art.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S33.T33.C192.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S33.T33.C193",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 3.11 - FiO Q5 (litres)",
+   "question_text": "Estimate how many litres a mug, a bucket and an overhead tank hold.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "DECORATIVE_ONLY"
+   ],
+   "reason": "The three estimates (1, about 20, 500 to 1000 litres) are numbers in the text; pictures of a mug, bucket and tank would only decorate.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S33.T33.C193.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S34.T34.C194",
+   "role": "question",
+   "lp_book_number": "Simple Estimation, Q1",
+   "ncert_ref": "Section 3.11 - Estimate the answer Q1",
+   "question_text": "Words in your maths book: more than 5000, or less than 5000?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Text question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S34.T34.C194.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S34.T34.C195",
+   "role": "solution",
+   "lp_book_number": "Simple Estimation, Q1",
+   "ncert_ref": "Section 3.11 - Estimate the answer Q1",
+   "question_text": "Words in your maths book: more than 5000, or less than 5000?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "100 x 100 = 10,000 is one multiplication in LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S34.T34.C195.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S34.T34.C196",
+   "role": "question",
+   "lp_book_number": "Simple Estimation, Q2",
+   "ncert_ref": "Section 3.11 - Estimate the answer Q2",
+   "question_text": "Students who come to school by bus: more than 200, or less than 200?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Text question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S34.T34.C196.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S34.T34.C197",
+   "role": "solution",
+   "lp_book_number": "Simple Estimation, Q2",
+   "ncert_ref": "Section 3.11 - Estimate the answer Q2",
+   "question_text": "Students who come to school by bus: more than 200, or less than 200?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "6 x 40 = 240 and 4 x 40 = 160 are plain LaTeX arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S34.T34.C197.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S34.T34.C198",
+   "role": "question",
+   "lp_book_number": "Simple Estimation, Q3",
+   "ncert_ref": "Section 3.11 - Estimate the answer Q3",
+   "question_text": "Milk and 3 kinds of fruit, custard for 5 people. Roshan says about ₹100. Do you agree?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Text question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S34.T34.C198.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S34.T34.C199",
+   "role": "solution",
+   "lp_book_number": "Simple Estimation, Q3",
+   "ncert_ref": "Section 3.11 - Estimate the answer Q3",
+   "question_text": "Milk and 3 kinds of fruit, custard for 5 people. Roshan says about ₹100. Do you agree?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Costs 60 + 20 + 85 = 165 (and 15 + 40 + 30 = 85) are plain LaTeX arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S34.T34.C199.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S34.T34.C200",
+   "role": "question",
+   "lp_book_number": "Simple Estimation, Q4",
+   "ncert_ref": "Section 3.11 - Estimate the answer Q4",
+   "question_text": "Gandhinagar to Kohima: about how many kilometres?",
+   "decision": "none",
+   "reason_codes": [
+    "NOT_RENDERABLE",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book only says 'look at the map of India' and prints no map; a faithful map with the two cities cannot be drawn, and no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S34.T34.C200.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S34.T34.C201",
+   "role": "solution",
+   "lp_book_number": "Simple Estimation, Q4",
+   "ncert_ref": "Section 3.11 - Estimate the answer Q4",
+   "question_text": "Gandhinagar to Kohima: about how many kilometres?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "3000 - 250 - 250 = 2500 and 3000 - 400 - 400 = 2200 are plain LaTeX arithmetic; no map is shown.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S34.T34.C201.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S34.T34.C202",
+   "role": "question",
+   "lp_book_number": "Simple Estimation, Q5",
+   "ncert_ref": "Section 3.11 - Estimate the answer Q5",
+   "question_text": "Sheetal is in Grade 6 and says she has spent about 13,000 hours in school. Do you agree?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Text question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S34.T34.C202.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S34.T34.C203",
+   "role": "solution",
+   "lp_book_number": "Simple Estimation, Q5",
+   "ncert_ref": "Section 3.11 - Estimate the answer Q5",
+   "question_text": "Sheetal is in Grade 6 and says she has spent about 13,000 hours in school. Do you agree?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "6 x 200 = 1200, 1200 x 6 = 7200 and 1200 x 8 = 9600 are plain LaTeX arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S34.T34.C203.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S34.T34.C204",
+   "role": "question",
+   "lp_book_number": "Simple Estimation, Q6",
+   "ncert_ref": "Section 3.11 - Estimate the answer Q6",
+   "question_text": "How long would it take you to walk across India?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Text question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S34.T34.C204.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S34.T34.C205",
+   "role": "solution",
+   "lp_book_number": "Simple Estimation, Q6",
+   "ncert_ref": "Section 3.11 - Estimate the answer Q6",
+   "question_text": "How long would it take you to walk across India?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "3000 / 5 = 600 and 600 / 8 = 75 are plain LaTeX arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S34.T34.C205.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S36.T36.C209",
+   "role": "question",
+   "lp_book_number": "Game of 21: the winning pattern",
+   "ncert_ref": "Section 3.12 - Game of 21",
+   "question_text": "Find the pattern of numbers the winning player should say.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The rules are in words; the book prints no figure for the game.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S36.T36.C209.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S36.T36.C210",
+   "role": "solution",
+   "lp_book_number": "Game of 21: the winning pattern",
+   "ncert_ref": "Section 3.12 - Game of 21",
+   "question_text": "Find the pattern of numbers the winning player should say.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The sequence 1, 5, 9, 13, 17, 21 is a text list; the 'safe numbers' strip C206.IMG1 is in the lesson topic just before and would be a near-copy.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S36.T36.C210.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S37.T37.C211",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 3.12 - FiO Q10 (race to 22)",
+   "question_text": "Starting with 0, players take turns adding 1, 2 or 3. The first to reach 22 wins. What is the winning strategy?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Text question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S37.T37.C211.IMG1"
+  },
+  {
+   "lp_concept_id": "M4.S37.T37.C212",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 3.12 - FiO Q10 (race to 22)",
+   "question_text": "Starting with 0, players take turns adding 1, 2 or 3. The first to reach 22 wins. What is the winning strategy?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The sequence 22, 18, 14, 10, 6, 2 is a text list; the race-to-22 strip C207.IMG1 is in the lesson topic just before and would be a near-copy.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": "M4.S37.T37.C212.IMG1"
+  }
+ ]
+}
