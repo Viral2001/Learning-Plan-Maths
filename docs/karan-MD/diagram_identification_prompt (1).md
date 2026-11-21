@@ -1,5 +1,9 @@
-# Diagram Identification & Diagram-Spec Prompt — NCERT Maths, Classes 5–8 (v1)
+# Diagram Identification & Diagram-Spec Prompt — NCERT Maths, Classes 5–8 (v3)
 
+> **v2 me kya badla (Number Play v17 audit ke baad):** 7 zaroori diagram chhoot gaye the (3.1 ke 3 picture-answers, aur 3.9 ke figures b, c, e, f jinka LP me image id hi nahi tha), aur 4 faltu ban gaye the (place-value header boxes, mental-math number lists). Iske liye ye add kiya: **Step 0 NCERT figure inventory** (har figure ka hisaab dena zaroori), **"missing image id ≠ no diagram"** rule, **printed-answer-is-a-picture** rule, **sibling consistency**, saaf likhe **NOT-a-diagram** cases, **LP me seedha likhne ka format** (section 8B) aur ek **coverage report**.
+>
+> **v3 me kya badla (Number Play, V3 v18 ke placement map ke baad):** (1) **Solution figure ka token hamesha `steps_tex` me, pehle step se pehle (`before_first_step`)** — solution ke liye `after_step_<n>` aur `answer_tex` hata diye. (2) **Concept (teaching) image ko kabhi link nahi karna** — `reuse_concept_image` aur `reuse_media_id` hata diye; item ko jo figure chahiye wo apni diagram image me banegi, chahe same topic me teaching image ho. Worked example ke lettered figures (b, c, e, f…) bhi hamesha draw hote hain. (3) **'Refer picture' wala question (C9 type)**: book ka answer sirf picture ki taraf ishara karta hai aur wahi picture pichhle topic ki teaching image hai → question side `optional` (draw nahi, link nahi), question text me data likhna zaroori; solution side apni poori figure khud draw karti hai (`derived_from` null).
+>
 > **Kaise use karna hai (short):** Har chapter ke liye ek LLM call (ya module-wise chunks). Input me do cheezein do: (1) us chapter ka Learning Plan JSON (ya uske question items), (2) NCERT chapter + solutions ki PDF pages (text **aur** page images dono). Section 1 ka block system prompt hai. Output ek JSON hoga jo `diagram_map.schema.json` follow karega. Jin items me `decision = required` (aur budget ho to `optional`) hai, sirf unki image manim se banegi; baaki sab text/LaTeX se aayega. Image ki jagah LP text me placeholder token lagega: `{{DIAGRAM:<media_id>}}`.
 
 ---
@@ -18,6 +22,14 @@ added ONLY where a diagram is needed. Your job, for every LP question item, is t
   2. for every required/optional diagram, write a complete, exact, render-ready specification
      of the DIAGRAM ONLY, to be drawn in manim (Python) — no question text, no solution text;
   3. give the placeholder token and where it goes in the LP text.
+Before deciding any item, build the NCERT figure inventory (section 3, Step 0); at the end,
+every figure in it must be accounted for. A missing image id in the LP is NEVER a reason to
+skip an item: evaluate every item, and create a new id where a diagram is needed.
+
+Placement and linking: the token of a solution diagram always goes at the start of the solution
+steps (steps_tex, before_first_step); the token of a question or worked-example diagram goes after
+the question text. A teaching (concept) image is never linked from a question, a solution or a
+worked example and never stands in for a figure the item needs: that item gets its own diagram.
 
 Be strict. Text and LaTeX are the default. A diagram must earn its place by the rules in
 sections 3–5. A chapter may need no diagrams at all, or diagrams for almost everything —
@@ -38,16 +50,26 @@ Walk the LP: `modules[].segments[].topics[].concepts[].content[]`. Every content
 | has `image_media_id` | `question` | that id (existing placeholder) |
 | has `solution_image_media_id` (or `solution_image_media_ids`) | `solution` | that id; extra parts use `…IMG2` |
 | has neither (worked example, often with `example_id` / `video_media_id`) | `worked_example` | new id `<concept_id>.IMG1` |
+| has neither, but it is the answer half of a question (has `steps`/`answer`, same `book_number` as the item before it) | `solution` | new id `<concept_id>.IMG1` |
+
+**The LP's current image fields are NOT a decision.** An earlier pipeline may have removed ids, or never created them. Items with no id must be judged exactly like items with one. (Audit miss, Number Play: the solutions of 3.1 Q3, Q4, Q6 and the worked examples on figures b, c, e, f had no id and were silently skipped, though each needs a diagram.)
 
 Rules:
 - Decide the question side and the solution side **separately**. Most of the time only one of them needs a diagram.
 - One item → normally one diagram. Use a second part (`IMG2`) only when one picture would be overcrowded (e.g. two different figures).
 - If the LP has split a NCERT question into parts (a, b, c…), each part gets its own diagram — never one combined picture.
-- Teaching figures inside the chapter (before the exercise, explaining the idea) are **concept images**, not this job. If such an image already exists in the LP `media` (`image_role` absent, `build_status: built`), reuse it (`lp_placeholder_action: reuse_concept_image`) instead of making a near-copy.
+- Teaching figures inside the chapter (before the exercise, explaining the idea) are **concept images**, not this job. They stay as they are (`image_role` absent) and are **never linked** from a question, solution or worked-example block: there is no `reuse_concept_image`. A figure that an item needs is judged by Step B like any other, even when a concept image shows the same figure: concept images sit elsewhere, carry a title banner and a logo, and may belong to another topic. The only exception is the 'refer picture' rule in Step B2.
 
 ---
 
 ## 3. Decision procedure (follow in order)
+
+**Step 0 — NCERT figure inventory (do this once, before any item).** Go through every page image of the chapter AND of the printed solutions. List every figure that carries mathematical content: tables with coloured cells, number lines, grids, arrangements of people/objects, dot/dice/number patterns, geometric figures, graphs, scales, boards with arrows. Skip pure decoration (characters, scenery, photos of people, the chapter-opening art, QR codes). Give each one an id like `P59-numberline-b` or `SOL3-Q6-picture` and a one-line description. Then, for each inventory figure, record exactly one of:
+- `item:<concept_id> (question|solution)` — it becomes that item's diagram;
+- `concept_image:<media_id>` — it is a teaching figure already in the LP media (accounting only: no item is linked to it, and an item that needs the figure still gets its own diagram, except under the 'refer picture' rule of Step B2);
+- `none:<REASON_CODE>` — with a reason from Step C.
+
+An inventory figure with no entry is an error. Include this table in the output (`figure_inventory`, section 8). **Printed-solution pictures count**: if the solutions PDF draws a figure for an answer (stick-figure line-ups, coloured tables, labelled number lines, a constructed figure), that figure is in the inventory.
 
 **Step A — locate the source.** Find the NCERT section, page and question number for the item (the LP manim `render_source.scene` name usually encodes it, e.g. `c3_2_FiO1_q` = section 3.2, Figure it Out Q1). Look at the NCERT page **image** and the printed **solution** page. Note whether a figure is attached to the question and whether the printed answer contains a figure.
 
@@ -64,6 +86,13 @@ Rules:
 | `MEASUREMENT_READING` | A reading must be taken from an instrument | ruler length, protractor angle, analogue clock face, weighing scale, measuring jug |
 | `HIGHLIGHT_MEANING` | Colour/circle/box carries mathematical meaning that LaTeX cannot show reliably | coloured supercells, circled smallest / boxed largest, highlighted factor pairs on a grid |
 
+**Step B2 — rules that override text-first:**
+- **Printed answer is a picture → solution `required`**, unless it would only repeat the question diagram (`SAME_AS_QUESTION_DIAGRAM`). Example: NCERT answers 3.1 Q4, Q5, Q6, Q7 with stick-figure line-ups → Q4, Q6, Q7 required (Q5 only repeats Q4's picture → optional).
+- **Answer is an arrangement / filled figure / construction**, even if the steps describe it in words → solution `required` (`ANSWER_IS_FIGURE`). Words like "Example: heights 150, 140, 120, 135, 145" are data for a picture, not a replacement for it.
+- **The question refers to a lettered figure** ("Figure a", "figure e", "Table 2") → that figure is `required` on whichever item first shows it to the student (question side, or the worked example's question side). Draw it even if a concept (teaching) image of the same topic already shows it. (Number Play 3.9: figures b, c, e, f are drawn for their worked examples, figures a and d for their questions.)
+- **'Refer picture' questions (the one case where a teaching image stands in):** the book's own answer only points at a picture ("refer picture on page 55"), the question names no lettered figure, and the very same picture is already a concept image of an earlier topic of the chapter → the QUESTION side is `optional` (reason codes `FIG_REFERENCED` + `REUSES_CONCEPT_IMAGE`): no diagram and no link. The question text must then state the data the picture carried (e.g. "the first line-up: bubbles 0, 2, 1, 1, 0, 2, 1, 0"): write that sentence in `text_alternative` and set `needs_lp_text_sync: true`. The SOLUTION side is judged on its own: if its answer is a picture or adds marks it is `required` and draws the whole figure itself with `derived_from: null` (Number Play 3.1 Q3: question `optional`, solution figure = the line-up with the neighbouring pair circled).
+- **Sibling consistency:** items from the same NCERT question set with the same kind of answer get the same decision. If Q7's answer line-up is required, Q4's and Q6's are too. If figure a and d are drawn, figures b, c, e, f are drawn too. If you break this, say why in `reason`.
+
 **Step C — NONE rules (text first).** The side is `none` when any of these holds and no Step-B trigger is essential:
 
 | Code | Meaning |
@@ -73,8 +102,10 @@ Rules:
 | `LATEX_ARITHMETIC` | Column addition/subtraction, long division, fractions, equations, sequences, number chains → LaTeX |
 | `DECORATIVE_ONLY` | NCERT picture is illustration (children, animals, fruit, characters, scenery) and the numbers are in the text |
 | `OPEN_ENDED` | "Make your own…", "Discuss…", "Challenge your friends" with no fixed figure |
-| `REUSES_CONCEPT_IMAGE` | The same figure already exists as an LP concept image; point to it |
+| `REUSES_CONCEPT_IMAGE` | The same figure is already a concept (teaching) image of the chapter. Never linked. Use it only for the 'refer picture' rule (Step B2, question side `optional`) and for a procedure flow-chart that is already a concept image (below); every other figure an item needs gets its own diagram |
 | `SAME_AS_QUESTION_DIAGRAM` | Solution would only repeat the question diagram without adding anything |
+| `HEADER_BOXES_ONLY` | A row of empty boxes whose only content is column headers (tth/th/h/t/u, 1-digit/2-digit…), or the same boxes filled with digits → LaTeX `array`, not an image |
+| `NUMBER_LIST_IN_BOXES` | Numbers drawn in boxes where neither position nor arrows carry meaning (a "board" of 5–6 numbers to choose from) → list them in text. The arrows only become a diagram on the side where they are drawn (usually the solution), and even then only `optional` if the LaTeX expression already gives the answer |
 | `NOT_RENDERABLE` | Needs a real map, photograph, real banknote/coin image, or anything manim cannot draw faithfully. Do not fake it; keep it `none` and say why |
 
 **Step D — OPTIONAL band.** Use `optional` when a diagram clearly helps understanding but the text/LaTeX answer is already complete (e.g. grouping the numbers of a pattern by colour, showing row totals beside a grid, an arrow picture for a sum that is already written as an expression). Optional diagrams are rendered only if budget allows.
@@ -87,7 +118,13 @@ Rules:
   - Word question, figure answer (e.g. "arrange five children so that…"): **Q none, S required**.
   - Act-on-figure (e.g. "mark / label / shade / place"): **Q required, S required**, with S `derived_from` Q.
 
-**Step F — dedupe and reuse.** Same figure used by several items → one spec, the rest `derived_from` it (manim reuses the scene). Concept image already exists → reuse it.
+**Step F — dedupe.** Same figure used by several items → one spec, the rest `derived_from` it (manim reuses the scene). A concept image is never used as an item's image: no `reuse_concept_image`, no link from the block (section 2).
+
+**Not a diagram (common false positives, from the audit):**
+- Place-value header boxes `tth th h t u` with or without digits (Puzzle Time) → `HEADER_BOXES_ONLY`.
+- "Numbers in the middle: 25,000, 400, 13,000, 1,500, 60,000 — make 28,000" as a question → `NUMBER_LIST_IN_BOXES`.
+- A plain count table (1-digit: 9, 2-digit: 90 …) → `LATEX_TABLE`.
+- A flow-chart of a procedure already drawn as a concept image → `none` with `REUSES_CONCEPT_IMAGE` (or `optional` on the solution side); no link, no new diagram.
 
 **Tie-breaker:** *Could a careful student solve it from the text alone, exactly as well?* If yes → `none`. If the picture would change how easily or how correctly they solve it → `required`. If it only makes it nicer → `optional`.
 
@@ -113,7 +150,7 @@ Rules:
 
 ## 5. Question diagram vs solution diagram — consistency rules
 
-1. The solution diagram is the question diagram **plus** the answer. Same layout, same size, same positions. Set `derived_from` to the question item.
+1. The solution diagram is the question diagram **plus** the answer. Same layout, same size, same positions. Set `derived_from` to the question item; when the question side has no diagram, the solution diagram stands alone (`derived_from: null`) and draws the whole figure.
 2. Given content stays in `INK`; content added in the solution is drawn in `ANSWER` green. Highlights (circles, dashed outlines) use `FOCUS`. A wrong/impossible case uses `WRONG` only when the LP solution itself shows it.
 3. Never move, renumber or restyle the given parts between question and solution.
 4. If the answer is open (many correct answers), draw the **sample answer given in the LP solution**, nothing else. If the LP gives no concrete instance, pick one, state it in `manim_description`, and set `needs_lp_text_sync: true` so the solution text can be aligned.
@@ -180,15 +217,29 @@ Return one JSON object (schema: `diagram_map.schema.json`):
 {
   "meta": {
     "chapter": "<chapter name>", "class": 6, "textbook": "<book, chapter no>",
-    "lp_plan_id": "<plan_id>", "prompt": "diagram_identification_prompt.md v1",
+    "lp_plan_id": "<plan_id>", "prompt": "diagram_identification_prompt.md v3",
     "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
     "counts_by_role_and_decision": {"question": {"required": 0, "optional": 0, "none": 0}, "solution": {}, "worked_example": {}},
     "notes": ["anything the reviewer must know"]
   },
   "style_tokens": { "BG": "#FFFFFF", "INK": "#2B2B2B", "...": "..." },
+  "figure_inventory": [
+    {"fig_id": "P68-fig-e", "source": "chapter p.68", "description": "hexagon of 15/25/35 pieces",
+     "mapped_to": "item:M3.S27.T27.C170 (question)"},
+    {"fig_id": "SOL1-Q6", "source": "solutions p.[2]", "description": "five stick figures 0,1,2,1,0",
+     "mapped_to": "item:M1.S3.T3.C16 (solution)"},
+    {"fig_id": "P63-kaprekar-flow", "source": "chapter p.63", "description": "Kaprekar steps flow-chart",
+     "mapped_to": "concept_image:M3.S19.T19.C98.IMG1"}
+  ],
+  "coverage_report": {
+    "inventory_figures": 0, "mapped_to_items": 0, "mapped_to_concept_images": 0, "mapped_none": 0, "unmapped": 0,
+    "new_media_ids_created": ["<ids of images for items that had no id>"],
+    "lp_ids_dropped": ["<ids of LP image placeholders removed because decision = none>"]
+  },
   "items": [ /* one per LP item, in LP order, INCLUDING the 'none' ones */ ]
 }
 ```
+`coverage_report.unmapped` must be 0.
 
 **Item with a diagram** (example from Class 6, Number Play):
 
@@ -237,9 +288,50 @@ Return one JSON object (schema: `diagram_map.schema.json`):
 }
 ```
 
+### 8B. Writing the result straight into the LP
+
+If you are asked to return the **updated LP** instead of (or along with) the map, apply each item's decision like this. Never leave an LP image id that points to nothing, and never leave a `required` item without one.
+
+| Decision | Content item (`concepts[].content[]`) | Topic `media[]` |
+|---|---|---|
+| required / optional (rendered), question or worked example | set `image_media_id` = `<concept_id>.IMG1` | add/replace one image entry (below) |
+| required / optional (rendered), solution | set `solution_image_media_id` = `<concept_id>.IMG1`; for 2 parts also `solution_image_media_ids` | add/replace one image entry per part |
+| none | remove `image_media_id` / `solution_image_media_id(s)` | remove that image entry |
+| concept (teaching) image of the chapter | untouched: its id is never put into `image_media_id` / `solution_image_media_id` of a question, solution or worked example | untouched |
+
+Image entry (same shape as the LP's existing diagram entries):
+
+```json
+{
+  "id": "M3.S27.T27.C170.IMG1",
+  "type": "image",
+  "title": "DIAGRAM · <book_number or short name> question figure",
+  "concept_id": "M3.S27.T27.C170", "home_concept_id": "M3.S27.T27.C170",
+  "image_role": "question",
+  "image_category": "concept", "subtype": "illustration",
+  "build_status": "placeholder",
+  "aspect_ratio": "1:1", "image_dimensions": "1920x1920",
+  "image_url": "<base>/diagram_v1/M3.S27.T27.C170.IMG1.png",
+  "planned_url": "<base>/diagram_v1/M3.S27.T27.C170.IMG1.png",
+  "description": "<= alt_text>",
+  "labels": ["<= visible_text>"],
+  "context": "Question figure of <...>. PLACEHOLDER: specified, not generated yet.",
+  "diagram_spec": { /* the full `diagram` object from section 8, plus reason and reason_codes */ },
+  "generation_prompt": "<= manim_description>",
+  "negative_prompt": "<= must_not_show joined with '; '>",
+  "accuracy_constraints": "<= accuracy_checks joined with newlines>",
+  "render_source": {"engine": "manim", "scene": "<scene>",
+                    "code_url": "<base>/diagram_v1/code/<id>.py", "style_url": "<base>/diagram_v1/code/_style.py"},
+  "instructions_for_student": "Look carefully at the figure.",
+  "teaching_notes": "", "related_concept_ids": [], "source_image_key": ""
+}
+```
+For a solution: `image_role: "solution"`, title "… solution figure", `instructions_for_student`: "Compare this with your own working, step by step.", `teaching_notes`: "Show only after the student has attempted the question."
+`<base>` = the LP's existing asset folder (take it from any existing `planned_url`). Scene name: `c<ch>_<section>_<item>_q|_sol`, or `end_<item>_q|_sol` for end-of-chapter items.
+
 Field rules:
-- `lp_placeholder_action`: `keep_and_replace_spec` (LP placeholder exists, use it for the diagram) · `add_new_image` (worked example with no id) · `drop_image` (LP placeholder exists but no diagram) · `reuse_concept_image` (+ `reuse_media_id`) · `no_image`.
-- `placeholder.insert_into`: `question_tex` for question/worked-example diagrams, `steps_tex` for solution diagrams. `position`: `after_question_text` | `before_first_step` | `after_step_<n>` | `after_answer`.
+- `lp_placeholder_action`: `keep_and_replace_spec` (LP placeholder exists, use it for the diagram) · `add_new_image` (worked example with no id) · `drop_image` (LP placeholder exists but no diagram) · `no_image` (no placeholder, no diagram). There is no reuse action: a concept image is never linked.
+- `placeholder`: question and worked-example diagrams → `insert_into: question_tex`, `position: after_question_text`. Solution diagrams → ALWAYS `insert_into: steps_tex`, `position: before_first_step`: the token is the first line of the solution steps (in every field that carries the steps, before step 1), because the solution figure shows the complete final state that the steps then explain. Never `after_step_<n>`, never `answer_tex`.
 - `text_alternative` (optional, for `none`): one line telling the text/LaTeX side what to write instead (e.g. "LaTeX array with headers tth, th, h, t, u").
 - `manim_description`: imperative, complete, left→right / top→bottom, exact values, 1-based tick/row/column indices, colour tokens by name. No "some", "several", "etc.", "similar".
 - `visible_text`: every string that will appear in the image, nothing more.
@@ -249,11 +341,17 @@ Field rules:
 
 ## 9. Self-check before you output
 
-1. Every LP question item appears once, in LP order, with a decision — including `none`.
+0. Every figure in `figure_inventory` is mapped; `coverage_report.unmapped` = 0. Every printed-solution picture is mapped to a solution item, a concept image, or `SAME_AS_QUESTION_DIAGRAM`.
+1. Every LP question item appears once, in LP order, with a decision — including `none`. Items without an LP image id were judged too (not skipped).
+1b. Sibling check: all parts of one NCERT question set with the same answer type have the same decision (or a stated reason).
+1c. No image was made for header-only boxes or a plain list of boxed numbers.
 2. No diagram contains question text, solution sentences, headings or branding.
 3. Every required diagram passes the tie-breaker in section 3.
 4. Every value in `content` traces to the LP item, its LP solution, or the NCERT page; nothing invented.
 5. Question diagrams do not leak the answer; solution diagrams are `derived_from` their question diagram when one exists.
 6. Accuracy checks actually hold (recompute sums, counts, supercell/rule conditions, scale positions).
-7. Media ids are unique; every token is `{{DIAGRAM:<media_id>}}` with the same id.
-8. Counts in `meta` match the items.
+7. In an LP write-back: every `required` item has its id field set and a matching `media[]` entry; no `none` item keeps an id; no `media[]` diagram entry is orphaned.
+8. Media ids are unique; every token is `{{DIAGRAM:<media_id>}}` with the same id.
+8b. Every solution token is `steps_tex` / `before_first_step`; every question or worked-example token is `question_tex` / `after_question_text`.
+8c. No block points at a concept image; no `reuse_concept_image` / `reuse_media_id` anywhere. A 'refer picture' question (Step B2) is `optional` and its `text_alternative` names the data.
+9. Counts in `meta` match the items.

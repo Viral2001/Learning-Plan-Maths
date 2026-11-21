@@ -1,6 +1,6 @@
 # Diagram trigger word — cross-standard companion note
 
-Nov 18, 2026 · @HALAJI
+Nov 18, 2026 · @HALAJI · updated Nov 21, 2026 (two bullets added to the figure-content rule: placement, and teaching images)
 
 ## What this is, and what it isn't
 
@@ -26,6 +26,8 @@ However many images your schema allows per question or answer, this rule governs
 - **A solution's figure shows the complete final state.** Whatever drawing, plotting, or construction the solution involves, the figure tied to the solution shows every point, label, line and mark the finished answer needs — not an intermediate step, not a blank canvas, the end result.
 - **If a question has no given figure, don't invent a question-figure.** A "blank" or placeholder image is worse than none — it implies something was given when nothing was.
 - **Labels stay consistent between a question's figure and its solution's figure.** Points named in the given figure keep the same letters in the solution's figure; new points the solution introduces continue the same labelling scheme (next letter, matching case) rather than restarting it.
+- **Placement: the solution's figure comes first.** The figure tied to a solution is shown before the first step of that solution (it is the complete final state, and the steps then explain how to reach it). A question's figure follows the question text.
+- **A teaching (concept) image is never linked in as a question's or a solution's figure.** Images that explain an idea elsewhere in the chapter keep their own place, get no ` DIAGRAM ·  ` prefix, and do not replace a figure the question or solution needs: each question or solution that needs a figure has its own image, even if a teaching image shows the same thing. One exception: if the book's answer only says "refer picture" and that same picture is already a teaching image of an earlier topic, the question gets no figure (don't invent one) and its text names the data; the solution's figure then draws the whole figure itself.
 
 This rule says nothing about whether you use one image, two, or a sequence of step-by-step images for a solution — it only says: wherever a figure's job is to represent the given state, keep it to the given state; wherever a figure's job is to represent the final state, make it complete.
 
