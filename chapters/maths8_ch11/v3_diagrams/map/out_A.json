@@ -1,0 +1,1550 @@
+{
+ "meta": {
+  "chapter": "Exploring Some Geometric Themes",
+  "class": 8,
+  "textbook": "Ganita Prakash Grade 8, Part 2, Chapter 4",
+  "lp_plan_id": "cbse_eng_maths8_ch11_v31",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "required": 1,
+    "optional": 0,
+    "none": 5
+   },
+   "question": {
+    "required": 0,
+    "optional": 0,
+    "none": 7
+   },
+   "solution": {
+    "required": 3,
+    "optional": 0,
+    "none": 4
+   }
+  },
+  "notes": [
+   "Chunk A = module M1 (fractals, book section 4.1, pdf pages 1 to 6), 13 units, 20 items.",
+   "Required: the three 'draw the initial steps' solutions (carpet C7, gasket C12, Koch C19) and the worked example on the midpoints of an equilateral triangle (C8). Everything else is text/LaTeX.",
+   "All three 'draw the steps' questions are none on the question side (no given figure) and required on the solution side: same decision across the set.",
+   "The four Figure it Out questions Q2/Q3 (units 7, 8, 12, 13) have formula answers, so none/none; their LP book_number says 'Figure it Out, Q1' for all four, which is wrong (they are Q2, Q3 of the triangle and of the snowflake).",
+   "The solution figures use MARK_FILL for the remaining pieces and ANSWER green for the count tags (no question diagram exists to derive from).",
+   "Weakest required item: C8 (midpoints worked example); a reviewer who prefers text only can flip it to none without touching the others.",
+   "Counts match the LP solution text, and were recomputed: carpet squares 1, 8, 64 and holes 0, 1, 9; gasket triangles 1, 3, 9 and holes 0, 1, 4; Koch sides 3, 12, 48."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P01-fractal_steps-1",
+   "source": "chapter p.01",
+   "description": "Sierpinski Carpet Steps 0, 1, 2 in magenta (checked against the page picture: Step 2 is a 9 x 9 grid, one white 3 x 3 hole, 8 single holes at (2,2),(2,5),(2,8),(5,2),(5,8),(8,2),(8,5),(8,8); 64 squares remain). It is the picture that answers the carpet 'draw Steps 0 to 2' prompt.",
+   "mapped_to": "item:M1.S3.T3.C7 (solution)"
+  },
+  {
+   "fig_id": "P02-fractal_image-1",
+   "source": "chapter p.02",
+   "description": "One late-step Sierpinski Carpet (about Step 4), caption 'Sierpinski Carpet' (checked: matches). No item uses it: the Step 3 and Step 4 counts come from the rule R(n+1) = 8 R(n), not from reading this picture.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P03-fractal_steps-1",
+   "source": "chapter p.03",
+   "description": "Sierpinski Gasket Steps 0, 1, 2 in magenta (checked: rows 1, 2, 2, 4 of up triangles at Step 2; 1 + 3 = 4 holes). It is the picture that answers Figure it Out Q1 of the triangle.",
+   "mapped_to": "item:M1.S5.T5.C12 (solution)"
+  },
+  {
+   "fig_id": "P03-fractal_image-2",
+   "source": "chapter p.03",
+   "description": "One late-step Sierpinski Triangle in thin pink outline, caption 'Sierpinski Triangle' (checked: matches). No item uses it: the counts and areas of FiO Q2 and Q3 come from rules in words.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P04-fractal_steps-1",
+   "source": "chapter p.04",
+   "description": "Koch Snowflake Steps 0, 1, 2 in green (checked: triangle, six-pointed star, then the star with a bump on each of its 12 sides, 48 sides). It is the picture that answers Figure it Out Q1 of the snowflake.",
+   "mapped_to": "item:M1.S8.T8.C19 (solution)"
+  },
+  {
+   "fig_id": "P04-fractal_image-2",
+   "source": "chapter p.04",
+   "description": "One late-step Koch Snowflake in green, caption 'Koch Snowflake' (checked: matches). No item uses it: the side counts and the perimeter come from the bump rule in words.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P04-bump_symbol-3",
+   "source": "chapter p.04",
+   "description": "Tiny inline symbol of the Koch bump (flat, up, down, flat) at the end of the sentence 'each side gets replaced by a bump-shaped structure' (checked: matches). The same idea is the topic's teaching image 'The bump rule: 1 side becomes 4'.",
+   "mapped_to": "concept_image:M1.S7.T7.C15.IMG1"
+  },
+  {
+   "fig_id": "P05-photo-1",
+   "source": "chapter p.05",
+   "description": "Photograph of a Nigerian Fulani wedding blanket with diamond motifs inside diamonds (checked: matches). A photograph of a woven cloth cannot be redrawn faithfully; the LP's diamond question (area 64, 32, 16, 8) is fully stated in words.",
+   "mapped_to": "none:NOT_RENDERABLE"
+  },
+  {
+   "fig_id": "NEW-P01-fern-photo",
+   "source": "chapter p.01",
+   "description": "NEW: photograph of a fern leaf, beside the first paragraph of 4.1 (the self-similarity example). Not in the base inventory. The topic's teaching image 'A fern made of smaller ferns' is the drawn version of this idea.",
+   "mapped_to": "concept_image:M1.S1.T1.C1.IMG1"
+  },
+  {
+   "fig_id": "NEW-P05-temple-photo",
+   "source": "chapter p.05",
+   "description": "NEW: photograph of the Kandariya Mahadev Temple, Khajuraho (tall temple tower made of smaller copies of itself), caption 'Kandariya Mahadev Temple'. Not in the base inventory; no question works on it.",
+   "mapped_to": "none:NOT_RENDERABLE"
+  },
+  {
+   "fig_id": "NEW-P06-escher-print",
+   "source": "chapter p.06",
+   "description": "NEW: print of green, black and white lizards that get smaller towards the centre, 'a print inspired by Escher's Smaller and Smaller'. Not in the base inventory; artwork that cannot be redrawn, no question works on it.",
+   "mapped_to": "none:NOT_RENDERABLE"
+  },
+  {
+   "fig_id": "NEW-P03-step1-midpoints",
+   "source": "chapter p.03",
+   "description": "NEW (second use of the Step 1 picture of P03-fractal_steps-1): the equilateral triangle with the midpoints of its sides joined, giving 4 triangles (3 coloured corners and the central white one). The worked example 'show that joining the midpoints makes 4 identical equilateral triangles' needs it, drawn as a plain outline figure with side 8 cm.",
+   "mapped_to": "item:M1.S4.T4.C8 (question)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 12,
+  "mapped_to_items": 4,
+  "mapped_to_concept_images": 2,
+  "mapped_none": 6,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S3.T3.C7.IMG1",
+   "M1.S4.T4.C8.IMG2",
+   "M1.S5.T5.C12.IMG1",
+   "M1.S8.T8.C19.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S2.T2.C3",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 4.1 - Sierpinski Carpet (R_n = 8 R_(n-1))",
+   "question_text": "Find the number of remaining squares at Step 3 and at Step 4 of the Sierpinski Carpet.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Pure counting with the rule R(n+1) = 8 R(n) (64 x 8 = 512, 512 x 8 = 4096); the question gives no figure and Step 3 or Step 4 (512 or 4096 squares) cannot be read from a drawing.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C4",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 4.1 - Sierpinski Carpet (H_(n+1) = H_n + R_n)",
+   "question_text": "Find the number of holes at Step 3 and at Step 4 of the Sierpinski Carpet.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic on the rule H(n+1) = H(n) + R(n) (1 + 8 + 64 = 73, 73 + 512 = 585); every datum is in the words and no figure is given.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C6",
+   "role": "question",
+   "lp_book_number": "Sierpinski Carpet: the first three steps",
+   "ncert_ref": "Section 4.1 - Sierpinski Carpet: draw Steps 0 to 2 (p.1-2)",
+   "question_text": "Draw Steps 0, 1 and 2 of the Sierpinski Carpet and count the remaining squares and the holes at each step.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure: it asks the learner to draw Steps 0, 1 and 2, so a question figure would show the answer; the drawing is the solution figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "solution",
+   "lp_book_number": "Sierpinski Carpet: the first three steps",
+   "ncert_ref": "Section 4.1 - Sierpinski Carpet: draw Steps 0 to 2 (p.1-2)",
+   "question_text": "Draw Steps 0, 1 and 2 of the Sierpinski Carpet and count the remaining squares and the holes at each step.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is the drawing of Steps 0, 1 and 2 with the counts; the LP steps only describe it in words, so the solution figure is drawn in full (the teaching image of the topic is not linked).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C7.IMG1",
+   "manim_scene": "c8_11_4_1_carpet_steps_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C7.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "2:1",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "figure_kind": "fractal_step_row",
+     "fractal": "Sierpinski Carpet",
+     "canvas_units": {
+      "width": 16,
+      "height": 8,
+      "pixels": "1920x960"
+     },
+     "panels": [
+      {
+       "step": 0,
+       "square_lower_left": [
+        1,
+        3
+       ],
+       "side": 4,
+       "grid": null,
+       "white_cells": [],
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "labels": {
+        "step": "Step 0",
+        "step_xy": [
+         3,
+         2.3
+        ],
+        "line1": "1 square",
+        "line1_xy": [
+         3,
+         1.5
+        ],
+        "line2": "0 holes",
+        "line2_xy": [
+         3,
+         0.8
+        ]
+       }
+      },
+      {
+       "step": 1,
+       "square_lower_left": [
+        6,
+        3
+       ],
+       "side": 4,
+       "grid": "3x3",
+       "cell_side": 1.3333,
+       "white_cells": [
+        [
+         2,
+         2
+        ]
+       ],
+       "remaining_cells": 8,
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "labels": {
+        "step": "Step 1",
+        "step_xy": [
+         8,
+         2.3
+        ],
+        "line1": "8 squares",
+        "line1_xy": [
+         8,
+         1.5
+        ],
+        "line2": "1 hole",
+        "line2_xy": [
+         8,
+         0.8
+        ]
+       }
+      },
+      {
+       "step": 2,
+       "square_lower_left": [
+        11,
+        3
+       ],
+       "side": 4,
+       "grid": "9x9",
+       "cell_side": 0.4444,
+       "white_blocks": [
+        {
+         "rows": [
+          4,
+          6
+         ],
+         "cols": [
+          4,
+          6
+         ]
+        }
+       ],
+       "white_cells": [
+        [
+         2,
+         2
+        ],
+        [
+         2,
+         5
+        ],
+        [
+         2,
+         8
+        ],
+        [
+         5,
+         2
+        ],
+        [
+         5,
+         8
+        ],
+        [
+         8,
+         2
+        ],
+        [
+         8,
+         5
+        ],
+        [
+         8,
+         8
+        ]
+       ],
+       "remaining_cells": 64,
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "labels": {
+        "step": "Step 2",
+        "step_xy": [
+         13,
+         2.3
+        ],
+        "line1": "64 squares",
+        "line1_xy": [
+         13,
+         1.5
+        ],
+        "line2": "9 holes",
+        "line2_xy": [
+         13,
+         0.8
+        ]
+       }
+      }
+     ],
+     "cell_index_rule": "(row, column), both counted from 1, row 1 at the top, column 1 at the left",
+     "colours": {
+      "remaining_squares": "MARK_FILL",
+      "holes": "BG",
+      "outlines_and_step_labels": "INK",
+      "count_text": "ANSWER"
+     },
+     "text_height_units": 0.45
+    },
+    "manim_description": "Canvas 16 by 8 units (2:1, 1920 x 960 px), plain BG white; 1 unit = 120 px. Draw three squares of side 4 units in one row, left to right, with their lower-left corners at (1,3), (6,3) and (11,3), so every square spans y = 3 to y = 7. Remaining squares are filled MARK_FILL; a hole is BG white; every outline is INK. Square 1 (Step 0): one solid square, MARK_FILL, 3 px INK outline, no inner lines, no hole. Square 2 (Step 1): cut into a 3 by 3 grid of cells of side 1.3333 (cells counted as (row, column) from 1, row 1 at the top, column 1 at the left). The cell (2,2) is the hole, BG white; the other 8 cells are MARK_FILL; every cell has a 2 px INK outline. Square 3 (Step 2): cut into a 9 by 9 grid of cells of side 0.4444. The 3 by 3 block of cells in rows 4 to 6 and columns 4 to 6 is ONE white hole of side 1.3333 with a single 2 px INK outline and no inner lines. Eight single cells are white holes: (2,2), (2,5), (2,8), (5,2), (5,8), (8,2), (8,5), (8,8). The remaining 64 cells are MARK_FILL with a 2 px INK outline. Under each square, centred on the square, write in INK at y = 2.3 the text 'Step 0', 'Step 1', 'Step 2' (x = 3, 8, 13), then in ANSWER green two lines of text, the first at y = 1.5 and the second at y = 0.8: under Step 0 '1 square' and '0 holes'; under Step 1 '8 squares' and '1 hole'; under Step 2 '64 squares' and '9 holes'. Text height 0.45 unit (54 px), sans-serif. Nothing else is drawn.",
+    "visible_text": [
+     "Step 0",
+     "Step 1",
+     "Step 2",
+     "1 square",
+     "0 holes",
+     "8 squares",
+     "1 hole",
+     "64 squares",
+     "9 holes"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the dots '. . .' after Step 2",
+     "the book's magenta colour",
+     "the formulas R_n = 8^n or H_n",
+     "inner lines inside a white hole"
+    ],
+    "accuracy_checks": [
+     "squares of the 3 steps: 1, 8, 64 = 8^0, 8^1, 8^2 (Step 2 has 81 cells - 9 in the big hole - 8 single holes = 64 remaining)",
+     "holes: 0, 1, 1 + 8 = 9 (Step 2: 1 big hole of side 4/3 plus 8 single-cell holes of side 4/9)",
+     "the 8 single-cell holes are the centre cells of the 8 outer 3 by 3 blocks of the 9 by 9 grid",
+     "all three squares have the same side 4"
+    ],
+    "alt_text": "Three squares: a whole square; a 3 by 3 grid with the centre removed, 8 squares and 1 hole; and the same cut again, 64 squares and 9 holes.",
+    "render_note": "Matches the book's carpet figure of p.1 (Steps 0 to 2) but with the counts of the LP solution; remaining squares are MARK_FILL, not magenta."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C8",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 4.1 - Sierpinski Gasket: show that the midpoints make 4 identical triangles (p.3)",
+   "question_text": "An equilateral triangle has side 8 cm. Show that joining the midpoints of its sides makes 4 identical equilateral triangles.",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The steps talk about the corner triangles, the 60 degree angle between the two 4 cm sides and the middle triangle; a learner cannot follow which triangle is which without seeing the triangle with its midpoints joined.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S4.T4.C8.IMG2",
+   "manim_scene": "c8_11_4_1_gasket_midpoints_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S4.T4.C8.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "1:1",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas_units": {
+      "width": 10,
+      "height": 10,
+      "pixels": "1920x1920"
+     },
+     "to_scale": true,
+     "points": {
+      "left_vertex": [
+       1,
+       1.9
+      ],
+      "right_vertex": [
+       9,
+       1.9
+      ],
+      "top_vertex": [
+       5,
+       8.8282
+      ],
+      "midpoint_bottom": [
+       5,
+       1.9
+      ],
+      "midpoint_left_side": [
+       3,
+       5.3641
+      ],
+      "midpoint_right_side": [
+       7,
+       5.3641
+      ]
+     },
+     "triangle": {
+      "vertices": [
+       "left_vertex",
+       "right_vertex",
+       "top_vertex"
+      ],
+      "kind": "equilateral",
+      "side_cm": 8,
+      "outline": "INK",
+      "stroke_px": 3,
+      "fill": "BG"
+     },
+     "segments": [
+      {
+       "from": "midpoint_left_side",
+       "to": "midpoint_right_side",
+       "colour": "INK",
+       "stroke_px": 3
+      },
+      {
+       "from": "midpoint_left_side",
+       "to": "midpoint_bottom",
+       "colour": "INK",
+       "stroke_px": 3
+      },
+      {
+       "from": "midpoint_right_side",
+       "to": "midpoint_bottom",
+       "colour": "INK",
+       "stroke_px": 3
+      }
+     ],
+     "dots": [
+      {
+       "at": "midpoint_bottom",
+       "radius": 0.1,
+       "colour": "INK"
+      },
+      {
+       "at": "midpoint_left_side",
+       "radius": 0.1,
+       "colour": "INK"
+      },
+      {
+       "at": "midpoint_right_side",
+       "radius": 0.1,
+       "colour": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "8 cm",
+       "xy": [
+        5,
+        1.1
+       ],
+       "colour": "INK",
+       "height_units": 0.5
+      }
+     ],
+     "angle_marks": [],
+     "vertex_letters": []
+    },
+    "manim_description": "Canvas 10 by 10 units (1:1, 1920 x 1920 px), plain BG white. Draw an equilateral triangle of side 8 units, apex up, horizontal base, 3 px INK outline, no fill: lower-left vertex (1,1.9), lower-right vertex (9,1.9), top vertex (5,8.8282). Mark the midpoint of each side with a small filled INK dot of radius 0.1: (5,1.9) on the bottom side, (3,5.3641) on the left side, (7,5.3641) on the right side. Join the three midpoints with three straight 3 px INK segments: (3,5.3641) to (7,5.3641), (3,5.3641) to (5,1.9), (7,5.3641) to (5,1.9). This cuts the triangle into four triangles, each with sides of 4 units, drawn without fill and without any marks inside them. Write '8 cm' in INK, height 0.5 unit (60 px), centred below the bottom side at (5,1.1). No vertex letters, no angle marks and no other labels.",
+    "visible_text": [
+     "8 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "4 cm labels",
+     "the 60 degree angle marks",
+     "vertex letters",
+     "shading or colours inside the four triangles",
+     "equal-side tick marks"
+    ],
+    "accuracy_checks": [
+     "triangle is equilateral: sides (1,1.9)-(9,1.9), (9,1.9)-(5,8.8282), (5,8.8282)-(1,1.9) all 8 units",
+     "the three dots are the midpoints of the three sides: (5,1.9), (3,5.3641), (7,5.3641)",
+     "each joining segment is 4 units, so the four triangles each have sides of 4 units",
+     "the figure shows only what the question gives (side 8 cm, midpoints joined), not the 4 cm or 60 degrees of the solution"
+    ],
+    "alt_text": "An equilateral triangle with side 8 cm; the midpoints of its three sides are joined, cutting it into four triangles."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C9",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 4.1 - Sierpinski Triangle, counts at Step 3 (FiO1 Q2 and Q3 ideas)",
+   "question_text": "For the Sierpinski Triangle with starting area 1 square unit, find the remaining triangles, the holes and the remaining area at Step 3.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "3 x 3 x 3 = 27, 1 + 3 + 9 = 13 and (3/4)^3 = 27/64 follow from rules stated in words; no figure is given, and a Step 3 drawing of 27 triangles is not needed to get the counts.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C11",
+   "role": "question",
+   "lp_book_number": "Sierpinski Fractals, Q1",
+   "ncert_ref": "Section 4.1 - Figure it Out Q1 (p.3)",
+   "question_text": "Draw the initial few steps (at least till Step 2) of the shape sequence that leads to the Sierpinski Triangle.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure: it asks the learner to draw the steps, so a question figure would show the answer; same decision as the other two 'draw the initial steps' questions of this chapter.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C12",
+   "role": "solution",
+   "lp_book_number": "Sierpinski Fractals, Q1",
+   "ncert_ref": "Section 4.1 - Figure it Out Q1 (p.3)",
+   "question_text": "Draw the initial few steps (at least till Step 2) of the shape sequence that leads to the Sierpinski Triangle.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is the drawing of Steps 0, 1 and 2 (the LP steps only describe it); the solution figure is drawn in full and the topic's teaching image is not linked.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S5.T5.C12.IMG1",
+   "manim_scene": "c8_11_4_1_gasket_FiO1_q1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S5.T5.C12.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "2:1",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "figure_kind": "fractal_step_row",
+     "fractal": "Sierpinski Triangle (Gasket)",
+     "canvas_units": {
+      "width": 16,
+      "height": 8,
+      "pixels": "1920x960"
+     },
+     "panel_origin_rule": "panel k (k = 0, 1, 2) has its lower-left corner at (1 + 5k, 3); all triangle coordinates below are relative to that corner, y up",
+     "panels": [
+      {
+       "step": 0,
+       "origin": [
+        1,
+        3
+       ],
+       "remaining_triangles": [
+        [
+         [
+          0.0,
+          0.0
+         ],
+         [
+          4.0,
+          0.0
+         ],
+         [
+          2.0,
+          3.4641
+         ]
+        ]
+       ],
+       "holes": [],
+       "labels": {
+        "step": "Step 0",
+        "step_xy": [
+         3,
+         2.3
+        ],
+        "line1": "1 triangle",
+        "line1_xy": [
+         3,
+         1.5
+        ],
+        "line2": "0 holes",
+        "line2_xy": [
+         3,
+         0.8
+        ]
+       }
+      },
+      {
+       "step": 1,
+       "origin": [
+        6,
+        3
+       ],
+       "remaining_triangles": [
+        [
+         [
+          0.0,
+          0.0
+         ],
+         [
+          2.0,
+          0.0
+         ],
+         [
+          1.0,
+          1.7321
+         ]
+        ],
+        [
+         [
+          2.0,
+          0.0
+         ],
+         [
+          4.0,
+          0.0
+         ],
+         [
+          3.0,
+          1.7321
+         ]
+        ],
+        [
+         [
+          1.0,
+          1.7321
+         ],
+         [
+          3.0,
+          1.7321
+         ],
+         [
+          2.0,
+          3.4641
+         ]
+        ]
+       ],
+       "holes": [
+        [
+         [
+          1.0,
+          1.7321
+         ],
+         [
+          3.0,
+          1.7321
+         ],
+         [
+          2.0,
+          0.0
+         ]
+        ]
+       ],
+       "labels": {
+        "step": "Step 1",
+        "step_xy": [
+         8,
+         2.3
+        ],
+        "line1": "3 triangles",
+        "line1_xy": [
+         8,
+         1.5
+        ],
+        "line2": "1 hole",
+        "line2_xy": [
+         8,
+         0.8
+        ]
+       }
+      },
+      {
+       "step": 2,
+       "origin": [
+        11,
+        3
+       ],
+       "remaining_triangles": [
+        [
+         [
+          0.0,
+          0.0
+         ],
+         [
+          1.0,
+          0.0
+         ],
+         [
+          0.5,
+          0.866
+         ]
+        ],
+        [
+         [
+          1.0,
+          0.0
+         ],
+         [
+          2.0,
+          0.0
+         ],
+         [
+          1.5,
+          0.866
+         ]
+        ],
+        [
+         [
+          2.0,
+          0.0
+         ],
+         [
+          3.0,
+          0.0
+         ],
+         [
+          2.5,
+          0.866
+         ]
+        ],
+        [
+         [
+          3.0,
+          0.0
+         ],
+         [
+          4.0,
+          0.0
+         ],
+         [
+          3.5,
+          0.866
+         ]
+        ],
+        [
+         [
+          0.5,
+          0.866
+         ],
+         [
+          1.5,
+          0.866
+         ],
+         [
+          1.0,
+          1.7321
+         ]
+        ],
+        [
+         [
+          2.5,
+          0.866
+         ],
+         [
+          3.5,
+          0.866
+         ],
+         [
+          3.0,
+          1.7321
+         ]
+        ],
+        [
+         [
+          1.0,
+          1.7321
+         ],
+         [
+          2.0,
+          1.7321
+         ],
+         [
+          1.5,
+          2.5981
+         ]
+        ],
+        [
+         [
+          2.0,
+          1.7321
+         ],
+         [
+          3.0,
+          1.7321
+         ],
+         [
+          2.5,
+          2.5981
+         ]
+        ],
+        [
+         [
+          1.5,
+          2.5981
+         ],
+         [
+          2.5,
+          2.5981
+         ],
+         [
+          2.0,
+          3.4641
+         ]
+        ]
+       ],
+       "holes": [
+        [
+         [
+          1.0,
+          1.7321
+         ],
+         [
+          3.0,
+          1.7321
+         ],
+         [
+          2.0,
+          0.0
+         ]
+        ],
+        [
+         [
+          0.5,
+          0.866
+         ],
+         [
+          1.5,
+          0.866
+         ],
+         [
+          1.0,
+          0.0
+         ]
+        ],
+        [
+         [
+          2.5,
+          0.866
+         ],
+         [
+          3.5,
+          0.866
+         ],
+         [
+          3.0,
+          0.0
+         ]
+        ],
+        [
+         [
+          1.5,
+          2.5981
+         ],
+         [
+          2.5,
+          2.5981
+         ],
+         [
+          2.0,
+          1.7321
+         ]
+        ]
+       ],
+       "labels": {
+        "step": "Step 2",
+        "step_xy": [
+         13,
+         2.3
+        ],
+        "line1": "9 triangles",
+        "line1_xy": [
+         13,
+         1.5
+        ],
+        "line2": "4 holes",
+        "line2_xy": [
+         13,
+         0.8
+        ]
+       }
+      }
+     ],
+     "colours": {
+      "remaining_triangles": "MARK_FILL",
+      "holes": "BG",
+      "outlines_and_step_labels": "INK",
+      "count_text": "ANSWER"
+     },
+     "text_height_units": 0.45
+    },
+    "manim_description": "Canvas 16 by 8 units (2:1, 1920 x 960 px), plain BG white; 1 unit = 120 px. Draw three equilateral-triangle panels in one row, apex up, horizontal base, left to right. Panel k (k = 0, 1, 2) has its lower-left corner at (1 + 5k, 3); the coordinates below are relative to that corner (y up); the whole triangle has side 4 and height 3.4641. Remaining triangles are filled MARK_FILL with a 3 px INK outline; holes are BG white (the edges of a hole are the outlines of the remaining triangles around it). Step 0: one triangle (0,0) (4,0) (2,3.4641). Step 1: three triangles of side 2: (0.0,0.0) (2.0,0.0) (1.0,1.7321); (2.0,0.0) (4.0,0.0) (3.0,1.7321); (1.0,1.7321) (3.0,1.7321) (2.0,3.4641); one hole, the inverted triangle (1,1.7321) (3,1.7321) (2,0). Step 2: nine triangles of side 1: (0.0,0.0) (1.0,0.0) (0.5,0.866); (1.0,0.0) (2.0,0.0) (1.5,0.866); (2.0,0.0) (3.0,0.0) (2.5,0.866); (3.0,0.0) (4.0,0.0) (3.5,0.866); (0.5,0.866) (1.5,0.866) (1.0,1.7321); (2.5,0.866) (3.5,0.866) (3.0,1.7321); (1.0,1.7321) (2.0,1.7321) (1.5,2.5981); (2.0,1.7321) (3.0,1.7321) (2.5,2.5981); (1.5,2.5981) (2.5,2.5981) (2.0,3.4641); four holes, all inverted triangles: (1.0,1.7321) (3.0,1.7321) (2.0,0.0); (0.5,0.866) (1.5,0.866) (1.0,0.0); (2.5,0.866) (3.5,0.866) (3.0,0.0); (1.5,2.5981) (2.5,2.5981) (2.0,1.7321) (the first is the Step 1 hole of side 2, the other three have side 1). Under each panel, centred on the panel (x = 3, 8, 13), write in INK at y = 2.3 'Step 0', 'Step 1', 'Step 2'; then in ANSWER green two lines, the first at y = 1.5 and the second at y = 0.8: under Step 0 '1 triangle' and '0 holes'; under Step 1 '3 triangles' and '1 hole'; under Step 2 '9 triangles' and '4 holes'. Text height 0.45 unit (54 px), sans-serif. Nothing else is drawn.",
+    "visible_text": [
+     "Step 0",
+     "Step 1",
+     "Step 2",
+     "1 triangle",
+     "0 holes",
+     "3 triangles",
+     "1 hole",
+     "9 triangles",
+     "4 holes"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the dots '. . .' after Step 2",
+     "the book's magenta colour",
+     "the formula 3^n",
+     "faint extra grid lines"
+    ],
+    "accuracy_checks": [
+     "remaining triangles 1, 3, 9 = 3^0, 3^1, 3^2; Step 2 has 9 up-pointing triangles of side 1 in rows of 1, 2, 2, 4 from the top",
+     "holes 0, 1, 4: Step 2 has the Step 1 hole of side 2 plus 3 holes of side 1 (one in the middle of each group of three triangles)",
+     "all three panels have the same outer triangle of side 4",
+     "area check: 9 triangles of side 1 = 9/16 of the side-4 triangle, 3 triangles of side 2 = 3/4"
+    ],
+    "alt_text": "Three triangles: one whole triangle; three triangles around one hole; nine triangles around four holes.",
+    "render_note": "Matches the book's gasket figure of p.3 (Steps 0 to 2) with the counts of the LP solution; remaining triangles are MARK_FILL, not magenta."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C13",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 4.1 - Figure it Out Q2 (p.3)",
+   "question_text": "Find the number of holes, and the triangles that remain at each step of the shape sequence that leads to the Sierpinski Triangle.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure is given; the counts follow from the construction rule in the words (each triangle gives 3, each triangle makes 1 hole).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C13",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 4.1 - Figure it Out Q2 (p.3)",
+   "question_text": "Find the number of holes, and the triangles that remain at each step of the shape sequence that leads to the Sierpinski Triangle.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "LATEX_TABLE"
+   ],
+   "reason": "The answer is the formulas 3^n and (3^n - 1)/2 with the counts 1, 3, 9, 27 and 0, 1, 4, 13; it adds nothing visual (the picture answers are the three 'draw the steps' items, not this one).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array with rows Step 0: 1 triangle, 0 holes; Step 1: 3, 1; Step 2: 9, 4; Step 3: 27, 13, then the two formulas."
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C14",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 4.1 - Figure it Out Q3 (p.3)",
+   "question_text": "Find the area of the region remaining at the nth step in each of the shape sequences that lead to the Sierpinski fractals. Take the area of the starting square/triangle to be 1 sq. unit.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure is given; the area at each step follows from the fraction kept (8/9 or 3/4) stated in the words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C14",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 4.1 - Figure it Out Q3 (p.3)",
+   "question_text": "Find the area of the region remaining at the nth step in each of the shape sequences that lead to the Sierpinski fractals. Take the area of the starting square/triangle to be 1 sq. unit.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the formulas (8/9)^n and (3/4)^n with the Step 2 checks 64/81 and 9/16; nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: carpet (8/9)^n, triangle (3/4)^n; Step 2 checks 8/9 x 8/9 = 64/81 and 3/4 x 3/4 = 9/16."
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C15",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 4.1 - Koch Snowflake, Step 1 (p.4)",
+   "question_text": "Start with an equilateral triangle of side 1 unit. Find the number of sides, the length of each side and the perimeter at Step 1 of the Koch Snowflake.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The bump rule is stated in the words and the counts are 3 x 4 = 12, 1/3 and 12 x 1/3 = 4; no figure is given or needed (the topic's teaching image already shows the bump).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C16",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 4.1 - Fractals in Art, diamond patterns (p.5-6)",
+   "question_text": "A diamond pattern has area 64 square cm. Each new shape is drawn by joining the midpoints of the sides of the one before. What is the area of the third shape inside?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "All data are in the words (area 64, midpoints joined, halving each time: 64 / 2 / 2 / 2 = 8); a nested-diamond figure would only illustrate the halving, and the topic's teaching image already does.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C18",
+   "role": "question",
+   "lp_book_number": "Koch Snowflake, Q1",
+   "ncert_ref": "Section 4.1 - Koch Snowflake, Figure it Out Q1 (p.4)",
+   "question_text": "Draw the initial few steps (at least till Step 2) of the shape sequence that leads to the Koch Snowflake.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure: it asks the learner to draw the steps, so a question figure would show the answer; same decision as the other two 'draw the initial steps' questions of this chapter.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C19",
+   "role": "solution",
+   "lp_book_number": "Koch Snowflake, Q1",
+   "ncert_ref": "Section 4.1 - Koch Snowflake, Figure it Out Q1 (p.4)",
+   "question_text": "Draw the initial few steps (at least till Step 2) of the shape sequence that leads to the Koch Snowflake.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is the drawing of Steps 0, 1 and 2 (the LP steps only describe it); the solution figure is drawn in full and the topic's teaching image is not linked.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S8.T8.C19.IMG1",
+   "manim_scene": "c8_11_4_1_koch_FiO2_q1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S8.T8.C19.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "2:1",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "figure_kind": "fractal_step_row",
+     "fractal": "Koch Snowflake",
+     "canvas_units": {
+      "width": 16,
+      "height": 8,
+      "pixels": "1920x960"
+     },
+     "panel_origin_rule": "panel k (k = 0, 1, 2) is centred at (3 + 5k, 5.2); the vertex lists are relative to that centre (the centre of the starting triangle), y up, counter-clockwise, starting at the top vertex",
+     "starting_triangle_side": 3.6,
+     "bump_rule": "split every edge into 3 equal parts, raise an outward equilateral triangle on the middle part, remove the middle part: 1 edge becomes 4 edges of one third the length",
+     "panels": [
+      {
+       "step": 0,
+       "centre": [
+        3,
+        5.2
+       ],
+       "polygon_vertices": [
+        [
+         0.0,
+         2.0785
+        ],
+        [
+         -1.8,
+         -1.0392
+        ],
+        [
+         1.8,
+         -1.0392
+        ]
+       ],
+       "sides": 3,
+       "side_length": 3.6,
+       "labels": {
+        "step": "Step 0",
+        "step_xy": [
+         3,
+         2.3
+        ],
+        "line1": "3 sides",
+        "line1_xy": [
+         3,
+         1.5
+        ]
+       }
+      },
+      {
+       "step": 1,
+       "centre": [
+        8,
+        5.2
+       ],
+       "polygon_vertices": [
+        [
+         0.0,
+         2.0785
+        ],
+        [
+         -0.6,
+         1.0392
+        ],
+        [
+         -1.8,
+         1.0392
+        ],
+        [
+         -1.2,
+         0.0
+        ],
+        [
+         -1.8,
+         -1.0392
+        ],
+        [
+         -0.6,
+         -1.0392
+        ],
+        [
+         -0.0,
+         -2.0785
+        ],
+        [
+         0.6,
+         -1.0392
+        ],
+        [
+         1.8,
+         -1.0392
+        ],
+        [
+         1.2,
+         0.0
+        ],
+        [
+         1.8,
+         1.0392
+        ],
+        [
+         0.6,
+         1.0392
+        ]
+       ],
+       "sides": 12,
+       "side_length": 1.2,
+       "labels": {
+        "step": "Step 1",
+        "step_xy": [
+         8,
+         2.3
+        ],
+        "line1": "12 sides",
+        "line1_xy": [
+         8,
+         1.5
+        ]
+       }
+      },
+      {
+       "step": 2,
+       "centre": [
+        13,
+        5.2
+       ],
+       "polygon_vertices": [
+        [
+         0.0,
+         2.0785
+        ],
+        [
+         -0.2,
+         1.7321
+        ],
+        [
+         -0.6,
+         1.7321
+        ],
+        [
+         -0.4,
+         1.3856
+        ],
+        [
+         -0.6,
+         1.0392
+        ],
+        [
+         -1.0,
+         1.0392
+        ],
+        [
+         -1.2,
+         1.3856
+        ],
+        [
+         -1.4,
+         1.0392
+        ],
+        [
+         -1.8,
+         1.0392
+        ],
+        [
+         -1.6,
+         0.6928
+        ],
+        [
+         -1.8,
+         0.3464
+        ],
+        [
+         -1.4,
+         0.3464
+        ],
+        [
+         -1.2,
+         0.0
+        ],
+        [
+         -1.4,
+         -0.3464
+        ],
+        [
+         -1.8,
+         -0.3464
+        ],
+        [
+         -1.6,
+         -0.6928
+        ],
+        [
+         -1.8,
+         -1.0392
+        ],
+        [
+         -1.4,
+         -1.0392
+        ],
+        [
+         -1.2,
+         -1.3856
+        ],
+        [
+         -1.0,
+         -1.0392
+        ],
+        [
+         -0.6,
+         -1.0392
+        ],
+        [
+         -0.4,
+         -1.3856
+        ],
+        [
+         -0.6,
+         -1.7321
+        ],
+        [
+         -0.2,
+         -1.7321
+        ],
+        [
+         -0.0,
+         -2.0785
+        ],
+        [
+         0.2,
+         -1.7321
+        ],
+        [
+         0.6,
+         -1.7321
+        ],
+        [
+         0.4,
+         -1.3856
+        ],
+        [
+         0.6,
+         -1.0392
+        ],
+        [
+         1.0,
+         -1.0392
+        ],
+        [
+         1.2,
+         -1.3856
+        ],
+        [
+         1.4,
+         -1.0392
+        ],
+        [
+         1.8,
+         -1.0392
+        ],
+        [
+         1.6,
+         -0.6928
+        ],
+        [
+         1.8,
+         -0.3464
+        ],
+        [
+         1.4,
+         -0.3464
+        ],
+        [
+         1.2,
+         0.0
+        ],
+        [
+         1.4,
+         0.3464
+        ],
+        [
+         1.8,
+         0.3464
+        ],
+        [
+         1.6,
+         0.6928
+        ],
+        [
+         1.8,
+         1.0392
+        ],
+        [
+         1.4,
+         1.0392
+        ],
+        [
+         1.2,
+         1.3856
+        ],
+        [
+         1.0,
+         1.0392
+        ],
+        [
+         0.6,
+         1.0392
+        ],
+        [
+         0.4,
+         1.3856
+        ],
+        [
+         0.6,
+         1.7321
+        ],
+        [
+         0.2,
+         1.7321
+        ]
+       ],
+       "sides": 48,
+       "side_length": 0.4,
+       "labels": {
+        "step": "Step 2",
+        "step_xy": [
+         13,
+         2.3
+        ],
+        "line1": "48 sides",
+        "line1_xy": [
+         13,
+         1.5
+        ]
+       }
+      }
+     ],
+     "colours": {
+      "shape_fill": "MARK_FILL",
+      "outline_and_step_labels": "INK",
+      "count_text": "ANSWER"
+     },
+     "text_height_units": 0.45
+    },
+    "manim_description": "Canvas 16 by 8 units (2:1, 1920 x 960 px), plain BG white; 1 unit = 120 px. Draw three closed straight-edged polygons in one row, left to right, all at the same scale, centred at (3,5.2), (8,5.2) and (13,5.2). Every polygon is filled MARK_FILL with a 3 px INK outline. The vertex lists are relative to the panel centre, y up, counter-clockwise, starting at the top vertex. Step 0: an equilateral triangle of side 3.6 with vertices (0.0,2.0785) (-1.8,-1.0392) (1.8,-1.0392) (apex up, horizontal base). Step 1: the six-pointed star (12 sides, each of length 1.2, tips straight up and straight down) with vertices (0.0,2.0785) (-0.6,1.0392) (-1.8,1.0392) (-1.2,0.0) (-1.8,-1.0392) (-0.6,-1.0392) (-0.0,-2.0785) (0.6,-1.0392) (1.8,-1.0392) (1.2,0.0) (1.8,1.0392) (0.6,1.0392). Step 2: the 48-sided shape (each side of length 0.4) made from the Step 1 star by splitting each of its 12 sides into 3 equal parts, raising an outward equilateral triangle on the middle part and removing the middle part; vertices (0.0,2.0785) (-0.2,1.7321) (-0.6,1.7321) (-0.4,1.3856) (-0.6,1.0392) (-1.0,1.0392) (-1.2,1.3856) (-1.4,1.0392) (-1.8,1.0392) (-1.6,0.6928) (-1.8,0.3464) (-1.4,0.3464) (-1.2,0.0) (-1.4,-0.3464) (-1.8,-0.3464) (-1.6,-0.6928) (-1.8,-1.0392) (-1.4,-1.0392) (-1.2,-1.3856) (-1.0,-1.0392) (-0.6,-1.0392) (-0.4,-1.3856) (-0.6,-1.7321) (-0.2,-1.7321) (-0.0,-2.0785) (0.2,-1.7321) (0.6,-1.7321) (0.4,-1.3856) (0.6,-1.0392) (1.0,-1.0392) (1.2,-1.3856) (1.4,-1.0392) (1.8,-1.0392) (1.6,-0.6928) (1.8,-0.3464) (1.4,-0.3464) (1.2,0.0) (1.4,0.3464) (1.8,0.3464) (1.6,0.6928) (1.8,1.0392) (1.4,1.0392) (1.2,1.3856) (1.0,1.0392) (0.6,1.0392) (0.4,1.3856) (0.6,1.7321) (0.2,1.7321). Under each polygon, centred at x = 3, 8, 13, write in INK at y = 2.3 'Step 0', 'Step 1', 'Step 2'; then in ANSWER green at y = 1.5 the text '3 sides' under Step 0, '12 sides' under Step 1 and '48 sides' under Step 2. Text height 0.45 unit (54 px), sans-serif. Nothing else is drawn.",
+    "visible_text": [
+     "Step 0",
+     "Step 1",
+     "Step 2",
+     "3 sides",
+     "12 sides",
+     "48 sides"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the dots '. . .' after Step 2",
+     "the book's green colour",
+     "dot paper or any grid",
+     "the formula 3 x 4^n"
+    ],
+    "accuracy_checks": [
+     "sides 3, 12, 48 = 3 x 4^0, 3 x 4^1, 3 x 4^2 (the vertex lists hold 3, 12 and 48 points)",
+     "side lengths 3.6, 1.2, 0.4: each step makes every side one third as long",
+     "Step 1 is a six-pointed star with tips straight up and straight down; every bump is raised outward on the middle third of its side",
+     "perimeters 10.8, 14.4, 19.2 are in the ratio 1 : 4/3 : 16/9",
+     "all three polygons share the same scale and their centres (the centre of the starting triangle) are on one horizontal line"
+    ],
+    "alt_text": "Three shapes: a triangle with 3 sides, a six-pointed star with 12 sides, and the star with a smaller bump on each side, 48 sides.",
+    "render_note": "Matches the book's Koch figure of p.4 (Steps 0 to 2) with side counts; the LP's dot-paper remark is a drawing tip and is not drawn."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C20",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 4.1 - Koch Snowflake, Figure it Out Q2 (p.4)",
+   "question_text": "Find the number of sides in the nth step of the shape sequence that leads to the Koch Snowflake.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure is given; the side count follows from the bump rule in the words (each side becomes 4 sides).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C20",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 4.1 - Koch Snowflake, Figure it Out Q2 (p.4)",
+   "question_text": "Find the number of sides in the nth step of the shape sequence that leads to the Koch Snowflake.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the formula 3 x 4^n with the counts 3, 12, 48, 192; nothing visual is added (the figure answers are the 'draw the steps' items).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: Step 0: 3; Step 1: 3 x 4 = 12; Step 2: 12 x 4 = 48; Step 3: 48 x 4 = 192; Step n: 3 x 4^n."
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C21",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 4.1 - Koch Snowflake, Figure it Out Q3 (p.4)",
+   "question_text": "Find the perimeter of the shape at the nth step of the sequence. Take the starting equilateral triangle to have a sidelength of 1 unit.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure is given; the side length (1 unit) and the bump rule are in the words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C21",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 4.1 - Koch Snowflake, Figure it Out Q3 (p.4)",
+   "question_text": "Find the perimeter of the shape at the nth step of the sequence. Take the starting equilateral triangle to have a sidelength of 1 unit.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the formula 3 x (4/3)^n with the checks 12 x 1/3 = 4 and 48 x 1/9 = 16/3; nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: sides 3 x 4^n, each side (1/3)^n, perimeter 3 x (4/3)^n; Step 1: 12 x 1/3 = 4; Step 2: 48 x 1/9 = 16/3."
+  }
+ ]
+}

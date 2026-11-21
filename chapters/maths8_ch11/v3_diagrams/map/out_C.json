@@ -1,0 +1,4152 @@
+{
+ "meta": {
+  "chapter": "Exploring Some Geometric Themes",
+  "class": 8,
+  "textbook": "Ganita Prakash Grade 8, Part 2, Chapter 4",
+  "lp_plan_id": "cbse_eng_maths8_ch11_v31",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "none": 6,
+    "required": 5
+   },
+   "question": {
+    "required": 3,
+    "optional": 1,
+    "none": 2
+   },
+   "solution": {
+    "required": 5,
+    "none": 1
+   }
+  },
+  "notes": [
+   "Chunk C: topics M2.S17-S20 (nets of other solids, shortest paths on a cuboid) and M3.S21-S24 (projections, front/top/side views, Figure it Out Q1-Q3). 17 units, 23 items.",
+   "Worked examples C46, C47, C60-C63 are none: numeric or name answers (circumference, fraction, sqrt(5^2-3^2), names of solids); their teaching figure already sits in the same concept. C48, C51, C52, C64, C65 are required: the answer is a net, an unfolding with the path, or drawn views.",
+   "C58 question is optional: all numbers are in the words; the box with the ant and the laddu would help (see its reason) but is not added.",
+   "C70 (match objects with their views): both sides none, NOT_RENDERABLE: the book table is 8 illustrated objects and 24 silhouettes. Matching read from the page: jug row 8, funnel row 6, hammer row 7, car row 1, slide row 3, chair row 4, ceiling fan row 5, pressure cooker row 2.",
+   "C69 solution table (21 views): the LP gives no sizes, so proportions are chosen in the spec; the ridge line of the prism top view and the edge line of the parallelepiped top view are the only extra visible lines.",
+   "C67 question text says 'Fig. 4.6' but the diagram is the table of views of the three lines of that figure (book page 23): needs_lp_text_sync is true, the wording could say 'the three lines whose views are shown'.",
+   "C57, C68: the solution figure is a different view from the question figure (net / 3D box with projections); derived_from is set because the validator requires it, the labels (ant, laddu, a, b, c) and numbers are the same.",
+   "Folding checks (octahedron net C48, tetrahedron shapes C49/C50) were run in code; the net 2 line of C59 was checked to stay inside the net."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P12-net-3",
+   "source": "chapter p.12",
+   "description": "Four shapes of equilateral triangles in a row (checked on the page picture and at 2x zoom): (1) a large triangle cut into 4; (2) a band of 3 triangles (up, down, up) with a 4th hanging below the first, all 4 meeting at one vertex; (3) a straight strip of 4; (4) the strip of 4 with a 5th triangle hanging below its first. Folding check run in code: (1) and (3) fold into a tetrahedron, (2) overlaps (2 triangles on one face; 4 triangles meet at one vertex), (4) has 5 triangles (4 of them also meet at one vertex). Drawn as the question figure of C49 (2 by 2 grid instead of one row) and marked in the C50 solution figure.",
+   "mapped_to": "item:M2.S18.T18.C49 (question)"
+  },
+  {
+   "fig_id": "P13-net-1",
+   "source": "chapter p.13",
+   "description": "Cylinder with the cut along its height and the two circles taken off, beside its net: one rectangle (no lengths printed) with a circle above and a circle below. Teaching figure of the concept 'Unrolling a cylinder'; the worked example C46 itself is none.",
+   "mapped_to": "concept_image:M2.S17.T17.C46.IMG1"
+  },
+  {
+   "fig_id": "P13-solid-2",
+   "source": "chapter p.13",
+   "description": "Cone with apex O and the slit line l (dashed) from O to the base. Teaching figure of the concept 'Unrolling a cone'; the worked example C47 is none.",
+   "mapped_to": "concept_image:M2.S17.T17.C47.IMG1"
+  },
+  {
+   "fig_id": "P13-net-3",
+   "source": "chapter p.13",
+   "description": "The unrolled cone: a sector of a circle (about 220 degrees, not printed) with centre O. Teaching figure of 'Unrolling a cone' (the concept image shows the half-circle case).",
+   "mapped_to": "concept_image:M2.S17.T17.C47.IMG1"
+  },
+  {
+   "fig_id": "P14-solid-1",
+   "source": "chapter p.14",
+   "description": "Shaded octahedron (8 triangular faces, 6 vertices, hidden edges dashed). Used only to introduce the solid; the LP defines the octahedron in words ('two square pyramids joined at their square bases') in C48, so the picture is not needed.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P14-net-2",
+   "source": "chapter p.14",
+   "description": "CHECKED at 4x zoom and by folding in code: the book's octahedron net is a band of 6 triangles (up, down, up, down, up, down) with 1 triangle up on the middle top side and 1 triangle down on the middle bottom side. It is also exactly two fans of 4 triangles (top fan around the right-hand vertex of the top edge, bottom fan around the left-hand vertex of the bottom edge) joined along one edge, as the LP steps say. Drawn for the worked example C48 with the fans coloured.",
+   "mapped_to": "item:M2.S17.T17.C48 (question)"
+  },
+  {
+   "fig_id": "P14-solid-3",
+   "source": "chapter p.14",
+   "description": "Shaded dodecahedron (pentagonal faces). Only illustrates a remark; the number 43,380 is in the text and no item asks about the picture.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P15-path_cuboid-1",
+   "source": "chapter p.15",
+   "description": "Cuboid with the laddu at the centre of the top face and the ant at the centre of the right face. The LP worked example C51 states both positions in words; the figure it needs is the flattened net (P16-path_net-1, left net).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P15-path_cuboid-2",
+   "source": "chapter p.15",
+   "description": "Cuboid with the laddu at the middle of the top front edge and the ant at the centre of the right face. C52 states the positions in words; the figure it needs is the flattened net (P16-path_net-2). Note: the LP puts the ant on the front face and the laddu on the top-right edge, the same problem with the two faces named the other way round.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P15-path_cuboid-3",
+   "source": "chapter p.15",
+   "description": "Two cuboids with a red and a blue candidate path ('are either of these the shortest path?'). No LP item asks about these two paths; the same paths are on the nets P16-path_net-1 and P16-path_net-2.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P16-path_net-1",
+   "source": "chapter p.16",
+   "description": "Two identical cross-shaped nets. Left net: laddu at the centre of the 2nd face, ant at the centre of the right arm, a straight red line (case 1, the laddu at the centre of the top face). Right net: the blue two-piece path of case 2. Drawn for C51 as the left net, reduced to the two faces that matter for the 4 cm cube (top face above the side face).",
+   "mapped_to": "item:M2.S19.T19.C51 (question)"
+  },
+  {
+   "fig_id": "P16-path_net-2",
+   "source": "chapter p.16",
+   "description": "The same net with the laddu at the middle of the bottom edge of the 2nd face and the ant in the right arm; a slanted red straight line (the shortest) and a blue path along the edge then up. Drawn for C52 as the right face laid beside the front face with the straight line, for the 6 cm cube.",
+   "mapped_to": "item:M2.S19.T19.C52 (question)"
+  },
+  {
+   "fig_id": "P16-path_cuboid-3",
+   "source": "chapter p.16",
+   "description": "The two paths of the net figure drawn on the cuboid (laddu at the middle of the edge). Same figure as P16-path_net-2 shown on the solid; the net version is the one drawn for C52.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P17-path_cuboid-1",
+   "source": "chapter p.17",
+   "description": "Cuboid 8 cm x 4 cm x 4 cm (labels '8 cm', '4 cm', '4 cm'), ant at the centre of the right end face, laddu on the bottom front edge with '2 cm' marked from the right end (checked on the page picture). Drawn as the question figure of C56 without the long arrow texts.",
+   "mapped_to": "item:M2.S20.T20.C56 (question)"
+  },
+  {
+   "fig_id": "P17-path_net-2",
+   "source": "chapter p.17",
+   "description": "The failed unfolding: a straight line from the laddu to the ant that leaves the net. The LP solution of C56 uses only the working unfolding and never mentions this one, so no item uses the picture.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P17-path_net-3",
+   "source": "chapter p.17",
+   "description": "The unfolding that works: column of four 8 by 4 rectangles, left square on the 2nd, right square (ant) on the 3rd, laddu on the line between the 3rd and 4th rectangle 2 cm from the right end, straight red line inside the net. Drawn as the solution figure of C57 with the numbers of the LP steps (2, 4, sqrt(20) = about 4.47).",
+   "mapped_to": "item:M2.S20.T20.C57 (solution)"
+  },
+  {
+   "fig_id": "P18-path_cuboid-1",
+   "source": "chapter p.18",
+   "description": "30 cm x 12 cm x 12 cm box with the laddu on the back end face (centred, 1 cm above the bottom) and the ant on the front end face (centred, 1 cm below the top). The C58 question is optional (all its numbers are in the words); the box would help but is not added. The positions come back in the solution nets (C59).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P18-net-2",
+   "source": "chapter p.18",
+   "description": "Two nets of the 30 x 12 x 12 box: left a T-shape with the straight 42 cm line through the top strip; right with the ant's square on the right of row 1 and the laddu's square on the left of row 3, the 40 cm slanted line and its 32 cm and 24 cm legs (the right angle sits outside the net). Drawn to scale from the 3D facts (ant 1 cm from its shared edge, laddu 1 cm from its shared edge, both centred), as the solution figure of C59.",
+   "mapped_to": "item:M2.S20.T20.C59 (solution)"
+  },
+  {
+   "fig_id": "P19-projection_point-1",
+   "source": "chapter p.19",
+   "description": "Point P, plane M and its projection O, right angle POX. Teaching figure; the definition is given in words and no item asks about it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P19-projection_line-2",
+   "source": "chapter p.19",
+   "description": "Fig. 4.2: a line parallel to the plane and a tilted line with their projections and dashed projectors. Teaching figure of 'Projecting a point and a line' (the concept image shows the stick over the table with its projection).",
+   "mapped_to": "concept_image:M3.S21.T21.C60.IMG1"
+  },
+  {
+   "fig_id": "P20-projection_line-1",
+   "source": "chapter p.20",
+   "description": "Fig. 4.3: line AB of length l, its projection DC of length p, AE perpendicular to BC so AECD is a rectangle. Teaching figure; the concept image redraws the same right triangle with 5 cm, 3 cm and 4 cm.",
+   "mapped_to": "concept_image:M3.S21.T21.C60.IMG1"
+  },
+  {
+   "fig_id": "P20-projection_solid-2",
+   "source": "chapter p.20",
+   "description": "Fig. 4.4: a cube and its projection on a plane. Teaching figure; no item asks about it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P20-projection_solid-3",
+   "source": "chapter p.20",
+   "description": "Fig. 4.5: a cone and its triangular projection on a plane. Teaching figure; C62 uses the cone standing on its base (circle on the floor), which is its own concept image.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P21-projection_line-1",
+   "source": "chapter p.21",
+   "description": "Fig. 4.6 upper drawing: three different lines with the same projection on a plane. The question C67 refers to these lines, but what it asks about is their front, top and side views, which are in P23-views_table-1; the 3D drawing adds nothing the question needs.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P21-projection_cuboid-2",
+   "source": "chapter p.21",
+   "description": "Fig. 4.6 lower drawing: a cuboid of three cubes (can be read as cuboids 1, 2, 3 cubes long) and their common projection. Teaching figure; no item asks about it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P22-projection_planes-1",
+   "source": "chapter p.22",
+   "description": "Wire box with the vertical, horizontal and side planes, a stack of 3 cubes (two at the bottom, one on the right one) and its three views on the planes. Teaching figure of 'Three planes, three views' (the concept image uses a cylinder).",
+   "mapped_to": "concept_image:M3.S22.T22.C64.IMG1"
+  },
+  {
+   "fig_id": "P23-views_table-1",
+   "source": "chapter p.23",
+   "description": "CORRECTED: side-view lengths measured from the page picture are about 1/9 and 0.3 of the box width, not 1/6 and 2/6. Pixel measurement: 3 x 3 boxes of 144 x 101 px. Front column: the same horizontal line, 95 px, in all three. Top column: row 1 horizontal 95 px; row 2 slanting down 17 px over 97 px; row 3 slanting down 36 px over 96 px. Side column: a dot; a horizontal line of 16 px (about 1/9 of the box, not 1/6); a horizontal line of 44 px (about 0.3 of the box). Drawn as the question figure of C67 with the top-view slope set equal to the side-view length so each row is exact.",
+   "mapped_to": "item:M3.S23.T23.C67 (question)"
+  },
+  {
+   "fig_id": "P23-views_table-2",
+   "source": "chapter p.23",
+   "description": "Front, top and side views of the three cuboids of Fig. 4.6 (square front face, depths 1, 2, 3). Teaching figure; the Figure it Out question C67 is about the lines, not the cuboids.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P24-match_views-1",
+   "source": "chapter p.24",
+   "description": "Eight coloured illustrations (jug, funnel, hammer, car, slide, chair, ceiling fan, pressure cooker) with T/F/S arrows, beside three columns FRONT, TOP, SIDE of 8 black silhouettes each in shuffled order (checked on the page picture): jug row 8, funnel row 6, hammer row 7, car row 1, slide row 3, chair row 4, ceiling fan row 5, pressure cooker row 2. Illustrated line art that cannot be redrawn faithfully, so C70 (question and solution) gets no diagram.",
+   "mapped_to": "none:NOT_RENDERABLE"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 29,
+  "mapped_to_items": 8,
+  "mapped_to_concept_images": 6,
+  "mapped_none": 15,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M2.S17.T17.C48.IMG2",
+   "M2.S18.T18.C49.IMG1",
+   "M2.S18.T18.C50.IMG1",
+   "M2.S19.T19.C51.IMG2",
+   "M2.S19.T19.C52.IMG2",
+   "M2.S20.T20.C56.IMG1",
+   "M2.S20.T20.C57.IMG1",
+   "M2.S20.T20.C59.IMG1",
+   "M3.S22.T22.C64.IMG2",
+   "M3.S22.T22.C65.IMG2",
+   "M3.S23.T23.C67.IMG1",
+   "M3.S23.T23.C68.IMG1",
+   "M3.S24.T24.C69.IMG2"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M2.S17.T17.C46",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Unrolling a cylinder",
+   "ncert_ref": "4.2.cyl_net",
+   "question_text": "A cylinder has radius 7 cm and height 10 cm. Find the sides of the rectangle in its net, using pi as 22/7.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Numbers only: circumference 2 x 22/7 x 7 = 44 cm and height 10 cm are computed in the steps; the net of a cylinder is already the teaching image of this concept (shown beside the example), so a second picture adds nothing the student needs to solve it.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C47",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Unrolling a cone",
+   "ncert_ref": "4.2.cone_net",
+   "question_text": "A cone has base radius 5 cm and slant length 10 cm. What fraction of a full circle of radius 10 cm is its unrolled curved surface?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The question asks for a fraction: 10 pi / 20 pi = 1/2 follows from two circumferences written in the steps. The unrolled sector is the teaching image of this concept, so no separate picture is needed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C48",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Practice: nets beyond the cube",
+   "ncert_ref": "4.2.octa_net",
+   "question_text": "An octahedron is two square pyramids joined at their square bases. Plan a net for it with equilateral triangles, and count its faces, edges and vertices.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The example asks to plan a net, so the net itself is the answer; the steps only describe it in words (two fans of 4 triangles joined along one edge) and cannot be followed without seeing the 8 triangles. Drawn as the book's own octahedron net (page 14), which is exactly this two-fan net.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S17.T17.C48.IMG2",
+   "manim_scene": "c8_11_s17_c48_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S17.T17.C48.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "net",
+    "aspect_ratio": "3:2",
+    "derived_from": null,
+    "content": {
+     "solid": "octahedron (two square pyramids joined at their square bases)",
+     "to_scale": true,
+     "unit": "side of one equilateral triangle = 1, height h = 0.866; coordinates x right, y up, origin at the bottom-left vertex of B1",
+     "triangles": [
+      {
+       "id": "B1",
+       "fan": "bottom",
+       "fill": "CELL_FILL",
+       "vertices": [
+        [
+         0,
+         0
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         0.5,
+         0.866
+        ]
+       ]
+      },
+      {
+       "id": "B2",
+       "fan": "bottom",
+       "fill": "CELL_FILL",
+       "vertices": [
+        [
+         0.5,
+         0.866
+        ],
+        [
+         1.5,
+         0.866
+        ],
+        [
+         1,
+         0
+        ]
+       ]
+      },
+      {
+       "id": "B3",
+       "fan": "bottom",
+       "fill": "CELL_FILL",
+       "vertices": [
+        [
+         1,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         1.5,
+         0.866
+        ]
+       ]
+      },
+      {
+       "id": "B4",
+       "fan": "bottom",
+       "fill": "CELL_FILL",
+       "vertices": [
+        [
+         1,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         1.5,
+         -0.866
+        ]
+       ]
+      },
+      {
+       "id": "A1",
+       "fan": "top",
+       "fill": "MARK_FILL",
+       "vertices": [
+        [
+         1.5,
+         0.866
+        ],
+        [
+         2.5,
+         0.866
+        ],
+        [
+         2,
+         0
+        ]
+       ]
+      },
+      {
+       "id": "A2",
+       "fan": "top",
+       "fill": "MARK_FILL",
+       "vertices": [
+        [
+         2,
+         0
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         2.5,
+         0.866
+        ]
+       ]
+      },
+      {
+       "id": "A3",
+       "fan": "top",
+       "fill": "MARK_FILL",
+       "vertices": [
+        [
+         2.5,
+         0.866
+        ],
+        [
+         3.5,
+         0.866
+        ],
+        [
+         3,
+         0
+        ]
+       ]
+      },
+      {
+       "id": "A4",
+       "fan": "top",
+       "fill": "MARK_FILL",
+       "vertices": [
+        [
+         1.5,
+         0.866
+        ],
+        [
+         2.5,
+         0.866
+        ],
+        [
+         2,
+         1.732
+        ]
+       ]
+      }
+     ],
+     "fans": {
+      "bottom": {
+       "apex": [
+        1,
+        0
+       ],
+       "triangles": [
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+       ],
+       "apex_tag": "bottom corner"
+      },
+      "top": {
+       "apex": [
+        2.5,
+        0.866
+       ],
+       "triangles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+       ],
+       "apex_tag": "top corner"
+      }
+     },
+     "joined_edge": {
+      "from": [
+       1.5,
+       0.866
+      ],
+      "to": [
+       2,
+       0
+      ],
+      "shared_by": [
+       "B3",
+       "A1"
+      ],
+      "colour": "FOCUS"
+     },
+     "canvas": {
+      "x": [
+       -1.0,
+       4.5
+      ],
+      "y": [
+       -1.3,
+       2.4
+      ]
+     },
+     "counts": {
+      "triangles": 8,
+      "triangles_per_fan": 4,
+      "fans": 2
+     },
+     "type": "net"
+    },
+    "manim_description": "Draw eight equilateral triangles of side 1 (h = 0.866) on a white canvas with x from -1.0 to 4.5 and y from -1.3 to 2.4 (y up). Bottom fan, fill CELL_FILL: B1 (0,0),(1,0),(0.5,0.866); B2 (0.5,0.866),(1.5,0.866),(1,0); B3 (1,0),(2,0),(1.5,0.866); B4 (1,0),(2,0),(1.5,-0.866). Top fan, fill MARK_FILL: A1 (1.5,0.866),(2.5,0.866),(2,0); A2 (2,0),(3,0),(2.5,0.866); A3 (2.5,0.866),(3.5,0.866),(3,0); A4 (1.5,0.866),(2.5,0.866),(2,1.732). Outline every triangle in INK, 3 px. Redraw the one edge from (1.5,0.866) to (2,0), shared by B3 and A1, in FOCUS, 6 px. Draw a filled INK dot of radius 0.06 at (2.5,0.866) and, with a thin GUIDE leader line to the dot, the label 'top corner' centred at (3.0,1.45). Draw a filled INK dot of radius 0.06 at (1,0) and, with a thin GUIDE leader line to the dot, the label 'bottom corner' centred at (0.15,-0.7). Labels are INK, text height 0.16 (at least 34 px on 1920 px). Nothing else is drawn.",
+    "visible_text": [
+     "top corner",
+     "bottom corner"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the counts 8, 12 or 6",
+     "the original book page art or watermark"
+    ],
+    "accuracy_checks": [
+     "8 triangles: 4 in each fan (B1-B4 and A1-A4)",
+     "both fans are strips of 4 triangles that all meet at their own apex (1,0) and (2.5,0.866)",
+     "the two fans share exactly one edge, (1.5,0.866)-(2,0), and that edge does not touch either apex, so it is an edge of the square",
+     "folding check run in code: the 8 triangles go to 8 different faces of an octahedron, no overlap",
+     "faces 8, edges 12, vertices 6 are not drawn but follow: 4+4, 4+4+4, 4+1+1"
+    ],
+    "alt_text": "A net of 8 equilateral triangles: two fans of 4, one shaded green with its corner marked 'top corner' and one shaded lilac with its corner marked 'bottom corner', joined along one pink edge."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S18.T18.C49",
+   "role": "question",
+   "lp_book_number": "Nets of a Tetrahedron: sorting four shapes",
+   "ncert_ref": "4.2.tetra_nets",
+   "question_text": "Four shapes are made of equilateral triangles: a large triangle of 4, four triangles that all meet at one point, a straight strip of 4, and a strip of 4 with a fifth triangle below. Which are nets of a regular tetrahedron?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book gives the four shapes as a picture (page 12) and the question is to sort them; how the triangles touch is the data. The words only name them, so the learner needs the four shapes to attempt it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S18.T18.C49.IMG1",
+   "manim_scene": "c8_11_s18_q1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S18.T18.C49.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "net",
+    "aspect_ratio": "6:5",
+    "derived_from": null,
+    "content": {
+     "to_scale": true,
+     "unit": "side of one equilateral triangle = 1, h = 0.866; x right, y up",
+     "canvas": {
+      "x": [
+       -3.6,
+       3.6
+      ],
+      "y": [
+       -3.3,
+       2.7
+      ]
+     },
+     "layout": "2 by 2 grid, read left to right then top to bottom",
+     "outline": "INK",
+     "fill": "none",
+     "shapes": [
+      {
+       "id": "s1",
+       "describes": "large triangle of 4",
+       "centre": [
+        -2.0,
+        1.6
+       ],
+       "triangle_count": 4,
+       "triangles": [
+        [
+         [
+          -3.0,
+          0.734
+         ],
+         [
+          -2.0,
+          0.734
+         ],
+         [
+          -2.5,
+          1.6
+         ]
+        ],
+        [
+         [
+          -2.0,
+          0.734
+         ],
+         [
+          -1.0,
+          0.734
+         ],
+         [
+          -1.5,
+          1.6
+         ]
+        ],
+        [
+         [
+          -2.5,
+          1.6
+         ],
+         [
+          -1.5,
+          1.6
+         ],
+         [
+          -2.0,
+          2.466
+         ]
+        ],
+        [
+         [
+          -2.5,
+          1.6
+         ],
+         [
+          -1.5,
+          1.6
+         ],
+         [
+          -2.0,
+          0.734
+         ]
+        ]
+       ]
+      },
+      {
+       "id": "s2",
+       "describes": "four triangles meeting at one point",
+       "centre": [
+        2.0,
+        1.6
+       ],
+       "triangle_count": 4,
+       "triangles": [
+        [
+         [
+          1.0,
+          1.6
+         ],
+         [
+          1.5,
+          2.466
+         ],
+         [
+          2.0,
+          1.6
+         ]
+        ],
+        [
+         [
+          1.5,
+          2.466
+         ],
+         [
+          2.0,
+          1.6
+         ],
+         [
+          2.5,
+          2.466
+         ]
+        ],
+        [
+         [
+          2.0,
+          1.6
+         ],
+         [
+          2.5,
+          2.466
+         ],
+         [
+          3.0,
+          1.6
+         ]
+        ],
+        [
+         [
+          1.0,
+          1.6
+         ],
+         [
+          2.0,
+          1.6
+         ],
+         [
+          1.5,
+          0.734
+         ]
+        ]
+       ]
+      },
+      {
+       "id": "s3",
+       "describes": "straight strip of 4",
+       "centre": [
+        -2.0,
+        -1.6
+       ],
+       "triangle_count": 4,
+       "triangles": [
+        [
+         [
+          -3.25,
+          -2.033
+         ],
+         [
+          -2.75,
+          -1.167
+         ],
+         [
+          -2.25,
+          -2.033
+         ]
+        ],
+        [
+         [
+          -2.75,
+          -1.167
+         ],
+         [
+          -2.25,
+          -2.033
+         ],
+         [
+          -1.75,
+          -1.167
+         ]
+        ],
+        [
+         [
+          -2.25,
+          -2.033
+         ],
+         [
+          -1.75,
+          -1.167
+         ],
+         [
+          -1.25,
+          -2.033
+         ]
+        ],
+        [
+         [
+          -1.75,
+          -1.167
+         ],
+         [
+          -1.25,
+          -2.033
+         ],
+         [
+          -0.75,
+          -1.167
+         ]
+        ]
+       ]
+      },
+      {
+       "id": "s4",
+       "describes": "strip of 4 with a fifth triangle below",
+       "centre": [
+        2.0,
+        -1.6
+       ],
+       "triangle_count": 5,
+       "triangles": [
+        [
+         [
+          0.75,
+          -1.6
+         ],
+         [
+          1.25,
+          -0.734
+         ],
+         [
+          1.75,
+          -1.6
+         ]
+        ],
+        [
+         [
+          1.25,
+          -0.734
+         ],
+         [
+          1.75,
+          -1.6
+         ],
+         [
+          2.25,
+          -0.734
+         ]
+        ],
+        [
+         [
+          1.75,
+          -1.6
+         ],
+         [
+          2.25,
+          -0.734
+         ],
+         [
+          2.75,
+          -1.6
+         ]
+        ],
+        [
+         [
+          2.25,
+          -0.734
+         ],
+         [
+          2.75,
+          -1.6
+         ],
+         [
+          3.25,
+          -0.734
+         ]
+        ],
+        [
+         [
+          0.75,
+          -1.6
+         ],
+         [
+          1.75,
+          -1.6
+         ],
+         [
+          1.25,
+          -2.466
+         ]
+        ]
+       ]
+      }
+     ],
+     "type": "net"
+    },
+    "manim_description": "On a white canvas with x from -3.6 to 3.6 and y from -3.3 to 2.7 draw four shapes of equilateral triangles (side 1) in a 2 by 2 grid, shape 1 top left, shape 2 top right, shape 3 bottom left, shape 4 bottom right. Every triangle is outlined in INK, 3 px, with no fill and no labels. Each triangle is listed by its three vertices. Shape 1 (large triangle of 4), 4 triangles: (-3.0,0.734),(-2.0,0.734),(-2.5,1.6); (-2.0,0.734),(-1.0,0.734),(-1.5,1.6); (-2.5,1.6),(-1.5,1.6),(-2.0,2.466); (-2.5,1.6),(-1.5,1.6),(-2.0,0.734). Shape 2 (four triangles meeting at one point), 4 triangles: (1.0,1.6),(1.5,2.466),(2.0,1.6); (1.5,2.466),(2.0,1.6),(2.5,2.466); (2.0,1.6),(2.5,2.466),(3.0,1.6); (1.0,1.6),(2.0,1.6),(1.5,0.734). Shape 3 (straight strip of 4), 4 triangles: (-3.25,-2.033),(-2.75,-1.167),(-2.25,-2.033); (-2.75,-1.167),(-2.25,-2.033),(-1.75,-1.167); (-2.25,-2.033),(-1.75,-1.167),(-1.25,-2.033); (-1.75,-1.167),(-1.25,-2.033),(-0.75,-1.167). Shape 4 (strip of 4 with a fifth triangle below), 5 triangles: (0.75,-1.6),(1.25,-0.734),(1.75,-1.6); (1.25,-0.734),(1.75,-1.6),(2.25,-0.734); (1.75,-1.6),(2.25,-0.734),(2.75,-1.6); (2.25,-0.734),(2.75,-1.6),(3.25,-0.734); (0.75,-1.6),(1.75,-1.6),(1.25,-2.466). Shape 2 has all four of its triangles meeting at the vertex (2.0,1.6). Shape 4 is shape 3 with its fifth triangle hanging below its first bottom edge.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "which shapes are nets",
+     "any shading, tick or cross",
+     "shape numbers or letters"
+    ],
+    "accuracy_checks": [
+     "shape 1 has 4 triangles, shape 2 has 4, shape 3 has 4, shape 4 has 5",
+     "in shape 2 the vertex (2.0,1.6) belongs to all 4 triangles; shapes 1 and 3 have no vertex shared by more than 3 triangles; shape 4 also has a vertex shared by 4 triangles and 5 triangles in all",
+     "all 17 triangles are equilateral with side 1 (heights 0.866)",
+     "no shading, no verdict, no ticks (nothing of the answer is shown)"
+    ],
+    "alt_text": "Four shapes made of equilateral triangles: a large triangle cut into 4 small ones, a band of 3 triangles with a fourth hanging below its left end, a straight strip of 4, and a straight strip of 4 with a fifth triangle hanging below its left end."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S18.T18.C50",
+   "role": "solution",
+   "lp_book_number": "Nets of a Tetrahedron: sorting four shapes",
+   "ncert_ref": "4.2.tetra_nets",
+   "question_text": "Four shapes are made of equilateral triangles: a large triangle of 4, four triangles that all meet at one point, a straight strip of 4, and a strip of 4 with a fifth triangle below. Which are nets of a regular tetrahedron?",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is a choice among the four given shapes; the steps go through them one by one ('the last shape has 5 triangles'). The solution figure marks each shape as net or not a net and circles the point where 4 triangles meet, so the steps can be followed on the picture. Same layout as the question figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S18.T18.C50.IMG1",
+   "manim_scene": "c8_11_s18_a1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S18.T18.C50.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "net",
+    "aspect_ratio": "6:5",
+    "derived_from": "M2.S18.T18.C49.IMG1",
+    "content": {
+     "same_layout_as": "M2.S18.T18.C49.IMG1",
+     "canvas": {
+      "x": [
+       -3.6,
+       3.6
+      ],
+      "y": [
+       -3.3,
+       2.7
+      ]
+     },
+     "shapes": [
+      {
+       "id": "s1",
+       "describes": "large triangle of 4",
+       "centre": [
+        -2.0,
+        1.6
+       ],
+       "triangle_count": 4,
+       "triangles": [
+        [
+         [
+          -3.0,
+          0.734
+         ],
+         [
+          -2.0,
+          0.734
+         ],
+         [
+          -2.5,
+          1.6
+         ]
+        ],
+        [
+         [
+          -2.0,
+          0.734
+         ],
+         [
+          -1.0,
+          0.734
+         ],
+         [
+          -1.5,
+          1.6
+         ]
+        ],
+        [
+         [
+          -2.5,
+          1.6
+         ],
+         [
+          -1.5,
+          1.6
+         ],
+         [
+          -2.0,
+          2.466
+         ]
+        ],
+        [
+         [
+          -2.5,
+          1.6
+         ],
+         [
+          -1.5,
+          1.6
+         ],
+         [
+          -2.0,
+          0.734
+         ]
+        ]
+       ]
+      },
+      {
+       "id": "s2",
+       "describes": "four triangles meeting at one point",
+       "centre": [
+        2.0,
+        1.6
+       ],
+       "triangle_count": 4,
+       "triangles": [
+        [
+         [
+          1.0,
+          1.6
+         ],
+         [
+          1.5,
+          2.466
+         ],
+         [
+          2.0,
+          1.6
+         ]
+        ],
+        [
+         [
+          1.5,
+          2.466
+         ],
+         [
+          2.0,
+          1.6
+         ],
+         [
+          2.5,
+          2.466
+         ]
+        ],
+        [
+         [
+          2.0,
+          1.6
+         ],
+         [
+          2.5,
+          2.466
+         ],
+         [
+          3.0,
+          1.6
+         ]
+        ],
+        [
+         [
+          1.0,
+          1.6
+         ],
+         [
+          2.0,
+          1.6
+         ],
+         [
+          1.5,
+          0.734
+         ]
+        ]
+       ]
+      },
+      {
+       "id": "s3",
+       "describes": "straight strip of 4",
+       "centre": [
+        -2.0,
+        -1.6
+       ],
+       "triangle_count": 4,
+       "triangles": [
+        [
+         [
+          -3.25,
+          -2.033
+         ],
+         [
+          -2.75,
+          -1.167
+         ],
+         [
+          -2.25,
+          -2.033
+         ]
+        ],
+        [
+         [
+          -2.75,
+          -1.167
+         ],
+         [
+          -2.25,
+          -2.033
+         ],
+         [
+          -1.75,
+          -1.167
+         ]
+        ],
+        [
+         [
+          -2.25,
+          -2.033
+         ],
+         [
+          -1.75,
+          -1.167
+         ],
+         [
+          -1.25,
+          -2.033
+         ]
+        ],
+        [
+         [
+          -1.75,
+          -1.167
+         ],
+         [
+          -1.25,
+          -2.033
+         ],
+         [
+          -0.75,
+          -1.167
+         ]
+        ]
+       ]
+      },
+      {
+       "id": "s4",
+       "describes": "strip of 4 with a fifth triangle below",
+       "centre": [
+        2.0,
+        -1.6
+       ],
+       "triangle_count": 5,
+       "triangles": [
+        [
+         [
+          0.75,
+          -1.6
+         ],
+         [
+          1.25,
+          -0.734
+         ],
+         [
+          1.75,
+          -1.6
+         ]
+        ],
+        [
+         [
+          1.25,
+          -0.734
+         ],
+         [
+          1.75,
+          -1.6
+         ],
+         [
+          2.25,
+          -0.734
+         ]
+        ],
+        [
+         [
+          1.75,
+          -1.6
+         ],
+         [
+          2.25,
+          -0.734
+         ],
+         [
+          2.75,
+          -1.6
+         ]
+        ],
+        [
+         [
+          2.25,
+          -0.734
+         ],
+         [
+          2.75,
+          -1.6
+         ],
+         [
+          3.25,
+          -0.734
+         ]
+        ],
+        [
+         [
+          0.75,
+          -1.6
+         ],
+         [
+          1.75,
+          -1.6
+         ],
+         [
+          1.25,
+          -2.466
+         ]
+        ]
+       ]
+      }
+     ],
+     "shape_fill": {
+      "s1": "MARK_FILL",
+      "s2": "none",
+      "s3": "MARK_FILL",
+      "s4": "none"
+     },
+     "verdict_tags": [
+      {
+       "shape": "s1",
+       "text": "net",
+       "colour": "ANSWER",
+       "centre": [
+        -2.0,
+        0.35
+       ]
+      },
+      {
+       "shape": "s2",
+       "text": "not a net",
+       "colour": "WRONG",
+       "centre": [
+        2.0,
+        0.35
+       ]
+      },
+      {
+       "shape": "s3",
+       "text": "net",
+       "colour": "ANSWER",
+       "centre": [
+        -2.0,
+        -2.85
+       ]
+      },
+      {
+       "shape": "s4",
+       "text": "not a net",
+       "colour": "WRONG",
+       "centre": [
+        2.0,
+        -2.85
+       ]
+      }
+     ],
+     "focus_circle": {
+      "centre": [
+       2.0,
+       1.6
+      ],
+      "radius": 0.2,
+      "colour": "FOCUS",
+      "around": "the vertex where the 4 triangles of shape 2 meet"
+     },
+     "type": "net"
+    },
+    "manim_description": "Redraw the four shapes of the question figure exactly as they are (same coordinates, same INK 3 px outlines): Shape 1 (large triangle of 4), 4 triangles: (-3.0,0.734),(-2.0,0.734),(-2.5,1.6); (-2.0,0.734),(-1.0,0.734),(-1.5,1.6); (-2.5,1.6),(-1.5,1.6),(-2.0,2.466); (-2.5,1.6),(-1.5,1.6),(-2.0,0.734). Shape 2 (four triangles meeting at one point), 4 triangles: (1.0,1.6),(1.5,2.466),(2.0,1.6); (1.5,2.466),(2.0,1.6),(2.5,2.466); (2.0,1.6),(2.5,2.466),(3.0,1.6); (1.0,1.6),(2.0,1.6),(1.5,0.734). Shape 3 (straight strip of 4), 4 triangles: (-3.25,-2.033),(-2.75,-1.167),(-2.25,-2.033); (-2.75,-1.167),(-2.25,-2.033),(-1.75,-1.167); (-2.25,-2.033),(-1.75,-1.167),(-1.25,-2.033); (-1.75,-1.167),(-1.25,-2.033),(-0.75,-1.167). Shape 4 (strip of 4 with a fifth triangle below), 5 triangles: (0.75,-1.6),(1.25,-0.734),(1.75,-1.6); (1.25,-0.734),(1.75,-1.6),(2.25,-0.734); (1.75,-1.6),(2.25,-0.734),(2.75,-1.6); (2.25,-0.734),(2.75,-1.6),(3.25,-0.734); (0.75,-1.6),(1.75,-1.6),(1.25,-2.466). Fill every triangle of shape 1 and of shape 3 with MARK_FILL; leave shapes 2 and 4 unfilled. Draw a FOCUS circle of radius 0.2, 4 px, centred at (2.0,1.6), the vertex shared by the 4 triangles of shape 2. Under shape 1 write 'net' in ANSWER centred at (-2.0,0.35); under shape 2 write 'not a net' in WRONG centred at (2.0,0.35); under shape 3 write 'net' in ANSWER centred at (-2.0,-2.85); under shape 4 write 'not a net' in WRONG centred at (2.0,-2.85). Tag text height 0.32 (at least 34 px on 1920 px). Nothing else.",
+    "visible_text": [
+     "net",
+     "not a net"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "fold arrows or 3D tetrahedra",
+     "the explanation sentences"
+    ],
+    "accuracy_checks": [
+     "shapes 1 and 3 fold into a regular tetrahedron (folding check run in code: 4 triangles go to 4 different faces)",
+     "shape 2 does not fold: 2 of its triangles land on the same face (run in code), and 4 triangles meet at one vertex while a tetrahedron has 3 faces at each vertex",
+     "shape 4 has 5 triangles, a tetrahedron has 4 faces",
+     "only shapes 1 and 3 are shaded and tagged 'net'"
+    ],
+    "alt_text": "The same four shapes: the large triangle and the straight strip of 4 are shaded green and tagged 'net'; the shape with four triangles meeting at a circled point and the shape with five triangles are tagged 'not a net'."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C51",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Flatten the box, draw a straight line",
+   "ncert_ref": "4.2.path_cube",
+   "question_text": "A cube has side 4 cm. An ant is at the centre of a side face and a laddu at the centre of the top face. Find the length of the shortest path.",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The whole solution happens on the unfolded net: 'unfold the top face so it sits flat above the side face', '2 cm below the shared edge, 2 cm beyond it'. These positions only exist in the flattened picture, so it is needed (book page 16, left net, drawn for the 4 cm cube).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S19.T19.C51.IMG2",
+   "manim_scene": "c8_11_s19_c51_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S19.T19.C51.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "net",
+    "aspect_ratio": "1:1",
+    "derived_from": null,
+    "content": {
+     "to_scale": true,
+     "unit": "1 = 1 cm; x right, y up; canvas x -3.2..6.8, y -0.7..8.7",
+     "faces": [
+      {
+       "name": "side face",
+       "rect": [
+        [
+         0,
+         0
+        ],
+        [
+         4,
+         4
+        ]
+       ]
+      },
+      {
+       "name": "top face",
+       "rect": [
+        [
+         0,
+         4
+        ],
+        [
+         4,
+         8
+        ]
+       ]
+      }
+     ],
+     "ant": {
+      "at": [
+       2,
+       2
+      ],
+      "colour": "INK"
+     },
+     "laddu": {
+      "at": [
+       2,
+       6
+      ],
+      "colour": "SET_B"
+     },
+     "path": {
+      "from": [
+       2,
+       2
+      ],
+      "to": [
+       2,
+       6
+      ],
+      "colour": "ANSWER",
+      "length_cm": 4,
+      "pieces_cm": [
+       2,
+       2
+      ]
+     },
+     "dimension_labels": [
+      {
+       "text": "2 cm",
+       "at": [
+        1.8,
+        3.0
+       ],
+       "align": "right"
+      },
+      {
+       "text": "2 cm",
+       "at": [
+        1.8,
+        5.0
+       ],
+       "align": "right"
+      },
+      {
+       "text": "4 cm",
+       "bracket": [
+        [
+         4.5,
+         2
+        ],
+        [
+         4.5,
+         6
+        ]
+       ],
+       "at": [
+        4.8,
+        4.0
+       ],
+       "align": "left"
+      }
+     ],
+     "tags": [
+      {
+       "text": "top face",
+       "at": [
+        -0.3,
+        6.0
+       ],
+       "align": "right"
+      },
+      {
+       "text": "side face",
+       "at": [
+        -0.3,
+        2.0
+       ],
+       "align": "right"
+      },
+      {
+       "text": "ant",
+       "at": [
+        2.3,
+        2.0
+       ],
+       "align": "left"
+      },
+      {
+       "text": "laddu",
+       "at": [
+        2.3,
+        6.0
+       ],
+       "align": "left"
+      }
+     ],
+     "type": "net"
+    },
+    "manim_description": "On a white canvas (x from -3.2 to 6.8, y from -0.7 to 8.7, 1 unit = 1 cm) draw two squares of side 4 in INK, 3 px, no fill, sharing one edge: the lower square 'side face' from (0,0) to (4,4) and the upper square 'top face' from (0,4) to (4,8). Draw a filled INK dot of radius 0.12 at (2,2) (the ant) and a filled SET_B dot of radius 0.14 with an INK 2 px ring at (2,6) (the laddu). Draw the straight vertical segment from (2,2) to (2,6) in ANSWER, 6 px. Write 'ant' in INK left-aligned starting at (2.3,2.0) and 'laddu' left-aligned starting at (2.3,6.0). Write 'side face' right-aligned ending at (-0.3,2.0) and 'top face' right-aligned ending at (-0.3,6.0), both INK. Write '2 cm' right-aligned ending at (1.8,3.0) and '2 cm' right-aligned ending at (1.8,5.0), both ANSWER. Draw a GUIDE 2 px bracket with end ticks from (4.5,2) to (4.5,6) and write '4 cm' in ANSWER left-aligned starting at (4.8,4.0). Text height 0.45 (at least 34 px on 1920 px). Nothing else.",
+    "visible_text": [
+     "top face",
+     "side face",
+     "ant",
+     "laddu",
+     "2 cm",
+     "4 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the 3D cube",
+     "any other net face"
+    ],
+    "accuracy_checks": [
+     "both squares have side 4 cm",
+     "ant at the centre of the lower square (2 cm from the shared edge), laddu at the centre of the upper square (2 cm from the shared edge)",
+     "the segment is vertical and passes through the middle of the shared edge: 2 + 2 = 4 cm"
+    ],
+    "alt_text": "Two 4 cm squares stacked, the top face above the side face; the ant at the centre of the lower one, the laddu at the centre of the upper one, joined by a straight vertical line of 4 cm."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C52",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: A laddu at the centre of an edge",
+   "ncert_ref": "4.2.path_edge",
+   "question_text": "A cube has side 6 cm. An ant is at the centre of the front face, and a laddu at the middle of the edge between the top face and the right face. Find the shortest path.",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The steps work on the net with the right face flat beside the front face ('6 cm across and 3 cm up', 'the slanted line'); the slanted straight line on the net is the answer. Drawn like the book's net on page 16 (the red path), for the 6 cm cube.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S19.T19.C52.IMG2",
+   "manim_scene": "c8_11_s19_c52_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S19.T19.C52.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "net",
+    "aspect_ratio": "5:3",
+    "derived_from": null,
+    "content": {
+     "to_scale": true,
+     "unit": "1 = 1 cm; x right, y up; canvas x -0.5..12.5, y -0.5..7.3",
+     "faces": [
+      {
+       "name": "front face",
+       "rect": [
+        [
+         0,
+         0
+        ],
+        [
+         6,
+         6
+        ]
+       ]
+      },
+      {
+       "name": "right face",
+       "rect": [
+        [
+         6,
+         0
+        ],
+        [
+         12,
+         6
+        ]
+       ]
+      }
+     ],
+     "ant": {
+      "at": [
+       3,
+       3
+      ],
+      "colour": "INK"
+     },
+     "laddu": {
+      "at": [
+       9,
+       6
+      ],
+      "colour": "SET_B",
+      "on": "top edge of the right face, its middle"
+     },
+     "shortest": {
+      "from": [
+       3,
+       3
+      ],
+      "to": [
+       9,
+       6
+      ],
+      "colour": "ANSWER",
+      "length": "sqrt(45) = 6.708, about 6.71 cm"
+     },
+     "legs": [
+      {
+       "from": [
+        3,
+        3
+       ],
+       "to": [
+        9,
+        3
+       ],
+       "label": "6 cm",
+       "label_at": [
+        6.0,
+        2.5
+       ]
+      },
+      {
+       "from": [
+        9,
+        3
+       ],
+       "to": [
+        9,
+        6
+       ],
+       "label": "3 cm",
+       "label_at": [
+        9.3,
+        4.5
+       ]
+      }
+     ],
+     "tags": [
+      {
+       "text": "front face",
+       "at": [
+        3.0,
+        0.6
+       ]
+      },
+      {
+       "text": "right face",
+       "at": [
+        9.0,
+        0.6
+       ]
+      },
+      {
+       "text": "ant",
+       "at": [
+        2.7,
+        3.0
+       ],
+       "align": "right"
+      },
+      {
+       "text": "laddu",
+       "at": [
+        9.0,
+        6.5
+       ]
+      },
+      {
+       "text": "√45 ≈ 6.71 cm",
+       "at": [
+        4.0,
+        5.2
+       ]
+      }
+     ],
+     "type": "net"
+    },
+    "manim_description": "On a white canvas (x from -0.5 to 12.5, y from -0.5 to 7.3, 1 unit = 1 cm) draw two squares of side 6 in INK, 3 px, no fill, sharing one edge: 'front face' from (0,0) to (6,6) and 'right face' from (6,0) to (12,6). Draw a filled INK dot of radius 0.14 at (3,3) (the ant) and a filled SET_B dot of radius 0.16 with an INK 2 px ring at (9,6) (the laddu, on the top edge of the right face). Draw the straight segment from (3,3) to (9,6) in ANSWER, 6 px. Draw two dashed GUIDE 2 px segments: from (3,3) to (9,3) and from (9,3) to (9,6). Write '6 cm' in GUIDE centred at (6.0,2.5) and '3 cm' in GUIDE left-aligned starting at (9.3,4.5). Write '√45 ≈ 6.71 cm' in ANSWER centred at (4.0,5.2). Write 'front face' in INK centred at (3.0,0.6) and 'right face' in INK centred at (9.0,0.6). Write 'ant' in INK right-aligned ending at (2.7,3.0) and 'laddu' in INK centred at (9.0,6.5). Text height 0.45 (at least 34 px on 1920 px). Nothing else.",
+    "visible_text": [
+     "front face",
+     "right face",
+     "ant",
+     "laddu",
+     "6 cm",
+     "3 cm",
+     "√45 ≈ 6.71 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the 9 cm longer route (it is only in the steps)",
+     "the 3D cube"
+    ],
+    "accuracy_checks": [
+     "squares of side 6; ant at (3,3), 3 cm from the shared edge and 3 cm from the bottom and top",
+     "laddu at (9,6): 3 cm into the right face along the top edge, the middle of that edge",
+     "right-angle legs 6 across and 3 up: sqrt(6^2 + 3^2) = sqrt(45) = 6.708, about 6.71 cm",
+     "the slanted line crosses the shared edge x = 6 at y = 4.5, inside the net"
+    ],
+    "alt_text": "Two 6 cm squares side by side, the front face and the right face; the ant at the centre of the front face, the laddu on the top edge of the right face, a slanted line between them of about 6.71 cm with legs 6 cm and 3 cm."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C56",
+   "role": "question",
+   "lp_book_number": "Shortest Paths: ant on the end of an 8 cm cuboid",
+   "ncert_ref": "4.2.path_cuboid",
+   "question_text": "A cuboid is 8 cm by 4 cm by 4 cm. An ant is at the centre of a 4 cm by 4 cm end face. A laddu sits on a long bottom edge, 2 cm from that end. Find the shortest path.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book gives this cuboid with the ant and laddu marked (page 17). Where the ant and laddu sit on the solid decides which unfolding works, and 'a long bottom edge' is hard to place from words alone, so the learner needs the solid to attempt it. The figure shows only what is given: no path.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S20.T20.C56.IMG1",
+   "manim_scene": "c8_11_s20_q1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S20.T20.C56.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "solid_3d",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "to_scale": "oblique drawing: front face true shape, depth drawn at 45 degrees at half length",
+     "unit": "1 = 1 cm on the front face; depth edge of 4 cm is drawn as (1.414,1.414); x right, y up; canvas x -2.0..11.6, y -1.5..6.3",
+     "box": {
+      "length": 8,
+      "depth": 4,
+      "height": 4
+     },
+     "visible_faces": {
+      "front": [
+       [
+        0,
+        0
+       ],
+       [
+        8,
+        0
+       ],
+       [
+        8,
+        4
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "top": [
+       [
+        0,
+        4
+       ],
+       [
+        8,
+        4
+       ],
+       [
+        9.414,
+        5.414
+       ],
+       [
+        1.414,
+        5.414
+       ]
+      ],
+      "right_end": [
+       [
+        8,
+        0
+       ],
+       [
+        9.414,
+        1.414
+       ],
+       [
+        9.414,
+        5.414
+       ],
+       [
+        8,
+        4
+       ]
+      ]
+     },
+     "ant": {
+      "at": [
+       8.707,
+       2.707
+      ],
+      "on": "centre of the right end face (4 by 4)",
+      "colour": "INK"
+     },
+     "laddu": {
+      "at": [
+       6,
+       0
+      ],
+      "on": "bottom front long edge, 2 cm from the right end",
+      "colour": "SET_B"
+     },
+     "dimension_labels": [
+      {
+       "text": "8 cm",
+       "at": [
+        4.0,
+        3.5
+       ]
+      },
+      {
+       "text": "4 cm",
+       "at": [
+        -0.35,
+        5.0
+       ],
+       "align": "right",
+       "on": "depth edge"
+      },
+      {
+       "text": "4 cm",
+       "at": [
+        -0.35,
+        2.0
+       ],
+       "align": "right",
+       "on": "height edge"
+      },
+      {
+       "text": "2 cm",
+       "arrow": [
+        [
+         6,
+         -0.45
+        ],
+        [
+         8,
+         -0.45
+        ]
+       ],
+       "at": [
+        7.0,
+        -0.9
+       ]
+      }
+     ],
+     "tags": [
+      {
+       "text": "ant",
+       "at": [
+        10.4,
+        2.9
+       ],
+       "leader_to": [
+        8.707,
+        2.707
+       ]
+      },
+      {
+       "text": "laddu",
+       "at": [
+        4.9,
+        -0.9
+       ],
+       "leader_to": [
+        6,
+        0
+       ]
+      }
+     ],
+     "type": "solid_3d"
+    },
+    "manim_description": "On a white canvas (x from -2.0 to 11.6, y from -1.5 to 6.3, 1 unit = 1 cm on the front face) draw a cuboid 8 cm long, 4 cm deep, 4 cm high as an oblique line drawing in INK, 3 px, no fill, showing only the three visible faces. Front face: rectangle (0,0),(8,0),(8,4),(0,4). Top face: parallelogram (0,4),(8,4),(9.414,5.414),(1.414,5.414). Right end face: parallelogram (8,0),(9.414,1.414),(9.414,5.414),(8,4). Draw a filled INK dot of radius 0.14 at (8.707,2.707), the centre of the right end face (the ant), with the label 'ant' in INK left-aligned starting at (10.4,2.9) and a thin GUIDE leader line to the dot. Draw a filled SET_B dot of radius 0.17 with an INK 2 px ring at (6,0), on the bottom front edge (the laddu), with the label 'laddu' in INK right-aligned ending at (4.9,-0.9) and a thin GUIDE leader line to the dot. Write '8 cm' in INK centred at (4.0,3.5); '4 cm' in INK right-aligned ending at (-0.35,5.0); '4 cm' in INK right-aligned ending at (-0.35,2.0). Draw a GUIDE 2 px double-headed arrow from (6,-0.45) to (8,-0.45) and write '2 cm' in INK centred at (7.0,-0.9). Text height 0.45 (at least 34 px on 1920 px). No path is drawn. Nothing else.",
+    "visible_text": [
+     "ant",
+     "laddu",
+     "8 cm",
+     "4 cm",
+     "2 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the shortest path",
+     "the net",
+     "hidden edges"
+    ],
+    "accuracy_checks": [
+     "box 8 by 4 by 4; the front face is drawn 8 wide and 4 high, depth edges drawn at half length at 45 degrees",
+     "ant at (8,2,2) = centre of the right end face, drawn at (8.707,2.707)",
+     "laddu at (6,0,0): on the bottom front edge, 2 cm from the right end",
+     "no path or net is drawn (question figure)"
+    ],
+    "alt_text": "A cuboid 8 cm long and 4 cm by 4 cm at the ends; an ant at the centre of the right end face and a laddu on the bottom front edge, 2 cm from the right end."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C57",
+   "role": "solution",
+   "lp_book_number": "Shortest Paths: ant on the end of an 8 cm cuboid",
+   "ncert_ref": "4.2.path_cuboid",
+   "question_text": "A cuboid is 8 cm by 4 cm by 4 cm. An ant is at the centre of a 4 cm by 4 cm end face. A laddu sits on a long bottom edge, 2 cm from that end. Find the shortest path.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is the right unfolding: the end face laid beside the long face that meets the laddu's edge, with the straight ant-to-laddu line staying inside the net (the book's 'shortest path' net, page 17). The steps (2 cm into the face, 2 cm from the edge line, 4 along and 2 across) are read off this net. Shown from a different view than the question's solid, so it is a new drawing with the same ant, laddu and numbers.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S20.T20.C57.IMG1",
+   "manim_scene": "c8_11_s20_a1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S20.T20.C57.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "net",
+    "aspect_ratio": "1:1",
+    "derived_from": "M2.S20.T20.C56.IMG1",
+    "content": {
+     "to_scale": true,
+     "unit": "1 = 1 cm; x right, y up; canvas x -4.8..12.8, y -1.0..16.8",
+     "net_rectangles": {
+      "rect1": [
+       [
+        0,
+        12
+       ],
+       [
+        8,
+        16
+       ]
+      ],
+      "rect2": [
+       [
+        0,
+        8
+       ],
+       [
+        8,
+        12
+       ]
+      ],
+      "rect3 (front long face)": [
+       [
+        0,
+        4
+       ],
+       [
+        8,
+        8
+       ]
+      ],
+      "rect4": [
+       [
+        0,
+        0
+       ],
+       [
+        8,
+        4
+       ]
+      ]
+     },
+     "end_faces": {
+      "left_end_face": [
+       [
+        -4,
+        8
+       ],
+       [
+        0,
+        12
+       ]
+      ],
+      "right_end_face (has the ant)": [
+       [
+        8,
+        4
+       ],
+       [
+        12,
+        8
+       ]
+      ]
+     },
+     "ant": {
+      "at": [
+       10,
+       6
+      ],
+      "colour": "INK"
+     },
+     "laddu": {
+      "at": [
+       6,
+       4
+      ],
+      "colour": "SET_B",
+      "on": "edge between rect3 and rect4, 2 cm from the right end of rect3"
+     },
+     "path": {
+      "from": [
+       6,
+       4
+      ],
+      "to": [
+       10,
+       6
+      ],
+      "colour": "ANSWER",
+      "crosses_fold_at": [
+       8,
+       5
+      ],
+      "length": "sqrt(20) = 4.472"
+     },
+     "legs": {
+      "along": {
+       "from": [
+        6,
+        3.1
+       ],
+       "to": [
+        10,
+        3.1
+       ],
+       "label": "4 cm",
+       "label_at": [
+        8.0,
+        2.55
+       ]
+      },
+      "across": {
+       "from": [
+        10,
+        4
+       ],
+       "to": [
+        10,
+        6
+       ],
+       "label": "2 cm",
+       "label_at": [
+        10.4,
+        5.0
+       ],
+       "style": "dashed GUIDE"
+      }
+     },
+     "tags": [
+      {
+       "text": "laddu",
+       "at": [
+        4.4,
+        3.2
+       ],
+       "leader_to": [
+        6,
+        4
+       ]
+      },
+      {
+       "text": "ant",
+       "at": [
+        10.0,
+        7.2
+       ]
+      },
+      {
+       "text": "√20 ≈ 4.47 cm",
+       "at": [
+        4.4,
+        6.8
+       ]
+      }
+     ],
+     "type": "net"
+    },
+    "manim_description": "On a white canvas (x from -4.8 to 12.8, y from -1.0 to 16.8, 1 unit = 1 cm) draw this net of the 8 by 4 by 4 cuboid in INK, 3 px, no fill: four rectangles stacked in one column, each 8 wide and 4 high: (0,12)-(8,16), (0,8)-(8,12), (0,4)-(8,8), (0,0)-(8,4); the left end square (-4,8)-(0,12) attached to the second rectangle; the right end square (8,4)-(12,8) attached to the third rectangle. Draw a filled INK dot of radius 0.14 at (10,6), the centre of the right end square (the ant), with the label 'ant' in INK centred at (10.0,7.2). Draw a filled SET_B dot of radius 0.17 with an INK 2 px ring at (6,4), on the edge between the third and fourth rectangles (the laddu), with the label 'laddu' in INK right-aligned ending at (4.4,3.2) and a thin GUIDE leader line to the dot. Draw the straight segment from (6,4) to (10,6) in ANSWER, 6 px; it stays inside the net and crosses the shared edge x = 8 at y = 5. Draw a dashed GUIDE 2 px segment from (10,4) to (10,6) and write '2 cm' in ANSWER left-aligned starting at (10.4,5.0). Draw a GUIDE 2 px double-headed arrow from (6,3.1) to (10,3.1) and write '4 cm' in ANSWER centred at (8.0,2.55). Write '√20 ≈ 4.47 cm' in ANSWER centred at (4.4,6.8). Text height 0.7 (at least 34 px on 1920 px). Nothing else.",
+    "visible_text": [
+     "ant",
+     "laddu",
+     "2 cm",
+     "4 cm",
+     "√20 ≈ 4.47 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the failed unfolding where the line leaves the net"
+    ],
+    "accuracy_checks": [
+     "net = four 8 by 4 rectangles in a column plus two 4 by 4 end squares; it folds into the 8 by 4 by 4 cuboid",
+     "ant at (10,6): 2 cm from the shared edge x = 8 and 2 cm above the bottom line y = 4",
+     "laddu at (6,4): 2 cm from the shared edge, on the bottom line y = 4",
+     "along = 10 - 6 = 4 cm, across = 6 - 4 = 2 cm, length = sqrt(4^2 + 2^2) = sqrt(20) = 4.472",
+     "the line crosses x = 8 at y = 5, inside the rectangle's edge [4,8], so it stays on the net"
+    ],
+    "alt_text": "The net of the cuboid with the 4 by 4 end square beside the long face; the ant at the centre of that square, the laddu on the bottom edge of the long face, joined by a straight line of about 4.47 cm with legs 4 cm and 2 cm."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C58",
+   "role": "question",
+   "lp_book_number": "Try This (Shortest Paths): the 30 cm box",
+   "ncert_ref": "4.2.path_try",
+   "question_text": "For the 30 cm by 12 cm by 12 cm box, compare the 42 cm route with the slanted unfolding whose right triangle has sides 24 cm and 32 cm.",
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Everything needed to answer is in the words (42, 24, 32): compare 42 with sqrt(24^2 + 32^2). A picture of the 30 by 12 by 12 box with the ant (centred on one end, 1 cm below the top edge) and the laddu (centred on the opposite end, 1 cm above the bottom edge) would help make sense of 'the 42 cm route' (book page 18, the box drawing), but it is not needed to attempt the question, and the solution figure draws both routes. Optional: the box with the ant and laddu.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "State in the question that the ant is on one 12 by 12 end face, centred and 1 cm below the top edge, and the laddu on the opposite end face, centred and 1 cm above the bottom edge."
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C59",
+   "role": "solution",
+   "lp_book_number": "Try This (Shortest Paths): the 30 cm box",
+   "ncert_ref": "4.2.path_try",
+   "question_text": "For the 30 cm by 12 cm by 12 cm box, compare the 42 cm route with the slanted unfolding whose right triangle has sides 24 cm and 32 cm.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The solution compares two unfoldings and its numbers (11 + 30 + 1 = 42, legs 24 and 32) only mean something on the nets: the book's 'ways of unfolding the cuboid' (page 18) is the figure of this answer. Both nets are drawn, as in the book. The question has no required figure, so this stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S20.T20.C59.IMG1",
+   "manim_scene": "c8_11_s20_a2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S20.T20.C59.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "net",
+    "aspect_ratio": "9:4",
+    "derived_from": null,
+    "content": {
+     "to_scale": true,
+     "unit": "1 = 1 cm; x right, y up; canvas x -15..105, y -3..51; net 1 as listed, net 2 shifted 60 to the right",
+     "net1": {
+      "rows": [
+       {
+        "name": "row1 top long face",
+        "rect": [
+         [
+          0,
+          36
+         ],
+         [
+          30,
+          48
+         ]
+        ]
+       },
+       {
+        "name": "row2 long face",
+        "rect": [
+         [
+          0,
+          24
+         ],
+         [
+          30,
+          36
+         ]
+        ]
+       },
+       {
+        "name": "row3 long face",
+        "rect": [
+         [
+          0,
+          12
+         ],
+         [
+          30,
+          24
+         ]
+        ]
+       },
+       {
+        "name": "row4 long face",
+        "rect": [
+         [
+          0,
+          0
+         ],
+         [
+          30,
+          12
+         ]
+        ]
+       }
+      ],
+      "square_left": [
+       [
+        -12,
+        36
+       ],
+       [
+        0,
+        48
+       ]
+      ],
+      "square_right": [
+       [
+        30,
+        36
+       ],
+       [
+        42,
+        48
+       ]
+      ],
+      "ant": [
+       31,
+       42
+      ],
+      "laddu": [
+       -11,
+       42
+      ],
+      "line": {
+       "from": [
+        -11,
+        42
+       ],
+       "to": [
+        31,
+        42
+       ],
+       "colour": "ANSWER",
+       "label": "42 cm",
+       "label_at": [
+        10,
+        45.2
+       ]
+      },
+      "note": "the line runs through the left square, the top long face and the right square: 11 + 30 + 1 = 42"
+     },
+     "net2": {
+      "rows": [
+       {
+        "name": "row1 top long face",
+        "rect": [
+         [
+          60,
+          36
+         ],
+         [
+          90,
+          48
+         ]
+        ]
+       },
+       {
+        "name": "row2 long face",
+        "rect": [
+         [
+          60,
+          24
+         ],
+         [
+          90,
+          36
+         ]
+        ]
+       },
+       {
+        "name": "row3 long face",
+        "rect": [
+         [
+          60,
+          12
+         ],
+         [
+          90,
+          24
+         ]
+        ]
+       },
+       {
+        "name": "row4 long face",
+        "rect": [
+         [
+          60,
+          0
+         ],
+         [
+          90,
+          12
+         ]
+        ]
+       }
+      ],
+      "square_right": [
+       [
+        90,
+        36
+       ],
+       [
+        102,
+        48
+       ]
+      ],
+      "square_left": [
+       [
+        48,
+        12
+       ],
+       [
+        60,
+        24
+       ]
+      ],
+      "ant": [
+       91,
+       42
+      ],
+      "laddu": [
+       59,
+       18
+      ],
+      "line": {
+       "from": [
+        91,
+        42
+       ],
+       "to": [
+        59,
+        18
+       ],
+       "colour": "ANSWER",
+       "label": "40 cm",
+       "label_at": [
+        84,
+        29.5
+       ]
+      },
+      "legs": {
+       "horizontal": {
+        "from": [
+         59,
+         18
+        ],
+        "to": [
+         91,
+         18
+        ],
+        "label": "32 cm",
+        "label_at": [
+         75,
+         14.8
+        ],
+        "style": "dashed GUIDE"
+       },
+       "vertical": {
+        "from": [
+         91,
+         18
+        ],
+        "to": [
+         91,
+         42
+        ],
+        "label": "24 cm",
+        "label_at": [
+         93.6,
+         30
+        ],
+        "style": "dashed GUIDE"
+       }
+      }
+     },
+     "tags": [
+      {
+       "text": "laddu",
+       "at": [
+        -6,
+        45
+       ]
+      },
+      {
+       "text": "ant",
+       "at": [
+        37,
+        45
+       ]
+      },
+      {
+       "text": "laddu",
+       "at": [
+        54,
+        21
+       ]
+      },
+      {
+       "text": "ant",
+       "at": [
+        97,
+        45
+       ]
+      }
+     ],
+     "type": "net"
+    },
+    "manim_description": "On a white canvas (x from -15 to 105, y from -3 to 51, 1 unit = 1 cm) draw two nets of the 30 by 12 by 12 box side by side, every face outlined in INK, 3 px, no fill. Net 1 (left): four long faces 30 wide and 12 high stacked in one column: (0,36)-(30,48), (0,24)-(30,36), (0,12)-(30,24), (0,0)-(30,12); a 12 by 12 square (-12,36)-(0,48) on the left of the top face and a 12 by 12 square (30,36)-(42,48) on its right. Draw a filled SET_B dot of radius 0.7 with an INK 2 px ring at (-11,42) (the laddu) and a filled INK dot of radius 0.7 at (31,42) (the ant). Draw the horizontal segment from (-11,42) to (31,42) in ANSWER, 6 px, and write '42 cm' in ANSWER centred at (10,45.2). Net 2 (right), the same column shifted 60 to the right: (60,36)-(90,48), (60,24)-(90,36), (60,12)-(90,24), (60,0)-(90,12); a 12 by 12 square (90,36)-(102,48) on the right of the top face and a 12 by 12 square (48,12)-(60,24) on the left of the third face. Draw a filled SET_B dot of radius 0.7 with an INK 2 px ring at (59,18) (the laddu) and a filled INK dot of radius 0.7 at (91,42) (the ant). Draw the straight segment from (91,42) to (59,18) in ANSWER, 6 px, and write '40 cm' in ANSWER centred at (84,29.5). Draw dashed GUIDE 2 px segments from (59,18) to (91,18) and from (91,18) to (91,42); write '32 cm' in ANSWER centred at (75,14.8) and '24 cm' in ANSWER left-aligned starting at (93.6,30). Write 'laddu' in INK centred at (-6,45), 'ant' in INK centred at (37,45), 'laddu' in INK centred at (54,21), 'ant' in INK centred at (97,45). Text height 2.4 (at least 34 px on 1920 px). Nothing else.",
+    "visible_text": [
+     "laddu",
+     "ant",
+     "42 cm",
+     "40 cm",
+     "32 cm",
+     "24 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the 11 and 1 breakdown of 42",
+     "the word 'shorter'"
+    ],
+    "accuracy_checks": [
+     "both nets fold into the 30 by 12 by 12 box (four long faces in a strip plus two end squares)",
+     "net 1: ant (31,42) is 1 cm from the shared edge x = 30 of the right square; laddu (-11,42) is 11 cm from the shared edge x = 0 of the left square; line length 31 - (-11) = 42",
+     "net 2: ant (91,42), laddu (59,18): horizontal 91 - 59 = 32, vertical 42 - 18 = 24, so d = sqrt(24^2 + 32^2) = sqrt(1600) = 40",
+     "net 2 line stays inside the net: it crosses x = 90 at y = 42 - 0.75 = 41.25 (inside the right square), x = 60 at y = 18.75 (inside the third face) and x = 59 inside the left square",
+     "40 < 42"
+    ],
+    "alt_text": "Two nets of the 30 by 12 by 12 box side by side. In the first, a straight line of 42 cm joins the laddu to the ant along the top strip. In the second, a slanted line of 40 cm is the long side of a right triangle with legs 32 cm and 24 cm."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S21.T21.C60",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Projecting a point and a line",
+   "ncert_ref": "4.2.proj_line",
+   "question_text": "A stick 5 cm long is held above a table so that one end is 3 cm higher than the other. How long is its projection on the table?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A right triangle with sides 3, 4, 5 is described in one sentence and solved with sqrt(5^2 - 3^2) = 4; the picture of the stick, projection and height is the teaching image of this concept.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S21.T21.C61",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Projections of a square and a parallelogram",
+   "ncert_ref": "4.2.mt_proj_square",
+   "question_text": "A square card of side 5 cm is tilted about one of its sides so that the opposite side is 3 cm higher. What is its projection on the floor?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is a shape named with its sides (a rectangle 5 cm by 4 cm), found by the same sqrt(5^2 - 3^2) = 4; nothing has to be drawn and the tilted card is the teaching image of this concept.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S21.T21.C62",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Same projection, different objects",
+   "ncert_ref": "4.2.proj_same",
+   "question_text": "A cone standing on its base has base radius 4 cm. Name three different solids whose projection on the floor is the same circle.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a list of names (a cylinder, a ball and a bowl, each of radius 4 cm); the cone, cylinder and ball picture is the teaching image of this concept.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S21.T21.C63",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Practice: predict the projection",
+   "ncert_ref": null,
+   "question_text": "A rod 13 cm long is held above a table so that one end is 5 cm higher than the other. Predict the length of its projection, and say when the projection would be 13 cm.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Pure arithmetic: sqrt(13^2 - 5^2) = sqrt(144) = 12, plus a one-line rule about a rod parallel to the table; the tilted-and-parallel rod picture is the teaching image of this concept.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C64",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Three planes, three views",
+   "ncert_ref": "4.2.views",
+   "question_text": "A cylinder of radius 3 cm and height 8 cm stands on its base. Draw its front, top and side views.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The example asks to draw three views, so the three drawings (two 6 by 8 rectangles and a circle of radius 3) are the answer; the steps only name them. The concept's teaching image shows the planes, not these three views on their own.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S22.T22.C64.IMG2",
+   "manim_scene": "c8_11_s22_c64_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S22.T22.C64.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "views",
+    "aspect_ratio": "7:3",
+    "derived_from": null,
+    "content": {
+     "to_scale": true,
+     "unit": "1 = 1 cm; x right, y up; canvas x -14..14, y -6..6",
+     "panels": [
+      {
+       "name": "front view",
+       "shape": "rectangle",
+       "corners": [
+        [
+         -12,
+         -4
+        ],
+        [
+         -6,
+         4
+        ]
+       ],
+       "width_cm": 6,
+       "height_cm": 8,
+       "labels": [
+        {
+         "text": "6 cm",
+         "at": [
+          -9,
+          4.7
+         ]
+        },
+        {
+         "text": "8 cm",
+         "at": [
+          -12.5,
+          0
+         ],
+         "align": "right"
+        }
+       ],
+       "caption": {
+        "text": "front view",
+        "at": [
+         -9,
+         -5.2
+        ]
+       }
+      },
+      {
+       "name": "top view",
+       "shape": "circle",
+       "centre": [
+        0,
+        0
+       ],
+       "radius": 3,
+       "radius_segment": [
+        [
+         0,
+         0
+        ],
+        [
+         3,
+         0
+        ]
+       ],
+       "labels": [
+        {
+         "text": "radius 3 cm",
+         "at": [
+          0,
+          -0.9
+         ]
+        }
+       ],
+       "caption": {
+        "text": "top view",
+        "at": [
+         0,
+         -5.2
+        ]
+       }
+      },
+      {
+       "name": "side view",
+       "shape": "rectangle",
+       "corners": [
+        [
+         6,
+         -4
+        ],
+        [
+         12,
+         4
+        ]
+       ],
+       "width_cm": 6,
+       "height_cm": 8,
+       "labels": [
+        {
+         "text": "6 cm",
+         "at": [
+          9,
+          4.7
+         ]
+        },
+        {
+         "text": "8 cm",
+         "at": [
+          12.5,
+          0
+         ],
+         "align": "left"
+        }
+       ],
+       "caption": {
+        "text": "side view",
+        "at": [
+         9,
+         -5.2
+        ]
+       }
+      }
+     ],
+     "type": "views"
+    },
+    "manim_description": "On a white canvas (x from -14 to 14, y from -6 to 6, 1 unit = 1 cm) draw three views of a cylinder of radius 3 cm and height 8 cm standing on its base, left to right. Front view: a rectangle from (-12,-4) to (-6,4), INK 3 px, fill MARK_FILL, with '6 cm' in INK centred at (-9,4.7), '8 cm' in INK right-aligned ending at (-12.5,0) and the caption 'front view' in INK centred at (-9,-5.2). Top view: a circle of radius 3 centred at (0,0), INK 3 px, fill MARK_FILL, with a GUIDE 2 px radius segment from (0,0) to (3,0), a filled INK dot of radius 0.1 at (0,0), the label 'radius 3 cm' in INK centred at (0,-0.9) and the caption 'top view' in INK centred at (0,-5.2). Side view: a rectangle from (6,-4) to (12,4), INK 3 px, fill MARK_FILL, with '6 cm' in INK centred at (9,4.7), '8 cm' in INK left-aligned starting at (12.5,0) and the caption 'side view' in INK centred at (9,-5.2). Text height 0.6 (at least 34 px on 1920 px). Nothing else.",
+    "visible_text": [
+     "front view",
+     "top view",
+     "side view",
+     "6 cm",
+     "8 cm",
+     "radius 3 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the 3D cylinder",
+     "the three planes"
+    ],
+    "accuracy_checks": [
+     "front width = diameter = 2 x 3 = 6 cm, height 8 cm",
+     "top view is a circle of radius 3 cm (diameter 6 = the width of the front view)",
+     "side view equals the front view: 6 cm by 8 cm",
+     "all rectangles drawn 6 wide and 8 high in the same unit as the circle"
+    ],
+    "alt_text": "Three views of a cylinder: the front and side views are 6 cm by 8 cm rectangles and the top view is a circle of radius 3 cm."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C65",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Views of a stack of cubes",
+   "ncert_ref": null,
+   "question_text": "Four identical cubes: three in a row on the floor, and one more on top of the left cube. Draw its front, top and side views.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The example asks to draw three views of a stack of cubes; the three square patterns (an L of 4, a row of 3, a column of 2) are the answer and are hard to follow in words alone.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S22.T22.C65.IMG2",
+   "manim_scene": "c8_11_s22_c65_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S22.T22.C65.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "views",
+    "aspect_ratio": "10:3",
+    "derived_from": null,
+    "content": {
+     "to_scale": true,
+     "unit": "1 = side of one cube; x right, y up; canvas x -1.0..12.5, y -1.4..2.6",
+     "solid": "four identical cubes: three in a row on the floor, one more on top of the left cube",
+     "panels": [
+      {
+       "name": "front view",
+       "squares": [
+        [
+         0,
+         0
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         0,
+         1
+        ]
+       ],
+       "note": "L of 4 squares: bottom row of 3, one square on top of the left one",
+       "caption": {
+        "text": "front view",
+        "at": [
+         1.5,
+         -0.7
+        ]
+       }
+      },
+      {
+       "name": "top view",
+       "squares": [
+        [
+         5,
+         0.5
+        ],
+        [
+         6,
+         0.5
+        ],
+        [
+         7,
+         0.5
+        ]
+       ],
+       "note": "row of 3 squares",
+       "caption": {
+        "text": "top view",
+        "at": [
+         6.5,
+         -0.7
+        ]
+       }
+      },
+      {
+       "name": "side view",
+       "squares": [
+        [
+         10,
+         0
+        ],
+        [
+         10,
+         1
+        ]
+       ],
+       "note": "column of 2 squares",
+       "caption": {
+        "text": "side view",
+        "at": [
+         10.5,
+         -0.7
+        ]
+       }
+      }
+     ],
+     "square_fill": "MARK_FILL",
+     "outline": "INK",
+     "type": "views"
+    },
+    "manim_description": "On a white canvas (x from -1.0 to 12.5, y from -1.4 to 2.6) draw unit squares (side 1) filled MARK_FILL with INK 3 px outlines, three views left to right. Front view: four squares whose lower-left corners are (0,0), (1,0), (2,0) and (0,1), an L-shape of 4 squares; caption 'front view' in INK centred at (1.5,-0.7). Top view: three squares whose lower-left corners are (5,0.5), (6,0.5) and (7,0.5), a row of 3; caption 'top view' in INK centred at (6.5,-0.7). Side view: two squares whose lower-left corners are (10,0) and (10,1), a column of 2; caption 'side view' in INK centred at (10.5,-0.7). Caption text height 0.5 (at least 34 px on 1920 px). Nothing else.",
+    "visible_text": [
+     "front view",
+     "top view",
+     "side view"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the 3D stack of cubes"
+    ],
+    "accuracy_checks": [
+     "front view has 4 squares: 3 in the bottom row, 1 above the left one",
+     "top view has 3 squares: the cube on top hides the cube under it",
+     "side view has 2 squares: the left cube with one cube on top of it, seen from the left",
+     "the stack has 4 cubes: 3 + 1"
+    ],
+    "alt_text": "Three views of the four-cube stack: the front view is an L of 4 squares, the top view a row of 3 squares and the side view a column of 2 squares."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S23.T23.C67",
+   "role": "question",
+   "lp_book_number": "Views of Solids, Q1",
+   "ncert_ref": "FiO4.q1",
+   "question_text": "Observe the front view, top view and side view of the different lines in Fig. 4.6. Is there any relation between their lengths?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question points to Fig. 4.6 and its three lines, and the lengths to be compared exist only in the table of front, top and side views of those lines (book page 23). The words give no length, so the learner needs this table. Fig. 4.6's 3D drawing itself is not needed once the views are shown.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S23.T23.C67.IMG1",
+   "manim_scene": "c8_11_s23_q1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S23.T23.C67.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "views",
+    "aspect_ratio": "4:3",
+    "derived_from": null,
+    "content": {
+     "to_scale": "proportions measured from the book (front line 95 px of a 144 px box, side lines 0, 16, 44 px); each top-view slope is set equal to the side-view length so every row is a true set of views",
+     "unit": "1 = 1/9 of a box width; boxes 9 wide and 6.3 high; box top-left corners at x = 0, 10, 20 and y (downwards) = 0, 7.1, 14.2; column labels 1.4 above the boxes; y measured downwards",
+     "boxes": {
+      "columns": [
+       "front view",
+       "top view",
+       "side view"
+      ],
+      "rows": 3,
+      "box_size": [
+       9.0,
+       6.3
+      ],
+      "frame": "INK 3 px, no fill"
+     },
+     "lines_in_boxes": [
+      {
+       "row": 1,
+       "front": {
+        "from": [
+         1.5,
+         2.06
+        ],
+        "to": [
+         7.5,
+         2.06
+        ],
+        "length": 6.0
+       },
+       "top": {
+        "from": [
+         1.5,
+         2.06
+        ],
+        "to": [
+         7.5,
+         2.06
+        ],
+        "length": 6.0
+       },
+       "side": {
+        "dot_at": [
+         2.2,
+         2.06
+        ]
+       }
+      },
+      {
+       "row": 2,
+       "front": {
+        "from": [
+         1.5,
+         2.06
+        ],
+        "to": [
+         7.5,
+         2.06
+        ],
+        "length": 6.0
+       },
+       "top": {
+        "from": [
+         1.5,
+         2.06
+        ],
+        "to": [
+         7.5,
+         3.06
+        ],
+        "length": 6.083
+       },
+       "side": {
+        "from": [
+         2.2,
+         2.06
+        ],
+        "to": [
+         3.2,
+         2.06
+        ],
+        "length": 1.0
+       }
+      },
+      {
+       "row": 3,
+       "front": {
+        "from": [
+         1.5,
+         2.06
+        ],
+        "to": [
+         7.5,
+         2.06
+        ],
+        "length": 6.0
+       },
+       "top": {
+        "from": [
+         1.5,
+         2.06
+        ],
+        "to": [
+         7.5,
+         4.81
+        ],
+        "length": 6.6
+       },
+       "side": {
+        "from": [
+         2.2,
+         2.06
+        ],
+        "to": [
+         4.95,
+         2.06
+        ],
+        "length": 2.75
+       }
+      }
+     ],
+     "canvas": {
+      "x": [
+       -0.5,
+       29.5
+      ],
+      "y_down": [
+       -2.4,
+       20.8
+      ]
+     },
+     "type": "views"
+    },
+    "manim_description": "On a white canvas (x from -0.5 to 29.5, y downwards from -2.4 to 20.8) draw a 3 by 3 grid of separate frames, each 9 wide and 6.3 high, INK 3 px, no fill. Left edges at x = 0, 10, 20; top edges at y = 0, 7.1, 14.2 (y measured downwards). Above the three columns write 'front view', 'top view', 'side view' in INK, centred at x = 4.5, 14.5, 24.5 and y = -1.2, text height 0.8 (at least 34 px on 1920 px). In every box the drawn line starts 1.5 from the left edge and 2.06 below the top edge, INK 4 px, and a dot is a filled INK circle of radius 0.1. Front view column, rows 1 to 3: a horizontal segment from (1.5,2.06) to (7.5,2.06) in the box. Top view column: row 1 a horizontal segment (1.5,2.06) to (7.5,2.06); row 2 a segment (1.5,2.06) to (7.5,3.06); row 3 a segment (1.5,2.06) to (7.5,4.81). Side view column: row 1 a single dot at (2.2,2.06); row 2 a horizontal segment (2.2,2.06) to (3.2,2.06); row 3 a horizontal segment (2.2,2.06) to (4.95,2.06). Coordinates inside a box are measured from the box's top-left corner, y downwards. Nothing else is drawn.",
+    "visible_text": [
+     "front view",
+     "top view",
+     "side view"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers or lengths",
+     "the relation between the lengths"
+    ],
+    "accuracy_checks": [
+     "3 rows (3 lines) by 3 columns (front, top, side)",
+     "front view of every line is the same horizontal segment of length 6",
+     "top-view length: row 1 = 6, row 2 = sqrt(6^2 + 1^2) = 6.08, row 3 = sqrt(6^2 + 2.75^2) = 6.60; side-view length: 0 (a dot), 1, 2.75",
+     "in each row the top-view slope (vertical drop) equals the side-view length, so top^2 = front^2 + side^2",
+     "no lengths are written and no relation is shown (question figure)"
+    ],
+    "alt_text": "A 3 by 3 grid of boxes for three lines. Front view: the same horizontal line in all three. Top view: a horizontal line, then two slanted lines that slope down more and more. Side view: a dot, a short horizontal line, a longer horizontal line."
+   },
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M3.S23.T23.C68",
+   "role": "solution",
+   "lp_book_number": "Views of Solids, Q1",
+   "ncert_ref": "FiO4.q1",
+   "question_text": "Observe the front view, top view and side view of the different lines in Fig. 4.6. Is there any relation between their lengths?",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The solution introduces a new object: a line going a cm along, b cm deep and c cm up, whose three views are the diagonals of the three faces of its box; the squared lengths a^2 + c^2, a^2 + b^2, b^2 + c^2 in step 3 can only be checked on that picture. The question figure (the views table) cannot show it, so this is a new drawing, not a copy of it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S23.T23.C68.IMG1",
+   "manim_scene": "c8_11_s23_a1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S23.T23.C68.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "solid_3d",
+    "aspect_ratio": "3:2",
+    "derived_from": "M3.S23.T23.C67.IMG1",
+    "content": {
+     "to_scale": "oblique drawing with a = 5, b = 4, c = 3 as drawing sizes only; the labels are the symbols a, b, c (not numbers)",
+     "unit": "x right, y up; front face drawn true; depth b drawn as (1.414,1.414) (45 degrees, half length); canvas x -1.2..9.3, y -1.0..5.9",
+     "box": {
+      "front_face": [
+       [
+        0,
+        0
+       ],
+       [
+        5,
+        0
+       ],
+       [
+        5,
+        3
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "top_face": [
+       [
+        0,
+        3
+       ],
+       [
+        5,
+        3
+       ],
+       [
+        6.414,
+        4.414
+       ],
+       [
+        1.414,
+        4.414
+       ]
+      ],
+      "right_face": [
+       [
+        5,
+        0
+       ],
+       [
+        6.414,
+        1.414
+       ],
+       [
+        6.414,
+        4.414
+       ],
+       [
+        5,
+        3
+       ]
+      ],
+      "hidden_edges_dashed_GUIDE": [
+       [
+        [
+         0,
+         0
+        ],
+        [
+         1.414,
+         1.414
+        ]
+       ],
+       [
+        [
+         1.414,
+         1.414
+        ],
+        [
+         6.414,
+         1.414
+        ]
+       ],
+       [
+        [
+         1.414,
+         1.414
+        ],
+        [
+         1.414,
+         4.414
+        ]
+       ]
+      ]
+     },
+     "line": {
+      "from": [
+       5,
+       0
+      ],
+      "to": [
+       1.414,
+       4.414
+      ],
+      "colour": "ANSWER",
+      "width_px": 6,
+      "meaning": "the line: a along (x), b deep, c up"
+     },
+     "views": [
+      {
+       "name": "front view",
+       "from": [
+        5,
+        0
+       ],
+       "to": [
+        0,
+        3
+       ],
+       "colour": "SET_A",
+       "squared_length": "a^2 + c^2"
+      },
+      {
+       "name": "top view",
+       "from": [
+        5,
+        3
+       ],
+       "to": [
+        1.414,
+        4.414
+       ],
+       "colour": "SET_B",
+       "squared_length": "a^2 + b^2"
+      },
+      {
+       "name": "side view",
+       "from": [
+        5,
+        0
+       ],
+       "to": [
+        6.414,
+        4.414
+       ],
+       "colour": "FOCUS",
+       "squared_length": "b^2 + c^2"
+      }
+     ],
+     "edge_labels": [
+      {
+       "text": "a",
+       "at": [
+        2.5,
+        -0.45
+       ]
+      },
+      {
+       "text": "b",
+       "at": [
+        5.95,
+        0.3
+       ]
+      },
+      {
+       "text": "c",
+       "at": [
+        -0.45,
+        1.5
+       ]
+      }
+     ],
+     "tags": [
+      {
+       "text": "line",
+       "colour": "ANSWER",
+       "at": [
+        0.55,
+        5.0
+       ],
+       "leader_to": [
+        1.414,
+        4.414
+       ]
+      },
+      {
+       "text": "front",
+       "colour": "SET_A",
+       "at": [
+        1.35,
+        1.15
+       ]
+      },
+      {
+       "text": "a² + c²",
+       "colour": "SET_A",
+       "at": [
+        1.35,
+        0.65
+       ]
+      },
+      {
+       "text": "top",
+       "colour": "SET_B",
+       "at": [
+        3.4,
+        5.4
+       ]
+      },
+      {
+       "text": "a² + b²",
+       "colour": "SET_B",
+       "at": [
+        3.4,
+        4.9
+       ]
+      },
+      {
+       "text": "side",
+       "colour": "FOCUS",
+       "at": [
+        7.5,
+        3.0
+       ],
+       "align": "left"
+      },
+      {
+       "text": "b² + c²",
+       "colour": "FOCUS",
+       "at": [
+        7.5,
+        2.5
+       ],
+       "align": "left"
+      }
+     ],
+     "type": "solid_3d"
+    },
+    "manim_description": "On a white canvas (x from -1.2 to 9.3, y from -1.0 to 5.9) draw a box as an oblique line drawing in INK, 3 px, no fill. Front face (0,0),(5,0),(5,3),(0,3); top face (0,3),(5,3),(6.414,4.414),(1.414,4.414); right face (5,0),(6.414,1.414),(6.414,4.414),(5,3). Draw the three hidden edges as dashed GUIDE 2 px lines: (0,0) to (1.414,1.414), (1.414,1.414) to (6.414,1.414), (1.414,1.414) to (1.414,4.414). Draw the line of the question as the segment from (5,0) to (1.414,4.414) in ANSWER, 6 px. Draw its three views as thinner 4 px segments: front view from (5,0) to (0,3) in SET_A; top view from (5,3) to (1.414,4.414) in SET_B; side view from (5,0) to (6.414,4.414) in FOCUS. Write the edge letters in INK: 'a' centred at (2.5,-0.45), 'b' centred at (5.95,0.3), 'c' centred at (-0.45,1.5). Write 'line' in ANSWER centred at (0.55,5.0) with a thin GUIDE leader to (1.414,4.414). Write 'front' in SET_A centred at (1.35,1.15) and 'a² + c²' in SET_A centred at (1.35,0.65); 'top' in SET_B centred at (3.4,5.4) and 'a² + b²' in SET_B centred at (3.4,4.9); 'side' in FOCUS left-aligned starting at (7.5,3.0) and 'b² + c²' in FOCUS left-aligned starting at (7.5,2.5). Text height 0.32 (at least 34 px on 1920 px). Nothing else.",
+    "visible_text": [
+     "a",
+     "b",
+     "c",
+     "line",
+     "front",
+     "a² + c²",
+     "top",
+     "a² + b²",
+     "side",
+     "b² + c²"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numeric values of a, b, c",
+     "the sum of the three squares (it is in the steps)"
+    ],
+    "accuracy_checks": [
+     "front view = diagonal of the a by c face: squared length a^2 + c^2",
+     "top view = diagonal of the a by b face: squared length a^2 + b^2",
+     "side view = diagonal of the b by c face: squared length b^2 + c^2",
+     "(a^2 + c^2) + (a^2 + b^2) + (b^2 + c^2) = 2(a^2 + b^2 + c^2) = twice the square of the line (which has squared length a^2 + b^2 + c^2)",
+     "the line joins the front-bottom-right corner (5,0) to the back-top-left corner (1.414,4.414) of the box; each view starts or ends on a corner of one face"
+    ],
+    "alt_text": "A box with a line running from one bottom corner to the opposite top corner, and the three face diagonals that are its front, top and side views, each tagged with its squared length.",
+    "render_note": "Different layout from the question figure on purpose: the solution adds the 3D box that explains the relation. derived_from is kept because the validator requires it when the question has a figure."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S24.T24.C69",
+   "role": "question",
+   "lp_book_number": "Views of Solids, Q2",
+   "ncert_ref": "FiO4.q2",
+   "question_text": "Find the front view, top view and side view of each of the following solids, fixing its orientation with respect to the vertical, horizontal and side planes: cube, cuboid, parallelepiped, cylinder, cone, prism, and pyramid.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure for this question (it only names seven solids); a question with no given figure gets no question figure, even though the answer is a set of drawings.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S24.T24.C69",
+   "role": "solution",
+   "lp_book_number": "Views of Solids, Q2",
+   "ncert_ref": "FiO4.q2",
+   "question_text": "Find the front view, top view and side view of each of the following solids, fixing its orientation with respect to the vertical, horizontal and side planes: cube, cuboid, parallelepiped, cylinder, cone, prism, and pyramid.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer to 'find the front, top and side view of each solid' is a set of 21 drawings; the LP steps only name the shapes. One table, one row per solid, three views each. The question has no figure, so this figure stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S24.T24.C69.IMG2",
+   "manim_scene": "c8_11_s24_q2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S24.T24.C69.IMG2}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "views",
+    "aspect_ratio": "5:8",
+    "derived_from": null,
+    "content": {
+     "to_scale": "each solid drawn with its own proportions, all views of one solid in one scale; no numbers are shown",
+     "unit": "x right, y up; canvas x -0.3..15.4, y -25.4..0.6; cells 3.4 by 3.4; column centres x = 6.5, 10.0, 13.5; row centres y = -2.7, -6.1, -9.5, -12.9, -16.3, -19.7, -23.1; header row y = -0.5",
+     "orientation": "front viewer looks along +y, top view drawn with the front of the solid at the bottom, side view taken from the left (front of the solid on the right)",
+     "solids": [
+      {
+       "name": "cube",
+       "orientation": "Cube on a face"
+      },
+      {
+       "name": "cuboid",
+       "orientation": "Cuboid on a face"
+      },
+      {
+       "name": "parallelepiped",
+       "orientation": "Parallelepiped leaning forward"
+      },
+      {
+       "name": "cylinder",
+       "orientation": "Cylinder standing"
+      },
+      {
+       "name": "cone",
+       "orientation": "Cone standing on its base"
+      },
+      {
+       "name": "prism",
+       "orientation": "Triangular prism, triangle facing front"
+      },
+      {
+       "name": "pyramid",
+       "orientation": "Square pyramid standing on its base"
+      }
+     ],
+     "dimensions": {
+      "cube": "2 x 2 x 2",
+      "cuboid": "length 2.6, depth 1.6, height 1.0",
+      "parallelepiped": "length 2.6, base depth 1.2, height 1.6, top shifted 0.8 forward",
+      "cylinder": "radius 1, height 2.4",
+      "cone": "radius 1, height 2",
+      "prism": "triangle 2 wide and 1.6 high facing front, length (depth) 2.6",
+      "pyramid": "square base 2 x 2, height 2"
+     },
+     "column_labels": [
+      {
+       "text": "front",
+       "at": [
+        6.5,
+        -0.5
+       ]
+      },
+      {
+       "text": "top",
+       "at": [
+        10.0,
+        -0.5
+       ]
+      },
+      {
+       "text": "side",
+       "at": [
+        13.5,
+        -0.5
+       ]
+      }
+     ],
+     "row_labels": [
+      {
+       "text": "cube",
+       "at": [
+        4.6,
+        -2.7
+       ],
+       "align": "right"
+      },
+      {
+       "text": "cuboid",
+       "at": [
+        4.6,
+        -6.1
+       ],
+       "align": "right"
+      },
+      {
+       "text": "parallelepiped",
+       "at": [
+        4.6,
+        -9.5
+       ],
+       "align": "right"
+      },
+      {
+       "text": "cylinder",
+       "at": [
+        4.6,
+        -12.9
+       ],
+       "align": "right"
+      },
+      {
+       "text": "cone",
+       "at": [
+        4.6,
+        -16.3
+       ],
+       "align": "right"
+      },
+      {
+       "text": "prism",
+       "at": [
+        4.6,
+        -19.7
+       ],
+       "align": "right"
+      },
+      {
+       "text": "pyramid",
+       "at": [
+        4.6,
+        -23.1
+       ],
+       "align": "right"
+      }
+     ],
+     "cells": [
+      {
+       "row": "cube",
+       "view": "front",
+       "centre": [
+        6.5,
+        -2.7
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1,
+           -1
+          ],
+          [
+           1,
+           -1
+          ],
+          [
+           1,
+           1
+          ],
+          [
+           -1,
+           1
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "cube",
+       "view": "top",
+       "centre": [
+        10.0,
+        -2.7
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1,
+           -1
+          ],
+          [
+           1,
+           -1
+          ],
+          [
+           1,
+           1
+          ],
+          [
+           -1,
+           1
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "cube",
+       "view": "side",
+       "centre": [
+        13.5,
+        -2.7
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1,
+           -1
+          ],
+          [
+           1,
+           -1
+          ],
+          [
+           1,
+           1
+          ],
+          [
+           -1,
+           1
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "cuboid",
+       "view": "front",
+       "centre": [
+        6.5,
+        -6.1
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1.3,
+           -0.5
+          ],
+          [
+           1.3,
+           -0.5
+          ],
+          [
+           1.3,
+           0.5
+          ],
+          [
+           -1.3,
+           0.5
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "cuboid",
+       "view": "top",
+       "centre": [
+        10.0,
+        -6.1
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1.3,
+           -0.8
+          ],
+          [
+           1.3,
+           -0.8
+          ],
+          [
+           1.3,
+           0.8
+          ],
+          [
+           -1.3,
+           0.8
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "cuboid",
+       "view": "side",
+       "centre": [
+        13.5,
+        -6.1
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -0.8,
+           -0.5
+          ],
+          [
+           0.8,
+           -0.5
+          ],
+          [
+           0.8,
+           0.5
+          ],
+          [
+           -0.8,
+           0.5
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "parallelepiped",
+       "view": "front",
+       "centre": [
+        6.5,
+        -9.5
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1.3,
+           -0.8
+          ],
+          [
+           1.3,
+           -0.8
+          ],
+          [
+           1.3,
+           0.8
+          ],
+          [
+           -1.3,
+           0.8
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "parallelepiped",
+       "view": "top",
+       "centre": [
+        10.0,
+        -9.5
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1.3,
+           -1.0
+          ],
+          [
+           1.3,
+           -1.0
+          ],
+          [
+           1.3,
+           1.0
+          ],
+          [
+           -1.3,
+           1.0
+          ]
+         ]
+        },
+        {
+         "kind": "line",
+         "points_relative_to_centre": [
+          [
+           -1.3,
+           0.2
+          ],
+          [
+           1.3,
+           0.2
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "parallelepiped",
+       "view": "side",
+       "centre": [
+        13.5,
+        -9.5
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1.0,
+           -0.8
+          ],
+          [
+           0.2,
+           -0.8
+          ],
+          [
+           1.0,
+           0.8
+          ],
+          [
+           -0.2,
+           0.8
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "cylinder",
+       "view": "front",
+       "centre": [
+        6.5,
+        -12.9
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1,
+           -1.2
+          ],
+          [
+           1,
+           -1.2
+          ],
+          [
+           1,
+           1.2
+          ],
+          [
+           -1,
+           1.2
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "cylinder",
+       "view": "top",
+       "centre": [
+        10.0,
+        -12.9
+       ],
+       "shapes": [
+        {
+         "kind": "circle",
+         "centre_relative": [
+          0,
+          0
+         ],
+         "radius": 1.0
+        }
+       ]
+      },
+      {
+       "row": "cylinder",
+       "view": "side",
+       "centre": [
+        13.5,
+        -12.9
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1,
+           -1.2
+          ],
+          [
+           1,
+           -1.2
+          ],
+          [
+           1,
+           1.2
+          ],
+          [
+           -1,
+           1.2
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "cone",
+       "view": "front",
+       "centre": [
+        6.5,
+        -16.3
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1,
+           -1
+          ],
+          [
+           1,
+           -1
+          ],
+          [
+           0,
+           1
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "cone",
+       "view": "top",
+       "centre": [
+        10.0,
+        -16.3
+       ],
+       "shapes": [
+        {
+         "kind": "circle",
+         "centre_relative": [
+          0,
+          0
+         ],
+         "radius": 1.0
+        },
+        {
+         "kind": "dot",
+         "centre_relative": [
+          0,
+          0
+         ],
+         "radius": 0.07
+        }
+       ]
+      },
+      {
+       "row": "cone",
+       "view": "side",
+       "centre": [
+        13.5,
+        -16.3
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1,
+           -1
+          ],
+          [
+           1,
+           -1
+          ],
+          [
+           0,
+           1
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "prism",
+       "view": "front",
+       "centre": [
+        6.5,
+        -19.7
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1,
+           -0.8
+          ],
+          [
+           1,
+           -0.8
+          ],
+          [
+           0,
+           0.8
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "prism",
+       "view": "top",
+       "centre": [
+        10.0,
+        -19.7
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1,
+           -1.3
+          ],
+          [
+           1,
+           -1.3
+          ],
+          [
+           1,
+           1.3
+          ],
+          [
+           -1,
+           1.3
+          ]
+         ]
+        },
+        {
+         "kind": "line",
+         "points_relative_to_centre": [
+          [
+           0,
+           -1.3
+          ],
+          [
+           0,
+           1.3
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "prism",
+       "view": "side",
+       "centre": [
+        13.5,
+        -19.7
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1.3,
+           -0.8
+          ],
+          [
+           1.3,
+           -0.8
+          ],
+          [
+           1.3,
+           0.8
+          ],
+          [
+           -1.3,
+           0.8
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "pyramid",
+       "view": "front",
+       "centre": [
+        6.5,
+        -23.1
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1,
+           -1
+          ],
+          [
+           1,
+           -1
+          ],
+          [
+           0,
+           1
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "pyramid",
+       "view": "top",
+       "centre": [
+        10.0,
+        -23.1
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1,
+           -1
+          ],
+          [
+           1,
+           -1
+          ],
+          [
+           1,
+           1
+          ],
+          [
+           -1,
+           1
+          ]
+         ]
+        },
+        {
+         "kind": "line",
+         "points_relative_to_centre": [
+          [
+           -1,
+           -1
+          ],
+          [
+           1,
+           1
+          ]
+         ]
+        },
+        {
+         "kind": "line",
+         "points_relative_to_centre": [
+          [
+           -1,
+           1
+          ],
+          [
+           1,
+           -1
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "row": "pyramid",
+       "view": "side",
+       "centre": [
+        13.5,
+        -23.1
+       ],
+       "shapes": [
+        {
+         "kind": "poly",
+         "points_relative_to_centre": [
+          [
+           -1,
+           -1
+          ],
+          [
+           1,
+           -1
+          ],
+          [
+           0,
+           1
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "drawing_colour": "ANSWER",
+     "label_colour": "INK",
+     "grid": "faint GUIDE 1.5 px lines between rows and columns",
+     "type": "views"
+    },
+    "manim_description": "On a white canvas (x from -0.3 to 15.4, y from -25.4 to 0.6) draw a table of 7 rows and 3 columns with faint GUIDE 1.5 px lines between rows and columns. Column centres at x = 6.5, 10.0, 13.5; row centres at y = -2.7, -6.1, -9.5, -12.9, -16.3, -19.7, -23.1, top to bottom. Write the column labels 'front', 'top', 'side' in INK centred at y = -0.5 above their columns. Write the row labels 'cube', 'cuboid', 'parallelepiped', 'cylinder', 'cone', 'prism', 'pyramid' in INK, right-aligned ending at x = 4.6, at the row centre heights. Label text height 0.45 (at least 34 px on 1920 px). In each cell draw the outline in ANSWER, 3 px, no fill, with points given relative to the cell centre. Row 'cube' (centre y = -2.7): front: closed polygon (-1.0,-1.0),(1.0,-1.0),(1.0,1.0),(-1.0,1.0); top: closed polygon (-1.0,-1.0),(1.0,-1.0),(1.0,1.0),(-1.0,1.0); side: closed polygon (-1.0,-1.0),(1.0,-1.0),(1.0,1.0),(-1.0,1.0). Row 'cuboid' (centre y = -6.1): front: closed polygon (-1.3,-0.5),(1.3,-0.5),(1.3,0.5),(-1.3,0.5); top: closed polygon (-1.3,-0.8),(1.3,-0.8),(1.3,0.8),(-1.3,0.8); side: closed polygon (-0.8,-0.5),(0.8,-0.5),(0.8,0.5),(-0.8,0.5). Row 'parallelepiped' (centre y = -9.5): front: closed polygon (-1.3,-0.8),(1.3,-0.8),(1.3,0.8),(-1.3,0.8); top: closed polygon (-1.3,-1.0),(1.3,-1.0),(1.3,1.0),(-1.3,1.0) + segment (-1.3,0.2),(1.3,0.2); side: closed polygon (-1.0,-0.8),(0.2,-0.8),(1.0,0.8),(-0.2,0.8). Row 'cylinder' (centre y = -12.9): front: closed polygon (-1.0,-1.2),(1.0,-1.2),(1.0,1.2),(-1.0,1.2); top: circle of radius 1.0 at (0,0); side: closed polygon (-1.0,-1.2),(1.0,-1.2),(1.0,1.2),(-1.0,1.2). Row 'cone' (centre y = -16.3): front: closed polygon (-1.0,-1.0),(1.0,-1.0),(0.0,1.0); top: circle of radius 1.0 at (0,0) + filled dot of radius 0.07 at (0,0); side: closed polygon (-1.0,-1.0),(1.0,-1.0),(0.0,1.0). Row 'prism' (centre y = -19.7): front: closed polygon (-1.0,-0.8),(1.0,-0.8),(0.0,0.8); top: closed polygon (-1.0,-1.3),(1.0,-1.3),(1.0,1.3),(-1.0,1.3) + segment (0.0,-1.3),(0.0,1.3); side: closed polygon (-1.3,-0.8),(1.3,-0.8),(1.3,0.8),(-1.3,0.8). Row 'pyramid' (centre y = -23.1): front: closed polygon (-1.0,-1.0),(1.0,-1.0),(0.0,1.0); top: closed polygon (-1.0,-1.0),(1.0,-1.0),(1.0,1.0),(-1.0,1.0) + segment (-1.0,-1.0),(1.0,1.0) + segment (-1.0,1.0),(1.0,-1.0); side: closed polygon (-1.0,-1.0),(1.0,-1.0),(0.0,1.0). Each cell is 3.4 by 3.4 and every outline stays inside it. Nothing else is drawn.",
+    "visible_text": [
+     "front",
+     "top",
+     "side",
+     "cube",
+     "cuboid",
+     "parallelepiped",
+     "cylinder",
+     "cone",
+     "prism",
+     "pyramid"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the 3D solids",
+     "dimension numbers"
+    ],
+    "accuracy_checks": [
+     "cube: square, square, square",
+     "cuboid: three different rectangles (none a square)",
+     "parallelepiped leaning forward: rectangle from the front, rectangle from the top, parallelogram from the side",
+     "cylinder standing: rectangle, circle, rectangle",
+     "cone standing: triangle, circle with its centre point, triangle",
+     "triangular prism with its triangle facing front: triangle, rectangle, rectangle",
+     "square pyramid standing: triangle, square with both diagonals, triangle",
+     "front and side views are equal for the cube, cylinder, cone and square pyramid"
+    ],
+    "alt_text": "A table of seven solids with their front, top and side views: cube three squares; cuboid three rectangles; parallelepiped rectangle, rectangle, parallelogram; cylinder rectangle, circle, rectangle; cone triangle, circle with a centre dot, triangle; triangular prism triangle and two rectangles; square pyramid triangle, square with both diagonals, triangle.",
+    "render_note": "The LP gives no sizes: proportions are chosen here (listed in content.dimensions). Visible edges are drawn: the ridge line in the prism top view and the edge line in the parallelepiped top view are the only lines beyond those named in the LP steps."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S24.T24.C70",
+   "role": "question",
+   "lp_book_number": "Views of Solids, Q3",
+   "ncert_ref": "FiO4.q3",
+   "question_text": "Match each of the following objects with its projections: a jug, a funnel, a hammer, a car, a slide, a chair, a ceiling fan and a pressure cooker, each with a front, a top and a side view.",
+   "decision": "none",
+   "reason_codes": [
+    "NOT_RENDERABLE"
+   ],
+   "reason": "The question depends on the book's table (page 24): eight coloured illustrations of everyday objects and 24 hand-drawn silhouettes in a shuffled order. They cannot be redrawn faithfully in manim (car, chair, jug, fan, slide, cooker line art) and must not be faked; the learner uses the book's page, as the card says.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "The question text lists the eight objects; the matching itself needs the book's table."
+  },
+  {
+   "lp_concept_id": "M3.S24.T24.C70",
+   "role": "solution",
+   "lp_book_number": "Views of Solids, Q3",
+   "ncert_ref": "FiO4.q3",
+   "question_text": "Match each of the following objects with its projections: a jug, a funnel, a hammer, a car, a slide, a chair, a ceiling fan and a pressure cooker, each with a front, a top and a side view.",
+   "decision": "none",
+   "reason_codes": [
+    "NOT_RENDERABLE"
+   ],
+   "reason": "The answer is the matching of the eight objects to rows of the book's silhouette table (read from the shapes: jug row 8, funnel row 6, hammer row 7, car row 1, slide row 3, chair row 4, ceiling fan row 5, pressure cooker row 2); the 24 silhouettes cannot be redrawn faithfully. The LP steps already describe the telling view of every object in words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the eight step lines (jug ... pressure cooker) as the answer; optionally add the row of the book's table for each object."
+  }
+ ]
+}

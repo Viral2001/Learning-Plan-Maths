@@ -1,0 +1,1658 @@
+{
+ "meta": {
+  "chapter": "Exploring Some Geometric Themes",
+  "class": 8,
+  "textbook": "Ganita Prakash Grade 8, Part 2, Chapter 4",
+  "lp_plan_id": "cbse_eng_maths8_ch11_v31",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "required": 3,
+    "optional": 0,
+    "none": 6
+   },
+   "question": {
+    "required": 1,
+    "optional": 1,
+    "none": 4
+   },
+   "solution": {
+    "required": 3,
+    "optional": 1,
+    "none": 2
+   }
+  },
+  "notes": [
+   "Chunk B: module M2, topics M2.S10 to M2.S16 (15 units: 9 worked, 4 pairs, 2 singles = 21 items). Book pages 6 to 13.",
+   "Rule used: a diagram is required where the book gives the figure only as a picture (the nets of Figure it Out Q1), where a verbal arrangement of squares has to be seen to be folded (cross net with labels, six squares), or where the answer IS a drawing (nets of a cuboid, all 11 nets of a cube). Count-and-name questions on solids and profiles (Build it in your imagination, faces/edges/vertices) stay text and LaTeX.",
+   "The part labels (i) to (vi) are drawn in the S15 Q1 question and solution figures and (i), (ii) in the Q3 solution figure: the question and the LP solution refer to the nets by them, so they are part of the figure and not headings.",
+   "Overlap marks in the S15 Q1 solution figure (squares that land on one face in nets (i) and (v)) were found by a fold simulation; the LP says only that a square lands on a wall.",
+   "The 11 nets in the C43 solution figure were enumerated by computer (35 hexominoes, 11 fold into a cube) and match the LP families 6 + 3 + 1 + 1.",
+   "Teaching images are not linked anywhere; concept images C22.IMG1, C23.IMG1, C24.IMG1, C26.IMG1, C29.IMG1, C32.IMG1, C37.IMG1, C38.IMG1, C39.IMG1 sit in the same concepts as the worked examples.",
+   "Base figures of pages 12 and 13 that belong to nets of other solids (P12-net-3 tetrahedron nets, P13-*) are not claimed here: they belong to chunk C (M2.S17 and later).",
+   "Page 6 (Escher print, section 4.1; Tesla portrait) has no entry in the base inventory; the Escher print belongs to the fractal-art section (chunk A), the portrait is a photograph of a person.",
+   "LP oddities: the singles C43 and C44 carry book_number 'Figure it Out, Q1' although their ncert_refs are FiO3.q2 and FiO3.q3; the LP question text of C43 drops the book's sentence 'For example, the following nets are all considered the same'."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P07-profile_views-1",
+   "source": "chapter p.07",
+   "description": "Four cartoon elephants (side view and front view, shown twice): one solid, different outlines from different viewpoints. Checked against the page: matches the base.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P07-cartoon-2",
+   "source": "chapter p.07",
+   "description": "Cartoon strip of a cat bursting through a wall and leaving a cat-shaped hole (3 + 5 panels). Checked against the page: matches the base.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P09-solid-1",
+   "source": "chapter p.09",
+   "description": "Six green 3D solids with names: cuboid, parallelopiped, cylinder, cone, triangular prism, triangular pyramid. Teaching figure; no item reads from it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P09-face_edge_vertex-2",
+   "source": "chapter p.09",
+   "description": "Wire cube and wire triangular pyramid, each shown three times to name a vertex (dots), an edge and a face (hatched). The LP teaching image of the same idea draws a triangular prism instead.",
+   "mapped_to": "concept_image:M2.S12.T12.C29.IMG1"
+  },
+  {
+   "fig_id": "P10-solid-1",
+   "source": "chapter p.10",
+   "description": "Triangular, pentagonal and hexagonal prisms (3D). Teaching figure; the counts in the items come from the rules in text.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P10-solid-2",
+   "source": "chapter p.10",
+   "description": "Triangular, pentagonal and hexagonal pyramids (3D). Teaching figure; the counts in the items come from the rules in text.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P11-net-1",
+   "source": "chapter p.11",
+   "description": "Fig. 4.1: a cross shaped net of a cube, column of four squares with one square on each side of the third square from the top. The LP worked example draws the same net flipped top to bottom (side squares beside the second square, labels A B C D L R), so its figure is drawn from the LP text.",
+   "mapped_to": "item:M2.S14.T14.C37 (question)"
+  },
+  {
+   "fig_id": "P11-net_folding-2",
+   "source": "chapter p.11",
+   "description": "Orange cartoon: a cube net with flaps, a hand folding it, the finished cube. Practical illustration, flaps are not part of a net.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P11-net-3",
+   "source": "chapter p.11",
+   "description": "Figure it Out Q1 nets (i), (ii), (iii): (i) two squares over a row of four, (ii) two rows of three, (iii) 2, 2, 2 staircase. Checked against the page: matches the base.",
+   "mapped_to": "item:M2.S15.T15.C41 (question)"
+  },
+  {
+   "fig_id": "P12-net-1",
+   "source": "chapter p.12",
+   "description": "Figure it Out Q1 nets (iv), (v), (vi): plus shape, row of four with a column of two below its second square, row of four with one above the third and one below the second. Checked against the page: matches the base.",
+   "mapped_to": "item:M2.S15.T15.C41 (question)"
+  },
+  {
+   "fig_id": "P12-net-2",
+   "source": "chapter p.12",
+   "description": "Figure it Out Q2 example: three differently placed nets of a row of four with one square above and one below, 'all considered the same'. The LP question text does not point at it and states the rule in words.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 11,
+  "mapped_to_items": 3,
+  "mapped_to_concept_images": 1,
+  "mapped_none": 7,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M2.S14.T14.C37.IMG2",
+   "M2.S14.T14.C38.IMG2",
+   "M2.S14.T14.C39.IMG2",
+   "M2.S15.T15.C41.IMG1",
+   "M2.S15.T15.C42.IMG1",
+   "M2.S16.T16.C43.IMG2",
+   "M2.S16.T16.C44.IMG2"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M2.S10.T10.C22",
+   "role": "worked_example",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The side, the midpoints and every area are in the words, and the book asks the learner to picture the cuts without drawing; the answer is two areas found by arithmetic. The concept image of the same example sits in this concept (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "4.2.imagine_intro; 4.2.imagine_square",
+   "question_text": "A square has side 4 cm. Its corners are cut off from midpoint to midpoint. Find the area of the square that is left and of the square made from the four corners."
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C23",
+   "role": "worked_example",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "All lengths are in the words and the answer is side lengths with the names hexagon and octagon; a careful learner loses nothing without a picture.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "4.2.imagine_triangle; 4.2.imagine_octagon",
+   "question_text": "Cut the corners at the thirds of an equilateral triangle of side 9 cm and of a square of side 9 cm. Find the side lengths of the shapes left."
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C24",
+   "role": "worked_example",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The solid is a plain tin can with its radius and height in the words; the answer is a circle of radius 3 cm and a 6 cm by 10 cm rectangle, both fully stated. The concept image of the same example sits in this concept (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "4.2.profile_intro; 4.2.profile_square; 4.2.profile_circle; 4.2.profile_triangle",
+   "question_text": "A tin can is a cylinder with radius 3 cm and height 10 cm. What profile does it show from directly above, and what from the side?"
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C26",
+   "role": "worked_example",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Radius and height are in the words; the answer is a square of side 14 cm and a circle of radius 7 cm, fully stated. The concept image of the same practice sits in this concept (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": null,
+   "question_text": "A cylinder has radius 7 cm and height 14 cm. Picture it before you draw it: what profile does it show from the side, and what from directly above?"
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C27",
+   "role": "question",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book question (an 'imagine it' prompt) gives no figure and asks the learner to name two solids; a blank figure would imply something was given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "lp_book_number": "Profiles: rectangle from one side, triangle from another",
+   "ncert_ref": "4.2.profile_pairs",
+   "question_text": "Give two different solids that each show a rectangular profile from one viewpoint and a triangular profile from another."
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C28",
+   "role": "solution",
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer names two solids (a triangular prism and a square pyramid) and says in words which outline each shows from which side, so the text is complete. A figure would clearly help: the prism and the pyramid, each with its rectangular and its triangular outline; it is not added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "lp_book_number": "Profiles: rectangle from one side, triangle from another",
+   "ncert_ref": "4.2.profile_pairs",
+   "question_text": "Give two different solids that each show a rectangular profile from one viewpoint and a triangular profile from another.",
+   "text_alternative": "Keep the three steps as text; no figure needed."
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C29",
+   "role": "worked_example",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The solid is named (a triangular prism) and the steps count faces, edges and vertices from its structure (2 triangles, 3 rectangles); the concept image of this prism sits in the same concept (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "4.2.solids_make; 4.2.fev_cube",
+   "question_text": "Count the faces, edges and vertices of a triangular prism."
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C32",
+   "role": "worked_example",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Counts come from n = 8 by the rules n + 2, 3n, 2n and n + 1, 2n, n + 1; nothing is read from a figure. The concept image of the same pair of solids sits in this concept (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": null,
+   "question_text": "A gift box is a prism on an octagon, and its lid is a pyramid on the same octagon. Find the faces, edges and vertices of each."
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C33",
+   "role": "question",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book question gives no figure (a prism on a 10 sided polygon); the data is the number 10 in the words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "lp_book_number": "Prisms: a prism on a 10 sided polygon",
+   "ncert_ref": "4.2.prism_count",
+   "question_text": "A prism has two congruent 10 sided polygons as opposite faces. Find its faces, edges and vertices."
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C34",
+   "role": "solution",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is three counts (12, 30, 20) and the rules n + 2, 3n, 2n, all in text and LaTeX; a 10 sided prism drawn in 3D would be unreadable at 20 vertices.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "lp_book_number": "Prisms: a prism on a 10 sided polygon",
+   "ncert_ref": "4.2.prism_count",
+   "question_text": "A prism has two congruent 10 sided polygons as opposite faces. Find its faces, edges and vertices."
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C35",
+   "role": "question",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book question gives no figure (a pyramid on a 10 sided base); the data is the number 10 in the words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "lp_book_number": "Pyramids: a pyramid on a 10 sided base",
+   "ncert_ref": "4.2.pyramid_count",
+   "question_text": "A pyramid has a 10 sided base. Find its faces, edges and vertices."
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C36",
+   "role": "solution",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is three counts (11, 20, 11) and the rules n + 1, 2n, n + 1, all in text and LaTeX; same decision as the sibling prism question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "lp_book_number": "Pyramids: a pyramid on a 10 sided base",
+   "ncert_ref": "4.2.pyramid_count",
+   "question_text": "A pyramid has a 10 sided base. Find its faces, edges and vertices."
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C37",
+   "role": "worked_example",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The example is about folding a net; the labelled squares and their places are the data, and seeing the cross makes the opposite pairs a matter of looking, not of holding six labelled squares in the head. Drawn as the LP states it (side squares beside the second square), which is the book's Fig. 4.1 flipped top to bottom.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S14.T14.C37.IMG2",
+   "manim_scene": "c8_11_s14_c37_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S14.T14.C37.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "net",
+    "aspect_ratio": "3:4",
+    "derived_from": null,
+    "content": {
+     "type": "net",
+     "unit": "one square side = 1",
+     "to_scale": true,
+     "frame": "x right, y down, origin top-left",
+     "squares": [
+      {
+       "label": "A",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "label": "B",
+       "col": 2,
+       "row": 2
+      },
+      {
+       "label": "C",
+       "col": 2,
+       "row": 3
+      },
+      {
+       "label": "D",
+       "col": 2,
+       "row": 4
+      },
+      {
+       "label": "L",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "label": "R",
+       "col": 3,
+       "row": 2
+      }
+     ],
+     "columns": 3,
+     "rows": 4,
+     "outline": "INK",
+     "fill": "BG",
+     "text_colour": "INK"
+    },
+    "manim_description": "Use a coordinate frame with x to the right and y downward, origin at the top-left corner of the drawing, one unit = the side of one square. Draw six equal squares of side 1 unit, outline INK 3 px, fill BG, as a cross. The column of four: square A fills x 1 to 2, y 0 to 1; square B fills x 1 to 2, y 1 to 2; square C fills x 1 to 2, y 2 to 3; square D fills x 1 to 2, y 3 to 4. Square L fills x 0 to 1, y 1 to 2 (directly left of B). Square R fills x 2 to 3, y 1 to 2 (directly right of B). Write each capital letter A, B, C, D, L, R centred in its own square, in INK, bold sans-serif, height 0.5 unit. Draw nothing else: no colours, no fold lines, no arrows.",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "L",
+     "R"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "pairs of opposite faces or colours that mark them",
+     "the word bottom or any note about folding",
+     "fold lines or arrows"
+    ],
+    "accuracy_checks": [
+     "exactly 6 squares: 3 columns by 4 rows frame, column of four with letters A, B, C, D from top to bottom",
+     "L is directly left of B and R is directly right of B (same row as B, the second row)",
+     "fold simulation with B as the bottom: faces D, A, C, L, R all get different directions, so it is a net of a cube",
+     "opposite pairs after folding are B-D, A-C and L-R (the LP answer); none of this is drawn"
+    ],
+    "alt_text": "A cross shaped net: a column of four squares A, B, C, D from top to bottom with L to the left of B and R to the right of B."
+   },
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "4.2.net_def; 4.2.net_fold; 4.2.net_practical",
+   "question_text": "A cross shaped net has a column of four squares A, B, C, D from top to bottom, and two squares L and R on either side of B. Fold it into a cube with B as the bottom. Which faces are opposite each other?"
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C38",
+   "role": "worked_example",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question is only a verbal description of an arrangement of six squares ('one above the first square, one more to the left of that'); the learner has to see the arrangement to fold it, so the picture changes how correctly they solve it.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S14.T14.C38.IMG2",
+   "manim_scene": "c8_11_s14_c38_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S14.T14.C38.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "net",
+    "aspect_ratio": "5:2",
+    "derived_from": null,
+    "content": {
+     "type": "net",
+     "unit": "one square side = 1",
+     "to_scale": true,
+     "frame": "x right, y down, origin top-left",
+     "squares": [
+      {
+       "col": 1,
+       "row": 1
+      },
+      {
+       "col": 2,
+       "row": 1
+      },
+      {
+       "col": 2,
+       "row": 2
+      },
+      {
+       "col": 3,
+       "row": 2
+      },
+      {
+       "col": 4,
+       "row": 2
+      },
+      {
+       "col": 5,
+       "row": 2
+      }
+     ],
+     "columns": 5,
+     "rows": 2,
+     "outline": "INK",
+     "fill": "BG"
+    },
+    "manim_description": "Use a coordinate frame with x to the right and y downward, origin at the top-left corner of the drawing, one unit = the side of one square. Draw six equal squares of side 1 unit, outline INK 3 px, fill BG. Bottom row, four squares: x 1 to 2, 2 to 3, 3 to 4 and 4 to 5, all at y 1 to 2. Top row, two squares at y 0 to 1: one at x 1 to 2, directly above the first square of the bottom row, and one at x 0 to 1, directly left of it. Draw no text, no colours, no fold lines, no numbers.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers or letters on the squares",
+     "overlap marks, ticks or crosses",
+     "the words net or not a net",
+     "fold lines"
+    ],
+    "accuracy_checks": [
+     "exactly 6 squares in a 5 by 2 frame",
+     "bottom row: 4 squares in columns 2 to 5; top row: the square in column 2 (above the first square of the row) and the square in column 1 (left of it)",
+     "fold simulation: the square in column 1 of the top row and the square in column 5 of the bottom row land on the same face, so it is not a net (matches the LP answer); the overlap is not drawn",
+     "the shape equals the book's net (i) of Figure it Out Q1"
+    ],
+    "alt_text": "Six squares: a row of four, one square above the first square of the row, and one more square to the left of that one."
+   },
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": null,
+   "question_text": "Six squares: a row of four, one square above the first square of the row, and one more square to the left of that square. Is it a net of a cube?"
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C39",
+   "role": "worked_example",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The example asks the learner to draw a net, so the answer is a drawing; the steps describe it in words, which is not a replacement for it (B2). The question gives no figure, so this single figure is the finished net with the given lengths marked.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S14.T14.C39.IMG2",
+   "manim_scene": "c8_11_s14_c39_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S14.T14.C39.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "net",
+    "aspect_ratio": "12:5",
+    "derived_from": null,
+    "content": {
+     "type": "net",
+     "unit": "1 cm",
+     "to_scale": true,
+     "frame": "x right, y down, origin top-left",
+     "rectangles": [
+      {
+       "label": "4 × 2",
+       "x": 0,
+       "y": 0,
+       "w": 4,
+       "h": 2
+      },
+      {
+       "label": "4 × 1",
+       "x": 0,
+       "y": 2,
+       "w": 4,
+       "h": 1
+      },
+      {
+       "label": "2 × 1",
+       "x": 4,
+       "y": 2,
+       "w": 2,
+       "h": 1
+      },
+      {
+       "label": "4 × 1",
+       "x": 6,
+       "y": 2,
+       "w": 4,
+       "h": 1
+      },
+      {
+       "label": "2 × 1",
+       "x": 10,
+       "y": 2,
+       "w": 2,
+       "h": 1
+      },
+      {
+       "label": "4 × 2",
+       "x": 0,
+       "y": 3,
+       "w": 4,
+       "h": 2
+      }
+     ],
+     "outline": "ANSWER",
+     "fill": "BG",
+     "label_colour": "INK"
+    },
+    "manim_description": "Use a coordinate frame with x to the right and y downward, origin at the top-left corner of the drawing, one unit = 1 cm. Draw the net of the cuboid 4 by 2 by 1 as six rectangles with outline ANSWER 3 px and fill BG: 4 × 2: x from 0 to 4, y from 0 to 2; 4 × 1: x from 0 to 4, y from 2 to 3; 2 × 1: x from 4 to 6, y from 2 to 3; 4 × 1: x from 6 to 10, y from 2 to 3; 2 × 1: x from 10 to 12, y from 2 to 3; 4 × 2: x from 0 to 4, y from 3 to 5. The row of four walls is 4, 2, 4, 2 long and 1 tall (12 long in all), and the two 4 by 2 rectangles sit above and below the first wall, which is a 4 wall. Write each rectangle's two side lengths centred inside it, in INK, sans-serif, height 0.4 unit, in the form shown (for example 4 × 2). Draw nothing else: no area value, no fold lines, no other text.",
+    "visible_text": [
+     "4 × 2",
+     "4 × 1",
+     "2 × 1"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the area value 28",
+     "fold lines",
+     "any text other than the six size labels"
+    ],
+    "accuracy_checks": [
+     "6 rectangles: two 4 × 2, two 4 × 1, two 2 × 1",
+     "the row of walls is 4 + 2 + 4 + 2 = 12 long, which is 2 × (4 + 2), the distance round the 4 by 2 base, and 1 tall",
+     "the 4 × 2 rectangles are attached to the first 4 wall along its 4 edge, and their other side 2 equals the width of the next wall",
+     "total area 8 + 8 + 4 + 2 + 4 + 2 = 28 = 2 × (8 + 4 + 2), as in the LP"
+    ],
+    "alt_text": "A net of a 4 cm by 2 cm by 1 cm cuboid: a row of four walls 4, 2, 4, 2 long and 1 tall, with a 4 by 2 rectangle above and one below the first wall."
+   },
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": null,
+   "needs_lp_text_sync": true,
+   "question_text": "Draw a net of a cuboid 4 cm by 2 cm by 1 cm and find the area of the net."
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C41",
+   "role": "question",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY",
+    "FIG_REFERENCED"
+   ],
+   "reason": "The six nets are the question: the learner has to look at each one and fold it in the mind. The book prints them as pictures; the words alone (rows, positions) are a hard way to hold six layouts. The part labels (i) to (vi) are kept because the question and the solution refer to the nets by them.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S15.T15.C41.IMG1",
+   "manim_scene": "c8_11_s15_c41_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S15.T15.C41.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "net",
+    "aspect_ratio": "2:1",
+    "derived_from": null,
+    "content": {
+     "type": "net",
+     "unit": "one square side = 1",
+     "to_scale": true,
+     "frame": "x right, y down, origin top-left",
+     "nets": [
+      {
+       "label": "(i)",
+       "origin": [
+        0.0,
+        0.5
+       ],
+       "squares": [
+        {
+         "col": 0,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 4,
+         "row": 1
+        }
+       ],
+       "caption_centre": [
+        2.5,
+        3.55
+       ]
+      },
+      {
+       "label": "(ii)",
+       "origin": [
+        6.5,
+        0.5
+       ],
+       "squares": [
+        {
+         "col": 0,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 0
+        },
+        {
+         "col": 2,
+         "row": 0
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 4,
+         "row": 1
+        }
+       ],
+       "caption_centre": [
+        9.0,
+        3.55
+       ]
+      },
+      {
+       "label": "(iii)",
+       "origin": [
+        13.5,
+        0.0
+       ],
+       "squares": [
+        {
+         "col": 0,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 2
+        },
+        {
+         "col": 3,
+         "row": 2
+        }
+       ],
+       "caption_centre": [
+        15.5,
+        3.55
+       ]
+      },
+      {
+       "label": "(iv)",
+       "origin": [
+        0.5,
+        4.6
+       ],
+       "squares": [
+        {
+         "col": 2,
+         "row": 0
+        },
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 1,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 2
+        }
+       ],
+       "caption_centre": [
+        2.5,
+        8.149999999999999
+       ]
+      },
+      {
+       "label": "(v)",
+       "origin": [
+        7.0,
+        4.6
+       ],
+       "squares": [
+        {
+         "col": 0,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 0
+        },
+        {
+         "col": 2,
+         "row": 0
+        },
+        {
+         "col": 3,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 1
+        },
+        {
+         "col": 1,
+         "row": 2
+        }
+       ],
+       "caption_centre": [
+        9.0,
+        8.149999999999999
+       ]
+      },
+      {
+       "label": "(vi)",
+       "origin": [
+        13.5,
+        4.6
+       ],
+       "squares": [
+        {
+         "col": 2,
+         "row": 0
+        },
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 1,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 1,
+         "row": 2
+        }
+       ],
+       "caption_centre": [
+        15.5,
+        8.149999999999999
+       ]
+      }
+     ],
+     "layout": "2 rows of 3",
+     "outline": "INK",
+     "fill": "BG"
+    },
+    "manim_description": "Use a coordinate frame with x to the right and y downward, origin at the top-left corner of the drawing, one unit = the side of one square. Draw six nets, each made of exactly six equal squares of side 1 unit with outline INK 3 px and fill BG, in two rows of three. Each net is given by its origin (the top-left corner of the square at offset (0, 0)) and the offsets (column, row) of its squares, where a square at offset (c, r) fills x from origin_x + c to origin_x + c + 1 and y from origin_y + r to origin_y + r + 1. (i): origin (0, 0.5), squares at offsets (0, 0), (1, 0), (1, 1), (2, 1), (3, 1), (4, 1); (ii): origin (6.5, 0.5), squares at offsets (0, 0), (1, 0), (2, 0), (2, 1), (3, 1), (4, 1); (iii): origin (13.5, 0), squares at offsets (0, 0), (1, 0), (1, 1), (2, 1), (2, 2), (3, 2); (iv): origin (0.5, 4.6), squares at offsets (2, 0), (0, 1), (1, 1), (2, 1), (3, 1), (2, 2); (v): origin (7, 4.6), squares at offsets (0, 0), (1, 0), (2, 0), (3, 0), (1, 1), (1, 2); (vi): origin (13.5, 4.6), squares at offsets (2, 0), (0, 1), (1, 1), (2, 1), (3, 1), (1, 2). Under each net write its part label in INK, sans-serif, height 0.45 unit: (i) centred at (2.5, 3.55), (ii) centred at (9, 3.55), (iii) centred at (15.5, 3.55), (iv) centred at (2.5, 8.15), (v) centred at (9, 8.15), (vi) centred at (15.5, 8.15). Draw nothing else: no colours, no fold lines, no ticks or crosses, no other text.",
+    "visible_text": [
+     "(i)",
+     "(ii)",
+     "(iii)",
+     "(iv)",
+     "(v)",
+     "(vi)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "any heading or caption other than the part labels (i) to (vi)",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "ticks, crosses or overlap marks",
+     "colours or fold lines"
+    ],
+    "accuracy_checks": [
+     "6 nets of 6 squares each = 36 squares in all",
+     "(i): row of four at the bottom (offset columns 1 to 4) with two squares above it at columns 0 and 1; (ii): two rows of three overlapping in one column; (iii): the 2, 2, 2 staircase",
+     "(iv): row of four with one square above and one below its third square; (v): row of four with a column of two below its second square; (vi): row of four with one square above its third square and one below its second square",
+     "all six match the book's Figure it Out Q1 pictures (checked against pages 11 and 12)",
+     "no answer is hinted: no marks"
+    ],
+    "alt_text": "Six flat shapes of six joined squares labelled (i) to (vi), the nets the learner has to sort."
+   },
+   "lp_book_number": "Nets, Q1",
+   "ncert_ref": "FiO3.q1",
+   "question_text": "Which of the following are the nets of a cube? First, try to answer by visualisation. Then, you may use cutouts and try. (i) to (vi): six nets of six squares each."
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C42",
+   "role": "solution",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The solution adds marks the question lacks: which nets fold (tick) and where the two squares of the other two land on one face. This is the printed answer type 'which of these figures', so the marks go on the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S15.T15.C42.IMG1",
+   "manim_scene": "c8_11_s15_c42_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S15.T15.C42.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "net",
+    "aspect_ratio": "2:1",
+    "derived_from": "M2.S15.T15.C41.IMG1",
+    "content": {
+     "type": "net",
+     "unit": "one square side = 1",
+     "to_scale": true,
+     "frame": "x right, y down, origin top-left",
+     "same_layout_as": "M2.S15.T15.C41.IMG1",
+     "ticks": [
+      {
+       "net": "(ii)",
+       "centre": [
+        10.15,
+        3.55
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "net": "(iii)",
+       "centre": [
+        16.65,
+        3.55
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "net": "(iv)",
+       "centre": [
+        3.65,
+        8.149999999999999
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "net": "(vi)",
+       "centre": [
+        16.65,
+        8.149999999999999
+       ],
+       "colour": "ANSWER"
+      }
+     ],
+     "crosses": [
+      {
+       "net": "(i)",
+       "centre": [
+        3.65,
+        3.55
+       ],
+       "colour": "WRONG"
+      },
+      {
+       "net": "(v)",
+       "centre": [
+        10.15,
+        8.149999999999999
+       ],
+       "colour": "WRONG"
+      }
+     ],
+     "overlap_outlines": [
+      {
+       "net": "(i)",
+       "top_left_corners": [
+        [
+         0.0,
+         0.5
+        ],
+        [
+         4.0,
+         1.5
+        ]
+       ],
+       "colour": "FOCUS"
+      },
+      {
+       "net": "(v)",
+       "top_left_corners": [
+        [
+         10.0,
+         4.6
+        ],
+        [
+         8.0,
+         6.6
+        ]
+       ],
+       "colour": "FOCUS"
+      }
+     ]
+    },
+    "manim_description": "Keep the drawing of the question figure exactly as it is: same coordinate frame (x to the right, y downward, one unit = one square side), same six nets at the same origins and offsets, same part labels (i) to (vi) at the same places, given parts stay INK. Then add the following. Tick marks in ANSWER, stroke 4 px, drawn as two line segments, for nets (ii), (iii), (iv) and (vi): with the mark centre (cx, cy) the tick runs from (cx - 0.2, cy) to (cx - 0.05, cy + 0.18) and on to (cx + 0.25, cy - 0.2); mark centres: (ii) mark centre (10.15, 3.55); (iii) mark centre (16.65, 3.55); (iv) mark centre (3.65, 8.15); (vi) mark centre (16.65, 8.15). Cross marks in WRONG, stroke 4 px, drawn as two line segments, for nets (i) and (v): with the mark centre (cx, cy) the cross runs from (cx - 0.2, cy - 0.2) to (cx + 0.2, cy + 0.2) and from (cx - 0.2, cy + 0.2) to (cx + 0.2, cy - 0.2); mark centres: (i) mark centre (3.65, 3.55); (v) mark centre (10.15, 8.15). Outline the two squares of net (i) that land on the same face when it is folded, in FOCUS, stroke 5 px, no fill: the square with top-left corner (0, 0.5) and the square with top-left corner (4, 1.5). Outline the two squares of net (v) that land on the same face, in FOCUS, stroke 5 px, no fill: the square with top-left corner (10, 4.6) and the square with top-left corner (8, 6.6). No other text, no words such as net or not a net.",
+    "visible_text": [
+     "(i)",
+     "(ii)",
+     "(iii)",
+     "(iv)",
+     "(v)",
+     "(vi)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "any heading or caption other than the part labels (i) to (vi)",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words net or not a net",
+     "a moved, redrawn or renumbered net"
+    ],
+    "accuracy_checks": [
+     "ticks on exactly (ii), (iii), (iv), (vi) and crosses on exactly (i), (v), as in the LP answer",
+     "fold simulation (row of four = the four walls): in (i) the top-left square and the right end of the row land on the same face; in (v) the lower square of the column and the right end of the row land on the same face; both outlined",
+     "the four nets with a tick fold with six different faces (six distinct directions in the fold simulation)",
+     "nets, labels and positions are identical to the question figure"
+    ],
+    "alt_text": "The same six nets (i) to (vi) with a tick beside (ii), (iii), (iv), (vi) and a cross beside (i) and (v), where the two squares that land on one face are outlined."
+   },
+   "lp_book_number": "Nets, Q1",
+   "ncert_ref": "FiO3.q1",
+   "question_text": "Which of the following are the nets of a cube? (i) to (vi)."
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C43",
+   "role": "question",
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book prints three nets 'considered the same' as an example of turning and flipping, but the rule (rotation or flip) is stated fully in words and the LP question text does not point at the example; the learner does not need the picture to attempt. A figure that would help: those three nets of a row of four with one square above and one below at different places.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "FiO3.q2",
+   "question_text": "A cube has 11 possible net structures in total. In this count, two nets are considered the same if one can be obtained from the other by a rotation or a flip. Find all the 11 nets of a cube.",
+   "text_alternative": "Keep the text; if the book's example is wanted, add the sentence that three differently placed nets of a row of four with one square above and one below are the same net."
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C43",
+   "role": "solution",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer to 'find all the 11 nets' is the 11 drawings themselves; the LP steps describe the families in words, which is not a replacement for the figure (B2). The question has no figure in the plan, so this figure stands alone and draws all 11.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S16.T16.C43.IMG2",
+   "manim_scene": "c8_11_s16_c43_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S16.T16.C43.IMG2}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "net",
+    "aspect_ratio": "9:8",
+    "derived_from": null,
+    "content": {
+     "type": "net",
+     "unit": "one square side = 1",
+     "to_scale": true,
+     "frame": "x right, y down, origin top-left",
+     "nets": [
+      {
+       "index": 1,
+       "family": "row of four, one square above and one below",
+       "origin": [
+        0.5,
+        0.0
+       ],
+       "squares": [
+        {
+         "col": 0,
+         "row": 0
+        },
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 1,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 0,
+         "row": 2
+        }
+       ]
+      },
+      {
+       "index": 2,
+       "family": "row of four, one square above and one below",
+       "origin": [
+        6.7,
+        0.0
+       ],
+       "squares": [
+        {
+         "col": 0,
+         "row": 0
+        },
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 1,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 1,
+         "row": 2
+        }
+       ]
+      },
+      {
+       "index": 3,
+       "family": "row of four, one square above and one below",
+       "origin": [
+        12.9,
+        0.0
+       ],
+       "squares": [
+        {
+         "col": 0,
+         "row": 0
+        },
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 1,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 2
+        }
+       ]
+      },
+      {
+       "index": 4,
+       "family": "row of four, one square above and one below",
+       "origin": [
+        0.5,
+        4.2
+       ],
+       "squares": [
+        {
+         "col": 0,
+         "row": 0
+        },
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 1,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 2
+        }
+       ]
+      },
+      {
+       "index": 5,
+       "family": "row of four, one square above and one below",
+       "origin": [
+        6.7,
+        4.2
+       ],
+       "squares": [
+        {
+         "col": 1,
+         "row": 0
+        },
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 1,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 1,
+         "row": 2
+        }
+       ]
+      },
+      {
+       "index": 6,
+       "family": "row of four, one square above and one below",
+       "origin": [
+        12.9,
+        4.2
+       ],
+       "squares": [
+        {
+         "col": 1,
+         "row": 0
+        },
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 1,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 2
+        }
+       ]
+      },
+      {
+       "index": 7,
+       "family": "row of three in the middle, pair above, one below",
+       "origin": [
+        0.5,
+        8.4
+       ],
+       "squares": [
+        {
+         "col": 0,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 1,
+         "row": 2
+        }
+       ]
+      },
+      {
+       "index": 8,
+       "family": "row of three in the middle, pair above, one below",
+       "origin": [
+        6.7,
+        8.4
+       ],
+       "squares": [
+        {
+         "col": 0,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 2
+        }
+       ]
+      },
+      {
+       "index": 9,
+       "family": "row of three in the middle, pair above, one below",
+       "origin": [
+        12.9,
+        8.4
+       ],
+       "squares": [
+        {
+         "col": 0,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 2
+        }
+       ]
+      },
+      {
+       "index": 10,
+       "family": "two rows of three",
+       "origin": [
+        0.0,
+        13.100000000000001
+       ],
+       "squares": [
+        {
+         "col": 0,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 0
+        },
+        {
+         "col": 2,
+         "row": 0
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 4,
+         "row": 1
+        }
+       ]
+      },
+      {
+       "index": 11,
+       "family": "staircase of 2, 2, 2",
+       "origin": [
+        6.7,
+        12.600000000000001
+       ],
+       "squares": [
+        {
+         "col": 0,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 0
+        },
+        {
+         "col": 1,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 2
+        },
+        {
+         "col": 3,
+         "row": 2
+        }
+       ]
+      }
+     ],
+     "layout": "3 columns by 4 rows, last row holds 2 nets",
+     "outline": "ANSWER",
+     "fill": "BG"
+    },
+    "manim_description": "Use a coordinate frame with x to the right and y downward, origin at the top-left corner of the drawing, one unit = the side of one square. Draw 11 different nets of a cube, each made of exactly six equal squares of side 1 unit with outline ANSWER 3 px and fill BG, in a grid of three columns and four rows (the last row holds two nets, its third place stays empty). Each net is given by its origin (the top-left corner of the square at offset (0, 0)) and the offsets (column, row) of its squares, where a square at offset (c, r) fills x from origin_x + c to origin_x + c + 1 and y from origin_y + r to origin_y + r + 1. Nets 1 to 6 are the six nets with a row of four, one square above and one below the row (row 1 and row 2 of the grid); nets 7 to 9 have a row of three with a pair of squares above its left end and one square below (row 3); net 10 is two rows of three joined at one square; net 11 is the staircase of 2, 2 and 2 squares (row 4). net 1: origin (0.5, 0), squares at offsets (0, 0), (0, 1), (1, 1), (2, 1), (3, 1), (0, 2); net 2: origin (6.7, 0), squares at offsets (0, 0), (0, 1), (1, 1), (2, 1), (3, 1), (1, 2); net 3: origin (12.9, 0), squares at offsets (0, 0), (0, 1), (1, 1), (2, 1), (3, 1), (2, 2); net 4: origin (0.5, 4.2), squares at offsets (0, 0), (0, 1), (1, 1), (2, 1), (3, 1), (3, 2); net 5: origin (6.7, 4.2), squares at offsets (1, 0), (0, 1), (1, 1), (2, 1), (3, 1), (1, 2); net 6: origin (12.9, 4.2), squares at offsets (1, 0), (0, 1), (1, 1), (2, 1), (3, 1), (2, 2); net 7: origin (0.5, 8.4), squares at offsets (0, 0), (1, 0), (1, 1), (2, 1), (3, 1), (1, 2); net 8: origin (6.7, 8.4), squares at offsets (0, 0), (1, 0), (1, 1), (2, 1), (3, 1), (2, 2); net 9: origin (12.9, 8.4), squares at offsets (0, 0), (1, 0), (1, 1), (2, 1), (3, 1), (3, 2); net 10: origin (0, 13.1), squares at offsets (0, 0), (1, 0), (2, 0), (2, 1), (3, 1), (4, 1); net 11: origin (6.7, 12.6), squares at offsets (0, 0), (1, 0), (1, 1), (2, 1), (2, 2), (3, 2). Draw no text, no numbers, no colours other than the ANSWER outlines and BG fill, no fold lines.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers, counts or family labels",
+     "turns or flips of the same net",
+     "fold lines"
+    ],
+    "accuracy_checks": [
+     "11 nets, 6 squares each = 66 squares in all",
+     "nets 1 to 6: row of four with one square above at place p and one below at place q for (p, q) = (1,1), (1,2), (1,3), (1,4), (2,2), (2,3): 6 different nets after turns and flips (Burnside (16 + 4 + 4 + 0) / 4 = 6)",
+     "nets 7 to 9: row of three, pair of squares above its left end, one square below its left, middle, right square: 3 nets; net 10: two rows of three joined at one square: 1 net; net 11: staircase 2, 2, 2: 1 net",
+     "6 + 3 + 1 + 1 = 11, and 6 + 4 + 1 = 11 in the LP grouping",
+     "fold simulation: every net has six distinct face directions; no two nets are equal under any of the 8 turns and flips"
+    ],
+    "alt_text": "All 11 nets of a cube drawn as six joined squares: six with a row of four, three with a row of three, one with two rows of three and one staircase."
+   },
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "FiO3.q2",
+   "needs_lp_text_sync": true,
+   "question_text": "Find all the 11 nets of a cube."
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C44",
+   "role": "question",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book question gives only side lengths in words (5, 3, 1 and 6, 3, 2) and asks the learner to draw; there is no given figure, and a blank figure would imply something was given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "FiO3.q3",
+   "question_text": "Draw a net of a cuboid having sidelengths: (i) 5 cm, 3 cm, and 1 cm (ii) 6 cm, 3 cm, and 2 cm"
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C44",
+   "role": "solution",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer to 'draw a net' is the drawing; the LP steps list the rectangles and the wall row in words but the net itself is the answer (B2). The question has no figure, so this figure stands alone and draws both nets with their side lengths.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S16.T16.C44.IMG2",
+   "manim_scene": "c8_11_s16_c44_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S16.T16.C44.IMG2}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "net",
+    "aspect_ratio": "6:5",
+    "derived_from": null,
+    "content": {
+     "type": "net",
+     "unit": "1 cm",
+     "to_scale": true,
+     "frame": "x right, y down, origin top-left",
+     "nets": [
+      {
+       "label": "(i)",
+       "cuboid": "5 by 3 by 1",
+       "rectangles": [
+        {
+         "label": "5 × 3",
+         "x": 1.8,
+         "y": 0,
+         "w": 5,
+         "h": 3
+        },
+        {
+         "label": "5 × 1",
+         "x": 1.8,
+         "y": 3,
+         "w": 5,
+         "h": 1
+        },
+        {
+         "label": "3 × 1",
+         "x": 6.8,
+         "y": 3,
+         "w": 3,
+         "h": 1
+        },
+        {
+         "label": "5 × 1",
+         "x": 9.8,
+         "y": 3,
+         "w": 5,
+         "h": 1
+        },
+        {
+         "label": "3 × 1",
+         "x": 14.8,
+         "y": 3,
+         "w": 3,
+         "h": 1
+        },
+        {
+         "label": "5 × 3",
+         "x": 1.8,
+         "y": 4,
+         "w": 5,
+         "h": 3
+        }
+       ],
+       "caption_centre": [
+        0.7,
+        3.5
+       ]
+      },
+      {
+       "label": "(ii)",
+       "cuboid": "6 by 3 by 2",
+       "rectangles": [
+        {
+         "label": "6 × 3",
+         "x": 1.8,
+         "y": 8.5,
+         "w": 6,
+         "h": 3
+        },
+        {
+         "label": "6 × 2",
+         "x": 1.8,
+         "y": 11.5,
+         "w": 6,
+         "h": 2
+        },
+        {
+         "label": "3 × 2",
+         "x": 7.8,
+         "y": 11.5,
+         "w": 3,
+         "h": 2
+        },
+        {
+         "label": "6 × 2",
+         "x": 10.8,
+         "y": 11.5,
+         "w": 6,
+         "h": 2
+        },
+        {
+         "label": "3 × 2",
+         "x": 16.8,
+         "y": 11.5,
+         "w": 3,
+         "h": 2
+        },
+        {
+         "label": "6 × 3",
+         "x": 1.8,
+         "y": 13.5,
+         "w": 6,
+         "h": 3
+        }
+       ],
+       "caption_centre": [
+        0.7,
+        12.5
+       ]
+      }
+     ],
+     "outline": "ANSWER",
+     "fill": "BG",
+     "label_colour": "INK"
+    },
+    "manim_description": "Use a coordinate frame with x to the right and y downward, origin at the top-left corner of the drawing, one unit = 1 cm, the same scale for both nets. Draw two nets of cuboids, each made of six rectangles with outline ANSWER 3 px and fill BG. Net (i), the cuboid 5 by 3 by 1: 5 × 3: x from 1.8 to 6.8, y from 0 to 3; 5 × 1: x from 1.8 to 6.8, y from 3 to 4; 3 × 1: x from 6.8 to 9.8, y from 3 to 4; 5 × 1: x from 9.8 to 14.8, y from 3 to 4; 3 × 1: x from 14.8 to 17.8, y from 3 to 4; 5 × 3: x from 1.8 to 6.8, y from 4 to 7. The row of four walls is 5, 3, 5, 3 long and 1 tall, and the two 5 by 3 rectangles sit above and below the first wall, which is a 5 wall. Net (ii), the cuboid 6 by 3 by 2: 6 × 3: x from 1.8 to 7.8, y from 8.5 to 11.5; 6 × 2: x from 1.8 to 7.8, y from 11.5 to 13.5; 3 × 2: x from 7.8 to 10.8, y from 11.5 to 13.5; 6 × 2: x from 10.8 to 16.8, y from 11.5 to 13.5; 3 × 2: x from 16.8 to 19.8, y from 11.5 to 13.5; 6 × 3: x from 1.8 to 7.8, y from 13.5 to 16.5. The row of four walls is 6, 3, 6, 3 long and 2 tall, and the two 6 by 3 rectangles sit above and below the first wall, which is a 6 wall. Write each rectangle's two side lengths centred inside it, in INK, sans-serif, height 0.4 unit, in the form shown (for example 5 × 3). Write the part labels (i) at (0.7, 3.5) and (ii) at (0.7, 12.5), centred, in INK, height 0.5 unit. Draw nothing else: no area values, no fold lines, no other text.",
+    "visible_text": [
+     "(i)",
+     "(ii)",
+     "5 × 3",
+     "5 × 1",
+     "3 × 1",
+     "6 × 3",
+     "6 × 2",
+     "3 × 2"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "area values 46 and 72",
+     "fold lines",
+     "any text other than the part labels and the size labels"
+    ],
+    "accuracy_checks": [
+     "net (i): 6 rectangles, two 5 × 3, two 5 × 1, two 3 × 1; walls 5 + 3 + 5 + 3 = 16 = 2 × (5 + 3); area 15 + 15 + 5 + 3 + 5 + 3 = 46 = 2 × (15 + 5 + 3)",
+     "net (ii): 6 rectangles, two 6 × 3, two 6 × 2, two 3 × 2; walls 6 + 3 + 6 + 3 = 18 = 2 × (6 + 3); area 18 + 18 + 12 + 6 + 12 + 6 = 72 = 2 × (18 + 12 + 6)",
+     "in each net the two big rectangles are attached to the first wall along its long edge and their other side equals the width of the neighbouring wall",
+     "both nets use the same scale (1 unit = 1 cm)"
+    ],
+    "alt_text": "Two nets of cuboids drawn to the same scale: (i) for 5 by 3 by 1 and (ii) for 6 by 3 by 2, each six rectangles with their side lengths written inside."
+   },
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "FiO3.q3",
+   "needs_lp_text_sync": true,
+   "question_text": "Draw a net of a cuboid having sidelengths: (i) 5 cm, 3 cm, and 1 cm (ii) 6 cm, 3 cm, and 2 cm"
+  }
+ ]
+}
