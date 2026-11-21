@@ -1,17 +1,19 @@
 # -*- coding: utf-8 -*-
-"""Build the V3 plan of Class 6 Ch 3 Number Play from the live V2 plan (v108) and the diagram map.
+"""Build the V3 plan of Class 6 Ch 3 Number Play from the live V2 plan (v108) and the diagram map (prompt v3).
 
     python -I -X utf8 build_v3.py merge            merge map/out_A..D.json into map/diagram_map.json (and validate)
-    python -I -X utf8 build_v3.py build [--version N]
-                                                   build out/cbse_eng_maths6_ch3_V3_v<N>.json (N = next free V3 version)
+    python -I -X utf8 build_v3.py build --version N
+                                                   build out/cbse_eng_maths6_ch3_V3_v<N>.json
 
 What it does to a COPY of source/cbse_eng_maths6_ch3_v108.json (the live V2 plan; nothing is written to staging):
   1. chapter_id -> cbse_eng_maths6_ch3_V3, phase 3, version N, plan_id <chapter_id>_v<N>.
   2. deletes every image node with image_role "question" or "solution" (the old card placeholders, 149 of them), the
      ids in the concepts' media_ids and the image_media_id / solution_image_media_id(s) fields of the blocks.
-  3. for every diagram the map marks `required`, adds one image node (title "DIAGRAM · <label> given figure" / "solution
-     figure" / "figure"), puts its id in the concept's media_ids and in the block's image field, and writes the
-     {{DIAGRAM:<id>}} token into the block's text fields.
+  3. writes the map back the way diagram_identification_prompt v3 section 8B says:
+       required            one image node (title "DIAGRAM · <label> question|solution figure"), id in the block's image
+                           field and in the concept's media_ids, {{DIAGRAM:<id>}} token in the block's text fields
+                           (solution token: first line of the steps, before step 1)
+       none / optional     nothing (the old id stays removed); a teaching image is never linked from a block (v3)
   4. integrity checks, and a diff against v108 that must show nothing else changed.
 Concept (teaching) images, videos, tools, text and objectives are untouched.
 """
@@ -20,14 +22,12 @@ import json
 import os
 import re
 import sys
-import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, "source", "cbse_eng_maths6_ch3_v108.json")
 MAP = os.path.join(HERE, "map", "diagram_map.json")
 OUT = os.path.join(HERE, "out")
 V3_ID = "cbse_eng_maths6_ch3_V3"
-API = "https://staging.singularity-learn.com/agentapi/api/lp2/learning-plans/chapter/"
 DIAGRAM = "DIAGRAM · "      # "DIAGRAM · "  (companion note: first token of the name, then space-middle dot-space)
 
 
@@ -41,16 +41,33 @@ def ratio_dims(r, width=1920):
 
 
 # ------------------------------------------------------------------ merge
+# two chunks gave the same figure different "none" codes; the merge picks the better one (both mean: no image)
+RESOLVE = {"P12-cards-1": "none:TEXT_SUFFICIENT"}      # ten cards that hold text conditions, no numbers to draw
+
+
 def merge():
     sys.path.insert(0, HERE)
     import validate_map
-    items, notes = [], []
+    items, notes, figs, conflicts = [], [], {}, []
     meta = None
+    first = None
     for c in "ABCD":
         m = load(os.path.join(HERE, "map", "out_%s.json" % c))
+        first = first or m
         meta = meta or m["meta"]
         items += m["items"]
         notes += ["[chunk %s] %s" % (c, n) for n in m["meta"].get("notes", [])]
+        for f in m["figure_inventory"]:
+            old = figs.get(f["fig_id"])
+            if old and old["mapped_to"] != f["mapped_to"] and RESOLVE.get(f["fig_id"]) in (f["mapped_to"], old["mapped_to"]):
+                old["mapped_to"] = RESOLVE[f["fig_id"]]
+            elif old and old["mapped_to"] != f["mapped_to"]:
+                conflicts.append("%s: chunk %s says %s, earlier chunk says %s" % (f["fig_id"], c, f["mapped_to"], old["mapped_to"]))
+            figs.setdefault(f["fig_id"], f)
+    if conflicts:
+        print("\n".join("CONFLICT " + x for x in conflicts))
+    import apply_supplied_map          # the user's placement map of 21 Nov 2026 (positions, C9, figures b/c/e/f)
+    apply_supplied_map.apply(items, figs, notes)
     inv = load(os.path.join(HERE, "map", "inventory.json"))
     order = []
     for u in inv:
@@ -65,12 +82,21 @@ def merge():
         counts.setdefault(it["role"], {}).setdefault(it["decision"], 0)
         counts[it["role"]][it["decision"]] += 1
     meta = dict(meta)
+    meta["prompt"] = "diagram_identification_prompt.md v3"
     meta["counts_by_role_and_decision"] = counts
     meta["notes"] = notes
-    json.dump({"meta": meta, "style_tokens": load(os.path.join(HERE, "map", "out_A.json"))["style_tokens"], "items": items},
+    fl = sorted(figs.values(), key=lambda f: f["fig_id"])
+    kinds = {"items": 0, "concept": 0, "none": 0}
+    for f in fl:
+        kinds["items" if f["mapped_to"].startswith("item:") else "concept" if f["mapped_to"].startswith("concept_image:") else "none"] += 1
+    cov = {"inventory_figures": len(fl), "mapped_to_items": kinds["items"], "mapped_to_concept_images": kinds["concept"],
+           "mapped_none": kinds["none"], "unmapped": 0,
+           "new_media_ids_created": sorted(i["media_id"] for i in items if i["decision"] == "required"),
+           "lp_ids_dropped": sorted({x for i in items if i["decision"] != "required" and i.get("media_id") for x in [i["media_id"]]})}
+    json.dump({"meta": meta, "style_tokens": first["style_tokens"], "figure_inventory": fl, "coverage_report": cov, "items": items},
               open(MAP, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print("merged", len(items), "items;", json.dumps(counts))
-    return validate_map.main(MAP, "all")
+    print("merged", len(items), "items,", len(fl), "figures;", json.dumps(counts))
+    return validate_map.main(MAP, "all") or (1 if conflicts else 0)
 
 
 # ------------------------------------------------------------------ text helpers
@@ -101,80 +127,54 @@ def put_question_token(block, tok, worked):
                 block[k] = block[k].rstrip("\n") + "\n" + tok
 
 
-def put_solution_token(block, tok, insert_into, position):
-    if insert_into == "answer_tex":
-        for k in ("answer_tex", "text", "publication_text"):
-            if isinstance(block.get(k), str):
-                block[k] = block[k].rstrip("\n") + "\n" + tok
-        return
-    steps = block["steps_tex"]
-    if position == "before_first_step":
-        n = 0
-        steps[0] = tok + "\n" + steps[0]
-    else:
-        n = int(re.match(r"after_step_(\d+)$", position).group(1))
-        steps[n - 1] = steps[n - 1] + "\n" + tok
+def put_solution_token(block, tok):
+    """v3: the solution figure is ALWAYS the first line of the solution steps (steps_tex[0], and before step 1 in the
+    combined text fields)."""
+    block["steps_tex"][0] = tok + "\n" + block["steps_tex"][0]
     for k in ("text", "publication_text"):
         if isinstance(block.get(k), str):
-            block[k] = insert_line(block[k], line_start(block[k], n + 1), tok)
+            block[k] = insert_line(block[k], line_start(block[k], 1), tok)
 
 
-def strip_tokens(s):
-    return re.sub(r"\n?\{\{DIAGRAM:[^}]+\}\}\n?", "\n", s).replace("\n\n", "\n")
-
-
-# ------------------------------------------------------------------ nodes
+# ------------------------------------------------------------------ nodes (section 8B of the v3 prompt)
 def make_node(it, u, key_dir, concept):
     d = it["diagram"]
     mid, role = it["media_id"], it["role"]
-    qb = None
-    if role == "question":
-        label = u["question_concept"]["item"].get("book_number") or u["question_concept"]["name"]
-        title, side = "%s%s given figure" % (DIAGRAM, label), "question"
-        teach, instr = ("Let the student attempt this before showing the video or the solution.",
-                        "Try this question yourself before you watch the video.")
-        ctx = "Given figure of %s." % label
-    elif role == "solution":
+    if role == "solution":
         label = u["answer_concept"]["item"].get("book_number") or u["answer_concept"]["name"]
-        title, side = "%s%s solution figure" % (DIAGRAM, label), "solution"
+        side, word = "solution", "solution"
         teach, instr = ("Show only after the student has attempted the question.",
                         "Compare this with your own working, step by step.")
-        ctx = "Complete solution figure of %s." % label
+        ctx = "Solution figure of %s." % label
     else:
-        label = u["concept_name"]
-        title, side = "%s%s figure" % (DIAGRAM, label), None
-        teach, instr = ("Show this figure with the worked example.", "Follow the figure while you read the example.")
-        ctx = "Figure of the worked example %s." % label
-    node = {
-        "id": mid, "type": "image", "title": title, "labels": list(d["visible_text"]),
+        if role == "question":
+            label = u["question_concept"]["item"].get("book_number") or u["question_concept"]["name"]
+        else:
+            label = u["item"].get("book_number") or u["concept_name"]
+        side, word = "question", "question"
+        teach, instr = "", "Look carefully at the figure."
+        ctx = "Question figure of %s." % label
+    spec = dict(d)
+    spec["reason"], spec["reason_codes"] = it["reason"], it["reason_codes"]
+    if it.get("needs_lp_text_sync"):
+        spec["needs_lp_text_sync"] = True
+    url = "%s/%s.png" % (key_dir, mid)
+    return {
+        "id": mid, "type": "image", "title": "%s%s %s figure" % (DIAGRAM, label, word),
+        "concept_id": concept, "home_concept_id": concept, "image_role": side,
+        "image_category": "concept", "subtype": "illustration", "build_status": "placeholder",
+        "aspect_ratio": d["aspect_ratio"], "image_dimensions": ratio_dims(d["aspect_ratio"]),
+        "image_url": url, "planned_url": url, "description": d["alt_text"], "labels": list(d["visible_text"]),
         "context": ctx + " PLACEHOLDER: specified, not generated yet.",
-        "subtype": "illustration", "image_url": "%s/%s.png" % (key_dir, mid), "concept_id": concept,
-    }
-    if side:
-        node["image_role"] = side
-    node.update({
-        "description": d["alt_text"], "planned_url": "%s/%s.png" % (key_dir, mid),
-        "aspect_ratio": d["aspect_ratio"], "build_status": "placeholder",
-        "render_source": {"scene": it.get("manim_scene"), "engine": "manim",
+        "diagram_spec": spec, "generation_prompt": d["manim_description"],
+        "negative_prompt": "; ".join(d["must_not_show"]), "accuracy_constraints": "\n".join(d["accuracy_checks"]),
+        "render_source": {"engine": "manim", "scene": it.get("manim_scene"),
                           "code_url": "%s/code/%s.py" % (key_dir, mid), "style_url": "%s/code/_style.py" % key_dir},
-        "image_category": "concept", "teaching_notes": teach, "home_concept_id": concept,
-        "negative_prompt": "; ".join(d["must_not_show"]), "image_dimensions": ratio_dims(d["aspect_ratio"]),
-        "source_image_key": "", "generation_prompt": d["manim_description"], "related_concept_ids": [],
-        "accuracy_constraints": "\n".join(d["accuracy_checks"]), "instructions_for_student": instr,
-        "diagram_spec": {k: d[k] for k in ("diagram_type", "content", "manim_description", "visible_text", "must_not_show",
-                                           "accuracy_checks", "alt_text") if k in d}
-        | {"derived_from": d.get("derived_from"), "reason_codes": it["reason_codes"], "reason": it["reason"],
-           "needs_lp_text_sync": bool(it.get("needs_lp_text_sync"))},
-    })
-    return node
+        "instructions_for_student": instr, "teaching_notes": teach, "related_concept_ids": [], "source_image_key": "",
+    }
 
 
 # ------------------------------------------------------------------ build
-def next_version():
-    with urllib.request.urlopen(API + V3_ID + "/versions", timeout=60) as r:
-        return max(v["version"] for v in json.load(r)["data"]) + 1
-
-
 def build(version):
     src = load(SRC)
     plan = copy.deepcopy(src)
@@ -188,6 +188,7 @@ def build(version):
             inv[(u["concept_id"], "worked_example")] = u
     items = {(i["lp_concept_id"], i["role"]): i for i in dm["items"]}
     req = {k: i for k, i in items.items() if i["decision"] == "required"}
+    assert not [i for i in items.values() if i["lp_placeholder_action"] == "reuse_concept_image" or i.get("reuse_media_id")], "v3: no reuse"
 
     plan["chapter_id"], plan["phase"], plan["version"] = V3_ID, 3, version
     plan["plan_id"] = "%s_v%d" % (V3_ID, version)
@@ -201,7 +202,7 @@ def build(version):
     old = next(md for t in topics.values() for md in t["media"] if md.get("image_role"))
     key_dir = re.sub(r"/[^/]+/[^/]+$", "", old["planned_url"]) + "/diagram_v1"
 
-    # 1+2: delete the old cards, 3: add the diagrams
+    # delete the old cards, add the diagrams
     for tid, t in topics.items():
         new_nodes = {}
         for (cid, role), it in req.items():
@@ -231,10 +232,13 @@ def build(version):
             for k in ("image_media_id", "solution_image_media_id", "solution_image_media_ids"):
                 b.pop(k, None)
 
+    def qblock(c):
+        return next(b for b in c["content"] if "question" in b)
+
     for (cid, role), it in req.items():
         t, c = concepts[cid]
         mid = it["media_id"]
-        block = next(b for b in c["content"] if "question" in b)
+        block = qblock(c)
         tok = "{{DIAGRAM:%s}}" % mid
         tokens[mid] = tok
         mids = c["media_ids"]
@@ -244,22 +248,14 @@ def build(version):
             put_question_token(block, tok, False)
         elif role == "solution":
             mids.append(mid)                           # after the video, which stays first
-            put_solution_token(block, tok, it["placeholder"]["insert_into"], it["placeholder"]["position"])
+            block["solution_image_media_id"] = mid
+            assert (it["placeholder"]["insert_into"], it["placeholder"]["position"]) == ("steps_tex", "before_first_step")
+            put_solution_token(block, tok)
         else:
             last_img = max([i for i, x in enumerate(mids) if ".IMG" in x] or [-1])
             mids.insert(last_img + 1, mid)
             block["image_media_id"] = mid
             put_question_token(block, tok, True)
-    # solution image fields (one or two ids per answer concept), in media_ids order
-    for cid, (t, c) in concepts.items():
-        sol = [x for x in c["media_ids"] if (cid, "solution") in req and x in
-               {r["media_id"] for (k, rl), r in req.items() if k == cid and rl == "solution"}]
-        if sol:
-            blk = next(b for b in c["content"] if "question" in b)
-            blk["solution_image_media_id"] = sol[0]
-            if len(sol) > 1:
-                blk["solution_image_media_ids"] = sol
-
     # summary + notes
     n_img = sum(1 for t in topics.values() for md in t["media"] if md.get("type") == "image")
     ss = plan["source_metadata"]["summary_stats"]
@@ -269,9 +265,12 @@ def build(version):
         "from": "cbse_eng_maths6_ch3_v108 (live V2)",
         "note": "Old question and solution card placeholders removed (%d). Diagram placeholders added where a figure is needed "
                 "(%d), each titled 'DIAGRAM · ...', specified in diagram_spec, linked by image_media_id / "
-                "solution_image_media_id(s) and by a {{DIAGRAM:<id>}} token in the text. Concept images, videos, tools and "
-                "teaching text are unchanged." % (len(removed_ids), len(added_ids)),
-        "rules": ["docs/karan-MD/diagram_identification_prompt.md v1", "Diagram trigger word companion note (2026-11-18)"],
+                "solution_image_media_id and by a {{DIAGRAM:<id>}} token in the text (solution token before step 1); no block "
+                "points at a teaching image. Concept images, videos, tools and teaching text are unchanged."
+                % (len(removed_ids), len(added_ids)),
+        "rules": ["diagram_identification_prompt v3", "diagram_map.schema v3", "Diagram trigger word companion note (2026-11-18)",
+                  "placement map supplied by the user, 21 Nov 2026 (ch3_number_play_diagram_map (1).json): solution tokens before the first step, "
+                  "3.1 Q3 question without a diagram, lettered pattern figures b, c, e, f drawn, no teaching image linked from any block"],
     }
     check(plan, src, removed_ids, added_ids, tokens)
     return plan
@@ -306,40 +305,35 @@ def diff_paths(a, b, path="", out=None):
 def check(plan, src, removed_ids, added_ids, tokens):
     errs = []
     s = json.dumps(plan, ensure_ascii=False)
-    # every id referenced resolves, inside its own topic
     for t in walk_nodes(plan):
         ids = {md["id"] for md in t["media"]}
         for c in t["concepts"]:
             for x in c.get("media_ids", []):
                 if x not in ids:
-                    errs.append("%s media_ids %s has no node" % (c["concept_id"], x))
+                    errs.append("%s media_ids %s has no node in its topic" % (c["concept_id"], x))
             for b in c.get("content", []):
                 refs = [b.get(k) for k in ("image_media_id", "solution_image_media_id", "video_media_id") if b.get(k)]
                 refs += b.get("solution_image_media_ids") or []
                 for x in refs:
                     if x not in ids:
-                        errs.append("%s block ref %s has no node" % (c["concept_id"], x))
+                        errs.append("%s block ref %s has no node in its topic" % (c["concept_id"], x))
                     if x not in c.get("media_ids", []):
                         errs.append("%s block ref %s missing from media_ids" % (c["concept_id"], x))
         for md in t["media"]:
-            if md.get("image_role") in ("question", "solution"):
-                if not md["title"].startswith(DIAGRAM):
-                    errs.append("old card left: %s" % md["id"])
+            if md.get("image_role") in ("question", "solution") and not md["title"].startswith(DIAGRAM):
+                errs.append("old card left: %s" % md["id"])
             if md["id"] in set(added_ids) and not md["title"].startswith(DIAGRAM):
                 errs.append("title of %s lacks the DIAGRAM word" % md["id"])
     for mid, tok in tokens.items():
         if s.count(tok) < 1:
             errs.append("token %s not in the plan" % tok)
-    # old card ids that were not re-added must not be mentioned anywhere
     for x in removed_ids - set(added_ids):
         if '"%s"' % x in s:
             errs.append("removed id %s is still referenced" % x)
-    # node counts
     old_imgs = sum(1 for t in walk_nodes(src) for md in t["media"] if md.get("type") == "image")
     new_imgs = sum(1 for t in walk_nodes(plan) for md in t["media"] if md.get("type") == "image")
     if new_imgs != old_imgs - len(removed_ids) + len(added_ids):
         errs.append("image count %d != %d - %d + %d" % (new_imgs, old_imgs, len(removed_ids), len(added_ids)))
-    # nothing but the expected changes
     changed = diff_paths(src, plan)
     ok = re.compile(r"^(/chapter_id|/phase|/version|/plan_id|/_activate|/source_metadata/(summary_stats/images|summary_stats/diagram_placeholders|diagram_v3)"
                     r"|/modules\[\d+\]/segments\[\d+\]/topics\[\d+\](/media(\[.*)?"
@@ -350,7 +344,18 @@ def check(plan, src, removed_ids, added_ids, tokens):
     if errs:
         print("\n".join("ERROR " + e for e in errs[:40]))
         raise SystemExit("%d integrity errors" % len(errs))
-    print("integrity ok: %d old cards removed, %d diagrams added, %d changed paths all expected" % (len(removed_ids), len(added_ids), len(changed)))
+    # v3: no block may point at a teaching image (V2 had none either, so every image link in the plan is a DIAGRAM node)
+    for t in walk_nodes(plan):
+        for c in t["concepts"]:
+            for b in c.get("content", []):
+                for k in ("image_media_id", "solution_image_media_id"):
+                    if b.get(k) and b[k] not in set(added_ids):
+                        errs.append("%s %s points at %s which is not a DIAGRAM node" % (c["concept_id"], k, b[k]))
+    if errs:
+        print("\n".join("ERROR " + e for e in errs[:40]))
+        raise SystemExit("%d integrity errors" % len(errs))
+    print("integrity ok: %d old cards removed, %d diagrams added, no teaching image linked, %d changed paths all expected"
+          % (len(removed_ids), len(added_ids), len(changed)))
 
 
 def main():
@@ -359,7 +364,9 @@ def main():
         raise SystemExit(__doc__)
     if a[0] == "merge":
         sys.exit(merge())
-    version = int(a[a.index("--version") + 1]) if "--version" in a else next_version()
+    if "--version" not in a:
+        raise SystemExit("build needs --version N")
+    version = int(a[a.index("--version") + 1])
     plan = build(version)
     os.makedirs(OUT, exist_ok=True)
     p = os.path.join(OUT, plan["plan_id"] + ".json")

@@ -4,30 +4,32 @@
   "class": 6,
   "textbook": "Ganita Prakash Grade 6, Chapter 3",
   "lp_plan_id": "cbse_eng_maths6_ch3_v108",
-  "prompt": "diagram_identification_prompt.md v1",
+  "prompt": "diagram_identification_prompt.md v2",
   "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
   "counts_by_role_and_decision": {
-   "worked_example": {
-    "none": 17
-   },
    "question": {
-    "optional": 1,
-    "none": 7,
-    "required": 2
+    "required": 0,
+    "optional": 0,
+    "none": 10
    },
    "solution": {
-    "none": 9,
-    "required": 1
+    "required": 0,
+    "optional": 0,
+    "none": 10
+   },
+   "worked_example": {
+    "required": 0,
+    "optional": 0,
+    "none": 17
    }
   },
   "notes": [
-   "Chunk C: units 43-69 (Kaprekar, Mental Math, How Many Digits? first half).",
-   "Only the two Mental Math question figures (28,000 arrow board, 45,000 six boxes) and the 28,000 arrow solution need a new diagram; every other item is text or LaTeX.",
-   "Number style follows the LP and its concept images (7000, 1500, 25,000), not the book's 7,000 and 1,500.",
-   "M3.S23.T23.C129.IMG1 and C131.IMG1 are close to concept images M3.S22.T22.C115.IMG1 and C124.IMG1; reuse is not allowed across topics, so they are new images.",
-   "The 17 worked examples all decide none: 12 reuse a concept image of the same topic or concept, 5 (How Many Digits) are plain arithmetic.",
-   "M3.S20.T20.C101 question is optional: the LP question 'Start with 321.' does not state the routine; adding the steps to the question text is the real fix.",
-   "M3.S21.T21.C112: the LP says 7 rounds (0558 keeps its leading zero), recomputed correct; the book prints 8 using 5058."
+   "Chunk C (units 43-69, module M3 first half: 3.6 Kaprekar, 3.7 FiO Kaprekar items, 3.8 Mental Math, How Many Digits). Result: 0 required, 0 optional, 37 none (10 question, 10 solution, 17 worked example).",
+   "No figure in this chunk is needed as a new diagram. Kaprekar answers are column subtractions (LaTeX, v2 Step C); the five-box and six-box Mental Math boards are lists of boxed numbers (NUMBER_LIST_IN_BOXES) and already exist as concept images C115.IMG1 and C124.IMG1 of topic M3.S22.T22; the 3.6 flow chart and the 6382 rounds are concept image C98.IMG1.",
+   "Arrow-board family (worked examples 51-58 and 28,000 in unit 62): all decided none. The book draws no arrows in its printed solutions and the LP answers are expressions already; an arrow picture would be optional at most (v2 NUMBER_LIST_IN_BOXES / Step D). Kept uniform for sibling consistency.",
+   "Question texts that lack what the book's page carries (text fix, not a picture): unit 44 Q1 'Start with 321.' has no instruction; worked examples 51-61 and unit 62/63 questions 'Make N.' do not state the allowed numbers (text_alternative says how to word them).",
+   "LP vs book: 5683 takes 7 rounds in the LP (0558 kept) but 8 in the printed answer (5058); 2013 / 1980 chains in the LP use 0123 / 0189 (3 rounds) while the printed 1980 answer uses 1089 (6 rounds). The LP was followed.",
+   "Not claimed: the cartoon calendar picture on book p.10 (digits 16, 02, 2016 as characters) is decoration (DECORATIVE_ONLY) and is not in the base inventory; SOL37-Q-palindromic-times (3.7 clock times table) belongs to the 3.7 Clock and Calendar units of another chunk."
   ]
  },
  "style_tokens": {
@@ -42,940 +44,629 @@
   "SET_B": "#E69F00",
   "CELL_FILL": "#F1EEF6"
  },
+ "figure_inventory": [
+  {
+   "fig_id": "P09-flowchart-1",
+   "source": "chapter p.9",
+   "description": "Kaprekar flow chart: four boxes (Take a 4-digit number; Make the largest number A; Make the smallest number B; Subtract B from A, C = A - B) joined by down arrows, with a curved 'Use digits of C' arrow from the last box back to the second. Checked against page_09.png: matches the base entry.",
+   "mapped_to": "concept_image:M3.S19.T19.C98.IMG1"
+  },
+  {
+   "fig_id": "P09-iterations-1",
+   "source": "chapter p.9",
+   "description": "Rounds for 6382 printed as A, B, C columns (8632/2368/6264, 6642/2466/4176, 7641/1467/6174) with curved arrows into a fourth empty A, B, C column; same content as the rounds panel of the concept image (rounds 1-4, stuck at 6174). Checked against page_09.png: matches the base entry.",
+   "mapped_to": "concept_image:M3.S19.T19.C98.IMG1"
+  },
+  {
+   "fig_id": "P11-arrowboard-1",
+   "source": "chapter p.11",
+   "description": "Arrow board of 3.8: left boxes 38,800 28,000 61,600 31,000, middle boxes 25,000 400 13,000 1,500 60,000, right boxes 3,400 63,000 19,500 20,900; arrows 25,000, 400 (x2), 13,000 into 38,800 and 400, 1,500 (x2) into 3,400. Checked against page_11.png: matches the base entry; the whole board (middle numbers, targets, the two example arrow sets) is the concept image C115.IMG1 of topic M3.S22.T22, the topic of the Mental Math worked examples.",
+   "mapped_to": "concept_image:M3.S22.T22.C115.IMG1"
+  },
+  {
+   "fig_id": "P12-arrowboard-2",
+   "source": "chapter p.12",
+   "description": "Six boxes 40,000 7,000 / 300 1,500 / 12,000 800 with the example 39,800 = 40,000 - 800 + 300 + 300 and open targets 45,000, 5,900, 17,500, 21,400 beside them; no arrows. Checked against page_12.png: matches the base entry; boxes, example and targets are the concept image C124.IMG1 of topic M3.S22.T22.",
+   "mapped_to": "concept_image:M3.S22.T22.C124.IMG1"
+  },
+  {
+   "fig_id": "P12-cards-1",
+   "source": "chapter p.12",
+   "description": "Ten text cards in 2 rows of 5 (row 1 plus signs, row 2 minus signs): 5-digit + 5-digit > 90,250; 5-digit + 3-digit = 6-digit; 4-digit + 4-digit = 6-digit; 5-digit + 5-digit = 6-digit; 5-digit + 5-digit = 18,500; 5-digit - 5-digit < 56,503; 5-digit - 3-digit = 4-digit; 5-digit - 4-digit = 4-digit; 5-digit - 5-digit = 3-digit; 5-digit - 5-digit = 91,500. Checked against page_12.png: matches the base entry. Plain text in boxes, position carries no meaning; the worked examples 64-68 and Q1 (90,250) are written as text sentences (the remaining cards belong to chunk D).",
+   "mapped_to": "none:NUMBER_LIST_IN_BOXES"
+  },
+  {
+   "fig_id": "SOL36-Q-kaprekar3",
+   "source": "solutions p.7 (pdf page 26)",
+   "description": "Printed answer to the 3-digit Kaprekar question: six column subtractions for 321 (321-123=198, 981-189=792, 972-279=693, 963-369=594, 954-459=495, 954-459=495) and the line 'The number 495 starts repeating'. Checked against page_26.png: matches the base entry. Column subtraction is LaTeX; the LP steps_tex already lists the six lines.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "SOL37-FiO4-kaprekar4",
+   "source": "solutions p.9 (pdf page 28)",
+   "description": "Printed answer to 3.7 FiO Q4: eight column subtractions for 5683 numbered 1-8 (8653-3568=5085, 8550-5058=3492, 9432-2349=7083, 8730-3078=5652, 6552-2556=3996, 9963-3699=6264, 6642-2466=4176, 7641-1467=6174), 'It will take 8 rounds'. Checked against page_28.png: matches the base entry. The LP gives 7 rounds with B = 0558 kept as four digits and follows itself; column subtraction is LaTeX.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "SOL312-FiO2-kaprekar1980",
+   "source": "solutions p.12 (pdf page 31)",
+   "description": "Printed answer to 3.12 FiO Q2 for the year 1980: six column subtractions (9810-1089=8721, 8721-1278=7443, 7443-3447=3996, 9963-3699=6264, 6642-2466=4176, 7641-1467=6174), 'It takes 6 rounds'. Checked against page_31.png: matches the base entry. The LP (unit 50) answers for 2013 and mentions 1980 as 9810-0189=9621, 9621-1269=8352, 8532-2358=6174 (3 rounds); column subtraction is LaTeX.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 8,
+  "mapped_to_items": 0,
+  "mapped_to_concept_images": 4,
+  "mapped_none": 4,
+  "unmapped": 0,
+  "new_media_ids_created": [],
+  "lp_ids_dropped": []
+ },
  "items": [
   {
    "lp_concept_id": "M3.S19.T19.C98",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "3.6.kaprekar_history, 3.6.routine",
+   "lp_book_number": "Example 5 (3.6.kaprekar_history)",
+   "ncert_ref": "Section 3.6 - Kaprekar routine, Example on 6382 (book p.63)",
    "question_text": "Start with 6382.",
    "decision": "none",
    "reason_codes": [
-    "REUSES_CONCEPT_IMAGE"
+    "REUSES_CONCEPT_IMAGE",
+    "LATEX_ARITHMETIC"
    ],
-   "reason": "The 6382 routine (A, B, C for rounds 1-4, stuck at 6174) is already drawn as concept image M3.S19.T19.C98.IMG1 of this very concept.",
-   "lp_placeholder_action": "reuse_concept_image",
+   "reason": "The book's flow chart (P09-flowchart-1) and the 6382 rounds (P09-iterations-1) are exactly the existing concept image M3.S19.T19.C98.IMG1 of this very concept (flow chart plus rounds 1-4 and 'stuck at 6174'). The example's own steps are plain A, B, C subtractions that LaTeX carries. No new picture; the block does not need to point at the concept image again because the concept already carries it.",
+   "lp_placeholder_action": "no_image",
    "media_id": null,
-   "reuse_media_id": "M3.S19.T19.C98.IMG1"
+   "text_alternative": "Keep concept image M3.S19.T19.C98.IMG1 as the only picture; write the four rounds as LaTeX lines (the LP already does)."
   },
   {
    "lp_concept_id": "M3.S20.T20.C101",
    "role": "question",
    "lp_book_number": "Kaprekar: the 3-digit routine from 321",
-   "ncert_ref": "3.6.three_digit",
+   "ncert_ref": "Section 3.6 - 3-digit numbers (book p.63; printed answer: solutions p.26)",
    "question_text": "Start with 321.",
-   "decision": "optional",
+   "decision": "none",
    "reason_codes": [
     "TEXT_SUFFICIENT"
    ],
-   "reason": "The book question is plain text (carry out the same steps with a 3-digit number); it has no given figure. A small flow of the routine (largest A, smallest B, C = A - B, repeat with the digits of C) for 3 digits would help only because the LP text does not state the steps; better to put the steps in the question text. Not added (near-copy of concept image M3.S19.T19.C98.IMG1, which is in another topic).",
+   "reason": "The book gives no figure for the 3-digit question: the flow chart on the page above is the 4-digit procedure and is the concept image of the Kaprekar topic (another topic, and not a given figure of this question). The student needs the procedure stated in words, not a picture. The earlier q_figure (a flow drawn for 321) is not a figure of the book question, so none.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S20.T20.C101.IMG1",
-   "text_alternative": "Add the routine to the question text: make the largest number A and the smallest number B from the digits, C = A - B, repeat with the digits of C; which number starts repeating?"
+   "media_id": null,
+   "text_alternative": "Make the question text carry the procedure: 'Use the Kaprekar steps on the 3-digit number 321: make the largest number A and the smallest number B from its digits, C = A - B, then use the digits of C again. Which number starts repeating?'"
   },
   {
    "lp_concept_id": "M3.S20.T20.C102",
    "role": "solution",
    "lp_book_number": "Kaprekar: the 3-digit routine from 321",
-   "ncert_ref": "3.6.three_digit",
+   "ncert_ref": "Section 3.6 - 3-digit numbers (book p.63; printed answer: solutions p.26)",
    "question_text": "Start with 321.",
    "decision": "none",
    "reason_codes": [
     "LATEX_ARITHMETIC"
    ],
-   "reason": "Six column subtractions that end in 495 repeating; the book's printed answer is also only column arithmetic.",
+   "reason": "The printed answer (SOL36-Q-kaprekar3) is six column subtractions 321-123=198 ... 954-459=495, and the LP steps_tex already gives them line by line; column subtraction / number chain is LaTeX (v2 Step C). A loop-back arrow chain 321 > 198 > 792 > 693 > 594 > 495 (repeat) would be optional at most, and is not needed.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S20.T20.C102.IMG1",
-   "text_alternative": "List the six subtractions 321 - 123 = 198, ... , 954 - 459 = 495 in LaTeX, then the answer."
+   "media_id": null,
+   "text_alternative": "Six LaTeX lines as in steps_tex."
   },
   {
    "lp_concept_id": "M3.S21.T21.C103",
    "role": "question",
    "lp_book_number": "Figure it Out, Q1",
-   "ncert_ref": "3.7.FiO1a",
+   "ncert_ref": "Section 3.7 - Figure it Out Q1 a (book p.64-65; printed answer: solutions p.27)",
    "question_text": "Choose 4 digits whose largest minus smallest is greater than 5085.",
    "decision": "none",
    "reason_codes": [
     "TEXT_SUFFICIENT"
    ],
-   "reason": "Everything is in the words (choose 4 digits so that the difference or sum compares with 5085 or 9779); the book shows no figure for it.",
+   "reason": "The question gives no figure: the student chooses four digits, and the numbers 2347, 7432, 5085, 9779 of the book's intro are words in the text. Nothing visual is given or needed, so no question figure.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S21.T21.C103.IMG1"
+   "media_id": null,
+   "text_alternative": "If the question text should carry its context: 'Pratibha makes the smallest and largest 4-digit numbers from 4, 7, 3, 2: 2347 and 7432; difference 5085, sum 9779. Choose 4 digits so that ...'."
   },
   {
    "lp_concept_id": "M3.S21.T21.C104",
    "role": "solution",
    "lp_book_number": "Figure it Out, Q1",
-   "ncert_ref": "3.7.FiO1a",
+   "ncert_ref": "Section 3.7 - Figure it Out Q1 a (book p.64-65; printed answer: solutions p.27)",
    "question_text": "Choose 4 digits whose largest minus smallest is greater than 5085.",
    "decision": "none",
    "reason_codes": [
     "LATEX_ARITHMETIC"
    ],
-   "reason": "The solution is one or two lines of subtraction or addition with the chosen digits; the book prints it as plain arithmetic.",
+   "reason": "The printed answer is one line of text arithmetic (7431 - 1347 = 6084) and the LP gives the same in steps_tex; the student loses nothing without a picture. Sibling check: Q1 a, b, c, d are all none.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S21.T21.C104.IMG1",
-   "text_alternative": "Write the chosen digits, the largest and smallest numbers and the sum or difference in LaTeX."
+   "media_id": null,
+   "text_alternative": "LaTeX steps as in steps_tex."
   },
   {
    "lp_concept_id": "M3.S21.T21.C105",
    "role": "question",
    "lp_book_number": "Figure it Out, Q2",
-   "ncert_ref": "3.7.FiO1b",
+   "ncert_ref": "Section 3.7 - Figure it Out Q1 b (book p.64-65; printed answer: solutions p.27)",
    "question_text": "Choose 4 digits whose largest minus smallest is less than 5085.",
    "decision": "none",
    "reason_codes": [
     "TEXT_SUFFICIENT"
    ],
-   "reason": "Everything is in the words (choose 4 digits so that the difference or sum compares with 5085 or 9779); the book shows no figure for it.",
+   "reason": "The question gives no figure: the student chooses four digits, and the numbers 2347, 7432, 5085, 9779 of the book's intro are words in the text. Nothing visual is given or needed, so no question figure.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S21.T21.C105.IMG1"
+   "media_id": null,
+   "text_alternative": "If the question text should carry its context: 'Pratibha makes the smallest and largest 4-digit numbers from 4, 7, 3, 2: 2347 and 7432; difference 5085, sum 9779. Choose 4 digits so that ...'."
   },
   {
    "lp_concept_id": "M3.S21.T21.C106",
    "role": "solution",
    "lp_book_number": "Figure it Out, Q2",
-   "ncert_ref": "3.7.FiO1b",
+   "ncert_ref": "Section 3.7 - Figure it Out Q1 b (book p.64-65; printed answer: solutions p.27)",
    "question_text": "Choose 4 digits whose largest minus smallest is less than 5085.",
    "decision": "none",
    "reason_codes": [
     "LATEX_ARITHMETIC"
    ],
-   "reason": "The solution is one or two lines of subtraction or addition with the chosen digits; the book prints it as plain arithmetic.",
+   "reason": "The printed answer is one line of text arithmetic (7433 - 3347 = 4086) and the LP gives the same in steps_tex; the student loses nothing without a picture. Sibling check: Q1 a, b, c, d are all none.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S21.T21.C106.IMG1",
-   "text_alternative": "Write the chosen digits, the largest and smallest numbers and the sum or difference in LaTeX."
+   "media_id": null,
+   "text_alternative": "LaTeX steps as in steps_tex."
   },
   {
    "lp_concept_id": "M3.S21.T21.C107",
    "role": "question",
    "lp_book_number": "Figure it Out, Q3",
-   "ncert_ref": "3.7.FiO1c",
+   "ncert_ref": "Section 3.7 - Figure it Out Q1 c (book p.64-65; printed answer: solutions p.27)",
    "question_text": "Choose 4 digits whose largest plus smallest is greater than 9779.",
    "decision": "none",
    "reason_codes": [
     "TEXT_SUFFICIENT"
    ],
-   "reason": "Everything is in the words (choose 4 digits so that the difference or sum compares with 5085 or 9779); the book shows no figure for it.",
+   "reason": "The question gives no figure: the student chooses four digits, and the numbers 2347, 7432, 5085, 9779 of the book's intro are words in the text. Nothing visual is given or needed, so no question figure.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S21.T21.C107.IMG1"
+   "media_id": null,
+   "text_alternative": "If the question text should carry its context: 'Pratibha makes the smallest and largest 4-digit numbers from 4, 7, 3, 2: 2347 and 7432; difference 5085, sum 9779. Choose 4 digits so that ...'."
   },
   {
    "lp_concept_id": "M3.S21.T21.C108",
    "role": "solution",
    "lp_book_number": "Figure it Out, Q3",
-   "ncert_ref": "3.7.FiO1c",
+   "ncert_ref": "Section 3.7 - Figure it Out Q1 c (book p.64-65; printed answer: solutions p.27)",
    "question_text": "Choose 4 digits whose largest plus smallest is greater than 9779.",
    "decision": "none",
    "reason_codes": [
     "LATEX_ARITHMETIC"
    ],
-   "reason": "The solution is one or two lines of subtraction or addition with the chosen digits; the book prints it as plain arithmetic.",
+   "reason": "The printed answer is one line of text arithmetic (7433 + 3347 = 10,780) and the LP gives the same in steps_tex; the student loses nothing without a picture. Sibling check: Q1 a, b, c, d are all none.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S21.T21.C108.IMG1",
-   "text_alternative": "Write the chosen digits, the largest and smallest numbers and the sum or difference in LaTeX."
+   "media_id": null,
+   "text_alternative": "LaTeX steps as in steps_tex."
   },
   {
    "lp_concept_id": "M3.S21.T21.C109",
    "role": "question",
    "lp_book_number": "Figure it Out, Q4",
-   "ncert_ref": "3.7.FiO1d",
+   "ncert_ref": "Section 3.7 - Figure it Out Q1 d (book p.64-65; printed answer: solutions p.27)",
    "question_text": "Choose 4 digits whose largest plus smallest is less than 9779.",
    "decision": "none",
    "reason_codes": [
     "TEXT_SUFFICIENT"
    ],
-   "reason": "Everything is in the words (choose 4 digits so that the difference or sum compares with 5085 or 9779); the book shows no figure for it.",
+   "reason": "The question gives no figure: the student chooses four digits, and the numbers 2347, 7432, 5085, 9779 of the book's intro are words in the text. Nothing visual is given or needed, so no question figure.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S21.T21.C109.IMG1"
+   "media_id": null,
+   "text_alternative": "If the question text should carry its context: 'Pratibha makes the smallest and largest 4-digit numbers from 4, 7, 3, 2: 2347 and 7432; difference 5085, sum 9779. Choose 4 digits so that ...'."
   },
   {
    "lp_concept_id": "M3.S21.T21.C110",
    "role": "solution",
    "lp_book_number": "Figure it Out, Q4",
-   "ncert_ref": "3.7.FiO1d",
+   "ncert_ref": "Section 3.7 - Figure it Out Q1 d (book p.64-65; printed answer: solutions p.27)",
    "question_text": "Choose 4 digits whose largest plus smallest is less than 9779.",
    "decision": "none",
    "reason_codes": [
     "LATEX_ARITHMETIC"
    ],
-   "reason": "The solution is one or two lines of subtraction or addition with the chosen digits; the book prints it as plain arithmetic.",
+   "reason": "The printed answer is one line of text arithmetic (7431 + 1347 = 8778) and the LP gives the same in steps_tex; the student loses nothing without a picture. Sibling check: Q1 a, b, c, d are all none.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S21.T21.C110.IMG1",
-   "text_alternative": "Write the chosen digits, the largest and smallest numbers and the sum or difference in LaTeX."
+   "media_id": null,
+   "text_alternative": "LaTeX steps as in steps_tex."
   },
   {
    "lp_concept_id": "M3.S21.T21.C111",
    "role": "question",
    "lp_book_number": "Figure it Out, Q5",
-   "ncert_ref": "3.7.FiO4",
+   "ncert_ref": "Section 3.7 - Figure it Out Q4 (book p.65; printed answer: solutions p.28)",
    "question_text": "How many rounds does 5683 take to reach 6174?",
    "decision": "none",
    "reason_codes": [
     "TEXT_SUFFICIENT"
    ],
-   "reason": "Plain text question about rounds of the Kaprekar routine from 5683; no figure in the book.",
+   "reason": "The question is one sentence with the start number 5683; the book gives no figure for it.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S21.T21.C111.IMG1"
+   "media_id": null
   },
   {
    "lp_concept_id": "M3.S21.T21.C112",
    "role": "solution",
    "lp_book_number": "Figure it Out, Q5",
-   "ncert_ref": "3.7.FiO4",
+   "ncert_ref": "Section 3.7 - Figure it Out Q4 (book p.65; printed answer: solutions p.28)",
    "question_text": "How many rounds does 5683 take to reach 6174?",
    "decision": "none",
    "reason_codes": [
     "LATEX_ARITHMETIC"
    ],
-   "reason": "Seven rounds of A - B = C is column arithmetic, a LaTeX list; the LP gives 7 rounds (0558 keeps its leading zero), checked by recomputation, while the book's printed 8 rounds uses 5058 in round 2.",
+   "reason": "The printed answer (SOL37-FiO4-kaprekar4) is a row of column subtractions numbered 1 to 8; the LP gives the seven rounds as 'Round n: A - B = C' lines, which LaTeX shows exactly (column subtraction / number chain, v2 Step C). The 321 and 2013 Kaprekar answers are decided the same way. LP vs book: the LP (7 rounds, B = 0558 kept as 4 digits) disagrees with the printed answer (8 rounds, B = 5058); followed the LP, as the rules say.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S21.T21.C112.IMG1",
-   "text_alternative": "List Round 1 to Round 7 as LaTeX lines, as in the steps."
+   "media_id": null,
+   "text_alternative": "Seven LaTeX lines as in steps_tex; keep the teacher note."
   },
   {
    "lp_concept_id": "M3.S21.T21.C113",
    "role": "question",
    "lp_book_number": "Figure it Out, Q6",
-   "ncert_ref": "end.FiO2",
+   "ncert_ref": "Section 3.12 - Figure it Out Q2 (book p.72; printed answer: solutions p.31)",
    "question_text": "How many rounds does the year 2013 take?",
    "decision": "none",
    "reason_codes": [
     "TEXT_SUFFICIENT"
    ],
-   "reason": "Plain text question about the year 2013 and Kaprekar rounds; no figure in the book.",
+   "reason": "The question is one sentence with the start number 2013 (the book asks for the year of birth); no figure is given.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S21.T21.C113.IMG1"
+   "media_id": null
   },
   {
    "lp_concept_id": "M3.S21.T21.C114",
    "role": "solution",
    "lp_book_number": "Figure it Out, Q6",
-   "ncert_ref": "end.FiO2",
+   "ncert_ref": "Section 3.12 - Figure it Out Q2 (book p.72; printed answer: solutions p.31)",
    "question_text": "How many rounds does the year 2013 take?",
    "decision": "none",
    "reason_codes": [
     "LATEX_ARITHMETIC"
    ],
-   "reason": "Three rounds of A - B = C, a LaTeX list; the extra year 1980 is also arithmetic.",
+   "reason": "The printed answer (SOL312-FiO2-kaprekar1980) is a row of six column subtractions for 1980; the LP answers for 2013 (3 rounds) and mentions 1980 in text, both as 'A - B = C' lines that LaTeX shows exactly. Same decision as the other Kaprekar answers. LP vs book: the LP's 1980 chain (9810-0189, 9621-1269, 8532-2358; 3 rounds) differs from the printed one (9810-1089 ..., 6 rounds, no leading zero); followed the LP.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S21.T21.C114.IMG1",
-   "text_alternative": "List Round 1 to Round 3 as LaTeX lines, as in the steps."
+   "media_id": null,
+   "text_alternative": "Three LaTeX lines as in steps_tex."
   },
   {
    "lp_concept_id": "M3.S22.T22.C116",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T9.D0.E8",
+   "lp_book_number": "Example 9 (T9.D0.E8)",
+   "ncert_ref": "Section 3.8 - Mental Math, middle numbers 25,000 400 13,000 1500 60,000 (book p.65-66)",
    "question_text": "Make 16,000.",
    "decision": "none",
    "reason_codes": [
-    "REUSES_CONCEPT_IMAGE"
+    "NUMBER_LIST_IN_BOXES",
+    "LATEX_ARITHMETIC"
    ],
-   "reason": "The five middle boxes (25,000, 400, 13,000, 1500, 60,000) that the working uses are already on the arrow board concept image M3.S22.T22.C115.IMG1; the target is in the question text and the working is plain arithmetic.",
-   "lp_placeholder_action": "reuse_concept_image",
+   "reason": "The only 'figure' is the column of five boxes 25,000, 400, 13,000, 1500, 60,000 (P11-arrowboard-1), a plain list of numbers whose position carries no meaning; v2 says list them in the text. The book's printed solutions draw no arrows (only the text sums), the steps here are plain arithmetic, and the board already exists as the concept image M3.S22.T22.C115.IMG1 of this topic. An arrow picture for 16,000 would be optional at most, and is not needed.",
+   "lp_placeholder_action": "no_image",
    "media_id": null,
-   "reuse_media_id": "M3.S22.T22.C115.IMG1"
+   "text_alternative": "Say the numbers in the question: 'Using 25,000, 400, 13,000, 1500 and 60,000, each as many times as needed, make 16,000.'"
   },
   {
    "lp_concept_id": "M3.S22.T22.C117",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T9.D0.E7",
+   "lp_book_number": "Example 8 (T9.D0.E7)",
+   "ncert_ref": "Section 3.8 - Mental Math, middle numbers 25,000 400 13,000 1500 60,000 (book p.65-66)",
    "question_text": "Make 15,000.",
    "decision": "none",
    "reason_codes": [
-    "REUSES_CONCEPT_IMAGE"
+    "NUMBER_LIST_IN_BOXES",
+    "LATEX_ARITHMETIC"
    ],
-   "reason": "The five middle boxes (25,000, 400, 13,000, 1500, 60,000) that the working uses are already on the arrow board concept image M3.S22.T22.C115.IMG1; the target is in the question text and the working is plain arithmetic.",
-   "lp_placeholder_action": "reuse_concept_image",
+   "reason": "The only 'figure' is the column of five boxes 25,000, 400, 13,000, 1500, 60,000 (P11-arrowboard-1), a plain list of numbers whose position carries no meaning; v2 says list them in the text. The book's printed solutions draw no arrows (only the text sums), the steps here are plain arithmetic, and the board already exists as the concept image M3.S22.T22.C115.IMG1 of this topic. An arrow picture for 15,000 would be optional at most, and is not needed.",
+   "lp_placeholder_action": "no_image",
    "media_id": null,
-   "reuse_media_id": "M3.S22.T22.C115.IMG1"
+   "text_alternative": "Say the numbers in the question: 'Using 25,000, 400, 13,000, 1500 and 60,000, each as many times as needed, make 15,000.'"
   },
   {
    "lp_concept_id": "M3.S22.T22.C118",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T9.D0.E6",
+   "lp_book_number": "Example 7 (T9.D0.E6)",
+   "ncert_ref": "Section 3.8 - Mental Math, middle numbers 25,000 400 13,000 1500 60,000 (book p.65-66)",
    "question_text": "Make 14,000.",
    "decision": "none",
    "reason_codes": [
-    "REUSES_CONCEPT_IMAGE"
+    "NUMBER_LIST_IN_BOXES",
+    "LATEX_ARITHMETIC"
    ],
-   "reason": "The five middle boxes (25,000, 400, 13,000, 1500, 60,000) that the working uses are already on the arrow board concept image M3.S22.T22.C115.IMG1; the target is in the question text and the working is plain arithmetic.",
-   "lp_placeholder_action": "reuse_concept_image",
+   "reason": "The only 'figure' is the column of five boxes 25,000, 400, 13,000, 1500, 60,000 (P11-arrowboard-1), a plain list of numbers whose position carries no meaning; v2 says list them in the text. The book's printed solutions draw no arrows (only the text sums), the steps here are plain arithmetic, and the board already exists as the concept image M3.S22.T22.C115.IMG1 of this topic. An arrow picture for 14,000 would be optional at most, and is not needed.",
+   "lp_placeholder_action": "no_image",
    "media_id": null,
-   "reuse_media_id": "M3.S22.T22.C115.IMG1"
+   "text_alternative": "Say the numbers in the question: 'Using 25,000, 400, 13,000, 1500 and 60,000, each as many times as needed, make 14,000.'"
   },
   {
    "lp_concept_id": "M3.S22.T22.C119",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T9.D0.E5",
+   "lp_book_number": "Example 6 (T9.D0.E5)",
+   "ncert_ref": "Section 3.8 - Mental Math, middle numbers 25,000 400 13,000 1500 60,000 (book p.65-66)",
    "question_text": "Make 20,900.",
    "decision": "none",
    "reason_codes": [
-    "REUSES_CONCEPT_IMAGE"
+    "NUMBER_LIST_IN_BOXES",
+    "LATEX_ARITHMETIC"
    ],
-   "reason": "The arrow board concept image M3.S22.T22.C115.IMG1 already shows the five middle boxes and this target box; the working is plain arithmetic in the steps.",
-   "lp_placeholder_action": "reuse_concept_image",
+   "reason": "The only 'figure' is the column of five boxes 25,000, 400, 13,000, 1500, 60,000 (P11-arrowboard-1), a plain list of numbers whose position carries no meaning; v2 says list them in the text. The book's printed solutions draw no arrows (only the text sums), the steps here are plain arithmetic, and the board already exists as the concept image M3.S22.T22.C115.IMG1 of this topic. An arrow picture for 20,900 would be optional at most, and is not needed.",
+   "lp_placeholder_action": "no_image",
    "media_id": null,
-   "reuse_media_id": "M3.S22.T22.C115.IMG1"
+   "text_alternative": "Say the numbers in the question: 'Using 25,000, 400, 13,000, 1500 and 60,000, each as many times as needed, make 20,900.'"
   },
   {
    "lp_concept_id": "M3.S22.T22.C120",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T9.D0.E4",
+   "lp_book_number": "Example 5 (T9.D0.E4)",
+   "ncert_ref": "Section 3.8 - Mental Math, middle numbers 25,000 400 13,000 1500 60,000 (book p.65-66)",
    "question_text": "Make 19,500.",
    "decision": "none",
    "reason_codes": [
-    "REUSES_CONCEPT_IMAGE"
+    "NUMBER_LIST_IN_BOXES",
+    "LATEX_ARITHMETIC"
    ],
-   "reason": "The arrow board concept image M3.S22.T22.C115.IMG1 already shows the five middle boxes and this target box; the working is plain arithmetic in the steps.",
-   "lp_placeholder_action": "reuse_concept_image",
+   "reason": "The only 'figure' is the column of five boxes 25,000, 400, 13,000, 1500, 60,000 (P11-arrowboard-1), a plain list of numbers whose position carries no meaning; v2 says list them in the text. The book's printed solutions draw no arrows (only the text sums), the steps here are plain arithmetic, and the board already exists as the concept image M3.S22.T22.C115.IMG1 of this topic. An arrow picture for 19,500 would be optional at most, and is not needed.",
+   "lp_placeholder_action": "no_image",
    "media_id": null,
-   "reuse_media_id": "M3.S22.T22.C115.IMG1"
+   "text_alternative": "Say the numbers in the question: 'Using 25,000, 400, 13,000, 1500 and 60,000, each as many times as needed, make 19,500.'"
   },
   {
    "lp_concept_id": "M3.S22.T22.C121",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T9.D0.E3",
+   "lp_book_number": "Example 4 (T9.D0.E3)",
+   "ncert_ref": "Section 3.8 - Mental Math, middle numbers 25,000 400 13,000 1500 60,000 (book p.65-66)",
    "question_text": "Make 63,000.",
    "decision": "none",
    "reason_codes": [
-    "REUSES_CONCEPT_IMAGE"
+    "NUMBER_LIST_IN_BOXES",
+    "LATEX_ARITHMETIC"
    ],
-   "reason": "The arrow board concept image M3.S22.T22.C115.IMG1 already shows the five middle boxes and this target box; the working is plain arithmetic in the steps.",
-   "lp_placeholder_action": "reuse_concept_image",
+   "reason": "The only 'figure' is the column of five boxes 25,000, 400, 13,000, 1500, 60,000 (P11-arrowboard-1), a plain list of numbers whose position carries no meaning; v2 says list them in the text. The book's printed solutions draw no arrows (only the text sums), the steps here are plain arithmetic, and the board already exists as the concept image M3.S22.T22.C115.IMG1 of this topic. An arrow picture for 63,000 would be optional at most, and is not needed.",
+   "lp_placeholder_action": "no_image",
    "media_id": null,
-   "reuse_media_id": "M3.S22.T22.C115.IMG1"
+   "text_alternative": "Say the numbers in the question: 'Using 25,000, 400, 13,000, 1500 and 60,000, each as many times as needed, make 63,000.'"
   },
   {
    "lp_concept_id": "M3.S22.T22.C122",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T9.D0.E2",
+   "lp_book_number": "Example 3 (T9.D0.E2)",
+   "ncert_ref": "Section 3.8 - Mental Math, middle numbers 25,000 400 13,000 1500 60,000 (book p.65-66)",
    "question_text": "Make 31,000.",
    "decision": "none",
    "reason_codes": [
-    "REUSES_CONCEPT_IMAGE"
+    "NUMBER_LIST_IN_BOXES",
+    "LATEX_ARITHMETIC"
    ],
-   "reason": "The arrow board concept image M3.S22.T22.C115.IMG1 already shows the five middle boxes and this target box; the working is plain arithmetic in the steps.",
-   "lp_placeholder_action": "reuse_concept_image",
+   "reason": "The only 'figure' is the column of five boxes 25,000, 400, 13,000, 1500, 60,000 (P11-arrowboard-1), a plain list of numbers whose position carries no meaning; v2 says list them in the text. The book's printed solutions draw no arrows (only the text sums), the steps here are plain arithmetic, and the board already exists as the concept image M3.S22.T22.C115.IMG1 of this topic. An arrow picture for 31,000 would be optional at most, and is not needed.",
+   "lp_placeholder_action": "no_image",
    "media_id": null,
-   "reuse_media_id": "M3.S22.T22.C115.IMG1"
+   "text_alternative": "Say the numbers in the question: 'Using 25,000, 400, 13,000, 1500 and 60,000, each as many times as needed, make 31,000.'"
   },
   {
    "lp_concept_id": "M3.S22.T22.C123",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T9.D0.E1",
+   "lp_book_number": "Example 2 (T9.D0.E1)",
+   "ncert_ref": "Section 3.8 - Mental Math, middle numbers 25,000 400 13,000 1500 60,000 (book p.65-66)",
    "question_text": "Make 61,600.",
    "decision": "none",
    "reason_codes": [
-    "REUSES_CONCEPT_IMAGE"
+    "NUMBER_LIST_IN_BOXES",
+    "LATEX_ARITHMETIC"
    ],
-   "reason": "The arrow board concept image M3.S22.T22.C115.IMG1 already shows the five middle boxes and this target box; the working is plain arithmetic in the steps.",
-   "lp_placeholder_action": "reuse_concept_image",
+   "reason": "The only 'figure' is the column of five boxes 25,000, 400, 13,000, 1500, 60,000 (P11-arrowboard-1), a plain list of numbers whose position carries no meaning; v2 says list them in the text. The book's printed solutions draw no arrows (only the text sums), the steps here are plain arithmetic, and the board already exists as the concept image M3.S22.T22.C115.IMG1 of this topic. An arrow picture for 61,600 would be optional at most, and is not needed.",
+   "lp_placeholder_action": "no_image",
    "media_id": null,
-   "reuse_media_id": "M3.S22.T22.C115.IMG1"
+   "text_alternative": "Say the numbers in the question: 'Using 25,000, 400, 13,000, 1500 and 60,000, each as many times as needed, make 61,600.'"
   },
   {
    "lp_concept_id": "M3.S22.T22.C125",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T9.D1.E3",
+   "lp_book_number": "Example 4 (T9.D1.E3)",
+   "ncert_ref": "Section 3.8 - Adding and Subtracting, six boxes (book p.66)",
    "question_text": "Make 21,400.",
    "decision": "none",
    "reason_codes": [
-    "REUSES_CONCEPT_IMAGE"
+    "NUMBER_LIST_IN_BOXES",
+    "LATEX_ARITHMETIC"
    ],
-   "reason": "The six boxes (40,000, 7000, 300, 1500, 12,000, 800) and this target are already shown by concept image M3.S22.T22.C124.IMG1; the working is plain arithmetic in the steps.",
-   "lp_placeholder_action": "reuse_concept_image",
+   "reason": "The only 'figure' is the six boxes 40,000, 7000, 300, 1500, 12,000, 800 (P12-arrowboard-2), a plain list of numbers with no arrows and no positional meaning (v2: NUMBER_LIST_IN_BOXES), and the target 21,400 is written beside them as text. The steps are plain arithmetic; the boxes already exist as the concept image M3.S22.T22.C124.IMG1 of this topic.",
+   "lp_placeholder_action": "no_image",
    "media_id": null,
-   "reuse_media_id": "M3.S22.T22.C124.IMG1"
+   "text_alternative": "Say the numbers in the question: 'Using 40,000, 7000, 300, 1500, 12,000 and 800, adding or subtracting each as many times as needed, make 21,400.'"
   },
   {
    "lp_concept_id": "M3.S22.T22.C126",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T9.D1.E2",
+   "lp_book_number": "Example 3 (T9.D1.E2)",
+   "ncert_ref": "Section 3.8 - Adding and Subtracting, six boxes (book p.66)",
    "question_text": "Make 17,500.",
    "decision": "none",
    "reason_codes": [
-    "REUSES_CONCEPT_IMAGE"
+    "NUMBER_LIST_IN_BOXES",
+    "LATEX_ARITHMETIC"
    ],
-   "reason": "The six boxes (40,000, 7000, 300, 1500, 12,000, 800) and this target are already shown by concept image M3.S22.T22.C124.IMG1; the working is plain arithmetic in the steps.",
-   "lp_placeholder_action": "reuse_concept_image",
+   "reason": "The only 'figure' is the six boxes 40,000, 7000, 300, 1500, 12,000, 800 (P12-arrowboard-2), a plain list of numbers with no arrows and no positional meaning (v2: NUMBER_LIST_IN_BOXES), and the target 17,500 is written beside them as text. The steps are plain arithmetic; the boxes already exist as the concept image M3.S22.T22.C124.IMG1 of this topic.",
+   "lp_placeholder_action": "no_image",
    "media_id": null,
-   "reuse_media_id": "M3.S22.T22.C124.IMG1"
+   "text_alternative": "Say the numbers in the question: 'Using 40,000, 7000, 300, 1500, 12,000 and 800, adding or subtracting each as many times as needed, make 17,500.'"
   },
   {
    "lp_concept_id": "M3.S22.T22.C127",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T9.D1.E1",
+   "lp_book_number": "Example 2 (T9.D1.E1)",
+   "ncert_ref": "Section 3.8 - Adding and Subtracting, six boxes (book p.66)",
    "question_text": "Make 5900.",
    "decision": "none",
    "reason_codes": [
-    "REUSES_CONCEPT_IMAGE"
+    "NUMBER_LIST_IN_BOXES",
+    "LATEX_ARITHMETIC"
    ],
-   "reason": "The six boxes (40,000, 7000, 300, 1500, 12,000, 800) and this target are already shown by concept image M3.S22.T22.C124.IMG1; the working is plain arithmetic in the steps.",
-   "lp_placeholder_action": "reuse_concept_image",
+   "reason": "The only 'figure' is the six boxes 40,000, 7000, 300, 1500, 12,000, 800 (P12-arrowboard-2), a plain list of numbers with no arrows and no positional meaning (v2: NUMBER_LIST_IN_BOXES), and the target 5900 is written beside them as text. The steps are plain arithmetic; the boxes already exist as the concept image M3.S22.T22.C124.IMG1 of this topic.",
+   "lp_placeholder_action": "no_image",
    "media_id": null,
-   "reuse_media_id": "M3.S22.T22.C124.IMG1"
+   "text_alternative": "Say the numbers in the question: 'Using 40,000, 7000, 300, 1500, 12,000 and 800, adding or subtracting each as many times as needed, make 5900.'"
   },
   {
    "lp_concept_id": "M3.S23.T23.C129",
    "role": "question",
    "lp_book_number": "Mental Math: make 28,000",
-   "ncert_ref": "3.8.side_targets",
+   "ncert_ref": "Section 3.8 - Mental Math, target 28,000 (book p.65)",
    "question_text": "Make 28,000.",
-   "decision": "required",
+   "decision": "none",
    "reason_codes": [
-    "DATA_IN_FIGURE",
-    "ACTION_ON_FIGURE",
-    "FIG_REFERENCED"
+    "NUMBER_LIST_IN_BOXES"
    ],
-   "reason": "The five boxes the student may add (25,000, 400, 13,000, 1500, 60,000) and the target 28,000 exist only in the arrow-board figure; the book task is to draw arrows from the middle boxes to the target. The question text does not name the boxes.",
-   "lp_placeholder_action": "keep_and_replace_spec",
-   "media_id": "M3.S23.T23.C129.IMG1",
-   "manim_scene": "c3_8_make28000_q",
-   "placeholder": {
-    "token": "{{DIAGRAM:M3.S23.T23.C129.IMG1}}",
-    "insert_into": "question_tex",
-    "position": "after_question_text"
-   },
-   "diagram": {
-    "diagram_type": "arrow_map",
-    "aspect_ratio": "4:3",
-    "derived_from": null,
-    "content": {
-     "type": "arrow_map",
-     "canvas_units": {
-      "width": 1600,
-      "height": 1200
-     },
-     "middle_boxes": [
-      {
-       "pos": 1,
-       "value": "25,000",
-       "left_x": 1050,
-       "right_x": 1450,
-       "centre_y": 240,
-       "height": 140,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      },
-      {
-       "pos": 2,
-       "value": "400",
-       "left_x": 1050,
-       "right_x": 1450,
-       "centre_y": 420,
-       "height": 140,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      },
-      {
-       "pos": 3,
-       "value": "13,000",
-       "left_x": 1050,
-       "right_x": 1450,
-       "centre_y": 600,
-       "height": 140,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      },
-      {
-       "pos": 4,
-       "value": "1500",
-       "left_x": 1050,
-       "right_x": 1450,
-       "centre_y": 780,
-       "height": 140,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      },
-      {
-       "pos": 5,
-       "value": "60,000",
-       "left_x": 1050,
-       "right_x": 1450,
-       "centre_y": 960,
-       "height": 140,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      }
-     ],
-     "target_box": {
-      "value": "28,000",
-      "left_x": 150,
-      "right_x": 550,
-      "centre_y": 600,
-      "height": 140,
-      "fill": "MARK_FILL",
-      "text_colour": "INK"
-     },
-     "arrows": [],
-     "text_height_units": 56,
-     "to_scale": false
-    },
-    "manim_description": "Canvas 1600 by 1200 units on a BG background, y measured downward from the top edge, text height 56 units, INK outlines 3 px. Draw five rounded rectangles in one column, each 400 wide and 140 tall, left edge x = 1050, right edge x = 1450, fill CELL_FILL, with vertical centres y = 240, 420, 600, 780, 960 from top to bottom. Write in INK, centred in them from top to bottom: 25,000, 400, 13,000, 1500, 60,000. Draw one target rounded rectangle 400 wide and 140 tall, left edge x = 150, right edge x = 550, vertical centre y = 600 (level with the 13,000 box), fill MARK_FILL, with the text 28,000 in INK. Draw no arrows and no other text.",
-    "visible_text": [
-     "25,000",
-     "400",
-     "13,000",
-     "1500",
-     "60,000",
-     "28,000"
-    ],
-    "must_not_show": [
-     "question text or instructions",
-     "answer sentence or solution steps",
-     "headings, Q-numbers, figure letters",
-     "branding, page numbers, watermarks",
-     "decorative clip-art",
-     "any arrow or line between the boxes and the target"
-    ],
-    "accuracy_checks": [
-     "exactly 5 middle boxes, top to bottom 25,000, 400, 13,000, 1500, 60,000 (book order)",
-     "exactly 1 target box, 28,000, level with the third middle box (centre y 600)",
-     "no arrow is drawn (the arrows are the student's task)",
-     "28,000 is reachable by adding middle boxes: 25,000 + 1500 + 1500 = 28,000 (not drawn)"
-    ],
-    "alt_text": "Five boxes in a column holding 25,000, 400, 13,000, 1500 and 60,000, with a target box 28,000 to their left and no arrows."
-   }
+   "reason": "Exactly the v2 example: the middle numbers 25,000, 400, 13,000, 1,500, 60,000 with the target 28,000 are a list of boxed numbers whose position carries no meaning; list them in the text. The target 28,000 is itself a printed box of the arrow board (P11-arrowboard-1).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Say the numbers in the question: 'Using 25,000, 400, 13,000, 1500 and 60,000, each as many times as needed, make 28,000.'"
   },
   {
    "lp_concept_id": "M3.S23.T23.C130",
    "role": "solution",
    "lp_book_number": "Mental Math: make 28,000",
-   "ncert_ref": "3.8.side_targets",
+   "ncert_ref": "Section 3.8 - Mental Math, target 28,000 (book p.65)",
    "question_text": "Make 28,000.",
-   "decision": "required",
+   "decision": "none",
    "reason_codes": [
-    "ANSWER_IS_FIGURE",
-    "ACTION_ON_FIGURE"
+    "LATEX_ARITHMETIC"
    ],
-   "reason": "The book's answer to this task is the drawn arrows: one from 25,000 and two from 1500 to 28,000.",
-   "lp_placeholder_action": "keep_and_replace_spec",
-   "media_id": "M3.S23.T23.C130.IMG1",
-   "manim_scene": "c3_8_make28000_sol",
-   "placeholder": {
-    "token": "{{DIAGRAM:M3.S23.T23.C130.IMG1}}",
-    "insert_into": "steps_tex",
-    "position": "before_first_step"
-   },
-   "diagram": {
-    "diagram_type": "arrow_map",
-    "aspect_ratio": "4:3",
-    "derived_from": "M3.S23.T23.C129.IMG1",
-    "content": {
-     "type": "arrow_map",
-     "canvas_units": {
-      "width": 1600,
-      "height": 1200
-     },
-     "middle_boxes": [
-      {
-       "pos": 1,
-       "value": "25,000",
-       "left_x": 1050,
-       "right_x": 1450,
-       "centre_y": 240,
-       "height": 140,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      },
-      {
-       "pos": 2,
-       "value": "400",
-       "left_x": 1050,
-       "right_x": 1450,
-       "centre_y": 420,
-       "height": 140,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      },
-      {
-       "pos": 3,
-       "value": "13,000",
-       "left_x": 1050,
-       "right_x": 1450,
-       "centre_y": 600,
-       "height": 140,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      },
-      {
-       "pos": 4,
-       "value": "1500",
-       "left_x": 1050,
-       "right_x": 1450,
-       "centre_y": 780,
-       "height": 140,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      },
-      {
-       "pos": 5,
-       "value": "60,000",
-       "left_x": 1050,
-       "right_x": 1450,
-       "centre_y": 960,
-       "height": 140,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      }
-     ],
-     "target_box": {
-      "value": "28,000",
-      "left_x": 150,
-      "right_x": 550,
-      "centre_y": 600,
-      "height": 140,
-      "fill": "MARK_FILL",
-      "text_colour": "INK"
-     },
-     "arrows": [
-      {
-       "id": 1,
-       "from_box_pos": 1,
-       "from_xy": [
-        1050,
-        240
-       ],
-       "to": "target_box",
-       "to_xy": [
-        550,
-        560
-       ],
-       "colour": "ANSWER",
-       "head": "at_target"
-      },
-      {
-       "id": 2,
-       "from_box_pos": 4,
-       "from_xy": [
-        1050,
-        760
-       ],
-       "to": "target_box",
-       "to_xy": [
-        550,
-        610
-       ],
-       "colour": "ANSWER",
-       "head": "at_target"
-      },
-      {
-       "id": 3,
-       "from_box_pos": 4,
-       "from_xy": [
-        1050,
-        800
-       ],
-       "to": "target_box",
-       "to_xy": [
-        550,
-        650
-       ],
-       "colour": "ANSWER",
-       "head": "at_target"
-      }
-     ],
-     "text_height_units": 56,
-     "to_scale": false
-    },
-    "manim_description": "Same canvas, five middle boxes, target box and INK text as the question figure, unchanged and in the same positions. Add three straight arrows in ANSWER, 4 px stroke, each with its arrowhead at the target box: arrow 1 from (1050, 240) on the left edge of the 25,000 box to (550, 560) on the right edge of the 28,000 box; arrow 2 from (1050, 760) on the left edge of the 1500 box to (550, 610); arrow 3 from (1050, 800) on the left edge of the 1500 box to (550, 650). Arrows 2 and 3 are parallel, 40 units apart. No arrow starts at the 400, 13,000 or 60,000 boxes. Add no new text.",
-    "visible_text": [
-     "25,000",
-     "400",
-     "13,000",
-     "1500",
-     "60,000",
-     "28,000"
-    ],
-    "must_not_show": [
-     "question text or instructions",
-     "answer sentence or solution steps",
-     "headings, Q-numbers, figure letters",
-     "branding, page numbers, watermarks",
-     "decorative clip-art",
-     "the equation or any sum written out"
-    ],
-    "accuracy_checks": [
-     "arrow count per box: 25,000 gives 1, 1500 gives 2, all other boxes 0",
-     "25,000 + 1500 + 1500 = 28,000 (matches the LP answer)",
-     "boxes, target and text identical in position and value to the question figure"
-    ],
-    "alt_text": "The same board with three arrows ending at 28,000: one from 25,000 and two from 1500."
-   }
+   "reason": "The LP answer is the expression 25,000 + 1500 + 1500 with two steps, and the book's printed solutions draw no arrows. Arrows (25,000 and two 1500s into 28,000) would only be an optional picture of a sum already written as an expression (v2 NUMBER_LIST_IN_BOXES / Step D); not needed. Same decision as the five-box worked examples of Mental Math.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX as in steps_tex."
   },
   {
    "lp_concept_id": "M3.S23.T23.C131",
    "role": "question",
    "lp_book_number": "Mental Math: add and subtract to make 45,000",
-   "ncert_ref": "3.8.add_subtract",
+   "ncert_ref": "Section 3.8 - Adding and Subtracting, target 45,000 (book p.66)",
    "question_text": "Make 45,000.",
-   "decision": "required",
+   "decision": "none",
    "reason_codes": [
-    "DATA_IN_FIGURE",
-    "FIG_REFERENCED"
+    "NUMBER_LIST_IN_BOXES"
    ],
-   "reason": "The six boxes that may be added or subtracted (40,000, 7000, 300, 1500, 12,000, 800) and the target 45,000 exist only in the book's box figure; the question text does not name them, so the student cannot attempt it without the figure.",
-   "lp_placeholder_action": "keep_and_replace_spec",
-   "media_id": "M3.S23.T23.C131.IMG1",
-   "manim_scene": "c3_8_make45000_q",
-   "placeholder": {
-    "token": "{{DIAGRAM:M3.S23.T23.C131.IMG1}}",
-    "insert_into": "question_tex",
-    "position": "after_question_text"
-   },
-   "diagram": {
-    "diagram_type": "cell_grid",
-    "aspect_ratio": "16:9",
-    "derived_from": null,
-    "content": {
-     "type": "cell_grid",
-     "canvas_units": {
-      "width": 1600,
-      "height": 900
-     },
-     "rows": 3,
-     "cols": 2,
-     "cells_row_by_row": [
-      {
-       "row": 1,
-       "col": 1,
-       "value": "40,000",
-       "left_x": 100,
-       "right_x": 460,
-       "top_y": 200,
-       "bottom_y": 340,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      },
-      {
-       "row": 1,
-       "col": 2,
-       "value": "7000",
-       "left_x": 500,
-       "right_x": 860,
-       "top_y": 200,
-       "bottom_y": 340,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      },
-      {
-       "row": 2,
-       "col": 1,
-       "value": "300",
-       "left_x": 100,
-       "right_x": 460,
-       "top_y": 380,
-       "bottom_y": 520,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      },
-      {
-       "row": 2,
-       "col": 2,
-       "value": "1500",
-       "left_x": 500,
-       "right_x": 860,
-       "top_y": 380,
-       "bottom_y": 520,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      },
-      {
-       "row": 3,
-       "col": 1,
-       "value": "12,000",
-       "left_x": 100,
-       "right_x": 460,
-       "top_y": 560,
-       "bottom_y": 700,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      },
-      {
-       "row": 3,
-       "col": 2,
-       "value": "800",
-       "left_x": 500,
-       "right_x": 860,
-       "top_y": 560,
-       "bottom_y": 700,
-       "fill": "CELL_FILL",
-       "text_colour": "INK"
-      }
-     ],
-     "target_box": {
-      "value": "45,000 = ?",
-      "left_x": 1040,
-      "right_x": 1500,
-      "top_y": 380,
-      "bottom_y": 520,
-      "fill": "MARK_FILL",
-      "text_colour": "INK"
-     },
-     "arrows": [],
-     "text_height_units": 56,
-     "to_scale": false
-    },
-    "manim_description": "Canvas 1600 by 900 units on a BG background, y measured downward from the top edge, text height 56 units, INK outlines 3 px. Draw six rounded rectangles in a grid of 3 rows and 2 columns, each 360 wide and 140 tall, fill CELL_FILL; column 1 spans x = 100 to 460, column 2 spans x = 500 to 860; row 1 spans y = 200 to 340, row 2 spans y = 380 to 520, row 3 spans y = 560 to 700. Write in INK, row by row from top to bottom and left to right: 40,000, 7000, 300, 1500, 12,000, 800. To the right draw one target rounded rectangle spanning x = 1040 to 1500 and y = 380 to 520 (level with row 2), fill MARK_FILL, with the text 45,000 = ? in INK. Draw no arrows and no other text.",
-    "visible_text": [
-     "40,000",
-     "7000",
-     "300",
-     "1500",
-     "12,000",
-     "800",
-     "45,000 = ?"
-    ],
-    "must_not_show": [
-     "question text or instructions",
-     "answer sentence or solution steps",
-     "headings, Q-numbers, figure letters",
-     "branding, page numbers, watermarks",
-     "decorative clip-art",
-     "any pre-written expression or the answer 40,000 + 7000 - 1500 - 800 + 300"
-    ],
-    "accuracy_checks": [
-     "6 boxes in 3 rows by 2 columns, reading order 40,000, 7000, 300, 1500, 12,000, 800 (book order)",
-     "one target box 45,000 = ?, no answer shown",
-     "45,000 is reachable: 40,000 + 7000 - 1500 - 800 + 300 = 45,000 (not drawn)"
-    ],
-    "alt_text": "Six boxes holding 40,000, 7000, 300, 1500, 12,000 and 800, with a target box reading 45,000 = ?."
-   }
+   "reason": "The six boxes 40,000, 7000, 300, 1500, 12,000, 800 (P12-arrowboard-2) are a list of boxed numbers with no arrows and no positional meaning, and the target 45,000 is text beside them (v2 NUMBER_LIST_IN_BOXES).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Say the numbers in the question: 'Using 40,000, 7000, 300, 1500, 12,000 and 800, adding or subtracting each as many times as needed, make 45,000.'"
   },
   {
    "lp_concept_id": "M3.S23.T23.C132",
    "role": "solution",
    "lp_book_number": "Mental Math: add and subtract to make 45,000",
-   "ncert_ref": "3.8.add_subtract",
+   "ncert_ref": "Section 3.8 - Adding and Subtracting, target 45,000 (book p.66)",
    "question_text": "Make 45,000.",
    "decision": "none",
    "reason_codes": [
     "LATEX_ARITHMETIC"
    ],
-   "reason": "The answer is an addition and subtraction expression with four running totals; the book prints it as a written sum with no drawing, and a figure would only repeat the question boxes.",
+   "reason": "The answer is a running sum 40,000 + 7000 - 1500 - 800 + 300 written step by step in the LP; the book draws no picture for it. LaTeX lines carry it fully.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S23.T23.C132.IMG1",
-   "text_alternative": "Write 40,000 + 7000 - 1500 - 800 + 300 and the four running totals in LaTeX."
+   "media_id": null,
+   "text_alternative": "LaTeX as in steps_tex."
   },
   {
    "lp_concept_id": "M3.S24.T24.C134",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T10.D0.E8",
+   "lp_book_number": "Example 9 (T10.D0.E8)",
+   "ncert_ref": "Section 3.8 - Digits and Operations, Figure it Out Q1 scenario cards (book p.66)",
    "question_text": "5-digit - 5-digit giving a 3-digit difference.",
    "decision": "none",
    "reason_codes": [
     "TEXT_SUFFICIENT",
     "LATEX_ARITHMETIC"
    ],
-   "reason": "All numbers are in the text and the working is one subtraction or addition line; a picture adds nothing.",
+   "reason": "The scenario is one sentence of words, the answer is one equation (50,999 - 50,000 = 999 (two 5-digit numbers, a 3-digit gap).) and the verdict 'Possible'; the book's cards (P12-cards-1) are plain text boxes and the printed answer is one line of text. A careful student loses nothing without a picture. (The number-line concept images of this topic, M3.S24.T24.C133.IMG1 and C139.IMG1, stay as they are.)",
    "lp_placeholder_action": "no_image",
-   "media_id": null,
-   "text_alternative": "Show the single line of working in LaTeX."
+   "media_id": null
   },
   {
    "lp_concept_id": "M3.S24.T24.C135",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T10.D0.E7",
+   "lp_book_number": "Example 8 (T10.D0.E7)",
+   "ncert_ref": "Section 3.8 - Digits and Operations, Figure it Out Q1 scenario cards (book p.66)",
    "question_text": "5-digit - 4-digit giving a 4-digit difference.",
    "decision": "none",
    "reason_codes": [
     "TEXT_SUFFICIENT",
     "LATEX_ARITHMETIC"
    ],
-   "reason": "All numbers are in the text and the working is one subtraction or addition line; a picture adds nothing.",
+   "reason": "The scenario is one sentence of words, the answer is one equation (12,000 - 2500 = 9500.) and the verdict 'Possible'; the book's cards (P12-cards-1) are plain text boxes and the printed answer is one line of text. A careful student loses nothing without a picture. (The number-line concept images of this topic, M3.S24.T24.C133.IMG1 and C139.IMG1, stay as they are.)",
    "lp_placeholder_action": "no_image",
-   "media_id": null,
-   "text_alternative": "Show the single line of working in LaTeX."
+   "media_id": null
   },
   {
    "lp_concept_id": "M3.S24.T24.C136",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T10.D0.E6",
+   "lp_book_number": "Example 7 (T10.D0.E6)",
+   "ncert_ref": "Section 3.8 - Digits and Operations, Figure it Out Q1 scenario cards (book p.66)",
    "question_text": "5-digit - 3-digit giving a 4-digit difference.",
    "decision": "none",
    "reason_codes": [
     "TEXT_SUFFICIENT",
     "LATEX_ARITHMETIC"
    ],
-   "reason": "All numbers are in the text and the working is one subtraction or addition line; a picture adds nothing.",
+   "reason": "The scenario is one sentence of words, the answer is one equation (10,000 - 999 = 9001.) and the verdict 'Possible'; the book's cards (P12-cards-1) are plain text boxes and the printed answer is one line of text. A careful student loses nothing without a picture. (The number-line concept images of this topic, M3.S24.T24.C133.IMG1 and C139.IMG1, stay as they are.)",
    "lp_placeholder_action": "no_image",
-   "media_id": null,
-   "text_alternative": "Show the single line of working in LaTeX."
+   "media_id": null
   },
   {
    "lp_concept_id": "M3.S24.T24.C137",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T10.D0.E5",
+   "lp_book_number": "Example 6 (T10.D0.E5)",
+   "ncert_ref": "Section 3.8 - Digits and Operations, Figure it Out Q1 scenario cards (book p.66)",
    "question_text": "5-digit - 5-digit giving a difference less than 56,503.",
    "decision": "none",
    "reason_codes": [
     "TEXT_SUFFICIENT",
     "LATEX_ARITHMETIC"
    ],
-   "reason": "All numbers are in the text and the working is one subtraction or addition line; a picture adds nothing.",
+   "reason": "The scenario is one sentence of words, the answer is one equation (80,000 - 50,000 = 30,000, which is less than 56,503.) and the verdict 'Possible'; the book's cards (P12-cards-1) are plain text boxes and the printed answer is one line of text. A careful student loses nothing without a picture. (The number-line concept images of this topic, M3.S24.T24.C133.IMG1 and C139.IMG1, stay as they are.)",
    "lp_placeholder_action": "no_image",
-   "media_id": null,
-   "text_alternative": "Show the single line of working in LaTeX."
+   "media_id": null
   },
   {
    "lp_concept_id": "M3.S24.T24.C138",
    "role": "worked_example",
-   "lp_book_number": null,
-   "ncert_ref": "T10.D0.E1",
+   "lp_book_number": "Example 2 (T10.D0.E1)",
+   "ncert_ref": "Section 3.8 - Digits and Operations, Figure it Out Q1 scenario cards (book p.66)",
    "question_text": "5-digit + 3-digit giving a 6-digit sum.",
    "decision": "none",
    "reason_codes": [
     "TEXT_SUFFICIENT",
     "LATEX_ARITHMETIC"
    ],
-   "reason": "All numbers are in the text and the working is one subtraction or addition line; a picture adds nothing.",
+   "reason": "The scenario is one sentence of words, the answer is one equation (99,999 + 999 = 1,00,998.) and the verdict 'Possible'; the book's cards (P12-cards-1) are plain text boxes and the printed answer is one line of text. A careful student loses nothing without a picture. (The number-line concept images of this topic, M3.S24.T24.C133.IMG1 and C139.IMG1, stay as they are.)",
    "lp_placeholder_action": "no_image",
-   "media_id": null,
-   "text_alternative": "Show the single line of working in LaTeX."
+   "media_id": null
   },
   {
    "lp_concept_id": "M3.S25.T25.C141",
    "role": "question",
    "lp_book_number": "5-digit + 5-digit giving a 5-digit sum more than 90,250.",
-   "ncert_ref": "3.8.FiO1_cards",
+   "ncert_ref": "Section 3.8 - Figure it Out Q1, first scenario card (book p.66; printed answer: solutions p.28)",
    "question_text": "5-digit + 5-digit giving a 5-digit sum more than 90,250.",
    "decision": "none",
    "reason_codes": [
     "TEXT_SUFFICIENT"
    ],
-   "reason": "The book's Figure it Out card is plain text and the LP question already carries every word of it; no figure.",
+   "reason": "The scenario card '5-digit + 5-digit to give a 5-digit sum more than 90,250' (P12-cards-1) is text in a box, with no figure content; the student writes an example.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S25.T25.C141.IMG1"
+   "media_id": null
   },
   {
    "lp_concept_id": "M3.S25.T25.C142",
    "role": "solution",
    "lp_book_number": "5-digit + 5-digit giving a 5-digit sum more than 90,250.",
-   "ncert_ref": "3.8.FiO1_cards",
+   "ncert_ref": "Section 3.8 - Figure it Out Q1, first scenario card (book p.66; printed answer: solutions p.28)",
    "question_text": "5-digit + 5-digit giving a 5-digit sum more than 90,250.",
    "decision": "none",
    "reason_codes": [
     "LATEX_ARITHMETIC"
    ],
-   "reason": "One addition, 45,000 + 45,400 = 90,400, compared with 90,250.",
+   "reason": "The answer is one equation 45,000 + 45,400 = 90,400 > 90,250, written as text in the book as well; LaTeX carries it. Sibling check: the other scenario items (worked examples 64-68) are none too.",
    "lp_placeholder_action": "drop_image",
-   "media_id": "M3.S25.T25.C142.IMG1"
+   "media_id": null,
+   "text_alternative": "LaTeX as in steps_tex."
   }
  ]
 }

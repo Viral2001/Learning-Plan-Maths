@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
-"""Check a diagram map (or one chunk of it) against diagram_map.schema.json and the rules of this plan.
+"""Check a diagram map (or one chunk of it) against spec/diagram_map.schema_v3.json and the rules of this plan.
 
     python -I -X utf8 validate_map.py <map json> [--chunk A|B|C|D|all]
 
 --chunk A..D : the map must hold exactly the units of map/in_<chunk>.json (a chunk file written by an agent)
---chunk all  : the merged map must hold all 101 units (map/inventory.json)
+--chunk all  : the merged map must hold all 101 units (map/inventory.json) and claim every figure of the base inventory
 
+v3 rules (diagram_identification_prompt v3): figure_inventory + coverage_report are required and must add up, every
+mapped_to points at something that exists, items judged without an LP image id like all others.
 Exit code 0 only when there are no errors. Warnings are printed but do not fail.
 """
 import json
@@ -16,14 +18,26 @@ import sys
 import jsonschema
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SCHEMA = os.path.join(HERE, "..", "..", "..", "docs", "karan-MD", "diagram_map.schema.json")
+SCHEMA = os.path.join(HERE, "spec", "diagram_map.schema_v3.json")
 VAGUE = re.compile(r"\b(some|several|etc\.?|similar|a few|various)\b", re.I)
 BAD_VISIBLE = re.compile(r"(figure it out|^q\d|\bfind\b|\bhence\b|\banswer\b|table \d|ncert|page \d)", re.I)
+MAPPED = re.compile(r"^(item:([^ ]+) \((question|solution)\)|concept_image:(.+)|none:([A-Z_]+))$")
+
+
+def base_inventory():
+    out = {}
+    for f in ("inv_base_chapter.json", "inv_base_solutions.json"):
+        p = os.path.join(HERE, "map", f)
+        if os.path.exists(p):
+            for x in json.load(open(p, encoding="utf-8")):
+                out[x["fig_id"]] = x
+    return out
 
 
 def main(path, chunk):
     errors, warnings = [], []
     schema = json.load(open(SCHEMA, encoding="utf-8"))
+    codes = set(schema["properties"]["items"]["items"]["properties"]["reason_codes"]["items"]["enum"])
     m = json.load(open(path, encoding="utf-8"))
     v = jsonschema.Draft202012Validator(schema)
     for e in sorted(v.iter_errors(m), key=lambda e: list(e.path)):
@@ -54,7 +68,6 @@ def main(path, chunk):
     for k in expected:
         if k not in seen:
             errors.append("missing item %s" % (k,))
-    # LP order
     order = [(it["lp_concept_id"], it["role"]) for it in items if (it.get("lp_concept_id"), it.get("role")) in expected]
     want = [k for k in expected if k in seen]
     if order != want:
@@ -77,19 +90,11 @@ def main(path, chunk):
             if tok != "{{DIAGRAM:%s}}" % mid:
                 errors.append("%s: token %r does not match media_id %r" % (cid, tok, mid))
             ins = (it.get("placeholder") or {}).get("insert_into")
-            if role in ("question", "worked_example") and ins != "question_tex":
-                errors.append("%s: %s diagram must insert into question_tex" % (cid, role))
-            if role == "solution" and ins not in ("steps_tex", "answer_tex"):
-                errors.append("%s: solution diagram must insert into steps_tex or answer_tex" % cid)
-            if role == "solution" and ins == "answer_tex" and it["placeholder"]["position"] != "after_answer":
-                errors.append("%s: answer_tex goes with position after_answer" % cid)
-            if role == "solution" and ins == "steps_tex" and it["placeholder"]["position"] in ("after_question_text",):
-                errors.append("%s: bad position for steps_tex" % cid)
-            if role == "solution" and ins == "steps_tex":
-                mm = re.match(r"after_step_(\d+)$", it["placeholder"]["position"])
-                nsteps = len(u["answer_concept"]["item"].get("steps_tex") or u["answer_concept"]["item"].get("steps") or [])
-                if mm and not (1 <= int(mm.group(1)) <= nsteps):
-                    errors.append("%s: after_step_%s but the solution has %d steps" % (cid, mm.group(1), nsteps))
+            pos = (it.get("placeholder") or {}).get("position")
+            if role in ("question", "worked_example") and (ins, pos) != ("question_tex", "after_question_text"):
+                errors.append("%s: %s diagram must be question_tex / after_question_text, got %s / %s" % (cid, role, ins, pos))
+            if role == "solution" and (ins, pos) != ("steps_tex", "before_first_step"):
+                errors.append("%s: solution diagram must be steps_tex / before_first_step (v3 rule), got %s / %s" % (cid, ins, pos))
             if role == "question":
                 want_id = "%s.IMG1" % cid
                 if mid != want_id:
@@ -122,24 +127,14 @@ def main(path, chunk):
         else:
             if "diagram" in it:
                 errors.append("%s: decision %s but has a diagram" % (cid, dec))
-            if dec == "none" and role in ("question", "solution") and act not in ("drop_image", "reuse_concept_image", "no_image"):
-                errors.append("%s: bad action %s for decision none" % (cid, act))
-            if dec == "none" and role == "worked_example" and act not in ("no_image", "reuse_concept_image"):
-                errors.append("%s: bad action %s for a worked example with no diagram" % (cid, act))
-            if dec == "optional":
-                if act not in ("drop_image", "no_image"):
-                    errors.append("%s: an optional item is not added in this run: action must be drop_image / no_image" % cid)
-                if it.get("media_id") is not None and role == "worked_example":
-                    pass
-        if act == "reuse_concept_image":
-            rid = it.get("reuse_media_id")
-            if rid not in concept_imgs:
-                errors.append("%s: reuse_media_id %r is not a concept image of this plan" % (cid, rid))
-            else:
-                # the concept image must be in the same topic
-                if rid.split(".C")[0] != cid.split(".C")[0]:
-                    errors.append("%s: reuse_media_id %s is in another topic" % (cid, rid))
-    # solution derived_from
+            if dec == "none" and act not in ("drop_image", "no_image"):
+                errors.append("%s: bad action %s for decision none (v3: drop_image for a pair, no_image for a worked example)" % (cid, act))
+            if dec == "none" and role == "worked_example" and act != "no_image":
+                errors.append("%s: a worked example with no diagram uses no_image" % cid)
+            if dec == "optional" and act not in ("drop_image", "no_image"):
+                errors.append("%s: an optional item is not added in this run: action must be drop_image / no_image" % cid)
+        if act == "reuse_concept_image" or it.get("reuse_media_id"):
+            errors.append("%s: no reuse of a teaching image in v3 (no reuse_concept_image / reuse_media_id): a concept image is never linked" % cid)
     for it in items:
         d = it.get("diagram")
         if not d:
@@ -153,8 +148,63 @@ def main(path, chunk):
             q = seen.get((qcid, "question"))
             if q and q.get("decision") == "required" and df != q.get("media_id"):
                 errors.append("%s: solution diagram must be derived_from the question diagram %s" % (it["lp_concept_id"], q["media_id"]))
-        if it["role"] == "question" and df:
-            errors.append("%s: a question diagram has nothing to derive from" % it["lp_concept_id"])
+        if it["role"] != "solution" and df:
+            errors.append("%s: only a solution diagram derives from another" % it["lp_concept_id"])
+
+    # ---- v2: figure inventory + coverage report
+    fi = m.get("figure_inventory", [])
+    base = base_inventory()
+    ids, claimed = set(), {"items": 0, "concept": 0, "none": 0}
+    item_refs = {}
+    for f in fi:
+        fid = f.get("fig_id")
+        if fid in ids:
+            errors.append("figure_inventory: duplicate fig_id %s" % fid)
+        ids.add(fid)
+        mt = MAPPED.match(f.get("mapped_to", ""))
+        if not mt:
+            continue
+        if mt.group(2):
+            claimed["items"] += 1
+            cid = mt.group(2)
+            role = mt.group(3)
+            real = "worked_example" if (cid, "worked_example") in expected and role == "question" else role
+            tgt = seen.get((cid, real))
+            if tgt is None:
+                errors.append("figure %s maps to item %s (%s) which is not an item of this map" % (fid, cid, role))
+            elif tgt["decision"] != "required":
+                errors.append("figure %s maps to item %s (%s) whose decision is %s, not required" % (fid, cid, role, tgt["decision"]))
+            else:
+                item_refs.setdefault((cid, real), []).append(fid)
+        elif mt.group(4):
+            claimed["concept"] += 1
+            if mt.group(4) not in concept_imgs:
+                errors.append("figure %s maps to concept image %s which is not in the plan" % (fid, mt.group(4)))
+        else:
+            claimed["none"] += 1
+            if mt.group(5) not in codes:
+                errors.append("figure %s: none:%s is not a reason code" % (fid, mt.group(5)))
+        if fid not in base and not str(fid).startswith("NEW-"):
+            errors.append("figure %s is not in the base inventory (give a figure you found yourself the prefix NEW-)" % fid)
+    for it in items:
+        if it["decision"] == "required" and (it["lp_concept_id"], it["role"]) not in item_refs:
+            warnings.append("%s (%s): required but no inventory figure maps to it (fine only when the figure is not printed in the book)" % (it["lp_concept_id"], it["role"]))
+    cr = m.get("coverage_report", {})
+    for key, val in (("inventory_figures", len(fi)), ("mapped_to_items", claimed["items"]),
+                     ("mapped_to_concept_images", claimed["concept"]), ("mapped_none", claimed["none"])):
+        if key in cr and cr[key] != val:
+            errors.append("coverage_report.%s is %s, the inventory says %s" % (key, cr[key], val))
+    if cr.get("unmapped") != 0:
+        errors.append("coverage_report.unmapped must be 0")
+    req_ids = {i["media_id"] for i in items if i["decision"] == "required"}
+    for x in cr.get("new_media_ids_created", []) or []:
+        if x not in req_ids:
+            errors.append("coverage_report.new_media_ids_created lists %s which is not a required item's media_id" % x)
+    if chunk == "all":
+        for fid in base:
+            if fid not in ids:
+                errors.append("base inventory figure %s is not claimed in the merged map" % fid)
+
     # meta counts
     cnt = {}
     for it in items:
@@ -173,10 +223,10 @@ def main(path, chunk):
         print("ERROR  ", e)
     for w in warnings:
         print("warning", w)
-    print("items %d | units expected %d | required %d | optional %d | none %d | errors %d | warnings %d" % (
+    print("items %d | units expected %d | required %d | optional %d | none %d | figures %d | errors %d | warnings %d" % (
         len(items), len(expected),
         sum(i["decision"] == "required" for i in items), sum(i["decision"] == "optional" for i in items),
-        sum(i["decision"] == "none" for i in items), len(errors), len(warnings)))
+        sum(i["decision"] == "none" for i in items), len(fi), len(errors), len(warnings)))
     return 1 if errors else 0
 
 

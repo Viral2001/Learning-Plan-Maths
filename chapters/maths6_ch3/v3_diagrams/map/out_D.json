@@ -1,1045 +1,1185 @@
 {
-  "meta": {
-    "chapter": "Number Play",
-    "class": 6,
-    "textbook": "Ganita Prakash Grade 6, Chapter 3",
-    "lp_plan_id": "cbse_eng_maths6_ch3_v108",
-    "prompt": "diagram_identification_prompt.md v1",
-    "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
-    "counts_by_role_and_decision": {
-      "question": {
-        "required": 2,
-        "optional": 0,
-        "none": 14
-      },
-      "solution": {
-        "required": 1,
-        "optional": 2,
-        "none": 13
-      },
-      "worked_example": {
-        "required": 0,
-        "optional": 0,
-        "none": 5
-      }
-    },
-    "notes": [
-      "Chunk D: module M3 second half (Figure it Out digit cards 3.8, Playing with Number Patterns 3.9, Collatz 3.10); 21 units, 37 items.",
-      "Figures a and d (C172, C174) already appear inside the concept images M3.S27.T27.C165.IMG1 (panel a) and M3.S27.T27.C168.IMG1 (panel d), but those are in topic S27 and the questions are in S28, so reuse is not allowed here and new question diagrams are specified; a reviewer may prefer to point these two cards at the concept images instead.",
-      "C172: the question text already gives the row counts (rows of 40, 40, 40, 40 / 50 x 5 ...) in shorthand; required only because the question names Figure (a) and the staggered boxes are the thing to be summed. Closest call of the chunk.",
-      "C173 and C175 (solutions of figures a and d) are optional, not added: colour-grouped 40s and 50s, and row totals 18, 18, 18, 18, 18, 15, 18 beside the dice rows.",
-      "C177: the LP says 'Place 25 at the four corners'; the diagram follows the book's printed answer (25 25 / 50 50 50 / 25 25, each 25 midway between two 50s), which fits that wording.",
-      "Worked examples C166, C167, C169, C170 reuse concept images of topic S27 (b and c share C165.IMG1; d and f are C168.IMG1; e is C168.IMG2).",
-      "LP figures checked against the book pictures: Figure c 32 + 16 cells, Figure b five 2 by 2 blocks of fives, Figure e 22 of each of 15, 25, 35, Figure f 4 + 8 + 18 circles, Figure d 123 pips; all agree with the LP."
-    ]
+ "meta": {
+  "chapter": "Number Play",
+  "class": 6,
+  "textbook": "Ganita Prakash Grade 6, Chapter 3",
+  "lp_plan_id": "cbse_eng_maths6_ch3_v108",
+  "prompt": "diagram_identification_prompt.md v2",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 2,
+    "optional": 0,
+    "none": 14
+   },
+   "solution": {
+    "required": 1,
+    "optional": 2,
+    "none": 13
+   },
+   "worked_example": {
+    "required": 0,
+    "optional": 0,
+    "none": 5
+   }
   },
-  "style_tokens": {
-    "BG": "#FFFFFF",
-    "INK": "#2B2B2B",
-    "MARK_FILL": "#CDEBD9",
-    "ANSWER": "#009E73",
-    "FOCUS": "#CC79A7",
-    "WRONG": "#D55E00",
-    "GUIDE": "#6B7280",
-    "SET_A": "#0072B2",
-    "SET_B": "#E69F00",
-    "CELL_FILL": "#F1EEF6"
-  },
-  "items": [
-    {
-      "lp_concept_id": "M3.S26.T26.C143",
-      "role": "question",
-      "lp_book_number": "Figure it Out, Q1",
-      "ncert_ref": "Section 3.8 - FiO1_cards; Section 3.8 - FiO1_reason",
-      "question_text": "4-digit + 4-digit giving a 6-digit sum.",
-      "decision": "none",
-      "reason_codes": [
-        "TEXT_SUFFICIENT"
-      ],
-      "reason": "The card is a rounded text box; every fact is in the words, so a student loses nothing without a picture.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C143.IMG1",
-      "text_alternative": "Show the card text only: 4-digit + 4-digit giving a 6-digit sum."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C144",
-      "role": "solution",
-      "lp_book_number": "Figure it Out, Q1",
-      "ncert_ref": "Section 3.8 - FiO1_cards; Section 3.8 - FiO1_reason",
-      "question_text": "4-digit + 4-digit giving a 6-digit sum.",
-      "decision": "none",
-      "reason_codes": [
-        "LATEX_ARITHMETIC"
-      ],
-      "reason": "Two lines of arithmetic (9999 + 9999 = 19,998, which has 5 digits) and the word Impossible; the page has no figure for it.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C144.IMG1",
-      "text_alternative": "LaTeX lines: 9999 + 9999 = 19,998; 19,998 has 5 digits; Impossible."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C145",
-      "role": "question",
-      "lp_book_number": "Figure it Out, Q2",
-      "ncert_ref": "Section 3.8 - FiO1_cards",
-      "question_text": "5-digit + 5-digit giving a 6-digit sum.",
-      "decision": "none",
-      "reason_codes": [
-        "TEXT_SUFFICIENT"
-      ],
-      "reason": "The card is a rounded text box; every fact is in the words, so a student loses nothing without a picture.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C145.IMG1",
-      "text_alternative": "Show the card text only: 5-digit + 5-digit giving a 6-digit sum."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C146",
-      "role": "solution",
-      "lp_book_number": "Figure it Out, Q2",
-      "ncert_ref": "Section 3.8 - FiO1_cards",
-      "question_text": "5-digit + 5-digit giving a 6-digit sum.",
-      "decision": "none",
-      "reason_codes": [
-        "LATEX_ARITHMETIC"
-      ],
-      "reason": "One line of arithmetic, 60,000 + 40,000 = 1,00,000, and the word Possible.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C146.IMG1",
-      "text_alternative": "LaTeX line: 60,000 + 40,000 = 1,00,000; Possible."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C147",
-      "role": "question",
-      "lp_book_number": "Figure it Out, Q3",
-      "ncert_ref": "Section 3.8 - FiO1_cards; Section 3.8 - FiO1_reason",
-      "question_text": "5-digit + 5-digit giving 18,500.",
-      "decision": "none",
-      "reason_codes": [
-        "TEXT_SUFFICIENT"
-      ],
-      "reason": "The card is a rounded text box; every fact is in the words, so a student loses nothing without a picture.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C147.IMG1",
-      "text_alternative": "Show the card text only: 5-digit + 5-digit giving 18,500."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C148",
-      "role": "solution",
-      "lp_book_number": "Figure it Out, Q3",
-      "ncert_ref": "Section 3.8 - FiO1_cards; Section 3.8 - FiO1_reason",
-      "question_text": "5-digit + 5-digit giving 18,500.",
-      "decision": "none",
-      "reason_codes": [
-        "LATEX_ARITHMETIC"
-      ],
-      "reason": "Two lines of arithmetic (10,000 + 10,000 = 20,000, and 18,500 is less than 20,000) and the word Impossible.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C148.IMG1",
-      "text_alternative": "LaTeX lines: 10,000 + 10,000 = 20,000; 18,500 < 20,000; Impossible."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C149",
-      "role": "question",
-      "lp_book_number": "Figure it Out, Q4",
-      "ncert_ref": "Section 3.8 - FiO1_cards; Section 3.8 - FiO1_reason",
-      "question_text": "5-digit - 5-digit giving 91,500.",
-      "decision": "none",
-      "reason_codes": [
-        "TEXT_SUFFICIENT"
-      ],
-      "reason": "The card is a rounded text box; every fact is in the words, so a student loses nothing without a picture.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C149.IMG1",
-      "text_alternative": "Show the card text only: 5-digit - 5-digit giving 91,500."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C150",
-      "role": "solution",
-      "lp_book_number": "Figure it Out, Q4",
-      "ncert_ref": "Section 3.8 - FiO1_cards; Section 3.8 - FiO1_reason",
-      "question_text": "5-digit - 5-digit giving 91,500.",
-      "decision": "none",
-      "reason_codes": [
-        "LATEX_ARITHMETIC"
-      ],
-      "reason": "Two lines of arithmetic (99,999 - 10,000 = 89,999, and 91,500 is more than 89,999) and the word Impossible.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C150.IMG1",
-      "text_alternative": "LaTeX lines: 99,999 - 10,000 = 89,999; 91,500 > 89,999; Impossible."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C151",
-      "role": "question",
-      "lp_book_number": "Figure it Out, Q5",
-      "ncert_ref": "Section 3.8 - FiO1_make_own",
-      "question_text": "Make your own card. What is its answer, and why?",
-      "decision": "none",
-      "reason_codes": [
-        "OPEN_ENDED",
-        "TEXT_SUFFICIENT"
-      ],
-      "reason": "Make-your-own card: there is no fixed figure; the student writes a card of their own.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C151.IMG1",
-      "text_alternative": "Plain text question; no picture."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C152",
-      "role": "solution",
-      "lp_book_number": "Figure it Out, Q5",
-      "ncert_ref": "Section 3.8 - FiO1_make_own",
-      "question_text": "Make your own card. What is its answer, and why?",
-      "decision": "none",
-      "reason_codes": [
-        "OPEN_ENDED",
-        "LATEX_ARITHMETIC"
-      ],
-      "reason": "The sample answer is a sentence and three sums (999 + 999 = 1998, 950 + 960 = 1910); no figure is involved.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C152.IMG1",
-      "text_alternative": "Keep the six LP steps as LaTeX lines; no picture."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C153",
-      "role": "question",
-      "lp_book_number": "Figure it Out, Q6",
-      "ncert_ref": "Section 3.8 - FiO2a",
-      "question_text": "a. 5-digit + 5-digit gives a 5-digit number.",
-      "decision": "none",
-      "reason_codes": [
-        "TEXT_SUFFICIENT"
-      ],
-      "reason": "A single statement in words (5-digit + 5-digit gives a 5-digit number); nothing is drawn in the book.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C153.IMG1",
-      "text_alternative": "Show the statement only."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C154",
-      "role": "solution",
-      "lp_book_number": "Figure it Out, Q6",
-      "ncert_ref": "Section 3.8 - FiO2a",
-      "question_text": "a. 5-digit + 5-digit gives a 5-digit number.",
-      "decision": "none",
-      "reason_codes": [
-        "LATEX_ARITHMETIC"
-      ],
-      "reason": "Two worked sums (12,350 + 24,545 = 36,895 and 20,000 + 80,000 = 1,00,000) with a digit count; text and LaTeX are enough.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C154.IMG1",
-      "text_alternative": "LaTeX lines for the two sums, then: Only sometimes true."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C155",
-      "role": "question",
-      "lp_book_number": "Figure it Out, Q7",
-      "ncert_ref": "Section 3.8 - FiO2b",
-      "question_text": "b. 4-digit + 2-digit gives a 4-digit number.",
-      "decision": "none",
-      "reason_codes": [
-        "TEXT_SUFFICIENT"
-      ],
-      "reason": "A single statement in words (4-digit + 2-digit gives a 4-digit number); nothing is drawn in the book.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C155.IMG1",
-      "text_alternative": "Show the statement only."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C156",
-      "role": "solution",
-      "lp_book_number": "Figure it Out, Q7",
-      "ncert_ref": "Section 3.8 - FiO2b",
-      "question_text": "b. 4-digit + 2-digit gives a 4-digit number.",
-      "decision": "none",
-      "reason_codes": [
-        "LATEX_ARITHMETIC"
-      ],
-      "reason": "Two worked sums (1000 + 10 = 1010 and 9999 + 99 = 10,098) with a digit count.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C156.IMG1",
-      "text_alternative": "LaTeX lines for the two sums, then: Only sometimes true."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C157",
-      "role": "question",
-      "lp_book_number": "Figure it Out, Q8",
-      "ncert_ref": "Section 3.8 - FiO2c",
-      "question_text": "c. 4-digit + 2-digit gives a 6-digit number.",
-      "decision": "none",
-      "reason_codes": [
-        "TEXT_SUFFICIENT"
-      ],
-      "reason": "A single statement in words (4-digit + 2-digit gives a 6-digit number); nothing is drawn in the book.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C157.IMG1",
-      "text_alternative": "Show the statement only."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C158",
-      "role": "solution",
-      "lp_book_number": "Figure it Out, Q8",
-      "ncert_ref": "Section 3.8 - FiO2c",
-      "question_text": "c. 4-digit + 2-digit gives a 6-digit number.",
-      "decision": "none",
-      "reason_codes": [
-        "LATEX_ARITHMETIC"
-      ],
-      "reason": "One worked sum (9999 + 99 = 10,098) and a digit count.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C158.IMG1",
-      "text_alternative": "LaTeX lines: 9999 + 99 = 10,098; it has only 5 digits; Never true."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C159",
-      "role": "question",
-      "lp_book_number": "Figure it Out, Q9",
-      "ncert_ref": "Section 3.8 - FiO2d",
-      "question_text": "d. 5-digit - 5-digit gives a 5-digit number.",
-      "decision": "none",
-      "reason_codes": [
-        "TEXT_SUFFICIENT"
-      ],
-      "reason": "A single statement in words (5-digit - 5-digit gives a 5-digit number); nothing is drawn in the book.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C159.IMG1",
-      "text_alternative": "Show the statement only."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C160",
-      "role": "solution",
-      "lp_book_number": "Figure it Out, Q9",
-      "ncert_ref": "Section 3.8 - FiO2d",
-      "question_text": "d. 5-digit - 5-digit gives a 5-digit number.",
-      "decision": "none",
-      "reason_codes": [
-        "LATEX_ARITHMETIC"
-      ],
-      "reason": "Two worked differences (48,952 - 24,547 = 24,405 and 12,000 - 10,000 = 2000) with a digit count.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C160.IMG1",
-      "text_alternative": "LaTeX lines for the two differences, then: Only sometimes true."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C161",
-      "role": "question",
-      "lp_book_number": "Figure it Out, Q10",
-      "ncert_ref": "Section 3.8 - FiO2e",
-      "question_text": "e. 5-digit - 2-digit gives a 3-digit number.",
-      "decision": "none",
-      "reason_codes": [
-        "TEXT_SUFFICIENT"
-      ],
-      "reason": "A single statement in words (5-digit - 2-digit gives a 3-digit number); nothing is drawn in the book.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C161.IMG1",
-      "text_alternative": "Show the statement only."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C162",
-      "role": "solution",
-      "lp_book_number": "Figure it Out, Q10",
-      "ncert_ref": "Section 3.8 - FiO2e",
-      "question_text": "e. 5-digit - 2-digit gives a 3-digit number.",
-      "decision": "none",
-      "reason_codes": [
-        "LATEX_ARITHMETIC"
-      ],
-      "reason": "One worked difference (10,000 - 99 = 9901) and a digit count.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C162.IMG1",
-      "text_alternative": "LaTeX lines: 10,000 - 99 = 9901; it already has 4 digits; Never true."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C163",
-      "role": "question",
-      "lp_book_number": "Figure it Out, Q11",
-      "ncert_ref": "Section 3.12 - Figure it Out (FiO6)",
-      "question_text": "Write one 5-digit number and two 3-digit numbers whose sum is 18,670.",
-      "decision": "none",
-      "reason_codes": [
-        "TEXT_SUFFICIENT",
-        "OPEN_ENDED"
-      ],
-      "reason": "All the numbers are in the words (one 5-digit and two 3-digit numbers adding to 18,670) and many answers are right; the book has no figure.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C163.IMG1",
-      "text_alternative": "Show the question text only."
-    },
-    {
-      "lp_concept_id": "M3.S26.T26.C164",
-      "role": "solution",
-      "lp_book_number": "Figure it Out, Q11",
-      "ncert_ref": "Section 3.12 - Figure it Out (FiO6)",
-      "question_text": "Write one 5-digit number and two 3-digit numbers whose sum is 18,670.",
-      "decision": "none",
-      "reason_codes": [
-        "LATEX_ARITHMETIC"
-      ],
-      "reason": "A sample split of the sum: 18,000 + 300 + 370 = 18,670; plain arithmetic.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S26.T26.C164.IMG1",
-      "text_alternative": "LaTeX lines for the three steps and the check 18,000 + 300 + 370 = 18,670."
-    },
-    {
-      "lp_concept_id": "M3.S27.T27.C166",
-      "role": "worked_example",
-      "lp_book_number": null,
-      "ncert_ref": "Section 3.9 - fig_c",
-      "question_text": "Figure c: 4 rows of eight 32s above 4 rows of four 64s.",
-      "decision": "none",
-      "reason_codes": [
-        "REUSES_CONCEPT_IMAGE"
-      ],
-      "reason": "Figure c (eight columns of 32s above the arch of 64s) is panel c of the existing concept image of this topic.",
-      "lp_placeholder_action": "reuse_concept_image",
-      "media_id": null,
-      "reuse_media_id": "M3.S27.T27.C165.IMG1"
-    },
-    {
-      "lp_concept_id": "M3.S27.T27.C167",
-      "role": "worked_example",
-      "lp_book_number": null,
-      "ncert_ref": "Section 3.9 - fig_b",
-      "question_text": "Figure b: an 8 by 8 grid of dice showing 1 or 5.",
-      "decision": "none",
-      "reason_codes": [
-        "REUSES_CONCEPT_IMAGE"
-      ],
-      "reason": "Figure b (8 by 8 dice, five 2 by 2 blocks of fives) is panel b of the existing concept image of this topic.",
-      "lp_placeholder_action": "reuse_concept_image",
-      "media_id": null,
-      "reuse_media_id": "M3.S27.T27.C165.IMG1"
-    },
-    {
-      "lp_concept_id": "M3.S27.T27.C169",
-      "role": "worked_example",
-      "lp_book_number": null,
-      "ncert_ref": "Section 3.9 - fig_f",
-      "question_text": "Figure f: circles with 1000 in the centre and rings of 500s, 250s and 125s.",
-      "decision": "none",
-      "reason_codes": [
-        "REUSES_CONCEPT_IMAGE"
-      ],
-      "reason": "Figure f (1000 in the centre, rings of 4, 8 and 18 circles) is panel f of the existing concept image of this topic.",
-      "lp_placeholder_action": "reuse_concept_image",
-      "media_id": null,
-      "reuse_media_id": "M3.S27.T27.C168.IMG1"
-    },
-    {
-      "lp_concept_id": "M3.S27.T27.C170",
-      "role": "worked_example",
-      "lp_book_number": null,
-      "ncert_ref": "Section 3.9 - fig_e",
-      "question_text": "Figure e: a hexagon made of pieces showing 15, 25 and 35.",
-      "decision": "none",
-      "reason_codes": [
-        "REUSES_CONCEPT_IMAGE"
-      ],
-      "reason": "Figure e (hexagon of 15s, 25s and 35s) is the existing concept image of this topic.",
-      "lp_placeholder_action": "reuse_concept_image",
-      "media_id": null,
-      "reuse_media_id": "M3.S27.T27.C168.IMG2"
-    },
-    {
-      "lp_concept_id": "M3.S28.T28.C172",
-      "role": "question",
-      "lp_book_number": "Number Patterns: figure a, rows of 40s and 50s",
-      "ncert_ref": "Section 3.9 - fig_a",
-      "question_text": "Figure a: rows of 40, 40, 40, 40 / 50 × 5 / 40 × 4 / 50 × 5 / 40 × 4.",
-      "decision": "required",
-      "reason_codes": [
-        "FIG_REFERENCED",
-        "DATA_IN_FIGURE"
-      ],
-      "reason": "The question names Figure (a) and the numbers and their staggered rows exist only in the picture; the text gives just a shorthand of the row counts.",
-      "lp_placeholder_action": "keep_and_replace_spec",
-      "media_id": "M3.S28.T28.C172.IMG1",
-      "manim_scene": "c3_9_figa_q",
-      "placeholder": {
-        "token": "{{DIAGRAM:M3.S28.T28.C172.IMG1}}",
-        "insert_into": "question_tex",
-        "position": "after_question_text"
-      },
-      "diagram": {
-        "diagram_type": "number_pattern",
-        "aspect_ratio": "16:9",
-        "derived_from": null,
-        "content": {
-          "type": "number_pattern",
-          "layout": "staggered_rows",
-          "box": {
-            "shape": "square",
-            "side": 0.4,
-            "fill": "CELL_FILL",
-            "stroke": "INK",
-            "text_colour": "INK"
-          },
-          "column_spacing": 1.0,
-          "row_spacing": 0.55,
-          "rows": [
-            {
-              "row": 1,
-              "value": 40,
-              "count": 4,
-              "x_positions": [
-                0.5,
-                1.5,
-                2.5,
-                3.5
-              ]
-            },
-            {
-              "row": 2,
-              "value": 50,
-              "count": 5,
-              "x_positions": [
-                0.0,
-                1.0,
-                2.0,
-                3.0,
-                4.0
-              ]
-            },
-            {
-              "row": 3,
-              "value": 40,
-              "count": 4,
-              "x_positions": [
-                0.5,
-                1.5,
-                2.5,
-                3.5
-              ]
-            },
-            {
-              "row": 4,
-              "value": 50,
-              "count": 5,
-              "x_positions": [
-                0.0,
-                1.0,
-                2.0,
-                3.0,
-                4.0
-              ]
-            },
-            {
-              "row": 5,
-              "value": 40,
-              "count": 4,
-              "x_positions": [
-                0.5,
-                1.5,
-                2.5,
-                3.5
-              ]
-            }
-          ],
-          "total_boxes": 22
-        },
-        "manim_description": "Draw five horizontal rows of square boxes, top to bottom, with row spacing 0.55 units and column spacing 1.0 unit. Each box has side 0.4 units, a 2 px INK outline and CELL_FILL fill, with its number centred in INK. Row 1: four boxes reading 40 at x = 0.5, 1.5, 2.5 and 3.5. Row 2: five boxes reading 50 at x = 0, 1, 2, 3 and 4. Row 3: four boxes reading 40 at x = 0.5, 1.5, 2.5 and 3.5. Row 4: five boxes reading 50 at x = 0, 1, 2, 3 and 4. Row 5: four boxes reading 40 at x = 0.5, 1.5, 2.5 and 3.5. So each 40 box sits midway between two 50 boxes of the next row. Centre the pattern with a small even margin. Draw nothing else: no totals, no grouping marks, no extra colour.",
-        "visible_text": [
-          "40",
-          "50"
-        ],
-        "must_not_show": [
-          "question text or instructions",
-          "answer sentence or solution steps",
-          "headings, Q-numbers, figure letters",
-          "branding, page numbers, watermarks",
-          "decorative clip-art"
-        ],
-        "accuracy_checks": [
-          "rows 1, 3 and 5 each hold exactly 4 boxes reading 40 (12 boxes of 40 in all)",
-          "rows 2 and 4 each hold exactly 5 boxes reading 50 (10 boxes of 50 in all)",
-          "every 40 box has x = n + 0.5 and every 50 box has x = n, so the rows are staggered by half a column",
-          "22 boxes in all; for QA only the total is 12 x 40 + 10 x 50 = 480 + 500 = 980 and it is never drawn"
-        ],
-        "alt_text": "Five staggered rows of boxed numbers: four 40s, five 50s, four 40s, five 50s and four 40s.",
-        "render_note": "Matches Figure a on book page 67 (pdf page 13): the 40s are boxes offset half a column from the 50s. The two box colours of the book are not used; every box is CELL_FILL."
-      }
-    },
-    {
-      "lp_concept_id": "M3.S28.T28.C173",
-      "role": "solution",
-      "lp_book_number": "Number Patterns: figure a, rows of 40s and 50s",
-      "ncert_ref": "Section 3.9 - fig_a",
-      "question_text": "Figure a: rows of 40, 40, 40, 40 / 50 × 5 / 40 × 4 / 50 × 5 / 40 × 4.",
-      "decision": "optional",
-      "reason_codes": [
-        "TEXT_SUFFICIENT",
-        "HIGHLIGHT_MEANING"
-      ],
-      "reason": "The five LP steps (12 forties, 480; 10 fifties, 500; 980) are complete in text. A figure that would help but is not needed: the question figure with the twelve 40 boxes in SET_A and the ten 50 boxes in SET_B, with counts 12 x 40 and 10 x 50; not added in this run.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S28.T28.C173.IMG1",
-      "text_alternative": "Five LaTeX lines as in the LP steps; the question figure stays on the question side."
-    },
-    {
-      "lp_concept_id": "M3.S28.T28.C174",
-      "role": "question",
-      "lp_book_number": "Number Patterns: figure d, a 7 by 5 grid of dice",
-      "ncert_ref": "Section 3.9 - fig_d",
-      "question_text": "Figure d: a 7 by 5 grid of dice.",
-      "decision": "required",
-      "reason_codes": [
-        "DATA_IN_FIGURE",
-        "FIG_REFERENCED"
-      ],
-      "reason": "The pips on each die exist only in the picture; the question text says only 7 by 5 grid of dice.",
-      "lp_placeholder_action": "keep_and_replace_spec",
-      "media_id": "M3.S28.T28.C174.IMG1",
-      "manim_scene": "c3_9_figd_q",
-      "placeholder": {
-        "token": "{{DIAGRAM:M3.S28.T28.C174.IMG1}}",
-        "insert_into": "question_tex",
-        "position": "after_question_text"
-      },
-      "diagram": {
-        "diagram_type": "dice_grid",
-        "aspect_ratio": "3:4",
-        "derived_from": null,
-        "content": {
-          "type": "dice_grid",
-          "rows": 7,
-          "cols": 5,
-          "die": {
-            "shape": "square",
-            "fill": "CELL_FILL",
-            "stroke": "INK",
-            "pip_colour": "INK"
-          },
-          "pip_layouts": {
-            "rising": "3 pips on the diagonal from bottom left to top right: top right, centre, bottom left",
-            "falling": "3 pips on the diagonal from top left to bottom right: top left, centre, bottom right",
-            "square_2x2": "4 pips in a 2 by 2 square at the four quarter points of the face"
-          },
-          "dice_by_row": [
-            {
-              "row": 1,
-              "dice": [
-                {
-                  "col": 1,
-                  "pips": 3,
-                  "layout": "rising"
-                },
-                {
-                  "col": 2,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 3,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 4,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 5,
-                  "pips": 3,
-                  "layout": "rising"
-                }
-              ]
-            },
-            {
-              "row": 2,
-              "dice": [
-                {
-                  "col": 1,
-                  "pips": 3,
-                  "layout": "rising"
-                },
-                {
-                  "col": 2,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 3,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 4,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 5,
-                  "pips": 3,
-                  "layout": "rising"
-                }
-              ]
-            },
-            {
-              "row": 3,
-              "dice": [
-                {
-                  "col": 1,
-                  "pips": 3,
-                  "layout": "rising"
-                },
-                {
-                  "col": 2,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 3,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 4,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 5,
-                  "pips": 3,
-                  "layout": "rising"
-                }
-              ]
-            },
-            {
-              "row": 4,
-              "dice": [
-                {
-                  "col": 1,
-                  "pips": 3,
-                  "layout": "rising"
-                },
-                {
-                  "col": 2,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 3,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 4,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 5,
-                  "pips": 3,
-                  "layout": "rising"
-                }
-              ]
-            },
-            {
-              "row": 5,
-              "dice": [
-                {
-                  "col": 1,
-                  "pips": 3,
-                  "layout": "rising"
-                },
-                {
-                  "col": 2,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 3,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 4,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 5,
-                  "pips": 3,
-                  "layout": "rising"
-                }
-              ]
-            },
-            {
-              "row": 6,
-              "dice": [
-                {
-                  "col": 1,
-                  "pips": 3,
-                  "layout": "falling"
-                },
-                {
-                  "col": 2,
-                  "pips": 3,
-                  "layout": "falling"
-                },
-                {
-                  "col": 3,
-                  "pips": 3,
-                  "layout": "falling"
-                },
-                {
-                  "col": 4,
-                  "pips": 3,
-                  "layout": "falling"
-                },
-                {
-                  "col": 5,
-                  "pips": 3,
-                  "layout": "falling"
-                }
-              ]
-            },
-            {
-              "row": 7,
-              "dice": [
-                {
-                  "col": 1,
-                  "pips": 3,
-                  "layout": "rising"
-                },
-                {
-                  "col": 2,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 3,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 4,
-                  "pips": 4,
-                  "layout": "square_2x2"
-                },
-                {
-                  "col": 5,
-                  "pips": 3,
-                  "layout": "rising"
-                }
-              ]
-            }
-          ],
-          "total_dice": 35
-        },
-        "manim_description": "Draw a grid of 7 rows and 5 columns of equal square dice faces touching side by side with no gaps, each with a 2 px INK outline and CELL_FILL fill. Draw every pip as a filled INK circle. Rows 1, 2, 3, 4, 5 and 7, left to right: a face with 3 pips on the rising diagonal (top right, centre, bottom left), then three faces with 4 pips in a 2 by 2 square, then a face with 3 pips on the rising diagonal. Row 6, left to right: five faces each with 3 pips on the falling diagonal (top left, centre, bottom right). Centre the grid with a small even margin. Draw no numbers, no row totals and no colour other than CELL_FILL and INK.",
-        "visible_text": [],
-        "must_not_show": [
-          "question text or instructions",
-          "answer sentence or solution steps",
-          "headings, Q-numbers, figure letters",
-          "branding, page numbers, watermarks",
-          "decorative clip-art"
-        ],
-        "accuracy_checks": [
-          "7 rows x 5 columns = 35 dice",
-          "rows 1-5 and row 7 read 3, 4, 4, 4, 3 pips (6 rows); row 6 reads 3, 3, 3, 3, 3",
-          "18 dice show 4 pips and 17 dice show 3 pips",
-          "for QA only the pip total is 18 x 4 + 17 x 3 = 72 + 51 = 123 (6 x 18 + 15) and it is never drawn"
-        ],
-        "alt_text": "A 7 by 5 grid of dice: six rows read 3, 4, 4, 4, 3 pips and the sixth row reads 3, 3, 3, 3, 3.",
-        "render_note": "Matches Figure d on book page 68 (pdf page 14). The book colours the dice purple and red; that colour does not mark anything the LP solution uses, so every die is neutral CELL_FILL."
-      }
-    },
-    {
-      "lp_concept_id": "M3.S28.T28.C175",
-      "role": "solution",
-      "lp_book_number": "Number Patterns: figure d, a 7 by 5 grid of dice",
-      "ncert_ref": "Section 3.9 - fig_d",
-      "question_text": "Figure d: a 7 by 5 grid of dice.",
-      "decision": "optional",
-      "reason_codes": [
-        "TEXT_SUFFICIENT",
-        "HIGHLIGHT_MEANING"
-      ],
-      "reason": "The four LP steps (18 per row, 4 x 18 = 72, 5 x 3 = 15, 123) are complete in text. A figure that would help but is not needed: the question grid with each row total written beside its row (18, 18, 18, 18, 18, 15, 18) in ANSWER; not added in this run.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S28.T28.C175.IMG1",
-      "text_alternative": "Four LaTeX lines as in the LP steps; the question grid stays on the question side."
-    },
-    {
-      "lp_concept_id": "M3.S29.T29.C176",
-      "role": "question",
-      "lp_book_number": "Figure it Out, Q1",
-      "ncert_ref": "Section 3.12 - Figure it Out (FiO7)",
-      "question_text": "Choose a number between 210 and 390 and make a pattern that sums to it.",
-      "decision": "none",
-      "reason_codes": [
-        "OPEN_ENDED"
-      ],
-      "reason": "The student picks their own number and builds their own pattern; no figure is given, so a question diagram would invent one.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S29.T29.C176.IMG1",
-      "text_alternative": "Plain text question; no picture."
-    },
-    {
-      "lp_concept_id": "M3.S29.T29.C177",
-      "role": "solution",
-      "lp_book_number": "Figure it Out, Q1",
-      "ncert_ref": "Section 3.12 - Figure it Out (FiO7)",
-      "question_text": "Choose a number between 210 and 390 and make a pattern that sums to it.",
-      "decision": "required",
-      "reason_codes": [
-        "ANSWER_IS_FIGURE"
-      ],
-      "reason": "The answer is itself a number pattern (three 50s with four 25s around them) that the words only describe.",
-      "lp_placeholder_action": "keep_and_replace_spec",
-      "media_id": "M3.S29.T29.C177.IMG1",
-      "manim_scene": "c3_9_FiO7_sol",
-      "placeholder": {
-        "token": "{{DIAGRAM:M3.S29.T29.C177.IMG1}}",
-        "insert_into": "steps_tex",
-        "position": "after_step_3"
-      },
-      "diagram": {
-        "diagram_type": "number_pattern",
-        "aspect_ratio": "16:9",
-        "derived_from": null,
-        "content": {
-          "type": "number_pattern",
-          "layout": "staggered_rows",
-          "box": {
-            "shape": "square",
-            "side": 0.4,
-            "fill": "CELL_FILL",
-            "stroke": "ANSWER",
-            "text_colour": "ANSWER"
-          },
-          "column_spacing": 1.0,
-          "row_spacing": 0.55,
-          "rows": [
-            {
-              "row": 1,
-              "value": 25,
-              "count": 2,
-              "x_positions": [
-                0.5,
-                1.5
-              ]
-            },
-            {
-              "row": 2,
-              "value": 50,
-              "count": 3,
-              "x_positions": [
-                0.0,
-                1.0,
-                2.0
-              ]
-            },
-            {
-              "row": 3,
-              "value": 25,
-              "count": 2,
-              "x_positions": [
-                0.5,
-                1.5
-              ]
-            }
-          ],
-          "total_boxes": 7,
-          "chosen_number": 250
-        },
-        "manim_description": "Draw three horizontal rows of square boxes, top to bottom, with row spacing 0.55 units and column spacing 1.0 unit. Each box has side 0.4 units, a 2 px ANSWER outline and CELL_FILL fill, with its number centred in ANSWER. Row 1: two boxes reading 25 at x = 0.5 and 1.5. Row 2: three boxes reading 50 at x = 0, 1 and 2. Row 3: two boxes reading 25 at x = 0.5 and 1.5. So the 50 at x = 1 is the centre, the 50s at x = 0 and x = 2 are the left and right points, and the four 25s are the four corners between them. Centre the pattern with a small even margin. Draw nothing else: no sums, no tags, no lines joining the boxes.",
-        "visible_text": [
-          "25",
-          "50"
-        ],
-        "must_not_show": [
-          "question text or instructions",
-          "answer sentence or solution steps",
-          "headings, Q-numbers, figure letters",
-          "branding, page numbers, watermarks",
-          "decorative clip-art"
-        ],
-        "accuracy_checks": [
-          "exactly 3 boxes of 50 (row 2) and 4 boxes of 25 (2 above, 2 below)",
-          "3 x 50 + 4 x 25 = 150 + 100 = 250 and 250 lies between 210 and 390",
-          "the layout is the book's printed answer: 25 25 above, 50 50 50 in the middle, 25 25 below, each 25 midway between two 50s"
-        ],
-        "alt_text": "A pattern of seven boxes: 50, 50, 50 in the middle row with two 25s above and two 25s below, adding up to 250.",
-        "render_note": "Layout taken from the printed answer on book solutions page [13] (pdf page 32). The LP says 'Place 25 at the four corners'; here the corners are the four outer points of the hexagon-shaped pattern."
-      }
-    },
-    {
-      "lp_concept_id": "M3.S30.T30.C178",
-      "role": "worked_example",
-      "lp_book_number": null,
-      "ncert_ref": "Section 3.10 - sequences; Section 3.10 - rule; Section 3.10 - make_own",
-      "question_text": "Check the rule on sequence a.",
-      "decision": "none",
-      "reason_codes": [
-        "LATEX_ARITHMETIC"
-      ],
-      "reason": "A number chain 12, 6, 3, 10, 5, 16, 8, 4, 2, 1 written with its six steps; text and LaTeX are enough. The only concept image of this topic (C179.IMG1) shows the powers of 2, not this chain.",
-      "lp_placeholder_action": "no_image",
-      "media_id": null,
-      "text_alternative": "LaTeX lines for the six steps, then the chain 12, 6, 3, 10, 5, 16, 8, 4, 2, 1."
-    },
-    {
-      "lp_concept_id": "M3.S31.T31.C181",
-      "role": "question",
-      "lp_book_number": "Figure it Out, Q1",
-      "ncert_ref": "Section 3.12 - Figure it Out (FiO8)",
-      "question_text": "1, 2, 4, 8, 16, 32, 64, ... Why does the rule take every one of them to 1?",
-      "decision": "none",
-      "reason_codes": [
-        "TEXT_SUFFICIENT"
-      ],
-      "reason": "The powers of 2 are listed in the question text; nothing is drawn in the book.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S31.T31.C181.IMG1",
-      "text_alternative": "Show the question text only."
-    },
-    {
-      "lp_concept_id": "M3.S31.T31.C182",
-      "role": "solution",
-      "lp_book_number": "Figure it Out, Q1",
-      "ncert_ref": "Section 3.12 - Figure it Out (FiO8)",
-      "question_text": "1, 2, 4, 8, 16, 32, 64, ... Why does the rule take every one of them to 1?",
-      "decision": "none",
-      "reason_codes": [
-        "LATEX_ARITHMETIC"
-      ],
-      "reason": "The reasoning is a halving chain 64, 32, 16, 8, 4, 2, 1 in words; text is enough, and the halving picture M3.S30.T30.C179.IMG1 already sits in the teaching topic just before.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S31.T31.C182.IMG1",
-      "text_alternative": "Keep the six LP steps as LaTeX lines; write the chain 64, 32, 16, 8, 4, 2, 1 in step 4."
-    },
-    {
-      "lp_concept_id": "M3.S31.T31.C183",
-      "role": "question",
-      "lp_book_number": "Figure it Out, Q2",
-      "ncert_ref": "Section 3.12 - Figure it Out (FiO9)",
-      "question_text": "Does the conjecture hold for the starting number 100?",
-      "decision": "none",
-      "reason_codes": [
-        "TEXT_SUFFICIENT"
-      ],
-      "reason": "One question about the start number 100; nothing is drawn in the book.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S31.T31.C183.IMG1",
-      "text_alternative": "Show the question text only."
-    },
-    {
-      "lp_concept_id": "M3.S31.T31.C184",
-      "role": "solution",
-      "lp_book_number": "Figure it Out, Q2",
-      "ncert_ref": "Section 3.12 - Figure it Out (FiO9)",
-      "question_text": "Does the conjecture hold for the starting number 100?",
-      "decision": "none",
-      "reason_codes": [
-        "LATEX_ARITHMETIC"
-      ],
-      "reason": "A number chain of 26 numbers (100 down to 1, 25 steps) already split into eight LP lines; it is a sequence, so LaTeX.",
-      "lp_placeholder_action": "drop_image",
-      "media_id": "M3.S31.T31.C184.IMG1",
-      "text_alternative": "Keep the eight LP lines; the chain is 100, 50, 25, 76, 38, 19, 58, 29, 88, 44, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1."
-    }
+  "notes": [
+   "Chunk D: units 70-90 (M3 second half: Figure it Out 3.8 Q1-Q11 incl. always/sometimes/never, 3.9 number patterns a-f, 3.10 Collatz, end-of-chapter FiO7-FiO9).",
+   "Judgement call: worked examples on figures b, c, e, f (C167, C166, C170, C169) are decision none + reuse_concept_image. The same-topic (T27) concept images C165.IMG1 (a, b, c) and C168.IMG1 (d, f) / C168.IMG2 (e) were opened and compared with the book figures: counts and positions match. Figures a and d are drawn for the T28 questions because their concept images are in another topic.",
+   "Concept images C165.IMG1, C168.IMG1 and C168.IMG2 carry a title banner and a SINGULARITY logo, and C168.IMG1/IMG2 a faint SINGULARITY watermark across the middle; if a clean figure per worked example is wanted instead, flip C166, C167, C169, C170 to required with the specs of figures b, c, e, f.",
+   "Solution sides of figures a and d are optional (grouping highlight / row totals), not added, per v2 Step D.",
+   "Only the 25/50 pattern of FiO7 is drawn (it is the one the LP solution works out); the book's 'Or' 5 x 5 grid of 10s is not in the LP.",
+   "Base figures P11-arrowboard-1 and P12-arrowboard-2 (3.8 Mental Math) and the 3.12 grid/Kaprekar/table figures are used by other units' items (chunks C and B), not by any unit of this chunk, and are not claimed here.",
+   "LP texts to check: the card and always/sometimes/never questions (units 70-79) lack the book's instructions 'Write an example ... whenever possible' and 'Always true, Only sometimes true or Never true'; units 85-86 question text describes figure a/d but does not say 'find the sum of the numbers'."
   ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P12-cards-1",
+   "source": "chapter p.12",
+   "description": "Ten peach cards in 2 rows x 5 (row 1: 5-digit + 5-digit more than 90,250; 5-digit + 3-digit 6-digit sum; 4-digit + 4-digit 6-digit sum; 5-digit + 5-digit 6-digit sum; 5-digit + 5-digit give 18,500; row 2 the matching subtractions, ending in 5-digit - 5-digit give 91,500). Each card is only its sentence in a box; the LP splits them into separate questions (my units use four of them plus the make-your-own question). Checked against page 12.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P13-pattern-a",
+   "source": "chapter p.13",
+   "description": "Figure a: 5 staggered rows of pale boxes, 4 x '40', 5 x '50', 4 x '40', 5 x '50', 4 x '40' (22 boxes, each 40 halfway between two 50s). Checked against the page picture.",
+   "mapped_to": "item:M3.S28.T28.C172 (question)"
+  },
+  {
+   "fig_id": "P13-pattern-b",
+   "source": "chapter p.13",
+   "description": "Figure b: 8 x 8 dice, twenty 5-pip faces in five 2 x 2 blocks (rows 2-3 and 6-7 in columns 2-3 and 6-7; rows 4-5 in columns 4-5) and forty-four 1-pip faces. Checked against the page picture and against the concept image.",
+   "mapped_to": "concept_image:M3.S27.T27.C165.IMG1"
+  },
+  {
+   "fig_id": "P14-pattern-c",
+   "source": "chapter p.14",
+   "description": "Figure c: arch of boxes, 8 columns x 8 rows: rows 1-4 all '32' (32 boxes); rows 5-8 '64' in columns 1-3 and column 8 (16 boxes), columns 4-7 empty. Checked against the page picture and against the concept image.",
+   "mapped_to": "concept_image:M3.S27.T27.C165.IMG1"
+  },
+  {
+   "fig_id": "P14-pattern-d",
+   "source": "chapter p.14",
+   "description": "Figure d: 7 rows x 5 columns of dice, outer ring one colour (20 tiles) and inner block another (15 tiles); rising 3-pip faces in columns 1 and 5 (rows 1-5 and 7), 4-pip faces in the middle columns of rows 1-5 and 7, falling 3-pip faces in all five tiles of row 6 (17 three-pip, 18 four-pip tiles). Checked against an enlarged page picture.",
+   "mapped_to": "item:M3.S28.T28.C174 (question)"
+  },
+  {
+   "fig_id": "P14-pattern-e",
+   "source": "chapter p.14",
+   "description": "Figure e: hexagon of seven hexagons and six corner pieces: top and bottom hexagons 35 x 6, upper-left and lower-right 25 x 6, upper-right and lower-left 15 x 6, centre 15 25 / 35 35 / 25 15; corner pieces 15, 25, 35, 15, 25, 35 x 4 each. Each of 15, 25, 35 appears 22 times (66 numbers). Checked region by region on an enlarged page picture and on the concept image.",
+   "mapped_to": "concept_image:M3.S27.T27.C168.IMG2"
+  },
+  {
+   "fig_id": "P14-pattern-f",
+   "source": "chapter p.14",
+   "description": "Figure f: disc with three zones: 1 coin '1000' in the centre, 4 coins '500', 8 coins '250', 18 coins '125' (31 coins; 7250 in all). Ring counts checked twice on an enlarged page picture and on the concept image.",
+   "mapped_to": "concept_image:M3.S27.T27.C168.IMG1"
+  },
+  {
+   "fig_id": "SOL310-Q-collatz",
+   "source": "solutions p.11",
+   "description": "Two plain number sequences in text lines: 28, 14, 7, 22, ... 4, 2, 1 (19 numbers) and 19, 58, 29, ... 4, 2, 1 (21 numbers); no arrows, boxes or colour. Checked against the page picture.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "SOL312-FiO7-pattern-rows",
+   "source": "solutions p.13",
+   "description": "Printed answer to FiO7 (Number Chosen 250): 25 25 / 50 50 50 / 25 25 in staggered rows, plain numbers, 25s halfway between the 50s. Checked against the page picture.",
+   "mapped_to": "item:M3.S29.T29.C177 (solution)"
+  },
+  {
+   "fig_id": "SOL312-FiO7-pattern-grid",
+   "source": "solutions p.13",
+   "description": "Second printed answer after 'Or': 5 x 5 grid of the number 10 (25 numbers, sum 250). The LP solution gives only the 25/50 pattern, so this alternative is not drawn. Checked against the page picture.",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "SOL312-FiO9-collatz100",
+   "source": "solutions p.13",
+   "description": "Plain text sequence 100, 50, 25, 76, ... 5, 16, 8, 4, 2, 1 (26 numbers, wraps after '4,'); no arrows, boxes or colour. Checked against the page picture.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 11,
+  "mapped_to_items": 3,
+  "mapped_to_concept_images": 4,
+  "mapped_none": 4,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M3.S28.T28.C172.IMG1",
+   "M3.S28.T28.C174.IMG1",
+   "M3.S29.T29.C177.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M3.S26.T26.C143",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "3.8.FiO1_cards, 3.8.FiO1_reason",
+   "question_text": "4-digit + 4-digit giving a 6-digit sum.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The card is one sentence and that sentence is already the question text; the boxed card in the book (P12-cards-1) is only a frame round words, so no figure is needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C144",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "3.8.FiO1_cards, 3.8.FiO1_reason",
+   "question_text": "4-digit + 4-digit giving a 6-digit sum.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Printed answer (book solutions p.9) is a text line: not possible, because even 9999 + 9999 = 19,998 has 5 digits. Nothing is drawn; the two LaTeX steps are complete. Same decision as the other card answers (siblings Q2 to Q5).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C145",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "3.8.FiO1_cards",
+   "question_text": "5-digit + 5-digit giving a 6-digit sum.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The card is one sentence and that sentence is already the question text; the boxed card in the book (P12-cards-1) is only a frame round words, so no figure is needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C146",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "3.8.FiO1_cards",
+   "question_text": "5-digit + 5-digit giving a 6-digit sum.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Printed answer is the text line 60,000 + 40,000 = 1,00,000; no picture, so one LaTeX step is enough.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C147",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "3.8.FiO1_cards, 3.8.FiO1_reason",
+   "question_text": "5-digit + 5-digit giving 18,500.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The card is one sentence and that sentence is already the question text; the boxed card in the book (P12-cards-1) is only a frame round words, so no figure is needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C148",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "3.8.FiO1_cards, 3.8.FiO1_reason",
+   "question_text": "5-digit + 5-digit giving 18,500.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Printed answer is text (smallest sum 10,000 + 10,000 = 20,000 is more than 18,500). A number line of where sums can land exists only as concept image M3.S24.T24.C133.IMG1 in another topic, so it cannot be reused, and the text already settles it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C149",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "3.8.FiO1_cards, 3.8.FiO1_reason",
+   "question_text": "5-digit - 5-digit giving 91,500.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The card is one sentence and that sentence is already the question text; the boxed card in the book (P12-cards-1) is only a frame round words, so no figure is needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C150",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "3.8.FiO1_cards, 3.8.FiO1_reason",
+   "question_text": "5-digit - 5-digit giving 91,500.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Printed answer is text (largest difference 99,999 - 10,000 = 89,999 is less than 91,500); two LaTeX steps are complete, no picture in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C151",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "3.8.FiO1_make_own",
+   "question_text": "Make your own card. What is its answer, and why?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "Make-your-own question: the student invents the card, so nothing is given as a figure and nothing can be drawn for the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C152",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "3.8.FiO1_make_own",
+   "question_text": "Make your own card. What is its answer, and why?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The LP answer is one worded sample card (3-digit + 3-digit giving a sum more than 1900) with the check 999 + 999 = 1998. The book's printed answer is two text lines of other card ideas, no picture, so text and LaTeX are enough.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C153",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q6",
+   "ncert_ref": "3.8.FiO2a",
+   "question_text": "a. 5-digit + 5-digit gives a 5-digit number.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "One statement in words (page 67 of the book prints the five statements as plain text); the student needs no figure to judge it. Same decision for all five (a to e).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C154",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q6",
+   "ncert_ref": "3.8.FiO2a",
+   "question_text": "a. 5-digit + 5-digit gives a 5-digit number.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Printed answer is text: only sometimes true, with 20,000 + 80,000 = 1,00,000. The LP gives the 5-digit case (12,350 + 24,545 = 36,895) and the 6-digit case in two LaTeX steps; no picture in the book. Sibling of Q7 to Q10 (all text).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C155",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q7",
+   "ncert_ref": "3.8.FiO2b",
+   "question_text": "b. 4-digit + 2-digit gives a 4-digit number.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "One statement in words (page 67 of the book prints the five statements as plain text); the student needs no figure to judge it. Same decision for all five (a to e).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C156",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q7",
+   "ncert_ref": "3.8.FiO2b",
+   "question_text": "b. 4-digit + 2-digit gives a 4-digit number.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Printed answer is text: only sometimes true, 9,999 + 99 = 10,098. Both cases (1000 + 10 = 1010 and 9999 + 99 = 10,098) are two LaTeX steps. The digit-zone strip (concept image M3.S24.T24.C139.IMG1) is in another topic, so it is not pointed at and not needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C157",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q8",
+   "ncert_ref": "3.8.FiO2c",
+   "question_text": "c. 4-digit + 2-digit gives a 6-digit number.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "One statement in words (page 67 of the book prints the five statements as plain text); the student needs no figure to judge it. Same decision for all five (a to e).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C158",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q8",
+   "ncert_ref": "3.8.FiO2c",
+   "question_text": "c. 4-digit + 2-digit gives a 6-digit number.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Printed answer is text: never true, because the largest sum 9999 + 99 = 10,098 has only 5 digits. Two LaTeX steps are complete; no picture in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C159",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q9",
+   "ncert_ref": "3.8.FiO2d",
+   "question_text": "d. 5-digit - 5-digit gives a 5-digit number.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "One statement in words (page 67 of the book prints the five statements as plain text); the student needs no figure to judge it. Same decision for all five (a to e).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C160",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q9",
+   "ncert_ref": "3.8.FiO2d",
+   "question_text": "d. 5-digit - 5-digit gives a 5-digit number.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Printed answer is text: only sometimes true, with 12,000 - 10,000 = 2,000. Two LaTeX steps (48,952 - 24,547 = 24,405 and 12,000 - 10,000 = 2000) are complete; no picture in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C161",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q10",
+   "ncert_ref": "3.8.FiO2e",
+   "question_text": "e. 5-digit - 2-digit gives a 3-digit number.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "One statement in words (page 67 of the book prints the five statements as plain text); the student needs no figure to judge it. Same decision for all five (a to e).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C162",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q10",
+   "ncert_ref": "3.8.FiO2e",
+   "question_text": "e. 5-digit - 2-digit gives a 3-digit number.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Printed answer is text: never true, because the smallest difference 10,000 - 99 = 9901 already has 4 digits. Two LaTeX steps are complete; no picture in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C163",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q11",
+   "ncert_ref": "end.FiO6",
+   "question_text": "Write one 5-digit number and two 3-digit numbers whose sum is 18,670.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A plain worded task (one 5-digit and two 3-digit numbers with sum 18,670); the book draws nothing for it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C164",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q11",
+   "ncert_ref": "end.FiO6",
+   "question_text": "Write one 5-digit number and two 3-digit numbers whose sum is 18,670.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "OPEN_ENDED"
+   ],
+   "reason": "One of many answers; the book prints it as one text line (18000 + 300 + 370 = 18670). Three LaTeX steps with the check are complete.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S27.T27.C166",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "3.9.fig_c",
+   "question_text": "Figure c: 4 rows of eight 32s above 4 rows of four 64s.",
+   "decision": "none",
+   "reason_codes": [
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "Figure c (arch: four rows of eight 32s above four rows of 64s, three at the left and one at the right) is panel c of concept image M3.S27.T27.C165.IMG1 in the same topic. Checked against the book page and the image: 32 cells of 32 and 16 cells of 64, same arch. Lettered figures b, c, e and f are not skipped: each is shown by its same-topic concept image (v2 Step F reuse); figures a and d, whose items sit in another topic, are drawn.",
+   "lp_placeholder_action": "reuse_concept_image",
+   "media_id": null,
+   "reuse_media_id": "M3.S27.T27.C165.IMG1"
+  },
+  {
+   "lp_concept_id": "M3.S27.T27.C167",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "3.9.fig_b",
+   "question_text": "Figure b: an 8 by 8 grid of dice showing 1 or 5.",
+   "decision": "none",
+   "reason_codes": [
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "Figure b (8 by 8 dice, twenty 5-pip faces in five 2 by 2 blocks, forty-four 1-pip faces) is panel b of concept image M3.S27.T27.C165.IMG1 in the same topic. Checked cell by cell against the book picture: blocks at rows 2-3 and 6-7 in columns 2-3 and 6-7, and rows 4-5 in columns 4-5.",
+   "lp_placeholder_action": "reuse_concept_image",
+   "media_id": null,
+   "reuse_media_id": "M3.S27.T27.C165.IMG1"
+  },
+  {
+   "lp_concept_id": "M3.S27.T27.C169",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "3.9.fig_f",
+   "question_text": "Figure f: circles with 1000 in the centre and rings of 500s, 250s and 125s.",
+   "decision": "none",
+   "reason_codes": [
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "Figure f (disc with 1000 in the centre, 4 coins of 500, 8 of 250, 18 of 125) is panel f of concept image M3.S27.T27.C168.IMG1 in the same topic. Coin counts per ring (1, 4, 8, 18) checked in both the book picture and the concept image.",
+   "lp_placeholder_action": "reuse_concept_image",
+   "media_id": null,
+   "reuse_media_id": "M3.S27.T27.C168.IMG1"
+  },
+  {
+   "lp_concept_id": "M3.S27.T27.C170",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "3.9.fig_e",
+   "question_text": "Figure e: a hexagon made of pieces showing 15, 25 and 35.",
+   "decision": "none",
+   "reason_codes": [
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "Figure e (hexagon of seven yellow hexagons and six blue corner pieces) is concept image M3.S27.T27.C168.IMG2 in the same topic. Checked region by region against the book: 15, 25 and 35 each appear 22 times, as the LP steps say.",
+   "lp_placeholder_action": "reuse_concept_image",
+   "media_id": null,
+   "reuse_media_id": "M3.S27.T27.C168.IMG2"
+  },
+  {
+   "lp_concept_id": "M3.S28.T28.C172",
+   "role": "question",
+   "lp_book_number": "Number Patterns: figure a, rows of 40s and 50s",
+   "ncert_ref": "3.9.fig_a",
+   "question_text": "Figure a: rows of 40, 40, 40, 40 / 50 × 5 / 40 × 4 / 50 × 5 / 40 × 4.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "Lettered figure (a) is the whole problem: the LP text only describes the rows, and the student must see the boxes to count and add them. Duplicates concept image M3.S27.T27.C165.IMG1 (panel a), which sits in another topic (T27), so this question needs its own diagram (v2 B2). Sibling of figure d.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S28.T28.C172.IMG1",
+   "manim_scene": "c3_9_fig_a_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S28.T28.C172.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_pattern",
+    "aspect_ratio": "5:4",
+    "derived_from": null,
+    "content": {
+     "type": "number_pattern",
+     "layout": "staggered_rows",
+     "box": {
+      "width": 0.7,
+      "height": 0.6,
+      "fill": "CELL_FILL",
+      "outline": "INK",
+      "text_colour": "INK"
+     },
+     "horizontal_pitch": 1.0,
+     "row_pitch": 0.85,
+     "rows_top_to_bottom": [
+      {
+       "row": 1,
+       "value": 40,
+       "x_centres": [
+        0.5,
+        1.5,
+        2.5,
+        3.5
+       ]
+      },
+      {
+       "row": 2,
+       "value": 50,
+       "x_centres": [
+        0,
+        1,
+        2,
+        3,
+        4
+       ]
+      },
+      {
+       "row": 3,
+       "value": 40,
+       "x_centres": [
+        0.5,
+        1.5,
+        2.5,
+        3.5
+       ]
+      },
+      {
+       "row": 4,
+       "value": 50,
+       "x_centres": [
+        0,
+        1,
+        2,
+        3,
+        4
+       ]
+      },
+      {
+       "row": 5,
+       "value": 40,
+       "x_centres": [
+        0.5,
+        1.5,
+        2.5,
+        3.5
+       ]
+      }
+     ]
+    },
+    "manim_description": "On a plain white BG canvas draw 22 small boxes in 5 staggered rows. Every box is 0.70 unit wide and 0.60 unit tall, filled CELL_FILL with a 2 px INK outline, and holds its number in INK. Box centres in one row are 1.00 unit apart; the row centres are 0.85 unit apart; row 1 is at the top. Row 1: four boxes holding 40, centres at x = 0.5, 1.5, 2.5, 3.5. Row 2: five boxes holding 50, centres at x = 0, 1, 2, 3, 4. Row 3: four boxes holding 40, centres at x = 0.5, 1.5, 2.5, 3.5. Row 4: five boxes holding 50, centres at x = 0, 1, 2, 3, 4. Row 5: four boxes holding 40, centres at x = 0.5, 1.5, 2.5, 3.5. Each 40 sits exactly halfway between the two 50s that neighbour it in the next row. Crop tightly with a small even margin. Draw no letter, total, bracket or outline round a group.",
+    "visible_text": [
+     "40",
+     "50"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the figure letter a",
+     "row totals, 12 x 40, 10 x 50 or 980",
+     "outlines or colours that group the 40s or the 50s"
+    ],
+    "accuracy_checks": [
+     "5 rows with 4, 5, 4, 5, 4 boxes (22 boxes in all)",
+     "rows 1, 3 and 5 hold 40 (12 boxes) and rows 2 and 4 hold 50 (10 boxes)",
+     "every 40 centre is exactly halfway between two 50 centres of the neighbouring row",
+     "check value, not drawn: 12 x 40 + 10 x 50 = 480 + 500 = 980"
+    ],
+    "alt_text": "Five staggered rows of boxes: four 40s, five 50s, four 40s, five 50s and four 40s."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S28.T28.C173",
+   "role": "solution",
+   "lp_book_number": "Number Patterns: figure a, rows of 40s and 50s",
+   "ncert_ref": "3.9.fig_a",
+   "question_text": "Figure a: rows of 40, 40, 40, 40 / 50 × 5 / 40 × 4 / 50 × 5 / 40 × 4.",
+   "decision": "optional",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The LP solution is complete in text (12 forties: 12 x 40 = 480; 10 fifties: 10 x 50 = 500; 480 + 500 = 980) and the question figure is already on screen; the book prints no answer picture for 3.9. A figure that would help: the same figure with rows 1, 3, 5 outlined as the twelve 40s and rows 2, 4 as the ten 50s. Not needed, so not added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S28.T28.C174",
+   "role": "question",
+   "lp_book_number": "Number Patterns: figure d, a 7 by 5 grid of dice",
+   "ncert_ref": "3.9.fig_d",
+   "question_text": "Figure d: a 7 by 5 grid of dice.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "Lettered figure (d): the dots on every die exist only in the picture (the LP text says just 'a 7 by 5 grid of dice'), so the student cannot attempt it without the figure. Duplicates concept image M3.S27.T27.C168.IMG1 (panel d), which sits in another topic (T27), so it needs its own diagram (v2 B2). Sibling of figure a.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S28.T28.C174.IMG1",
+   "manim_scene": "c3_9_fig_d_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S28.T28.C174.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "dice_grid",
+    "aspect_ratio": "3:4",
+    "derived_from": null,
+    "content": {
+     "type": "dice_grid",
+     "rows": 7,
+     "cols": 5,
+     "tile_side": 1.0,
+     "tile_gap": 0.06,
+     "tile_fill_outer_ring": "SET_A",
+     "tile_fill_inner_block": "SET_B",
+     "pip_colour": "BG",
+     "pip_radius": 0.08,
+     "pip_layouts_from_tile_bottom_left": {
+      "FOUR": [
+       [
+        0.3,
+        0.3
+       ],
+       [
+        0.7,
+        0.3
+       ],
+       [
+        0.3,
+        0.7
+       ],
+       [
+        0.7,
+        0.7
+       ]
+      ],
+      "RISING_THREE": [
+       [
+        0.25,
+        0.25
+       ],
+       [
+        0.5,
+        0.5
+       ],
+       [
+        0.75,
+        0.75
+       ]
+      ],
+      "FALLING_THREE": [
+       [
+        0.25,
+        0.75
+       ],
+       [
+        0.5,
+        0.5
+       ],
+       [
+        0.75,
+        0.25
+       ]
+      ]
+     },
+     "tiles_row_by_row_top_to_bottom": [
+      [
+       {
+        "row": 1,
+        "col": 1,
+        "face": "RISING_THREE",
+        "pips": 3,
+        "group": "outer_ring"
+       },
+       {
+        "row": 1,
+        "col": 2,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "outer_ring"
+       },
+       {
+        "row": 1,
+        "col": 3,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "outer_ring"
+       },
+       {
+        "row": 1,
+        "col": 4,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "outer_ring"
+       },
+       {
+        "row": 1,
+        "col": 5,
+        "face": "RISING_THREE",
+        "pips": 3,
+        "group": "outer_ring"
+       }
+      ],
+      [
+       {
+        "row": 2,
+        "col": 1,
+        "face": "RISING_THREE",
+        "pips": 3,
+        "group": "outer_ring"
+       },
+       {
+        "row": 2,
+        "col": 2,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "inner_block"
+       },
+       {
+        "row": 2,
+        "col": 3,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "inner_block"
+       },
+       {
+        "row": 2,
+        "col": 4,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "inner_block"
+       },
+       {
+        "row": 2,
+        "col": 5,
+        "face": "RISING_THREE",
+        "pips": 3,
+        "group": "outer_ring"
+       }
+      ],
+      [
+       {
+        "row": 3,
+        "col": 1,
+        "face": "RISING_THREE",
+        "pips": 3,
+        "group": "outer_ring"
+       },
+       {
+        "row": 3,
+        "col": 2,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "inner_block"
+       },
+       {
+        "row": 3,
+        "col": 3,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "inner_block"
+       },
+       {
+        "row": 3,
+        "col": 4,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "inner_block"
+       },
+       {
+        "row": 3,
+        "col": 5,
+        "face": "RISING_THREE",
+        "pips": 3,
+        "group": "outer_ring"
+       }
+      ],
+      [
+       {
+        "row": 4,
+        "col": 1,
+        "face": "RISING_THREE",
+        "pips": 3,
+        "group": "outer_ring"
+       },
+       {
+        "row": 4,
+        "col": 2,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "inner_block"
+       },
+       {
+        "row": 4,
+        "col": 3,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "inner_block"
+       },
+       {
+        "row": 4,
+        "col": 4,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "inner_block"
+       },
+       {
+        "row": 4,
+        "col": 5,
+        "face": "RISING_THREE",
+        "pips": 3,
+        "group": "outer_ring"
+       }
+      ],
+      [
+       {
+        "row": 5,
+        "col": 1,
+        "face": "RISING_THREE",
+        "pips": 3,
+        "group": "outer_ring"
+       },
+       {
+        "row": 5,
+        "col": 2,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "inner_block"
+       },
+       {
+        "row": 5,
+        "col": 3,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "inner_block"
+       },
+       {
+        "row": 5,
+        "col": 4,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "inner_block"
+       },
+       {
+        "row": 5,
+        "col": 5,
+        "face": "RISING_THREE",
+        "pips": 3,
+        "group": "outer_ring"
+       }
+      ],
+      [
+       {
+        "row": 6,
+        "col": 1,
+        "face": "FALLING_THREE",
+        "pips": 3,
+        "group": "outer_ring"
+       },
+       {
+        "row": 6,
+        "col": 2,
+        "face": "FALLING_THREE",
+        "pips": 3,
+        "group": "inner_block"
+       },
+       {
+        "row": 6,
+        "col": 3,
+        "face": "FALLING_THREE",
+        "pips": 3,
+        "group": "inner_block"
+       },
+       {
+        "row": 6,
+        "col": 4,
+        "face": "FALLING_THREE",
+        "pips": 3,
+        "group": "inner_block"
+       },
+       {
+        "row": 6,
+        "col": 5,
+        "face": "FALLING_THREE",
+        "pips": 3,
+        "group": "outer_ring"
+       }
+      ],
+      [
+       {
+        "row": 7,
+        "col": 1,
+        "face": "RISING_THREE",
+        "pips": 3,
+        "group": "outer_ring"
+       },
+       {
+        "row": 7,
+        "col": 2,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "outer_ring"
+       },
+       {
+        "row": 7,
+        "col": 3,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "outer_ring"
+       },
+       {
+        "row": 7,
+        "col": 4,
+        "face": "FOUR",
+        "pips": 4,
+        "group": "outer_ring"
+       },
+       {
+        "row": 7,
+        "col": 5,
+        "face": "RISING_THREE",
+        "pips": 3,
+        "group": "outer_ring"
+       }
+      ]
+     ]
+    },
+    "manim_description": "On a plain white BG canvas draw a grid of 7 rows by 5 columns of equal square dice tiles: tile side 1.00 unit, 0.06 unit of BG gap between tiles, row 1 at the top and column 1 at the left. The 20 tiles of the outer ring (all of column 1, all of column 5, all of row 1 and all of row 7) are filled SET_A. The 15 tiles of the inner block (rows 2 to 6, columns 2 to 4) are filled SET_B. Pips are filled BG circles of radius 0.08 unit, positions measured from the tile's bottom-left corner. A FOUR tile has pips at (0.30, 0.30), (0.70, 0.30), (0.30, 0.70), (0.70, 0.70). A RISING_THREE tile has pips at (0.25, 0.25), (0.50, 0.50), (0.75, 0.75). A FALLING_THREE tile has pips at (0.25, 0.75), (0.50, 0.50), (0.75, 0.25). Row 1: RISING_THREE, FOUR, FOUR, FOUR, RISING_THREE. Rows 2, 3, 4 and 5: RISING_THREE, FOUR, FOUR, FOUR, RISING_THREE. Row 6: FALLING_THREE in all five columns. Row 7: RISING_THREE, FOUR, FOUR, FOUR, RISING_THREE. Crop tightly with a small even margin. Write no numeral, letter or total anywhere.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the figure letter d",
+     "row totals such as 18 or 15",
+     "any numeral at all (the dice carry dots only)"
+    ],
+    "accuracy_checks": [
+     "7 rows x 5 columns = 35 tiles",
+     "17 three-pip tiles (columns 1 and 5 in rows 1 to 5 and 7 = 12, plus all 5 tiles of row 6) and 18 four-pip tiles",
+     "only row 6 uses the falling three; every other three-pip tile is rising",
+     "check value, not drawn: 17 x 3 + 18 x 4 = 51 + 72 = 123"
+    ],
+    "alt_text": "A grid of dice, 7 rows by 5 columns: the first and last columns and the sixth row show three dots, every other die shows four dots.",
+    "render_note": "Tile colours follow the book (outer ring one colour, inner block another); they carry no value."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S28.T28.C175",
+   "role": "solution",
+   "lp_book_number": "Number Patterns: figure d, a 7 by 5 grid of dice",
+   "ncert_ref": "3.9.fig_d",
+   "question_text": "Figure d: a 7 by 5 grid of dice.",
+   "decision": "optional",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The LP solution is complete in text (rows 3,4,4,4,3 = 18; four middle rows 4 x 18 = 72; row of threes 5 x 3 = 15; 18 + 18 + 72 + 15 = 123) and the question figure is already on screen; the book prints no answer picture for 3.9. A figure that would help: the same grid with each row total (18, 18, 18, 18, 18, 15, 18) written beside it in ANSWER green. Not needed, so not added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S29.T29.C176",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.FiO7",
+   "question_text": "Choose a number between 210 and 390 and make a pattern that sums to it.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "Open task: the student invents a pattern and the question gives no figure, so there is no question diagram (a solution-only figure never gets a blank question figure).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S29.T29.C177",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.FiO7",
+   "question_text": "Choose a number between 210 and 390 and make a pattern that sums to it.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The book's printed answer (solutions p.13, number chosen 250) is a picture: 25 25 / 50 50 50 / 25 25 in staggered rows, and the question asks the student to make a pattern. The LP steps only describe it in words (v2 B2: an arrangement is a figure even when the steps describe it). Only the 250 pattern is drawn because it is the one the LP solution works out; the book's second answer after 'Or' (5 x 5 grid of 10s) is not in the LP solution.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S29.T29.C177.IMG1",
+   "manim_scene": "c3_12_FiO7_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S29.T29.C177.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "after_step_3"
+   },
+   "diagram": {
+    "diagram_type": "number_pattern",
+    "aspect_ratio": "5:4",
+    "derived_from": null,
+    "content": {
+     "type": "number_pattern",
+     "layout": "staggered_rows",
+     "box": {
+      "width": 0.7,
+      "height": 0.6,
+      "fill": "CELL_FILL",
+      "outline": "ANSWER",
+      "text_colour": "ANSWER"
+     },
+     "horizontal_pitch": 1.0,
+     "row_pitch": 0.85,
+     "rows_top_to_bottom": [
+      {
+       "row": 1,
+       "value": 25,
+       "x_centres": [
+        0.5,
+        1.5
+       ]
+      },
+      {
+       "row": 2,
+       "value": 50,
+       "x_centres": [
+        0,
+        1,
+        2
+       ]
+      },
+      {
+       "row": 3,
+       "value": 25,
+       "x_centres": [
+        0.5,
+        1.5
+       ]
+      }
+     ]
+    },
+    "manim_description": "On a plain white BG canvas draw 7 boxes in 3 staggered rows. Every box is 0.70 unit wide and 0.60 unit tall, filled CELL_FILL with a 3 px ANSWER outline, and holds its number in bold ANSWER. Box centres in one row are 1.00 unit apart; the row centres are 0.85 unit apart; row 1 is at the top. Row 1: two boxes holding 25, centres at x = 0.5 and 1.5. Row 2: three boxes holding 50, centres at x = 0, 1 and 2. Row 3: two boxes holding 25, centres at x = 0.5 and 1.5. Each 25 sits exactly halfway between two neighbouring 50s. Crop tightly with a small even margin. Draw no sum, label or outline round a group.",
+    "visible_text": [
+     "25",
+     "50"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the number chosen (250) or any sum",
+     "the book's second answer, the 5 x 5 grid of 10s"
+    ],
+    "accuracy_checks": [
+     "3 rows with 2, 3, 2 boxes (7 boxes in all)",
+     "three 50s and four 25s: 3 x 50 + 4 x 25 = 150 + 100 = 250, the number chosen in the LP solution (210 to 390)",
+     "each 25 is exactly halfway between two neighbouring 50s, as in the book's printed answer"
+    ],
+    "alt_text": "Three staggered rows of boxes: 25 and 25 on top, 50, 50 and 50 in the middle, 25 and 25 below."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S30.T30.C178",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "3.10.sequences, 3.10.rule, 3.10.make_own",
+   "question_text": "Check the rule on sequence a.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The book prints the four Collatz sequences as plain text lines (p.68) and the rule in words, with no figure; the chain 12, 6, 3, 10, 5, 16, 8, 4, 2, 1 and its six steps are a number chain for LaTeX. An arrow chain labelled halve / multiply by 3 and add 1 would be nice but is not needed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX line: 12, 6, 3, 10, 5, 16, 8, 4, 2, 1"
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C181",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.FiO8",
+   "question_text": "1, 2, 4, 8, 16, 32, 64, ... Why does the rule take every one of them to 1?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question lists the powers of 2 in words and asks why; the book draws nothing for it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C182",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.FiO8",
+   "question_text": "1, 2, 4, 8, 16, 32, 64, ... Why does the rule take every one of them to 1?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's printed answer is a short text paragraph (2^8 halves down to 2^7 and so on), no picture. The chain 64, 32, 16, 8, 4, 2, 1 is a number chain for LaTeX. The picture 'Powers of 2 halve straight down to 1' exists only as concept image M3.S30.T30.C179.IMG1 in another topic (T30), so it cannot be pointed at, and the text is complete.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C183",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "end.FiO9",
+   "question_text": "Does the conjecture hold for the starting number 100?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A plain question (start from 100); the book draws nothing for it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C184",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "end.FiO9",
+   "question_text": "Does the conjecture hold for the starting number 100?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The book's printed answer (solutions p.13, Q9) is one plain text line of 26 numbers from 100 to 1, with no arrows, boxes or colour, and the LP already cuts it into 8 LaTeX lines. Same decision as the Collatz sequences printed in the 3.10 answer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
 }
