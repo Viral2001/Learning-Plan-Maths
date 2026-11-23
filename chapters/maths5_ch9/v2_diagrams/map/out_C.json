@@ -1,0 +1,569 @@
+{
+ "meta": {
+  "chapter": "Coconut Farm",
+  "class": 5,
+  "textbook": "Maths Mela, Grade 5 (NCERT), Chapter 9",
+  "lp_plan_id": "cbse_eng_maths5_ch9_v4",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "none": 13
+   },
+   "solution": {
+    "none": 13
+   },
+   "worked_example": {
+    "none": 2,
+    "optional": 2
+   }
+  },
+  "notes": [
+   "Chunk C (T16 to T22) has no required diagram: every printed picture in it is a long-division or column-multiplication layout, which Step C puts under LATEX_ARITHMETIC (same call as Class 5 Ch4 and Class 7 Ch12), and no question gives a figure the text does not carry.",
+   "Borderline calls (see notes_C.md): printed solution layouts C66, C70, C84, C86; partly blank frames C71, C73, C89 and the blank multiplication frame C87; base-ten-blocks figures for the worked examples C93 and C94 (optional, the same figures already exist as kept teaching images of those concepts, which was NOT the reason).",
+   "Figures P10-*, P11-*, P12-*, P13-* (pages 10 to 13) are drawn for the book examples and Let Us Divide frames of topics T23 to T25 (chunk D); the T22 worked examples here use practice values and use none of them, so they are not claimed in this chunk.",
+   "Old solution cards are dropped (action drop_image); the [Image: ...] markers inside the text of C66, C70, C84, C86 and C90 must be removed by the builder."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P06-long_division-1",
+   "source": "chapter p.06",
+   "description": "Long-division layout in bold black sans-serif text. Top line: '6) 582 (20+20+20+20+10+7' (divisor 6, closing bracket, dividend 582, opening bracket, quotient parts joined by '+': 20, 20, 20, 20, 10, 7 = 97). Below, a stacked column of six subtractions, each with a short dashed rule under it and the result under the rule: '–120' / '462'; '–120' / '342'; '–120' / '222'; '–120' / '102'; '–60' / '42'; '–42' / '00'. (Counted: four 120s, one 60, one 42.) Each new line is indented slightly to the right (numbers are right-aligned). A red italic label 'Susie's solution' with a thin red curved arrow pointing up at the quotient line, to the right of the column. At the right of the page, above Sunitha's layout, a red italic note: 'Estimate the answer first. Do you realise that each customer will likely get less than 100 coconuts?'",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P06-long_division-2",
+   "source": "chapter p.06",
+   "description": "Long-division layout in bold black sans-serif text. Top line: '6) 582 (90 + 7'. Above the '90 + 7' two small adjacent squares: a light-blue square holding '9' and a pink square holding '7' (serif digits); a thin black bracket (horizontal line with short downward ends) under the two squares spans them and ties them to '90 + 7'. Below, two subtraction steps with dashed rules: '–540' / '42'; '–42' / '00'. A red italic note 'Sunitha says she has a better way to do this' with a thin red arrow pointing left at the quotient '(90 + 7'. Under the layout the plain sentence 'Each customer gets 97 coconuts.' (text).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P07-long_division-1",
+   "source": "chapter p.07",
+   "description": "Long-division layout in bold black text. Top line: '25) 535 (20 + 1'. Above the '20 + 1', two small adjacent squares: light-blue with '2' and pink with '1', tied to the quotient by a thin black bracket (horizontal line with short downward ends) beneath them. Steps with dashed rules: '–500' / '35'; '–25' / '10'. Red italic notes: at the left of the top, 'Guess the number of bags needed. Use the strategies learnt.'; at the right, 'Let us take away maximum groups of 25 in multiples of tens. Can we write 30 here?' with a red curved arrow pointing at the '20' of the quotient line; at the lower left 'Remainder (R)' with a red arrow pointing right at the final '10'.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P07-long_division-2",
+   "source": "chapter p.07",
+   "description": "Label '726 ÷ 4' in plain serif text, below it the layout in bold black text: top line '4) 726 (100 + _____ + _____' (the two blanks are red underlines); then a bare '–' with a dashed rule under it (the subtrahend is missing) and under the rule '326'; then '–320' with a rule and '6'; then another bare '–' with a rule (subtrahend missing) and under it '2'. So the steps are: 726 – (blank) = 326; 326 – 320 = 6; 6 – (blank) = 2. Red italic note 'Could we have written 200 here?' with a red curved arrow pointing at the '100' of the quotient line.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P07-long_division-3",
+   "source": "chapter p.07",
+   "description": "Label '902 ÷ 16' in plain serif text, below it the layout in bold black text: top line '16) 902 (_____ + 6' (one red blank before '+ 6'); first step '–800' with a dashed rule beneath it and then NO number under the rule (an empty gap for the remainder); then '– 96' with a dashed rule and '6' under it. Red italic note at the right: 'What should we write here so that we get a number close to 902 but less than it? Could we have multiplied 16 by a larger tens?' with a red arrow pointing at the blank in the quotient line.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "NEW-P07-formula_box-1",
+   "source": "chapter p.7",
+   "description": "Pink rounded box with the bold text 'N = D × Q + R' printed under 'Is 726 = 4 × 181? Yes/No' and 'Is 902 = 16 × 56? Yes/No' (Let Us Learn to Divide). A formula in a box, no numbers, no drawing.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P08-long_division-1",
+   "source": "chapter p.08",
+   "description": "Long-division layout in bold black sans-serif text. Top line: '8) 4376 (200+200+100+40+7' (200+200+100+40+7 = 547). Below, five subtractions each with a dashed rule and the result: '–1600' / '2776'; '–1600' / '1176'; '– 800' / '376'; '–320' / '56'; '–56' / '00'. Numbers are right-aligned. A red italic label 'Susie's solution' with a thin red curved arrow pointing up at the quotient line, placed to the right of the column.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P08-long_division-2",
+   "source": "chapter p.08",
+   "description": "Long-division layout in bold black text. Top line: '8) 4376 (500 + 40 + 7'. Above the quotient three small adjacent squares: salmon/orange with '5', light-blue with '4', pink with '7' (serif digits); a thin black bracket (horizontal line with short downward ends) under the three squares spans them and ties them to '500 + 40 + 7'. Steps with dashed rules: '–4000' / '376'; '–320' / '56'; '–56' / '00'. A red italic note 'Sunitha shows her solution again' with a red curved arrow pointing at the quotient line. Under the layout the sentence 'They extracted 547 l of oil in the year.' (text).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P09-column_multiplication-1",
+   "source": "chapter p.09",
+   "description": "Column multiplication frame, no working filled in. Column headings in bold serif 'H', 'T', 'O' (three columns). Row 1 digits under them: '5', '4', '7'. Row 2: bold '×' at the far left, then '1', '7', '5' under H, T, O. A horizontal black line under row 2, then an empty band (one blank line of space), then a second horizontal black line below it. Nothing is written between or under the lines. To the right, a pink rounded speech box with the text 'How much will they earn if they sell the oil at ₹175 for 1 l? They will earn ₹ 547 × 175. Find out.' and a thinking-girl mascot (text and mascot are not part of the figure).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P09-long_division-1",
+   "source": "chapter p.09",
+   "description": "Long-division layout in bold black text. Top line: '23) 9913 (400 + 30 + 1'. Above it three small adjacent squares: salmon/orange with '4', light-blue with '3', pink with '1' (serif digits), tied to '400 + 30 + 1' by a thin black bracket (horizontal line, short downward ends) beneath them. Steps with dashed rules: '–9200' / '713'; '–690' / '23'; '–23' / '00'. Red italic notes: 'Make a guess first.' at the top left; 'What would happen if 23 is multiplied by 300 or 500?' at the right; 'Let us take away maximum groups of 23 in multiples of hundreds and tens.' lower right with a red curved arrow pointing up-left at the top of the quotient line. Under the layout the sentence 'Susie and Sunitha's farm sold 431 kg of coconut husk in May.' (text).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P09-long_division-2",
+   "source": "chapter p.09",
+   "description": "Long-division layout in bold black text with blanks. Above the quotient three small adjacent squares: salmon/orange EMPTY, light-blue holding '5', pink EMPTY; a thin black bracket (horizontal line, short downward ends) under them spans all three. Top line: '35) 8890 (_____ + 50 + _____' (two red blanks around '+ 50 +'). Steps: '–7000' with dashed rule and '1890'; then a bare '–' followed by a red blank line with a dashed rule and '140' under it; then a bare '–' followed by a red blank line with a dashed rule and '00' under it. To the right the plain sentence 'Ibrahim sold ______ tender coconuts.' (text).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 11,
+  "mapped_to_items": 0,
+  "mapped_to_concept_images": 0,
+  "mapped_none": 11,
+  "unmapped": 0,
+  "new_media_ids_created": [],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M2.S16.T16.C65",
+   "role": "question",
+   "lp_book_number": "Example 5: 582 coconuts to 6 customers",
+   "ncert_ref": "Questions: Example, book p.6 (sf.q1)",
+   "question_text": "Susie and Sunitha have a large coconut farm and they have harvested 1,117 coconuts in April. They sold 582 coconuts equally to 6 regular customers. How many coconuts did each customer get? They sold 582 ÷ 6 coconuts to each customer.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem: 1,117 harvested, 582 sold equally to 6 customers; every number is in the text and the book gives no figure with the question (the layouts printed under it are its solution).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C66",
+   "role": "solution",
+   "lp_book_number": "Example 5: 582 coconuts to 6 customers",
+   "ncert_ref": "Questions: Example, book p.6 (sf.q1)",
+   "question_text": "Susie and Sunitha have a large coconut farm and they have harvested 1,117 coconuts in April. They sold 582 coconuts equally to 6 regular customers. How many coconuts did each customer get? They sold 582 ÷ 6 coconuts to each customer.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The book's printed answer is two long-division layouts (Susie's six take-aways, Sunitha's two: P06-long_division-1 and -2); long division is LaTeX arithmetic (Step C) and the 14 LP steps already give every subtraction line by line. Borderline: the coloured 9 and 7 cells above Sunitha's quotient carry nothing beyond the digits 9 and 7.",
+   "text_alternative": "Write both ways as LaTeX long-division arrays: Susie's way 6)582, quotient 20+20+20+20+10+7, subtract 120 (462), 120 (342), 120 (222), 120 (102), 60 (42), 42 (0); Sunitha's way 6)582, quotient 90+7, subtract 540 (42), 42 (0); both give 97.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C67",
+   "role": "question",
+   "lp_book_number": "Example 6: bags for 97 coconuts",
+   "ncert_ref": "Questions: Example, book p.6 (sf.bags)",
+   "question_text": "Each bag can hold 25 coconuts. How many bags would be needed to pack 97 coconuts?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem (25 coconuts per bag, 97 coconuts); all numbers are in the text and the book prints no figure with it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C68",
+   "role": "solution",
+   "lp_book_number": "Example 6: bags for 97 coconuts",
+   "ncert_ref": "Questions: Example, book p.6 (sf.bags)",
+   "question_text": "Each bag can hold 25 coconuts. How many bags would be needed to pack 97 coconuts?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "97 divided by 25 is quotient 3, remainder 22, then one more bag: sentences and one check line; the book prints no picture for this answer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C69",
+   "role": "question",
+   "lp_book_number": "Example 7: 535 coconuts left",
+   "ncert_ref": "Questions: Example, book p.7 (sf.q2)",
+   "question_text": "They pack the remaining coconuts for drying and extracting oil. They can pack 25 coconuts in each bag. How many bags will they need to pack the remaining coconuts? The number of coconuts left after selling 582 coconuts is 1117 − 582 = 535. The number of bags needed is 535 ÷ 25. Guess the number of bags needed. Use the strategies learnt.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem with 1117 - 582 = 535 and 25 per bag given in the text; the book gives no figure with the question (the layout beside it is the printed solution).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C70",
+   "role": "solution",
+   "lp_book_number": "Example 7: 535 coconuts left",
+   "ncert_ref": "Questions: Example, book p.7 (sf.q2)",
+   "question_text": "They pack the remaining coconuts for drying and extracting oil. They can pack 25 coconuts in each bag. How many bags will they need to pack the remaining coconuts? The number of coconuts left after selling 582 coconuts is 1117 − 582 = 535. The number of bags needed is 535 ÷ 25. Guess the number of bags needed. Use the strategies learnt.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The book's printed answer is one long-division layout, 25)535 (20 + 1 with coloured 2 and 1 cells and margin notes (P07-long_division-1); long division is LaTeX arithmetic and the 11 LP steps carry every line, the remainder and the 21 + 1 = 22 bags.",
+   "text_alternative": "LaTeX long-division array 25)535, quotient 20+1, subtract 500 (35), subtract 25 (10); remainder 10; 21 full bags and 1 more bag make 22 bags.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C71",
+   "role": "question",
+   "lp_book_number": "Let Us Learn to Divide: 726 ÷ 4",
+   "ncert_ref": "Questions: Let Us Learn to Divide, book p.7 (ld.726)",
+   "question_text": "Let Us Learn to Divide. Find 726 ÷ 4 by taking away groups of 4. The first part of the quotient is 100: take away ___ and 326 is left. Take away 320, which is ___ groups of 4, and 6 is left. Take away ___, which is ___ group of 4, and 2 is left. Could we have written 200 here?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The partly blank frame 4)726 (100 + __ + __ (P07-long_division-2) is restated blank by blank in the question text, so the student can attempt it from the words; a blank long-division frame is LaTeX arithmetic. Borderline (ACTION_ON_FIGURE on a frame).",
+   "text_alternative": "Write the frame as a LaTeX array: 4)726, quotient 100 + __ + __; first subtraction __ leaves 326; subtract 320 leaves 6; last subtraction __ leaves 2.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C72",
+   "role": "solution",
+   "lp_book_number": "Let Us Learn to Divide: 726 ÷ 4",
+   "ncert_ref": "Questions: Let Us Learn to Divide, book p.7 (ld.726)",
+   "question_text": "Let Us Learn to Divide. Find 726 ÷ 4 by taking away groups of 4. The first part of the quotient is 100: take away ___ and 326 is left. Take away 320, which is ___ groups of 4, and 6 is left. Take away ___, which is ___ group of 4, and 2 is left. Could we have written 200 here?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The completed frame is a long-division layout (LaTeX arithmetic); the 8 LP steps give 400, 80, 4 and 1 and the check. The book prints no answer picture for it.",
+   "text_alternative": "Same LaTeX array completed: quotient 100 + 80 + 1 = 181; subtract 400 (326), 320 (6), 4 (2); quotient 181, remainder 2.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C73",
+   "role": "question",
+   "lp_book_number": "Let Us Learn to Divide: 902 ÷ 16",
+   "ncert_ref": "Questions: Let Us Learn to Divide, book p.7 (ld.902)",
+   "question_text": "902 ÷ 16. Take away groups of 16: the quotient parts are ___ + 6. Take away 800, then take away 96, and 6 is left. What should we write here so that we get a number close to 902 but less than it? Could we have multiplied 16 by a larger tens?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The partly blank frame 16)902 (__ + 6 (P07-long_division-3) is restated in the question text (quotient parts __ + 6, take away 800, take away 96, 6 left); a long-division frame is LaTeX arithmetic. Borderline (ACTION_ON_FIGURE on a frame).",
+   "text_alternative": "Write the frame as a LaTeX array: 16)902, quotient __ + 6; subtract 800 leaves __; subtract 96 leaves 6.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C74",
+   "role": "solution",
+   "lp_book_number": "Let Us Learn to Divide: 902 ÷ 16",
+   "ncert_ref": "Questions: Let Us Learn to Divide, book p.7 (ld.902)",
+   "question_text": "902 ÷ 16. Take away groups of 16: the quotient parts are ___ + 6. Take away 800, then take away 96, and 6 is left. What should we write here so that we get a number close to 902 but less than it? Could we have multiplied 16 by a larger tens?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The completed frame is a long-division layout (LaTeX arithmetic); the 7 LP steps give the blank 50, the remainder 6 and why 50 and not 60. The book prints no answer picture for it.",
+   "text_alternative": "Same LaTeX array completed: quotient 50 + 6 = 56; subtract 800 (102), 96 (6); quotient 56, remainder 6.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C75",
+   "role": "question",
+   "lp_book_number": "Let Us Learn to Divide: the remainder rule",
+   "ncert_ref": "Questions: Let Us Learn to Divide, book p.7 (ld.relation)",
+   "question_text": "Sometimes, the divisor (D) does not completely divide the dividend (N) and leaves a remainder (R). What is the relationship between the dividend (N) and divisor (D), quotient (Q), and remainder (R)? Try to find out! Is 726 = 4 × 181? Yes/No. So, 726 = 4 × 181 + ___. Is 902 = 16 × 56? Yes/No. So, 902 = 16 × 56 + ___.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two Yes/No checks and two blanks (726 = 4 x 181 + __ and 902 = 16 x 56 + __); the boxed N = D x Q + R is a formula in words and symbols, no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C76",
+   "role": "solution",
+   "lp_book_number": "Let Us Learn to Divide: the remainder rule",
+   "ncert_ref": "Questions: Let Us Learn to Divide, book p.7 (ld.relation)",
+   "question_text": "Sometimes, the divisor (D) does not completely divide the dividend (N) and leaves a remainder (R). What is the relationship between the dividend (N) and divisor (D), quotient (Q), and remainder (R)? Try to find out! Is 726 = 4 × 181? Yes/No. So, 726 = 4 × 181 + ___. Is 902 = 16 × 56? Yes/No. So, 902 = 16 × 56 + ___.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two products (4 x 181 = 724, 16 x 56 = 896) and the rule N = D x Q + R, all arithmetic and words; the book prints no answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S18.T18.C77",
+   "role": "question",
+   "lp_book_number": "Let Us Solve (remainders), Q5",
+   "ncert_ref": "Questions: Let Us Solve (remainders), book p.8 (ls1.q5)",
+   "question_text": "Identify the remainder, if any. Check if N = D × Q + R. (a): 887 ÷ 3; (b): 283 ÷ 8; (c): 745 ÷ 5; (d): 767 ÷ 26; (e): 530 ÷ 41; (f): 888 ÷ 67.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six plain divisions (a) to (f) written in the text; the book gives no figure with this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S18.T18.C78",
+   "role": "solution",
+   "lp_book_number": "Let Us Solve (remainders), Q5",
+   "ncert_ref": "Questions: Let Us Solve (remainders), book p.8 (ls1.q5)",
+   "question_text": "Identify the remainder, if any. Check if N = D × Q + R. (a): 887 ÷ 3; (b): 283 ÷ 8; (c): 745 ÷ 5; (d): 767 ÷ 26; (e): 530 ÷ 41; (f): 888 ÷ 67.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six quotient-and-remainder results, each with its N = D x Q + R check, narrated line by line in the LP steps; the book prints no answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S18.T18.C79",
+   "role": "question",
+   "lp_book_number": "Let Us Solve (remainders), Q4",
+   "ncert_ref": "Questions: Let Us Solve (remainders), book p.14 (ls2.q4)",
+   "question_text": "Solve the following and identify the remainder, if any. Check whether N = D × Q + R in each case. (a): 9,045 ÷ 5; (b): 1,034 ÷ 4; (c): 2,504 ÷ 7; (d): 8,900 ÷ 15; (e): 9,876 ÷ 32; (f): 7,506 ÷ 24.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six plain divisions (a) to (f) written in the text; the book gives no figure with this question (p.14 holds no picture for Q4).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S18.T18.C80",
+   "role": "solution",
+   "lp_book_number": "Let Us Solve (remainders), Q4",
+   "ncert_ref": "Questions: Let Us Solve (remainders), book p.14 (ls2.q4)",
+   "question_text": "Solve the following and identify the remainder, if any. Check whether N = D × Q + R in each case. (a): 9,045 ÷ 5; (b): 1,034 ÷ 4; (c): 2,504 ÷ 7; (d): 8,900 ÷ 15; (e): 9,876 ÷ 32; (f): 7,506 ÷ 24.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six quotient-and-remainder results, each with its N = D x Q + R check, narrated line by line in the LP steps; the book prints no answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C81",
+   "role": "worked_example",
+   "lp_book_number": "Hundreds, Tens and Ones Groups (worked example, practice values)",
+   "ncert_ref": "Hundreds, Tens and Ones Groups, oil.text/oil.hint",
+   "question_text": "Find 6534 ÷ 18 by taking away hundreds, tens and ones groups (practice values).",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "6534 / 18 by taking away hundreds, tens and ones groups: arithmetic lines with a practice value, every number in the text (the book's matching layout is the long division of Example 9, P09-long_division-1, a LaTeX arithmetic case).",
+   "text_alternative": "Write the three take-aways as LaTeX lines: 18 x 300 = 5400 and 6534 - 5400 = 1134; 18 x 60 = 1080 and 1134 - 1080 = 54; 18 x 3 = 54 and 54 - 54 = 0; 300 + 60 + 3 = 363.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C83",
+   "role": "question",
+   "lp_book_number": "Example 8: oil from 4376 coconuts",
+   "ncert_ref": "Questions: Example, book p.8 (oil.q1)",
+   "question_text": "In a particular year, Susie and Sunitha used 4376 coconuts for extracting coconut oil. They can extract 1 litre of oil from 8 coconuts. What quantity of oil were they able to extract? They would get 4376 ÷ 8 litres of coconut oil.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem: 4376 coconuts, 1 litre from 8 coconuts; the book gives no figure with the question (the layouts under it are its solution).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C84",
+   "role": "solution",
+   "lp_book_number": "Example 8: oil from 4376 coconuts",
+   "ncert_ref": "Questions: Example, book p.8 (oil.q1)",
+   "question_text": "In a particular year, Susie and Sunitha used 4376 coconuts for extracting coconut oil. They can extract 1 litre of oil from 8 coconuts. What quantity of oil were they able to extract? They would get 4376 ÷ 8 litres of coconut oil.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The book's printed answer is Susie's five take-aways and Sunitha's three-step layout with coloured 5, 4 and 7 cells (P08-long_division-1 and -2); long division is LaTeX arithmetic and the 12 LP steps carry every line. Borderline, as C66.",
+   "text_alternative": "Write both ways as LaTeX long-division arrays: Susie's way 8)4376, quotient 200+200+100+40+7, subtract 1600 (2776), 1600 (1176), 800 (376), 320 (56), 56 (0); Sunitha's way 8)4376, quotient 500+40+7, subtract 4000 (376), 320 (56), 56 (0); both give 547.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C85",
+   "role": "question",
+   "lp_book_number": "Example 9: coconut husk",
+   "ncert_ref": "Questions: Example, book p.9 (oil.husk)",
+   "question_text": "Coconut husk is used for making coir. Coir is a natural fibre used in gardening, farming, boat making, and making decorative items. Susie and Sunitha's farm sells coconut husk at ₹23 per kilogram. They earned ₹9913 from the sale of husk in May. What quantity of husk did they sell in May? The quantity of husk sold in May is 9913 ÷ 23 kg. Make a guess first.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem: husk at Rs 23 per kg, Rs 9913 earned; all numbers are in the text and the book gives no figure with the question (the layout under it is its solution).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C86",
+   "role": "solution",
+   "lp_book_number": "Example 9: coconut husk",
+   "ncert_ref": "Questions: Example, book p.9 (oil.husk)",
+   "question_text": "Coconut husk is used for making coir. Coir is a natural fibre used in gardening, farming, boat making, and making decorative items. Susie and Sunitha's farm sells coconut husk at ₹23 per kilogram. They earned ₹9913 from the sale of husk in May. What quantity of husk did they sell in May? The quantity of husk sold in May is 9913 ÷ 23 kg. Make a guess first.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The book's printed answer is one long-division layout, 23)9913 (400 + 30 + 1, with coloured 4, 3 and 1 cells and margin notes (P09-long_division-1); LaTeX arithmetic, and the 9 LP steps carry the guess, every subtraction and the check. Borderline, as C66.",
+   "text_alternative": "LaTeX long-division array 23)9913, quotient 400+30+1, subtract 9200 (713), 690 (23), 23 (0); quotient 431.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S21.T21.C87",
+   "role": "question",
+   "lp_book_number": "Kalpavruksha Coconut Oil: earnings from the oil",
+   "ncert_ref": "Questions: Kalpavruksha Coconut Oil, book p.9 (oil.earn)",
+   "question_text": "How much will they earn if they sell the oil at ₹175 for 1 litre? They will earn ₹547 × 175. Find out.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "HEADER_BOXES_ONLY"
+   ],
+   "reason": "The given figure is an empty column-multiplication frame (H T O headings, 547 over x 175, two blank lines): header boxes plus column arithmetic, a LaTeX array; the question text already carries both numbers (Rs 547 x 175). Borderline (ACTION_ON_FIGURE on a frame).",
+   "text_alternative": "LaTeX array with H T O headings: 547 over x 175, with empty working lines.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S21.T21.C88",
+   "role": "solution",
+   "lp_book_number": "Kalpavruksha Coconut Oil: earnings from the oil",
+   "ncert_ref": "Questions: Kalpavruksha Coconut Oil, book p.9 (oil.earn)",
+   "question_text": "How much will they earn if they sell the oil at ₹175 for 1 litre? They will earn ₹547 × 175. Find out.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Filled column multiplication with partial products 2,735 (x 5), 38,290 (x 70), 54,700 (x 100) and total 95,725: column arithmetic (LaTeX), and the LP steps give each partial product; the book prints no answer picture.",
+   "text_alternative": "LaTeX array: 547 x 175 with partial products 2735, 38290, 54700 and total 95725.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S21.T21.C89",
+   "role": "question",
+   "lp_book_number": "Kalpavruksha Coconut Oil: tender coconuts",
+   "ncert_ref": "Questions: Kalpavruksha Coconut Oil, book p.9 (oil.tender)",
+   "question_text": "In the hot summer months, tender coconuts are sold for ₹35. Ibrahim earns ₹8890 in a week. How many tender coconuts did he sell? The number of tender coconuts sold by Ibrahim is 8890 ÷ 35. Take away groups of 35 and fill the blanks: the quotient parts are ___ + 50 + ___; take away 7000, and 1890 is left; take away ___, and 140 is left; take away ___, and nothing is left. Ibrahim sold ___ tender coconuts.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The partly blank frame 35)8890 (__ + 50 + __ with three digit cells (empty, 5, empty) (P09-long_division-2) is restated blank by blank in the question text; a long-division frame is LaTeX arithmetic. Borderline (ACTION_ON_FIGURE on a frame).",
+   "text_alternative": "Write the frame as a LaTeX array: 35)8890, quotient __ + 50 + __; subtract 7000 leaves 1890; subtract __ leaves 140; subtract __ leaves 0.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S21.T21.C90",
+   "role": "solution",
+   "lp_book_number": "Kalpavruksha Coconut Oil: tender coconuts",
+   "ncert_ref": "Questions: Kalpavruksha Coconut Oil, book p.9 (oil.tender)",
+   "question_text": "In the hot summer months, tender coconuts are sold for ₹35. Ibrahim earns ₹8890 in a week. How many tender coconuts did he sell? The number of tender coconuts sold by Ibrahim is 8890 ÷ 35. Take away groups of 35 and fill the blanks: the quotient parts are ___ + 50 + ___; take away 7000, and 1890 is left; take away ___, and 140 is left; take away ___, and nothing is left. Ibrahim sold ___ tender coconuts.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The completed frame is a long-division layout (LaTeX arithmetic); the 8 LP steps give 200, 1750, 140, 4 and the total 254. The book prints no answer picture for it.",
+   "text_alternative": "Same LaTeX array completed: quotient 200 + 50 + 4 = 254; subtract 7000 (1890), 1750 (140), 140 (0).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S21.T21.C91",
+   "role": "question",
+   "lp_book_number": "Kalpavruksha Coconut Oil: extra money",
+   "ncert_ref": "Questions: Kalpavruksha Coconut Oil, book p.10 (oil.extra)",
+   "question_text": "Ibrahim had bought the tender coconuts for ₹20 each. How much extra money did he earn by selling the coconuts at ₹35? The cost of ___ coconuts at ₹20 each = ___ × ₹20 = ₹___. He earned ₹8890 from the sale. The extra amount he earned is ₹8890 − ₹___ = ₹___.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Fill-in sentences about cost (254 x Rs 20) and the extra amount (Rs 8890 minus the cost); the book gives no figure with the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S21.T21.C92",
+   "role": "solution",
+   "lp_book_number": "Kalpavruksha Coconut Oil: extra money",
+   "ncert_ref": "Questions: Kalpavruksha Coconut Oil, book p.10 (oil.extra)",
+   "question_text": "Ibrahim had bought the tender coconuts for ₹20 each. How much extra money did he earn by selling the coconuts at ₹35? The cost of ___ coconuts at ₹20 each = ___ × ₹20 = ₹___. He earned ₹8890 from the sale. The extra amount he earned is ₹8890 − ₹___ = ₹___.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two products and one subtraction (254 x 20 = 5080, 8890 - 5080 = 3810) plus a check; the book prints no answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C93",
+   "role": "worked_example",
+   "lp_book_number": "Regroup and Share (worked example, practice values)",
+   "ncert_ref": "Regroup and Share, pv.text",
+   "question_text": "83 candies are shared equally among 6 children (practice values). How many candies does each child get? Use place value.",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No v3 trigger applies: the practice values (83 candies, 6 children) and every regroup are in the text, so a careful student follows the example from the words. A base-ten-blocks picture (8 tens and 3 ones, 1 ten on each of 6 plates, the 2 tens left regrouped into 20 ones) would clearly help but is not needed. Decided on the tie-breaker, not because concept image C93.IMG1 shows it. Borderline.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C94",
+   "role": "worked_example",
+   "lp_book_number": "Regroup Hundreds, Hold the Place with Zero (worked example, practice values)",
+   "ncert_ref": "Regroup Hundreds, Hold the Place with Zero, pv.zero",
+   "question_text": "Find 412 ÷ 4 by place value (practice values), and say how many digits the quotient has.",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No v3 trigger applies: the practice values (412 divided by 4) and every regroup, including the 0 in the tens place, are in the text. A base-ten-blocks picture (4 hundreds, 1 ten, 2 ones on 4 plates; the ten that cannot be shared regrouped into 10 ones) would clearly help but is not needed. Decided on the tie-breaker, not because concept image C94.IMG1 shows it. Borderline.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C95",
+   "role": "worked_example",
+   "lp_book_number": "Thousands and Two-Digit Divisors: Both Methods (worked example, practice values)",
+   "ncert_ref": "Thousands and Two-Digit Divisors: Both Methods, ldv.zero/ldv.compare",
+   "question_text": "Find 3,648 ÷ 12 in two ways (practice values).",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "3,648 / 12 in two ways (take away groups, then place value): arithmetic lines with a practice value, every number in the text; the book's matching pictures (Let Us Divide layouts) are long divisions, a LaTeX arithmetic case.",
+   "text_alternative": "Write the two ways as LaTeX lines: 12 x 300 = 3,600, 3,648 - 3,600 = 48, 12 x 4 = 48, 300 + 4 = 304; and by place value 36 hundreds / 12 = 3 hundreds, 0 tens, 48 ones / 12 = 4 ones, quotient 304.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  }
+ ]
+}

@@ -1,0 +1,3070 @@
+{
+ "meta": {
+  "chapter": "Coconut Farm",
+  "class": 5,
+  "textbook": "Maths Mela, Grade 5 (NCERT), Chapter 9",
+  "lp_plan_id": "cbse_eng_maths5_ch9_v4",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "optional": 1,
+    "none": 3
+   },
+   "question": {
+    "required": 5,
+    "none": 8
+   },
+   "solution": {
+    "required": 5,
+    "none": 8
+   }
+  },
+  "notes": [
+   "Chunk A: topics M1.S2.T2 to M1.S8.T8 (book pages 1 to 4), 30 items.",
+   "Figures P03-equation_boxes-2, P03-place_value_table-1 and P03-place_value_table-2 are the figures of chunk B's questions (M1.S9.T9) and are not claimed here.",
+   "Solution figures of the four filled-in puzzle/array questions carry NEW-<base>-sol inventory entries (second use of the book figure).",
+   "C3 worked example: optional (not added); C4 worked example: none. See notes_A.md, Borderline."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P01-array-1",
+   "source": "chapter p.01",
+   "description": "Opening array of 35 coconuts, 5 rows x 7 columns, with count brackets 7 and 5 and caption 5 x 7 = 35 (belongs to the Example 1 question).",
+   "mapped_to": "item:M1.S3.T3.C6 (question)"
+  },
+  {
+   "fig_id": "P01-array-2",
+   "source": "chapter p.01",
+   "description": "First regrouping: 7 groups of 5 coconuts, 35 / 7 = 5 (printed answer picture of Example 1).",
+   "mapped_to": "item:M1.S3.T3.C7 (solution)"
+  },
+  {
+   "fig_id": "P01-array-3",
+   "source": "chapter p.01",
+   "description": "Second regrouping: 5 groups of 7 coconuts, 35 / 5 = 7 (printed answer picture of Example 1).",
+   "mapped_to": "item:M1.S3.T3.C7 (solution)"
+  },
+  {
+   "fig_id": "P01-labelled_equation-1",
+   "source": "chapter p.01",
+   "description": "Division Facts box: three facts with Dividend (N), Divisor (D), Quotient (Q) arrows and the rule N = D x Q. A teaching figure of concept C4 (the worked example C4 names the parts of 45 / 5 = 9 in words); not a figure of any question.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P01-array-4",
+   "source": "chapter p.01",
+   "description": "Second array of 32 coconuts, 4 rows x 8 columns, with EMPTY count boxes above and beside, and a lilac answer box of three blank lines.",
+   "mapped_to": "item:M1.S4.T4.C10 (question)"
+  },
+  {
+   "fig_id": "NEW-P01-array-4-sol",
+   "source": "chapter p.01 (solution use)",
+   "description": "Same 4 x 8 array in the solution figure: count boxes 8 and 4 and the caption 4 x 8 = 32 filled in.",
+   "mapped_to": "item:M1.S4.T4.C11 (solution)"
+  },
+  {
+   "fig_id": "P02-triangle_puzzle-1",
+   "source": "chapter p.02",
+   "description": "Top row of 6 multiplication puzzles: squares 72, 60, 48, 36, 24, 40; only puzzle 1 has circles filled (36, 2).",
+   "mapped_to": "item:M1.S5.T5.C12 (question)"
+  },
+  {
+   "fig_id": "NEW-P02-triangle_puzzle-1-sol",
+   "source": "chapter p.02 (solution use)",
+   "description": "The same six multiplication puzzles with all circle pairs filled by the LP sample answer.",
+   "mapped_to": "item:M1.S5.T5.C13 (solution)"
+  },
+  {
+   "fig_id": "P02-triangle_puzzle-2",
+   "source": "chapter p.02",
+   "description": "Bottom row of 6 division puzzles: squares 54, 42, 56 with empty circles; then left circles 54, 42, 56 with empty right circle and empty square.",
+   "mapped_to": "item:M1.S5.T5.C14 (question)"
+  },
+  {
+   "fig_id": "NEW-P02-triangle_puzzle-2-sol",
+   "source": "chapter p.02 (solution use)",
+   "description": "The same six division puzzles with all empty circles and squares filled by the LP sample answer.",
+   "mapped_to": "item:M1.S5.T5.C15 (solution)"
+  },
+  {
+   "fig_id": "P02-answer_boxes-1",
+   "source": "chapter p.02",
+   "description": "Four dashed answer boxes (2 x 2) holding 30 x 30, 15 x 60, 400 x 8 and 200 x 16 with blank lines for the two division statements.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P03-equation_boxes-1",
+   "source": "chapter p.03",
+   "description": "Pink 3 x 3 grid of nine division problems with blanks (150÷3 ... 630÷63) and three red hints.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P04-hexagon_puzzle-1",
+   "source": "chapter p.04",
+   "description": "Eight empty hexagons on a 3 x 3 board without the centre one: ÷ and = in the top row, + and = in the bottom row, − under the top-left, × under the top-right, a line under each middle hexagon.",
+   "mapped_to": "item:M1.S8.T8.C31 (question)"
+  },
+  {
+   "fig_id": "NEW-P04-hexagon_puzzle-1-sol",
+   "source": "chapter p.04 (solution use)",
+   "description": "The same board filled with the two arrangements of 1 to 8.",
+   "mapped_to": "item:M1.S8.T8.C32 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 14,
+  "mapped_to_items": 11,
+  "mapped_to_concept_images": 0,
+  "mapped_none": 3,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S3.T3.C6.IMG1",
+   "M1.S3.T3.C7.IMG1",
+   "M1.S4.T4.C10.IMG1",
+   "M1.S4.T4.C11.IMG1",
+   "M1.S5.T5.C12.IMG1",
+   "M1.S5.T5.C13.IMG1",
+   "M1.S5.T5.C14.IMG1",
+   "M1.S5.T5.C15.IMG1",
+   "M1.S8.T8.C31.IMG1",
+   "M1.S8.T8.C32.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S2.T2.C3",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "div.facts",
+   "question_text": "Susie lays out an array of 27 coconuts in 3 rows of 9 (practice values). Write the multiplication fact and the two division facts.",
+   "block_index": 0,
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Optional: the question gives everything in words (an array of 27 coconuts in 3 rows of 9, write 3 x 9 = 27 and the two division facts); no v3 trigger applies (no figure is referenced, no data lives only in a picture, the answer is equations). An array of 27 coconuts with its 9 columns and its 3 rows outlined would help, but it is not needed and is not added.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "No image: the question text already states the array (3 rows of 9) and the steps already name the column and row groups."
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C4",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "div.nqd",
+   "question_text": "Name the dividend, divisor and quotient in 45 ÷ 5 = 9, check the fact, and find 45 ÷ 1 (practice values).",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Naming the dividend, divisor and quotient of 45 / 5 = 9 and finding 45 / 1 is fully stated in words and equations; the book's labelled-equation box is a teaching figure, not a figure of this question.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX only: 45 \\div 5 = 9 with the names dividend (N) = 45, divisor (D) = 5, quotient (Q) = 9 in the steps."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C6",
+   "role": "question",
+   "lp_book_number": "Example 1: array of 35 coconuts",
+   "ncert_ref": "div.example",
+   "question_text": "Observe the following array of coconuts. Write two division facts using the given multiplication fact. The array has $5$ rows of $7$ coconuts, and the multiplication fact is $5 \\times 7 = 35$.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question says 'Observe the following array of coconuts' and the array, with its two count brackets, is the figure the two division facts are read from.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C6.IMG1",
+   "manim_scene": "c5_9_example1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C6.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "dot_array",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "dot_array",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "element": "coconut circle",
+     "rows": 5,
+     "cols": 7,
+     "coconuts": 35,
+     "pitch_px": 100,
+     "diameter_px": 76,
+     "fill": "CELL_FILL",
+     "outline": "INK 3 px",
+     "column_centres_x": [
+      755,
+      855,
+      955,
+      1055,
+      1155,
+      1255,
+      1355
+     ],
+     "row_centres_y": [
+      350,
+      450,
+      550,
+      650,
+      750
+     ],
+     "brackets": {
+      "top_bracket": {
+       "ends_x": [
+        705,
+        1405
+       ],
+       "ends_y": 285,
+       "tip": [
+        1055,
+        255
+       ],
+       "box_centre": [
+        1055,
+        175
+       ]
+      },
+      "left_bracket": {
+       "ends_y": [
+        300,
+        800
+       ],
+       "ends_x": 690,
+       "tip": [
+        660,
+        550
+       ],
+       "box_centre": [
+        580,
+        550
+       ]
+      }
+     },
+     "top_bracket_label": "7",
+     "left_bracket_label": "5",
+     "caption": "5 × 7 = 35",
+     "caption_centre": [
+      1055,
+      880
+     ],
+     "group_outlines": "none"
+    },
+    "manim_description": "On a plain white 1920 x 1080 px canvas (origin top-left, y downwards) draw the given array of coconuts. Draw 35 coconuts as a plain array of 5 rows and 7 columns. Each coconut is a circle of diameter 76 px with fill CELL_FILL and a 3 px INK outline. The column centres are at x = 755, 855, 955, 1055, 1155, 1255, 1355 (columns 1 to 7, left to right) and the row centres are at y = 350, 450, 550, 650, 750 (rows 1 to 5, top to bottom); every row holds 7 coconuts and every column holds 5 coconuts, with no gaps. Above the array draw a horizontal curly bracket (INK, 3 px) whose two ends are at x = 705 and x = 1405, y = 285, and whose tip points up at x = 1055, y = 255. Above the tip draw a square box 80 x 80 px (INK 3 px outline, BG fill) centred at (1055, 175) holding the digit 7 in INK, 56 px high. To the left of the array draw a vertical curly bracket (INK, 3 px) whose two ends are at y = 300 and y = 800, x = 690, and whose tip points left at x = 660, y = 550. Left of the tip draw a square box 80 x 80 px (INK 3 px outline, BG fill) centred at (580, 550) holding the digit 5 in INK, 56 px high. Under the array, centred at x = 1055, y = 880, write the caption 5 × 7 = 35 in INK bold, 64 px high. Draw nothing else.",
+    "visible_text": [
+     "7",
+     "5",
+     "5 × 7 = 35"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "division facts 35 ÷ 7 = 5 or 35 ÷ 5 = 7",
+     "group outlines around columns or rows",
+     "the book's blue and red grouping boxes or the arrows to them",
+     "the labels Dividend, Divisor, Quotient"
+    ],
+    "accuracy_checks": [
+     "rows x columns = 5 x 7 = 35 coconuts drawn",
+     "top bracket spans all 7 columns and its box reads 7; left bracket spans all 5 rows and its box reads 5",
+     "caption 5 × 7 = 35 matches the counts"
+    ],
+    "alt_text": "An array of 35 coconuts in 5 rows and 7 columns, with brackets marked 7 across the top and 5 down the left and the caption 5 × 7 = 35.",
+    "render_note": "Same array as the book's opening picture (page 1). The LP question gives the multiplication fact 5 × 7 = 35, so the caption is part of the given figure. The coconuts are plain circles (the book's brown coconut art is decorative)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "solution",
+   "lp_book_number": "Example 1: array of 35 coconuts",
+   "ncert_ref": "div.example",
+   "question_text": "Observe the following array of coconuts. Write two division facts using the given multiplication fact. The array has 5 rows of 7 coconuts, and the multiplication fact is 5 × 7 = 35.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The book's printed answer is a picture: the array regrouped as 7 groups of 5 and as 5 groups of 7; the LP steps describe the same two outlines.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C7.IMG1",
+   "manim_scene": "c5_9_example1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C7.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "dot_array",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S3.T3.C6.IMG1",
+    "content": {
+     "type": "dot_array",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "element": "coconut circle",
+     "rows": 5,
+     "cols": 7,
+     "coconuts_per_copy": 35,
+     "copies": 2,
+     "pitch_px": 100,
+     "diameter_px": 76,
+     "fill": "CELL_FILL",
+     "outline": "INK 3 px",
+     "left_copy": {
+      "column_centres_x": [
+       210,
+       310,
+       410,
+       510,
+       610,
+       710,
+       810
+      ],
+      "row_centres_y": [
+       300,
+       400,
+       500,
+       600,
+       700
+      ],
+      "groups": "7 column groups of 5",
+      "group_outline_rects_x0_x1_y0_y1": [
+       [
+        166,
+        254,
+        252,
+        748
+       ],
+       [
+        266,
+        354,
+        252,
+        748
+       ],
+       [
+        366,
+        454,
+        252,
+        748
+       ],
+       [
+        466,
+        554,
+        252,
+        748
+       ],
+       [
+        566,
+        654,
+        252,
+        748
+       ],
+       [
+        666,
+        754,
+        252,
+        748
+       ],
+       [
+        766,
+        854,
+        252,
+        748
+       ]
+      ],
+      "outline_colour": "ANSWER",
+      "caption": "35 ÷ 7 = 5",
+      "caption_centre": [
+       510,
+       830
+      ]
+     },
+     "right_copy": {
+      "column_centres_x": [
+       1110,
+       1210,
+       1310,
+       1410,
+       1510,
+       1610,
+       1710
+      ],
+      "row_centres_y": [
+       300,
+       400,
+       500,
+       600,
+       700
+      ],
+      "groups": "5 row groups of 7",
+      "group_outline_rects_x0_x1_y0_y1": [
+       [
+        1060,
+        1760,
+        256,
+        344
+       ],
+       [
+        1060,
+        1760,
+        356,
+        444
+       ],
+       [
+        1060,
+        1760,
+        456,
+        544
+       ],
+       [
+        1060,
+        1760,
+        556,
+        644
+       ],
+       [
+        1060,
+        1760,
+        656,
+        744
+       ]
+      ],
+      "outline_colour": "ANSWER",
+      "caption": "35 ÷ 5 = 7",
+      "caption_centre": [
+       1410,
+       830
+      ]
+     }
+    },
+    "manim_description": "On a plain white 1920 x 1080 px canvas (origin top-left, y downwards) draw two copies of the 5-row by 7-column coconut array side by side. Every coconut is a circle of diameter 76 px, fill CELL_FILL, 3 px INK outline, with the same 100 px spacing as the question figure. LEFT copy: column centres at x = 210, 310, 410, 510, 610, 710, 810 (columns 1 to 7) and row centres at y = 300, 400, 500, 600, 700 (rows 1 to 5). Around each of the 7 columns draw one rounded rectangle (corner radius 20 px, ANSWER, 4 px, no fill) from x = centre - 44 to centre + 44 and from y = 252 to y = 748, so that each rectangle holds 5 coconuts; the 7 rectangles do not touch. Under the left copy, centred at x = 510, y = 830, write 35 ÷ 7 = 5 in ANSWER bold, 56 px high. RIGHT copy: column centres at x = 1110, 1210, 1310, 1410, 1510, 1610, 1710 (columns 1 to 7) and the same row centres y = 300, 400, 500, 600, 700. Around each of the 5 rows draw one rounded rectangle (corner radius 20 px, ANSWER, 4 px, no fill) from x = 1060 to x = 1760 and from y = centre - 44 to centre + 44, so that each rectangle holds 7 coconuts; the 5 rectangles do not touch. Under the right copy, centred at x = 1410, y = 830, write 35 ÷ 5 = 7 in ANSWER bold, 56 px high. Draw nothing else: no brackets, no arrows, no other text.",
+    "visible_text": [
+     "35 ÷ 7 = 5",
+     "35 ÷ 5 = 7"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the count brackets with the boxes 7 and 5 of the question figure",
+     "the caption 5 × 7 = 35",
+     "the labels Dividend, Divisor, Quotient",
+     "the sentences '35 split into 7 groups has 5 in each group'"
+    ],
+    "accuracy_checks": [
+     "left copy: 7 outlined groups x 5 coconuts = 35",
+     "right copy: 5 outlined groups x 7 coconuts = 35",
+     "35 ÷ 7 = 5 (5 coconuts per column group) and 35 ÷ 5 = 7 (7 coconuts per row group)",
+     "every coconut lies inside exactly one outline in each copy"
+    ],
+    "alt_text": "Two copies of a 5 by 7 coconut array: the left one with its 7 columns outlined as 7 groups of 5 (35 ÷ 7 = 5), the right one with its 5 rows outlined as 5 groups of 7 (35 ÷ 5 = 7).",
+    "render_note": "This is the book's printed answer picture (page 1, the blue 7 groups of 5 and the red 5 groups of 7) redrawn in the house style: INK coconuts, ANSWER outlines. The given brackets and the caption of the question figure are not repeated; the same coconut size and spacing as C6.IMG1 are used."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C8",
+   "role": "question",
+   "lp_book_number": "Division Facts: think and answer 35 ÷ 1",
+   "ncert_ref": "div.one",
+   "question_text": "Think and answer: $35 \\div 1 = \\underline{\\hspace{1.2em}}$",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A one-line 'Think and answer' question, 35 ÷ 1 = blank; the book's picture is a thought-bubble character only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX only: $35 \\div 1 = \\underline{\\hspace{1.2em}}$."
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C9",
+   "role": "solution",
+   "lp_book_number": "Division Facts: think and answer 35 ÷ 1",
+   "ncert_ref": "div.one",
+   "question_text": "Think and answer: 35 ÷ 1 = ___",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is one equation, 35 ÷ 1 = 35, with a check by multiplication; nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C10",
+   "role": "question",
+   "lp_book_number": "Division Facts: write the facts for the second array",
+   "ncert_ref": "div.array2",
+   "question_text": "Write the appropriate multiplication fact for the array shown below. Write two division facts that follow from the multiplication fact.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The question says 'the array shown below'; the number of rows and columns lives only in the picture, and the two empty boxes are for the student to fill with the counts.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S4.T4.C10.IMG1",
+   "manim_scene": "c5_9_divfacts_q2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S4.T4.C10.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "dot_array",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "dot_array",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "element": "coconut circle",
+     "rows": 4,
+     "cols": 8,
+     "coconuts": 32,
+     "pitch_px": 100,
+     "diameter_px": 76,
+     "fill": "CELL_FILL",
+     "outline": "INK 3 px",
+     "column_centres_x": [
+      705,
+      805,
+      905,
+      1005,
+      1105,
+      1205,
+      1305,
+      1405
+     ],
+     "row_centres_y": [
+      420,
+      520,
+      620,
+      720
+     ],
+     "brackets": {
+      "top_bracket": {
+       "ends_x": [
+        655,
+        1455
+       ],
+       "ends_y": 355,
+       "tip": [
+        1055,
+        325
+       ],
+       "box_centre": [
+        1055,
+        245
+       ]
+      },
+      "left_bracket": {
+       "ends_y": [
+        370,
+        770
+       ],
+       "ends_x": 640,
+       "tip": [
+        610,
+        570
+       ],
+       "box_centre": [
+        530,
+        570
+       ]
+      }
+     },
+     "top_bracket_label": "",
+     "left_bracket_label": "",
+     "caption": null,
+     "group_outlines": "none"
+    },
+    "manim_description": "On a plain white 1920 x 1080 px canvas (origin top-left, y downwards) draw the given array of coconuts. Draw 32 coconuts as a plain array of 4 rows and 8 columns. Each coconut is a circle of diameter 76 px with fill CELL_FILL and a 3 px INK outline. The column centres are at x = 705, 805, 905, 1005, 1105, 1205, 1305, 1405 (columns 1 to 8, left to right) and the row centres are at y = 420, 520, 620, 720 (rows 1 to 4, top to bottom); every row holds 8 coconuts and every column holds 4 coconuts, with no gaps. Above the array draw a horizontal curly bracket (INK, 3 px) whose two ends are at x = 655 and x = 1455, y = 355, and whose tip points up at x = 1055, y = 325. Above the tip draw a square box 80 x 80 px (INK 3 px outline, BG fill) centred at (1055, 245); the box is EMPTY, with nothing written in it. To the left of the array draw a vertical curly bracket (INK, 3 px) whose two ends are at y = 370 and y = 770, x = 640, and whose tip points left at x = 610, y = 570. Left of the tip draw a square box 80 x 80 px (INK 3 px outline, BG fill) centred at (530, 570); the box is EMPTY, with nothing written in it. Draw nothing else: no caption, no equations, no answer lines.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any digit in the two bracket boxes",
+     "the multiplication fact 4 × 8 = 32 or the division facts",
+     "the book's lilac box of blank answer lines",
+     "group outlines around columns or rows"
+    ],
+    "accuracy_checks": [
+     "rows x columns = 4 x 8 = 32 coconuts drawn",
+     "top bracket spans all 8 columns, left bracket spans all 4 rows",
+     "both bracket boxes are empty"
+    ],
+    "alt_text": "An array of 32 coconuts in 4 rows and 8 columns with an empty box above the columns and an empty box beside the rows.",
+    "render_note": "Same array as the book's second array (page 1, bottom). The book's lilac box of three blank answer lines is an answer area, not part of the figure, and is not drawn."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C11",
+   "role": "solution",
+   "lp_book_number": "Division Facts: write the facts for the second array",
+   "ncert_ref": "div.array2",
+   "question_text": "Write the appropriate multiplication fact for the array shown below. Write two division facts that follow from the multiplication fact.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The solution fills the two empty count boxes (8 columns, 4 rows) and adds the multiplication fact under the array, so it adds visual content to the question figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S4.T4.C11.IMG1",
+   "manim_scene": "c5_9_divfacts_q2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S4.T4.C11.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "dot_array",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S4.T4.C10.IMG1",
+    "content": {
+     "type": "dot_array",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "element": "coconut circle",
+     "rows": 4,
+     "cols": 8,
+     "coconuts": 32,
+     "pitch_px": 100,
+     "diameter_px": 76,
+     "fill": "CELL_FILL",
+     "outline": "INK 3 px",
+     "column_centres_x": [
+      705,
+      805,
+      905,
+      1005,
+      1105,
+      1205,
+      1305,
+      1405
+     ],
+     "row_centres_y": [
+      420,
+      520,
+      620,
+      720
+     ],
+     "brackets": {
+      "top_bracket": {
+       "ends_x": [
+        655,
+        1455
+       ],
+       "ends_y": 355,
+       "tip": [
+        1055,
+        325
+       ],
+       "box_centre": [
+        1055,
+        245
+       ]
+      },
+      "left_bracket": {
+       "ends_y": [
+        370,
+        770
+       ],
+       "ends_x": 640,
+       "tip": [
+        610,
+        570
+       ],
+       "box_centre": [
+        530,
+        570
+       ]
+      }
+     },
+     "top_bracket_label": "8",
+     "left_bracket_label": "4",
+     "label_colour": "ANSWER",
+     "caption": "4 × 8 = 32",
+     "caption_colour": "ANSWER",
+     "caption_centre": [
+      1055,
+      860
+     ],
+     "group_outlines": "none"
+    },
+    "manim_description": "On a plain white 1920 x 1080 px canvas (origin top-left, y downwards) draw the same array of coconuts as the question figure, unchanged. Draw 32 coconuts as a plain array of 4 rows and 8 columns. Each coconut is a circle of diameter 76 px with fill CELL_FILL and a 3 px INK outline. The column centres are at x = 705, 805, 905, 1005, 1105, 1205, 1305, 1405 (columns 1 to 8, left to right) and the row centres are at y = 420, 520, 620, 720 (rows 1 to 4, top to bottom); every row holds 8 coconuts and every column holds 4 coconuts, with no gaps. Above the array draw a horizontal curly bracket (INK, 3 px) whose two ends are at x = 655 and x = 1455, y = 355, and whose tip points up at x = 1055, y = 325. Above the tip draw a square box 80 x 80 px (INK 3 px outline, BG fill) centred at (1055, 245) holding the digit 8 in ANSWER, 56 px high. To the left of the array draw a vertical curly bracket (INK, 3 px) whose two ends are at y = 370 and y = 770, x = 640, and whose tip points left at x = 610, y = 570. Left of the tip draw a square box 80 x 80 px (INK 3 px outline, BG fill) centred at (530, 570) holding the digit 4 in ANSWER, 56 px high. Under the array, centred at x = 1055, y = 860, write the caption 4 × 8 = 32 in ANSWER bold, 64 px high. Draw nothing else.",
+    "visible_text": [
+     "8",
+     "4",
+     "4 × 8 = 32"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the division facts 32 ÷ 8 = 4 and 32 ÷ 4 = 8",
+     "group outlines around columns or rows",
+     "the book's lilac box of answer lines"
+    ],
+    "accuracy_checks": [
+     "rows x columns = 4 x 8 = 32",
+     "the top box reads 8 (columns) and the left box reads 4 (rows)",
+     "caption 4 × 8 = 32 matches the counts"
+    ],
+    "alt_text": "The 4 by 8 coconut array with 8 written above the columns, 4 beside the rows and the caption 4 × 8 = 32.",
+    "render_note": "Same layout, coconut size and positions as C10.IMG1; only the two bracket numbers and the caption are added, all in ANSWER. The two division facts stay in the LP text."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C12",
+   "role": "question",
+   "lp_book_number": "Let Us Play: products",
+   "ncert_ref": "play.times",
+   "question_text": "Identify the numbers that can fill the circles such that the numbers in the squares are the products or the quotients of the numbers in the circles. This row has the sign $\\times$ . The squares are $72$, $60$, $48$, $36$, $24$ and $40$, and the first triangle already has the circles $36$ and $2$.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The puzzle shapes (square on top, two circles below, × between) are the figure the student fills in; which squares are given and which circle is already filled is shown only in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S5.T5.C12.IMG1",
+   "manim_scene": "c5_9_play_times_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S5.T5.C12.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "figure": "triangle_puzzle",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "layout": "2 rows x 3 puzzles, anchors px in [480, 960, 1440], py in [150, 600]",
+     "operator": "×",
+     "relation": "square = left circle × right circle",
+     "puzzles": [
+      {
+       "index": 1,
+       "row": 1,
+       "col": 1,
+       "anchor_top_centre": [
+        480,
+        150
+       ],
+       "geometry": {
+        "square": [
+         430,
+         530,
+         150,
+         250
+        ],
+        "trapezoid": [
+         [
+          450,
+          260
+         ],
+         [
+          510,
+          260
+         ],
+         [
+          560,
+          360
+         ],
+         [
+          400,
+          360
+         ]
+        ],
+        "left_circle_centre": [
+         385,
+         395
+        ],
+        "right_circle_centre": [
+         575,
+         395
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         480,
+         405
+        ]
+       },
+       "square_value": "72",
+       "left_circle_value": "36",
+       "right_circle_value": "2",
+       "operator": "×"
+      },
+      {
+       "index": 2,
+       "row": 1,
+       "col": 2,
+       "anchor_top_centre": [
+        960,
+        150
+       ],
+       "geometry": {
+        "square": [
+         910,
+         1010,
+         150,
+         250
+        ],
+        "trapezoid": [
+         [
+          930,
+          260
+         ],
+         [
+          990,
+          260
+         ],
+         [
+          1040,
+          360
+         ],
+         [
+          880,
+          360
+         ]
+        ],
+        "left_circle_centre": [
+         865,
+         395
+        ],
+        "right_circle_centre": [
+         1055,
+         395
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         960,
+         405
+        ]
+       },
+       "square_value": "60",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "×"
+      },
+      {
+       "index": 3,
+       "row": 1,
+       "col": 3,
+       "anchor_top_centre": [
+        1440,
+        150
+       ],
+       "geometry": {
+        "square": [
+         1390,
+         1490,
+         150,
+         250
+        ],
+        "trapezoid": [
+         [
+          1410,
+          260
+         ],
+         [
+          1470,
+          260
+         ],
+         [
+          1520,
+          360
+         ],
+         [
+          1360,
+          360
+         ]
+        ],
+        "left_circle_centre": [
+         1345,
+         395
+        ],
+        "right_circle_centre": [
+         1535,
+         395
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         1440,
+         405
+        ]
+       },
+       "square_value": "48",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "×"
+      },
+      {
+       "index": 4,
+       "row": 2,
+       "col": 1,
+       "anchor_top_centre": [
+        480,
+        600
+       ],
+       "geometry": {
+        "square": [
+         430,
+         530,
+         600,
+         700
+        ],
+        "trapezoid": [
+         [
+          450,
+          710
+         ],
+         [
+          510,
+          710
+         ],
+         [
+          560,
+          810
+         ],
+         [
+          400,
+          810
+         ]
+        ],
+        "left_circle_centre": [
+         385,
+         845
+        ],
+        "right_circle_centre": [
+         575,
+         845
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         480,
+         855
+        ]
+       },
+       "square_value": "36",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "×"
+      },
+      {
+       "index": 5,
+       "row": 2,
+       "col": 2,
+       "anchor_top_centre": [
+        960,
+        600
+       ],
+       "geometry": {
+        "square": [
+         910,
+         1010,
+         600,
+         700
+        ],
+        "trapezoid": [
+         [
+          930,
+          710
+         ],
+         [
+          990,
+          710
+         ],
+         [
+          1040,
+          810
+         ],
+         [
+          880,
+          810
+         ]
+        ],
+        "left_circle_centre": [
+         865,
+         845
+        ],
+        "right_circle_centre": [
+         1055,
+         845
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         960,
+         855
+        ]
+       },
+       "square_value": "24",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "×"
+      },
+      {
+       "index": 6,
+       "row": 2,
+       "col": 3,
+       "anchor_top_centre": [
+        1440,
+        600
+       ],
+       "geometry": {
+        "square": [
+         1390,
+         1490,
+         600,
+         700
+        ],
+        "trapezoid": [
+         [
+          1410,
+          710
+         ],
+         [
+          1470,
+          710
+         ],
+         [
+          1520,
+          810
+         ],
+         [
+          1360,
+          810
+         ]
+        ],
+        "left_circle_centre": [
+         1345,
+         845
+        ],
+        "right_circle_centre": [
+         1535,
+         845
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         1440,
+         855
+        ]
+       },
+       "square_value": "40",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "×"
+      }
+     ]
+    },
+    "manim_description": "On a plain white 1920 x 1080 px canvas (origin top-left, y downwards) draw six identical puzzle shapes in two rows of three, read left to right and top to bottom. Each puzzle is anchored at the top-centre (px, py) of its square. The anchors are: row 1 at py = 150, row 2 at py = 600; column 1 at px = 480, column 2 at px = 960, column 3 at px = 1440. Each puzzle consists of (1) a square 100 x 100 px from (px - 50, py) to (px + 50, py + 100) with a dashed INK outline (3 px, dashes 12 px, gaps 8 px) and BG fill, holding its value centred in INK, 56 px high; (2) below it a trapezoid with corners (px - 30, py + 110), (px + 30, py + 110), (px + 80, py + 210) and (px - 80, py + 210), fill CELL_FILL, INK 3 px outline; (3) two circles of radius 60 px with BG fill and INK 3 px outline, centred at (px - 95, py + 245) and (px + 95, py + 245), drawn over the lower corners of the trapezoid, each holding its value centred, 56 px high; (4) the sign × in INK bold, 56 px high, centred at (px, py + 255) between the two circles. Puzzle 1 (top row, left column, anchor (480, 150)): the square shows 72 in INK, the left circle shows 36 in INK, the right circle shows 2 in INK. Puzzle 2 (top row, middle column, anchor (960, 150)): the square shows 60 in INK, the left circle is EMPTY (nothing written), the right circle is EMPTY (nothing written). Puzzle 3 (top row, right column, anchor (1440, 150)): the square shows 48 in INK, the left circle is EMPTY (nothing written), the right circle is EMPTY (nothing written). Puzzle 4 (bottom row, left column, anchor (480, 600)): the square shows 36 in INK, the left circle is EMPTY (nothing written), the right circle is EMPTY (nothing written). Puzzle 5 (bottom row, middle column, anchor (960, 600)): the square shows 24 in INK, the left circle is EMPTY (nothing written), the right circle is EMPTY (nothing written). Puzzle 6 (bottom row, right column, anchor (1440, 600)): the square shows 40 in INK, the left circle is EMPTY (nothing written), the right circle is EMPTY (nothing written). Puzzles 2 to 6 have both circles EMPTY and puzzle 1 is the only puzzle with filled circles. The relation of every puzzle is: left circle × right circle = the number in the square. Draw nothing else.",
+    "visible_text": [
+     "72",
+     "60",
+     "48",
+     "36",
+     "24",
+     "40",
+     "36",
+     "2",
+     "×"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any filled circle other than 36 and 2 in puzzle 1",
+     "the book's pastel triangle colours"
+    ],
+    "accuracy_checks": [
+     "six puzzles, squares 72, 60, 48, 36, 24, 40 in reading order",
+     "only puzzle 1 has circles filled: 36 and 2",
+     "36 × 2 = 72 holds for the given puzzle",
+     "the other ten circles are empty"
+    ],
+    "alt_text": "Six puzzle shapes, each with a number in a square on top and two circles below joined by a × sign: the squares read 72, 60, 48, 36, 24 and 40; only the first puzzle has its circles filled (36 and 2).",
+    "render_note": "Redrawn from the book's top row of six puzzles (page 2); the book prints the six in one row and the triangles in six pastel colours (decorative), here they sit in two rows of three on the 16:9 card, all in CELL_FILL. The order 72, 60, 48 / 36, 24, 40 is the book's left-to-right order. The book's shapes are trapezoids narrow at the top, which the LP calls triangles."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C13",
+   "role": "solution",
+   "lp_book_number": "Let Us Play: products",
+   "ncert_ref": "play.times",
+   "question_text": "Identify the numbers that can fill the circles such that the numbers in the squares are the products or the quotients of the numbers in the circles. This row has the sign ×. The squares are 72, 60, 48, 36, 24 and 40, and the first triangle already has the circles 36 and 2.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The answer is the filled puzzles: each pair of circles shown with the product in its square.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S5.T5.C13.IMG1",
+   "manim_scene": "c5_9_play_times_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S5.T5.C13.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S5.T5.C12.IMG1",
+    "content": {
+     "type": "other",
+     "figure": "triangle_puzzle",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "layout": "2 rows x 3 puzzles, anchors px in [480, 960, 1440], py in [150, 600]",
+     "operator": "×",
+     "relation": "square = left circle × right circle",
+     "puzzles": [
+      {
+       "index": 1,
+       "row": 1,
+       "col": 1,
+       "anchor_top_centre": [
+        480,
+        150
+       ],
+       "geometry": {
+        "square": [
+         430,
+         530,
+         150,
+         250
+        ],
+        "trapezoid": [
+         [
+          450,
+          260
+         ],
+         [
+          510,
+          260
+         ],
+         [
+          560,
+          360
+         ],
+         [
+          400,
+          360
+         ]
+        ],
+        "left_circle_centre": [
+         385,
+         395
+        ],
+        "right_circle_centre": [
+         575,
+         395
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         480,
+         405
+        ]
+       },
+       "square_value": "72",
+       "left_circle_value": "36",
+       "right_circle_value": "2",
+       "operator": "×",
+       "added_in_ANSWER": {}
+      },
+      {
+       "index": 2,
+       "row": 1,
+       "col": 2,
+       "anchor_top_centre": [
+        960,
+        150
+       ],
+       "geometry": {
+        "square": [
+         910,
+         1010,
+         150,
+         250
+        ],
+        "trapezoid": [
+         [
+          930,
+          260
+         ],
+         [
+          990,
+          260
+         ],
+         [
+          1040,
+          360
+         ],
+         [
+          880,
+          360
+         ]
+        ],
+        "left_circle_centre": [
+         865,
+         395
+        ],
+        "right_circle_centre": [
+         1055,
+         395
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         960,
+         405
+        ]
+       },
+       "square_value": "60",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "×",
+       "added_in_ANSWER": {
+        "L": "6",
+        "R": "10"
+       }
+      },
+      {
+       "index": 3,
+       "row": 1,
+       "col": 3,
+       "anchor_top_centre": [
+        1440,
+        150
+       ],
+       "geometry": {
+        "square": [
+         1390,
+         1490,
+         150,
+         250
+        ],
+        "trapezoid": [
+         [
+          1410,
+          260
+         ],
+         [
+          1470,
+          260
+         ],
+         [
+          1520,
+          360
+         ],
+         [
+          1360,
+          360
+         ]
+        ],
+        "left_circle_centre": [
+         1345,
+         395
+        ],
+        "right_circle_centre": [
+         1535,
+         395
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         1440,
+         405
+        ]
+       },
+       "square_value": "48",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "×",
+       "added_in_ANSWER": {
+        "L": "6",
+        "R": "8"
+       }
+      },
+      {
+       "index": 4,
+       "row": 2,
+       "col": 1,
+       "anchor_top_centre": [
+        480,
+        600
+       ],
+       "geometry": {
+        "square": [
+         430,
+         530,
+         600,
+         700
+        ],
+        "trapezoid": [
+         [
+          450,
+          710
+         ],
+         [
+          510,
+          710
+         ],
+         [
+          560,
+          810
+         ],
+         [
+          400,
+          810
+         ]
+        ],
+        "left_circle_centre": [
+         385,
+         845
+        ],
+        "right_circle_centre": [
+         575,
+         845
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         480,
+         855
+        ]
+       },
+       "square_value": "36",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "×",
+       "added_in_ANSWER": {
+        "L": "4",
+        "R": "9"
+       }
+      },
+      {
+       "index": 5,
+       "row": 2,
+       "col": 2,
+       "anchor_top_centre": [
+        960,
+        600
+       ],
+       "geometry": {
+        "square": [
+         910,
+         1010,
+         600,
+         700
+        ],
+        "trapezoid": [
+         [
+          930,
+          710
+         ],
+         [
+          990,
+          710
+         ],
+         [
+          1040,
+          810
+         ],
+         [
+          880,
+          810
+         ]
+        ],
+        "left_circle_centre": [
+         865,
+         845
+        ],
+        "right_circle_centre": [
+         1055,
+         845
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         960,
+         855
+        ]
+       },
+       "square_value": "24",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "×",
+       "added_in_ANSWER": {
+        "L": "3",
+        "R": "8"
+       }
+      },
+      {
+       "index": 6,
+       "row": 2,
+       "col": 3,
+       "anchor_top_centre": [
+        1440,
+        600
+       ],
+       "geometry": {
+        "square": [
+         1390,
+         1490,
+         600,
+         700
+        ],
+        "trapezoid": [
+         [
+          1410,
+          710
+         ],
+         [
+          1470,
+          710
+         ],
+         [
+          1520,
+          810
+         ],
+         [
+          1360,
+          810
+         ]
+        ],
+        "left_circle_centre": [
+         1345,
+         845
+        ],
+        "right_circle_centre": [
+         1535,
+         845
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         1440,
+         855
+        ]
+       },
+       "square_value": "40",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "×",
+       "added_in_ANSWER": {
+        "L": "5",
+        "R": "8"
+       }
+      }
+     ]
+    },
+    "manim_description": "On a plain white 1920 x 1080 px canvas (origin top-left, y downwards) draw six identical puzzle shapes in two rows of three, read left to right and top to bottom. Each puzzle is anchored at the top-centre (px, py) of its square. The anchors are: row 1 at py = 150, row 2 at py = 600; column 1 at px = 480, column 2 at px = 960, column 3 at px = 1440. Each puzzle consists of (1) a square 100 x 100 px from (px - 50, py) to (px + 50, py + 100) with a dashed INK outline (3 px, dashes 12 px, gaps 8 px) and BG fill, holding its value centred in INK, 56 px high; (2) below it a trapezoid with corners (px - 30, py + 110), (px + 30, py + 110), (px + 80, py + 210) and (px - 80, py + 210), fill CELL_FILL, INK 3 px outline; (3) two circles of radius 60 px with BG fill and INK 3 px outline, centred at (px - 95, py + 245) and (px + 95, py + 245), drawn over the lower corners of the trapezoid, each holding its value centred, 56 px high; (4) the sign × in INK bold, 56 px high, centred at (px, py + 255) between the two circles. Puzzle 1 (top row, left column, anchor (480, 150)): the square shows 72 in INK, the left circle shows 36 in INK, the right circle shows 2 in INK. Puzzle 2 (top row, middle column, anchor (960, 150)): the square shows 60 in INK, the left circle shows 6 in ANSWER, the right circle shows 10 in ANSWER. Puzzle 3 (top row, right column, anchor (1440, 150)): the square shows 48 in INK, the left circle shows 6 in ANSWER, the right circle shows 8 in ANSWER. Puzzle 4 (bottom row, left column, anchor (480, 600)): the square shows 36 in INK, the left circle shows 4 in ANSWER, the right circle shows 9 in ANSWER. Puzzle 5 (bottom row, middle column, anchor (960, 600)): the square shows 24 in INK, the left circle shows 3 in ANSWER, the right circle shows 8 in ANSWER. Puzzle 6 (bottom row, right column, anchor (1440, 600)): the square shows 40 in INK, the left circle shows 5 in ANSWER, the right circle shows 8 in ANSWER. Puzzle 1 keeps its given 36 and 2 in INK. Every added number is drawn in ANSWER green. Check of the sample answer: 36 × 2 = 72, 6 × 10 = 60, 6 × 8 = 48, 4 × 9 = 36, 3 × 8 = 24, 5 × 8 = 40. Draw nothing else.",
+    "visible_text": [
+     "72",
+     "60",
+     "48",
+     "36",
+     "24",
+     "40",
+     "36",
+     "2",
+     "6",
+     "10",
+     "6",
+     "8",
+     "4",
+     "9",
+     "3",
+     "8",
+     "5",
+     "8",
+     "×"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a pair that does not multiply to its square",
+     "the words 'sample answer'"
+    ],
+    "accuracy_checks": [
+     "every circle pair multiplies to the number in its square: 36×2=72, 6×10=60, 6×8=48, 4×9=36, 3×8=24, 5×8=40",
+     "given values 36 and 2 stay in INK; the ten added numbers 6, 10, 6, 8, 4, 9, 3, 8, 5, 8 are ANSWER",
+     "no circle is left empty"
+    ],
+    "alt_text": "The same six puzzles with every pair of circles filled: 36 × 2 = 72, 6 × 10 = 60, 6 × 8 = 48, 4 × 9 = 36, 3 × 8 = 24 and 5 × 8 = 40.",
+    "render_note": "Same layout and positions as C12.IMG1. The pairs are the sample answer written in the LP solution; the LP says many pairs fit each square, so this is one correct answer, not the only one."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C14",
+   "role": "question",
+   "lp_book_number": "Let Us Play: quotients",
+   "ncert_ref": "play.divide",
+   "question_text": "Identify the numbers that can fill the circles such that the numbers in the squares are the products or the quotients of the numbers in the circles. This row has the sign $\\div$ . Three triangles have the squares $54$, $42$ and $56$ and empty circles. Three triangles have $54$, $42$ and $56$ in the first circle, an empty second circle and an empty square.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The puzzle shapes with ÷ are the figure the student fills in; which squares and which circles are given is shown only in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S5.T5.C14.IMG1",
+   "manim_scene": "c5_9_play_divide_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S5.T5.C14.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "figure": "triangle_puzzle",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "layout": "2 rows x 3 puzzles, anchors px in [480, 960, 1440], py in [150, 600]",
+     "operator": "÷",
+     "relation": "square = left circle ÷ right circle",
+     "puzzles": [
+      {
+       "index": 1,
+       "row": 1,
+       "col": 1,
+       "anchor_top_centre": [
+        480,
+        150
+       ],
+       "geometry": {
+        "square": [
+         430,
+         530,
+         150,
+         250
+        ],
+        "trapezoid": [
+         [
+          450,
+          260
+         ],
+         [
+          510,
+          260
+         ],
+         [
+          560,
+          360
+         ],
+         [
+          400,
+          360
+         ]
+        ],
+        "left_circle_centre": [
+         385,
+         395
+        ],
+        "right_circle_centre": [
+         575,
+         395
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         480,
+         405
+        ]
+       },
+       "square_value": "54",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "÷"
+      },
+      {
+       "index": 2,
+       "row": 1,
+       "col": 2,
+       "anchor_top_centre": [
+        960,
+        150
+       ],
+       "geometry": {
+        "square": [
+         910,
+         1010,
+         150,
+         250
+        ],
+        "trapezoid": [
+         [
+          930,
+          260
+         ],
+         [
+          990,
+          260
+         ],
+         [
+          1040,
+          360
+         ],
+         [
+          880,
+          360
+         ]
+        ],
+        "left_circle_centre": [
+         865,
+         395
+        ],
+        "right_circle_centre": [
+         1055,
+         395
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         960,
+         405
+        ]
+       },
+       "square_value": "42",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "÷"
+      },
+      {
+       "index": 3,
+       "row": 1,
+       "col": 3,
+       "anchor_top_centre": [
+        1440,
+        150
+       ],
+       "geometry": {
+        "square": [
+         1390,
+         1490,
+         150,
+         250
+        ],
+        "trapezoid": [
+         [
+          1410,
+          260
+         ],
+         [
+          1470,
+          260
+         ],
+         [
+          1520,
+          360
+         ],
+         [
+          1360,
+          360
+         ]
+        ],
+        "left_circle_centre": [
+         1345,
+         395
+        ],
+        "right_circle_centre": [
+         1535,
+         395
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         1440,
+         405
+        ]
+       },
+       "square_value": "56",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "÷"
+      },
+      {
+       "index": 4,
+       "row": 2,
+       "col": 1,
+       "anchor_top_centre": [
+        480,
+        600
+       ],
+       "geometry": {
+        "square": [
+         430,
+         530,
+         600,
+         700
+        ],
+        "trapezoid": [
+         [
+          450,
+          710
+         ],
+         [
+          510,
+          710
+         ],
+         [
+          560,
+          810
+         ],
+         [
+          400,
+          810
+         ]
+        ],
+        "left_circle_centre": [
+         385,
+         845
+        ],
+        "right_circle_centre": [
+         575,
+         845
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         480,
+         855
+        ]
+       },
+       "square_value": "",
+       "left_circle_value": "54",
+       "right_circle_value": "",
+       "operator": "÷"
+      },
+      {
+       "index": 5,
+       "row": 2,
+       "col": 2,
+       "anchor_top_centre": [
+        960,
+        600
+       ],
+       "geometry": {
+        "square": [
+         910,
+         1010,
+         600,
+         700
+        ],
+        "trapezoid": [
+         [
+          930,
+          710
+         ],
+         [
+          990,
+          710
+         ],
+         [
+          1040,
+          810
+         ],
+         [
+          880,
+          810
+         ]
+        ],
+        "left_circle_centre": [
+         865,
+         845
+        ],
+        "right_circle_centre": [
+         1055,
+         845
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         960,
+         855
+        ]
+       },
+       "square_value": "",
+       "left_circle_value": "42",
+       "right_circle_value": "",
+       "operator": "÷"
+      },
+      {
+       "index": 6,
+       "row": 2,
+       "col": 3,
+       "anchor_top_centre": [
+        1440,
+        600
+       ],
+       "geometry": {
+        "square": [
+         1390,
+         1490,
+         600,
+         700
+        ],
+        "trapezoid": [
+         [
+          1410,
+          710
+         ],
+         [
+          1470,
+          710
+         ],
+         [
+          1520,
+          810
+         ],
+         [
+          1360,
+          810
+         ]
+        ],
+        "left_circle_centre": [
+         1345,
+         845
+        ],
+        "right_circle_centre": [
+         1535,
+         845
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         1440,
+         855
+        ]
+       },
+       "square_value": "",
+       "left_circle_value": "56",
+       "right_circle_value": "",
+       "operator": "÷"
+      }
+     ]
+    },
+    "manim_description": "On a plain white 1920 x 1080 px canvas (origin top-left, y downwards) draw six identical puzzle shapes in two rows of three, read left to right and top to bottom. Each puzzle is anchored at the top-centre (px, py) of its square. The anchors are: row 1 at py = 150, row 2 at py = 600; column 1 at px = 480, column 2 at px = 960, column 3 at px = 1440. Each puzzle consists of (1) a square 100 x 100 px from (px - 50, py) to (px + 50, py + 100) with a dashed INK outline (3 px, dashes 12 px, gaps 8 px) and BG fill, holding its value centred in INK, 56 px high; (2) below it a trapezoid with corners (px - 30, py + 110), (px + 30, py + 110), (px + 80, py + 210) and (px - 80, py + 210), fill CELL_FILL, INK 3 px outline; (3) two circles of radius 60 px with BG fill and INK 3 px outline, centred at (px - 95, py + 245) and (px + 95, py + 245), drawn over the lower corners of the trapezoid, each holding its value centred, 56 px high; (4) the sign ÷ in INK bold, 56 px high, centred at (px, py + 255) between the two circles. Puzzle 1 (top row, left column, anchor (480, 150)): the square shows 54 in INK, the left circle is EMPTY (nothing written), the right circle is EMPTY (nothing written). Puzzle 2 (top row, middle column, anchor (960, 150)): the square shows 42 in INK, the left circle is EMPTY (nothing written), the right circle is EMPTY (nothing written). Puzzle 3 (top row, right column, anchor (1440, 150)): the square shows 56 in INK, the left circle is EMPTY (nothing written), the right circle is EMPTY (nothing written). Puzzle 4 (bottom row, left column, anchor (480, 600)): the square is EMPTY (nothing written), the left circle shows 54 in INK, the right circle is EMPTY (nothing written). Puzzle 5 (bottom row, middle column, anchor (960, 600)): the square is EMPTY (nothing written), the left circle shows 42 in INK, the right circle is EMPTY (nothing written). Puzzle 6 (bottom row, right column, anchor (1440, 600)): the square is EMPTY (nothing written), the left circle shows 56 in INK, the right circle is EMPTY (nothing written). Puzzles 1 to 3 have a number in the square and both circles EMPTY; puzzles 4 to 6 have a number in the left circle and the square and the right circle EMPTY. The relation of every puzzle is: left circle ÷ right circle = the number in the square. Draw nothing else.",
+    "visible_text": [
+     "54",
+     "42",
+     "56",
+     "54",
+     "42",
+     "56",
+     "÷"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any value in an empty circle or empty square"
+    ],
+    "accuracy_checks": [
+     "six puzzles with ÷: squares 54, 42, 56 in puzzles 1-3 and empty in 4-6",
+     "left circles 54, 42, 56 filled in puzzles 4-6 and empty in 1-3",
+     "all right circles empty",
+     "12 circles in all, 3 filled"
+    ],
+    "alt_text": "Six puzzle shapes with a ÷ sign between two circles: the first three show 54, 42 and 56 in the square with both circles empty; the last three show 54, 42 and 56 in the left circle with the right circle and the square empty.",
+    "render_note": "Redrawn from the book's bottom row of six puzzles (page 2), here in two rows of three on the 16:9 card, all trapezoids in CELL_FILL (the book's six colours are decorative). Which circle is the dividend is read from the book: puzzles 4 to 6 print 54, 42 and 56 in the LEFT circle, so left circle ÷ right circle = square."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C15",
+   "role": "solution",
+   "lp_book_number": "Let Us Play: quotients",
+   "ncert_ref": "play.divide",
+   "question_text": "Identify the numbers that can fill the circles such that the numbers in the squares are the products or the quotients of the numbers in the circles. This row has the sign ÷. Three triangles have the squares 54, 42 and 56 and empty circles. Three triangles have 54, 42 and 56 in the first circle, an empty second circle and an empty square.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The answer is the filled puzzles: every empty circle and square shown filled with a pair that divides to the square.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S5.T5.C15.IMG1",
+   "manim_scene": "c5_9_play_divide_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S5.T5.C15.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S5.T5.C14.IMG1",
+    "content": {
+     "type": "other",
+     "figure": "triangle_puzzle",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "layout": "2 rows x 3 puzzles, anchors px in [480, 960, 1440], py in [150, 600]",
+     "operator": "÷",
+     "relation": "square = left circle ÷ right circle",
+     "puzzles": [
+      {
+       "index": 1,
+       "row": 1,
+       "col": 1,
+       "anchor_top_centre": [
+        480,
+        150
+       ],
+       "geometry": {
+        "square": [
+         430,
+         530,
+         150,
+         250
+        ],
+        "trapezoid": [
+         [
+          450,
+          260
+         ],
+         [
+          510,
+          260
+         ],
+         [
+          560,
+          360
+         ],
+         [
+          400,
+          360
+         ]
+        ],
+        "left_circle_centre": [
+         385,
+         395
+        ],
+        "right_circle_centre": [
+         575,
+         395
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         480,
+         405
+        ]
+       },
+       "square_value": "54",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "÷",
+       "added_in_ANSWER": {
+        "L": "108",
+        "R": "2"
+       }
+      },
+      {
+       "index": 2,
+       "row": 1,
+       "col": 2,
+       "anchor_top_centre": [
+        960,
+        150
+       ],
+       "geometry": {
+        "square": [
+         910,
+         1010,
+         150,
+         250
+        ],
+        "trapezoid": [
+         [
+          930,
+          260
+         ],
+         [
+          990,
+          260
+         ],
+         [
+          1040,
+          360
+         ],
+         [
+          880,
+          360
+         ]
+        ],
+        "left_circle_centre": [
+         865,
+         395
+        ],
+        "right_circle_centre": [
+         1055,
+         395
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         960,
+         405
+        ]
+       },
+       "square_value": "42",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "÷",
+       "added_in_ANSWER": {
+        "L": "84",
+        "R": "2"
+       }
+      },
+      {
+       "index": 3,
+       "row": 1,
+       "col": 3,
+       "anchor_top_centre": [
+        1440,
+        150
+       ],
+       "geometry": {
+        "square": [
+         1390,
+         1490,
+         150,
+         250
+        ],
+        "trapezoid": [
+         [
+          1410,
+          260
+         ],
+         [
+          1470,
+          260
+         ],
+         [
+          1520,
+          360
+         ],
+         [
+          1360,
+          360
+         ]
+        ],
+        "left_circle_centre": [
+         1345,
+         395
+        ],
+        "right_circle_centre": [
+         1535,
+         395
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         1440,
+         405
+        ]
+       },
+       "square_value": "56",
+       "left_circle_value": "",
+       "right_circle_value": "",
+       "operator": "÷",
+       "added_in_ANSWER": {
+        "L": "112",
+        "R": "2"
+       }
+      },
+      {
+       "index": 4,
+       "row": 2,
+       "col": 1,
+       "anchor_top_centre": [
+        480,
+        600
+       ],
+       "geometry": {
+        "square": [
+         430,
+         530,
+         600,
+         700
+        ],
+        "trapezoid": [
+         [
+          450,
+          710
+         ],
+         [
+          510,
+          710
+         ],
+         [
+          560,
+          810
+         ],
+         [
+          400,
+          810
+         ]
+        ],
+        "left_circle_centre": [
+         385,
+         845
+        ],
+        "right_circle_centre": [
+         575,
+         845
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         480,
+         855
+        ]
+       },
+       "square_value": "",
+       "left_circle_value": "54",
+       "right_circle_value": "",
+       "operator": "÷",
+       "added_in_ANSWER": {
+        "R": "6",
+        "sq": "9"
+       }
+      },
+      {
+       "index": 5,
+       "row": 2,
+       "col": 2,
+       "anchor_top_centre": [
+        960,
+        600
+       ],
+       "geometry": {
+        "square": [
+         910,
+         1010,
+         600,
+         700
+        ],
+        "trapezoid": [
+         [
+          930,
+          710
+         ],
+         [
+          990,
+          710
+         ],
+         [
+          1040,
+          810
+         ],
+         [
+          880,
+          810
+         ]
+        ],
+        "left_circle_centre": [
+         865,
+         845
+        ],
+        "right_circle_centre": [
+         1055,
+         845
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         960,
+         855
+        ]
+       },
+       "square_value": "",
+       "left_circle_value": "42",
+       "right_circle_value": "",
+       "operator": "÷",
+       "added_in_ANSWER": {
+        "R": "7",
+        "sq": "6"
+       }
+      },
+      {
+       "index": 6,
+       "row": 2,
+       "col": 3,
+       "anchor_top_centre": [
+        1440,
+        600
+       ],
+       "geometry": {
+        "square": [
+         1390,
+         1490,
+         600,
+         700
+        ],
+        "trapezoid": [
+         [
+          1410,
+          710
+         ],
+         [
+          1470,
+          710
+         ],
+         [
+          1520,
+          810
+         ],
+         [
+          1360,
+          810
+         ]
+        ],
+        "left_circle_centre": [
+         1345,
+         845
+        ],
+        "right_circle_centre": [
+         1535,
+         845
+        ],
+        "circle_radius": 60,
+        "operator_centre": [
+         1440,
+         855
+        ]
+       },
+       "square_value": "",
+       "left_circle_value": "56",
+       "right_circle_value": "",
+       "operator": "÷",
+       "added_in_ANSWER": {
+        "R": "8",
+        "sq": "7"
+       }
+      }
+     ]
+    },
+    "manim_description": "On a plain white 1920 x 1080 px canvas (origin top-left, y downwards) draw six identical puzzle shapes in two rows of three, read left to right and top to bottom. Each puzzle is anchored at the top-centre (px, py) of its square. The anchors are: row 1 at py = 150, row 2 at py = 600; column 1 at px = 480, column 2 at px = 960, column 3 at px = 1440. Each puzzle consists of (1) a square 100 x 100 px from (px - 50, py) to (px + 50, py + 100) with a dashed INK outline (3 px, dashes 12 px, gaps 8 px) and BG fill, holding its value centred in INK, 56 px high; (2) below it a trapezoid with corners (px - 30, py + 110), (px + 30, py + 110), (px + 80, py + 210) and (px - 80, py + 210), fill CELL_FILL, INK 3 px outline; (3) two circles of radius 60 px with BG fill and INK 3 px outline, centred at (px - 95, py + 245) and (px + 95, py + 245), drawn over the lower corners of the trapezoid, each holding its value centred, 56 px high; (4) the sign ÷ in INK bold, 56 px high, centred at (px, py + 255) between the two circles. Puzzle 1 (top row, left column, anchor (480, 150)): the square shows 54 in INK, the left circle shows 108 in ANSWER, the right circle shows 2 in ANSWER. Puzzle 2 (top row, middle column, anchor (960, 150)): the square shows 42 in INK, the left circle shows 84 in ANSWER, the right circle shows 2 in ANSWER. Puzzle 3 (top row, right column, anchor (1440, 150)): the square shows 56 in INK, the left circle shows 112 in ANSWER, the right circle shows 2 in ANSWER. Puzzle 4 (bottom row, left column, anchor (480, 600)): the square shows 9 in ANSWER, the left circle shows 54 in INK, the right circle shows 6 in ANSWER. Puzzle 5 (bottom row, middle column, anchor (960, 600)): the square shows 6 in ANSWER, the left circle shows 42 in INK, the right circle shows 7 in ANSWER. Puzzle 6 (bottom row, right column, anchor (1440, 600)): the square shows 7 in ANSWER, the left circle shows 56 in INK, the right circle shows 8 in ANSWER. Given values 54, 42, 56 (squares of puzzles 1-3 and left circles of puzzles 4-6) stay in INK. Every added number is drawn in ANSWER green. Check of the sample answer: 108 ÷ 2 = 54, 84 ÷ 2 = 42, 112 ÷ 2 = 56, 54 ÷ 6 = 9, 42 ÷ 7 = 6, 56 ÷ 8 = 7. Draw nothing else.",
+    "visible_text": [
+     "54",
+     "42",
+     "56",
+     "54",
+     "42",
+     "56",
+     "108",
+     "2",
+     "84",
+     "2",
+     "112",
+     "2",
+     "6",
+     "9",
+     "7",
+     "6",
+     "8",
+     "7",
+     "÷"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a pair that does not divide to its square",
+     "the words 'sample answer'"
+    ],
+    "accuracy_checks": [
+     "left ÷ right = square in all six: 108÷2=54, 84÷2=42, 112÷2=56, 54÷6=9, 42÷7=6, 56÷8=7",
+     "added numbers 108, 2, 84, 2, 112, 2, 6, 9, 7, 6, 8, 7 are ANSWER; given 54, 42, 56 (twice) stay INK",
+     "no circle or square is left empty"
+    ],
+    "alt_text": "The same six division puzzles filled in: 108 ÷ 2 = 54, 84 ÷ 2 = 42, 112 ÷ 2 = 56, 54 ÷ 6 = 9, 42 ÷ 7 = 6 and 56 ÷ 8 = 7.",
+    "render_note": "Same layout and positions as C14.IMG1. The numbers are the sample answer written in the LP solution; the LP says other pairs fit too (for example 54 ÷ 9 = 6)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C16",
+   "role": "question",
+   "lp_book_number": "Let Us Do (division facts), Q1",
+   "ncert_ref": "lud1.q1",
+   "question_text": "Solve the following multiplication problems. Write two division statements in each case. $(a)$: $30 \\times 30 = \\underline{\\hspace{1.2em}}$; $(b)$: $15 \\times 60 = \\underline{\\hspace{1.2em}}$; $(c)$: $400 \\times 8 = \\underline{\\hspace{1.2em}}$; $(d)$: $200 \\times 16 = \\underline{\\hspace{1.2em}}$.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four multiplications to solve and two division statements to write each: the book's four dashed boxes are only answer areas for equations.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX only: the four products (a) 30 × 30, (b) 15 × 60, (c) 400 × 8, (d) 200 × 16 with blanks for the two division statements."
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C17",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (division facts), Q1",
+   "ncert_ref": "lud1.q1",
+   "question_text": "Solve the following multiplication problems. Write two division statements in each case. (a): 30 × 30 = ___; (b): 15 × 60 = ___; (c): 400 × 8 = ___; (d): 200 × 16 = ___.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is eight division equations written from the four products; they are arithmetic, not a picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C18",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "(none printed; practice values on the Patterns section)",
+   "question_text": "How many groups of 9 are in 270? Then find 2700 ÷ 9 and 2700 ÷ 90 (practice values).",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Groups of 9 in 270, 2700 ÷ 9 and 2700 ÷ 90 are stated and solved in words and equations; nothing needs a picture.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX only: 27 tens ÷ 9 = 3 tens, so 270 ÷ 9 = 30 (and 2700 ÷ 9 = 300, 2700 ÷ 90 = 30)."
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C19",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "pd.notice, pd.quotients",
+   "question_text": "Divide 70, 700 and 7000 by 10, and then divide 3500 by 35 (practice values).",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "HEADER_BOXES_ONLY",
+    "LATEX_TABLE"
+   ],
+   "reason": "The place value chart of 70 ÷ 10, 700 ÷ 10 and 7000 ÷ 10 is a header-boxes table (Hundreds, Tens, Ones with digits): a LaTeX array, not an image (v3 'not a diagram' list: HEADER_BOXES_ONLY). The steps carry all the numbers; the answer is equations.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array with headers Problem | H | T | O: 70 ÷ 10 = 7 (ones 7); 700 ÷ 10 = 70 (tens 7, ones 0); 7000 ÷ 10 = 700 (hundreds 7, tens 0, ones 0)."
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C21",
+   "role": "question",
+   "lp_book_number": "Let Us Do (dividing tens and hundreds), Q2",
+   "ncert_ref": "pd.q2",
+   "question_text": "Solve the following division problems. Notice the patterns and discuss in class. $(a)$: $150 \\div 3 = \\underline{\\hspace{1.2em}}$; $(b)$: $80 \\div 4 = \\underline{\\hspace{1.2em}}$; $(c)$: $500 \\div 5 = \\underline{\\hspace{1.2em}}$; $(d)$: $100 \\div 10 = \\underline{\\hspace{1.2em}}$; $(e)$: $300 \\div 100 = \\underline{\\hspace{1.2em}}$; $(f)$: $500 \\div 50 = \\underline{\\hspace{1.2em}}$; $(g)$: $200 \\div 20 = \\underline{\\hspace{1.2em}}$; $(h)$: $440 \\div 44 = \\underline{\\hspace{1.2em}}$; (i): $630 \\div 63 = \\underline{\\hspace{1.2em}}$. The book's hints: how many groups of $3$ are in $150$; $5 \\times \\underline{\\hspace{1.2em}} = 500$; $44 \\times \\underline{\\hspace{1.2em}} = 440$.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Nine division problems with blanks (the book's pink 3 x 3 boxes) and three red hints; the LP question text already lists all nine and the hints, and neither position nor arrows carry any meaning.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX list of the nine problems (a) to (i) with blanks, hints as given in the question text."
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C22",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (dividing tens and hundreds), Q2",
+   "ncert_ref": "pd.q2",
+   "question_text": "Solve the following division problems. Notice the patterns and discuss in class. (a): 150 ÷ 3 = ___; (b): 80 ÷ 4 = ___; (c): 500 ÷ 5 = ___; (d): 100 ÷ 10 = ___; (e): 300 ÷ 100 = ___; (f): 500 ÷ 50 = ___; (g): 200 ÷ 20 = ___; (h): 440 ÷ 44 = ___; (i): 630 ÷ 63 = ___. The book's hints: how many groups of 3 are in 150; 5 × ___ = 500; 44 × ___ = 440.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Nine quotients with a check line each; plain arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C23",
+   "role": "question",
+   "lp_book_number": "Let Us Do (division with tens and hundreds), Q1",
+   "ncert_ref": "lud2.q1",
+   "question_text": "Sabina cycles $160\\text{ km}$ in $20$ days and the same distance each day. How many kilometres does she cycle each day?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word problem with every number in the text; the book has no figure for it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C24",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (division with tens and hundreds), Q1",
+   "ncert_ref": "lud2.q1",
+   "question_text": "Sabina cycles 160 km in 20 days and the same distance each day. How many kilometres does she cycle each day?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The solution is one division by tens or hundreds and a check; nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C25",
+   "role": "question",
+   "lp_book_number": "Let Us Do (division with tens and hundreds), Q2",
+   "ncert_ref": "lud2.q2",
+   "question_text": "How many notes of ₹$100$ does Seema need to carry if she wants to buy coconuts worth ₹$4200$?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word problem with every number in the text; the book has no figure for it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C26",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (division with tens and hundreds), Q2",
+   "ncert_ref": "lud2.q2",
+   "question_text": "How many notes of ₹100 does Seema need to carry if she wants to buy coconuts worth ₹4200?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The solution is one division by tens or hundreds and a check; nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C27",
+   "role": "question",
+   "lp_book_number": "Let Us Do (division with tens and hundreds), Q3",
+   "ncert_ref": "lud2.q3",
+   "question_text": "The owner of an electric store has decided to distribute ₹$5500$ equally amongst $5$ of his employees as a Diwali gift. What amount will each employee get?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word problem with every number in the text; the book has no figure for it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C28",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (division with tens and hundreds), Q3",
+   "ncert_ref": "lud2.q3",
+   "question_text": "The owner of an electric store has decided to distribute ₹5500 equally amongst 5 of his employees as a Diwali gift. What amount will each employee get?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The solution is one division by tens or hundreds and a check; nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C29",
+   "role": "question",
+   "lp_book_number": "Let Us Do (division with tens and hundreds), Q3 continued",
+   "ncert_ref": "lud2.q3b",
+   "question_text": "What will happen if he distributes the same amount of money among $10$ employees? Will each employee get more or less? How much money would he have to distribute if everyone must get the same amount as earlier?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A reasoning question in words (more or less, and how much money); no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C30",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (division with tens and hundreds), Q3 continued",
+   "ncert_ref": "lud2.q3b",
+   "question_text": "What will happen if he distributes the same amount of money among 10 employees? Will each employee get more or less? How much money would he have to distribute if everyone must get the same amount as earlier?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two divisions, a comparison in words and a check; no picture is needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C31",
+   "role": "question",
+   "lp_book_number": "Let Us Do (division with tens and hundreds), Q4",
+   "ncert_ref": "lud2.q4",
+   "question_text": "Place the numbers $1$ to $8$ in the following boxes so that all the four operations, division, multiplication, addition and subtraction are correct. No number must be repeated. How did you think about solving this? Is there more than one answer?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The question says 'the following boxes'; which boxes are joined by which sign (two row sums and two column sums sharing four boxes) is shown only by the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S8.T8.C31.IMG1",
+   "manim_scene": "c5_9_lud2_q4_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S8.T8.C31.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "figure": "hexagon_puzzle",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "hexagon_side_px": 100,
+     "column_pitch_px": 290,
+     "row_centres_y": [
+      280,
+      540,
+      800
+     ],
+     "boards": [
+      {
+       "hexagon_centres": {
+        "A": [
+         670,
+         280
+        ],
+        "B": [
+         960,
+         280
+        ],
+        "C": [
+         1250,
+         280
+        ],
+        "D": [
+         670,
+         540
+        ],
+        "E": [
+         1250,
+         540
+        ],
+        "F": [
+         670,
+         800
+        ],
+        "G": [
+         960,
+         800
+        ],
+        "H": [
+         1250,
+         800
+        ]
+       },
+       "signs": [
+        {
+         "sign": "÷",
+         "centre": [
+          815,
+          280
+         ]
+        },
+        {
+         "sign": "=",
+         "centre": [
+          1105,
+          280
+         ]
+        },
+        {
+         "sign": "−",
+         "centre": [
+          670,
+          410
+         ]
+        },
+        {
+         "sign": "×",
+         "centre": [
+          1250,
+          410
+         ]
+        },
+        {
+         "sign": "+",
+         "centre": [
+          815,
+          800
+         ]
+        },
+        {
+         "sign": "=",
+         "centre": [
+          1105,
+          800
+         ]
+        }
+       ],
+       "separator_lines_x0_x1_y": [
+        [
+         570,
+         770,
+         670
+        ],
+        [
+         1150,
+         1350,
+         670
+        ]
+       ],
+       "values": {},
+       "value_colour": "INK"
+      }
+     ],
+     "equations": [
+      "top row: A ÷ B = C",
+      "left column: A − D = F",
+      "right column: C × E = H",
+      "bottom row: F + G = H"
+     ],
+     "letters_drawn": false,
+     "numbers_drawn": 0
+    },
+    "manim_description": "On a plain white 1920 x 1080 px canvas (origin top-left, y downwards) draw one board of eight EMPTY hexagons joined by arithmetic signs, centred on the canvas. Each hexagon is a regular hexagon with flat top and bottom and points left and right, side 100 px (width 200 px, height 173.2 px), fill CELL_FILL, INK 3 px outline; its corners are at (cx - 100, cy), (cx - 50, cy - 86.6), (cx + 50, cy - 86.6), (cx + 100, cy), (cx + 50, cy + 86.6), (cx - 50, cy + 86.6). The board has three columns (centres x = 670, 960, 1250) and three rows (centres y = 280, 540, 800); the middle column of the middle row has NO hexagon. Board: top-left hexagon at (670, 280) EMPTY; top-middle hexagon at (960, 280) EMPTY; top-right hexagon at (1250, 280) EMPTY; middle-left hexagon at (670, 540) EMPTY; middle-right hexagon at (1250, 540) EMPTY; bottom-left hexagon at (670, 800) EMPTY; bottom-middle hexagon at (960, 800) EMPTY; bottom-right hexagon at (1250, 800) EMPTY. Signs in INK bold 56 px high, centred: ÷ at (815, 280), = at (1105, 280), − at (670, 410), × at (1250, 410), + at (815, 800), = at (1105, 800). Under each of the two middle hexagons draw one horizontal INK line (3 px) from (570, 670) to (770, 670); from (1150, 670) to (1350, 670). No hexagon holds a number. Draw nothing else.",
+    "visible_text": [
+     "÷",
+     "=",
+     "−",
+     "×",
+     "+"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any digit inside a hexagon",
+     "the box letters A to H used in the LP steps",
+     "the book's side text 'How did you think about solving this?'"
+    ],
+    "accuracy_checks": [
+     "8 hexagons: 3 in the top row, 2 in the middle row (left and right only), 3 in the bottom row",
+     "signs: ÷ and = in the top row, + and = in the bottom row, − under the top-left hexagon, × under the top-right hexagon",
+     "one separator line under each middle-row hexagon",
+     "the four sums read A ÷ B = C, A − D = F, C × E = H, F + G = H"
+    ],
+    "alt_text": "Eight empty hexagons: top row box ÷ box = box, bottom row box + box = box, and down the left a − and down the right a × joining the top and middle hexagons to the bottom ones.",
+    "render_note": "Same board as the book's page 4 puzzle (the 3 x 3 positions with the middle one empty). The horizontal line under each middle-row hexagon is the book's equals line of the column sum (the LP reads it as A − D = F and C × E = H). The book's side text is not drawn."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C32",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (division with tens and hundreds), Q4",
+   "ncert_ref": "lud2.q4",
+   "question_text": "Place the numbers 1 to 8 in the following boxes so that all the four operations, division, multiplication, addition and subtraction are correct. No number must be repeated. How did you think about solving this? Is there more than one answer?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The answer is the filled boards: both arrangements of 1 to 8 are a picture (an arrangement of numbers in the hexagons), and the question asks whether there is more than one answer.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S8.T8.C32.IMG1",
+   "manim_scene": "c5_9_lud2_q4_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S8.T8.C32.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S8.T8.C31.IMG1",
+    "content": {
+     "type": "other",
+     "figure": "hexagon_puzzle",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "hexagon_side_px": 100,
+     "column_pitch_px": 290,
+     "row_centres_y": [
+      280,
+      540,
+      800
+     ],
+     "boards": [
+      {
+       "hexagon_centres": {
+        "A": [
+         190,
+         280
+        ],
+        "B": [
+         480,
+         280
+        ],
+        "C": [
+         770,
+         280
+        ],
+        "D": [
+         190,
+         540
+        ],
+        "E": [
+         770,
+         540
+        ],
+        "F": [
+         190,
+         800
+        ],
+        "G": [
+         480,
+         800
+        ],
+        "H": [
+         770,
+         800
+        ]
+       },
+       "signs": [
+        {
+         "sign": "÷",
+         "centre": [
+          335,
+          280
+         ]
+        },
+        {
+         "sign": "=",
+         "centre": [
+          625,
+          280
+         ]
+        },
+        {
+         "sign": "−",
+         "centre": [
+          190,
+          410
+         ]
+        },
+        {
+         "sign": "×",
+         "centre": [
+          770,
+          410
+         ]
+        },
+        {
+         "sign": "+",
+         "centre": [
+          335,
+          800
+         ]
+        },
+        {
+         "sign": "=",
+         "centre": [
+          625,
+          800
+         ]
+        }
+       ],
+       "separator_lines_x0_x1_y": [
+        [
+         90,
+         290,
+         670
+        ],
+        [
+         670,
+         870,
+         670
+        ]
+       ],
+       "values": {
+        "A": "6",
+        "B": "3",
+        "C": "2",
+        "D": "5",
+        "E": "4",
+        "F": "1",
+        "G": "7",
+        "H": "8"
+       },
+       "value_colour": "ANSWER"
+      },
+      {
+       "hexagon_centres": {
+        "A": [
+         1150,
+         280
+        ],
+        "B": [
+         1440,
+         280
+        ],
+        "C": [
+         1730,
+         280
+        ],
+        "D": [
+         1150,
+         540
+        ],
+        "E": [
+         1730,
+         540
+        ],
+        "F": [
+         1150,
+         800
+        ],
+        "G": [
+         1440,
+         800
+        ],
+        "H": [
+         1730,
+         800
+        ]
+       },
+       "signs": [
+        {
+         "sign": "÷",
+         "centre": [
+          1295,
+          280
+         ]
+        },
+        {
+         "sign": "=",
+         "centre": [
+          1585,
+          280
+         ]
+        },
+        {
+         "sign": "−",
+         "centre": [
+          1150,
+          410
+         ]
+        },
+        {
+         "sign": "×",
+         "centre": [
+          1730,
+          410
+         ]
+        },
+        {
+         "sign": "+",
+         "centre": [
+          1295,
+          800
+         ]
+        },
+        {
+         "sign": "=",
+         "centre": [
+          1585,
+          800
+         ]
+        }
+       ],
+       "separator_lines_x0_x1_y": [
+        [
+         1050,
+         1250,
+         670
+        ],
+        [
+         1630,
+         1830,
+         670
+        ]
+       ],
+       "values": {
+        "A": "8",
+        "B": "4",
+        "C": "2",
+        "D": "7",
+        "E": "3",
+        "F": "1",
+        "G": "5",
+        "H": "6"
+       },
+       "value_colour": "ANSWER"
+      }
+     ],
+     "equations": [
+      "top row: A ÷ B = C",
+      "left column: A − D = F",
+      "right column: C × E = H",
+      "bottom row: F + G = H"
+     ],
+     "answers": [
+      {
+       "A": 6,
+       "B": 3,
+       "C": 2,
+       "D": 5,
+       "E": 4,
+       "F": 1,
+       "G": 7,
+       "H": 8
+      },
+      {
+       "A": 8,
+       "B": 4,
+       "C": 2,
+       "D": 7,
+       "E": 3,
+       "F": 1,
+       "G": 5,
+       "H": 6
+      }
+     ],
+     "letters_drawn": false
+    },
+    "manim_description": "On a plain white 1920 x 1080 px canvas (origin top-left, y downwards) draw the same board as the question figure twice, side by side, each filled with the numbers 1 to 8 once. Each hexagon is a regular hexagon with flat top and bottom and points left and right, side 100 px (width 200 px, height 173.2 px), fill CELL_FILL, INK 3 px outline; its corners are at (cx - 100, cy), (cx - 50, cy - 86.6), (cx + 50, cy - 86.6), (cx + 100, cy), (cx + 50, cy + 86.6), (cx - 50, cy + 86.6). Each board has three columns and three rows (row centres y = 280, 540, 800); the middle column of the middle row has NO hexagon. Column spacing and row spacing are 290 px and 260 px, as in the question figure; only the horizontal position of the board changes. LEFT board (first answer): top-left hexagon at (190, 280) holding the number 6 in ANSWER, 64 px high; top-middle hexagon at (480, 280) holding the number 3 in ANSWER, 64 px high; top-right hexagon at (770, 280) holding the number 2 in ANSWER, 64 px high; middle-left hexagon at (190, 540) holding the number 5 in ANSWER, 64 px high; middle-right hexagon at (770, 540) holding the number 4 in ANSWER, 64 px high; bottom-left hexagon at (190, 800) holding the number 1 in ANSWER, 64 px high; bottom-middle hexagon at (480, 800) holding the number 7 in ANSWER, 64 px high; bottom-right hexagon at (770, 800) holding the number 8 in ANSWER, 64 px high. Signs in INK bold 56 px high, centred: ÷ at (335, 280), = at (625, 280), − at (190, 410), × at (770, 410), + at (335, 800), = at (625, 800). Under each of the two middle hexagons draw one horizontal INK line (3 px) from (90, 670) to (290, 670); from (670, 670) to (870, 670). RIGHT board (second answer): top-left hexagon at (1150, 280) holding the number 8 in ANSWER, 64 px high; top-middle hexagon at (1440, 280) holding the number 4 in ANSWER, 64 px high; top-right hexagon at (1730, 280) holding the number 2 in ANSWER, 64 px high; middle-left hexagon at (1150, 540) holding the number 7 in ANSWER, 64 px high; middle-right hexagon at (1730, 540) holding the number 3 in ANSWER, 64 px high; bottom-left hexagon at (1150, 800) holding the number 1 in ANSWER, 64 px high; bottom-middle hexagon at (1440, 800) holding the number 5 in ANSWER, 64 px high; bottom-right hexagon at (1730, 800) holding the number 6 in ANSWER, 64 px high. Signs in INK bold 56 px high, centred: ÷ at (1295, 280), = at (1585, 280), − at (1150, 410), × at (1730, 410), + at (1295, 800), = at (1585, 800). Under each of the two middle hexagons draw one horizontal INK line (3 px) from (1050, 670) to (1250, 670); from (1630, 670) to (1830, 670). All hexagons, signs and lines keep the INK style of the question figure; only the eight numbers on each board are ANSWER. Draw nothing else.",
+    "visible_text": [
+     "÷",
+     "=",
+     "−",
+     "×",
+     "+",
+     "6",
+     "3",
+     "2",
+     "5",
+     "4",
+     "1",
+     "7",
+     "8",
+     "8",
+     "4",
+     "2",
+     "7",
+     "3",
+     "1",
+     "5",
+     "6"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the box letters A to H used in the LP steps",
+     "the words 'first answer' and 'second answer'",
+     "a third board or any other arrangement"
+    ],
+    "accuracy_checks": [
+     "left board: 6 ÷ 3 = 2, 6 − 5 = 1, 2 × 4 = 8, 1 + 7 = 8",
+     "right board: 8 ÷ 4 = 2, 8 − 7 = 1, 2 × 3 = 6, 1 + 5 = 6",
+     "each board uses the eight numbers 1 to 8 exactly once (checked by brute force: these are the only two arrangements)",
+     "hexagon size, spacing, signs and lines are identical to the question figure"
+    ],
+    "alt_text": "Two filled boards: 6 ÷ 3 = 2 across the top with 6 − 5 = 1 down the left, 2 × 4 = 8 down the right and 1 + 7 = 8 along the bottom; and 8 ÷ 4 = 2, 8 − 7 = 1, 2 × 3 = 6, 1 + 5 = 6.",
+    "render_note": "The LP answer gives two arrangements ('Yes, two answers'), so both are drawn, one board each, in the order of the LP steps. The LP's s_figure hint mentions only the first. The boards carry no letters; the LP steps name the boxes A to H in words by position."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C33",
+   "role": "question",
+   "lp_book_number": "Let Us Do (division with tens and hundreds), Q5",
+   "ncert_ref": "lud2.q5",
+   "question_text": "Fill in the blanks. $(a)$: $\\underline{\\hspace{1.2em}} \\div 18 = 100$; $(b)$: $\\underline{\\hspace{1.2em}} \\div 10 = 610$; $(c)$: $\\underline{\\hspace{1.2em}} \\div 100 = 72$; $(d)$: $\\underline{\\hspace{1.2em}} \\div 100 = 10$; $(e)$: $870 \\div \\underline{\\hspace{1.2em}} = 87$; $(f)$: $\\underline{\\hspace{1.2em}} \\div 100 = 70$; $(g)$: $200 \\div \\underline{\\hspace{1.2em}} = 2$; $(h)$: $130 \\div \\underline{\\hspace{1.2em}} = 13$.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Eight fill-in-the-blank equations (a) to (h); the book's two columns of equations carry no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX list of the eight equations with blanks."
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C34",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (division with tens and hundreds), Q5",
+   "ncert_ref": "lud2.q5",
+   "question_text": "Fill in the blanks. (a): ___ ÷ 18 = 100; (b): ___ ÷ 10 = 610; (c): ___ ÷ 100 = 72; (d): ___ ÷ 100 = 10; (e): 870 ÷ ___ = 87; (f): ___ ÷ 100 = 70; (g): 200 ÷ ___ = 2; (h): 130 ÷ ___ = 13.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Eight values from Dividend = Divisor × Quotient; plain arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

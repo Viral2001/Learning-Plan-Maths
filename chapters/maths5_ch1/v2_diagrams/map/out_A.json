@@ -1,0 +1,950 @@
+{
+ "meta": {
+  "chapter": "We the Travellers - I",
+  "class": 5,
+  "textbook": "Maths Mela, Grade 5 (NCERT), Chapter 1",
+  "lp_plan_id": "cbse_eng_maths5_ch1_v6",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "none": 11,
+    "required": 1
+   },
+   "question": {
+    "none": 6,
+    "required": 2
+   },
+   "solution": {
+    "none": 8
+   }
+  },
+  "notes": [
+   "Chunk A (topics M1.S2.T2 to M2.S12.T12, 20 units, 28 items): 3 required, 0 optional, 25 none.",
+   "Required: question diagrams of the two token-table questions (C13, C15: tokens only) and the number-line worked example C34.",
+   "Sequences with blanks, Number/Number-Name tables and place-value digit charts stay text/LaTeX (LATEX_ARITHMETIC, LATEX_TABLE, HEADER_BOXES_ONLY).",
+   "See notes_A.md for LP text issues and borderline calls."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P01-number_strip-1",
+   "source": "chapter p.01",
+   "description": "Row of 9 equal boxes under 'Let us start with 1,000': 1,000, 2,000, six empty boxes, 9,000. Checked on the page picture: there are NO arrows between the boxes (the LP hint says arrows). Sequence of numbers: text/LaTeX.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P02-table-1",
+   "source": "chapter p.02",
+   "description": "Teaching place value chart (TTh Th H T O) with the staircase 1, 10, 100, 1000, 10000 and four x10 arrows over TTh, Th, H, T (checked on the picture: arcs curve left, each meaning one place to the right times 10). Accounting only; the plan's teaching image 'The value of each digit' carries the TTh column and the x10 arrows.",
+   "mapped_to": "concept_image:M1.S3.T3.C6.IMG1"
+  },
+  {
+   "fig_id": "P02-base_ten_blocks-2",
+   "source": "chapter p.02",
+   "description": "Teaching base-ten blocks: unit square, ten-rod, hundred-flat (10 x 10) and thousand-cube (10 x 10 x 10) with the sentences 10 Ones = 1 Ten, 10 Tens = 1 Hundred, 10 Hundreds = 1 Thousand. No question, solution or worked example of this chapter uses it; the sentences carry it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P02-tokens-3",
+   "source": "chapter p.02",
+   "description": "Ten 1,000 tokens (two rows of five) with an arrow to one 10,000 token. Same picture as the plan's teaching image 'After nine thousand' (accounting only).",
+   "mapped_to": "concept_image:M1.S3.T3.C5.IMG1"
+  },
+  {
+   "fig_id": "P02-tokens-4",
+   "source": "chapter p.02",
+   "description": "Teaching tokens for 1,380 = 1 Thousand + 3 Hundreds + 8 Tens + 0 Ones. Checked: one 1,000, three 100, eight 10, no 1 tokens. No item asks about 1,380; the line above states the expansion.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P02-tokens-5",
+   "source": "chapter p.02",
+   "description": "Teaching tokens for 9,123 = 9 Thousands + 1 Hundred + 2 Tens + 3 Ones. Checked: nine 1,000, one 100, two 10, three 1. No item asks about 9,123; the line above states the expansion.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P03-table-1",
+   "source": "chapter p.03",
+   "description": "Token table (Token(s), Number, TTh, Th, H, T, O, Number Name), six rows. Rows 1 to 4 (10,001 / 10,002 / 10,010 / 10,024) are complete teaching rows. Rows 5 and 6 are the question C13: row 5 = one 10,000, three 10, three 1 (checked by counting: 10,033; the Number and digit cells are empty, the name Ten thousand thirty-three is given); row 6 = one 10,000, four 100, five 10, eight 1 (10,458, Number printed, digits empty, name printed). The diagram draws the tokens of rows 5 and 6 only. Book slip seen: the two 1 tokens of row 2 are coloured like 100 tokens (value is 1).",
+   "mapped_to": "item:M1.S6.T6.C13 (question)"
+  },
+  {
+   "fig_id": "P04-table-1",
+   "source": "chapter p.04",
+   "description": "Continuation of the token table, four rows, all are question C15. Counted on the picture: row 1 = 10,000 + 1,000 + two 100 + one 10 + four 1 = 11,214 (digits 1 1 2 1 4 printed, Number and name empty); row 2 = 10,000 + three 1,000 + five 100 + two 10 = 13,520; row 3 = two 10,000 = 20,000; row 4 = four 10,000 + five 1,000 + eight 100 + six 10 + seven 1 = 45,867 (30 tokens). The diagram draws the tokens of the four rows only.",
+   "mapped_to": "item:M1.S6.T6.C15 (question)"
+  },
+  {
+   "fig_id": "P05-sequence-1",
+   "source": "chapter p.05",
+   "description": "Let Us Do Q1 (a): boxes joined by arrows: 456 -> 567 -> 678 -> four empty boxes (7 boxes). Checked on the picture. A sequence with blanks: number chain in text/LaTeX (question C27).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P05-sequence-2",
+   "source": "chapter p.05",
+   "description": "Let Us Do Q1 (b): boxes joined by arrows: 1,050 -> empty -> 3,150 -> 4,200 -> three empty boxes (7 boxes, 4 empty). Checked on the picture. A sequence with blanks: number chain in text/LaTeX (question C27).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P05-sequence-3",
+   "source": "chapter p.05",
+   "description": "Let Us Do Q1 (c): boxes joined by arrows: 5,501 -> 6,401 -> 7,301 -> four empty boxes (7 boxes). Checked on the picture. A sequence with blanks: number chain in text/LaTeX (question C27).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P05-sequence-4",
+   "source": "chapter p.05",
+   "description": "Let Us Do Q1 (d): boxes joined by arrows: 10,100 -> 10,200 -> 10,300 -> four empty boxes in row 1, then row 2 right to left: empty, 10,900, empty (10 boxes, 7 empty). Checked on the picture. A sequence with blanks: number chain in text/LaTeX (question C29).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P05-sequence-5",
+   "source": "chapter p.05",
+   "description": "Let Us Do Q1 (e): boxes joined by arrows: 10,105 -> 10,125 -> five empty boxes in row 1, then three empty boxes in row 2 (10 boxes, 8 empty). Checked on the picture. A sequence with blanks: number chain in text/LaTeX (question C29).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P05-sequence-6",
+   "source": "chapter p.05",
+   "description": "Let Us Do Q1 (f): boxes joined by arrows: 10,992 -> 10,993 -> five empty boxes in row 1, then three empty boxes in row 2 (10 boxes, 8 empty). Checked on the picture. A sequence with blanks: number chain in text/LaTeX (question C29).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P05-sequence-7",
+   "source": "chapter p.05",
+   "description": "Let Us Do Q1 (g): boxes joined by arrows: 10,794 -> 10,796 -> 10,798 -> four empty boxes in row 1, then three empty boxes in row 2 (10 boxes, 7 empty). Checked on the picture. A sequence with blanks: number chain in text/LaTeX (question C29).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P05-sequence-8",
+   "source": "chapter p.05",
+   "description": "Let Us Do Q1 (h): boxes joined by arrows: 73,005 -> 72,004 -> five empty boxes in row 1, then three empty boxes in row 2 (10 boxes, 8 empty). Checked on the picture. A sequence with blanks: number chain in text/LaTeX (question C31).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P05-sequence-9",
+   "source": "chapter p.05",
+   "description": "Let Us Do Q1 (i): boxes joined by arrows: 82,350 -> 83,350 -> five empty boxes in row 1, then three empty boxes in row 2 (10 boxes, 8 empty). Checked on the picture. A sequence with blanks: number chain in text/LaTeX (question C31).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P06-table-1",
+   "source": "chapter p.06",
+   "description": "Number | Number Name table, 16 rows (checked on the picture): 8,045 and 20,869 are completed example rows; 7,209, 10,599, 13,579, 45,045, 39,593, 50,005, 26,050, 81,200 have empty names (question C17); the six names Ten thousand seven hundred forty-three, Ten thousand ten, Fifty-six thousand four hundred ninety-one, Ninety thousand nine, Twenty-three thousand two hundred thirty, Thirty-six thousand one have empty numbers (question C22). Plain table, used by both questions.",
+   "mapped_to": "none:LATEX_TABLE"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 18,
+  "mapped_to_items": 2,
+  "mapped_to_concept_images": 2,
+  "mapped_none": 14,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S6.T6.C13.IMG1",
+   "M1.S6.T6.C15.IMG1",
+   "M2.S12.T12.C34.IMG2"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S2.T2.C3",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Chapter 1 p.1 (opening story)",
+   "question_text": "The opening story names ways of travelling. Long ago: on foot, on animals, in boats and in ships. About a hundred years ago: animal-drawn carts, cars and trains. How many ways of travelling does the story name in all, and which is older, a boat or a bullock cart?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Counting 4 + 3 = 7 named ways of travelling and comparing boat with bullock cart is all in the words; the three pictures on p.1 are chapter-opening art (decoration), and the plan's teaching image 'Seven ways of travelling' already shows the seven cards (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C5",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Chapter 1 pp.1-2 (ten thousand)",
+   "question_text": "Start at 4,150 and keep adding one thousand. Which number do you reach after 9,150, and how do you say it?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Adding 1,000 each time from 4,150 to 9,150 and then 9,150 + 1,000 = 10,150 is a plain number chain with arithmetic; no figure is given or asked for.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX chain: 4,150, 5,150, 6,150, 7,150, 8,150, 9,150, then 9,150 + 1,000 = 10,150.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C6",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Chapter 1 p.2 (place value chart with the TTh column)",
+   "question_text": "Put the digits of 52,525 in the place value chart and say what each digit is worth.",
+   "decision": "none",
+   "reason_codes": [
+    "HEADER_BOXES_ONLY"
+   ],
+   "reason": "The place value chart for 52,525 is a row of header boxes (TTh Th H T O) filled with digits: HEADER_BOXES_ONLY, a LaTeX array does it. The book's teaching chart with the x10 arrows is covered by the teaching image 'The value of each digit' (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array with headers TTh, Th, H, T, O and the digits 5, 2, 5, 2, 5 (second row: the values 50,000, 2,000, 500, 20, 5).",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C8",
+   "role": "question",
+   "lp_book_number": "Reading and writing large numbers: counting in thousands",
+   "ncert_ref": "Chapter 1 p.1 (counting in thousands)",
+   "question_text": "Let us start with 1,000. What numbers do we get when we keep adding a thousand? Fill the boxes: 1,000, 2,000, then six empty boxes, then 9,000. What number do we get when we add a thousand to 9,000? How do we write this number?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The strip is a sequence 1,000, 2,000, six blanks, 9,000: a number chain with every position stated in the question text; no shading, colour or arrow carries meaning (sequences stay text/LaTeX, as for Let Us Do Q1). The book prints the 9 boxes WITHOUT arrows; the LP hint 'joined by arrows' is wrong.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: $1{,}000,\\ 2{,}000,\\ \\square,\\ \\square,\\ \\square,\\ \\square,\\ \\square,\\ \\square,\\ 9{,}000$ (nine places, six blanks)."
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C9",
+   "role": "solution",
+   "lp_book_number": "Reading and writing large numbers: counting in thousands",
+   "ncert_ref": "Chapter 1 p.1 (counting in thousands)",
+   "question_text": "Let us start with 1,000. What numbers do we get when we keep adding a thousand? Fill the boxes: 1,000, 2,000, then six empty boxes, then 9,000. What number do we get when we add a thousand to 9,000? How do we write this number?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the list 3,000 to 8,000 and 9,000 + 1,000 = 10,000: a filled number chain, plain arithmetic in LaTeX; the book has no printed solutions and no picture answer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: $1{,}000, 2{,}000, 3{,}000, 4{,}000, 5{,}000, 6{,}000, 7{,}000, 8{,}000, 9{,}000$ and $9{,}000 + 1{,}000 = 10{,}000$."
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C10",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Chapter 1 p.3 (reading numbers beyond ten thousand)",
+   "question_text": "Read the number 34,682 aloud.",
+   "decision": "none",
+   "reason_codes": [
+    "HEADER_BOXES_ONLY"
+   ],
+   "reason": "Reading 34,682 aloud needs only the digit chart TTh 3, Th 4, H 6, T 8, O 2 (header boxes with digits, LaTeX array) and the words; the plan's teaching image 'Reading a number from its tokens' already shows the tokens (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array with headers TTh, Th, H, T, O and the digits 3, 4, 6, 8, 2.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C11",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Chapter 1 p.3 (reading numbers with zeros)",
+   "question_text": "Read the number 30,402 aloud.",
+   "decision": "none",
+   "reason_codes": [
+    "HEADER_BOXES_ONLY"
+   ],
+   "reason": "Reading 30,402 needs only the digit chart TTh 3, Th 0, H 4, T 0, O 2 (header boxes with digits) and the words; the shaded zeros are already in the teaching image 'Reading a number with zeros' (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array with headers TTh, Th, H, T, O and the digits 3, 0, 4, 0, 2.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C13",
+   "role": "question",
+   "lp_book_number": "Reading and writing large numbers: token table, first rows",
+   "ncert_ref": "Chapter 1 p.3, token table rows 5 and 6",
+   "question_text": "Fill in the token table. Write the number and write its digits in the ten thousands, thousands, hundreds, tens and ones columns. Row 1: the tokens are one 10,000, three tokens of 10 and three tokens of 1, and the number name is Ten thousand thirty-three. Row 2: the number is 10,458 and the number name is Ten thousand four hundred fifty-eight; write its digits.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The book gives the two rows as token pictures that the learner counts to fill the table; the token counts of row 2 live only in the picture (the LP text gives the row-2 number, not its tokens), and the LP solution's check 'with the tokens: 10,000 + 400 + 50 + 8' relies on them. Shows only the tokens (what the question gives); the digit and name cells are a plain table (text/LaTeX).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S6.T6.C13.IMG1",
+   "manim_scene": "c5_1_s6_t6_c13_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S6.T6.C13.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "place_value_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "place_value_model",
+     "layout": "token_rows",
+     "canvas": "1920x1080, scale uniformly to fill the 16:9 card with a 6 percent margin",
+     "token_chip": {
+      "style": "rounded rectangle, corner radius 14 px, height 72 px, fill CELL_FILL, 3 px INK outline, value printed centred in INK at 38 px",
+      "widths_px": {
+       "10,000": 190,
+       "1,000": 170,
+       "100": 124,
+       "10": 100,
+       "1": 80
+      }
+     },
+     "block_rule": "tokens of one value form a block; blocks run left to right in the order 10,000, 1,000, 100, 10, 1 (empty blocks left out), 44 px between blocks; inside a block tokens wrap two per line (14 px across, 12 px between lines)",
+     "row_labels": "circled numerals 1 and 2 at the left of the bands (diameter 72 px, 3 px INK outline, numeral INK 44 px)",
+     "rows": [
+      {
+       "row_label": "1",
+       "tokens": [
+        {
+         "value": 10000,
+         "count": 1
+        },
+        {
+         "value": 10,
+         "count": 3
+        },
+        {
+         "value": 1,
+         "count": 3
+        }
+       ],
+       "token_count": 7,
+       "total_value_check_only_not_drawn": 10033,
+       "lines_in_tallest_block": 2
+      },
+      {
+       "row_label": "2",
+       "tokens": [
+        {
+         "value": 10000,
+         "count": 1
+        },
+        {
+         "value": 100,
+         "count": 4
+        },
+        {
+         "value": 10,
+         "count": 5
+        },
+        {
+         "value": 1,
+         "count": 8
+        }
+       ],
+       "token_count": 18,
+       "total_value_check_only_not_drawn": 10458,
+       "lines_in_tallest_block": 4
+      }
+     ],
+     "band_gap_px": 40
+    },
+    "manim_description": "Canvas 1920 by 1080 on BG (plain white); scale the whole composition uniformly so it fills the 16:9 card with a 6 percent margin. Two horizontal bands, band 1 above band 2, 40 px apart, with a 3 px GUIDE line across the middle of the gap. At the left of each band sits a circle (diameter 72 px, 3 px INK outline, no fill) holding a numeral in INK at 44 px: band 1 shows 1, band 2 shows 2. To the right of the circle each band shows place-value tokens: rounded rectangles (corner radius 14 px, height 72 px, fill CELL_FILL, 3 px INK outline) with the token value printed centred in INK at 38 px. Token widths: the 10,000 token is 190 px wide, the 100 token 124 px, the 10 token 100 px, the 1 token 80 px. Tokens of one value form a block. Blocks run left to right in the order 10,000, then 100, then 10, then 1, with 44 px between blocks. Inside a block the tokens wrap two per line, 14 px apart across and 12 px apart between lines, the first line at the top edge of the band, aligned left. Band 1 (circle 1): block 10,000 holds 1 token; block 10 holds 3 tokens (line 1: two tokens, line 2: one token); block 1 holds 3 tokens (line 1: two tokens, line 2: one token); there is no 100 block. Band 1 is 2 lines tall (156 px). Band 2 (circle 2): block 10,000 holds 1 token; block 100 holds 4 tokens (two lines of two); block 10 holds 5 tokens (lines of 2, 2 and 1); block 1 holds 8 tokens (four lines of two). Band 2 is 4 lines tall (324 px). Draw no column headings, no number, no digits, no number name and no totals: the figure shows only the tokens.",
+    "visible_text": [
+     "1",
+     "2",
+     "10",
+     "100",
+     "10,000"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, captions",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "column headings Token(s), Number, TTh, Th, H, T, O, Number Name",
+     "the numbers 10,033 or 10,458, their digits or their number names",
+     "token colours by place value (one neutral fill is used)"
+    ],
+    "accuracy_checks": [
+     "row 1 holds 7 tokens: 10,000 + 3 x 10 + 3 x 1 = 10,033",
+     "row 2 holds 18 tokens: 10,000 + 4 x 100 + 5 x 10 + 8 x 1 = 10,458",
+     "no 1,000 token appears in either row",
+     "the circled numerals read 1 (top band) and 2 (bottom band), matching Row 1 and Row 2 of the question"
+    ],
+    "alt_text": "Row 1: one 10,000 token, three 10 tokens and three 1 tokens. Row 2: one 10,000 token, four 100 tokens, five 10 tokens and eight 1 tokens.",
+    "render_note": "Same book figure as the token table of p.3 (rows 5 and 6). The book colours tokens by place value; this card uses the neutral CELL_FILL so the house palette is kept and the printed value tells the tokens apart. Layout rule shared with M1.S6.T6.C15.IMG1."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C14",
+   "role": "solution",
+   "lp_book_number": "Reading and writing large numbers: token table, first rows",
+   "ncert_ref": "Chapter 1 p.3, token table rows 5 and 6",
+   "question_text": "Fill in the token table. Write the number and write its digits in the ten thousands, thousands, hundreds, tens and ones columns. Row 1: the tokens are one 10,000, three tokens of 10 and three tokens of 1, and the number name is Ten thousand thirty-three. Row 2: the number is 10,458 and the number name is Ten thousand four hundred fifty-eight; write its digits.",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "LATEX_TABLE"
+   ],
+   "reason": "The tokens do not change in the answer; the answer only fills the Number and digit cells (10,033 with 1,0,0,3,3 and 10,458 with 1,0,4,5,8): a plain table in LaTeX, so a solution figure would only repeat the question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array: columns Number, TTh, Th, H, T, O, Number Name; row 1: 10,033, 1, 0, 0, 3, 3, Ten thousand thirty-three; row 2: 10,458, 1, 0, 4, 5, 8, Ten thousand four hundred fifty-eight."
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C15",
+   "role": "question",
+   "lp_book_number": "Reading and writing large numbers: token table, last rows",
+   "ncert_ref": "Chapter 1 p.4, token table (four rows)",
+   "question_text": "Fill in the token table. (a): The tokens are one 10,000, one 1,000, two tokens of 100, one 10 and four tokens of 1, and the digits are ten thousands 1, thousands 1, hundreds 2, tens 1, ones 4: write the number and its number name. (b): The number is 13,520, Thirteen thousand five hundred twenty: write its digits. (c): The number is 20,000, Twenty thousand: write its digits. (d): The number is 45,867, Forty-five thousand eight hundred sixty-seven: write its digits.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The book gives the four rows as token pictures; for (b), (c) and (d) the token counts live only in the picture (the LP text states them for (a) only) and the LP solution works from them ('Two 10,000 tokens make 20,000'). Shows only the tokens (what the question gives); the digit, number and name cells are a plain table (text/LaTeX). Sibling of C13.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S6.T6.C15.IMG1",
+   "manim_scene": "c5_1_s6_t6_c15_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S6.T6.C15.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "place_value_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "place_value_model",
+     "layout": "token_rows",
+     "canvas": "1920x1080, scale uniformly to fill the 16:9 card with a 6 percent margin",
+     "token_chip": {
+      "style": "rounded rectangle, corner radius 14 px, height 72 px, fill CELL_FILL, 3 px INK outline, value printed centred in INK at 38 px",
+      "widths_px": {
+       "10,000": 190,
+       "1,000": 170,
+       "100": 124,
+       "10": 100,
+       "1": 80
+      }
+     },
+     "block_rule": "tokens of one value form a block; blocks run left to right in the order 10,000, 1,000, 100, 10, 1 (empty blocks left out), 44 px between blocks; inside a block tokens wrap two per line (14 px across, 12 px between lines)",
+     "row_labels": "(a), (b), (c), (d) in INK bold 44 px at the left of the bands",
+     "rows": [
+      {
+       "row_label": "(a)",
+       "tokens": [
+        {
+         "value": 10000,
+         "count": 1
+        },
+        {
+         "value": 1000,
+         "count": 1
+        },
+        {
+         "value": 100,
+         "count": 2
+        },
+        {
+         "value": 10,
+         "count": 1
+        },
+        {
+         "value": 1,
+         "count": 4
+        }
+       ],
+       "token_count": 9,
+       "total_value_check_only_not_drawn": 11214,
+       "lines_in_tallest_block": 2
+      },
+      {
+       "row_label": "(b)",
+       "tokens": [
+        {
+         "value": 10000,
+         "count": 1
+        },
+        {
+         "value": 1000,
+         "count": 3
+        },
+        {
+         "value": 100,
+         "count": 5
+        },
+        {
+         "value": 10,
+         "count": 2
+        }
+       ],
+       "token_count": 11,
+       "total_value_check_only_not_drawn": 13520,
+       "lines_in_tallest_block": 3
+      },
+      {
+       "row_label": "(c)",
+       "tokens": [
+        {
+         "value": 10000,
+         "count": 2
+        }
+       ],
+       "token_count": 2,
+       "total_value_check_only_not_drawn": 20000,
+       "lines_in_tallest_block": 1
+      },
+      {
+       "row_label": "(d)",
+       "tokens": [
+        {
+         "value": 10000,
+         "count": 4
+        },
+        {
+         "value": 1000,
+         "count": 5
+        },
+        {
+         "value": 100,
+         "count": 8
+        },
+        {
+         "value": 10,
+         "count": 6
+        },
+        {
+         "value": 1,
+         "count": 7
+        }
+       ],
+       "token_count": 30,
+       "total_value_check_only_not_drawn": 45867,
+       "lines_in_tallest_block": 4
+      }
+     ],
+     "band_gap_px": 40
+    },
+    "manim_description": "Canvas 1920 by 1080 on BG (plain white); scale the whole composition uniformly so it fills the 16:9 card with a 6 percent margin. Four horizontal bands, top to bottom labelled (a), (b), (c), (d), each 40 px below the one above, with a 3 px GUIDE line across the middle of each gap. At the left of each band the label (a), (b), (c) or (d) is written in INK bold at 44 px, aligned to the top of the band. To the right of the label each band shows place-value tokens: rounded rectangles (corner radius 14 px, height 72 px, fill CELL_FILL, 3 px INK outline) with the token value printed centred in INK at 38 px. Token widths: the 10,000 token is 190 px wide, the 1,000 token 170 px, the 100 token 124 px, the 10 token 100 px, the 1 token 80 px. Tokens of one value form a block. Blocks run left to right in the order 10,000, 1,000, 100, 10, 1 (a value with no token has no block), with 44 px between blocks. Inside a block the tokens wrap two per line, 14 px apart across and 12 px apart between lines, the first line at the top edge of the band, aligned left. Band (a): block 10,000 holds 1 token; block 1,000 holds 1 token; block 100 holds 2 tokens (one line of two); block 10 holds 1 token; block 1 holds 4 tokens (two lines of two). Band (a) is 2 lines tall (156 px). Band (b): block 10,000 holds 1 token; block 1,000 holds 3 tokens (lines of 2 and 1); block 100 holds 5 tokens (lines of 2, 2 and 1); block 10 holds 2 tokens (one line of two); there is no 1 block. Band (b) is 3 lines tall (240 px). Band (c): block 10,000 holds 2 tokens (one line of two); no other block. Band (c) is 1 line tall (72 px). Band (d): block 10,000 holds 4 tokens (two lines of two); block 1,000 holds 5 tokens (lines of 2, 2 and 1); block 100 holds 8 tokens (four lines of two); block 10 holds 6 tokens (three lines of two); block 1 holds 7 tokens (lines of 2, 2, 2 and 1). Band (d) is 4 lines tall (324 px). Draw no column headings, no number, no digits, no number name and no totals: the figure shows only the tokens.",
+    "visible_text": [
+     "(a)",
+     "(b)",
+     "(c)",
+     "(d)",
+     "1",
+     "10",
+     "100",
+     "1,000",
+     "10,000"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, captions",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "column headings Token(s), Number, TTh, Th, H, T, O, Number Name",
+     "the numbers 11,214, 13,520, 20,000 or 45,867, their digits or their number names",
+     "token colours by place value (one neutral fill is used)"
+    ],
+    "accuracy_checks": [
+     "(a) holds 9 tokens: 10,000 + 1,000 + 2 x 100 + 10 + 4 x 1 = 11,214",
+     "(b) holds 11 tokens: 10,000 + 3 x 1,000 + 5 x 100 + 2 x 10 = 13,520",
+     "(c) holds 2 tokens: 2 x 10,000 = 20,000",
+     "(d) holds 30 tokens: 4 x 10,000 + 5 x 1,000 + 8 x 100 + 6 x 10 + 7 x 1 = 45,867",
+     "52 tokens in all (9 + 11 + 2 + 30); the 4 bands fit the canvas height (156 + 240 + 72 + 324 + 3 x 40 = 912 px)"
+    ],
+    "alt_text": "Four rows of tokens: (a) 10,000, 1,000, two 100, one 10, four 1; (b) 10,000, three 1,000, five 100, two 10; (c) two 10,000; (d) four 10,000, five 1,000, eight 100, six 10, seven 1.",
+    "render_note": "Same book figure as the token table of p.4. Row letters (a) to (d) are the LP's own (the book prints no letters) and are drawn because the LP question and answer refer to the rows by letter. Neutral CELL_FILL chips as in M1.S6.T6.C13.IMG1."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C16",
+   "role": "solution",
+   "lp_book_number": "Reading and writing large numbers: token table, last rows",
+   "ncert_ref": "Chapter 1 p.4, token table (four rows)",
+   "question_text": "Fill in the token table. (a): The tokens are one 10,000, one 1,000, two tokens of 100, one 10 and four tokens of 1, and the digits are ten thousands 1, thousands 1, hundreds 2, tens 1, ones 4: write the number and its number name. (b): The number is 13,520, Thirteen thousand five hundred twenty: write its digits. (c): The number is 20,000, Twenty thousand: write its digits. (d): The number is 45,867, Forty-five thousand eight hundred sixty-seven: write its digits.",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "LATEX_TABLE"
+   ],
+   "reason": "The tokens do not change in the answer; the answer only fills the Number, digit and name cells: a plain table in LaTeX, so a solution figure would only repeat the question figure (same decision as C14).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array: columns Number, TTh, Th, H, T, O, Number Name; (a) 11,214, 1,1,2,1,4, Eleven thousand two hundred fourteen; (b) 13,520, 1,3,5,2,0; (c) 20,000, 2,0,0,0,0; (d) 45,867, 4,5,8,6,7."
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C17",
+   "role": "question",
+   "lp_book_number": "Let Us Do (large numbers), Q2 read",
+   "ncert_ref": "Chapter 1 p.6, Let Us Do Q2 (numbers to names)",
+   "question_text": "Fill in the blanks appropriately. Use commas as required. Write the number name of each of these numbers: 7,209; 10,599; 13,579; 45,045; 39,593; 50,005; 26,050; 81,200.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "A plain two-column table (Number, Number Name) with the numbers given: no colour, picture or arrow; the LP text already lists the eight numbers.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array with columns Number and Number Name; rows 7,209; 10,599; 13,579; 45,045; 39,593; 50,005; 26,050; 81,200 with empty names (the book's two worked rows 8,045 and 20,869 may be added)."
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C18",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (large numbers), Q2 read",
+   "ncert_ref": "Chapter 1 p.6, Let Us Do Q2 (numbers to names)",
+   "question_text": "Fill in the blanks appropriately. Use commas as required. Write the number name of each of these numbers: 7,209; 10,599; 13,579; 45,045; 39,593; 50,005; 26,050; 81,200.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The answer is the filled two-column table of number names: a plain table with words, written in LaTeX; the book has no printed solutions and no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array: 7,209 Seven thousand two hundred nine; 10,599 Ten thousand five hundred ninety-nine; 13,579 Thirteen thousand five hundred seventy-nine; 45,045 Forty-five thousand forty-five; 39,593 Thirty-nine thousand five hundred ninety-three; 50,005 Fifty thousand five; 26,050 Twenty-six thousand fifty; 81,200 Eighty-one thousand two hundred."
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C19",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Chapter 1 pp.3-6 (writing a number from its name)",
+   "question_text": "Write in numbers: Sixty-eight thousand five hundred nineteen.",
+   "decision": "none",
+   "reason_codes": [
+    "HEADER_BOXES_ONLY"
+   ],
+   "reason": "Writing 68,519 from its name uses the digit chart TTh 6, Th 8, H 5, T 1, O 9 (header boxes with digits) and words; the ticket picture is already the teaching image 'Writing a number from its name' (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array with headers TTh, Th, H, T, O and the digits 6, 8, 5, 1, 9.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C20",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Chapter 1 pp.3-6 (zero holds a place)",
+   "question_text": "Write in numbers: Sixty thousand two hundred nine.",
+   "decision": "none",
+   "reason_codes": [
+    "HEADER_BOXES_ONLY"
+   ],
+   "reason": "Writing 60,209 uses the digit chart TTh 6, Th 0, H 2, T 0, O 9 (header boxes with digits) and words; the shaded zeros are already in the teaching image 'Zero holds a place' (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array with headers TTh, Th, H, T, O and the digits 6, 0, 2, 0, 9.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C22",
+   "role": "question",
+   "lp_book_number": "Let Us Do (large numbers), Q2 write",
+   "ncert_ref": "Chapter 1 p.6, Let Us Do Q2 (names to numbers)",
+   "question_text": "Fill in the blanks appropriately. Use commas as required. Write the number for each of these names: Ten thousand seven hundred forty-three; Ten thousand ten; Fifty-six thousand four hundred ninety-one; Ninety thousand nine; Twenty-three thousand two hundred thirty; Thirty-six thousand one.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "A plain two-column table (Number, Number Name) with the names given: no colour, picture or arrow; the LP text already lists the six names. Same book table as C17.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array with columns Number and Number Name; rows with empty numbers and the names Ten thousand seven hundred forty-three; Ten thousand ten; Fifty-six thousand four hundred ninety-one; Ninety thousand nine; Twenty-three thousand two hundred thirty; Thirty-six thousand one."
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C23",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (large numbers), Q2 write",
+   "ncert_ref": "Chapter 1 p.6, Let Us Do Q2 (names to numbers)",
+   "question_text": "Fill in the blanks appropriately. Use commas as required. Write the number for each of these names: Ten thousand seven hundred forty-three; Ten thousand ten; Fifty-six thousand four hundred ninety-one; Ninety thousand nine; Twenty-three thousand two hundred thirty; Thirty-six thousand one.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The answer is the filled Number column (10,743; 10,010; 56,491; 90,009; 23,230; 36,001): a plain table of numbers in LaTeX; no printed solutions and no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array: 10,743 Ten thousand seven hundred forty-three; 10,010 Ten thousand ten; 56,491 Fifty-six thousand four hundred ninety-one; 90,009 Ninety thousand nine; 23,230 Twenty-three thousand two hundred thirty; 36,001 Thirty-six thousand one."
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C24",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Chapter 1 p.5 (number patterns)",
+   "question_text": "Find the rule and write the next two numbers: 2,150, 2,450, 2,750, 3,050.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Finding the rule of 2,150, 2,450, 2,750, 3,050 is differences and a sequence, all written as arithmetic; the arrow row with the +300 pills is already the teaching image 'Finding the rule of a pattern' (never linked). An arrow row with the jumps would be the optional picture.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: 2,450 - 2,150 = 300 and the next numbers 3,050 + 300 = 3,350, 3,350 + 300 = 3,650.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C25",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Chapter 1 p.5 (number patterns)",
+   "question_text": "Find the rule and write the next two numbers: 13,050, 12,050, 11,050, 10,050.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Finding the rule of 13,050, 12,050, 11,050, 10,050 (subtract 1,000, then 9,050 and 8,050) is differences and a sequence, all written as arithmetic; the picture is already the teaching image 'A pattern that goes down' (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: 13,050 - 12,050 = 1,000 and the next numbers 10,050 - 1,000 = 9,050, 9,050 - 1,000 = 8,050.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C27",
+   "role": "question",
+   "lp_book_number": "Let Us Do (patterns), Q1 (a) to (c)",
+   "ncert_ref": "Chapter 1 p.5, Let Us Do Q1 (a) to (c)",
+   "question_text": "Fill in the blanks by continuing the pattern in each of the following sequences. Discuss the patterns in class. (a): 456, 567, 678, then four empty boxes. (b): 1,050, an empty box, 3,150, 4,200, then three empty boxes. (c): 5,501, 6,401, 7,301, then four empty boxes.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three sequences with blanks: number chains whose given values and blank positions are all stated in the question text; no shading or colour carries meaning (sequences stay text/LaTeX). Sibling of C29 and C31.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: (a) 456, 567, 678, then four blanks; (b) 1,050, a blank, 3,150, 4,200, then three blanks; (c) 5,501, 6,401, 7,301, then four blanks."
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C28",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (patterns), Q1 (a) to (c)",
+   "ncert_ref": "Chapter 1 p.5, Let Us Do Q1 (a) to (c)",
+   "question_text": "Fill in the blanks by continuing the pattern in each of the following sequences. Discuss the patterns in class. (a): 456, 567, 678, then four empty boxes. (b): 1,050, an empty box, 3,150, 4,200, then three empty boxes. (c): 5,501, 6,401, 7,301, then four empty boxes.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is three filled number chains with the rule and the jumps already in the steps; plain arithmetic in LaTeX. A chain with a curved jump arrow over each step would be the optional picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: (a) 456, 567, 678, 789, 900, 1,011, 1,122; (b) 1,050, 2,100, 3,150, 4,200, 5,250, 6,300, 7,350; (c) 5,501, 6,401, 7,301, 8,201, 9,101, 10,001, 10,901."
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C29",
+   "role": "question",
+   "lp_book_number": "Let Us Do (patterns), Q1 (d) to (g)",
+   "ncert_ref": "Chapter 1 p.5, Let Us Do Q1 (d) to (g)",
+   "question_text": "Fill in the blanks by continuing the pattern in each of the following sequences. Discuss the patterns in class. (d): 10,100, 10,200, 10,300, five empty boxes, 10,900 and one more empty box. (e): 10,105, 10,125, then eight empty boxes. (f): 10,992, 10,993, then eight empty boxes. (g): 10,794, 10,796, 10,798, then seven empty boxes.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four sequences with blanks (a 10-box snake in the book): number chains whose given values and blank positions are stated in the question text; the snake layout carries no meaning (sequences stay text/LaTeX). Sibling of C27 and C31.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: (d) 10,100, 10,200, 10,300, five blanks, 10,900, one blank; (e) 10,105, 10,125, then eight blanks; (f) 10,992, 10,993, then eight blanks; (g) 10,794, 10,796, 10,798, then seven blanks."
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C30",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (patterns), Q1 (d) to (g)",
+   "ncert_ref": "Chapter 1 p.5, Let Us Do Q1 (d) to (g)",
+   "question_text": "Fill in the blanks by continuing the pattern in each of the following sequences. Discuss the patterns in class. (d): 10,100, 10,200, 10,300, five empty boxes, 10,900 and one more empty box. (e): 10,105, 10,125, then eight empty boxes. (f): 10,992, 10,993, then eight empty boxes. (g): 10,794, 10,796, 10,798, then seven empty boxes.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is four filled number chains with the rule in the steps; plain arithmetic in LaTeX (same decision as C28).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: (d) 10,100 to 11,000 in steps of 100; (e) 10,105 to 10,285 in steps of 20; (f) 10,992 to 11,001 in steps of 1; (g) 10,794 to 10,812 in steps of 2."
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C31",
+   "role": "question",
+   "lp_book_number": "Let Us Do (patterns), Q1 (h) and (i)",
+   "ncert_ref": "Chapter 1 p.5, Let Us Do Q1 (h) and (i)",
+   "question_text": "Fill in the blanks by continuing the pattern in each of the following sequences. Discuss the patterns in class. (h): 73,005, 72,004, then eight empty boxes. (i): 82,350, 83,350, then eight empty boxes.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two sequences with blanks (a 10-box snake in the book): number chains whose given values are in the question text (sequences stay text/LaTeX). Sibling of C27 and C29.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: (h) 73,005, 72,004, then eight blanks; (i) 82,350, 83,350, then eight blanks."
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C32",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (patterns), Q1 (h) and (i)",
+   "ncert_ref": "Chapter 1 p.5, Let Us Do Q1 (h) and (i)",
+   "question_text": "Fill in the blanks by continuing the pattern in each of the following sequences. Discuss the patterns in class. (h): 73,005, 72,004, then eight empty boxes. (i): 82,350, 83,350, then eight empty boxes.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is two filled number chains with the rule in the steps; plain arithmetic in LaTeX (same decision as C28).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: (h) 73,005, 72,004, 71,003, 70,002, 69,001, 68,000, 66,999, 65,998, 64,997, 63,996; (i) 82,350 to 91,350 in steps of 1,000."
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C33",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "LP worked example (comparing large numbers)",
+   "question_text": "Which is greater, 8,965 or 21,304? Then which is greater, 47,260 or 47,620?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Comparing 8,965 with 21,304 (number of digits) and 47,260 with 47,620 (place by place from the left) is words and digits; the place value chart with the deciding digit is already the teaching image 'Which number is greater?' (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write the digits of each pair under TTh, Th, H, T, O in a LaTeX array if wanted.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C34",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "LP worked example (ordering on a number line); book Let Us Do Q3 p.6 uses the same idea",
+   "question_text": "Place 31,250, 8,640, 24,305 and 19,780 on a number line with the marks 0, 10,000, 20,000, 30,000 and 40,000. Then write them in increasing order.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The example itself asks to place four numbers on a number line with the marks 0 to 40,000 (place on a line), and the steps locate each number between two marks; the positions are the content. The teaching image 'Numbers on a number line' is never linked, so the example gets its own diagram: the line with the four numbers placed (the worked example shows the finished placement; the steps follow).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S12.T12.C34.IMG2",
+   "manim_scene": "c5_1_s12_t12_c34_wex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S12.T12.C34.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "to_scale": true,
+     "range": [
+      0,
+      40000
+     ],
+     "ticks": 5,
+     "tick_spacing_units": 10000,
+     "px_per_unit": 0.04,
+     "line_x_from_to": [
+      120,
+      1800
+     ],
+     "tick_x_px": [
+      160,
+      560,
+      960,
+      1360,
+      1760
+     ],
+     "tick_labels_left_to_right": [
+      "0",
+      "10,000",
+      "20,000",
+      "30,000",
+      "40,000"
+     ],
+     "points": [
+      {
+       "value": 8640,
+       "x_px": 506,
+       "side": "above",
+       "colour": "ANSWER"
+      },
+      {
+       "value": 19780,
+       "x_px": 951,
+       "side": "above",
+       "colour": "ANSWER"
+      },
+      {
+       "value": 24305,
+       "x_px": 1132,
+       "side": "above",
+       "colour": "ANSWER"
+      },
+      {
+       "value": 31250,
+       "x_px": 1410,
+       "side": "above",
+       "colour": "ANSWER"
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 by 1080 on BG (plain white); scale the whole composition uniformly so it fills the 16:9 card with a 6 percent margin. A horizontal number line in INK, 4 px thick, at y = 560, running from x = 120 (flat left end) to x = 1800 (right end with a filled right-pointing arrowhead 24 px long). Five vertical tick marks in INK, 3 px thick and 40 px tall (y = 540 to 580), at x = 160, 560, 960, 1360 and 1760, so 10,000 units are 400 px and 1 px is 25 units. Tick labels in INK at 40 px, centred under each tick (centre y = 625), left to right: 0, 10,000, 20,000, 30,000, 40,000. Four numbers placed on the line in ANSWER green, each a filled circle of radius 12 centred on the line with a 2 px INK outline, at x = 506 for 8,640 (160 + 8,640 / 25 = 505.6), x = 951 for 19,780 (160 + 791.2), x = 1132 for 24,305 (160 + 972.2) and x = 1410 for 31,250 (160 + 1,250). From each circle a vertical stem, 3 px thick in ANSWER, rises 90 px from y = 548 to y = 458 and ends at a label box: a rounded rectangle 164 px wide and 64 px tall (y = 394 to 458), fill BG, 3 px ANSWER outline, centred on the stem, holding the number in ANSWER bold at 36 px. The four label boxes sit on one level, left to right: 8,640, 19,780, 24,305, 31,250 (box centres x = 506, 951, 1132, 1410; the boxes do not touch: the gap between the 19,780 and 24,305 boxes is 17 px). Draw nothing else: no title, no arrow text, no increasing-order sentence.",
+    "visible_text": [
+     "0",
+     "10,000",
+     "20,000",
+     "30,000",
+     "40,000",
+     "8,640",
+     "19,780",
+     "24,305",
+     "31,250"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, captions",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words increasing order or farther right is greater",
+     "any extra tick marks or minor ticks"
+    ],
+    "accuracy_checks": [
+     "x = 160 + value / 25 for every point: 8,640 -> 505.6, 19,780 -> 951.2, 24,305 -> 1,132.2, 31,250 -> 1,410",
+     "8,640 lies between the 0 and 10,000 ticks; 19,780 between 10,000 and 20,000 and 9 px before the 20,000 tick; 24,305 between 20,000 and 30,000; 31,250 between 30,000 and 40,000",
+     "left to right the four points read 8,640, 19,780, 24,305, 31,250, which is the LP's increasing order",
+     "tick labels are equally spaced (400 px) and read 0, 10,000, 20,000, 30,000, 40,000"
+    ],
+    "alt_text": "A number line marked 0, 10,000, 20,000, 30,000 and 40,000 with the numbers 8,640, 19,780, 24,305 and 31,250 placed on it from left to right.",
+    "render_note": "Worked-example figure: the four ANSWER-green points show the finished placement the steps explain. Same four numbers and marks as the plan's teaching image M2.S12.T12.C34.IMG1, which is not linked."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C35",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "LP worked example (numbers between two numbers)",
+   "question_text": "(a) Write three numbers between 71,420 and 72,050. (b) Which of them has 0 in the ones, tens and hundreds places?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "The question asks for any three numbers between 71,420 and 72,050 (many answers are right) and checks the zeros by place; it is words and comparison of digits. The segment with the three green dots is already the teaching image 'Numbers between two numbers' (never linked). A number line with the sample numbers would be the optional picture.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: 71,420 < 71,500 < 71,900 < 72,000 < 72,050.",
+   "block_index": 0
+  }
+ ]
+}

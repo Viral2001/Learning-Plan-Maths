@@ -1,0 +1,7820 @@
+{
+ "meta": {
+  "chapter": "Symmetrical Designs",
+  "class": 5,
+  "textbook": "Maths Mela, Grade 5 (NCERT), Chapter 10",
+  "lp_plan_id": "cbse_eng_maths5_ch10_v4",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 7,
+    "none": 3
+   },
+   "solution": {
+    "optional": 1,
+    "required": 8,
+    "none": 1
+   },
+   "worked_example": {
+    "required": 2
+   }
+  },
+  "notes": [
+   "Chunk B: topics M3.S13.T13 to M3.S19.T19 (22 items). Decisions follow the v3 rules and the 23 Nov 2026 user decisions (own diagram even where a teaching image shows the figure; book mistakes corrected in the spec; LP text issues only listed).",
+   "Symmetry facts of every drawn shape (border shapes 1-19, designs of squares and triangles, the 4-square shape) were checked by computation on the exact coordinates in the specs.",
+   "See map/notes_B.md for borderline calls and LP text issues."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P04-pattern-2",
+   "source": "chapter p.04 (Let Us Think)",
+   "description": "Square of 4 equal cells in a 2 x 2 grid: top-left light green, top-right pink, bottom-left pink, bottom-right light green (checked on the page picture: correct).",
+   "mapped_to": "item:M3.S13.T13.C34 (question)"
+  },
+  {
+   "fig_id": "P04-grid-3",
+   "source": "chapter p.04 (Let Us Think)",
+   "description": "Square with thick black border and 4 dashed grey lines through the centre (vertical, horizontal, both diagonals) cutting it into 8 uncoloured triangles; a small grey dot at the centre (checked on the page picture: correct).",
+   "mapped_to": "item:M3.S13.T13.C36 (question)"
+  },
+  {
+   "fig_id": "NEW-P04-pattern-2-C38",
+   "source": "chapter p.04 (Let Us Think)",
+   "description": "Second use of the green-pink 2 x 2 square: it is the left design of the question \"Do these designs have reflection symmetry also?\".",
+   "mapped_to": "item:M3.S13.T13.C38 (question)"
+  },
+  {
+   "fig_id": "NEW-P04-grid-3-C38",
+   "source": "chapter p.04 (Let Us Think)",
+   "description": "Second use of the 8-triangle square: coloured orange and blue one after the other (the solution of the colouring question) it is the right design of \"Do these designs have reflection symmetry also?\".",
+   "mapped_to": "item:M3.S13.T13.C38 (question)"
+  },
+  {
+   "fig_id": "P04-cutouts-4",
+   "source": "chapter p.04 (Let Us Do)",
+   "description": "Eight loose cut-out pieces on the page: 4 tan equilateral triangles and 4 blue squares, tilted at different angles, side length equal (checked on the page picture: correct). Illustrates the material only.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P05-shape-1",
+   "source": "chapter p.05 (Let Us Do)",
+   "description": "Four blue squares in a 2 x 2 block with a tan triangle at the left end and one at the right end of each row (4 triangles, each with its base on the block and its point away). Checked on the page picture: correct; the triangles are about one square side high.",
+   "mapped_to": "item:M3.S14.T14.C42 (question)"
+  },
+  {
+   "fig_id": "P05-photo_pair-2",
+   "source": "chapter p.05 (Let Us Explore)",
+   "description": "Two tiles tagged Wooden Block and Print: a photograph of a carved block with two stacked diamond motifs and the same design printed in black on cloth (checked on the page picture: correct). Introduces block printing; no question uses it.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P05-matching-3",
+   "source": "chapter p.05 (Let Us Explore)",
+   "description": "Five block photographs (i) paisley/drop, (ii) lotus, (iii) rosette, (iv) fan, (v) tall block with a plant, and five half prints (a) blue right half of a rosette, (b) green left half of a plant, (c) teal right half of a drop, (d) yellow left half of a lotus, (e) red left half of a fan; a line joins (iv) to (e). Checked on the page picture: the half sides (right for a and c, left for b, d, e) are correct.",
+   "mapped_to": "item:M3.S16.T16.C49 (question)"
+  },
+  {
+   "fig_id": "P06-photo_pair-1",
+   "source": "chapter p.06 (Let Us Explore)",
+   "description": "Wooden block (a leaf-shaped block) and its print A: 4 leaf motifs round the middle at quarter turns, with the sentence about 1/4 turn already filled in (checked on the page picture: correct). No LP item asks about design A (the LP worked example M3.S15.T15.C47 uses a two-stamp flower instead).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P06-print-2",
+   "source": "chapter p.06 (Let Us Explore)",
+   "description": "Design B: 4 purple heart-shaped lobes, one up, one down, one left, one right, pointed ends meeting at the middle, with a dashed vertical and a dashed horizontal line through the middle (checked on the page picture: correct).",
+   "mapped_to": "item:M3.S17.T17.C51 (question)"
+  },
+  {
+   "fig_id": "P06-border_shapes-3",
+   "source": "chapter p.06 (Let Us Do)",
+   "description": "CORRECTED: the 19 shapes round the page border, numbered 1 to 19 (the LP numbering) from the top-left corner. Base description checked shape by shape against the page picture. Corrections: shape 3 is NOT a regular hexagon: it is a six-sided shape about as tall as it is wide (corners (1,0), (0.5,1), (-0.5,1), (-1,0), (-0.5,-1), (0.5,-1)), with 2 lines of symmetry and a 1/2 turn; shape 7 is a rhombus whose long diagonal is tilted about 9 degrees (not untilted); shape 9 is a ring of 10 triangular tips in 5 mirror pairs (pair gap about 27 degrees, between pairs about 45 degrees), drawn slightly uneven; shape 4 has its top arm slightly shorter than the other two (drawn equal here, as the LP treats it); shape 16 is two equal ISOSCELES triangles (apex angle about 55 degrees) meeting at their apex along one common axis, so it has 2 lines of symmetry and a 1/2 turn; shape 14 has a grey triangle about 8 percent larger than the yellow one. Layout drawn here is a 7 x 5 ring instead of the page layout; order and symmetry facts are unchanged.",
+   "mapped_to": "item:M3.S18.T18.C53 (question)"
+  },
+  {
+   "fig_id": "P06-project_sample-4",
+   "source": "chapter p.06 (Project Work)",
+   "description": "Picture (a): three okra pods, one cut piece with a five-sided cross-section, and two flower-like prints (about 7 pentagon stamps each) on a stem with two leaves (checked on the page picture: correct). Illustrates an open project.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P06-project_sample-5",
+   "source": "chapter p.06 (Project Work)",
+   "description": "Picture (b): three potatoes with striped cut faces and six oval prints in a 2 x 3 chessboard-like arrangement, 3 orange-yellow and 3 blue (checked on the page picture: correct). Illustrates an open project.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 13,
+  "mapped_to_items": 8,
+  "mapped_to_concept_images": 0,
+  "mapped_none": 5,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M3.S13.T13.C34.IMG1",
+   "M3.S13.T13.C36.IMG1",
+   "M3.S13.T13.C37.IMG1",
+   "M3.S13.T13.C38.IMG1",
+   "M3.S13.T13.C39.IMG1",
+   "M3.S14.T14.C41.IMG1",
+   "M3.S14.T14.C42.IMG1",
+   "M3.S14.T14.C43.IMG1",
+   "M3.S14.T14.C45.IMG1",
+   "M3.S15.T15.C46.IMG2",
+   "M3.S15.T15.C47.IMG2",
+   "M3.S16.T16.C49.IMG1",
+   "M3.S16.T16.C50.IMG1",
+   "M3.S17.T17.C51.IMG1",
+   "M3.S18.T18.C53.IMG1",
+   "M3.S18.T18.C54.IMG1",
+   "M3.S19.T19.C56.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M3.S13.T13.C34",
+   "role": "question",
+   "lp_book_number": "Let Us Think: the green and pink square",
+   "ncert_ref": "lt.half_quarter",
+   "question_text": "Look at the design made of 4 squares. Does this design look the same after 1/2 turn? ___ Does the design look the same after 1/4 turn? ___",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question is about \"the design made of 4 squares\"; which cells are green and which are pink exists only in the book picture (page 4).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S13.T13.C34.IMG1",
+   "manim_scene": "c5_10_LT_Q1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S13.T13.C34.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "square_side": 4.4,
+     "cell_side": 2.2,
+     "cells": [
+      {
+       "cell": "top-left",
+       "x": [
+        -2.2,
+        0
+       ],
+       "y": [
+        0,
+        2.2
+       ],
+       "fill": "#CFE4AA",
+       "colour": "green"
+      },
+      {
+       "cell": "top-right",
+       "x": [
+        0,
+        2.2
+       ],
+       "y": [
+        0,
+        2.2
+       ],
+       "fill": "#EC999D",
+       "colour": "pink"
+      },
+      {
+       "cell": "bottom-left",
+       "x": [
+        -2.2,
+        0
+       ],
+       "y": [
+        -2.2,
+        0
+       ],
+       "fill": "#EC999D",
+       "colour": "pink"
+      },
+      {
+       "cell": "bottom-right",
+       "x": [
+        0,
+        2.2
+       ],
+       "y": [
+        -2.2,
+        0
+       ],
+       "fill": "#CFE4AA",
+       "colour": "green"
+      }
+     ],
+     "lines": {
+      "colour": "INK",
+      "width_px": 4
+     },
+     "type": "cell_grid"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). Draw one square of side 4.4 centred at (0,0), cut into 4 equal cells of side 2.2 by one vertical line (x = 0) and one horizontal line (y = 0). Fill the top-left cell (x -2.2 to 0, y 0 to 2.2) green #CFE4AA, the top-right cell (x 0 to 2.2, y 0 to 2.2) pink #EC999D, the bottom-left cell (x -2.2 to 0, y -2.2 to 0) pink #EC999D and the bottom-right cell (x 0 to 2.2, y -2.2 to 0) green #CFE4AA. Draw the outer border and both inner lines in INK, 4 px. Nothing else is drawn: no dots, no arrows, no text.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery, photographs"
+    ],
+    "accuracy_checks": [
+     "2 x 2 cells, side 2.2 each",
+     "the 2 green cells are on one diagonal (top-left, bottom-right), the 2 pink cells on the other (top-right, bottom-left)",
+     "no mark, arrow or text anywhere"
+    ],
+    "alt_text": "A square made of four equal squares: green at top left and bottom right, pink at top right and bottom left.",
+    "render_note": "Colours are the book colours (green and pink) as named in the LP solution."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S13.T13.C35",
+   "role": "solution",
+   "lp_book_number": "Let Us Think: the green and pink square",
+   "ncert_ref": "lt.half_quarter",
+   "question_text": "Look at the design made of 4 squares. Does this design look the same after 1/2 turn? ___ Does the design look the same after 1/4 turn? ___",
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Figure-based question with a Yes/No answer: the LP steps carry the colours cell by cell, so text is enough. The turned pictures (the square after a 1/2 turn: same; after a 1/4 turn: green and pink swap places) would help, but they are not needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optional figure not added: the square, the square after a 1/2 turn (identical) and after a 1/4 turn (colours moved to the other diagonal)."
+  },
+  {
+   "lp_concept_id": "M3.S13.T13.C36",
+   "role": "question",
+   "lp_book_number": "Let Us Think: colour the square",
+   "ncert_ref": "lt.colour",
+   "question_text": "Colour the square given in the figure using two colours so that the design looks the same after every 1/4 turn. How many times does this shape look the same during a full turn?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The student must colour the given square; the 8 triangular parts exist only in the book figure (page 4).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S13.T13.C36.IMG1",
+   "manim_scene": "c5_10_LT_Q2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S13.T13.C36.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "symmetry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "square_side": 5.0,
+     "centre": [
+      0,
+      0
+     ],
+     "border": {
+      "colour": "INK",
+      "width_px": 4
+     },
+     "guide_lines": {
+      "colour": "GUIDE",
+      "style": "dashed",
+      "width_px": 2,
+      "lines": [
+       "x = 0",
+       "y = 0",
+       "diagonal (-2.5,-2.5) to (2.5,2.5)",
+       "diagonal (-2.5,2.5) to (2.5,-2.5)"
+      ]
+     },
+     "centre_dot": {
+      "at": [
+       0,
+       0
+      ],
+      "colour": "GUIDE",
+      "radius": 0.07
+     },
+     "type": "symmetry_figure"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). Draw a square of side 5.0 centred at (0,0) (corners (-2.5,-2.5), (2.5,-2.5), (2.5,2.5), (-2.5,2.5)), border INK 4 px, white inside. Through the centre draw 4 dashed lines in GUIDE, 2 px: the vertical line from (0,-2.5) to (0,2.5), the horizontal line from (-2.5,0) to (2.5,0), the diagonal from (-2.5,-2.5) to (2.5,2.5) and the diagonal from (-2.5,2.5) to (2.5,-2.5). Put a small GUIDE dot of radius 0.07 at (0,0). The 4 lines cut the square into 8 equal triangles that all meet at the centre. All 8 triangles are left white (nothing is coloured). No text.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery, photographs"
+    ],
+    "accuracy_checks": [
+     "the 4 dashed lines cut the square into exactly 8 triangles",
+     "all 8 triangles are white",
+     "no text, no colour fill"
+    ],
+    "alt_text": "A square with its two diagonals and two middle lines drawn dashed, cutting it into eight empty triangles."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S13.T13.C37",
+   "role": "solution",
+   "lp_book_number": "Let Us Think: colour the square",
+   "ncert_ref": "lt.colour",
+   "question_text": "Colour the square given in the figure using two colours so that the design looks the same after every 1/4 turn. How many times does this shape look the same during a full turn?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The answer is the coloured square: the 8 triangles in two colours one after the other (orange, blue, orange, blue ...) as the LP solution says.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S13.T13.C37.IMG1",
+   "manim_scene": "c5_10_LT_Q2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S13.T13.C37.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "symmetry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S13.T13.C36.IMG1",
+    "content": {
+     "square_side": 5.0,
+     "centre": [
+      0,
+      0
+     ],
+     "border": {
+      "colour": "INK",
+      "width_px": 4
+     },
+     "guide_lines": {
+      "colour": "GUIDE",
+      "style": "dashed",
+      "width_px": 2,
+      "lines": [
+       "x = 0",
+       "y = 0",
+       "diagonal (-2.5,-2.5) to (2.5,2.5)",
+       "diagonal (-2.5,2.5) to (2.5,-2.5)"
+      ]
+     },
+     "centre_dot": {
+      "at": [
+       0,
+       0
+      ],
+      "colour": "GUIDE",
+      "radius": 0.07
+     },
+     "triangles": [
+      {
+       "id": "T1",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         0,
+         2.5
+        ],
+        [
+         2.5,
+         2.5
+        ]
+       ],
+       "fill_token": "SET_B",
+       "colour": "orange"
+      },
+      {
+       "id": "T2",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         2.5,
+         2.5
+        ],
+        [
+         2.5,
+         0
+        ]
+       ],
+       "fill_token": "SET_A",
+       "colour": "blue"
+      },
+      {
+       "id": "T3",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         2.5,
+         0
+        ],
+        [
+         2.5,
+         -2.5
+        ]
+       ],
+       "fill_token": "SET_B",
+       "colour": "orange"
+      },
+      {
+       "id": "T4",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         2.5,
+         -2.5
+        ],
+        [
+         0,
+         -2.5
+        ]
+       ],
+       "fill_token": "SET_A",
+       "colour": "blue"
+      },
+      {
+       "id": "T5",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         0,
+         -2.5
+        ],
+        [
+         -2.5,
+         -2.5
+        ]
+       ],
+       "fill_token": "SET_B",
+       "colour": "orange"
+      },
+      {
+       "id": "T6",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         -2.5,
+         -2.5
+        ],
+        [
+         -2.5,
+         0
+        ]
+       ],
+       "fill_token": "SET_A",
+       "colour": "blue"
+      },
+      {
+       "id": "T7",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         -2.5,
+         0
+        ],
+        [
+         -2.5,
+         2.5
+        ]
+       ],
+       "fill_token": "SET_B",
+       "colour": "orange"
+      },
+      {
+       "id": "T8",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         -2.5,
+         2.5
+        ],
+        [
+         0,
+         2.5
+        ]
+       ],
+       "fill_token": "SET_A",
+       "colour": "blue"
+      }
+     ],
+     "type": "symmetry_figure"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). Same square and dashed GUIDE lines as the question figure, nothing moved. Fill the 8 triangles in turn, going clockwise from the triangle just right of the top of the vertical line: T1 (0,0),(0,2.5),(2.5,2.5) orange SET_B; T2 (0,0),(2.5,2.5),(2.5,0) blue SET_A; T3 (0,0),(2.5,0),(2.5,-2.5) orange SET_B; T4 (0,0),(2.5,-2.5),(0,-2.5) blue SET_A; T5 (0,0),(0,-2.5),(-2.5,-2.5) orange SET_B; T6 (0,0),(-2.5,-2.5),(-2.5,0) blue SET_A; T7 (0,0),(-2.5,0),(-2.5,2.5) orange SET_B; T8 (0,0),(-2.5,2.5),(0,2.5) blue SET_A. Keep the INK border and the dashed GUIDE lines on top of the fills. No text.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery, photographs"
+    ],
+    "accuracy_checks": [
+     "4 orange and 4 blue triangles, neighbours always differ",
+     "a quarter turn (90 degrees) moves T1 to T3, T2 to T4, T3 to T5 and so on: each triangle lands on one of its own colour",
+     "same square, border and lines as the question figure"
+    ],
+    "alt_text": "The square with its eight triangles coloured orange and blue one after the other round the middle.",
+    "render_note": "Fills use the colours the LP names (orange SET_B, blue SET_A) instead of ANSWER green."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S13.T13.C38",
+   "role": "question",
+   "lp_book_number": "Let Us Think: reflection symmetry in the designs",
+   "ncert_ref": "lt.reflection",
+   "question_text": "Do these designs have reflection symmetry also? Draw the lines of symmetry.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "\"These designs\" are the green-pink square and the orange-blue square of the two earlier questions; the student must draw lines of symmetry on them, so both designs must be on screen.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S13.T13.C38.IMG1",
+   "manim_scene": "c5_10_LT_Q3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S13.T13.C38.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "symmetry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "left_design": {
+      "kind": "2 x 2 square",
+      "square_side": 4.4,
+      "centre": [
+       -4.4,
+       0
+      ],
+      "cells": [
+       {
+        "cell": "top-left",
+        "x": [
+         -6.6,
+         -4.4
+        ],
+        "y": [
+         0,
+         2.2
+        ],
+        "fill": "#CFE4AA"
+       },
+       {
+        "cell": "top-right",
+        "x": [
+         -4.4,
+         -2.2
+        ],
+        "y": [
+         0,
+         2.2
+        ],
+        "fill": "#EC999D"
+       },
+       {
+        "cell": "bottom-left",
+        "x": [
+         -6.6,
+         -4.4
+        ],
+        "y": [
+         -2.2,
+         0.0
+        ],
+        "fill": "#EC999D"
+       },
+       {
+        "cell": "bottom-right",
+        "x": [
+         -4.4,
+         -2.2
+        ],
+        "y": [
+         -2.2,
+         0.0
+        ],
+        "fill": "#CFE4AA"
+       }
+      ]
+     },
+     "right_design": {
+      "square_side": 4.4,
+      "centre": [
+       4.4,
+       0
+      ],
+      "triangles": [
+       {
+        "id": "T1",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          4.4,
+          2.2
+         ],
+         [
+          6.6,
+          2.2
+         ]
+        ],
+        "colour": "orange"
+       },
+       {
+        "id": "T2",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          6.6,
+          2.2
+         ],
+         [
+          6.6,
+          0.0
+         ]
+        ],
+        "colour": "blue"
+       },
+       {
+        "id": "T3",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          6.6,
+          0.0
+         ],
+         [
+          6.6,
+          -2.2
+         ]
+        ],
+        "colour": "orange"
+       },
+       {
+        "id": "T4",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          6.6,
+          -2.2
+         ],
+         [
+          4.4,
+          -2.2
+         ]
+        ],
+        "colour": "blue"
+       },
+       {
+        "id": "T5",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          4.4,
+          -2.2
+         ],
+         [
+          2.2,
+          -2.2
+         ]
+        ],
+        "colour": "orange"
+       },
+       {
+        "id": "T6",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          2.2,
+          -2.2
+         ],
+         [
+          2.2,
+          0.0
+         ]
+        ],
+        "colour": "blue"
+       },
+       {
+        "id": "T7",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          2.2,
+          0.0
+         ],
+         [
+          2.2,
+          2.2
+         ]
+        ],
+        "colour": "orange"
+       },
+       {
+        "id": "T8",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          2.2,
+          2.2
+         ],
+         [
+          4.4,
+          2.2
+         ]
+        ],
+        "colour": "blue"
+       }
+      ]
+     },
+     "border": {
+      "colour": "INK",
+      "width_px": 4
+     },
+     "inner_lines": {
+      "colour": "GUIDE",
+      "width_px": 2
+     },
+     "type": "symmetry_figure"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). Draw two designs side by side. LEFT design, centre (-4.4,0): a square of side 4.4 (corners (-6.6,-2.2), (-2.2,-2.2), (-2.2,2.2), (-6.6,2.2)) cut into 4 cells of side 2.2 by the lines x = -4.4 and y = 0; fill top-left (x -6.6 to -4.4, y 0 to 2.2) green #CFE4AA, top-right (x -4.4 to -2.2, y 0 to 2.2) pink #EC999D, bottom-left (x -6.6 to -4.4, y -2.2 to 0) pink #EC999D, bottom-right (x -4.4 to -2.2, y -2.2 to 0) green #CFE4AA. RIGHT design, centre (4.4,0): a square of side 4.4 (corners (2.2,-2.2), (6.6,-2.2), (6.6,2.2), (2.2,2.2)) cut into 8 triangles that meet at (4.4,0) by the lines x = 4.4, y = 0 and both diagonals; fill the triangles one after the other going clockwise from the one just right of the top of the vertical line: T1 (4.4,0),(4.4,2.2),(6.6,2.2) orange #E69F00; T2 (4.4,0),(6.6,2.2),(6.6,0) blue #0072B2; T3 (4.4,0),(6.6,0),(6.6,-2.2) orange; T4 (4.4,0),(6.6,-2.2),(4.4,-2.2) blue; T5 (4.4,0),(4.4,-2.2),(2.2,-2.2) orange; T6 (4.4,0),(2.2,-2.2),(2.2,0) blue; T7 (4.4,0),(2.2,0),(2.2,2.2) orange; T8 (4.4,0),(2.2,2.2),(4.4,2.2) blue. Both borders INK 4 px; the inner lines of the left design INK 3 px, the edges between the triangles of the right design GUIDE 2 px. No line of symmetry is drawn on either design. No text.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery, photographs"
+    ],
+    "accuracy_checks": [
+     "left design: green cells on the top-left/bottom-right diagonal, pink on the other",
+     "right design: 8 triangles, colours alternate, a quarter turn maps each triangle onto one of its own colour",
+     "no dashed or other symmetry line on either design"
+    ],
+    "alt_text": "Two designs side by side: a square of four cells coloured green and pink, and a square cut into eight triangles coloured orange and blue one after the other.",
+    "render_note": "The orange-blue design is the one coloured in the solution of the previous question (the book only says \"these designs\"); it is drawn identically to M3.S13.T13.C37.IMG1 but 4.4 wide."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S13.T13.C39",
+   "role": "solution",
+   "lp_book_number": "Let Us Think: reflection symmetry in the designs",
+   "ncert_ref": "lt.reflection",
+   "question_text": "Do these designs have reflection symmetry also? Draw the lines of symmetry.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The answer is a drawing: the two diagonals of the green-pink square are its lines of symmetry; the orange-blue square gets no line.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S13.T13.C39.IMG1",
+   "manim_scene": "c5_10_LT_Q3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S13.T13.C39.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "symmetry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S13.T13.C38.IMG1",
+    "content": {
+     "left_design": {
+      "kind": "2 x 2 square",
+      "square_side": 4.4,
+      "centre": [
+       -4.4,
+       0
+      ],
+      "cells": [
+       {
+        "cell": "top-left",
+        "x": [
+         -6.6,
+         -4.4
+        ],
+        "y": [
+         0,
+         2.2
+        ],
+        "fill": "#CFE4AA"
+       },
+       {
+        "cell": "top-right",
+        "x": [
+         -4.4,
+         -2.2
+        ],
+        "y": [
+         0,
+         2.2
+        ],
+        "fill": "#EC999D"
+       },
+       {
+        "cell": "bottom-left",
+        "x": [
+         -6.6,
+         -4.4
+        ],
+        "y": [
+         -2.2,
+         0.0
+        ],
+        "fill": "#EC999D"
+       },
+       {
+        "cell": "bottom-right",
+        "x": [
+         -4.4,
+         -2.2
+        ],
+        "y": [
+         -2.2,
+         0.0
+        ],
+        "fill": "#CFE4AA"
+       }
+      ]
+     },
+     "right_design": {
+      "square_side": 4.4,
+      "centre": [
+       4.4,
+       0
+      ],
+      "triangles": [
+       {
+        "id": "T1",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          4.4,
+          2.2
+         ],
+         [
+          6.6,
+          2.2
+         ]
+        ],
+        "colour": "orange"
+       },
+       {
+        "id": "T2",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          6.6,
+          2.2
+         ],
+         [
+          6.6,
+          0.0
+         ]
+        ],
+        "colour": "blue"
+       },
+       {
+        "id": "T3",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          6.6,
+          0.0
+         ],
+         [
+          6.6,
+          -2.2
+         ]
+        ],
+        "colour": "orange"
+       },
+       {
+        "id": "T4",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          6.6,
+          -2.2
+         ],
+         [
+          4.4,
+          -2.2
+         ]
+        ],
+        "colour": "blue"
+       },
+       {
+        "id": "T5",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          4.4,
+          -2.2
+         ],
+         [
+          2.2,
+          -2.2
+         ]
+        ],
+        "colour": "orange"
+       },
+       {
+        "id": "T6",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          2.2,
+          -2.2
+         ],
+         [
+          2.2,
+          0.0
+         ]
+        ],
+        "colour": "blue"
+       },
+       {
+        "id": "T7",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          2.2,
+          0.0
+         ],
+         [
+          2.2,
+          2.2
+         ]
+        ],
+        "colour": "orange"
+       },
+       {
+        "id": "T8",
+        "points": [
+         [
+          4.4,
+          0.0
+         ],
+         [
+          2.2,
+          2.2
+         ],
+         [
+          4.4,
+          2.2
+         ]
+        ],
+        "colour": "blue"
+       }
+      ]
+     },
+     "border": {
+      "colour": "INK",
+      "width_px": 4
+     },
+     "inner_lines": {
+      "colour": "GUIDE",
+      "width_px": 2
+     },
+     "added_lines": [
+      {
+       "from": [
+        -6.812,
+        2.412
+       ],
+       "to": [
+        -1.988,
+        -2.412
+       ],
+       "colour": "ANSWER",
+       "style": "dashed",
+       "width_px": 4
+      },
+      {
+       "from": [
+        -1.988,
+        2.412
+       ],
+       "to": [
+        -6.812,
+        -2.412
+       ],
+       "colour": "ANSWER",
+       "style": "dashed",
+       "width_px": 4
+      }
+     ],
+     "type": "symmetry_figure"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). Draw two designs side by side. LEFT design, centre (-4.4,0): a square of side 4.4 (corners (-6.6,-2.2), (-2.2,-2.2), (-2.2,2.2), (-6.6,2.2)) cut into 4 cells of side 2.2 by the lines x = -4.4 and y = 0; fill top-left (x -6.6 to -4.4, y 0 to 2.2) green #CFE4AA, top-right (x -4.4 to -2.2, y 0 to 2.2) pink #EC999D, bottom-left (x -6.6 to -4.4, y -2.2 to 0) pink #EC999D, bottom-right (x -4.4 to -2.2, y -2.2 to 0) green #CFE4AA. RIGHT design, centre (4.4,0): a square of side 4.4 (corners (2.2,-2.2), (6.6,-2.2), (6.6,2.2), (2.2,2.2)) cut into 8 triangles that meet at (4.4,0) by the lines x = 4.4, y = 0 and both diagonals; fill the triangles one after the other going clockwise from the one just right of the top of the vertical line: T1 (4.4,0),(4.4,2.2),(6.6,2.2) orange #E69F00; T2 (4.4,0),(6.6,2.2),(6.6,0) blue #0072B2; T3 (4.4,0),(6.6,0),(6.6,-2.2) orange; T4 (4.4,0),(6.6,-2.2),(4.4,-2.2) blue; T5 (4.4,0),(4.4,-2.2),(2.2,-2.2) orange; T6 (4.4,0),(2.2,-2.2),(2.2,0) blue; T7 (4.4,0),(2.2,0),(2.2,2.2) orange; T8 (4.4,0),(2.2,2.2),(4.4,2.2) blue. Both borders INK 4 px; the inner lines of the left design INK 3 px, the edges between the triangles of the right design GUIDE 2 px. Nothing of the question figure moves. Then add 2 dashed lines in ANSWER, 4 px, on the LEFT design only: the diagonal from (-6.812,2.412) to (-1.988,-2.412) and the diagonal from (-1.988,2.412) to (-6.812,-2.412) (each diagonal reaches 0.3 beyond the two corners it joins). The RIGHT design gets no added line. No text.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery, photographs"
+    ],
+    "accuracy_checks": [
+     "the 2 added lines are the diagonals of the green-pink square and nothing else",
+     "folding the left design along either diagonal puts green on green and pink on pink",
+     "no added line on the orange-blue square"
+    ],
+    "alt_text": "The green and pink square with its two diagonals drawn as dashed lines of symmetry, beside the orange and blue square with no line."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C40",
+   "role": "question",
+   "lp_book_number": "Let Us Do (squares and triangles): make designs",
+   "ncert_ref": "sq.make",
+   "question_text": "Cut out squares and equilateral triangles with the same side length. These are provided at the end of the book. Make different symmetrical designs by using these two shapes.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "DECORATIVE_ONLY"
+   ],
+   "reason": "Open task (\"make different designs\"). The book picture only shows the loose paper pieces (4 triangles, 4 squares, tilted at no particular angle); no number or position matters, so the text is enough.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C41",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (squares and triangles): make designs",
+   "ncert_ref": "sq.make",
+   "question_text": "Cut out squares and equilateral triangles with the same side length. These are provided at the end of the book. Make different symmetrical designs by using these two shapes.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The LP sample answer is three arrangements of squares and triangles; the answer is the drawing of the designs, so it is drawn (the question gives no figure, so there is no question diagram).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S14.T14.C41.IMG1",
+   "manim_scene": "c5_10_LD1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S14.T14.C41.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "tiling",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "side_length": 1.5,
+     "triangle_height": 1.299,
+     "outline": {
+      "colour": "INK",
+      "width_px": 3
+     },
+     "design_1_square_with_4_triangles": {
+      "triangles": [
+       {
+        "points": [
+         [
+          -5.95,
+          0.75
+         ],
+         [
+          -4.45,
+          0.75
+         ],
+         [
+          -5.2,
+          2.049
+         ]
+        ],
+        "fill": "#D5C58C"
+       },
+       {
+        "points": [
+         [
+          -4.45,
+          -0.75
+         ],
+         [
+          -4.45,
+          0.75
+         ],
+         [
+          -3.151,
+          0
+         ]
+        ],
+        "fill": "#D5C58C"
+       },
+       {
+        "points": [
+         [
+          -4.45,
+          -0.75
+         ],
+         [
+          -5.95,
+          -0.75
+         ],
+         [
+          -5.2,
+          -2.049
+         ]
+        ],
+        "fill": "#D5C58C"
+       },
+       {
+        "points": [
+         [
+          -5.95,
+          -0.75
+         ],
+         [
+          -5.95,
+          0.75
+         ],
+         [
+          -7.249,
+          0
+         ]
+        ],
+        "fill": "#D5C58C"
+       }
+      ],
+      "square": {
+       "points": [
+        [
+         -5.95,
+         -0.75
+        ],
+        [
+         -4.45,
+         -0.75
+        ],
+        [
+         -4.45,
+         0.75
+        ],
+        [
+         -5.95,
+         0.75
+        ]
+       ],
+       "fill": "#497FC1"
+      }
+     },
+     "design_2_house": {
+      "triangles": [
+       {
+        "points": [
+         [
+          -0.75,
+          0.1
+         ],
+         [
+          0.75,
+          0.1
+         ],
+         [
+          0.0,
+          1.4
+         ]
+        ],
+        "fill": "#D5C58C"
+       }
+      ],
+      "square": {
+       "points": [
+        [
+         -0.75,
+         -1.4
+        ],
+        [
+         0.75,
+         -1.4
+        ],
+        [
+         0.75,
+         0.1
+        ],
+        [
+         -0.75,
+         0.1
+        ]
+       ],
+       "fill": "#497FC1"
+      }
+     },
+     "design_3_slanted_strip": {
+      "triangles": [
+       {
+        "points": [
+         [
+          3.325,
+          -0.65
+         ],
+         [
+          4.825,
+          -0.65
+         ],
+         [
+          4.075,
+          0.65
+         ]
+        ],
+        "fill": "#D5C58C"
+       },
+       {
+        "points": [
+         [
+          4.075,
+          0.65
+         ],
+         [
+          5.575,
+          0.65
+         ],
+         [
+          4.825,
+          -0.65
+         ]
+        ],
+        "fill": "#D5C58C"
+       },
+       {
+        "points": [
+         [
+          4.825,
+          -0.65
+         ],
+         [
+          6.325,
+          -0.65
+         ],
+         [
+          5.575,
+          0.65
+         ]
+        ],
+        "fill": "#D5C58C"
+       },
+       {
+        "points": [
+         [
+          5.575,
+          0.65
+         ],
+         [
+          7.075,
+          0.65
+         ],
+         [
+          6.325,
+          -0.65
+         ]
+        ],
+        "fill": "#D5C58C"
+       }
+      ]
+     },
+     "type": "tiling"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). Draw three designs in a row, all built from squares of side 1.5 and equilateral triangles of side 1.5 (height 1.299). Every piece has an INK outline of 3 px. Squares are filled blue #497FC1, triangles sand #D5C58C. LEFT design (square with a triangle on each side, each triangle with one side along a side of the square and its point away from the square): square ((-5.950,-0.750), (-4.450,-0.750), (-4.450,0.750), (-5.950,0.750)) filled blue #497FC1; triangle 1 ((-5.950,0.750), (-4.450,0.750), (-5.200,2.049)) filled sand #D5C58C, triangle 2 ((-4.450,-0.750), (-4.450,0.750), (-3.151,0.000)) filled sand #D5C58C, triangle 3 ((-4.450,-0.750), (-5.950,-0.750), (-5.200,-2.049)) filled sand #D5C58C, triangle 4 ((-5.950,-0.750), (-5.950,0.750), (-7.249,0.000)) filled sand #D5C58C. MIDDLE design (house: one triangle on top of one square, point up): square ((-0.750,-1.400), (0.750,-1.400), (0.750,0.100), (-0.750,0.100)) filled blue #497FC1; triangle 1 ((-0.750,0.100), (0.750,0.100), (0.000,1.400)) filled sand #D5C58C. RIGHT design (slanted strip of 4 triangles in a row, point up, point down, point up, point down, each sharing a side with the next): triangle 1 ((3.325,-0.650), (4.825,-0.650), (4.075,0.650)) filled sand #D5C58C, triangle 2 ((4.075,0.650), (5.575,0.650), (4.825,-0.650)) filled sand #D5C58C, triangle 3 ((4.825,-0.650), (6.325,-0.650), (5.575,0.650)) filled sand #D5C58C, triangle 4 ((5.575,0.650), (7.075,0.650), (6.325,-0.650)) filled sand #D5C58C. No lines of symmetry, no arrows, no text.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery, photographs"
+    ],
+    "accuracy_checks": [
+     "square side = triangle side = 1.5; every triangle is equilateral (height 1.299)",
+     "left design: 4 lines of symmetry and a 1/4 turn; middle design: 1 vertical line, no turn; right design: a 1/2 turn, no line (checked by computation)",
+     "the strip: bottom side from x = 3.325 to 6.325, top side from x = 4.075 to 7.075"
+    ],
+    "alt_text": "Three designs: a blue square with a sand triangle on each side, a house made of a triangle on a square, and a slanted strip of four triangles."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C42",
+   "role": "question",
+   "lp_book_number": "Let Us Do (squares and triangles): the shape with four squares",
+   "ncert_ref": "sq.shape",
+   "question_text": "Does this shape have reflection symmetry? If yes, draw its lines of symmetry. Does it have rotational symmetry? If yes, at which turn? Does it have both symmetries?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "\"This shape\" exists only in the book picture (page 5); the student must draw lines of symmetry on it and judge turns.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S14.T14.C42.IMG1",
+   "manim_scene": "c5_10_LD2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S14.T14.C42.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "symmetry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "square_side": 1.8,
+     "squares": [
+      {
+       "x": [
+        -1.8,
+        0.0
+       ],
+       "y": [
+        0,
+        1.8
+       ],
+       "fill": "#497FC1"
+      },
+      {
+       "x": [
+        0,
+        1.8
+       ],
+       "y": [
+        0,
+        1.8
+       ],
+       "fill": "#497FC1"
+      },
+      {
+       "x": [
+        -1.8,
+        0.0
+       ],
+       "y": [
+        -1.8,
+        0.0
+       ],
+       "fill": "#497FC1"
+      },
+      {
+       "x": [
+        0,
+        1.8
+       ],
+       "y": [
+        -1.8,
+        0.0
+       ],
+       "fill": "#497FC1"
+      }
+     ],
+     "triangles": [
+      {
+       "points": [
+        [
+         -1.8,
+         0
+        ],
+        [
+         -1.8,
+         1.8
+        ],
+        [
+         -3.6,
+         0.9
+        ]
+       ],
+       "fill": "#D5C58C"
+      },
+      {
+       "points": [
+        [
+         -1.8,
+         -1.8
+        ],
+        [
+         -1.8,
+         0
+        ],
+        [
+         -3.6,
+         -0.9
+        ]
+       ],
+       "fill": "#D5C58C"
+      },
+      {
+       "points": [
+        [
+         1.8,
+         0
+        ],
+        [
+         1.8,
+         1.8
+        ],
+        [
+         3.6,
+         0.9
+        ]
+       ],
+       "fill": "#D5C58C"
+      },
+      {
+       "points": [
+        [
+         1.8,
+         -1.8
+        ],
+        [
+         1.8,
+         0
+        ],
+        [
+         3.6,
+         -0.9
+        ]
+       ],
+       "fill": "#D5C58C"
+      }
+     ],
+     "outline": {
+      "colour": "INK",
+      "width_px": 3
+     },
+     "type": "symmetry_figure"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). Draw 4 blue squares #497FC1 of side 1.8 in a 2 x 2 block: top-left (x -1.8 to 0, y 0 to 1.8), top-right (x 0 to 1.8, y 0 to 1.8), bottom-left (x -1.8 to 0, y -1.8 to 0), bottom-right (x 0 to 1.8, y -1.8 to 0). Draw 4 sand triangles #D5C58C, each with a vertical side of length 1.8 lying along an outer side of the block and its point away from the block, height 1.8: top-left triangle (-1.8,0),(-1.8,1.8),(-3.6,0.9); bottom-left triangle (-1.8,-1.8),(-1.8,0),(-3.6,-0.9); top-right triangle (1.8,0),(1.8,1.8),(3.6,0.9); bottom-right triangle (1.8,-1.8),(1.8,0),(3.6,-0.9). Every piece has an INK outline of 3 px. The whole shape is 7.2 wide and 3.6 tall. No lines, no arrows, no text. ",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery, photographs"
+    ],
+    "accuracy_checks": [
+     "4 squares and 4 triangles",
+     "the triangles are 1.8 wide at the base and 1.8 high (as printed, not equilateral)",
+     "no symmetry line drawn"
+    ],
+    "alt_text": "A shape of four blue squares in two rows of two with a sand triangle on the left and on the right of each row.",
+    "render_note": "The book draws the triangles with height about equal to the square side; the LP calls them \"triangles\" only."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C43",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (squares and triangles): the shape with four squares",
+   "ncert_ref": "sq.shape",
+   "question_text": "Does this shape have reflection symmetry? If yes, draw its lines of symmetry. Does it have rotational symmetry? If yes, at which turn? Does it have both symmetries?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The printed answer is a drawing: the 2 lines of symmetry (one vertical, one horizontal) and the 1/2 turn.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S14.T14.C43.IMG1",
+   "manim_scene": "c5_10_LD2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S14.T14.C43.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "symmetry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S14.T14.C42.IMG1",
+    "content": {
+     "square_side": 1.8,
+     "squares": [
+      {
+       "x": [
+        -1.8,
+        0.0
+       ],
+       "y": [
+        0,
+        1.8
+       ],
+       "fill": "#497FC1"
+      },
+      {
+       "x": [
+        0,
+        1.8
+       ],
+       "y": [
+        0,
+        1.8
+       ],
+       "fill": "#497FC1"
+      },
+      {
+       "x": [
+        -1.8,
+        0.0
+       ],
+       "y": [
+        -1.8,
+        0.0
+       ],
+       "fill": "#497FC1"
+      },
+      {
+       "x": [
+        0,
+        1.8
+       ],
+       "y": [
+        -1.8,
+        0.0
+       ],
+       "fill": "#497FC1"
+      }
+     ],
+     "triangles": [
+      {
+       "points": [
+        [
+         -1.8,
+         0
+        ],
+        [
+         -1.8,
+         1.8
+        ],
+        [
+         -3.6,
+         0.9
+        ]
+       ],
+       "fill": "#D5C58C"
+      },
+      {
+       "points": [
+        [
+         -1.8,
+         -1.8
+        ],
+        [
+         -1.8,
+         0
+        ],
+        [
+         -3.6,
+         -0.9
+        ]
+       ],
+       "fill": "#D5C58C"
+      },
+      {
+       "points": [
+        [
+         1.8,
+         0
+        ],
+        [
+         1.8,
+         1.8
+        ],
+        [
+         3.6,
+         0.9
+        ]
+       ],
+       "fill": "#D5C58C"
+      },
+      {
+       "points": [
+        [
+         1.8,
+         -1.8
+        ],
+        [
+         1.8,
+         0
+        ],
+        [
+         3.6,
+         -0.9
+        ]
+       ],
+       "fill": "#D5C58C"
+      }
+     ],
+     "outline": {
+      "colour": "INK",
+      "width_px": 3
+     },
+     "added_lines": [
+      {
+       "from": [
+        0,
+        2.2
+       ],
+       "to": [
+        0,
+        -2.2
+       ],
+       "style": "dashed",
+       "colour": "ANSWER",
+       "width_px": 4,
+       "meaning": "vertical line of symmetry"
+      },
+      {
+       "from": [
+        -4.2,
+        0
+       ],
+       "to": [
+        4.2,
+        0
+       ],
+       "style": "dashed",
+       "colour": "ANSWER",
+       "width_px": 4,
+       "meaning": "horizontal line of symmetry"
+      }
+     ],
+     "added_arrow": {
+      "kind": "curved arrow",
+      "centre": [
+       0,
+       0
+      ],
+      "radius": 0.7,
+      "from_angle_deg": 160,
+      "to_angle_deg": 20,
+      "direction": "clockwise",
+      "colour": "ANSWER",
+      "width_px": 4,
+      "label": "1/2 turn"
+     },
+     "type": "symmetry_figure"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). Draw 4 blue squares #497FC1 of side 1.8 in a 2 x 2 block: top-left (x -1.8 to 0, y 0 to 1.8), top-right (x 0 to 1.8, y 0 to 1.8), bottom-left (x -1.8 to 0, y -1.8 to 0), bottom-right (x 0 to 1.8, y -1.8 to 0). Draw 4 sand triangles #D5C58C, each with a vertical side of length 1.8 lying along an outer side of the block and its point away from the block, height 1.8: top-left triangle (-1.8,0),(-1.8,1.8),(-3.6,0.9); bottom-left triangle (-1.8,-1.8),(-1.8,0),(-3.6,-0.9); top-right triangle (1.8,0),(1.8,1.8),(3.6,0.9); bottom-right triangle (1.8,-1.8),(1.8,0),(3.6,-0.9). Every piece has an INK outline of 3 px. The whole shape is 7.2 wide and 3.6 tall. Nothing of the question figure moves. Add 2 dashed lines in ANSWER, 4 px: the vertical line from (0,2.2) to (0,-2.2) and the horizontal line from (-4.2,0) to (4.2,0). Add a curved arrow in ANSWER, 4 px, centred at (0,0), radius 0.7, running clockwise over the top from the angle 160 degrees to the angle 20 degrees (angles measured from the +x axis), with an arrow head at the 20-degree end; draw a thin BG halo 3 px wide under the arrow so that it reads over the dashed lines. Write the text \"1/2 turn\" in ANSWER, height 0.32, inside a white rounded box, centred at (1.0,1.2).",
+    "visible_text": [
+     "1/2 turn"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery, photographs"
+    ],
+    "accuracy_checks": [
+     "exactly 2 added lines, one vertical and one horizontal, crossing at (0,0) between the 2 rows and between the 2 columns",
+     "left half is the mirror image of the right half, top half the mirror image of the bottom half (checked by computation: 2 lines of symmetry, rotational order 2)",
+     "the arrow is a half-turn marker only"
+    ],
+    "alt_text": "The same shape with a dashed vertical line, a dashed horizontal line and a curved arrow labelled 1/2 turn."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C44",
+   "role": "question",
+   "lp_book_number": "Let Us Do (squares and triangles): sort your designs",
+   "ncert_ref": "sq.sort",
+   "question_text": "Now, make your designs. Sort your designs in 3 categories: designs with only rotational symmetry, designs with only reflection symmetry, and designs with both rotational and reflection symmetry.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "The question gives no figure: the student sorts designs of their own, so there is nothing to draw on the question side.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C45",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (squares and triangles): sort your designs",
+   "ncert_ref": "sq.sort",
+   "question_text": "Now, make your designs. Sort your designs in 3 categories: designs with only rotational symmetry, designs with only reflection symmetry, and designs with both rotational and reflection symmetry.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The LP sample answer is a sorting of three drawn designs into three categories; the sorted arrangement is the answer, so it is drawn (same three designs as the figure of M3.S14.T14.C41, regrouped under the category names the LP uses).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S14.T14.C45.IMG1",
+   "manim_scene": "c5_10_LD3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S14.T14.C45.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "tiling",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "columns": [
+      {
+       "label": "Only rotational symmetry",
+       "label_at": [
+        -5.4,
+        3.0
+       ],
+       "design": {
+        "triangles": [
+         {
+          "points": [
+           [
+            -7.275,
+            -0.65
+           ],
+           [
+            -5.775,
+            -0.65
+           ],
+           [
+            -6.525,
+            0.65
+           ]
+          ],
+          "fill": "#D5C58C"
+         },
+         {
+          "points": [
+           [
+            -6.525,
+            0.65
+           ],
+           [
+            -5.025,
+            0.65
+           ],
+           [
+            -5.775,
+            -0.65
+           ]
+          ],
+          "fill": "#D5C58C"
+         },
+         {
+          "points": [
+           [
+            -5.775,
+            -0.65
+           ],
+           [
+            -4.275,
+            -0.65
+           ],
+           [
+            -5.025,
+            0.65
+           ]
+          ],
+          "fill": "#D5C58C"
+         },
+         {
+          "points": [
+           [
+            -5.025,
+            0.65
+           ],
+           [
+            -3.525,
+            0.65
+           ],
+           [
+            -4.275,
+            -0.65
+           ]
+          ],
+          "fill": "#D5C58C"
+         }
+        ]
+       }
+      },
+      {
+       "label": "Only reflection symmetry",
+       "label_at": [
+        0.0,
+        3.0
+       ],
+       "design": {
+        "triangles": [
+         {
+          "points": [
+           [
+            -0.75,
+            0.1
+           ],
+           [
+            0.75,
+            0.1
+           ],
+           [
+            0.0,
+            1.4
+           ]
+          ],
+          "fill": "#D5C58C"
+         }
+        ],
+        "square": {
+         "points": [
+          [
+           -0.75,
+           -1.4
+          ],
+          [
+           0.75,
+           -1.4
+          ],
+          [
+           0.75,
+           0.1
+          ],
+          [
+           -0.75,
+           0.1
+          ]
+         ],
+         "fill": "#497FC1"
+        }
+       }
+      },
+      {
+       "label": "Both",
+       "label_at": [
+        5.4,
+        3.0
+       ],
+       "design": {
+        "triangles": [
+         {
+          "points": [
+           [
+            4.65,
+            0.75
+           ],
+           [
+            6.15,
+            0.75
+           ],
+           [
+            5.4,
+            2.049
+           ]
+          ],
+          "fill": "#D5C58C"
+         },
+         {
+          "points": [
+           [
+            6.15,
+            -0.75
+           ],
+           [
+            6.15,
+            0.75
+           ],
+           [
+            7.449,
+            0
+           ]
+          ],
+          "fill": "#D5C58C"
+         },
+         {
+          "points": [
+           [
+            6.15,
+            -0.75
+           ],
+           [
+            4.65,
+            -0.75
+           ],
+           [
+            5.4,
+            -2.049
+           ]
+          ],
+          "fill": "#D5C58C"
+         },
+         {
+          "points": [
+           [
+            4.65,
+            -0.75
+           ],
+           [
+            4.65,
+            0.75
+           ],
+           [
+            3.351,
+            0
+           ]
+          ],
+          "fill": "#D5C58C"
+         }
+        ],
+        "square": {
+         "points": [
+          [
+           4.65,
+           -0.75
+          ],
+          [
+           6.15,
+           -0.75
+          ],
+          [
+           6.15,
+           0.75
+          ],
+          [
+           4.65,
+           0.75
+          ]
+         ],
+         "fill": "#497FC1"
+        }
+       }
+      }
+     ],
+     "column_frames": {
+      "colour": "GUIDE",
+      "width_px": 2,
+      "x_half_width": 2.55,
+      "y": [
+       -3.4,
+       3.6
+      ]
+     },
+     "outline": {
+      "colour": "INK",
+      "width_px": 3
+     },
+     "type": "tiling"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). Draw 3 columns, each inside a rounded rectangle frame in GUIDE 2 px, 5.1 wide and 7.0 tall (x half-width 2.55, y from -3.4 to 3.6), centred at x = -5.4, 0 and 5.4. Put the title of each column inside its frame at y = 3.0, centred, in INK, text height 0.32: \"Only rotational symmetry\" (left), \"Only reflection symmetry\" (middle), \"Both\" (right). Under each title, centred at y = 0, draw one design built from squares of side 1.5 (blue #497FC1) and equilateral triangles of side 1.5 (sand #D5C58C), every piece with an INK outline of 3 px. LEFT column design (slanted strip of 4 triangles): triangle 1 ((-7.275,-0.650), (-5.775,-0.650), (-6.525,0.650)) filled sand #D5C58C, triangle 2 ((-6.525,0.650), (-5.025,0.650), (-5.775,-0.650)) filled sand #D5C58C, triangle 3 ((-5.775,-0.650), (-4.275,-0.650), (-5.025,0.650)) filled sand #D5C58C, triangle 4 ((-5.025,0.650), (-3.525,0.650), (-4.275,-0.650)) filled sand #D5C58C. MIDDLE column design (house: triangle on a square): square ((-0.750,-1.400), (0.750,-1.400), (0.750,0.100), (-0.750,0.100)) filled blue #497FC1; triangle 1 ((-0.750,0.100), (0.750,0.100), (0.000,1.400)) filled sand #D5C58C. RIGHT column design (square with a triangle on each side): square ((4.650,-0.750), (6.150,-0.750), (6.150,0.750), (4.650,0.750)) filled blue #497FC1; triangle 1 ((4.650,0.750), (6.150,0.750), (5.400,2.049)) filled sand #D5C58C, triangle 2 ((6.150,-0.750), (6.150,0.750), (7.449,0.000)) filled sand #D5C58C, triangle 3 ((6.150,-0.750), (4.650,-0.750), (5.400,-2.049)) filled sand #D5C58C, triangle 4 ((4.650,-0.750), (4.650,0.750), (3.351,0.000)) filled sand #D5C58C. No other text, no arrows.",
+    "visible_text": [
+     "Only rotational symmetry",
+     "Only reflection symmetry",
+     "Both"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery, photographs"
+    ],
+    "accuracy_checks": [
+     "strip: half turn, no line of symmetry; house: 1 vertical line, no turn; square with 4 triangles: 4 lines and a quarter turn (checked by computation)",
+     "each design is in the column named in the LP solution",
+     "the 3 designs are drawn exactly as in M3.S14.T14.C41.IMG1"
+    ],
+    "alt_text": "Three columns: only rotational symmetry shows the slanted strip of four triangles, only reflection symmetry shows the house, both shows the square with a triangle on each side.",
+    "render_note": "Same three designs as M3.S14.T14.C41.IMG1, different order and with the three column titles."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S15.T15.C46",
+   "role": "worked_example",
+   "lp_book_number": "Block Printing: a half print and its line of symmetry",
+   "ncert_ref": "block.intro",
+   "question_text": "A block is carved in the shape of a leaf with a stem down the middle. Its half print shows only the left half of the leaf. What does the whole print look like?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The example asks what the whole print looks like: the answer is a drawing (half print plus its copy across the straight edge). The teaching image of this concept stays untouched and is not linked; this example gets its own diagram.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S15.T15.C46.IMG2",
+   "manim_scene": "c5_10_BP_ex1",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S15.T15.C46.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "symmetry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "leaf_height": 4.4,
+     "leaf_half_width": 1.21,
+     "left_panel_stem_x": -3.4,
+     "right_panel_stem_x": 3.0,
+     "left_arc": {
+      "centre": [
+       -2.005,
+       0
+      ],
+      "radius": 2.605,
+      "through": [
+       [
+        -3.4,
+        2.2
+       ],
+       [
+        -4.61,
+        0
+       ],
+       [
+        -3.4,
+        -2.2
+       ]
+      ]
+     },
+     "copied_arc": {
+      "centre": [
+       1.605,
+       0
+      ],
+      "radius": 2.605,
+      "through": [
+       [
+        3.0,
+        2.2
+       ],
+       [
+        4.21,
+        0
+       ],
+       [
+        3.0,
+        -2.2
+       ]
+      ]
+     },
+     "arrow": {
+      "from": [
+       -2.2,
+       0
+      ],
+      "to": [
+       0.9,
+       0
+      ],
+      "colour": "FOCUS",
+      "width_px": 4
+     },
+     "type": "symmetry_figure"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). Two panels joined by an arrow. LEFT panel, the half print: draw the left half of a leaf. Its straight edge is the vertical segment x = -3.4 from y = -2.2 to y = 2.2; its curved edge is the circular arc with centre (-2.005,0) and radius 2.605 that passes through (-3.4,2.2), (-4.61,0) and (-3.4,-2.2). Fill it MARK_FILL, outline INK 4 px. Draw the stem as an INK line 4 px along x = -3.4 from y = 2.2 down to y = -2.7 (it sticks out 0.5 below the leaf tip). ARROW: a FOCUS arrow 4 px from (-2.2,0) to (0.9,0) with an arrow head at (0.9,0). RIGHT panel, the whole print: the same left half moved to the stem line x = 3.0 (arc centre (4.395,0), radius 2.605 through (3.0,2.2), (1.79,0), (3.0,-2.2); fill MARK_FILL, outline INK 4 px) together with its mirror copy on the right of the stem: the arc with centre (1.605,0) and radius 2.605 through (3.0,2.2), (4.21,0) and (3.0,-2.2), outlined in ANSWER 4 px and filled ANSWER at 30 percent opacity. Draw the INK stem line 4 px along x = 3.0 from y = 2.2 down to y = -2.7. The whole leaf is 2.42 wide and 4.4 tall. No text. ",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery, photographs"
+    ],
+    "accuracy_checks": [
+     "the arc through (x,2.2), (x-1.21,0), (x,-2.2) has centre 1.395 from the stem and radius 2.605 (checked: 1.395^2 + 2.2^2 = 2.605^2 to 3 decimals)",
+     "the copied half is the exact mirror image of the half print across the stem line",
+     "left panel shows only the left half; right panel shows both halves, the right one in ANSWER"
+    ],
+    "alt_text": "A left half of a leaf with a stem, an arrow, and the whole leaf where the copied right half is drawn in green.",
+    "render_note": "The worked example has one diagram only, so it shows the given half print and, after the arrow, the completed whole print."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S15.T15.C47",
+   "role": "worked_example",
+   "lp_book_number": "Block Printing: one block printed many times",
+   "ncert_ref": "block.A",
+   "question_text": "A flower block is stamped 2 times, with a 1/2 turn between the stamps. Does the print look the same after a 1/2 turn? After a 1/4 turn?",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question is about how the finished print looks after turns; the print (a flower at the top, the same flower turned a half turn at the bottom, none at the sides) is the picture the example needs. The teaching image of this concept stays untouched and is not linked.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S15.T15.C47.IMG2",
+   "manim_scene": "c5_10_BP_ex2",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S15.T15.C47.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "symmetry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "print_area": {
+      "square_side": 5.6,
+      "centre": [
+       0,
+       0
+      ]
+     },
+     "top_flower": {
+      "head_centre": [
+       0.0,
+       1.75
+      ],
+      "petal_centres": [
+       [
+        0.0,
+        2.3
+       ],
+       [
+        -0.523,
+        1.92
+       ],
+       [
+        -0.323,
+        1.305
+       ],
+       [
+        0.323,
+        1.305
+       ],
+       [
+        0.523,
+        1.92
+       ]
+      ],
+      "petal_radius": 0.42,
+      "head_disc_radius": 0.28,
+      "stem": [
+       [
+        0,
+        1.45
+       ],
+       [
+        0,
+        0.35
+       ]
+      ],
+      "leaf": {
+       "centre": [
+        0.35,
+        0.9
+       ],
+       "semi_major": 0.38,
+       "semi_minor": 0.15,
+       "major_axis_angle_deg": 35
+      }
+     },
+     "bottom_flower": {
+      "head_centre": [
+       0.0,
+       -1.75
+      ],
+      "petal_centres": [
+       [
+        -0.0,
+        -2.3
+       ],
+       [
+        0.523,
+        -1.92
+       ],
+       [
+        0.323,
+        -1.305
+       ],
+       [
+        -0.323,
+        -1.305
+       ],
+       [
+        -0.523,
+        -1.92
+       ]
+      ],
+      "petal_radius": 0.42,
+      "head_disc_radius": 0.28,
+      "stem": [
+       [
+        0,
+        -1.45
+       ],
+       [
+        0,
+        -0.35
+       ]
+      ],
+      "leaf": {
+       "centre": [
+        -0.35,
+        -0.9
+       ],
+       "semi_major": 0.38,
+       "semi_minor": 0.15,
+       "major_axis_angle_deg": 35
+      }
+     },
+     "relationship": "bottom flower = top flower turned a half turn about (0,0)",
+     "type": "symmetry_figure"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). Draw a square print area of side 5.6 centred at (0,0) (corners (-2.8,-2.8), (2.8,-2.8), (2.8,2.8), (-2.8,2.8)), white inside, INK border 4 px. Inside it draw 2 flowers, the second being the first turned a half turn about (0,0). TOP flower: head disc of radius 0.28 filled SET_B at (0.00,1.75); 5 petals, circles of radius 0.42 filled MARK_FILL with INK outline 3 px, centres (0.000,2.300), (-0.523,1.920), (-0.323,1.305), (0.323,1.305), (0.523,1.920); stem INK 3 px from (0, 1.45) to (0, 0.35); leaf: ellipse filled MARK_FILL with INK outline 3 px, centre (0.35, 0.9), semi-axes 0.38 and 0.15, long axis turned 35 degrees anticlockwise from horizontal. BOTTOM flower: head disc of radius 0.28 filled SET_B at (0.00,-1.75); 5 petals, circles of radius 0.42 filled MARK_FILL with INK outline 3 px, centres (-0.000,-2.300), (0.523,-1.920), (0.323,-1.305), (-0.323,-1.305), (-0.523,-1.920); stem INK 3 px from (0, -1.45) to (0, -0.35); leaf: ellipse filled MARK_FILL with INK outline 3 px, centre (-0.35, -0.9), semi-axes 0.38 and 0.15, long axis turned 35 degrees anticlockwise from horizontal. Draw each head disc over its petals. Nothing is drawn at the left or right of the area. No arrows, no text.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery, photographs"
+    ],
+    "accuracy_checks": [
+     "the bottom flower is the top flower turned 180 degrees about (0,0): petal centres, stem and leaf all map exactly",
+     "the leaf of the top flower is on the right of its stem, the leaf of the bottom flower on the left of its stem",
+     "no flower at the left or right side of the area"
+    ],
+    "alt_text": "A square print area with a flower at the top and the same flower turned a half turn at the bottom."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C49",
+   "role": "question",
+   "lp_book_number": "Let Us Explore: match the blocks to the prints",
+   "ncert_ref": "bp.match",
+   "question_text": "Below are images of wooden blocks and a part of their prints. Match each block to its correct print by drawing a line. One is done for you.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The matching can only be done by looking at the 5 blocks and the 5 half prints (book page 5); the words alone do not give them. The one line already joined, (iv) to (e), is part of what the book gives.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C49.IMG1",
+   "manim_scene": "c5_10_LE_Q1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C49.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "tiles": {
+      "size": 2.6,
+      "blocks_row_y": 2.4,
+      "prints_row_y": -2.9,
+      "x_centres": [
+       -6.0,
+       -3.0,
+       0.0,
+       3.0,
+       6.0
+      ]
+     },
+     "blocks": [
+      {
+       "label": "(i)",
+       "glyph": "drop with scalloped edge and leaf",
+       "x": -6.0
+      },
+      {
+       "label": "(ii)",
+       "glyph": "lotus with two leaves",
+       "x": -3.0
+      },
+      {
+       "label": "(iii)",
+       "glyph": "round rosette with 8-petal flower",
+       "x": 0.0
+      },
+      {
+       "label": "(iv)",
+       "glyph": "fan (half-disc with scalloped arc)",
+       "x": 3.0
+      },
+      {
+       "label": "(v)",
+       "glyph": "tall block with flower on a stem",
+       "x": 6.0
+      }
+     ],
+     "prints": [
+      {
+       "label": "(a)",
+       "half": "right half of rosette",
+       "colour": "#3D8FB5",
+       "x": -6.0
+      },
+      {
+       "label": "(b)",
+       "half": "left half of plant (v)",
+       "colour": "#2E8B4E",
+       "x": -3.0
+      },
+      {
+       "label": "(c)",
+       "half": "right half of drop (i)",
+       "colour": "#4DB3A8",
+       "x": 0.0
+      },
+      {
+       "label": "(d)",
+       "half": "left half of lotus (ii)",
+       "colour": "#E8C23A",
+       "x": 3.0
+      },
+      {
+       "label": "(e)",
+       "half": "left half of fan (iv)",
+       "colour": "#B0463A",
+       "x": 6.0
+      }
+     ],
+     "given_line": {
+      "from": [
+       3.0,
+       1.0999999999999999
+      ],
+      "to": [
+       6.0,
+       -1.5999999999999999
+      ],
+      "colour": "INK",
+      "width_px": 3,
+      "joins": "(iv) to (e)"
+     },
+     "type": "other"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). TILES: 10 rounded squares of side 2.6 (corner radius 0.25), fill #F3EBDD, border GUIDE 2 px. Top row (the blocks) centre y = 2.4, tiles centred at x = -6, -3, 0, 3, 6 holding blocks (i), (ii), (iii), (iv), (v) in that order; bottom row (the prints) centre y = -2.9, same x centres, holding half prints (a), (b), (c), (d), (e) in that order. Tile labels in INK, height 0.30: \"(i)\" to \"(v)\" at the bottom-right corner inside each top tile, at (x+0.85, 1.4); \"(a)\" to \"(e)\" at the bottom-left corner inside each bottom tile, at (x-0.85, -3.9). Each glyph is centred in its tile and scaled so that its tile-local unit is 1.0 canvas unit. GLYPHS (tile-local coordinates, tile centre (0,0), all five blocks are mirror-symmetric about their vertical middle line x = 0; carved lines drawn in #EFE3CC 3 px on the wood-coloured shape): (i) drop block: the convex hull of the circle centre (0,-0.25) radius 0.60 and the point (0,0.95), filled wood #8A6F55, its edge scalloped by 12 semicircular bumps of radius 0.07 spread at equal arc-length steps, 6 on each side of x = 0 and none on the line; carved leaf: midrib from (0,-0.60) to (0,0.50) and 3 pairs of leaflet strokes from (0,-0.35), (0,-0.05) and (0,0.25) to (+-0.26, y+0.24). (ii) lotus block: body polygon (0,0.95),(0.22,0.50),(0.52,0.64),(0.50,0.30),(0.86,0.26),(0.60,0.02),(0.58,-0.22),(0.20,-0.30),(0,-0.32) and its mirror image, filled wood; 2 leaves = ellipses centred (+-0.45,-0.62) with semi-axes 0.40 and 0.16, the left one turned 20 degrees anticlockwise and the right one 20 degrees clockwise from horizontal, filled wood; carved teardrop = ellipse centre (0,0.45) semi-axes 0.11 and 0.19. (iii) rosette block: disc of radius 0.78 plus 8 bumps = circles of radius 0.17 centred at distance 0.78 at angles 22.5, 67.5, ..., 337.5 degrees (every 45 degrees), filled wood; carved flower = 8 petal ellipses centred at distance 0.40 at angles 0, 45, ..., 315 degrees with semi-axes 0.26 (along the radius) and 0.11, and a centre dot of radius 0.09. (iv) fan block: upper half-disc with centre (0,-0.45), radius 0.95, flat base on y = -0.45, filled wood, the arc scalloped by 14 bumps of radius 0.055 at equal angle steps of 180/14 degrees (first bump centre half a step from the left end); small ring (outline only) centre (0,-0.62) radius 0.13 below the base; carved lines: 7 radiating strokes from (0,-0.45) to radius 0.78 at 90, 90+-25, 90+-50, 90+-75 degrees, and an inner semicircle arc of radius 0.35. (v) tall block: rectangle x -0.5 to 0.5, y -1.1 to 1.1 filled dark wood #5B4332; carved plant: stem from (0,-0.95) to (0,0.30); 3 pairs of leaves = ellipses with semi-axes 0.24 and 0.09 centred (+-0.27,-0.65), (+-0.27,-0.28), (+-0.27,0.05), turned 35 degrees upwards away from the stem; flower on top = vertical ellipse centre (0,0.65) semi-axes 0.11 and 0.30 and 2 side petal ellipses centred (+-0.22,0.55) semi-axes 0.10 and 0.24 leaning 30 degrees away from the stem. HALF PRINTS (line art only, 4 px, no fill, drawn with the straight edge on the tile centre line x = 0, and the straight edge itself drawn as a 4 px line over the full height of the motif): (a) the x >= 0 half of the rosette (scalloped outline and carved flower) in blue #3D8FB5; (b) the x <= 0 half of the carved plant of block (v) (stem, left leaves, left side petal and the left half of the central petal) in green #2E8B4E; (c) the x >= 0 half of the drop block outline and carved leaf in teal #4DB3A8; (d) the x <= 0 half of the lotus (body outline, left leaf, carved teardrop half) in yellow #E8C23A; (e) the x <= 0 half of the fan (scalloped arc, base, ring, radiating strokes, inner arc) in red-brown #B0463A. GIVEN LINE: one straight INK line 3 px from the bottom-centre of tile (iv) (3,1.1) to the top-centre of tile (e) (6,-1.6). No other line. ",
+    "visible_text": [
+     "(i)",
+     "(ii)",
+     "(iii)",
+     "(iv)",
+     "(v)",
+     "(a)",
+     "(b)",
+     "(c)",
+     "(d)",
+     "(e)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "photographs or photo textures, shadows, 3D effects",
+     "any line other than the one given"
+    ],
+    "accuracy_checks": [
+     "every half print is the exact half of one block's carved design, cut along its vertical middle line",
+     "the pairs are (i)-(c), (ii)-(d), (iii)-(a), (iv)-(e), (v)-(b): each print is used once",
+     "only the line (iv)-(e) is drawn"
+    ],
+    "alt_text": "Five wooden blocks in a row labelled (i) to (v), five half prints below labelled (a) to (e), and one line already joining block (iv) to print (e).",
+    "render_note": "The book shows photographs of carved wooden blocks and printed half designs. This spec asks for flat line-art glyphs that keep each block's identifying shape (drop, lotus, rosette, fan, plant) and its exact half print. If the team prefers the photographs cropped from the book instead, the layout stays the same."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C50",
+   "role": "solution",
+   "lp_book_number": "Let Us Explore: match the blocks to the prints",
+   "ncert_ref": "bp.match",
+   "question_text": "Below are images of wooden blocks and a part of their prints. Match each block to its correct print by drawing a line. One is done for you.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The answer is a set of lines joining each block to its print.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C50.IMG1",
+   "manim_scene": "c5_10_LE_Q1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C50.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S16.T16.C49.IMG1",
+    "content": {
+     "tiles": {
+      "size": 2.6,
+      "blocks_row_y": 2.4,
+      "prints_row_y": -2.9,
+      "x_centres": [
+       -6.0,
+       -3.0,
+       0.0,
+       3.0,
+       6.0
+      ]
+     },
+     "blocks": [
+      {
+       "label": "(i)",
+       "glyph": "drop with scalloped edge and leaf",
+       "x": -6.0
+      },
+      {
+       "label": "(ii)",
+       "glyph": "lotus with two leaves",
+       "x": -3.0
+      },
+      {
+       "label": "(iii)",
+       "glyph": "round rosette with 8-petal flower",
+       "x": 0.0
+      },
+      {
+       "label": "(iv)",
+       "glyph": "fan (half-disc with scalloped arc)",
+       "x": 3.0
+      },
+      {
+       "label": "(v)",
+       "glyph": "tall block with flower on a stem",
+       "x": 6.0
+      }
+     ],
+     "prints": [
+      {
+       "label": "(a)",
+       "half": "right half of rosette",
+       "colour": "#3D8FB5",
+       "x": -6.0
+      },
+      {
+       "label": "(b)",
+       "half": "left half of plant (v)",
+       "colour": "#2E8B4E",
+       "x": -3.0
+      },
+      {
+       "label": "(c)",
+       "half": "right half of drop (i)",
+       "colour": "#4DB3A8",
+       "x": 0.0
+      },
+      {
+       "label": "(d)",
+       "half": "left half of lotus (ii)",
+       "colour": "#E8C23A",
+       "x": 3.0
+      },
+      {
+       "label": "(e)",
+       "half": "left half of fan (iv)",
+       "colour": "#B0463A",
+       "x": 6.0
+      }
+     ],
+     "given_line": {
+      "from": [
+       3.0,
+       1.0999999999999999
+      ],
+      "to": [
+       6.0,
+       -1.5999999999999999
+      ],
+      "colour": "INK",
+      "width_px": 3,
+      "joins": "(iv) to (e)"
+     },
+     "added_lines": [
+      {
+       "joins": "(i) to (c)",
+       "from": [
+        -6.0,
+        1.0999999999999999
+       ],
+       "to": [
+        0.0,
+        -1.5999999999999999
+       ],
+       "colour": "ANSWER",
+       "width_px": 5
+      },
+      {
+       "joins": "(ii) to (d)",
+       "from": [
+        -3.0,
+        1.0999999999999999
+       ],
+       "to": [
+        3.0,
+        -1.5999999999999999
+       ],
+       "colour": "ANSWER",
+       "width_px": 5
+      },
+      {
+       "joins": "(iii) to (a)",
+       "from": [
+        0.0,
+        1.0999999999999999
+       ],
+       "to": [
+        -6.0,
+        -1.5999999999999999
+       ],
+       "colour": "ANSWER",
+       "width_px": 5
+      },
+      {
+       "joins": "(v) to (b)",
+       "from": [
+        6.0,
+        1.0999999999999999
+       ],
+       "to": [
+        -3.0,
+        -1.5999999999999999
+       ],
+       "colour": "ANSWER",
+       "width_px": 5
+      }
+     ],
+     "type": "other"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). TILES: 10 rounded squares of side 2.6 (corner radius 0.25), fill #F3EBDD, border GUIDE 2 px. Top row (the blocks) centre y = 2.4, tiles centred at x = -6, -3, 0, 3, 6 holding blocks (i), (ii), (iii), (iv), (v) in that order; bottom row (the prints) centre y = -2.9, same x centres, holding half prints (a), (b), (c), (d), (e) in that order. Tile labels in INK, height 0.30: \"(i)\" to \"(v)\" at the bottom-right corner inside each top tile, at (x+0.85, 1.4); \"(a)\" to \"(e)\" at the bottom-left corner inside each bottom tile, at (x-0.85, -3.9). Each glyph is centred in its tile and scaled so that its tile-local unit is 1.0 canvas unit. GLYPHS (tile-local coordinates, tile centre (0,0), all five blocks are mirror-symmetric about their vertical middle line x = 0; carved lines drawn in #EFE3CC 3 px on the wood-coloured shape): (i) drop block: the convex hull of the circle centre (0,-0.25) radius 0.60 and the point (0,0.95), filled wood #8A6F55, its edge scalloped by 12 semicircular bumps of radius 0.07 spread at equal arc-length steps, 6 on each side of x = 0 and none on the line; carved leaf: midrib from (0,-0.60) to (0,0.50) and 3 pairs of leaflet strokes from (0,-0.35), (0,-0.05) and (0,0.25) to (+-0.26, y+0.24). (ii) lotus block: body polygon (0,0.95),(0.22,0.50),(0.52,0.64),(0.50,0.30),(0.86,0.26),(0.60,0.02),(0.58,-0.22),(0.20,-0.30),(0,-0.32) and its mirror image, filled wood; 2 leaves = ellipses centred (+-0.45,-0.62) with semi-axes 0.40 and 0.16, the left one turned 20 degrees anticlockwise and the right one 20 degrees clockwise from horizontal, filled wood; carved teardrop = ellipse centre (0,0.45) semi-axes 0.11 and 0.19. (iii) rosette block: disc of radius 0.78 plus 8 bumps = circles of radius 0.17 centred at distance 0.78 at angles 22.5, 67.5, ..., 337.5 degrees (every 45 degrees), filled wood; carved flower = 8 petal ellipses centred at distance 0.40 at angles 0, 45, ..., 315 degrees with semi-axes 0.26 (along the radius) and 0.11, and a centre dot of radius 0.09. (iv) fan block: upper half-disc with centre (0,-0.45), radius 0.95, flat base on y = -0.45, filled wood, the arc scalloped by 14 bumps of radius 0.055 at equal angle steps of 180/14 degrees (first bump centre half a step from the left end); small ring (outline only) centre (0,-0.62) radius 0.13 below the base; carved lines: 7 radiating strokes from (0,-0.45) to radius 0.78 at 90, 90+-25, 90+-50, 90+-75 degrees, and an inner semicircle arc of radius 0.35. (v) tall block: rectangle x -0.5 to 0.5, y -1.1 to 1.1 filled dark wood #5B4332; carved plant: stem from (0,-0.95) to (0,0.30); 3 pairs of leaves = ellipses with semi-axes 0.24 and 0.09 centred (+-0.27,-0.65), (+-0.27,-0.28), (+-0.27,0.05), turned 35 degrees upwards away from the stem; flower on top = vertical ellipse centre (0,0.65) semi-axes 0.11 and 0.30 and 2 side petal ellipses centred (+-0.22,0.55) semi-axes 0.10 and 0.24 leaning 30 degrees away from the stem. HALF PRINTS (line art only, 4 px, no fill, drawn with the straight edge on the tile centre line x = 0, and the straight edge itself drawn as a 4 px line over the full height of the motif): (a) the x >= 0 half of the rosette (scalloped outline and carved flower) in blue #3D8FB5; (b) the x <= 0 half of the carved plant of block (v) (stem, left leaves, left side petal and the left half of the central petal) in green #2E8B4E; (c) the x >= 0 half of the drop block outline and carved leaf in teal #4DB3A8; (d) the x <= 0 half of the lotus (body outline, left leaf, carved teardrop half) in yellow #E8C23A; (e) the x <= 0 half of the fan (scalloped arc, base, ring, radiating strokes, inner arc) in red-brown #B0463A. GIVEN LINE: one straight INK line 3 px from the bottom-centre of tile (iv) (3,1.1) to the top-centre of tile (e) (6,-1.6). Nothing of the question figure moves. Add 4 ANSWER lines, 5 px, each from the bottom-centre of a block tile (y = 1.1) to the top-centre of a print tile (y = -1.6): (i) to (c) from (-6,1.1) to (0,-1.6); (ii) to (d) from (-3,1.1) to (3,-1.6); (iii) to (a) from (0,1.1) to (-6,-1.6); (v) to (b) from (6,1.1) to (-3,-1.6). The given INK line (iv) to (e) stays INK. Lines are drawn over the tile gaps only (they stop at the tile edges). ",
+    "visible_text": [
+     "(i)",
+     "(ii)",
+     "(iii)",
+     "(iv)",
+     "(v)",
+     "(a)",
+     "(b)",
+     "(c)",
+     "(d)",
+     "(e)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "photographs or photo textures, shadows, 3D effects"
+    ],
+    "accuracy_checks": [
+     "5 lines in all: 1 INK (given) + 4 ANSWER",
+     "the pairs are (i)-(c), (ii)-(d), (iii)-(a), (iv)-(e), (v)-(b)",
+     "each block and each print has exactly one line"
+    ],
+    "alt_text": "The same blocks and prints with five lines: (i) to (c), (ii) to (d), (iii) to (a), (iv) to (e) and (v) to (b).",
+    "render_note": "Same glyph drawing as M3.S16.T16.C49.IMG1."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C51",
+   "role": "question",
+   "lp_book_number": "Block Printing: design B",
+   "ncert_ref": "bp.designB",
+   "question_text": "The design B looks the same after every ___ turn. This design has ___ symmetry.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The question is about design B, which exists only as the printed picture (page 6): 4 hearts round a middle point with the two dashed lines the book draws.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S17.T17.C51.IMG1",
+   "manim_scene": "c5_10_BP_Q1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S17.T17.C51.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "symmetry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "heart_height": 2.6,
+     "heart_width": 2.877,
+     "tip_at": [
+      0,
+      0
+     ],
+     "fill": "#7C5CA8",
+     "hearts": {
+      "top": [
+       [
+        0.0,
+        1.978
+       ],
+       [
+        0.006,
+        2.022
+       ],
+       [
+        0.042,
+        2.143
+       ],
+       [
+        0.135,
+        2.305
+       ],
+       [
+        0.292,
+        2.463
+       ],
+       [
+        0.509,
+        2.572
+       ],
+       [
+        0.762,
+        2.598
+       ],
+       [
+        1.017,
+        2.528
+       ],
+       [
+        1.237,
+        2.371
+       ],
+       [
+        1.386,
+        2.147
+       ],
+       [
+        1.438,
+        1.888
+       ],
+       [
+        1.386,
+        1.619
+       ],
+       [
+        1.237,
+        1.357
+       ],
+       [
+        1.017,
+        1.112
+       ],
+       [
+        0.762,
+        0.882
+       ],
+       [
+        0.509,
+        0.665
+       ],
+       [
+        0.292,
+        0.461
+       ],
+       [
+        0.135,
+        0.279
+       ],
+       [
+        0.042,
+        0.131
+       ],
+       [
+        0.006,
+        0.034
+       ],
+       [
+        0.0,
+        0.0
+       ],
+       [
+        -0.006,
+        0.034
+       ],
+       [
+        -0.042,
+        0.131
+       ],
+       [
+        -0.135,
+        0.279
+       ],
+       [
+        -0.292,
+        0.461
+       ],
+       [
+        -0.509,
+        0.665
+       ],
+       [
+        -0.762,
+        0.882
+       ],
+       [
+        -1.017,
+        1.112
+       ],
+       [
+        -1.237,
+        1.357
+       ],
+       [
+        -1.386,
+        1.619
+       ],
+       [
+        -1.438,
+        1.888
+       ],
+       [
+        -1.386,
+        2.147
+       ],
+       [
+        -1.237,
+        2.371
+       ],
+       [
+        -1.017,
+        2.528
+       ],
+       [
+        -0.762,
+        2.598
+       ],
+       [
+        -0.509,
+        2.572
+       ],
+       [
+        -0.292,
+        2.463
+       ],
+       [
+        -0.135,
+        2.305
+       ],
+       [
+        -0.042,
+        2.143
+       ],
+       [
+        -0.006,
+        2.022
+       ]
+      ],
+      "right": [
+       [
+        1.978,
+        0.0
+       ],
+       [
+        2.022,
+        -0.006
+       ],
+       [
+        2.143,
+        -0.042
+       ],
+       [
+        2.305,
+        -0.135
+       ],
+       [
+        2.463,
+        -0.292
+       ],
+       [
+        2.572,
+        -0.509
+       ],
+       [
+        2.598,
+        -0.762
+       ],
+       [
+        2.528,
+        -1.017
+       ],
+       [
+        2.371,
+        -1.237
+       ],
+       [
+        2.147,
+        -1.386
+       ],
+       [
+        1.888,
+        -1.438
+       ],
+       [
+        1.619,
+        -1.386
+       ],
+       [
+        1.357,
+        -1.237
+       ],
+       [
+        1.112,
+        -1.017
+       ],
+       [
+        0.882,
+        -0.762
+       ],
+       [
+        0.665,
+        -0.509
+       ],
+       [
+        0.461,
+        -0.292
+       ],
+       [
+        0.279,
+        -0.135
+       ],
+       [
+        0.131,
+        -0.042
+       ],
+       [
+        0.034,
+        -0.006
+       ],
+       [
+        0.0,
+        -0.0
+       ],
+       [
+        0.034,
+        0.006
+       ],
+       [
+        0.131,
+        0.042
+       ],
+       [
+        0.279,
+        0.135
+       ],
+       [
+        0.461,
+        0.292
+       ],
+       [
+        0.665,
+        0.509
+       ],
+       [
+        0.882,
+        0.762
+       ],
+       [
+        1.112,
+        1.017
+       ],
+       [
+        1.357,
+        1.237
+       ],
+       [
+        1.619,
+        1.386
+       ],
+       [
+        1.888,
+        1.438
+       ],
+       [
+        2.147,
+        1.386
+       ],
+       [
+        2.371,
+        1.237
+       ],
+       [
+        2.528,
+        1.017
+       ],
+       [
+        2.598,
+        0.762
+       ],
+       [
+        2.572,
+        0.509
+       ],
+       [
+        2.463,
+        0.292
+       ],
+       [
+        2.305,
+        0.135
+       ],
+       [
+        2.143,
+        0.042
+       ],
+       [
+        2.022,
+        0.006
+       ]
+      ],
+      "bottom": [
+       [
+        -0.0,
+        -1.978
+       ],
+       [
+        -0.006,
+        -2.022
+       ],
+       [
+        -0.042,
+        -2.143
+       ],
+       [
+        -0.135,
+        -2.305
+       ],
+       [
+        -0.292,
+        -2.463
+       ],
+       [
+        -0.509,
+        -2.572
+       ],
+       [
+        -0.762,
+        -2.598
+       ],
+       [
+        -1.017,
+        -2.528
+       ],
+       [
+        -1.237,
+        -2.371
+       ],
+       [
+        -1.386,
+        -2.147
+       ],
+       [
+        -1.438,
+        -1.888
+       ],
+       [
+        -1.386,
+        -1.619
+       ],
+       [
+        -1.237,
+        -1.357
+       ],
+       [
+        -1.017,
+        -1.112
+       ],
+       [
+        -0.762,
+        -0.882
+       ],
+       [
+        -0.509,
+        -0.665
+       ],
+       [
+        -0.292,
+        -0.461
+       ],
+       [
+        -0.135,
+        -0.279
+       ],
+       [
+        -0.042,
+        -0.131
+       ],
+       [
+        -0.006,
+        -0.034
+       ],
+       [
+        -0.0,
+        0.0
+       ],
+       [
+        0.006,
+        -0.034
+       ],
+       [
+        0.042,
+        -0.131
+       ],
+       [
+        0.135,
+        -0.279
+       ],
+       [
+        0.292,
+        -0.461
+       ],
+       [
+        0.509,
+        -0.665
+       ],
+       [
+        0.762,
+        -0.882
+       ],
+       [
+        1.017,
+        -1.112
+       ],
+       [
+        1.237,
+        -1.357
+       ],
+       [
+        1.386,
+        -1.619
+       ],
+       [
+        1.438,
+        -1.888
+       ],
+       [
+        1.386,
+        -2.147
+       ],
+       [
+        1.237,
+        -2.371
+       ],
+       [
+        1.017,
+        -2.528
+       ],
+       [
+        0.762,
+        -2.598
+       ],
+       [
+        0.509,
+        -2.572
+       ],
+       [
+        0.292,
+        -2.463
+       ],
+       [
+        0.135,
+        -2.305
+       ],
+       [
+        0.042,
+        -2.143
+       ],
+       [
+        0.006,
+        -2.022
+       ]
+      ],
+      "left": [
+       [
+        -1.978,
+        0.0
+       ],
+       [
+        -2.022,
+        0.006
+       ],
+       [
+        -2.143,
+        0.042
+       ],
+       [
+        -2.305,
+        0.135
+       ],
+       [
+        -2.463,
+        0.292
+       ],
+       [
+        -2.572,
+        0.509
+       ],
+       [
+        -2.598,
+        0.762
+       ],
+       [
+        -2.528,
+        1.017
+       ],
+       [
+        -2.371,
+        1.237
+       ],
+       [
+        -2.147,
+        1.386
+       ],
+       [
+        -1.888,
+        1.438
+       ],
+       [
+        -1.619,
+        1.386
+       ],
+       [
+        -1.357,
+        1.237
+       ],
+       [
+        -1.112,
+        1.017
+       ],
+       [
+        -0.882,
+        0.762
+       ],
+       [
+        -0.665,
+        0.509
+       ],
+       [
+        -0.461,
+        0.292
+       ],
+       [
+        -0.279,
+        0.135
+       ],
+       [
+        -0.131,
+        0.042
+       ],
+       [
+        -0.034,
+        0.006
+       ],
+       [
+        0.0,
+        0.0
+       ],
+       [
+        -0.034,
+        -0.006
+       ],
+       [
+        -0.131,
+        -0.042
+       ],
+       [
+        -0.279,
+        -0.135
+       ],
+       [
+        -0.461,
+        -0.292
+       ],
+       [
+        -0.665,
+        -0.509
+       ],
+       [
+        -0.882,
+        -0.762
+       ],
+       [
+        -1.112,
+        -1.017
+       ],
+       [
+        -1.357,
+        -1.237
+       ],
+       [
+        -1.619,
+        -1.386
+       ],
+       [
+        -1.888,
+        -1.438
+       ],
+       [
+        -2.147,
+        -1.386
+       ],
+       [
+        -2.371,
+        -1.237
+       ],
+       [
+        -2.528,
+        -1.017
+       ],
+       [
+        -2.598,
+        -0.762
+       ],
+       [
+        -2.572,
+        -0.509
+       ],
+       [
+        -2.463,
+        -0.292
+       ],
+       [
+        -2.305,
+        -0.135
+       ],
+       [
+        -2.143,
+        -0.042
+       ],
+       [
+        -2.022,
+        -0.006
+       ]
+      ]
+     },
+     "dashed_lines": [
+      {
+       "from": [
+        0,
+        -3.4
+       ],
+       "to": [
+        0,
+        3.4
+       ]
+      },
+      {
+       "from": [
+        -3.4,
+        0
+       ],
+       "to": [
+        3.4,
+        0
+       ]
+      }
+     ],
+     "type": "symmetry_figure"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). Draw 4 identical heart shapes in purple #7C5CA8 with INK outline 3 px, their pointed ends all touching at (0,0). Each heart is the curve x = 16 sin^3 t, y = 13 cos t - 5 cos 2t - 2 cos 3t - cos 4t scaled to a height of 2.6 (width 2.88) with its pointed end at the origin and its two round lobes pointing away from the origin. TOP heart: pointed end at (0,0), lobes up (the curve as it is, moved so that its lowest point is (0,0)); RIGHT heart: the top heart turned 90 degrees clockwise about (0,0) (point at (0,0), lobes to the right); BOTTOM heart: the top heart turned 180 degrees about (0,0); LEFT heart: the top heart turned 90 degrees anticlockwise about (0,0). Inside each heart draw a smaller heart outline in BG white, 3 px, scaled 0.6 about the heart centre point 0.45 of its height away from its pointed end. Over everything draw 2 dashed INK lines, 3 px, dash 0.2 gap 0.12: the vertical line from (0,-3.4) to (0,3.4) and the horizontal line from (-3.4,0) to (3.4,0). No text, no arrow.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, the letter B",
+     "branding, page numbers, watermarks, logos",
+     "photographs, fabric texture, shadows"
+    ],
+    "accuracy_checks": [
+     "4 hearts, one at each of top, right, bottom and left, tips meeting at (0,0)",
+     "a quarter turn (90 degrees) about (0,0) maps each heart onto the next",
+     "the 2 dashed lines run through the middle of two opposite hearts each (they are lines of symmetry)"
+    ],
+    "alt_text": "Four purple hearts placed round a middle point with their pointed ends meeting there, and a dashed vertical and a dashed horizontal line through the middle."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C52",
+   "role": "solution",
+   "lp_book_number": "Block Printing: design B",
+   "ncert_ref": "bp.designB",
+   "question_text": "The design B looks the same after every ___ turn. This design has ___ symmetry.",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer (every 1/4 turn; both symmetries) is two words to fill in. The question figure already shows the 4 hearts and both dashed lines of symmetry, so the solution figure would only repeat it (a turn arrow would be the only addition).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C53",
+   "role": "question",
+   "lp_book_number": "Let Us Do (border shapes): reflection and rotational symmetry",
+   "ncert_ref": "bd.border",
+   "question_text": "Observe the shapes given on the border. Which of the shapes have reflection symmetry? Put a tick mark on them. Put a star mark on the shapes that have rotational symmetry.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The 19 shapes exist only in the book border (page 6); the student must mark the shapes. The numbers 1 to 19 (written round the ring as the LP solution counts them) let the LP refer to each shape.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S18.T18.C53.IMG1",
+   "manim_scene": "c5_10_LD4_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S18.T18.C53.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "grid": {
+      "columns": 7,
+      "rows": 5,
+      "cell_width": 2.2,
+      "cell_height": 1.65,
+      "centre_of_cell(col,row)": "x = (col-4)*2.2, y = (3-row)*1.65"
+     },
+     "order": "1 to 7 along the top row left to right, 8 to 10 down the right column, 11 to 16 along the bottom row right to left, 17 to 19 up the left column",
+     "empty_cell": "column 7, row 5 (bottom-right corner)",
+     "shape_scale": 0.55,
+     "shapes": [
+      {
+       "number": 1,
+       "cell_centre": [
+        -6.6,
+        3.3
+       ],
+       "label_at": [
+        -7.46,
+        3.8
+       ],
+       "tick_at": [
+        -5.72,
+        3.63
+       ],
+       "star_at": [
+        -5.72,
+        2.97
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#DCA4A4",
+         "points": [
+          [
+           -6.142,
+           3.5
+          ],
+          [
+           -6.6,
+           3.631
+          ],
+          [
+           -6.485,
+           3.169
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#DCA4A4",
+         "points": [
+          [
+           -7.058,
+           3.762
+          ],
+          [
+           -6.943,
+           3.3
+          ],
+          [
+           -6.6,
+           3.631
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#DCA4A4",
+         "points": [
+          [
+           -6.827,
+           2.838
+          ],
+          [
+           -6.485,
+           3.169
+          ],
+          [
+           -6.943,
+           3.3
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 2,
+       "cell_centre": [
+        -4.4,
+        3.3
+       ],
+       "label_at": [
+        -5.26,
+        3.8
+       ],
+       "tick_at": [
+        -3.52,
+        3.63
+       ],
+       "star_at": [
+        -3.52,
+        2.97
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#A4D4AC",
+         "points": [
+          [
+           -4.4,
+           3.85
+          ],
+          [
+           -4.241,
+           3.575
+          ],
+          [
+           -3.924,
+           3.575
+          ],
+          [
+           -4.082,
+           3.3
+          ],
+          [
+           -3.924,
+           3.025
+          ],
+          [
+           -4.241,
+           3.025
+          ],
+          [
+           -4.4,
+           2.75
+          ],
+          [
+           -4.559,
+           3.025
+          ],
+          [
+           -4.876,
+           3.025
+          ],
+          [
+           -4.718,
+           3.3
+          ],
+          [
+           -4.876,
+           3.575
+          ],
+          [
+           -4.559,
+           3.575
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 3,
+       "cell_centre": [
+        -2.2,
+        3.3
+       ],
+       "label_at": [
+        -3.06,
+        3.8
+       ],
+       "tick_at": [
+        -1.32,
+        3.63
+       ],
+       "star_at": [
+        -1.32,
+        2.97
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#F4EC94",
+         "points": [
+          [
+           -1.65,
+           3.3
+          ],
+          [
+           -1.925,
+           3.85
+          ],
+          [
+           -2.475,
+           3.85
+          ],
+          [
+           -2.75,
+           3.3
+          ],
+          [
+           -2.475,
+           2.75
+          ],
+          [
+           -1.925,
+           2.75
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 4,
+       "cell_centre": [
+        0.0,
+        3.3
+       ],
+       "label_at": [
+        -0.86,
+        3.8
+       ],
+       "tick_at": [
+        0.88,
+        3.63
+       ],
+       "star_at": [
+        0.88,
+        2.97
+       ],
+       "parts": [
+        {
+         "kind": "line",
+         "colour": "#5C6464",
+         "width_px": 4,
+         "points": [
+          [
+           0.0,
+           3.215
+          ],
+          [
+           0.0,
+           3.556
+          ]
+         ]
+        },
+        {
+         "kind": "line",
+         "colour": "#5C6464",
+         "width_px": 4,
+         "points": [
+          [
+           0.0,
+           3.215
+          ],
+          [
+           -0.295,
+           3.044
+          ]
+         ]
+        },
+        {
+         "kind": "line",
+         "colour": "#5C6464",
+         "width_px": 4,
+         "points": [
+          [
+           0.0,
+           3.215
+          ],
+          [
+           0.295,
+           3.044
+          ]
+         ]
+        },
+        {
+         "kind": "circle",
+         "fill": "#D4BCDC",
+         "centre": [
+          0.0,
+          3.556
+         ],
+         "radius": 0.165
+        },
+        {
+         "kind": "circle",
+         "fill": "#D4BCDC",
+         "centre": [
+          -0.295,
+          3.044
+         ],
+         "radius": 0.165
+        },
+        {
+         "kind": "circle",
+         "fill": "#D4BCDC",
+         "centre": [
+          0.295,
+          3.044
+         ],
+         "radius": 0.165
+        }
+       ]
+      },
+      {
+       "number": 5,
+       "cell_centre": [
+        2.2,
+        3.3
+       ],
+       "label_at": [
+        1.34,
+        3.8
+       ],
+       "tick_at": [
+        3.08,
+        3.63
+       ],
+       "star_at": [
+        3.08,
+        2.97
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#B4D4C4",
+         "points": [
+          [
+           1.931,
+           3.768
+          ],
+          [
+           1.75,
+           2.832
+          ],
+          [
+           2.65,
+           3.143
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#848C94",
+         "points": [
+          [
+           1.931,
+           3.768
+          ],
+          [
+           1.871,
+           3.456
+          ],
+          [
+           2.171,
+           3.559
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#848C94",
+         "points": [
+          [
+           1.75,
+           2.832
+          ],
+          [
+           2.05,
+           2.936
+          ],
+          [
+           1.81,
+           3.144
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#848C94",
+         "points": [
+          [
+           2.65,
+           3.143
+          ],
+          [
+           2.411,
+           3.351
+          ],
+          [
+           2.35,
+           3.039
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 6,
+       "cell_centre": [
+        4.4,
+        3.3
+       ],
+       "label_at": [
+        3.54,
+        3.8
+       ],
+       "tick_at": [
+        5.28,
+        3.63
+       ],
+       "star_at": [
+        5.28,
+        2.97
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#F48C94",
+         "points": [
+          [
+           4.028,
+           2.92
+          ],
+          [
+           4.441,
+           2.77
+          ],
+          [
+           4.772,
+           3.68
+          ],
+          [
+           4.359,
+           3.83
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 7,
+       "cell_centre": [
+        6.6,
+        3.3
+       ],
+       "label_at": [
+        5.74,
+        3.8
+       ],
+       "tick_at": [
+        7.48,
+        3.63
+       ],
+       "star_at": [
+        7.48,
+        2.97
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#CCC4BC",
+         "points": [
+          [
+           7.143,
+           3.386
+          ],
+          [
+           6.534,
+           3.718
+          ],
+          [
+           6.057,
+           3.214
+          ],
+          [
+           6.666,
+           2.882
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 8,
+       "cell_centre": [
+        6.6,
+        1.65
+       ],
+       "label_at": [
+        5.74,
+        2.15
+       ],
+       "tick_at": [
+        7.48,
+        1.98
+       ],
+       "star_at": [
+        7.48,
+        1.32
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#CCCCA4",
+         "points": [
+          [
+           6.6,
+           2.147
+          ],
+          [
+           6.077,
+           1.767
+          ],
+          [
+           6.277,
+           1.153
+          ],
+          [
+           6.923,
+           1.153
+          ],
+          [
+           7.123,
+           1.767
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 9,
+       "cell_centre": [
+        6.6,
+        0.0
+       ],
+       "label_at": [
+        5.74,
+        0.5
+       ],
+       "tick_at": [
+        7.48,
+        0.33
+       ],
+       "star_at": [
+        7.48,
+        -0.33
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           7.03,
+           -0.176
+          ],
+          [
+           7.132,
+           -0.094
+          ],
+          [
+           7.062,
+           0.018
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           7.06,
+           0.042
+          ],
+          [
+           7.114,
+           0.162
+          ],
+          [
+           7.001,
+           0.23
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.89,
+           0.362
+          ],
+          [
+           6.844,
+           0.485
+          ],
+          [
+           6.716,
+           0.453
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.692,
+           0.459
+          ],
+          [
+           6.594,
+           0.547
+          ],
+          [
+           6.495,
+           0.46
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.335,
+           0.396
+          ],
+          [
+           6.204,
+           0.389
+          ],
+          [
+           6.195,
+           0.258
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.182,
+           0.237
+          ],
+          [
+           6.068,
+           0.172
+          ],
+          [
+           6.12,
+           0.051
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.132,
+           -0.121
+          ],
+          [
+           6.097,
+           -0.248
+          ],
+          [
+           6.219,
+           -0.297
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.235,
+           -0.316
+          ],
+          [
+           6.262,
+           -0.445
+          ],
+          [
+           6.393,
+           -0.433
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.561,
+           -0.475
+          ],
+          [
+           6.671,
+           -0.547
+          ],
+          [
+           6.755,
+           -0.446
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.778,
+           -0.437
+          ],
+          [
+           6.909,
+           -0.451
+          ],
+          [
+           6.938,
+           -0.323
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 10,
+       "cell_centre": [
+        6.6,
+        -1.65
+       ],
+       "label_at": [
+        5.74,
+        -1.15
+       ],
+       "tick_at": [
+        7.48,
+        -1.32
+       ],
+       "star_at": [
+        7.48,
+        -1.98
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#A4D4AC",
+         "points": [
+          [
+           6.6,
+           -1.127
+          ],
+          [
+           6.17,
+           -1.334
+          ],
+          [
+           6.064,
+           -1.8
+          ],
+          [
+           6.361,
+           -2.173
+          ],
+          [
+           6.839,
+           -2.173
+          ],
+          [
+           7.136,
+           -1.8
+          ],
+          [
+           7.03,
+           -1.334
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 11,
+       "cell_centre": [
+        4.4,
+        -3.3
+       ],
+       "label_at": [
+        3.54,
+        -2.8
+       ],
+       "tick_at": [
+        5.28,
+        -2.97
+       ],
+       "star_at": [
+        5.28,
+        -3.63
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#5CB4D4",
+         "points": [
+          [
+           4.125,
+           -2.75
+          ],
+          [
+           4.675,
+           -2.75
+          ],
+          [
+           4.4,
+           -3.3
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#5CB4D4",
+         "points": [
+          [
+           4.95,
+           -3.025
+          ],
+          [
+           4.95,
+           -3.575
+          ],
+          [
+           4.4,
+           -3.3
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#5CB4D4",
+         "points": [
+          [
+           4.675,
+           -3.85
+          ],
+          [
+           4.125,
+           -3.85
+          ],
+          [
+           4.4,
+           -3.3
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#5CB4D4",
+         "points": [
+          [
+           3.85,
+           -3.575
+          ],
+          [
+           3.85,
+           -3.025
+          ],
+          [
+           4.4,
+           -3.3
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 12,
+       "cell_centre": [
+        2.2,
+        -3.3
+       ],
+       "label_at": [
+        1.34,
+        -2.8
+       ],
+       "tick_at": [
+        3.08,
+        -2.97
+       ],
+       "star_at": [
+        3.08,
+        -3.63
+       ],
+       "parts": [
+        {
+         "kind": "circle",
+         "fill": "#ACDCD4",
+         "centre": [
+          2.2,
+          -2.99
+         ],
+         "radius": 0.179
+        },
+        {
+         "kind": "circle",
+         "fill": "#ACDCD4",
+         "centre": [
+          2.558,
+          -3.61
+         ],
+         "radius": 0.179
+        },
+        {
+         "kind": "circle",
+         "fill": "#ACDCD4",
+         "centre": [
+          1.843,
+          -3.61
+         ],
+         "radius": 0.179
+        },
+        {
+         "kind": "polygon",
+         "fill": "#CCACAC",
+         "points": [
+          [
+           2.2,
+           -2.99
+          ],
+          [
+           2.558,
+           -3.61
+          ],
+          [
+           1.843,
+           -3.61
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 13,
+       "cell_centre": [
+        0.0,
+        -3.3
+       ],
+       "label_at": [
+        -0.86,
+        -2.8
+       ],
+       "tick_at": [
+        0.88,
+        -2.97
+       ],
+       "star_at": [
+        0.88,
+        -3.63
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#FCD494",
+         "points": [
+          [
+           -0.648,
+           -3.536
+          ],
+          [
+           0.397,
+           -3.536
+          ],
+          [
+           0.648,
+           -3.063
+          ],
+          [
+           -0.397,
+           -3.063
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 14,
+       "cell_centre": [
+        -2.2,
+        -3.3
+       ],
+       "label_at": [
+        -3.06,
+        -2.8
+       ],
+       "tick_at": [
+        -1.32,
+        -2.97
+       ],
+       "star_at": [
+        -1.32,
+        -3.63
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#848C94",
+         "points": [
+          [
+           -1.975,
+           -2.808
+          ],
+          [
+           -2.726,
+           -3.394
+          ],
+          [
+           -1.842,
+           -3.751
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#FCDC94",
+         "points": [
+          [
+           -1.674,
+           -3.247
+          ],
+          [
+           -2.496,
+           -2.915
+          ],
+          [
+           -2.373,
+           -3.792
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 15,
+       "cell_centre": [
+        -4.4,
+        -3.3
+       ],
+       "label_at": [
+        -5.26,
+        -2.8
+       ],
+       "tick_at": [
+        -3.52,
+        -2.97
+       ],
+       "star_at": [
+        -3.52,
+        -3.63
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#F48C94",
+         "points": [
+          [
+           -4.686,
+           -3.142
+          ],
+          [
+           -4.444,
+           -2.892
+          ],
+          [
+           -4.114,
+           -3.708
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 16,
+       "cell_centre": [
+        -6.6,
+        -3.3
+       ],
+       "label_at": [
+        -7.46,
+        -2.8
+       ],
+       "tick_at": [
+        -5.72,
+        -2.97
+       ],
+       "star_at": [
+        -5.72,
+        -3.63
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#B4949C",
+         "points": [
+          [
+           -6.6,
+           -3.3
+          ],
+          [
+           -7.058,
+           -2.884
+          ],
+          [
+           -6.527,
+           -2.686
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4949C",
+         "points": [
+          [
+           -6.6,
+           -3.3
+          ],
+          [
+           -6.142,
+           -3.716
+          ],
+          [
+           -6.673,
+           -3.914
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 17,
+       "cell_centre": [
+        -6.6,
+        -1.65
+       ],
+       "label_at": [
+        -7.46,
+        -1.15
+       ],
+       "tick_at": [
+        -5.72,
+        -1.32
+       ],
+       "star_at": [
+        -5.72,
+        -1.98
+       ],
+       "parts": [
+        {
+         "kind": "circle",
+         "fill": "#DCECBC",
+         "centre": [
+          -6.6,
+          -1.65
+         ],
+         "radius": 0.522
+        }
+       ]
+      },
+      {
+       "number": 18,
+       "cell_centre": [
+        -6.6,
+        0.0
+       ],
+       "label_at": [
+        -7.46,
+        0.5
+       ],
+       "tick_at": [
+        -5.72,
+        0.33
+       ],
+       "star_at": [
+        -5.72,
+        -0.33
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#ACDCF4",
+         "points": [
+          [
+           -7.013,
+           -0.413
+          ],
+          [
+           -6.188,
+           -0.413
+          ],
+          [
+           -6.188,
+           0.413
+          ],
+          [
+           -7.013,
+           0.413
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 19,
+       "cell_centre": [
+        -6.6,
+        1.65
+       ],
+       "label_at": [
+        -7.46,
+        2.15
+       ],
+       "tick_at": [
+        -5.72,
+        1.98
+       ],
+       "star_at": [
+        -5.72,
+        1.32
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           -6.6,
+           2.054
+          ],
+          [
+           -7.067,
+           1.246
+          ],
+          [
+           -6.133,
+           1.246
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "type": "other"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). Draw 19 flat shapes around the border of the canvas, in a ring of 7 columns x 5 rows of cells (cell width 2.2, cell height 1.65; the cell of column c, row r is centred at x = (c-4)*2.2, y = (3-r)*1.65). Numbering goes round the ring from the top-left corner: shapes 1 to 7 along the top row left to right (columns 1 to 7, row 1); shapes 8, 9, 10 down the right column (column 7, rows 2, 3, 4); shapes 11 to 16 along the bottom row right to left (columns 6 down to 1, row 5); shapes 17, 18, 19 up the left column (column 1, rows 4, 3, 2). The bottom-right cell (column 7, row 5) and every cell inside the ring stay empty. Every polygon and circle has an INK outline of 2 px (the lines of shape 4 have no outline). Next to each shape write its number in INK, text height 0.34, centred at (cell x - 0.86, cell y + 0.50). Shapes (all coordinates in canvas units): Shape 1 at cell centre (-6.60,3.30): large equilateral triangle, vertices at 14, 134, 254 degrees, circumradius 1; the 3 corner triangles filled, central triangle left white; parts: polygon (-6.142,3.500), (-6.600,3.631), (-6.485,3.169) fill #DCA4A4 / polygon (-7.058,3.762), (-6.943,3.300), (-6.600,3.631) fill #DCA4A4 / polygon (-6.827,2.838), (-6.485,3.169), (-6.943,3.300) fill #DCA4A4. Shape 2 at cell centre (-4.40,3.30): six-pointed star (two equilateral triangles, one apex up, one apex down, circumradius 1); parts: polygon (-4.400,3.850), (-4.241,3.575), (-3.924,3.575), (-4.082,3.300), (-3.924,3.025), (-4.241,3.025), (-4.400,2.750), (-4.559,3.025), (-4.876,3.025), (-4.718,3.300), (-4.876,3.575), (-4.559,3.575) fill #A4D4AC. Shape 3 at cell centre (-2.20,3.30): six-sided shape with flat top and bottom, corners at (1,0), (0.5,1), (-0.5,1), (-1,0), (-0.5,-1), (0.5,-1); parts: polygon (-1.650,3.300), (-1.925,3.850), (-2.475,3.850), (-2.750,3.300), (-2.475,2.750), (-1.925,2.750) fill #F4EC94. Shape 4 at cell centre (0.00,3.30): three circles of radius 0.30 with centres at distance 0.62 from the middle point at 90, 210, 330 degrees, each joined to the middle point by a straight line; parts: line [[0.0, 3.215], [0.0, 3.556]] colour #5C6464 / line [[0.0, 3.215], [-0.295, 3.044]] colour #5C6464 / line [[0.0, 3.215], [0.295, 3.044]] colour #5C6464 / circle centre (0.000,3.556) radius 0.165 fill #D4BCDC / circle centre (-0.295,3.044) radius 0.165 fill #D4BCDC / circle centre (0.295,3.044) radius 0.165 fill #D4BCDC. Shape 5 at cell centre (2.20,3.30): large equilateral triangle, vertices at 109, 229, 349 degrees, circumradius 1, with a corner triangle cut off at one third of each side (corners grey, middle part a regular hexagon); parts: polygon (1.931,3.768), (1.750,2.832), (2.650,3.143) fill #B4D4C4 / polygon (1.931,3.768), (1.871,3.456), (2.171,3.559) fill #848C94 / polygon (1.750,2.832), (2.050,2.936), (1.810,3.144) fill #848C94 / polygon (2.650,3.143), (2.411,3.351), (2.350,3.039) fill #848C94. Shape 6 at cell centre (4.40,3.30): rectangle 0.80 by 1.76, long side turned 20 degrees clockwise from upright; parts: polygon (4.028,2.920), (4.441,2.770), (4.772,3.680), (4.359,3.830) fill #F48C94. Shape 7 at cell centre (6.60,3.30): rhombus with diagonals 2.00 and 1.54, long diagonal turned 9 degrees anticlockwise from horizontal; parts: polygon (7.143,3.386), (6.534,3.718), (6.057,3.214), (6.666,2.882) fill #CCC4BC. Shape 8 at cell centre (6.60,1.65): regular pentagon, circumradius 1, one corner up; parts: polygon (6.600,2.147), (6.077,1.767), (6.277,1.153), (6.923,1.153), (7.123,1.767) fill #CCCCA4. Shape 9 at cell centre (6.60,0.00): ring of 10 small triangular tips in 5 mirror pairs: pair axes at 4, 76, 148, 220, 292 degrees; apex of each tip at radius 1.00 and angle axis +/- 13.5; base corners at radius 0.86 and angle apex +/- 12; parts: polygon (7.030,-0.176), (7.132,-0.094), (7.062,0.018) fill #B4A4CC / polygon (7.060,0.042), (7.114,0.162), (7.001,0.230) fill #B4A4CC / polygon (6.890,0.362), (6.844,0.485), (6.716,0.453) fill #B4A4CC / polygon (6.692,0.459), (6.594,0.547), (6.495,0.460) fill #B4A4CC / polygon (6.335,0.396), (6.204,0.389), (6.195,0.258) fill #B4A4CC / polygon (6.182,0.237), (6.068,0.172), (6.120,0.051) fill #B4A4CC / polygon (6.132,-0.121), (6.097,-0.248), (6.219,-0.297) fill #B4A4CC / polygon (6.235,-0.316), (6.262,-0.445), (6.393,-0.433) fill #B4A4CC / polygon (6.561,-0.475), (6.671,-0.547), (6.755,-0.446) fill #B4A4CC / polygon (6.778,-0.437), (6.909,-0.451), (6.938,-0.323) fill #B4A4CC. Shape 10 at cell centre (6.60,-1.65): regular heptagon, circumradius 1, one corner up, flat bottom edge; parts: polygon (6.600,-1.127), (6.170,-1.334), (6.064,-1.800), (6.361,-2.173), (6.839,-2.173), (7.136,-1.800), (7.030,-1.334) fill #A4D4AC. Shape 11 at cell centre (4.40,-3.30): four triangles with corners at the middle point: top (-0.5,1),(0.5,1),(0,0); right (1,0.5),(1,-0.5),(0,0); bottom (0.5,-1),(-0.5,-1),(0,0); left (-1,-0.5),(-1,0.5),(0,0); parts: polygon (4.125,-2.750), (4.675,-2.750), (4.400,-3.300) fill #5CB4D4 / polygon (4.950,-3.025), (4.950,-3.575), (4.400,-3.300) fill #5CB4D4 / polygon (4.675,-3.850), (4.125,-3.850), (4.400,-3.300) fill #5CB4D4 / polygon (3.850,-3.575), (3.850,-3.025), (4.400,-3.300) fill #5CB4D4. Shape 12 at cell centre (2.20,-3.30): equilateral triangle of side 1.30, apex up, with a circle of radius 0.325 centred on each of its three corners (circles behind the triangle); parts: circle centre (2.200,-2.990) radius 0.179 fill #ACDCD4 / circle centre (2.558,-3.610) radius 0.179 fill #ACDCD4 / circle centre (1.843,-3.610) radius 0.179 fill #ACDCD4 / polygon (2.200,-2.990), (2.558,-3.610), (1.843,-3.610) fill #CCACAC. Shape 13 at cell centre (0.00,-3.30): parallelogram, horizontal sides 1.90 long, height 0.86, top side shifted 0.456 to the right of the bottom side; parts: polygon (-0.648,-3.536), (0.397,-3.536), (0.648,-3.063), (-0.397,-3.063) fill #FCD494. Shape 14 at cell centre (-2.20,-3.30): grey equilateral triangle (corners at 68, 188, 308 degrees, circumradius 1.00) with a yellow equilateral triangle on top (corners at 8, 128, 248 degrees, circumradius 0.93); parts: polygon (-1.975,-2.808), (-2.726,-3.394), (-1.842,-3.751) fill #848C94 / polygon (-1.674,-3.247), (-2.496,-2.915), (-2.373,-3.792) fill #FCDC94. Shape 15 at cell centre (-4.40,-3.30): narrow scalene triangle with corners (-0.494,0.192), (-0.053,0.645), (0.547,-0.837); parts: polygon (-4.686,-3.142), (-4.444,-2.892), (-4.114,-3.708) fill #F48C94. Shape 16 at cell centre (-6.60,-3.30): two equal isosceles triangles meeting at their sharp corner at (0,0): the upper one has corners (0,0), (-0.833,0.756), (0.132,1.117); the lower one is the same turned a half turn about (0,0); parts: polygon (-6.600,-3.300), (-7.058,-2.884), (-6.527,-2.686) fill #B4949C / polygon (-6.600,-3.300), (-6.142,-3.716), (-6.673,-3.914) fill #B4949C. Shape 17 at cell centre (-6.60,-1.65): circle of radius 0.95; parts: circle centre (-6.600,-1.650) radius 0.522 fill #DCECBC. Shape 18 at cell centre (-6.60,0.00): square of side 1.50 with horizontal and vertical sides; parts: polygon (-7.013,-0.413), (-6.188,-0.413), (-6.188,0.413), (-7.013,0.413) fill #ACDCF4. Shape 19 at cell centre (-6.60,1.65): equilateral triangle, circumradius 0.98, apex up; parts: polygon (-6.600,2.054), (-7.067,1.246), (-6.133,1.246) fill #B4A4CC. No tick marks, no star marks, no other text.",
+    "visible_text": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "tick marks or star marks",
+     "the page border frame lines and the page-number badge"
+    ],
+    "accuracy_checks": [
+     "19 shapes, numbered 1 to 19 round the ring from the top-left corner",
+     "regular polygons: shape 8 pentagon, shape 10 heptagon, shape 18 square; shapes 1, 5, 12, 14, 19 have 3 equal corners, shape 2 has 6 points, shape 11 has 4 blades",
+     "symmetry of each drawn shape, checked by computation: 1: 3 lines, 1/3 turn; 2: 6, 1/6; 3: 2, 1/2; 4: 3, 1/3; 5: 3, 1/3; 6: 2, 1/2; 7: 2, 1/2; 8: 5, 1/5; 9: 5, 1/5; 10: 7, 1/7; 11: 4, 1/4; 12: 3, 1/3; 13: no line, 1/2; 14: 3, 1/3; 15: no line, no turn; 16: 2, 1/2; 17: circle; 18: 4, 1/4; 19: 3, 1/3",
+     "no tick or star in this figure"
+    ],
+    "alt_text": "Nineteen numbered shapes arranged round a border: triangles, a star, a hexagon, circles, a rectangle, a diamond, a pentagon, a heptagon, a windmill, a parallelogram, a narrow triangle, a bow-tie, a circle and a square.",
+    "render_note": "Several book shapes are drawn slightly uneven; they are drawn here in their regular form (the LP treats them as having the symmetries listed). Colours are the book colours."
+   },
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C54",
+   "role": "solution",
+   "lp_book_number": "Let Us Do (border shapes): reflection and rotational symmetry",
+   "ncert_ref": "bd.border",
+   "question_text": "Observe the shapes given on the border. Which of the shapes have reflection symmetry? Put a tick mark on them. Put a star mark on the shapes that have rotational symmetry.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The answer is the marking itself: a tick on every shape with reflection symmetry (17 shapes: all except 13 and 15) and a star on every shape with rotational symmetry (18 shapes: all except 15).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S18.T18.C54.IMG1",
+   "manim_scene": "c5_10_LD4_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S18.T18.C54.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S18.T18.C53.IMG1",
+    "content": {
+     "grid": {
+      "columns": 7,
+      "rows": 5,
+      "cell_width": 2.2,
+      "cell_height": 1.65,
+      "centre_of_cell(col,row)": "x = (col-4)*2.2, y = (3-row)*1.65"
+     },
+     "order": "1 to 7 along the top row left to right, 8 to 10 down the right column, 11 to 16 along the bottom row right to left, 17 to 19 up the left column",
+     "empty_cell": "column 7, row 5 (bottom-right corner)",
+     "shape_scale": 0.55,
+     "shapes": [
+      {
+       "number": 1,
+       "cell_centre": [
+        -6.6,
+        3.3
+       ],
+       "label_at": [
+        -7.46,
+        3.8
+       ],
+       "tick_at": [
+        -5.72,
+        3.63
+       ],
+       "star_at": [
+        -5.72,
+        2.97
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#DCA4A4",
+         "points": [
+          [
+           -6.142,
+           3.5
+          ],
+          [
+           -6.6,
+           3.631
+          ],
+          [
+           -6.485,
+           3.169
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#DCA4A4",
+         "points": [
+          [
+           -7.058,
+           3.762
+          ],
+          [
+           -6.943,
+           3.3
+          ],
+          [
+           -6.6,
+           3.631
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#DCA4A4",
+         "points": [
+          [
+           -6.827,
+           2.838
+          ],
+          [
+           -6.485,
+           3.169
+          ],
+          [
+           -6.943,
+           3.3
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 2,
+       "cell_centre": [
+        -4.4,
+        3.3
+       ],
+       "label_at": [
+        -5.26,
+        3.8
+       ],
+       "tick_at": [
+        -3.52,
+        3.63
+       ],
+       "star_at": [
+        -3.52,
+        2.97
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#A4D4AC",
+         "points": [
+          [
+           -4.4,
+           3.85
+          ],
+          [
+           -4.241,
+           3.575
+          ],
+          [
+           -3.924,
+           3.575
+          ],
+          [
+           -4.082,
+           3.3
+          ],
+          [
+           -3.924,
+           3.025
+          ],
+          [
+           -4.241,
+           3.025
+          ],
+          [
+           -4.4,
+           2.75
+          ],
+          [
+           -4.559,
+           3.025
+          ],
+          [
+           -4.876,
+           3.025
+          ],
+          [
+           -4.718,
+           3.3
+          ],
+          [
+           -4.876,
+           3.575
+          ],
+          [
+           -4.559,
+           3.575
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 3,
+       "cell_centre": [
+        -2.2,
+        3.3
+       ],
+       "label_at": [
+        -3.06,
+        3.8
+       ],
+       "tick_at": [
+        -1.32,
+        3.63
+       ],
+       "star_at": [
+        -1.32,
+        2.97
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#F4EC94",
+         "points": [
+          [
+           -1.65,
+           3.3
+          ],
+          [
+           -1.925,
+           3.85
+          ],
+          [
+           -2.475,
+           3.85
+          ],
+          [
+           -2.75,
+           3.3
+          ],
+          [
+           -2.475,
+           2.75
+          ],
+          [
+           -1.925,
+           2.75
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 4,
+       "cell_centre": [
+        0.0,
+        3.3
+       ],
+       "label_at": [
+        -0.86,
+        3.8
+       ],
+       "tick_at": [
+        0.88,
+        3.63
+       ],
+       "star_at": [
+        0.88,
+        2.97
+       ],
+       "parts": [
+        {
+         "kind": "line",
+         "colour": "#5C6464",
+         "width_px": 4,
+         "points": [
+          [
+           0.0,
+           3.215
+          ],
+          [
+           0.0,
+           3.556
+          ]
+         ]
+        },
+        {
+         "kind": "line",
+         "colour": "#5C6464",
+         "width_px": 4,
+         "points": [
+          [
+           0.0,
+           3.215
+          ],
+          [
+           -0.295,
+           3.044
+          ]
+         ]
+        },
+        {
+         "kind": "line",
+         "colour": "#5C6464",
+         "width_px": 4,
+         "points": [
+          [
+           0.0,
+           3.215
+          ],
+          [
+           0.295,
+           3.044
+          ]
+         ]
+        },
+        {
+         "kind": "circle",
+         "fill": "#D4BCDC",
+         "centre": [
+          0.0,
+          3.556
+         ],
+         "radius": 0.165
+        },
+        {
+         "kind": "circle",
+         "fill": "#D4BCDC",
+         "centre": [
+          -0.295,
+          3.044
+         ],
+         "radius": 0.165
+        },
+        {
+         "kind": "circle",
+         "fill": "#D4BCDC",
+         "centre": [
+          0.295,
+          3.044
+         ],
+         "radius": 0.165
+        }
+       ]
+      },
+      {
+       "number": 5,
+       "cell_centre": [
+        2.2,
+        3.3
+       ],
+       "label_at": [
+        1.34,
+        3.8
+       ],
+       "tick_at": [
+        3.08,
+        3.63
+       ],
+       "star_at": [
+        3.08,
+        2.97
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#B4D4C4",
+         "points": [
+          [
+           1.931,
+           3.768
+          ],
+          [
+           1.75,
+           2.832
+          ],
+          [
+           2.65,
+           3.143
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#848C94",
+         "points": [
+          [
+           1.931,
+           3.768
+          ],
+          [
+           1.871,
+           3.456
+          ],
+          [
+           2.171,
+           3.559
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#848C94",
+         "points": [
+          [
+           1.75,
+           2.832
+          ],
+          [
+           2.05,
+           2.936
+          ],
+          [
+           1.81,
+           3.144
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#848C94",
+         "points": [
+          [
+           2.65,
+           3.143
+          ],
+          [
+           2.411,
+           3.351
+          ],
+          [
+           2.35,
+           3.039
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 6,
+       "cell_centre": [
+        4.4,
+        3.3
+       ],
+       "label_at": [
+        3.54,
+        3.8
+       ],
+       "tick_at": [
+        5.28,
+        3.63
+       ],
+       "star_at": [
+        5.28,
+        2.97
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#F48C94",
+         "points": [
+          [
+           4.028,
+           2.92
+          ],
+          [
+           4.441,
+           2.77
+          ],
+          [
+           4.772,
+           3.68
+          ],
+          [
+           4.359,
+           3.83
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 7,
+       "cell_centre": [
+        6.6,
+        3.3
+       ],
+       "label_at": [
+        5.74,
+        3.8
+       ],
+       "tick_at": [
+        7.48,
+        3.63
+       ],
+       "star_at": [
+        7.48,
+        2.97
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#CCC4BC",
+         "points": [
+          [
+           7.143,
+           3.386
+          ],
+          [
+           6.534,
+           3.718
+          ],
+          [
+           6.057,
+           3.214
+          ],
+          [
+           6.666,
+           2.882
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 8,
+       "cell_centre": [
+        6.6,
+        1.65
+       ],
+       "label_at": [
+        5.74,
+        2.15
+       ],
+       "tick_at": [
+        7.48,
+        1.98
+       ],
+       "star_at": [
+        7.48,
+        1.32
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#CCCCA4",
+         "points": [
+          [
+           6.6,
+           2.147
+          ],
+          [
+           6.077,
+           1.767
+          ],
+          [
+           6.277,
+           1.153
+          ],
+          [
+           6.923,
+           1.153
+          ],
+          [
+           7.123,
+           1.767
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 9,
+       "cell_centre": [
+        6.6,
+        0.0
+       ],
+       "label_at": [
+        5.74,
+        0.5
+       ],
+       "tick_at": [
+        7.48,
+        0.33
+       ],
+       "star_at": [
+        7.48,
+        -0.33
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           7.03,
+           -0.176
+          ],
+          [
+           7.132,
+           -0.094
+          ],
+          [
+           7.062,
+           0.018
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           7.06,
+           0.042
+          ],
+          [
+           7.114,
+           0.162
+          ],
+          [
+           7.001,
+           0.23
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.89,
+           0.362
+          ],
+          [
+           6.844,
+           0.485
+          ],
+          [
+           6.716,
+           0.453
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.692,
+           0.459
+          ],
+          [
+           6.594,
+           0.547
+          ],
+          [
+           6.495,
+           0.46
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.335,
+           0.396
+          ],
+          [
+           6.204,
+           0.389
+          ],
+          [
+           6.195,
+           0.258
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.182,
+           0.237
+          ],
+          [
+           6.068,
+           0.172
+          ],
+          [
+           6.12,
+           0.051
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.132,
+           -0.121
+          ],
+          [
+           6.097,
+           -0.248
+          ],
+          [
+           6.219,
+           -0.297
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.235,
+           -0.316
+          ],
+          [
+           6.262,
+           -0.445
+          ],
+          [
+           6.393,
+           -0.433
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.561,
+           -0.475
+          ],
+          [
+           6.671,
+           -0.547
+          ],
+          [
+           6.755,
+           -0.446
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           6.778,
+           -0.437
+          ],
+          [
+           6.909,
+           -0.451
+          ],
+          [
+           6.938,
+           -0.323
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 10,
+       "cell_centre": [
+        6.6,
+        -1.65
+       ],
+       "label_at": [
+        5.74,
+        -1.15
+       ],
+       "tick_at": [
+        7.48,
+        -1.32
+       ],
+       "star_at": [
+        7.48,
+        -1.98
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#A4D4AC",
+         "points": [
+          [
+           6.6,
+           -1.127
+          ],
+          [
+           6.17,
+           -1.334
+          ],
+          [
+           6.064,
+           -1.8
+          ],
+          [
+           6.361,
+           -2.173
+          ],
+          [
+           6.839,
+           -2.173
+          ],
+          [
+           7.136,
+           -1.8
+          ],
+          [
+           7.03,
+           -1.334
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 11,
+       "cell_centre": [
+        4.4,
+        -3.3
+       ],
+       "label_at": [
+        3.54,
+        -2.8
+       ],
+       "tick_at": [
+        5.28,
+        -2.97
+       ],
+       "star_at": [
+        5.28,
+        -3.63
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#5CB4D4",
+         "points": [
+          [
+           4.125,
+           -2.75
+          ],
+          [
+           4.675,
+           -2.75
+          ],
+          [
+           4.4,
+           -3.3
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#5CB4D4",
+         "points": [
+          [
+           4.95,
+           -3.025
+          ],
+          [
+           4.95,
+           -3.575
+          ],
+          [
+           4.4,
+           -3.3
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#5CB4D4",
+         "points": [
+          [
+           4.675,
+           -3.85
+          ],
+          [
+           4.125,
+           -3.85
+          ],
+          [
+           4.4,
+           -3.3
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#5CB4D4",
+         "points": [
+          [
+           3.85,
+           -3.575
+          ],
+          [
+           3.85,
+           -3.025
+          ],
+          [
+           4.4,
+           -3.3
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 12,
+       "cell_centre": [
+        2.2,
+        -3.3
+       ],
+       "label_at": [
+        1.34,
+        -2.8
+       ],
+       "tick_at": [
+        3.08,
+        -2.97
+       ],
+       "star_at": [
+        3.08,
+        -3.63
+       ],
+       "parts": [
+        {
+         "kind": "circle",
+         "fill": "#ACDCD4",
+         "centre": [
+          2.2,
+          -2.99
+         ],
+         "radius": 0.179
+        },
+        {
+         "kind": "circle",
+         "fill": "#ACDCD4",
+         "centre": [
+          2.558,
+          -3.61
+         ],
+         "radius": 0.179
+        },
+        {
+         "kind": "circle",
+         "fill": "#ACDCD4",
+         "centre": [
+          1.843,
+          -3.61
+         ],
+         "radius": 0.179
+        },
+        {
+         "kind": "polygon",
+         "fill": "#CCACAC",
+         "points": [
+          [
+           2.2,
+           -2.99
+          ],
+          [
+           2.558,
+           -3.61
+          ],
+          [
+           1.843,
+           -3.61
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 13,
+       "cell_centre": [
+        0.0,
+        -3.3
+       ],
+       "label_at": [
+        -0.86,
+        -2.8
+       ],
+       "tick_at": [
+        0.88,
+        -2.97
+       ],
+       "star_at": [
+        0.88,
+        -3.63
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#FCD494",
+         "points": [
+          [
+           -0.648,
+           -3.536
+          ],
+          [
+           0.397,
+           -3.536
+          ],
+          [
+           0.648,
+           -3.063
+          ],
+          [
+           -0.397,
+           -3.063
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 14,
+       "cell_centre": [
+        -2.2,
+        -3.3
+       ],
+       "label_at": [
+        -3.06,
+        -2.8
+       ],
+       "tick_at": [
+        -1.32,
+        -2.97
+       ],
+       "star_at": [
+        -1.32,
+        -3.63
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#848C94",
+         "points": [
+          [
+           -1.975,
+           -2.808
+          ],
+          [
+           -2.726,
+           -3.394
+          ],
+          [
+           -1.842,
+           -3.751
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#FCDC94",
+         "points": [
+          [
+           -1.674,
+           -3.247
+          ],
+          [
+           -2.496,
+           -2.915
+          ],
+          [
+           -2.373,
+           -3.792
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 15,
+       "cell_centre": [
+        -4.4,
+        -3.3
+       ],
+       "label_at": [
+        -5.26,
+        -2.8
+       ],
+       "tick_at": [
+        -3.52,
+        -2.97
+       ],
+       "star_at": [
+        -3.52,
+        -3.63
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#F48C94",
+         "points": [
+          [
+           -4.686,
+           -3.142
+          ],
+          [
+           -4.444,
+           -2.892
+          ],
+          [
+           -4.114,
+           -3.708
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 16,
+       "cell_centre": [
+        -6.6,
+        -3.3
+       ],
+       "label_at": [
+        -7.46,
+        -2.8
+       ],
+       "tick_at": [
+        -5.72,
+        -2.97
+       ],
+       "star_at": [
+        -5.72,
+        -3.63
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#B4949C",
+         "points": [
+          [
+           -6.6,
+           -3.3
+          ],
+          [
+           -7.058,
+           -2.884
+          ],
+          [
+           -6.527,
+           -2.686
+          ]
+         ]
+        },
+        {
+         "kind": "polygon",
+         "fill": "#B4949C",
+         "points": [
+          [
+           -6.6,
+           -3.3
+          ],
+          [
+           -6.142,
+           -3.716
+          ],
+          [
+           -6.673,
+           -3.914
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 17,
+       "cell_centre": [
+        -6.6,
+        -1.65
+       ],
+       "label_at": [
+        -7.46,
+        -1.15
+       ],
+       "tick_at": [
+        -5.72,
+        -1.32
+       ],
+       "star_at": [
+        -5.72,
+        -1.98
+       ],
+       "parts": [
+        {
+         "kind": "circle",
+         "fill": "#DCECBC",
+         "centre": [
+          -6.6,
+          -1.65
+         ],
+         "radius": 0.522
+        }
+       ]
+      },
+      {
+       "number": 18,
+       "cell_centre": [
+        -6.6,
+        0.0
+       ],
+       "label_at": [
+        -7.46,
+        0.5
+       ],
+       "tick_at": [
+        -5.72,
+        0.33
+       ],
+       "star_at": [
+        -5.72,
+        -0.33
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#ACDCF4",
+         "points": [
+          [
+           -7.013,
+           -0.413
+          ],
+          [
+           -6.188,
+           -0.413
+          ],
+          [
+           -6.188,
+           0.413
+          ],
+          [
+           -7.013,
+           0.413
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "number": 19,
+       "cell_centre": [
+        -6.6,
+        1.65
+       ],
+       "label_at": [
+        -7.46,
+        2.15
+       ],
+       "tick_at": [
+        -5.72,
+        1.98
+       ],
+       "star_at": [
+        -5.72,
+        1.32
+       ],
+       "parts": [
+        {
+         "kind": "polygon",
+         "fill": "#B4A4CC",
+         "points": [
+          [
+           -6.6,
+           2.054
+          ],
+          [
+           -7.067,
+           1.246
+          ],
+          [
+           -6.133,
+           1.246
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "ticks": [
+      {
+       "shape": 1,
+       "polyline": [
+        [
+         -5.88,
+         3.63
+        ],
+        [
+         -5.77,
+         3.5
+        ],
+        [
+         -5.55,
+         3.78
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 2,
+       "polyline": [
+        [
+         -3.68,
+         3.63
+        ],
+        [
+         -3.57,
+         3.5
+        ],
+        [
+         -3.35,
+         3.78
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 3,
+       "polyline": [
+        [
+         -1.48,
+         3.63
+        ],
+        [
+         -1.37,
+         3.5
+        ],
+        [
+         -1.15,
+         3.78
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 4,
+       "polyline": [
+        [
+         0.72,
+         3.63
+        ],
+        [
+         0.83,
+         3.5
+        ],
+        [
+         1.05,
+         3.78
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 5,
+       "polyline": [
+        [
+         2.92,
+         3.63
+        ],
+        [
+         3.03,
+         3.5
+        ],
+        [
+         3.25,
+         3.78
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 6,
+       "polyline": [
+        [
+         5.12,
+         3.63
+        ],
+        [
+         5.23,
+         3.5
+        ],
+        [
+         5.45,
+         3.78
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 7,
+       "polyline": [
+        [
+         7.32,
+         3.63
+        ],
+        [
+         7.43,
+         3.5
+        ],
+        [
+         7.65,
+         3.78
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 8,
+       "polyline": [
+        [
+         7.32,
+         1.98
+        ],
+        [
+         7.43,
+         1.85
+        ],
+        [
+         7.65,
+         2.13
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 9,
+       "polyline": [
+        [
+         7.32,
+         0.33
+        ],
+        [
+         7.43,
+         0.2
+        ],
+        [
+         7.65,
+         0.48
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 10,
+       "polyline": [
+        [
+         7.32,
+         -1.32
+        ],
+        [
+         7.43,
+         -1.45
+        ],
+        [
+         7.65,
+         -1.17
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 11,
+       "polyline": [
+        [
+         5.12,
+         -2.97
+        ],
+        [
+         5.23,
+         -3.1
+        ],
+        [
+         5.45,
+         -2.82
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 12,
+       "polyline": [
+        [
+         2.92,
+         -2.97
+        ],
+        [
+         3.03,
+         -3.1
+        ],
+        [
+         3.25,
+         -2.82
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 14,
+       "polyline": [
+        [
+         -1.48,
+         -2.97
+        ],
+        [
+         -1.37,
+         -3.1
+        ],
+        [
+         -1.15,
+         -2.82
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 16,
+       "polyline": [
+        [
+         -5.88,
+         -2.97
+        ],
+        [
+         -5.77,
+         -3.1
+        ],
+        [
+         -5.55,
+         -2.82
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 17,
+       "polyline": [
+        [
+         -5.88,
+         -1.32
+        ],
+        [
+         -5.77,
+         -1.45
+        ],
+        [
+         -5.55,
+         -1.17
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 18,
+       "polyline": [
+        [
+         -5.88,
+         0.33
+        ],
+        [
+         -5.77,
+         0.2
+        ],
+        [
+         -5.55,
+         0.48
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      },
+      {
+       "shape": 19,
+       "polyline": [
+        [
+         -5.88,
+         1.98
+        ],
+        [
+         -5.77,
+         1.85
+        ],
+        [
+         -5.55,
+         2.13
+        ]
+       ],
+       "colour": "ANSWER",
+       "width_px": 6
+      }
+     ],
+     "stars": [
+      {
+       "shape": 1,
+       "polygon": [
+        [
+         -5.72,
+         3.16
+        ],
+        [
+         -5.767,
+         3.035
+        ],
+        [
+         -5.901,
+         3.029
+        ],
+        [
+         -5.796,
+         2.945
+        ],
+        [
+         -5.832,
+         2.816
+        ],
+        [
+         -5.72,
+         2.89
+        ],
+        [
+         -5.608,
+         2.816
+        ],
+        [
+         -5.644,
+         2.945
+        ],
+        [
+         -5.539,
+         3.029
+        ],
+        [
+         -5.673,
+         3.035
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 2,
+       "polygon": [
+        [
+         -3.52,
+         3.16
+        ],
+        [
+         -3.567,
+         3.035
+        ],
+        [
+         -3.701,
+         3.029
+        ],
+        [
+         -3.596,
+         2.945
+        ],
+        [
+         -3.632,
+         2.816
+        ],
+        [
+         -3.52,
+         2.89
+        ],
+        [
+         -3.408,
+         2.816
+        ],
+        [
+         -3.444,
+         2.945
+        ],
+        [
+         -3.339,
+         3.029
+        ],
+        [
+         -3.473,
+         3.035
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 3,
+       "polygon": [
+        [
+         -1.32,
+         3.16
+        ],
+        [
+         -1.367,
+         3.035
+        ],
+        [
+         -1.501,
+         3.029
+        ],
+        [
+         -1.396,
+         2.945
+        ],
+        [
+         -1.432,
+         2.816
+        ],
+        [
+         -1.32,
+         2.89
+        ],
+        [
+         -1.208,
+         2.816
+        ],
+        [
+         -1.244,
+         2.945
+        ],
+        [
+         -1.139,
+         3.029
+        ],
+        [
+         -1.273,
+         3.035
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 4,
+       "polygon": [
+        [
+         0.88,
+         3.16
+        ],
+        [
+         0.833,
+         3.035
+        ],
+        [
+         0.699,
+         3.029
+        ],
+        [
+         0.804,
+         2.945
+        ],
+        [
+         0.768,
+         2.816
+        ],
+        [
+         0.88,
+         2.89
+        ],
+        [
+         0.992,
+         2.816
+        ],
+        [
+         0.956,
+         2.945
+        ],
+        [
+         1.061,
+         3.029
+        ],
+        [
+         0.927,
+         3.035
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 5,
+       "polygon": [
+        [
+         3.08,
+         3.16
+        ],
+        [
+         3.033,
+         3.035
+        ],
+        [
+         2.899,
+         3.029
+        ],
+        [
+         3.004,
+         2.945
+        ],
+        [
+         2.968,
+         2.816
+        ],
+        [
+         3.08,
+         2.89
+        ],
+        [
+         3.192,
+         2.816
+        ],
+        [
+         3.156,
+         2.945
+        ],
+        [
+         3.261,
+         3.029
+        ],
+        [
+         3.127,
+         3.035
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 6,
+       "polygon": [
+        [
+         5.28,
+         3.16
+        ],
+        [
+         5.233,
+         3.035
+        ],
+        [
+         5.099,
+         3.029
+        ],
+        [
+         5.204,
+         2.945
+        ],
+        [
+         5.168,
+         2.816
+        ],
+        [
+         5.28,
+         2.89
+        ],
+        [
+         5.392,
+         2.816
+        ],
+        [
+         5.356,
+         2.945
+        ],
+        [
+         5.461,
+         3.029
+        ],
+        [
+         5.327,
+         3.035
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 7,
+       "polygon": [
+        [
+         7.48,
+         3.16
+        ],
+        [
+         7.433,
+         3.035
+        ],
+        [
+         7.299,
+         3.029
+        ],
+        [
+         7.404,
+         2.945
+        ],
+        [
+         7.368,
+         2.816
+        ],
+        [
+         7.48,
+         2.89
+        ],
+        [
+         7.592,
+         2.816
+        ],
+        [
+         7.556,
+         2.945
+        ],
+        [
+         7.661,
+         3.029
+        ],
+        [
+         7.527,
+         3.035
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 8,
+       "polygon": [
+        [
+         7.48,
+         1.51
+        ],
+        [
+         7.433,
+         1.385
+        ],
+        [
+         7.299,
+         1.379
+        ],
+        [
+         7.404,
+         1.295
+        ],
+        [
+         7.368,
+         1.166
+        ],
+        [
+         7.48,
+         1.24
+        ],
+        [
+         7.592,
+         1.166
+        ],
+        [
+         7.556,
+         1.295
+        ],
+        [
+         7.661,
+         1.379
+        ],
+        [
+         7.527,
+         1.385
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 9,
+       "polygon": [
+        [
+         7.48,
+         -0.14
+        ],
+        [
+         7.433,
+         -0.265
+        ],
+        [
+         7.299,
+         -0.271
+        ],
+        [
+         7.404,
+         -0.355
+        ],
+        [
+         7.368,
+         -0.484
+        ],
+        [
+         7.48,
+         -0.41
+        ],
+        [
+         7.592,
+         -0.484
+        ],
+        [
+         7.556,
+         -0.355
+        ],
+        [
+         7.661,
+         -0.271
+        ],
+        [
+         7.527,
+         -0.265
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 10,
+       "polygon": [
+        [
+         7.48,
+         -1.79
+        ],
+        [
+         7.433,
+         -1.915
+        ],
+        [
+         7.299,
+         -1.921
+        ],
+        [
+         7.404,
+         -2.005
+        ],
+        [
+         7.368,
+         -2.134
+        ],
+        [
+         7.48,
+         -2.06
+        ],
+        [
+         7.592,
+         -2.134
+        ],
+        [
+         7.556,
+         -2.005
+        ],
+        [
+         7.661,
+         -1.921
+        ],
+        [
+         7.527,
+         -1.915
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 11,
+       "polygon": [
+        [
+         5.28,
+         -3.44
+        ],
+        [
+         5.233,
+         -3.565
+        ],
+        [
+         5.099,
+         -3.571
+        ],
+        [
+         5.204,
+         -3.655
+        ],
+        [
+         5.168,
+         -3.784
+        ],
+        [
+         5.28,
+         -3.71
+        ],
+        [
+         5.392,
+         -3.784
+        ],
+        [
+         5.356,
+         -3.655
+        ],
+        [
+         5.461,
+         -3.571
+        ],
+        [
+         5.327,
+         -3.565
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 12,
+       "polygon": [
+        [
+         3.08,
+         -3.44
+        ],
+        [
+         3.033,
+         -3.565
+        ],
+        [
+         2.899,
+         -3.571
+        ],
+        [
+         3.004,
+         -3.655
+        ],
+        [
+         2.968,
+         -3.784
+        ],
+        [
+         3.08,
+         -3.71
+        ],
+        [
+         3.192,
+         -3.784
+        ],
+        [
+         3.156,
+         -3.655
+        ],
+        [
+         3.261,
+         -3.571
+        ],
+        [
+         3.127,
+         -3.565
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 13,
+       "polygon": [
+        [
+         0.88,
+         -3.44
+        ],
+        [
+         0.833,
+         -3.565
+        ],
+        [
+         0.699,
+         -3.571
+        ],
+        [
+         0.804,
+         -3.655
+        ],
+        [
+         0.768,
+         -3.784
+        ],
+        [
+         0.88,
+         -3.71
+        ],
+        [
+         0.992,
+         -3.784
+        ],
+        [
+         0.956,
+         -3.655
+        ],
+        [
+         1.061,
+         -3.571
+        ],
+        [
+         0.927,
+         -3.565
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 14,
+       "polygon": [
+        [
+         -1.32,
+         -3.44
+        ],
+        [
+         -1.367,
+         -3.565
+        ],
+        [
+         -1.501,
+         -3.571
+        ],
+        [
+         -1.396,
+         -3.655
+        ],
+        [
+         -1.432,
+         -3.784
+        ],
+        [
+         -1.32,
+         -3.71
+        ],
+        [
+         -1.208,
+         -3.784
+        ],
+        [
+         -1.244,
+         -3.655
+        ],
+        [
+         -1.139,
+         -3.571
+        ],
+        [
+         -1.273,
+         -3.565
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 16,
+       "polygon": [
+        [
+         -5.72,
+         -3.44
+        ],
+        [
+         -5.767,
+         -3.565
+        ],
+        [
+         -5.901,
+         -3.571
+        ],
+        [
+         -5.796,
+         -3.655
+        ],
+        [
+         -5.832,
+         -3.784
+        ],
+        [
+         -5.72,
+         -3.71
+        ],
+        [
+         -5.608,
+         -3.784
+        ],
+        [
+         -5.644,
+         -3.655
+        ],
+        [
+         -5.539,
+         -3.571
+        ],
+        [
+         -5.673,
+         -3.565
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 17,
+       "polygon": [
+        [
+         -5.72,
+         -1.79
+        ],
+        [
+         -5.767,
+         -1.915
+        ],
+        [
+         -5.901,
+         -1.921
+        ],
+        [
+         -5.796,
+         -2.005
+        ],
+        [
+         -5.832,
+         -2.134
+        ],
+        [
+         -5.72,
+         -2.06
+        ],
+        [
+         -5.608,
+         -2.134
+        ],
+        [
+         -5.644,
+         -2.005
+        ],
+        [
+         -5.539,
+         -1.921
+        ],
+        [
+         -5.673,
+         -1.915
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 18,
+       "polygon": [
+        [
+         -5.72,
+         -0.14
+        ],
+        [
+         -5.767,
+         -0.265
+        ],
+        [
+         -5.901,
+         -0.271
+        ],
+        [
+         -5.796,
+         -0.355
+        ],
+        [
+         -5.832,
+         -0.484
+        ],
+        [
+         -5.72,
+         -0.41
+        ],
+        [
+         -5.608,
+         -0.484
+        ],
+        [
+         -5.644,
+         -0.355
+        ],
+        [
+         -5.539,
+         -0.271
+        ],
+        [
+         -5.673,
+         -0.265
+        ]
+       ],
+       "fill": "SET_A"
+      },
+      {
+       "shape": 19,
+       "polygon": [
+        [
+         -5.72,
+         1.51
+        ],
+        [
+         -5.767,
+         1.385
+        ],
+        [
+         -5.901,
+         1.379
+        ],
+        [
+         -5.796,
+         1.295
+        ],
+        [
+         -5.832,
+         1.166
+        ],
+        [
+         -5.72,
+         1.24
+        ],
+        [
+         -5.608,
+         1.166
+        ],
+        [
+         -5.644,
+         1.295
+        ],
+        [
+         -5.539,
+         1.379
+        ],
+        [
+         -5.673,
+         1.385
+        ]
+       ],
+       "fill": "SET_A"
+      }
+     ],
+     "type": "other"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). Draw 19 flat shapes around the border of the canvas, in a ring of 7 columns x 5 rows of cells (cell width 2.2, cell height 1.65; the cell of column c, row r is centred at x = (c-4)*2.2, y = (3-r)*1.65). Numbering goes round the ring from the top-left corner: shapes 1 to 7 along the top row left to right (columns 1 to 7, row 1); shapes 8, 9, 10 down the right column (column 7, rows 2, 3, 4); shapes 11 to 16 along the bottom row right to left (columns 6 down to 1, row 5); shapes 17, 18, 19 up the left column (column 1, rows 4, 3, 2). The bottom-right cell (column 7, row 5) and every cell inside the ring stay empty. Every polygon and circle has an INK outline of 2 px (the lines of shape 4 have no outline). Next to each shape write its number in INK, text height 0.34, centred at (cell x - 0.86, cell y + 0.50). Shapes (all coordinates in canvas units): Shape 1 at cell centre (-6.60,3.30): large equilateral triangle, vertices at 14, 134, 254 degrees, circumradius 1; the 3 corner triangles filled, central triangle left white; parts: polygon (-6.142,3.500), (-6.600,3.631), (-6.485,3.169) fill #DCA4A4 / polygon (-7.058,3.762), (-6.943,3.300), (-6.600,3.631) fill #DCA4A4 / polygon (-6.827,2.838), (-6.485,3.169), (-6.943,3.300) fill #DCA4A4. Shape 2 at cell centre (-4.40,3.30): six-pointed star (two equilateral triangles, one apex up, one apex down, circumradius 1); parts: polygon (-4.400,3.850), (-4.241,3.575), (-3.924,3.575), (-4.082,3.300), (-3.924,3.025), (-4.241,3.025), (-4.400,2.750), (-4.559,3.025), (-4.876,3.025), (-4.718,3.300), (-4.876,3.575), (-4.559,3.575) fill #A4D4AC. Shape 3 at cell centre (-2.20,3.30): six-sided shape with flat top and bottom, corners at (1,0), (0.5,1), (-0.5,1), (-1,0), (-0.5,-1), (0.5,-1); parts: polygon (-1.650,3.300), (-1.925,3.850), (-2.475,3.850), (-2.750,3.300), (-2.475,2.750), (-1.925,2.750) fill #F4EC94. Shape 4 at cell centre (0.00,3.30): three circles of radius 0.30 with centres at distance 0.62 from the middle point at 90, 210, 330 degrees, each joined to the middle point by a straight line; parts: line [[0.0, 3.215], [0.0, 3.556]] colour #5C6464 / line [[0.0, 3.215], [-0.295, 3.044]] colour #5C6464 / line [[0.0, 3.215], [0.295, 3.044]] colour #5C6464 / circle centre (0.000,3.556) radius 0.165 fill #D4BCDC / circle centre (-0.295,3.044) radius 0.165 fill #D4BCDC / circle centre (0.295,3.044) radius 0.165 fill #D4BCDC. Shape 5 at cell centre (2.20,3.30): large equilateral triangle, vertices at 109, 229, 349 degrees, circumradius 1, with a corner triangle cut off at one third of each side (corners grey, middle part a regular hexagon); parts: polygon (1.931,3.768), (1.750,2.832), (2.650,3.143) fill #B4D4C4 / polygon (1.931,3.768), (1.871,3.456), (2.171,3.559) fill #848C94 / polygon (1.750,2.832), (2.050,2.936), (1.810,3.144) fill #848C94 / polygon (2.650,3.143), (2.411,3.351), (2.350,3.039) fill #848C94. Shape 6 at cell centre (4.40,3.30): rectangle 0.80 by 1.76, long side turned 20 degrees clockwise from upright; parts: polygon (4.028,2.920), (4.441,2.770), (4.772,3.680), (4.359,3.830) fill #F48C94. Shape 7 at cell centre (6.60,3.30): rhombus with diagonals 2.00 and 1.54, long diagonal turned 9 degrees anticlockwise from horizontal; parts: polygon (7.143,3.386), (6.534,3.718), (6.057,3.214), (6.666,2.882) fill #CCC4BC. Shape 8 at cell centre (6.60,1.65): regular pentagon, circumradius 1, one corner up; parts: polygon (6.600,2.147), (6.077,1.767), (6.277,1.153), (6.923,1.153), (7.123,1.767) fill #CCCCA4. Shape 9 at cell centre (6.60,0.00): ring of 10 small triangular tips in 5 mirror pairs: pair axes at 4, 76, 148, 220, 292 degrees; apex of each tip at radius 1.00 and angle axis +/- 13.5; base corners at radius 0.86 and angle apex +/- 12; parts: polygon (7.030,-0.176), (7.132,-0.094), (7.062,0.018) fill #B4A4CC / polygon (7.060,0.042), (7.114,0.162), (7.001,0.230) fill #B4A4CC / polygon (6.890,0.362), (6.844,0.485), (6.716,0.453) fill #B4A4CC / polygon (6.692,0.459), (6.594,0.547), (6.495,0.460) fill #B4A4CC / polygon (6.335,0.396), (6.204,0.389), (6.195,0.258) fill #B4A4CC / polygon (6.182,0.237), (6.068,0.172), (6.120,0.051) fill #B4A4CC / polygon (6.132,-0.121), (6.097,-0.248), (6.219,-0.297) fill #B4A4CC / polygon (6.235,-0.316), (6.262,-0.445), (6.393,-0.433) fill #B4A4CC / polygon (6.561,-0.475), (6.671,-0.547), (6.755,-0.446) fill #B4A4CC / polygon (6.778,-0.437), (6.909,-0.451), (6.938,-0.323) fill #B4A4CC. Shape 10 at cell centre (6.60,-1.65): regular heptagon, circumradius 1, one corner up, flat bottom edge; parts: polygon (6.600,-1.127), (6.170,-1.334), (6.064,-1.800), (6.361,-2.173), (6.839,-2.173), (7.136,-1.800), (7.030,-1.334) fill #A4D4AC. Shape 11 at cell centre (4.40,-3.30): four triangles with corners at the middle point: top (-0.5,1),(0.5,1),(0,0); right (1,0.5),(1,-0.5),(0,0); bottom (0.5,-1),(-0.5,-1),(0,0); left (-1,-0.5),(-1,0.5),(0,0); parts: polygon (4.125,-2.750), (4.675,-2.750), (4.400,-3.300) fill #5CB4D4 / polygon (4.950,-3.025), (4.950,-3.575), (4.400,-3.300) fill #5CB4D4 / polygon (4.675,-3.850), (4.125,-3.850), (4.400,-3.300) fill #5CB4D4 / polygon (3.850,-3.575), (3.850,-3.025), (4.400,-3.300) fill #5CB4D4. Shape 12 at cell centre (2.20,-3.30): equilateral triangle of side 1.30, apex up, with a circle of radius 0.325 centred on each of its three corners (circles behind the triangle); parts: circle centre (2.200,-2.990) radius 0.179 fill #ACDCD4 / circle centre (2.558,-3.610) radius 0.179 fill #ACDCD4 / circle centre (1.843,-3.610) radius 0.179 fill #ACDCD4 / polygon (2.200,-2.990), (2.558,-3.610), (1.843,-3.610) fill #CCACAC. Shape 13 at cell centre (0.00,-3.30): parallelogram, horizontal sides 1.90 long, height 0.86, top side shifted 0.456 to the right of the bottom side; parts: polygon (-0.648,-3.536), (0.397,-3.536), (0.648,-3.063), (-0.397,-3.063) fill #FCD494. Shape 14 at cell centre (-2.20,-3.30): grey equilateral triangle (corners at 68, 188, 308 degrees, circumradius 1.00) with a yellow equilateral triangle on top (corners at 8, 128, 248 degrees, circumradius 0.93); parts: polygon (-1.975,-2.808), (-2.726,-3.394), (-1.842,-3.751) fill #848C94 / polygon (-1.674,-3.247), (-2.496,-2.915), (-2.373,-3.792) fill #FCDC94. Shape 15 at cell centre (-4.40,-3.30): narrow scalene triangle with corners (-0.494,0.192), (-0.053,0.645), (0.547,-0.837); parts: polygon (-4.686,-3.142), (-4.444,-2.892), (-4.114,-3.708) fill #F48C94. Shape 16 at cell centre (-6.60,-3.30): two equal isosceles triangles meeting at their sharp corner at (0,0): the upper one has corners (0,0), (-0.833,0.756), (0.132,1.117); the lower one is the same turned a half turn about (0,0); parts: polygon (-6.600,-3.300), (-7.058,-2.884), (-6.527,-2.686) fill #B4949C / polygon (-6.600,-3.300), (-6.142,-3.716), (-6.673,-3.914) fill #B4949C. Shape 17 at cell centre (-6.60,-1.65): circle of radius 0.95; parts: circle centre (-6.600,-1.650) radius 0.522 fill #DCECBC. Shape 18 at cell centre (-6.60,0.00): square of side 1.50 with horizontal and vertical sides; parts: polygon (-7.013,-0.413), (-6.188,-0.413), (-6.188,0.413), (-7.013,0.413) fill #ACDCF4. Shape 19 at cell centre (-6.60,1.65): equilateral triangle, circumradius 0.98, apex up; parts: polygon (-6.600,2.054), (-7.067,1.246), (-6.133,1.246) fill #B4A4CC. Nothing of the question figure moves. Then add the marks. TICK (reflection symmetry) on 17 shapes, all except 13 and 15: a 3-point polyline in ANSWER, 6 px, round joins, drawn at (cell x + 0.88, cell y + 0.33) as (x-0.16,y), (x-0.05,y-0.13), (x+0.17,y+0.15) with (x,y) that point. STAR (rotational symmetry) on 18 shapes, all except 15: a filled 5-pointed star in SET_A, outer radius 0.19, inner radius 0.08, one point up, centred at (cell x + 0.88, cell y - 0.33). Shape 13 gets a star only; shape 15 gets neither mark. No other text.",
+    "visible_text": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "the page border frame lines and the page-number badge"
+    ],
+    "accuracy_checks": [
+     "17 ticks: shapes 1-12, 14, 16-19",
+     "18 stars: shapes 1-14 and 16-19",
+     "17 + 2 = 19 and 18 + 1 = 19",
+     "shape 13 has only a star, shape 15 has no mark"
+    ],
+    "alt_text": "The same nineteen numbered shapes with a green tick on every shape except 13 and 15 and a blue star on every shape except 15.",
+    "render_note": "Marks differ in shape (tick, star) as well as colour."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C55",
+   "role": "question",
+   "lp_book_number": "Project Work: vegetable blocks",
+   "ncert_ref": "pw.veg",
+   "question_text": "Create symmetrical patterns and designs using vegetable blocks. Some are shown below.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "DECORATIVE_ONLY"
+   ],
+   "reason": "Open project task. The two book pictures only illustrate how a vegetable block and its prints look (okra flowers, striped potato prints); no number or position is needed to attempt it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C56",
+   "role": "solution",
+   "lp_book_number": "Project Work: vegetable blocks",
+   "ncert_ref": "pw.veg",
+   "question_text": "Create symmetrical patterns and designs using vegetable blocks. Some are shown below.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The LP sample answer is a pattern made by stamping a block 4 times, turning a 1/4 turn each time; the sample pattern is the answer, so it is drawn (the question gives no figure, so there is no question diagram).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S19.T19.C56.IMG1",
+   "manim_scene": "c5_10_PW_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S19.T19.C56.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "symmetry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "sheet": {
+      "x": [
+       -4.4,
+       4.4
+      ],
+      "y": [
+       -3.4,
+       3.4
+      ],
+      "border": "INK 4 px"
+     },
+     "prints": [
+      {
+       "position": "top",
+       "centre": [
+        0,
+        1.05
+       ],
+       "tip": [
+        0,
+        3.0
+       ],
+       "points": [
+        [
+         0.0,
+         0.6
+        ],
+        [
+         -0.059,
+         0.604
+        ],
+        [
+         -0.116,
+         0.615
+        ],
+        [
+         -0.172,
+         0.634
+        ],
+        [
+         -0.225,
+         0.66
+        ],
+        [
+         -0.274,
+         0.693
+        ],
+        [
+         -0.318,
+         0.732
+        ],
+        [
+         -0.357,
+         0.776
+        ],
+        [
+         -0.39,
+         0.825
+        ],
+        [
+         -0.416,
+         0.878
+        ],
+        [
+         -0.435,
+         0.934
+        ],
+        [
+         -0.446,
+         0.991
+        ],
+        [
+         -0.45,
+         1.05
+        ],
+        [
+         -0.446,
+         1.109
+        ],
+        [
+         -0.435,
+         1.166
+        ],
+        [
+         0.0,
+         3.0
+        ],
+        [
+         0.435,
+         1.166
+        ],
+        [
+         0.446,
+         1.109
+        ],
+        [
+         0.45,
+         1.05
+        ],
+        [
+         0.446,
+         0.991
+        ],
+        [
+         0.435,
+         0.934
+        ],
+        [
+         0.416,
+         0.878
+        ],
+        [
+         0.39,
+         0.825
+        ],
+        [
+         0.357,
+         0.776
+        ],
+        [
+         0.318,
+         0.732
+        ],
+        [
+         0.274,
+         0.693
+        ],
+        [
+         0.225,
+         0.66
+        ],
+        [
+         0.172,
+         0.634
+        ],
+        [
+         0.116,
+         0.615
+        ],
+        [
+         0.059,
+         0.604
+        ]
+       ]
+      },
+      {
+       "position": "right",
+       "centre": [
+        1.05,
+        0
+       ],
+       "tip": [
+        3.0,
+        0
+       ],
+       "points": [
+        [
+         0.6,
+         0.0
+        ],
+        [
+         0.604,
+         0.059
+        ],
+        [
+         0.615,
+         0.116
+        ],
+        [
+         0.634,
+         0.172
+        ],
+        [
+         0.66,
+         0.225
+        ],
+        [
+         0.693,
+         0.274
+        ],
+        [
+         0.732,
+         0.318
+        ],
+        [
+         0.776,
+         0.357
+        ],
+        [
+         0.825,
+         0.39
+        ],
+        [
+         0.878,
+         0.416
+        ],
+        [
+         0.934,
+         0.435
+        ],
+        [
+         0.991,
+         0.446
+        ],
+        [
+         1.05,
+         0.45
+        ],
+        [
+         1.109,
+         0.446
+        ],
+        [
+         1.166,
+         0.435
+        ],
+        [
+         3.0,
+         0.0
+        ],
+        [
+         1.166,
+         -0.435
+        ],
+        [
+         1.109,
+         -0.446
+        ],
+        [
+         1.05,
+         -0.45
+        ],
+        [
+         0.991,
+         -0.446
+        ],
+        [
+         0.934,
+         -0.435
+        ],
+        [
+         0.878,
+         -0.416
+        ],
+        [
+         0.825,
+         -0.39
+        ],
+        [
+         0.776,
+         -0.357
+        ],
+        [
+         0.732,
+         -0.318
+        ],
+        [
+         0.693,
+         -0.274
+        ],
+        [
+         0.66,
+         -0.225
+        ],
+        [
+         0.634,
+         -0.172
+        ],
+        [
+         0.615,
+         -0.116
+        ],
+        [
+         0.604,
+         -0.059
+        ]
+       ]
+      },
+      {
+       "position": "bottom",
+       "centre": [
+        0,
+        -1.05
+       ],
+       "tip": [
+        0,
+        -3.0
+       ],
+       "points": [
+        [
+         -0.0,
+         -0.6
+        ],
+        [
+         0.059,
+         -0.604
+        ],
+        [
+         0.116,
+         -0.615
+        ],
+        [
+         0.172,
+         -0.634
+        ],
+        [
+         0.225,
+         -0.66
+        ],
+        [
+         0.274,
+         -0.693
+        ],
+        [
+         0.318,
+         -0.732
+        ],
+        [
+         0.357,
+         -0.776
+        ],
+        [
+         0.39,
+         -0.825
+        ],
+        [
+         0.416,
+         -0.878
+        ],
+        [
+         0.435,
+         -0.934
+        ],
+        [
+         0.446,
+         -0.991
+        ],
+        [
+         0.45,
+         -1.05
+        ],
+        [
+         0.446,
+         -1.109
+        ],
+        [
+         0.435,
+         -1.166
+        ],
+        [
+         -0.0,
+         -3.0
+        ],
+        [
+         -0.435,
+         -1.166
+        ],
+        [
+         -0.446,
+         -1.109
+        ],
+        [
+         -0.45,
+         -1.05
+        ],
+        [
+         -0.446,
+         -0.991
+        ],
+        [
+         -0.435,
+         -0.934
+        ],
+        [
+         -0.416,
+         -0.878
+        ],
+        [
+         -0.39,
+         -0.825
+        ],
+        [
+         -0.357,
+         -0.776
+        ],
+        [
+         -0.318,
+         -0.732
+        ],
+        [
+         -0.274,
+         -0.693
+        ],
+        [
+         -0.225,
+         -0.66
+        ],
+        [
+         -0.172,
+         -0.634
+        ],
+        [
+         -0.116,
+         -0.615
+        ],
+        [
+         -0.059,
+         -0.604
+        ]
+       ]
+      },
+      {
+       "position": "left",
+       "centre": [
+        -1.05,
+        0
+       ],
+       "tip": [
+        -3.0,
+        0
+       ],
+       "points": [
+        [
+         -0.6,
+         0.0
+        ],
+        [
+         -0.604,
+         -0.059
+        ],
+        [
+         -0.615,
+         -0.116
+        ],
+        [
+         -0.634,
+         -0.172
+        ],
+        [
+         -0.66,
+         -0.225
+        ],
+        [
+         -0.693,
+         -0.274
+        ],
+        [
+         -0.732,
+         -0.318
+        ],
+        [
+         -0.776,
+         -0.357
+        ],
+        [
+         -0.825,
+         -0.39
+        ],
+        [
+         -0.878,
+         -0.416
+        ],
+        [
+         -0.934,
+         -0.435
+        ],
+        [
+         -0.991,
+         -0.446
+        ],
+        [
+         -1.05,
+         -0.45
+        ],
+        [
+         -1.109,
+         -0.446
+        ],
+        [
+         -1.166,
+         -0.435
+        ],
+        [
+         -3.0,
+         0.0
+        ],
+        [
+         -1.166,
+         0.435
+        ],
+        [
+         -1.109,
+         0.446
+        ],
+        [
+         -1.05,
+         0.45
+        ],
+        [
+         -0.991,
+         0.446
+        ],
+        [
+         -0.934,
+         0.435
+        ],
+        [
+         -0.878,
+         0.416
+        ],
+        [
+         -0.825,
+         0.39
+        ],
+        [
+         -0.776,
+         0.357
+        ],
+        [
+         -0.732,
+         0.318
+        ],
+        [
+         -0.693,
+         0.274
+        ],
+        [
+         -0.66,
+         0.225
+        ],
+        [
+         -0.634,
+         0.172
+        ],
+        [
+         -0.615,
+         0.116
+        ],
+        [
+         -0.604,
+         0.059
+        ]
+       ]
+      }
+     ],
+     "fill": "SET_A",
+     "outline": "INK 2 px",
+     "type": "symmetry_figure"
+    },
+    "manim_description": "Canvas 16 x 9 units (1920 x 1080 px, 1 unit = 120 px), origin at the centre, x to the right, y up, background BG (plain white). Draw a sheet of paper as a rectangle x from -4.4 to 4.4, y from -3.4 to 3.4, white inside, INK border 4 px. On it draw 4 identical drop-shaped prints, filled SET_A with INK outline 2 px; each print is the convex hull of a circle of radius 0.45 and a point, with the point turned away from the middle of the sheet. TOP print: circle centre (0,1.05), point (0,3.0). RIGHT print: circle centre (1.05,0), point (3.0,0). BOTTOM print: circle centre (0,-1.05), point (0,-3.0). LEFT print: circle centre (-1.05,0), point (-3.0,0). Each print is the one before it turned a quarter turn clockwise about (0,0). Nothing is drawn at (0,0) and no text. ",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery, photographs"
+    ],
+    "accuracy_checks": [
+     "4 prints, each the previous one turned 90 degrees clockwise about (0,0)",
+     "the pattern looks the same after every 1/4 turn",
+     "prints do not overlap (circle centres 1.05 from (0,0), radius 0.45)"
+    ],
+    "alt_text": "A sheet of paper with four drop-shaped prints of one block round the middle, each turned a quarter turn from the one before.",
+    "render_note": "The LP names only \"a simple shape\" for the carved block; a drop shape is chosen so that the turn of each print is visible."
+   },
+   "needs_lp_text_sync": true
+  }
+ ]
+}

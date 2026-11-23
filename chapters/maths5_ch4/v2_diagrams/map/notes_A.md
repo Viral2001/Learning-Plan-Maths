@@ -1,0 +1,42 @@
+# Notes, chunk A (Class 5 Ch 4 "We the Travellers - II", topics M1.S2.T2 to M2.S13.T13)
+
+Result: 17 units, 29 items. Required 8 (question 4, solution 4), optional 0, none 21 (worked 5, question 8, solution 8). Validator: errors 0, 4 warnings (the four solution diagrams of Making Sums Equal have no base figure, because the book prints no solution pictures).
+
+## 1. Judgement calls
+
+1. **Making Sums Equal (a) to (d), units M1.S3.T3.C5/C6, C7/C8, C9/C10, C11/C12: question required, solution required.**
+   - Question: the book gives each puzzle as a figure (two groups of number cards with their sums) and the learner acts on it by interchanging cards (ACTION_ON_FIGURE, DATA_IN_FIGURE). The LP question text repeats the numbers, which is why this is Borderline (see section 4), but the figure is what the book question gives.
+   - Solution: the answer is an arrangement, the two groups after the swap, with equal sums (ANSWER_IS_FIGURE). The LP steps only describe it in words (Step B2). Same decision for all four puzzles (sibling consistency).
+   - The solution diagram is derived from the question diagram (same layout), changed cards and both sums in ANSWER green, plus an ANSWER double arrow joining the two swapped cards.
+   - The figure carries the labels "Group 1" and "Group 2" above the columns. The book prints no such labels, but the question text names the groups and the LP solution says "group 1 is now ...", so they are category labels the figure needs. If the team does not want them, remove them from `visible_text` and the description.
+   - (a) question diagram also carries the book's hint arrow joining the 2 of Group 1 and the 5 of Group 2 (it is printed in the book figure, and LP solution step 2 says "The hint swaps 2 and 5"). The red italic hint note is not drawn. The (a) solution diagram does not carry the hint arrow, because that swap is the wrong one; it shows the real swap, 2 and 3.
+   - (b): the LP also names the swap of 7 and 11. Only the first swap (5 and 9) is drawn. (c) and (d): the LP gives a sample answer (two swaps); the figure draws the LP's own swaps (11/13 with 15/17, and 77/81 with 78/82). I recomputed all sums: 19/21, 39/47, 68/76, 314/330 before; 20/20, 43/43, 72/72, 322/322 after.
+2. **Place-value (H-T-O, T-O) tables: none.** The book draws the lorry example (28 + 75), 49 + 89, the minibus subtraction (65 - 18) and 82 - 37 inside blue place-value tables with ovals, carries and struck digits. I treated these as LaTeX arithmetic and header boxes with digits (Step C: LATEX_ARITHMETIC, HEADER_BOXES_ONLY; "Not a diagram" list), because every carry and regroup is stated in the LP steps and a column addition or subtraction can be written as a LaTeX array. See Borderline.
+3. **All worked examples (T2, T4, T7, T9, T13): none.** Practice values, all numbers in the text, the plan's own teaching image already shows each one (never linked). No book figure belongs to any of them except the T13 boxes (see 5).
+4. **Questions that are only sums or fill-in-the-blanks** (Let Us Solve adding, Relationship Q1 and Q2, subtraction Q2 to 9): none, no book figure. Relationship Q2 has four dashed answer boxes in the book; they only hold the given sentence and blank lines, so I added `NEW-P03-answer_boxes-1` mapped to none:TEXT_SUFFICIENT.
+5. **Base figures P04-number_boxes-1 and P04-pattern-1.** P04-number_boxes-1 (examples of consecutive numbers in four boxes) is none:NUMBER_LIST_IN_BOXES. P04-pattern-1 (the three boxes of sums of 2, 3 and 4 consecutive numbers) sits in the book section of my worked unit M2.S13.T13 (ncert ref cons.boxes) so I claimed it, as the teaching figure (`concept_image:M2.S13.T13.C35.IMG1`, accounting only). It is also the given figure of questions M2.S14.T14.C37 and C39 (chunk B, "in each of the boxes above"). A validator cannot let me map it to a chunk-B item, so at merge the item mapping from chunk B should win; if chunk B maps it to a question item, my entry for it should be dropped.
+6. **Figure descriptions checked against the page pictures (pages 1 to 4):** all inventory entries of my chunk match the pictures; no CORRECTED entries needed.
+
+## 2. LP text issues
+
+- **M1.S2.T2.C3** (worked, step 5): "...group 1 becomes 18 and group 2 becomes 20, and the gap is still 2." The gap was 4 before this swap and is 2 after it, so "still" is wrong (checked: swapping 6 and 7 gives 2 + 7 + 9 = 18 and 4 + 6 + 10 = 20). Suggested sentence: "They differ by 1, so group 1 becomes 18 and group 2 becomes 20, and the gap is now 2, not 0."
+- **M1.S3.T3.C5** (question text): omits the book's hint (an arrow between 2 and 5 and the note "Think what will happen to the sums if we interchange 2 and 5?"), but the solution C6 step 2 starts "The hint swaps 2 and 5". Suggested sentence to add to the question: "A hint arrow joins the 2 of group 1 and the 5 of group 2: think what happens to the sums if we interchange 2 and 5."
+- **M1.S3.T3.C8** (`answer_tex` and the Answer line of `text`): broken LaTeX: `Swap $5$ and $9 ($or $7$ and $11)$: ...`. Suggested: "Swap $5$ and $9$ (or $7$ and $11$): both groups add up to $43$. This takes $1$ move."
+- **M1.S3.T3.C10** (step 2): the list of pairs that differ by 2 is incomplete: "11 and 13, 15 and 17, 19 and 21, and 23 and 25" leaves out the pairs with the Group 2 number smaller. Suggested sentence: "The pairs that differ by $2$ are $11$ and $13$, $13$ and $15$, $15$ and $17$, $17$ and $19$, $19$ and $21$, $21$ and $23$, and $23$ and $25$. Every other pair differs by $6$ or more." (The conclusion, no pair differs by 4, is true: every difference is 2 plus a multiple of 4.)
+- **M1.S10.T10.C28** (`answer_tex`): gives one sentence per part while the steps give two for (a) and (b) (two subtractions) and two for (c) and (d). Suggested: "Sample answer: $(a)$: $242 - 164 = 78$ and $242 - 78 = 164$; $(b)$: $1,301 - 839 = 462$ and $1,301 - 462 = 839$; $(c)$: $784 + 137 = 921$ and $921 - 784 = 137$; $(d)$: $590 + 234 = 824$ and $824 - 590 = 234$. Your answer may differ."
+- **M1.S11.T11.C29** (`q_figure` hint only): says "A bar from 18 litres to 65 litres"; the book shows two boxes (18 l and 65 l) joined by a curved arrow. No diagram is made for this item, so only the hint is wrong.
+- All other solution arithmetic in this chunk was recomputed and is correct (T4, T5 lorry 103, T6 138, T7 152 and 93, T8 six sums, T9, T10, T11 47, T12 45 and the eight differences, T13 33, 36, 39).
+
+## 3. Where the book itself is unclear
+
+- Page 3, the minibus table prints the note "Regroup, 1 Tens = 10 Ones" ("Tens" should be "Ten"); a print slip. No diagram of mine uses it.
+- Page 2, the lorry table: the ones cell of the answer row reads a boxed, struck "1" followed by 3 (the regrouped 1 shown inside the answer row, answer 103). Print quirk, not drawn.
+- Page 1 puzzle (a): the red curved arrow of the hint note ends at or just above the first box of Group 1 (inventory "unclear"); it carries no number and is not drawn.
+- This pdf has no printed-solutions section; every solution diagram of this chunk follows the LP solution text.
+
+## 4. Borderline
+
+- **Making Sums Equal question side (units M1.S3.T3.C5, C7, C9, C11), required.** All numbers and sums are also in the LP question text, so a reviewer could call these none (TEXT_SUFFICIENT). I kept them required because the book gives the puzzle as a figure that the learner acts on and the solution figure is derived from it. If the team prefers text-only questions, set the four question items to none and make the four solution diagrams stand alone (`derived_from` null).
+- **Place-value tables (units M1.S5.T5 solution C16, M1.S6.T6 C17 and C18, M1.S11.T11 solution C30, M1.S12.T12 C31 and C32), none.** The book prints regroup marks (circled carries, struck digits) which a reviewer could read as HIGHLIGHT_MEANING or "printed answer is a picture". I followed the explicit v3 rules (column addition and subtraction are LaTeX, header boxes with digits are not a diagram). These items are the first to become required if the team decides otherwise.
+- **Minibus question (M1.S11.T11.C29), none.** The book's two boxes joined by a curved arrow with a question mark would be an optional model of "fuel filled = jump from 18 to 65"; the text carries both readings.
+- **Worked example M1.S2.T2.C3, none.** A picture of two groups of cards with a swap would suit it, but all the numbers are in the text and the teaching image already shows it.

@@ -1,0 +1,925 @@
+{
+ "meta": {
+  "chapter": "Weight and Capacity",
+  "class": 5,
+  "textbook": "Maths Mela, Grade 5 (NCERT), Chapter 8",
+  "lp_plan_id": "cbse_eng_maths5_ch8_v4",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "none": 8,
+    "required": 2,
+    "optional": 0
+   },
+   "solution": {
+    "none": 8,
+    "required": 2,
+    "optional": 0
+   },
+   "worked_example": {
+    "none": 2,
+    "required": 0,
+    "optional": 0
+   }
+  },
+  "notes": [
+   "Chunk B: topics M2.S13.T13 to M2.S17.T17 (units 19-30, book pages 5-8).",
+   "Required: the double number line of Let Us Find 2 (question and solution) and the elephant-and-whale arrow figure of Let Us Find 6 (question and solution).",
+   "Column addition/subtraction, unit conversions and word problems are text/LaTeX; kept teaching images were not a reason for any decision (user decision 5).",
+   "P06-unit_facts-1 is also claimed by chunk A (units topic); same meaning (concept image of the units table)."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P05-double_number_line-1",
+   "source": "chapter p.05",
+   "description": "Double number line, mg above and g below, 6 ticks: 1,000 mg/1 g, blank/5 g, 12,000 mg/12 g, 20,000 mg/blank, blank/25 g, 31,000 mg/blank; open circle at both ends; ticks roughly in proportion.",
+   "mapped_to": "item:M2.S13.T13.C37 (question)"
+  },
+  {
+   "fig_id": "NEW-P05-double_number_line-1-sol",
+   "source": "chapter p.05 (completed state, not printed)",
+   "description": "Second use of the double number line: the completed line, 5,000 mg, 20 g, 25,000 mg and 31 g filled in (the book prints no solutions).",
+   "mapped_to": "item:M2.S13.T13.C38 (solution)"
+  },
+  {
+   "fig_id": "P05-dialogue-2",
+   "source": "chapter p.05",
+   "description": "Girl with a green bubble: 'Converting g to mg is similar to converting kg to g. 4 g = 4,000 mg; 4 g 100 mg = 4,100 mg'; it is the book's worked line for the 4 g 100 mg ornament (LP Example 3). Text only.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P05-scale-1",
+   "source": "chapter p.05",
+   "description": "Jeweller's precision balance with a small gold ring on the pan; the green LCD is too small to read (looks like four characters). No question depends on it; weights are in the text.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "NEW-P05-sachet",
+   "source": "chapter p.05",
+   "description": "Small blue-and-white sugar sachet printed 'SUGAR 5g' beside Let Us Find 1 and 2; missing from the base inventory. The 5 g is also in the question text.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P06-table-1",
+   "source": "chapter p.06",
+   "description": "Pink panel, plain table of 6 rows (a)-(f): left weight, empty line for the sign, right weight; no colour meaning.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P06-unit_facts-1",
+   "source": "chapter p.06",
+   "description": "'Did you know?' box: 100 kg = 1 quintal, 10 quintals = 1 tonne, arrow, 1,000 kg = 1 tonne. Teaching figure already drawn as the concept image of the units topic; also the source of the facts used by LP Let Us Find Q6.",
+   "mapped_to": "concept_image:M2.S12.T12.C32.IMG1"
+  },
+  {
+   "fig_id": "P06-picture_relation-1",
+   "source": "chapter p.06",
+   "description": "Elephant (left) and whale (right), a curved arrow from the elephant to the whale marked x 40, '5,000 kg' under the elephant and '............ kg' (blank) under the whale. Drawn as two captioned boxes and the arrow.",
+   "mapped_to": "item:M2.S13.T13.C43 (question)"
+  },
+  {
+   "fig_id": "NEW-P06-picture_relation-1-sol",
+   "source": "chapter p.06 (completed state, not printed)",
+   "description": "Second use of the elephant-and-whale figure with the whale value filled in: 200,000 kg (the book prints no solutions).",
+   "mapped_to": "item:M2.S13.T13.C44 (solution)"
+  },
+  {
+   "fig_id": "P06-scale-1",
+   "source": "chapter p.06",
+   "description": "Beam balance: the king (turban, blue coat) sits in the left pan, 10 sacks of wheat (two stacks of 5) in the right pan; no numbers printed; beam almost level. Illustration of 'ten times his weight'.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P07-dialogue-1",
+   "source": "chapter p.07",
+   "description": "Rathna with an olive bubble: 'I can think like this' 2 kg 500 g + 1 kg 750 g = 3 kg + 500 g + 750 g ... 'So, total rice bought is 4 kg 250.' (book prints 4 kg 250, the 'g' is missing). Text only.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P07-column_addition-1",
+   "source": "chapter p.07",
+   "description": "Column addition 2 kg 500 g + 1 kg 750 g under 'kg' and 'g' tabs with a circled carry 1 and the answer row 4 | 250 (carry boxed in red and crossed); bubbles 'We can add and subtract like quantities.' and '1,000 g = 1 kg'. Column arithmetic.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P07-column_addition-2",
+   "source": "chapter p.07",
+   "description": "The same addition in grams under a 'Grams' tab: 2500 + 1750 = 4250 with the carry, '= 4 kg 250 g'; bubble 'We can also convert the quantities into grams. 2,500 g + 1,750 g'. Column arithmetic.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P08-dialogue-1",
+   "source": "chapter p.08",
+   "description": "Blue bubble for 2 kg 500 g - 1 kg 750 g: take away 500 g from 2 kg 500 g to get 2 kg, take away 1 kg to get 1 kg, take away 250 g to get 750 g. Text only.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P08-column_subtraction-1",
+   "source": "chapter p.08",
+   "description": "Two-stage column subtraction 2 kg 500 g - 1 kg 750 g in kg and g columns with regrouping marks (crossed digits, circled 1, 0, 14, 10) and the note 'Convert 1 kg = 1000 g'; answer row 0 | 750. Column arithmetic.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P08-column_subtraction-2",
+   "source": "chapter p.08",
+   "description": "The same subtraction in grams: 2500 - 1750 with regrouping marks, answer 0750 = 750 g; bubble 'Convert the quantities into grams. We get 2500 g and 1750 g. Now subtract as before.' Column arithmetic.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 16,
+  "mapped_to_items": 4,
+  "mapped_to_concept_images": 1,
+  "mapped_none": 11,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M2.S13.T13.C37.IMG1",
+   "M2.S13.T13.C38.IMG1",
+   "M2.S13.T13.C43.IMG1",
+   "M2.S13.T13.C44.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M2.S13.T13.C35",
+   "role": "question",
+   "lp_book_number": "Let Us Find: sugar sachet",
+   "ncert_ref": "Let Us Find 1 (lf2.sachet), chapter p.5",
+   "question_text": "If a sugar sachet weighs 5 g, how much will it be in milligrams?",
+   "decision": "none",
+   "reason_codes": [
+    "DECORATIVE_ONLY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The weight (5 g) is in the question text; the small sugar-sachet picture beside it only illustrates it and carries no extra data.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C36",
+   "role": "solution",
+   "lp_book_number": "Let Us Find: sugar sachet",
+   "ncert_ref": "Let Us Find 1 (lf2.sachet), chapter p.5",
+   "question_text": "If a sugar sachet weighs 5 g, how much will it be in milligrams?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "One multiplication, 5 x 1,000 = 5,000 mg, and its check; nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write 5 x 1,000 = 5,000 mg and the check 5,000 / 1,000 = 5 g in LaTeX."
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C37",
+   "role": "question",
+   "lp_book_number": "Let Us Find: double number line in mg",
+   "ncert_ref": "Let Us Find 2 (lf2.mgline), chapter p.5",
+   "question_text": "Complete the double number line below appropriately.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The question says 'the double number line below' and all its data (which ticks carry which mg and g values, where the four blanks are) lives only in the picture; the learner must complete the line.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S13.T13.C37.IMG1",
+   "manim_scene": "c5_8_lf2_mgline_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S13.T13.C37.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "variant": "double_number_line",
+     "to_scale": true,
+     "scale_rule": "tick x (fraction of canvas width) = 0.08 + 0.84 x (g - 1) / 30 for g = 1, 5, 12, 20, 25, 31",
+     "lines": [
+      {
+       "name": "top",
+       "unit": "mg",
+       "y": 0.42,
+       "line_x_from": 0.03,
+       "line_x_to": 0.97,
+       "ticks_point": "up",
+       "tick_length": 0.08,
+       "label_y": 0.27
+      },
+      {
+       "name": "bottom",
+       "unit": "g",
+       "y": 0.58,
+       "line_x_from": 0.03,
+       "line_x_to": 0.97,
+       "ticks_point": "down",
+       "tick_length": 0.08,
+       "label_y": 0.73
+      }
+     ],
+     "end_markers": "open circle (white fill, INK outline) at the left end and the right end of both lines",
+     "ticks": [
+      {
+       "tick": 1,
+       "x": 0.08,
+       "top_label": "1,000 mg",
+       "bottom_label": "1 g",
+       "top_blank": false,
+       "bottom_blank": false
+      },
+      {
+       "tick": 2,
+       "x": 0.192,
+       "top_label": "",
+       "bottom_label": "5 g",
+       "top_blank": true,
+       "bottom_blank": false
+      },
+      {
+       "tick": 3,
+       "x": 0.388,
+       "top_label": "12,000 mg",
+       "bottom_label": "12 g",
+       "top_blank": false,
+       "bottom_blank": false
+      },
+      {
+       "tick": 4,
+       "x": 0.612,
+       "top_label": "20,000 mg",
+       "bottom_label": "",
+       "top_blank": false,
+       "bottom_blank": true
+      },
+      {
+       "tick": 5,
+       "x": 0.752,
+       "top_label": "",
+       "bottom_label": "25 g",
+       "top_blank": true,
+       "bottom_blank": false
+      },
+      {
+       "tick": 6,
+       "x": 0.92,
+       "top_label": "31,000 mg",
+       "bottom_label": "",
+       "top_blank": false,
+       "bottom_blank": true
+      }
+     ]
+    },
+    "manim_description": "Draw a double number line on a plain white canvas (BG), 16:9. Draw two horizontal INK lines, one above the other: the top line at 42% of the canvas height and the bottom line at 58% of the canvas height, each running from 3% to 97% of the canvas width, with an open circle (white fill, INK outline) at its left end and at its right end. Draw six vertical INK tick marks at the same six x positions on both lines, at 8%, 19.2%, 38.8%, 61.2%, 75.2% and 92% of the canvas width (ticks 1 to 6, standing for 1 g, 5 g, 12 g, 20 g, 25 g and 31 g, spaced in proportion to those gram values). Top-line ticks point up and bottom-line ticks point down, each 8% of the canvas height long. Top-line labels, centred on ticks 1 to 6 at 27% of the canvas height: '1,000 mg', blank, '12,000 mg', '20,000 mg', blank, '31,000 mg'. A blank is a short INK underline, 6% of the canvas width long, with the word 'mg' (top line) or 'g' (bottom line) to its right, the underline and the unit together centred on the tick. Bottom-line labels, centred on ticks 1 to 6 at 73% of the canvas height: '1 g', '5 g', '12 g', blank, '25 g', blank. All text is INK, sans-serif, at least 34 px high on a 1920 px wide canvas. Draw nothing else: no arrows, no multiplication labels, no title.",
+    "visible_text": [
+     "1,000 mg",
+     "12,000 mg",
+     "20,000 mg",
+     "31,000 mg",
+     "mg",
+     "1 g",
+     "5 g",
+     "12 g",
+     "25 g",
+     "g"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any filled blank: 5,000 mg, 20 g, 25,000 mg and 31 g must not appear",
+     "multiplication or division arrows"
+    ],
+    "accuracy_checks": [
+     "tick x positions follow 0.08 + 0.84 x (g - 1) / 30 for g = 1, 5, 12, 20, 25, 31",
+     "label n on the top line and label n on the bottom line sit on the same tick for n = 1 to 6",
+     "given pairs agree with 1 g = 1,000 mg: 1,000 mg with 1 g and 12,000 mg with 12 g",
+     "exactly four blanks: top ticks 2 and 5, bottom ticks 4 and 6"
+    ],
+    "alt_text": "A double number line, mg above and g below, with 1,000 mg over 1 g, 12,000 mg over 12 g, 20,000 mg, 31,000 mg and 25 g given, and four blanks to fill.",
+    "render_note": "Book prints the first top label as '1000 mg' (no comma) while the rest of the line uses commas; drawn as '1,000 mg' to match the line and the LP. Book ticks are only roughly to scale; here they are exactly proportional."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C38",
+   "role": "solution",
+   "lp_book_number": "Let Us Find: double number line in mg",
+   "ncert_ref": "Let Us Find 2 (lf2.mgline), chapter p.5",
+   "question_text": "Complete the double number line below appropriately.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The answer is the completed double number line: four blanks filled (5,000 mg, 20 g, 25,000 mg, 31 g), shown as the finished state of the question figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S13.T13.C38.IMG1",
+   "manim_scene": "c5_8_lf2_mgline_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S13.T13.C38.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S13.T13.C37.IMG1",
+    "content": {
+     "type": "number_line",
+     "variant": "double_number_line",
+     "to_scale": true,
+     "scale_rule": "tick x (fraction of canvas width) = 0.08 + 0.84 x (g - 1) / 30 for g = 1, 5, 12, 20, 25, 31",
+     "lines": [
+      {
+       "name": "top",
+       "unit": "mg",
+       "y": 0.42,
+       "line_x_from": 0.03,
+       "line_x_to": 0.97,
+       "ticks_point": "up",
+       "tick_length": 0.08,
+       "label_y": 0.27
+      },
+      {
+       "name": "bottom",
+       "unit": "g",
+       "y": 0.58,
+       "line_x_from": 0.03,
+       "line_x_to": 0.97,
+       "ticks_point": "down",
+       "tick_length": 0.08,
+       "label_y": 0.73
+      }
+     ],
+     "end_markers": "open circle (white fill, INK outline) at the left end and the right end of both lines",
+     "ticks": [
+      {
+       "tick": 1,
+       "x": 0.08,
+       "top_label": "1,000 mg",
+       "bottom_label": "1 g",
+       "top_colour": "INK",
+       "bottom_colour": "INK"
+      },
+      {
+       "tick": 2,
+       "x": 0.192,
+       "top_label": "5,000 mg",
+       "bottom_label": "5 g",
+       "top_colour": "ANSWER",
+       "bottom_colour": "INK"
+      },
+      {
+       "tick": 3,
+       "x": 0.388,
+       "top_label": "12,000 mg",
+       "bottom_label": "12 g",
+       "top_colour": "INK",
+       "bottom_colour": "INK"
+      },
+      {
+       "tick": 4,
+       "x": 0.612,
+       "top_label": "20,000 mg",
+       "bottom_label": "20 g",
+       "top_colour": "INK",
+       "bottom_colour": "ANSWER"
+      },
+      {
+       "tick": 5,
+       "x": 0.752,
+       "top_label": "25,000 mg",
+       "bottom_label": "25 g",
+       "top_colour": "ANSWER",
+       "bottom_colour": "INK"
+      },
+      {
+       "tick": 6,
+       "x": 0.92,
+       "top_label": "31,000 mg",
+       "bottom_label": "31 g",
+       "top_colour": "INK",
+       "bottom_colour": "ANSWER"
+      }
+     ]
+    },
+    "manim_description": "Draw the same double number line as the question figure, with the same lines, the same open end circles, the same six ticks at 8%, 19.2%, 38.8%, 61.2%, 75.2% and 92% of the canvas width and the same label rows (top labels at 27%, bottom labels at 73% of the canvas height), but with no blanks and no underlines. Top-line labels, left to right: '1,000 mg' (INK), '5,000 mg' (ANSWER), '12,000 mg' (INK), '20,000 mg' (INK), '25,000 mg' (ANSWER), '31,000 mg' (INK). Bottom-line labels, left to right: '1 g' (INK), '5 g' (INK), '12 g' (INK), '20 g' (ANSWER), '25 g' (INK), '31 g' (ANSWER). Lines, ticks and given labels stay INK exactly where they were; only the four filled values are ANSWER green. All text sans-serif, at least 34 px high on a 1920 px wide canvas. Draw nothing else: no arrows, no multiplication labels, no title.",
+    "visible_text": [
+     "1,000 mg",
+     "5,000 mg",
+     "12,000 mg",
+     "20,000 mg",
+     "25,000 mg",
+     "31,000 mg",
+     "1 g",
+     "5 g",
+     "12 g",
+     "20 g",
+     "25 g",
+     "31 g"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "blanks or underlines",
+     "multiplication or division arrows",
+     "the check line"
+    ],
+    "accuracy_checks": [
+     "every tick pair satisfies mg = 1,000 x g: 1,000/1, 5,000/5, 12,000/12, 20,000/20, 25,000/25, 31,000/31",
+     "5 x 1,000 = 5,000; 20,000 / 1,000 = 20; 25 x 1,000 = 25,000; 31,000 / 1,000 = 31",
+     "the four ANSWER-green values are exactly 5,000 mg (top tick 2), 25,000 mg (top tick 5), 20 g (bottom tick 4), 31 g (bottom tick 6)",
+     "same tick positions as the question figure"
+    ],
+    "alt_text": "The completed double number line: 1,000 mg is 1 g, 5,000 mg is 5 g, 12,000 mg is 12 g, 20,000 mg is 20 g, 25,000 mg is 25 g, 31,000 mg is 31 g.",
+    "render_note": "Same layout as M2.S13.T13.C37.IMG1; the filled values are drawn in ANSWER green."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C39",
+   "role": "question",
+   "lp_book_number": "Let Us Find: the goldsmith's ornament",
+   "ncert_ref": "Let Us Find 4 (lf2.goldsmith), chapter p.5",
+   "question_text": "A goldsmith has made an ornament weighing 10 g 500 mg. What will its weight be in milligrams?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word problem with no given figure; both weights are in the text. The precision-balance picture on the page sits beside the previous question and its display is unreadable.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C40",
+   "role": "solution",
+   "lp_book_number": "Let Us Find: the goldsmith's ornament",
+   "ncert_ref": "Let Us Find 4 (lf2.goldsmith), chapter p.5",
+   "question_text": "A goldsmith has made an ornament weighing 10 g 500 mg. What will its weight be in milligrams?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic only: 10 x 1,000 = 10,000 and 10,000 + 500 = 10,500 mg.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write 10 x 1,000 = 10,000 mg, then 10,000 + 500 = 10,500 mg, in LaTeX."
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C41",
+   "role": "question",
+   "lp_book_number": "Let Us Find: compare in g and mg",
+   "ncert_ref": "Let Us Find 5 (lf2.compare), chapter p.6",
+   "question_text": "Compare the weights using <, =, > signs. (a): 20 g ___ 200 mg; (b): 16 g 50 mg ___ 50 g 16 mg; (c): 2,010 mg ___ 2 g 100 mg; (d): 9,000 mg ___ 90 g; (e): 5,000 g ___ 7,500 g; (f): 800 mg + 88 mg ___ 880 mg + 8 mg",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The book panel is a plain 6-row table (left weight, blank for the sign, right weight) with no colour or shading; the LP text already lists all six comparisons.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array, three columns (left weight, blank for the sign, right weight), rows (a) to (f)."
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C42",
+   "role": "solution",
+   "lp_book_number": "Let Us Find: compare in g and mg",
+   "ncert_ref": "Let Us Find 5 (lf2.compare), chapter p.6",
+   "question_text": "Compare the weights using <, =, > signs. (a): 20 g ___ 200 mg; (b): 16 g 50 mg ___ 50 g 16 mg; (c): 2,010 mg ___ 2 g 100 mg; (d): 9,000 mg ___ 90 g; (e): 5,000 g ___ 7,500 g; (f): 800 mg + 88 mg ___ 880 mg + 8 mg",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "LATEX_TABLE"
+   ],
+   "reason": "The answer is six signs and the unit conversions behind them; a plain filled table of signs is LaTeX, not a diagram.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Same LaTeX array as the question with the signs filled in: (a) >, (b) <, (c) <, (d) <, (e) <, (f) =."
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C43",
+   "role": "question",
+   "lp_book_number": "Let Us Find: elephant and whale",
+   "ncert_ref": "Let Us Find 6 (lf2.whale), chapter p.6",
+   "question_text": "Observe the pictures given below and fill in the blanks. An elephant weighs 5,000 kg. An arrow marked × 40 goes from the elephant to a whale. The whale weighs ___ kg.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book question is 'Observe the pictures given below': the elephant weight, the x 40 arrow and the blank under the whale live in the picture, and the LP question text still opens with 'Observe the pictures given below'. Drawn as plain boxes and an arrow (the animals are decoration).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S13.T13.C43.IMG1",
+   "manim_scene": "c5_8_lf2_whale_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S13.T13.C43.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "arrow_map",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "arrow_map",
+     "boxes": [
+      {
+       "id": "elephant",
+       "cx": 0.22,
+       "cy": 0.62,
+       "w": 0.3,
+       "h": 0.26,
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "text": "5,000 kg",
+       "text_colour": "INK",
+       "caption": "Elephant",
+       "caption_y": 0.85
+      },
+      {
+       "id": "whale",
+       "cx": 0.78,
+       "cy": 0.62,
+       "w": 0.3,
+       "h": 0.26,
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "text": "",
+       "text_colour": "INK",
+       "blank": true,
+       "blank_spec": "INK underline 12% of the canvas width, then the word 'kg' to its right, the pair centred in the box",
+       "caption": "Whale",
+       "caption_y": 0.85
+      }
+     ],
+     "arrows": [
+      {
+       "from": "elephant",
+       "to": "whale",
+       "shape": "single curved arc over the top of both boxes, arrowhead at the whale box",
+       "start": [
+        0.22,
+        0.49
+       ],
+       "apex": [
+        0.5,
+        0.22
+       ],
+       "end": [
+        0.78,
+        0.49
+       ],
+       "colour": "INK",
+       "label": "× 40",
+       "label_pill": {
+        "cx": 0.5,
+        "cy": 0.24,
+        "fill": "CELL_FILL",
+        "outline": "INK"
+       }
+      }
+     ]
+    },
+    "manim_description": "On a plain white canvas (BG), 16:9, draw two rounded rectangles side by side, each 30% of the canvas width and 26% of the canvas height, filled CELL_FILL with a 3 px INK outline. The left box is centred at 22% of the canvas width and 62% of the canvas height; it holds the text '5,000 kg' in INK, centred. The right box is centred at 78% of the canvas width and 62% of the canvas height; it is blank: draw one INK underline 12% of the canvas width long, centred in the box, with the word 'kg' immediately to its right (the underline and 'kg' together centred in the box). Below the left box, centred under it at 85% of the canvas height, write 'Elephant' in INK; below the right box, centred under it at 85% of the canvas height, write 'Whale' in INK. Draw one INK curved arrow with a 3 px stroke: it starts at the top centre of the left box (22% across, 49% down), rises in a smooth arc to a highest point at 50% across and 22% down, and comes down to an arrowhead on the top centre of the right box (78% across, 49% down). At the highest point of the arc, on top of the line, place a small rounded pill (CELL_FILL fill, INK outline) centred at 50% across and 24% down, holding the text '× 40' in INK. All text is sans-serif and at least 34 px high on a 1920 px wide canvas. Draw nothing else: no animal pictures, no title.",
+    "visible_text": [
+     "5,000 kg",
+     "kg",
+     "× 40",
+     "Elephant",
+     "Whale"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the whale weight 200,000 kg",
+     "pictures of an elephant or a whale",
+     "working such as 5,000 x 40"
+    ],
+    "accuracy_checks": [
+     "the arrow runs from the elephant box (5,000 kg) to the whale box and is labelled x 40",
+     "the whale box is blank in the question figure",
+     "the arrow, pill and captions use the same positions in the solution figure"
+    ],
+    "alt_text": "An elephant box of 5,000 kg with an arrow marked x 40 to a whale box whose weight in kg is blank.",
+    "render_note": "Book draws a grey elephant and a blue whale with the arrow and two labels; the animals are replaced by captioned boxes (no clip-art rule)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C44",
+   "role": "solution",
+   "lp_book_number": "Let Us Find: elephant and whale",
+   "ncert_ref": "Let Us Find 6 (lf2.whale), chapter p.6",
+   "question_text": "Observe the pictures given below and fill in the blanks. An elephant weighs 5,000 kg. An arrow marked × 40 goes from the elephant to a whale. The whale weighs ___ kg.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The question asks to fill the blank in the figure; the solution figure shows the finished figure with 200,000 kg in the whale box (5,000 x 40 = 200,000).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S13.T13.C44.IMG1",
+   "manim_scene": "c5_8_lf2_whale_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S13.T13.C44.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "arrow_map",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S13.T13.C43.IMG1",
+    "content": {
+     "type": "arrow_map",
+     "boxes": [
+      {
+       "id": "elephant",
+       "cx": 0.22,
+       "cy": 0.62,
+       "w": 0.3,
+       "h": 0.26,
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "text": "5,000 kg",
+       "text_colour": "INK",
+       "caption": "Elephant",
+       "caption_y": 0.85
+      },
+      {
+       "id": "whale",
+       "cx": 0.78,
+       "cy": 0.62,
+       "w": 0.3,
+       "h": 0.26,
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "text": "200,000 kg",
+       "text_colour": "ANSWER",
+       "blank": false,
+       "blank_spec": null,
+       "caption": "Whale",
+       "caption_y": 0.85
+      }
+     ],
+     "arrows": [
+      {
+       "from": "elephant",
+       "to": "whale",
+       "shape": "single curved arc over the top of both boxes, arrowhead at the whale box",
+       "start": [
+        0.22,
+        0.49
+       ],
+       "apex": [
+        0.5,
+        0.22
+       ],
+       "end": [
+        0.78,
+        0.49
+       ],
+       "colour": "INK",
+       "label": "× 40",
+       "label_pill": {
+        "cx": 0.5,
+        "cy": 0.24,
+        "fill": "CELL_FILL",
+        "outline": "INK"
+       }
+      }
+     ]
+    },
+    "manim_description": "Draw the same figure as the question figure, with the same two boxes, the same captions 'Elephant' and 'Whale', the same curved arrow from the left box to the right box and the same '× 40' pill, all in INK exactly where they were. The left box still holds '5,000 kg' in INK. In the right box (centred at 78% across and 62% down) remove the blank underline and write '200,000 kg' in ANSWER green, centred in the box. All text is sans-serif and at least 34 px high on a 1920 px wide canvas. Draw nothing else: no animal pictures, no title, no working.",
+    "visible_text": [
+     "5,000 kg",
+     "200,000 kg",
+     "× 40",
+     "Elephant",
+     "Whale"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "pictures of an elephant or a whale",
+     "working such as 5,000 x 40 = 200,000",
+     "the check line"
+    ],
+    "accuracy_checks": [
+     "5,000 x 40 = 200,000",
+     "200,000 / 40 = 5,000 (the elephant box)",
+     "only the whale-box value is ANSWER green; everything given stays INK"
+    ],
+    "alt_text": "The elephant box of 5,000 kg with an arrow marked x 40 to the whale box, now filled with 200,000 kg.",
+    "render_note": "Same layout as M2.S13.T13.C43.IMG1; the whale box value is drawn in ANSWER green."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C45",
+   "role": "question",
+   "lp_book_number": "Let Us Find: kg, quintals and tonnes",
+   "ncert_ref": "Let Us Find 7 (lf2.quintal), chapter p.6",
+   "question_text": "Answer the following questions. (a): 5,000 kg = ___ quintals = ___ tonne (b): 9,000 kg = ___ quintals; (c): ___ kg = 8 tonnes",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three conversion equations with blanks, no figure; the facts (100 kg = 1 quintal, 10 quintals = 1 tonne) are in the 'Did you know?' box, which is a teaching figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C46",
+   "role": "solution",
+   "lp_book_number": "Let Us Find: kg, quintals and tonnes",
+   "ncert_ref": "Let Us Find 7 (lf2.quintal), chapter p.6",
+   "question_text": "Answer the following questions. (a): 5,000 kg = ___ quintals = ___ tonne (b): 9,000 kg = ___ quintals; (c): ___ kg = 8 tonnes",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Divisions and one multiplication (5,000 / 100, 50 / 10, 9,000 / 100, 8 x 1,000); no visual content.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write each conversion as a LaTeX line with its division or multiplication."
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C47",
+   "role": "question",
+   "lp_book_number": "Example 3: the ornament",
+   "ncert_ref": "Let Us Find 3 (ex.ornament), chapter p.5",
+   "question_text": "An ornament weighs 4 g 100 mg. What will be the weight in milligrams?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word problem with no given figure; the book's green bubble is a worked line of text (4 g = 4,000 mg; 4 g 100 mg = 4,100 mg) and the balance beside it is unreadable decoration.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C48",
+   "role": "solution",
+   "lp_book_number": "Example 3: the ornament",
+   "ncert_ref": "Let Us Find 3 (ex.ornament), chapter p.5",
+   "question_text": "An ornament weighs 4 g 100 mg. What will be the weight in milligrams?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic only: 4 x 1,000 = 4,000 and 4,000 + 100 = 4,100 mg.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write 4 x 1,000 = 4,000 mg, then 4,000 + 100 = 4,100 mg, in LaTeX."
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C49",
+   "role": "question",
+   "lp_book_number": "King's Weight: the king's wheat",
+   "ncert_ref": "King's Weight (king.weight), chapter p.6",
+   "question_text": "In a kingdom, the king donates wheat grains equal to 10 times his weight on his birthday. (a): If he donates 800 kg of wheat grain this birthday, what is his current weight? ___ kg. (b): If he had donated 780 kg of wheat grain on his last birthday, what was his weight last year? ___ kg. (c): How much weight did he gain in a year until this birthday? ___ kg.",
+   "decision": "none",
+   "reason_codes": [
+    "DECORATIVE_ONLY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book picture (the king in one pan of a beam balance, 10 sacks of wheat in the other) only illustrates 'ten times his weight', which the text states with every number; it prints no weights. A balance picture would be a nicety, not needed to attempt the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C50",
+   "role": "solution",
+   "lp_book_number": "King's Weight: the king's wheat",
+   "ncert_ref": "King's Weight (king.weight), chapter p.6",
+   "question_text": "In a kingdom, the king donates wheat grains equal to 10 times his weight on his birthday. (a): If he donates 800 kg of wheat grain this birthday, what is his current weight? ___ kg. (b): If he had donated 780 kg of wheat grain on his last birthday, what was his weight last year? ___ kg. (c): How much weight did he gain in a year until this birthday? ___ kg.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three divisions/subtractions (800 / 10, 780 / 10, 80 - 78); no visual content.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write 800 / 10 = 80 kg, 780 / 10 = 78 kg and 80 - 78 = 2 kg in LaTeX."
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C51",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Adding weights: three ways (add.ways, addsub.note), chapter p.7",
+   "question_text": "Add 3 kg 600 g and 2 kg 700 g in three ways. These are practice values.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Column addition/subtraction and conversions to grams are arithmetic (LaTeX); the steps already name every carry, borrow and value. The kept teaching image of this concept is not a reason either way.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Way 2 as a LaTeX array with kg and g columns and a carry row; Way 3 as one line in grams.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C52",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Subtracting weights: three ways (sub.ways), chapter p.7-8",
+   "question_text": "Subtract 2 kg 800 g from 5 kg 200 g in three ways. These are practice values.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Column addition/subtraction and conversions to grams are arithmetic (LaTeX); the steps already name every carry, borrow and value. The kept teaching image of this concept is not a reason either way.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Way 2 as a LaTeX array with kg and g columns and a carry row; Way 3 as one line in grams.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C54",
+   "role": "question",
+   "lp_book_number": "Example 4: Rathna's rice",
+   "ncert_ref": "The Grocery Store, Example 4 (ex.rice_total), chapter p.7",
+   "question_text": "Rathna went to the local grocery store and bought several items. She bought 2 kg 500 g rice for daily use and 1 kg 750 g additional rice for the upcoming Pongal festival. How much total rice did she buy?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word problem with no given figure; both quantities are in the text. The book's bubbles and column sums are worked-solution layouts, not given data.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C55",
+   "role": "solution",
+   "lp_book_number": "Example 4: Rathna's rice",
+   "ncert_ref": "The Grocery Store, Example 4 (ex.rice_total), chapter p.7",
+   "question_text": "Rathna went to the local grocery store and bought several items. She bought 2 kg 500 g rice for daily use and 1 kg 750 g additional rice for the upcoming Pongal festival. How much total rice did she buy?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A column/parts addition, 2 kg 500 g + 1 kg 750 g = 4 kg 250 g with the carry of 1 kg, plus a check in grams: arithmetic, written in LaTeX (the LP steps do not use the book's carry-arrow layout).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array with kg and g columns: 2 | 500, + 1 | 750, carry 1 kg, result 4 | 250; then the check 2,500 + 1,750 = 4,250 g."
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C56",
+   "role": "question",
+   "lp_book_number": "Example 5: extra rice",
+   "ncert_ref": "The Grocery Store, Example 5 (ex.rice_extra), chapter p.7",
+   "question_text": "How much extra rice did she buy for household use than for the Pongal festival?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word problem with no given figure of its own; the quantities come from Example 4 and are named in the solution.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C57",
+   "role": "solution",
+   "lp_book_number": "Example 5: extra rice",
+   "ncert_ref": "The Grocery Store, Example 5 (ex.rice_extra), chapter p.8",
+   "question_text": "How much extra rice did she buy for household use than for the Pongal festival?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A subtraction, 2 kg 500 g - 1 kg 750 g = 750 g, worked in grams (2,500 - 1,750) with two checks; the book's regrouping layouts are column subtraction (LaTeX) and the LP steps do not use them.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines: 2,500 - 1,750 = 750 g; check 1,750 + 750 = 2,500 g; the 'in parts' check as three short lines."
+  }
+ ]
+}

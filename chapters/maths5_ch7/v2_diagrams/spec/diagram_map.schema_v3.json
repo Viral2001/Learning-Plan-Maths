@@ -1,0 +1,447 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NCERT Classes 5-8 diagram map (per chapter)",
+  "type": "object",
+  "required": [
+    "meta",
+    "style_tokens",
+    "figure_inventory",
+    "coverage_report",
+    "items"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "chapter",
+        "class",
+        "placeholder_token_format",
+        "counts_by_role_and_decision"
+      ],
+      "properties": {
+        "chapter": {
+          "type": "string"
+        },
+        "class": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 8
+        },
+        "textbook": {
+          "type": "string"
+        },
+        "lp_plan_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "placeholder_token_format": {
+          "const": "{{DIAGRAM:<media_id>}}"
+        },
+        "counts_by_role_and_decision": {
+          "type": "object"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "style_tokens": {
+      "type": "object"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "lp_concept_id",
+          "role",
+          "decision",
+          "reason_codes",
+          "reason",
+          "lp_placeholder_action"
+        ],
+        "properties": {
+          "lp_concept_id": {
+            "type": "string"
+          },
+          "role": {
+            "enum": [
+              "question",
+              "solution",
+              "worked_example"
+            ]
+          },
+          "lp_book_number": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ncert_ref": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "question_text": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "decision": {
+            "enum": [
+              "required",
+              "optional",
+              "none"
+            ]
+          },
+          "reason_codes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "enum": [
+                "FIG_REFERENCED",
+                "DATA_IN_FIGURE",
+                "ACTION_ON_FIGURE",
+                "ANSWER_IS_FIGURE",
+                "SPATIAL_GEOMETRY",
+                "GRAPH_CHART",
+                "MEASUREMENT_READING",
+                "HIGHLIGHT_MEANING",
+                "TEXT_SUFFICIENT",
+                "LATEX_TABLE",
+                "LATEX_ARITHMETIC",
+                "DECORATIVE_ONLY",
+                "OPEN_ENDED",
+                "REUSES_CONCEPT_IMAGE",
+                "SAME_AS_QUESTION_DIAGRAM",
+                "HEADER_BOXES_ONLY",
+                "NUMBER_LIST_IN_BOXES",
+                "NOT_RENDERABLE"
+              ]
+            }
+          },
+          "reason": {
+            "type": "string"
+          },
+          "text_alternative": {
+            "type": "string"
+          },
+          "needs_lp_text_sync": {
+            "type": "boolean"
+          },
+          "lp_placeholder_action": {
+            "enum": [
+              "keep_and_replace_spec",
+              "add_new_image",
+              "drop_image",
+              "no_image"
+            ]
+          },
+          "media_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "manim_scene": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "placeholder": {
+            "type": "object",
+            "required": [
+              "token",
+              "insert_into",
+              "position"
+            ],
+            "properties": {
+              "token": {
+                "type": "string",
+                "pattern": "^\\{\\{DIAGRAM:[^}]+\\}\\}$"
+              },
+              "insert_into": {
+                "enum": [
+                  "question_tex",
+                  "steps_tex"
+                ]
+              },
+              "position": {
+                "type": "string",
+                "pattern": "^(after_question_text|before_first_step)$"
+              }
+            }
+          },
+          "diagram": {
+            "type": "object",
+            "required": [
+              "diagram_type",
+              "aspect_ratio",
+              "content",
+              "manim_description",
+              "visible_text",
+              "must_not_show",
+              "accuracy_checks",
+              "alt_text"
+            ],
+            "properties": {
+              "diagram_type": {
+                "type": "string"
+              },
+              "aspect_ratio": {
+                "type": "string",
+                "pattern": "^[0-9]+:[0-9]+$"
+              },
+              "derived_from": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "content": {
+                "type": "object",
+                "required": [
+                  "type"
+                ]
+              },
+              "manim_description": {
+                "type": "string",
+                "minLength": 20
+              },
+              "visible_text": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "must_not_show": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "accuracy_checks": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "alt_text": {
+                "type": "string"
+              },
+              "render_note": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "decision": {
+                  "const": "required"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "diagram",
+                "placeholder",
+                "media_id"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "decision": {
+                  "const": "none"
+                }
+              }
+            },
+            "then": {
+              "not": {
+                "required": [
+                  "diagram"
+                ]
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "role": {
+                  "const": "solution"
+                }
+              },
+              "required": [
+                "role"
+              ]
+            },
+            "then": {
+              "properties": {
+                "placeholder": {
+                  "properties": {
+                    "insert_into": {
+                      "const": "steps_tex"
+                    },
+                    "position": {
+                      "const": "before_first_step"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "role": {
+                  "enum": [
+                    "question",
+                    "worked_example"
+                  ]
+                }
+              },
+              "required": [
+                "role"
+              ]
+            },
+            "then": {
+              "properties": {
+                "placeholder": {
+                  "properties": {
+                    "insert_into": {
+                      "const": "question_tex"
+                    },
+                    "position": {
+                      "const": "after_question_text"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "decision": {
+                  "const": "required"
+                }
+              },
+              "required": [
+                "decision"
+              ]
+            },
+            "then": {
+              "properties": {
+                "lp_placeholder_action": {
+                  "enum": [
+                    "keep_and_replace_spec",
+                    "add_new_image"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "decision": {
+                  "const": "none"
+                }
+              },
+              "required": [
+                "decision"
+              ]
+            },
+            "then": {
+              "properties": {
+                "lp_placeholder_action": {
+                  "enum": [
+                    "drop_image",
+                    "no_image"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "figure_inventory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "fig_id",
+          "source",
+          "description",
+          "mapped_to"
+        ],
+        "properties": {
+          "fig_id": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "mapped_to": {
+            "type": "string",
+            "pattern": "^(item:[^ ]+ \\((question|solution)\\)|concept_image:.+|none:[A-Z_]+)$"
+          }
+        }
+      }
+    },
+    "coverage_report": {
+      "type": "object",
+      "required": [
+        "inventory_figures",
+        "unmapped"
+      ],
+      "properties": {
+        "inventory_figures": {
+          "type": "integer"
+        },
+        "mapped_to_items": {
+          "type": "integer"
+        },
+        "mapped_to_concept_images": {
+          "type": "integer"
+        },
+        "mapped_none": {
+          "type": "integer"
+        },
+        "unmapped": {
+          "const": 0
+        },
+        "new_media_ids_created": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lp_ids_dropped": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$comment": "v3 (21 Nov 2026): solution tokens only steps_tex/before_first_step; question and worked-example tokens only question_tex/after_question_text; no reuse_concept_image / reuse_media_id (a concept image is never linked); decision none -> drop_image|no_image; required -> keep_and_replace_spec|add_new_image."
+}
