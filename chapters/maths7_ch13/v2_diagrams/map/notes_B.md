@@ -1,0 +1,46 @@
+# Notes, chunk B (Class 7 Ch 13, topics T13, T14, T15, T16, T17, T19)
+
+Result: 26 items = required 10 / optional 1 / none 15. Validator (`--chunk B`): errors 0, warnings 0.
+
+Required diagrams (all data graphs):
+- C57 / C58: Fig it Out 5.2 Q3, empty dot-plot frame (question) and the filled plot with mean and median (solution, derived from C57.IMG1)
+- C61 / C62: Q5, empty dot-plot frame (question) and the filled two-group plot (solution, derived from C61.IMG1)
+- C63: Q6, the three given dot plots (question only; solution is `none`)
+- C67 (worked example, IMG2): the onion double column graph
+- C71 and C73: the rocket launch graph, one diagram per question (identical spec); both solutions `none`
+- C80 / C81: the cricket graph (question) and the same graph with two columns marked (solution, derived from C80.IMG1)
+
+## 1. Judgement calls
+
+1. **Q6 whole-class dots (C63) - please confirm.** The book's printed whole-class plot has 28 grey dots with mean 144.5, which is the FIRST section's plot repeated (p.13). It contradicts its own labels (mean 141.21, median 142.5) and the Boys/Girls plots under it. I drew the whole-class dots as the 18 boys + 14 girls (32 dots, values read from the page), which reproduces the printed mean (4519/32 = 141.22) and median (142.5) exactly. The spec's `render_note` says so. If you prefer the book's literal 28 dots, replace the first plot's `dots_per_value` and the mean line (it would then not match 141.21).
+2. **Q6 boys' median.** Printed and drawn 143, but the 18 dots read from the page give 143.5 (9th and 10th values 143 and 144). I kept the printed 143 (the question text states it) and noted it in `accuracy_checks`. Boys mean 2557/18 = 142.06 vs printed 142.05 (truncated); girls mean 1962/14 = 140.14 and median 140 match exactly, which also confirms the girls' dot positions.
+3. **Q3 frame has 4 rows, the book's has 3.** The data has a stack of 4 at height 60, which does not fit the book's 3-row frame; the question figure and its derived solution figure both use 4 rows so the layout is identical (rule: same layout, same positions).
+4. **Q5 solution (C62): no mean/median lines.** The question only says "fill the dot plot" (Q3 explicitly says mark mean and median, Q5 does not), and the four numbers 3.43 / 3.35 / 3.45 / 3.4 are less than 30 px apart on the axis. The solution figure is the filled plot only; the two groups use SET_A / SET_B (not ANSWER green) with a Boys/Girls legend. Q5's grid is a single plot, as in the book.
+5. **C67 worked example is `required` although the teaching image C67.IMG1 shows the same graph.** v3 says a figure the item needs is drawn even if a teaching image shows it (the example's task is "Draw ... one double column graph"). Result: the concept will show two similar graphs (teaching image and DIAGRAM IMG2). Colours are SET_A / SET_B instead of the book's stripes and dots.
+6. **C76 (worked, daylight graph) is `optional`, not added.** The question gives the three readings per city that the answer uses, and the concept already holds the 12-month clustered graph as teaching image C76.IMG1. The figure that would help is that clustered column graph (12 monthly averages, City 1 orange / City 2 blue in the book). If you want it drawn, it is a straightforward clustered column graph; values (hours per day) are in base figure P23-bar_graph-1.
+7. **Rocket questions C71 and C73 are `required`, solutions `none`.** The LP texts give readings for only 4 (C71) or 6 (C73) of the 10 organisations; the 'USA' statement and the world-total estimate need the other bars. Solutions only list numbers and mark nothing on the graph, so `SAME_AS_QUESTION_DIAGRAM`. The rocket spec has no value labels (the book has none; the task is estimation) and uses SET_A / SET_B / INK for 2021 / 2022 / 2023 (three colour-blind-safe tones) instead of the book's three blues.
+8. **Cricket (C80 / C81).** Question required (every value is only in the columns). Solution required because the LP solution reads two specific columns (blue over 12 about 15, red's shortest over 4 about 2) and the earlier author's `s_figure` hint says the same: I outline those two columns (FOCUS) and add the two tags "about 15" / "about 2" (ANSWER). The red team's column colour is the hex #D55E00 (the palette vermilion = same hex as token WRONG) because the question names a "red team" and a "blue team"; it is used only as the team colour, not as a "wrong" marker. SET_B (amber) would contradict the text.
+9. **Q1 (C53) is `none` with LATEX_TABLE.** The data is the plain onion-price table (rupees per kg) printed earlier in the book; a table of numbers stays LaTeX. The LP question text does not contain it (see section 2), so `text_alternative` holds the LaTeX array and `needs_lp_text_sync` is true. Not a refer-picture case: the book question names no figure.
+10. **Q2, Q4, Q7 and all the worked examples T13 / T17 C75 are `none`.** All data is in the text and the work is arithmetic or word reasoning. Q7's see-saw picture (sumo wrestler and dancers) is decoration.
+11. **C64 (Q6 solution) is `none`.** The answer is a written comparison; it adds no mark to the three plots (`SAME_AS_QUESTION_DIAGRAM`).
+12. **Figure accounting choices.** A figure used by two items is two entries: P16-dot_plot-1 (question C57) and NEW-P16-dot_plot-1-sol (solution C58); same for P17-dot_plot-1, P20 (C71, NEW-...-C73), P26 (C80, NEW-...-C81), P19 (teaching concept image, plus NEW-P19-bar_graph-1-C67 for the worked example). P21 (annotated rocket graph) and P23 (daylight graph) map to the concept images. I also claimed P06-table-1 / P06-table-2 (onion tables in chunk A's section) with `none:LATEX_TABLE` because Q1 uses them; if chunk A maps them differently the merge keeps both as separate uses. P18-bar_graph-1 / -2 (single-town graphs, teaching step) are `none:TEXT_SUFFICIENT` (same numbers as the table and the combined graph).
+13. **Decoration not listed (not in the base inventory, left out on purpose):** Kobel woodcut (p.16), sumo/ballet see-saw (p.17), midnight-sun photo (p.25), cartoon characters.
+14. **Placement of labels in the spec.** Q3 solution: the two marker labels sit at the top of the lines, "Mean" to the left and "Median" to the right, because the lines are only 1.7 px apart. Cricket solution: tags sit in the empty band above the columns with dotted pointers.
+
+## 2. Things in the LP that look wrong or thin
+
+- **C53 (Q1):** the question text "Find the median of onion prices in Yahapur and Wahapur." has no data at all; the learner cannot attempt it. The onion table must be written into the text (LaTeX array in `text_alternative`).
+- **C73 (Q2):** the question text says "decide which statements (a) to (f) are justified" but the six statements and the four options for the 2023 total are not in the text (the old `q_figure` hint put them "beside the figure"); the solution then refers to them as (a) ... (f) and "option (b)". The statements and options must go into the question text. In the solution the letter (b) is used both for statement (b) and for the total option (b); consider "option 200 to 400".
+- **C71 / C73:** readings given in the text are partial (4 and 6 of 10 organisations) and "about"; fine with the figure, not enough without it.
+- **C80 (T19 Q1):** the LP packs the book's four questions into one question; its text describes the graph ("bars run through all 20 overs ... red bars stop after over 18"). That description is correct (red has 18 columns). The base inventory entry P26 is wrong here (red 19 columns, over 19 = 17); corrected in the figure entry.
+- **C81:** "red stopped after 18 overs without losing all its wickets, so blue batted first and red won" is the book's logic, but the drawn bars sum to blue 163 and red 152 (target 164), so the drawing does not actually show red passing blue. Not a diagram problem; the diagram does not state totals.
+- **C64:** quotes first-section numbers (146.91 vs 142.94, class mean 144.5) that belong to chunk A's unit 19; consistent with concept image M2.S11.T11.C44 (means about 142.9 and 146.9).
+- All sums, means, medians and counts in the LP solutions of this chunk were recomputed and are correct (Q2 total 72, Q3 total 1621 / mean 55.9 / median 56 / 13 trees, Q4 total 87.39, Q5 totals 20.6 / 20.1, Q7 totals 1201.9 / 254.5, onion months, daylight divisions, rocket 2023 total 220).
+
+## 3. Places where the book itself is unclear
+
+- Q6 whole-class plot is the wrong picture (judgement call 1); boys' median 143 vs 143.5 (judgement call 2).
+- Q3 frame has 3 rows but the answer needs 4 (judgement call 3).
+- No numbers are printed on the rocket or cricket bars. Values were measured from the page pictures (rocket about +/-0.5 launch, cricket about +/-0.3 run). Rocket values agree with the book's remarks (SpaceX 2022 "perhaps 61", 2023 about 35 more, Arianespace 2023 about half of 2022, "Other" 2023 "around 25" read as 26, which the LP also uses). Cricket: blue over 2 = 10.7 (drawn 11), over 5 = 8.7 (9), over 18 = 12.8 (13), over 12 = 14.9 (15).
+- The book's whole-class mean 141.21 and boys' mean 142.05 are truncated, not rounded (141.219 and 142.056).
+- The cricket graph has no legend in the book; the wicket-circle meaning is only in the book text and the LP text ("wicket circles"). I added no legend.

@@ -1,0 +1,653 @@
+{
+ "meta": {
+  "chapter": "Another Peek Beyond the Point",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 12",
+  "lp_plan_id": "cbse_eng_maths7_ch12_v32",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 0,
+    "optional": 0,
+    "none": 14
+   },
+   "solution": {
+    "required": 0,
+    "optional": 2,
+    "none": 12
+   },
+   "worked_example": {
+    "required": 0,
+    "optional": 0,
+    "none": 3
+   }
+  },
+  "notes": [
+   "Chunk B (topics M1.S11.T11 to M2.S22.T22): no item needs a drawn figure. The only given figures in this part of the book are plain tables (Figure it Out Q10 table, the division table), a list of equations (powers of 2 and 5) and long-division sketches, all of which the rules send to LaTeX (LATEX_TABLE, LATEX_ARITHMETIC).",
+   "Two solutions are optional (not added): Example 7 (ribbon bar 14 m + 14 m + 1 m) and Example 8 (the final place-value division tree).",
+   "Three questions need their text synced because the dropped card carried a table or list: M1.S11.T11.C48 and M2.S16.T16.C60 (the table they say to complete, as a LaTeX array) and M2.S19.T19.C67 (the two lists of unit fractions as a LaTeX array).",
+   "The LP numbers (Figure it Out 4.2, Q1 to Q4) are not the book's numbers: they stand for book Q2, Q6, Q8 and Q10, and M1.S13.T13 'Q1' is book Q9."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P06-table-1",
+   "source": "chapter p.06",
+   "description": "Green table 'Situation | Multiplication | Relationship' with three rows (both numbers > 1: 3.4 x 6.5 = 22.1; both between 0 and 1: 0.75 x 0.4 = 0.3; one of each: 0.75 x 5 = 3.75). Teaching table of 4.2 'Is the Product Always Greater'; the plan's concept image shows the same three situations.",
+   "mapped_to": "concept_image:M1.S12.T12.C51.IMG1"
+  },
+  {
+   "fig_id": "P08-table-1",
+   "source": "chapter p.08",
+   "description": "Figure it Out Q10 table: header x 10 | x 100 | x 1000, first column 5.7, 23.02, 0.92, 0.306, 24.67, 15 blank cells. Plain table, no colour meaning.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P08-ribbon_picture-1",
+   "source": "chapter p.08",
+   "description": "Example 6 illustration: thought bubble with a row of 10 red squares, girl cutting a red ribbon, white double arrow labelled 3.9m. Checked on the page: 10 squares. The same scene is the plan's teaching image 'One ribbon, ten pieces'.",
+   "mapped_to": "concept_image:M2.S14.T14.C55.IMG1"
+  },
+  {
+   "fig_id": "P09-table-1",
+   "source": "chapter p.09",
+   "description": "Division table: Decimal | / 10 | / 100 | / 1000 | / 10000; row 18.7 filled (1.87, 0.187, 0.0187, 0.00187); row 21.1 and row 0.13 blank; row 4 has only 2.146 under / 100 (first cell blank); row 5 has only 0.0058 under / 10000 (first cell blank). No instruction line is printed. The LP completes it as 214.6 and 58.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P09-ribbon_picture-1",
+   "source": "chapter p.09",
+   "description": "Example 7 illustration: two girls and a speech bubble with a red ribbon marked 29m and cut into 14m, 14m, 1m (not to scale; the first 14m part is drawn shorter than the second). Checked on the page.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P11-division_tree-1",
+   "source": "chapter p.11",
+   "description": "Example 8 first tree: '1 Thousand + 3 Hundreds + 2 Tens + 4 Ones' with 4 arrows to 4 empty boxes.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P11-division_tree-2",
+   "source": "chapter p.11",
+   "description": "Example 8 second tree: '13 Hundreds + 2 Tens + 4 Ones' with 4 arrows to 4 empty boxes.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P11-division_tree-3",
+   "source": "chapter p.11",
+   "description": "Example 8 third tree: 4 boxes '3 Hundreds' and a loose '1 Hundred', with a long-division sketch 4) 1324 (0 + 3 + __ + __.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P12-division_tree-1",
+   "source": "chapter p.12",
+   "description": "Example 8: 4 boxes each '3 Hundreds / 3 Tens' beside the long division 4) 1324 (0 + 3 + 3 + __.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P12-division_tree-2",
+   "source": "chapter p.12",
+   "description": "Example 8 final tree: 4 boxes each '3 Hundreds / 3 Tens / 1 Ones' beside the finished long division 4) 1324 (0 + 3 + 3 + 1, remainder 0.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P13-division_tree-1",
+   "source": "chapter p.13",
+   "description": "Example 8 continued, 1325 / 4: '5 Ones' tree, 4 boxes '3 Hundreds / 3 Tens / 1 Ones' and a loose '1 Ones', with the long division 4) 1325 (0 + 3 + 3 + 1.",
+   "mapped_to": "concept_image:M2.S21.T21.C71.IMG1"
+  },
+  {
+   "fig_id": "P13-division_tree-2",
+   "source": "chapter p.13",
+   "description": "Example 8 continued: '10 Tenths' tree over the same 4 boxes.",
+   "mapped_to": "concept_image:M2.S21.T21.C71.IMG1"
+  },
+  {
+   "fig_id": "P13-division_tree-3",
+   "source": "chapter p.13",
+   "description": "Example 8 continued: 10 Tenths / 4 gives 2 Tenths each, 2 Tenths remain; long division 4) 1325 (0 + 3 + 3 + 1 + 2 with labels Tens, Ones, Tenths.",
+   "mapped_to": "concept_image:M2.S21.T21.C71.IMG1"
+  },
+  {
+   "fig_id": "P14-division_tree-1",
+   "source": "chapter p.14",
+   "description": "Example 8 continued: '20 Hundredths' tree over the 4 boxes (each with 2 Tenths).",
+   "mapped_to": "concept_image:M2.S21.T21.C71.IMG1"
+  },
+  {
+   "fig_id": "P14-division_tree-2",
+   "source": "chapter p.14",
+   "description": "Example 8 final tree for 1325 / 4: each box 3 Hundreds, 3 Tens, 1 Ones, 2 Tenths, 5 Hundredths; long division 4) 1325 (0 + 3 + 3 + 1 + 2 + 5 with labels Tens, Ones, Tenths, Hundredths. The loose '2 Tenths' arrow label is left over from the previous tree (nothing remains).",
+   "mapped_to": "concept_image:M2.S21.T21.C71.IMG1"
+  },
+  {
+   "fig_id": "P15-long_division-1",
+   "source": "chapter p.15",
+   "description": "Example 9 stage 1: 8) 237 (0 2, row 16 labelled Tens, remainder 7. Snapshot of the 237 / 8 long division.",
+   "mapped_to": "concept_image:M2.S21.T21.C73.IMG1"
+  },
+  {
+   "fig_id": "P15-long_division-2",
+   "source": "chapter p.15",
+   "description": "Example 9 stage 2: 8) 237 (0 2 9, rows 16, 77, 72, remainder 5 (Tens, Ones).",
+   "mapped_to": "concept_image:M2.S21.T21.C73.IMG1"
+  },
+  {
+   "fig_id": "P15-long_division-3",
+   "source": "chapter p.15",
+   "description": "Example 9 stage 3: quotient 0 2 9 . 6 with the decimal point and the 50 Tenths row; speech box 'Remember, when we regroup Ones into Tenths we need to place a decimal point in the quotient.'",
+   "mapped_to": "concept_image:M2.S21.T21.C73.IMG1"
+  },
+  {
+   "fig_id": "P15-long_division-4",
+   "source": "chapter p.15",
+   "description": "Example 9 stage 4: quotient 0 2 9 . 6 2, rows down to 20 Hundredths, 16, remainder 4.",
+   "mapped_to": "concept_image:M2.S21.T21.C73.IMG1"
+  },
+  {
+   "fig_id": "P16-long_division-1",
+   "source": "chapter p.16",
+   "description": "Example 9 finished: 8) 237 (0 2 9 . 6 2 5 with rows 16, 77, 72, 50, 48, 20, 16, 40, 40, 0 and labels Tens, Ones, Tenths, Hundredths, Thousandths.",
+   "mapped_to": "concept_image:M2.S21.T21.C73.IMG1"
+  },
+  {
+   "fig_id": "P16-long_division-2",
+   "source": "chapter p.16",
+   "description": "Example 10: 4) 9.5 (2 . 3 7 5 with rows 8, 15, 12, 30, 28, 20, 20, 0 and labels Ones, Tenths, Hundredths, Thousandths.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P17-long_division-1",
+   "source": "chapter p.17",
+   "description": "Example 11: 5) 0.06 (0 . 0 1 2 with rows 0, 00, 00, 06, 5, 10, 10, 0 and labels Ones, Tenths, Hundredths, Thousandths (8 numbers, 4 rules).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P21-pattern-1",
+   "source": "chapter p.21",
+   "description": "Boxed two-column list under Figure it Out: 1/2 = 0.5, 1/(2x2) = 0.25, 1/(2x2x2) = 0.125, 1/(2x2x2x2) = 0.0625, 1/(2x2x2x2x2) = ?; and 1/5 = 0.2, 1/(5x5) = 0.04, 1/(5x5x5) = 0.008, 1/(5x5x5x5) = 0.0016, 1/(5x5x5x5x5) = ? (10 equations, 2 unknown). A list of equations: LaTeX.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 23,
+  "mapped_to_items": 0,
+  "mapped_to_concept_images": 12,
+  "mapped_none": 11,
+  "unmapped": 0,
+  "new_media_ids_created": [],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S11.T11.C42",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.2, Q1",
+   "ncert_ref": "Section 4.2 - Figure it Out, book Q2 (4.2.FiO2)",
+   "question_text": "Find the products: (a) 27.34 × 6 (b) 4.23 × 3.7 (c) 0.432 × 0.23",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three plain products with every number in the text; the book prints no figure with this question (page 7).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C43",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.2, Q1",
+   "ncert_ref": "Section 4.2 - Figure it Out, book Q2 (4.2.FiO2)",
+   "question_text": "Find the products: (a) 27.34 × 6 (b) 4.23 × 3.7 (c) 0.432 × 0.23",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The steps already show each whole-number product and the decimal-place count (2734 × 6 = 16404, 423 × 37 = 15651, 432 × 23 = 9936); nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C44",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.2, Q2",
+   "ncert_ref": "Section 4.2 - Figure it Out, book Q6 (4.2.FiO6)",
+   "question_text": "The price of 1 kg of oranges is ₹56.50. What is the price of 2.250 kg of oranges? Can we write 56.50 as 56.5 and 2.250 as 2.25 and multiply? Will we get the same product? Why?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem; every number is in the text and the book prints no figure with it (page 7).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C45",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.2, Q2",
+   "ncert_ref": "Section 4.2 - Figure it Out, book Q6 (4.2.FiO6)",
+   "question_text": "The price of 1 kg of oranges is ₹56.50. What is the price of 2.250 kg of oranges? Can we write 56.50 as 56.5 and 2.250 as 2.25 and multiply? Will we get the same product? Why?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic and a sentence of reasoning (565 × 225 = 127125, so 127.125; trailing zeroes do not change the value); no visual content.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C46",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.2, Q3",
+   "ncert_ref": "Section 4.2 - Figure it Out, book Q8 (4.2.FiO8)",
+   "question_text": "Given that 18 × 12 = 216, find the products: (a) 18 × 1.2 (b) 18 × 0.12 (c) 1.8 × 1.2 (d) 0.18 × 0.12 (e) 0.018 × 0.012 (f) 1.8 × 12. In which of the cases above is the product less than 1?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Six products from one given fact; all in the text, no figure in the book (page 7).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C47",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.2, Q3",
+   "ncert_ref": "Section 4.2 - Figure it Out, book Q8 (4.2.FiO8)",
+   "question_text": "Given that 18 × 12 = 216, find the products: (a) 18 × 1.2 (b) 18 × 0.12 (c) 1.8 × 1.2 (d) 0.18 × 0.12 (e) 0.018 × 0.012 (f) 1.8 × 12. In which of the cases above is the product less than 1?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Six decimal-place calculations (21.6, 2.16, 2.16, 0.0216, 0.000216, 21.6) and the cases below 1 ((d) and (e)); plain arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C48",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.2, Q4",
+   "ncert_ref": "Section 4.2 - Figure it Out, book Q10 (4.2.FiO10)",
+   "question_text": "Multiply the following numbers by 10, 100 and 1000 to complete the table: 5.7, 23.02, 0.92, 0.306, 24.67",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The book's table (P08-table-1, page 8) is a plain table: header cells x 10, x 100, x 1000, five numbers down the first column and 15 blank cells, with no colour meaning. The question text already lists the five numbers, so a careful student loses nothing without a picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "The question says 'complete the table': write the empty table into the question as a LaTeX array: header row (blank cell, x 10, x 100, x 1000); first column 5.7, 23.02, 0.92, 0.306, 24.67; 15 empty cells.",
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C49",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.2, Q4",
+   "ncert_ref": "Section 4.2 - Figure it Out, book Q10 (4.2.FiO10)",
+   "question_text": "Multiply the following numbers by 10, 100 and 1000 to complete the table: 5.7, 23.02, 0.92, 0.306, 24.67",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The filled table is a plain table of numbers (LATEX_TABLE: the prompt's own example of a complete-the-table question is a LaTeX array). The steps already list all 15 products, so no picture is needed. Same decision as the other plain-table question in this chunk (the division table, M2.S16.T16).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array x 10 | x 100 | x 1000 -> 5.7: 57, 570, 5700; 23.02: 230.2, 2302, 23020; 0.92: 9.2, 92, 920; 0.306: 3.06, 30.6, 306; 24.67: 246.7, 2467, 24670."
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C50",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 4.2 - 'Is the Product Always Greater' (4.2.size_three)",
+   "question_text": "Find 2.25 × 8, 0.25 × 8 and 0.25 × 0.8, and compare each product with the two numbers multiplied.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure for this comparison (page 6, text only). Three products and three comparisons are all in words and numbers; the concept already keeps its own teaching image (three number lines), which is not linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C51",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 4.2 - 'Is the Product Always Greater' (4.2.situations)",
+   "question_text": "Find 3.4 × 6.5, 0.75 × 0.4 and 0.75 × 5, and say how each product compares with the numbers multiplied.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example gives no figure. The book's three-situation table (P06-table-1) is a teaching table that the plan already keeps as the concept image M1.S12.T12.C51.IMG1; it is not linked and not redrawn.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S13.T13.C53",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.2, Q1",
+   "ncert_ref": "Section 4.2 - Figure it Out, book Q9 (4.2.FiO9)",
+   "question_text": "In which of the following multiplications is the product less than 1? Can you find the answer without actually doing the multiplications? (a) 7 × 0.6 (b) 0.7 × 0.6 (c) 0.7 × 6 (d) 0.07 × 0.06",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four products listed in the text; reasoning question with no figure in the book (page 7).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S13.T13.C54",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.2, Q1",
+   "ncert_ref": "Section 4.2 - Figure it Out, book Q9 (4.2.FiO9)",
+   "question_text": "In which of the following multiplications is the product less than 1? Can you find the answer without actually doing the multiplications? (a) 7 × 0.6 (b) 0.7 × 0.6 (c) 0.7 × 6 (d) 0.07 × 0.06",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Word reasoning plus a check of four products (4.2, 0.42, 4.2, 0.0042); no visual content.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C58",
+   "role": "question",
+   "lp_book_number": "Example 6: Anuja's ribbon in pieces",
+   "ncert_ref": "Section 4.3 - Example 6 (4.3.ex6)",
+   "question_text": "Anuja cuts a 3.9 m ribbon into 10 equal pieces, then another such ribbon into 100 equal pieces. Find the length of each piece, and write 0.039 m in centimetres and millimetres.",
+   "decision": "none",
+   "reason_codes": [
+    "DECORATIVE_ONLY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's picture (P08-ribbon_picture-1) is an illustration of a girl cutting a ribbon with a '3.9m' arrow and a row of 10 squares in a thought bubble; every number is in the text, and the plan already has the teaching image M2.S14.T14.C55.IMG1 for it (not linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C59",
+   "role": "solution",
+   "lp_book_number": "Example 6: Anuja's ribbon in pieces",
+   "ncert_ref": "Section 4.3 - Example 6 (4.3.ex6)",
+   "question_text": "Anuja cuts a 3.9 m ribbon into 10 equal pieces, then another such ribbon into 100 equal pieces. Find the length of each piece, and write 0.039 m in centimetres and millimetres.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Division by 10 and 100 through fractions (39/10 x 1/10 = 0.39, 39/10 x 1/100 = 0.039) and two unit conversions (3.9 cm, 39 mm); all in LaTeX, nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C60",
+   "role": "question",
+   "lp_book_number": "Dividing by 10, 100 and 1000: the table",
+   "ncert_ref": "Section 4.3 - the table after the decimal-point rule (4.3.div_table)",
+   "question_text": "Complete the table: divide 21.1, 0.13, 214.6 and 58 by 10, 100, 1000 and 10000.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The book's table (P09-table-1, page 9) is a plain table: Decimal, / 10, / 100, / 1000, / 10000 over five rows, one row (18.7) filled as the sample, no colour meaning. All the numbers to divide are in the question text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "The question says 'complete the table': write the table into the question as a LaTeX array: header Decimal, / 10, / 100, / 1000, / 10000; sample row 18.7: 1.87, 0.187, 0.0187, 0.00187; rows 21.1, 0.13, 214.6, 58 with empty cells.",
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C61",
+   "role": "solution",
+   "lp_book_number": "Dividing by 10, 100 and 1000: the table",
+   "ncert_ref": "Section 4.3 - the table after the decimal-point rule (4.3.div_table)",
+   "question_text": "Complete the table: divide 21.1, 0.13, 214.6 and 58 by 10, 100, 1000 and 10000.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The filled table is a plain table of numbers; the steps already give all 16 quotients. Same decision as the x 10, x 100, x 1000 table (M1.S11.T11).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array Decimal | / 10 | / 100 | / 1000 | / 10000 -> 18.7: 1.87, 0.187, 0.0187, 0.00187; 21.1: 2.11, 0.211, 0.0211, 0.00211; 0.13: 0.013, 0.0013, 0.00013, 0.000013; 214.6: 21.46, 2.146, 0.2146, 0.02146; 58: 5.8, 0.58, 0.058, 0.0058."
+  },
+  {
+   "lp_concept_id": "M2.S18.T18.C65",
+   "role": "question",
+   "lp_book_number": "Example 7: Sharing 29 m of ribbon",
+   "ncert_ref": "Section 4.3 - Example 7 (4.3.ex7)",
+   "question_text": "Neenu shares 29 m of ribbon equally with Anu. How much does each get? The same 29 m ribbon is shared equally among 4 friends. How much does each get?",
+   "decision": "none",
+   "reason_codes": [
+    "DECORATIVE_ONLY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two sharing problems (blocks E0 and E1 on one card) with all numbers in the text. The book's picture (P09-ribbon_picture-1) shows two girls with a speech bubble and belongs to the first block's working, not to what the question gives.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S18.T18.C66",
+   "role": "solution",
+   "lp_book_number": "Example 7: Sharing 29 m of ribbon",
+   "ncert_ref": "Section 4.3 - Example 7 (4.3.ex7)",
+   "question_text": "Neenu shares 29 m of ribbon equally with Anu. How much does each get? The same 29 m ribbon is shared equally among 4 friends. How much does each get?",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A bar of the 29 m ribbon cut into 14 m, 14 m and 1 m (as in the book's bubble) would help the first sharing, but the steps already say it in words and fractions (14 m each, 1 m left, half a metre each, 14.5 m; then 29/4 = 7.25 m) and the pair has two blocks, so one picture would cover only the first. Not added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C67",
+   "role": "question",
+   "lp_book_number": "Fractions as Decimals: 10/3, 1/32 and 1/3125",
+   "ncert_ref": "Section 4.3 - Math Talk after Figure it Out (4.3.two_five)",
+   "question_text": "Can 10/3 be written with denominator 10, 100 or 1000? Find 1/(2 × 2 × 2 × 2 × 2) and 1/(5 × 5 × 5 × 5 × 5) as decimals, and say why 2 and 5 behave this way.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The book's boxed figure (P21-pattern-1, page 21) is two lists of equations (1/2 = 0.5 ... 1/16 = 0.0625 and 1/5 = 0.2 ... 1/625 = 0.0016, each with a final '= ?'): a sequence of equations, which is LaTeX, not a diagram (no colour, no position meaning). The two unknown values (1/32, 1/3125) are asked in the text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the two lists in the question as a LaTeX array of two columns: 1/2 = 0.5, 1/(2 x 2) = 0.25, 1/(2 x 2 x 2) = 0.125, 1/(2 x 2 x 2 x 2) = 0.0625, 1/(2 x 2 x 2 x 2 x 2) = ?  and  1/5 = 0.2, 1/(5 x 5) = 0.04, 1/(5 x 5 x 5) = 0.008, 1/(5 x 5 x 5 x 5) = 0.0016, 1/(5 x 5 x 5 x 5 x 5) = ?",
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C68",
+   "role": "solution",
+   "lp_book_number": "Fractions as Decimals: 10/3, 1/32 and 1/3125",
+   "ncert_ref": "Section 4.3 - Math Talk after Figure it Out (4.3.two_five)",
+   "question_text": "Can 10/3 be written with denominator 10, 100 or 1000? Find 1/(2 × 2 × 2 × 2 × 2) and 1/(5 × 5 × 5 × 5 × 5) as decimals, and say why 2 and 5 behave this way.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The filled lists only add two values (0.03125 and 0.00032), which the steps already compute (32 x 3125 = 100000, 3125 x 32 = 100000); LaTeX is enough.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Repeat the same two-column LaTeX array with the two blanks filled: 1/(2 x 2 x 2 x 2 x 2) = 0.03125 and 1/(5 x 5 x 5 x 5 x 5) = 0.00032."
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C69",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.3, Q1",
+   "ncert_ref": "Section 4.3 - Figure it Out (second set), Q1 (4.3.FiOB1)",
+   "question_text": "Express the following fractions in decimal form: (a) 2/5 (b) 13/4 (c) 4/50 (d) 5/8",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four fractions given in the text; no figure in the book (page 20).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C70",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.3, Q1",
+   "ncert_ref": "Section 4.3 - Figure it Out (second set), Q1 (4.3.FiOB1)",
+   "question_text": "Express the following fractions in decimal form: (a) 2/5 (b) 13/4 (c) 4/50 (d) 5/8",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four equivalent-fraction chains (2/5 = 4/10 = 0.4, 13/4 = 325/100 = 3.25, 4/50 = 8/100 = 0.08, 5/8 = 625/1000 = 0.625) in LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S21.T21.C72",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 4.3 - Example 8, decimal quotient (4.3.ex8_1325)",
+   "question_text": "Find 1325 ÷ 4 by place value, and verify with an equivalent fraction.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure. The book's regrouping trees for 1325 / 4 (P13 and P14: four boxes each filling to 3 Hundreds, 3 Tens, 1 Ones, 2 Tenths, 5 Hundredths, with the labelled long division) are working, and the plan already carries the same regrouping chain as the concept image M2.S21.T21.C71.IMG1 (not linked). The five steps and the check 33125/100 are text and LaTeX.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C76",
+   "role": "question",
+   "lp_book_number": "Example 8: 1324 ÷ 4 by place value",
+   "ncert_ref": "Section 4.3 - Example 8 (4.3.ex8)",
+   "question_text": "Find 1324 ÷ 4 by place value.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure: the book's empty division trees (P11-division_tree-1 and -2) are the start of the working, not data.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C77",
+   "role": "solution",
+   "lp_book_number": "Example 8: 1324 ÷ 4 by place value",
+   "ncert_ref": "Section 4.3 - Example 8 (4.3.ex8)",
+   "question_text": "Find 1324 ÷ 4 by place value.",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The book's final division tree (P12-division_tree-2: four boxes each holding 3 Hundreds, 3 Tens, 1 Ones, beside the finished long division) would show the equal sharing, but the five LP steps already give every regrouping in words and numbers (13 Hundreds, 12 Tens, 331). Not added; draw it only if the content team wants the place-value picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the finished long division as a LaTeX array with the Th H T O heads: 4) 1324 (0 + 3 + 3 + 1."
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C78",
+   "role": "question",
+   "lp_book_number": "Example 9: 237 ÷ 8 by long division",
+   "ncert_ref": "Section 4.3 - Example 9 (4.3.ex9)",
+   "question_text": "Find 237 ÷ 8 by long division.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two numbers in the text; no figure is given with the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C79",
+   "role": "solution",
+   "lp_book_number": "Example 9: 237 ÷ 8 by long division",
+   "ncert_ref": "Section 4.3 - Example 9 (4.3.ex9)",
+   "question_text": "Find 237 ÷ 8 by long division.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Long division is LaTeX (Step C). The book's five long-division sketches (P15-long_division-1..4, P16-long_division-1) carry nothing the six LP steps do not say (23 Tens, 77 Ones, 50 Tenths, 20 Hundredths, 40 Thousandths); the finished one is already the concept image M2.S21.T21.C73.IMG1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the long division as a LaTeX array: 8) 237 (0 2 9 . 6 2 5 with rows 16, 77, 72, 50, 48, 20, 16, 40, 40, 0 and the place labels Tens, Ones, Tenths, Hundredths, Thousandths."
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C80",
+   "role": "question",
+   "lp_book_number": "Example 10: Sugar packed in 4 bags",
+   "ncert_ref": "Section 4.3 - Example 10 (4.3.ex10)",
+   "question_text": "A shopkeeper packs 9.5 kg of sugar equally into 4 bags. How much is in each bag?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem with its numbers in the text; no figure is given with it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C81",
+   "role": "solution",
+   "lp_book_number": "Example 10: Sugar packed in 4 bags",
+   "ncert_ref": "Section 4.3 - Example 10 (4.3.ex10)",
+   "question_text": "A shopkeeper packs 9.5 kg of sugar equally into 4 bags. How much is in each bag?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Long division with a decimal dividend (P16-long_division-2) is LaTeX; the five LP steps say each regrouping (9 Ones, 15 Tenths, 30 Hundredths, 20 Thousandths). Same decision as Examples 9 and 11.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the long division as a LaTeX array: 4) 9.5 (2 . 3 7 5 with rows 8, 15, 12, 30, 28, 20, 20, 0 and the place labels Ones, Tenths, Hundredths, Thousandths."
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C82",
+   "role": "question",
+   "lp_book_number": "Example 11: The value of 0.06 ÷ 5",
+   "ncert_ref": "Section 4.3 - Example 11 (4.3.ex11)",
+   "question_text": "Find 0.06 ÷ 5.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two numbers in the text; no figure is given with the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C83",
+   "role": "solution",
+   "lp_book_number": "Example 11: The value of 0.06 ÷ 5",
+   "ncert_ref": "Section 4.3 - Example 11 (4.3.ex11)",
+   "question_text": "Find 0.06 ÷ 5.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Long division of 0.06 by 5 (P17-long_division-1) is LaTeX; the LP steps already name each place (0 Ones, 0 Tenths, 6 Hundredths, 10 Thousandths). Same decision as Examples 9 and 10.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the long division as a LaTeX array: 5) 0.06 (0 . 0 1 2 with rows 0, 00, 00, 06, 5, 10, 10, 0 and the place labels Ones, Tenths, Hundredths, Thousandths."
+  }
+ ]
+}

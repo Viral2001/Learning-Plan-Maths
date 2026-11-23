@@ -1,0 +1,43 @@
+# Notes for chunk C (Class 7 Ch 7, v61): M2.S26.T26, M2.S28.T28, M3.S30.T30, M3.S31.T31, M3.S32.T32, M4.S33.T33
+
+Result: 27 items, required 13 / optional 1 / none 13. Validator: errors 0, 4 warnings (T32 solutions C111, C113, C115, C117 are required but the book prints no figure for them; this is expected, the figure is the finished construction the LP describes).
+
+## 1. Judgement calls I was unsure about
+
+| Item | Choice | Why / what to check |
+|---|---|---|
+| M2.S26.T26.C85 (FiO Q1 solution) | required, figure for part (a) only | The book's printed answer is a picture (page 33, 'Process for (a) is given'). The LP solution covers (a) to (d) but one pair gets one solution figure; (b) to (d) have numeric answers only in the book. If you want the figure to say it is part (a), that is a text-sync matter, not a drawing one. Question side is `none`: the book page 20 gives no figure with Q1. |
+| M2.S26.T26.C89 (FiO Q3 solution) | none (SAME_AS_QUESTION_DIAGRAM + TEXT_SUFFICIENT) | Numeric answer (65° each). The printed-answers page only repeats the question figure and prints the answer as text. Question side is required (the book gives the triangle with 50° and the equal-angle arcs). |
+| M2.S28.T28.C96 (exterior angle solution) | optional (not added) | Figure-based question, numeric answer (Step E: Q required, S none). A labelled figure with A 50°, B 60°, angle ACB 70°, angle ACD 110° would help the 'what do you notice' step, but every value is in the LP steps. The teaching image C91 already shows this. Upgrade to required only if you want it. |
+| M2.S28.T28.C95 (exterior angle question) | required | The LP question names angle ACD but never says D lies on BC extended beyond C; the book's figure carries that and marks the exterior angle. Drawn to scale for the first case (50°, 60°, 70°), no numbers printed, so the second case (35°, 45°) uses the same labelled figure and is not to scale. `needs_lp_text_sync` is set: the question text should say 'BC is extended to D' (optional). |
+| M2.S28.T28.C94 (angle sum proof solution) | required | The proof is the figure (line XY through A parallel to BC, equal alternate angles). Redrawn from Fig. 7.7 with SET_A / SET_B / MARK_FILL plus one / two / three arcs so the equal pairs can be told apart without colour. No numbers. The question side is `none`: the prompt gives no figure. |
+| Paper-fold picture (P21-paper_fold-2) and the paper-fold step of C94 and C102 | not drawn (`none:TEXT_SUFFICIENT`) | One solution figure per pair, and the parallel-line figure is the proof. The fold is a physical activity the LP describes in words; a fold-sequence figure would be a second diagram. Say if you want it added as a second image later. |
+| M3.S30.T30.C101 (obtuse altitude question) | required | The book gives this triangle ('What would the altitude from A to BC be in this triangle?'), the student acts on it, and the position of A relative to B is what puts the foot outside. |
+| M3.S30.T30.C105 (right-angle question) | none, but C106 solution required | Sibling difference on purpose: for C101 the book GIVES a triangle; for C105 the book's right triangle (page 169) is the printed answer to 'Visualise such a triangle and draw a rough diagram', not a given figure, and the LP question already says 'right angle at B'. The solution draws the right triangle with AB and BC highlighted and the third altitude inside. |
+| M3.S30.T30.C104 (set square solution) | required, type `construction` | Final state of the book's Steps 1 to 3 (page 169): ruler, set square at A, altitude AD with the right angle at D. Ruler and set square are plain GUIDE outlines, not the book's teal clip-art. Step 1's picture is an intermediate state: `none:TEXT_SUFFICIENT`. |
+| M3.S32.T32.C111, C113, C115, C117 (constructions) | all four solutions required, all four questions none | Same answer type (a construction), so the same decision. The questions give no figure. The solution figure is the finished construction. C111 shows the two compass arcs in GUIDE because the LP solution names them; C113 shows both 140° and the outside 40°. |
+| M3.S32.T32.C115 | the three vertices are named B1, B2, B3 | The LP uses 'B' for every triangle. Three triangles on one base need three names; the LP text does not use B1 to B3. 1 cm is drawn as 2 units so the nine angle labels do not collide. Triangles are drawn in SET_A, SET_B and ANSWER so each arc and label can be matched to its triangle. |
+| M3.S32.T32.C117 | no vertex letters, hypotenuse and base unlabelled | The LP names no vertices for these two triangles, and gives no length for the slanting side (4 x sqrt 2 = 5.66 cm) or the base (8.66 cm). Not inventing numbers. |
+| M3.S31.T31.C107, C108 (worked examples) | none | All numbers are in the question text and the answers are names, so a picture would only show the answer. The existing teaching images stay. |
+| M4.S33.T33.C118 (spider worked example) | required, media id `C118.IMG2` (IMG1 is the kept teaching image) | The book gives the box with the spider's corner and the marked far corner; the LP adds 6, 4 and 3 cm. The picture is the closed box in oblique projection with 'start' and 'end' opposite corners and the three lengths; no path (that would give the answer). The two-faces-laid-flat picture is the teaching image C118.IMG1 and is not linked. |
+
+Figures I claimed that are not in a unit's own section: P22-shape-2 (Fig. 7.8) and P23-shape-1 (altitudes BE and CF) sit in book section 7.4 next to my T30 units but belong to the teaching topic M3.S29 (no unit). I claimed them so the merged coverage check can close: P22-shape-2 -> concept image M3.S29.T29.C97.IMG1; P23-shape-1 -> `none:TEXT_SUFFICIENT` (no question uses it, no concept image shows it). The base entry P23-shape-2 holds two drawings: the left one is the T30.C101 question figure, the right one is a second entry `NEW-P23-shape-2-sol` for the C102 solution.
+
+All geometry in the specs was computed and asserted in a script (angles, lengths, perpendicularity, label positions): e.g. FiO Q1(a) A=(8.09,5.88) gives 36°, 72°, 72°; Q3 apex 50° gives 65° base angles; T32 Q1 AD = 4.8 exactly (BD 3.6, DC 1.4); T32 Q2 TD = 7 sin 40° = 4.4995 (LP says about 4.5); T32 Q3 right angles at B1, B2, B3 verified; box edges and opposite corners verified.
+
+## 2. Things in the LP that look wrong or thin
+
+- M2.S28.T28.C95 (question): 'Find angle ACD, if angle A = 50° and angle B = 60°' does not say where D is. Everything else is correct (110°, then 80°, exterior angle = sum of the two opposite angles).
+- M2.S26.T26 and M3.S32.T32 both have the book number 'Figure it Out, Q1' ... Q4 (two different Figure it Out sets); the mapping to the book is by text and is right (angle-sum set on page 165, types-of-triangles set on pages 170 to 171).
+- The `q_figure` hints on C101 and C105 and the `s_figure` hints are consistent with the book, except that C105's hint describes a figure the book does not give with the question (see the table).
+- M3.S30.T30.C102 step 5 (paper fold) and M2.S28.T28.C94 step 5 are text only; consistent with the book's 'Altitudes Using Paper Folding' and fold picture, no contradiction.
+- M3.S32.T32.C115: LP steps say 'the arms cross at B' for each choice; with three triangles on one base the figure needs three names (B1 to B3), so the LP text and the figure use different labels. Optional text sync.
+- M4.S33.T33.C118: the book's puzzle gives no sizes; the LP's 6 x 4 x 3 box is its own. The LP numbers check out: diagonals sqrt(36+49)=9.22, sqrt(16+81)=9.85, sqrt(9+100)=10.44; edges 6+4+3=13.
+
+## 3. Where the book itself is unclear
+
+- The pdf has partial printed answers on pages 28 to 34 (book pages 150 to 165), although the run brief says it has none. They cover the first angle-sum Figure it Out (my T26) on pages 33 and 34; there are no printed answers for the Altitudes questions or for the types-of-triangles Figure it Out.
+- Page 33: the printed answer for Q1(a) draws line XY with arrowheads at both ends (the chapter's own Fig. 7.6 and 7.7 draw dots at X and Y). The spec follows the printed-answer picture (arrowheads, no dots) because that is what this figure replaces; the proof figure of T28 (C94) uses dots at X and Y as Fig. 7.7 does.
+- Page 23: the book's right-hand drawing (altitude outside) has no right-angle mark at D; the LP solution says 'the foot D', so I add the mark.
+- Page 27: the box in the Puzzle Time picture is open at the front and carries no dimensions; the spec uses a closed wireframe box with the LP's dimensions.
+- Page 24: the book calls the third altitude nothing; the LP does not name the foot of the altitude from B, so it has no letter in C106.

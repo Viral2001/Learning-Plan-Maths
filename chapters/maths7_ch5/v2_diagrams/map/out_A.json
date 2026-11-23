@@ -1,0 +1,5514 @@
+{
+ "meta": {
+  "chapter": "Parallel and Intersecting Lines",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 5",
+  "lp_plan_id": "cbse_eng_maths7_ch5_v52",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "optional": 2,
+    "none": 1,
+    "required": 1
+   },
+   "question": {
+    "required": 10,
+    "none": 4,
+    "optional": 0
+   },
+   "solution": {
+    "required": 10,
+    "optional": 4,
+    "none": 0
+   }
+  },
+  "notes": [
+   "Chunk A: sections 5.1 to 5.4 (topics M1.S2.T2 to M2.S11.T11), 18 units, 32 items.",
+   "Only required diagrams are added; optional items are dropped. Diagram coordinates were measured from the page pictures and recomputed in code (angles, parallels, crossings).",
+   "Three items carry needs_lp_text_sync: M2.S10.T10.C33 (text says 'both ways' and 'centre crease', the figure has three upright creases and corners folded onto the first and third creases), M2.S11.T11.C41 (text says 13 by 13 dots, the picture has 13 by 14), M2.S11.T11.C40 (the LP gives no concrete sets; the book's printed sets are drawn)."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P02-intersecting_lines-1",
+   "source": "chapter p.02",
+   "description": "Fig. 5.2 two crossing lines l, m with angles a (upper left), b, c, d; no values printed (used with a = 120 in the text).",
+   "mapped_to": "item:M1.S3.T3.C7 (question)"
+  },
+  {
+   "fig_id": "NEW-P02-intersecting_lines-1-sol",
+   "source": "chapter p.02",
+   "description": "Fig. 5.2 reused as the solution figure of the same question: all four angles 120, 60, 120, 60 marked.",
+   "mapped_to": "item:M1.S3.T3.C8 (solution)"
+  },
+  {
+   "fig_id": "P03-intersecting_lines-1",
+   "source": "chapter p.03",
+   "description": "Fig. 5.3 two steep lines l, m crossing; b top (narrow), a left (wide), c right (wide), d bottom (narrow); arcs red for a, c and black for b, d.",
+   "mapped_to": "item:M1.S4.T4.C9 (question)"
+  },
+  {
+   "fig_id": "P03-table-2",
+   "source": "chapter p.03",
+   "description": "Empty 2 x 2 answer table beside Fig. 5.3 (Linear Pairs: a and b, ...; Pairs of Vertically Opposite Angles: b and d, ...).",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P22-intersecting_lines-1",
+   "source": "chapter p.22",
+   "description": "REPRINT of Fig. 5.3 before the printed answer (same drawing as chapter p.03).",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P22-table-2",
+   "source": "chapter p.22",
+   "description": "Reprint of the empty answer table (same as P03-table-2).",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P22-table-3",
+   "source": "chapter p.22",
+   "description": "Printed answer: filled 2 x 2 table, linear pairs a-b, b-c, c-d, d-a and vertically opposite pairs b-d, a-c (text only).",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P04-perpendicular_lines-1",
+   "source": "chapter p.04",
+   "description": "Fig. 5.4 two lines l and m crossing at right angles, one square mark in the upper right angle, no degree value printed.",
+   "mapped_to": "item:M1.S6.T6.C15 (solution)"
+  },
+  {
+   "fig_id": "P04-line_segments-2",
+   "source": "chapter p.04",
+   "description": "Fig. 5.5 eleven labelled points on ten segments: FG with FH (115.3° at F), AB x CD at X, IJ x LM at Y, ST with UV, OP with QR.",
+   "mapped_to": "item:M2.S8.T8.C19 (question)"
+  },
+  {
+   "fig_id": "NEW-P04-line_segments-2-q2",
+   "source": "chapter p.04",
+   "description": "Fig. 5.5 reused for question 2: only the ST/UV and OP/QR pairs, at the same coordinates.",
+   "mapped_to": "item:M2.S8.T8.C21 (question)"
+  },
+  {
+   "fig_id": "NEW-P04-line_segments-2-sol2",
+   "source": "chapter p.04",
+   "description": "Fig. 5.5 reused as the solution figure of question 2: ST/UV and OP/QR extended with dashed lines, ST and UV meeting at K.",
+   "mapped_to": "item:M2.S8.T8.C22 (solution)"
+  },
+  {
+   "fig_id": "P05-photo-1",
+   "source": "chapter p.05",
+   "description": "Three real photographs of parallel lines: piano keyboard, red park bench, railway track.",
+   "mapped_to": "none:NOT_RENDERABLE"
+  },
+  {
+   "fig_id": "P05-pattern-2",
+   "source": "chapter p.05",
+   "description": "Two small artwork pictures of parallel lines: a six-pointed rangoli star of strips and a striped shading pattern.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P05-dot_lines-3",
+   "source": "chapter p.05",
+   "description": "Fig. 5.6 dot grid 16 x 8 with nine segments a to i (a, h, i upright; c, g flat; d, f fall to the right; b, e rise to the right).",
+   "mapped_to": "item:M2.S8.T8.C23 (question)"
+  },
+  {
+   "fig_id": "NEW-P05-dot_lines-3-sol",
+   "source": "chapter p.05",
+   "description": "Fig. 5.6 reused as the solution figure: the four parallel groups coloured.",
+   "mapped_to": "item:M2.S8.T8.C24 (solution)"
+  },
+  {
+   "fig_id": "P23-dot_lines-1",
+   "source": "chapter p.23",
+   "description": "REPRINT of Fig. 5.6 before the printed answer 'a, i and h; c and g; d and f; e and b' (text only).",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P07-notation-2",
+   "source": "chapter p.07",
+   "description": "Fig. 5.9 notation: two flat parallel lines with one arrow mark, a slanting pair with two arrow marks, and a right angle with a square and 90°.",
+   "mapped_to": "item:M2.S9.T9.C27 (question)"
+  },
+  {
+   "fig_id": "P06-paper_folding-1",
+   "source": "chapter p.06",
+   "description": "Fig. 5.7 eight panels: fold the square in half three times (1, 3, 7 horizontal creases) and once vertically.",
+   "mapped_to": "concept_image:M2.S9.T9.C25.IMG1"
+  },
+  {
+   "fig_id": "P24-paper_folding-1",
+   "source": "chapter p.24",
+   "description": "REPRINT of Fig. 5.7 on the printed-answers page (same drawing as chapter p.06).",
+   "mapped_to": "concept_image:M2.S9.T9.C25.IMG1"
+  },
+  {
+   "fig_id": "P07-paper_folding-1",
+   "source": "chapter p.07",
+   "description": "Fig. 5.8 six panels: fold in the middle, fold the edges to the centre line, fold two opposite corners onto the creases; last stage shows flaps with edges a, b, c and p, q, r.",
+   "mapped_to": "item:M2.S10.T10.C33 (question)"
+  },
+  {
+   "fig_id": "NEW-P07-paper_folding-1-sol",
+   "source": "chapter p.07",
+   "description": "Fig. 5.8 reused as the solution figure: the last stage with matching arrow marks on each parallel pair.",
+   "mapped_to": "item:M2.S10.T10.C34 (solution)"
+  },
+  {
+   "fig_id": "P25-paper_folding-1",
+   "source": "chapter p.25",
+   "description": "REPRINT of Fig. 5.8 before the printed answer (same drawing as chapter p.07).",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P08-dot_lines-1",
+   "source": "chapter p.08",
+   "description": "Fig. 5.10 dot paper of 6 columns x 4 rows (equal spacing) with four segments: flat, rising, upright, falling.",
+   "mapped_to": "item:M2.S11.T11.C35 (question)"
+  },
+  {
+   "fig_id": "P26-dot_lines-1",
+   "source": "chapter p.26",
+   "description": "CORRECTED: REPRINT of Fig. 5.10 before the printed answer; the six columns are evenly spaced (about 84 px), there is no gap between column 2 and column 3.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P26-dot_lines-2",
+   "source": "chapter p.26",
+   "description": "CORRECTED: Printed answer picture: Fig. 5.10 with red perpendicular segments added; the book's fourth red segment (1 across, 1 up) is not exactly perpendicular to the long falling segment, so the solution figure leaves it out.",
+   "mapped_to": "item:M2.S11.T11.C36 (solution)"
+  },
+  {
+   "fig_id": "P08-grid_shapes-2",
+   "source": "chapter p.08",
+   "description": "Fig. 5.11 grid of 12 x 12 lines with five shapes (pentagon, parallelogram, hexagon, right triangle, pentagon), nothing marked.",
+   "mapped_to": "item:M2.S11.T11.C37 (question)"
+  },
+  {
+   "fig_id": "P27-grid_shapes-1",
+   "source": "chapter p.27",
+   "description": "REPRINT of Fig. 5.11 before the printed answer (same drawing as chapter p.08).",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P27-grid_shapes-2",
+   "source": "chapter p.27",
+   "description": "Printed answer picture: Fig. 5.11 with arrow marks on parallel sides and six right-angle squares.",
+   "mapped_to": "item:M2.S11.T11.C38 (solution)"
+  },
+  {
+   "fig_id": "P28-dot_lines-1",
+   "source": "chapter p.28",
+   "description": "Printed answer picture: 13 x 14 dot paper with four pairs of parallel segments (falling, upright, flat, rising).",
+   "mapped_to": "item:M2.S11.T11.C40 (solution)"
+  },
+  {
+   "fig_id": "P09-dot_lines-1",
+   "source": "chapter p.09",
+   "description": "Fig. 5.12 dot paper 13 columns x 14 rows with eight segments a to h.",
+   "mapped_to": "item:M2.S11.T11.C41 (question)"
+  },
+  {
+   "fig_id": "P28-dot_lines-2",
+   "source": "chapter p.28",
+   "description": "REPRINT of Fig. 5.12 before the printed answer (same drawing as chapter p.09).",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P29-dot_lines-1",
+   "source": "chapter p.29",
+   "description": "Printed answer picture: Fig. 5.12 with eight red segments added, one parallel to each of a to h.",
+   "mapped_to": "item:M2.S11.T11.C42 (solution)"
+  },
+  {
+   "fig_id": "P09-dot_lines-2",
+   "source": "chapter p.09",
+   "description": "Fig. 5.13 five dots with segments a (left to bottom), b (top to far right), c (top to middle right) and an unlabelled steep segment from top to bottom.",
+   "mapped_to": "item:M2.S11.T11.C43 (question)"
+  },
+  {
+   "fig_id": "P29-dot_lines-2",
+   "source": "chapter p.29",
+   "description": "REPRINT of Fig. 5.13 before the printed answer 'c is parallel to a' (text only).",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P01-paper_folding-1",
+   "source": "chapter p.01",
+   "description": "Fig. 5.1 square sheet with seven dashed crease lines (two upright, one nearly flat, one flat, two diagonals, one oblique) crossing each other.",
+   "mapped_to": "concept_image:M1.S1.T1.C1.IMG1"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 35,
+  "mapped_to_items": 20,
+  "mapped_to_concept_images": 3,
+  "mapped_none": 12,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S3.T3.C7.IMG1",
+   "M1.S3.T3.C8.IMG1",
+   "M1.S4.T4.C9.IMG1",
+   "M1.S6.T6.C15.IMG1",
+   "M2.S8.T8.C19.IMG1",
+   "M2.S8.T8.C21.IMG1",
+   "M2.S8.T8.C22.IMG1",
+   "M2.S8.T8.C23.IMG1",
+   "M2.S8.T8.C24.IMG1",
+   "M2.S9.T9.C27.IMG1",
+   "M2.S10.T10.C32.IMG1",
+   "M2.S10.T10.C33.IMG1",
+   "M2.S10.T10.C34.IMG1",
+   "M2.S11.T11.C35.IMG1",
+   "M2.S11.T11.C36.IMG1",
+   "M2.S11.T11.C37.IMG1",
+   "M2.S11.T11.C38.IMG1",
+   "M2.S11.T11.C40.IMG1",
+   "M2.S11.T11.C41.IMG1",
+   "M2.S11.T11.C42.IMG1",
+   "M2.S11.T11.C43.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S2.T2.C3",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "Section 5.1 - Activity 1 (two crossing lines, four measured angles)",
+   "question_text": "Farhan draws two lines that cross and measures the four angles with a protractor, going round the point: a = 63°, b = 117°, c = 63° and d = 117°. What pattern do the four angles show?",
+   "block_index": 0,
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "All four angle values (63, 117, 63, 117) and their order round the point are in the text, and the book prints no figure for Farhan's lines; a crossing with a = 63, b = 117, c = 63, d = 117 would help but is not needed, so nothing is added.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "No figure: the text already lists a, b, c, d going round the point."
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C5",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "Section 5.1 - proof that vertically opposite angles are equal",
+   "question_text": "Two lines cross and a = 35°. Use linear pairs to find b and d, then show that they are equal for any value of a.",
+   "block_index": 0,
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example is invented (a = 35) and the book gives no figure for it; the linear-pair names are fully defined in the text. A crossing with a = 35 and b, c, d unknown would help, but a figure the book does not give is not added.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "No figure: the steps name each linear pair in words."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "question",
+   "lp_book_number": "Linear Pairs: b, c and d from a = 120°",
+   "ncert_ref": "Section 5.1 - Fig. 5.2 (a = 120°)",
+   "question_text": "Two lines cross. The angle a is 120°. Find b, c and d going round the point, without measuring.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book question is about Fig. 5.2 (angles a, b, c, d at a crossing, a = 120°); the learner needs the lettered crossing to see which angle is which.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C7.IMG1",
+   "manim_scene": "c7_5_1_a120_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C7.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "content": {
+     "canvas": {
+      "units": [
+       16,
+       9
+      ],
+      "x_range": [
+       -8,
+       8
+      ],
+      "y_range": [
+       -4.5,
+       4.5
+      ],
+      "origin": "centre"
+     },
+     "lines": [
+      {
+       "name": "l",
+       "from": [
+        -5.0,
+        0.0
+       ],
+       "to": [
+        5.0,
+        0.0
+       ],
+       "arrowheads": "both",
+       "label": {
+        "text": "l",
+        "at": [
+         4.5,
+         0.45
+        ]
+       }
+      },
+      {
+       "name": "m",
+       "from": [
+        -2.0,
+        -3.46
+       ],
+       "to": [
+        2.0,
+        3.46
+       ],
+       "arrowheads": "both",
+       "label": {
+        "text": "m",
+        "at": [
+         2.45,
+         3.5
+        ]
+       }
+      }
+     ],
+     "crossing": [
+      0,
+      0
+     ],
+     "angles": [
+      {
+       "name": "a",
+       "arc_from_deg": 60,
+       "arc_to_deg": 180,
+       "arc_radius": 1.0,
+       "letter_at": [
+        -0.72,
+        1.25
+       ],
+       "value_text": "120°",
+       "value_at": [
+        -1.22,
+        2.12
+       ],
+       "true_value_deg": 120
+      },
+      {
+       "name": "b",
+       "arc_from_deg": 0,
+       "arc_to_deg": 60,
+       "arc_radius": 1.0,
+       "letter_at": [
+        1.26,
+        0.73
+       ],
+       "value_text": null,
+       "value_at": null,
+       "true_value_deg": 60
+      },
+      {
+       "name": "c",
+       "arc_from_deg": 240,
+       "arc_to_deg": 360,
+       "arc_radius": 1.0,
+       "letter_at": [
+        0.72,
+        -1.25
+       ],
+       "value_text": null,
+       "value_at": null,
+       "true_value_deg": 120
+      },
+      {
+       "name": "d",
+       "arc_from_deg": 180,
+       "arc_to_deg": 240,
+       "arc_radius": 1.0,
+       "letter_at": [
+        -1.26,
+        -0.73
+       ],
+       "value_text": null,
+       "value_at": null,
+       "true_value_deg": 60
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Draw on a plain white 16:9 canvas of 16 x 9 units (x from -8 to 8, y from -4.5 to 4.5, origin at the centre, 120 px per unit). In INK draw line l from (-5.0, 0.0) to (5.0, 0.0) and line m from (-2.0, -3.46) to (2.0, 3.46), each with an arrowhead at both ends; they cross at O = (0, 0) and m makes 60 degrees with l. Write the names 'l' centred at (4.5, 0.45) and 'm' centred at (2.45, 3.5). Draw four INK angle arcs of radius 1.0 centred at O, angles measured anticlockwise from the positive x axis: arc a from 60 to 180 degrees (upper left), arc b from 0 to 60 degrees (upper right), arc c from 240 to 360 degrees (lower right), arc d from 180 to 240 degrees (lower left). Write the italic INK letters 'a' centred at (-0.72, 1.25), 'b' at (1.26, 0.73), 'c' at (0.72, -1.25), 'd' at (-1.26, -0.73). Write '120°' in INK centred at (-1.22, 2.12), outside arc a, as the given value of angle a. Show no other number and no value for b, c or d. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "l",
+     "m",
+     "a",
+     "b",
+     "c",
+     "d",
+     "120°"
+    ],
+    "accuracy_checks": [
+     "the four arcs together cover 360 degrees: 120 + 60 + 120 + 60",
+     "m makes 60 degrees with l, so the angle between the upper part of m and the left part of l (angle a) is 120 degrees",
+     "only angle a carries a number; b, c and d show their letter only (nothing solved)"
+    ],
+    "alt_text": "Two lines l and m cross; the four angles round the crossing are named a, b, c and d, and angle a is marked 120°.",
+    "render_note": "Fig. 5.2 of the book (a upper left, b upper right, c lower right, d lower left, going round); the book colours the arcs of a and c red and those of b and d black: drawn all INK here so the pairing is not given away.",
+    "derived_from": null,
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "values of angle b, c or d",
+     "arc colours that pair a with c or b with d"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "solution",
+   "lp_book_number": "Linear Pairs: b, c and d from a = 120°",
+   "ncert_ref": "Section 5.1 - Fig. 5.2 (a = 120°)",
+   "question_text": "Two lines cross. The angle a is 120°. Find b, c and d going round the point, without measuring.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The solution adds the three computed angles b, c, d at their places on the crossing (complete final state, steps then explain it).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C8.IMG1",
+   "manim_scene": "c7_5_1_a120_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C8.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "content": {
+     "canvas": {
+      "units": [
+       16,
+       9
+      ],
+      "x_range": [
+       -8,
+       8
+      ],
+      "y_range": [
+       -4.5,
+       4.5
+      ],
+      "origin": "centre"
+     },
+     "lines": [
+      {
+       "name": "l",
+       "from": [
+        -5.0,
+        0.0
+       ],
+       "to": [
+        5.0,
+        0.0
+       ],
+       "arrowheads": "both",
+       "label": {
+        "text": "l",
+        "at": [
+         4.5,
+         0.45
+        ]
+       }
+      },
+      {
+       "name": "m",
+       "from": [
+        -2.0,
+        -3.46
+       ],
+       "to": [
+        2.0,
+        3.46
+       ],
+       "arrowheads": "both",
+       "label": {
+        "text": "m",
+        "at": [
+         2.45,
+         3.5
+        ]
+       }
+      }
+     ],
+     "crossing": [
+      0,
+      0
+     ],
+     "angles": [
+      {
+       "name": "a",
+       "arc_from_deg": 60,
+       "arc_to_deg": 180,
+       "arc_radius": 1.0,
+       "letter_at": [
+        -0.72,
+        1.25
+       ],
+       "value_text": "120°",
+       "value_at": [
+        -1.22,
+        2.12
+       ],
+       "true_value_deg": 120
+      },
+      {
+       "name": "b",
+       "arc_from_deg": 0,
+       "arc_to_deg": 60,
+       "arc_radius": 1.0,
+       "letter_at": [
+        1.26,
+        0.73
+       ],
+       "value_text": "60°",
+       "value_at": [
+        2.12,
+        1.22
+       ],
+       "true_value_deg": 60,
+       "value_colour": "ANSWER"
+      },
+      {
+       "name": "c",
+       "arc_from_deg": 240,
+       "arc_to_deg": 360,
+       "arc_radius": 1.0,
+       "letter_at": [
+        0.72,
+        -1.25
+       ],
+       "value_text": "120°",
+       "value_at": [
+        1.22,
+        -2.12
+       ],
+       "true_value_deg": 120,
+       "value_colour": "ANSWER"
+      },
+      {
+       "name": "d",
+       "arc_from_deg": 180,
+       "arc_to_deg": 240,
+       "arc_radius": 1.0,
+       "letter_at": [
+        -1.26,
+        -0.73
+       ],
+       "value_text": "60°",
+       "value_at": [
+        -2.12,
+        -1.22
+       ],
+       "true_value_deg": 60,
+       "value_colour": "ANSWER"
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Use exactly the same canvas, lines l and m, names, arcs and letters as the figure of the question (media id M1.S3.T3.C7.IMG1), all unchanged in INK, including '120°' centred at (-1.22, 2.12). Add in ANSWER green, outside the arcs and centred at: '60°' at (2.12, 1.22) for angle b, '120°' at (1.22, -2.12) for angle c, '60°' at (-2.12, -1.22) for angle d. Add nothing else. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "l",
+     "m",
+     "a",
+     "b",
+     "c",
+     "d",
+     "120°",
+     "60°",
+     "120°",
+     "60°"
+    ],
+    "accuracy_checks": [
+     "b = 180 - 120 = 60",
+     "c = 180 - 60 = 120",
+     "d = 180 - 120 = 60",
+     "a + b + c + d = 120 + 60 + 120 + 60 = 360",
+     "every neighbouring pair adds to 180: 120 + 60"
+    ],
+    "alt_text": "The same crossing with the four angles marked a = 120°, b = 60°, c = 120° and d = 60°.",
+    "derived_from": "M1.S3.T3.C7.IMG1",
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words 'linear pair'",
+     "equations such as b = 180 - 120",
+     "any change to the given parts of the question figure"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C9",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.1, Q1",
+   "ncert_ref": "Section 5.1 - Figure it Out, Fig. 5.3",
+   "question_text": "Two lines l and m cross, and the four angles are named a, b, c and d going round the crossing, with a and b neighbours. List all the linear pairs and all the pairs of vertically opposite angles.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book question is 'in Fig. 5.3': the learner lists linear pairs and vertically opposite angles by looking at the four lettered angles of the crossing.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S4.T4.C9.IMG1",
+   "manim_scene": "c7_5_1_FiO1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S4.T4.C9.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "content": {
+     "canvas": {
+      "units": [
+       16,
+       9
+      ],
+      "x_range": [
+       -8,
+       8
+      ],
+      "y_range": [
+       -4.5,
+       4.5
+      ],
+      "origin": "centre"
+     },
+     "lines": [
+      {
+       "name": "l",
+       "from": [
+        -1.82,
+        3.56
+       ],
+       "to": [
+        1.82,
+        -3.56
+       ],
+       "arrowheads": "both",
+       "label": {
+        "text": "l",
+        "at": [
+         2.3,
+         -3.7
+        ]
+       }
+      },
+      {
+       "name": "m",
+       "from": [
+        -1.82,
+        -3.56
+       ],
+       "to": [
+        1.82,
+        3.56
+       ],
+       "arrowheads": "both",
+       "label": {
+        "text": "m",
+        "at": [
+         -2.3,
+         -3.7
+        ]
+       }
+      }
+     ],
+     "crossing": [
+      0,
+      0
+     ],
+     "angles": [
+      {
+       "name": "b",
+       "arc_from_deg": 63,
+       "arc_to_deg": 117,
+       "arc_radius": 1.0,
+       "letter_at": [
+        0.0,
+        1.5
+       ],
+       "position": "top"
+      },
+      {
+       "name": "a",
+       "arc_from_deg": 117,
+       "arc_to_deg": 243,
+       "arc_radius": 1.0,
+       "letter_at": [
+        -1.45,
+        0.0
+       ],
+       "position": "left"
+      },
+      {
+       "name": "d",
+       "arc_from_deg": 243,
+       "arc_to_deg": 297,
+       "arc_radius": 1.0,
+       "letter_at": [
+        0.0,
+        -1.5
+       ],
+       "position": "bottom"
+      },
+      {
+       "name": "c",
+       "arc_from_deg": 297,
+       "arc_to_deg": 423,
+       "arc_radius": 1.0,
+       "letter_at": [
+        1.45,
+        0.0
+       ],
+       "position": "right"
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Draw on a plain white 16:9 canvas of 16 x 9 units (x from -8 to 8, y from -4.5 to 4.5, origin at the centre, 120 px per unit). In INK draw line l from (-1.82, 3.56) to (1.82, -3.56) (steep, falling to the right) and line m from (-1.82, -3.56) to (1.82, 3.56) (steep, rising to the right), each with an arrowhead at both ends; they cross at O = (0, 0) and make 54 degrees with each other at the top and the bottom, 126 degrees at the left and the right. Write the names 'l' centred at (2.3, -3.7) and 'm' centred at (-2.3, -3.7). Draw four INK angle arcs of radius 1.0 centred at O, angles anticlockwise from the positive x axis: arc b from 63 to 117 degrees (top, narrow), arc a from 117 to 243 degrees (left, wide), arc d from 243 to 297 degrees (bottom, narrow), arc c from 297 to 423 degrees (right, wide). Write the italic INK letters 'b' centred at (0.0, 1.5), 'a' at (-1.45, 0.0), 'd' at (0.0, -1.5), 'c' at (1.45, 0.0). Show no number anywhere. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "l",
+     "m",
+     "a",
+     "b",
+     "c",
+     "d"
+    ],
+    "accuracy_checks": [
+     "the two lines are mirror images in the vertical axis: top and bottom angles 54 degrees, left and right angles 126 degrees (not printed)",
+     "going round the crossing the letters run a (left), b (top), c (right), d (bottom), so a and b are neighbours as the question says",
+     "no angle value is printed"
+    ],
+    "alt_text": "Two steep lines l and m cross; the angle at the left is a, at the top b, at the right c and at the bottom d.",
+    "render_note": "Fig. 5.3 of the book; the book colours the arcs of a and c red and those of b and d black: all INK here because the colouring would give away the vertically opposite pairs the learner must list.",
+    "derived_from": null,
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any angle value",
+     "arc colours that pair a with c or b with d",
+     "the words 'linear pair' or 'vertically opposite'"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C10",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.1, Q1",
+   "ncert_ref": "Section 5.1 - Figure it Out, Fig. 5.3",
+   "question_text": "Two lines l and m cross, and the four angles are named a, b, c and d going round the crossing, with a and b neighbours. List all the linear pairs and all the pairs of vertically opposite angles.",
+   "decision": "optional",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The printed answer is a text table and the six pairs are named in the steps; one figure cannot mark four overlapping linear pairs cleanly. A crossing with a, c in one colour and b, d in another would help but is not needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array: Linear pairs - a and b, b and c, c and d, a and d; Vertically opposite - a and c, b and d."
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C11",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "Section 5.1 - Measurements and Geometry",
+   "question_text": "Imran measures a linear pair as 63° and 119°. Their sum is not 180°. Does that break the rule? What should the second angle be?",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example is the arithmetic 63 + 119 = 182 and 180 - 63 = 117 with a sentence about measurement error; the book prints no figure for it.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "No figure: write 63 + 119 = 182, 180 - 63 = 117 and 119 - 117 = 2 in LaTeX."
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C14",
+   "role": "question",
+   "lp_book_number": "Perpendicular Lines: all four angles equal",
+   "ncert_ref": "Section 5.2 - Fig. 5.4 (all four angles equal)",
+   "question_text": "Two lines cross so that all four angles are equal. Find each angle, and say what the lines are called.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure: it only says the lines cross so that all four angles are equal; the book's Fig. 5.4 is the answer picture, not part of the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "No figure on the question side."
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C15",
+   "role": "solution",
+   "lp_book_number": "Perpendicular Lines: all four angles equal",
+   "ncert_ref": "Section 5.2 - Fig. 5.4 (all four angles equal)",
+   "question_text": "Two lines cross so that all four angles are equal. Find each angle, and say what the lines are called.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book's own answer to 'draw a pair of intersecting lines with all four angles equal' is Fig. 5.4, a drawing: two lines crossing at right angles with the square mark; the solution figure shows it with 90° in each angle.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S6.T6.C15.IMG1",
+   "manim_scene": "c7_5_2_perp_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S6.T6.C15.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "content": {
+     "canvas": {
+      "units": [
+       16,
+       9
+      ],
+      "x_range": [
+       -8,
+       8
+      ],
+      "y_range": [
+       -4.5,
+       4.5
+      ],
+      "origin": "centre"
+     },
+     "lines": [
+      {
+       "name": "m",
+       "from": [
+        -4.76,
+        -1.55
+       ],
+       "to": [
+        4.76,
+        1.55
+       ],
+       "direction_deg": 18,
+       "arrowheads": "both",
+       "label": {
+        "text": "m",
+        "at": [
+         5.2,
+         2.0
+        ]
+       }
+      },
+      {
+       "name": "l",
+       "from": [
+        1.24,
+        -3.8
+       ],
+       "to": [
+        -1.24,
+        3.8
+       ],
+       "direction_deg": 108,
+       "arrowheads": "both",
+       "label": {
+        "text": "l",
+        "at": [
+         1.8,
+         -3.9
+        ]
+       }
+      }
+     ],
+     "crossing": [
+      0,
+      0
+     ],
+     "right_angle_square": {
+      "wedge": "upper right",
+      "side": 0.5,
+      "corners": [
+       [
+        0,
+        0
+       ],
+       [
+        0.48,
+        0.15
+       ],
+       [
+        0.32,
+        0.63
+       ],
+       [
+        -0.15,
+        0.48
+       ]
+      ],
+      "colour": "ANSWER"
+     },
+     "angle_values": [
+      {
+       "text": "90°",
+       "at": [
+        0.77,
+        1.51
+       ],
+       "wedge_bisector_deg": 63,
+       "colour": "ANSWER"
+      },
+      {
+       "text": "90°",
+       "at": [
+        -1.51,
+        0.77
+       ],
+       "wedge_bisector_deg": 153,
+       "colour": "ANSWER"
+      },
+      {
+       "text": "90°",
+       "at": [
+        -0.77,
+        -1.51
+       ],
+       "wedge_bisector_deg": 243,
+       "colour": "ANSWER"
+      },
+      {
+       "text": "90°",
+       "at": [
+        1.51,
+        -0.77
+       ],
+       "wedge_bisector_deg": 333,
+       "colour": "ANSWER"
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Draw on a plain white 16:9 canvas of 16 x 9 units (x from -8 to 8, y from -4.5 to 4.5, origin at the centre, 120 px per unit). In INK draw line m from (-4.76, -1.55) to (4.76, 1.55) (direction 18 degrees) and line l from (-1.24, 3.80) to (1.24, -3.80) (direction 108 degrees), each with an arrowhead at both ends; they cross at O = (0, 0) at exactly 90 degrees. Write the names 'm' centred at (5.2, 2.0) and 'l' centred at (1.8, -3.9). In ANSWER green draw one small right-angle square of side 0.5 in the upper right angle, with corners O, (0.48, 0.15), (0.32, 0.63), (-0.15, 0.48). In ANSWER green write '90°' in each of the four angles, outside the square, centred at (0.77, 1.51) for the upper right angle, (-1.51, 0.77) for the upper left, (-0.77, -1.51) for the lower left and (1.51, -0.77) for the lower right. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "m",
+     "l",
+     "90°",
+     "90°",
+     "90°",
+     "90°"
+    ],
+    "accuracy_checks": [
+     "direction of m is 18 degrees, direction of l is 108 degrees: 108 - 18 = 90, so the lines are perpendicular",
+     "the four angles are 90 each and 4 x 90 = 360",
+     "a neighbouring pair adds to 90 + 90 = 180"
+    ],
+    "alt_text": "Two tilted lines l and m cross at right angles; a small square marks the right angle and each of the four angles is labelled 90°.",
+    "render_note": "Same picture as the book's Fig. 5.4 (tilted perpendicular pair with a square), with 90° written in each angle as the LP solution says. The question has no figure, so this solution figure stands alone.",
+    "derived_from": null,
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words 'perpendicular' or 'right angle'",
+     "the division 180 / 2",
+     "arc marks"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C19",
+   "role": "question",
+   "lp_book_number": "Between Lines: how the segments meet",
+   "ncert_ref": "Section 5.3 - Fig. 5.5",
+   "question_text": "Five pairs of segments are drawn. FG and FH share the end F, with 115.3° between them. AB and CD cross at X, at about 60°, a little past the middle of each. IJ and LM cross at Y, at about 80°, close to the middle of both. Describe each pair in mathematical words.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The question describes how the pairs of segments in Fig. 5.5 meet or cross: where F, X and Y lie and how the segments sit exists only in the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S8.T8.C19.IMG1",
+   "manim_scene": "c7_5_3_fig55_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C19.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "content": {
+     "canvas": {
+      "units": [
+       58,
+       32.6
+      ],
+      "x_range": [
+       -2,
+       56
+      ],
+      "y_range": [
+       -2.3,
+       30.3
+      ],
+      "y_axis": "up",
+      "px_per_unit": 33
+     },
+     "segments": [
+      {
+       "name": "ST",
+       "from": [
+        0.93,
+        22.0
+       ],
+       "to": [
+        11.18,
+        25.78
+       ]
+      },
+      {
+       "name": "UV",
+       "from": [
+        2.43,
+        20.59
+       ],
+       "to": [
+        12.59,
+        24.82
+       ]
+      },
+      {
+       "name": "OP",
+       "from": [
+        43.12,
+        25.2
+       ],
+       "to": [
+        51.62,
+        19.5
+       ]
+      },
+      {
+       "name": "QR",
+       "from": [
+        37.01,
+        24.18
+       ],
+       "to": [
+        52.92,
+        13.69
+       ]
+      },
+      {
+       "name": "AB",
+       "from": [
+        17.16,
+        11.65
+       ],
+       "to": [
+        25.6,
+        19.83
+       ]
+      },
+      {
+       "name": "CD",
+       "from": [
+        18.88,
+        17.6
+       ],
+       "to": [
+        25.06,
+        15.9
+       ]
+      },
+      {
+       "name": "IJ",
+       "from": [
+        30.9,
+        10.34
+       ],
+       "to": [
+        35.45,
+        5.83
+       ]
+      },
+      {
+       "name": "LM",
+       "from": [
+        39.09,
+        11.82
+       ],
+       "to": [
+        26.72,
+        3.21
+       ]
+      },
+      {
+       "name": "FH",
+       "from": [
+        14.78,
+        7.28
+       ],
+       "to": [
+        20.21,
+        8.39
+       ]
+      },
+      {
+       "name": "FG",
+       "from": [
+        14.78,
+        7.28
+       ],
+       "to": [
+        13.69,
+        2.82
+       ]
+      }
+     ],
+     "points": [
+      {
+       "label": "A",
+       "at": [
+        17.16,
+        11.65
+       ],
+       "label_side": "left"
+      },
+      {
+       "label": "B",
+       "at": [
+        25.6,
+        19.83
+       ],
+       "label_side": "right"
+      },
+      {
+       "label": "C",
+       "at": [
+        18.88,
+        17.6
+       ],
+       "label_side": "upper-left"
+      },
+      {
+       "label": "D",
+       "at": [
+        25.06,
+        15.9
+       ],
+       "label_side": "lower-right"
+      },
+      {
+       "label": "F",
+       "at": [
+        14.78,
+        7.28
+       ],
+       "label_side": "above-left"
+      },
+      {
+       "label": "G",
+       "at": [
+        13.69,
+        2.82
+       ],
+       "label_side": "below-left"
+      },
+      {
+       "label": "H",
+       "at": [
+        20.21,
+        8.39
+       ],
+       "label_side": "above-right"
+      },
+      {
+       "label": "I",
+       "at": [
+        30.9,
+        10.34
+       ],
+       "label_side": "above-left"
+      },
+      {
+       "label": "J",
+       "at": [
+        35.45,
+        5.83
+       ],
+       "label_side": "lower-right"
+      },
+      {
+       "label": "L",
+       "at": [
+        39.09,
+        11.82
+       ],
+       "label_side": "right"
+      },
+      {
+       "label": "M",
+       "at": [
+        26.72,
+        3.21
+       ],
+       "label_side": "below"
+      },
+      {
+       "label": "O",
+       "at": [
+        43.12,
+        25.2
+       ],
+       "label_side": "above"
+      },
+      {
+       "label": "P",
+       "at": [
+        51.62,
+        19.5
+       ],
+       "label_side": "right"
+      },
+      {
+       "label": "Q",
+       "at": [
+        37.01,
+        24.18
+       ],
+       "label_side": "above-left"
+      },
+      {
+       "label": "R",
+       "at": [
+        52.92,
+        13.69
+       ],
+       "label_side": "right"
+      },
+      {
+       "label": "S",
+       "at": [
+        0.93,
+        22.0
+       ],
+       "label_side": "left"
+      },
+      {
+       "label": "T",
+       "at": [
+        11.18,
+        25.78
+       ],
+       "label_side": "above"
+      },
+      {
+       "label": "U",
+       "at": [
+        2.43,
+        20.59
+       ],
+       "label_side": "below-left"
+      },
+      {
+       "label": "V",
+       "at": [
+        12.59,
+        24.82
+       ],
+       "label_side": "right"
+      }
+     ],
+     "crossings": [
+      {
+       "label": "X",
+       "segments": [
+        "AB",
+        "CD"
+       ],
+       "at": [
+        22.32,
+        16.65
+       ],
+       "label_at": [
+        22.9,
+        15.0
+       ]
+      },
+      {
+       "label": "Y",
+       "segments": [
+        "IJ",
+        "LM"
+       ],
+       "at": [
+        33.4,
+        7.86
+       ],
+       "label_at": [
+        33.8,
+        9.3
+       ]
+      }
+     ],
+     "angle_marks": [
+      {
+       "at": "F",
+       "between": [
+        "FG",
+        "FH"
+       ],
+       "arc_radius": 2.4,
+       "arc_from_deg": -103.75,
+       "arc_to_deg": 11.55,
+       "value_text": "115.3°",
+       "value_at": [
+        17.69,
+        4.25
+       ]
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Draw on a plain white 16:9 canvas covering x from -2 to 56 and y from -2.3 to 30.3 (58 x 32.6 units, 33 px per unit, y pointing up). Draw ten straight INK segments of 4 px, no arrowheads, with a filled INK dot of radius 0.28 on every endpoint: ST from S(0.93, 22.0) to T(11.18, 25.78); UV from U(2.43, 20.59) to V(12.59, 24.82); OP from O(43.12, 25.2) to P(51.62, 19.5); QR from Q(37.01, 24.18) to R(52.92, 13.69); AB from A(17.16, 11.65) to B(25.6, 19.83); CD from C(18.88, 17.6) to D(25.06, 15.9); IJ from I(30.9, 10.34) to J(35.45, 5.83); LM from L(39.09, 11.82) to M(26.72, 3.21); FH from F(14.78, 7.28) to H(20.21, 8.39); FG from F(14.78, 7.28) to G(13.69, 2.82). Write each point letter in capital INK, 0.7 units away from its dot: S left, T above, U below-left, V right, Q above-left, O above, P right, R right, A left, B right, C upper-left, D lower-right, I above-left, J lower-right, L right, M below, F above-left, H above-right, G below-left. AB and CD cross at X(22.32, 16.65): write 'X' centred at (22.9, 15.0). IJ and LM cross at Y(33.4, 7.86): write 'Y' centred at (33.8, 9.3). Draw an INK arc of radius 2.4 centred at F from direction -103.75 to direction 11.55 degrees (the angle between FG and FH, on the lower right side) and write '115.3°' centred at (17.69, 4.25). Draw nothing else. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "F",
+     "G",
+     "H",
+     "I",
+     "J",
+     "L",
+     "M",
+     "O",
+     "P",
+     "Q",
+     "R",
+     "S",
+     "T",
+     "U",
+     "V",
+     "X",
+     "Y",
+     "115.3°"
+    ],
+    "accuracy_checks": [
+     "angle at F between FG and FH computes to 115.3 degrees",
+     "AB and CD cross at X, 61% of the way from A to B and 56% of the way from C to D (a little past the middle of each); the lines meet at about 59 degrees",
+     "IJ and LM cross at Y, 55% of the way from I to J and 46% of the way from L to M (close to the middle of both); the lines meet at about 80 degrees",
+     "UV rises 2.4 degrees more steeply than ST, so the two lean towards each other (about 2.5 degrees); OP and QR are parallel (directions differ by 0.4 degrees)",
+     "no angle value other than 115.3° is printed"
+    ],
+    "alt_text": "Five pairs of line segments: FG and FH meet at F with 115.3° between them, AB and CD cross at X, IJ and LM cross at Y, ST and UV lean together, OP and QR run side by side.",
+    "render_note": "Fig. 5.5 of the book, coordinates measured from the page picture (1 unit = 10 px of the page picture, y flipped); G is moved by under 0.1 units so the angle at F is exactly 115.3°. The 60° and 80° are given only in the question text, as in the book.",
+    "derived_from": null,
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "angle values other than 115.3°",
+     "extension lines",
+     "midpoint marks",
+     "any frame"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C20",
+   "role": "solution",
+   "lp_book_number": "Between Lines: how the segments meet",
+   "ncert_ref": "Section 5.3 - Fig. 5.5",
+   "question_text": "Five pairs of segments are drawn. FG and FH share the end F, with 115.3° between them. AB and CD cross at X, at about 60°, a little past the middle of each. IJ and LM cross at Y, at about 80°, close to the middle of both. Describe each pair in mathematical words.",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The 60° and 80° are already in the question text and the answer is a sentence per pair; the question figure carries the geometry. A copy with arcs at X (60°) and Y (80°) would help but only writes given numbers on the figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "No figure: the three sentences about F, X and Y are the answer."
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C21",
+   "role": "question",
+   "lp_book_number": "Between Lines: extending ST, UV, OP and QR",
+   "ncert_ref": "Section 5.3 - Fig. 5.5 (ST, UV, OP, QR)",
+   "question_text": "Two more pairs are drawn: ST and UV lean towards each other by about 2.5° and look nearly side by side; OP and QR keep about the same gap along their whole length. Are ST and UV likely to meet if extended? Are OP and QR?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "'Are they likely to meet if extended?' is judged on how the two pairs lie in Fig. 5.5; the lean of ST and UV (about 2.5 degrees) is only visible in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S8.T8.C21.IMG1",
+   "manim_scene": "c7_5_3_extend_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C21.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "content": {
+     "canvas": {
+      "units": [
+       67.6,
+       38
+      ],
+      "x_range": [
+       -3,
+       64.6
+      ],
+      "y_range": [
+       5,
+       43
+      ],
+      "y_axis": "up",
+      "px_per_unit": 28.4
+     },
+     "segments": [
+      {
+       "name": "ST",
+       "from": [
+        0.93,
+        22.0
+       ],
+       "to": [
+        11.18,
+        25.78
+       ]
+      },
+      {
+       "name": "UV",
+       "from": [
+        2.43,
+        20.59
+       ],
+       "to": [
+        12.59,
+        24.82
+       ]
+      },
+      {
+       "name": "OP",
+       "from": [
+        43.12,
+        25.2
+       ],
+       "to": [
+        51.62,
+        19.5
+       ]
+      },
+      {
+       "name": "QR",
+       "from": [
+        37.01,
+        24.18
+       ],
+       "to": [
+        52.92,
+        13.69
+       ]
+      }
+     ],
+     "points": [
+      {
+       "label": "S",
+       "at": [
+        0.93,
+        22.0
+       ],
+       "label_side": "left"
+      },
+      {
+       "label": "T",
+       "at": [
+        11.18,
+        25.78
+       ],
+       "label_side": "above"
+      },
+      {
+       "label": "U",
+       "at": [
+        2.43,
+        20.59
+       ],
+       "label_side": "below-left"
+      },
+      {
+       "label": "V",
+       "at": [
+        12.59,
+        24.82
+       ],
+       "label_side": "right"
+      },
+      {
+       "label": "O",
+       "at": [
+        43.12,
+        25.2
+       ],
+       "label_side": "above"
+      },
+      {
+       "label": "P",
+       "at": [
+        51.62,
+        19.5
+       ],
+       "label_side": "right"
+      },
+      {
+       "label": "Q",
+       "at": [
+        37.01,
+        24.18
+       ],
+       "label_side": "above-left"
+      },
+      {
+       "label": "R",
+       "at": [
+        52.92,
+        13.69
+       ],
+       "label_side": "right"
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Draw on a plain white 16:9 canvas covering x from -3 to 64.6 and y from 5 to 43 (67.6 x 38 units, 28.4 px per unit, y pointing up); the upper right of the canvas stays empty. Draw four straight INK segments of 4 px, no arrowheads, with a filled INK dot of radius 0.35 on every endpoint: ST from S(0.93, 22.0) to T(11.18, 25.78); UV from U(2.43, 20.59) to V(12.59, 24.82); OP from O(43.12, 25.2) to P(51.62, 19.5); QR from Q(37.01, 24.18) to R(52.92, 13.69). Write each point letter in capital INK, 0.9 units away from its dot: S left, T above, U below-left, V right, Q above-left, O above, P right, R right. Draw nothing else: no extension lines, no angle values. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "S",
+     "T",
+     "U",
+     "V",
+     "O",
+     "P",
+     "Q",
+     "R"
+    ],
+    "accuracy_checks": [
+     "ST and UV: UV rises 2.4 degrees more steeply than ST, so they lean towards each other",
+     "OP and QR: directions differ by 0.4 degrees, so they run side by side with the same gap",
+     "ST and UV do not touch and OP and QR do not touch"
+    ],
+    "alt_text": "Two pairs of segments: ST and UV close together and leaning towards each other, and OP and QR running side by side; none of them touches.",
+    "render_note": "The ST, UV, OP and QR part of Fig. 5.5 with the same coordinates as the figure of M2.S8.T8.C19 (question 1), on a wider canvas that leaves room for the extensions drawn in the solution figure.",
+    "derived_from": null,
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "extension lines",
+     "angle values",
+     "a meeting point"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C22",
+   "role": "solution",
+   "lp_book_number": "Between Lines: extending ST, UV, OP and QR",
+   "ncert_ref": "Section 5.3 - Fig. 5.5 (ST, UV, OP, QR)",
+   "question_text": "Two more pairs are drawn: ST and UV lean towards each other by about 2.5° and look nearly side by side; OP and QR keep about the same gap along their whole length. Are ST and UV likely to meet if extended? Are OP and QR?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The solution is an extension construction: ST and UV are drawn out until they meet, OP and QR are drawn out and stay apart; that final picture is the answer.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S8.T8.C22.IMG1",
+   "manim_scene": "c7_5_3_extend_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C22.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "content": {
+     "canvas": {
+      "units": [
+       67.6,
+       38
+      ],
+      "x_range": [
+       -3,
+       64.6
+      ],
+      "y_range": [
+       5,
+       43
+      ],
+      "y_axis": "up",
+      "px_per_unit": 28.4
+     },
+     "segments": [
+      {
+       "name": "ST",
+       "from": [
+        0.93,
+        22.0
+       ],
+       "to": [
+        11.18,
+        25.78
+       ]
+      },
+      {
+       "name": "UV",
+       "from": [
+        2.43,
+        20.59
+       ],
+       "to": [
+        12.59,
+        24.82
+       ]
+      },
+      {
+       "name": "OP",
+       "from": [
+        43.12,
+        25.2
+       ],
+       "to": [
+        51.62,
+        19.5
+       ]
+      },
+      {
+       "name": "QR",
+       "from": [
+        37.01,
+        24.18
+       ],
+       "to": [
+        52.92,
+        13.69
+       ]
+      }
+     ],
+     "points": [
+      {
+       "label": "S",
+       "at": [
+        0.93,
+        22.0
+       ],
+       "label_side": "left"
+      },
+      {
+       "label": "T",
+       "at": [
+        11.18,
+        25.78
+       ],
+       "label_side": "above"
+      },
+      {
+       "label": "U",
+       "at": [
+        2.43,
+        20.59
+       ],
+       "label_side": "below-left"
+      },
+      {
+       "label": "V",
+       "at": [
+        12.59,
+        24.82
+       ],
+       "label_side": "right"
+      },
+      {
+       "label": "O",
+       "at": [
+        43.12,
+        25.2
+       ],
+       "label_side": "above"
+      },
+      {
+       "label": "P",
+       "at": [
+        51.62,
+        19.5
+       ],
+       "label_side": "right"
+      },
+      {
+       "label": "Q",
+       "at": [
+        37.01,
+        24.18
+       ],
+       "label_side": "above-left"
+      },
+      {
+       "label": "R",
+       "at": [
+        52.92,
+        13.69
+       ],
+       "label_side": "right"
+      }
+     ],
+     "added_in_ANSWER": {
+      "dashed_extensions": [
+       {
+        "from": "T",
+        "to": [
+         43.71,
+         37.78
+        ]
+       },
+       {
+        "from": "V",
+        "to": [
+         43.71,
+         37.78
+        ]
+       },
+       {
+        "from": [
+         36.48,
+         29.66
+        ],
+        "to": "O"
+       },
+       {
+        "from": "P",
+        "to": [
+         58.26,
+         15.04
+        ]
+       },
+       {
+        "from": [
+         30.33,
+         28.58
+        ],
+        "to": "Q"
+       },
+       {
+        "from": "R",
+        "to": [
+         59.6,
+         9.29
+        ]
+       }
+      ],
+      "meeting_dot": {
+       "at": [
+        43.71,
+        37.78
+       ],
+       "radius": 0.45,
+       "label": null
+      }
+     },
+     "type": "geometry_figure"
+    },
+    "manim_description": "Use exactly the same canvas, segments, dots and letters as the figure of the question (media id M2.S8.T8.C21.IMG1), all unchanged in INK. Add in ANSWER green, as dashed lines of 5 px (14 px dashes, 10 px gaps) with no arrowheads: the extension of ST beyond T to the meeting point K(43.71, 37.78); the extension of UV beyond V to the same point K; the extension of OP beyond O to (36.48, 29.66) and beyond P to (58.26, 15.04); the extension of QR beyond Q to (30.33, 28.58) and beyond R to (59.6, 9.29). Draw a filled ANSWER dot of radius 0.45 at K and give it no letter. Add nothing else. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "S",
+     "T",
+     "U",
+     "V",
+     "O",
+     "P",
+     "Q",
+     "R"
+    ],
+    "accuracy_checks": [
+     "the lines through ST and UV meet at K(43.71, 37.78), 3.2 segment lengths beyond T along ST and 3.1 beyond V along UV (about 3 lengths beyond the ends, about 4 from the start)",
+     "K is on both extended lines (recomputed from the four endpoints)",
+     "the extensions of OP and QR keep their directions (-33.8 and -33.4 degrees), so they stay the same gap apart and do not meet inside the canvas"
+    ],
+    "alt_text": "ST and UV are extended with dashed lines until they meet at a point far to the upper right, while the dashed extensions of OP and QR stay side by side and never meet.",
+    "render_note": "The LP step says the lines meet 'about four lengths of the segment beyond the ends'; the figure geometry gives 3.2 lengths beyond T and 3.1 beyond V (4.2 and 4.1 lengths measured from S and U), so the drawing follows the figure.",
+    "derived_from": "M2.S8.T8.C21.IMG1",
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a letter or text on the meeting point",
+     "words such as 'meet'",
+     "any change to the given parts of the question figure"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C23",
+   "role": "question",
+   "lp_book_number": "Parallel Lines: spotting parallel pairs",
+   "ncert_ref": "Section 5.3 - Fig. 5.6",
+   "question_text": "Nine segments a to i are drawn on a grid. Segments a, h and i are upright. c and g are flat. d and f lean one way, each along the diagonal of a square. b and e lean the other way, also along the diagonal of a square. Which pairs of lines appear to be parallel?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "Which segments look parallel can only be judged on the figure: the nine segments a to i exist only in Fig. 5.6.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S8.T8.C23.IMG1",
+   "manim_scene": "c7_5_3_fig56_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C23.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "content": {
+     "canvas": {
+      "units": [
+       17.4,
+       9.8
+      ],
+      "col_range": [
+       -1.2,
+       16.2
+      ],
+      "row_range": [
+       -1.4,
+       8.4
+      ],
+      "row_axis": "down (row 0 at the top)",
+      "px_per_unit": 110
+     },
+     "dot_grid": {
+      "columns": 16,
+      "rows": 8,
+      "spacing": 1.0,
+      "dot_radius": 0.12,
+      "dot_colour": "GUIDE",
+      "origin": "dot (col 0, row 0) at the top left"
+     },
+     "segments": [
+      {
+       "name": "a",
+       "from_dot": [
+        1,
+        0
+       ],
+       "to_dot": [
+        1,
+        3
+       ]
+      },
+      {
+       "name": "b",
+       "from_dot": [
+        1,
+        6
+       ],
+       "to_dot": [
+        4,
+        3
+       ]
+      },
+      {
+       "name": "c",
+       "from_dot": [
+        1,
+        3
+       ],
+       "to_dot": [
+        9,
+        3
+       ]
+      },
+      {
+       "name": "d",
+       "from_dot": [
+        3,
+        1
+       ],
+       "to_dot": [
+        6,
+        4
+       ]
+      },
+      {
+       "name": "e",
+       "from_dot": [
+        6,
+        4
+       ],
+       "to_dot": [
+        9,
+        1
+       ]
+      },
+      {
+       "name": "f",
+       "from_dot": [
+        9,
+        3
+       ],
+       "to_dot": [
+        13,
+        7
+       ]
+      },
+      {
+       "name": "g",
+       "from_dot": [
+        5,
+        4
+       ],
+       "to_dot": [
+        12,
+        4
+       ]
+      },
+      {
+       "name": "h",
+       "from_dot": [
+        8,
+        4
+       ],
+       "to_dot": [
+        8,
+        7
+       ]
+      },
+      {
+       "name": "i",
+       "from_dot": [
+        5,
+        4
+       ],
+       "to_dot": [
+        5,
+        7
+       ]
+      }
+     ],
+     "letters": [
+      {
+       "text": "a",
+       "at": [
+        0.4,
+        0.65
+       ]
+      },
+      {
+       "text": "b",
+       "at": [
+        1.6,
+        4.6
+       ]
+      },
+      {
+       "text": "c",
+       "at": [
+        2.4,
+        2.45
+       ]
+      },
+      {
+       "text": "d",
+       "at": [
+        4.2,
+        1.55
+       ]
+      },
+      {
+       "text": "e",
+       "at": [
+        7.5,
+        1.55
+       ]
+      },
+      {
+       "text": "f",
+       "at": [
+        12.1,
+        5.5
+       ]
+      },
+      {
+       "text": "g",
+       "at": [
+        9.9,
+        3.5
+       ]
+      },
+      {
+       "text": "h",
+       "at": [
+        8.4,
+        6.6
+       ]
+      },
+      {
+       "text": "i",
+       "at": [
+        5.5,
+        6.4
+       ]
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Draw on a plain white 16:9 canvas that shows a dot grid with 16 columns (col 0 to 15, left to right) and 8 rows (row 0 to 7, top to bottom); the dot spacing is 1.0 unit, 110 px per unit, and the canvas runs from col -1.2 to 16.2 and from row -1.4 to 8.4. Draw every dot as a filled GUIDE dot of radius 0.12 (128 dots). Draw nine straight INK segments of 4 px between dots, no arrowheads: a from (col 1, row 0) to (1, 3); c from (1, 3) to (9, 3); d from (3, 1) to (6, 4); e from (6, 4) to (9, 1); b from (1, 6) to (4, 3); g from (5, 4) to (12, 4); f from (9, 3) to (13, 7); h from (8, 4) to (8, 7); i from (5, 4) to (5, 7). Write the italic INK letters, centred at (col, row): a (0.4, 0.65), b (1.6, 4.6), c (2.4, 2.45), d (4.2, 1.55), e (7.5, 1.55), f (12.1, 5.5), g (9.9, 3.5), h (8.4, 6.6), i (5.5, 6.4). Draw no frame and nothing else. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "a",
+     "b",
+     "c",
+     "d",
+     "e",
+     "f",
+     "g",
+     "h",
+     "i"
+    ],
+    "accuracy_checks": [
+     "a, h and i all run 3 rows down and 0 columns across: parallel (not marked)",
+     "c and g are both flat (0 rows): parallel (not marked)",
+     "d goes (3, 3) and f goes (4, 4): same slope, parallel; b goes (3, -3) and e goes (3, -3): same slope, parallel",
+     "grid is exactly 16 x 8 = 128 dots; every segment starts and ends on a dot",
+     "the figure shows no mark that groups the segments (nothing solved)"
+    ],
+    "alt_text": "A grid of dots with nine labelled segments a to i: a, h and i upright, c and g flat, d and f leaning down to the right, b and e leaning up to the right.",
+    "render_note": "Fig. 5.6 of the book; the printed picture sits in a red frame, left out here. Coordinates checked by overlay on the page picture.",
+    "derived_from": null,
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "colours or marks that group the segments",
+     "the word 'parallel'",
+     "the red frame printed around the book figure"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C24",
+   "role": "solution",
+   "lp_book_number": "Parallel Lines: spotting parallel pairs",
+   "ncert_ref": "Section 5.3 - Fig. 5.6",
+   "question_text": "Nine segments a to i are drawn on a grid. Segments a, h and i are upright. c and g are flat. d and f lean one way, each along the diagonal of a square. b and e lean the other way, also along the diagonal of a square. Which pairs of lines appear to be parallel?",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is four disjoint groups of segments; colouring each group on the figure shows the grouping that a dense figure of nine letters hides.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S8.T8.C24.IMG1",
+   "manim_scene": "c7_5_3_fig56_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C24.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "content": {
+     "canvas": {
+      "units": [
+       17.4,
+       9.8
+      ],
+      "col_range": [
+       -1.2,
+       16.2
+      ],
+      "row_range": [
+       -1.4,
+       8.4
+      ],
+      "row_axis": "down (row 0 at the top)",
+      "px_per_unit": 110
+     },
+     "dot_grid": {
+      "columns": 16,
+      "rows": 8,
+      "spacing": 1.0,
+      "dot_radius": 0.12,
+      "dot_colour": "GUIDE",
+      "origin": "dot (col 0, row 0) at the top left"
+     },
+     "segments": [
+      {
+       "name": "a",
+       "from_dot": [
+        1,
+        0
+       ],
+       "to_dot": [
+        1,
+        3
+       ]
+      },
+      {
+       "name": "b",
+       "from_dot": [
+        1,
+        6
+       ],
+       "to_dot": [
+        4,
+        3
+       ]
+      },
+      {
+       "name": "c",
+       "from_dot": [
+        1,
+        3
+       ],
+       "to_dot": [
+        9,
+        3
+       ]
+      },
+      {
+       "name": "d",
+       "from_dot": [
+        3,
+        1
+       ],
+       "to_dot": [
+        6,
+        4
+       ]
+      },
+      {
+       "name": "e",
+       "from_dot": [
+        6,
+        4
+       ],
+       "to_dot": [
+        9,
+        1
+       ]
+      },
+      {
+       "name": "f",
+       "from_dot": [
+        9,
+        3
+       ],
+       "to_dot": [
+        13,
+        7
+       ]
+      },
+      {
+       "name": "g",
+       "from_dot": [
+        5,
+        4
+       ],
+       "to_dot": [
+        12,
+        4
+       ]
+      },
+      {
+       "name": "h",
+       "from_dot": [
+        8,
+        4
+       ],
+       "to_dot": [
+        8,
+        7
+       ]
+      },
+      {
+       "name": "i",
+       "from_dot": [
+        5,
+        4
+       ],
+       "to_dot": [
+        5,
+        7
+       ]
+      }
+     ],
+     "letters": [
+      {
+       "text": "a",
+       "at": [
+        0.4,
+        0.65
+       ]
+      },
+      {
+       "text": "b",
+       "at": [
+        1.6,
+        4.6
+       ]
+      },
+      {
+       "text": "c",
+       "at": [
+        2.4,
+        2.45
+       ]
+      },
+      {
+       "text": "d",
+       "at": [
+        4.2,
+        1.55
+       ]
+      },
+      {
+       "text": "e",
+       "at": [
+        7.5,
+        1.55
+       ]
+      },
+      {
+       "text": "f",
+       "at": [
+        12.1,
+        5.5
+       ]
+      },
+      {
+       "text": "g",
+       "at": [
+        9.9,
+        3.5
+       ]
+      },
+      {
+       "text": "h",
+       "at": [
+        8.4,
+        6.6
+       ]
+      },
+      {
+       "text": "i",
+       "at": [
+        5.5,
+        6.4
+       ]
+      }
+     ],
+     "groups": [
+      {
+       "segments": [
+        "a",
+        "h",
+        "i"
+       ],
+       "colour": "SET_A",
+       "stroke_px": 6
+      },
+      {
+       "segments": [
+        "c",
+        "g"
+       ],
+       "colour": "SET_B",
+       "stroke_px": 6
+      },
+      {
+       "segments": [
+        "d",
+        "f"
+       ],
+       "colour": "ANSWER",
+       "stroke_px": 6
+      },
+      {
+       "segments": [
+        "b",
+        "e"
+       ],
+       "colour": "FOCUS",
+       "stroke_px": 6
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Use exactly the same canvas, dot grid, segments, positions and letters as the figure of the question (media id M2.S8.T8.C23.IMG1); the letters stay INK. Redraw the nine segments at 6 px in four colours, one colour per group of parallel segments: a, h and i in SET_A; c and g in SET_B; d and f in ANSWER; b and e in FOCUS. Add nothing else: no legend and no arrow marks. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "a",
+     "b",
+     "c",
+     "d",
+     "e",
+     "f",
+     "g",
+     "h",
+     "i"
+    ],
+    "accuracy_checks": [
+     "group 1 = a, h, i (upright); group 2 = c, g (flat); group 3 = d, f (lean down to the right); group 4 = b, e (lean up to the right)",
+     "every segment is in exactly one group: 3 + 2 + 2 + 2 = 9",
+     "the four colours differ and each group is parallel (recomputed from the dot steps)"
+    ],
+    "alt_text": "The same grid with the parallel groups coloured: a, h and i blue; c and g orange; d and f green; b and e pink.",
+    "derived_from": "M2.S8.T8.C23.IMG1",
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "arrow marks",
+     "a legend",
+     "any text other than the letters a to i"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C27",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "Section 5.4 - Notations, Fig. 5.9",
+   "question_text": "A drawing has two flat parallel lines, two slanting parallel lines, and one upright line that crosses a flat line at 90°. How are these marked?",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The worked example asks how the lines are marked and its answer is a marked drawing (arrow marks, a square); the concept has no teaching image, and the figure is the one the steps point at.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S9.T9.C27.IMG1",
+   "manim_scene": "c7_5_4_notation_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S9.T9.C27.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "content": {
+     "canvas": {
+      "units": [
+       16,
+       9
+      ],
+      "x_range": [
+       -8,
+       8
+      ],
+      "y_range": [
+       -4.5,
+       4.5
+      ],
+      "origin": "centre"
+     },
+     "lines": [
+      {
+       "name": "F1",
+       "from": [
+        -6,
+        1.0
+       ],
+       "to": [
+        6,
+        1.0
+       ],
+       "kind": "flat"
+      },
+      {
+       "name": "F2",
+       "from": [
+        -6,
+        -1.0
+       ],
+       "to": [
+        6,
+        -1.0
+       ],
+       "kind": "flat"
+      },
+      {
+       "name": "U",
+       "from": [
+        -3.5,
+        -2.6
+       ],
+       "to": [
+        -3.5,
+        0.0
+       ],
+       "kind": "upright"
+      },
+      {
+       "name": "S1",
+       "from": [
+        -0.82,
+        -2.6
+       ],
+       "to": [
+        2.82,
+        2.6
+       ],
+       "kind": "slanting",
+       "direction_deg": 55
+      },
+      {
+       "name": "S2",
+       "from": [
+        2.18,
+        -2.6
+       ],
+       "to": [
+        5.82,
+        2.6
+       ],
+       "kind": "slanting",
+       "direction_deg": 55
+      }
+     ],
+     "arrow_marks": [
+      {
+       "on": "F1",
+       "at": [
+        -1.5,
+        1.0
+       ],
+       "direction_deg": 0,
+       "count": 1
+      },
+      {
+       "on": "F2",
+       "at": [
+        -1.5,
+        -1.0
+       ],
+       "direction_deg": 0,
+       "count": 1
+      },
+      {
+       "on": "S1",
+       "at": [
+        2.26,
+        1.8
+       ],
+       "direction_deg": 55,
+       "count": 2
+      },
+      {
+       "on": "S2",
+       "at": [
+        5.26,
+        1.8
+       ],
+       "direction_deg": 55,
+       "count": 2
+      }
+     ],
+     "right_angle_square": {
+      "at_crossing": [
+       -3.5,
+       -1.0
+      ],
+      "of": [
+       "U",
+       "F2"
+      ],
+      "wedge": "upper right",
+      "side": 0.5
+     },
+     "type": "geometry_figure"
+    },
+    "manim_description": "Draw on a plain white 16:9 canvas of 16 x 9 units (x from -8 to 8, y from -4.5 to 4.5, origin at the centre, 120 px per unit) a drawing of five INK straight lines of 4 px, no arrowheads at the line ends: flat line F1 from (-6, 1.0) to (6, 1.0); flat line F2 from (-6, -1.0) to (6, -1.0); upright line U from (-3.5, -2.6) to (-3.5, 0.0), which crosses F2 at (-3.5, -1.0) at 90 degrees; slanting line S1 from (-0.82, -2.6) to (2.82, 2.6) and slanting line S2 from (2.18, -2.6) to (5.82, 2.6), both at 55 degrees to the flat lines and so parallel to each other. In ANSWER green add the finished marks, each stroke 4 px: one arrow mark (a chevron '>' of two strokes 0.4 units long, apex on the line, pointing right) on F1 centred at (-1.5, 1.0) and on F2 centred at (-1.5, -1.0); two arrow marks (two chevrons 0.3 units apart along the line, pointing up and to the right at 55 degrees) on S1 centred at (2.26, 1.8) and on S2 centred at (5.26, 1.8); one small right-angle square of side 0.5 in the upper right corner between U and F2 at (-3.5, -1.0), with corners (-3.5, -1.0), (-3.0, -1.0), (-3.0, -0.5), (-3.5, -0.5). Write no text and no number: no '90°'. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [],
+    "accuracy_checks": [
+     "F1 and F2 are both flat (slope 0) and carry one arrow mark each",
+     "S1 and S2 both have direction 55 degrees and carry two arrow marks each",
+     "U is upright and F2 is flat, so the right angle between them is 90 degrees and gets a square, not the number",
+     "the arrow marks of one set all point the same way; the set marks differ in count (1 and 2)"
+    ],
+    "alt_text": "A drawing of two flat parallel lines with one arrow mark each, two slanting parallel lines with two arrow marks each, and an upright line meeting a flat line at a small square.",
+    "render_note": "Shows the finished marking of the worked example (the steps follow immediately), built from the notation of Fig. 5.9; the book's own Fig. 5.9 is a teaching figure and is not reused as a link.",
+    "derived_from": null,
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the number 90°",
+     "text such as 'parallel' or 'perpendicular'",
+     "the three separate parts of the book's Fig. 5.9 as a layout"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C29",
+   "role": "question",
+   "lp_book_number": "Paper Folding: counting parallel lines",
+   "ncert_ref": "Section 5.4 - Activity 2, Fig. 5.7",
+   "question_text": "A square sheet has two flat edges. Fold it horizontally in half again and again. Count the parallel lines, including the two edges, after one, two, three and four folds. What is the pattern?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The question is a folding count described fully in words; no figure is given with it (Fig. 5.7 is the teaching figure of the earlier topic).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "No figure on the question side."
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C30",
+   "role": "solution",
+   "lp_book_number": "Paper Folding: counting parallel lines",
+   "ncert_ref": "Section 5.4 - Activity 2, Fig. 5.7",
+   "question_text": "A square sheet has two flat edges. Fold it horizontally in half again and again. Count the parallel lines, including the two edges, after one, two, three and four folds. What is the pattern?",
+   "decision": "optional",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is the number pattern 2 + 1, 4 + 1, 8 + 1, 16 + 1 = 3, 5, 9, 17 (printed answer is text). A row of four creased squares with 3, 5, 9, 17 lines would help (the first three are the teaching image of the earlier topic) but is not needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: 2+1=3, 4+1=5, 8+1=9, 16+1=17."
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C31",
+   "role": "question",
+   "lp_book_number": "Paper Folding: a fold parallel to the diagonal",
+   "ncert_ref": "Section 5.4 - Activity 2 (diagonal fold)",
+   "question_text": "Fold a square sheet along one diagonal. Describe a fold that makes a line parallel to this diagonal and say why it is parallel.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question is an instruction to fold a square sheet along a diagonal; no figure is given with it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "No figure on the question side."
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C32",
+   "role": "solution",
+   "lp_book_number": "Paper Folding: a fold parallel to the diagonal",
+   "ncert_ref": "Section 5.4 - Activity 2 (diagonal fold)",
+   "question_text": "Fold a square sheet along one diagonal. Describe a fold that makes a line parallel to this diagonal and say why it is parallel.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is a fold: which corner goes onto the centre and where the crease lies. That is a construction on the sheet, so the figure is the answer.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C32.IMG1",
+   "manim_scene": "c7_5_4_act2diag_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C32.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "1:1",
+    "content": {
+     "canvas": {
+      "units": [
+       10,
+       10
+      ],
+      "x_range": [
+       -5,
+       5
+      ],
+      "y_range": [
+       -5,
+       5
+      ],
+      "origin": "centre"
+     },
+     "sheet": {
+      "corners": [
+       [
+        -3.0,
+        -3.0
+       ],
+       [
+        3.0,
+        -3.0
+       ],
+       [
+        3.0,
+        3.0
+       ],
+       [
+        -3.0,
+        3.0
+       ]
+      ],
+      "outline": "INK solid"
+     },
+     "diagonal_AC": {
+      "from": [
+       -3.0,
+       -3.0
+      ],
+      "to": [
+       3.0,
+       3.0
+      ],
+      "style": "INK dashed"
+     },
+     "diagonal_BD": {
+      "from": [
+       3.0,
+       -3.0
+      ],
+      "to": [
+       -3.0,
+       3.0
+      ],
+      "style": "GUIDE dashed"
+     },
+     "centre_dot": [
+      0,
+      0
+     ],
+     "fold_pointer": {
+      "from": [
+       3.0,
+       -3.0
+      ],
+      "to": [
+       0,
+       0
+      ],
+      "colour": "FOCUS",
+      "arrowhead": "at the centre"
+     },
+     "crease": {
+      "from": [
+       0.0,
+       -3.0
+      ],
+      "to": [
+       3.0,
+       0.0
+      ],
+      "colour": "ANSWER",
+      "style": "solid",
+      "passes_through": [
+       1.5,
+       -1.5
+      ]
+     },
+     "right_angle_squares": [
+      {
+       "at": [
+        0,
+        0
+       ],
+       "between": [
+        "O to C",
+        "O to B"
+       ],
+       "side_diag_offset": 0.35
+      },
+      {
+       "at": [
+        1.5,
+        -1.5
+       ],
+       "between": [
+        "to O",
+        "along the crease towards (3, 0)"
+       ],
+       "side_diag_offset": 0.35
+      }
+     ],
+     "arrow_marks": [
+      {
+       "on": "diagonal_AC",
+       "at": [
+        -1.8,
+        -1.8
+       ],
+       "direction_deg": 45,
+       "count": 1
+      },
+      {
+       "on": "crease",
+       "at": [
+        2.25,
+        -0.75
+       ],
+       "direction_deg": 45,
+       "count": 1
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Draw on a plain white square canvas of 10 x 10 units (x and y from -5 to 5, origin at the centre, 192 px per unit) a square sheet in INK, solid outline of 4 px, with corners (-3, -3), (3, -3), (3, 3), (-3, 3). Draw the diagonal from (-3, -3) to (3, 3) as a dashed INK line (14 px dashes, 10 px gaps), the diagonal that was folded first. Draw the other diagonal from (3, -3) to (-3, 3) as a dashed GUIDE line of 3 px and put a filled INK dot of radius 0.08 at the centre (0, 0). Draw a FOCUS straight arrow of 4 px from the corner (3, -3) to the centre (0, 0) with the arrowhead at the centre: the corner folded onto the centre. In ANSWER green draw the crease as a solid line of 5 px from (0, -3) to (3, 0); it crosses the arrow at its midpoint (1.5, -1.5). In ANSWER green draw two small right-angle squares of side 0.5: one at the centre (0, 0) between the ray to (3, 3) and the ray to (3, -3), with corners (0, 0), (0.35, 0.35), (0.7, 0), (0.35, -0.35); one at (1.5, -1.5) between the ray towards the centre and the ray along the crease towards (3, 0), with corners (1.5, -1.5), (1.15, -1.15), (1.5, -0.8), (1.85, -1.15). In ANSWER green draw one arrow mark (a chevron '>' of two strokes 0.4 units long, pointing up and to the right at 45 degrees) on the dashed diagonal centred at (-1.8, -1.8) and one on the crease centred at (2.25, -0.75). Write no text and no number. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [],
+    "accuracy_checks": [
+     "the crease is the perpendicular bisector of the segment from (3, -3) to the centre (0, 0): it passes through the midpoint (1.5, -1.5) and has direction (1, 1)",
+     "the diagonal from (-3, -3) to (3, 3) also has direction (1, 1), so the crease is parallel to it",
+     "both are perpendicular to the other diagonal (direction (1, -1)): (1, 1) . (1, -1) = 0",
+     "the crease runs from (0, -3) on the bottom edge to (3, 0) on the right edge, inside the sheet"
+    ],
+    "alt_text": "A square sheet with one dashed diagonal; folding a corner onto the centre makes a crease parallel to that diagonal, and right-angle squares and arrow marks show the two parallel lines are both perpendicular to the other diagonal.",
+    "render_note": "The question has no figure, so this solution figure stands alone. The corner chosen is the one at (3, -3), a corner not on the first diagonal, as the LP step says.",
+    "derived_from": null,
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any text",
+     "the number 90°",
+     "the folded-over flap drawn on the sheet"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C33",
+   "role": "question",
+   "lp_book_number": "Paper Folding: creases a, b, c and p, q, r",
+   "ncert_ref": "Section 5.4 - Fig. 5.8",
+   "question_text": "A square sheet is folded in the middle both ways, the edges are folded to the centre line, and then two opposite corners are folded onto a centre crease to make triangles. Pairs of creases a and p, b and q, c and r are marked. Are they parallel?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The edges a, b, c and p, q, r are named only on the folded sheet of Fig. 5.8; the learner must see where they lie to say whether a pair is parallel.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C33.IMG1",
+   "manim_scene": "c7_5_4_fig58_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C33.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "1:1",
+    "content": {
+     "canvas": {
+      "units": [
+       10,
+       10
+      ],
+      "x_range": [
+       -1,
+       9
+      ],
+      "y_range": [
+       -1,
+       9
+      ],
+      "origin": "lower left corner of the sheet at (0, 0)"
+     },
+     "sheet_outline": [
+      [
+       2,
+       0
+      ],
+      [
+       8,
+       0
+      ],
+      [
+       8,
+       6
+      ],
+      [
+       6,
+       8
+      ],
+      [
+       0,
+       8
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "creases": [
+      {
+       "x": 2,
+       "from_y": 0,
+       "to_y": 8
+      },
+      {
+       "x": 4,
+       "from_y": 0,
+       "to_y": 8
+      },
+      {
+       "x": 6,
+       "from_y": 0,
+       "to_y": 8
+      }
+     ],
+     "flaps": [
+      {
+       "name": "upper right",
+       "triangle": [
+        [
+         6,
+         8
+        ],
+        [
+         8,
+         6
+        ],
+        [
+         6,
+         6
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "edges": {
+        "a": [
+         [
+          6,
+          6
+         ],
+         [
+          6,
+          8
+         ]
+        ],
+        "b": [
+         [
+          6,
+          6
+         ],
+         [
+          8,
+          6
+         ]
+        ],
+        "c": [
+         [
+          6,
+          8
+         ],
+         [
+          8,
+          6
+         ]
+        ]
+       }
+      },
+      {
+       "name": "lower left",
+       "triangle": [
+        [
+         0,
+         2
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         2
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "edges": {
+        "p": [
+         [
+          2,
+          0
+         ],
+         [
+          2,
+          2
+         ]
+        ],
+        "q": [
+         [
+          0,
+          2
+         ],
+         [
+          2,
+          2
+         ]
+        ],
+        "r": [
+         [
+          0,
+          2
+         ],
+         [
+          2,
+          0
+         ]
+        ]
+       }
+      }
+     ],
+     "letters": [
+      {
+       "text": "a",
+       "at": [
+        5.55,
+        7.0
+       ]
+      },
+      {
+       "text": "b",
+       "at": [
+        7.0,
+        5.55
+       ]
+      },
+      {
+       "text": "c",
+       "at": [
+        7.45,
+        7.45
+       ]
+      },
+      {
+       "text": "q",
+       "at": [
+        1.0,
+        2.45
+       ]
+      },
+      {
+       "text": "p",
+       "at": [
+        2.45,
+        1.0
+       ]
+      },
+      {
+       "text": "r",
+       "at": [
+        0.45,
+        0.45
+       ]
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Draw on a plain white square canvas of 10 x 10 units (x and y from -1 to 9, 192 px per unit) a square sheet of side 8 whose lower left corner is at (0, 0) and whose upper right corner is at (8, 8), with its upper right corner and its lower left corner folded in. Draw the outline of the folded sheet as a closed INK polygon of 4 px through (2, 0), (8, 0), (8, 6), (6, 8), (0, 8), (0, 2). Draw three dashed INK crease lines of 3 px (12 px dashes, 8 px gaps), upright, at x = 2, x = 4 and x = 6, each from y = 0 to y = 8. Draw the upper right flap as a triangle with corners (6, 8), (8, 6), (6, 6), filled CELL_FILL with an INK outline of 4 px; its upright edge from (6, 6) to (6, 8) is a, its flat edge from (6, 6) to (8, 6) is b, its slanting edge from (6, 8) to (8, 6) is c. Draw the lower left flap as a triangle with corners (0, 2), (2, 0), (2, 2), filled CELL_FILL with an INK outline of 4 px; its upright edge from (2, 0) to (2, 2) is p, its flat edge from (0, 2) to (2, 2) is q, its slanting edge from (0, 2) to (2, 0) is r. Write the italic INK letters centred at: 'a' (5.55, 7.0), 'b' (7.0, 5.55), 'c' (7.45, 7.45), 'q' (1.0, 2.45), 'p' (2.45, 1.0), 'r' (0.45, 0.45). Draw no arrow marks and nothing else. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "a",
+     "b",
+     "c",
+     "p",
+     "q",
+     "r"
+    ],
+    "accuracy_checks": [
+     "a is upright and p is upright (both on the creases x = 6 and x = 2); b and q are both flat; c from (6, 8) to (8, 6) and r from (0, 2) to (2, 0) both have direction (1, -1)",
+     "each corner lands on its crease: the upper right corner (8, 8) folds to (6, 6) on x = 6, the lower left corner (0, 0) folds to (2, 2) on x = 2",
+     "the flaps stay inside the creases x >= 6 and x <= 2 (the triangles do not cross the crease lines)",
+     "no arrow marks are drawn in the question figure"
+    ],
+    "alt_text": "A square sheet with three upright dashed creases at one quarter, one half and three quarters; the upper right corner is folded onto the third crease and the lower left corner onto the first, giving two triangles whose edges are named a, b, c and p, q, r.",
+    "render_note": "Last stage of Fig. 5.8 (the folded sheet, lower left panel), drawn to scale: the book sketch is not to scale and its c and r are not exactly parallel, here they are. The earlier stages are described in the question text, so they are not repeated.",
+    "derived_from": null,
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "arrow marks or any mark that says parallel",
+     "the earlier folding stages and the blue fold arrows",
+     "the page watermark"
+    ]
+   },
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C34",
+   "role": "solution",
+   "lp_book_number": "Paper Folding: creases a, b, c and p, q, r",
+   "ncert_ref": "Section 5.4 - Fig. 5.8",
+   "question_text": "A square sheet is folded in the middle both ways, the edges are folded to the centre line, and then two opposite corners are folded onto a centre crease to make triangles. Pairs of creases a and p, b and q, c and r are marked. Are they parallel?",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is three parallel pairs; the chapter's own notation (matching arrow marks) shows each pair on the figure, which the three-sentence text answer cannot show.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C34.IMG1",
+   "manim_scene": "c7_5_4_fig58_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C34.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "1:1",
+    "content": {
+     "canvas": {
+      "units": [
+       10,
+       10
+      ],
+      "x_range": [
+       -1,
+       9
+      ],
+      "y_range": [
+       -1,
+       9
+      ],
+      "origin": "lower left corner of the sheet at (0, 0)"
+     },
+     "sheet_outline": [
+      [
+       2,
+       0
+      ],
+      [
+       8,
+       0
+      ],
+      [
+       8,
+       6
+      ],
+      [
+       6,
+       8
+      ],
+      [
+       0,
+       8
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "creases": [
+      {
+       "x": 2,
+       "from_y": 0,
+       "to_y": 8
+      },
+      {
+       "x": 4,
+       "from_y": 0,
+       "to_y": 8
+      },
+      {
+       "x": 6,
+       "from_y": 0,
+       "to_y": 8
+      }
+     ],
+     "flaps": [
+      {
+       "name": "upper right",
+       "triangle": [
+        [
+         6,
+         8
+        ],
+        [
+         8,
+         6
+        ],
+        [
+         6,
+         6
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "edges": {
+        "a": [
+         [
+          6,
+          6
+         ],
+         [
+          6,
+          8
+         ]
+        ],
+        "b": [
+         [
+          6,
+          6
+         ],
+         [
+          8,
+          6
+         ]
+        ],
+        "c": [
+         [
+          6,
+          8
+         ],
+         [
+          8,
+          6
+         ]
+        ]
+       }
+      },
+      {
+       "name": "lower left",
+       "triangle": [
+        [
+         0,
+         2
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         2
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "edges": {
+        "p": [
+         [
+          2,
+          0
+         ],
+         [
+          2,
+          2
+         ]
+        ],
+        "q": [
+         [
+          0,
+          2
+         ],
+         [
+          2,
+          2
+         ]
+        ],
+        "r": [
+         [
+          0,
+          2
+         ],
+         [
+          2,
+          0
+         ]
+        ]
+       }
+      }
+     ],
+     "letters": [
+      {
+       "text": "a",
+       "at": [
+        5.55,
+        7.0
+       ]
+      },
+      {
+       "text": "b",
+       "at": [
+        7.0,
+        5.55
+       ]
+      },
+      {
+       "text": "c",
+       "at": [
+        7.45,
+        7.45
+       ]
+      },
+      {
+       "text": "q",
+       "at": [
+        1.0,
+        2.45
+       ]
+      },
+      {
+       "text": "p",
+       "at": [
+        2.45,
+        1.0
+       ]
+      },
+      {
+       "text": "r",
+       "at": [
+        0.45,
+        0.45
+       ]
+      }
+     ],
+     "arrow_marks": [
+      {
+       "on": "a",
+       "at": [
+        6.0,
+        7.0
+       ],
+       "direction": "up",
+       "count": 1
+      },
+      {
+       "on": "p",
+       "at": [
+        2.0,
+        1.0
+       ],
+       "direction": "up",
+       "count": 1
+      },
+      {
+       "on": "b",
+       "at": [
+        7.0,
+        6.0
+       ],
+       "direction": "right",
+       "count": 2
+      },
+      {
+       "on": "q",
+       "at": [
+        1.0,
+        2.0
+       ],
+       "direction": "right",
+       "count": 2
+      },
+      {
+       "on": "c",
+       "at": [
+        7.0,
+        7.0
+       ],
+       "direction": "down and to the right",
+       "count": 3
+      },
+      {
+       "on": "r",
+       "at": [
+        1.0,
+        1.0
+       ],
+       "direction": "down and to the right",
+       "count": 3
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Use exactly the same canvas, sheet outline, creases, flaps and letters as the figure of the question (media id M2.S10.T10.C33.IMG1), all unchanged in INK. Add in ANSWER green matching arrow marks on each parallel pair, each mark a chevron '>' of two strokes 0.4 units long with its apex on the edge, strokes 4 px, marks of one edge 0.3 units apart along the edge and centred on the stated point: one arrow mark pointing up on a at (6.0, 7.0) and on p at (2.0, 1.0); two arrow marks pointing right on b at (7.0, 6.0) and on q at (1.0, 2.0); three arrow marks pointing down and to the right at 45 degrees on c at (7.0, 7.0) and on r at (1.0, 1.0). Add nothing else. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "a",
+     "b",
+     "c",
+     "p",
+     "q",
+     "r"
+    ],
+    "accuracy_checks": [
+     "a and p carry 1 arrow mark each, b and q carry 2 each, c and r carry 3 each: three different counts for three pairs",
+     "each marked pair is parallel: upright with upright, flat with flat, direction (1, -1) with direction (1, -1)",
+     "arrow marks of one pair point the same way"
+    ],
+    "alt_text": "The folded sheet with a and p marked by one arrow each, b and q by two arrows each, and c and r by three arrows each, showing the three pairs are parallel.",
+    "derived_from": "M2.S10.T10.C33.IMG1",
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "text such as 'parallel'",
+     "any change to the given parts of the question figure"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C35",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.4, Q1",
+   "ncert_ref": "Section 5.4 - Figure it Out Q1, Fig. 5.10",
+   "question_text": "Draw some lines perpendicular to the lines given on the dot paper. There are two grids, each 3 dots across and 4 dots up. In the left grid, one segment is flat, 2 steps long, and another leans with 2 steps across and 2 steps up. In the right grid, one segment has 2 steps across and 3 steps down, and another is upright, 2 steps long.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "DATA_IN_FIGURE",
+    "FIG_REFERENCED"
+   ],
+   "reason": "The learner draws perpendiculars to the four given segments on the dot paper of Fig. 5.10, which exists only in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S11.T11.C35.IMG1",
+   "manim_scene": "c7_5_4_FiO1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C35.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "content": {
+     "canvas": {
+      "units": [
+       9.24,
+       5.2
+      ],
+      "x_range": [
+       -2.1,
+       7.1
+      ],
+      "y_range": [
+       -1.1,
+       4.1
+      ],
+      "y_axis": "up",
+      "px_per_unit": 208
+     },
+     "dot_paper": {
+      "columns": 6,
+      "rows": 4,
+      "spacing": 1.0,
+      "dot_colour": "GUIDE",
+      "dot_radius": 0.1,
+      "dot_at": "x = column 0..5, y = 3 - row (row 0 at the top)"
+     },
+     "given_segments": [
+      {
+       "name": "flat",
+       "from_dot_col_row": [
+        0,
+        0
+       ],
+       "to_dot_col_row": [
+        2,
+        0
+       ],
+       "from_xy": [
+        0,
+        3
+       ],
+       "to_xy": [
+        2,
+        3
+       ]
+      },
+      {
+       "name": "rising diagonal",
+       "from_dot_col_row": [
+        0,
+        3
+       ],
+       "to_dot_col_row": [
+        2,
+        1
+       ],
+       "from_xy": [
+        0,
+        0
+       ],
+       "to_xy": [
+        2,
+        2
+       ]
+      },
+      {
+       "name": "upright",
+       "from_dot_col_row": [
+        3,
+        1
+       ],
+       "to_dot_col_row": [
+        3,
+        3
+       ],
+       "from_xy": [
+        3,
+        2
+       ],
+       "to_xy": [
+        3,
+        0
+       ]
+      },
+      {
+       "name": "falling diagonal",
+       "from_dot_col_row": [
+        3,
+        0
+       ],
+       "to_dot_col_row": [
+        5,
+        3
+       ],
+       "from_xy": [
+        3,
+        3
+       ],
+       "to_xy": [
+        5,
+        0
+       ]
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Draw on a plain white 16:9 canvas of 9.24 x 5.2 units (x from -2.1 to 7.1, y from -1.1 to 4.1, 208 px per unit) a dot paper of 6 columns and 4 rows, equal spacing 1.0 unit, filled GUIDE dots of radius 0.1 at x = 0, 1, 2, 3, 4, 5 and y = 3, 2, 1, 0 (24 dots; row 0 is the top row y = 3). Draw four straight INK segments of 5 px between dots, no arrowheads: a flat segment from (0, 3) to (2, 3); a segment rising to the right from (0, 0) to (2, 2); an upright segment from (3, 2) to (3, 0); a segment falling to the right from (3, 3) to (5, 0). Draw nothing else: no letters, no numbers, no extra lines. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [],
+    "accuracy_checks": [
+     "24 dots = 6 columns x 4 rows",
+     "rising segment: 2 across and 2 up; falling segment: 2 across and 3 down; flat segment 2 long; upright segment 2 long",
+     "every segment starts and ends on a dot",
+     "no perpendicular is drawn in the question figure"
+    ],
+    "alt_text": "A dot paper of 6 columns and 4 rows with four segments: a flat one, one rising to the right, an upright one and a long one falling to the right.",
+    "render_note": "Fig. 5.10 of the book. The book prints the 6 columns at equal spacing as one sheet; the LP calls the left 3 columns and the right 3 columns 'two grids', so keep exactly the book's equal spacing.",
+    "derived_from": null,
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "perpendicular segments (nothing solved)",
+     "right-angle squares",
+     "letters or numbers"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C36",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.4, Q1",
+   "ncert_ref": "Section 5.4 - Figure it Out Q1, Fig. 5.10",
+   "question_text": "Draw some lines perpendicular to the lines given on the dot paper. There are two grids, each 3 dots across and 4 dots up. In the left grid, one segment is flat, 2 steps long, and another leans with 2 steps across and 2 steps up. In the right grid, one segment has 2 steps across and 3 steps down, and another is upright, 2 steps long.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The printed answer is a picture: the dot paper with the perpendicular segments drawn in; the solution figure shows the drawn lines and the right-angle marks.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S11.T11.C36.IMG1",
+   "manim_scene": "c7_5_4_FiO1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C36.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "content": {
+     "canvas": {
+      "units": [
+       9.24,
+       5.2
+      ],
+      "x_range": [
+       -2.1,
+       7.1
+      ],
+      "y_range": [
+       -1.1,
+       4.1
+      ],
+      "y_axis": "up",
+      "px_per_unit": 208
+     },
+     "dot_paper": {
+      "columns": 6,
+      "rows": 4,
+      "spacing": 1.0,
+      "dot_colour": "GUIDE",
+      "dot_radius": 0.1,
+      "dot_at": "x = column 0..5, y = 3 - row (row 0 at the top)"
+     },
+     "given_segments": [
+      {
+       "name": "flat",
+       "from_dot_col_row": [
+        0,
+        0
+       ],
+       "to_dot_col_row": [
+        2,
+        0
+       ],
+       "from_xy": [
+        0,
+        3
+       ],
+       "to_xy": [
+        2,
+        3
+       ]
+      },
+      {
+       "name": "rising diagonal",
+       "from_dot_col_row": [
+        0,
+        3
+       ],
+       "to_dot_col_row": [
+        2,
+        1
+       ],
+       "from_xy": [
+        0,
+        0
+       ],
+       "to_xy": [
+        2,
+        2
+       ]
+      },
+      {
+       "name": "upright",
+       "from_dot_col_row": [
+        3,
+        1
+       ],
+       "to_dot_col_row": [
+        3,
+        3
+       ],
+       "from_xy": [
+        3,
+        2
+       ],
+       "to_xy": [
+        3,
+        0
+       ]
+      },
+      {
+       "name": "falling diagonal",
+       "from_dot_col_row": [
+        3,
+        0
+       ],
+       "to_dot_col_row": [
+        5,
+        3
+       ],
+       "from_xy": [
+        3,
+        3
+       ],
+       "to_xy": [
+        5,
+        0
+       ]
+      }
+     ],
+     "added_in_ANSWER": {
+      "segments": [
+       {
+        "purpose": "upright, perpendicular to the flat segment",
+        "from_dot_col_row": [
+         1,
+         0
+        ],
+        "to_dot_col_row": [
+         1,
+         1
+        ],
+        "from_xy": [
+         1,
+         3
+        ],
+        "to_xy": [
+         1,
+         2
+        ]
+       },
+       {
+        "purpose": "2 across 2 down, perpendicular to the rising segment",
+        "from_dot_col_row": [
+         0,
+         1
+        ],
+        "to_dot_col_row": [
+         2,
+         3
+        ],
+        "from_xy": [
+         0,
+         2
+        ],
+        "to_xy": [
+         2,
+         0
+        ]
+       },
+       {
+        "purpose": "flat, perpendicular to the upright segment",
+        "from_dot_col_row": [
+         3,
+         2
+        ],
+        "to_dot_col_row": [
+         4,
+         2
+        ],
+        "from_xy": [
+         3,
+         1
+        ],
+        "to_xy": [
+         4,
+         1
+        ]
+       }
+      ],
+      "right_angle_squares": [
+       {
+        "at_xy": [
+         1,
+         3
+        ],
+        "wedge": "lower right",
+        "side": 0.28
+       },
+       {
+        "at_xy": [
+         1,
+         1
+        ],
+        "wedge": "right of the crossing (between the up-right and down-right rays)",
+        "side": 0.28
+       },
+       {
+        "at_xy": [
+         3,
+         1
+        ],
+        "wedge": "upper right",
+        "side": 0.28
+       }
+      ],
+      "not_drawn": "no perpendicular for the segment with 2 across and 3 down (needs 3 across and 2 up, but a grid is only 2 steps wide)"
+     },
+     "type": "geometry_figure"
+    },
+    "manim_description": "Use exactly the same canvas, dot paper and four given INK segments as the figure of the question (media id M2.S11.T11.C35.IMG1), all unchanged. Add three straight ANSWER green segments of 5 px between dots, no arrowheads: an upright segment from (1, 3) down to (1, 2), starting at the middle dot of the flat segment; a segment of 2 across and 2 down from (0, 2) to (2, 0), which passes through the middle dot (1, 1) of the rising segment; a flat segment from (3, 1) to (4, 1), starting at the middle dot of the upright segment. Add three right-angle squares of side 0.28 in ANSWER green with 3 px strokes: at (1, 3) in the lower right angle (corners (1, 3), (1.28, 3), (1.28, 2.72), (1, 2.72)); at (1, 1) in the right-hand angle between the ray going up and to the right and the ray going down and to the right (corners (1, 1), (1.2, 1.2), (1.4, 1), (1.2, 0.8)); at (3, 1) in the upper right angle (corners (3, 1), (3.28, 1), (3.28, 1.28), (3, 1.28)). Draw no segment perpendicular to the long falling segment: it cannot be drawn between dots on this grid. Add nothing else. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [],
+    "accuracy_checks": [
+     "the new upright segment (0, 1) is perpendicular to the flat segment (1, 0): dot product 0",
+     "(2, 2) . (2, -2) = 0 so the 2 across 2 down segment is perpendicular to the rising one",
+     "the new flat segment (1, 0) is perpendicular to the upright segment (0, 2): dot product 0",
+     "the perpendicular of 2 across and 3 down would be 3 across and 2 up, wider than the 2 steps of the grid: nothing is drawn for it",
+     "all three new segments start and end on dots and do not touch other segments except at the marked crossings"
+    ],
+    "alt_text": "The same dot paper with three green segments at right angles to the given ones, each marked with a small square; the long falling segment has no perpendicular.",
+    "render_note": "The book's printed answer also draws a fourth red segment (1 across, 1 up) that is not exactly perpendicular to the long falling segment; the LP solution says it cannot be drawn between dots, so it is left out here (the LP wins). The 2 across 2 down perpendicular is drawn in full through the middle dot of the rising segment, as the LP says; the book draws only its lower half.",
+    "derived_from": "M2.S11.T11.C35.IMG1",
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a perpendicular to the segment with 2 across and 3 down",
+     "text or numbers",
+     "any change to the given parts of the question figure"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C37",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.4, Q2",
+   "ncert_ref": "Section 5.4 - Figure it Out Q2, Fig. 5.11",
+   "question_text": "Five shapes are drawn on a dot grid. Each corner is given as (across, down) from the top left. Shape 1: (0,0), (2,2), (2,4), (3,5), (0,5). Shape 2: (6,1), (10,1), (8,3), (4,3). Shape 3: (5,4), (7,6), (7,8), (5,8), (3,6), (5,6). Shape 4: (0,7), (3,7), (0,10). Shape 5: (5,9), (8,9), (11,7), (11,11), (5,11). Mark the parallel lines with arrow marks (single arrow, double arrow and so on) and the angle between perpendicular lines with a square. (a) How did you spot the perpendicular lines? (b) How did you spot the parallel lines?",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "DATA_IN_FIGURE",
+    "FIG_REFERENCED"
+   ],
+   "reason": "The learner marks parallel sides and right angles on the five shapes of Fig. 5.11; the shapes exist as a picture on a grid.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S11.T11.C37.IMG1",
+   "manim_scene": "c7_5_4_FiO2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C37.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "1:1",
+    "content": {
+     "canvas": {
+      "units": [
+       14.2,
+       14.2
+      ],
+      "col_range": [
+       -1.6,
+       12.6
+      ],
+      "row_range": [
+       -1.2,
+       13.0
+      ],
+      "row_axis": "down (row 0 at the top)",
+      "px_per_unit": 135
+     },
+     "grid": {
+      "vertical_lines_at_col": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ],
+      "horizontal_lines_at_row": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ],
+      "vertical_span_rows": [
+       -0.5,
+       12
+      ],
+      "horizontal_span_cols": [
+       -1,
+       12
+      ],
+      "colour": "GUIDE",
+      "stroke_px": 2
+     },
+     "shapes": [
+      {
+       "name": "shape 1",
+       "vertices_col_row": [
+        [
+         0,
+         0
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         2,
+         4
+        ],
+        [
+         3,
+         5
+        ],
+        [
+         0,
+         5
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK"
+      },
+      {
+       "name": "shape 2",
+       "vertices_col_row": [
+        [
+         6,
+         1
+        ],
+        [
+         10,
+         1
+        ],
+        [
+         8,
+         3
+        ],
+        [
+         4,
+         3
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK"
+      },
+      {
+       "name": "shape 3",
+       "vertices_col_row": [
+        [
+         5,
+         4
+        ],
+        [
+         7,
+         6
+        ],
+        [
+         7,
+         8
+        ],
+        [
+         5,
+         8
+        ],
+        [
+         3,
+         6
+        ],
+        [
+         5,
+         6
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK"
+      },
+      {
+       "name": "shape 4",
+       "vertices_col_row": [
+        [
+         0,
+         7
+        ],
+        [
+         3,
+         7
+        ],
+        [
+         0,
+         10
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK"
+      },
+      {
+       "name": "shape 5",
+       "vertices_col_row": [
+        [
+         5,
+         9
+        ],
+        [
+         8,
+         9
+        ],
+        [
+         11,
+         7
+        ],
+        [
+         11,
+         11
+        ],
+        [
+         5,
+         11
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK"
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Draw on a plain white square canvas of 14.2 x 14.2 grid units (col from -1.6 to 12.6, row from -1.2 to 13.0, row 0 at the top, row numbers increasing downwards, 135 px per unit) a square grid in GUIDE with 2 px lines: 12 upright lines at col 0, 1, 2, ..., 11 each from row -0.5 to row 12, and 12 flat lines at row 0, 1, 2, ..., 11 each from col -1 to col 12 (11 x 11 squares). Draw five polygons, each filled MARK_FILL with an INK outline of 4 px, corners listed (col, row) in order: shape 1: (0, 0), (2, 2), (2, 4), (3, 5), (0, 5); shape 2: (6, 1), (10, 1), (8, 3), (4, 3); shape 3: (5, 4), (7, 6), (7, 8), (5, 8), (3, 6), (5, 6); shape 4: (0, 7), (3, 7), (0, 10); shape 5: (5, 9), (8, 9), (11, 7), (11, 11), (5, 11). Draw no arrow marks, no squares, no letters and no numbers. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [],
+    "accuracy_checks": [
+     "every vertex lies on a grid crossing",
+     "shape 1 has 5 corners, shape 2 has 4, shape 3 has 6, shape 4 has 3, shape 5 has 5",
+     "the question figure carries no arrow mark and no square symbol (the learner adds them)",
+     "grid is 12 x 12 lines"
+    ],
+    "alt_text": "A square grid with five shaded polygons: a pentagon at the top left, a slanted four-sided shape at the top right, a six-sided shape in the middle, a right-angled triangle at the left and a pentagon with a flat base at the bottom right.",
+    "render_note": "Fig. 5.11 of the book (the printed one has salmon polygons with red outlines; drawn here in the house colours). Vertices read from the page picture and given in the LP text.",
+    "derived_from": null,
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "arrow marks",
+     "right-angle squares",
+     "the salmon fill and red outline of the printed polygons"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C38",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.4, Q2",
+   "ncert_ref": "Section 5.4 - Figure it Out Q2, Fig. 5.11",
+   "question_text": "Five shapes are drawn on a dot grid. Each corner is given as (across, down) from the top left. Shape 1: (0,0), (2,2), (2,4), (3,5), (0,5). Shape 2: (6,1), (10,1), (8,3), (4,3). Shape 3: (5,4), (7,6), (7,8), (5,8), (3,6), (5,6). Shape 4: (0,7), (3,7), (0,10). Shape 5: (5,9), (8,9), (11,7), (11,11), (5,11). Mark the parallel lines with arrow marks (single arrow, double arrow and so on) and the angle between perpendicular lines with a square. (a) How did you spot the perpendicular lines? (b) How did you spot the parallel lines?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The printed answer is a picture: the five shapes with arrow marks and right-angle squares added; the solution figure shows the same marking, following the LP's solution text.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S11.T11.C38.IMG1",
+   "manim_scene": "c7_5_4_FiO2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C38.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "1:1",
+    "content": {
+     "canvas": {
+      "units": [
+       14.2,
+       14.2
+      ],
+      "col_range": [
+       -1.6,
+       12.6
+      ],
+      "row_range": [
+       -1.2,
+       13.0
+      ],
+      "row_axis": "down (row 0 at the top)",
+      "px_per_unit": 135
+     },
+     "grid": {
+      "vertical_lines_at_col": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ],
+      "horizontal_lines_at_row": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ],
+      "vertical_span_rows": [
+       -0.5,
+       12
+      ],
+      "horizontal_span_cols": [
+       -1,
+       12
+      ],
+      "colour": "GUIDE",
+      "stroke_px": 2
+     },
+     "shapes": [
+      {
+       "name": "shape 1",
+       "vertices_col_row": [
+        [
+         0,
+         0
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         2,
+         4
+        ],
+        [
+         3,
+         5
+        ],
+        [
+         0,
+         5
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK"
+      },
+      {
+       "name": "shape 2",
+       "vertices_col_row": [
+        [
+         6,
+         1
+        ],
+        [
+         10,
+         1
+        ],
+        [
+         8,
+         3
+        ],
+        [
+         4,
+         3
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK"
+      },
+      {
+       "name": "shape 3",
+       "vertices_col_row": [
+        [
+         5,
+         4
+        ],
+        [
+         7,
+         6
+        ],
+        [
+         7,
+         8
+        ],
+        [
+         5,
+         8
+        ],
+        [
+         3,
+         6
+        ],
+        [
+         5,
+         6
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK"
+      },
+      {
+       "name": "shape 4",
+       "vertices_col_row": [
+        [
+         0,
+         7
+        ],
+        [
+         3,
+         7
+        ],
+        [
+         0,
+         10
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK"
+      },
+      {
+       "name": "shape 5",
+       "vertices_col_row": [
+        [
+         5,
+         9
+        ],
+        [
+         8,
+         9
+        ],
+        [
+         11,
+         7
+        ],
+        [
+         11,
+         11
+        ],
+        [
+         5,
+         11
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK"
+      }
+     ],
+     "added_in_ANSWER": {
+      "arrow_marks": [
+       {
+        "shape": 1,
+        "at_col_row": [
+         1,
+         1
+        ],
+        "direction": "down and to the right",
+        "count": 1
+       },
+       {
+        "shape": 1,
+        "at_col_row": [
+         2.5,
+         4.5
+        ],
+        "direction": "down and to the right",
+        "count": 1
+       },
+       {
+        "shape": 1,
+        "at_col_row": [
+         2,
+         3
+        ],
+        "direction": "up",
+        "count": 2
+       },
+       {
+        "shape": 1,
+        "at_col_row": [
+         0,
+         2.5
+        ],
+        "direction": "up",
+        "count": 2
+       },
+       {
+        "shape": 2,
+        "at_col_row": [
+         8,
+         1
+        ],
+        "direction": "right",
+        "count": 1
+       },
+       {
+        "shape": 2,
+        "at_col_row": [
+         6,
+         3
+        ],
+        "direction": "right",
+        "count": 1
+       },
+       {
+        "shape": 2,
+        "at_col_row": [
+         9,
+         2
+        ],
+        "direction": "up and to the right",
+        "count": 2
+       },
+       {
+        "shape": 2,
+        "at_col_row": [
+         5,
+         2
+        ],
+        "direction": "up and to the right",
+        "count": 2
+       },
+       {
+        "shape": 3,
+        "at_col_row": [
+         6,
+         5
+        ],
+        "direction": "down and to the right",
+        "count": 1
+       },
+       {
+        "shape": 3,
+        "at_col_row": [
+         4,
+         7
+        ],
+        "direction": "down and to the right",
+        "count": 1
+       },
+       {
+        "shape": 3,
+        "at_col_row": [
+         7,
+         7
+        ],
+        "direction": "down",
+        "count": 2
+       },
+       {
+        "shape": 3,
+        "at_col_row": [
+         5,
+         5
+        ],
+        "direction": "down",
+        "count": 2
+       },
+       {
+        "shape": 3,
+        "at_col_row": [
+         6,
+         8
+        ],
+        "direction": "right",
+        "count": 3
+       },
+       {
+        "shape": 3,
+        "at_col_row": [
+         4,
+         6
+        ],
+        "direction": "right",
+        "count": 3
+       },
+       {
+        "shape": 5,
+        "at_col_row": [
+         6.5,
+         9
+        ],
+        "direction": "right",
+        "count": 1
+       },
+       {
+        "shape": 5,
+        "at_col_row": [
+         8,
+         11
+        ],
+        "direction": "right",
+        "count": 1
+       },
+       {
+        "shape": 5,
+        "at_col_row": [
+         11,
+         9
+        ],
+        "direction": "up",
+        "count": 2
+       },
+       {
+        "shape": 5,
+        "at_col_row": [
+         5,
+         10
+        ],
+        "direction": "up",
+        "count": 2
+       }
+      ],
+      "right_angle_squares": [
+       {
+        "shape": 1,
+        "corner_col_row": [
+         0,
+         5
+        ],
+        "position": "inside, up-right of the corner",
+        "side": 0.4
+       },
+       {
+        "shape": 3,
+        "corner_col_row": [
+         7,
+         8
+        ],
+        "position": "inside, up-left of the corner",
+        "side": 0.4
+       },
+       {
+        "shape": 3,
+        "corner_col_row": [
+         5,
+         6
+        ],
+        "position": "outside the shape, up-left of the corner, between the flat edge going left and the upright edge going up",
+        "side": 0.4
+       },
+       {
+        "shape": 4,
+        "corner_col_row": [
+         0,
+         7
+        ],
+        "position": "inside, down-right of the corner",
+        "side": 0.4
+       },
+       {
+        "shape": 5,
+        "corner_col_row": [
+         5,
+         9
+        ],
+        "position": "inside, down-right of the corner",
+        "side": 0.4
+       },
+       {
+        "shape": 5,
+        "corner_col_row": [
+         5,
+         11
+        ],
+        "position": "inside, up-right of the corner",
+        "side": 0.4
+       },
+       {
+        "shape": 5,
+        "corner_col_row": [
+         11,
+         11
+        ],
+        "position": "inside, up-left of the corner",
+        "side": 0.4
+       }
+      ]
+     },
+     "type": "geometry_figure"
+    },
+    "manim_description": "Use exactly the same canvas, grid and five polygons as the figure of the question (media id M2.S11.T11.C37.IMG1), all unchanged. Add in ANSWER green, strokes of 4 px, arrow marks (each a chevron '>' of two strokes 0.35 units long, apex on the edge, marks of one edge 0.22 units apart along the edge, centred on the stated point) at these (col, row) points: shape 1: one mark pointing down and to the right on the edge (0, 0)-(2, 2) at (1, 1) and on the edge (2, 4)-(3, 5) at (2.5, 4.5); two marks pointing up on the edge (2, 2)-(2, 4) at (2, 3) and on the edge (0, 5)-(0, 0) at (0, 2.5). Shape 2: one mark pointing right on (6, 1)-(10, 1) at (8, 1) and on (8, 3)-(4, 3) at (6, 3); two marks pointing up and to the right on (10, 1)-(8, 3) at (9, 2) and on (4, 3)-(6, 1) at (5, 2). Shape 3: one mark pointing down and to the right on (5, 4)-(7, 6) at (6, 5) and on (5, 8)-(3, 6) at (4, 7); two marks pointing down on (7, 6)-(7, 8) at (7, 7) and on (5, 6)-(5, 4) at (5, 5); three marks pointing right on (7, 8)-(5, 8) at (6, 8) and on (3, 6)-(5, 6) at (4, 6). Shape 4: no arrow marks. Shape 5: one mark pointing right on (5, 9)-(8, 9) at (6.5, 9) and on (11, 11)-(5, 11) at (8, 11); two marks pointing up on (11, 7)-(11, 11) at (11, 9) and on (5, 11)-(5, 9) at (5, 10); the edge (8, 9)-(11, 7) gets no mark. Add seven right-angle squares of side 0.4 in ANSWER green with 3 px strokes, drawn in the angle between the two perpendicular edges: shape 1 at corner (0, 5), inside the shape; shape 3 at corner (7, 8), inside the shape, and at corner (5, 6), outside the shape in the upper left angle between the edge going left to (3, 6) and the edge going up to (5, 4); shape 4 at corner (0, 7), inside; shape 5 at corners (5, 9), (5, 11) and (11, 11), inside. Add nothing else: no text, no numbers. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [],
+    "accuracy_checks": [
+     "marks per shape (LP numbering): shape 1: 2 pairs (single on the two sloping edges, double on the two upright edges); shape 2: 2 pairs (single flat, double slanting); shape 3: 3 pairs (single sloping, double upright, triple flat); shape 4: none; shape 5: 2 pairs (single flat, double upright)",
+     "right angles: shape 1 one, shape 2 none, shape 3 two, shape 4 one, shape 5 three: 7 squares in all (recomputed from the vertices with dot product 0)",
+     "chevrons drawn: shape 1 has 6, shape 2 has 6, shape 3 has 12, shape 4 has 0, shape 5 has 6: 30 chevrons on 18 marked edges (4 + 4 + 6 + 0 + 4)",
+     "the edge (8, 9)-(11, 7) of shape 5 is not parallel to any other edge and carries no mark"
+    ],
+    "alt_text": "The five shapes with parallel sides marked by one, two or three arrow marks and each right angle marked with a small square.",
+    "render_note": "Follows the LP solution. It differs from the book's printed answer in two places: the LP puts the single arrow on the flat sides of shape 2 (the book puts the double there), and the LP counts two right angles in shape 3, at (7, 8) and at (5, 6) (the book marks only (7, 8)). The right angle at (5, 6) lies outside the hexagon between its flat and upright edges.",
+    "derived_from": "M2.S11.T11.C37.IMG1",
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "arrow marks on an edge that has no parallel partner",
+     "text or numbers",
+     "the number 90°"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C39",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.4, Q3",
+   "ncert_ref": "Section 5.4 - Figure it Out Q3",
+   "question_text": "On dot paper, draw different sets of parallel lines. The line segments can be of different lengths but should have dots as endpoints.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "An open drawing task. This pdf prints no dot paper under Q3 (page 8 ends with the question text and page 9 starts with Q4), and an empty grid would only imply a given figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "No figure on the question side."
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C40",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.4, Q3",
+   "ncert_ref": "Section 5.4 - Figure it Out Q3",
+   "question_text": "On dot paper, draw different sets of parallel lines. The line segments can be of different lengths but should have dots as endpoints.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The printed answer is a picture: dot paper with four sets of parallel segments drawn between dots; the answer is the drawing itself.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S11.T11.C40.IMG1",
+   "manim_scene": "c7_5_4_FiO3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C40.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "1:1",
+    "content": {
+     "canvas": {
+      "units": [
+       15.4,
+       15.4
+      ],
+      "col_range": [
+       -1.7,
+       13.7
+      ],
+      "row_range": [
+       -1.2,
+       14.2
+      ],
+      "row_axis": "down (row 0 at the top)",
+      "px_per_unit": 125
+     },
+     "dot_paper": {
+      "columns": 13,
+      "rows": 14,
+      "spacing": 1.0,
+      "dot_colour": "GUIDE",
+      "dot_radius": 0.12
+     },
+     "segments": [
+      {
+       "set": "falling pair, long",
+       "from_dot_col_row": [
+        1,
+        1
+       ],
+       "to_dot_col_row": [
+        5,
+        5
+       ]
+      },
+      {
+       "set": "falling pair, short",
+       "from_dot_col_row": [
+        1,
+        2
+       ],
+       "to_dot_col_row": [
+        4,
+        5
+       ]
+      },
+      {
+       "set": "upright pair, long",
+       "from_dot_col_row": [
+        9,
+        0
+       ],
+       "to_dot_col_row": [
+        9,
+        7
+       ]
+      },
+      {
+       "set": "upright pair, short",
+       "from_dot_col_row": [
+        10,
+        1
+       ],
+       "to_dot_col_row": [
+        10,
+        6
+       ]
+      },
+      {
+       "set": "flat pair, upper",
+       "from_dot_col_row": [
+        2,
+        9
+       ],
+       "to_dot_col_row": [
+        7,
+        9
+       ]
+      },
+      {
+       "set": "flat pair, lower",
+       "from_dot_col_row": [
+        2,
+        10
+       ],
+       "to_dot_col_row": [
+        7,
+        10
+       ]
+      },
+      {
+       "set": "rising pair, short",
+       "from_dot_col_row": [
+        7,
+        12
+       ],
+       "to_dot_col_row": [
+        11,
+        8
+       ]
+      },
+      {
+       "set": "rising pair, long",
+       "from_dot_col_row": [
+        7,
+        13
+       ],
+       "to_dot_col_row": [
+        12,
+        8
+       ]
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Draw on a plain white square canvas of 15.4 x 15.4 grid units (col from -1.7 to 13.7, row from -1.2 to 14.2, row 0 at the top, 125 px per unit) a dot paper of 13 columns (col 0 to 12) and 14 rows (row 0 to 13), spacing 1.0 unit, with a filled GUIDE dot of radius 0.12 at every crossing (182 dots). In ANSWER green draw eight straight segments of 5 px between dots, no arrowheads, in four parallel sets of two, as (col, row) end dots: falling pair: (1, 1) to (5, 5) and (1, 2) to (4, 5); upright pair: (9, 0) to (9, 7) and (10, 1) to (10, 6); flat pair: (2, 9) to (7, 9) and (2, 10) to (7, 10); rising pair: (7, 12) to (11, 8) and (7, 13) to (12, 8). Write no text and no number. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [],
+    "accuracy_checks": [
+     "182 dots = 13 x 14",
+     "falling pair: steps (4, 4) and (3, 3), same slope; upright pair: both 0 across; flat pair: both 0 down; rising pair: steps (4, -4) and (5, -5), same slope",
+     "every segment starts and ends on a dot and the four pairs do not touch each other",
+     "each set has two segments of different lengths, as the LP allows"
+    ],
+    "alt_text": "A dot paper with four sets of parallel segments drawn between dots: two leaning down to the right, two upright, two flat and two leaning up to the right, each of a different length.",
+    "render_note": "Sample answer taken from the book's printed answer picture (p.28 of this pdf); the LP gives only the kinds of sets (flat, upright, leaning). The question has no figure, so the whole figure is drawn here.",
+    "derived_from": null,
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "text",
+     "arrowheads",
+     "any colour other than ANSWER on the drawn segments"
+    ]
+   },
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C41",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.4, Q4",
+   "ncert_ref": "Section 5.4 - Figure it Out Q4, Fig. 5.12",
+   "question_text": "Using your sense of how parallel lines look, draw lines parallel to the line segments a to h on dot paper that has 13 dots by 13 dots. Taking steps across to the right and then up or down: segment a is 1 across, 1 down; b is 2 across, 2 down; c is 3 across, 3 up; d is 4 across, 4 up; e is 1 across, 3 down; f is 1 across, 6 down; g is 5 across, 2 up; h is 10 across, 3 down. (a) Did you find it challenging to draw some of them? (b) Which ones? (c) How did you do it?",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "DATA_IN_FIGURE",
+    "FIG_REFERENCED"
+   ],
+   "reason": "The learner draws a parallel to each of the eight segments of Fig. 5.12 on the dot paper; the segments exist only in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S11.T11.C41.IMG1",
+   "manim_scene": "c7_5_4_FiO4_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C41.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "1:1",
+    "content": {
+     "canvas": {
+      "units": [
+       15.4,
+       15.4
+      ],
+      "col_range": [
+       -1.7,
+       13.7
+      ],
+      "row_range": [
+       -1.2,
+       14.2
+      ],
+      "row_axis": "down (row 0 at the top)",
+      "px_per_unit": 125
+     },
+     "dot_paper": {
+      "columns": 13,
+      "rows": 14,
+      "spacing": 1.0,
+      "dot_colour": "GUIDE",
+      "dot_radius": 0.12
+     },
+     "segments": [
+      {
+       "name": "a",
+       "from_dot_col_row": [
+        1,
+        1
+       ],
+       "to_dot_col_row": [
+        2,
+        2
+       ],
+       "steps": [
+        1,
+        1
+       ]
+      },
+      {
+       "name": "b",
+       "from_dot_col_row": [
+        3,
+        1
+       ],
+       "to_dot_col_row": [
+        5,
+        3
+       ],
+       "steps": [
+        2,
+        2
+       ]
+      },
+      {
+       "name": "c",
+       "from_dot_col_row": [
+        6,
+        4
+       ],
+       "to_dot_col_row": [
+        9,
+        1
+       ],
+       "steps": [
+        3,
+        -3
+       ]
+      },
+      {
+       "name": "d",
+       "from_dot_col_row": [
+        7,
+        5
+       ],
+       "to_dot_col_row": [
+        11,
+        1
+       ],
+       "steps": [
+        4,
+        -4
+       ]
+      },
+      {
+       "name": "e",
+       "from_dot_col_row": [
+        1,
+        3
+       ],
+       "to_dot_col_row": [
+        2,
+        6
+       ],
+       "steps": [
+        1,
+        3
+       ]
+      },
+      {
+       "name": "f",
+       "from_dot_col_row": [
+        3,
+        3
+       ],
+       "to_dot_col_row": [
+        4,
+        9
+       ],
+       "steps": [
+        1,
+        6
+       ]
+      },
+      {
+       "name": "g",
+       "from_dot_col_row": [
+        6,
+        8
+       ],
+       "to_dot_col_row": [
+        11,
+        6
+       ],
+       "steps": [
+        5,
+        -2
+       ]
+      },
+      {
+       "name": "h",
+       "from_dot_col_row": [
+        1,
+        9
+       ],
+       "to_dot_col_row": [
+        11,
+        12
+       ],
+       "steps": [
+        10,
+        3
+       ]
+      }
+     ],
+     "letters": [
+      {
+       "text": "a",
+       "at_col_row": [
+        1.0,
+        1.5
+       ]
+      },
+      {
+       "text": "b",
+       "at_col_row": [
+        4.1,
+        1.5
+       ]
+      },
+      {
+       "text": "c",
+       "at_col_row": [
+        8.0,
+        2.6
+       ]
+      },
+      {
+       "text": "d",
+       "at_col_row": [
+        8.9,
+        3.5
+       ]
+      },
+      {
+       "text": "e",
+       "at_col_row": [
+        1.8,
+        4.4
+       ]
+      },
+      {
+       "text": "f",
+       "at_col_row": [
+        3.6,
+        4.5
+       ]
+      },
+      {
+       "text": "g",
+       "at_col_row": [
+        8.5,
+        7.3
+       ]
+      },
+      {
+       "text": "h",
+       "at_col_row": [
+        7.6,
+        11.4
+       ]
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Draw on a plain white square canvas of 15.4 x 15.4 grid units (col from -1.7 to 13.7, row from -1.2 to 14.2, row 0 at the top, 125 px per unit) a dot paper of 13 columns (col 0 to 12) and 14 rows (row 0 to 13), spacing 1.0 unit, with a filled GUIDE dot of radius 0.12 at every crossing (182 dots). Draw eight straight INK segments of 4 px between dots, no arrowheads, as (col, row) end dots: a (1, 1) to (2, 2); b (3, 1) to (5, 3); c (6, 4) to (9, 1); d (7, 5) to (11, 1); e (1, 3) to (2, 6); f (3, 3) to (4, 9); g (6, 8) to (11, 6); h (1, 9) to (11, 12). Write the italic INK letters centred at (col, row): a (1.0, 1.5), b (4.1, 1.5), c (8.0, 2.6), d (8.9, 3.5), e (1.8, 4.4), f (3.6, 4.5), g (8.5, 7.3), h (7.6, 11.4). Draw no frame and nothing else. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "a",
+     "b",
+     "c",
+     "d",
+     "e",
+     "f",
+     "g",
+     "h"
+    ],
+    "accuracy_checks": [
+     "182 dots = 13 columns x 14 rows",
+     "steps across, down: a (1, 1); b (2, 2); c (3, -3); d (4, -4); e (1, 3); f (1, 6); g (5, -2); h (10, 3)",
+     "every segment starts and ends on a dot",
+     "no drawn line is parallel-marked or answered (nothing solved)"
+    ],
+    "alt_text": "A 13 by 14 dot paper with eight labelled segments a to h: a and b leaning down to the right, c and d leaning up to the right, e and f steep, g gently rising, h long and gently falling.",
+    "render_note": "Fig. 5.12 of the book. The picture has 14 rows, the LP question text says '13 dots by 13 dots': the figure follows the book.",
+    "derived_from": null,
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any parallel segment (nothing solved)",
+     "any frame"
+    ]
+   },
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C42",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.4, Q4",
+   "ncert_ref": "Section 5.4 - Figure it Out Q4, Fig. 5.12",
+   "question_text": "Using your sense of how parallel lines look, draw lines parallel to the line segments a to h on dot paper that has 13 dots by 13 dots. Taking steps across to the right and then up or down: segment a is 1 across, 1 down; b is 2 across, 2 down; c is 3 across, 3 up; d is 4 across, 4 up; e is 1 across, 3 down; f is 1 across, 6 down; g is 5 across, 2 up; h is 10 across, 3 down. (a) Did you find it challenging to draw some of them? (b) Which ones? (c) How did you do it?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The printed answer is a picture: the dot paper with a parallel segment drawn for each of a to h.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S11.T11.C42.IMG1",
+   "manim_scene": "c7_5_4_FiO4_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C42.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "1:1",
+    "content": {
+     "canvas": {
+      "units": [
+       15.4,
+       15.4
+      ],
+      "col_range": [
+       -1.7,
+       13.7
+      ],
+      "row_range": [
+       -1.2,
+       14.2
+      ],
+      "row_axis": "down (row 0 at the top)",
+      "px_per_unit": 125
+     },
+     "dot_paper": {
+      "columns": 13,
+      "rows": 14,
+      "spacing": 1.0,
+      "dot_colour": "GUIDE",
+      "dot_radius": 0.12
+     },
+     "segments": [
+      {
+       "name": "a",
+       "from_dot_col_row": [
+        1,
+        1
+       ],
+       "to_dot_col_row": [
+        2,
+        2
+       ],
+       "steps": [
+        1,
+        1
+       ]
+      },
+      {
+       "name": "b",
+       "from_dot_col_row": [
+        3,
+        1
+       ],
+       "to_dot_col_row": [
+        5,
+        3
+       ],
+       "steps": [
+        2,
+        2
+       ]
+      },
+      {
+       "name": "c",
+       "from_dot_col_row": [
+        6,
+        4
+       ],
+       "to_dot_col_row": [
+        9,
+        1
+       ],
+       "steps": [
+        3,
+        -3
+       ]
+      },
+      {
+       "name": "d",
+       "from_dot_col_row": [
+        7,
+        5
+       ],
+       "to_dot_col_row": [
+        11,
+        1
+       ],
+       "steps": [
+        4,
+        -4
+       ]
+      },
+      {
+       "name": "e",
+       "from_dot_col_row": [
+        1,
+        3
+       ],
+       "to_dot_col_row": [
+        2,
+        6
+       ],
+       "steps": [
+        1,
+        3
+       ]
+      },
+      {
+       "name": "f",
+       "from_dot_col_row": [
+        3,
+        3
+       ],
+       "to_dot_col_row": [
+        4,
+        9
+       ],
+       "steps": [
+        1,
+        6
+       ]
+      },
+      {
+       "name": "g",
+       "from_dot_col_row": [
+        6,
+        8
+       ],
+       "to_dot_col_row": [
+        11,
+        6
+       ],
+       "steps": [
+        5,
+        -2
+       ]
+      },
+      {
+       "name": "h",
+       "from_dot_col_row": [
+        1,
+        9
+       ],
+       "to_dot_col_row": [
+        11,
+        12
+       ],
+       "steps": [
+        10,
+        3
+       ]
+      }
+     ],
+     "letters": [
+      {
+       "text": "a",
+       "at_col_row": [
+        1.0,
+        1.5
+       ]
+      },
+      {
+       "text": "b",
+       "at_col_row": [
+        4.1,
+        1.5
+       ]
+      },
+      {
+       "text": "c",
+       "at_col_row": [
+        8.0,
+        2.6
+       ]
+      },
+      {
+       "text": "d",
+       "at_col_row": [
+        8.9,
+        3.5
+       ]
+      },
+      {
+       "text": "e",
+       "at_col_row": [
+        1.8,
+        4.4
+       ]
+      },
+      {
+       "text": "f",
+       "at_col_row": [
+        3.6,
+        4.5
+       ]
+      },
+      {
+       "text": "g",
+       "at_col_row": [
+        8.5,
+        7.3
+       ]
+      },
+      {
+       "text": "h",
+       "at_col_row": [
+        7.6,
+        11.4
+       ]
+      }
+     ],
+     "added_in_ANSWER": {
+      "segments": [
+       {
+        "parallel_to": "a",
+        "from_dot_col_row": [
+         1,
+         0
+        ],
+        "to_dot_col_row": [
+         3,
+         2
+        ],
+        "steps": [
+         2,
+         2
+        ]
+       },
+       {
+        "parallel_to": "b",
+        "from_dot_col_row": [
+         3,
+         0
+        ],
+        "to_dot_col_row": [
+         6,
+         3
+        ],
+        "steps": [
+         3,
+         3
+        ]
+       },
+       {
+        "parallel_to": "c",
+        "from_dot_col_row": [
+         6,
+         5
+        ],
+        "to_dot_col_row": [
+         10,
+         1
+        ],
+        "steps": [
+         4,
+         -4
+        ]
+       },
+       {
+        "parallel_to": "d",
+        "from_dot_col_row": [
+         8,
+         6
+        ],
+        "to_dot_col_row": [
+         12,
+         2
+        ],
+        "steps": [
+         4,
+         -4
+        ]
+       },
+       {
+        "parallel_to": "e",
+        "from_dot_col_row": [
+         0,
+         3
+        ],
+        "to_dot_col_row": [
+         2,
+         9
+        ],
+        "steps": [
+         2,
+         6
+        ]
+       },
+       {
+        "parallel_to": "f",
+        "from_dot_col_row": [
+         2,
+         3
+        ],
+        "to_dot_col_row": [
+         3,
+         9
+        ],
+        "steps": [
+         1,
+         6
+        ]
+       },
+       {
+        "parallel_to": "g",
+        "from_dot_col_row": [
+         6,
+         9
+        ],
+        "to_dot_col_row": [
+         11,
+         7
+        ],
+        "steps": [
+         5,
+         -2
+        ]
+       },
+       {
+        "parallel_to": "h",
+        "from_dot_col_row": [
+         0,
+         10
+        ],
+        "to_dot_col_row": [
+         10,
+         13
+        ],
+        "steps": [
+         10,
+         3
+        ]
+       }
+      ]
+     },
+     "type": "geometry_figure"
+    },
+    "manim_description": "Use exactly the same canvas, dot paper, eight given INK segments and letters as the figure of the question (media id M2.S11.T11.C41.IMG1), all unchanged. Add eight straight ANSWER green segments of 5 px between dots, no arrowheads and no letters, one parallel to each given segment, as (col, row) end dots: parallel to a: (1, 0) to (3, 2); parallel to b: (3, 0) to (6, 3); parallel to c: (6, 5) to (10, 1); parallel to d: (8, 6) to (12, 2); parallel to e: (0, 3) to (2, 9); parallel to f: (2, 3) to (3, 9); parallel to g: (6, 9) to (11, 7); parallel to h: (0, 10) to (10, 13). Add nothing else. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "a",
+     "b",
+     "c",
+     "d",
+     "e",
+     "f",
+     "g",
+     "h"
+    ],
+    "accuracy_checks": [
+     "each new segment repeats the steps of its given segment: a (1, 1) twice, b (2, 2) as (3, 3) = 3 steps of (1, 1), c (3, -3) as (4, -4), d (4, -4), e (1, 3) twice, f (1, 6), g (5, -2), h (10, 3)",
+     "cross product of each new segment with its given segment is 0 (parallel) and all end dots lie inside the 13 x 14 grid",
+     "no new segment lies on a given segment or on another new segment"
+    ],
+    "alt_text": "The same dot paper with a green segment drawn from other dots parallel to each of a to h, taking the same steps across and up or down.",
+    "render_note": "Segments are those of the book's printed answer picture (p.29 of this pdf), checked parallel by their steps; several are longer than the given segment but repeat its steps, as the LP method says.",
+    "derived_from": "M2.S11.T11.C41.IMG1",
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "letters on the new segments",
+     "text",
+     "any change to the given parts of the question figure"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C43",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.4, Q5",
+   "ncert_ref": "Section 5.4 - Figure it Out Q5, Fig. 5.13",
+   "question_text": "Which line is parallel to line segment a, line segment b or line segment c? How do you decide this? Line segment a, line segment b and line segment c lean to the right. A steep line meets segment a at one end and segments b and c at its other end. The angles the steep line makes are about 30° with segment a, about 29° with segment c and about 33° with segment b.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "'Which line is parallel to a: b or c?' is decided on the figure: the three segments and the steep segment meeting them exist only in Fig. 5.13.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S11.T11.C43.IMG1",
+   "manim_scene": "c7_5_4_FiO5_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C43.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "content": {
+     "canvas": {
+      "units": [
+       25.6,
+       14.4
+      ],
+      "x_range": [
+       -2.4,
+       23.2
+      ],
+      "y_range": [
+       -0.3,
+       14.1
+      ],
+      "y_axis": "up",
+      "px_per_unit": 75
+     },
+     "points": [
+      {
+       "id": "T",
+       "at": [
+        5.65,
+        13.26
+       ]
+      },
+      {
+       "id": "L",
+       "at": [
+        1.77,
+        7.61
+       ]
+      },
+      {
+       "id": "B",
+       "at": [
+        12.16,
+        1.36
+       ]
+      },
+      {
+       "id": "M",
+       "at": [
+        15.34,
+        7.14
+       ]
+      },
+      {
+       "id": "R",
+       "at": [
+        20.03,
+        5.48
+       ]
+      }
+     ],
+     "segments": [
+      {
+       "name": "a",
+       "from": "L",
+       "to": "B"
+      },
+      {
+       "name": "b",
+       "from": "T",
+       "to": "R"
+      },
+      {
+       "name": "c",
+       "from": "T",
+       "to": "M"
+      },
+      {
+       "name": "unnamed steep segment",
+       "from": "T",
+       "to": "B"
+      }
+     ],
+     "letters": [
+      {
+       "text": "a",
+       "at": [
+        6.6,
+        2.8
+       ]
+      },
+      {
+       "text": "b",
+       "at": [
+        14.1,
+        10.0
+       ]
+      },
+      {
+       "text": "c",
+       "at": [
+        11.1,
+        8.3
+       ]
+      }
+     ],
+     "type": "geometry_figure"
+    },
+    "manim_description": "Draw on a plain white 16:9 canvas covering x from -2.4 to 23.2 and y from -0.3 to 14.1 (25.6 x 14.4 units, 75 px per unit, y pointing up). Draw five filled INK dots of radius 0.17 at T(5.65, 13.26), L(1.77, 7.61), B(12.16, 1.36), M(15.34, 7.14) and R(20.03, 5.48), and do not write these point names. Draw four straight INK segments of 4 px, no arrowheads: from L to B (this is line segment a); from T to R (line segment b); from T to M (line segment c); and from T to B (the steep segment, with no letter). Write the italic INK letters centred at: 'a' (6.6, 2.8), below segment a; 'b' (14.1, 10.0), above segment b; 'c' (11.1, 8.3), below segment c. Draw no angle marks, no numbers and nothing else. Flat 2D, plain white background, uniform strokes of 4 px for the given lines and 5 px for added lines, sans-serif text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "a",
+     "b",
+     "c"
+    ],
+    "accuracy_checks": [
+     "segments a, b, c all fall to the right: a at 31.0, b at 28.4, c at 32.3 degrees below the horizontal",
+     "the steep segment T-B makes about 30 degrees with a at B, about 29 degrees with c at T and about 33 degrees with b at T (matches the 30, 29 and 33 degrees of the question text)",
+     "b and c start at the same dot T and make about 4 degrees with each other",
+     "no angle value is drawn (the values are in the question text only)"
+    ],
+    "alt_text": "Three segments a, b and c lean down to the right; b and c start together at the top end of a steep segment whose other end is the lower end of a.",
+    "render_note": "Fig. 5.13 of the book; dot positions measured from the page picture (1 unit = 10 px). The steep segment carries no letter in the book.",
+    "derived_from": null,
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as 'Fig. 5.2' or figure names",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "angle arcs or angle values",
+     "point names"
+    ]
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C44",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.4, Q5",
+   "ncert_ref": "Section 5.4 - Figure it Out Q5, Fig. 5.13",
+   "question_text": "Which line is parallel to line segment a, line segment b or line segment c? How do you decide this? Line segment a, line segment b and line segment c lean to the right. A steep line meets segment a at one end and segments b and c at its other end. The angles the steep line makes are about 30° with segment a, about 29° with segment c and about 33° with segment b.",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The 30°, 29° and 33° are already in the question text and the answer is a comparison of those numbers (printed answer is text). A copy of the figure with arcs and the three values would help but only writes given numbers on it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "No figure: compare 30°, 29° and 33° in the text."
+  }
+ ]
+}

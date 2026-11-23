@@ -1,0 +1,1085 @@
+{
+ "meta": {
+  "chapter": "Operations with Integers",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 10",
+  "lp_plan_id": "cbse_eng_maths7_ch10_v69",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 1,
+    "optional": 0,
+    "none": 6
+   },
+   "solution": {
+    "required": 0,
+    "optional": 1,
+    "none": 6
+   },
+   "worked_example": {
+    "required": 1,
+    "optional": 1,
+    "none": 13
+   }
+  },
+  "notes": [
+   "Chunk A (topics M1.S3.T3 to M2.S11.T11): 2 required (Try This question figures; Math Talk token sets), 2 optional, rest text.",
+   "Teaching figures of the carrom, token-subtraction and token-bag narrative are accounted to the 18 concept images and not drawn again; the two figures the book GIVES in a question (Try This, Math Talk sets) are drawn.",
+   "Token colours in the C30 diagram (#6CC24A, #E8643C) are not in the style table; the signs + and - also tell the tokens apart."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P01-table-1",
+   "source": "chapter p.01",
+   "description": "Plain 4-column table First Number, Second Number, Sum, Difference with the guesses 10/15, 20/5, 19/6, 18/7 (last row bold).",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P02-number_line-1",
+   "source": "chapter p.02",
+   "description": "Number line 0 to 12 with a coin over 4 and a rightward arrow spanning 3 units from 4 to 7 (carrom coin, first strike 4, second 3).",
+   "mapped_to": "concept_image:M1.S5.T5.C8.IMG1"
+  },
+  {
+   "fig_id": "P02-number_line-2",
+   "source": "chapter p.02",
+   "description": "Generic coin picture: arcs a then b to the right from 0 to P, with P = a + b.",
+   "mapped_to": "concept_image:M1.S5.T5.C8.IMG1"
+  },
+  {
+   "fig_id": "P03-number_line-1",
+   "source": "chapter p.03",
+   "description": "Coin at 0 on a line marked -ve and +ve with one left arrow and one right arrow above it.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P03-number_line-2",
+   "source": "chapter p.03",
+   "description": "Integer number line from -5 to 6 with -ve and +ve ends, no coin.",
+   "mapped_to": "concept_image:M1.S5.T5.C10.IMG1"
+  },
+  {
+   "fig_id": "P04-number_line-1",
+   "source": "chapter p.04",
+   "description": "Try This figure 1: a goes right from 0, longer b comes back left, final P left of 0.",
+   "mapped_to": "item:M1.S7.T7.C17 (question)"
+  },
+  {
+   "fig_id": "P04-number_line-2",
+   "source": "chapter p.04",
+   "description": "Try This figure 2: long a goes right from 0, shorter b comes back left, final P right of 0.",
+   "mapped_to": "item:M1.S7.T7.C17 (question)"
+  },
+  {
+   "fig_id": "P04-number_line-3",
+   "source": "chapter p.04",
+   "description": "Try This figure 3: a goes left from 0 and b comes back right over the same span, P = 0.",
+   "mapped_to": "item:M1.S7.T7.C17 (question)"
+  },
+  {
+   "fig_id": "P05-token_key-1",
+   "source": "chapter p.05",
+   "description": "Inline icons: a green + token for positive 1 and a red - token for negative 1.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P05-token_row-2",
+   "source": "chapter p.05",
+   "description": "A row of 7 green + tokens.",
+   "mapped_to": "concept_image:M1.S8.T8.C19.IMG1"
+  },
+  {
+   "fig_id": "P05-token_row-3",
+   "source": "chapter p.05",
+   "description": "18 green tokens over 11 red tokens placed under greens 8 to 18 (11 zero pairs added).",
+   "mapped_to": "concept_image:M1.S8.T8.C19.IMG1"
+  },
+  {
+   "fig_id": "P05-token_row-4",
+   "source": "chapter p.05",
+   "description": "Same 18 greens and 11 reds with a line struck through all 18 greens; 11 reds remain.",
+   "mapped_to": "concept_image:M1.S8.T8.C19.IMG1"
+  },
+  {
+   "fig_id": "P06-token_bags-1",
+   "source": "chapter p.06",
+   "description": "Four bags with 2 green tokens each, brace and caption 'Two green tokens 4 times = 8', 4 x 2 = 8.",
+   "mapped_to": "concept_image:M2.S10.T10.C26.IMG1"
+  },
+  {
+   "fig_id": "P06-token_bags-2",
+   "source": "chapter p.06",
+   "description": "Four bags with 2 red tokens each, caption 'Two red tokens 4 times = -8', 4 x (-2) = -8, callouts Multiplier, Multiplicand, Product.",
+   "mapped_to": "concept_image:M2.S10.T10.C26.IMG1"
+  },
+  {
+   "fig_id": "P07-token_bags-1",
+   "source": "chapter p.07",
+   "description": "Four bags, each with 2 greens (struck) beside 2 reds: (-4) x 2 = -8.",
+   "mapped_to": "concept_image:M2.S10.T10.C28.IMG1"
+  },
+  {
+   "fig_id": "P07-token_bags-2",
+   "source": "chapter p.07",
+   "description": "Four bags, each with 2 greens beside 2 reds (struck): (-4) x (-2) = 8.",
+   "mapped_to": "concept_image:M2.S10.T10.C28.IMG1"
+  },
+  {
+   "fig_id": "P08-token_set-1",
+   "source": "chapter p.08",
+   "description": "Math Talk set (a): 2 red tokens in one row.",
+   "mapped_to": "item:M2.S10.T10.C30 (question)"
+  },
+  {
+   "fig_id": "P08-token_set-2",
+   "source": "chapter p.08",
+   "description": "Math Talk set (b): bottom row red, red, green, green and 2 reds above the greens.",
+   "mapped_to": "item:M2.S10.T10.C30 (question)"
+  },
+  {
+   "fig_id": "P08-token_set-3",
+   "source": "chapter p.08",
+   "description": "Math Talk set (c): bottom row red, red, 4 greens and 4 reds above the greens.",
+   "mapped_to": "item:M2.S10.T10.C30 (question)"
+  },
+  {
+   "fig_id": "P09-token_grid-1",
+   "source": "chapter p.09",
+   "description": "8 red tokens in 4 rows of 2 beside the text (-4) x 2 (adding 2 reds to the empty bag 4 times).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 20,
+  "mapped_to_items": 6,
+  "mapped_to_concept_images": 10,
+  "mapped_none": 4,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S7.T7.C17.IMG1",
+   "M2.S10.T10.C30.IMG2"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S3.T3.C4",
+   "role": "question",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.1.rakesh",
+   "question_text": "Find two numbers whose sum is 25 and whose difference is 11. || Find two numbers whose sum is 25 and whose difference is −11.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The sum and the difference are stated in words; the book's guess table is the working, not something the question gives.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C5",
+   "role": "solution",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.1.rakesh",
+   "question_text": "Find two numbers whose sum is 25 and whose difference is 11. || Find two numbers whose sum is 25 and whose difference is −11.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The trial pairs are a plain table of numbers (First Number, Second Number, Sum, Difference) with no colour meaning; bold only marks the right pair.",
+   "text_alternative": "LaTeX array, columns First Number, Second Number, Sum, Difference; rows 10, 15, 25, -5; 20, 5, 25, 15; 19, 6, 25, 13; 18, 7, 25, 11 (last row bold); for the second block one row 7, 18, 25, -11.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C6",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.1, Q1",
+   "ncert_ref": "2.1.FiO",
+   "question_text": "Let us try to find a few more pairs of numbers from their sums and differences: (a) Sum = 27, Difference = 9 (b) Sum = 4, Difference = 12 (c) Sum = 0, Difference = 10 (d) Sum = 0, Difference = −10 (e) Sum = −7, Difference = −1 (f) Sum = −7, Difference = −13",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six sum and difference pairs are written in words; the book draws no figure for them.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C7",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.1, Q1",
+   "ncert_ref": "2.1.FiO",
+   "question_text": "Let us try to find a few more pairs of numbers from their sums and differences: (a) Sum = 27, Difference = 9 (b) Sum = 4, Difference = 12 (c) Sum = 0, Difference = 10 (d) Sum = 0, Difference = −10 (e) Sum = −7, Difference = −1 (f) Sum = −7, Difference = −13",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Each part is two short equations; a plain table of the six pairs covers it.",
+   "text_alternative": "LaTeX array, columns part, first number, second number, sum, difference: (a) 18, 9, 27, 9; (b) 8, -4, 4, 12; (c) 5, -5, 0, 10; (d) -5, 5, 0, -10; (e) -4, -3, -7, -1; (f) -10, 3, -7, -13.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C8",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "2.1.carrom_right",
+   "question_text": "The coin starts at 0. The first strike moves it 4 units right and the second 3 units right. Where does it stop?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Both strikes are stated in the question (4 right, 3 right); the book's 0 to 12 line with the coin is a teaching figure, already the concept image C8.IMG1 of this same concept (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C9",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": null,
+   "question_text": "Write a formula for the final position after strikes of a units and b units to the right.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Asks for a formula in words and symbols; the book's arcs a, b and P are a teaching figure that concept image C8.IMG1 (caption P = a + b, same topic) already shows.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C10",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "2.1.carrom_both",
+   "question_text": "The first movement is 5 units right and the second 7 units left. Where is the coin?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question states 5 right and 7 left; the book's number line from -5 to 6 is a teaching figure, already the concept image C10.IMG1 of this same concept (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C11",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E3",
+   "ncert_ref": null,
+   "question_text": "What do the magnitude and the direction of the movement −4 tell us?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Magnitude 4 and direction left are answered in words; the book has no figure for this question.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C13",
+   "role": "question",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.1.carrom_Q1",
+   "question_text": "If the first movement is −4 and the final position is 5, what is the second movement?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "First movement -4 and final position 5 are given in words; the book prints no figure with this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C14",
+   "role": "solution",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.1.carrom_Q1",
+   "question_text": "If the first movement is −4 and the final position is 5, what is the second movement?",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer (9 to the right) is complete in words and arithmetic. One number line with a single arc from -4 to 5 would help but is not needed, and the book draws none.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C15",
+   "role": "question",
+   "lp_book_number": "Example 2",
+   "ncert_ref": "2.1.carrom_Q2",
+   "question_text": "The movements are 1, −2, 3, −4, and so on up to −10. Where does the coin end?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The movements 1, -2, 3, -4 up to -10 are given in words; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C16",
+   "role": "solution",
+   "lp_book_number": "Example 2",
+   "ncert_ref": "2.1.carrom_Q2",
+   "question_text": "The movements are 1, −2, 3, −4, and so on up to −10. Where does the coin end?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Five pairs that each sum to -1, then a sum of five -1 terms: arithmetic for LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C17",
+   "role": "question",
+   "lp_book_number": "Try This (section 2.1)",
+   "ncert_ref": "2.1.TryThis",
+   "question_text": "From the figures below, what can you conclude about the magnitudes of a and b compared to each other, and what are their directions? Remember to start from 0. Figure 1: jump a goes right from 0, jump b comes back left, and the coin ends at P left of 0. Figure 2: jump a goes right from 0, jump b comes back left, and the coin ends at P right of 0. Figure 3: jump a goes left from 0, jump b comes back right, and the coin ends at P, which is 0.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question asks for conclusions 'from the figures below': the three number lines (jumps a and b from 0, final position P) are the question's data, and the arc lengths and directions are compared by sight.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S7.T7.C17.IMG1",
+   "manim_scene": "c7_10_2_1_trythis_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S7.T7.C17.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "layout": "three strips stacked top to bottom (Figure 1, 2, 3), GUIDE divider lines at y = 1.5 and y = -1.5",
+     "frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ]
+     },
+     "to_scale": false,
+     "numeric_scale_printed": false,
+     "rows": [
+      {
+       "row": 1,
+       "band_y": [
+        1.5,
+        4.5
+       ],
+       "baseline_y": 2.5,
+       "line_x": [
+        -7.2,
+        7.2
+       ],
+       "arrowheads": "both ends",
+       "left_label": "−ve",
+       "right_label": "+ve",
+       "dot_zero_x": 1.0,
+       "P_x": -0.4,
+       "dashed_coin_x": 3.8,
+       "unit": 1.4,
+       "a_units": 2,
+       "b_units": -3,
+       "to_scale": false,
+       "arcs": {
+        "a": {
+         "start": [
+          1.0,
+          3.1
+         ],
+         "end": [
+          3.65,
+          3.1
+         ],
+         "centre_x": 2.325,
+         "half_width": 1.325,
+         "height": 0.55,
+         "apex_y": 3.65,
+         "label_xy": [
+          2.325,
+          3.4
+         ],
+         "outer": false,
+         "direction": "right"
+        },
+        "b": {
+         "start": [
+          3.95,
+          3.1
+         ],
+         "end": [
+          -0.4,
+          3.1
+         ],
+         "centre_x": 1.775,
+         "half_width": 2.175,
+         "height": 0.9,
+         "apex_y": 4.0,
+         "label_xy": [
+          1.775,
+          4.28
+         ],
+         "outer": true,
+         "direction": "left"
+        }
+       }
+      },
+      {
+       "row": 2,
+       "band_y": [
+        -1.5,
+        1.5
+       ],
+       "baseline_y": -0.5,
+       "line_x": [
+        -7.2,
+        7.2
+       ],
+       "arrowheads": "both ends",
+       "left_label": "−ve",
+       "right_label": "+ve",
+       "dot_zero_x": -3.4,
+       "P_x": -1.0,
+       "dashed_coin_x": 2.2,
+       "unit": 0.8,
+       "a_units": 7,
+       "b_units": -4,
+       "to_scale": false,
+       "arcs": {
+        "a": {
+         "start": [
+          -3.4,
+          0.1
+         ],
+         "end": [
+          2.32,
+          0.1
+         ],
+         "centre_x": -0.54,
+         "half_width": 2.86,
+         "height": 0.9,
+         "apex_y": 1.0,
+         "label_xy": [
+          -0.54,
+          1.28
+         ],
+         "outer": true,
+         "direction": "right"
+        },
+        "b": {
+         "start": [
+          2.08,
+          0.1
+         ],
+         "end": [
+          -1.0,
+          0.1
+         ],
+         "centre_x": 0.54,
+         "half_width": 1.54,
+         "height": 0.55,
+         "apex_y": 0.65,
+         "label_xy": [
+          0.54,
+          0.4
+         ],
+         "outer": false,
+         "direction": "left"
+        }
+       }
+      },
+      {
+       "row": 3,
+       "band_y": [
+        -4.5,
+        -1.5
+       ],
+       "baseline_y": -3.5,
+       "line_x": [
+        -7.2,
+        7.2
+       ],
+       "arrowheads": "both ends",
+       "left_label": "−ve",
+       "right_label": "+ve",
+       "dot_zero_x": 0.0,
+       "P_x": 0.0,
+       "dashed_coin_x": -4.2,
+       "unit": 1.4,
+       "a_units": -3,
+       "b_units": 3,
+       "to_scale": false,
+       "arcs": {
+        "a": {
+         "start": [
+          0.12,
+          -2.9
+         ],
+         "end": [
+          -4.32,
+          -2.9
+         ],
+         "centre_x": -2.1,
+         "half_width": 2.22,
+         "height": 0.9,
+         "apex_y": -2.0,
+         "label_xy": [
+          -2.1,
+          -1.72
+         ],
+         "outer": true,
+         "direction": "left"
+        },
+        "b": {
+         "start": [
+          -4.08,
+          -2.9
+         ],
+         "end": [
+          -0.12,
+          -2.9
+         ],
+         "centre_x": -2.1,
+         "half_width": 1.98,
+         "height": 0.55,
+         "apex_y": -2.35,
+         "label_xy": [
+          -2.1,
+          -2.6
+         ],
+         "outer": false,
+         "direction": "right"
+        }
+       }
+      }
+     ],
+     "coin_solid": {
+      "radius": 0.3,
+      "fill": "MARK_FILL",
+      "outline": "INK"
+     },
+     "coin_dashed": {
+      "radius": 0.3,
+      "fill": "CELL_FILL",
+      "outline": "GUIDE dashed"
+     },
+     "rule": "row 1: a right, b left, |b| > |a|, P left of 0; row 2: a right, b left, |a| > |b|, P right of 0; row 3: a left, b right, |a| = |b|, P = 0"
+    },
+    "manim_description": "16:9 canvas, frame x from -8 to 8 and y from -4.5 to 4.5, BG background, text height 0.3 (sans-serif, labels INK). Three number-line strips stacked top to bottom, separated by two GUIDE lines (2 px) at y = 1.5 and y = -1.5 running from x = -7.4 to x = 7.4. The strips are Figure 1 (top), Figure 2 (middle) and Figure 3 (bottom) of the question; no numbers or letters mark the strips. No numeric scale is drawn: positions are proportional jumps only. In each strip a coin starts at 0, is struck by jump a, then by jump b, and stops at P. Row 1 (band y from 1.5 to 4.5, baseline y = 2.5). Draw a straight INK line, 3 px, from x = -7.2 to x = 7.2 at y = 2.5 with an arrowhead at both ends. Under the left end write \"−ve\" centred at (-6.5, 2.15) and under the right end write \"+ve\" centred at (6.5, 2.15). Draw a filled INK dot (radius 0.07) at (1, 2.5) and write \"0\" centred at (1, 2.15). Draw a filled INK dot (radius 0.07) at (-0.4, 2.5) for the final position and write \"P\" centred at (-0.4, 2.15). Draw the solid coin (circle radius 0.3, fill MARK_FILL, INK outline 3 px) centred at (-0.4, 2.8), sitting on the dot at P. Draw the dashed coin (circle radius 0.3, fill CELL_FILL, GUIDE dashed outline 2.5 px) centred at (3.8, 2.8); it has no dot and no label. Arc a: INK half-ellipse, 3 px, from (1, 3.1) to (3.65, 3.1), horizontal semi-axis 1.325, height 0.55 above its end points (apex y = 3.65), arrowhead at the end point pointing down, so the jump runs rightwards. Arc b: INK half-ellipse, 3 px, from (3.95, 3.1) to (-0.4, 3.1), horizontal semi-axis 2.175, height 0.9 above its end points (apex y = 4), arrowhead at the end point pointing down, so the jump runs leftwards. Write the italic letter \"a\" centred at (2.325, 3.4), directly under the apex of its arc. Write the italic letter \"b\" centred at (1.775, 4.28), above the apex of its arc. Row 2 (band y from -1.5 to 1.5, baseline y = -0.5). Draw a straight INK line, 3 px, from x = -7.2 to x = 7.2 at y = -0.5 with an arrowhead at both ends. Under the left end write \"−ve\" centred at (-6.5, -0.85) and under the right end write \"+ve\" centred at (6.5, -0.85). Draw a filled INK dot (radius 0.07) at (-3.4, -0.5) and write \"0\" centred at (-3.4, -0.85). Draw a filled INK dot (radius 0.07) at (-1, -0.5) for the final position and write \"P\" centred at (-1, -0.85). Draw the solid coin (circle radius 0.3, fill MARK_FILL, INK outline 3 px) centred at (-1, -0.2), sitting on the dot at P. Draw the dashed coin (circle radius 0.3, fill CELL_FILL, GUIDE dashed outline 2.5 px) centred at (2.2, -0.2); it has no dot and no label. Arc a: INK half-ellipse, 3 px, from (-3.4, 0.1) to (2.32, 0.1), horizontal semi-axis 2.86, height 0.9 above its end points (apex y = 1), arrowhead at the end point pointing down, so the jump runs rightwards. Arc b: INK half-ellipse, 3 px, from (2.08, 0.1) to (-1, 0.1), horizontal semi-axis 1.54, height 0.55 above its end points (apex y = 0.65), arrowhead at the end point pointing down, so the jump runs leftwards. Write the italic letter \"a\" centred at (-0.54, 1.28), above the apex of its arc. Write the italic letter \"b\" centred at (0.54, 0.4), directly under the apex of its arc. Row 3 (band y from -4.5 to -1.5, baseline y = -3.5). Draw a straight INK line, 3 px, from x = -7.2 to x = 7.2 at y = -3.5 with an arrowhead at both ends. Under the left end write \"−ve\" centred at (-6.5, -3.85) and under the right end write \"+ve\" centred at (6.5, -3.85). Draw a filled INK dot (radius 0.07) at (0, -3.5) and write \"0\" centred at (0, -3.85). The final position P is the same point as 0: write \"P\" centred at (0, -4.22), directly below the \"0\". Draw the solid coin (circle radius 0.3, fill MARK_FILL, INK outline 3 px) centred at (0, -3.2), sitting on the dot at 0. Draw the dashed coin (circle radius 0.3, fill CELL_FILL, GUIDE dashed outline 2.5 px) centred at (-4.2, -3.2); it has no dot and no label. Arc a: INK half-ellipse, 3 px, from (0.12, -2.9) to (-4.32, -2.9), horizontal semi-axis 2.22, height 0.9 above its end points (apex y = -2), arrowhead at the end point pointing down, so the jump runs leftwards. Arc b: INK half-ellipse, 3 px, from (-4.08, -2.9) to (-0.12, -2.9), horizontal semi-axis 1.98, height 0.55 above its end points (apex y = -2.35), arrowhead at the end point pointing down, so the jump runs rightwards. Write the italic letter \"a\" centred at (-2.1, -1.72), above the apex of its arc. Write the italic letter \"b\" centred at (-2.1, -2.6), directly under the apex of its arc.",
+    "visible_text": [
+     "−ve",
+     "P",
+     "0",
+     "+ve",
+     "a",
+     "b",
+     "−ve",
+     "0",
+     "P",
+     "+ve",
+     "a",
+     "b",
+     "−ve",
+     "0",
+     "P",
+     "+ve",
+     "a",
+     "b"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "figure numbers 1, 2, 3 or the word Figure",
+     "any numeric scale, tick marks or tick values",
+     "numbers or lengths for the jumps a and b",
+     "the words greater, equal, magnitude, positive or negative",
+     "a coin drawn at 0 at the start"
+    ],
+    "accuracy_checks": [
+     "Row 1: 0 at x = 1.0, a = +2 units of 1.4 so the dashed coin is at x = 3.8, b = -3 units so P = 1.0 + 2.8 - 4.2 = -0.4: P is left of 0 and |b| (4.2) > |a| (2.8)",
+     "Row 2: 0 at x = -3.4, a = +7 units of 0.8 (5.6) so the dashed coin is at x = 2.2, b = -4 units (3.2) so P = -3.4 + 5.6 - 3.2 = -1.0: P is right of 0 and |a| (5.6) > |b| (3.2)",
+     "Row 3: 0 = P at x = 0.0, a = -3 units of 1.4 so the dashed coin is at x = -4.2, b = +3 units brings it back: |a| = |b| = 4.2",
+     "Arrowheads: a points right in rows 1 and 2 and left in row 3; b points left in rows 1 and 2 and right in row 3",
+     "Row 3 has the 0 and the P labels on the same x, P below 0; nothing is printed that gives the answer"
+    ],
+    "alt_text": "Three number lines: in the first the coin goes right by a then left by a longer b and ends left of 0; in the second it goes right by a then left by a shorter b and ends right of 0; in the third a left jump and a right jump of the same length bring it back to 0.",
+    "render_note": "Proportions follow the book's three figures (page 4); the book prints no scale, so the units 1.4, 0.8, 1.4 are drawing proportions only. Rows are told apart by their top-to-bottom order, as the question's Figure 1, 2, 3; the figure numbers are not drawn (v3 rule: no figure letters or numbers)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C18",
+   "role": "solution",
+   "lp_book_number": "Try This (section 2.1)",
+   "ncert_ref": "2.1.TryThis",
+   "question_text": "From the figures below, what can you conclude about the magnitudes of a and b compared to each other, and what are their directions? Remember to start from 0. Figure 1: jump a goes right from 0, jump b comes back left, and the coin ends at P left of 0. Figure 2: jump a goes right from 0, jump b comes back left, and the coin ends at P right of 0. Figure 3: jump a goes left from 0, jump b comes back right, and the coin ends at P, which is 0.",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM"
+   ],
+   "reason": "The solution only states the conclusion for each figure; it adds no mark, arc or label to the question diagram.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C19",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "2.1.tokens_recap",
+   "question_text": "Find (+7) − (+18) with tokens.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example is stated in symbols, (+7) - (+18); the book's three token rows are a teaching figure, already the concept image C19.IMG1 of this same concept (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C20",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "2.1.teacher_note",
+   "question_text": "Argue with tokens that 7 − 18 = 7 + (−18).",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The statement 7 - 18 = 7 + (-18) is given in symbols; the book draws no figure for this Math Talk, and the token rows for 7 - 18 are already in concept image C19.IMG1 of the previous concept.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C21",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": null,
+   "question_text": "Argue with tokens that 4 − (−12) = 4 + 12.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The statement 4 - (-12) = 4 + 12 is given in symbols; the book draws no figure for this Math Talk, and concept image C20.IMG1 of the previous concept already shows these token rows.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C22",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E2",
+   "ncert_ref": null,
+   "question_text": "Write the additive inverse of 18 and of −18.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Writing the additive inverse is words and symbols; the book has no figure for it.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C24",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q4",
+   "question_text": "If 47 − 56 + 14 − 8 + 2 − 8 + 5 = −4, then find the value of −47 + 56 − 14 + 8 − 2 + 8 − 5 without calculating the full expression.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "An expression to reason about; the book prints no figure with end-of-chapter Q4.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C25",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q4",
+   "question_text": "If 47 − 56 + 14 − 8 + 2 − 8 + 5 = −4, then find the value of −47 + 56 − 14 + 8 − 2 + 8 − 5 without calculating the full expression.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four lines of reasoning with additive inverses and one value, 4: no picture adds anything.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C26",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "2.2.bag_4x2",
+   "question_text": "Find 4 × 2 with the bag.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example is stated in symbols, 4 x 2; the book's bag picture is a teaching figure, already the concept image C26.IMG1 of this same concept (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C27",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": null,
+   "question_text": "Find 4 × (−2) with the bag.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example is stated in symbols, 4 x (-2); the book's picture (4 bags of 2 reds with the multiplier, multiplicand, product labels) is a teaching figure shown by concept image C26.IMG1 of the previous concept.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C28",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "2.2.four_results",
+   "question_text": "Find (−4) × 2 with the bag.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example is stated in symbols, (-4) x 2; the book's zero-pair bags with the greens struck are a teaching figure, already the concept image C28.IMG1 of this same concept (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C29",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": null,
+   "question_text": "Find (−4) × (−2) with the bag.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example is stated in symbols, (-4) x (-2); the book's bags with the reds struck are a teaching figure shown by concept image C28.IMG1 of the previous concept.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C30",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "2.2.token_sets",
+   "question_text": "Put each set into the bag 4 times: (a) 2 reds (b) 4 reds and 2 greens (c) 6 reds and 4 greens.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book gives the three token sets (a), (b), (c) only as pictures ('the following tokens'); under the lettered-figure rule they are drawn even though concept image C30.IMG1 shows them, and this figure holds only the given tokens.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S10.T10.C30.IMG2",
+   "manim_scene": "c7_10_2_2_tokensets_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C30.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "integer_tokens",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "integer_tokens",
+     "frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ]
+     },
+     "token_diameter": 1.0,
+     "token_colours": {
+      "positive": "#6CC24A",
+      "negative": "#E8643C",
+      "outline": "INK",
+      "note": "the chapter's green and red tokens; not part of the style-token table"
+     },
+     "dividers": [
+      {
+       "y": 1.5
+      },
+      {
+       "y": -1.5
+      }
+     ],
+     "sets": [
+      {
+       "part": "first",
+       "band_y": [
+        1.5,
+        4.5
+       ],
+       "negatives": 2,
+       "positives": 0,
+       "tokens": [
+        {
+         "x": -0.5,
+         "y": 3.0,
+         "sign": "−"
+        },
+        {
+         "x": 0.5,
+         "y": 3.0,
+         "sign": "−"
+        }
+       ]
+      },
+      {
+       "part": "second",
+       "band_y": [
+        -1.5,
+        1.5
+       ],
+       "negatives": 4,
+       "positives": 2,
+       "tokens": [
+        {
+         "x": -1.5,
+         "y": -0.5,
+         "sign": "−"
+        },
+        {
+         "x": -0.5,
+         "y": -0.5,
+         "sign": "−"
+        },
+        {
+         "x": 0.5,
+         "y": -0.5,
+         "sign": "+"
+        },
+        {
+         "x": 1.5,
+         "y": -0.5,
+         "sign": "+"
+        },
+        {
+         "x": 0.5,
+         "y": 0.5,
+         "sign": "−"
+        },
+        {
+         "x": 1.5,
+         "y": 0.5,
+         "sign": "−"
+        }
+       ]
+      },
+      {
+       "part": "third",
+       "band_y": [
+        -4.5,
+        -1.5
+       ],
+       "negatives": 6,
+       "positives": 4,
+       "tokens": [
+        {
+         "x": -2.5,
+         "y": -3.5,
+         "sign": "−"
+        },
+        {
+         "x": -1.5,
+         "y": -3.5,
+         "sign": "−"
+        },
+        {
+         "x": -0.5,
+         "y": -3.5,
+         "sign": "+"
+        },
+        {
+         "x": 0.5,
+         "y": -3.5,
+         "sign": "+"
+        },
+        {
+         "x": 1.5,
+         "y": -3.5,
+         "sign": "+"
+        },
+        {
+         "x": 2.5,
+         "y": -3.5,
+         "sign": "+"
+        },
+        {
+         "x": -0.5,
+         "y": -2.5,
+         "sign": "−"
+        },
+        {
+         "x": 0.5,
+         "y": -2.5,
+         "sign": "−"
+        },
+        {
+         "x": 1.5,
+         "y": -2.5,
+         "sign": "−"
+        },
+        {
+         "x": 2.5,
+         "y": -2.5,
+         "sign": "−"
+        }
+       ]
+      }
+     ]
+    },
+    "manim_description": "16:9 canvas, frame x from -8 to 8 and y from -4.5 to 4.5, BG background. Three token sets stacked top to bottom, separated by two GUIDE lines (2 px) at y = 1.5 and y = -1.5 from x = -7.4 to x = 7.4; each set is centred in its band, read top to bottom as the question's parts. Each token is a circle of diameter 1.0 (radius 0.5) with an INK outline of 2.5 px; tokens in a row touch each other. A positive token has fill #6CC24A and an INK \"+\" sign (height 0.5) in its centre; a negative token has fill #E8643C and an INK \"−\" sign (height 0.5) in its centre. First set (band y from 1.5 to 4.5): one row of 2 negative tokens centred at (-0.5, 3) and (0.5, 3); no positive tokens. Second set (band y from -1.5 to 1.5): the bottom row has 4 tokens centred at y = -0.5, left to right at x = -1.5 negative, x = -0.5 negative, x = 0.5 positive, x = 1.5 positive; the top row has 2 negative tokens centred at y = 0.5 at x = 0.5 and x = 1.5, each directly above one of the 2 positive tokens. Third set (band y from -4.5 to -1.5): the bottom row has 6 tokens centred at y = -3.5, left to right at x = -2.5 negative, x = -1.5 negative, then x = -0.5, 0.5, 1.5, 2.5 all positive; the top row has 4 negative tokens centred at y = -2.5 at x = -0.5, 0.5, 1.5, 2.5, each directly above one of the 4 positive tokens. Nothing else is drawn: no letters, no totals, no outlines around pairs, no bag.",
+    "visible_text": [
+     "−",
+     "−",
+     "−",
+     "−",
+     "+",
+     "+",
+     "−",
+     "−",
+     "−",
+     "−",
+     "+",
+     "+",
+     "+",
+     "+",
+     "−",
+     "−",
+     "−",
+     "−"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the value -2 or any total",
+     "zero-pair outlines, circles or strike-through marks",
+     "the part letters (a), (b), (c)",
+     "a bag, braces or arrows",
+     "the words red, green, positive or negative"
+    ],
+    "accuracy_checks": [
+     "First set: 2 negative tokens, 0 positive tokens",
+     "Second set: 4 negative and 2 positive tokens (bottom row negative, negative, positive, positive; top row 2 negatives above positions 3 and 4)",
+     "Third set: 6 negative and 4 positive tokens (bottom row negative, negative, then 4 positives; top row 4 negatives above positions 3 to 6)",
+     "Every set stands for -2 (negatives minus positives = 2 in each set), but the value is not printed",
+     "Token counts 2 + 6 + 10 = 18 tokens drawn in all; visible_text holds 18 signs"
+    ],
+    "alt_text": "Three token sets, top to bottom: 2 red minus tokens; 4 red minus and 2 green plus tokens with 2 reds above the greens; 6 red minus and 4 green plus tokens with 4 reds above the greens.",
+    "render_note": "The book (page 8, Math Talk) shows these as three lettered token sets. The LP question already lists them in words, so the letters are not drawn (v3: no figure letters); the sets run top to bottom in the order of the question's parts. The teaching image C30.IMG1 shows the same sets with the value -2 and ringed zero pairs: it is not linked, this question figure shows only the given sets."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C31",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": null,
+   "question_text": "Check 5 × 4 with two different token sets for 4.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The two token sets for 4 are described in words (4 greens; 5 greens and 1 red); the book draws no token sets for this check.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C32",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E2",
+   "ncert_ref": null,
+   "question_text": "Find −4 × 2 by adding tokens instead of removing them.",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question and the three steps are complete in words. The book's picture (8 red tokens in 4 rows of 2 next to (-4) x 2) would help but is not needed, and no teaching image shows it.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C34",
+   "role": "question",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.2.similar",
+   "question_text": "Find 4 × (−6) and 9 × (−7).",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two products are stated in symbols; the book prints no figure for them.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C35",
+   "role": "solution",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.2.similar",
+   "question_text": "Find 4 × (−6) and 9 × (−7).",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word-and-arithmetic reasoning (put in 6 reds, 4 times, 24 reds); the book draws no figure for these two products.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

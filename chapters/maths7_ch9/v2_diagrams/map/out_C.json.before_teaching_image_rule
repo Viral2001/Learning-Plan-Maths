@@ -1,0 +1,4000 @@
+{
+  "meta": {
+    "chapter": "Geometric Twins",
+    "class": 7,
+    "textbook": "Ganita Prakash, Grade 7, Chapter 9",
+    "lp_plan_id": "cbse_eng_maths7_ch9_v61",
+    "prompt": "diagram_identification_prompt.md v3",
+    "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+    "counts_by_role_and_decision": {
+      "worked_example": {
+        "required": 6,
+        "optional": 4,
+        "none": 7
+      },
+      "question": {
+        "required": 6,
+        "optional": 0,
+        "none": 0
+      },
+      "solution": {
+        "required": 4,
+        "optional": 0,
+        "none": 2
+      }
+    },
+    "notes": [
+      "Chunk C: topics M3.S11.T11, M3.S12.T12, M3.S13.T13, M4.S14.T14, M4.S15.T15 (book pages 12 to 20; the SSA picture at the top of page 12, P12-shape-1, belongs to chunk B and is not claimed here).",
+      "Worked examples that are constructions (ASA, RHS twice, altitude, equilateral) are required: B2 says a construction answer is a drawing even when the steps are words.",
+      "Solutions are required only where they add new equal-part marks (midpoint, parallel lines, shared side, crossing lines); the 47 degree pair and the 50 degree isosceles answer add nothing new and stay text.",
+      "Four check questions point at a teaching image ('this crossing', 'this card', 'this sign', 'the bridge'): optional or none, with the data to write into the text (needs_lp_text_sync).",
+      "The five real-life pictures of the book (four photographs and a rangoli) are accounted to the teaching image 'Twins in the world' and are not redrawn.",
+      "The four required solution diagrams (C51, C55, C57, C59) are derived from their question diagrams (same positions, new marks in ANSWER)."
+    ]
+  },
+  "style_tokens": {
+    "BG": "#FFFFFF",
+    "INK": "#2B2B2B",
+    "MARK_FILL": "#CDEBD9",
+    "ANSWER": "#009E73",
+    "FOCUS": "#CC79A7",
+    "WRONG": "#D55E00",
+    "GUIDE": "#6B7280",
+    "SET_A": "#0072B2",
+    "SET_B": "#E69F00",
+    "CELL_FILL": "#F1EEF6"
+  },
+  "figure_inventory": [
+    {
+      "fig_id": "P12-shape-2",
+      "source": "chapter p.12",
+      "description": "Bow-tie: segments AD and BC cross at O, AB and CD joined, one tick on AO and OD, two ticks on BO and OC (checked against the page picture: correct).",
+      "mapped_to": "item:M3.S12.T12.C50 (question)"
+    },
+    {
+      "fig_id": "P13-shape-1",
+      "source": "chapter p.13",
+      "description": "Two mirror-image triangles ABC and XYZ: AB = XZ = 7 cm, BC = YZ = 5 cm, 47 degrees at B and at Z (checked against the page picture: correct, an exact mirror pair).",
+      "mapped_to": "item:M3.S12.T12.C52 (question)"
+    },
+    {
+      "fig_id": "P14-shape-1",
+      "source": "chapter p.14",
+      "description": "Parallelogram-style figure: DC and AB each with one arrowhead and one tick, crossing segments DB and CA meeting at O (checked against the page picture: one tick and one arrowhead on each, as listed).",
+      "mapped_to": "item:M3.S12.T12.C54 (question)"
+    },
+    {
+      "fig_id": "P14-shape-2",
+      "source": "chapter p.14",
+      "description": "Kite-like figure ABDC with diagonal BC: one arc at B in each of ABC and DBC, two arcs at C in each of ACB and DCB (checked against the page picture: correct).",
+      "mapped_to": "item:M3.S12.T12.C56 (question)"
+    },
+    {
+      "fig_id": "P14-shape-3",
+      "source": "chapter p.14",
+      "description": "Base BC with A top left, D top right, sides AB and DC and crossing diagonals AC and DB; B: one arc in ABD and two in DBC; C: one arc in DCA and two in ACB; A and D not joined (checked against the page picture: correct).",
+      "mapped_to": "item:M3.S12.T12.C58 (question)"
+    },
+    {
+      "fig_id": "P15-shape-1",
+      "source": "chapter p.15",
+      "description": "Fig. 1.2: two tall triangles ABC and XYZ, 35 degrees at the apex, 75 degrees at the lower right, 4 cm base, arcs at B and Y without values (checked: correct).",
+      "mapped_to": "item:M3.S11.T11.C48#0 (question)"
+    },
+    {
+      "fig_id": "P15-shape-2",
+      "source": "chapter p.15",
+      "description": "The same pair with the angles at B and Y filled in as 70 degrees: the worked example has one picture slot and the question state is drawn; the 70 degree values are written in the LP steps (step 3).",
+      "mapped_to": "none:TEXT_SUFFICIENT"
+    },
+    {
+      "fig_id": "P16-shape-1",
+      "source": "chapter p.16",
+      "description": "Rough right triangle PQR: right angle at Q, QR = 4 cm, PR = 5 cm, PQ unlabelled (checked: correct). Drawn as the base of the finished construction of the first RHS block.",
+      "mapped_to": "item:M3.S13.T13.C60#0 (question)"
+    },
+    {
+      "fig_id": "P16-construction-1",
+      "source": "chapter p.16",
+      "description": "Construction figure: base QR = 4 cm, upright line l from Q with a right-angle mark, an arc of radius 5 cm from R cutting l at P (checked: correct). The second RHS block continues this figure below the base.",
+      "mapped_to": "item:M3.S13.T13.C60#1 (question)"
+    },
+    {
+      "fig_id": "P17-shape-1",
+      "source": "chapter p.17",
+      "description": "Isosceles triangle ABC with one tick on AB and one on AC and 80 degrees at A, base about 1.7 times the height (checked: correct).",
+      "mapped_to": "item:M4.S15.T15.C67 (question)"
+    },
+    {
+      "fig_id": "P18-shape-1",
+      "source": "chapter p.18",
+      "description": "The same triangle with the altitude AD and a right-angle mark at D, ticks on AB and AC, no 80 degree mark (checked: correct).",
+      "mapped_to": "item:M4.S14.T14.C63#0 (question)"
+    },
+    {
+      "fig_id": "P18-shape-2",
+      "source": "chapter p.18",
+      "description": "Equilateral triangle with ticks on AB and AC and one arc at each of B and C (checked: correct). Teaching figure of reasoning that needs no construction: the block is optional, the text carries it.",
+      "mapped_to": "none:TEXT_SUFFICIENT"
+    },
+    {
+      "fig_id": "P18-shape-3",
+      "source": "chapter p.18",
+      "description": "Equilateral triangle with ticks on AB and BC and one arc at each of A and C (checked: correct). Same reason as P18-shape-2.",
+      "mapped_to": "none:TEXT_SUFFICIENT"
+    },
+    {
+      "fig_id": "P19-photo-1",
+      "source": "chapter p.19",
+      "description": "Louvre glass pyramid photograph: one of the five 'Congruent Triangles in Real Life' pictures; the teaching image 'Twins in the world' shows all five as flat panels. A photograph is not renderable and the item's answer is text.",
+      "mapped_to": "concept_image:M4.S14.T14.C65.IMG1"
+    },
+    {
+      "fig_id": "P19-photo-2",
+      "source": "chapter p.19",
+      "description": "Pyramid of Giza photograph: one of the five 'Congruent Triangles in Real Life' pictures; the teaching image 'Twins in the world' shows all five as flat panels. A photograph is not renderable and the item's answer is text.",
+      "mapped_to": "concept_image:M4.S14.T14.C65.IMG1"
+    },
+    {
+      "fig_id": "P19-photo-3",
+      "source": "chapter p.19",
+      "description": "glass dome photograph: one of the five 'Congruent Triangles in Real Life' pictures; the teaching image 'Twins in the world' shows all five as flat panels. A photograph is not renderable and the item's answer is text.",
+      "mapped_to": "concept_image:M4.S14.T14.C65.IMG1"
+    },
+    {
+      "fig_id": "P19-pattern-1",
+      "source": "chapter p.19",
+      "description": "rangoli design (drawn pattern): one of the five 'Congruent Triangles in Real Life' pictures; the teaching image 'Twins in the world' shows all five as flat panels. A photograph is not renderable and the item's answer is text.",
+      "mapped_to": "concept_image:M4.S14.T14.C65.IMG1"
+    },
+    {
+      "fig_id": "P20-photo-1",
+      "source": "chapter p.20",
+      "description": "Howrah Bridge photograph: one of the five 'Congruent Triangles in Real Life' pictures; the teaching image 'Twins in the world' shows all five as flat panels. A photograph is not renderable and the item's answer is text.",
+      "mapped_to": "concept_image:M4.S14.T14.C65.IMG1"
+    }
+  ],
+  "coverage_report": {
+    "inventory_figures": 18,
+    "mapped_to_items": 10,
+    "mapped_to_concept_images": 5,
+    "mapped_none": 3,
+    "unmapped": 0,
+    "new_media_ids_created": [
+      "M3.S11.T11.C46.IMG2",
+      "M3.S11.T11.C48.IMG2",
+      "M3.S12.T12.C50.IMG1",
+      "M3.S12.T12.C51.IMG1",
+      "M3.S12.T12.C52.IMG1",
+      "M3.S12.T12.C54.IMG1",
+      "M3.S12.T12.C55.IMG1",
+      "M3.S12.T12.C56.IMG1",
+      "M3.S12.T12.C57.IMG1",
+      "M3.S12.T12.C58.IMG1",
+      "M3.S12.T12.C59.IMG1",
+      "M3.S13.T13.C60.IMG2",
+      "M3.S13.T13.C60.IMG3",
+      "M4.S14.T14.C63.IMG2",
+      "M4.S14.T14.C64.IMG2",
+      "M4.S15.T15.C67.IMG1"
+    ],
+    "lp_ids_dropped": []
+  },
+  "items": [
+    {
+      "lp_concept_id": "M3.S11.T11.C46",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p12.asa",
+      "question_text": "Two triangles have BC = YZ = 5 cm, angle B = angle Y = 50 degrees and angle C = angle Z = 30 degrees. Are they congruent? Can there be triangles with these measurements that are not congruent? Construct one and find out.",
+      "block_index": 0,
+      "decision": "required",
+      "reason_codes": [
+        "ANSWER_IS_FIGURE",
+        "SPATIAL_GEOMETRY"
+      ],
+      "reason": "The steps construct a triangle from BC = 5 cm, 50 and 30 degrees and end at one crossing point A: the finished construction is the picture the example needs (B2: a construction answer is a drawing even when the steps are words).",
+      "lp_placeholder_action": "add_new_image",
+      "media_id": "M3.S11.T11.C46.IMG2",
+      "manim_scene": "c7_9_s11_c46_b0",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S11.T11.C46.IMG2}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "construction",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "construction",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "B": [
+              0.0,
+              0.0
+            ],
+            "C": [
+              5.0,
+              0.0
+            ],
+            "A": [
+              1.632,
+              1.945
+            ]
+          },
+          "segments": [
+            {
+              "from": "B",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "B",
+              "colour": "ANSWER",
+              "style": "solid",
+              "to": "A"
+            },
+            {
+              "from": "C",
+              "colour": "ANSWER",
+              "style": "solid",
+              "to": "A"
+            },
+            {
+              "from": "A",
+              "colour": "GUIDE",
+              "style": "dashed",
+              "to_xy": [
+                2.21,
+                2.634
+              ],
+              "arrowhead_at_end": false
+            },
+            {
+              "from": "A",
+              "colour": "GUIDE",
+              "style": "dashed",
+              "to_xy": [
+                0.852,
+                2.395
+              ],
+              "arrowhead_at_end": false
+            }
+          ],
+          "highlight_strokes": [],
+          "angle_arcs": [
+            {
+              "vertex": "B",
+              "from_deg": 0.0,
+              "to_deg": 50.0,
+              "radii": [
+                0.7
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "BC and BA"
+            },
+            {
+              "vertex": "C",
+              "from_deg": 150.0,
+              "to_deg": 180.0,
+              "radii": [
+                0.7
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "CA and CB"
+            },
+            {
+              "vertex": "A",
+              "from_deg": 230.0,
+              "to_deg": 330.0,
+              "radii": [
+                0.55
+              ],
+              "count": 1,
+              "colour": "ANSWER",
+              "between": "AB and AC, the angle BAC"
+            }
+          ],
+          "construction_arcs": [],
+          "tick_marks": [],
+          "right_angle_marks": [],
+          "parallel_arrowheads": [],
+          "labels": [
+            {
+              "text": "50°",
+              "centre": [
+                1.088,
+                0.507
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "30°",
+              "centre": [
+                3.793,
+                0.324
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "100°",
+              "centre": [
+                1.805,
+                0.96
+              ],
+              "colour": "ANSWER",
+              "rotation_deg": 0
+            },
+            {
+              "text": "5 cm",
+              "centre": [
+                2.5,
+                -0.5
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "B",
+              "centre": [
+                -0.4,
+                -0.35
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "C",
+              "centre": [
+                5.4,
+                -0.35
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "A",
+              "centre": [
+                1.632,
+                2.395
+              ],
+              "colour": "ANSWER",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": true,
+          "given": [
+            "BC = 5 cm",
+            "angle B = 50 degrees",
+            "angle C = 30 degrees"
+          ],
+          "constructed": [
+            "rays BA and CA",
+            "point A",
+            "angle A = 100 degrees"
+          ]
+        },
+        "manim_description": "Draw the finished construction of a triangle from one base and two angles (figure units are centimetres, drawn to scale). Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: B at (0, 0); C at (5, 0); A at (1.632, 1.945). Draw these straight segments in INK, solid: B to C. Draw these straight segments in ANSWER, solid: B to A; C to A. Draw these straight segments in GUIDE, dashed: A to the free end (2.21, 2.634); A to the free end (0.852, 2.395). Angle mark in INK at vertex B (the angle between BC and BA): one arc of radius 0.7 sweeping counter-clockwise from 0 degrees to 50 degrees. Angle mark in INK at vertex C (the angle between CA and CB): one arc of radius 0.7 sweeping counter-clockwise from 150 degrees to 180 degrees. Angle mark in ANSWER at vertex A (the angle between AB and AC, the angle BAC): one arc of radius 0.55 sweeping counter-clockwise from 230 degrees to 330 degrees. Write the text labels: '50°' in INK centred at (1.088, 0.507); '30°' in INK centred at (3.793, 0.324); '100°' in ANSWER centred at (1.805, 0.96); '5 cm' in INK centred at (2.5, -0.5); 'B' in INK centred at (-0.4, -0.35); 'C' in INK centred at (5.4, -0.35); 'A' in ANSWER centred at (1.632, 2.395). Draw nothing else.",
+        "visible_text": [
+          "50°",
+          "30°",
+          "100°",
+          "5 cm",
+          "B",
+          "C",
+          "A"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "the words ASA, congruent, same or different",
+          "a second triangle"
+        ],
+        "accuracy_checks": [
+          "BC = 5 and the rays leave B at exactly 50 degrees and C at exactly 150 degrees (30 degrees inside the triangle)",
+          "angle A = 180 - 50 - 30 = 100 degrees: direction of AB is 230 degrees, direction of AC is 330 degrees, difference 100",
+          "A = (1.632, 1.945): AB = 5 sin30 / sin100 = 2.539, AC = 5 sin50 / sin100 = 3.889",
+          "the two rays cross exactly once (at A)"
+        ],
+        "alt_text": "A base BC of 5 cm with a 50 degree ray from B and a 30 degree ray from C crossing at the single point A, where the angle is 100 degrees.",
+        "render_note": "to_scale true. Same construction as the book's ASA text on page 12 (the book prints no figure for it). The given measurements (BC, 50, 30) are INK; what the construction produces (the two rays, A, the angle at A) is ANSWER. The rays are drawn slightly past A in dashed GUIDE only to show that two straight lines cross once."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S11.T11.C46",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p12.asa",
+      "question_text": "If both children keep standing still and do not move their torches, is there more than one place where the beams meet?",
+      "block_index": 1,
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "A yes/no question about one meeting place of two beams; the answer is a sentence and the story picture of the concept already sits in the plan as a teaching image.",
+      "text_alternative": "No figure: keep the sentence 'No, only one place, where the two beams cross.'",
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S11.T11.C47",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": null,
+      "question_text": "You met this crossing earlier. Which two angles here are equal without anybody measuring?",
+      "block_index": 0,
+      "decision": "optional",
+      "reason_codes": [
+        "FIG_REFERENCED",
+        "REUSES_CONCEPT_IMAGE"
+      ],
+      "reason": "The text points at 'this crossing' and 'here' (the road-crossing teaching image of this concept). A figure of two straight lines crossing with the four angles drawn would help, but the answer is the general fact about opposite angles, so nothing is added.",
+      "text_alternative": "Write the data into the text: 'Two straight lines cross and make four angles. Which two angles are equal without anybody measuring?'",
+      "needs_lp_text_sync": true,
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S11.T11.C48",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p14.aas",
+      "question_text": "Two triangles ABC and XYZ have angle A = angle X = 35 degrees, angle C = angle Z = 75 degrees and BC = YZ = 4 cm. The side is not between the two given angles. Are the triangles congruent? Find the missing angles B and Y.",
+      "block_index": 0,
+      "decision": "required",
+      "reason_codes": [
+        "FIG_REFERENCED",
+        "DATA_IN_FIGURE",
+        "SPATIAL_GEOMETRY"
+      ],
+      "reason": "The book's example is built on its numbered Fig. 1.2 (two triangles with 35, 75 and a 4 cm base); the position of the given side relative to the given angles is what the example is about, so the figure is drawn (v3: a numbered or lettered figure is drawn even if a teaching image shows the topic).",
+      "lp_placeholder_action": "add_new_image",
+      "media_id": "M3.S11.T11.C48.IMG2",
+      "manim_scene": "c7_9_s11_c48_b0",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S11.T11.C48.IMG2}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "geometry_figure",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "geometry_figure",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "B": [
+              0.0,
+              0.0
+            ],
+            "C": [
+              4.0,
+              0.0
+            ],
+            "A": [
+              2.304,
+              6.33
+            ],
+            "Y": [
+              6.5,
+              0.0
+            ],
+            "Z": [
+              10.5,
+              0.0
+            ],
+            "X": [
+              8.804,
+              6.33
+            ]
+          },
+          "segments": [
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "B",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "C",
+              "colour": "INK",
+              "style": "solid",
+              "to": "A"
+            },
+            {
+              "from": "X",
+              "colour": "INK",
+              "style": "solid",
+              "to": "Y"
+            },
+            {
+              "from": "Y",
+              "colour": "INK",
+              "style": "solid",
+              "to": "Z"
+            },
+            {
+              "from": "Z",
+              "colour": "INK",
+              "style": "solid",
+              "to": "X"
+            }
+          ],
+          "highlight_strokes": [],
+          "angle_arcs": [
+            {
+              "vertex": "A",
+              "from_deg": 250.0,
+              "to_deg": 285.0,
+              "radii": [
+                0.9
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "AB and AC"
+            },
+            {
+              "vertex": "C",
+              "from_deg": 105.0,
+              "to_deg": 180.0,
+              "radii": [
+                0.8
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "CA and CB"
+            },
+            {
+              "vertex": "B",
+              "from_deg": 0.0,
+              "to_deg": 70.0,
+              "radii": [
+                0.8
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "BC and BA"
+            },
+            {
+              "vertex": "X",
+              "from_deg": 250.0,
+              "to_deg": 285.0,
+              "radii": [
+                0.9
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "XY and XZ"
+            },
+            {
+              "vertex": "Z",
+              "from_deg": 105.0,
+              "to_deg": 180.0,
+              "radii": [
+                0.8
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "ZX and ZY"
+            },
+            {
+              "vertex": "Y",
+              "from_deg": 0.0,
+              "to_deg": 70.0,
+              "radii": [
+                0.8
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "YZ and YX"
+            }
+          ],
+          "construction_arcs": [],
+          "tick_marks": [],
+          "right_angle_marks": [],
+          "parallel_arrowheads": [],
+          "labels": [
+            {
+              "text": "35°",
+              "centre": [
+                2.217,
+                4.332
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "75°",
+              "centre": [
+                2.929,
+                0.822
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "?",
+              "centre": [
+                1.065,
+                0.746
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "35°",
+              "centre": [
+                8.717,
+                4.332
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "75°",
+              "centre": [
+                9.429,
+                0.822
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "?",
+              "centre": [
+                7.565,
+                0.746
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "4 cm",
+              "centre": [
+                2.0,
+                -0.55
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "4 cm",
+              "centre": [
+                8.5,
+                -0.55
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "A",
+              "centre": [
+                2.304,
+                6.83
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "B",
+              "centre": [
+                -0.45,
+                -0.4
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "C",
+              "centre": [
+                4.45,
+                -0.4
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "X",
+              "centre": [
+                8.804,
+                6.83
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "Y",
+              "centre": [
+                6.05,
+                -0.4
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "Z",
+              "centre": [
+                10.95,
+                -0.4
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": true,
+          "given": [
+            "angle A = angle X = 35 degrees",
+            "angle C = angle Z = 75 degrees",
+            "BC = YZ = 4 cm"
+          ],
+          "unknown": [
+            "angle B",
+            "angle Y"
+          ]
+        },
+        "manim_description": "Draw the book's Fig. 1.2: two triangles side by side with the same marked parts, drawn to scale. Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: B at (0, 0); C at (4, 0); A at (2.304, 6.33); Y at (6.5, 0); Z at (10.5, 0); X at (8.804, 6.33). Draw these straight segments in INK, solid: A to B; B to C; C to A; X to Y; Y to Z; Z to X. Angle mark in INK at vertex A (the angle between AB and AC): one arc of radius 0.9 sweeping counter-clockwise from 250 degrees to 285 degrees. Angle mark in INK at vertex C (the angle between CA and CB): one arc of radius 0.8 sweeping counter-clockwise from 105 degrees to 180 degrees. Angle mark in INK at vertex B (the angle between BC and BA): one arc of radius 0.8 sweeping counter-clockwise from 0 degrees to 70 degrees. Angle mark in INK at vertex X (the angle between XY and XZ): one arc of radius 0.9 sweeping counter-clockwise from 250 degrees to 285 degrees. Angle mark in INK at vertex Z (the angle between ZX and ZY): one arc of radius 0.8 sweeping counter-clockwise from 105 degrees to 180 degrees. Angle mark in INK at vertex Y (the angle between YZ and YX): one arc of radius 0.8 sweeping counter-clockwise from 0 degrees to 70 degrees. Write the text labels: '35°' in INK centred at (2.217, 4.332); '75°' in INK centred at (2.929, 0.822); '?' in INK centred at (1.065, 0.746); '35°' in INK centred at (8.717, 4.332); '75°' in INK centred at (9.429, 0.822); '?' in INK centred at (7.565, 0.746); '4 cm' in INK centred at (2, -0.55); '4 cm' in INK centred at (8.5, -0.55); 'A' in INK centred at (2.304, 6.83); 'B' in INK centred at (-0.45, -0.4); 'C' in INK centred at (4.45, -0.4); 'X' in INK centred at (8.804, 6.83); 'Y' in INK centred at (6.05, -0.4); 'Z' in INK centred at (10.95, -0.4). Draw nothing else.",
+        "visible_text": [
+          "35°",
+          "75°",
+          "?",
+          "4 cm",
+          "A",
+          "B",
+          "C",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "70 degree values",
+          "the words AAS, ASA, congruent"
+        ],
+        "accuracy_checks": [
+          "angle A = angle X = 35 degrees (apex), angle C = angle Z = 75 degrees, BC = YZ = 4 cm",
+          "angle at B = 180 - 35 - 75 = 70 degrees: direction of BA is 70 degrees, A = (2.304, 6.33)",
+          "both triangles are identical copies, the second moved 6.5 units to the right",
+          "no value is printed at B and Y (they show ?)"
+        ],
+        "alt_text": "Two tall triangles ABC and XYZ, each with 35 degrees at the top, 75 degrees at the lower right, a 4 cm base and a question mark at the lower left angle.",
+        "render_note": "to_scale true: B = 70 degrees is only implied by the angle sum, the drawing is made with it. Question state of the example: the unknown angles at B and Y show '?' (the book shows the arcs with no value; the 70 degree values appear in the LP steps). P15-shape-1 of the book."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S11.T11.C48",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p14.aas",
+      "question_text": "Which half of this card is the reason A A S works and S S A does not?",
+      "block_index": 1,
+      "decision": "optional",
+      "reason_codes": [
+        "FIG_REFERENCED",
+        "REUSES_CONCEPT_IMAGE"
+      ],
+      "reason": "'This card' is the split ANGLES / SIDES teaching image of this concept; a drawing of the two halves would help but the answer is a sentence.",
+      "text_alternative": "Write the card into the text: 'A card has two halves. ANGLES: two angles are known, so the third is found. SIDES: two sides are known, so the third stays free. Which half is the reason AAS works and SSA does not?'",
+      "needs_lp_text_sync": true,
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S11.T11.C48",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p14.aas",
+      "question_text": "Chintu says: the side is not between the two angles, so this is like the swinging side last time and it fails. Is he right?",
+      "block_index": 2,
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "A two-option judgement (A) Yes (B) No about a statement written in the text; no figure is given or needed.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S12.T12.C50",
+      "role": "question",
+      "lp_book_number": "Two Angles and a Side: the midpoint figure",
+      "ncert_ref": "p12.midpoint",
+      "question_text": "In the figure, O is the midpoint of AD and of BC. What can one say about the lengths AB and CD?",
+      "decision": "required",
+      "reason_codes": [
+        "FIG_REFERENCED",
+        "DATA_IN_FIGURE",
+        "SPATIAL_GEOMETRY"
+      ],
+      "reason": "'In the figure' - the position of the crossing and the equal-length ticks are given only by the book's figure.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S12.T12.C50.IMG1",
+      "manim_scene": "c7_9_s12_midpoint_q",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S12.T12.C50.IMG1}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "geometry_figure",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "geometry_figure",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "A": [
+              -2.4,
+              2.6
+            ],
+            "B": [
+              -3.6,
+              -2.2
+            ],
+            "C": [
+              3.6,
+              2.2
+            ],
+            "D": [
+              2.4,
+              -2.6
+            ],
+            "O": [
+              0.0,
+              0.0
+            ]
+          },
+          "segments": [
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "D"
+            },
+            {
+              "from": "B",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "C",
+              "colour": "INK",
+              "style": "solid",
+              "to": "D"
+            }
+          ],
+          "highlight_strokes": [],
+          "angle_arcs": [],
+          "construction_arcs": [],
+          "tick_marks": [
+            {
+              "on": "A-O",
+              "distance_from_first_end": 1.769,
+              "count": 1,
+              "colour": "INK"
+            },
+            {
+              "on": "O-D",
+              "distance_from_first_end": 1.769,
+              "count": 1,
+              "colour": "INK"
+            },
+            {
+              "on": "B-O",
+              "distance_from_first_end": 2.11,
+              "count": 2,
+              "colour": "INK"
+            },
+            {
+              "on": "O-C",
+              "distance_from_first_end": 2.11,
+              "count": 2,
+              "colour": "INK"
+            }
+          ],
+          "right_angle_marks": [],
+          "parallel_arrowheads": [],
+          "labels": [
+            {
+              "text": "A",
+              "centre": [
+                -2.85,
+                3.05
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "B",
+              "centre": [
+                -4.05,
+                -2.65
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "C",
+              "centre": [
+                4.05,
+                2.65
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "D",
+              "centre": [
+                2.85,
+                -3.05
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "O",
+              "centre": [
+                0.15,
+                0.7
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": false
+        },
+        "manim_description": "Draw the book's midpoint figure (two crossing segments and two joining sides, with equal-length ticks). Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: A at (-2.4, 2.6); B at (-3.6, -2.2); C at (3.6, 2.2); D at (2.4, -2.6); O at (0, 0). Draw these straight segments in INK, solid: A to D; B to C; A to B; C to D. 1 tick mark in INK on segment A-O: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 1.769 from A, at (-1.2, 1.3). 1 tick mark in INK on segment O-D: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 1.769 from O, at (1.2, -1.3). 2 tick marks in INK on segment B-O: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.11 from B, at the centres (-1.894, -1.157), (-1.706, -1.043) (0.22 apart along the segment). 2 tick marks in INK on segment O-C: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.11 from O, at the centres (1.706, 1.043), (1.894, 1.157) (0.22 apart along the segment). Write the text labels: 'A' in INK centred at (-2.85, 3.05); 'B' in INK centred at (-4.05, -2.65); 'C' in INK centred at (4.05, 2.65); 'D' in INK centred at (2.85, -3.05); 'O' in INK centred at (0.15, 0.7). Draw nothing else.",
+        "visible_text": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "O"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "any angle mark",
+          "the word SAS",
+          "a mark on AB or CD"
+        ],
+        "accuracy_checks": [
+          "O = (0, 0) is the midpoint of AD (A and D are opposite points) and of BC (B and C are opposite points)",
+          "AO = OD = 3.538 and BO = OC = 4.219",
+          "one tick on each of AO and OD, two ticks on each of BO and OC, nothing else marked",
+          "AB and CD are drawn but carry no marks"
+        ],
+        "alt_text": "Segments AD and BC cross at O, with AB and CD joined; AO and OD carry one tick each and BO and OC carry two ticks each.",
+        "render_note": "Not to scale (the book gives no lengths): proportions follow the page 12 picture. P12-shape-2 of the book. Question state: only the given ticks, no angle marks."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S12.T12.C51",
+      "role": "solution",
+      "lp_book_number": "Two Angles and a Side: the midpoint figure",
+      "ncert_ref": "p12.midpoint",
+      "question_text": "In the figure, O is the midpoint of AD and of BC. What can one say about the lengths AB and CD?",
+      "decision": "required",
+      "reason_codes": [
+        "SPATIAL_GEOMETRY",
+        "HIGHLIGHT_MEANING"
+      ],
+      "reason": "The solution's key step is a new mark the question figure does not carry: the two facing angles at O are equal (vertically opposite); the figure also shows the result AB = CD.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S12.T12.C51.IMG1",
+      "manim_scene": "c7_9_s12_midpoint_sol",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S12.T12.C51.IMG1}}",
+        "insert_into": "steps_tex",
+        "position": "before_first_step"
+      },
+      "diagram": {
+        "diagram_type": "geometry_figure",
+        "aspect_ratio": "16:9",
+        "derived_from": "M3.S12.T12.C50.IMG1",
+        "content": {
+          "type": "geometry_figure",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "A": [
+              -2.4,
+              2.6
+            ],
+            "B": [
+              -3.6,
+              -2.2
+            ],
+            "C": [
+              3.6,
+              2.2
+            ],
+            "D": [
+              2.4,
+              -2.6
+            ],
+            "O": [
+              0.0,
+              0.0
+            ]
+          },
+          "segments": [
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "D"
+            },
+            {
+              "from": "B",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "C",
+              "colour": "INK",
+              "style": "solid",
+              "to": "D"
+            }
+          ],
+          "highlight_strokes": [],
+          "angle_arcs": [
+            {
+              "vertex": "O",
+              "from_deg": 132.709,
+              "to_deg": 211.43,
+              "radii": [
+                1.0
+              ],
+              "count": 1,
+              "colour": "ANSWER",
+              "between": "OA and OB, the left angle AOB"
+            },
+            {
+              "vertex": "O",
+              "from_deg": -47.291,
+              "to_deg": 31.43,
+              "radii": [
+                1.0
+              ],
+              "count": 1,
+              "colour": "ANSWER",
+              "between": "OD and OC, the right angle DOC"
+            }
+          ],
+          "construction_arcs": [],
+          "tick_marks": [
+            {
+              "on": "A-O",
+              "distance_from_first_end": 1.769,
+              "count": 1,
+              "colour": "INK"
+            },
+            {
+              "on": "O-D",
+              "distance_from_first_end": 1.769,
+              "count": 1,
+              "colour": "INK"
+            },
+            {
+              "on": "B-O",
+              "distance_from_first_end": 2.11,
+              "count": 2,
+              "colour": "INK"
+            },
+            {
+              "on": "O-C",
+              "distance_from_first_end": 2.11,
+              "count": 2,
+              "colour": "INK"
+            },
+            {
+              "on": "A-B",
+              "distance_from_first_end": 2.474,
+              "count": 3,
+              "colour": "ANSWER"
+            },
+            {
+              "on": "C-D",
+              "distance_from_first_end": 2.474,
+              "count": 3,
+              "colour": "ANSWER"
+            }
+          ],
+          "right_angle_marks": [],
+          "parallel_arrowheads": [],
+          "labels": [
+            {
+              "text": "A",
+              "centre": [
+                -2.85,
+                3.05
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "B",
+              "centre": [
+                -4.05,
+                -2.65
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "C",
+              "centre": [
+                4.05,
+                2.65
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "D",
+              "centre": [
+                2.85,
+                -3.05
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "O",
+              "centre": [
+                0.15,
+                0.7
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": false
+        },
+        "manim_description": "Same layout and given ticks as M3.S12.T12.C50.IMG1; draw the complete final state of the midpoint figure. Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: A at (-2.4, 2.6); B at (-3.6, -2.2); C at (3.6, 2.2); D at (2.4, -2.6); O at (0, 0). Draw these straight segments in INK, solid: A to D; B to C; A to B; C to D. Angle mark in ANSWER at vertex O (the angle between OA and OB, the left angle AOB): one arc of radius 1 sweeping counter-clockwise from 132.709 degrees to 211.43 degrees. Angle mark in ANSWER at vertex O (the angle between OD and OC, the right angle DOC): one arc of radius 1 sweeping counter-clockwise from -47.291 degrees to 31.43 degrees. 1 tick mark in INK on segment A-O: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 1.769 from A, at (-1.2, 1.3). 1 tick mark in INK on segment O-D: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 1.769 from O, at (1.2, -1.3). 2 tick marks in INK on segment B-O: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.11 from B, at the centres (-1.894, -1.157), (-1.706, -1.043) (0.22 apart along the segment). 2 tick marks in INK on segment O-C: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.11 from O, at the centres (1.706, 1.043), (1.894, 1.157) (0.22 apart along the segment). 3 tick marks in ANSWER on segment A-B: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.474 from A, at the centres (-2.947, 0.413), (-3, 0.2), (-3.053, -0.013) (0.22 apart along the segment). 3 tick marks in ANSWER on segment C-D: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.474 from C, at the centres (3.053, 0.013), (3, -0.2), (2.947, -0.413) (0.22 apart along the segment). Write the text labels: 'A' in INK centred at (-2.85, 3.05); 'B' in INK centred at (-4.05, -2.65); 'C' in INK centred at (4.05, 2.65); 'D' in INK centred at (2.85, -3.05); 'O' in INK centred at (0.15, 0.7). Draw nothing else.",
+        "visible_text": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "O"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "the sentence AB = CD",
+          "the word SAS"
+        ],
+        "accuracy_checks": [
+          "angle AOB and angle DOC are the two facing wedges at O and both span 78.72 degrees",
+          "SAS: AO = OD (one tick), BO = OC (two ticks), angle AOB = angle DOC (one arc each) give AB = CD (three ticks each)",
+          "AB = CD = 4.948 in the drawing (point symmetry about O)",
+          "given marks unchanged from the question figure"
+        ],
+        "alt_text": "The midpoint figure with the two facing angles at O marked equal and AB and CD marked equal with three ticks each.",
+        "render_note": "same positions as M3.S12.T12.C50.IMG1. Added in ANSWER: one arc inside each of the two facing angles AOB and DOC (vertically opposite, 78.7 degrees each in the drawing) and three ticks on each of AB and CD (the result AB = CD)."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S12.T12.C52",
+      "role": "question",
+      "lp_book_number": "Two Angles and a Side: the 47 degree pair",
+      "ncert_ref": "p13.FIO1",
+      "question_text": "Triangle ABC has AB = 7 cm, BC = 5 cm and angle B = 47 degrees. Triangle XYZ has XZ = 7 cm, ZY = 5 cm and angle Z = 47 degrees. Are they congruent? Which rule fits, and in what order do you write the letters?",
+      "decision": "required",
+      "reason_codes": [
+        "DATA_IN_FIGURE",
+        "SPATIAL_GEOMETRY"
+      ],
+      "reason": "The book gives the two triangles as a picture (a mirror pair); which corner sits where decides the order in which the letters are written, so the figure is drawn.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S12.T12.C52.IMG1",
+      "manim_scene": "c7_9_s12_fio1_q",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S12.T12.C52.IMG1}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "geometry_figure",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "geometry_figure",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "B": [
+              0.0,
+              0.0
+            ],
+            "C": [
+              4.908,
+              -0.954
+            ],
+            "A": [
+              5.663,
+              4.114
+            ],
+            "Z": [
+              13.0,
+              0.0
+            ],
+            "Y": [
+              8.092,
+              -0.954
+            ],
+            "X": [
+              7.337,
+              4.114
+            ]
+          },
+          "segments": [
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "B",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "C",
+              "colour": "INK",
+              "style": "solid",
+              "to": "A"
+            },
+            {
+              "from": "X",
+              "colour": "INK",
+              "style": "solid",
+              "to": "Y"
+            },
+            {
+              "from": "Y",
+              "colour": "INK",
+              "style": "solid",
+              "to": "Z"
+            },
+            {
+              "from": "Z",
+              "colour": "INK",
+              "style": "solid",
+              "to": "X"
+            }
+          ],
+          "highlight_strokes": [],
+          "angle_arcs": [
+            {
+              "vertex": "B",
+              "from_deg": -11.0,
+              "to_deg": 36.0,
+              "radii": [
+                1.1
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "BC and BA"
+            },
+            {
+              "vertex": "Z",
+              "from_deg": 144.0,
+              "to_deg": 191.0,
+              "radii": [
+                1.1
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "ZX and ZY"
+            }
+          ],
+          "construction_arcs": [],
+          "tick_marks": [],
+          "right_angle_marks": [],
+          "parallel_arrowheads": [],
+          "labels": [
+            {
+              "text": "7 cm",
+              "centre": [
+                2.508,
+                2.502
+              ],
+              "colour": "INK",
+              "rotation_deg": 36
+            },
+            {
+              "text": "5 cm",
+              "centre": [
+                2.454,
+                -1.027
+              ],
+              "colour": "INK",
+              "rotation_deg": -11
+            },
+            {
+              "text": "7 cm",
+              "centre": [
+                10.492,
+                2.502
+              ],
+              "colour": "INK",
+              "rotation_deg": -36
+            },
+            {
+              "text": "5 cm",
+              "centre": [
+                10.546,
+                -1.027
+              ],
+              "colour": "INK",
+              "rotation_deg": 11
+            },
+            {
+              "text": "47°",
+              "centre": [
+                1.855,
+                0.411
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "47°",
+              "centre": [
+                11.145,
+                0.411
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "A",
+              "centre": [
+                5.663,
+                4.614
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "B",
+              "centre": [
+                -0.5,
+                0.0
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "C",
+              "centre": [
+                5.358,
+                -1.404
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "X",
+              "centre": [
+                7.337,
+                4.614
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "Y",
+              "centre": [
+                7.642,
+                -1.404
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "Z",
+              "centre": [
+                13.5,
+                0.0
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": true,
+          "mirror_line_x": 6.5
+        },
+        "manim_description": "Draw the book's Figure it Out question 1 figure: two triangles that are mirror images of each other, drawn to scale. Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: B at (0, 0); C at (4.908, -0.954); A at (5.663, 4.114); Z at (13, 0); Y at (8.092, -0.954); X at (7.337, 4.114). Draw these straight segments in INK, solid: A to B; B to C; C to A; X to Y; Y to Z; Z to X. Angle mark in INK at vertex B (the angle between BC and BA): one arc of radius 1.1 sweeping counter-clockwise from -11 degrees to 36 degrees. Angle mark in INK at vertex Z (the angle between ZX and ZY): one arc of radius 1.1 sweeping counter-clockwise from 144 degrees to 191 degrees. Write the text labels: '7 cm' in INK centred at (2.508, 2.502) rotated 36 degrees to follow its line; '5 cm' in INK centred at (2.454, -1.027) rotated -11 degrees to follow its line; '7 cm' in INK centred at (10.492, 2.502) rotated -36 degrees to follow its line; '5 cm' in INK centred at (10.546, -1.027) rotated 11 degrees to follow its line; '47°' in INK centred at (1.855, 0.411); '47°' in INK centred at (11.145, 0.411); 'A' in INK centred at (5.663, 4.614); 'B' in INK centred at (-0.5, 0); 'C' in INK centred at (5.358, -1.404); 'X' in INK centred at (7.337, 4.614); 'Y' in INK centred at (7.642, -1.404); 'Z' in INK centred at (13.5, 0). Draw nothing else.",
+        "visible_text": [
+          "7 cm",
+          "5 cm",
+          "47°",
+          "A",
+          "B",
+          "C",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "tick marks or matching marks",
+          "the letters in matching order",
+          "the word SAS"
+        ],
+        "accuracy_checks": [
+          "AB = 7, BC = 5, angle ABC = 47 degrees (direction of BA 36 degrees, direction of BC -11 degrees)",
+          "XYZ is the exact mirror image of ABC in the vertical line x = 6.5: XZ = 7, ZY = 5, angle XZY = 47 degrees",
+          "labels exactly 7 cm, 5 cm, 47 degrees as printed in the book; no label on AC or XY"
+        ],
+        "alt_text": "Triangle ABC with AB 7 cm, BC 5 cm and 47 degrees at B, beside its mirror image XYZ with XZ 7 cm, YZ 5 cm and 47 degrees at Z.",
+        "render_note": "to_scale true (the book's picture is a mirror pair). P13-shape-1 of the book. AC and XY carry no label. Question state: no tick marks, no matching marks."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S12.T12.C53",
+      "role": "solution",
+      "lp_book_number": "Two Angles and a Side: the 47 degree pair",
+      "ncert_ref": "p13.FIO1",
+      "question_text": "Triangle ABC has AB = 7 cm, BC = 5 cm and angle B = 47 degrees. Triangle XYZ has XZ = 7 cm, ZY = 5 cm and angle Z = 47 degrees. Are they congruent? Which rule fits, and in what order do you write the letters?",
+      "decision": "none",
+      "reason_codes": [
+        "SAME_AS_QUESTION_DIAGRAM"
+      ],
+      "reason": "Every fact the solution uses (7 cm, 5 cm, the 47 degree angle at B and at Z) is already printed on the question figure; the solution only matches letters, so a second figure would repeat the first.",
+      "text_alternative": "No figure: keep the five steps and the answer 'Triangle ABC is congruent to triangle XZY' as text.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S12.T12.C54",
+      "role": "question",
+      "lp_book_number": "Two Angles and a Side: parallel lines AB and CD",
+      "ncert_ref": "p13.FIO2",
+      "question_text": "In the figure, DC is parallel to AB and DC = AB, and the lines DB and AC cross at O. Which triangles are congruent, by which rule, and which other parts are then equal?",
+      "decision": "required",
+      "reason_codes": [
+        "FIG_REFERENCED",
+        "DATA_IN_FIGURE",
+        "SPATIAL_GEOMETRY"
+      ],
+      "reason": "'In the figure' - the parallel marks, the equal marks and the crossing at O are given only by the book's figure.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S12.T12.C54.IMG1",
+      "manim_scene": "c7_9_s12_fio2_q",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S12.T12.C54.IMG1}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "geometry_figure",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "geometry_figure",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "D": [
+              -3.0,
+              3.2
+            ],
+            "C": [
+              3.0,
+              2.6
+            ],
+            "A": [
+              -3.0,
+              -2.6
+            ],
+            "B": [
+              3.0,
+              -3.2
+            ],
+            "O": [
+              0.0,
+              0.0
+            ]
+          },
+          "segments": [
+            {
+              "from": "D",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "D",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "C",
+              "colour": "INK",
+              "style": "solid",
+              "to": "A"
+            }
+          ],
+          "highlight_strokes": [],
+          "angle_arcs": [],
+          "construction_arcs": [],
+          "tick_marks": [
+            {
+              "on": "D-C",
+              "distance_from_first_end": 3.4,
+              "count": 1,
+              "colour": "INK"
+            },
+            {
+              "on": "A-B",
+              "distance_from_first_end": 3.4,
+              "count": 1,
+              "colour": "INK"
+            }
+          ],
+          "right_angle_marks": [],
+          "parallel_arrowheads": [
+            {
+              "on": "D-C",
+              "distance_from_first_end": 2.6,
+              "colour": "INK"
+            },
+            {
+              "on": "A-B",
+              "distance_from_first_end": 2.6,
+              "colour": "INK"
+            }
+          ],
+          "labels": [
+            {
+              "text": "D",
+              "centre": [
+                -3.5,
+                3.65
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "C",
+              "centre": [
+                3.45,
+                3.0
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "A",
+              "centre": [
+                -3.5,
+                -3.05
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "B",
+              "centre": [
+                3.45,
+                -3.65
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "O",
+              "centre": [
+                0.6,
+                0.0
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": false
+        },
+        "manim_description": "Draw the book's Figure it Out question 2 figure: segments DC and AB joined by the two crossing segments DB and CA. Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: D at (-3, 3.2); C at (3, 2.6); A at (-3, -2.6); B at (3, -3.2); O at (0, 0). Draw these straight segments in INK, solid: D to C; A to B; D to B; C to A. 1 tick mark in INK on segment D-C: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 3.4 from D, at (0.383, 2.862). 1 tick mark in INK on segment A-B: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 3.4 from A, at (0.383, -2.938). Parallel-lines arrowhead in INK on D-C: a small open chevron (two strokes of length 0.4 meeting at an angle of 60 degrees) with its tip at (-0.413, 2.941) pointing along the direction from D to C. Parallel-lines arrowhead in INK on A-B: a small open chevron (two strokes of length 0.4 meeting at an angle of 60 degrees) with its tip at (-0.413, -2.859) pointing along the direction from A to B. Write the text labels: 'D' in INK centred at (-3.5, 3.65); 'C' in INK centred at (3.45, 3); 'A' in INK centred at (-3.5, -3.05); 'B' in INK centred at (3.45, -3.65); 'O' in INK centred at (0.6, 0). Draw nothing else.",
+        "visible_text": [
+          "D",
+          "C",
+          "A",
+          "B",
+          "O"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "any angle mark",
+          "tick marks on OA, OB, OC or OD",
+          "the word ASA"
+        ],
+        "accuracy_checks": [
+          "DC and AB have the same direction vector (6, -0.6): parallel and equal in length (6.03)",
+          "O = (0, 0) is where DB and CA cross (the midpoint of each)",
+          "one arrowhead and one tick on DC, one arrowhead and one tick on AB, nothing else marked",
+          "the sides joining D to A and C to B are NOT drawn"
+        ],
+        "alt_text": "Segments DC (top) and AB (bottom) are parallel and equal, marked with an arrowhead and one tick each, and the segments DB and CA cross at O.",
+        "render_note": "Not to scale: DC and AB are drawn as an exact parallelogram pair so that O is the midpoint of both crossing segments. P14-shape-1 of the book (printed on page 14, question 2 text on page 13). Question state: only the arrowheads and the one tick each, no angle marks."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S12.T12.C55",
+      "role": "solution",
+      "lp_book_number": "Two Angles and a Side: parallel lines AB and CD",
+      "ncert_ref": "p13.FIO2",
+      "question_text": "In the figure, DC is parallel to AB and DC = AB, and the lines DB and AC cross at O. Which triangles are congruent, by which rule, and which other parts are then equal?",
+      "decision": "required",
+      "reason_codes": [
+        "SPATIAL_GEOMETRY",
+        "HIGHLIGHT_MEANING"
+      ],
+      "reason": "The solution derives new equal angles (alternate angles from the parallel lines, the facing angles at O) and equal parts (OC = OA, OD = OB); these marks are not on the question figure and are what the argument stands on.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S12.T12.C55.IMG1",
+      "manim_scene": "c7_9_s12_fio2_sol",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S12.T12.C55.IMG1}}",
+        "insert_into": "steps_tex",
+        "position": "before_first_step"
+      },
+      "diagram": {
+        "diagram_type": "geometry_figure",
+        "aspect_ratio": "16:9",
+        "derived_from": "M3.S12.T12.C54.IMG1",
+        "content": {
+          "type": "geometry_figure",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "D": [
+              -3.0,
+              3.2
+            ],
+            "C": [
+              3.0,
+              2.6
+            ],
+            "A": [
+              -3.0,
+              -2.6
+            ],
+            "B": [
+              3.0,
+              -3.2
+            ],
+            "O": [
+              0.0,
+              0.0
+            ]
+          },
+          "segments": [
+            {
+              "from": "D",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "D",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "C",
+              "colour": "INK",
+              "style": "solid",
+              "to": "A"
+            }
+          ],
+          "highlight_strokes": [],
+          "angle_arcs": [
+            {
+              "vertex": "C",
+              "from_deg": 174.289,
+              "to_deg": 220.914,
+              "radii": [
+                1.0
+              ],
+              "count": 1,
+              "colour": "ANSWER",
+              "between": "CD and CO, the angle DCO"
+            },
+            {
+              "vertex": "A",
+              "from_deg": -5.711,
+              "to_deg": 40.914,
+              "radii": [
+                1.0
+              ],
+              "count": 1,
+              "colour": "ANSWER",
+              "between": "AB and AO, the angle BAO"
+            },
+            {
+              "vertex": "D",
+              "from_deg": -46.848,
+              "to_deg": -5.711,
+              "radii": [
+                1.0,
+                1.15
+              ],
+              "count": 2,
+              "colour": "ANSWER",
+              "between": "DC and DO, the angle CDO"
+            },
+            {
+              "vertex": "B",
+              "from_deg": 133.152,
+              "to_deg": 174.289,
+              "radii": [
+                1.0,
+                1.15
+              ],
+              "count": 2,
+              "colour": "ANSWER",
+              "between": "BA and BO, the angle ABO"
+            },
+            {
+              "vertex": "O",
+              "from_deg": 40.914,
+              "to_deg": 133.152,
+              "radii": [
+                0.8,
+                0.95,
+                1.1
+              ],
+              "count": 3,
+              "colour": "ANSWER",
+              "between": "OC and OD, the angle COD"
+            },
+            {
+              "vertex": "O",
+              "from_deg": -139.086,
+              "to_deg": -46.848,
+              "radii": [
+                0.8,
+                0.95,
+                1.1
+              ],
+              "count": 3,
+              "colour": "ANSWER",
+              "between": "OA and OB, the angle AOB"
+            }
+          ],
+          "construction_arcs": [],
+          "tick_marks": [
+            {
+              "on": "D-C",
+              "distance_from_first_end": 3.4,
+              "count": 1,
+              "colour": "INK"
+            },
+            {
+              "on": "A-B",
+              "distance_from_first_end": 3.4,
+              "count": 1,
+              "colour": "INK"
+            },
+            {
+              "on": "O-C",
+              "distance_from_first_end": 1.985,
+              "count": 2,
+              "colour": "ANSWER"
+            },
+            {
+              "on": "O-A",
+              "distance_from_first_end": 1.985,
+              "count": 2,
+              "colour": "ANSWER"
+            },
+            {
+              "on": "O-D",
+              "distance_from_first_end": 2.193,
+              "count": 3,
+              "colour": "ANSWER"
+            },
+            {
+              "on": "O-B",
+              "distance_from_first_end": 2.193,
+              "count": 3,
+              "colour": "ANSWER"
+            }
+          ],
+          "right_angle_marks": [],
+          "parallel_arrowheads": [
+            {
+              "on": "D-C",
+              "distance_from_first_end": 2.6,
+              "colour": "INK"
+            },
+            {
+              "on": "A-B",
+              "distance_from_first_end": 2.6,
+              "colour": "INK"
+            }
+          ],
+          "labels": [
+            {
+              "text": "D",
+              "centre": [
+                -3.5,
+                3.65
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "C",
+              "centre": [
+                3.45,
+                3.0
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "A",
+              "centre": [
+                -3.5,
+                -3.05
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "B",
+              "centre": [
+                3.45,
+                -3.65
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "O",
+              "centre": [
+                0.6,
+                0.0
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": false
+        },
+        "manim_description": "Same layout and given marks as M3.S12.T12.C54.IMG1; draw the complete final state with every equal part the solution names. Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: D at (-3, 3.2); C at (3, 2.6); A at (-3, -2.6); B at (3, -3.2); O at (0, 0). Draw these straight segments in INK, solid: D to C; A to B; D to B; C to A. Angle mark in ANSWER at vertex C (the angle between CD and CO, the angle DCO): one arc of radius 1 sweeping counter-clockwise from 174.289 degrees to 220.914 degrees. Angle mark in ANSWER at vertex A (the angle between AB and AO, the angle BAO): one arc of radius 1 sweeping counter-clockwise from -5.711 degrees to 40.914 degrees. Angle mark in ANSWER at vertex D (the angle between DC and DO, the angle CDO): 2 concentric arcs of radii 1, 1.15, each sweeping counter-clockwise from -46.848 degrees to -5.711 degrees. Angle mark in ANSWER at vertex B (the angle between BA and BO, the angle ABO): 2 concentric arcs of radii 1, 1.15, each sweeping counter-clockwise from 133.152 degrees to 174.289 degrees. Angle mark in ANSWER at vertex O (the angle between OC and OD, the angle COD): 3 concentric arcs of radii 0.8, 0.95, 1.1, each sweeping counter-clockwise from 40.914 degrees to 133.152 degrees. Angle mark in ANSWER at vertex O (the angle between OA and OB, the angle AOB): 3 concentric arcs of radii 0.8, 0.95, 1.1, each sweeping counter-clockwise from -139.086 degrees to -46.848 degrees. 1 tick mark in INK on segment D-C: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 3.4 from D, at (0.383, 2.862). 1 tick mark in INK on segment A-B: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 3.4 from A, at (0.383, -2.938). 2 tick marks in ANSWER on segment O-C: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 1.985 from O, at the centres (1.417, 1.228), (1.583, 1.372) (0.22 apart along the segment). 2 tick marks in ANSWER on segment O-A: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 1.985 from O, at the centres (-1.417, -1.228), (-1.583, -1.372) (0.22 apart along the segment). 3 tick marks in ANSWER on segment O-D: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.193 from O, at the centres (-1.35, 1.44), (-1.5, 1.6), (-1.65, 1.76) (0.22 apart along the segment). 3 tick marks in ANSWER on segment O-B: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.193 from O, at the centres (1.35, -1.44), (1.5, -1.6), (1.65, -1.76) (0.22 apart along the segment). Parallel-lines arrowhead in INK on D-C: a small open chevron (two strokes of length 0.4 meeting at an angle of 60 degrees) with its tip at (-0.413, 2.941) pointing along the direction from D to C. Parallel-lines arrowhead in INK on A-B: a small open chevron (two strokes of length 0.4 meeting at an angle of 60 degrees) with its tip at (-0.413, -2.859) pointing along the direction from A to B. Write the text labels: 'D' in INK centred at (-3.5, 3.65); 'C' in INK centred at (3.45, 3); 'A' in INK centred at (-3.5, -3.05); 'B' in INK centred at (3.45, -3.65); 'O' in INK centred at (0.6, 0). Draw nothing else.",
+        "visible_text": [
+          "D",
+          "C",
+          "A",
+          "B",
+          "O"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "the sentence congruent by ASA",
+          "the word ASA"
+        ],
+        "accuracy_checks": [
+          "alternate angles: angle DCO = angle BAO = 46.625 degrees and angle CDO = angle ABO = 41.137 degrees (DC parallel to AB)",
+          "facing angles angle COD = angle AOB = 92.238 degrees; the three angles of triangle COD add to 180: 46.625 + 41.137 + 92.238",
+          "OC = OA = 3.97 (two ticks) and OD = OB = 4.386 (three ticks) in the drawing",
+          "given marks (arrowheads and one tick on DC and AB) unchanged"
+        ],
+        "alt_text": "The parallel-lines figure with the alternate angles, the facing angles at O and the equal halves of the crossing segments all marked.",
+        "render_note": "same positions as M3.S12.T12.C54.IMG1. Added in ANSWER: alternate angles DCO = BAO (one arc, 46.625 degrees in the drawing) and CDO = ABO (two arcs, 41.137 degrees), facing angles COD = AOB (three arcs, 92.238 degrees), OC = OA (two ticks), OD = OB (three ticks)."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S12.T12.C56",
+      "role": "question",
+      "lp_book_number": "Two Angles and a Side: the shared side BC",
+      "ncert_ref": "p14.FIO3",
+      "question_text": "In the figure, angle ABC = angle DBC and angle ACB = angle DCB, and BC is a side of both triangles. Which triangles are congruent, by which rule, and what does that tell you about angle BAC and angle BDC?",
+      "decision": "required",
+      "reason_codes": [
+        "FIG_REFERENCED",
+        "DATA_IN_FIGURE",
+        "SPATIAL_GEOMETRY"
+      ],
+      "reason": "'In the figure' - which angles are equal is shown only by the arc marks of the book's figure.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S12.T12.C56.IMG1",
+      "manim_scene": "c7_9_s12_fio3_q",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S12.T12.C56.IMG1}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "geometry_figure",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "geometry_figure",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "B": [
+              -3.6,
+              0.0
+            ],
+            "C": [
+              3.6,
+              0.0
+            ],
+            "A": [
+              -0.6,
+              2.4
+            ],
+            "D": [
+              -0.6,
+              -2.4
+            ]
+          },
+          "segments": [
+            {
+              "from": "B",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "D",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "D",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            }
+          ],
+          "highlight_strokes": [],
+          "angle_arcs": [
+            {
+              "vertex": "B",
+              "from_deg": 0.0,
+              "to_deg": 38.66,
+              "radii": [
+                1.1
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "BC and BA, the angle ABC"
+            },
+            {
+              "vertex": "B",
+              "from_deg": -38.66,
+              "to_deg": 0.0,
+              "radii": [
+                1.1
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "BD and BC, the angle DBC"
+            },
+            {
+              "vertex": "C",
+              "from_deg": 150.255,
+              "to_deg": 180.0,
+              "radii": [
+                1.1,
+                1.25
+              ],
+              "count": 2,
+              "colour": "INK",
+              "between": "CA and CB, the angle ACB"
+            },
+            {
+              "vertex": "C",
+              "from_deg": 180.0,
+              "to_deg": 209.745,
+              "radii": [
+                1.1,
+                1.25
+              ],
+              "count": 2,
+              "colour": "INK",
+              "between": "CB and CD, the angle DCB"
+            }
+          ],
+          "construction_arcs": [],
+          "tick_marks": [],
+          "right_angle_marks": [],
+          "parallel_arrowheads": [],
+          "labels": [
+            {
+              "text": "A",
+              "centre": [
+                -0.6,
+                2.95
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "B",
+              "centre": [
+                -4.1,
+                0.0
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "C",
+              "centre": [
+                4.1,
+                0.0
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "D",
+              "centre": [
+                -0.6,
+                -2.95
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": false
+        },
+        "manim_description": "Draw the book's Figure it Out question 3 figure: a four-sided figure with the horizontal diagonal BC and angle marks. Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: B at (-3.6, 0); C at (3.6, 0); A at (-0.6, 2.4); D at (-0.6, -2.4). Draw these straight segments in INK, solid: B to C; A to B; A to C; D to B; D to C. Angle mark in INK at vertex B (the angle between BC and BA, the angle ABC): one arc of radius 1.1 sweeping counter-clockwise from 0 degrees to 38.66 degrees. Angle mark in INK at vertex B (the angle between BD and BC, the angle DBC): one arc of radius 1.1 sweeping counter-clockwise from -38.66 degrees to 0 degrees. Angle mark in INK at vertex C (the angle between CA and CB, the angle ACB): 2 concentric arcs of radii 1.1, 1.25, each sweeping counter-clockwise from 150.255 degrees to 180 degrees. Angle mark in INK at vertex C (the angle between CB and CD, the angle DCB): 2 concentric arcs of radii 1.1, 1.25, each sweeping counter-clockwise from 180 degrees to 209.745 degrees. Write the text labels: 'A' in INK centred at (-0.6, 2.95); 'B' in INK centred at (-4.1, 0); 'C' in INK centred at (4.1, 0); 'D' in INK centred at (-0.6, -2.95). Draw nothing else.",
+        "visible_text": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "any mark at A or D",
+          "the word ASA"
+        ],
+        "accuracy_checks": [
+          "angle ABC = angle DBC (one arc each), angle ACB = angle DCB (two arcs each): A and D are mirror images in BC, angle ABC = 38.66 degrees, angle ACB = 29.745 degrees",
+          "BC is horizontal from B (-3.6, 0) to C (3.6, 0) and is drawn as a solid line",
+          "no mark at A or D and no tick marks"
+        ],
+        "alt_text": "A kite-shaped figure with A at the top, B left, C right, D at the bottom and the line BC across the middle; angles ABC and DBC have one arc each, angles ACB and DCB have two arcs each.",
+        "render_note": "Not to scale (marks only); A and D are mirror images in the line BC so that the equal-angle marks are true. P14-shape-2 of the book. Question state: only the given arcs, nothing on A, D or BC."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S12.T12.C57",
+      "role": "solution",
+      "lp_book_number": "Two Angles and a Side: the shared side BC",
+      "ncert_ref": "p14.FIO3",
+      "question_text": "In the figure, angle ABC = angle DBC and angle ACB = angle DCB, and BC is a side of both triangles. Which triangles are congruent, by which rule, and what does that tell you about angle BAC and angle BDC?",
+      "decision": "required",
+      "reason_codes": [
+        "SPATIAL_GEOMETRY",
+        "HIGHLIGHT_MEANING"
+      ],
+      "reason": "The solution adds the shared side BC and the new matching angles BAC and BDC to the figure; these are the facts the proof is about and are not on the question figure.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S12.T12.C57.IMG1",
+      "manim_scene": "c7_9_s12_fio3_sol",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S12.T12.C57.IMG1}}",
+        "insert_into": "steps_tex",
+        "position": "before_first_step"
+      },
+      "diagram": {
+        "diagram_type": "geometry_figure",
+        "aspect_ratio": "16:9",
+        "derived_from": "M3.S12.T12.C56.IMG1",
+        "content": {
+          "type": "geometry_figure",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "B": [
+              -3.6,
+              0.0
+            ],
+            "C": [
+              3.6,
+              0.0
+            ],
+            "A": [
+              -0.6,
+              2.4
+            ],
+            "D": [
+              -0.6,
+              -2.4
+            ]
+          },
+          "segments": [
+            {
+              "from": "B",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "D",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "D",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            }
+          ],
+          "highlight_strokes": [
+            {
+              "from": "B",
+              "to": "C",
+              "colour": "FOCUS",
+              "width_px": 9
+            }
+          ],
+          "angle_arcs": [
+            {
+              "vertex": "B",
+              "from_deg": 0.0,
+              "to_deg": 38.66,
+              "radii": [
+                1.1
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "BC and BA, the angle ABC"
+            },
+            {
+              "vertex": "B",
+              "from_deg": -38.66,
+              "to_deg": 0.0,
+              "radii": [
+                1.1
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "BD and BC, the angle DBC"
+            },
+            {
+              "vertex": "C",
+              "from_deg": 150.255,
+              "to_deg": 180.0,
+              "radii": [
+                1.1,
+                1.25
+              ],
+              "count": 2,
+              "colour": "INK",
+              "between": "CA and CB, the angle ACB"
+            },
+            {
+              "vertex": "C",
+              "from_deg": 180.0,
+              "to_deg": 209.745,
+              "radii": [
+                1.1,
+                1.25
+              ],
+              "count": 2,
+              "colour": "INK",
+              "between": "CB and CD, the angle DCB"
+            },
+            {
+              "vertex": "A",
+              "from_deg": -141.34,
+              "to_deg": -29.745,
+              "radii": [
+                0.7,
+                0.85,
+                1.0
+              ],
+              "count": 3,
+              "colour": "ANSWER",
+              "between": "AB and AC, the angle BAC"
+            },
+            {
+              "vertex": "D",
+              "from_deg": 29.745,
+              "to_deg": 141.34,
+              "radii": [
+                0.7,
+                0.85,
+                1.0
+              ],
+              "count": 3,
+              "colour": "ANSWER",
+              "between": "DB and DC, the angle BDC"
+            }
+          ],
+          "construction_arcs": [],
+          "tick_marks": [],
+          "right_angle_marks": [],
+          "parallel_arrowheads": [],
+          "labels": [
+            {
+              "text": "A",
+              "centre": [
+                -0.6,
+                2.95
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "B",
+              "centre": [
+                -4.1,
+                0.0
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "C",
+              "centre": [
+                4.1,
+                0.0
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "D",
+              "centre": [
+                -0.6,
+                -2.95
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": false
+        },
+        "manim_description": "Same layout and given arcs as M3.S12.T12.C56.IMG1; draw the complete final state: the shared side highlighted and the two matching angles at A and D marked. Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: B at (-3.6, 0); C at (3.6, 0); A at (-0.6, 2.4); D at (-0.6, -2.4). Draw these straight segments in INK, solid: B to C; A to B; A to C; D to B; D to C. Draw a FOCUS stroke 9 px wide along B-C, beneath the INK line of that segment, as a highlight. Angle mark in INK at vertex B (the angle between BC and BA, the angle ABC): one arc of radius 1.1 sweeping counter-clockwise from 0 degrees to 38.66 degrees. Angle mark in INK at vertex B (the angle between BD and BC, the angle DBC): one arc of radius 1.1 sweeping counter-clockwise from -38.66 degrees to 0 degrees. Angle mark in INK at vertex C (the angle between CA and CB, the angle ACB): 2 concentric arcs of radii 1.1, 1.25, each sweeping counter-clockwise from 150.255 degrees to 180 degrees. Angle mark in INK at vertex C (the angle between CB and CD, the angle DCB): 2 concentric arcs of radii 1.1, 1.25, each sweeping counter-clockwise from 180 degrees to 209.745 degrees. Angle mark in ANSWER at vertex A (the angle between AB and AC, the angle BAC): 3 concentric arcs of radii 0.7, 0.85, 1, each sweeping counter-clockwise from -141.34 degrees to -29.745 degrees. Angle mark in ANSWER at vertex D (the angle between DB and DC, the angle BDC): 3 concentric arcs of radii 0.7, 0.85, 1, each sweeping counter-clockwise from 29.745 degrees to 141.34 degrees. Write the text labels: 'A' in INK centred at (-0.6, 2.95); 'B' in INK centred at (-4.1, 0); 'C' in INK centred at (4.1, 0); 'D' in INK centred at (-0.6, -2.95). Draw nothing else.",
+        "visible_text": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "the sentence BC = BC",
+          "the word ASA"
+        ],
+        "accuracy_checks": [
+          "angle BAC = angle BDC = 111.595 degrees in the drawing (180 - 38.66 - 29.745)",
+          "BC is the side shared by triangles ABC and DBC, between the two equal angles",
+          "given arcs (one arc at B in each angle, two arcs at C in each angle) unchanged"
+        ],
+        "alt_text": "The kite figure with BC highlighted as the shared side and angles BAC and BDC marked equal with three arcs each.",
+        "render_note": "same positions as M3.S12.T12.C56.IMG1. Added: the common side BC highlighted (FOCUS stroke beneath the INK line) and, in ANSWER, three arcs in angle BAC and in angle BDC (111.595 degrees each in the drawing)."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S12.T12.C58",
+      "role": "question",
+      "lp_book_number": "Two Angles and a Side: crossing lines AC and DB",
+      "ncert_ref": "p14.FIO4",
+      "question_text": "In the figure, AC and DB cross, angle ABD = angle DCA and angle ACB = angle DBC. Show that angle ABC = angle DCB and that triangle ABC is congruent to triangle DCB. Which other parts are equal?",
+      "decision": "required",
+      "reason_codes": [
+        "FIG_REFERENCED",
+        "DATA_IN_FIGURE",
+        "SPATIAL_GEOMETRY"
+      ],
+      "reason": "'In the figure' - which angles are equal and where AC and DB cross are given only by the book's figure.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S12.T12.C58.IMG1",
+      "manim_scene": "c7_9_s12_fio4_q",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S12.T12.C58.IMG1}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "geometry_figure",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "geometry_figure",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "B": [
+              -3.0,
+              -2.0
+            ],
+            "C": [
+              3.0,
+              -2.0
+            ],
+            "A": [
+              -3.86,
+              1.96
+            ],
+            "D": [
+              3.86,
+              1.96
+            ]
+          },
+          "segments": [
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "D",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "B",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "B",
+              "colour": "INK",
+              "style": "solid",
+              "to": "D"
+            }
+          ],
+          "highlight_strokes": [],
+          "angle_arcs": [
+            {
+              "vertex": "B",
+              "from_deg": 29.996,
+              "to_deg": 102.253,
+              "radii": [
+                1.0
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "BD and BA, the angle ABD"
+            },
+            {
+              "vertex": "B",
+              "from_deg": 0.0,
+              "to_deg": 29.996,
+              "radii": [
+                1.4,
+                1.55
+              ],
+              "count": 2,
+              "colour": "INK",
+              "between": "BC and BD, the angle DBC"
+            },
+            {
+              "vertex": "C",
+              "from_deg": 77.747,
+              "to_deg": 150.004,
+              "radii": [
+                1.0
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "CD and CA, the angle DCA"
+            },
+            {
+              "vertex": "C",
+              "from_deg": 150.004,
+              "to_deg": 180.0,
+              "radii": [
+                1.4,
+                1.55
+              ],
+              "count": 2,
+              "colour": "INK",
+              "between": "CA and CB, the angle ACB"
+            }
+          ],
+          "construction_arcs": [],
+          "tick_marks": [],
+          "right_angle_marks": [],
+          "parallel_arrowheads": [],
+          "labels": [
+            {
+              "text": "A",
+              "centre": [
+                -4.36,
+                2.46
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "D",
+              "centre": [
+                4.36,
+                2.46
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "B",
+              "centre": [
+                -3.5,
+                -2.5
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "C",
+              "centre": [
+                3.5,
+                -2.5
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": false
+        },
+        "manim_description": "Draw the book's Figure it Out question 4 figure: base BC with A and D above, the sides AB and DC, and the crossing segments AC and DB. Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: B at (-3, -2); C at (3, -2); A at (-3.86, 1.96); D at (3.86, 1.96). Draw these straight segments in INK, solid: A to B; D to C; B to C; A to C; B to D. Angle mark in INK at vertex B (the angle between BD and BA, the angle ABD): one arc of radius 1 sweeping counter-clockwise from 29.996 degrees to 102.253 degrees. Angle mark in INK at vertex B (the angle between BC and BD, the angle DBC): 2 concentric arcs of radii 1.4, 1.55, each sweeping counter-clockwise from 0 degrees to 29.996 degrees. Angle mark in INK at vertex C (the angle between CD and CA, the angle DCA): one arc of radius 1 sweeping counter-clockwise from 77.747 degrees to 150.004 degrees. Angle mark in INK at vertex C (the angle between CA and CB, the angle ACB): 2 concentric arcs of radii 1.4, 1.55, each sweeping counter-clockwise from 150.004 degrees to 180 degrees. Write the text labels: 'A' in INK centred at (-4.36, 2.46); 'D' in INK centred at (4.36, 2.46); 'B' in INK centred at (-3.5, -2.5); 'C' in INK centred at (3.5, -2.5). Draw nothing else.",
+        "visible_text": [
+          "A",
+          "D",
+          "B",
+          "C"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "a segment AD",
+          "the label O",
+          "any tick mark"
+        ],
+        "accuracy_checks": [
+          "angle ABD = angle DCA = 72.257 degrees (one arc each) and angle ACB = angle DBC = 29.996 degrees (two arcs each)",
+          "B = (-3, -2) and C = (3, -2); A = (-3.86, 1.96) and D = (3.86, 1.96) are mirror images in x = 0; there is no segment AD",
+          "no tick marks, no mark at A or D, no mark at the crossing point"
+        ],
+        "alt_text": "Base BC at the bottom, A top left and D top right, AB and DC drawn, AC and DB crossing; at B angle ABD has one arc and angle DBC two arcs, at C angle DCA has one arc and angle ACB two arcs.",
+        "render_note": "Not to scale (marks only); the figure is symmetric about the vertical axis so the given equal marks are true. P14-shape-3 of the book. A and D are NOT joined. Question state: only the given arcs."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S12.T12.C59",
+      "role": "solution",
+      "lp_book_number": "Two Angles and a Side: crossing lines AC and DB",
+      "ncert_ref": "p14.FIO4",
+      "question_text": "In the figure, AC and DB cross, angle ABD = angle DCA and angle ACB = angle DBC. Show that angle ABC = angle DCB and that triangle ABC is congruent to triangle DCB. Which other parts are equal?",
+      "decision": "required",
+      "reason_codes": [
+        "SPATIAL_GEOMETRY",
+        "HIGHLIGHT_MEANING"
+      ],
+      "reason": "The solution adds the whole angles ABC and DCB, the matching angles BAC and CDB, the equal sides and the equal halves at the crossing: new marks that carry the proof and are not on the question figure.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S12.T12.C59.IMG1",
+      "manim_scene": "c7_9_s12_fio4_sol",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S12.T12.C59.IMG1}}",
+        "insert_into": "steps_tex",
+        "position": "before_first_step"
+      },
+      "diagram": {
+        "diagram_type": "geometry_figure",
+        "aspect_ratio": "16:9",
+        "derived_from": "M3.S12.T12.C58.IMG1",
+        "content": {
+          "type": "geometry_figure",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "B": [
+              -3.0,
+              -2.0
+            ],
+            "C": [
+              3.0,
+              -2.0
+            ],
+            "A": [
+              -3.86,
+              1.96
+            ],
+            "D": [
+              3.86,
+              1.96
+            ],
+            "O": [
+              0.0,
+              -0.268
+            ]
+          },
+          "segments": [
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "D",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "B",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "B",
+              "colour": "INK",
+              "style": "solid",
+              "to": "D"
+            }
+          ],
+          "highlight_strokes": [],
+          "angle_arcs": [
+            {
+              "vertex": "B",
+              "from_deg": 29.996,
+              "to_deg": 102.253,
+              "radii": [
+                1.0
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "BD and BA, the angle ABD"
+            },
+            {
+              "vertex": "B",
+              "from_deg": 0.0,
+              "to_deg": 29.996,
+              "radii": [
+                1.4,
+                1.55
+              ],
+              "count": 2,
+              "colour": "INK",
+              "between": "BC and BD, the angle DBC"
+            },
+            {
+              "vertex": "C",
+              "from_deg": 77.747,
+              "to_deg": 150.004,
+              "radii": [
+                1.0
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "CD and CA, the angle DCA"
+            },
+            {
+              "vertex": "C",
+              "from_deg": 150.004,
+              "to_deg": 180.0,
+              "radii": [
+                1.4,
+                1.55
+              ],
+              "count": 2,
+              "colour": "INK",
+              "between": "CA and CB, the angle ACB"
+            },
+            {
+              "vertex": "B",
+              "from_deg": 0.0,
+              "to_deg": 102.253,
+              "radii": [
+                1.9
+              ],
+              "count": 1,
+              "colour": "ANSWER",
+              "between": "BC and BA, the whole angle ABC"
+            },
+            {
+              "vertex": "C",
+              "from_deg": 77.747,
+              "to_deg": 180.0,
+              "radii": [
+                1.9
+              ],
+              "count": 1,
+              "colour": "ANSWER",
+              "between": "CD and CB, the whole angle DCB"
+            },
+            {
+              "vertex": "A",
+              "from_deg": -77.747,
+              "to_deg": -29.996,
+              "radii": [
+                0.8,
+                1.0,
+                1.2
+              ],
+              "count": 3,
+              "colour": "ANSWER",
+              "between": "AB and AC, the angle BAC"
+            },
+            {
+              "vertex": "D",
+              "from_deg": -150.004,
+              "to_deg": -102.253,
+              "radii": [
+                0.8,
+                1.0,
+                1.2
+              ],
+              "count": 3,
+              "colour": "ANSWER",
+              "between": "DB and DC, the angle CDB"
+            }
+          ],
+          "construction_arcs": [],
+          "tick_marks": [
+            {
+              "on": "A-B",
+              "distance_from_first_end": 1.7,
+              "count": 1,
+              "colour": "ANSWER"
+            },
+            {
+              "on": "D-C",
+              "distance_from_first_end": 1.7,
+              "count": 1,
+              "colour": "ANSWER"
+            },
+            {
+              "on": "B-O",
+              "distance_from_first_end": 2.6,
+              "count": 2,
+              "colour": "ANSWER"
+            },
+            {
+              "on": "C-O",
+              "distance_from_first_end": 2.6,
+              "count": 2,
+              "colour": "ANSWER"
+            },
+            {
+              "on": "A-O",
+              "distance_from_first_end": 2.9,
+              "count": 3,
+              "colour": "ANSWER"
+            },
+            {
+              "on": "D-O",
+              "distance_from_first_end": 2.9,
+              "count": 3,
+              "colour": "ANSWER"
+            }
+          ],
+          "right_angle_marks": [],
+          "parallel_arrowheads": [],
+          "labels": [
+            {
+              "text": "A",
+              "centre": [
+                -4.36,
+                2.46
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "D",
+              "centre": [
+                4.36,
+                2.46
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "B",
+              "centre": [
+                -3.5,
+                -2.5
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "C",
+              "centre": [
+                3.5,
+                -2.5
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "O",
+              "centre": [
+                0.0,
+                0.45
+              ],
+              "colour": "ANSWER",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": false
+        },
+        "manim_description": "Same layout and given arcs as M3.S12.T12.C58.IMG1; draw the complete final state: the two whole angles, the matching angles at A and D, and the equal sides and halves. Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: B at (-3, -2); C at (3, -2); A at (-3.86, 1.96); D at (3.86, 1.96); O at (0, -0.268). Draw these straight segments in INK, solid: A to B; D to C; B to C; A to C; B to D. Angle mark in INK at vertex B (the angle between BD and BA, the angle ABD): one arc of radius 1 sweeping counter-clockwise from 29.996 degrees to 102.253 degrees. Angle mark in INK at vertex B (the angle between BC and BD, the angle DBC): 2 concentric arcs of radii 1.4, 1.55, each sweeping counter-clockwise from 0 degrees to 29.996 degrees. Angle mark in INK at vertex C (the angle between CD and CA, the angle DCA): one arc of radius 1 sweeping counter-clockwise from 77.747 degrees to 150.004 degrees. Angle mark in INK at vertex C (the angle between CA and CB, the angle ACB): 2 concentric arcs of radii 1.4, 1.55, each sweeping counter-clockwise from 150.004 degrees to 180 degrees. Angle mark in ANSWER at vertex B (the angle between BC and BA, the whole angle ABC): one arc of radius 1.9 sweeping counter-clockwise from 0 degrees to 102.253 degrees. Angle mark in ANSWER at vertex C (the angle between CD and CB, the whole angle DCB): one arc of radius 1.9 sweeping counter-clockwise from 77.747 degrees to 180 degrees. Angle mark in ANSWER at vertex A (the angle between AB and AC, the angle BAC): 3 concentric arcs of radii 0.8, 1, 1.2, each sweeping counter-clockwise from -77.747 degrees to -29.996 degrees. Angle mark in ANSWER at vertex D (the angle between DB and DC, the angle CDB): 3 concentric arcs of radii 0.8, 1, 1.2, each sweeping counter-clockwise from -150.004 degrees to -102.253 degrees. 1 tick mark in ANSWER on segment A-B: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 1.7 from A, at (-3.499, 0.299). 1 tick mark in ANSWER on segment D-C: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 1.7 from D, at (3.499, 0.299). 2 tick marks in ANSWER on segment B-O: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.6 from B, at the centres (-0.844, -0.755), (-0.653, -0.645) (0.22 apart along the segment). 2 tick marks in ANSWER on segment C-O: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.6 from C, at the centres (0.844, -0.755), (0.653, -0.645) (0.22 apart along the segment). 3 tick marks in ANSWER on segment A-O: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.9 from A, at the centres (-1.539, 0.62), (-1.348, 0.51), (-1.158, 0.4) (0.22 apart along the segment). 3 tick marks in ANSWER on segment D-O: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.9 from D, at the centres (1.539, 0.62), (1.348, 0.51), (1.158, 0.4) (0.22 apart along the segment). Write the text labels: 'A' in INK centred at (-4.36, 2.46); 'D' in INK centred at (4.36, 2.46); 'B' in INK centred at (-3.5, -2.5); 'C' in INK centred at (3.5, -2.5); 'O' in ANSWER centred at (0, 0.45). Draw nothing else.",
+        "visible_text": [
+          "A",
+          "D",
+          "B",
+          "C",
+          "O"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "the word ASA",
+          "the sentence OB = OC"
+        ],
+        "accuracy_checks": [
+          "whole angle ABC = angle ABD + angle DBC = 72.257 + 29.996 = 102.253 degrees and whole angle DCB = 72.257 + 29.996 = 102.253 degrees: equal",
+          "angle BAC = angle CDB = 180 - 102.253 - 29.996 = 47.751 degrees",
+          "AB = DC = 4.052, OB = OC = 3.464, OA = OD = 4.457 in the drawing; O = (0, -0.268) is where AC and DB cross",
+          "given arcs (one arc, two arcs) unchanged"
+        ],
+        "alt_text": "The crossing-lines figure with the whole angles ABC and DCB marked equal, angles BAC and CDB marked equal, AB and DC equal, and the halves OB, OC and OA, OD marked equal.",
+        "render_note": "same positions as M3.S12.T12.C58.IMG1; the crossing point O (not lettered in the book) is lettered because the LP solution names it. Added in ANSWER: one large arc over each whole angle ABC and DCB (102.253 degrees), three arcs at A and at D (47.751 degrees), one tick on AB and DC, two ticks on OB and OC, three ticks on OA and OD. AC = DB is stated in the LP text and is not drawn as a mark (it follows from OA = OD and OB = OC and a mark on the crossing segments would be confused with those ticks)."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S13.T13.C60",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p16.rhs, p17.arc",
+      "question_text": "Two triangles each have a right angle, a base of 4 cm next to it and a long side of 5 cm opposite it. Are they congruent? Construct the triangle and find out whether different triangles can exist.",
+      "block_index": 0,
+      "decision": "required",
+      "reason_codes": [
+        "ANSWER_IS_FIGURE",
+        "SPATIAL_GEOMETRY"
+      ],
+      "reason": "The steps are a ruler-and-compass construction (base, perpendicular, 5 cm arc, join) that ends in one triangle; the finished construction is the picture the example needs (B2: construction, even though the steps are words).",
+      "lp_placeholder_action": "add_new_image",
+      "media_id": "M3.S13.T13.C60.IMG2",
+      "manim_scene": "c7_9_s13_c60_b0",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S13.T13.C60.IMG2}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "construction",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "construction",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "Q": [
+              0.0,
+              0.0
+            ],
+            "R": [
+              4.0,
+              0.0
+            ],
+            "P": [
+              0.0,
+              3.0
+            ]
+          },
+          "segments": [
+            {
+              "from": "Q",
+              "colour": "INK",
+              "style": "solid",
+              "to": "R"
+            },
+            {
+              "from": "P",
+              "colour": "INK",
+              "style": "solid",
+              "to": "R"
+            },
+            {
+              "from": "Q",
+              "colour": "INK",
+              "style": "solid",
+              "to": "P"
+            },
+            {
+              "from": "P",
+              "colour": "GUIDE",
+              "style": "solid",
+              "to_xy": [
+                0.0,
+                3.9
+              ],
+              "arrowhead_at_end": true
+            }
+          ],
+          "highlight_strokes": [],
+          "angle_arcs": [],
+          "construction_arcs": [
+            {
+              "centre": [
+                4.0,
+                0.0
+              ],
+              "radius": 5.0,
+              "from_deg": 128.13,
+              "to_deg": 158.13,
+              "colour": "GUIDE",
+              "style": "dashed"
+            }
+          ],
+          "tick_marks": [],
+          "right_angle_marks": [
+            {
+              "vertex": "Q",
+              "dir1_deg": 0,
+              "dir2_deg": 90,
+              "size": 0.4,
+              "colour": "INK"
+            }
+          ],
+          "parallel_arrowheads": [],
+          "labels": [
+            {
+              "text": "4 cm",
+              "centre": [
+                2.0,
+                -0.5
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "5 cm",
+              "centre": [
+                2.27,
+                1.86
+              ],
+              "colour": "INK",
+              "rotation_deg": -36.87
+            },
+            {
+              "text": "3 cm",
+              "centre": [
+                -0.7,
+                1.5
+              ],
+              "colour": "ANSWER",
+              "rotation_deg": 0
+            },
+            {
+              "text": "P",
+              "centre": [
+                -0.4,
+                3.3
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "Q",
+              "centre": [
+                -0.4,
+                -0.35
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "R",
+              "centre": [
+                4.45,
+                -0.1
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": true,
+          "given": [
+            "right angle at Q",
+            "QR = 4 cm",
+            "PR = 5 cm"
+          ],
+          "derived": [
+            "PQ = 3 cm"
+          ]
+        },
+        "manim_description": "Draw the finished RHS construction: base QR, the upright line at Q, the 5 cm arc from R and the triangle PQR (figure units are centimetres, drawn to scale). Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: Q at (0, 0); R at (4, 0); P at (0, 3). Draw these straight segments in INK, solid: Q to R; P to R; Q to P. Draw these straight segments in GUIDE, solid: P to the free end (0, 3.9) with an arrowhead at the free end. Draw a GUIDE dashed circular arc of radius 5 centred at (4, 0), sweeping counter-clockwise from 128.13 degrees to 158.13 degrees (from (0.913, 3.933) to (-0.64, 1.863)). Right-angle mark in INK at Q: an open square of side 0.4 with corners (0, 0), (0.4, 0), (0.4, 0.4), (0, 0.4). Write the text labels: '4 cm' in INK centred at (2, -0.5); '5 cm' in INK centred at (2.27, 1.86) rotated -36.87 degrees to follow its line; '3 cm' in ANSWER centred at (-0.7, 1.5); 'P' in INK centred at (-0.4, 3.3); 'Q' in INK centred at (-0.4, -0.35); 'R' in INK centred at (4.45, -0.1). Draw nothing else.",
+        "visible_text": [
+          "4 cm",
+          "5 cm",
+          "3 cm",
+          "P",
+          "Q",
+          "R"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "the second triangle below the base",
+          "the word RHS or hypotenuse"
+        ],
+        "accuracy_checks": [
+          "QR = 4, PR = 5 and angle PQR = 90 degrees; P = (0, 3) is on the circle of radius 5 about R = (4, 0)",
+          "PQ = sqrt(25 - 16) = 3",
+          "the dashed arc is centred at R with radius exactly 5 and passes through P",
+          "nothing is drawn below the base QR"
+        ],
+        "alt_text": "A right triangle PQR with the right angle at Q, base QR 4 cm, long side PR 5 cm and upright side PQ 3 cm, with the arc from R shown dashed where it cuts the upright line at P.",
+        "render_note": "to_scale true. P16-shape-1 of the book (rough sketch) with the construction arc of P16-construction-1 added. Given (INK): the right angle, QR = 4 cm, PR = 5 cm. ANSWER: the 3 cm that the construction produces for PQ (LP step 5; 5 squared minus 4 squared is 9). Only the upper arc and the upper upright line are shown here: the part below the base belongs to the next block's figure."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S13.T13.C60",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p16.rhs, p17.arc",
+      "question_text": "Carry the upright line downwards below the base. Would the arc cut it there too? Is the triangle below also congruent to triangle PQR?",
+      "block_index": 1,
+      "decision": "required",
+      "reason_codes": [
+        "ANSWER_IS_FIGURE",
+        "SPATIAL_GEOMETRY"
+      ],
+      "reason": "The question cannot be followed without seeing the upright line carried below the base and the arc cutting it a second time, and the steps compare the two triangles by folding; the figure with both triangles is the answer (B2).",
+      "lp_placeholder_action": "add_new_image",
+      "media_id": "M3.S13.T13.C60.IMG3",
+      "manim_scene": "c7_9_s13_c60_b1",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S13.T13.C60.IMG3}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "construction",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "construction",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "Q": [
+              0.0,
+              0.0
+            ],
+            "R": [
+              4.0,
+              0.0
+            ],
+            "P": [
+              0.0,
+              3.0
+            ],
+            "P'": [
+              0.0,
+              -3.0
+            ]
+          },
+          "segments": [
+            {
+              "from": "Q",
+              "colour": "INK",
+              "style": "solid",
+              "to": "R"
+            },
+            {
+              "from": "P",
+              "colour": "INK",
+              "style": "solid",
+              "to": "R"
+            },
+            {
+              "from": "Q",
+              "colour": "INK",
+              "style": "solid",
+              "to": "P"
+            },
+            {
+              "from": "Q",
+              "colour": "ANSWER",
+              "style": "solid",
+              "to": "P'"
+            },
+            {
+              "from": "P'",
+              "colour": "ANSWER",
+              "style": "solid",
+              "to": "R"
+            },
+            {
+              "from": "P",
+              "colour": "GUIDE",
+              "style": "solid",
+              "to_xy": [
+                0.0,
+                3.9
+              ],
+              "arrowhead_at_end": true
+            },
+            {
+              "from": "P'",
+              "colour": "ANSWER",
+              "style": "solid",
+              "to_xy": [
+                0.0,
+                -3.9
+              ],
+              "arrowhead_at_end": true
+            }
+          ],
+          "highlight_strokes": [],
+          "angle_arcs": [],
+          "construction_arcs": [
+            {
+              "centre": [
+                4.0,
+                0.0
+              ],
+              "radius": 5.0,
+              "from_deg": 128.13,
+              "to_deg": 158.13,
+              "colour": "GUIDE",
+              "style": "dashed"
+            },
+            {
+              "centre": [
+                4.0,
+                0.0
+              ],
+              "radius": 5.0,
+              "from_deg": 201.87,
+              "to_deg": 231.87,
+              "colour": "ANSWER",
+              "style": "dashed"
+            }
+          ],
+          "tick_marks": [],
+          "right_angle_marks": [
+            {
+              "vertex": "Q",
+              "dir1_deg": 0,
+              "dir2_deg": 90,
+              "size": 0.4,
+              "colour": "INK"
+            },
+            {
+              "vertex": "Q",
+              "dir1_deg": 0,
+              "dir2_deg": -90,
+              "size": 0.4,
+              "colour": "ANSWER"
+            }
+          ],
+          "parallel_arrowheads": [],
+          "labels": [
+            {
+              "text": "4 cm",
+              "centre": [
+                2.0,
+                0.45
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "5 cm",
+              "centre": [
+                2.27,
+                1.86
+              ],
+              "colour": "INK",
+              "rotation_deg": -36.87
+            },
+            {
+              "text": "5 cm",
+              "centre": [
+                2.27,
+                -1.86
+              ],
+              "colour": "ANSWER",
+              "rotation_deg": 36.87
+            },
+            {
+              "text": "P",
+              "centre": [
+                -0.4,
+                3.3
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "Q",
+              "centre": [
+                -0.4,
+                0.35
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "R",
+              "centre": [
+                4.45,
+                0.0
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "P'",
+              "centre": [
+                -0.5,
+                -3.3
+              ],
+              "colour": "ANSWER",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": true,
+          "given": [
+            "triangle PQR as drawn in the previous block"
+          ],
+          "added": [
+            "line below Q",
+            "P'",
+            "triangle P'QR"
+          ]
+        },
+        "manim_description": "Draw the two mirror triangles PQR and P'QR that share the base QR, with the upright line carried below the base and the arc cutting it at P and at P' (figure units are centimetres, drawn to scale). Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: Q at (0, 0); R at (4, 0); P at (0, 3); P' at (0, -3). Draw these straight segments in INK, solid: Q to R; P to R; Q to P. Draw these straight segments in ANSWER, solid: Q to P'; P' to R. Draw these straight segments in GUIDE, solid: P to the free end (0, 3.9) with an arrowhead at the free end. Draw these straight segments in ANSWER, solid: P' to the free end (0, -3.9) with an arrowhead at the free end. Draw a GUIDE dashed circular arc of radius 5 centred at (4, 0), sweeping counter-clockwise from 128.13 degrees to 158.13 degrees (from (0.913, 3.933) to (-0.64, 1.863)). Draw a ANSWER dashed circular arc of radius 5 centred at (4, 0), sweeping counter-clockwise from 201.87 degrees to 231.87 degrees (from (-0.64, -1.863) to (0.913, -3.933)). Right-angle mark in INK at Q: an open square of side 0.4 with corners (0, 0), (0.4, 0), (0.4, 0.4), (0, 0.4). Right-angle mark in ANSWER at Q: an open square of side 0.4 with corners (0, 0), (0.4, 0), (0.4, -0.4), (0, -0.4). Write the text labels: '4 cm' in INK centred at (2, 0.45); '5 cm' in INK centred at (2.27, 1.86) rotated -36.87 degrees to follow its line; '5 cm' in ANSWER centred at (2.27, -1.86) rotated 36.87 degrees to follow its line; 'P' in INK centred at (-0.4, 3.3); 'Q' in INK centred at (-0.4, 0.35); 'R' in INK centred at (4.45, 0); 'P'' in ANSWER centred at (-0.5, -3.3). Draw nothing else.",
+        "visible_text": [
+          "4 cm",
+          "5 cm",
+          "P",
+          "Q",
+          "R",
+          "P'"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "a fold line",
+          "the word RHS or hypotenuse"
+        ],
+        "accuracy_checks": [
+          "QR = 4, PR = P'R = 5, PQ = P'Q = 3, both angles at Q are 90 degrees",
+          "P = (0, 3) and P' = (0, -3) are the mirror images of each other in the line QR",
+          "both dashed arcs belong to the circle of radius 5 about R = (4, 0)",
+          "triangle PQR and triangle P'QR are congruent (mirror images)"
+        ],
+        "alt_text": "A base QR of 4 cm with a right angle at Q; the 5 cm arc from R cuts the upright line above Q at P and below Q at P', making two triangles that are mirror images across QR.",
+        "render_note": "to_scale true. Continues P16-construction-1 of the book (the book's text on page 17 asks about the downward extension but prints no new figure). INK: what block 0 drew (triangle PQR, base, upper arc and line, upper right angle); ANSWER: what this block adds (the line below Q, point P', triangle P'QR, the lower arc, the lower right angle, its 5 cm). The two triangles are exact mirror images in QR."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S13.T13.C60",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p16.rhs, p17.arc",
+      "question_text": "Chintu says: two sides and an angle never fix a triangle, so a right angle cannot fix one either. Is Chintu right?",
+      "block_index": 2,
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "A two-option judgement (A) Yes (B) No about Chintu's sentence; no figure is given or needed.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S13.T13.C61",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p17.five_conditions",
+      "question_text": "Name the conditions that are enough to guarantee two triangles are congruent, and name the two that look as if they should work but do not.",
+      "block_index": 0,
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The answer is a list of the names of the five conditions that work and the two that do not; the book prints no figure for it (page 17 list) and the wall chart of the concept is already a teaching image.",
+      "text_alternative": "No figure: write the five names SSS, SAS, ASA, AAS, RHS and the two that fail, AAA and SSA, as text.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S14.T14.C63",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p17.isosceles",
+      "question_text": "Triangle ABC is isosceles with AB equal to AC, and the angle at A is 80 degrees. What can we say about angle B and angle C? Draw the altitude from A to BC and use it.",
+      "block_index": 0,
+      "decision": "required",
+      "reason_codes": [
+        "ANSWER_IS_FIGURE",
+        "SPATIAL_GEOMETRY"
+      ],
+      "reason": "The example is built on a construction: draw the altitude from A and use the two triangles it makes. The figure with the altitude, the foot D and the right angle is the picture the steps refer to (B2).",
+      "lp_placeholder_action": "add_new_image",
+      "media_id": "M4.S14.T14.C63.IMG2",
+      "manim_scene": "c7_9_s14_c63_b0",
+      "placeholder": {
+        "token": "{{DIAGRAM:M4.S14.T14.C63.IMG2}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "geometry_figure",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "geometry_figure",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "A": [
+              0.0,
+              4.0
+            ],
+            "B": [
+              -3.356,
+              0.0
+            ],
+            "C": [
+              3.356,
+              0.0
+            ],
+            "D": [
+              0.0,
+              0.0
+            ]
+          },
+          "segments": [
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "B",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "A",
+              "colour": "ANSWER",
+              "style": "solid",
+              "to": "D"
+            }
+          ],
+          "highlight_strokes": [],
+          "angle_arcs": [],
+          "construction_arcs": [],
+          "tick_marks": [
+            {
+              "on": "A-B",
+              "distance_from_first_end": 2.611,
+              "count": 1,
+              "colour": "INK"
+            },
+            {
+              "on": "A-C",
+              "distance_from_first_end": 2.611,
+              "count": 1,
+              "colour": "INK"
+            }
+          ],
+          "right_angle_marks": [
+            {
+              "vertex": "D",
+              "dir1_deg": 90,
+              "dir2_deg": 0,
+              "size": 0.4,
+              "colour": "ANSWER"
+            }
+          ],
+          "parallel_arrowheads": [],
+          "labels": [
+            {
+              "text": "A",
+              "centre": [
+                0.0,
+                4.5
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "B",
+              "centre": [
+                -3.856,
+                -0.15
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "C",
+              "centre": [
+                3.856,
+                -0.15
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "D",
+              "centre": [
+                0.0,
+                -0.5
+              ],
+              "colour": "ANSWER",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": true,
+          "given": [
+            "AB = AC",
+            "angle A = 80 degrees (not drawn as a mark)"
+          ],
+          "constructed": [
+            "altitude AD",
+            "foot D",
+            "right angle at D"
+          ]
+        },
+        "manim_description": "Draw the book's picture of the isosceles triangle with its altitude (the figure that goes with the RHS argument). Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: A at (0, 4); B at (-3.356, 0); C at (3.356, 0); D at (0, 0). Draw these straight segments in INK, solid: A to B; A to C; B to C. Draw these straight segments in ANSWER, solid: A to D. Right-angle mark in ANSWER at D: an open square of side 0.4 with corners (0, 0), (0, 0.4), (0.4, 0.4), (0.4, 0). 1 tick mark in INK on segment A-B: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.611 from A, at (-1.678, 2). 1 tick mark in INK on segment A-C: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.611 from A, at (1.678, 2). Write the text labels: 'A' in INK centred at (0, 4.5); 'B' in INK centred at (-3.856, -0.15); 'C' in INK centred at (3.856, -0.15); 'D' in ANSWER centred at (0, -0.5). Draw nothing else.",
+        "visible_text": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "angle values 80 or 50",
+          "the word RHS"
+        ],
+        "accuracy_checks": [
+          "AB = AC = 5.222 and the apex angle BAC = 80 degrees (B = (-3.356, 0), C = (3.356, 0), A = (0, 4))",
+          "D = (0, 0) is the foot of the perpendicular from A on BC and the midpoint of BC",
+          "one tick on AB and one tick on AC (equal sides), a right-angle mark at D on the side of C",
+          "no angle values are written"
+        ],
+        "alt_text": "An isosceles triangle ABC with one tick on each of AB and AC and the altitude AD drawn from A to the base BC with a right angle marked at D.",
+        "render_note": "to_scale true: the apex angle is 80 degrees (base about 1.68 times the height), D is the midpoint of BC. P18-shape-1 of the book. Given (INK): the triangle and the two ticks. ANSWER: the altitude AD, the foot D and the right-angle mark (the construction step of the example). The 80 degree mark is left off as in the book, because the altitude passes through the place where it would be written and the argument does not use it."
+      }
+    },
+    {
+      "lp_concept_id": "M4.S14.T14.C63",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p17.isosceles",
+      "question_text": "In triangle PQR, PQ equals PR. Chintu says angle Q and angle R must be equal. Is Chintu right?",
+      "block_index": 1,
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "A two-option judgement (A) Yes (B) No about triangle PQR with PQ = PR, all stated in the text.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S14.T14.C64",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p18.equilateral, p19.equilateral_check",
+      "question_text": "In an equilateral triangle ABC all three sides are equal. What can we say about its angles?",
+      "block_index": 0,
+      "decision": "optional",
+      "reason_codes": [
+        "SPATIAL_GEOMETRY",
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The steps are pure reasoning about equal sides and angles (no construction). A labelled equilateral triangle ABC with a tick on each side and an arc at each corner would help, but a careful student can follow the text alone, so it is not added (the book's two page-18 pictures are teaching figures).",
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S14.T14.C64",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p18.equilateral, p19.equilateral_check",
+      "question_text": "What could the measures of the angles of an equilateral triangle be? Check your answer by drawing one.",
+      "block_index": 1,
+      "decision": "required",
+      "reason_codes": [
+        "ANSWER_IS_FIGURE",
+        "SPATIAL_GEOMETRY"
+      ],
+      "reason": "The steps draw a base and two 60 degree rays and read off the sides and the angle at A; the drawing is the check the question asks for (B2: a construction is a drawing even when the steps are words).",
+      "lp_placeholder_action": "add_new_image",
+      "media_id": "M4.S14.T14.C64.IMG2",
+      "manim_scene": "c7_9_s14_c64_b1",
+      "placeholder": {
+        "token": "{{DIAGRAM:M4.S14.T14.C64.IMG2}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "construction",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "construction",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "B": [
+              0.0,
+              0.0
+            ],
+            "C": [
+              5.0,
+              0.0
+            ],
+            "A": [
+              2.5,
+              4.33
+            ]
+          },
+          "segments": [
+            {
+              "from": "B",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "B",
+              "colour": "ANSWER",
+              "style": "solid",
+              "to": "A"
+            },
+            {
+              "from": "C",
+              "colour": "ANSWER",
+              "style": "solid",
+              "to": "A"
+            }
+          ],
+          "highlight_strokes": [],
+          "angle_arcs": [
+            {
+              "vertex": "B",
+              "from_deg": 0.0,
+              "to_deg": 60.0,
+              "radii": [
+                0.9
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "BC and BA"
+            },
+            {
+              "vertex": "C",
+              "from_deg": 120.0,
+              "to_deg": 180.0,
+              "radii": [
+                0.9
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "CA and CB"
+            },
+            {
+              "vertex": "A",
+              "from_deg": 240.0,
+              "to_deg": 300.0,
+              "radii": [
+                0.9
+              ],
+              "count": 1,
+              "colour": "ANSWER",
+              "between": "AB and AC"
+            }
+          ],
+          "construction_arcs": [],
+          "tick_marks": [],
+          "right_angle_marks": [],
+          "parallel_arrowheads": [],
+          "labels": [
+            {
+              "text": "60°",
+              "centre": [
+                1.256,
+                0.725
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "60°",
+              "centre": [
+                3.744,
+                0.725
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "60°",
+              "centre": [
+                2.5,
+                2.83
+              ],
+              "colour": "ANSWER",
+              "rotation_deg": 0
+            },
+            {
+              "text": "5 cm",
+              "centre": [
+                2.5,
+                -0.5
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "5 cm",
+              "centre": [
+                0.774,
+                2.44
+              ],
+              "colour": "ANSWER",
+              "rotation_deg": 60
+            },
+            {
+              "text": "5 cm",
+              "centre": [
+                4.226,
+                2.44
+              ],
+              "colour": "ANSWER",
+              "rotation_deg": -60
+            },
+            {
+              "text": "B",
+              "centre": [
+                -0.45,
+                -0.2
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "C",
+              "centre": [
+                5.45,
+                -0.2
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "A",
+              "centre": [
+                2.5,
+                4.83
+              ],
+              "colour": "ANSWER",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": true,
+          "given": [
+            "BC = 5 cm",
+            "angle B = 60 degrees",
+            "angle C = 60 degrees"
+          ],
+          "constructed": [
+            "A",
+            "AB = 5 cm",
+            "AC = 5 cm",
+            "angle A = 60 degrees"
+          ]
+        },
+        "manim_description": "Draw the finished construction of an equilateral triangle from a base and two 60 degree rays (figure units are centimetres, drawn to scale). Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: B at (0, 0); C at (5, 0); A at (2.5, 4.33). Draw these straight segments in INK, solid: B to C. Draw these straight segments in ANSWER, solid: B to A; C to A. Angle mark in INK at vertex B (the angle between BC and BA): one arc of radius 0.9 sweeping counter-clockwise from 0 degrees to 60 degrees. Angle mark in INK at vertex C (the angle between CA and CB): one arc of radius 0.9 sweeping counter-clockwise from 120 degrees to 180 degrees. Angle mark in ANSWER at vertex A (the angle between AB and AC): one arc of radius 0.9 sweeping counter-clockwise from 240 degrees to 300 degrees. Write the text labels: '60°' in INK centred at (1.256, 0.725); '60°' in INK centred at (3.744, 0.725); '60°' in ANSWER centred at (2.5, 2.83); '5 cm' in INK centred at (2.5, -0.5); '5 cm' in ANSWER centred at (0.774, 2.44) rotated 60 degrees to follow its line; '5 cm' in ANSWER centred at (4.226, 2.44) rotated -60 degrees to follow its line; 'B' in INK centred at (-0.45, -0.2); 'C' in INK centred at (5.45, -0.2); 'A' in ANSWER centred at (2.5, 4.83). Draw nothing else.",
+        "visible_text": [
+          "60°",
+          "5 cm",
+          "B",
+          "C",
+          "A"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "the word equilateral",
+          "tick marks"
+        ],
+        "accuracy_checks": [
+          "BC = 5 and the rays leave B at 60 degrees and C at 120 degrees (60 degrees inside the triangle)",
+          "A = (2.5, 4.33): AB = AC = 5 = 5 and BC = 5, so all three sides are equal",
+          "angle A = 180 - 60 - 60 = 60 degrees"
+        ],
+        "alt_text": "A base BC of 5 cm with 60 degree angles at B and C; the rays meet at A, where the angle is also 60 degrees, and AB and AC are both 5 cm.",
+        "render_note": "to_scale true. The book only says 'Verify this by construction' (page 19) and prints no figure. Given by the procedure (INK): base BC = 5 cm and the two 60 degree angles. Produced (ANSWER): A, the sides AB and AC, their measured length 5 cm and the angle at A, 60 degrees."
+      }
+    },
+    {
+      "lp_concept_id": "M4.S14.T14.C64",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p18.equilateral, p19.equilateral_check",
+      "question_text": "If I spin this sign a third of a turn and you cannot tell, what must be true about its three corners?",
+      "block_index": 2,
+      "decision": "optional",
+      "reason_codes": [
+        "FIG_REFERENCED",
+        "REUSES_CONCEPT_IMAGE"
+      ],
+      "reason": "'This sign' is the triangular road sign of the teaching image of this concept (drawn three times, each turned a third of a turn). A drawing of the sign would help but the answer is a sentence.",
+      "text_alternative": "Write the sign into the text: 'A triangular road sign looks exactly the same after a third of a turn. What must be true about its three corners?'",
+      "needs_lp_text_sync": true,
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S14.T14.C65",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p20.world",
+      "question_text": "Describe the congruent triangles you see in each of the five pictures.",
+      "block_index": 0,
+      "decision": "none",
+      "reason_codes": [
+        "NOT_RENDERABLE",
+        "REUSES_CONCEPT_IMAGE"
+      ],
+      "reason": "The five pictures are real photographs (and one rangoli design) printed in the book and cannot be faked; the teaching image of this concept already shows all five. The answer is text.",
+      "text_alternative": "No figure: the five descriptions in the steps are the answer.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S14.T14.C65",
+      "role": "worked_example",
+      "lp_book_number": null,
+      "ncert_ref": "p20.world",
+      "question_text": "Look at the bridge. Why do builders use triangles and not squares?",
+      "block_index": 1,
+      "decision": "none",
+      "reason_codes": [
+        "NOT_RENDERABLE",
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "'The bridge' is the Howrah Bridge photograph (a real photo, not renderable); the answer is the general fact that three sides fix a triangle and a square frame can be pushed over.",
+      "text_alternative": "Write the data into the text: 'A bridge truss is a line of triangles. Why do builders use triangles and not squares?'",
+      "needs_lp_text_sync": true,
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S15.T15.C67",
+      "role": "question",
+      "lp_book_number": "Equal Sides: finding angles B and C",
+      "ncert_ref": "p18.isosceles_use",
+      "question_text": "Use that fact to find angle B and angle C when the angle at A is 80 degrees.",
+      "decision": "required",
+      "reason_codes": [
+        "DATA_IN_FIGURE",
+        "SPATIAL_GEOMETRY"
+      ],
+      "reason": "The text does not say which two sides are equal; AB = AC is carried only by the tick marks of the book's figure, so the figure is drawn.",
+      "text_alternative": "Add the givens to the text: 'Triangle ABC has AB = AC and the angle at A is 80 degrees. Use the fact that angles opposite equal sides are equal to find angle B and angle C.'",
+      "needs_lp_text_sync": true,
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M4.S15.T15.C67.IMG1",
+      "manim_scene": "c7_9_s15_q1_q",
+      "placeholder": {
+        "token": "{{DIAGRAM:M4.S15.T15.C67.IMG1}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "geometry_figure",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "geometry_figure",
+          "coordinate_system": "figure units, y up",
+          "points": {
+            "A": [
+              0.0,
+              4.0
+            ],
+            "B": [
+              -3.356,
+              0.0
+            ],
+            "C": [
+              3.356,
+              0.0
+            ]
+          },
+          "segments": [
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "B"
+            },
+            {
+              "from": "A",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            },
+            {
+              "from": "B",
+              "colour": "INK",
+              "style": "solid",
+              "to": "C"
+            }
+          ],
+          "highlight_strokes": [],
+          "angle_arcs": [
+            {
+              "vertex": "A",
+              "from_deg": 230.0,
+              "to_deg": 310.0,
+              "radii": [
+                1.0
+              ],
+              "count": 1,
+              "colour": "INK",
+              "between": "AB and AC"
+            }
+          ],
+          "construction_arcs": [],
+          "tick_marks": [
+            {
+              "on": "A-B",
+              "distance_from_first_end": 2.611,
+              "count": 1,
+              "colour": "INK"
+            },
+            {
+              "on": "A-C",
+              "distance_from_first_end": 2.611,
+              "count": 1,
+              "colour": "INK"
+            }
+          ],
+          "right_angle_marks": [],
+          "parallel_arrowheads": [],
+          "labels": [
+            {
+              "text": "80°",
+              "centre": [
+                0.0,
+                2.1
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "A",
+              "centre": [
+                0.0,
+                4.5
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "B",
+              "centre": [
+                -3.856,
+                -0.15
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            },
+            {
+              "text": "C",
+              "centre": [
+                3.856,
+                -0.15
+              ],
+              "colour": "INK",
+              "rotation_deg": 0
+            }
+          ],
+          "to_scale": true
+        },
+        "manim_description": "Draw the book's isosceles triangle with the 80 degree apex angle (the same picture as the example M4.S14.T14.C63.IMG2 but without the altitude). Plain BG canvas, 16:9 card, flat 2D, all strokes 3 px, all text sans-serif at least 34 px high. Coordinates are figure units with y pointing up; scale the whole drawing uniformly to fit the card with a 6 percent margin. Place the points: A at (0, 4); B at (-3.356, 0); C at (3.356, 0). Draw these straight segments in INK, solid: A to B; A to C; B to C. Angle mark in INK at vertex A (the angle between AB and AC): one arc of radius 1 sweeping counter-clockwise from 230 degrees to 310 degrees. 1 tick mark in INK on segment A-B: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.611 from A, at (-1.678, 2). 1 tick mark in INK on segment A-C: each tick is a straight stroke of length 0.5 perpendicular to the segment, centred at distance 2.611 from A, at (1.678, 2). Write the text labels: '80°' in INK centred at (0, 2.1); 'A' in INK centred at (0, 4.5); 'B' in INK centred at (-3.856, -0.15); 'C' in INK centred at (3.856, -0.15). Draw nothing else.",
+        "visible_text": [
+          "80°",
+          "A",
+          "B",
+          "C"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "the altitude",
+          "the values 50 degrees",
+          "a right-angle mark"
+        ],
+        "accuracy_checks": [
+          "AB = AC = 5.222 and angle BAC = 80 degrees (B = (-3.356, 0), C = (3.356, 0), A = (0, 4))",
+          "one tick on AB and one tick on AC; no tick on BC",
+          "80 degrees is written inside the angle at A; nothing is written at B or C"
+        ],
+        "alt_text": "An isosceles triangle ABC with one tick on each of AB and AC and the angle at A marked 80 degrees.",
+        "render_note": "to_scale true (apex 80 degrees, base about 1.68 times the height). P17-shape-1 of the book. Question state: no altitude, no value at B or C. Same triangle as the figure of M4.S14.T14.C63.IMG2 without its altitude and right angle."
+      }
+    },
+    {
+      "lp_concept_id": "M4.S15.T15.C68",
+      "role": "solution",
+      "lp_book_number": "Equal Sides: finding angles B and C",
+      "ncert_ref": "p18.isosceles_use",
+      "question_text": "Use that fact to find angle B and angle C when the angle at A is 80 degrees.",
+      "decision": "none",
+      "reason_codes": [
+        "SAME_AS_QUESTION_DIAGRAM",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "A figure-based question with a numeric answer: the solution is the angle-sum arithmetic 180 - 80 = 100 and 100 / 2 = 50 in the steps; it adds no new geometric relation, only the two values 50 degrees on the same triangle.",
+      "text_alternative": "No figure: keep the three steps and 'Angle B = angle C = 50 degrees' as text.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    }
+  ]
+}

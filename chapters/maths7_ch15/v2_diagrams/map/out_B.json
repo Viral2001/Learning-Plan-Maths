@@ -1,0 +1,542 @@
+{
+ "meta": {
+  "chapter": "Finding the Unknown",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 15",
+  "lp_plan_id": "cbse_eng_maths7_ch15_v27",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 0,
+    "optional": 0,
+    "none": 11
+   },
+   "solution": {
+    "required": 0,
+    "optional": 0,
+    "none": 11
+   },
+   "worked_example": {
+    "required": 0,
+    "optional": 0,
+    "none": 5
+   }
+  },
+  "notes": [
+   "Chunk B (topics M2.S7.T7 to M2.S12.T12, units 21-36): no diagram is needed. Every question, solution and worked example is an equation, arithmetic or a plain list of numbers that LaTeX carries.",
+   "Judgement call: the three machine questions (Chapter Exercises Q4 a, Q4 b, Q5) are none, because the LP question text states each machine completely and the same strips already exist as teaching images M2.S6.T6.C37.IMG1 and IMG2 (never linked). Flip them to required only if the user wants the strips drawn per question.",
+   "The book prints the Q5 first-machine output as '+5'; the LP and the arithmetic use 5 (LP wins).",
+   "The two boxed long-way / short-way comparisons on book p.10 are plain equation lines; the LP text can use a two-column LaTeX array if the side-by-side layout is wanted."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P22-machine-1",
+   "source": "chapter p.22 (Figure it Out Q4a)",
+   "description": "Strip 12 -> +3 -> 15 -> x4 -> 60 -> -5 = 55 (solved example). Checked against the page picture: correct.",
+   "mapped_to": "concept_image:M2.S6.T6.C37.IMG1"
+  },
+  {
+   "fig_id": "P22-machine-2",
+   "source": "chapter p.22 (Figure it Out Q4a)",
+   "description": "Strip ? -> +3 -> x4 -> -5 = 43. Checked against the page picture: correct.",
+   "mapped_to": "concept_image:M2.S6.T6.C37.IMG1"
+  },
+  {
+   "fig_id": "P22-machine-3",
+   "source": "chapter p.22 (Figure it Out Q4a)",
+   "description": "Strip ? -> +3 -> x4 -> -5 = 75. Checked against the page picture: correct.",
+   "mapped_to": "concept_image:M2.S6.T6.C37.IMG1"
+  },
+  {
+   "fig_id": "P23-machine-1",
+   "source": "chapter p.23 (Figure it Out Q4b)",
+   "description": "Two-path machine, input 12, x3 path gives 36, +3 path gives 15, minus box, output 21 (solved example). Checked against the page picture: correct.",
+   "mapped_to": "concept_image:M2.S6.T6.C37.IMG2"
+  },
+  {
+   "fig_id": "P23-machine-2",
+   "source": "chapter p.23 (Figure it Out Q4b)",
+   "description": "Two-path machine ? with output 63. Checked against the page picture: correct.",
+   "mapped_to": "concept_image:M2.S6.T6.C37.IMG2"
+  },
+  {
+   "fig_id": "P23-machine-3",
+   "source": "chapter p.23 (Figure it Out Q4b)",
+   "description": "Two-path machine ? with output 227. Checked against the page picture: correct.",
+   "mapped_to": "concept_image:M2.S6.T6.C37.IMG2"
+  },
+  {
+   "fig_id": "P23-machine-4",
+   "source": "chapter p.23 (Figure it Out Q5)",
+   "description": "Strip ? -> /3 -> /3 = output box. Checked against the page picture: the box prints '+5' (a plus sign before the 5, as the base says); the LP and the arithmetic use 5 (45 / 3 / 3 = 5).",
+   "mapped_to": "concept_image:M2.S6.T6.C37.IMG1"
+  },
+  {
+   "fig_id": "P23-machine-5",
+   "source": "chapter p.23 (Figure it Out Q5)",
+   "description": "Strip ? -> -4 -> -4 = -11. Checked against the page picture: correct.",
+   "mapped_to": "concept_image:M2.S6.T6.C37.IMG1"
+  },
+  {
+   "fig_id": "P10-table-1",
+   "source": "chapter p.10 (7.2)",
+   "description": "Boxed two-column comparison of the long way and the short way for 11y + (-5) = 61, plain equation lines, no colour. Checked against the page picture: correct.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P10-table-2",
+   "source": "chapter p.10 (7.2)",
+   "description": "Boxed two-column comparison for 6y + 7 = 4y + 21, 7 lines per column, plain equation lines, no colour. Checked against the page picture: correct.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "NEW-P06-ex1-cancel",
+   "source": "chapter p.6 (Example 1)",
+   "description": "Display equation 14593 - 1459 + 145 - 14 + 88 - 88 = 13353 - 88 with the + 88 and - 88 crossed out on the left (the target expression is printed in red). Text with strike marks, not a drawn figure; LaTeX \\cancel covers it.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "NEW-P08-check-cancel",
+   "source": "chapter p.8 (check of 5x - 4 = 7)",
+   "description": "Check display LHS = 5(11/5) - 4 = 5(11/5) - 4 with the 5 and the denominator 5 crossed out, then = 11 - 4 = 7. Text with strike marks; LaTeX \\cancel covers it.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 12,
+  "mapped_to_items": 0,
+  "mapped_to_concept_images": 8,
+  "mapped_none": 4,
+  "unmapped": 0,
+  "new_media_ids_created": [],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M2.S7.T7.C38",
+   "role": "question",
+   "lp_book_number": "Trial and Error: solving 2n + 1 = 99",
+   "ncert_ref": "7.2.Q_ways_n",
+   "question_text": "Solve 2n + 1 = 99 by trial and error. Can it have any other solution?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question is the single equation 2n + 1 = 99 and nothing is given as a figure (the matchstick picture and the LHS/RHS callouts belong to earlier topics); the equation reads fully in LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C39",
+   "role": "solution",
+   "lp_book_number": "Trial and Error: solving 2n + 1 = 99",
+   "ncert_ref": "7.2.Q_ways_n",
+   "question_text": "Solve 2n + 1 = 99 by trial and error. Can it have any other solution?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The trial-and-error values are a plain two-column list of numbers (n and the LHS), no colour or position meaning; the LP steps already state each one.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optional LaTeX array, headers n | LHS: 5 | 11, 10 | 21, 30 | 61, 40 | 81, 50 | 101, 49 | 99."
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C40",
+   "role": "question",
+   "lp_book_number": "Trial and Error on 5x − 4 = 7",
+   "ncert_ref": "7.2.Q_trial_5x",
+   "question_text": "Try solving 5x − 4 = 7 using trial and error.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "5x - 4 = 7 is fully given in the words and the equation; the book prints no figure for it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C41",
+   "role": "solution",
+   "lp_book_number": "Trial and Error on 5x − 4 = 7",
+   "ncert_ref": "7.2.Q_trial_5x",
+   "question_text": "Try solving 5x − 4 = 7 using trial and error.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "x = 1, 2, 3 giving LHS 1, 6, 11 is a plain number table; the answer (the solution 2.2 lies between 2 and 3) is a sentence, not a picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optional LaTeX array, headers x | LHS: 1 | 1, 2 | 6, 3 | 11; target RHS = 7."
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C42",
+   "role": "question",
+   "lp_book_number": "Chapter Exercises, Q1 (a)",
+   "ncert_ref": "end.FiO1a, end.FiO1b, end.FiO1c",
+   "question_text": "Fill in the blank with an integer: 5 × ___ − 8 = 37. | Fill in the blank with an integer: 37 − (33 − ___) = 35. | Fill in the blank with an integer: −3 × (−11 + ___) = 45.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Three fill-in-the-blank arithmetic sentences with a blank; the blank is written in LaTeX and nothing else is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C43",
+   "role": "solution",
+   "lp_book_number": "Chapter Exercises, Q1 (a)",
+   "ncert_ref": "end.FiO1a, end.FiO1b, end.FiO1c",
+   "question_text": "Fill in the blank with an integer: 5 × ___ − 8 = 37. | Fill in the blank with an integer: 37 − (33 − ___) = 35. | Fill in the blank with an integer: −3 × (−11 + ___) = 45.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The three answers 9, 31 and -4 are numbers found by undoing operations; the LP steps and check lines are arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C44",
+   "role": "question",
+   "lp_book_number": "Chapter Exercises, Q4 (a)",
+   "ncert_ref": "end.FiO4a",
+   "question_text": "A machine adds 3, then multiplies by 4, then subtracts 5 (for input 12: 15, then 60, then 55). Find the inputs when the outputs are 43 and 75.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "The LP question states the whole machine in words (add 3, multiply by 4, subtract 5, sample 12 -> 15 -> 60 -> 55, outputs 43 and 75), so a careful student loses nothing without the book's strips; the same operation-chain strips already exist as the teaching image M2.S6.T6.C37.IMG1 (not linked). A drawn machine would clearly help only as a picture of the same chain.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the machine written in words exactly as in question_tex."
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C45",
+   "role": "solution",
+   "lp_book_number": "Chapter Exercises, Q4 (a)",
+   "ncert_ref": "end.FiO4a",
+   "question_text": "A machine adds 3, then multiplies by 4, then subtracts 5 (for input 12: 15, then 60, then 55). Find the inputs when the outputs are 43 and 75.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is two numbers (9 and 17) reached by undoing +3, x4, -5 in order; the LP steps and check already carry it, and the question has no diagram to derive from.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C46",
+   "role": "question",
+   "lp_book_number": "Chapter Exercises, Q4 (b)",
+   "ncert_ref": "end.FiO4b",
+   "question_text": "A machine sends the input two ways: one path multiplies it by 3, the other adds 3; then it subtracts the second result from the first (for input 12: 36 − 15 = 21). Find the inputs when the outputs are 63 and 227.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "The LP question describes the two-path machine completely (x3 path, +3 path, subtract second from first, sample 12 -> 36 and 15 -> 21, outputs 63 and 227); the two-path strips already exist as the teaching image M2.S6.T6.C37.IMG2 (not linked). The only figure that would help is that two-path machine.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the machine written in words exactly as in question_tex."
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C47",
+   "role": "solution",
+   "lp_book_number": "Chapter Exercises, Q4 (b)",
+   "ncert_ref": "end.FiO4b",
+   "question_text": "A machine sends the input two ways: one path multiplies it by 3, the other adds 3; then it subtracts the second result from the first (for input 12: 36 − 15 = 21). Find the inputs when the outputs are 63 and 227.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is 33 and 115 from the equation 2x - 3 = output; steps and check are algebra and arithmetic, and the question has no diagram to derive from.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C48",
+   "role": "question",
+   "lp_book_number": "Chapter Exercises, Q5",
+   "ncert_ref": "end.FiO5",
+   "question_text": "What are the inputs to these machines? The first divides by 3 and then divides by 3 again, giving 5. The second subtracts 4 and then subtracts 4 again, giving −11.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "The two machines are described completely in the question (divide by 3 twice giving 5; subtract 4 twice giving -11); their strips already exist as part of the teaching image M2.S6.T6.C37.IMG1 (not linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the two machines written in words exactly as in question_tex."
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C49",
+   "role": "solution",
+   "lp_book_number": "Chapter Exercises, Q5",
+   "ncert_ref": "end.FiO5",
+   "question_text": "What are the inputs to these machines? The first divides by 3 and then divides by 3 again, giving 5. The second subtracts 4 and then subtracts 4 again, giving −11.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answers 45 and -3 come from undoing two equal operations; the LP steps are arithmetic and the question has no diagram to derive from.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C50",
+   "role": "question",
+   "lp_book_number": "Example 1: Removing the term 88",
+   "ncert_ref": "7.2.Ex1",
+   "question_text": "It is known that 14593 − 1459 + 145 − 14 + 88 = 13353. What is the value of 14593 − 1459 + 145 − 14?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Example 1 is a long arithmetic expression given as an equation; the book's red colouring of the target expression is not a figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C51",
+   "role": "solution",
+   "lp_book_number": "Example 1: Removing the term 88",
+   "ncert_ref": "7.2.Ex1",
+   "question_text": "It is known that 14593 − 1459 + 145 − 14 + 88 = 13353. What is the value of 14593 − 1459 + 145 − 14?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The solution cancels + 88 and - 88 and subtracts 88 from 13353; a crossed-out pair in the equation is reliably written with \\cancel in LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write step 2 with \\cancel{+88} and \\cancel{-88} on the LHS."
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C52",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "7.2.solve_5x, 7.2.check_5x",
+   "question_text": "Solve 5x − 4 = 7 and check the solution.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A worked solution of 5x - 4 = 7 in equations with a check; the book prints no figure (the crossed-out 5s in the check are LaTeX \\cancel).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write the check line with \\cancel{5} on the 5 and the denominator 5 if the crossing-out is wanted."
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C53",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "7.2.Ex5",
+   "question_text": "Solve the equation 11y + (−5) = 61, and check the solution.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Example 5 is a short equation chain (subtract (-5), divide by 11, check); no figure in the book.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C56",
+   "role": "question",
+   "lp_book_number": "Example 6: Unknowns on both sides",
+   "ncert_ref": "7.2.Ex6",
+   "question_text": "Solve 6y + 7 = 4y + 21.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Example 6 is one equation with unknowns on both sides, fully given in LaTeX; the book draws no figure for it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C57",
+   "role": "solution",
+   "lp_book_number": "Example 6: Unknowns on both sides",
+   "ncert_ref": "7.2.Ex6",
+   "question_text": "Solve 6y + 7 = 4y + 21.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A chain of equations (subtract 4y, subtract 7, divide by 2, check 49 = 49) is arithmetic and algebra, not a picture; the book prints no figure for the solution.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C58",
+   "role": "question",
+   "lp_book_number": "Solve and Check, Q1 (a)",
+   "ncert_ref": "7.2.FiOa1a, 7.2.FiOa1b, 7.2.FiOa1c",
+   "question_text": "Solve and check: 3x − 10 = 35. | Solve and check: 5s = 3s. | Solve and check: 3u − 7 = 2u + 3.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Three equations to solve and check (3x - 10 = 35; 5s = 3s; 3u - 7 = 2u + 3), all in LaTeX; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C59",
+   "role": "solution",
+   "lp_book_number": "Solve and Check, Q1 (a)",
+   "ncert_ref": "7.2.FiOa1a, 7.2.FiOa1b, 7.2.FiOa1c",
+   "question_text": "Solve and check: 3x − 10 = 35. | Solve and check: 5s = 3s. | Solve and check: 3u − 7 = 2u + 3.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Answers x = 15, s = 0, u = 10 are the end of short step lists plus a numeric check; no visual content.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C60",
+   "role": "question",
+   "lp_book_number": "Solve and Check, Q1 (d)",
+   "ncert_ref": "7.2.FiOa1d, 7.2.FiOa1e",
+   "question_text": "Solve and check: 4(m + 6) − 8 = 2m − 4. | Solve and check: u/15 = 6.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two equations to solve and check (4(m + 6) - 8 = 2m - 4 and u/15 = 6), fully given as LaTeX; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C61",
+   "role": "solution",
+   "lp_book_number": "Solve and Check, Q1 (d)",
+   "ncert_ref": "7.2.FiOa1d, 7.2.FiOa1e",
+   "question_text": "Solve and check: 4(m + 6) − 8 = 2m − 4. | Solve and check: u/15 = 6.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Answers m = -10 and u = 90 come from algebra steps and a numeric check; nothing visual.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C62",
+   "role": "question",
+   "lp_book_number": "Solve and Check, Q2",
+   "ncert_ref": "7.2.FiOa2",
+   "question_text": "Frame an equation that has no solution. [Hint: 4 more than a number, and 5 more than a number can never be equal!]",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "'Frame an equation that has no solution' is open-ended and carries no given figure; the hint is a sentence.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C63",
+   "role": "solution",
+   "lp_book_number": "Solve and Check, Q2",
+   "ncert_ref": "7.2.FiOa2",
+   "question_text": "Frame an equation that has no solution. [Hint: 4 more than a number, and 5 more than a number can never be equal!]",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "OPEN_ENDED"
+   ],
+   "reason": "The sample answer x + 4 = x + 5 leading to 4 = 5 is an equation and a short argument; the LP gives it as text, not a picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C64",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "7.2.shortcut_11y",
+   "question_text": "Solve 11y + (−5) = 61 the long way and the short way, side by side.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's boxed long-way / short-way comparison is a two-column list of equation lines with no colour, shading or arrows (base figure P10-table-1); the LP steps already give both ways as text.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Optional LaTeX array of two columns: left 'long way' (11y + (-5) - (-5) = 61 - (-5); 11y = 66; 11y / 11 = 66 / 11; y = 6), right 'short way' (11y = 61 - (-5); 11y = 66; y = 66 / 11; y = 6)."
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C65",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "7.2.shortcut_6y",
+   "question_text": "Solve 6y + 7 = 4y + 21 the short way, and compare it with the long way.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The second boxed comparison (6y + 7 = 4y + 21, long way beside short way) is again plain equation lines in two columns with no colour (base figure P10-table-2); the LP steps already carry both ways.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Optional LaTeX array of two columns: left long way, right short way, each ending y = 7."
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C66",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "7.2.u15, 7.2.observations",
+   "question_text": "Solve u/15 = 6.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "u/15 = 6 solved by multiplying both sides by 15 is one equation and one multiplication; no figure in the book.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  }
+ ]
+}

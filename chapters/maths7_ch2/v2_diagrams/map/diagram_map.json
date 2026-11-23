@@ -1,0 +1,4490 @@
+{
+ "meta": {
+  "chapter": "Arithmetic Expressions",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 2",
+  "lp_plan_id": "cbse_eng_maths7_ch2_v44",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "none": 11,
+    "required": 1
+   },
+   "question": {
+    "none": 44,
+    "required": 3,
+    "optional": 1
+   },
+   "solution": {
+    "none": 39,
+    "required": 7,
+    "optional": 2
+   }
+  },
+  "notes": [
+   "[chunk A] Chunk A: topics M1.S2.T2, M1.S3.T3, M1.S4.T4, M1.S6.T6, M1.S7.T7, M2.S8.T8 to M2.S13.T13 (pdf pages 1 to 8 and the printed answers on pages 23 to 26).",
+   "[chunk A] Required: the solution bar pictures of Examples 2 and 3 (M1.S6.T6.C17, C19) and the counters picture of the worked example M2.S11.T11.C33; everything else is text or LaTeX.",
+   "[chunk A] The oval marking of terms and the red grouping ovals of the book are written in LaTeX (\\boxed or brackets) and are not drawn.",
+   "[chunk A] The pdf does contain printed answers (pages 23 to 40: 'Page No. 24' onwards) for the in-chapter Try This and Figure it Out items, contrary to the run brief; pages 23 to 26 were checked for this chunk.",
+   "[chunk A] Names: the book and the teaching text of T5 use Raja and Joy; the LP solution steps C17/C19 use Kabir and Farhan; the diagrams follow the LP solution steps.",
+   "[chunk B] Chunk B: topics M2.S15.T15 (Examples 7-11), M2.S16.T16 (Figure it Out 2.2 Q1-Q3), M3.S18.T18 (Examples 12-14), M3.S19.T19 (Tinker the Terms I); 12 pair units, 24 items.",
+   "[chunk B] Required: Example 11 question and solution (square arrangements), Figure it Out Q3 question and solution (window), Tinker the Terms I solution (printed answer grid). Everything else is text/LaTeX.",
+   "[chunk B] The book's oval term-marking lines (Examples 7, 8, 9, 11) are not drawn: the LP solutions name the terms in words.",
+   "[chunk B] Tinker the Terms I: the LP differs from the book (54 + (-16) is a find; -87 + (-16) = -103 is given); the LP wins and the solution figure follows it.",
+   "[chunk C] Chunk C: Figure it Out 2.3 (9 pairs), the 10 x 98 worked example, Examples 15-18 and the two follow-up prompts (15 pairs + 1 worked example).",
+   "[chunk C] Only the two worked answers that the book prints as pictures (Examples 15 and 16) get a solution diagram; everything else is plain arithmetic in text/LaTeX.",
+   "[chunk C] Example 16's question is optional (not added): the LP text carries every count.",
+   "[chunk C] The two solution diagrams show the same pictures as teaching images M3.S21.T21.C91.IMG1 and C92.IMG1; those stay untouched and are not linked (v3).",
+   "[chunk D] Chunk D: Figure it Out 2.4 (Q1-Q4), the three worked examples of Solving Problems with Expressions, Figure it Out 2.5 (Q1-Q6) and the Expression Engineer puzzle.",
+   "[chunk D] Only 2.4 Q4 (two number pictures given in the book) gets a diagram; everything else is text/LaTeX. Two solutions are optional (2.4 Q4 grouped copy of the figure, 2.5 Q1 snail height path) and are not added.",
+   "[chunk D] Stale image/video ids inside the item fields were ignored; every item was matched by its own concept id."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "NEW-P02-bar_model-1-teaching",
+   "source": "chapter p.02",
+   "description": "The same Example 2 picture is also the teaching image 'Who ends with more?' of topic M1.S5.T5 (second use of P02-bar_model-1, accounting only: it is not linked to the Example 2 solution).",
+   "mapped_to": "concept_image:M1.S5.T5.C13.IMG1"
+  },
+  {
+   "fig_id": "NEW-P10-arrangement-2-sol",
+   "source": "chapter p.10",
+   "description": "Second use of the Example 11 left arrangement: the solution figure (5 x 2 + 3 = 13, with braces).",
+   "mapped_to": "item:M2.S15.T15.C54 (solution)"
+  },
+  {
+   "fig_id": "NEW-P10-arrangement-3-sol",
+   "source": "chapter p.10",
+   "description": "Second use of the Example 11 right arrangement: the solution figure (2 x (5 + 3) = 16, with braces).",
+   "mapped_to": "item:M2.S15.T15.C54 (solution)"
+  },
+  {
+   "fig_id": "NEW-P12-shape-1-sol",
+   "source": "chapter p.12",
+   "description": "Second use of the window: the solution figure with the length of all 15 parts and the total 53 cm.",
+   "mapped_to": "item:M2.S16.T16.C60 (solution)"
+  },
+  {
+   "fig_id": "P02-bar_model-1",
+   "source": "chapter p.02",
+   "description": "Base description checked against the page picture: correct. Example 2 picture: two stacked panels 'Raja (1023 + 125)' (1022 bar + one circle 1, then a 125 bar) and 'Joy (1022 + 128)' (1022 bar, then a 125 bar + three circles 1). Redrawn as the solution figure of Example 2 with the LP's names Kabir and Farhan.",
+   "mapped_to": "item:M1.S6.T6.C17 (solution)"
+  },
+  {
+   "fig_id": "P02-bar_model-2",
+   "source": "chapter p.02",
+   "description": "Base description checked against the page picture: correct. Example 3 picture: 'Raja (113 − 25)' (112 bar + circle 1, brace marked 24 under the end of the bar and the circle, 'remove') and 'Joy (112 − 24)' (112 bar, brace marked 24 under its end, 'remove'). Redrawn as the solution figure of Example 3 (Kabir's brace labelled 25, see render_note).",
+   "mapped_to": "item:M1.S6.T6.C19 (solution)"
+  },
+  {
+   "fig_id": "P05-term_marking-1",
+   "source": "chapter p.05",
+   "description": "Base description checked against the page picture: correct. '12 + 7 = (12) + (7)' with each term in an oval. Teaching figure; no concept image of the plan shows it; the LP text states the terms.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P05-term_marking-2",
+   "source": "chapter p.05",
+   "description": "Base description checked against the page picture: correct. '83 − 14 = (83) + (−14)' with each term in an oval. Teaching figure; the LP text states the terms.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P05-term_marking-3",
+   "source": "chapter p.05",
+   "description": "Base description checked against the page picture: correct. Three lines of expressions with their terms in ovals: −18 − 3, 6 × 5 + 3, 2 − 10 + 4 × 6. Teaching figure; the worked example M2.S8.T8.C24 states the same terms in words.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P06-table-1",
+   "source": "chapter p.06",
+   "description": "Base description checked against the page picture: correct. Try This table 'Expression | Expression as the sum of its terms | Terms', row 1 completed, row 2 half completed, rows 3 to 5 with empty ovals. Answer slots only; the LP question lists the four expressions in words and the solution lists the terms in text (an array with \\boxed).",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P06-term_marking-2",
+   "source": "chapter p.06",
+   "description": "Base description checked against the page picture: correct. Example 6 line '(6) + (−4) = (2)' in ovals.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P06-term_marking-3",
+   "source": "chapter p.06",
+   "description": "Base description checked against the page picture: correct. Example 6 line '(−4) + (6) = (2)' in ovals (terms swapped).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P07-term_grouping-2",
+   "source": "chapter p.07",
+   "description": "Base description checked against the page picture: correct. '(−7) + (10) + (−11)' with a red oval around the first two terms. Teaching figure; the worked example M2.S11.T11.C34 writes the grouping in text.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P07-term_grouping-3",
+   "source": "chapter p.07",
+   "description": "Base description checked against the page picture: correct. '(−7) + (10) + (−11)' with a red oval around the last two terms. Teaching figure; the worked example M2.S11.T11.C34 writes the grouping in text.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P07-term_grouping-4",
+   "source": "chapter p.07",
+   "description": "Base description checked against the page picture: correct. 'Term 1 + Term 2 + Term 3 = Term 1 + Term 2 + Term 3' with a red oval around Terms 1-2 on the left and around Terms 2-3 on the right. Teaching figure for the grouping property.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P07-term_marking-1",
+   "source": "chapter p.07",
+   "description": "Base description checked against the page picture: correct. '(Term 1) + (Term 2) = (Term 2) + (Term 1)' in ovals. Teaching figure for the swapping property.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P08-number_list-3",
+   "source": "chapter p.08",
+   "description": "Base description checked against the page picture: correct. Manasa's handwritten list 1342, 774, 8611, 9055, 1022 (9055 is the fourth). The LP question M2.S13.T13.C40 already states all five numbers.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P08-term_marking-1",
+   "source": "chapter p.08",
+   "description": "Base description checked against the page picture: correct. '30 + 5 × 4 = (30) + (5 × 4) = (30) + (20) = (50)' in five ovals. Teaching figure; the teaching image M2.S8.T8.C22.IMG1 of the plan is a different picture (marble bags).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P08-term_marking-2",
+   "source": "chapter p.08",
+   "description": "Base description checked against the page picture: correct. '5 × (3 + 2) + 7 × 8 + 3 = (5 × (3 + 2)) + (7 × 8) + (3)' in three ovals; the same expression is the worked example M2.S11.T11.C35, whose steps state the three terms in text.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P09-arrangement-2",
+   "source": "chapter p.09",
+   "description": "Example 8: stick-figure children, six groups of 5 plus a group of 3 (33). Checked on the page picture: 6 groups of 5 and one of 3, three '+' signs between the three columns of two groups and the group of 3. Illustration only; data in the LP text.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P09-term_marking-1",
+   "source": "chapter p.09",
+   "description": "Example 7: oval line 4 x 23 + 5 = (4 x 23) + (5) = (92) + (5) = (97); part of the book's worked answer.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P09-term_marking-3",
+   "source": "chapter p.09",
+   "description": "Example 8: ovals (6 x 5) + (3); part of the book's worked answer.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P10-arrangement-2",
+   "source": "chapter p.10",
+   "description": "Example 11 left arrangement: five green stacks of 2 squares and one red stack of 3 (13 squares). Verified by zoom.",
+   "mapped_to": "item:M2.S15.T15.C53 (question)"
+  },
+  {
+   "fig_id": "P10-arrangement-3",
+   "source": "chapter p.10",
+   "description": "Example 11 right arrangement: two stacks, each 5 yellow above 3 blue (16 squares). Verified by zoom.",
+   "mapped_to": "item:M2.S15.T15.C53 (question)"
+  },
+  {
+   "fig_id": "P10-term_marking-1",
+   "source": "chapter p.10",
+   "description": "Example 9: ovals (4) + (100/2); part of the book's worked answer.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P11-term_marking-1",
+   "source": "chapter p.11",
+   "description": "Example 11: ovals (5 x 2) + (3) = (10) + (3) = (13); part of the book's worked answer.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P12-shape-1",
+   "source": "chapter p.12",
+   "description": "Figure it Out 2.2 Q3(c) window: 2 borders, 6 grills, 7 gaps, with Border 3 cm, Grill 2 cm (2nd grill), Gap 5 cm (between grills 3 and 4) and a Total Height arrow. Count of 6 grills and 7 gaps confirmed on the page picture; the bottom border's size is not printed (the LP says 3 cm).",
+   "mapped_to": "item:M2.S16.T16.C59 (question)"
+  },
+  {
+   "fig_id": "P14-table-1",
+   "source": "chapter p.14",
+   "description": "Tinker the Terms I question grid: 3 columns of cards with blank result circles (7 blanks). The LP question lists every sum in text, so the blank grid is not drawn; the filled grid is the solution figure.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P16-arrangement-2",
+   "source": "chapter p.16",
+   "description": "Example 15: two trays each with a cutlet marked ₹43 and a rasgulla marked ₹24, left brace 2 × (43 + 24) with two curved arrows, bottom brace 2 × 43 + 2 × 24. Checked against the page picture: description is right (trays, labels above each tray, left and bottom braces, two small curved arrows over the left label).",
+   "mapped_to": "item:M3.S22.T22.C97 (solution)"
+  },
+  {
+   "fig_id": "P16-array-3",
+   "source": "chapter p.16",
+   "description": "Example 16: 7 rows x 5 columns of symbols, top 3 rows green (braced 3 × 5), bottom 4 rows yellow (braced 4 × 5), one right brace round all 7 rows labelled (4+3) × 5. Checked against the page picture: description is right; the row counts agree with the text (4 rows of scouts, 3 rows of guides).",
+   "mapped_to": "item:M3.S22.T22.C99 (solution)"
+  },
+  {
+   "fig_id": "P16-term_marking-1",
+   "source": "chapter p.16",
+   "description": "Example 15: '(2 × 43) + (24)' with each term in its own oval.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P16-term_marking-4",
+   "source": "chapter p.16",
+   "description": "Example 16: '4 × 5 + 3 × 5 = (4 × 5) + (3 × 5) = (20) + (15) = (35)' with the terms in ovals.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P17-braced_sum-1",
+   "source": "chapter p.17",
+   "description": "Repeated addition of 98, 13 copies, braced '10 times' and '3 times'. Checked against the page picture: right.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P17-braced_sum-2",
+   "source": "chapter p.17",
+   "description": "Repeated addition of 10, 14 copies braced '14 times', the last 6 copies struck through. Checked against the page picture: right (8 plain, 6 struck).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P19-pattern-1",
+   "source": "chapter p.19",
+   "description": "Figure it Out 2.4 Q4, left picture: 3 x 3 yellow squares (4) at the corners and centre and blue circles (8) at the edge middles; checked against the page picture, correct. Drawn inside the one question diagram of the item.",
+   "mapped_to": "item:M3.S24.T24.C114 (question)"
+  },
+  {
+   "fig_id": "P19-pattern-2",
+   "source": "chapter p.19",
+   "description": "Figure it Out 2.4 Q4, right picture: 4 x 4 circles, blue 5 at the corners and the middle 2 x 2, red 6 on the other eight edge circles; checked against the page picture, correct. Drawn inside the same question diagram.",
+   "mapped_to": "item:M3.S24.T24.C114 (question)"
+  },
+  {
+   "fig_id": "P24-token_model-1",
+   "source": "chapter p.24",
+   "description": "Base description checked against the page picture: correct. Printed answer to the Try This 'explain swapping with the Token Model': (−4) + (−2) = −6, a row of 4 and a row of 2 negative tokens. The LP carries this Try This (ncert ref 2.2.swap_neg) as the worked example M2.S11.T11.C33 with (−9) + 4 and 4 + (−9), so that item's counters picture follows this printed answer's idea with the LP's numbers.",
+   "mapped_to": "item:M2.S11.T11.C33 (question)"
+  },
+  {
+   "fig_id": "P24-token_model-2",
+   "source": "chapter p.24",
+   "description": "Base description checked against the page picture: correct. Printed answer, right picture: (−2) + (−4) = −6, the same tokens with the groups swapped. Same use as P24-token_model-1: the order-swapped counters of the worked example M2.S11.T11.C33.",
+   "mapped_to": "item:M2.S11.T11.C33 (question)"
+  },
+  {
+   "fig_id": "P25-expression_chain-1",
+   "source": "chapter p.25",
+   "description": "Base description checked against the page picture: correct. Printed answer to 'will this hold with negative terms?': (−6) + (−7) + (−13) = ((−6) + (−7)) + (−13) = (−13) + (−13) = −26, terms in ovals. A number chain; no question or solution of this chunk uses these numbers.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P25-expression_chain-2",
+   "source": "chapter p.25",
+   "description": "Base description checked against the page picture: correct. Same printed answer, 'Other way': (−6) + ((−7) + (−13)) = (−6) + (−20) = −26, terms in ovals. A number chain; no item of this chunk uses these numbers.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P25-token_model-1",
+   "source": "chapter p.25",
+   "description": "Base description checked against the page picture: correct. Printed answer to the Try This 'explain grouping with the Token Model': rows of 6, 7 and 13 negative tokens, the first two rows in a dashed box. The LP has no question, solution or worked example that asks for counters on grouping (M2.S11.T11.C34 is 'add in three ways' in text), so no item needs it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P25-token_model-2",
+   "source": "chapter p.25",
+   "description": "Base description checked against the page picture: correct. Same printed answer, right picture: rows of 6, 7 and 13 negative tokens, the last two rows in a dashed box. No item of this chunk needs it (see P25-token_model-1).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P26-number_list-1",
+   "source": "chapter p.26",
+   "description": "Base description checked against the page picture: correct. The same handwritten list 1342, 774, 8611, 9055, 1022 reprinted with the printed answer to Manasa's question; all five numbers are in the LP question M2.S13.T13.C40.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P29-measurement_figure-1",
+   "source": "chapter p.29",
+   "description": "Reprint of the Q3(c) window on the answers page (same picture as P12-shape-1); the printed answer under it is text only.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P30-table-1",
+   "source": "chapter p.30",
+   "description": "Reprint of the Tinker question grid on the answers page (same as P14-table-1).",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P30-table-2",
+   "source": "chapter p.30",
+   "description": "Printed answer grid of Tinker the Terms I: all 10 cards filled (38, 38, 36, 36, -103, -103, -104, -123 plus the three given 37, 37, -103), with explanation sentences in some cards. Checked on the page picture; becomes the solution figure without the sentences.",
+   "mapped_to": "item:M3.S19.T19.C72 (solution)"
+  },
+  {
+   "fig_id": "P37-pattern-1",
+   "source": "chapter p.37",
+   "description": "The same Q4 picture (I) reprinted in the answers section of the book with the caption (I); the printed answer under it is text only, so it adds no solution figure.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P37-pattern-2",
+   "source": "chapter p.37",
+   "description": "The same Q4 picture (II) reprinted in the answers section with the caption (II); the printed answer under it is text only, so it adds no solution figure.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 48,
+  "mapped_to_items": 15,
+  "mapped_to_concept_images": 1,
+  "mapped_none": 32,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S6.T6.C17.IMG1",
+   "M1.S6.T6.C19.IMG1",
+   "M2.S11.T11.C33.IMG1",
+   "M2.S15.T15.C53.IMG1",
+   "M2.S15.T15.C54.IMG1",
+   "M2.S16.T16.C59.IMG1",
+   "M2.S16.T16.C60.IMG1",
+   "M3.S19.T19.C72.IMG1",
+   "M3.S22.T22.C97.IMG1",
+   "M3.S22.T22.C99.IMG1",
+   "M3.S24.T24.C114.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S2.T2.C4",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.1 - same_value",
+   "question_text": "Write four different expressions whose value is 12, and one more for a favourite number of your own.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "OPEN_ENDED"
+   ],
+   "reason": "Writing expressions whose value is 12 (and one for a favourite number) is plain arithmetic in text; the book prints no figure for it.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C5",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.1 - compare",
+   "question_text": "Compare 10 + 2 with 7 + 1, and 13 − 2 with 4 × 3, using <, > or =.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Comparing 10 + 2 with 7 + 1 and 13 − 2 with 4 × 3 is two lines of arithmetic with < or >; the book prints no figure for it.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "question",
+   "lp_book_number": "Example 1: Lunch money for five days",
+   "ncert_ref": "Section 2.1 - ex1",
+   "question_text": "Meera spends ₹25 every day for lunch at school. Write an expression for what she spends in 5 days and find its value.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Everything is in the words (25 rupees a day, 5 days); the book prints no figure for Example 1. The lunch-tray picture of the plan is a teaching image and is never linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "solution",
+   "lp_book_number": "Example 1: Lunch money for five days",
+   "ncert_ref": "Section 2.1 - ex1",
+   "question_text": "Meera spends ₹25 every day for lunch at school. Write an expression for what she spends in 5 days and find its value.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The solution is 5 × 25 = 125 written in text; no printed-answer picture exists for Example 1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C9",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.1, Q1",
+   "ncert_ref": "Section 2.1 - FiO1",
+   "question_text": "Fill in the blanks to make the expressions equal on both sides of the = sign: (a) 13 + 4 = ____ + 6 (b) 22 + ____ = 6 × 5 (c) 8 × ____ = 64 ÷ 2 (d) 34 − ____ = 25",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four fill-in-the-blank equations; the blanks are underlines in LaTeX. The book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C10",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.1, Q1",
+   "ncert_ref": "Section 2.1 - FiO1",
+   "question_text": "Fill in the blanks to make the expressions equal on both sides of the = sign: (a) 13 + 4 = ____ + 6 (b) 22 + ____ = 6 × 5 (c) 8 × ____ = 64 ÷ 2 (d) 34 − ____ = 25",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answers 11, 8, 4, 9 are numbers in text; the book's printed answer is the same four numbers.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C11",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.1, Q2",
+   "ncert_ref": "Section 2.1 - FiO2",
+   "question_text": "Arrange the following expressions in ascending (increasing) order of their values. (a) 67 − 19 (b) 67 − 20 (c) 35 + 25 (d) 5 × 11 (e) 120 ÷ 3",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Five expressions to put in order; all of them are given in the words. The book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C12",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.1, Q2",
+   "ncert_ref": "Section 2.1 - FiO2",
+   "question_text": "Arrange the following expressions in ascending (increasing) order of their values. (a) 67 − 19 (b) 67 − 20 (c) 35 + 25 (d) 5 × 11 (e) 120 ÷ 3",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the single chain 120 ÷ 3 < 67 − 20 < 67 − 19 < 5 × 11 < 35 + 25, which LaTeX writes in one line; it is a sequence of expressions, not a drawn arrangement, and the book's printed answer is the same chain in text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C16",
+   "role": "question",
+   "lp_book_number": "Example 2: Marbles gained by two children",
+   "ncert_ref": "Section 2.1 - ex2",
+   "question_text": "Which is greater, 1023 + 125 or 1022 + 128? Answer without working out either total.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives only the two expressions; the book's bar picture is the explanation of the answer, not data given in the question, so the question gets no figure (companion note: no question figure when the question gives none).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C17",
+   "role": "solution",
+   "lp_book_number": "Example 2: Marbles gained by two children",
+   "ncert_ref": "Section 2.1 - ex2",
+   "question_text": "Which is greater, 1023 + 125 or 1022 + 128? Answer without working out either total.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The book explains Example 2 with a bar picture ('the situation can be represented as shown in the picture'): Kabir's one extra marble at the start against Farhan's three extra marbles gained is what shows why Farhan ends 2 ahead, and the LP solution only describes it in words. The question gives no figure, so the question side stays without one. Example 3 is decided the same way.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S6.T6.C17.IMG1",
+   "manim_scene": "c7_2_2_1_ex2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S6.T6.C17.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "model": "bar_model",
+     "canvas": {
+      "width": 1920,
+      "height": 1080
+     },
+     "to_scale": false,
+     "stroke": "INK, 3 px",
+     "panels": [
+      {
+       "caption": {
+        "text": "Kabir (1023 + 125)",
+        "x_left": 500,
+        "y_centre": 195,
+        "size_px": 40,
+        "italic": true
+       },
+       "rows": [
+        {
+         "row": 1,
+         "bar": {
+          "label": "1022",
+          "x_left": 500,
+          "x_right": 1300,
+          "y_top": 245,
+          "y_bottom": 345,
+          "fill": "CELL_FILL"
+         },
+         "circles": [
+          {
+           "label": "1",
+           "centre_x": 1375,
+           "centre_y": 295,
+           "diameter": 90,
+           "fill": "MARK_FILL"
+          }
+         ]
+        },
+        {
+         "row": 2,
+         "bar": {
+          "label": "125",
+          "x_left": 500,
+          "x_right": 820,
+          "y_top": 375,
+          "y_bottom": 475,
+          "fill": "CELL_FILL"
+         },
+         "circles": []
+        }
+       ]
+      },
+      {
+       "caption": {
+        "text": "Farhan (1022 + 128)",
+        "x_left": 500,
+        "y_centre": 625,
+        "size_px": 40,
+        "italic": true
+       },
+       "rows": [
+        {
+         "row": 1,
+         "bar": {
+          "label": "1022",
+          "x_left": 500,
+          "x_right": 1300,
+          "y_top": 675,
+          "y_bottom": 775,
+          "fill": "CELL_FILL"
+         },
+         "circles": []
+        },
+        {
+         "row": 2,
+         "bar": {
+          "label": "125",
+          "x_left": 500,
+          "x_right": 820,
+          "y_top": 805,
+          "y_bottom": 905,
+          "fill": "CELL_FILL"
+         },
+         "circles": [
+          {
+           "label": "1",
+           "centre_x": 895,
+           "centre_y": 855,
+           "diameter": 90,
+           "fill": "MARK_FILL"
+          },
+          {
+           "label": "1",
+           "centre_x": 1005,
+           "centre_y": 855,
+           "diameter": 90,
+           "fill": "MARK_FILL"
+          },
+          {
+           "label": "1",
+           "centre_x": 1115,
+           "centre_y": 855,
+           "diameter": 90,
+           "fill": "MARK_FILL"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 by 1080, plain BG, nothing else on it. Draw two panels, one above the other, with every bar left-aligned at x = 500. All outlines are INK, 3 px; all text is plain sans-serif INK. Panel 1 (top): the italic caption 'Kabir (1023 + 125)' at 40 px with its left end at x = 500 and its vertical centre at y = 195. Row 1: a rectangle from x = 500 to x = 1300 and from y = 245 to y = 345, filled CELL_FILL, with the label '1022' centred in it at 44 px; 30 px to the right of this rectangle a circle of diameter 90 centred at (1375, 295), filled MARK_FILL, with the label '1' centred in it at 40 px. Row 2: a rectangle from x = 500 to x = 820 and from y = 375 to y = 475, filled CELL_FILL, with the label '125' centred in it at 44 px; nothing to its right. Panel 2 (bottom): the italic caption 'Farhan (1022 + 128)' at 40 px with its left end at x = 500 and its vertical centre at y = 625. Row 1: a rectangle from x = 500 to x = 1300 and from y = 675 to y = 775, filled CELL_FILL, with the label '1022'; nothing to its right. Row 2: a rectangle from x = 500 to x = 820 and from y = 805 to y = 905, filled CELL_FILL, with the label '125'; then three circles of diameter 90 filled MARK_FILL, each with the label '1', centred at (895, 855), (1005, 855) and (1115, 855) (30 px after the rectangle, 20 px between neighbouring circles). Draw no arrows, braces, equals signs, totals or any other mark. The drawing is not to scale: only the labels carry the values.",
+    "visible_text": [
+     "Kabir (1023 + 125)",
+     "1022",
+     "1",
+     "125",
+     "Farhan (1022 + 128)",
+     "1022",
+     "125",
+     "1",
+     "1",
+     "1"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the names Raja or Joy",
+     "the totals 1148 and 1150",
+     "any <, > or = sign",
+     "the words greater, more or marbles",
+     "faces or photographs of marbles"
+    ],
+    "accuracy_checks": [
+     "Kabir: bar 1022 + one circle 1 on row 1 makes 1023, and bar 125 on row 2: 1023 + 125",
+     "Farhan: bar 1022 on row 1, bar 125 + three circles 1 on row 2 makes 128: 1022 + 128",
+     "circle counts: 1 in Kabir's panel, 3 in Farhan's panel, 4 in all",
+     "the extra start (1) is Kabir's and the extra gain (3) is Farhan's: 3 − 1 = 2, and 1022 + 128 = 1150 > 1148 = 1023 + 125",
+     "both panels use the same x for the left edge of every bar and the same bar widths (800 px for 1022, 320 px for 125)"
+    ],
+    "alt_text": "Two stacked bar pictures: Kabir has a 1022 bar with one extra marble beside it above a 125 bar, and Farhan has a 1022 bar above a 125 bar followed by three single marbles.",
+    "render_note": "Redraws the book's Example 2 picture (pdf page 2), same arrangement; not drawn to scale in the book either. Labels use the names of the LP solution steps (Kabir, Farhan), not the book's Raja and Joy; the teaching image of topic M1.S5.T5 uses Raja and Joy. The base shows Joy's 1022 bar slightly longer than Raja's: here both are 800 px. The question has no diagram, so derived_from is null."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C18",
+   "role": "question",
+   "lp_book_number": "Example 3: Marbles lost by two children",
+   "ncert_ref": "Section 2.1 - ex3",
+   "question_text": "Which is greater, 113 − 25 or 112 − 24? Answer without working out either difference.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives only the two differences; the book's bar picture is the explanation of the answer, not data given in the question, so the question gets no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C19",
+   "role": "solution",
+   "lp_book_number": "Example 3: Marbles lost by two children",
+   "ncert_ref": "Section 2.1 - ex3",
+   "question_text": "Which is greater, 113 − 25 or 112 − 24? Answer without working out either difference.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The book explains Example 3 with a bar picture: Kabir's extra marble at the start is cancelled by the extra marble he loses, shown by the braces and the circle. The LP solution only describes it in words. The question gives no figure. Same decision as Example 2 (sibling).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S6.T6.C19.IMG1",
+   "manim_scene": "c7_2_2_1_ex3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S6.T6.C19.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "model": "bar_model_with_removal",
+     "canvas": {
+      "width": 1920,
+      "height": 1080
+     },
+     "to_scale": false,
+     "stroke": "INK, 3 px",
+     "panels": [
+      {
+       "caption": {
+        "text": "Kabir (113 − 25)",
+        "x_left": 500,
+        "y_centre": 170,
+        "size_px": 40,
+        "italic": true
+       },
+       "bar": {
+        "label": "112",
+        "x_left": 500,
+        "x_right": 1300,
+        "y_top": 220,
+        "y_bottom": 320,
+        "fill": "CELL_FILL"
+       },
+       "circle": {
+        "label": "1",
+        "centre_x": 1375,
+        "centre_y": 270,
+        "diameter": 90,
+        "fill": "MARK_FILL"
+       },
+       "span_label": {
+        "text": "25",
+        "centre_x": 1210,
+        "centre_y": 360,
+        "size_px": 40,
+        "arrows": "short left arrow and short right arrow, 45 px long, either side of the number"
+       },
+       "brace": {
+        "shape": "curly underbrace (both ends point up, the middle tip points down)",
+        "x_left": 1000,
+        "x_right": 1420,
+        "y_top": 395,
+        "y_tip": 435,
+        "colour": "FOCUS",
+        "stroke_px": 3
+       },
+       "word": {
+        "text": "remove",
+        "italic": true,
+        "centre_x": 1210,
+        "centre_y": 475,
+        "size_px": 38
+       }
+      },
+      {
+       "caption": {
+        "text": "Farhan (112 − 24)",
+        "x_left": 500,
+        "y_centre": 620,
+        "size_px": 40,
+        "italic": true
+       },
+       "bar": {
+        "label": "112",
+        "x_left": 500,
+        "x_right": 1300,
+        "y_top": 670,
+        "y_bottom": 770,
+        "fill": "CELL_FILL"
+       },
+       "circle": null,
+       "span_label": {
+        "text": "24",
+        "centre_x": 1150,
+        "centre_y": 810,
+        "size_px": 40,
+        "arrows": "short left arrow and short right arrow, 45 px long, either side of the number"
+       },
+       "brace": {
+        "shape": "curly underbrace (both ends point up, the middle tip points down)",
+        "x_left": 1000,
+        "x_right": 1300,
+        "y_top": 845,
+        "y_tip": 885,
+        "colour": "FOCUS",
+        "stroke_px": 3
+       },
+       "word": {
+        "text": "remove",
+        "italic": true,
+        "centre_x": 1150,
+        "centre_y": 925,
+        "size_px": 38
+       }
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 by 1080, plain BG, nothing else on it. Draw two panels, one above the other, with every bar left-aligned at x = 500. Bars and circles have INK outlines of 3 px; all text is plain sans-serif INK. Panel 1 (top): the italic caption 'Kabir (113 − 25)' at 40 px, left end at x = 500, vertical centre y = 170. A rectangle from x = 500 to x = 1300 and from y = 220 to y = 320, filled CELL_FILL, with the label '112' centred in it at 44 px; 30 px to its right a circle of diameter 90 centred at (1375, 270), filled MARK_FILL, with the label '1' centred in it at 40 px. Below the bar, centred at x = 1210 and y = 360, the number '25' at 40 px with a short left-pointing arrow (45 px long, INK) to its left and a short right-pointing arrow (45 px long, INK) to its right. Below that a curly underbrace in FOCUS, 3 px, running from x = 1000 to x = 1420 (so it covers the last 300 px of the bar, the gap and the circle), top edge at y = 395 and its middle tip pointing down to y = 435. Below the tip the italic word 'remove' at 38 px, centred at x = 1210, y = 475. Panel 2 (bottom): the italic caption 'Farhan (112 − 24)' at 40 px, left end at x = 500, vertical centre y = 620. A rectangle from x = 500 to x = 1300 and from y = 670 to y = 770, filled CELL_FILL, with the label '112' centred in it at 44 px; no circle. Below the bar, centred at x = 1150 and y = 810, the number '24' at 40 px with the same pair of arrows. Below that a curly underbrace in FOCUS, 3 px, running from x = 1000 to x = 1300 (the last 300 px of the bar), top edge at y = 845 and its middle tip pointing down to y = 885. Below the tip the italic word 'remove' at 38 px, centred at x = 1150, y = 925. Both braces start at x = 1000, so the part of each bar left of x = 1000 (500 px) is what is left after removing. Draw nothing else. Not to scale: only the labels carry the values.",
+    "visible_text": [
+     "Kabir (113 − 25)",
+     "112",
+     "1",
+     "25",
+     "remove",
+     "Farhan (112 − 24)",
+     "112",
+     "24",
+     "remove"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the names Raja or Joy",
+     "the value 88 or any total",
+     "any <, > or = sign",
+     "the words greater, equal or marbles",
+     "faces or photographs of marbles"
+    ],
+    "accuracy_checks": [
+     "Kabir's bar 112 plus one circle 1 is 113; Farhan's bar is 112",
+     "Kabir's brace covers the circle (1) and the last part of the bar: it is labelled 25 = 24 + 1; Farhan's brace covers the last part of the bar and is labelled 24",
+     "both braces start at the same x (1000), so what is left of each bar is the same length: 113 − 25 = 88 and 112 − 24 = 88",
+     "the circle sits outside the bar and inside Kabir's brace only"
+    ],
+    "alt_text": "Two stacked bar pictures: Kabir's 112 bar with one extra marble has a brace marked 25 under its end and the circle, Farhan's 112 bar has a brace marked 24 under its end, both with the word remove.",
+    "render_note": "Redraws the book's Example 3 picture (pdf page 2). In the book both braces are labelled 24, but Raja's brace runs under the extra circle as well, so it removes 25; the LP solution says Kabir loses 25 and Farhan loses 24, so Kabir's brace is labelled 25 here (LP text wins). Names follow the LP solution steps (Kabir, Farhan), not the book's Raja and Joy. The question has no diagram, so derived_from is null."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C20",
+   "role": "question",
+   "lp_book_number": "Comparing Without Working Out: five pairs",
+   "ncert_ref": "Section 2.1 - compare5",
+   "question_text": "Compare using <, > or =, by reasoning: (a) 245 + 289 and 246 + 285 (b) 273 − 145 and 272 − 144 (c) 364 + 587 and 363 + 589 (d) 124 + 245 and 129 + 245 (e) 213 − 77 and 214 − 76.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Five pairs of expressions, all written in the words; the empty boxes in the book are blanks for the sign, not a figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C21",
+   "role": "solution",
+   "lp_book_number": "Comparing Without Working Out: five pairs",
+   "ncert_ref": "Section 2.1 - compare5",
+   "question_text": "Compare using <, > or =, by reasoning: (a) 245 + 289 and 246 + 285 (b) 273 − 145 and 272 − 144 (c) 364 + 587 and 363 + 589 (d) 124 + 245 and 129 + 245 (e) 213 − 77 and 214 − 76.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Five short lines of reasoning ending in >, =, <, <, <, exactly the book's printed answer in text; no printed-answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C24",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - terms",
+   "question_text": "Write 13 − 2 + 6 and 2 − 10 + 4 × 6 as sums of terms, list the terms and find the values.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The LP steps already write each expression as a sum of terms and list the terms in words; the book's oval marking of terms (figures P05 and row 1 of P06) is a notation that LaTeX writes with \\boxed, and it is not given data the learner needs to attempt anything.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C26",
+   "role": "question",
+   "lp_book_number": "Example 4: Marbles and bags of marbles",
+   "ncert_ref": "Section 2.2 - ex4",
+   "question_text": "Meera has 30 marbles. A friend gives her 5 bags with 4 marbles in each bag. Write an expression for her marbles now and find its value.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "30 marbles and 5 bags of 4 are all in the words; the book prints no figure for Example 4 (the marbles-and-bags picture of the plan is a teaching image and is never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C27",
+   "role": "solution",
+   "lp_book_number": "Example 4: Marbles and bags of marbles",
+   "ncert_ref": "Section 2.2 - ex4",
+   "question_text": "Meera has 30 marbles. A friend gives her 5 bags with 4 marbles in each bag. Write an expression for her marbles now and find its value.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "30 + 5 × 4 = 50 and the wrong left-to-right path 35 × 4 = 140 are arithmetic lines in text; the book prints no figure for it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C28",
+   "role": "question",
+   "lp_book_number": "Example 5: Change from a ₹100 note",
+   "ncert_ref": "Section 2.2 - ex5",
+   "question_text": "Farhan bought a pack of biscuits for ₹15 and a packet of toor dal for ₹56. He paid with a ₹100 note. Write an expression for the money he has left and find its value.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The two prices and the 100 rupee note are all in the words; the book prints no figure for Example 5.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C29",
+   "role": "solution",
+   "lp_book_number": "Example 5: Change from a ₹100 note",
+   "ncert_ref": "Section 2.2 - ex5",
+   "question_text": "Farhan bought a pack of biscuits for ₹15 and a packet of toor dal for ₹56. He paid with a ₹100 note. Write an expression for the money he has left and find its value.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "100 − (15 + 56) = 29 and the wrong 100 − 15 + 56 = 141 are arithmetic lines in text; the book prints no figure for it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C30",
+   "role": "question",
+   "lp_book_number": "Try This (Terms in Expressions): table of terms",
+   "ncert_ref": "Section 2.2 - try_terms",
+   "question_text": "Write each as a sum of terms and list the terms: (a) 5 + 6 × 3 (b) 4 + 15 − 9 (c) 23 − 2 × 4 + 16 (d) 28 + 19 − 8.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The LP question gives the four expressions in words; the book's table (P06-table-1) only adds empty ovals as answer slots, and a learner can attempt the question from the text exactly as well.",
+   "text_alternative": "Write the four expressions in a line: (a) 5 + 6 × 3, (b) 4 + 15 − 9, (c) 23 − 2 × 4 + 16, (d) 28 + 19 − 8.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C31",
+   "role": "solution",
+   "lp_book_number": "Try This (Terms in Expressions): table of terms",
+   "ncert_ref": "Section 2.2 - try_terms",
+   "question_text": "Write each as a sum of terms and list the terms: (a) 5 + 6 × 3 (b) 4 + 15 − 9 (c) 23 − 2 × 4 + 16 (d) 28 + 19 − 8.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The completed table is plain text with terms in ovals, and its 'Terms' column already lists the terms; LaTeX writes it with an array and \\boxed. The pdf's printed answers (pages 23 to 26) have no entry for this table, so there is no printed-answer picture.",
+   "text_alternative": "LaTeX array, columns Expression | Sum of its terms | Terms: (a) 5 + 6 × 3 | 5 + 6 × 3 | 5, 6 × 3; (b) 4 + 15 − 9 | 4 + 15 + (−9) | 4, 15, −9; (c) 23 − 2 × 4 + 16 | 23 + (−2 × 4) + 16 | 23, −2 × 4, 16; (d) 28 + 19 − 8 | 28 + 19 + (−8) | 28, 19, −8.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C33",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - swap_neg",
+   "question_text": "Check whether swapping changes the value of (−9) + 4, and say why using counters.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The example asks the learner to say why swapping (−9) + 4 changes nothing 'using counters': the answer is a counter arrangement (nine negative and four positive counters, four cancelling pairs, five negative left) that the steps only describe in words, and the printed answer of the matching Try This (token model, pdf page 24) is a picture. The same 13 counters in the other order show why the sum cannot change.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S11.T11.C33.IMG1",
+   "manim_scene": "c7_2_2_2_swap_neg_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C33.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "integer_tokens",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "integer_tokens",
+     "canvas": {
+      "width": 1920,
+      "height": 1080
+     },
+     "to_scale": true,
+     "rows": [
+      {
+       "label": "(−9) + 4",
+       "label_centre": [
+        960,
+        170
+       ],
+       "label_size_px": 48,
+       "counters": [
+        {
+         "pos": 1,
+         "centre_x": 360,
+         "centre_y": 300,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 2,
+         "centre_x": 460,
+         "centre_y": 300,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 3,
+         "centre_x": 560,
+         "centre_y": 300,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 4,
+         "centre_x": 660,
+         "centre_y": 300,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 5,
+         "centre_x": 760,
+         "centre_y": 300,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 6,
+         "centre_x": 860,
+         "centre_y": 300,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 7,
+         "centre_x": 960,
+         "centre_y": 300,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 8,
+         "centre_x": 1060,
+         "centre_y": 300,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 9,
+         "centre_x": 1160,
+         "centre_y": 300,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 10,
+         "centre_x": 1260,
+         "centre_y": 300,
+         "diameter": 80,
+         "sign": "+",
+         "fill": "SET_A",
+         "glyph_colour": "BG"
+        },
+        {
+         "pos": 11,
+         "centre_x": 1360,
+         "centre_y": 300,
+         "diameter": 80,
+         "sign": "+",
+         "fill": "SET_A",
+         "glyph_colour": "BG"
+        },
+        {
+         "pos": 12,
+         "centre_x": 1460,
+         "centre_y": 300,
+         "diameter": 80,
+         "sign": "+",
+         "fill": "SET_A",
+         "glyph_colour": "BG"
+        },
+        {
+         "pos": 13,
+         "centre_x": 1560,
+         "centre_y": 300,
+         "diameter": 80,
+         "sign": "+",
+         "fill": "SET_A",
+         "glyph_colour": "BG"
+        }
+       ],
+       "zero_pair_ring": {
+        "counters": "6 to 13",
+        "x_left": 810,
+        "x_right": 1610,
+        "y_top": 245,
+        "y_bottom": 355,
+        "colour": "FOCUS",
+        "dashed": true,
+        "corner_radius_px": 20
+       },
+       "left_over": {
+        "counters": "1 to 5",
+        "count": 5,
+        "sign": "−",
+        "tag": "−5",
+        "tag_colour": "ANSWER",
+        "tag_centre": [
+         560,
+         400
+        ],
+        "tag_size_px": 56
+       }
+      },
+      {
+       "label": "4 + (−9)",
+       "label_centre": [
+        960,
+        600
+       ],
+       "label_size_px": 48,
+       "counters": [
+        {
+         "pos": 1,
+         "centre_x": 360,
+         "centre_y": 730,
+         "diameter": 80,
+         "sign": "+",
+         "fill": "SET_A",
+         "glyph_colour": "BG"
+        },
+        {
+         "pos": 2,
+         "centre_x": 460,
+         "centre_y": 730,
+         "diameter": 80,
+         "sign": "+",
+         "fill": "SET_A",
+         "glyph_colour": "BG"
+        },
+        {
+         "pos": 3,
+         "centre_x": 560,
+         "centre_y": 730,
+         "diameter": 80,
+         "sign": "+",
+         "fill": "SET_A",
+         "glyph_colour": "BG"
+        },
+        {
+         "pos": 4,
+         "centre_x": 660,
+         "centre_y": 730,
+         "diameter": 80,
+         "sign": "+",
+         "fill": "SET_A",
+         "glyph_colour": "BG"
+        },
+        {
+         "pos": 5,
+         "centre_x": 760,
+         "centre_y": 730,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 6,
+         "centre_x": 860,
+         "centre_y": 730,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 7,
+         "centre_x": 960,
+         "centre_y": 730,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 8,
+         "centre_x": 1060,
+         "centre_y": 730,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 9,
+         "centre_x": 1160,
+         "centre_y": 730,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 10,
+         "centre_x": 1260,
+         "centre_y": 730,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 11,
+         "centre_x": 1360,
+         "centre_y": 730,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 12,
+         "centre_x": 1460,
+         "centre_y": 730,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        },
+        {
+         "pos": 13,
+         "centre_x": 1560,
+         "centre_y": 730,
+         "diameter": 80,
+         "sign": "−",
+         "fill": "SET_B",
+         "glyph_colour": "INK"
+        }
+       ],
+       "zero_pair_ring": {
+        "counters": "1 to 8",
+        "x_left": 310,
+        "x_right": 1110,
+        "y_top": 675,
+        "y_bottom": 785,
+        "colour": "FOCUS",
+        "dashed": true,
+        "corner_radius_px": 20
+       },
+       "left_over": {
+        "counters": "9 to 13",
+        "count": 5,
+        "sign": "−",
+        "tag": "−5",
+        "tag_colour": "ANSWER",
+        "tag_centre": [
+         1360,
+         830
+        ],
+        "tag_size_px": 56
+       }
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 by 1080, plain BG, nothing else on it. Two rows of 13 round counters, each of diameter 80 with an INK outline of 3 px, centres 100 px apart, the 13 centres at x = 360, 460, 560, 660, 760, 860, 960, 1060, 1160, 1260, 1360, 1460, 1560. A negative counter is filled SET_B with a '−' in INK centred in it at 56 px; a positive counter is filled SET_A with a '+' in BG (white) centred in it at 56 px. Row 1: the label '(−9) + 4' in INK at 48 px centred at (960, 170). Counters 1 to 9 (x = 360 to 1160) are negative and counters 10 to 13 (x = 1260 to 1560) are positive, all at y = 300. A dashed rounded rectangle in FOCUS, 3 px, corner radius 20, from x = 810 to x = 1610 and from y = 245 to y = 355, encloses counters 6 to 13 (four negative and four positive, the four zero pairs). Under counters 1 to 5, which lie outside the rectangle, the tag '−5' in ANSWER at 56 px, centred at (560, 400). Row 2: the label '4 + (−9)' in INK at 48 px centred at (960, 600). Counters 1 to 4 (x = 360 to 660) are positive and counters 5 to 13 (x = 760 to 1560) are negative, all at y = 730. A dashed rounded rectangle in FOCUS, 3 px, corner radius 20, from x = 310 to x = 1110 and from y = 675 to y = 785, encloses counters 1 to 8 (four positive and four negative, the four zero pairs). Under counters 9 to 13, which lie outside the rectangle, the tag '−5' in ANSWER at 56 px, centred at (1360, 830). Draw nothing else.",
+    "visible_text": [
+     "(−9) + 4",
+     "4 + (−9)",
+     "−",
+     "+",
+     "−5"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any equals sign or the sentence that the value does not change",
+     "the words swap, zero pair or counters",
+     "the totals 13 or 4 pairs",
+     "faces or decorative tokens"
+    ],
+    "accuracy_checks": [
+     "each row has 13 counters: 9 negative and 4 positive",
+     "row 1 order: 9 negative then 4 positive; row 2 order: 4 positive then 9 negative (the same 13 counters in the other order)",
+     "each dashed ring encloses 8 counters, 4 negative and 4 positive: 4 zero pairs",
+     "outside the ring 9 − 4 = 5 negative counters remain in each row, so the tag −5 is correct and (−9) + 4 = −5 = 4 + (−9)"
+    ],
+    "alt_text": "Two rows of the same thirteen counters, nine negative and four positive, in opposite order; in each row four positive and four negative counters are ringed as cancelling pairs and five negative counters, marked minus five, are left.",
+    "render_note": "Worked example: the figure sits after the question text and the steps then explain it. The base book has no picture for (−9) + 4; the LP's example is 'say why using counters' (ncert ref 2.2.swap_neg, whose printed answer on pdf page 24 is a token picture for (−4) + (−2)), so this picture follows the printed answer's idea with the LP's numbers. The teaching image M2.S11.T11.C32.IMG1 (6 + (−4)) is not linked."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C34",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - three_terms",
+   "question_text": "Add (−7) + 10 + (−11) in three different ways and compare.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The three orders of adding (−7) + 10 + (−11) are three short equation chains in text; the book's red ovals around two terms (figures P07-term_grouping) are brackets in LaTeX.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C35",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - properties",
+   "question_text": "Evaluate 5 × (3 + 2) + 7 × 8 + 3 by terms, and name the property that lets you add the term values in any order.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Splitting 5 × (3 + 2) + 7 × 8 + 3 into three terms and adding 25 + 56 + 3 = 84 is text; the book's oval line (P08-term_marking-2) is a term split that LaTeX writes with \\boxed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C36",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - swap_life",
+   "question_text": "Is 12 − 5 equal to 5 − 12? Write 12 − 5 as terms, swap them, and decide.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "12 − 5 = (−5) + 12 = 7 against 5 − 12 = −7 is arithmetic in text; the book prints no figure (socks and shoes is only a story).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C38",
+   "role": "question",
+   "lp_book_number": "Example 6: Drone goes up and down",
+   "ncert_ref": "Section 2.2 - ex6",
+   "question_text": "A drone goes 6 m up and then 4 m down. Write the final height as a sum of terms, then swap the two terms and compare.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The drone's 6 m up and 4 m down are in the words; the book's two oval lines (P06-term_marking-2 and −3) are the working of the answer, not given data.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C39",
+   "role": "solution",
+   "lp_book_number": "Example 6: Drone goes up and down",
+   "ncert_ref": "Section 2.2 - ex6",
+   "question_text": "A drone goes 6 m up and then 4 m down. Write the final height as a sum of terms, then swap the two terms and compare.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "6 + (−4) = 2 and (−4) + 6 = 2 are two equations in text; the book's oval lines are the same equations, and no printed-answer picture exists for Example 6.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C40",
+   "role": "question",
+   "lp_book_number": "Try This (Swapping and Grouping): Manasa's forgotten number",
+   "ncert_ref": "Section 2.2 - manasa",
+   "question_text": "Meera added the numbers 1342, 774, 8611, 9055 and 1022 but forgot 9055 the first time and got 11749. What is the correct total, without starting again?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "All five numbers, the forgotten 9055 and the wrong total 11749 are in the LP question text; the book's handwritten list (P08-number_list-3, P26-number_list-1) shows the same five numbers and carries nothing else.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C41",
+   "role": "solution",
+   "lp_book_number": "Try This (Swapping and Grouping): Manasa's forgotten number",
+   "ncert_ref": "Section 2.2 - manasa",
+   "question_text": "Meera added the numbers 1342, 774, 8611, 9055 and 1022 but forgot 9055 the first time and got 11749. What is the correct total, without starting again?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the one line 11749 + 9055 = 20804 in text; the book's printed answer is text only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C45",
+   "role": "question",
+   "lp_book_number": "Example 7: Dosas and a tip",
+   "ncert_ref": "Section 2.2 - Example 7",
+   "question_text": "Four friends order 4 dosas at ₹23 each and tip ₹5. Write the total as an expression, list its terms and find the value. Then do it again for 7 friends.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure: every number (4 dosas, Rs 23, tip Rs 5, 7 friends) is in the text. The book's oval line (4 x 23 + 5 = (4 x 23) + (5) = (92) + (5) = (97)) is part of the book's worked answer, not of what the question gives.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Question stays text only."
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C46",
+   "role": "solution",
+   "lp_book_number": "Example 7: Dosas and a tip",
+   "ncert_ref": "Section 2.2 - Example 7",
+   "question_text": "Four friends order 4 dosas at ₹23 each and tip ₹5. Write the total as an expression, list its terms and find the value. Then do it again for 7 friends.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's oval picture only marks each term of a plain chain of equalities; the LP solution already names the terms in words and writes the chain in LaTeX, so a student loses nothing.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX chain $4 \\times 23 + 5 = 92 + 5 = 97$ and $7 \\times 23 + 5 = 161 + 5 = 166$ with the terms named in words (as the LP steps already do)."
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C47",
+   "role": "question",
+   "lp_book_number": "Example 8: Groups of students in a game",
+   "ncert_ref": "Section 2.2 - Example 8",
+   "question_text": "Tanvi sat out of a game and the other 33 students made equal groups. When the teacher called 5, Tanvi wrote 6 × 5 + 3. Write the matching expressions when the teacher calls 4 and 7, and list the terms of each.",
+   "decision": "none",
+   "reason_codes": [
+    "DECORATIVE_ONLY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's picture is stick-figure children in six groups of 5 plus 3 more; the LP question already states 33 students, groups of 5 and Tanvi's 6 x 5 + 3, and then asks about groups of 4 and 7, which the picture does not show.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Question stays text only."
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C48",
+   "role": "solution",
+   "lp_book_number": "Example 8: Groups of students in a game",
+   "ncert_ref": "Section 2.2 - Example 8",
+   "question_text": "Tanvi sat out of a game and the other 33 students made equal groups. When the teacher called 5, Tanvi wrote 6 × 5 + 3. Write the matching expressions when the teacher calls 4 and 7, and list the terms of each.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The printed answer is text only (8 x 4 + 1 and 4 x 7 + 5, with terms); the LP steps give every grouping and the check 30 + 3, 32 + 1, 28 + 5 in words and LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines $33 = 6 \\times 5 + 3$, $33 = 8 \\times 4 + 1$, $33 = 4 \\times 7 + 5$ (as the LP steps already do)."
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C49",
+   "role": "question",
+   "lp_book_number": "Example 9: Packets of rice",
+   "ncert_ref": "Section 2.2 - Example 9",
+   "question_text": "Meera packs 100 kg of rice into 2 kg packets and already has 4 packets. Write an expression for the packets she has now, list its terms and find the value.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure is given with the question; 100 kg, 2 kg packets and 4 packets are all in the text. The book's oval picture (4) + (100/2) is part of its answer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C50",
+   "role": "solution",
+   "lp_book_number": "Example 9: Packets of rice",
+   "ncert_ref": "Section 2.2 - Example 9",
+   "question_text": "Meera packs 100 kg of rice into 2 kg packets and already has 4 packets. Write an expression for the packets she has now, list its terms and find the value.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's oval picture only marks the two terms 4 and 100/2; the LP steps already name them and give 100 / 2 = 50, 4 + 50 = 54.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: $4 + \\dfrac{100}{2}$ with terms $4$ and $\\dfrac{100}{2}$, value $54$."
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C51",
+   "role": "question",
+   "lp_book_number": "Example 10: Paying ₹432",
+   "ncert_ref": "Section 2.2 - Example 10",
+   "question_text": "Joseph must pay ₹432 using notes and coins. Check 4 × 100 + 1 × 20 + 1 × 10 + 2 × 1 and 8 × 50 + 1 × 10 + 4 × 5 + 2 × 1, name the terms of each, and find one more way.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure in the book or the question; the two ways of paying Rs 432 are written as expressions in the text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C52",
+   "role": "solution",
+   "lp_book_number": "Example 10: Paying ₹432",
+   "ncert_ref": "Section 2.2 - Example 10",
+   "question_text": "Joseph must pay ₹432 using notes and coins. Check 4 × 100 + 1 × 20 + 1 × 10 + 2 × 1 and 8 × 50 + 1 × 10 + 4 × 5 + 2 × 1, name the terms of each, and find one more way.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Printed answer is text only (terms of the two ways and one more way); the LP steps give each term product and the totals 400 + 20 + 10 + 2 = 432, 400 + 10 + 20 + 2 = 432, 400 + 30 + 2 = 432.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Three LaTeX lines as in the LP steps."
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C53",
+   "role": "question",
+   "lp_book_number": "Example 11: Squares matching 5 × 2 + 3",
+   "ncert_ref": "Section 2.2 - Example 11",
+   "question_text": "One arrangement has 5 rows of 2 squares and 3 extra squares. Another has 2 rows, each with 5 yellow and 3 blue squares. Write an expression for each and find the number of squares.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The book's question is 'here are two pictures: which arrangement matches 5 x 2 + 3, and what is the expression for the other, using its yellow and blue squares?' The stacks (5 of 2 plus a stack of 3, and 2 stacks of 5 yellow over 3 blue) and their colours are what the learner reads the expressions from.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S15.T15.C53.IMG1",
+   "manim_scene": "c7_2_ex11_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S15.T15.C53.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "figure_kind": "unit_square_stacks",
+     "square_side": 1,
+     "stack_gap": 0.3,
+     "baseline_y": 0,
+     "left_group": {
+      "x_span": [
+       0,
+       7.5
+      ],
+      "stacks": [
+       {
+        "x": 0,
+        "squares": 2,
+        "fill": "MARK_FILL"
+       },
+       {
+        "x": 1.3,
+        "squares": 2,
+        "fill": "MARK_FILL"
+       },
+       {
+        "x": 2.6,
+        "squares": 2,
+        "fill": "MARK_FILL"
+       },
+       {
+        "x": 3.9,
+        "squares": 2,
+        "fill": "MARK_FILL"
+       },
+       {
+        "x": 5.2,
+        "squares": 2,
+        "fill": "MARK_FILL"
+       },
+       {
+        "x": 6.5,
+        "squares": 3,
+        "fill": "FOCUS"
+       }
+      ],
+      "square_total": 13
+     },
+     "right_group": {
+      "x_span": [
+       10.5,
+       12.8
+      ],
+      "stacks": [
+       {
+        "x": 10.5,
+        "bottom_squares": {
+         "count": 3,
+         "fill": "SET_A"
+        },
+        "top_squares": {
+         "count": 5,
+         "fill": "SET_B"
+        }
+       },
+       {
+        "x": 11.8,
+        "bottom_squares": {
+         "count": 3,
+         "fill": "SET_A"
+        },
+        "top_squares": {
+         "count": 5,
+         "fill": "SET_B"
+        }
+       }
+      ],
+      "square_total": 16
+     },
+     "gap_between_groups": 3.0,
+     "colours": {
+      "MARK_FILL": "five stacks of 2 (left)",
+      "FOCUS": "extra stack of 3 (left)",
+      "SET_B": "yellow squares (right, top 5 of each stack)",
+      "SET_A": "blue squares (right, bottom 3 of each stack)"
+     },
+     "text": []
+    },
+    "manim_description": "Draw two groups of unit squares on a plain BG canvas. Every square has side 1 unit and a 2 px INK outline; squares inside one stack touch each other; every stack stands on one common horizontal baseline at y = 0 (y grows upward). LEFT GROUP: six vertical stacks from left to right, 1 unit wide each, with 0.3 unit between neighbouring stacks. Stacks 1 to 5 stand at x = 0, 1.3, 2.6, 3.9 and 5.2, each exactly 2 squares tall, every square filled MARK_FILL. Stack 6 stands at x = 6.5, exactly 3 squares tall (taller than stacks 1 to 5), every square filled FOCUS. The left group has 5 x 2 + 3 = 13 squares and spans x from 0 to 7.5. RIGHT GROUP: two vertical stacks at x = 10.5 and x = 11.8, 1 unit wide each, 0.3 unit apart, both on the same baseline, each exactly 8 squares tall: the bottom 3 squares of each stack are filled SET_A (blue) and the top 5 squares of each stack are filled SET_B (yellow-amber). The right group has 2 x (5 + 3) = 16 squares and spans x from 10.5 to 12.8. Leave 3 units of empty space between the two groups (x from 7.5 to 10.5). Draw no text, no numbers, no braces, no brackets and no labels anywhere. Scale the whole drawing uniformly to fill a 16:9 card with an even margin.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers, counts or expression labels",
+     "braces, brackets or any grouping mark",
+     "the matching expressions 5 x 2 + 3 or 2 x (5 + 3)"
+    ],
+    "accuracy_checks": [
+     "left group: 5 stacks x 2 squares + 1 stack of 3 squares = 13 squares",
+     "right group: 2 stacks, each 5 yellow-amber (SET_B) above 3 blue (SET_A) = 8 squares, 16 in all (10 SET_B, 6 SET_A)",
+     "all squares the same size and all stacks on one baseline; the 3-square FOCUS stack is the only left stack taller than 2"
+    ],
+    "alt_text": "Left: five stacks of two green squares and one stack of three pink squares. Right: two stacks, each with five yellow squares above three blue squares.",
+    "render_note": "Redraws the book's two pictures on p.10 (P10-arrangement-2 and -3) in house colours; the teaching image M2.S14.T14.C44.IMG1 shows the same two arrangements but is never linked. The LP text calls the vertical stacks 'rows'; the figure keeps the book's vertical stacks."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C54",
+   "role": "solution",
+   "lp_book_number": "Example 11: Squares matching 5 × 2 + 3",
+   "ncert_ref": "Section 2.2 - Example 11",
+   "question_text": "One arrangement has 5 rows of 2 squares and 3 extra squares. Another has 2 rows, each with 5 yellow and 3 blue squares. Write an expression for each and find the number of squares.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The solution reads the expressions off the arrangements: which squares form 5 x 2 and which form the extra 3, and the 5 + 3 in each of the 2 stacks. Braces and labels on the squares add this grouping, which the steps only describe in words.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S15.T15.C54.IMG1",
+   "manim_scene": "c7_2_ex11_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S15.T15.C54.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S15.T15.C53.IMG1",
+    "content": {
+     "type": "other",
+     "figure_kind": "unit_square_stacks_with_grouping",
+     "base_figure": "same as M2.S15.T15.C53.IMG1",
+     "added_in_ANSWER": [
+      {
+       "kind": "brace",
+       "under": "left stacks 1-5",
+       "x_span": [
+        0,
+        6.2
+       ],
+       "y": -0.4,
+       "label": "5 × 2",
+       "label_at": [
+        3.1,
+        -1.3
+       ]
+      },
+      {
+       "kind": "brace",
+       "under": "left stack 6",
+       "x_span": [
+        6.5,
+        7.5
+       ],
+       "y": -0.4,
+       "label": "3",
+       "label_at": [
+        7.0,
+        -1.3
+       ]
+      },
+      {
+       "kind": "line_text",
+       "left_total": [
+        "5 × 2 + 3",
+        "= 13"
+       ],
+       "centre_x_of_expression": 3.0,
+       "y": -2.4
+      },
+      {
+       "kind": "brace",
+       "under": "both right stacks",
+       "x_span": [
+        10.5,
+        12.8
+       ],
+       "y": -0.4,
+       "label": "2 ×",
+       "label_at": [
+        11.65,
+        -1.3
+       ]
+      },
+      {
+       "kind": "brace",
+       "beside": "right stack, yellow-amber part",
+       "x": 13.1,
+       "y_span": [
+        3,
+        8
+       ],
+       "label": "5",
+       "label_at": [
+        13.8,
+        5.5
+       ]
+      },
+      {
+       "kind": "brace",
+       "beside": "right stack, blue part",
+       "x": 13.1,
+       "y_span": [
+        0,
+        3
+       ],
+       "label": "3",
+       "label_at": [
+        13.8,
+        1.5
+       ]
+      },
+      {
+       "kind": "line_text",
+       "right_total": [
+        "2 × (5 + 3)",
+        "= 16"
+       ],
+       "centre_x_of_expression": 11.4,
+       "y": -2.4
+      }
+     ]
+    },
+    "manim_description": "Redraw the question figure exactly as it is: same squares, same fills, same outlines and same positions (left group stacks at x = 0, 1.3, 2.6, 3.9, 5.2 with 2 MARK_FILL squares each and x = 6.5 with 3 FOCUS squares; right group stacks at x = 10.5 and 11.8 with 3 SET_A squares at the bottom and 5 SET_B squares above, baseline y = 0, square side 1). Then add the following in ANSWER green with 2 px strokes and text of at least 34 px (on a 1920 px canvas). LEFT: a curly brace under the five MARK_FILL stacks, spanning x from 0 to 6.2 at y = -0.4 and opening upwards towards the squares, with the text \"5 × 2\" centred at x = 3.1, y = -1.3. A curly brace under the 3-square FOCUS stack, spanning x from 6.5 to 7.5 at y = -0.4 and opening upwards, with the text \"3\" centred at x = 7.0, y = -1.3. Below both braces, on one line at y = -2.4: the text \"5 × 2 + 3\" centred at x = 3.0, immediately followed on the same line by the text \"= 13\" (its left end 0.3 unit right of the right end of \"5 × 2 + 3\"). RIGHT: a curly brace under the two stacks, spanning x from 10.5 to 12.8 at y = -0.4 and opening upwards, with the text \"2 ×\" centred at x = 11.65, y = -1.3. A curly brace on the right side of the right-hand stack at x = 13.1, opening to the left towards the squares, spanning y from 3 to 8 (the 5 SET_B squares), with the text \"5\" centred at x = 13.8, y = 5.5. A second curly brace at x = 13.1, opening to the left, spanning y from 0 to 3 (the 3 SET_A squares), with the text \"3\" centred at x = 13.8, y = 1.5. Below the right group, on one line at y = -2.4: the text \"2 × (5 + 3)\" centred at x = 11.4, immediately followed on the same line by the text \"= 16\" (its left end 0.3 unit right of the right end of \"2 × (5 + 3)\"). Scale the whole drawing uniformly to fill a 16:9 card with an even margin.",
+    "visible_text": [
+     "5 × 2",
+     "3",
+     "5 × 2 + 3",
+     "= 13",
+     "2 ×",
+     "5",
+     "2 × (5 + 3)",
+     "= 16"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the extra counting 5 + 3 + 5 + 3 or 5 x 2 + 3 x 2 (kept in the LP text only)",
+     "step sentences"
+    ],
+    "accuracy_checks": [
+     "left brace spans exactly stacks 1-5 (x 0 to 6.2): 5 x 2 = 10 squares; right-hand brace of the left group spans exactly stack 6: 3 squares; 10 + 3 = 13",
+     "right: 2 stacks, each 5 + 3 = 8 squares, 2 x 8 = 16; the brace labelled 5 covers the 5 SET_B squares, the brace labelled 3 covers the 3 SET_A squares",
+     "labels equal the expressions in the LP solution: 5 × 2 + 3 = 13 and 2 × (5 + 3) = 16"
+    ],
+    "alt_text": "The same two arrangements with braces: five stacks of 2 plus 3 give 5 × 2 + 3 = 13; two stacks, each 5 yellow and 3 blue, give 2 × (5 + 3) = 16."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C55",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.2, Q1",
+   "ncert_ref": "Section 2.2 - Figure it Out Q1",
+   "question_text": "Find the values of the following expressions by writing the terms in each case. (a) 28 − 7 + 8 (b) 39 − 2 × 6 + 11 (c) 40 − 10 + 10 + 10 (d) 48 − 10 × 2 + 16 ÷ 2 (e) 6 × 3 − 4 × 8 × 5",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Five plain expressions to evaluate by writing their terms; no figure in the book or in the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX list (a) to (e) as in the LP question."
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C56",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.2, Q1",
+   "ncert_ref": "Section 2.2 - Figure it Out Q1",
+   "question_text": "Find the values of the following expressions by writing the terms in each case. (a) 28 − 7 + 8 (b) 39 − 2 × 6 + 11 (c) 40 − 10 + 10 + 10 (d) 48 − 10 × 2 + 16 ÷ 2 (e) 6 × 3 − 4 × 8 × 5",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Printed answer is text (terms and values); the LP steps list the terms and values of each part in LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines (a) to (e) as in the LP steps."
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C57",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.2, Q2",
+   "ncert_ref": "Section 2.2 - Figure it Out Q2",
+   "question_text": "Write a story or situation for each of the following expressions and find their values. (a) 89 + 21 − 10 (b) 5 × 12 − 6 (c) 4 × 9 + 2 × 6",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Write a story for each of three expressions: open-ended, no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C58",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.2, Q2",
+   "ncert_ref": "Section 2.2 - Figure it Out Q2",
+   "question_text": "Write a story or situation for each of the following expressions and find their values. (a) 89 + 21 − 10 (b) 5 × 12 − 6 (c) 4 × 9 + 2 × 6",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Stories vary; the LP gives one sample story per expression in words and the values 100, 54, 48; the book's printed answer is text only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Sample stories and values as in the LP steps."
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C59",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.2, Q3",
+   "ncert_ref": "Section 2.2 - Figure it Out Q3",
+   "question_text": "For each situation, write the expression, identify its terms and find its value. (a) A queen gave 100 gold coins to each of two princesses last year. One princess used the coins to start a business and doubled her coins. The other bought jewellery and has only half of her coins left. Write an expression for how many coins the two princesses have together. (b) A metro train ticket between two stations is ₹40 for an adult and ₹20 for a child. What is the total cost of tickets (i) for four adults and three children, (ii) for two groups having three adults each? (c) A window has a border of 3 cm at the top and at the bottom, six grills of 2 cm each, and seven gaps of 5 cm each between and beside them. Find the total height of the window by writing an expression.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "Part (c) of the book question is 'find the total height of the window ... from the measurements shown in the picture'. The learner must see that the window has 2 borders, 6 grills and 7 gaps (the gaps are easy to miscount from words) and that only one of each is dimensioned.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S16.T16.C59.IMG1",
+   "manim_scene": "c7_2_fio22_q3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S16.T16.C59.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "mensuration_figure",
+     "scale": "1 unit = 1 cm (width of the window is not given: drawn 36 units)",
+     "outer_rect": {
+      "x": [
+       0,
+       36
+      ],
+      "y": [
+       0,
+       53
+      ],
+      "stroke": "INK"
+     },
+     "parts_top_to_bottom": [
+      {
+       "n": 1,
+       "kind": "border",
+       "y_from": 0,
+       "y_to": 3,
+       "height_cm": 3,
+       "fill": "GUIDE"
+      },
+      {
+       "n": 2,
+       "kind": "gap",
+       "y_from": 3,
+       "y_to": 8,
+       "height_cm": 5,
+       "fill": "BG"
+      },
+      {
+       "n": 3,
+       "kind": "grill",
+       "y_from": 8,
+       "y_to": 10,
+       "height_cm": 2,
+       "fill": "INK"
+      },
+      {
+       "n": 4,
+       "kind": "gap",
+       "y_from": 10,
+       "y_to": 15,
+       "height_cm": 5,
+       "fill": "BG"
+      },
+      {
+       "n": 5,
+       "kind": "grill",
+       "y_from": 15,
+       "y_to": 17,
+       "height_cm": 2,
+       "fill": "INK"
+      },
+      {
+       "n": 6,
+       "kind": "gap",
+       "y_from": 17,
+       "y_to": 22,
+       "height_cm": 5,
+       "fill": "BG"
+      },
+      {
+       "n": 7,
+       "kind": "grill",
+       "y_from": 22,
+       "y_to": 24,
+       "height_cm": 2,
+       "fill": "INK"
+      },
+      {
+       "n": 8,
+       "kind": "gap",
+       "y_from": 24,
+       "y_to": 29,
+       "height_cm": 5,
+       "fill": "BG"
+      },
+      {
+       "n": 9,
+       "kind": "grill",
+       "y_from": 29,
+       "y_to": 31,
+       "height_cm": 2,
+       "fill": "INK"
+      },
+      {
+       "n": 10,
+       "kind": "gap",
+       "y_from": 31,
+       "y_to": 36,
+       "height_cm": 5,
+       "fill": "BG"
+      },
+      {
+       "n": 11,
+       "kind": "grill",
+       "y_from": 36,
+       "y_to": 38,
+       "height_cm": 2,
+       "fill": "INK"
+      },
+      {
+       "n": 12,
+       "kind": "gap",
+       "y_from": 38,
+       "y_to": 43,
+       "height_cm": 5,
+       "fill": "BG"
+      },
+      {
+       "n": 13,
+       "kind": "grill",
+       "y_from": 43,
+       "y_to": 45,
+       "height_cm": 2,
+       "fill": "INK"
+      },
+      {
+       "n": 14,
+       "kind": "gap",
+       "y_from": 45,
+       "y_to": 50,
+       "height_cm": 5,
+       "fill": "BG"
+      },
+      {
+       "n": 15,
+       "kind": "border",
+       "y_from": 50,
+       "y_to": 53,
+       "height_cm": 3,
+       "fill": "GUIDE"
+      }
+     ],
+     "counts": {
+      "borders": 2,
+      "grills": 6,
+      "gaps": 7
+     },
+     "dimension_marks": [
+      {
+       "kind": "border",
+       "y_from": 0,
+       "y_to": 3,
+       "name": "Border",
+       "value": "3 cm",
+       "name_at": [
+        39,
+        -2.4
+       ],
+       "value_at": [
+        40.5,
+        1.5
+       ]
+      },
+      {
+       "kind": "grill",
+       "y_from": 15,
+       "y_to": 17,
+       "name": "Grill",
+       "value": "2 cm",
+       "name_at": [
+        39,
+        12.6
+       ],
+       "value_at": [
+        40.5,
+        16
+       ]
+      },
+      {
+       "kind": "gap",
+       "y_from": 24,
+       "y_to": 29,
+       "name": "Gap",
+       "value": "5 cm",
+       "name_at": [
+        39,
+        21.6
+       ],
+       "value_at": [
+        40.5,
+        26.5
+       ]
+      }
+     ],
+     "total_height_arrow": {
+      "x": 48,
+      "y_from": 0,
+      "y_to": 53,
+      "double_headed": true,
+      "label_lines": [
+       {
+        "text": "Total",
+        "at": [
+         49.5,
+         38
+        ]
+       },
+       {
+        "text": "Height",
+        "at": [
+         49.5,
+         41.5
+        ]
+       }
+      ],
+      "value_shown": false
+     }
+    },
+    "manim_description": "Draw a tall window, to scale with 1 unit = 1 cm, on a plain BG canvas; y grows downward from the top edge of the window. Outer rectangle from x = 0 to x = 36 and from y = 0 to y = 53, outlined in INK 3 px. Inside it draw 15 horizontal bands that each span the full width x = 0 to 36, with these exact y ranges from top to bottom: border 0 to 3 (filled GUIDE); gap 3 to 8 (BG); grill 8 to 10 (filled INK); gap 10 to 15; grill 15 to 17; gap 17 to 22; grill 22 to 24; gap 24 to 29; grill 29 to 31; gap 31 to 36; grill 36 to 38; gap 38 to 43; grill 43 to 45; gap 45 to 50; border 50 to 53 (filled GUIDE). So the window has 2 borders, 6 grills and 7 gaps. Gaps and the white space stay BG. To the right of the window draw three dimension marks. Each mark is a band filled SET_B covering the part's y range from x = 36 to x = 38, and a vertical double-headed INK arrow at x = 39 spanning the same y range. Mark 1: the top border, y 0 to 3, the text \"Border\" centred at x = 39, y = -2.4, and the text \"3 cm\" left-aligned at x = 40.5, y = 1.5. Mark 2: the grill at y 15 to 17, the text \"Grill\" centred at x = 39, y = 12.6, and the text \"2 cm\" left-aligned at x = 40.5, y = 16. Mark 3: the gap at y 24 to 29, the text \"Gap\" centred at x = 39, y = 21.6, and the text \"5 cm\" left-aligned at x = 40.5, y = 26.5. Further right draw one long vertical double-headed INK arrow at x = 48 from y = 0 to y = 53, and beside it, left-aligned at x = 49.5, the two lines \"Total\" at y = 38 and \"Height\" at y = 41.5. Text is INK, at least 34 px high on a 1920 px canvas. Draw no cat, no curtains, no flower pot, no glass reflections. Scale the whole drawing uniformly so that the window height of 53 units fills about 85 percent of the height of a 16:9 card, centred.",
+    "visible_text": [
+     "Border",
+     "3 cm",
+     "Grill",
+     "2 cm",
+     "Gap",
+     "5 cm",
+     "Total",
+     "Height"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the total height value 53 or the expression 7 x 5 + 6 x 2 + 2 x 3",
+     "the cat, curtains, flower pot or glass reflections of the book picture",
+     "a length written on any part other than the three marked ones"
+    ],
+    "accuracy_checks": [
+     "bands add up: 2 x 3 + 6 x 2 + 7 x 5 = 6 + 12 + 35 = 53 units, and the last band ends at y = 53",
+     "exactly 2 border bands (3 each), 6 grill bands (2 each) and 7 gap bands (5 each), in the alternating order border, gap, grill, gap, ..., gap, border",
+     "each dimension arrow spans exactly the y range of its part (3, 2 and 5 units)"
+    ],
+    "alt_text": "A window with a 3 cm border at top and bottom, six 2 cm grills and seven 5 cm gaps; one border, one grill and one gap are marked at the side and a long arrow shows the total height.",
+    "render_note": "Redraws the book window (chapter p.12, reprinted p.29). The book's picture is not to scale (gaps look much taller than 5:2); this drawing is to scale because the LP gives every length. The book prints 3 cm only for the top border; the LP text (and the picture's symmetry) make the bottom border 3 cm too. The figure belongs to part (c) of the question."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C60",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.2, Q3",
+   "ncert_ref": "Section 2.2 - Figure it Out Q3",
+   "question_text": "For each situation, write the expression, identify its terms and find its value. (a) A queen gave 100 gold coins to each of two princesses last year. One princess used the coins to start a business and doubled her coins. The other bought jewellery and has only half of her coins left. Write an expression for how many coins the two princesses have together. (b) A metro train ticket between two stations is ₹40 for an adult and ₹20 for a child. What is the total cost of tickets (i) for four adults and three children, (ii) for two groups having three adults each? (c) A window has a border of 3 cm at the top and at the bottom, six grills of 2 cm each, and seven gaps of 5 cm each between and beside them. Find the total height of the window by writing an expression.",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The LP solution turns the window into 7 x 5 + 6 x 2 + 2 x 3. Writing the length of each of the 15 parts beside the window (seven 5s, six 2s, two 3s) and the total 53 cm shows where each term comes from, which the question figure alone (one part of each kind dimensioned) does not.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S16.T16.C60.IMG1",
+   "manim_scene": "c7_2_fio22_q3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S16.T16.C60.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S16.T16.C59.IMG1",
+    "content": {
+     "type": "mensuration_figure",
+     "base_figure": "same as M2.S16.T16.C59.IMG1",
+     "added_in_ANSWER": {
+      "left_numbers": [
+       {
+        "part_n": 1,
+        "text": "3",
+        "right_edge_at": [
+         -1.5,
+         1.5
+        ]
+       },
+       {
+        "part_n": 2,
+        "text": "5",
+        "right_edge_at": [
+         -1.5,
+         5.5
+        ]
+       },
+       {
+        "part_n": 3,
+        "text": "2",
+        "right_edge_at": [
+         -1.5,
+         9.0
+        ]
+       },
+       {
+        "part_n": 4,
+        "text": "5",
+        "right_edge_at": [
+         -1.5,
+         12.5
+        ]
+       },
+       {
+        "part_n": 5,
+        "text": "2",
+        "right_edge_at": [
+         -1.5,
+         16.0
+        ]
+       },
+       {
+        "part_n": 6,
+        "text": "5",
+        "right_edge_at": [
+         -1.5,
+         19.5
+        ]
+       },
+       {
+        "part_n": 7,
+        "text": "2",
+        "right_edge_at": [
+         -1.5,
+         23.0
+        ]
+       },
+       {
+        "part_n": 8,
+        "text": "5",
+        "right_edge_at": [
+         -1.5,
+         26.5
+        ]
+       },
+       {
+        "part_n": 9,
+        "text": "2",
+        "right_edge_at": [
+         -1.5,
+         30.0
+        ]
+       },
+       {
+        "part_n": 10,
+        "text": "5",
+        "right_edge_at": [
+         -1.5,
+         33.5
+        ]
+       },
+       {
+        "part_n": 11,
+        "text": "2",
+        "right_edge_at": [
+         -1.5,
+         37.0
+        ]
+       },
+       {
+        "part_n": 12,
+        "text": "5",
+        "right_edge_at": [
+         -1.5,
+         40.5
+        ]
+       },
+       {
+        "part_n": 13,
+        "text": "2",
+        "right_edge_at": [
+         -1.5,
+         44.0
+        ]
+       },
+       {
+        "part_n": 14,
+        "text": "5",
+        "right_edge_at": [
+         -1.5,
+         47.5
+        ]
+       },
+       {
+        "part_n": 15,
+        "text": "3",
+        "right_edge_at": [
+         -1.5,
+         51.5
+        ]
+       }
+      ],
+      "total_value": {
+       "text": "53 cm",
+       "at": [
+        49.5,
+        45.5
+       ]
+      }
+     },
+     "counts": {
+      "borders": 2,
+      "grills": 6,
+      "gaps": 7
+     },
+     "sum": "7 x 5 + 6 x 2 + 2 x 3 = 35 + 12 + 6 = 53"
+    },
+    "manim_description": "Redraw the question figure exactly as it is: same window rectangle, same 15 bands with the same y ranges and fills, same three SET_B dimension marks with their arrows and texts (Border 3 cm, Grill 2 cm, Gap 5 cm), same Total Height arrow at x = 48 and its two text lines. Then add in ANSWER green (#009E73), text at least 34 px high on a 1920 px canvas: to the left of the window, one number per band, right-aligned at x = -1.5 and vertically centred on the band: at y = 1.5 the text \"3\"; y = 5.5 \"5\"; y = 9 \"2\"; y = 12.5 \"5\"; y = 16 \"2\"; y = 19.5 \"5\"; y = 23 \"2\"; y = 26.5 \"5\"; y = 30 \"2\"; y = 33.5 \"5\"; y = 37 \"2\"; y = 40.5 \"5\"; y = 44 \"2\"; y = 47.5 \"5\"; y = 51.5 \"3\". (15 numbers: two 3s for the borders, six 2s for the grills, seven 5s for the gaps.) Below the \"Height\" line of the Total Height label, left-aligned at x = 49.5, y = 45.5, the text \"53 cm\" in ANSWER green. Everything given in the question figure stays in INK; only the 15 numbers and \"53 cm\" are ANSWER green. Scale the whole drawing uniformly so that the window height of 53 units fills about 85 percent of the height of a 16:9 card, centred (the left numbers extend the drawing to about x = -2.6).",
+    "visible_text": [
+     "Border",
+     "3 cm",
+     "Grill",
+     "2 cm",
+     "Gap",
+     "5 cm",
+     "Total",
+     "Height",
+     "3",
+     "5",
+     "2",
+     "53 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the expression 7 x 5 + 6 x 2 + 2 x 3 written out",
+     "the cat, curtains, flower pot or glass reflections of the book picture"
+    ],
+    "accuracy_checks": [
+     "the 15 added numbers are 3,5,2,5,2,5,2,5,2,5,2,5,2,5,3 and each equals the height of the band it sits beside",
+     "numbers: seven 5s (35), six 2s (12), two 3s (6); 35 + 12 + 6 = 53",
+     "the total shown, 53 cm, equals the sum of the 15 numbers and the height of the window (y 0 to 53)"
+    ],
+    "alt_text": "The same window with the length of every border, grill and gap written beside it (3, 5, 2, 5, 2, ... 5, 3) and a total height of 53 cm.",
+    "render_note": "Same layout as the question figure; adds the length of each of the 15 parts and the total."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C65",
+   "role": "question",
+   "lp_book_number": "Example 12: Subtracting two prices",
+   "ncert_ref": "Section 2.3 - Example 12",
+   "question_text": "Find 100 − (15 + 56) by taking the two prices away one at a time. Compare with working out the bracket first.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "No figure in the book or the question: 100 - (15 + 56) with the two prices is plain arithmetic in text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C66",
+   "role": "solution",
+   "lp_book_number": "Example 12: Subtracting two prices",
+   "ncert_ref": "Section 2.3 - Example 12",
+   "question_text": "Find 100 − (15 + 56) by taking the two prices away one at a time. Compare with working out the bracket first.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Printed solution is the chain 100 - 15 = 85, 85 - 56 = 29, and the bracket-first check 15 + 56 = 71, 100 - 71 = 29: LaTeX arithmetic, no picture in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines as in the LP steps."
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C67",
+   "role": "question",
+   "lp_book_number": "Example 13: A bracket with a difference",
+   "ncert_ref": "Section 2.3 - Example 13",
+   "question_text": "Consider 500 − (250 − 100). Can we write it as 500 − 250 − 100? Find the right way to remove the bracket.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "No figure in the book or the question: 500 - (250 - 100) is plain arithmetic in text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C68",
+   "role": "solution",
+   "lp_book_number": "Example 13: A bracket with a difference",
+   "ncert_ref": "Section 2.3 - Example 13",
+   "question_text": "Consider 500 − (250 − 100). Can we write it as 500 − 250 − 100? Find the right way to remove the bracket.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No picture in the book; the 'give 100 back' reasoning is fully carried by the LP steps and four LaTeX lines (350, 150, 350).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines as in the LP steps."
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C69",
+   "role": "question",
+   "lp_book_number": "Example 14: Coins in two bags",
+   "ncert_ref": "Section 2.3 - Example 14",
+   "question_text": "Meera has 28 coins in one bag and puts in a bag holding 35 − 10 coins. Write the total as an expression, remove the bracket and find the value.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "No figure in the book or the question: 28 coins and a bag of 35 - 10 coins are stated in the text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C70",
+   "role": "solution",
+   "lp_book_number": "Example 14: Coins in two bags",
+   "ncert_ref": "Section 2.3 - Example 14",
+   "question_text": "Meera has 28 coins in one bag and puts in a bag holding 35 − 10 coins. Write the total as an expression, remove the bracket and find the value.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "No picture in the book; the LP steps give 35 - 10 = 25, 28 + 25 = 53 and 28 + 35 - 10 = 63 - 10 = 53 in LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines as in the LP steps."
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C71",
+   "role": "question",
+   "lp_book_number": "Tinker the Terms I: one more, one less",
+   "ncert_ref": "Section 2.3 - Tinker the Terms I",
+   "question_text": "Given 53 + (−16) = 37, find 54 + (−16), 52 + (−16), 53 + (−15) and 53 + (−17) without adding afresh.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The LP question lists every given sum (53 + (-16) = 37 and -87 + (-16) = -103) and every sum to find in words, so a student loses nothing without the book's blank-circle cards; the full grid is shown once, filled in, in the solution figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Question stays text only (the LP text already lists all the sums)."
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C72",
+   "role": "solution",
+   "lp_book_number": "Tinker the Terms I: one more, one less",
+   "ncert_ref": "Section 2.3 - Tinker the Terms I",
+   "question_text": "Given 53 + (−16) = 37, find 54 + (−16), 52 + (−16), 53 + (−15) and 53 + (−17) without adding afresh.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book's printed answer is the filled grid of three columns of cards (one-more / one-less pattern), and the LP answer covers both of its blocks: all nine sums with their values are shown once as the finished grid before the steps explain each change.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S19.T19.C72.IMG1",
+   "manim_scene": "c7_2_tinker1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S19.T19.C72.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "layout": "3 columns of equation cards (col 1: 3 cards, col 2: 3 cards, col 3: 4 cards)",
+     "card": {
+      "width": 7.0,
+      "height": 1.8,
+      "outline": "GUIDE",
+      "ovals": [
+       {
+        "centre_x": 1.2,
+        "width": 1.5
+       },
+       {
+        "centre_x": 3.4,
+        "width": 1.7
+       },
+       {
+        "centre_x": 5.7,
+        "width": 1.8
+       }
+      ],
+      "plus_x": 2.2,
+      "equals_x": 4.5
+     },
+     "cards": [
+      {
+       "col": 1,
+       "row": 1,
+       "card_left_x": 0.0,
+       "card_top_y": 0.0,
+       "first_number": "53",
+       "second_number": "−16",
+       "result": "37",
+       "result_is_given": true,
+       "result_colour": "INK"
+      },
+      {
+       "col": 1,
+       "row": 2,
+       "card_left_x": 0.0,
+       "card_top_y": -2.15,
+       "first_number": "54",
+       "second_number": "−16",
+       "result": "38",
+       "result_is_given": false,
+       "result_colour": "ANSWER"
+      },
+      {
+       "col": 1,
+       "row": 3,
+       "card_left_x": 0.0,
+       "card_top_y": -4.3,
+       "first_number": "53",
+       "second_number": "−15",
+       "result": "38",
+       "result_is_given": false,
+       "result_colour": "ANSWER"
+      },
+      {
+       "col": 2,
+       "row": 1,
+       "card_left_x": 7.8,
+       "card_top_y": 0.0,
+       "first_number": "53",
+       "second_number": "−16",
+       "result": "37",
+       "result_is_given": true,
+       "result_colour": "INK"
+      },
+      {
+       "col": 2,
+       "row": 2,
+       "card_left_x": 7.8,
+       "card_top_y": -2.15,
+       "first_number": "52",
+       "second_number": "−16",
+       "result": "36",
+       "result_is_given": false,
+       "result_colour": "ANSWER"
+      },
+      {
+       "col": 2,
+       "row": 3,
+       "card_left_x": 7.8,
+       "card_top_y": -4.3,
+       "first_number": "53",
+       "second_number": "−17",
+       "result": "36",
+       "result_is_given": false,
+       "result_colour": "ANSWER"
+      },
+      {
+       "col": 3,
+       "row": 1,
+       "card_left_x": 15.6,
+       "card_top_y": 0.0,
+       "first_number": "−87",
+       "second_number": "−16",
+       "result": "−103",
+       "result_is_given": true,
+       "result_colour": "INK"
+      },
+      {
+       "col": 3,
+       "row": 2,
+       "card_left_x": 15.6,
+       "card_top_y": -2.15,
+       "first_number": "−88",
+       "second_number": "−15",
+       "result": "−103",
+       "result_is_given": false,
+       "result_colour": "ANSWER"
+      },
+      {
+       "col": 3,
+       "row": 3,
+       "card_left_x": 15.6,
+       "card_top_y": -4.3,
+       "first_number": "−86",
+       "second_number": "−18",
+       "result": "−104",
+       "result_is_given": false,
+       "result_colour": "ANSWER"
+      },
+      {
+       "col": 3,
+       "row": 4,
+       "card_left_x": 15.6,
+       "card_top_y": -6.45,
+       "first_number": "−97",
+       "second_number": "−26",
+       "result": "−123",
+       "result_is_given": false,
+       "result_colour": "ANSWER"
+      }
+     ],
+     "answers_in_ANSWER": [
+      "38",
+      "38",
+      "36",
+      "36",
+      "−103",
+      "−104",
+      "−123"
+     ]
+    },
+    "manim_description": "Draw a grid of 10 equation cards in 3 columns on a plain BG canvas (y grows upward). Each card is a rectangle 7.0 units wide and 1.8 units high with rounded corners (radius 0.15) and a 2 px GUIDE outline, no fill. Column left edges: column 1 at x = 0, column 2 at x = 7.8, column 3 at x = 15.6. Row top edges: row 1 at y = 0, row 2 at y = -2.15, row 3 at y = -4.3, row 4 at y = -6.45. Columns 1 and 2 have rows 1 to 3; column 3 has rows 1 to 4. Inside every card, all vertically centred on the card's middle, with x measured from the card's left edge: an oval (2 px outline, no fill, width 1.5, height 1.0) centred at x = 1.2 holding the first number; the sign \"+\" centred at x = 2.2; an oval (width 1.7, height 1.0) centred at x = 3.4 holding the second number; the sign \"=\" centred at x = 4.5; an oval (width 1.8, height 1.0) centred at x = 5.7 holding the result. Numbers use the minus sign − and no brackets. Card contents (first number, second number, result): column 1 row 1: 53, −16, 37; row 2: 54, −16, 38; row 3: 53, −15, 38. Column 2 row 1: 53, −16, 37; row 2: 52, −16, 36; row 3: 53, −17, 36. Column 3 row 1: −87, −16, −103; row 2: −88, −15, −103; row 3: −86, −18, −104; row 4: −97, −26, −123. Colours: all text, signs and oval outlines are INK, except the results in column 1 rows 2 and 3, column 2 rows 2 and 3, and column 3 rows 2, 3 and 4 (7 results: 38, 38, 36, 36, −103, −104, −123), whose text and oval outline are ANSWER green. The results in column 1 row 1, column 2 row 1 and column 3 row 1 (37, 37, −103) stay INK. Draw no sentences or explanation text inside or under the cards. Text at least 34 px high on a 1920 px canvas. Scale the whole grid uniformly to fill a 16:9 card with an even margin.",
+    "visible_text": [
+     "53",
+     "54",
+     "52",
+     "−87",
+     "−88",
+     "−86",
+     "−97",
+     "−16",
+     "−15",
+     "−17",
+     "−18",
+     "−26",
+     "37",
+     "38",
+     "36",
+     "−103",
+     "−104",
+     "−123",
+     "+",
+     "="
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the book's explanation sentences ('54 is one more than 53 ...')",
+     "question marks or empty ovals",
+     "brackets around the negative numbers"
+    ],
+    "accuracy_checks": [
+     "every card satisfies first + second = result: 53 + (−16) = 37, 54 + (−16) = 38, 53 + (−15) = 38, 52 + (−16) = 36, 53 + (−17) = 36, −87 + (−16) = −103, −88 + (−15) = −103, −86 + (−18) = −104, −97 + (−26) = −123",
+     "10 cards: 3 + 3 + 4; 7 results in ANSWER green (38, 38, 36, 36, −103, −104, −123), 3 given results in INK (37, 37, −103)",
+     "the values agree with the LP solution (38, 36, 38, 36 and −103, −104, −123)"
+    ],
+    "alt_text": "Three columns of sum cards: 53 + (−16) = 37 with 54 + (−16) = 38 and 53 + (−15) = 38; 52 + (−16) = 36 and 53 + (−17) = 36; and −87 + (−16) = −103 with −88 + (−15) = −103, −86 + (−18) = −104, −97 + (−26) = −123.",
+    "render_note": "Redraws the book's printed answer grid (p.30) without its explanation sentences. LP versus book: the LP asks for 54 + (−16), so its 38 is drawn as an answer (the book prints it as given), and the LP gives −87 + (−16) = −103 as given (the book leaves it blank in the question and fills it in the answer), so that card is all INK. The question has no diagram, so this figure draws the whole grid (derived_from null). Each distinct text string appears several times in the grid; visible_text lists each string once."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C73",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.3, Q1",
+   "ncert_ref": "2.3.FiO1",
+   "question_text": "Fill in the blanks with numbers, and boxes with operation signs such that the expressions on both sides are equal. (a) 24 + (6 − 4) = 24 + 6 [ ] ____ (b) 38 + (____ [ ] ____) = 38 + 9 − 4 (c) 24 − (6 + 4) = 24 [ ] 6 − 4 (d) 24 − 6 − 4 = 24 − 6 [ ] ____ (e) 27 − (8 + 3) = 27 [ ] 8 [ ] 3 (f) 27 − (____ [ ] ____) = 27 − 8 + 3",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Every number and operator is in the six equations; the book's empty squares are only boxes inside the lines of text, not a figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write each sign box as \\square and each number blank as \\underline{\\hspace{1.2em}}, one part (a) to (f) per line."
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C74",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.3, Q1",
+   "ncert_ref": "2.3.FiO1",
+   "question_text": "Fill in the blanks with numbers, and boxes with operation signs such that the expressions on both sides are equal. (a) 24 + (6 − 4) = 24 + 6 [ ] ____ (b) 38 + (____ [ ] ____) = 38 + 9 − 4 (c) 24 − (6 + 4) = 24 [ ] 6 − 4 (d) 24 − 6 − 4 = 24 − 6 [ ] ____ (e) 27 − (8 + 3) = 27 [ ] 8 [ ] 3 (f) 27 − (____ [ ] ____) = 27 − 8 + 3",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The filled signs and numbers are plain symbols in the equations, and the question has no figure for a solution picture to complete.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C75",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.3, Q2",
+   "ncert_ref": "2.3.FiO2",
+   "question_text": "Remove the brackets and write the expression having the same value. (a) 14 + (12 + 10) (b) 14 − (12 + 10) (c) 14 + (12 − 10) (d) 14 − (12 − 10) (e) −14 + (12 − 10) (f) 14 − (−12 − 10)",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six bracketed expressions, all given in the words and symbols of the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C76",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.3, Q2",
+   "ncert_ref": "2.3.FiO2",
+   "question_text": "Remove the brackets and write the expression having the same value. (a) 14 + (12 + 10) (b) 14 − (12 + 10) (c) 14 + (12 − 10) (d) 14 − (12 − 10) (e) −14 + (12 − 10) (f) 14 − (−12 − 10)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is six rewritten expressions with their values: LaTeX arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C77",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.3, Q3",
+   "ncert_ref": "2.3.FiO3",
+   "question_text": "Find the values of the following expressions. For each pair, first try to guess whether they have the same value. When are the two expressions equal? (a) (6 + 10) − 2 and 6 + (10 − 2) (b) 16 − (8 − 3) and (16 − 8) − 3 (c) 27 − (18 + 4) and 27 + (−18 − 4)",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Three pairs of expressions, all given in the question text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C78",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.3, Q3",
+   "ncert_ref": "2.3.FiO3",
+   "question_text": "Find the values of the following expressions. For each pair, first try to guess whether they have the same value. When are the two expressions equal? (a) (6 + 10) − 2 and 6 + (10 − 2) (b) 16 − (8 − 3) and (16 − 8) − 3 (c) 27 − (18 + 4) and 27 + (−18 − 4)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Values of the pairs and an equal / not equal verdict: LaTeX arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C79",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.3, Q4",
+   "ncert_ref": "2.3.FiO4",
+   "question_text": "In each of the sets of expressions below, identify those that have the same value. Do not evaluate them, but rather use your understanding of terms. (a) 319 + 537, 319 − 537, −537 + 319, 537 − 319 (b) 87 + 46 − 109, 87 + 46 − 109, 87 + 46 − 109, 87 − 46 + 109, 87 − (46 + 109), (87 − 46) + 109",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two lists of expressions to be grouped by equality; the lists are in the question text (the book prints the same three identical expressions in set (b)).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C80",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.3, Q4",
+   "ncert_ref": "2.3.FiO4",
+   "question_text": "In each of the sets of expressions below, identify those that have the same value. Do not evaluate them, but rather use your understanding of terms. (a) 319 + 537, 319 − 537, −537 + 319, 537 − 319 (b) 87 + 46 − 109, 87 + 46 − 109, 87 + 46 − 109, 87 − 46 + 109, 87 − (46 + 109), (87 − 46) + 109",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Grouping of listed expressions by their terms: words and LaTeX expressions say it completely.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C81",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.3, Q5",
+   "ncert_ref": "2.3.FiO5",
+   "question_text": "Add brackets at appropriate places in the expressions such that they lead to the values indicated. (a) 34 − 9 + 12 = 13 (b) 56 − 14 − 8 = 34 (c) −22 − 12 + 10 + 22 = −22",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three equations without brackets; the student inserts brackets into them: text and LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C82",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.3, Q5",
+   "ncert_ref": "2.3.FiO5",
+   "question_text": "Add brackets at appropriate places in the expressions such that they lead to the values indicated. (a) 34 − 9 + 12 = 13 (b) 56 − 14 − 8 = 34 (c) −22 − 12 + 10 + 22 = −22",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is three expressions with brackets added: LaTeX arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C83",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.3, Q6",
+   "ncert_ref": "2.3.FiO6",
+   "question_text": "Using only reasoning of how terms change their values, fill the blanks to make the expressions on either side of the equality equal. (a) 423 + ____ = 419 + ____ (b) 207 − 68 = 210 − ____",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two equations with blanks, all given in the text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C84",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.3, Q6",
+   "ncert_ref": "2.3.FiO6",
+   "question_text": "Using only reasoning of how terms change their values, fill the blanks to make the expressions on either side of the equality equal. (a) 423 + ____ = 419 + ____ (b) 207 − 68 = 210 − ____",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Filled blanks and a check of both sides: LaTeX arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C85",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.3, Q7",
+   "ncert_ref": "2.3.FiO7",
+   "question_text": "Using the numbers 2, 3 and 5, and the operators + and −, and brackets, as necessary, generate expressions to give as many different values as possible. For example, 2 − 3 + 5 = 4 and 3 − (5 − 2) = 0.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Make as many expressions as possible from 2, 3 and 5: open ended, no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C86",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.3, Q7",
+   "ncert_ref": "2.3.FiO7",
+   "question_text": "Using the numbers 2, 3 and 5, and the operators + and −, and brackets, as necessary, generate expressions to give as many different values as possible. For example, 2 − 3 + 5 = 4 and 3 − (5 − 2) = 0.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A list of expressions and their values (10, 6, 4, 0, -4, -6): LaTeX arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C87",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.3, Q8",
+   "ncert_ref": "2.3.FiO8",
+   "question_text": "Whenever Meera has to subtract 9 from a number, she subtracts 10 and adds 1 to it. For example, 36 − 9 = 26 + 1. (a) Do you think she always gets the correct answer? Why? (b) Can you think of similar strategies? Give some examples.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "Part (a) asks why a subtraction trick works and part (b) asks for other tricks: reasoning in words, no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C88",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.3, Q8",
+   "ncert_ref": "2.3.FiO8",
+   "question_text": "Whenever Meera has to subtract 9 from a number, she subtracts 10 and adds 1 to it. For example, 36 − 9 = 26 + 1. (a) Do you think she always gets the correct answer? Why? (b) Can you think of similar strategies? Give some examples.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The reasoning is the identity -9 = -10 + 1 and two similar identities: LaTeX arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C89",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.3, Q9",
+   "ncert_ref": "2.3.FiO9",
+   "question_text": "Consider the two expressions: a) 73 − 14 + 1, b) 73 − 14 − 1. For each of these expressions, identify the expressions from the following collection that are equal to it. (a) 73 − (14 + 1) (b) 73 − (14 − 1) (c) 73 + (−14 + 1) (d) 73 + (−14 − 1)",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two expressions and four candidate expressions, all in the question text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C90",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.3, Q9",
+   "ncert_ref": "2.3.FiO9",
+   "question_text": "Consider the two expressions: a) 73 − 14 + 1, b) 73 − 14 − 1. For each of these expressions, identify the expressions from the following collection that are equal to it. (a) 73 − (14 + 1) (b) 73 − (14 − 1) (c) 73 + (−14 + 1) (d) 73 + (−14 − 1)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Matching of expressions after removing brackets: LaTeX arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S21.T21.C93",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Rows of scouts, and the general rule (worked example E1)",
+   "ncert_ref": "2.4.general",
+   "question_text": "Write 10 × 98 + 3 × 98 as one product, and 14 × 10 − 6 × 10 as one product, and find both values.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives two expressions and no figure. The book's two repeated-addition lines (13 copies of 98, and 14 copies of 10 with 6 struck out) are written lines with braces: LaTeX underbrace expressions say the same thing, so no picture is needed.",
+   "text_alternative": "Optionally write the repeated sums with LaTeX \\underbrace: 98 repeated 10 times plus 98 repeated 3 times = 13 times 98; 10 repeated 14 times with the last 6 cancelled = 8 times 10.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C96",
+   "role": "question",
+   "lp_book_number": "Example 15: Two friends at a hotel",
+   "ncert_ref": "2.4.ex15",
+   "question_text": "Meera and Kabir each order a ₹43 cutlet and a ₹24 rasgulla. Write the total with a bracket, remove the bracket, and compare with 2 × 43 + 24.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The prices 43 and 24 and the two friends are all in the question text. The book prints no figure with the question: the tray picture appears only later, inside the explanation of the answer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C97",
+   "role": "solution",
+   "lp_book_number": "Example 15: Two friends at a hotel",
+   "ncert_ref": "2.4.ex15",
+   "question_text": "Meera and Kabir each order a ₹43 cutlet and a ₹24 rasgulla. Write the total with a bracket, remove the bracket, and compare with 2 × 43 + 24.",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The book prints the tray picture with its two braces as the worked answer of Example 15: the same total counted per friend, 2 × (43 + 24), and per item, 2 × 43 + 2 × 24. The LP solution only describes it in symbols, so the picture adds the visual meaning of removing the bracket. No question figure exists, so the solution figure stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S22.T22.C97.IMG1",
+   "manim_scene": "c7_2_2_4_ex15_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S22.T22.C97.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "canvas": {
+      "width_units": 16,
+      "height_units": 9,
+      "origin": "top-left, y grows downward",
+      "background": "BG"
+     },
+     "trays": [
+      {
+       "name": "tray_1",
+       "x_from": 7.0,
+       "x_to": 13.0,
+       "y_from": 1.7,
+       "y_to": 3.7,
+       "corner_radius": 0.3,
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "divider_x": 11.0
+      },
+      {
+       "name": "tray_2",
+       "x_from": 7.0,
+       "x_to": 13.0,
+       "y_from": 4.8,
+       "y_to": 6.8,
+       "corner_radius": 0.3,
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "divider_x": 11.0
+      }
+     ],
+     "items": [
+      {
+       "tray": "tray_1",
+       "role": "cutlet",
+       "shape": "circle",
+       "centre": [
+        9.0,
+        2.7
+       ],
+       "radius": 0.65,
+       "fill": "SET_B",
+       "outline": "INK"
+      },
+      {
+       "tray": "tray_1",
+       "role": "rasgulla",
+       "shape": "circle",
+       "centre": [
+        12.0,
+        2.7
+       ],
+       "radius": 0.5,
+       "fill": "BG",
+       "outline": "INK"
+      },
+      {
+       "tray": "tray_2",
+       "role": "cutlet",
+       "shape": "circle",
+       "centre": [
+        9.0,
+        5.8
+       ],
+       "radius": 0.65,
+       "fill": "SET_B",
+       "outline": "INK"
+      },
+      {
+       "tray": "tray_2",
+       "role": "rasgulla",
+       "shape": "circle",
+       "centre": [
+        12.0,
+        5.8
+       ],
+       "radius": 0.5,
+       "fill": "BG",
+       "outline": "INK"
+      }
+     ],
+     "price_labels": [
+      {
+       "text": "₹43",
+       "centre": [
+        9.0,
+        1.35
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "₹24",
+       "centre": [
+        12.0,
+        1.35
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "₹43",
+       "centre": [
+        9.0,
+        4.4
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "₹24",
+       "centre": [
+        12.0,
+        4.4
+       ],
+       "colour": "INK"
+      }
+     ],
+     "left_brace": {
+      "tip_direction": "left",
+      "y_from": 1.7,
+      "y_to": 6.8,
+      "back_edge_x": 6.8,
+      "tip_x": 6.2,
+      "tip_y": 4.25,
+      "colour": "ANSWER",
+      "label": {
+       "text": "2 × (43 + 24)",
+       "right_edge_x": 6.0,
+       "centre_y": 4.25,
+       "colour": "ANSWER"
+      }
+     },
+     "bottom_brace": {
+      "tip_direction": "down",
+      "x_from": 7.0,
+      "x_to": 13.0,
+      "back_edge_y": 7.1,
+      "tip_y": 7.7,
+      "tip_x": 10.0,
+      "colour": "ANSWER",
+      "label": {
+       "text": "2 × 43 + 2 × 24",
+       "centre": [
+        10.0,
+        8.2
+       ],
+       "colour": "ANSWER"
+      }
+     },
+     "text_height_units": 0.5
+    },
+    "manim_description": "Plain white BG canvas, 16 units wide and 9 units high, origin top-left, y grows downward, flat 2D, 3 px INK strokes. Draw two identical food trays, one above the other. Tray 1 is a rounded rectangle (corner radius 0.3) from x 7.0 to 13.0 and y 1.7 to 3.7; tray 2 is the same rectangle from y 4.8 to 6.8. Fill both CELL_FILL with an INK outline. Each tray has two compartments: a vertical INK line at x 11.0 from the top edge to the bottom edge of the tray makes a wide left compartment (x 7.0 to 11.0) and a narrow right compartment (x 11.0 to 13.0). In the left compartment of each tray draw one cutlet as a circle of radius 0.65 filled SET_B with an INK outline, centred at x 9.0 (y 2.7 in tray 1, y 5.8 in tray 2). In the right compartment of each tray draw one rasgulla as a circle of radius 0.5 filled BG with an INK outline, centred at x 12.0 (y 2.7 in tray 1, y 5.8 in tray 2). Write INK price labels, 0.5 units high, centred above each compartment: '₹43' at (9.0, 1.35) and '₹24' at (12.0, 1.35) above tray 1, and '₹43' at (9.0, 4.4) and '₹24' at (12.0, 4.4) above tray 2. Draw a tall curly brace in ANSWER green on the left of the trays, its tip pointing left: the brace runs from y 1.7 to y 6.8, its two ends sit at x 6.8 and its tip is at (6.2, 4.25), so it spans both trays. Write the label '2 × (43 + 24)' in ANSWER green, 0.5 units high, right-aligned at x 6.0 and vertically centred at y 4.25. Draw a wide curly brace in ANSWER green under the trays, its tip pointing down: it runs from x 7.0 to x 13.0, its two ends sit at y 7.1 and its tip is at (10.0, 7.7), so it spans the full width of the trays. Write the label '2 × 43 + 2 × 24' in ANSWER green, 0.5 units high, centred at (10.0, 8.2). Nothing else is drawn.",
+    "visible_text": [
+     "₹43",
+     "₹24",
+     "₹43",
+     "₹24",
+     "2 × (43 + 24)",
+     "2 × 43 + 2 × 24"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the totals 67, 134 or 110",
+     "the words cutlet, rasgulla, tray or the friends' names",
+     "the book's two curved arrows over the left label",
+     "photograph textures, leaf-plate pattern or shadows"
+    ],
+    "accuracy_checks": [
+     "exactly 2 trays, each with exactly 2 compartments, one cutlet circle and one rasgulla circle (4 food circles in all)",
+     "the label ₹43 sits above every cutlet compartment and ₹24 above every rasgulla compartment, so each price is printed twice",
+     "the left brace spans both trays and carries 2 × (43 + 24); the bottom brace spans the full tray width and carries 2 × 43 + 2 × 24",
+     "2 × (43 + 24) = 2 × 67 = 134 and 2 × 43 + 2 × 24 = 86 + 48 = 134, so both labels name the same total (the LP solution)"
+    ],
+    "alt_text": "Two food trays one above the other, each with a cutlet under a ₹43 label and a rasgulla under a ₹24 label; a brace round both trays reads 2 × (43 + 24) and a brace under them reads 2 × 43 + 2 × 24.",
+    "render_note": "Redrawn as a flat schematic of the book's tray photograph (page 16, right of Example 15). The book's two small curved arrows above the label 2 × (43 + 24) are left out: their arrowhead targets are not clear in the printed figure. Same picture as teaching image M3.S21.T21.C91.IMG1, which stays untouched and is not linked. The LP's friends are Meera and Kabir (the book: Lhamo and Norbu); no names are drawn."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C98",
+   "role": "question",
+   "lp_book_number": "Example 16: Rows of scouts and guides",
+   "ncert_ref": "2.4.ex16",
+   "question_text": "In a parade, 4 rows of 5 scouts march beside 3 rows of 5 guides. Find the number of children in two ways, and say why 5 × 4 + 3 is different.",
+   "decision": "optional",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book says 'see the figure below', but the LP question already gives every count (4 rows of 5 scouts, 3 rows of 5 guides). A plain 7 by 5 array of dots (3 guide rows, 4 scout rows, no braces) would help but is not needed to attempt it, so it is not added; the solution figure draws the whole array.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "No figure added; the question text states 4 rows of 5 scouts and 3 rows of 5 guides."
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C99",
+   "role": "solution",
+   "lp_book_number": "Example 16: Rows of scouts and guides",
+   "ncert_ref": "2.4.ex16",
+   "question_text": "In a parade, 4 rows of 5 scouts march beside 3 rows of 5 guides. Find the number of children in two ways, and say why 5 × 4 + 3 is different.",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The book prints the coloured array with three braces as the worked answer of Example 16: 3 × 5 guides, 4 × 5 scouts, and all seven rows as (4 + 3) × 5. The braces and colours carry the meaning of the two ways of counting that LaTeX cannot show reliably. Same kind of answer as Example 15, so same decision.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S22.T22.C99.IMG1",
+   "manim_scene": "c7_2_2_4_ex16_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S22.T22.C99.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "canvas": {
+      "width_units": 16,
+      "height_units": 9,
+      "origin": "top-left, y grows downward",
+      "background": "BG"
+     },
+     "array": {
+      "rows": 7,
+      "cols": 5,
+      "dot_radius": 0.38,
+      "column_x": [
+       5.0,
+       6.0,
+       7.0,
+       8.0,
+       9.0
+      ],
+      "row_y": [
+       1.5,
+       2.5,
+       3.5,
+       4.5,
+       5.5,
+       6.5,
+       7.5
+      ],
+      "rows_1_to_3": {
+       "fill": "SET_B",
+       "outline": "INK",
+       "dots": 15
+      },
+      "rows_4_to_7": {
+       "fill": "SET_A",
+       "outline": "INK",
+       "dots": 20
+      },
+      "dots": [
+       {
+        "row": 1,
+        "col": 1,
+        "centre": [
+         5.0,
+         1.5
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "row": 1,
+        "col": 2,
+        "centre": [
+         6.0,
+         1.5
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "row": 1,
+        "col": 3,
+        "centre": [
+         7.0,
+         1.5
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "row": 1,
+        "col": 4,
+        "centre": [
+         8.0,
+         1.5
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "row": 1,
+        "col": 5,
+        "centre": [
+         9.0,
+         1.5
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "row": 2,
+        "col": 1,
+        "centre": [
+         5.0,
+         2.5
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "row": 2,
+        "col": 2,
+        "centre": [
+         6.0,
+         2.5
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "row": 2,
+        "col": 3,
+        "centre": [
+         7.0,
+         2.5
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "row": 2,
+        "col": 4,
+        "centre": [
+         8.0,
+         2.5
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "row": 2,
+        "col": 5,
+        "centre": [
+         9.0,
+         2.5
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "row": 3,
+        "col": 1,
+        "centre": [
+         5.0,
+         3.5
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "row": 3,
+        "col": 2,
+        "centre": [
+         6.0,
+         3.5
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "row": 3,
+        "col": 3,
+        "centre": [
+         7.0,
+         3.5
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "row": 3,
+        "col": 4,
+        "centre": [
+         8.0,
+         3.5
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "row": 3,
+        "col": 5,
+        "centre": [
+         9.0,
+         3.5
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "row": 4,
+        "col": 1,
+        "centre": [
+         5.0,
+         4.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 4,
+        "col": 2,
+        "centre": [
+         6.0,
+         4.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 4,
+        "col": 3,
+        "centre": [
+         7.0,
+         4.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 4,
+        "col": 4,
+        "centre": [
+         8.0,
+         4.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 4,
+        "col": 5,
+        "centre": [
+         9.0,
+         4.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 5,
+        "col": 1,
+        "centre": [
+         5.0,
+         5.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 5,
+        "col": 2,
+        "centre": [
+         6.0,
+         5.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 5,
+        "col": 3,
+        "centre": [
+         7.0,
+         5.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 5,
+        "col": 4,
+        "centre": [
+         8.0,
+         5.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 5,
+        "col": 5,
+        "centre": [
+         9.0,
+         5.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 6,
+        "col": 1,
+        "centre": [
+         5.0,
+         6.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 6,
+        "col": 2,
+        "centre": [
+         6.0,
+         6.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 6,
+        "col": 3,
+        "centre": [
+         7.0,
+         6.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 6,
+        "col": 4,
+        "centre": [
+         8.0,
+         6.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 6,
+        "col": 5,
+        "centre": [
+         9.0,
+         6.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 7,
+        "col": 1,
+        "centre": [
+         5.0,
+         7.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 7,
+        "col": 2,
+        "centre": [
+         6.0,
+         7.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 7,
+        "col": 3,
+        "centre": [
+         7.0,
+         7.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 7,
+        "col": 4,
+        "centre": [
+         8.0,
+         7.5
+        ],
+        "fill": "SET_A"
+       },
+       {
+        "row": 7,
+        "col": 5,
+        "centre": [
+         9.0,
+         7.5
+        ],
+        "fill": "SET_A"
+       }
+      ]
+     },
+     "left_braces": [
+      {
+       "rows": [
+        1,
+        2,
+        3
+       ],
+       "tip_direction": "left",
+       "y_from": 1.1,
+       "y_to": 3.9,
+       "back_edge_x": 4.2,
+       "tip_x": 3.6,
+       "tip_y": 2.5,
+       "colour": "ANSWER",
+       "label": {
+        "text": "3 × 5",
+        "right_edge_x": 3.3,
+        "centre_y": 2.5,
+        "colour": "ANSWER"
+       }
+      },
+      {
+       "rows": [
+        4,
+        5,
+        6,
+        7
+       ],
+       "tip_direction": "left",
+       "y_from": 4.1,
+       "y_to": 7.9,
+       "back_edge_x": 4.2,
+       "tip_x": 3.6,
+       "tip_y": 6.0,
+       "colour": "ANSWER",
+       "label": {
+        "text": "4 × 5",
+        "right_edge_x": 3.3,
+        "centre_y": 6.0,
+        "colour": "ANSWER"
+       }
+      }
+     ],
+     "right_brace": {
+      "rows": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7
+      ],
+      "tip_direction": "right",
+      "y_from": 1.1,
+      "y_to": 7.9,
+      "back_edge_x": 9.8,
+      "tip_x": 10.4,
+      "tip_y": 4.5,
+      "colour": "ANSWER",
+      "label": {
+       "text": "(4 + 3) × 5",
+       "left_edge_x": 10.7,
+       "centre_y": 4.5,
+       "colour": "ANSWER"
+      }
+     },
+     "text_height_units": 0.5
+    },
+    "manim_description": "Plain white BG canvas, 16 units wide and 9 units high, origin top-left, y grows downward, flat 2D, 3 px INK strokes. Draw an array of 35 filled circles, 7 rows by 5 columns, each of radius 0.38 with an INK outline. Column centres are at x 5.0, 6.0, 7.0, 8.0, 9.0 (left to right). Row centres are at y 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5 (top to bottom). Rows 1, 2 and 3 (15 circles, the guides) are filled SET_B; rows 4, 5, 6 and 7 (20 circles, the scouts) are filled SET_A. On the left of the array draw two curly braces in ANSWER green, each with its tip pointing left and its two ends at x 4.2 and its tip at x 3.6: the first runs from y 1.1 to y 3.9 around rows 1 to 3 with its tip at y 2.5, the second runs from y 4.1 to y 7.9 around rows 4 to 7 with its tip at y 6.0. Write the label '3 × 5' in ANSWER green, 0.5 units high, right-aligned at x 3.3 and centred at y 2.5, and the label '4 × 5' in ANSWER green, 0.5 units high, right-aligned at x 3.3 and centred at y 6.0. On the right of the array draw one tall curly brace in ANSWER green with its tip pointing right: it runs from y 1.1 to y 7.9 around all seven rows, its two ends sit at x 9.8 and its tip is at (10.4, 4.5). Write the label '(4 + 3) × 5' in ANSWER green, 0.5 units high, left-aligned at x 10.7 and centred at y 4.5. Nothing else is drawn.",
+    "visible_text": [
+     "3 × 5",
+     "4 × 5",
+     "(4 + 3) × 5"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the totals 20, 15, 35 or 7 and 23",
+     "fleur-de-lis symbols or any emblem in place of the circles",
+     "a legend, or the words scouts and guides",
+     "the book's two curved arrows over the right label"
+    ],
+    "accuracy_checks": [
+     "7 rows x 5 columns = 35 circles",
+     "rows 1 to 3 hold 3 x 5 = 15 circles in SET_B and carry the label 3 × 5 (guides, 3 rows of 5)",
+     "rows 4 to 7 hold 4 x 5 = 20 circles in SET_A and carry the label 4 × 5 (scouts, 4 rows of 5)",
+     "the right brace spans all 7 = 4 + 3 rows and carries (4 + 3) × 5; 20 + 15 = 35 = 7 x 5 as in the LP solution"
+    ],
+    "alt_text": "Seven rows of five dots: the top three rows amber and the bottom four rows blue; braces on the left read 3 × 5 and 4 × 5, and a brace on the right round all seven rows reads (4 + 3) × 5.",
+    "render_note": "Redrawn as plain dots from the book's fleur-de-lis array (page 16, Example 16): top 3 rows = girl guides, bottom 4 rows = boy scouts, as in the book. The book's two curved arrows over the right label are left out: their targets are not clear. Colours match the teaching image M3.S21.T21.C92.IMG1 (scouts blue, guides amber), which stays untouched and is not linked. No question figure is drawn (the question item is optional / dropped), so derived_from is null."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C100",
+   "role": "question",
+   "lp_book_number": "Example 17: 63 × 18 from 53 × 18",
+   "ncert_ref": "2.4.ex17",
+   "question_text": "Given 53 × 18 = 954, find 63 × 18 without multiplying afresh.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The product 53 x 18 = 954 and the new product 63 x 18 are in the text; the book has no figure here.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C101",
+   "role": "solution",
+   "lp_book_number": "Example 17: 63 × 18 from 53 × 18",
+   "ncert_ref": "2.4.ex17",
+   "question_text": "Given 53 × 18 = 954, find 63 × 18 without multiplying afresh.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A short chain of equalities: LaTeX arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C102",
+   "role": "question",
+   "lp_book_number": "Example 18: A quick way to find 97 × 25",
+   "ncert_ref": "2.4.ex18",
+   "question_text": "Find 97 × 25 by writing 97 as 100 − 3.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "One product, 97 x 25, and the hint 97 = 100 - 3 are in the text; the book has no figure here.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C103",
+   "role": "solution",
+   "lp_book_number": "Example 18: A quick way to find 97 × 25",
+   "ncert_ref": "2.4.ex18",
+   "question_text": "Find 97 × 25 by writing 97 as 100 − 3.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A chain of equalities: LaTeX arithmetic. The area picture of the teaching topic (M3.S21.T21.C94.IMG1) is not in the book and is never linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S23.T23.C104",
+   "role": "question",
+   "lp_book_number": "Multiplying a Sum: a third friend joins",
+   "ncert_ref": "2.4.sangmu",
+   "question_text": "A third friend, Tanvi, joins and orders the same. Write the total for three friends with a bracket, remove it, and find the value.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The prices and the third friend are in the text; the book gives no figure for this follow-up question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S23.T23.C105",
+   "role": "solution",
+   "lp_book_number": "Multiplying a Sum: a third friend joins",
+   "ncert_ref": "2.4.sangmu",
+   "question_text": "A third friend, Tanvi, joins and orders the same. Write the total for three friends with a bracket, remove it, and find the value.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A chain of equalities giving 201: LaTeX arithmetic. A three-tray picture is not in the book and would only be decoration.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S23.T23.C106",
+   "role": "question",
+   "lp_book_number": "Multiplying a Sum: 95 × 8 and two more",
+   "ncert_ref": "2.4.use_method",
+   "question_text": "Use the same method for 95 × 8, 104 × 15 and 49 × 50, and say which other products suit it.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Three products to find by the same method; all in the text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S23.T23.C107",
+   "role": "solution",
+   "lp_book_number": "Multiplying a Sum: 95 × 8 and two more",
+   "ncert_ref": "2.4.use_method",
+   "question_text": "Use the same method for 95 × 8, 104 × 15 and 49 × 50, and say which other products suit it.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three chains of equalities: LaTeX arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S24.T24.C108",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.4, Q1",
+   "ncert_ref": "Section 2.4 - Figure it Out Q1",
+   "question_text": "Fill in the blanks with numbers, and boxes with signs, so that the expressions on both sides are equal. (a) 3 × (6 + 7) = 3 × 6 + 3 × 7 (b) (8 + 3) × 4 = 8 × 4 + 3 × 4 (c) 3 × (5 + 8) = 3 × 5 [ ] 3 × ____ (d) (9 + 2) × 4 = 9 × 4 [ ] 2 × ____ (e) 3 × (____ + 4) = 3 × ____ + ____ (f) (____ + 6) × 4 = 13 × 4 + ____ (g) 3 × (____ + ____) = 3 × 5 + 3 × 2 (h) (____ + ____) × ____ = 2 × 4 + 3 × 4 (i) 5 × (9 − 2) = 5 × 9 − 5 × ____ (j) (5 − 2) × 7 = 5 × 7 − 2 × ____ (k) 5 × (8 − 3) = 5 × 8 [ ] 5 × ____ (l) (8 − 3) × 7 = 8 × 7 [ ] 3 × 7 (m) 5 × (12 − ____) = ____ [ ] 5 × ____ (n) (15 − ____) × 7 = ____ [ ] 6 × 7 (o) 5 × (____ − ____) = 5 × 9 − 5 × 4 (p) (____ − ____) × ____ = 17 × 7 − 9 × 7",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Sixteen fill-in equalities printed as text lines (the sign boxes are written [ ] in the line); the book gives no figure, so a picture adds nothing.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "One LaTeX line per part (a) to (p), blanks as \\underline{\\hspace{1.2em}} and the sign slot as a boxed gap; put each part on its own line."
+  },
+  {
+   "lp_concept_id": "M3.S24.T24.C109",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.4, Q1",
+   "ncert_ref": "Section 2.4 - Figure it Out Q1",
+   "question_text": "Fill in the blanks with numbers, and boxes with signs, so that the expressions on both sides are equal. (a) 3 × (6 + 7) = 3 × 6 + 3 × 7 (b) (8 + 3) × 4 = 8 × 4 + 3 × 4 (c) 3 × (5 + 8) = 3 × 5 [ ] 3 × ____ (d) (9 + 2) × 4 = 9 × 4 [ ] 2 × ____ (e) 3 × (____ + 4) = 3 × ____ + ____ (f) (____ + 6) × 4 = 13 × 4 + ____ (g) 3 × (____ + ____) = 3 × 5 + 3 × 2 (h) (____ + ____) × ____ = 2 × 4 + 3 × 4 (i) 5 × (9 − 2) = 5 × 9 − 5 × ____ (j) (5 − 2) × 7 = 5 × 7 − 2 × ____ (k) 5 × (8 − 3) = 5 × 8 [ ] 5 × ____ (l) (8 − 3) × 7 = 8 × 7 [ ] 3 × 7 (m) 5 × (12 − ____) = ____ [ ] 5 × ____ (n) (15 − ____) × 7 = ____ [ ] 6 × 7 (o) 5 × (____ − ____) = 5 × 9 − 5 × 4 (p) (____ − ____) × ____ = 17 × 7 − 9 × 7",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is the same equalities with numbers and signs filled in; the book prints them as text lines and the LP steps already list them.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines for (c) to (p) with the filled numbers and signs."
+  },
+  {
+   "lp_concept_id": "M3.S24.T24.C110",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.4, Q2",
+   "ncert_ref": "Section 2.4 - Figure it Out Q2",
+   "question_text": "In the boxes below, fill '<', '>' or '=' after analysing the expressions on the left and the right. Use reasoning and understanding of terms and brackets to figure this out and not by evaluating the expressions. (a) (8 − 3) × 29 [ ] (3 − 8) × 29 (b) 15 + 9 × 18 [ ] (15 + 9) × 18 (c) 23 × (17 − 9) [ ] 23 × 17 + 23 × 9 (d) (34 − 28) × 42 [ ] 34 × 42 − 28 × 42",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four pairs of expressions with an empty box for <, > or =; all information is in the text and no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S24.T24.C111",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.4, Q2",
+   "ncert_ref": "Section 2.4 - Figure it Out Q2",
+   "question_text": "In the boxes below, fill '<', '>' or '=' after analysing the expressions on the left and the right. Use reasoning and understanding of terms and brackets to figure this out and not by evaluating the expressions. (a) (8 − 3) × 29 [ ] (3 − 8) × 29 (b) 15 + 9 × 18 [ ] (15 + 9) × 18 (c) 23 × (17 − 9) [ ] 23 × 17 + 23 × 9 (d) (34 − 28) × 42 [ ] 34 × 42 − 28 × 42",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is four signs with a one-line reason each; text and LaTeX are complete.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S24.T24.C112",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.4, Q3",
+   "ncert_ref": "Section 2.4 - Figure it Out Q3",
+   "question_text": "Here is one way to make 14: 2 × (1 + 6) = 14. Are there other ways of getting 14? Fill them out: (a) ____ × (____ + ____) = 14 (b) ____ × (____ + ____) = 14 (c) ____ × (____ + ____) = 14 (d) ____ × (____ + ____) = 14",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four blank templates of the form _ x (_ + _) = 14; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S24.T24.C113",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.4, Q3",
+   "ncert_ref": "Section 2.4 - Figure it Out Q3",
+   "question_text": "Here is one way to make 14: 2 × (1 + 6) = 14. Are there other ways of getting 14? Fill them out: (a) ____ × (____ + ____) = 14 (b) ____ × (____ + ____) = 14 (c) ____ × (____ + ____) = 14 (d) ____ × (____ + ____) = 14",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "OPEN_ENDED"
+   ],
+   "reason": "Open answer (many correct fills); the LP lists four filled equalities 2x(2+5), 2x(3+4), 7x(1+1), 1x(5+9), which are plain arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S24.T24.C114",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.4, Q4",
+   "ncert_ref": "Section 2.4 - Figure it Out Q4",
+   "question_text": "Find the sum of the numbers given in each picture in at least two different ways. Describe how you solved it through expressions. Picture I is a 3 by 3 grid. Five squares, at the four corners and the centre, each show 4. Four circles, in the middle of each side, each show 8. Picture II is a 4 by 4 grid, with rows reading 5, 6, 6, 5 then 6, 5, 5, 6 then 6, 5, 5, 6 then 5, 6, 6, 5, so eight cells show 5 and eight cells show 6.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The book asks for the sum of the numbers 'given in each picture below': the two pictures are the question, and shape and colour (squares and circles, 5s and 6s) are what the 'different ways' are built on.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S24.T24.C114.IMG1",
+   "manim_scene": "c7_2_FiO24_Q4_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S24.T24.C114.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_pattern",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_pattern",
+     "unit": "1.0 = the diameter of one circle (side of one square is 0.95); x to the right, y upwards, origin at the centre of the composition",
+     "canvas_units": {
+      "width": 12.0,
+      "height": 6.75
+     },
+     "pictures": [
+      {
+       "name": "left picture (Picture I)",
+       "grid": "3 rows x 3 columns",
+       "centre": [
+        -3.125,
+        0.0
+       ],
+       "pitch": 1.4,
+       "shape_size": {
+        "square_side": 0.95,
+        "circle_diameter": 1.0
+       },
+       "cells": [
+        {
+         "row": 1,
+         "col": 1,
+         "x": -4.525,
+         "y": 1.4,
+         "shape": "square",
+         "value": 4,
+         "fill": "SET_B at 45% opacity"
+        },
+        {
+         "row": 1,
+         "col": 2,
+         "x": -3.125,
+         "y": 1.4,
+         "shape": "circle",
+         "value": 8,
+         "fill": "SET_A at 35% opacity"
+        },
+        {
+         "row": 1,
+         "col": 3,
+         "x": -1.725,
+         "y": 1.4,
+         "shape": "square",
+         "value": 4,
+         "fill": "SET_B at 45% opacity"
+        },
+        {
+         "row": 2,
+         "col": 1,
+         "x": -4.525,
+         "y": 0.0,
+         "shape": "circle",
+         "value": 8,
+         "fill": "SET_A at 35% opacity"
+        },
+        {
+         "row": 2,
+         "col": 2,
+         "x": -3.125,
+         "y": 0.0,
+         "shape": "square",
+         "value": 4,
+         "fill": "SET_B at 45% opacity"
+        },
+        {
+         "row": 2,
+         "col": 3,
+         "x": -1.725,
+         "y": 0.0,
+         "shape": "circle",
+         "value": 8,
+         "fill": "SET_A at 35% opacity"
+        },
+        {
+         "row": 3,
+         "col": 1,
+         "x": -4.525,
+         "y": -1.4,
+         "shape": "square",
+         "value": 4,
+         "fill": "SET_B at 45% opacity"
+        },
+        {
+         "row": 3,
+         "col": 2,
+         "x": -3.125,
+         "y": -1.4,
+         "shape": "circle",
+         "value": 8,
+         "fill": "SET_A at 35% opacity"
+        },
+        {
+         "row": 3,
+         "col": 3,
+         "x": -1.725,
+         "y": -1.4,
+         "shape": "square",
+         "value": 4,
+         "fill": "SET_B at 45% opacity"
+        }
+       ],
+       "counts": {
+        "squares_showing_4": 5,
+        "circles_showing_8": 4
+       }
+      },
+      {
+       "name": "right picture (Picture II)",
+       "grid": "4 rows x 4 columns",
+       "centre": [
+        2.8,
+        0.0
+       ],
+       "pitch": 1.15,
+       "shape_size": {
+        "circle_diameter": 1.0
+       },
+       "cells": [
+        {
+         "row": 1,
+         "col": 1,
+         "x": 1.075,
+         "y": 1.725,
+         "shape": "circle",
+         "value": 5,
+         "fill": "SET_A at 35% opacity"
+        },
+        {
+         "row": 1,
+         "col": 2,
+         "x": 2.225,
+         "y": 1.725,
+         "shape": "circle",
+         "value": 6,
+         "fill": "SET_B at 45% opacity"
+        },
+        {
+         "row": 1,
+         "col": 3,
+         "x": 3.375,
+         "y": 1.725,
+         "shape": "circle",
+         "value": 6,
+         "fill": "SET_B at 45% opacity"
+        },
+        {
+         "row": 1,
+         "col": 4,
+         "x": 4.525,
+         "y": 1.725,
+         "shape": "circle",
+         "value": 5,
+         "fill": "SET_A at 35% opacity"
+        },
+        {
+         "row": 2,
+         "col": 1,
+         "x": 1.075,
+         "y": 0.575,
+         "shape": "circle",
+         "value": 6,
+         "fill": "SET_B at 45% opacity"
+        },
+        {
+         "row": 2,
+         "col": 2,
+         "x": 2.225,
+         "y": 0.575,
+         "shape": "circle",
+         "value": 5,
+         "fill": "SET_A at 35% opacity"
+        },
+        {
+         "row": 2,
+         "col": 3,
+         "x": 3.375,
+         "y": 0.575,
+         "shape": "circle",
+         "value": 5,
+         "fill": "SET_A at 35% opacity"
+        },
+        {
+         "row": 2,
+         "col": 4,
+         "x": 4.525,
+         "y": 0.575,
+         "shape": "circle",
+         "value": 6,
+         "fill": "SET_B at 45% opacity"
+        },
+        {
+         "row": 3,
+         "col": 1,
+         "x": 1.075,
+         "y": -0.575,
+         "shape": "circle",
+         "value": 6,
+         "fill": "SET_B at 45% opacity"
+        },
+        {
+         "row": 3,
+         "col": 2,
+         "x": 2.225,
+         "y": -0.575,
+         "shape": "circle",
+         "value": 5,
+         "fill": "SET_A at 35% opacity"
+        },
+        {
+         "row": 3,
+         "col": 3,
+         "x": 3.375,
+         "y": -0.575,
+         "shape": "circle",
+         "value": 5,
+         "fill": "SET_A at 35% opacity"
+        },
+        {
+         "row": 3,
+         "col": 4,
+         "x": 4.525,
+         "y": -0.575,
+         "shape": "circle",
+         "value": 6,
+         "fill": "SET_B at 45% opacity"
+        },
+        {
+         "row": 4,
+         "col": 1,
+         "x": 1.075,
+         "y": -1.725,
+         "shape": "circle",
+         "value": 5,
+         "fill": "SET_A at 35% opacity"
+        },
+        {
+         "row": 4,
+         "col": 2,
+         "x": 2.225,
+         "y": -1.725,
+         "shape": "circle",
+         "value": 6,
+         "fill": "SET_B at 45% opacity"
+        },
+        {
+         "row": 4,
+         "col": 3,
+         "x": 3.375,
+         "y": -1.725,
+         "shape": "circle",
+         "value": 6,
+         "fill": "SET_B at 45% opacity"
+        },
+        {
+         "row": 4,
+         "col": 4,
+         "x": 4.525,
+         "y": -1.725,
+         "shape": "circle",
+         "value": 5,
+         "fill": "SET_A at 35% opacity"
+        }
+       ],
+       "counts": {
+        "circles_showing_5": 8,
+        "circles_showing_6": 8
+       }
+      }
+     ],
+     "colour_groups": {
+      "SET_A": "circles showing 8 (left picture) and circles showing 5 (right picture)",
+      "SET_B": "squares showing 4 (left picture) and circles showing 6 (right picture)"
+     },
+     "digit_text": {
+      "colour": "INK",
+      "weight": "bold",
+      "height_units": 0.5
+     },
+     "outline": {
+      "colour": "INK",
+      "stroke_px": 2
+     },
+     "to_scale": true,
+     "captions": [
+      {
+       "text": "(I)",
+       "under": "left picture (Picture I)",
+       "centre": [
+        -3.125,
+        -2.8
+       ],
+       "weight": "bold",
+       "colour": "INK",
+       "height_units": 0.5
+      },
+      {
+       "text": "(II)",
+       "under": "right picture (Picture II)",
+       "centre": [
+        2.8,
+        -2.8
+       ],
+       "weight": "bold",
+       "colour": "INK",
+       "height_units": 0.5
+      }
+     ]
+    },
+    "manim_description": "White BG card, 16:9 (12.0 x 6.75 units), two pictures side by side on one shared horizontal centre line, left picture then right picture, and under each picture its caption (nothing else on the card). Unit 1.0 = the diameter of one circle. Every shape has a 2 px INK outline and a bold INK digit centred inside, digit height 0.5 units. LEFT PICTURE: 3 rows x 3 columns of 9 shapes, centre at (-3.125, 0), pitch 1.4 between neighbouring shape centres in both directions, so the shape centres are x = -4.525, -3.125, -1.725 and y = 1.4, 0, -1.4. Five squares of side 0.95 with fill SET_B at 45% opacity, each showing 4, at (-4.525, 1.4), (-1.725, 1.4), (-3.125, 0), (-4.525, -1.4) and (-1.725, -1.4). Four circles of diameter 1.0 with fill SET_A at 35% opacity, each showing 8, at (-3.125, 1.4), (-4.525, 0), (-1.725, 0) and (-3.125, -1.4). Reading row by row: row 1 = 4 8 4, row 2 = 8 4 8, row 3 = 4 8 4. RIGHT PICTURE: 4 rows x 4 columns of 16 circles of diameter 1.0, centre at (2.8, 0), pitch 1.15, so the circle centres are x = 1.075, 2.225, 3.375, 4.525 and y = 1.725, 0.575, -0.575, -1.725. Eight circles showing 5 with fill SET_A at 35% opacity: the four corners and the four middle circles. Eight circles showing 6 with fill SET_B at 45% opacity: the other eight edge circles. Reading row by row: row 1 = 5 6 6 5, row 2 = 6 5 5 6, row 3 = 6 5 5 6, row 4 = 5 6 6 5. CAPTIONS: under each picture write its caption in bold INK, height 0.5 units, centred on the picture: (I) at (-3.125, -2.8) under the left picture and (II) at (2.8, -2.8) under the right picture. No other labels, no key, no totals, no braces or grouping marks: only the 25 shapes with their digits and the two captions.",
+    "visible_text": [
+     "4",
+     "8",
+     "5",
+     "6",
+     "(I)",
+     "(II)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the captions (I) and (II)",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the sum 52 or 88, any row total (16, 20, 22), any expression or bracket grouping",
+     "a colour key or legend"
+    ],
+    "accuracy_checks": [
+     "left picture: 5 squares showing 4 and 4 circles showing 8, 9 shapes in all; 5 x 4 + 4 x 8 = 20 + 32 = 52 (QA only, never drawn)",
+     "left picture rows read 4 8 4 / 8 4 8 / 4 8 4; squares at the four corners and the centre, circles at the four edge middles",
+     "right picture: 8 circles showing 5 and 8 showing 6, 16 in all; 8 x 5 + 8 x 6 = 40 + 48 = 88 (QA only, never drawn)",
+     "right picture rows read 5 6 6 5 / 6 5 5 6 / 6 5 5 6 / 5 6 6 5, symmetric about both centre lines",
+     "all shape centres lie on the stated coordinates and the pictures do not overlap (left ends at x = -1.225, right starts at x = 0.575)",
+     "captions (I) and (II) sit under the left (3 by 3) and the right (4 by 4) picture; caption top edge y = -2.55 is clear of the lowest shape edge y = -2.225 and the caption bottom edge y = -3.05 is inside the card (-3.375)"
+    ],
+    "alt_text": "Two pictures of numbered shapes, captioned (I) and (II): picture (I) is a 3 by 3 picture with squares showing 4 at the corners and centre and circles showing 8 between them; picture (II) is a 4 by 4 picture of circles showing 5 at the corners and centre and 6 along the edges.",
+    "render_note": "Both book pictures (pdf page 19, reprinted on pdf page 37) sit in ONE diagram because the pair is allowed one question diagram. Left is Picture I, right is Picture II, as in the book; the printed captions (I) and (II) are drawn under the pictures (see Captions below). The book colours (yellow squares, light-blue circles, red circles) are approximated with the style-token pair SET_B / SET_A; the digit carries the meaning, not the colour. In the book Picture I is drawn with wider gaps than Picture II; the pitches 1.4 and 1.15 follow that. Captions: (I) and (II) are drawn under the pictures because the LP question and answer text refer to them as Picture I and Picture II."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S24.T24.C115",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.4, Q4",
+   "ncert_ref": "Section 2.4 - Figure it Out Q4",
+   "question_text": "Find the sum of the numbers given in each picture in at least two different ways. Describe how you solved it through expressions. Picture I is a 3 by 3 grid. Five squares, at the four corners and the centre, each show 4. Four circles, in the middle of each side, each show 8. Picture II is a 4 by 4 grid, with rows reading 5, 6, 6, 5 then 6, 5, 5, 6 then 6, 5, 5, 6 then 5, 6, 6, 5, so eight cells show 5 and eight cells show 6.",
+   "decision": "optional",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "SAME_AS_QUESTION_DIAGRAM"
+   ],
+   "reason": "Printed and LP answers are arithmetic (5 x 4 + 4 x 8 = 52, 8 x (5 + 6) = 88, row sums) with no picture; a marked-up copy of the question figure (five squares and four circles braced as 5 x 4 and 4 x 8, row totals 16, 20, 16, the eight 5s and eight 6s grouped as 8 x (5 + 6)) would help but is not needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines: 5 x 4 + 4 x 8 = 52 and 2 x (4 + 8 + 4) + (8 + 4 + 8) = 52; 8 x 5 + 8 x 6 = 8 x (5 + 6) = 88 and 4 x 22 = 88."
+  },
+  {
+   "lp_concept_id": "M4.S25.T25.C116",
+   "role": "worked_example",
+   "lp_book_number": "E0",
+   "ncert_ref": "Worked example (LP) - E0",
+   "question_text": "A baker bakes 14 loaves every day except Sunday. Write expressions for the loaves in 6 weeks in two ways and find the value.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word problem solved with arithmetic expressions (7 - 1) x 6 x 14 and 7 x 6 x 14 - 1 x 6 x 14; the book gives no figure and the numbers are all in the text.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M4.S25.T25.C117",
+   "role": "worked_example",
+   "lp_book_number": "E0",
+   "ncert_ref": "Worked example (LP) - E0",
+   "question_text": "Compare 57 × 30 − 20 and 57 × 31 − 20 without working them out, then check.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two products compared by reasoning, then checked with 1690 and 1747; pure arithmetic, no figure in the book.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M4.S25.T25.C118",
+   "role": "worked_example",
+   "lp_book_number": "E1",
+   "ncert_ref": "Worked example (LP) - E1",
+   "question_text": "Which of 91 − (35 + 12), 91 − (35 − 12) and −35 + 91 − 12 equal 91 − 35 − 12?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Three expressions compared with 91 - 35 - 12 by their terms; pure arithmetic, no figure in the book.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C120",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.5, Q1",
+   "ncert_ref": "Section 2.5 - Figure it Out Q1",
+   "question_text": "Read the situations given below. Write appropriate expressions for each of them and find their values. (a) The district market in Begur operates on all seven days of a week. Rahim supplies 9 kg of mangoes each day from his orchard and Shyam supplies 11 kg of mangoes each day from his orchard to this market. Find the amount of mangoes supplied by them in a week. (b) Binu earns ₹20,000 per month. She spends ₹5,000 on rent, ₹5,000 on food, and ₹2,000 on other expenses every month. What is the amount Binu will save by the end of a year? (c) During the daytime a snail climbs 3 cm up a post, and during the night while asleep, accidentally slips down by 2 cm. The post is 10 cm high, and a delicious treat is on its top. In how many days will the snail get the treat?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three word problems; the book prints no figure for any part (the snail's post is described in words), so the question gets none.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C121",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.5, Q1",
+   "ncert_ref": "Section 2.5 - Figure it Out Q1",
+   "question_text": "Read the situations given below. Write appropriate expressions for each of them and find their values. (a) The district market in Begur operates on all seven days of a week. Rahim supplies 9 kg of mangoes each day from his orchard and Shyam supplies 11 kg of mangoes each day from his orchard to this market. Find the amount of mangoes supplied by them in a week. (b) Binu earns ₹20,000 per month. She spends ₹5,000 on rent, ₹5,000 on food, and ₹2,000 on other expenses every month. What is the amount Binu will save by the end of a year? (c) During the daytime a snail climbs 3 cm up a post, and during the night while asleep, accidentally slips down by 2 cm. The post is 10 cm high, and a delicious treat is on its top. In how many days will the snail get the treat?",
+   "decision": "optional",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Answers are 7 x (9 + 11) = 140 kg, Rs 96000 and 8 days, all as arithmetic in text. Only part (c) would gain from a picture: a post with the snail's height after each day (3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10) would show why it is 8 days and not 10, but the 7 x (3 - 2) + 3 = 10 line already says it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C122",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.5, Q2",
+   "ncert_ref": "Section 2.5 - Figure it Out Q2",
+   "question_text": "Melvin reads a two-page story every day except on Tuesdays and Saturdays. How many stories would he complete reading in 8 weeks? Which of the expressions below describes this scenario? (a) 5 × 2 × 8 (b) (7 − 2) × 8 (c) 8 × 7 (d) 7 × 2 × 8 (e) 7 × 5 − 2 (f) (7 + 2) × 8 (g) 7 × 8 − 2 × 8 (h) (7 − 5) × 8",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A reading story with eight expressions to choose from; all in text, no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C123",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.5, Q2",
+   "ncert_ref": "Section 2.5 - Figure it Out Q2",
+   "question_text": "Melvin reads a two-page story every day except on Tuesdays and Saturdays. How many stories would he complete reading in 8 weeks? Which of the expressions below describes this scenario? (a) 5 × 2 × 8 (b) (7 − 2) × 8 (c) 8 × 7 (d) 7 × 2 × 8 (e) 7 × 5 − 2 (f) (7 + 2) × 8 (g) 7 × 8 − 2 × 8 (h) (7 − 5) × 8",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Answer is 40 stories and expressions (b) and (g), checked by evaluating the eight expressions; plain arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C124",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.5, Q3",
+   "ncert_ref": "Section 2.5 - Figure it Out Q3",
+   "question_text": "Find different ways of evaluating the following expressions: (a) 1 − 2 + 3 − 4 + 5 − 6 + 7 − 8 + 9 − 10 (b) 1 − 1 + 1 − 1 + 1 − 1 + 1 − 1 + 1 − 1",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two long alternating sums to evaluate; text and LaTeX carry them fully.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C125",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.5, Q3",
+   "ncert_ref": "Section 2.5 - Figure it Out Q3",
+   "question_text": "Find different ways of evaluating the following expressions: (a) 1 − 2 + 3 − 4 + 5 − 6 + 7 − 8 + 9 − 10 (b) 1 − 1 + 1 − 1 + 1 − 1 + 1 − 1 + 1 − 1",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "OPEN_ENDED"
+   ],
+   "reason": "Different ways of grouping the same sums (pairs, leave out the ends); each way is a LaTeX line, no picture in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C126",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.5, Q4",
+   "ncert_ref": "Section 2.5 - Figure it Out Q4",
+   "question_text": "Compare the following pairs of expressions using '<', '>' or '=' or by reasoning. (a) 49 − 7 + 8 and 49 − 7 + 8 (b) 83 × 42 − 18 and 83 × 40 − 18 (c) 145 − 17 × 8 and 145 − 17 × 6 (d) 23 × 48 − 35 and 23 × (48 − 35) (e) (16 − 11) × 12 and −11 × 12 + 16 × 12 (f) (76 − 53) × 88 and 88 × (53 − 76) (g) 25 × (42 + 16) and 25 × (43 + 15) (h) 36 × (28 − 16) and 35 × (27 − 15)",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Eight pairs of expressions to compare with <, > or =; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C127",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.5, Q4",
+   "ncert_ref": "Section 2.5 - Figure it Out Q4",
+   "question_text": "Compare the following pairs of expressions using '<', '>' or '=' or by reasoning. (a) 49 − 7 + 8 and 49 − 7 + 8 (b) 83 × 42 − 18 and 83 × 40 − 18 (c) 145 − 17 × 8 and 145 − 17 × 6 (d) 23 × 48 − 35 and 23 × (48 − 35) (e) (16 − 11) × 12 and −11 × 12 + 16 × 12 (f) (76 − 53) × 88 and 88 × (53 − 76) (g) 25 × (42 + 16) and 25 × (43 + 15) (h) 36 × (28 − 16) and 35 × (27 − 15)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is eight signs with a one-line reason each; the printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C128",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.5, Q5",
+   "ncert_ref": "Section 2.5 - Figure it Out Q5",
+   "question_text": "Identify which of the following expressions are equal to the given expression without computation. You may rewrite the expressions using terms or removing brackets. There can be more than one expression which is equal to the given expression. (a) 83 − 37 − 12: (i) 84 − 38 − 12 (ii) 84 − (37 + 12) (iii) 83 − 38 − 13 (iv) −37 + 83 − 12. (b) 93 + 37 × 44 + 76: (i) 37 + 93 × 44 + 76 (ii) 93 + 37 × 76 + 44 (iii) (93 + 37) × (44 + 76) (iv) 37 × 44 + 93 + 76",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two given expressions with four choices each; all in text, no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C129",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.5, Q5",
+   "ncert_ref": "Section 2.5 - Figure it Out Q5",
+   "question_text": "Identify which of the following expressions are equal to the given expression without computation. You may rewrite the expressions using terms or removing brackets. There can be more than one expression which is equal to the given expression. (a) 83 − 37 − 12: (i) 84 − 38 − 12 (ii) 84 − (37 + 12) (iii) 83 − 38 − 13 (iv) −37 + 83 − 12. (b) 93 + 37 × 44 + 76: (i) 37 + 93 × 44 + 76 (ii) 93 + 37 × 76 + 44 (iii) (93 + 37) × (44 + 76) (iv) 37 × 44 + 93 + 76",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer names the equal expressions, (a)(i)(iv) and (b)(iv), with the terms-and-values reasoning in text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C130",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.5, Q6",
+   "ncert_ref": "Section 2.5 - Figure it Out Q6",
+   "question_text": "Choose a number and create ten different expressions having that value.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Open task: choose a number and write ten expressions for it; no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C131",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.5, Q6",
+   "ncert_ref": "Section 2.5 - Figure it Out Q6",
+   "question_text": "Choose a number and create ten different expressions having that value.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Answers vary; the LP shows ten expressions for 24 (the book shows 26), which is a plain list in LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C132",
+   "role": "worked_example",
+   "lp_book_number": "E0",
+   "ncert_ref": "Puzzle Time - Expression Engineer",
+   "question_text": "Using three 3s, the four operations and brackets, find expressions for 0, 2, 4, 6, 9 and 12.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "DECORATIVE_ONLY"
+   ],
+   "reason": "Six expressions from three 3s, each a short line of arithmetic; the only art on the book page is the owl banner and a row of children, which is decoration.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  }
+ ]
+}

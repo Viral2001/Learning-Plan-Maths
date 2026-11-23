@@ -1,0 +1,996 @@
+{
+ "meta": {
+  "chapter": "Expressions using Letter-Numbers",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 4",
+  "lp_plan_id": "cbse_eng_maths7_ch4_v41",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 1,
+    "optional": 0,
+    "none": 14
+   },
+   "solution": {
+    "required": 1,
+    "optional": 1,
+    "none": 13
+   },
+   "worked_example": {
+    "required": 0,
+    "optional": 0,
+    "none": 0
+   }
+  },
+  "notes": [
+   "Chunk A: topics M1.S3.T3, M1.S4.T4, M1.S6.T6, M1.S7.T7, M1.S8.T8, M1.S10.T10 (15 pair units, 30 items).",
+   "Only Figure it Out 4.1 Q7 needs diagrams (question: calendar + grid with w - 1 and w; solution: the completed grid). Every other question and solution is a word problem, an expression or a plain table and stays text/LaTeX.",
+   "The book's plain tables (Fig. 4.1, the Example 3 table, the Q3 table and its printed answer) go to LaTeX arrays; the 4.2 boxed-term pictures are optional only and not added.",
+   "The PDF does contain printed answers (pages 26 onwards: P27 table for Q3, P28 grid for Q7), although the brief says it has none; the LP solution text was followed throughout and agrees with them."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P01-table-1",
+   "source": "chapter p.01",
+   "description": "Fig. 4.1 (Example 1): borderless two-column table, Aftab's age | Expression for Shabnam's age; rows 4 | 4 + 3, 10 | 10 + 3, 23 | 23 + 3, ? | ? + 3, a | a + 3. Checked against the page picture: matches.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P02-pattern-1",
+   "source": "chapter p.02",
+   "description": "Fig. 4.2 (Example 2): three groups of matchstick Ls, 1 L, 2 Ls and 3 Ls joined in a row (2, 4, 6 matchsticks). Checked against the page picture: matches. It is the teaching figure of Parthiv's Ls; the plan's teaching image M1.S2.T2.C4.IMG1 shows the same Ls (accounting only, not linked).",
+   "mapped_to": "concept_image:M1.S2.T2.C4.IMG1"
+  },
+  {
+   "fig_id": "P03-table-1",
+   "source": "chapter p.03",
+   "description": "Example 3 relationship table: Quantity needed | Relationship | Expression; Cost of coconuts | Number of coconuts x 35 | c x 35; Cost of jaggery | Number of kgs of jaggery x 60 | j x 60. Plain table; matches the page picture.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P03-term_boxes-2",
+   "source": "chapter p.03",
+   "description": "Example 3: the two terms c x 35 and j x 60 in two small outlined boxes joined by a plus sign; no extra meaning. Matches the page picture.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P04-table-1",
+   "source": "chapter p.04",
+   "description": "Figure it Out Q3 given table: 4 columns (No. of 100 notes, No. of 20 notes, No. of 5 notes, Expression and total amount); row 1: 3, 5, 6, blank; row 2: blank counts, 6 x 100 + 4 x 20 + 3 x 5 = 695; row 3: 8, 4, z, blank; row 4: x, y, z, blank. Plain table, no colour meaning. Matches the page picture (the three blank count cells of row 2 are blank in the book; the LP question text states 6, 4, 3).",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P05-calendar-1",
+   "source": "chapter p.05",
+   "description": "Figure it Out Q7 given calendar: header Mon to Sun, five date rows with 1 on Sat and 2 on Sun, then 3-9, 10-16, 17-23, 24-30; a red outline round the 2 x 3 block 12, 13, 14 / 19, 20, 21. Matches the page picture. The book titles it 'November 2024' but its weekdays are one day off the real November 2024; the calendar drawn here omits the title and keeps the printed arrangement.",
+   "mapped_to": "item:M1.S8.T8.C35 (question)"
+  },
+  {
+   "fig_id": "P05-grid-2",
+   "source": "chapter p.05",
+   "description": "Figure it Out Q7 given grid: 2 rows x 3 columns, bottom-left w - 1, bottom-middle w, the other four cells blank. Matches the page picture.",
+   "mapped_to": "item:M1.S8.T8.C35 (question)"
+  },
+  {
+   "fig_id": "P06-boxes_arrows-1",
+   "source": "chapter p.06",
+   "description": "Section 4.2 worked picture for 83 + 28 - 13 + 32: four boxed terms with two crossing curved arrows (83 to -13, 28 to 32) and the row = 70 + 60 = 130. Matches the page picture. The LP gives the same grouping in LaTeX brackets; a picture is optional only (see item M1.S10.T10.C40 solution).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P06-boxes_arrows-2",
+   "source": "chapter p.06",
+   "description": "Section 4.2 worked picture for 68 - (18 + 13), solve the bracket first: rows 68 + -(18 + 13); 68 + -31; 37. Matches the page picture. Optional only (see item M1.S10.T10.C40 solution).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P06-boxes_arrows-3",
+   "source": "chapter p.06",
+   "description": "Section 4.2 worked picture for 68 - (18 + 13), remove the brackets: rows 68 + -(18 + 13); 68 + -18 + -13 with a curved arrow from 68 to -18; 50 + -13 = 37. Matches the page picture. Optional only (see item M1.S10.T10.C40 solution).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P27-table-1",
+   "source": "chapter p.27",
+   "description": "Printed answer to Figure it Out Q3: the same table with every row filled (red = filled in): 430, counts 6/4/3 of row 2, 880 + 5z, 100x + 20y + 5z. Plain table, no colour meaning (red only marks what was filled in). Matches the page picture.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P28-grid-1",
+   "source": "chapter p.28",
+   "description": "Printed answer to Figure it Out Q7: 2 x 3 grid, top row w-8, w-7, w-6, bottom row w-1, w, w+1. Matches the page picture.",
+   "mapped_to": "item:M1.S8.T8.C36 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 12,
+  "mapped_to_items": 3,
+  "mapped_to_concept_images": 1,
+  "mapped_none": 8,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S8.T8.C35.IMG1",
+   "M1.S8.T8.C36.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S3.T3.C6",
+   "role": "question",
+   "lp_book_number": "Example 1: Shabnam's age from Aftab's",
+   "ncert_ref": "Section 4.1 - 4.1.ex1_s",
+   "question_text": "Shabnam is 3 years older than Aftab. Use a and s for Aftab's age and Shabnam's age, write the expression for Shabnam's age, and find it when Aftab is 23 years old.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question is fully in words (3 years older, a and s, 23 years); the book's Fig. 4.1 is only a plain table of age and expression and is not needed to attempt it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "solution",
+   "lp_book_number": "Example 1: Shabnam's age from Aftab's",
+   "ncert_ref": "Section 4.1 - 4.1.ex1_s",
+   "question_text": "Shabnam is 3 years older than Aftab. Use a and s for Aftab's age and Shabnam's age, write the expression for Shabnam's age, and find it when Aftab is 23 years old.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The steps already give the pairs 4 -> 4 + 3, 10 -> 10 + 3, 23 -> 23 + 3 and then a + 3; the book's Fig. 4.1 is a plain two-column table of numbers and expressions with no colour meaning, so a LaTeX array carries it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "If a table is wanted, a LaTeX array: Aftab's age | Expression for Shabnam's age; 4 | 4 + 3; 10 | 10 + 3; 23 | 23 + 3; ? | ? + 3; a | a + 3."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "question",
+   "lp_book_number": "Example 2: matchsticks for n Ls",
+   "ncert_ref": "Section 4.1 - 4.1.ex2",
+   "question_text": "Each L in Parthiv's pattern uses 2 matchsticks. Find the sticks for 5, 7 and 45 letters L, then write an expression for n letters L.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The text gives everything needed: each L uses 2 matchsticks and the numbers of Ls are 5, 7, 45 and n. Fig. 4.2 (1, 2, 3 Ls) only shows what the text already says and is the teaching image M1.S2.T2.C4.IMG1 of this idea.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C9",
+   "role": "solution",
+   "lp_book_number": "Example 2: matchsticks for n Ls",
+   "ncert_ref": "Section 4.1 - 4.1.ex2",
+   "question_text": "Each L in Parthiv's pattern uses 2 matchsticks. Find the sticks for 5, 7 and 45 letters L, then write an expression for n letters L.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is the numbers 10, 14, 90 and the expression 2 x n, all written as arithmetic in the steps; it is not a picture or an arrangement.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C10",
+   "role": "question",
+   "lp_book_number": "Age Rule: Aftab's age from Shabnam's",
+   "ncert_ref": "Section 4.1 - 4.1.ex1_a",
+   "question_text": "Shabnam is 3 years older than Aftab. Write an expression for Aftab's age using s for Shabnam's age, and find it when Shabnam is 20 years old.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word relationship (Aftab is 3 years younger than Shabnam, Shabnam is 20); no figure is given in the book for this part.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C11",
+   "role": "solution",
+   "lp_book_number": "Age Rule: Aftab's age from Shabnam's",
+   "ncert_ref": "Section 4.1 - 4.1.ex1_a",
+   "question_text": "Shabnam is 3 years older than Aftab. Write an expression for Aftab's age using s for Shabnam's age, and find it when Shabnam is 20 years old.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer a = s - 3 and 20 - 3 = 17 is a short equation and arithmetic; LaTeX carries it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C15",
+   "role": "question",
+   "lp_book_number": "Example 3: Ketaki's laddu bill",
+   "ncert_ref": "Section 4.1 - 4.1.ex3_a",
+   "question_text": "Coconuts cost 35 rupees each and jaggery costs 60 rupees for 1 kg. Find the total to pay for 10 coconuts and 5 kg of jaggery.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Prices and quantities are all in the words; the book prints no figure for this part of Example 3.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C16",
+   "role": "solution",
+   "lp_book_number": "Example 3: Ketaki's laddu bill",
+   "ncert_ref": "Section 4.1 - 4.1.ex3_a",
+   "question_text": "Coconuts cost 35 rupees each and jaggery costs 60 rupees for 1 kg. Find the total to pay for 10 coconuts and 5 kg of jaggery.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Pure arithmetic: 10 x 35 = 350, 5 x 60 = 300, total 650.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C17",
+   "role": "question",
+   "lp_book_number": "Example 4: perimeter of a square",
+   "ncert_ref": "Section 4.1 - 4.1.ex4",
+   "question_text": "Write an expression for the perimeter of a square with side q, and use it for a side of 7 cm.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Example 4 prints no figure; the question names a square with side q and a side of 7 cm, which is all the learner needs.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C18",
+   "role": "solution",
+   "lp_book_number": "Example 4: perimeter of a square",
+   "ncert_ref": "Section 4.1 - 4.1.ex4",
+   "question_text": "Write an expression for the perimeter of a square with side q, and use it for a side of 7 cm.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the expression 4 x q and 4 x 7 = 28 cm; the book prints no square figure here, and a labelled square is already the teaching image M1.S5.T5.C13.IMG1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C19",
+   "role": "question",
+   "lp_book_number": "Laddu Order: expression for c coconuts and j kg",
+   "ncert_ref": "Section 4.1 - 4.1.ex3_b",
+   "question_text": "Write an expression for the total to pay for c coconuts and j kg of jaggery, then use it for 8 coconuts and 9 kg of jaggery.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem with c coconuts, j kg and the prices in the text; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C20",
+   "role": "solution",
+   "lp_book_number": "Laddu Order: expression for c coconuts and j kg",
+   "ncert_ref": "Section 4.1 - 4.1.ex3_b",
+   "question_text": "Write an expression for the total to pay for c coconuts and j kg of jaggery, then use it for 8 coconuts and 9 kg of jaggery.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The book's relationship table (Cost of coconuts | Number of coconuts x 35 | c x 35 and the same for jaggery) is a plain 3-column table; the steps already state both rows and the total, so LaTeX carries it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "If a table is wanted, a LaTeX array: Quantity needed | Relationship | Expression; Cost of coconuts | Number of coconuts x 35 | c x 35; Cost of jaggery | Number of kgs of jaggery x 60 | j x 60."
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C21",
+   "role": "question",
+   "lp_book_number": "Laddu Order: 7 coconuts and 4 kg of jaggery",
+   "ncert_ref": "Section 4.1 - 4.1.ex3_c",
+   "question_text": "Use the expression c × 35 + j × 60 for 7 coconuts and 4 kg of jaggery, and name its two terms.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The expression c x 35 + j x 60 and the values 7 and 4 are in the text; naming the two terms needs no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C22",
+   "role": "solution",
+   "lp_book_number": "Laddu Order: 7 coconuts and 4 kg of jaggery",
+   "ncert_ref": "Section 4.1 - 4.1.ex3_c",
+   "question_text": "Use the expression c × 35 + j × 60 for 7 coconuts and 4 kg of jaggery, and name its two terms.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The terms are named in words (c x 35 and j x 60) and the value is arithmetic. The book's two small boxes around the terms only show the same two terms and carry no extra meaning; LaTeX can box them if wanted.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "If boxes are wanted, $\\boxed{c \\times 35} + \\boxed{j \\times 60}$."
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C23",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.1, Q1",
+   "ncert_ref": "Section 4.1 - 4.1.FiO_1",
+   "question_text": "Write formulas for the perimeter of: (a) a triangle with all sides equal. (b) a regular pentagon (the sides and the angles of a regular figure are all equal). (c) a regular hexagon.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Three named shapes (equilateral triangle, regular pentagon, regular hexagon) are given in words; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C24",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.1, Q1",
+   "ncert_ref": "Section 4.1 - 4.1.FiO_1",
+   "question_text": "Write formulas for the perimeter of: (a) a triangle with all sides equal. (b) a regular pentagon (the sides and the angles of a regular figure are all equal). (c) a regular hexagon.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answers are the formulas 3a, 5a, 6a, written in the steps; the book's printed answer is text too. Three regular polygons with every side marked a would only be a nicety.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C25",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.1, Q2",
+   "ncert_ref": "Section 4.1 - 4.1.FiO_2",
+   "question_text": "Munirathna has a 20 m long pipe. He wants a longer watering pipe for his garden, so he joins another pipe of some length to this one. Give the expression for the combined length of the pipe. Use the letter-number k to denote the length in metres of the other pipe.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A 20 m pipe joined to another pipe of k metres is fully stated in words; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C26",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.1, Q2",
+   "ncert_ref": "Section 4.1 - 4.1.FiO_2",
+   "question_text": "Munirathna has a 20 m long pipe. He wants a longer watering pipe for his garden, so he joins another pipe of some length to this one. Give the expression for the combined length of the pipe. Use the letter-number k to denote the length in metres of the other pipe.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer (20 + k) metres is a one-line expression.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C27",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.1, Q3",
+   "ncert_ref": "Section 4.1 - 4.1.FiO_3",
+   "question_text": "What is the total amount Krithika has, if she has the following numbers of notes of 100, 20 and 5 rupees? Complete the table, where each row gives the number of 100 rupee notes, the number of 20 rupee notes and the number of 5 rupee notes: row 1 is 3, 5 and 6 notes. Row 2 is 6, 4 and 3 notes (already worked: 6 × 100 + 4 × 20 + 3 × 5 = 695). Row 3 is 8 notes of 100, 4 notes of 20 and z notes of 5. Row 4 is x notes of 100, y notes of 20 and z notes of 5.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The book's table is a plain table of counts, letters and one given expression with no colour meaning, and the LP question text already states every row in words, so a LaTeX array is enough.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "A LaTeX array with columns No. of 100 rupee notes | No. of 20 rupee notes | No. of 5 rupee notes | Expression and total amount; rows: 3, 5, 6, (blank); (the counts of the worked row are 6, 4, 3), 6 x 100 + 4 x 20 + 3 x 5 = 695; 8, 4, z, (blank); x, y, z, (blank)."
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C28",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.1, Q3",
+   "ncert_ref": "Section 4.1 - 4.1.FiO_3",
+   "question_text": "What is the total amount Krithika has, if she has the following numbers of notes of 100, 20 and 5 rupees? Complete the table, where each row gives the number of 100 rupee notes, the number of 20 rupee notes and the number of 5 rupee notes: row 1 is 3, 5 and 6 notes. Row 2 is 6, 4 and 3 notes (already worked: 6 × 100 + 4 × 20 + 3 × 5 = 695). Row 3 is 8 notes of 100, 4 notes of 20 and z notes of 5. Row 4 is x notes of 100, y notes of 20 and z notes of 5.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The printed answer is the same plain table with the expression and total filled in; there is no colour or arrangement meaning (the red in the book only marks what was filled in), the steps already give every row, and a plain table to complete goes to LaTeX (prompt example: LATEX_TABLE).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "A LaTeX array with the same columns and rows filled: 3, 5, 6 | 3 x 100 + 5 x 20 + 6 x 5 = 430; 6, 4, 3 | 6 x 100 + 4 x 20 + 3 x 5 = 695; 8, 4, z | 8 x 100 + 4 x 20 + z x 5 = 880 + 5z; x, y, z | x x 100 + y x 20 + z x 5 = 100x + 20y + 5z."
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C29",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.1, Q4",
+   "ncert_ref": "Section 4.1 - 4.1.FiO_4",
+   "question_text": "Venkatalakshmi owns a flour mill. It takes 10 seconds for the roller mill to start running. Once it is running, each kilogram of grain takes 8 seconds to grind into powder. Which of the expressions below describes the time taken to grind y kg of grain, assuming the machine is off initially? (a) 10 + 8 + y; (b) (10 + 8) × y; (c) 10 × 8 × y; (d) 10 + 8 × y; (e) 10 × y + 8",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word problem with five options (a) to (e) written in text; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C30",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.1, Q4",
+   "ncert_ref": "Section 4.1 - 4.1.FiO_4",
+   "question_text": "Venkatalakshmi owns a flour mill. It takes 10 seconds for the roller mill to start running. Once it is running, each kilogram of grain takes 8 seconds to grind into powder. Which of the expressions below describes the time taken to grind y kg of grain, assuming the machine is off initially? (a) 10 + 8 + y; (b) (10 + 8) × y; (c) 10 × 8 × y; (d) 10 + 8 × y; (e) 10 × y + 8",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is option (d) 10 + 8 x y with a check at y = 3 (34 seconds); arithmetic only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C31",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.1, Q5",
+   "ncert_ref": "Section 4.1 - 4.1.FiO_5",
+   "question_text": "Write algebraic expressions using letters of your choice. (a) 5 more than a number. (b) 4 less than a number. (c) 2 less than 13 times a number. (d) 13 less than 2 times a number.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four phrases to turn into expressions; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C32",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.1, Q5",
+   "ncert_ref": "Section 4.1 - 4.1.FiO_5",
+   "question_text": "Write algebraic expressions using letters of your choice. (a) 5 more than a number. (b) 4 less than a number. (c) 2 less than 13 times a number. (d) 13 less than 2 times a number.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answers d + 5, d - 4, 13d - 2, 2d - 13 are short expressions.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C33",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.1, Q6",
+   "ncert_ref": "Section 4.1 - 4.1.FiO_6",
+   "question_text": "Describe situations corresponding to the following algebraic expressions: (a) 8 × x + 3 × y; (b) 15 × j − 2 × k",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "Describe your own situation for each expression; no fixed figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C34",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.1, Q6",
+   "ncert_ref": "Section 4.1 - 4.1.FiO_6",
+   "question_text": "Describe situations corresponding to the following algebraic expressions: (a) 8 × x + 3 × y; (b) 15 × j − 2 × k",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "Open-ended: the LP gives model situations in words (8 pens and 3 notebooks; 15 chairs a day and 2 spoiled); nothing to draw.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C35",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.1, Q7",
+   "ncert_ref": "Section 4.1 - 4.1.FiO_7",
+   "question_text": "In a calendar month, a 2 by 3 grid full of dates is chosen: 2 rows and 3 columns. Write expressions for the dates in the blank cells if the bottom middle cell has date w.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The book gives the calendar picture and a 2 by 3 grid whose bottom-left cell already reads w - 1; that given cell and the 'blank cells' to fill exist only in the figure (the LP question text names only the bottom middle w), so the learner needs it to attempt the question.",
+   "needs_lp_text_sync": false,
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S8.T8.C35.IMG1",
+   "manim_scene": "c7_4_1_FiO7_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S8.T8.C35.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "canvas": "16:9",
+     "panels": [
+      {
+       "panel": "calendar",
+       "position": "left",
+       "columns": 7,
+       "date_rows": 5,
+       "cell_width_units": 1.0,
+       "cell_height_units": 0.8,
+       "header_row": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+       ],
+       "header_fill": "CELL_FILL",
+       "date_rows_cells": [
+        [
+         "",
+         "",
+         "",
+         "",
+         "",
+         "1",
+         "2"
+        ],
+        [
+         "3",
+         "4",
+         "5",
+         "6",
+         "7",
+         "8",
+         "9"
+        ],
+        [
+         "10",
+         "11",
+         "12",
+         "13",
+         "14",
+         "15",
+         "16"
+        ],
+        [
+         "17",
+         "18",
+         "19",
+         "20",
+         "21",
+         "22",
+         "23"
+        ],
+        [
+         "24",
+         "25",
+         "26",
+         "27",
+         "28",
+         "29",
+         "30"
+        ]
+       ],
+       "cell_fill": "BG",
+       "title": null,
+       "highlight": {
+        "kind": "outline",
+        "colour": "FOCUS",
+        "date_rows": [
+         3,
+         4
+        ],
+        "columns": [
+         3,
+         4,
+         5
+        ],
+        "cells": [
+         "12",
+         "13",
+         "14",
+         "19",
+         "20",
+         "21"
+        ]
+       }
+      },
+      {
+       "panel": "date_grid",
+       "position": "right",
+       "rows": 2,
+       "columns": 3,
+       "cell_width_units": 1.6,
+       "cell_height_units": 1.4,
+       "cells_top_to_bottom": [
+        [
+         "",
+         "",
+         ""
+        ],
+        [
+         "w − 1",
+         "w",
+         ""
+        ]
+       ],
+       "outline": "INK",
+       "fill": "BG",
+       "given_cells": [
+        {
+         "row": 2,
+         "col": 1,
+         "text": "w − 1"
+        },
+        {
+         "row": 2,
+         "col": 2,
+         "text": "w"
+        }
+       ]
+      }
+     ]
+    },
+    "manim_description": "Canvas 16:9, plain BG white background, two figures side by side and vertically centred; 1 unit = 120 px. LEFT figure, a calendar grid of 7 columns by 6 rows (one weekday-header row on top and five date rows below), every cell 1.0 unit wide and 0.8 unit high, outlined in INK at 2 to 3 px; its left edge at x = -6.7 and its right edge at x = 0.3. Header row, left to right, cells filled CELL_FILL with INK text: Mon, Tue, Wed, Thu, Fri, Sat, Sun. Date row 1: the cells under Mon, Tue, Wed, Thu and Fri are empty, the cell under Sat holds 1 and the cell under Sun holds 2. Date row 2: 3, 4, 5, 6, 7, 8, 9. Date row 3: 10, 11, 12, 13, 14, 15, 16. Date row 4: 17, 18, 19, 20, 21, 22, 23. Date row 5: 24, 25, 26, 27, 28, 29, 30. Date cells are BG filled with bold INK numbers. One rectangle outline in FOCUS, 3 px and no fill, surrounds exactly the six cells 12, 13, 14 (date row 3, under Wed, Thu, Fri) and 19, 20, 21 (date row 4, under Wed, Thu, Fri). No month name, no year and no caption above or below the calendar. RIGHT figure, a grid of 2 rows by 3 columns of equal cells, each 1.6 units wide and 1.4 units high, outlined in INK at 2 to 3 px with BG fill; its left edge at x = 1.9 and its right edge at x = 6.7, centred at y = 0. In the grid, the top row is three empty cells; the bottom row holds, left to right, the label w − 1 in the first cell, the label w in the second cell (italic letter) and an empty third cell. All text INK, 56 px; nothing else is written in the grid.",
+    "visible_text": [
+     "Mon",
+     "Tue",
+     "Wed",
+     "Thu",
+     "Fri",
+     "Sat",
+     "Sun",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20",
+     "21",
+     "22",
+     "23",
+     "24",
+     "25",
+     "26",
+     "27",
+     "28",
+     "29",
+     "30",
+     "w − 1",
+     "w"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any of w − 8, w − 7, w − 6 or w + 1 in the grid (the four blank cells stay blank)",
+     "a month or year title above the calendar",
+     "a number put in place of w"
+    ],
+    "accuracy_checks": [
+     "calendar has 7 columns and 5 date rows holding exactly the dates 1 to 30, with 1 under Sat and 2 under Sun, 3 under Mon",
+     "each date is 1 more than the date to its left and 7 more than the date above it (for example 19 = 12 + 7, 20 = 13 + 7, 21 = 14 + 7)",
+     "the FOCUS outline encloses exactly the 6 cells 12, 13, 14, 19, 20, 21 (2 rows by 3 columns under Wed, Thu, Fri)",
+     "date grid is 2 rows by 3 columns; only the bottom-left (w − 1) and bottom-middle (w) cells are filled, the other 4 cells are empty"
+    ],
+    "alt_text": "A calendar with the block 12, 13, 14 over 19, 20, 21 outlined, beside an empty 2 by 3 grid whose bottom row starts with w minus 1 and w.",
+    "render_note": "Combines the book's two printed pictures of Figure it Out Q7 (the November calendar with the outlined block, then the blank grid) side by side as printed. The book's 'November 2024' title is left out (headings are not drawn, and the book's weekdays are one day off the real calendar); the printed arrangement of dates is kept."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C36",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.1, Q7",
+   "ncert_ref": "Section 4.1 - 4.1.FiO_7",
+   "question_text": "In a calendar month, a 2 by 3 grid full of dates is chosen: 2 rows and 3 columns. Write expressions for the dates in the blank cells if the bottom middle cell has date w.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The printed answer is a picture (the completed 2 by 3 grid) and the LP steps only describe it in words; the solution figure shows the full final grid, derived from the question figure.",
+   "needs_lp_text_sync": false,
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S8.T8.C36.IMG1",
+   "manim_scene": "c7_4_1_FiO7_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S8.T8.C36.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S8.T8.C35.IMG1",
+    "content": {
+     "type": "cell_grid",
+     "canvas": "16:9",
+     "panels": [
+      {
+       "panel": "calendar",
+       "position": "left",
+       "columns": 7,
+       "date_rows": 5,
+       "cell_width_units": 1.0,
+       "cell_height_units": 0.8,
+       "header_row": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+       ],
+       "header_fill": "CELL_FILL",
+       "date_rows_cells": [
+        [
+         "",
+         "",
+         "",
+         "",
+         "",
+         "1",
+         "2"
+        ],
+        [
+         "3",
+         "4",
+         "5",
+         "6",
+         "7",
+         "8",
+         "9"
+        ],
+        [
+         "10",
+         "11",
+         "12",
+         "13",
+         "14",
+         "15",
+         "16"
+        ],
+        [
+         "17",
+         "18",
+         "19",
+         "20",
+         "21",
+         "22",
+         "23"
+        ],
+        [
+         "24",
+         "25",
+         "26",
+         "27",
+         "28",
+         "29",
+         "30"
+        ]
+       ],
+       "cell_fill": "BG",
+       "title": null,
+       "highlight": {
+        "kind": "outline",
+        "colour": "FOCUS",
+        "date_rows": [
+         3,
+         4
+        ],
+        "columns": [
+         3,
+         4,
+         5
+        ],
+        "cells": [
+         "12",
+         "13",
+         "14",
+         "19",
+         "20",
+         "21"
+        ]
+       }
+      },
+      {
+       "panel": "date_grid",
+       "position": "right",
+       "rows": 2,
+       "columns": 3,
+       "cell_width_units": 1.6,
+       "cell_height_units": 1.4,
+       "cells_top_to_bottom": [
+        [
+         "w − 8",
+         "w − 7",
+         "w − 6"
+        ],
+        [
+         "w − 1",
+         "w",
+         "w + 1"
+        ]
+       ],
+       "outline": "INK",
+       "fill": "BG",
+       "given_cells": [
+        {
+         "row": 2,
+         "col": 1,
+         "text": "w − 1"
+        },
+        {
+         "row": 2,
+         "col": 2,
+         "text": "w"
+        }
+       ],
+       "answer_cells": [
+        {
+         "row": 1,
+         "col": 1,
+         "text": "w − 8"
+        },
+        {
+         "row": 1,
+         "col": 2,
+         "text": "w − 7"
+        },
+        {
+         "row": 1,
+         "col": 3,
+         "text": "w − 6"
+        },
+        {
+         "row": 2,
+         "col": 3,
+         "text": "w + 1"
+        }
+       ],
+       "answer_colour": "ANSWER"
+      }
+     ]
+    },
+    "manim_description": "Canvas 16:9, plain BG white background, two figures side by side and vertically centred; 1 unit = 120 px. LEFT figure, a calendar grid of 7 columns by 6 rows (one weekday-header row on top and five date rows below), every cell 1.0 unit wide and 0.8 unit high, outlined in INK at 2 to 3 px; its left edge at x = -6.7 and its right edge at x = 0.3. Header row, left to right, cells filled CELL_FILL with INK text: Mon, Tue, Wed, Thu, Fri, Sat, Sun. Date row 1: the cells under Mon, Tue, Wed, Thu and Fri are empty, the cell under Sat holds 1 and the cell under Sun holds 2. Date row 2: 3, 4, 5, 6, 7, 8, 9. Date row 3: 10, 11, 12, 13, 14, 15, 16. Date row 4: 17, 18, 19, 20, 21, 22, 23. Date row 5: 24, 25, 26, 27, 28, 29, 30. Date cells are BG filled with bold INK numbers. One rectangle outline in FOCUS, 3 px and no fill, surrounds exactly the six cells 12, 13, 14 (date row 3, under Wed, Thu, Fri) and 19, 20, 21 (date row 4, under Wed, Thu, Fri). No month name, no year and no caption above or below the calendar. RIGHT figure, a grid of 2 rows by 3 columns of equal cells, each 1.6 units wide and 1.4 units high, outlined in INK at 2 to 3 px with BG fill; its left edge at x = 1.9 and its right edge at x = 6.7, centred at y = 0. In the grid the given labels stay in INK exactly where they were: w − 1 in the bottom-left cell and w (italic letter) in the bottom-middle cell. The four added labels are drawn in ANSWER green: w − 8 in the top-left cell, w − 7 in the top-middle cell, w − 6 in the top-right cell and w + 1 in the bottom-right cell. All text 56 px; no cell is empty and nothing else is written in the grid. The calendar is drawn exactly as in the question figure.",
+    "visible_text": [
+     "Mon",
+     "Tue",
+     "Wed",
+     "Thu",
+     "Fri",
+     "Sat",
+     "Sun",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20",
+     "21",
+     "22",
+     "23",
+     "24",
+     "25",
+     "26",
+     "27",
+     "28",
+     "29",
+     "30",
+     "w − 1",
+     "w",
+     "w + 1",
+     "w − 8",
+     "w − 7",
+     "w − 6"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a number put in place of w",
+     "a month or year title above the calendar",
+     "arrows or sentences explaining the 7-day step"
+    ],
+    "accuracy_checks": [
+     "top row = bottom row minus 7: (w − 1) − 7 = w − 8, w − 7, (w + 1) − 7 = w − 6",
+     "bottom row is w − 1, w, w + 1 (left neighbour is 1 less, right neighbour is 1 more)",
+     "with w = 20 the grid reads 12, 13, 14 over 19, 20, 21, the same block as the outlined calendar cells",
+     "given labels w − 1 and w are INK and unmoved; exactly 4 labels are ANSWER green",
+     "calendar identical to the question figure (dates 1 to 30, FOCUS outline on 12, 13, 14, 19, 20, 21)"
+    ],
+    "alt_text": "The same calendar and 2 by 3 grid, now full: w minus 8, w minus 7, w minus 6 on the top row and w minus 1, w, w plus 1 on the bottom row.",
+    "render_note": "Same layout as M1.S8.T8.C35.IMG1; only the four added grid labels are new. Matches the book's printed answer grid (page 28), which shows the grid alone; the calendar is repeated so that the figure keeps the question figure's layout."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C39",
+   "role": "question",
+   "lp_book_number": "Revisiting Arithmetic: values of seven expressions",
+   "ncert_ref": "Section 4.2 - 4.2.arith_a",
+   "question_text": "Evaluate 23 − 10 × 2, then 7 × 4 + 9 × 6, then 20 + 8 × (16 − 6).",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Seven arithmetic expressions written in the text; the book prints no figure with the question itself.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C40",
+   "role": "solution",
+   "lp_book_number": "Revisiting Arithmetic: values of seven expressions",
+   "ncert_ref": "Section 4.2 - 4.2.arith_a",
+   "question_text": "Evaluate 23 − 10 × 2, then 7 × 4 + 9 × 6, then 20 + 8 × (16 − 6).",
+   "decision": "optional",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "OPTIONAL, not added. The book prints two pictures of the worked method: 83 + 28 - 13 + 32 as four boxed terms with two crossing curved arrows pairing 83 with -13 and 28 with 32 (giving 70 + 60 = 130), and 68 - (18 + 13) done in two ways as rows of boxed terms (one with a curved arrow from 68 to -18). The LP steps give the same grouping in LaTeX brackets, (83 - 13) + (28 + 32) and 68 - 31 / 68 - 18 - 13, so such a picture would only make it nicer; and the three expression groups of this card cannot share one honest picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the grouping with LaTeX brackets as in the steps, for example $(83 - 13) + (28 + 32) = 70 + 60 = 130$."
+  }
+ ]
+}

@@ -1,0 +1,582 @@
+{
+  "meta": {
+    "chapter": "Large Numbers Around Us",
+    "class": 7,
+    "textbook": "Ganita Prakash, Grade 7, Chapter 1",
+    "lp_plan_id": "cbse_eng_maths7_ch1_v30",
+    "prompt": "diagram_identification_prompt.md v3",
+    "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+    "counts_by_role_and_decision": {
+      "question": {
+        "required": 0,
+        "optional": 0,
+        "none": 13
+      },
+      "solution": {
+        "required": 0,
+        "optional": 3,
+        "none": 10
+      },
+      "worked_example": {
+        "required": 0,
+        "optional": 0,
+        "none": 5
+      }
+    },
+    "notes": [
+      "Chunk B (topics T16-T21, T23-T26): every item is a text/LaTeX item. The only figures in this part of the book are plain tables, comic strips and equation workings, none of which needs a diagram image.",
+      "Optional (not added): number lines for the solutions of T21 Q2 and of the two estimating questions of T23.",
+      "T25 Q1 and Q2 need the 20-city population table (book p.12-13) but their LP question text does not contain it: needs_lp_text_sync is true and the table should be written as a LaTeX array.",
+      "meta.json says 'solutions_pages: null' but pdf pages 24-38 are a printed-solutions section; its pictures (P29, P30, P31) were checked.",
+      "P07-calculator-1 and P07-table-1 (Systematic Sippy, book p.7) sit on the page of T16 but belong to the units of chunk A (T14, T15); they are not claimed here."
+    ]
+  },
+  "style_tokens": {
+    "BG": "#FFFFFF",
+    "INK": "#2B2B2B",
+    "MARK_FILL": "#CDEBD9",
+    "ANSWER": "#009E73",
+    "FOCUS": "#CC79A7",
+    "WRONG": "#D55E00",
+    "GUIDE": "#6B7280",
+    "SET_A": "#0072B2",
+    "SET_B": "#E69F00",
+    "CELL_FILL": "#F1EEF6"
+  },
+  "figure_inventory": [
+    {
+      "fig_id": "P08-table-1",
+      "source": "chapter p.08",
+      "description": "Plain 4-column table of Indian and American numerals and names (7 rows, 1,000 to 1,00,00,00,000); red outline, peach header, no colour coding of commas. Checked against the page picture: correct.",
+      "mapped_to": "none:LATEX_TABLE"
+    },
+    {
+      "fig_id": "P09-comic_dialogue-1",
+      "source": "chapter p.09",
+      "description": "Three-character comic opening section 1.4 ('1 lakh people visited the book fair' / 'If I had not gone, they would have written 99,999'); the only numbers are in the speech bubbles. Checked: correct. A discussion opener, no item uses it.",
+      "mapped_to": "none:DECORATIVE_ONLY"
+    },
+    {
+      "fig_id": "P10-comic_dialogue-1",
+      "source": "chapter p.10",
+      "description": "Six-panel comic (Toofan Express, emergency numbers 100/112, 101, 102, 108, 112, 139, 'I called the rounded off number'); discussion opener for rounding, no item uses it. Checked: correct.",
+      "mapped_to": "none:DECORATIVE_ONLY"
+    },
+    {
+      "fig_id": "P11-table-1",
+      "source": "chapter p.11",
+      "description": "Plain 2-column table of the five nearest neighbours of 6,72,85,183 (thousand 6,72,85,000; ten thousand 6,72,90,000; lakh 6,73,00,000; ten lakh 6,70,00,000; crore 7,00,00,000), no header row. Checked: correct. A worked model; the number-line concept image C71 shows only its first row.",
+      "mapped_to": "none:LATEX_TABLE"
+    },
+    {
+      "fig_id": "P12-table-1",
+      "source": "chapter p.12-13",
+      "description": "Plain 20-row table Rank | City | Population (2011) | Population (2001), split over pdf pages 12 (ranks 1-14) and 13 (ranks 15-20); used by the worked example of T24 and the two questions of T25. Checked row by row against the page pictures: correct.",
+      "mapped_to": "none:LATEX_TABLE"
+    },
+    {
+      "fig_id": "P13-cancellation_working-1",
+      "source": "chapter p.13",
+      "description": "Roxie's working 116 x 5 = 116 x 10/2 = 58 x 10 = 580 with 116 and 2 struck through and 58 written above. Checked: correct.",
+      "mapped_to": "none:LATEX_ARITHMETIC"
+    },
+    {
+      "fig_id": "P14-cancellation_working-1",
+      "source": "chapter p.14",
+      "description": "Estu's working 824 x 25 = 824 x 100/4 (824 and 4 struck through, 206 written above), then '= 20600.'. Checked: correct.",
+      "mapped_to": "none:LATEX_ARITHMETIC"
+    },
+    {
+      "fig_id": "P29-table-1",
+      "source": "solutions p.29",
+      "description": "Printed answer of Figure it Out 1.3 Q1: black-grid table Sl. No. | Indian System | American System, rows (a) to (d) and the numerals of (e); plain text, no colour. Checked: correct.",
+      "mapped_to": "none:LATEX_TABLE"
+    },
+    {
+      "fig_id": "P30-table-1",
+      "source": "solutions p.30",
+      "description": "Continuation of the printed answer table of Figure it Out 1.3 Q1: the names of row (e) and the whole of row (f); plain text, no colour. Checked: correct.",
+      "mapped_to": "none:LATEX_TABLE"
+    },
+    {
+      "fig_id": "P31-table-1",
+      "source": "solutions p.31",
+      "description": "Printed answer table for the nearest neighbours of 3,87,69,957: 5 rows, 3,87,70,000 / 3,87,70,000 / 3,88,00,000 / 3,90,00,000 / 4,00,00,000. Checked: correct.",
+      "mapped_to": "none:LATEX_TABLE"
+    },
+    {
+      "fig_id": "P31-table-2",
+      "source": "solutions p.31",
+      "description": "Printed answer table for the nearest neighbours of 29,05,32,481: 5 rows, 29,05,32,000 / 29,05,30,000 / 29,05,00,000 / 29,10,00,000 / 29,00,00,000. Checked: correct.",
+      "mapped_to": "none:LATEX_TABLE"
+    }
+  ],
+  "coverage_report": {
+    "inventory_figures": 11,
+    "mapped_to_items": 0,
+    "mapped_to_concept_images": 0,
+    "mapped_none": 11,
+    "unmapped": 0,
+    "new_media_ids_created": [],
+    "lp_ids_dropped": []
+  },
+  "items": [
+    {
+      "lp_concept_id": "M2.S16.T16.C52",
+      "role": "question",
+      "lp_book_number": "Figure it Out 1.2, Q1",
+      "ncert_ref": "1.2.FiO_sippy1",
+      "question_text": "For the numbers in the previous exercise, find out how to get each number by making the smallest number of button clicks and write the expression. The numbers are $(a)$: $8300$; $(b)$: $40629$; $(c)$: $56354$; $(d)$: $66666$; $(e)$: $367813$.",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The question gives the five numbers (8300, 40629, 56354, 66666, 367813) in words; the book gives no figure for this question. The Sippy calculator drawing on book p.7 is a mascot whose only content is the six button labels, which are text.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "State the six Sippy buttons in the text: +1, +10, +100, +1,000, +10,000, +1,00,000 (the question never lists them)."
+    },
+    {
+      "lp_concept_id": "M2.S16.T16.C53",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 1.2, Q1",
+      "ncert_ref": "1.2.FiO_sippy1",
+      "question_text": "For the numbers in the previous exercise, find out how to get each number by making the smallest number of button clicks and write the expression. The numbers are $(a)$: $8300$; $(b)$: $40629$; $(c)$: $56354$; $(d)$: $66666$; $(e)$: $367813$.",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "The answer is five place-value expressions with click counts (8+3=11, 4+6+2+9=21, 5+6+3+5+4=23, 6+6+6+6+6=30, 3+6+7+8+1+3=28); the book prints them as text lines (p.28), no picture.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "Write the five expressions as LaTeX lines exactly as in steps_tex."
+    },
+    {
+      "lp_concept_id": "M2.S16.T16.C54",
+      "role": "question",
+      "lp_book_number": "Figure it Out 1.2, Q2",
+      "ncert_ref": "1.2.FiO_sippy2",
+      "question_text": "Do you see any connection between each number and the corresponding smallest number of button clicks?",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Open question about the five numbers and their click counts; no figure is given.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S16.T16.C55",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 1.2, Q2",
+      "ncert_ref": "1.2.FiO_sippy2",
+      "question_text": "Do you see any connection between each number and the corresponding smallest number of button clicks?",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The answer (clicks = sum of the digits) is a sentence plus digit sums; the book answer on p.29 is one text sentence.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S16.T16.C56",
+      "role": "question",
+      "lp_book_number": "Figure it Out 1.2, Q3",
+      "ncert_ref": "1.2.FiO_sippy3",
+      "question_text": "If you notice, the expressions for the least button clicks also give the Indian place value notation of the numbers. Think about why this is so.",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "A why-question in words (Math Talk); the book gives no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S16.T16.C57",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 1.2, Q3",
+      "ncert_ref": "1.2.FiO_sippy3",
+      "question_text": "If you notice, the expressions for the least button clicks also give the Indian place value notation of the numbers. Think about why this is so.",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Reasoning in words with the single example 5072 (5 thousands, 0 hundreds, 7 tens, 2 ones); a button table would only repeat it.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S17.T17.C58",
+      "role": "worked_example",
+      "lp_book_number": "Worked example: Two comma patterns",
+      "ncert_ref": "1.3.commas, 1.3.table",
+      "question_text": "Place commas in 12345678 in the Indian and the American system and read it in both.",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "LATEX_TABLE"
+      ],
+      "reason": "The example is two comma-grouped numbers written in text (1,23,45,678 and 12,345,678). The book's Indian/American numeral table on p.8 (P08-table-1) is a plain table with no colour coding of commas, so it is LaTeX, not a diagram. A strip showing the 3-2-2-2 against 3-3-3 digit groups would be nice but the steps already name every group.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null,
+      "text_alternative": "If the LP shows the numeral table, write it as a LaTeX array (Indian numeral | Indian name | American numeral | American name, 7 rows as on book p.8).",
+      "block_index": 0
+    },
+    {
+      "lp_concept_id": "M3.S17.T17.C60",
+      "role": "worked_example",
+      "lp_book_number": "Worked example: Reading a ten-digit number in both systems",
+      "ncert_ref": "1.3.read_big",
+      "question_text": "Read 9876501234 in the Indian system and in the American system.",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Reading 9876501234 in two systems: the answer is two comma-grouped number names in text.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null,
+      "block_index": 0
+    },
+    {
+      "lp_concept_id": "M3.S18.T18.C62",
+      "role": "question",
+      "lp_book_number": "Zeros: a thousand lakh and a hundred thousand",
+      "ncert_ref": "1.3.zeros_thousand_lakh",
+      "question_text": "Show that a lakh is a hundred thousands, a crore a hundred lakhs and an arab a hundred crores. Then find the zeros in a thousand lakh and in a hundred thousand.",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "A word question; no figure is given in the book (p.8-9).",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S18.T18.C63",
+      "role": "solution",
+      "lp_book_number": "Zeros: a thousand lakh and a hundred thousand",
+      "ncert_ref": "1.3.zeros_thousand_lakh",
+      "question_text": "Show that a lakh is a hundred thousands, a crore a hundred lakhs and an arab a hundred crores. Then find the zeros in a thousand lakh and in a hundred thousand.",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "The answer is multiplication lines (100 x 1000 = 1,00,000, ...) with zero counts 5, 7, 9, 8, 5; the book answer is text ('8 zeros', '5 zeros').",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "LaTeX lines as in steps_tex."
+    },
+    {
+      "lp_concept_id": "M3.S19.T19.C64",
+      "role": "question",
+      "lp_book_number": "Figure it Out 1.3, Q1",
+      "ncert_ref": "1.3.FiO_1",
+      "question_text": "Read the following numbers in Indian place value notation and write their number names in both the Indian and American systems: $(a)$: $4050678$; $(b)$: $48121620$; $(c)$: $20022002$; $(d)$: $246813579$; $(e)$: $345000543$; $(f)$: $1020304050$",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Six numbers are given in the text; no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S19.T19.C65",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 1.3, Q1",
+      "ncert_ref": "1.3.FiO_1",
+      "question_text": "Read the following numbers in Indian place value notation and write their number names in both the Indian and American systems: $(a)$: $4050678$; $(b)$: $48121620$; $(c)$: $20022002$; $(d)$: $246813579$; $(e)$: $345000543$; $(f)$: $1020304050$",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_TABLE"
+      ],
+      "reason": "The book's printed answer (p.29-30, P29-table-1 and P30-table-1) is a plain black-grid table of numerals and number names with no colour meaning, so it is a LaTeX table; the LP steps_tex already carries every cell.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "Write the answer as a LaTeX array: rows (a) to (f), columns Indian numeral and name, American numeral and name (same words as steps_tex)."
+    },
+    {
+      "lp_concept_id": "M3.S19.T19.C66",
+      "role": "question",
+      "lp_book_number": "Figure it Out 1.3, Q2",
+      "ncert_ref": "1.3.FiO_2",
+      "question_text": "Write the following numbers in Indian place value notation: $(a)$: One crore one lakh one thousand ten $(b)$: One billion one million one thousand one $(c)$: Ten crore twenty lakh thirty thousand forty $(d)$: Nine billion eighty million seven hundred thousand six hundred",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Four number names are given in words; no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S19.T19.C67",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 1.3, Q2",
+      "ncert_ref": "1.3.FiO_2",
+      "question_text": "Write the following numbers in Indian place value notation: $(a)$: One crore one lakh one thousand ten $(b)$: One billion one million one thousand one $(c)$: Ten crore twenty lakh thirty thousand forty $(d)$: Nine billion eighty million seven hundred thousand six hundred",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "The answer is four numerals written with commas; the book answer (p.30) is four text lines.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "LaTeX lines as in steps_tex."
+    },
+    {
+      "lp_concept_id": "M3.S19.T19.C68",
+      "role": "question",
+      "lp_book_number": "Figure it Out 1.3, Q3",
+      "ncert_ref": "1.3.FiO_3",
+      "question_text": "Compare and write $<$, $>$ or $=$: $(a)$: $30$ thousand $\\underline{\\hspace{1.2em}} 3$ lakhs $(b)$: $500$ lakhs $\\underline{\\hspace{1.2em}} 5$ million $(c)$: $800$ thousand $\\underline{\\hspace{1.2em}} 8$ million $(d)$: $640$ crore $\\underline{\\hspace{1.2em}} 60$ billion",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Four comparisons of quantities written in words; no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S19.T19.C69",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 1.3, Q3",
+      "ncert_ref": "1.3.FiO_3",
+      "question_text": "Compare and write $<$, $>$ or $=$: $(a)$: $30$ thousand $\\underline{\\hspace{1.2em}} 3$ lakhs $(b)$: $500$ lakhs $\\underline{\\hspace{1.2em}} 5$ million $(c)$: $800$ thousand $\\underline{\\hspace{1.2em}} 8$ million $(d)$: $640$ crore $\\underline{\\hspace{1.2em}} 60$ billion",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "The answer is four comparisons with products (30 x 1000 against 3 x 1,00,000, ...) ending in <, >, <, <; the book answer (p.30) is four symbols in text.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "LaTeX lines as in steps_tex."
+    },
+    {
+      "lp_concept_id": "M4.S20.T20.C70",
+      "role": "worked_example",
+      "lp_book_number": "Worked example: Rounding up and rounding down",
+      "ncert_ref": "1.4.round_updown, 1.4.think_share",
+      "question_text": "A school has 732 people and the principal orders sweets. An item costs 470 rupees and the shopkeeper says around 450 rupees. Which one rounds up and which rounds down? Give one situation for each of: round up, round down, either, exact.",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "OPEN_ENDED"
+      ],
+      "reason": "The example is a rounding-up and a rounding-down sum (732 - 700 = 32, 470 - 450 = 20) plus four open 'give a situation' answers, all text. The two comic strips of section 1.4 (P09, P10) are discussion openers; no step uses them. The number line 'Which thousand is nearer' stays as the concept image of C71 and is not touched.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null,
+      "block_index": 0
+    },
+    {
+      "lp_concept_id": "M4.S21.T21.C74",
+      "role": "question",
+      "lp_book_number": "Nearest Neighbours: 3,87,69,957 and 29,05,32,481",
+      "ncert_ref": "1.4.nn_a",
+      "question_text": "Write the five nearest neighbours of $(a)$: $3,87,69,957$ and $(b)$: $29,05,32,481$.",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The two numbers (3,87,69,957 and 29,05,32,481) are in the text. The book's table for 6,72,85,183 (P11-table-1) is only a worked model, not data for this question.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S21.T21.C75",
+      "role": "solution",
+      "lp_book_number": "Nearest Neighbours: 3,87,69,957 and 29,05,32,481",
+      "ncert_ref": "1.4.nn_a",
+      "question_text": "Write the five nearest neighbours of $(a)$: $3,87,69,957$ and $(b)$: $29,05,32,481$.",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_TABLE"
+      ],
+      "reason": "The book's printed answer (P31-table-1 and P31-table-2) is two plain black-grid tables, each 5 rows of 'Nearest ... | value', no colour meaning, so LaTeX; the LP steps_tex already lists every value.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "Write two LaTeX arrays, (a) and (b), rows Nearest thousand, ten thousand, lakh, ten lakh, crore with the values in steps_tex."
+    },
+    {
+      "lp_concept_id": "M4.S21.T21.C76",
+      "role": "question",
+      "lp_book_number": "Nearest Neighbours: five equal neighbours",
+      "ncert_ref": "1.4.five_equal",
+      "question_text": "Find all numbers whose five nearest neighbours are all $5,00,00,000$, and say how many there are.",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "A word question about a number whose five neighbours are all 5,00,00,000; no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S21.T21.C77",
+      "role": "solution",
+      "lp_book_number": "Nearest Neighbours: five equal neighbours",
+      "ncert_ref": "1.4.five_equal",
+      "question_text": "Find all numbers whose five nearest neighbours are all $5,00,00,000$, and say how many there are.",
+      "decision": "optional",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Optional figure that would help: a number line around 5,00,00,000 with the stretch from 4,99,99,500 to 5,00,00,499 shaded (1000 numbers, half a thousand each side). Not needed: the steps and the answer give the two end numbers and the count in text.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S23.T23.C81",
+      "role": "question",
+      "lp_book_number": "Estimating: the sum 4,63,128 + 4,19,682",
+      "ncert_ref": "1.4.sum_a",
+      "question_text": "Check the estimates of $4,63,128 + 4,19,682$ by Roxie (near $8,00,000$, more) and Estu (near $9,00,000$, less). Say whose is closer, whether the sum is above or below $8,50,000$ and $8,83,128$, and find the exact sum.",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The sum, both estimates and both checkpoints are in the text; the book gives no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S23.T23.C82",
+      "role": "solution",
+      "lp_book_number": "Estimating: the sum 4,63,128 + 4,19,682",
+      "ncert_ref": "1.4.sum_a",
+      "question_text": "Check the estimates of $4,63,128 + 4,19,682$ by Roxie (near $8,00,000$, more) and Estu (near $9,00,000$, less). Say whose is closer, whether the sum is above or below $8,50,000$ and $8,83,128$, and find the exact sum.",
+      "decision": "optional",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Optional figure that would help: a number line from 8,00,000 to 9,00,000 marking Roxie's 8,00,000, the checkpoint 8,50,000, the exact sum 8,82,810, the checkpoint 8,83,128 and Estu's 9,00,000, to show that the sum is above 8,50,000, below 8,83,128 and closer to Estu's estimate. Not needed: the LP steps give every distance (17,190 and 82,810) in LaTeX.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S23.T23.C83",
+      "role": "question",
+      "lp_book_number": "Estimating: the difference 14,63,128 − 4,90,020",
+      "ncert_ref": "1.4.diff_a",
+      "question_text": "Check the estimates of $14,63,128 - 4,90,020$ by Roxie (near $10,00,000$, less) and Estu (near $9,00,000$, more). Say whose is closer, whether the difference is above or below $9,50,000$ and $9,63,128$, and find the exact difference.",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The difference, both estimates and both checkpoints are in the text; the book gives no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S23.T23.C84",
+      "role": "solution",
+      "lp_book_number": "Estimating: the difference 14,63,128 − 4,90,020",
+      "ncert_ref": "1.4.diff_a",
+      "question_text": "Check the estimates of $14,63,128 - 4,90,020$ by Roxie (near $10,00,000$, less) and Estu (near $9,00,000$, more). Say whose is closer, whether the difference is above or below $9,50,000$ and $9,63,128$, and find the exact difference.",
+      "decision": "optional",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Optional figure that would help: a number line from 9,00,000 to 10,00,000 marking Estu's 9,00,000, the checkpoint 9,50,000, the checkpoint 9,63,128, the exact difference 9,73,108 and Roxie's 10,00,000, to show which estimate is closer. Not needed: the LP steps give the distances (26,892 and 73,108) in LaTeX.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S24.T24.C85",
+      "role": "worked_example",
+      "lp_book_number": "Worked example: What the table shows",
+      "ncert_ref": "1.4.table_obs, 1.4.table_title",
+      "question_text": "Write a general observation about the table and an appropriate title.",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_TABLE"
+      ],
+      "reason": "The example talks about 'the table' of city populations. It is a plain table of numbers, so LaTeX, not a diagram; and this concept already keeps its own teaching image (C85.IMG1, four cities with Kolkata outlined), which shows every city the steps mention (Mumbai, New Delhi, Chennai, Kolkata). No second picture is needed here. The full 20-city table (P12-table-1) is handled in the two questions of T25.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null,
+      "needs_lp_text_sync": false,
+      "block_index": 0
+    },
+    {
+      "lp_concept_id": "M4.S25.T25.C89",
+      "role": "question",
+      "lp_book_number": "Populations of Cities: Pune and the biggest increase",
+      "ncert_ref": "1.4.pune",
+      "question_text": "Find the population of Pune in $2011$ and approximately how much it grew from $2001$. Then find the city whose population grew the most.",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_TABLE"
+      ],
+      "reason": "The question needs the 20-city population table of book p.12-13, but it is a plain table of numbers (no colour meaning), so it is a LaTeX array, not a diagram (rule LATEX_TABLE). The LP question text currently does NOT contain the table, so the text must be synced.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "Put the 20-city table into the question text as a LaTeX array (columns Rank | City | Population (2011) | Population (2001), 20 rows exactly as printed in the book, rows listed in figure P12-table-1 of the base inventory): the question text itself carries no data.",
+      "needs_lp_text_sync": true
+    },
+    {
+      "lp_concept_id": "M4.S25.T25.C90",
+      "role": "solution",
+      "lp_book_number": "Populations of Cities: Pune and the biggest increase",
+      "ncert_ref": "1.4.pune",
+      "question_text": "Find the population of Pune in $2011$ and approximately how much it grew from $2001$. Then find the city whose population grew the most.",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "The answer is subtractions of populations (31,15,431 - 25,38,473 = 5,76,958; 84,25,970 - 43,01,326 = 41,24,644; ...) in lakh and exact numbers, all in steps_tex; the book answer (p.31) is two text lines.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "LaTeX lines as in steps_tex."
+    },
+    {
+      "lp_concept_id": "M4.S25.T25.C91",
+      "role": "question",
+      "lp_book_number": "Populations of Cities: nearly doubled and Patna to Mumbai",
+      "ncert_ref": "1.4.doubled",
+      "question_text": "Find the cities whose population nearly doubled, and the number by which Patna's population is multiplied to come close to Mumbai's.",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_TABLE"
+      ],
+      "reason": "Same table as the previous question (book p.12-13): a plain table of numbers, so a LaTeX array, not a diagram. The LP question text does NOT contain the table, so the text must be synced (the same table, once per question card).",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "Put the 20-city table into the question text as a LaTeX array (columns Rank | City | Population (2011) | Population (2001), 20 rows exactly as printed in the book, rows listed in figure P12-table-1 of the base inventory): the question text itself carries no data.",
+      "needs_lp_text_sync": true
+    },
+    {
+      "lp_concept_id": "M4.S25.T25.C92",
+      "role": "solution",
+      "lp_book_number": "Populations of Cities: nearly doubled and Patna to Mumbai",
+      "ncert_ref": "1.4.doubled",
+      "question_text": "Find the cities whose population nearly doubled, and the number by which Patna's population is multiplied to come close to Mumbai's.",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "The answer compares each city's 2001 population doubled with its 2011 population (Bengaluru 43 -> 86 against 84 lakh, ...) and divides Mumbai by Patna (about 7.39); all arithmetic in steps_tex, and the book answer (p.32) is two text lines. A bar graph of 2001 against 2011 would be nicer, but the comparison is complete in LaTeX; the book draws none.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "LaTeX lines as in steps_tex."
+    },
+    {
+      "lp_concept_id": "M5.S26.T26.C93",
+      "role": "worked_example",
+      "lp_book_number": "Worked example: Two quick ways to multiply",
+      "ncert_ref": "1.5.shortcut_roxie, 1.5.shortcut_estu",
+      "question_text": "Roxie finds 116 × 5 by multiplying by 10 and halving. Estu finds 824 × 25 by multiplying by 100 and dividing by 4. Do both.",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "The two workings (116 x 5 = 116 x 10/2 = 58 x 10 = 580 and 824 x 25 = 824 x 100/4 = 206 x 100 = 20600, book p.13-14, P13- and P14-cancellation_working-1) are equation chains with fractions: LaTeX. The LP steps do the same sums in another order (multiply by 10 or 100 first, then halve or divide by 4), also LaTeX.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null,
+      "text_alternative": "LaTeX equation chains; the book's struck-through 116 and 2 (824 and 4) can be written with \\cancel{} if wanted.",
+      "block_index": 0
+    }
+  ]
+}

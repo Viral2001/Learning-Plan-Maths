@@ -1,0 +1,1888 @@
+{
+ "meta": {
+  "chapter": "Number Play",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 6",
+  "lp_plan_id": "cbse_eng_maths7_ch6_v62",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 3,
+    "optional": 1,
+    "none": 10
+   },
+   "solution": {
+    "required": 3,
+    "optional": 0,
+    "none": 11
+   },
+   "worked_example": {
+    "required": 1,
+    "optional": 0,
+    "none": 0
+   }
+  },
+  "notes": [
+   "Chunk B: topics M2.S6.T6, M2.S7.T7, M2.S9.T9, M3.S10.T10, M3.S11.T11, M3.S13.T13 (29 items: 14 question, 14 solution, 1 worked example).",
+   "Diagrams are needed only for the grid-filling items (worked example T10.C62, T11.C65/C66, T11.C67/C68, T13.C73/C74); every other item is text/LaTeX.",
+   "Figures claimed: every base figure of book section 6.2 (pages 3-6, 23) and of section 6.3 pages 7-10, plus the printed-answer pictures of pages 24 and 30 that answer chunk B questions; pages 11-13 and 25-28 of section 6.3 are left to the chunk that owns Generalising/Figure it Out.",
+   "NEW-P25-magic_square-1-t13sol is the second use of the book's p.25 magic square (the T13.C74 solution draws it); the base id P25-magic_square-1 is left to the chunk that owns Figure it Out Q1.",
+   "See notes_B.md for LP defects (C39/C40 contradicts the book's printed answer, C67 question_tex markup, C73 text omits the centre 5)."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P03-blank_boxes-1",
+   "source": "chapter p.03",
+   "description": "A single row of five EMPTY white rectangular boxes (black outline, landscape rectangles, equal size) joined by four plus signs: [ ] + [ ] + [ ] + [ ] + [ ] = 30. The text '= 30' follows the fifth box. No numbers inside any box.",
+   "mapped_to": "concept_image:M2.S5.T5.C32.IMG2"
+  },
+  {
+   "fig_id": "P03-cards-1",
+   "source": "chapter p.03",
+   "description": "Seven small piles of square number cards in a row under the five boxes, each pile one colour and one number, cards slightly rotated and overlapping, each card with a thin black outline and its number printed in dark ink. Left to right (counted): purple cards '13' x 3 cards; pink/salmon cards '9' x 4 cards; dark-green cards '1' x 3 cards (top one partly covered); yellow cards '7' x 4 cards; light-green cards '11' x 3 cards; orange/peach cards '5' x 4 cards; light-blue cards '3' x 4 cards. Total 25 cards; all numbers are odd (1, 3, 5, 7, 9, 11, 13). || chunk B note: Seven heaps of odd cards, counted from the page picture: 13 x3, 9 x4, 1 x3, 7 x4, 11 x3, 5 x4, 3 x4 (the teaching image shows 1, 3, 5, 7, 9, 11, 13 with 3 cards each). The Kishor question (T6.C35) is judged none/optional, so no item uses it.",
+   "mapped_to": "concept_image:M2.S5.T5.C32.IMG2"
+  },
+  {
+   "fig_id": "P03-dot_pattern-1",
+   "source": "chapter p.03",
+   "description": "Three groups of identical pink (magenta) round dots side by side, each dot set in pairs: (1) a vertical block of 3 rows x 2 columns = 6 dots; (2) a tilted strip of 5 pairs (each pair a short row of 2 dots, rows stepping down to the left from top right to bottom left) = 10 dots; (3) a horizontal block of 2 rows x 9 columns = 18 dots. No leftover single dot in any group (6, 10 and 18 are even). || chunk B note: Teaching picture of even numbers (6, 10, 18) as pairs; no question, solution or worked example of this chunk needs it and no concept image redraws it; the idea is in the topic text.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P03-dot_pattern-2",
+   "source": "chapter p.03",
+   "description": "A single block of round dots, 2 columns x 5 rows = 10 dots, printed to the right of the paragraph. Top 3 rows (6 dots) are green, bottom 2 rows (4 dots) are purple. It shows two even numbers (6 green + 4 purple) joined, still all in pairs. || chunk B note: Teaching picture of a sum of two even numbers (6 + 4) still in pairs; no item needs it and no concept image redraws it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P03-dot_pattern-3",
+   "source": "chapter p.03",
+   "description": "Three groups of dots side by side, each made of pink pairs plus ONE extra dark navy-blue dot: (1) a vertical block of 3 rows x 2 columns of pink dots (6) with one navy dot below the left column = 7 dots; (2) a tilted strip of 10 pink dots in pairs (5 pairs, stepping down to the right from top left to bottom right) with one navy dot at the bottom end = 11 dots; (3) a horizontal block of 2 rows x 9 pink dots (18) with one navy dot at the right end of the bottom row = 19 dots. The navy dot is the unpaired leftover in each. || chunk B note: Teaching picture of odd numbers (7, 11, 19) as pairs plus one extra dot; closest concept image is the 'extra dot' picture C32.IMG1 (accounting only).",
+   "mapped_to": "concept_image:M2.S5.T5.C32.IMG1"
+  },
+  {
+   "fig_id": "P04-dot_pattern-1",
+   "source": "chapter p.04",
+   "description": "One block of round dots, 2 columns x 6 rows = 12 dots, printed to the right of the paragraph. Green dots: the first 3 rows (6 dots) plus the left dot of row 4 = 7 green. Purple dots: the right dot of row 4 plus rows 5 and 6 (4 dots) = 5 purple. So 7 + 5 = 12: the two leftover single dots (one green, one purple) sit together in row 4 and form a pair. || chunk B note: Teaching proof picture that two odd numbers (7 + 5) make pairs; same idea as the concept image 'Two Odd Numbers Make Pairs'.",
+   "mapped_to": "concept_image:M2.S5.T5.C32.IMG1"
+  },
+  {
+   "fig_id": "P04-dot_pattern-2",
+   "source": "chapter p.04",
+   "description": "Three blocks of 2-column dot arrays of increasing height, bottoms aligned, left to right (green + purple dots, rows of 2): (1) 3 rows = 6 dots: 3 green (row 1 both, row 2 left) + 3 purple (row 2 right, row 3 both); (2) 4 rows = 8 dots: 5 green (rows 1 and 2 both, row 3 left) + 3 purple (row 3 right, row 4 both); (3) 6 rows = 12 dots: 3 green (row 1 both, row 2 left) + 9 purple (row 2 right, rows 3 to 6 both). In each array the two odd numbers (green and purple) are joined and every dot has a partner. The boy cartoon and speech bubble beside it are decoration; the bubble text is the sentence quoted above. || chunk B note: Three dot blocks beside the boy: two odd numbers joined into pairs; same idea as C32.IMG1.",
+   "mapped_to": "concept_image:M2.S5.T5.C32.IMG1"
+  },
+  {
+   "fig_id": "P05-grid-1",
+   "source": "chapter p.05",
+   "description": "An empty rectangular grid with thick black outline and thin black inner lines, white cells, no numbers: 3 rows x 4 columns = 12 small squares (counted: 4 columns, 3 rows). Printed to the right of the 'Small Squares in Grids' paragraph. || chunk B note: The 3 x 4 grid of Small Squares in Grids; the concept image redraws it with the 3 x 3 grid.",
+   "mapped_to": "concept_image:M2.S8.T8.C51.IMG1"
+  },
+  {
+   "fig_id": "P06-table-1",
+   "source": "chapter p.06",
+   "description": "A table with a red outline and red lines, 3 columns, header row plus 3 data rows. Header row (bold, light peach fill): 'n' (italic) | 'Value of 3n + 4' | 'Parity of the Value'. Data rows (white): 3 | 13 | odd ; 8 | 28 | even ; 10 | 34 | even. || chunk B note: Plain table n / 3n + 4 / parity (3, 13, odd; 8, 28, even; 10, 34, even); the red outline is decoration; no item uses it.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P23-grid-1",
+   "source": "chapter p.23",
+   "description": "A plain rectangular grid of 3 rows x 4 columns = 12 equal empty squares, white fill, thin dark grey outline (about 2 px) on the outside and between all cells, no numbers, no letters, no colour, no labels. The cells are slightly taller than wide (about 80 x 87 px in the page picture), so the whole grid is wider than tall (about 320 x 262 px). Centred on the page. It is the 3 x 4 grid the text speaks of (12 small squares). || chunk B note: Answer-key repeat of the 3 x 4 grid of Small Squares in Grids; no question of this chunk draws a grid (27 x 13 etc. are not pictured).",
+   "mapped_to": "concept_image:M2.S8.T8.C51.IMG1"
+  },
+  {
+   "fig_id": "P07-number_grid-1",
+   "source": "chapter p.07",
+   "description": "A 3 x 3 grid with pale mint-green cells and dark outlines, filled with the digits 1 to 9 once each: row 1: 4, 7, 5; row 2: 6, 1, 2; row 3: 3, 9, 8. Outside the grid are yellow filled circles holding numbers: to the right of the rows, top to bottom: 16, 9, 20; below the columns, left to right: 13, 17, 15. (Circles are the row and column sums: 4+7+5, 6+1+2, 3+9+8; 4+6+3, 7+1+9, 5+2+8.)",
+   "mapped_to": "concept_image:M3.S10.T10.C61.IMG1"
+  },
+  {
+   "fig_id": "P07-number_grid-2",
+   "source": "chapter p.07",
+   "description": "A 3 x 3 mint-green grid, almost empty. Given digits: '9' in the top-left cell and '5' in the bottom-right cell (small numbers printed in the cell; all other cells blank). Yellow circles to the right of the rows, top to bottom: 13, 14, 18. Yellow circles below the columns, left to right: 24, 9, 12. || chunk B note: Verified on the page picture: 9 top-left, 5 bottom-right, row circles 13, 14, 18, column circles 24, 9, 12.",
+   "mapped_to": "item:M3.S11.T11.C65 (question)"
+  },
+  {
+   "fig_id": "P07-number_grid-3",
+   "source": "chapter p.07",
+   "description": "A 3 x 3 mint-green grid, almost empty. Given digits: '4' in the middle-left cell (row 2, column 1) and '3' in the bottom-right cell (row 3, column 3); all other cells blank. Yellow circles to the right of the rows, top to bottom: 24, 15, 6. Yellow circles below the columns, left to right: 12, 16, 17. || chunk B note: Verified on the page picture: 4 middle-left, 3 bottom-right, row circles 24, 15, 6, column circles 12, 16, 17. Becomes the figure of the worked example (the learner's puzzle).",
+   "mapped_to": "item:M3.S10.T10.C62 (question)"
+  },
+  {
+   "fig_id": "P08-number_grid-1",
+   "source": "chapter p.08",
+   "description": "A 3 x 3 mint-green grid with one given digit: '6' in the middle-right cell (row 2, column 3); all other cells blank. Yellow circles to the right of the rows, top to bottom: 5, 21, 19. Yellow circles below the columns, left to right: 9, 11, 26.",
+   "mapped_to": "concept_image:M3.S10.T10.C63.IMG1"
+  },
+  {
+   "fig_id": "P08-number_grid-2",
+   "source": "chapter p.08",
+   "description": "The same filled 3 x 3 mint grid as on page 7: row 1: 4, 7, 5; row 2: 6, 1, 2; row 3: 3, 9, 8. Yellow oval labels hold the sums written as additions: to the right of the rows, top to bottom: '4+7+5', '6+1+2', '3+9+8'; below the columns, left to right (the three ovals touch/overlap slightly): '4+6+3', '7+1+9', '5+2+8'.",
+   "mapped_to": "concept_image:M3.S10.T10.C63.IMG2"
+  },
+  {
+   "fig_id": "P08-grid-3",
+   "source": "chapter p.08",
+   "description": "An empty 3 x 3 grid (white cells, black lines, no numbers) with two wide semi-transparent blue bands laid along the two diagonals, crossing in an X: one from top-left to bottom-right, one from top-right to bottom-left. The bands overlap in the centre cell and the overlap is a darker blue; the band ends stick out slightly beyond the four corners of the grid, cut square across (diamond-ended). || chunk B note: Empty 3 x 3 grid with the two diagonals shown; the concept image 'The Eight Lines of a Magic Square' shows the same grid with all eight lines.",
+   "mapped_to": "concept_image:M3.S12.T12.C69.IMG1"
+  },
+  {
+   "fig_id": "P09-grid-1",
+   "source": "chapter p.09",
+   "description": "A 3 x 3 mint-green grid with 8 in the top-left cell and 9 in the centre cell; all other cells blank. A black dashed rectangle, rotated 45 degrees, runs along the main diagonal from the top-left corner to beyond the bottom-right corner, enclosing 8, 9 and the empty bottom-right cell (the third cell of that line).",
+   "mapped_to": "concept_image:M3.S12.T12.C70.IMG1"
+  },
+  {
+   "fig_id": "P09-grid-2",
+   "source": "chapter p.09",
+   "description": "A 3 x 3 mint-green grid with 1 in the centre cell (row 2, column 2) and 2 directly below it in the bottom-middle cell (row 3, column 2); all other cells blank. A black dashed upright rectangle surrounds the whole middle column (all three cells, extending a little above and below the grid). || chunk B note: Verified on the page picture: 1 in the centre cell, 2 below it, dashed rectangle around the middle column. Teaching picture of why 1 cannot be the centre; the argument is in the text and no concept image draws it; no item needs it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P09-grid-3",
+   "source": "chapter p.09",
+   "description": "A 3 x 3 mint-green grid with '5' in the centre cell only; all eight other cells blank. || chunk B note: Teaching picture: only 5 in the centre cell (Observation 2); no item needs it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P09-grid-4",
+   "source": "chapter p.09",
+   "description": "A 3 x 3 mint-green grid, no numbers, with a solid black dot in each of the 4 corner cells (top-left, top-right, bottom-left, bottom-right); the other 5 cells are plain. Printed side by side with the edge-middle grid P09-grid-5. || chunk B note: Teaching picture: dots on the four corner cells (category 1 of boundary positions); no item needs it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P09-grid-5",
+   "source": "chapter p.09",
+   "description": "A 3 x 3 mint-green grid, no numbers, with a solid black dot in each of the 4 edge-middle cells (top-middle, middle-left, middle-right, bottom-middle); corner cells and centre cell are plain. Printed side by side with the corner grid P09-grid-4. || chunk B note: Teaching picture: dots on the four edge-middle cells (category 2 of boundary positions); no item needs it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P10-grid-1",
+   "source": "chapter p.10",
+   "description": "A 3 x 3 mint-green grid with 1 in the top-left corner cell and 5 in the centre cell; other cells blank. Three black dashed outlines pass through the corner 1: a horizontal dashed rectangle around the whole top row, a vertical dashed rectangle around the whole left column, and a 45-degree rotated dashed rectangle along the main diagonal from the top-left corner to beyond the bottom-right corner (passing through 5). Three plain '15' labels (no circle): one to the right of the top row, one below the left column, one at the bottom-right just beyond the end of the diagonal.",
+   "mapped_to": "concept_image:M3.S12.T12.C70.IMG2"
+  },
+  {
+   "fig_id": "P10-grid-2",
+   "source": "chapter p.10",
+   "description": "A 3 x 3 mint-green grid with the middle ROW filled: row 2 reads 1, 5, 9 (left to right); all other cells blank. Printed side by side with P10-grid-3. || chunk B note: Verified on the page picture: middle ROW reads 1, 5, 9. This is the twin of the question figure rotated; the LP question fixes 1 at the top middle and 9 at the bottom middle, so only the middle-column twin (P10-grid-3) is drawn.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P10-grid-3",
+   "source": "chapter p.10",
+   "description": "A 3 x 3 mint-green grid with the middle COLUMN filled: column 2 reads 1 (top), 5 (centre), 9 (bottom); all other cells blank. Printed side by side with P10-grid-2. || chunk B note: Verified on the page picture: middle COLUMN reads 1 (top), 5 (centre), 9 (bottom); other six cells empty.",
+   "mapped_to": "item:M3.S13.T13.C73 (question)"
+  },
+  {
+   "fig_id": "P24-sum_grid-1",
+   "source": "chapter p.24",
+   "description": "3 x 3 grid of 9 equal square cells, pale green fill (about #CDEBD9), dark outline of about 2 px on the outside and between cells. Yellow solid circles (about #EDD91E) with dark serif numbers: three at the right end of the rows (row sums) and three under the columns (column sums). Given numbers: row 1 column 1 = 9 and row 3 column 3 = 5; all other 7 cells empty. Row-sum circles, top to bottom: 13, 14, 18. Column-sum circles, left to right: 24, 9, 12. || chunk B note: Answer-key repeat of the left question grid (same as P07-number_grid-2); the question diagram of T11.C65 covers it.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P24-sum_grid-2",
+   "source": "chapter p.24",
+   "description": "3 x 3 grid of 9 equal square cells, pale green fill (about #CDEBD9), dark outline of about 2 px on the outside and between cells. Yellow solid circles (about #EDD91E) with dark serif numbers: three at the right end of the rows (row sums) and three under the columns (column sums). Given numbers: row 2 column 1 = 4 and row 3 column 3 = 3; all other 7 cells empty. Row-sum circles, top to bottom: 24, 15, 6. Column-sum circles, left to right: 12, 16, 17. || chunk B note: Answer-key repeat of the right question grid (same as P07-number_grid-3); the worked example's diagram covers it.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P24-sum_grid-3",
+   "source": "chapter p.24",
+   "description": "3 x 3 grid of 9 equal square cells, pale green fill (about #CDEBD9), dark outline of about 2 px on the outside and between cells. Yellow solid circles (about #EDD91E) with dark serif numbers: three at the right end of the rows (row sums) and three under the columns (column sums). All 9 cells filled, row by row: 9 1 3 / 8 2 4 / 7 6 5. Row-sum circles: 13, 14, 18. Column-sum circles: 24, 9, 12. Checked: rows 9+1+3 = 13, 8+2+4 = 14, 7+6+5 = 18; columns 9+8+7 = 24, 1+2+6 = 9, 3+4+5 = 12; digits 1-9 each once; given 9 and 5 kept in place. Same layout and circles as P24-sum_grid-1. || chunk B note: Verified on the page picture: 9 1 3 / 8 2 4 / 7 6 5 with circles 13, 14, 18 and 24, 9, 12; matches the LP answer.",
+   "mapped_to": "item:M3.S11.T11.C66 (solution)"
+  },
+  {
+   "fig_id": "P24-sum_grid-4",
+   "source": "chapter p.24",
+   "description": "3 x 3 grid of 9 equal square cells, pale green fill (about #CDEBD9), dark outline of about 2 px on the outside and between cells. Yellow solid circles (about #EDD91E) with dark serif numbers: three at the right end of the rows (row sums) and three under the columns (column sums). All 9 cells filled, row by row: 7 8 9 / 4 6 5 / 1 2 3. Row-sum circles: 24, 15, 6. Column-sum circles: 12, 16, 17. Checked: rows 7+8+9 = 24, 4+6+5 = 15, 1+2+3 = 6; columns 7+4+1 = 12, 8+6+2 = 16, 9+5+3 = 17; digits 1-9 each once; given 4 and 3 kept in place. Same layout and circles as P24-sum_grid-2. || chunk B note: Printed answer of the right grid: 7 8 9 / 4 6 5 / 1 2 3 (checked: valid). Belongs to the worked example T10.C62, which has one diagram slot (the given puzzle) and whose LP answer lists TWO valid fillings in text; not drawn as a solution figure.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P18-sum_grid-1",
+   "source": "chapter p.18",
+   "description": "A grid of 2 rows x 3 columns = 6 equal square cells, every cell empty, pale green fill (about #CDEBD9) with a dark outline of about 2 px (also between cells). Five solid yellow circles (about #EDD91E) with a dark lowercase letter: two at the right end of the rows - row 1 circle \"o\", row 2 circle \"e\" - and three under the columns - column 1 \"e\", column 2 \"e\", column 3 \"o\". Circles are about as wide as one cell is tall (slightly smaller than a cell). Nothing else is printed. || chunk B note: Verified on the page picture: 2 x 3 empty grid, row circles o, e, column circles e, e, o.",
+   "mapped_to": "item:M3.S11.T11.C67 (question)"
+  },
+  {
+   "fig_id": "P30-sum_grid-1",
+   "source": "chapter p.30",
+   "description": "A grid of 2 rows x 3 columns = 6 equal square cells, all empty, pale green fill (about #CDEBD9) with a dark outline (about 2 px). Five yellow solid circles with a dark lowercase letter: right of the rows - row 1 \"o\", row 2 \"e\"; under the columns - column 1 \"e\", column 2 \"e\", column 3 \"o\". Same picture as P18-sum_grid-1. || chunk B note: Answer-key repeat of the 2 x 3 question grid (same as P18-sum_grid-1).",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P30-sum_grid-2",
+   "source": "chapter p.30",
+   "description": "Same grid and circles as P30-sum_grid-1 (2 x 3 pale green cells; right circles \"o\" for row 1 and \"e\" for row 2; bottom circles \"e\", \"e\", \"o\"), now with letters filled in all 6 cells, row by row: row 1 \"o  e  e\", row 2 \"o  e  o\" (lowercase dark letters centred in the cells). Checked: row 1 = odd+even+even = odd (o), row 2 = odd+even+odd = even (e); column 1 = odd+odd = even (e), column 2 = even+even = even (e), column 3 = even+odd = odd (o); three \"o\" and three \"e\" in the cells. || chunk B note: Verified on the page picture: o e e / o e o with circles o, e and e, e, o; matches the LP answer.",
+   "mapped_to": "item:M3.S11.T11.C68 (solution)"
+  },
+  {
+   "fig_id": "NEW-P25-magic_square-1-t13sol",
+   "source": "chapter p.25 (same picture as P25-magic_square-1)",
+   "description": "The completed magic square 8 1 6 / 3 5 7 / 4 9 2 of the book (printed on p.25 as the answer of Figure it Out Q1, base figure P25-magic_square-1, claimed by the chunk that owns that question). The LP solution of T13.C74 ('Try completing it') draws the same square, so this is the second use of that picture: one entry per use.",
+   "mapped_to": "item:M3.S13.T13.C74 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 32,
+  "mapped_to_items": 7,
+  "mapped_to_concept_images": 13,
+  "mapped_none": 12,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M3.S10.T10.C62.IMG1",
+   "M3.S11.T11.C65.IMG1",
+   "M3.S11.T11.C66.IMG1",
+   "M3.S11.T11.C67.IMG1",
+   "M3.S11.T11.C68.IMG1",
+   "M3.S13.T13.C73.IMG1",
+   "M3.S13.T13.C74.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M2.S6.T6.C35",
+   "role": "question",
+   "lp_book_number": "Picking Parity: Kishor's five cards add to 30",
+   "ncert_ref": "6.2.kishor",
+   "question_text": "Can Kishor's five odd cards add up to 30?",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question itself says the cards are odd and the answer needs only parity, so it is solvable from the words. The figure that would help: five empty boxes joined by + and = 30 above seven heaps of odd cards 13, 9, 1, 7, 11, 5, 3 (already the teaching image M2.S5.T5.C32.IMG2 of the topic before; never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C36",
+   "role": "solution",
+   "lp_book_number": "Picking Parity: Kishor's five cards add to 30",
+   "ncert_ref": "6.2.kishor",
+   "question_text": "Can Kishor's five odd cards add up to 30?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Three-line parity argument; the printed solution is text and the LP steps state every fact.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C37",
+   "role": "question",
+   "lp_book_number": "End of chapter, Q1",
+   "ncert_ref": "end.FiO1",
+   "question_text": "A bulb is ON. Dorjee toggles its switch 77 times. Is it on or off?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem about toggling a switch 77 times; the book prints no figure and every datum is in the words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C38",
+   "role": "solution",
+   "lp_book_number": "End of chapter, Q1",
+   "ncert_ref": "end.FiO1",
+   "question_text": "A bulb is ON. Dorjee toggles its switch 77 times. Is it on or off?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two-line toggle argument ending in the word OFF; the book prints no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C39",
+   "role": "question",
+   "lp_book_number": "End of chapter, Q2",
+   "ncert_ref": "end.FiO2",
+   "question_text": "Liswini finds 50 loose sheets from an old book, each printed on both sides. Can the page numbers add up to 6000?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem about 50 loose sheets and a total of 6000; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C40",
+   "role": "solution",
+   "lp_book_number": "End of chapter, Q2",
+   "ncert_ref": "end.FiO2",
+   "question_text": "Liswini finds 50 loose sheets from an old book, each printed on both sides. Can the page numbers add up to 6000?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Argument with the sums 1 + 2, 3 + 4, 5 + 6 written in LaTeX; the book's answer is text only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C41",
+   "role": "question",
+   "lp_book_number": "End of chapter, Q5",
+   "ncert_ref": "end.FiO5",
+   "question_text": "Fill in odd or even: the sum of (a) an odd number of even numbers, (b) an even number of odd numbers, (c) an even number of even numbers, (d) an odd number of odd numbers.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four fill-in statements about sums of even/odd counts; plain words, no figure printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C42",
+   "role": "solution",
+   "lp_book_number": "End of chapter, Q5",
+   "ncert_ref": "end.FiO5",
+   "question_text": "Fill in odd or even: the sum of (a) an odd number of even numbers, (b) an even number of odd numbers, (c) an even number of even numbers, (d) an odd number of odd numbers.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answers are the words even, even, even, odd; text only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C43",
+   "role": "question",
+   "lp_book_number": "End of chapter, Q6",
+   "ncert_ref": "end.FiO6",
+   "question_text": "What is the parity of the sum 1 + 2 + 3 + ... + 100?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The sum 1 + 2 + 3 + ... + 100 is an arithmetic expression for LaTeX; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C44",
+   "role": "solution",
+   "lp_book_number": "End of chapter, Q6",
+   "ncert_ref": "end.FiO6",
+   "question_text": "What is the parity of the sum 1 + 2 + 3 + ... + 100?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Counting 50 odd numbers and the sum 5050 are arithmetic for LaTeX; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C45",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "6.2.FiO1a",
+   "question_text": "Find the parity: (a) 2 even and 2 odd numbers, (b) 2 odd and 3 even, (c) 5 even, (d) 8 odd.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four sums described in words (2 even and 2 odd, 2 odd and 3 even, 5 even, 8 odd); the book mentions the pictorial representation but prints no figure with the question (the dot pictures are teaching images of the earlier topic).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C46",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "6.2.FiO1a",
+   "question_text": "Find the parity: (a) 2 even and 2 odd numbers, (b) 2 odd and 3 even, (c) 5 even, (d) 8 odd.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "All four answers are the word even; the printed answers are text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C47",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "6.2.FiO2_lakpa",
+   "question_text": "Lakpa has an odd number of ₹1 coins, an odd number of ₹5 coins and an even number of ₹10 coins. He says the total is ₹205. Is he right?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Coin word problem (odd, odd, even counts, total 205); no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C48",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "6.2.FiO2_lakpa",
+   "question_text": "Lakpa has an odd number of ₹1 coins, an odd number of ₹5 coins and an even number of ₹10 coins. He says the total is ₹205. Is he right?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Parity argument in words (odd + odd + even is even, 205 is odd); no printed figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C49",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "6.2.FiO3d",
+   "question_text": "Find the parity of even - even, odd - odd, even - odd and odd - even.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four differences (even - even, odd - odd, even - odd, odd - even) stated in words; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C50",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "6.2.FiO3d",
+   "question_text": "Find the parity of even - even, odd - odd, even - odd and odd - even.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The LP steps speak of pairs and a left-over dot, but the book prints no picture for this answer (only the words Even, Even, Odd, Odd); the dot pictures are teaching images of the earlier topic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C55",
+   "role": "question",
+   "lp_book_number": "Parity of a Product: 27 × 13 and two more grids",
+   "ncert_ref": "6.2.grid_27x13",
+   "question_text": "Find the parity of the number of squares in grids of 27 × 13, 42 × 78 and 135 × 654.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The grid sizes 27 x 13, 42 x 78 and 135 x 654 are all in the words; the book draws no grid for them (its only grid picture, 3 x 4, is the teaching figure of Small Squares in Grids).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C56",
+   "role": "solution",
+   "lp_book_number": "Parity of a Product: 27 × 13 and two more grids",
+   "ncert_ref": "6.2.grid_27x13",
+   "question_text": "Find the parity of the number of squares in grids of 27 × 13, 42 × 78 and 135 × 654.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Three parity arguments in words; the book's answer is Odd, Even, Even and draws no grid.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C57",
+   "role": "question",
+   "lp_book_number": "Odd Numbers: finding the 100th odd number",
+   "ncert_ref": "6.2.100th_odd",
+   "question_text": "What is the 100th odd number?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Single question 'What is the 100th odd number?'; the book shows the even and odd lists only as plain text lines, no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C58",
+   "role": "solution",
+   "lp_book_number": "Odd Numbers: finding the 100th odd number",
+   "ncert_ref": "6.2.100th_odd",
+   "question_text": "What is the 100th odd number?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "LATEX_TABLE"
+   ],
+   "reason": "2 x 100 = 200 and 200 - 1 = 199 are arithmetic. The two aligned lists the hint describes are plain number lists, not a diagram.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optionally write two aligned LaTeX lines: even 2, 4, 6, 8, 10, 12 above odd 1, 3, 5, 7, 9, 11."
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C59",
+   "role": "question",
+   "lp_book_number": "End of chapter, Q10",
+   "ncert_ref": "end.FiO10",
+   "question_text": "Which statements are true? (a) 4m - 1 always gives odd numbers. (b) All even numbers can be written as 6j - 4. (c) Both 2p + 1 and 2q - 1 describe all odd numbers. (d) 2f + 3 gives both even and odd numbers.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four algebraic statements to judge; text and LaTeX carry everything, no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C60",
+   "role": "solution",
+   "lp_book_number": "End of chapter, Q10",
+   "ncert_ref": "end.FiO10",
+   "question_text": "Which statements are true? (a) 4m - 1 always gives odd numbers. (b) All even numbers can be written as 6j - 4. (c) Both 2p + 1 and 2q - 1 describe all odd numbers. (d) 2f + 3 gives both even and odd numbers.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four true/false verdicts with short arithmetic; the book's answer is True, False, False, False as text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S10.T10.C62",
+   "role": "worked_example",
+   "lp_book_number": "Example 2",
+   "ncert_ref": "T4.D0.E1",
+   "question_text": "Rows 24, 15, 6; columns 12, 16, 17; 4 at the start of the middle row and 3 in the bottom-right corner.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "'This grid puzzle' is a figure: the positions of the given 4 and 3 and the circled row and column sums exist only in the grid, and the learner must fill it. Same kind of figure as T11.C65 (sibling consistency).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S10.T10.C62.IMG1",
+   "manim_scene": "c7_6_3_3_example2_q",
+   "block_index": 0,
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S10.T10.C62.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "rows": 3,
+     "cols": 3,
+     "cell_side_units": 1,
+     "grid_origin": "top-left corner of the grid at (0,0); x to the right, y downward; grid spans x 0..3, y 0..3",
+     "cell_fill": "CELL_FILL",
+     "cell_outline": "INK",
+     "cell_outline_px": 3,
+     "cells_row_by_row": [
+      [
+       {
+        "pos": [
+         1,
+         1
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         1,
+         2
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         1,
+         3
+        ],
+        "value": ""
+       }
+      ],
+      [
+       {
+        "pos": [
+         2,
+         1
+        ],
+        "value": "4",
+        "text_colour": "INK"
+       },
+       {
+        "pos": [
+         2,
+         2
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         2,
+         3
+        ],
+        "value": ""
+       }
+      ],
+      [
+       {
+        "pos": [
+         3,
+         1
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         3,
+         2
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         3,
+         3
+        ],
+        "value": "3",
+        "text_colour": "INK"
+       }
+      ]
+     ],
+     "shaded_cells": [],
+     "row_circles": [
+      {
+       "row": 1,
+       "centre": [
+        3.75,
+        0.5
+       ],
+       "value": 24
+      },
+      {
+       "row": 2,
+       "centre": [
+        3.75,
+        1.5
+       ],
+       "value": 15
+      },
+      {
+       "row": 3,
+       "centre": [
+        3.75,
+        2.5
+       ],
+       "value": 6
+      }
+     ],
+     "column_circles": [
+      {
+       "column": 1,
+       "centre": [
+        0.5,
+        3.75
+       ],
+       "value": 12
+      },
+      {
+       "column": 2,
+       "centre": [
+        1.5,
+        3.75
+       ],
+       "value": 16
+      },
+      {
+       "column": 3,
+       "centre": [
+        2.5,
+        3.75
+       ],
+       "value": 17
+      }
+     ],
+     "circle_style": {
+      "diameter_units": 0.7,
+      "fill": "BG",
+      "outline": "INK",
+      "outline_px": 3,
+      "text_colour": "INK"
+     }
+    },
+    "manim_description": "On a plain BG 16:9 canvas draw, centred, a grid of 9 equal square cells in 3 rows and 3 columns (cell side 1 unit; the grid spans x 0 to 3 and y 0 to 3, y measured downward from the top edge of the grid). Fill every cell CELL_FILL and draw the outer border and every inner line in INK, 3 px. Cell contents, row by row from the top, each row left to right: row 1: empty, empty, empty; row 2: '4', empty, empty; row 3: empty, empty, '3'. Given characters are INK, centred in their cells. To the right of the grid draw one circle per row, centred on its row, at x = 3.75: row 1 (y = 0.5) shows 24, row 2 (y = 1.5) shows 15, row 3 (y = 2.5) shows 6. Below the grid draw one circle per column, centred on its column, at y = 3.75: column 1 (x = 0.5) shows 12, column 2 (x = 1.5) shows 16, column 3 (x = 2.5) shows 17. Every circle has diameter 0.7 unit, BG fill, INK outline 3 px and its text in INK, centred. Fit the whole figure, circles included, inside the canvas with an even margin; all text at least 34 px high on a 1920 px wide canvas. Nothing else is drawn.",
+    "visible_text": [
+     "4",
+     "3",
+     "24",
+     "15",
+     "6",
+     "12",
+     "16",
+     "17"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any digit in the seven empty cells",
+     "the filled solution grid (the example has two valid fillings)"
+    ],
+    "accuracy_checks": [
+     "given digits only 4 at row 2 column 1 and 3 at row 3 column 3; the other seven cells empty",
+     "row circles top to bottom 24, 15, 6 and column circles left to right 12, 16, 17 as printed in the book",
+     "24 + 15 + 6 = 45 and 12 + 16 + 17 = 45 (row circles and column circles have the same total)"
+    ],
+    "alt_text": "A 3 by 3 grid with 4 in the middle-left cell and 3 in the bottom-right cell; row sums 24, 15, 6 are circled at the right and column sums 12, 16, 17 below.",
+    "render_note": "Book figure: the right-hand puzzle of 'Fill the grids below' (p.7). The worked example shows only the GIVEN puzzle; its two fillings stay in the steps text."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S11.T11.C65",
+   "role": "question",
+   "lp_book_number": "Grids with Sums: filling the first grid",
+   "ncert_ref": "6.3.fill_grid1",
+   "question_text": "Rows 13, 14, 18; columns 24, 9, 12; 9 in the top-left corner and 5 in the bottom-right corner.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The book gives a grid puzzle: given 9 and 5 in two cells and circled row and column sums; the learner completes the grid (ACTION_ON_FIGURE). The circled sums carry the meaning, so the figure is drawn even though the text lists the values.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S11.T11.C65.IMG1",
+   "manim_scene": "c7_6_3_3_fillgrid1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S11.T11.C65.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "rows": 3,
+     "cols": 3,
+     "cell_side_units": 1,
+     "grid_origin": "top-left corner of the grid at (0,0); x to the right, y downward; grid spans x 0..3, y 0..3",
+     "cell_fill": "CELL_FILL",
+     "cell_outline": "INK",
+     "cell_outline_px": 3,
+     "cells_row_by_row": [
+      [
+       {
+        "pos": [
+         1,
+         1
+        ],
+        "value": "9",
+        "text_colour": "INK"
+       },
+       {
+        "pos": [
+         1,
+         2
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         1,
+         3
+        ],
+        "value": ""
+       }
+      ],
+      [
+       {
+        "pos": [
+         2,
+         1
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         2,
+         2
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         2,
+         3
+        ],
+        "value": ""
+       }
+      ],
+      [
+       {
+        "pos": [
+         3,
+         1
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         3,
+         2
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         3,
+         3
+        ],
+        "value": "5",
+        "text_colour": "INK"
+       }
+      ]
+     ],
+     "shaded_cells": [],
+     "row_circles": [
+      {
+       "row": 1,
+       "centre": [
+        3.75,
+        0.5
+       ],
+       "value": 13
+      },
+      {
+       "row": 2,
+       "centre": [
+        3.75,
+        1.5
+       ],
+       "value": 14
+      },
+      {
+       "row": 3,
+       "centre": [
+        3.75,
+        2.5
+       ],
+       "value": 18
+      }
+     ],
+     "column_circles": [
+      {
+       "column": 1,
+       "centre": [
+        0.5,
+        3.75
+       ],
+       "value": 24
+      },
+      {
+       "column": 2,
+       "centre": [
+        1.5,
+        3.75
+       ],
+       "value": 9
+      },
+      {
+       "column": 3,
+       "centre": [
+        2.5,
+        3.75
+       ],
+       "value": 12
+      }
+     ],
+     "circle_style": {
+      "diameter_units": 0.7,
+      "fill": "BG",
+      "outline": "INK",
+      "outline_px": 3,
+      "text_colour": "INK"
+     }
+    },
+    "manim_description": "On a plain BG 16:9 canvas draw, centred, a grid of 9 equal square cells in 3 rows and 3 columns (cell side 1 unit; the grid spans x 0 to 3 and y 0 to 3, y measured downward from the top edge of the grid). Fill every cell CELL_FILL and draw the outer border and every inner line in INK, 3 px. Cell contents, row by row from the top, each row left to right: row 1: '9', empty, empty; row 2: empty, empty, empty; row 3: empty, empty, '5'. Given characters are INK, centred in their cells. To the right of the grid draw one circle per row, centred on its row, at x = 3.75: row 1 (y = 0.5) shows 13, row 2 (y = 1.5) shows 14, row 3 (y = 2.5) shows 18. Below the grid draw one circle per column, centred on its column, at y = 3.75: column 1 (x = 0.5) shows 24, column 2 (x = 1.5) shows 9, column 3 (x = 2.5) shows 12. Every circle has diameter 0.7 unit, BG fill, INK outline 3 px and its text in INK, centred. Fit the whole figure, circles included, inside the canvas with an even margin; all text at least 34 px high on a 1920 px wide canvas. Nothing else is drawn.",
+    "visible_text": [
+     "9",
+     "5",
+     "13",
+     "14",
+     "18",
+     "24",
+     "9",
+     "12"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any digit in the seven empty cells",
+     "the filled solution grid"
+    ],
+    "accuracy_checks": [
+     "given digits only 9 at row 1 column 1 and 5 at row 3 column 3; the other seven cells empty",
+     "row circles top to bottom 13, 14, 18 and column circles left to right 24, 9, 12 as printed in the book",
+     "13 + 14 + 18 = 45 and 24 + 9 + 12 = 45 (row circles and column circles have the same total)"
+    ],
+    "alt_text": "A 3 by 3 grid with 9 in the top-left cell and 5 in the bottom-right cell; row sums 13, 14, 18 are circled at the right and column sums 24, 9, 12 below."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S11.T11.C66",
+   "role": "solution",
+   "lp_book_number": "Grids with Sums: filling the first grid",
+   "ncert_ref": "6.3.fill_grid1",
+   "question_text": "Rows 13, 14, 18; columns 24, 9, 12; 9 in the top-left corner and 5 in the bottom-right corner.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The printed answer is a picture: the completed grid 9 1 3 / 8 2 4 / 7 6 5 with the same circles. The LP steps only describe it in words, so the filled grid is the solution figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S11.T11.C66.IMG1",
+   "manim_scene": "c7_6_3_3_fillgrid1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S11.T11.C66.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S11.T11.C65.IMG1",
+    "content": {
+     "type": "cell_grid",
+     "rows": 3,
+     "cols": 3,
+     "cell_side_units": 1,
+     "grid_origin": "top-left corner of the grid at (0,0); x to the right, y downward; grid spans x 0..3, y 0..3",
+     "cell_fill": "CELL_FILL",
+     "cell_outline": "INK",
+     "cell_outline_px": 3,
+     "cells_row_by_row": [
+      [
+       {
+        "pos": [
+         1,
+         1
+        ],
+        "value": "9",
+        "text_colour": "INK"
+       },
+       {
+        "pos": [
+         1,
+         2
+        ],
+        "value": "1",
+        "text_colour": "ANSWER"
+       },
+       {
+        "pos": [
+         1,
+         3
+        ],
+        "value": "3",
+        "text_colour": "ANSWER"
+       }
+      ],
+      [
+       {
+        "pos": [
+         2,
+         1
+        ],
+        "value": "8",
+        "text_colour": "ANSWER"
+       },
+       {
+        "pos": [
+         2,
+         2
+        ],
+        "value": "2",
+        "text_colour": "ANSWER"
+       },
+       {
+        "pos": [
+         2,
+         3
+        ],
+        "value": "4",
+        "text_colour": "ANSWER"
+       }
+      ],
+      [
+       {
+        "pos": [
+         3,
+         1
+        ],
+        "value": "7",
+        "text_colour": "ANSWER"
+       },
+       {
+        "pos": [
+         3,
+         2
+        ],
+        "value": "6",
+        "text_colour": "ANSWER"
+       },
+       {
+        "pos": [
+         3,
+         3
+        ],
+        "value": "5",
+        "text_colour": "INK"
+       }
+      ]
+     ],
+     "shaded_cells": [],
+     "row_circles": [
+      {
+       "row": 1,
+       "centre": [
+        3.75,
+        0.5
+       ],
+       "value": 13
+      },
+      {
+       "row": 2,
+       "centre": [
+        3.75,
+        1.5
+       ],
+       "value": 14
+      },
+      {
+       "row": 3,
+       "centre": [
+        3.75,
+        2.5
+       ],
+       "value": 18
+      }
+     ],
+     "column_circles": [
+      {
+       "column": 1,
+       "centre": [
+        0.5,
+        3.75
+       ],
+       "value": 24
+      },
+      {
+       "column": 2,
+       "centre": [
+        1.5,
+        3.75
+       ],
+       "value": 9
+      },
+      {
+       "column": 3,
+       "centre": [
+        2.5,
+        3.75
+       ],
+       "value": 12
+      }
+     ],
+     "circle_style": {
+      "diameter_units": 0.7,
+      "fill": "BG",
+      "outline": "INK",
+      "outline_px": 3,
+      "text_colour": "INK"
+     }
+    },
+    "manim_description": "Draw exactly the figure of the question diagram: same grid, same cell positions, same circles, same given characters in INK. Then write the answer characters into the empty cells in ANSWER green, same size and font as the given characters, centred in their cells. Cell contents, row by row from the top, each row left to right: row 1: '9' (INK, given), '1' (ANSWER), '3' (ANSWER); row 2: '8' (ANSWER), '2' (ANSWER), '4' (ANSWER); row 3: '7' (ANSWER), '6' (ANSWER), '5' (INK, given). The circles stay unchanged in INK. Fit the whole figure inside the canvas with an even margin; all text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "9",
+     "1",
+     "3",
+     "8",
+     "2",
+     "4",
+     "7",
+     "6",
+     "5",
+     "13",
+     "14",
+     "18",
+     "24",
+     "9",
+     "12"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any extra annotation or arrows"
+    ],
+    "accuracy_checks": [
+     "rows: 9 + 1 + 3 = 13, 8 + 2 + 4 = 14, 7 + 6 + 5 = 18",
+     "columns: 9 + 8 + 7 = 24, 1 + 2 + 6 = 9, 3 + 4 + 5 = 12",
+     "digits 1 to 9 each appear exactly once",
+     "given 9 (row 1 column 1) and 5 (row 3 column 3) unchanged in INK; the seven added digits in ANSWER"
+    ],
+    "alt_text": "The completed grid 9, 1, 3 / 8, 2, 4 / 7, 6, 5 with row sums 13, 14, 18 and column sums 24, 9, 12 circled.",
+    "render_note": "Matches the book's printed answer (p.24, left grid)."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S11.T11.C67",
+   "role": "question",
+   "lp_book_number": "End of chapter, Q3",
+   "ncert_ref": "end.FiO3",
+   "question_text": "A 2 × 3 grid: row sums odd, even; column sums even, even, odd. Fill it with 3 odd (o) and 3 even (e) numbers.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The book gives a 2 x 3 grid with the parity circles o, e (rows) and e, e, o (columns); the learner fills six boxes (ACTION_ON_FIGURE). Same decision as the other grid-filling questions of the chapter (sibling consistency).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S11.T11.C67.IMG1",
+   "manim_scene": "c7_6_3_3_fio3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S11.T11.C67.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "rows": 2,
+     "cols": 3,
+     "cell_side_units": 1,
+     "grid_origin": "top-left corner of the grid at (0,0); x to the right, y downward; grid spans x 0..3, y 0..2",
+     "cell_fill": "CELL_FILL",
+     "cell_outline": "INK",
+     "cell_outline_px": 3,
+     "cells_row_by_row": [
+      [
+       {
+        "pos": [
+         1,
+         1
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         1,
+         2
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         1,
+         3
+        ],
+        "value": ""
+       }
+      ],
+      [
+       {
+        "pos": [
+         2,
+         1
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         2,
+         2
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         2,
+         3
+        ],
+        "value": ""
+       }
+      ]
+     ],
+     "shaded_cells": [],
+     "row_circles": [
+      {
+       "row": 1,
+       "centre": [
+        3.75,
+        0.5
+       ],
+       "value": "o"
+      },
+      {
+       "row": 2,
+       "centre": [
+        3.75,
+        1.5
+       ],
+       "value": "e"
+      }
+     ],
+     "column_circles": [
+      {
+       "column": 1,
+       "centre": [
+        0.5,
+        2.75
+       ],
+       "value": "e"
+      },
+      {
+       "column": 2,
+       "centre": [
+        1.5,
+        2.75
+       ],
+       "value": "e"
+      },
+      {
+       "column": 3,
+       "centre": [
+        2.5,
+        2.75
+       ],
+       "value": "o"
+      }
+     ],
+     "circle_style": {
+      "diameter_units": 0.7,
+      "fill": "BG",
+      "outline": "INK",
+      "outline_px": 3,
+      "text_colour": "INK"
+     }
+    },
+    "manim_description": "On a plain BG 16:9 canvas draw, centred, a grid of 6 equal square cells in 2 rows and 3 columns (cell side 1 unit; the grid spans x 0 to 3 and y 0 to 2, y measured downward from the top edge of the grid). Fill every cell CELL_FILL and draw the outer border and every inner line in INK, 3 px. Cell contents, row by row from the top, each row left to right: row 1: empty, empty, empty; row 2: empty, empty, empty. Every cell stays empty. To the right of the grid draw one circle per row, centred on its row, at x = 3.75: row 1 (y = 0.5) shows o, row 2 (y = 1.5) shows e. Below the grid draw one circle per column, centred on its column, at y = 2.75: column 1 (x = 0.5) shows e, column 2 (x = 1.5) shows e, column 3 (x = 2.5) shows o. Every circle has diameter 0.7 unit, BG fill, INK outline 3 px and its text in INK, centred. Fit the whole figure, circles included, inside the canvas with an even margin; all text at least 34 px high on a 1920 px wide canvas. Nothing else is drawn.",
+    "visible_text": [
+     "o",
+     "e",
+     "e",
+     "e",
+     "o"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any letter inside the six cells",
+     "the filled solution grid"
+    ],
+    "accuracy_checks": [
+     "grid is 2 rows by 3 columns and every one of the six cells is empty",
+     "row circles top to bottom o, e; column circles left to right e, e, o as printed in the book",
+     "exactly five circles are drawn (two beside the rows, three under the columns)"
+    ],
+    "alt_text": "An empty 2 by 3 grid; the row circles read o then e and the column circles read e, e, o."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S11.T11.C68",
+   "role": "solution",
+   "lp_book_number": "End of chapter, Q3",
+   "ncert_ref": "end.FiO3",
+   "question_text": "A 2 × 3 grid: row sums odd, even; column sums even, even, odd. Fill it with 3 odd (o) and 3 even (e) numbers.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The printed answer is a picture: the 2 x 3 grid filled o e e / o e o with the same circles. The LP answer (words) is the same filling.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S11.T11.C68.IMG1",
+   "manim_scene": "c7_6_3_3_fio3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S11.T11.C68.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S11.T11.C67.IMG1",
+    "content": {
+     "type": "cell_grid",
+     "rows": 2,
+     "cols": 3,
+     "cell_side_units": 1,
+     "grid_origin": "top-left corner of the grid at (0,0); x to the right, y downward; grid spans x 0..3, y 0..2",
+     "cell_fill": "CELL_FILL",
+     "cell_outline": "INK",
+     "cell_outline_px": 3,
+     "cells_row_by_row": [
+      [
+       {
+        "pos": [
+         1,
+         1
+        ],
+        "value": "o",
+        "text_colour": "ANSWER"
+       },
+       {
+        "pos": [
+         1,
+         2
+        ],
+        "value": "e",
+        "text_colour": "ANSWER"
+       },
+       {
+        "pos": [
+         1,
+         3
+        ],
+        "value": "e",
+        "text_colour": "ANSWER"
+       }
+      ],
+      [
+       {
+        "pos": [
+         2,
+         1
+        ],
+        "value": "o",
+        "text_colour": "ANSWER"
+       },
+       {
+        "pos": [
+         2,
+         2
+        ],
+        "value": "e",
+        "text_colour": "ANSWER"
+       },
+       {
+        "pos": [
+         2,
+         3
+        ],
+        "value": "o",
+        "text_colour": "ANSWER"
+       }
+      ]
+     ],
+     "shaded_cells": [],
+     "row_circles": [
+      {
+       "row": 1,
+       "centre": [
+        3.75,
+        0.5
+       ],
+       "value": "o"
+      },
+      {
+       "row": 2,
+       "centre": [
+        3.75,
+        1.5
+       ],
+       "value": "e"
+      }
+     ],
+     "column_circles": [
+      {
+       "column": 1,
+       "centre": [
+        0.5,
+        2.75
+       ],
+       "value": "e"
+      },
+      {
+       "column": 2,
+       "centre": [
+        1.5,
+        2.75
+       ],
+       "value": "e"
+      },
+      {
+       "column": 3,
+       "centre": [
+        2.5,
+        2.75
+       ],
+       "value": "o"
+      }
+     ],
+     "circle_style": {
+      "diameter_units": 0.7,
+      "fill": "BG",
+      "outline": "INK",
+      "outline_px": 3,
+      "text_colour": "INK"
+     }
+    },
+    "manim_description": "Draw exactly the figure of the question diagram: same grid, same cell positions, same circles, same given characters in INK. Then write the answer characters into the empty cells in ANSWER green, same size and font as the given characters, centred in their cells. Cell contents, row by row from the top, each row left to right: row 1: 'o' (ANSWER), 'e' (ANSWER), 'e' (ANSWER); row 2: 'o' (ANSWER), 'e' (ANSWER), 'o' (ANSWER). The circles stay unchanged in INK. Fit the whole figure inside the canvas with an even margin; all text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "o",
+     "e",
+     "e",
+     "o",
+     "e",
+     "o",
+     "o",
+     "e",
+     "e",
+     "e",
+     "o"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the second filling e, o, e / e, o, o (it stays in the text)"
+    ],
+    "accuracy_checks": [
+     "row 1 has one o, so its sum is odd (circle o); row 2 has two o, so its sum is even (circle e)",
+     "column 1 is o + o = even (e); column 2 is e + e = even (e); column 3 is e + o = odd (o)",
+     "three o and three e in the six cells"
+    ],
+    "alt_text": "The 2 by 3 grid filled o, e, e in the top row and o, e, o in the bottom row, with the same parity circles.",
+    "render_note": "Matches the book's printed answer (p.30) and the LP's first answer; the LP's 'another answer' is text only."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S13.T13.C73",
+   "role": "question",
+   "lp_book_number": "Magic Square: completing with 1 and 9",
+   "ncert_ref": "6.3.complete_square",
+   "question_text": "Complete the magic square with 1 at the top middle and 9 at the bottom middle.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The book gives the partly filled magic square (1, 5, 9 down the middle column) and asks the learner to complete it. The centre 5 is in the book's figure but not in the LP text, so the figure carries data the text does not (see notes).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S13.T13.C73.IMG1",
+   "manim_scene": "c7_6_3_4_complete_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S13.T13.C73.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "rows": 3,
+     "cols": 3,
+     "cell_side_units": 1,
+     "grid_origin": "top-left corner of the grid at (0,0); x to the right, y downward; grid spans x 0..3, y 0..3",
+     "cell_fill": "CELL_FILL",
+     "cell_outline": "INK",
+     "cell_outline_px": 3,
+     "cells_row_by_row": [
+      [
+       {
+        "pos": [
+         1,
+         1
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         1,
+         2
+        ],
+        "value": "1",
+        "text_colour": "INK"
+       },
+       {
+        "pos": [
+         1,
+         3
+        ],
+        "value": ""
+       }
+      ],
+      [
+       {
+        "pos": [
+         2,
+         1
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         2,
+         2
+        ],
+        "value": "5",
+        "text_colour": "INK"
+       },
+       {
+        "pos": [
+         2,
+         3
+        ],
+        "value": ""
+       }
+      ],
+      [
+       {
+        "pos": [
+         3,
+         1
+        ],
+        "value": ""
+       },
+       {
+        "pos": [
+         3,
+         2
+        ],
+        "value": "9",
+        "text_colour": "INK"
+       },
+       {
+        "pos": [
+         3,
+         3
+        ],
+        "value": ""
+       }
+      ]
+     ],
+     "shaded_cells": []
+    },
+    "manim_description": "On a plain BG 16:9 canvas draw, centred, a grid of 9 equal square cells in 3 rows and 3 columns (cell side 1 unit; the grid spans x 0 to 3 and y 0 to 3, y measured downward from the top edge of the grid). Fill every cell CELL_FILL and draw the outer border and every inner line in INK, 3 px. Cell contents, row by row from the top, each row left to right: row 1: empty, '1', empty; row 2: empty, '5', empty; row 3: empty, '9', empty. Given digits are INK, centred in their cells. No circles, no sums and no other marks are drawn. Fit the grid inside the canvas with an even margin; all text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "1",
+     "5",
+     "9"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any digit in the six empty cells",
+     "the magic sum 15 or any circle"
+    ],
+    "accuracy_checks": [
+     "only the middle column is filled: 1 at row 1, 5 at row 2, 9 at row 3 (column 2)",
+     "the six other cells are empty",
+     "1 + 5 + 9 = 15, the magic sum, so the given column already adds to 15"
+    ],
+    "alt_text": "A 3 by 3 grid with 1 in the top-middle cell, 5 in the centre cell and 9 in the bottom-middle cell; the other six cells are empty.",
+    "render_note": "Book figure: the right-hand grid of 'Can you find the other possible positions for 1 and 9?' (p.10). The middle-row twin on the left is not used (the LP fixes 1 at the top middle)."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S13.T13.C74",
+   "role": "solution",
+   "lp_book_number": "Magic Square: completing with 1 and 9",
+   "ncert_ref": "6.3.complete_square",
+   "question_text": "Complete the magic square with 1 at the top middle and 9 at the bottom middle.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The answer is a completed magic square 8 1 6 / 3 5 7 / 4 9 2; the LP steps describe it only in words and quote the eight line sums of 15, so the full square with its eight 15s is the solution figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S13.T13.C74.IMG1",
+   "manim_scene": "c7_6_3_4_complete_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S13.T13.C74.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S13.T13.C73.IMG1",
+    "content": {
+     "type": "cell_grid",
+     "rows": 3,
+     "cols": 3,
+     "cell_side_units": 1,
+     "grid_origin": "top-left corner of the grid at (0,0); x to the right, y downward; grid spans x 0..3, y 0..3",
+     "cell_fill": "CELL_FILL",
+     "cell_outline": "INK",
+     "cell_outline_px": 3,
+     "cells_row_by_row": [
+      [
+       {
+        "pos": [
+         1,
+         1
+        ],
+        "value": "8",
+        "text_colour": "ANSWER"
+       },
+       {
+        "pos": [
+         1,
+         2
+        ],
+        "value": "1",
+        "text_colour": "INK"
+       },
+       {
+        "pos": [
+         1,
+         3
+        ],
+        "value": "6",
+        "text_colour": "ANSWER"
+       }
+      ],
+      [
+       {
+        "pos": [
+         2,
+         1
+        ],
+        "value": "3",
+        "text_colour": "ANSWER"
+       },
+       {
+        "pos": [
+         2,
+         2
+        ],
+        "value": "5",
+        "text_colour": "INK"
+       },
+       {
+        "pos": [
+         2,
+         3
+        ],
+        "value": "7",
+        "text_colour": "ANSWER"
+       }
+      ],
+      [
+       {
+        "pos": [
+         3,
+         1
+        ],
+        "value": "4",
+        "text_colour": "ANSWER"
+       },
+       {
+        "pos": [
+         3,
+         2
+        ],
+        "value": "9",
+        "text_colour": "INK"
+       },
+       {
+        "pos": [
+         3,
+         3
+        ],
+        "value": "2",
+        "text_colour": "ANSWER"
+       }
+      ]
+     ],
+     "shaded_cells": [],
+     "line_sum_circles": [
+      {
+       "line": "row 1",
+       "centre": [
+        3.75,
+        0.5
+       ],
+       "value": "15"
+      },
+      {
+       "line": "row 2",
+       "centre": [
+        3.75,
+        1.5
+       ],
+       "value": "15"
+      },
+      {
+       "line": "row 3",
+       "centre": [
+        3.75,
+        2.5
+       ],
+       "value": "15"
+      },
+      {
+       "line": "column 1",
+       "centre": [
+        0.5,
+        3.75
+       ],
+       "value": "15"
+      },
+      {
+       "line": "column 2",
+       "centre": [
+        1.5,
+        3.75
+       ],
+       "value": "15"
+      },
+      {
+       "line": "column 3",
+       "centre": [
+        2.5,
+        3.75
+       ],
+       "value": "15"
+      },
+      {
+       "line": "diagonal top-left to bottom-right",
+       "centre": [
+        3.75,
+        3.75
+       ],
+       "value": "15"
+      },
+      {
+       "line": "diagonal top-right to bottom-left",
+       "centre": [
+        -0.75,
+        3.75
+       ],
+       "value": "15"
+      }
+     ],
+     "line_sum_circle_style": {
+      "diameter_units": 0.6,
+      "fill": "BG",
+      "outline": "ANSWER",
+      "outline_px": 3,
+      "text_colour": "ANSWER"
+     },
+     "diagonal_guides": [
+      {
+       "colour": "GUIDE",
+       "style": "dashed",
+       "from": [
+        0.5,
+        0.5
+       ],
+       "to": [
+        3.54,
+        3.54
+       ]
+      },
+      {
+       "colour": "GUIDE",
+       "style": "dashed",
+       "from": [
+        2.5,
+        0.5
+       ],
+       "to": [
+        -0.54,
+        3.54
+       ]
+      }
+     ]
+    },
+    "manim_description": "Draw exactly the figure of the question diagram: same 3 by 3 grid of CELL_FILL cells with INK outlines (3 px), same positions, given digits 1, 5, 9 in INK in the middle column. Then write the added digits in ANSWER green, same size and font as the given ones, centred in their cells. Cell contents, row by row from the top, each row left to right: row 1: '8' (ANSWER), '1' (INK, given), '6' (ANSWER); row 2: '3' (ANSWER), '5' (INK, given), '7' (ANSWER); row 3: '4' (ANSWER), '9' (INK, given), '2' (ANSWER). Then add eight line-sum circles, each of diameter 0.6 unit, BG fill, ANSWER outline 3 px, the number 15 in ANSWER inside, centred (grid spans x 0 to 3 and y 0 to 3, y downward): three to the right of the rows at x = 3.75 with centres at y = 0.5, 1.5, 2.5; three below the columns at y = 3.75 with centres at x = 0.5, 1.5, 2.5; one for the diagonal from the top-left corner to the bottom-right corner at (3.75, 3.75); one for the diagonal from the top-right corner to the bottom-left corner at (-0.75, 3.75). Draw two thin dashed GUIDE lines along the diagonals: the first from the centre of the top-left cell (0.5, 0.5) to (3.54, 3.54), the second from the centre of the top-right cell (2.5, 0.5) to (-0.54, 3.54). Fit the whole figure, circles included, inside the canvas with an even margin; all text at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "8",
+     "1",
+     "6",
+     "3",
+     "5",
+     "7",
+     "4",
+     "9",
+     "2",
+     "15",
+     "15",
+     "15",
+     "15",
+     "15",
+     "15",
+     "15",
+     "15"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words magic sum or magic square"
+    ],
+    "accuracy_checks": [
+     "rows: 8 + 1 + 6 = 15, 3 + 5 + 7 = 15, 4 + 9 + 2 = 15",
+     "columns: 8 + 3 + 4 = 15, 1 + 5 + 9 = 15, 6 + 7 + 2 = 15",
+     "diagonals: 8 + 5 + 2 = 15 and 6 + 5 + 4 = 15",
+     "digits 1 to 9 each appear exactly once; given 1, 5, 9 unchanged in INK, six added digits in ANSWER",
+     "eight circles, all showing 15"
+    ],
+    "alt_text": "The completed magic square 8, 1, 6 / 3, 5, 7 / 4, 9, 2 with eight circles showing 15 for its three rows, three columns and two diagonals.",
+    "render_note": "Same square as the book's printed answer to Figure it Out Q1 (p.25), also the LP answer here; the book prints no separate answer picture for 'Try completing it'. Mirror images of this square are also magic; the LP and the book print this one."
+   }
+  }
+ ]
+}

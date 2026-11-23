@@ -1,0 +1,834 @@
+{
+  "meta": {
+    "chapter": "Finding Common Ground",
+    "class": 7,
+    "textbook": "Ganita Prakash, Grade 7, Chapter 11",
+    "lp_plan_id": "cbse_eng_maths7_ch11_v30",
+    "prompt": "diagram_identification_prompt.md v3",
+    "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+    "counts_by_role_and_decision": {
+      "question": {
+        "required": 1,
+        "optional": 0,
+        "none": 12
+      },
+      "solution": {
+        "required": 1,
+        "optional": 0,
+        "none": 12
+      },
+      "worked_example": {
+        "required": 0,
+        "optional": 0,
+        "none": 5
+      }
+    },
+    "notes": [
+      "Chunk D = topics M3.S37.T37, M3.S38.T38, M3.S39.T39, M4.S40.T40 (18 units, 31 items): Figure it Out 3.3 Q1 to Q13, three worked examples of Part Two, two worked examples of the chapter review.",
+      "Only Figure it Out Q1 (the star rows, book p.17) has a printed figure; its question and solution are both required, everything else stays text and LaTeX.",
+      "LP book_number of T39 restarts at 'Figure it Out 3.3, Q1' to Q6 although the book numbers are Q8 to Q13 (ncert_refs end8 to end13 are right).",
+      "Chunk D also accounts for base figure P20-number_grid-1 (Mystery Colours) because topic M4.S41.T41 belongs to no chunk."
+    ]
+  },
+  "style_tokens": {
+    "BG": "#FFFFFF",
+    "INK": "#2B2B2B",
+    "MARK_FILL": "#CDEBD9",
+    "ANSWER": "#009E73",
+    "FOCUS": "#CC79A7",
+    "WRONG": "#D55E00",
+    "GUIDE": "#6B7280",
+    "SET_A": "#0072B2",
+    "SET_B": "#E69F00",
+    "CELL_FILL": "#F1EEF6"
+  },
+  "figure_inventory": [
+    {
+      "fig_id": "P17-pattern-1",
+      "source": "chapter p.17",
+      "description": "Figure it Out Q1: two aligned rows of 12 coloured stars each followed by an ellipsis; row 1 repeats yellow, green, orange, blue, pink, grey; row 2 repeats green, orange, yellow, blue (checked against the page picture, base description is right).",
+      "mapped_to": "item:M3.S37.T37.C137 (question)"
+    },
+    {
+      "fig_id": "NEW-P17-pattern-1-sol",
+      "source": "drawn from the LP solution of Figure it Out Q1 (not printed in the book)",
+      "description": "The same two star rows used a second time, by the solution of Q1: extended to 16 columns, columns numbered, columns 4 and 16 boxed.",
+      "mapped_to": "item:M3.S37.T37.C138 (solution)"
+    },
+    {
+      "fig_id": "P20-number_grid-1",
+      "source": "chapter p.20",
+      "description": "Puzzle Time Mystery Colours: 10 x 10 grid of ring badges for 1 to 100 (arcs = prime factors with repeats, one colour per prime). Checked against the page picture: base description is right. Teaching figure with no question item; its topic (M4.S41.T41) is in no chunk, so chunk D claims it for accounting (the plan's teaching images C170 and C171 are small excerpts of the same ring scheme).",
+      "mapped_to": "concept_image:M4.S41.T41.C171.IMG1"
+    }
+  ],
+  "coverage_report": {
+    "inventory_figures": 3,
+    "mapped_to_items": 2,
+    "mapped_to_concept_images": 1,
+    "mapped_none": 0,
+    "unmapped": 0,
+    "new_media_ids_created": [
+      "M3.S37.T37.C137.IMG1",
+      "M3.S37.T37.C138.IMG1"
+    ],
+    "lp_ids_dropped": []
+  },
+  "items": [
+    {
+      "lp_concept_id": "M3.S37.T37.C137",
+      "role": "question",
+      "lp_book_number": "Figure it Out 3.3, Q1",
+      "ncert_ref": "Section 3.3 - Figure it Out Q1 (3.3.end1), book p.17",
+      "question_text": "In the two rows below, colours repeat as shown. When will the blue stars meet next? (Row one repeats yellow, green, orange, blue, pink, grey. Row two repeats green, orange, yellow, blue.)",
+      "decision": "required",
+      "reason_codes": [
+        "FIG_REFERENCED",
+        "DATA_IN_FIGURE"
+      ],
+      "reason": "The question says 'the two rows below ... as shown': the printed picture of coloured stars is what the book gives, and the LP text points to rows that are not otherwise shown.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S37.T37.C137.IMG1",
+      "manim_scene": "c7_11_3_3_end1_q",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S37.T37.C137.IMG1}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "object_row",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "object_row",
+          "canvas_px": [
+            1920,
+            1080
+          ],
+          "glyph": "five_pointed_star_point_up",
+          "star_outer_diameter_px": 80,
+          "outline": "INK 3 px",
+          "columns": 12,
+          "column_pitch_px": 100,
+          "column_k_centre_x_px": "166 + 100*(k-1)",
+          "row_centre_y_px": {
+            "1": 440,
+            "2": 600
+          },
+          "rows": [
+            {
+              "row": 1,
+              "colours_left_to_right": [
+                "yellow",
+                "green",
+                "orange",
+                "blue",
+                "pink",
+                "grey",
+                "yellow",
+                "green",
+                "orange",
+                "blue",
+                "pink",
+                "grey"
+              ]
+            },
+            {
+              "row": 2,
+              "colours_left_to_right": [
+                "green",
+                "orange",
+                "yellow",
+                "blue",
+                "green",
+                "orange",
+                "yellow",
+                "blue",
+                "green",
+                "orange",
+                "yellow",
+                "blue"
+              ]
+            }
+          ],
+          "star_colour_hex": {
+            "yellow": "#F4D41F",
+            "green": "#7BBF3A",
+            "orange": "#E8801E",
+            "blue": "#3C6DC5",
+            "pink": "#C768AE",
+            "grey": "#8C8C8C"
+          },
+          "ellipsis_after_last_star": {
+            "dots": 3,
+            "colour": "INK",
+            "centre_x_px": 1366,
+            "dot_radius_px": 6,
+            "dot_spacing_px": 20,
+            "on_each_row": true
+          },
+          "to_scale": false
+        },
+        "manim_description": "Plain white canvas (BG), 1920 by 1080 pixels. Draw two horizontal rows of flat five-pointed stars, one above the other, with the stars of the two rows standing in the same 12 columns. Every star points up, has an outer diameter of 80 px, a fill in its star colour and a 3 px INK outline. Column k (k = 1 to 12) has its centre at x = 166 + 100 x (k - 1) px (column 1 at x = 166, column 12 at x = 1266). Row 1 centre line is y = 440 px, row 2 centre line is y = 600 px. Row 1 colours from left to right: yellow, green, orange, blue, pink, grey, yellow, green, orange, blue, pink, grey. Row 2 colours from left to right: green, orange, yellow, blue, green, orange, yellow, blue, green, orange, yellow, blue. Star colour values: yellow #F4D41F, green #7BBF3A, orange #E8801E, blue #3C6DC5, pink #C768AE, grey #8C8C8C. After the 12th star of each row draw a bold ellipsis of three INK dots (radius 6 px, 20 px apart) centred at x = 1366 px on that row's centre line. The right part of the card stays empty; the solution diagram adds columns 13 to 16 there. Draw nothing else: no numbers, no rings, no boxes, no marks on any star.",
+        "visible_text": [
+          "...",
+          "..."
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "column numbers",
+          "any ring, box or mark on a star (nothing is solved)",
+          "stars beyond the 12th in either row",
+          "the words blue, meet, LCM or the cycle lengths 6 and 4"
+        ],
+        "accuracy_checks": [
+          "Row 1 colour of column k is item ((k-1) mod 6)+1 of yellow, green, orange, blue, pink, grey: blue stars only at columns 4 and 10",
+          "Row 2 colour of column k is item ((k-1) mod 4)+1 of green, orange, yellow, blue: blue stars only at columns 4, 8 and 12",
+          "Exactly 12 stars in each row (24 in all) and the two stars of a column share the same x",
+          "Nothing marks the answer (column 16 is not drawn)"
+        ],
+        "alt_text": "Two rows of twelve coloured stars: the top row repeats yellow, green, orange, blue, pink, grey and the bottom row repeats green, orange, yellow, blue, each row ending in three dots.",
+        "render_note": "Book p.17 picture of Figure it Out Q1 (base figure P17-pattern-1), checked against the page image: 12 stars per row then an ellipsis. The same x and y of columns 1 to 12 are kept in the solution diagram, which is why the card is left-aligned with spare room on the right."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S37.T37.C138",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 3.3, Q1",
+      "ncert_ref": "Section 3.3 - Figure it Out Q1 (3.3.end1), book p.17",
+      "question_text": "In the two rows below, colours repeat as shown. When will the blue stars meet next? (Row one repeats yellow, green, orange, blue, pink, grey. Row two repeats green, orange, yellow, blue.)",
+      "decision": "required",
+      "reason_codes": [
+        "HIGHLIGHT_MEANING",
+        "DATA_IN_FIGURE"
+      ],
+      "reason": "The solution adds something visual: the rows run on to the 16th star (the question picture stops at 12) and the two columns where both rows are blue, 4 and 16, are marked, which is the answer.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S37.T37.C138.IMG1",
+      "manim_scene": "c7_11_3_3_end1_sol",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S37.T37.C138.IMG1}}",
+        "insert_into": "steps_tex",
+        "position": "before_first_step"
+      },
+      "diagram": {
+        "diagram_type": "object_row",
+        "aspect_ratio": "16:9",
+        "derived_from": "M3.S37.T37.C137.IMG1",
+        "content": {
+          "type": "object_row",
+          "canvas_px": [
+            1920,
+            1080
+          ],
+          "glyph": "five_pointed_star_point_up",
+          "star_outer_diameter_px": 80,
+          "outline": "INK 3 px",
+          "columns": 16,
+          "column_pitch_px": 100,
+          "column_k_centre_x_px": "166 + 100*(k-1)",
+          "row_centre_y_px": {
+            "1": 440,
+            "2": 600
+          },
+          "rows": [
+            {
+              "row": 1,
+              "colours_left_to_right": [
+                "yellow",
+                "green",
+                "orange",
+                "blue",
+                "pink",
+                "grey",
+                "yellow",
+                "green",
+                "orange",
+                "blue",
+                "pink",
+                "grey",
+                "yellow",
+                "green",
+                "orange",
+                "blue"
+              ]
+            },
+            {
+              "row": 2,
+              "colours_left_to_right": [
+                "green",
+                "orange",
+                "yellow",
+                "blue",
+                "green",
+                "orange",
+                "yellow",
+                "blue",
+                "green",
+                "orange",
+                "yellow",
+                "blue",
+                "green",
+                "orange",
+                "yellow",
+                "blue"
+              ]
+            }
+          ],
+          "star_colour_hex": {
+            "yellow": "#F4D41F",
+            "green": "#7BBF3A",
+            "orange": "#E8801E",
+            "blue": "#3C6DC5",
+            "pink": "#C768AE",
+            "grey": "#8C8C8C"
+          },
+          "ellipsis_after_last_star": {
+            "dots": 3,
+            "colour": "INK",
+            "centre_x_px": 1766,
+            "dot_radius_px": 6,
+            "dot_spacing_px": 20,
+            "on_each_row": true
+          },
+          "column_numbers": {
+            "values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "colour": "ANSWER",
+            "centre_y_px": 720,
+            "height_px": 40,
+            "weight": "bold"
+          },
+          "focus_boxes": [
+            {
+              "column": 4,
+              "x_px": [
+                420,
+                512
+              ],
+              "y_px": [
+                375,
+                755
+              ],
+              "colour": "FOCUS",
+              "stroke_px": 3,
+              "corner_radius_px": 18,
+              "fill": "none"
+            },
+            {
+              "column": 16,
+              "x_px": [
+                1620,
+                1712
+              ],
+              "y_px": [
+                375,
+                755
+              ],
+              "colour": "FOCUS",
+              "stroke_px": 3,
+              "corner_radius_px": 18,
+              "fill": "none"
+            }
+          ],
+          "blue_columns_row1": [
+            4,
+            10,
+            16
+          ],
+          "blue_columns_row2": [
+            4,
+            8,
+            12,
+            16
+          ],
+          "shared_blue_columns": [
+            4,
+            16
+          ],
+          "to_scale": false
+        },
+        "manim_description": "Plain white canvas (BG), 1920 by 1080 pixels; this is the question diagram extended to 16 columns, with columns 1 to 12 at the same positions and in the same colours. Draw two horizontal rows of flat five-pointed stars, one above the other, in the same 16 columns. Every star points up, has an outer diameter of 80 px, a fill in its star colour and a 3 px INK outline. Column k (k = 1 to 16) has its centre at x = 166 + 100 x (k - 1) px (column 1 at x = 166, column 16 at x = 1666). Row 1 centre line is y = 440 px, row 2 centre line is y = 600 px. Row 1 colours from left to right: yellow, green, orange, blue, pink, grey, yellow, green, orange, blue, pink, grey, yellow, green, orange, blue. Row 2 colours from left to right: green, orange, yellow, blue, green, orange, yellow, blue, green, orange, yellow, blue, green, orange, yellow, blue. Star colour values: yellow #F4D41F, green #7BBF3A, orange #E8801E, blue #3C6DC5, pink #C768AE, grey #8C8C8C. After the 16th star of each row draw a bold ellipsis of three INK dots (radius 6 px, 20 px apart) centred at x = 1766 px on that row's centre line. Under row 2, on the centre line y = 720 px, write the column numbers 1 to 16 from left to right, each centred under its column, in ANSWER green, bold sans-serif, 40 px high. Draw two FOCUS rounded rectangles (3 px stroke, corner radius 18 px, no fill), each enclosing both stars of one column together with that column's number: one around column 4 (x from 420 to 512 px) and one around column 16 (x from 1620 to 1712 px), both from y = 375 px to y = 755 px. Draw no other mark.",
+        "visible_text": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "...",
+          "..."
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "the question text",
+          "the words blue, meet, LCM or the cycle lengths 6 and 4",
+          "any mark on the blue stars of columns 8, 10 and 12",
+          "the numbers 12 or 6 as labels"
+        ],
+        "accuracy_checks": [
+          "16 stars in each row; row 1 is blue at columns 4, 10 and 16; row 2 is blue at columns 4, 8, 12 and 16",
+          "Columns where both rows are blue within 1 to 16: 4 and 16 only, and 16 = 4 + 12 with 12 = LCM(6, 4)",
+          "FOCUS boxes are around columns 4 and 16 only",
+          "Columns 1 to 12 have the same colours and positions as the question diagram",
+          "Column numbers run 1 to 16 left to right"
+        ],
+        "alt_text": "The same two rows of stars shown to the 16th column with the columns numbered 1 to 16; both rows have a blue star in column 4 and again in column 16, and those two columns are boxed.",
+        "render_note": "Draws the whole final state of Figure it Out Q1: the book's 12 stars per row extended by the pattern to column 16 (LP solution: blue at 4th, 10th, 16th and 4th, 8th, 12th, 16th star; next meeting at the 16th star). The 12 printed columns stay at the same x and y as the question diagram."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S37.T37.C139",
+      "role": "question",
+      "lp_book_number": "Figure it Out 3.3, Q2",
+      "ncert_ref": "Section 3.3 - Figure it Out Q2 (3.3.end2), book p.17",
+      "question_text": "(a) Is 5 × 7 × 11 × 11 a multiple of 5 × 7 × 7 × 11 × 2? (b) Is 5 × 7 × 11 × 11 a factor of 5 × 7 × 7 × 11 × 2?",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "The book gives no figure; the two products of primes to compare are written in the question, so the prime counts can be read straight from the LaTeX.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S37.T37.C140",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 3.3, Q2",
+      "ncert_ref": "Section 3.3 - Figure it Out Q2 (3.3.end2), book p.17",
+      "question_text": "(a) Is 5 × 7 × 11 × 11 a multiple of 5 × 7 × 7 × 11 × 2? (b) Is 5 × 7 × 11 × 11 a factor of 5 × 7 × 7 × 11 × 2?",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Word reasoning about how often each prime occurs; the answer is Yes/No, not a drawing, so the LaTeX steps are complete.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S37.T37.C141",
+      "role": "question",
+      "lp_book_number": "Figure it Out 3.3, Q3",
+      "ncert_ref": "Section 3.3 - Figure it Out Q3 (3.3.end3), book p.17",
+      "question_text": "Find the HCF and LCM of the following (state your answers in the form of prime factorisations): (a) 3 × 3 × 5 × 7 × 7 and 12 × 7 × 11 (b) 45 and 36",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "The book gives no figure; the numbers are products of primes and plain numbers written in the question.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S37.T37.C142",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 3.3, Q3",
+      "ncert_ref": "Section 3.3 - Figure it Out Q3 (3.3.end3), book p.17",
+      "question_text": "Find the HCF and LCM of the following (state your answers in the form of prime factorisations): (a) 3 × 3 × 5 × 7 × 7 and 12 × 7 × 11 (b) 45 and 36",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Prime factorisations with minimum and maximum counts are arithmetic written as LaTeX; the answer is a product, not a picture (the matched-subpart pictures of section 3.1 are teaching figures of other topics).",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S37.T37.C143",
+      "role": "question",
+      "lp_book_number": "Figure it Out 3.3, Q4",
+      "ncert_ref": "Section 3.3 - Figure it Out Q4 (3.3.end4), book p.17",
+      "question_text": "Find two numbers whose HCF is 1 and LCM is 66.",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "One sentence with two numbers; the book gives no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S37.T37.C144",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 3.3, Q4",
+      "ncert_ref": "Section 3.3 - Figure it Out Q4 (3.3.end4), book p.17",
+      "question_text": "Find two numbers whose HCF is 1 and LCM is 66.",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Splitting 66 = 2 x 3 x 11 into co-prime pairs is a list of number pairs, which LaTeX shows completely.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S37.T37.C145",
+      "role": "question",
+      "lp_book_number": "Figure it Out 3.3, Q5",
+      "ncert_ref": "Section 3.3 - Figure it Out Q5 (3.3.end5), book p.17",
+      "question_text": "A cowherd took all his cows to graze in the fields. The cows came to a crossing with 3 gates. An equal number of cows passed through each gate. Later at another crossing with 5 gates again an equal number of cows passed through each gate. The same happened at the third crossing with 7 gates. If the cowherd had less than 200 cows, how many cows did he have? (Based on the folklore mathematics from Karnataka.)",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "A word problem about cows and gates; the book gives no figure and all numbers (3, 5, 7 gates, fewer than 200 cows) are in the text.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S37.T37.C146",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 3.3, Q5",
+      "ncert_ref": "Section 3.3 - Figure it Out Q5 (3.3.end5), book p.17",
+      "question_text": "A cowherd took all his cows to graze in the fields. The cows came to a crossing with 3 gates. An equal number of cows passed through each gate. Later at another crossing with 5 gates again an equal number of cows passed through each gate. The same happened at the third crossing with 7 gates. If the cowherd had less than 200 cows, how many cows did he have? (Based on the folklore mathematics from Karnataka.)",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Common multiple of 3, 5 and 7 below 200 is arithmetic; the answer 105 is a number.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S37.T37.C147",
+      "role": "question",
+      "lp_book_number": "Figure it Out 3.3, Q6",
+      "ncert_ref": "Section 3.3 - Figure it Out Q6 (3.3.end6), book p.18",
+      "question_text": "The length, width, and height of a box are 12 cm, 18 cm, and 36 cm respectively. Which of the following sized cubes can be packed in this box without leaving gaps? (a) 9 cm (b) 6 cm (c) 4 cm (d) 3 cm (e) 2 cm",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The book gives no figure for the box; the three edge lengths and the five cube sizes are in the text, and a careful student solves it by checking divisibility. (A cuboid sketch would only be a nicety and is not given, so it is not invented.)",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S37.T37.C148",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 3.3, Q6",
+      "ncert_ref": "Section 3.3 - Figure it Out Q6 (3.3.end6), book p.18",
+      "question_text": "The length, width, and height of a box are 12 cm, 18 cm, and 36 cm respectively. Which of the following sized cubes can be packed in this box without leaving gaps? (a) 9 cm (b) 6 cm (c) 4 cm (d) 3 cm (e) 2 cm",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC",
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Common factors of 12, 18 and 36 and a divisibility check; the answer is a set of cube sizes chosen from a list, not a drawing.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S37.T37.C149",
+      "role": "question",
+      "lp_book_number": "Figure it Out 3.3, Q7",
+      "ncert_ref": "Section 3.3 - Figure it Out Q7 (3.3.end7), book p.18",
+      "question_text": "Among the numbers below, which is the largest number that perfectly divides both 306 and 36? (a) 36 (b) 612 (c) 18 (d) 3 (e) 2 (f) 360",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Two numbers and a plain list of six choices; the book gives no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S37.T37.C150",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 3.3, Q7",
+      "ncert_ref": "Section 3.3 - Figure it Out Q7 (3.3.end7), book p.18",
+      "question_text": "Among the numbers below, which is the largest number that perfectly divides both 306 and 36? (a) 36 (b) 612 (c) 18 (d) 3 (e) 2 (f) 360",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Two prime factorisations and their HCF are arithmetic in LaTeX; the answer is one choice from the list.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S38.T38.C151",
+      "role": "worked_example",
+      "lp_book_number": "Worked example E0",
+      "ncert_ref": null,
+      "question_text": "Find the smallest number that is divisible by 5 and 6 but leaves a remainder of 4 when divided by 7.",
+      "block_index": 0,
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "No figure is referred to; the four steps are multiples and remainders written as arithmetic. The teaching image M3.S38.T38.C151.IMG1 (hops along multiples of 30) already stays in the concept and is never linked.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S38.T38.C152",
+      "role": "worked_example",
+      "lp_book_number": "Worked example E1",
+      "ncert_ref": null,
+      "question_text": "A cat chases a mouse that has a head start of 48 feet. The cat jumps 7 feet every time the mouse jumps 5 feet. In how many leaps does the cat catch the mouse?",
+      "block_index": 0,
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "A chase story solved by gain per leap (7 - 5 = 2, 48 / 2 = 24); all numbers are in the text and no figure is referred to. Same decision as the dog and rabbit question M3.S39.T39.C161.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S38.T38.C153",
+      "role": "worked_example",
+      "lp_book_number": "Worked example E0",
+      "ncert_ref": null,
+      "question_text": "Add 1/6 and 1/4 using the LCM of the denominators.",
+      "block_index": 0,
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Adding 1/6 and 1/4 over 12 is fraction arithmetic in LaTeX; the teaching image M3.S38.T38.C153.IMG1 (twelfth bars) already stays in the concept and is never linked.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S39.T39.C155",
+      "role": "question",
+      "lp_book_number": "Figure it Out 3.3, Q1",
+      "ncert_ref": "Section 3.3 - Figure it Out Q8 (3.3.end8), book p.18",
+      "question_text": "Find the smallest number that is divisible by 3, 4, 5 and 7, but leaves a remainder of 10 when divided by 11.",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "One sentence with the numbers 3, 4, 5, 7, 10 and 11; the book gives no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S39.T39.C156",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 3.3, Q1",
+      "ncert_ref": "Section 3.3 - Figure it Out Q8 (3.3.end8), book p.18",
+      "question_text": "Find the smallest number that is divisible by 3, 4, 5 and 7, but leaves a remainder of 10 when divided by 11.",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC",
+        "LATEX_TABLE"
+      ],
+      "reason": "LCM 420, its five multiples and their remainders on division by 11 are numbers; a plain two-row table is enough.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "LaTeX array: multiples 420, 840, 1260, 1680, 2100 against remainders 2, 4, 6, 8, 10."
+    },
+    {
+      "lp_concept_id": "M3.S39.T39.C157",
+      "role": "question",
+      "lp_book_number": "Figure it Out 3.3, Q2",
+      "ncert_ref": "Section 3.3 - Figure it Out Q9 (3.3.end9), book p.18",
+      "question_text": "Children are playing 'Fire in the Mountain'. When the number 6 was called out, no one got out. When the number 9 was called out, no one got out. But when the number 10 was called out, some people got out. How many children could have been playing initially? (a) 72 (b) 90 (c) 45 (d) 3 (e) 36 (f) None of these",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "A game story with numbers 6, 9, 10 and a list of six choices; the book gives no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S39.T39.C158",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 3.3, Q2",
+      "ncert_ref": "Section 3.3 - Figure it Out Q9 (3.3.end9), book p.18",
+      "question_text": "Children are playing 'Fire in the Mountain'. When the number 6 was called out, no one got out. When the number 9 was called out, no one got out. But when the number 10 was called out, some people got out. How many children could have been playing initially? (a) 72 (b) 90 (c) 45 (d) 3 (e) 36 (f) None of these",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Word reasoning with multiples of 18 and 10; the answer is two choices from the list, not a drawing.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S39.T39.C159",
+      "role": "question",
+      "lp_book_number": "Figure it Out 3.3, Q3",
+      "ncert_ref": "Section 3.3 - Figure it Out Q10 (3.3.end10), book p.18",
+      "question_text": "Tick the correct statement(s). The LCM of two different prime numbers (m, n) can be: (a) Less than both numbers (b) In between the two numbers (c) Greater than both numbers (d) Less than m × n (e) Greater than m × n",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Five statements to tick about the LCM of two primes m and n; the book gives no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S39.T39.C160",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 3.3, Q3",
+      "ncert_ref": "Section 3.3 - Figure it Out Q10 (3.3.end10), book p.18",
+      "question_text": "Tick the correct statement(s). The LCM of two different prime numbers (m, n) can be: (a) Less than both numbers (b) In between the two numbers (c) Greater than both numbers (d) Less than m × n (e) Greater than m × n",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Word reasoning that the LCM of two different primes is m x n; the answer is one statement, not a drawing.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S39.T39.C161",
+      "role": "question",
+      "lp_book_number": "Figure it Out 3.3, Q4",
+      "ncert_ref": "Section 3.3 - Figure it Out Q11 (3.3.end11), book p.18",
+      "question_text": "A dog is chasing a rabbit that has a head start of 150 feet. It jumps 9 feet every time the rabbit jumps 7 feet. In how many leaps does the dog catch up with the rabbit?",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "A chase story with the head start 150 feet and the jumps 9 and 7 feet all in the text; the book gives no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S39.T39.C162",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 3.3, Q4",
+      "ncert_ref": "Section 3.3 - Figure it Out Q11 (3.3.end11), book p.18",
+      "question_text": "A dog is chasing a rabbit that has a head start of 150 feet. It jumps 9 feet every time the rabbit jumps 7 feet. In how many leaps does the dog catch up with the rabbit?",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Gain per leap 9 - 7 = 2, 150 / 2 = 75 and the check 675 = 675 are arithmetic in LaTeX.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S39.T39.C163",
+      "role": "question",
+      "lp_book_number": "Figure it Out 3.3, Q5",
+      "ncert_ref": "Section 3.3 - Figure it Out Q12 (3.3.end12), book p.18",
+      "question_text": "What is the smallest number that is a multiple of 1, 2, 3, 4, 5, 6, 8, 9, 10? Do you remember the answer from Grade 6, Chapter 5?",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "A list of nine numbers and one sentence; the book gives no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S39.T39.C164",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 3.3, Q5",
+      "ncert_ref": "Section 3.3 - Figure it Out Q12 (3.3.end12), book p.18",
+      "question_text": "What is the smallest number that is a multiple of 1, 2, 3, 4, 5, 6, 8, 9, 10? Do you remember the answer from Grade 6, Chapter 5?",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Highest powers of 2, 3 and 5 and the product 360 are arithmetic in LaTeX.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S39.T39.C165",
+      "role": "question",
+      "lp_book_number": "Figure it Out 3.3, Q6",
+      "ncert_ref": "Section 3.3 - Figure it Out Q13 (3.3.end13), book p.18",
+      "question_text": "Here is a problem posed by the ancient Indian Mathematician Mahaviracharya (850 C.E.). Add together 8/15, 1/20, 7/36, 11/63 and 1/21. What do you get? How can we find this sum efficiently?",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Five fractions written in the question as LaTeX; the book gives no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S39.T39.C166",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 3.3, Q6",
+      "ncert_ref": "Section 3.3 - Figure it Out Q13 (3.3.end13), book p.18",
+      "question_text": "Here is a problem posed by the ancient Indian Mathematician Mahaviracharya (850 C.E.). Add together 8/15, 1/20, 7/36, 11/63 and 1/21. What do you get? How can we find this sum efficiently?",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "LCM 1260, five equivalent fractions and their sum 1260/1260 = 1 are fraction arithmetic in LaTeX.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S40.T40.C167",
+      "role": "worked_example",
+      "lp_book_number": "Worked example E0",
+      "ncert_ref": null,
+      "question_text": "Find the HCF and LCM of 42 and 70, and check with the product rule.",
+      "block_index": 0,
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Two prime factorisations, minimum and maximum counts and the product check 14 x 210 = 2940 = 42 x 70 are arithmetic; the teaching image M4.S40.T40.C167.IMG1 already stays in the concept and is never linked.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S40.T40.C168",
+      "role": "worked_example",
+      "lp_book_number": "Worked example E0",
+      "ncert_ref": null,
+      "question_text": "Find the HCF and LCM of 8 and 15, of 7 and 21, and of 12 and 13 without long working.",
+      "block_index": 0,
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Three short HCF/LCM cases decided by co-prime / factor / consecutive reasoning, written as plain statements; the teaching image M4.S40.T40.C168.IMG1 already stays in the concept and is never linked.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    }
+  ]
+}

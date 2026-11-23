@@ -1,0 +1,4679 @@
+{
+ "meta": {
+  "chapter": "A Tale of Three Intersecting Lines",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 7",
+  "lp_plan_id": "cbse_eng_maths7_ch7_v61",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 2,
+    "optional": 0,
+    "none": 11
+   },
+   "solution": {
+    "required": 9,
+    "optional": 0,
+    "none": 4
+   },
+   "worked_example": {
+    "required": 1,
+    "optional": 2,
+    "none": 2
+   }
+  },
+  "notes": [
+   "Chunk A: topics M1.S3.T3 to M1.S13.T13 (18 units, 31 items). Figures of book pages 1-13 (7.1 to the cases of two circles) and the printed answers of Figure it Out 7.2 (page 28) are claimed here.",
+   "Every question without a given figure is 'none'; the construction answers (4 cm, 4-4-6, 4-5-6, five triangles, the failed 3-4-8 / 2-3-6 / 3-3-7 attempts, circles 4 and 5 on base 8) are required on the solution side; the existence-check answers are arithmetic and stay text.",
+   "Two optional worked examples (C20 tent-tree-pole, C42 touch-miss-cross) are not added; their teaching images already show the scene.",
+   "All figures are drawn to scale except the rough sketch of C26 (lengths 10, 15, 30 cannot form a triangle)."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P01-shape-1",
+   "source": "chapter p.01",
+   "description": "Four plain triangles with vertex letters and names (ABC, YZX, WUV, BAU); a teaching figure on naming triangles.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P02-shape-1",
+   "source": "chapter p.02",
+   "description": "Triangle ABC with AB = 4 cm, AC = 4 cm and a dashed BC marked '4 cm?' (ruler-only trial); a teaching figure of the equilateral-triangle section, no item uses it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P02-construction-2",
+   "source": "chapter p.02",
+   "description": "Step 1 of the equilateral construction: dashed circle of radius 4 cm at A with B on it and one solid arc; the answer figure of C7 shows this arc in its final state.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P03-construction-1",
+   "source": "chapter p.03",
+   "description": "Step 2: two dashed circles of radius 4 cm at A and B with two short solid arcs crossing at the top.",
+   "mapped_to": "concept_image:M1.S2.T2.C4.IMG1"
+  },
+  {
+   "fig_id": "P03-construction-2",
+   "source": "chapter p.03",
+   "description": "Step 3: the same picture with C labelled and AC, BC drawn: the finished equilateral triangle on base AB = 4 cm.",
+   "mapped_to": "item:M1.S3.T3.C7 (solution)"
+  },
+  {
+   "fig_id": "P04-construction-1",
+   "source": "chapter p.04",
+   "description": "Fig. 7.1: a bare base segment with two end dots (no letters, no length).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P04-construction-2",
+   "source": "chapter p.04",
+   "description": "Fig. 7.2: dashed circle of radius 5 cm at A with a solid arc, B inside the circle, AB = 4 cm.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P04-construction-3",
+   "source": "chapter p.04",
+   "description": "Fig. 7.3: circles of radius 5 cm at A and 6 cm at B with the two solid arcs crossing at the top.",
+   "mapped_to": "concept_image:M1.S4.T4.C8.IMG1"
+  },
+  {
+   "fig_id": "P05-construction-1",
+   "source": "chapter p.05",
+   "description": "The finished triangle ABC with AC = 5 cm, BC = 6 cm, AB = 4 cm and the two arcs through C (not to scale in the book: C is drawn left of A).",
+   "mapped_to": "item:M1.S5.T5.C12 (solution)"
+  },
+  {
+   "fig_id": "P05-shape-2",
+   "source": "chapter p.05",
+   "description": "Figure it Out 7.2 Q1: a plain circle with its centre dot, no other point marked.",
+   "mapped_to": "item:M1.S6.T6.C15 (question)"
+  },
+  {
+   "fig_id": "P06-shape-1",
+   "source": "chapter p.06",
+   "description": "Figure it Out 7.2 Q2, left: two equal circles with centres A and B, each passing through the other's centre.",
+   "mapped_to": "item:M1.S6.T6.C17 (question)"
+  },
+  {
+   "fig_id": "P06-shape-2",
+   "source": "chapter p.06",
+   "description": "Figure it Out 7.2 Q2, right: three equal circles with centres A, B (top) and C (below), each passing through the other two centres.",
+   "mapped_to": "item:M1.S6.T6.C17 (question)"
+  },
+  {
+   "fig_id": "P07-scene-1",
+   "source": "chapter p.07",
+   "description": "Illustration of a tree, a pole and a tent with the red direct path and the yellow roundabout path (teaching figure; children are decoration).",
+   "mapped_to": "concept_image:M1.S7.T7.C20.IMG1"
+  },
+  {
+   "fig_id": "P07-shape-2",
+   "source": "chapter p.07",
+   "description": "Fig. 7.4: rough, long thin triangle ABC with AB = 15 cm, AC = 30 cm, BC = 10 cm.",
+   "mapped_to": "item:M1.S8.T8.C26 (solution)"
+  },
+  {
+   "fig_id": "P10-shape-1",
+   "source": "chapter p.10",
+   "description": "Circle of radius 4 cm at A on the base AB = 8 cm meeting AB at X, with dimension lines AX = 4 cm and AB = 8 cm (teaching figure).",
+   "mapped_to": "concept_image:M1.S10.T10.C35.IMG1"
+  },
+  {
+   "fig_id": "P11-shape-1",
+   "source": "chapter p.11",
+   "description": "Fig. 7.5: circles of radius 4 cm at A and 5 cm at B on AB = 8 cm crossing at two points, with X and the dimension lines 4 cm and 5 cm.",
+   "mapped_to": "item:M1.S11.T11.C39 (solution)"
+  },
+  {
+   "fig_id": "P12-shape-1",
+   "source": "chapter p.12",
+   "description": "Case 1: a small circle at A and a larger circle at B touching on AB.",
+   "mapped_to": "concept_image:M1.S13.T13.C42.IMG1"
+  },
+  {
+   "fig_id": "P12-shape-2",
+   "source": "chapter p.12",
+   "description": "Case 2: the same two circles with a clear gap between them on AB.",
+   "mapped_to": "concept_image:M1.S13.T13.C42.IMG1"
+  },
+  {
+   "fig_id": "P12-shape-3",
+   "source": "chapter p.12",
+   "description": "Case 3: the same two circles overlapping in a lens.",
+   "mapped_to": "concept_image:M1.S13.T13.C42.IMG1"
+  },
+  {
+   "fig_id": "P13-shape-1",
+   "source": "chapter p.13",
+   "description": "Case 1 again, with the touching point on AB labelled X (sum of the two radii = AB).",
+   "mapped_to": "concept_image:M1.S13.T13.C42.IMG1"
+  },
+  {
+   "fig_id": "P13-shape-2",
+   "source": "chapter p.13",
+   "description": "Case 2 again, with a small clear gap on AB (sum of the two radii < AB).",
+   "mapped_to": "concept_image:M1.S13.T13.C42.IMG1"
+  },
+  {
+   "fig_id": "P13-shape-3",
+   "source": "chapter p.13",
+   "description": "Case 3 again, overlapping, with the arrows 'radius 1' and 'radius 2' on AB.",
+   "mapped_to": "concept_image:M1.S13.T13.C42.IMG1"
+  },
+  {
+   "fig_id": "P28-shape-1",
+   "source": "chapter p.28",
+   "description": "Printed answer of Figure it Out 7.2 Q1: a circle with its centre and two points on its lower part joined to the centre and to each other (an isosceles triangle with apex at the centre).",
+   "mapped_to": "item:M1.S6.T6.C16 (solution)"
+  },
+  {
+   "fig_id": "P28-shape-2",
+   "source": "chapter p.28",
+   "description": "Printed answer of Figure it Out 7.2 Q2, first figure: two equal circles with crossing points C and D, AB, AC, BC, AD, BD drawn, and extra points C1 to C3 and D1 to D3 on the circles.",
+   "mapped_to": "item:M1.S6.T6.C18 (solution)"
+  },
+  {
+   "fig_id": "P28-shape-3",
+   "source": "chapter p.28",
+   "description": "Printed answer of Figure it Out 7.2 Q2, second figure: three equal circles with only A, B (centres), C (top crossing) and D (lower crossing, also the third centre) lettered, no segments. The LP solution keeps the question's lettering instead.",
+   "mapped_to": "item:M1.S6.T6.C18 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 25,
+  "mapped_to_items": 10,
+  "mapped_to_concept_images": 10,
+  "mapped_none": 5,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S3.T3.C7.IMG1",
+   "M1.S4.T4.C9.IMG1",
+   "M1.S5.T5.C12.IMG1",
+   "M1.S5.T5.C14.IMG1",
+   "M1.S6.T6.C15.IMG1",
+   "M1.S6.T6.C16.IMG1",
+   "M1.S6.T6.C17.IMG1",
+   "M1.S6.T6.C18.IMG1",
+   "M1.S8.T8.C24.IMG1",
+   "M1.S8.T8.C26.IMG1",
+   "M1.S8.T8.C28.IMG1",
+   "M1.S11.T11.C39.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S3.T3.C6",
+   "role": "question",
+   "lp_book_number": "Equilateral Triangles: construct a triangle of side 4 cm",
+   "ncert_ref": "7.1.compass",
+   "question_text": "Construct a triangle in which all the sides are of length 4 cm, and explain why AC and BC are both 4 cm.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure, only the side length 4 cm; the learner draws the construction, so a question figure would be an invented one.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optional text fix: say that AB is the base and C the third corner, because AC and BC are named in the question but never introduced."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "solution",
+   "lp_book_number": "Equilateral Triangles: construct a triangle of side 4 cm",
+   "ncert_ref": "7.1.compass",
+   "question_text": "Construct a triangle in which all the sides are of length 4 cm, and explain why AC and BC are both 4 cm.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is a construction: base AB, two arcs of radius 4 cm crossing at C, and the triangle. The steps describe it in words; the finished figure is what the learner compares with.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C7.IMG1",
+   "manim_scene": "c7_7_s3_C7_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C7.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "construction",
+     "scale_px_per_cm": 185,
+     "to_scale": true,
+     "base": "AB",
+     "base_length_cm": 4,
+     "arcs_radius_cm": [
+      4,
+      4
+     ],
+     "apex": "C",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "coordinates": "px from the top-left corner, x to the right, y downward; angles counter-clockwise on screen (0 = right, 90 = up)",
+     "elements": [
+      {
+       "k": "seg",
+       "name": "Base AB (4 cm)",
+       "p": [
+        590.0,
+        880.0
+       ],
+       "q": [
+        1330.0,
+        880.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "arc",
+       "name": "Construction arc of radius 4 cm from A (passes through C)",
+       "c": [
+        590.0,
+        880.0
+       ],
+       "r": 740.0,
+       "a0": 40.0,
+       "a1": 80.0,
+       "col": "GUIDE",
+       "dash": false,
+       "start": [
+        1156.9,
+        404.3
+       ],
+       "end": [
+        718.5,
+        151.2
+       ]
+      },
+      {
+       "k": "arc",
+       "name": "Construction arc of radius 4 cm from B (passes through C)",
+       "c": [
+        1330.0,
+        880.0
+       ],
+       "r": 740.0,
+       "a0": 100.0,
+       "a1": 140.0,
+       "col": "GUIDE",
+       "dash": false,
+       "start": [
+        1201.5,
+        151.2
+       ],
+       "end": [
+        763.1,
+        404.3
+       ]
+      },
+      {
+       "k": "seg",
+       "name": "Side AC",
+       "p": [
+        590.0,
+        880.0
+       ],
+       "q": [
+        960.0,
+        239.1
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Side BC",
+       "p": [
+        1330.0,
+        880.0
+       ],
+       "q": [
+        960.0,
+        239.1
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "dot",
+       "name": "Point A",
+       "p": [
+        590.0,
+        880.0
+       ],
+       "col": "INK",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "Point B",
+       "p": [
+        1330.0,
+        880.0
+       ],
+       "col": "INK",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "Point C (where the two arcs cross)",
+       "p": [
+        960.0,
+        239.1
+       ],
+       "col": "ANSWER",
+       "r": 9
+      },
+      {
+       "k": "text",
+       "name": "Letter A",
+       "s": "A",
+       "p": [
+        538.0,
+        890.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter B",
+       "s": "B",
+       "p": [
+        1382.0,
+        890.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter C",
+       "s": "C",
+       "p": [
+        960.0,
+        169.1
+       ],
+       "col": "ANSWER",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Length of AB",
+       "s": "4 cm",
+       "p": [
+        960,
+        942
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Length of AC (written along AC)",
+       "s": "4 cm",
+       "p": [
+        721.3,
+        528.6
+       ],
+       "col": "INK",
+       "rot": 59.99999999999999
+      },
+      {
+       "k": "text",
+       "name": "Length of BC (written along BC)",
+       "s": "4 cm",
+       "p": [
+        1198.7,
+        528.6
+       ],
+       "col": "INK",
+       "rot": -59.999999999999986
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG (plain white), coordinates in px from the top-left corner (y grows downward), 16:9. Flat 2D construction figure, 1 cm = 185 px, to scale. An equilateral triangle ABC of side 4 cm (740 px) built on the base AB with two construction arcs of radius 4 cm that cross at C. Draw in this order (back to front): 1. Base AB (4 cm): straight line from (590, 880) to (1330, 880), INK, 3 px, solid. 2. Construction arc of radius 4 cm from A (passes through C): circular arc, centre (590, 880), radius 740 px, from 40 to 80 degrees (start point (1156.9, 404.3), end point (718.5, 151.2)), GUIDE, 3 px, solid. 3. Construction arc of radius 4 cm from B (passes through C): circular arc, centre (1330, 880), radius 740 px, from 100 to 140 degrees (start point (1201.5, 151.2), end point (763.1, 404.3)), GUIDE, 3 px, solid. 4. Side AC: straight line from (590, 880) to (960, 239.1), ANSWER, 3 px, solid. 5. Side BC: straight line from (1330, 880) to (960, 239.1), ANSWER, 3 px, solid. 6. Point A: filled dot, centre (590, 880), radius 9 px, INK. 7. Point B: filled dot, centre (1330, 880), radius 9 px, INK. 8. Point C (where the two arcs cross): filled dot, centre (960, 239.1), radius 9 px, ANSWER. 9. Letter A: text \"A\" centred at (538, 890), INK, sans-serif 48 px. 10. Letter B: text \"B\" centred at (1382, 890), INK, sans-serif 48 px. 11. Letter C: text \"C\" centred at (960, 169.1), ANSWER, sans-serif 48 px. 12. Length of AB: text \"4 cm\" centred at (960, 942), INK, sans-serif 48 px. 13. Length of AC (written along AC): text \"4 cm\" centred at (721.3, 528.6), INK, sans-serif 48 px, rotated 60 degrees counter-clockwise (negative = clockwise). 14. Length of BC (written along BC): text \"4 cm\" centred at (1198.7, 528.6), INK, sans-serif 48 px, rotated -60 degrees counter-clockwise (negative = clockwise).",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "4 cm",
+     "4 cm",
+     "4 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a ruler, a compass or a pencil",
+     "the word equilateral",
+     "the full dashed circles",
+     "arcs beyond the short pieces drawn"
+    ],
+    "accuracy_checks": [
+     "AB = AC = BC = 740 px = 4 cm at 185 px per cm (code assertion)",
+     "C lies on the arc of radius 4 cm centred A and on the arc of radius 4 cm centred B",
+     "C is at x = 960, the midpoint of AB, and 4 x sin 60 degrees = 3.464 cm above it"
+    ],
+    "alt_text": "Base AB of 4 cm with two arcs of radius 4 cm from A and B crossing at C, and the triangle ABC with all three sides labelled 4 cm."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C9",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "7.2.why, 7.2.iso",
+   "question_text": "Construct a triangle with sidelengths 4 cm, 4 cm and 6 cm and say what kind of triangle it is.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The example's answer is a construction (base 6 cm, two arcs of radius 4 cm crossing at C) and the steps lean on it: 'they cross at C', 'AC = BC'. The concept has no teaching image of its own, so the example gets its picture.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S4.T4.C9.IMG1",
+   "manim_scene": "c7_7_s4_C9_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S4.T4.C9.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "construction",
+     "scale_px_per_cm": 150,
+     "to_scale": true,
+     "base": "AB",
+     "base_length_cm": 6,
+     "arcs_radius_cm": [
+      4,
+      4
+     ],
+     "apex": "C",
+     "equal_sides": [
+      "AC",
+      "BC"
+     ],
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "coordinates": "px from the top-left corner, x to the right, y downward; angles counter-clockwise on screen (0 = right, 90 = up)",
+     "elements": [
+      {
+       "k": "seg",
+       "name": "Base AB (6 cm)",
+       "p": [
+        510.0,
+        800.0
+       ],
+       "q": [
+        1410.0,
+        800.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "arc",
+       "name": "Construction arc of radius 4 cm from A (passes through C)",
+       "c": [
+        510.0,
+        800.0
+       ],
+       "r": 600.0,
+       "a0": 23.41,
+       "a1": 59.41,
+       "col": "GUIDE",
+       "dash": false,
+       "start": [
+        1060.6,
+        561.6
+       ],
+       "end": [
+        815.3,
+        283.5
+       ]
+      },
+      {
+       "k": "arc",
+       "name": "Construction arc of radius 4 cm from B (passes through C)",
+       "c": [
+        1410.0,
+        800.0
+       ],
+       "r": 600.0,
+       "a0": 120.59,
+       "a1": 156.59,
+       "col": "GUIDE",
+       "dash": false,
+       "start": [
+        1104.7,
+        283.5
+       ],
+       "end": [
+        859.4,
+        561.6
+       ]
+      },
+      {
+       "k": "seg",
+       "name": "Side AC",
+       "p": [
+        510.0,
+        800.0
+       ],
+       "q": [
+        960.0,
+        403.1
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Side BC",
+       "p": [
+        1410.0,
+        800.0
+       ],
+       "q": [
+        960.0,
+        403.1
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "ticks",
+       "name": "Equal-side tick on AC",
+       "marks": [
+        [
+         [
+          725.1,
+          590.3
+         ],
+         [
+          744.9,
+          612.8
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "ticks",
+       "name": "Equal-side tick on BC",
+       "marks": [
+        [
+         [
+          1175.1,
+          612.8
+         ],
+         [
+          1194.9,
+          590.3
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "dot",
+       "name": "Point A",
+       "p": [
+        510.0,
+        800.0
+       ],
+       "col": "INK",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "Point B",
+       "p": [
+        1410.0,
+        800.0
+       ],
+       "col": "INK",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "Point C (where the two arcs cross)",
+       "p": [
+        960.0,
+        403.1
+       ],
+       "col": "ANSWER",
+       "r": 9
+      },
+      {
+       "k": "text",
+       "name": "Letter A",
+       "s": "A",
+       "p": [
+        458.0,
+        810.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter B",
+       "s": "B",
+       "p": [
+        1462.0,
+        810.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter C",
+       "s": "C",
+       "p": [
+        960.0,
+        323.1
+       ],
+       "col": "ANSWER",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Length of AB",
+       "s": "6 cm",
+       "p": [
+        960,
+        862
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Length of AC (written along AC)",
+       "s": "4 cm",
+       "p": [
+        694.0,
+        555.1
+       ],
+       "col": "INK",
+       "rot": 41.40962210927086
+      },
+      {
+       "k": "text",
+       "name": "Length of BC (written along BC)",
+       "s": "4 cm",
+       "p": [
+        1226.0,
+        555.1
+       ],
+       "col": "INK",
+       "rot": -41.409622109270856
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG (plain white), coordinates in px from the top-left corner (y grows downward), 16:9. Flat 2D construction figure, 1 cm = 150 px, to scale. The isosceles triangle ABC with AB = 6 cm (900 px) as the base and AC = BC = 4 cm (600 px), built with two construction arcs of radius 4 cm that cross at C. Draw in this order (back to front): 1. Base AB (6 cm): straight line from (510, 800) to (1410, 800), INK, 3 px, solid. 2. Construction arc of radius 4 cm from A (passes through C): circular arc, centre (510, 800), radius 600 px, from 23.4 to 59.4 degrees (start point (1060.6, 561.6), end point (815.3, 283.5)), GUIDE, 3 px, solid. 3. Construction arc of radius 4 cm from B (passes through C): circular arc, centre (1410, 800), radius 600 px, from 120.6 to 156.6 degrees (start point (1104.7, 283.5), end point (859.4, 561.6)), GUIDE, 3 px, solid. 4. Side AC: straight line from (510, 800) to (960, 403.1), ANSWER, 3 px, solid. 5. Side BC: straight line from (1410, 800) to (960, 403.1), ANSWER, 3 px, solid. 6. Equal-side tick on AC: 1 short tick line, ANSWER, 3 px, from (725.1, 590.3) to (744.9, 612.8). 7. Equal-side tick on BC: 1 short tick line, ANSWER, 3 px, from (1175.1, 612.8) to (1194.9, 590.3). 8. Point A: filled dot, centre (510, 800), radius 9 px, INK. 9. Point B: filled dot, centre (1410, 800), radius 9 px, INK. 10. Point C (where the two arcs cross): filled dot, centre (960, 403.1), radius 9 px, ANSWER. 11. Letter A: text \"A\" centred at (458, 810), INK, sans-serif 48 px. 12. Letter B: text \"B\" centred at (1462, 810), INK, sans-serif 48 px. 13. Letter C: text \"C\" centred at (960, 323.1), ANSWER, sans-serif 48 px. 14. Length of AB: text \"6 cm\" centred at (960, 862), INK, sans-serif 48 px. 15. Length of AC (written along AC): text \"4 cm\" centred at (694, 555.1), INK, sans-serif 48 px, rotated 41.4 degrees counter-clockwise (negative = clockwise). 16. Length of BC (written along BC): text \"4 cm\" centred at (1226, 555.1), INK, sans-serif 48 px, rotated -41.4 degrees counter-clockwise (negative = clockwise).",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "6 cm",
+     "4 cm",
+     "4 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the word isosceles",
+     "the full dashed circles",
+     "a ruler, a compass or a pencil"
+    ],
+    "accuracy_checks": [
+     "AB = 900 px = 6 cm, AC = BC = 600 px = 4 cm at 150 px per cm (code assertion)",
+     "4 + 4 > 6, so the arcs cross; C is at x = 960, the midpoint of AB",
+     "height of C above AB = sqrt(16 - 9) = 2.646 cm = 396.9 px",
+     "only AC and BC carry the equal-side tick (two equal sides: isosceles)"
+    ],
+    "alt_text": "Base AB of 6 cm with two arcs of radius 4 cm from A and B crossing at C; AC and BC are marked equal and labelled 4 cm."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C11",
+   "role": "question",
+   "lp_book_number": "Triangles from Three Sides: construct 4 cm, 5 cm and 6 cm",
+   "ncert_ref": "7.2.build",
+   "question_text": "Construct a triangle with sidelengths 4 cm, 5 cm and 6 cm.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure, only three lengths; the learner draws the triangle.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C12",
+   "role": "solution",
+   "lp_book_number": "Triangles from Three Sides: construct 4 cm, 5 cm and 6 cm",
+   "ncert_ref": "7.2.build",
+   "question_text": "Construct a triangle with sidelengths 4 cm, 5 cm and 6 cm.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is a construction: base AB = 4 cm, an arc of radius 5 cm from A and one of radius 6 cm from B crossing at C. The book prints this finished triangle (p.5) beside its worked steps.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S5.T5.C12.IMG1",
+   "manim_scene": "c7_7_s5_C12_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S5.T5.C12.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "construction",
+     "scale_px_per_cm": 130,
+     "to_scale": true,
+     "base": "AB",
+     "base_length_cm": 4,
+     "arcs_radius_cm": [
+      5,
+      6
+     ],
+     "apex": "C",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "coordinates": "px from the top-left corner, x to the right, y downward; angles counter-clockwise on screen (0 = right, 90 = up)",
+     "elements": [
+      {
+       "k": "seg",
+       "name": "Base AB (4 cm)",
+       "p": [
+        720.0,
+        850.0
+       ],
+       "q": [
+        1240.0,
+        850.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "arc",
+       "name": "Construction arc of radius 5 cm from A (passes through C)",
+       "c": [
+        720.0,
+        850.0
+       ],
+       "r": 650.0,
+       "a0": 66.82,
+       "a1": 98.82,
+       "col": "GUIDE",
+       "dash": false,
+       "start": [
+        975.9,
+        252.5
+       ],
+       "end": [
+        620.3,
+        207.7
+       ]
+      },
+      {
+       "k": "arc",
+       "name": "Construction arc of radius 6 cm from B (passes through C)",
+       "c": [
+        1240.0,
+        850.0
+       ],
+       "r": 780.0,
+       "a0": 108.23,
+       "a1": 140.23,
+       "col": "GUIDE",
+       "dash": false,
+       "start": [
+        996.0,
+        109.1
+       ],
+       "end": [
+        640.5,
+        351.0
+       ]
+      },
+      {
+       "k": "seg",
+       "name": "Side AC",
+       "p": [
+        720.0,
+        850.0
+       ],
+       "q": [
+        801.2,
+        205.1
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Side BC",
+       "p": [
+        1240.0,
+        850.0
+       ],
+       "q": [
+        801.2,
+        205.1
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "dot",
+       "name": "Point A",
+       "p": [
+        720.0,
+        850.0
+       ],
+       "col": "INK",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "Point B",
+       "p": [
+        1240.0,
+        850.0
+       ],
+       "col": "INK",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "Point C (where the two arcs cross)",
+       "p": [
+        801.2,
+        205.1
+       ],
+       "col": "ANSWER",
+       "r": 9
+      },
+      {
+       "k": "text",
+       "name": "Letter A",
+       "s": "A",
+       "p": [
+        668.0,
+        860.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter B",
+       "s": "B",
+       "p": [
+        1292.0,
+        860.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter C",
+       "s": "C",
+       "p": [
+        779.2,
+        135.1
+       ],
+       "col": "ANSWER",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Length of AB",
+       "s": "4 cm",
+       "p": [
+        980.0,
+        912
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Length of AC (written along AC)",
+       "s": "5 cm",
+       "p": [
+        699.1,
+        519.8
+       ],
+       "col": "INK",
+       "rot": 82.81924421854171
+      },
+      {
+       "k": "text",
+       "name": "Length of BC (written along BC)",
+       "s": "6 cm",
+       "p": [
+        1071.9,
+        492.7
+       ],
+       "col": "INK",
+       "rot": -55.77113367218743
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG (plain white), coordinates in px from the top-left corner (y grows downward), 16:9. Flat 2D construction figure, 1 cm = 130 px, to scale. The triangle ABC with AB = 4 cm (520 px) as the base, AC = 5 cm (650 px) and BC = 6 cm (780 px), built with a construction arc of radius 5 cm from A and one of radius 6 cm from B that cross at C. Draw in this order (back to front): 1. Base AB (4 cm): straight line from (720, 850) to (1240, 850), INK, 3 px, solid. 2. Construction arc of radius 5 cm from A (passes through C): circular arc, centre (720, 850), radius 650 px, from 66.8 to 98.8 degrees (start point (975.9, 252.5), end point (620.3, 207.7)), GUIDE, 3 px, solid. 3. Construction arc of radius 6 cm from B (passes through C): circular arc, centre (1240, 850), radius 780 px, from 108.2 to 140.2 degrees (start point (996, 109.1), end point (640.5, 351)), GUIDE, 3 px, solid. 4. Side AC: straight line from (720, 850) to (801.2, 205.1), ANSWER, 3 px, solid. 5. Side BC: straight line from (1240, 850) to (801.2, 205.1), ANSWER, 3 px, solid. 6. Point A: filled dot, centre (720, 850), radius 9 px, INK. 7. Point B: filled dot, centre (1240, 850), radius 9 px, INK. 8. Point C (where the two arcs cross): filled dot, centre (801.2, 205.1), radius 9 px, ANSWER. 9. Letter A: text \"A\" centred at (668, 860), INK, sans-serif 48 px. 10. Letter B: text \"B\" centred at (1292, 860), INK, sans-serif 48 px. 11. Letter C: text \"C\" centred at (779.2, 135.1), ANSWER, sans-serif 48 px. 12. Length of AB: text \"4 cm\" centred at (980, 912), INK, sans-serif 48 px. 13. Length of AC (written along AC): text \"5 cm\" centred at (699.1, 519.8), INK, sans-serif 48 px, rotated 82.8 degrees counter-clockwise (negative = clockwise). 14. Length of BC (written along BC): text \"6 cm\" centred at (1071.9, 492.7), INK, sans-serif 48 px, rotated -55.8 degrees counter-clockwise (negative = clockwise).",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "4 cm",
+     "5 cm",
+     "6 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the full dashed circles",
+     "a ruler, a compass or a pencil",
+     "a right-angle mark",
+     "the book's Fig. 7.1, 7.2 or 7.3 captions"
+    ],
+    "accuracy_checks": [
+     "AB = 520 px = 4 cm, AC = 650 px = 5 cm, BC = 780 px = 6 cm at 130 px per cm (code assertion)",
+     "C = 0.625 cm to the right of A and 4.961 cm above AB: (0.625)^2 + (4.961)^2 = 25 and (3.375)^2 + (4.961)^2 = 36",
+     "5 + 4 > 6, 6 + 4 > 5 and 5 + 6 > 4, so the arcs cross and the triangle exists"
+    ],
+    "alt_text": "Base AB of 4 cm with an arc of radius 5 cm from A and an arc of radius 6 cm from B crossing at C, and the triangle ABC with sides 4 cm, 5 cm and 6 cm.",
+    "render_note": "The book's picture of this triangle (p.5) is not to scale (C is drawn slightly left of A); this diagram uses the exact coordinates, so C is to the right of A."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C13",
+   "role": "question",
+   "lp_book_number": "Construct (triangles from three sides)",
+   "ncert_ref": "7.2.construct",
+   "question_text": "Construct triangles having the following sidelengths (all the units are in cm): (a) 4, 4, 6 (b) 3, 4, 5 (c) 1, 5, 5 (d) 4, 6, 8 (e) 3.5, 3.5, 3.5. Say what kind of triangle each is.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives five sets of lengths in words and no figure; the learner draws the triangles.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C14",
+   "role": "solution",
+   "lp_book_number": "Construct (triangles from three sides)",
+   "ncert_ref": "7.2.construct",
+   "question_text": "Construct triangles having the following sidelengths (all the units are in cm): (a) 4, 4, 6 (b) 3, 4, 5 (c) 1, 5, 5 (d) 4, 6, 8 (e) 3.5, 3.5, 3.5. Say what kind of triangle each is.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is five constructed triangles whose shapes (two equal sides, three equal sides, a very short base) are what 'say what kind of triangle each is' needs. The LP holds the question as one item, so the five triangles share one card drawn to one scale.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S5.T5.C14.IMG1",
+   "manim_scene": "c7_7_s5_C14_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S5.T5.C14.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "scale_px_per_cm": 85,
+     "to_scale": true,
+     "triangles": [
+      {
+       "sides_cm": [
+        6.0,
+        4.0,
+        4.0
+       ],
+       "base_cm": 6.0,
+       "base_left_px": [
+        250.0,
+        540.0
+       ]
+      },
+      {
+       "sides_cm": [
+        5.0,
+        3.0,
+        4.0
+       ],
+       "base_cm": 5.0,
+       "base_left_px": [
+        960.0,
+        540.0
+       ]
+      },
+      {
+       "sides_cm": [
+        1.0,
+        5.0,
+        5.0
+       ],
+       "base_cm": 1.0,
+       "base_left_px": [
+        1585.0,
+        540.0
+       ]
+      },
+      {
+       "sides_cm": [
+        8.0,
+        4.0,
+        6.0
+       ],
+       "base_cm": 8.0,
+       "base_left_px": [
+        371.25,
+        940.0
+       ]
+      },
+      {
+       "sides_cm": [
+        3.5,
+        3.5,
+        3.5
+       ],
+       "base_cm": 3.5,
+       "base_left_px": [
+        1251.25,
+        940.0
+       ]
+      }
+     ],
+     "equal_side_ticks": {
+      "4, 4, 6": "the two 4 cm sides",
+      "1, 5, 5": "the two 5 cm sides",
+      "3.5, 3.5, 3.5": "all three sides"
+     },
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "coordinates": "px from the top-left corner, x to the right, y downward; angles counter-clockwise on screen (0 = right, 90 = up)",
+     "elements": [
+      {
+       "k": "seg",
+       "name": "Base of the triangle with sides 6 cm, 4 cm and 4 cm",
+       "p": [
+        250.0,
+        540.0
+       ],
+       "q": [
+        760.0,
+        540.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Left side of the triangle with sides 6 cm, 4 cm and 4 cm",
+       "p": [
+        250.0,
+        540.0
+       ],
+       "q": [
+        505.0,
+        315.1
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Right side of the triangle with sides 6 cm, 4 cm and 4 cm",
+       "p": [
+        760.0,
+        540.0
+       ],
+       "q": [
+        505.0,
+        315.1
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Base of the triangle with sides 5 cm, 3 cm and 4 cm",
+       "p": [
+        960.0,
+        540.0
+       ],
+       "q": [
+        1385.0,
+        540.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Left side of the triangle with sides 5 cm, 3 cm and 4 cm",
+       "p": [
+        960.0,
+        540.0
+       ],
+       "q": [
+        1113.0,
+        336.0
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Right side of the triangle with sides 5 cm, 3 cm and 4 cm",
+       "p": [
+        1385.0,
+        540.0
+       ],
+       "q": [
+        1113.0,
+        336.0
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Base of the triangle with sides 1 cm, 5 cm and 5 cm",
+       "p": [
+        1585.0,
+        540.0
+       ],
+       "q": [
+        1670.0,
+        540.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Left side of the triangle with sides 1 cm, 5 cm and 5 cm",
+       "p": [
+        1585.0,
+        540.0
+       ],
+       "q": [
+        1627.5,
+        117.1
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Right side of the triangle with sides 1 cm, 5 cm and 5 cm",
+       "p": [
+        1670.0,
+        540.0
+       ],
+       "q": [
+        1627.5,
+        117.1
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Base of the triangle with sides 8 cm, 4 cm and 6 cm",
+       "p": [
+        371.2,
+        940.0
+       ],
+       "q": [
+        1051.2,
+        940.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Left side of the triangle with sides 8 cm, 4 cm and 6 cm",
+       "p": [
+        371.2,
+        940.0
+       ],
+       "q": [
+        605.0,
+        693.1
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Right side of the triangle with sides 8 cm, 4 cm and 6 cm",
+       "p": [
+        1051.2,
+        940.0
+       ],
+       "q": [
+        605.0,
+        693.1
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Base of the triangle with sides 3.5 cm, 3.5 cm and 3.5 cm",
+       "p": [
+        1251.2,
+        940.0
+       ],
+       "q": [
+        1548.8,
+        940.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Left side of the triangle with sides 3.5 cm, 3.5 cm and 3.5 cm",
+       "p": [
+        1251.2,
+        940.0
+       ],
+       "q": [
+        1400.0,
+        682.4
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Right side of the triangle with sides 3.5 cm, 3.5 cm and 3.5 cm",
+       "p": [
+        1548.8,
+        940.0
+       ],
+       "q": [
+        1400.0,
+        682.4
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "text",
+       "name": "Base length of the triangle 6 cm, 4 cm, 4 cm",
+       "s": "6 cm",
+       "p": [
+        505.0,
+        598.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Left side length of the triangle 6 cm, 4 cm, 4 cm (written along the side)",
+       "s": "4 cm",
+       "p": [
+        336.5,
+        381.1
+       ],
+       "col": "INK",
+       "rot": 41.40962210927086
+      },
+      {
+       "k": "text",
+       "name": "Right side length of the triangle 6 cm, 4 cm, 4 cm (written along the side)",
+       "s": "4 cm",
+       "p": [
+        673.5,
+        381.1
+       ],
+       "col": "INK",
+       "rot": -41.409622109270856
+      },
+      {
+       "k": "ticks",
+       "name": "Equal-side tick on the left side of the triangle 6 cm, 4 cm, 4 cm",
+       "marks": [
+        [
+         [
+          367.6,
+          416.3
+         ],
+         [
+          387.4,
+          438.8
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "ticks",
+       "name": "Equal-side tick on the right side of the triangle 6 cm, 4 cm, 4 cm",
+       "marks": [
+        [
+         [
+          622.6,
+          438.8
+         ],
+         [
+          642.4,
+          416.3
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "text",
+       "name": "Base length of the triangle 5 cm, 3 cm, 4 cm",
+       "s": "5 cm",
+       "p": [
+        1172.5,
+        598.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Left side length of the triangle 5 cm, 3 cm, 4 cm (written along the side)",
+       "s": "3 cm",
+       "p": [
+        986.9,
+        400.8
+       ],
+       "col": "INK",
+       "rot": 53.13010235415598
+      },
+      {
+       "k": "text",
+       "name": "Right side length of the triangle 5 cm, 3 cm, 4 cm (written along the side)",
+       "s": "4 cm",
+       "p": [
+        1286.2,
+        388.4
+       ],
+       "col": "INK",
+       "rot": -36.86989764584402
+      },
+      {
+       "k": "text",
+       "name": "Base length of the triangle 1 cm, 5 cm, 5 cm",
+       "s": "1 cm",
+       "p": [
+        1627.5,
+        598.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Left side length of the triangle 1 cm, 5 cm, 5 cm (written along the side)",
+       "s": "5 cm",
+       "p": [
+        1544.6,
+        322.4
+       ],
+       "col": "INK",
+       "rot": 84.26082952273322
+      },
+      {
+       "k": "text",
+       "name": "Right side length of the triangle 1 cm, 5 cm, 5 cm (written along the side)",
+       "s": "5 cm",
+       "p": [
+        1710.4,
+        322.4
+       ],
+       "col": "INK",
+       "rot": -84.2608295227332
+      },
+      {
+       "k": "ticks",
+       "name": "Equal-side tick on the left side of the triangle 1 cm, 5 cm, 5 cm",
+       "marks": [
+        [
+         [
+          1591.3,
+          327.1
+         ],
+         [
+          1621.2,
+          330.1
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "ticks",
+       "name": "Equal-side tick on the right side of the triangle 1 cm, 5 cm, 5 cm",
+       "marks": [
+        [
+         [
+          1633.8,
+          330.1
+         ],
+         [
+          1663.7,
+          327.1
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "text",
+       "name": "Base length of the triangle 8 cm, 4 cm, 6 cm",
+       "s": "8 cm",
+       "p": [
+        711.2,
+        998.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Left side length of the triangle 8 cm, 4 cm, 6 cm (written along the side)",
+       "s": "4 cm",
+       "p": [
+        443.1,
+        773.9
+       ],
+       "col": "INK",
+       "rot": 46.56746344221022
+      },
+      {
+       "k": "text",
+       "name": "Right side length of the triangle 8 cm, 4 cm, 6 cm (written along the side)",
+       "s": "6 cm",
+       "p": [
+        858.1,
+        762.3
+       ],
+       "col": "INK",
+       "rot": -28.95502437185985
+      },
+      {
+       "k": "text",
+       "name": "Base length of the triangle 3.5 cm, 3.5 cm, 3.5 cm",
+       "s": "3.5 cm",
+       "p": [
+        1400.0,
+        998.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Left side length of the triangle 3.5 cm, 3.5 cm, 3.5 cm (written along the side)",
+       "s": "3.5 cm",
+       "p": [
+        1271.9,
+        780.2
+       ],
+       "col": "INK",
+       "rot": 59.99999999999999
+      },
+      {
+       "k": "text",
+       "name": "Right side length of the triangle 3.5 cm, 3.5 cm, 3.5 cm (written along the side)",
+       "s": "3.5 cm",
+       "p": [
+        1528.1,
+        780.2
+       ],
+       "col": "INK",
+       "rot": -59.999999999999986
+      },
+      {
+       "k": "ticks",
+       "name": "Equal-side tick on the base side of the triangle 3.5 cm, 3.5 cm, 3.5 cm",
+       "marks": [
+        [
+         [
+          1400.0,
+          925.0
+         ],
+         [
+          1400.0,
+          955.0
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "ticks",
+       "name": "Equal-side tick on the left side of the triangle 3.5 cm, 3.5 cm, 3.5 cm",
+       "marks": [
+        [
+         [
+          1312.6,
+          803.7
+         ],
+         [
+          1338.6,
+          818.7
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "ticks",
+       "name": "Equal-side tick on the right side of the triangle 3.5 cm, 3.5 cm, 3.5 cm",
+       "marks": [
+        [
+         [
+          1461.4,
+          818.7
+         ],
+         [
+          1487.4,
+          803.7
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "text",
+       "name": "Part letter (a) of the triangle with sides 4 cm, 4 cm, 6 cm (50 px left of its base's left end)",
+       "s": "(a)",
+       "p": [
+        200,
+        540
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Part letter (b) of the triangle with sides 3 cm, 4 cm, 5 cm (50 px left of its base's left end)",
+       "s": "(b)",
+       "p": [
+        910,
+        540
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Part letter (c) of the triangle with sides 1 cm, 5 cm, 5 cm (50 px left of its base's left end)",
+       "s": "(c)",
+       "p": [
+        1535,
+        540
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Part letter (d) of the triangle with sides 4 cm, 6 cm, 8 cm (50 px left of its base's left end)",
+       "s": "(d)",
+       "p": [
+        321,
+        940
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Part letter (e) of the triangle with sides 3.5 cm, 3.5 cm, 3.5 cm (50 px left of its base's left end)",
+       "s": "(e)",
+       "p": [
+        1201,
+        940
+       ],
+       "col": "INK",
+       "rot": 0
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG (plain white), coordinates in px from the top-left corner (y grows downward), 16:9. Flat 2D figure, one common scale 1 cm = 85 px, to scale, five separate triangles with no frames: three in the upper row (baseline y = 540) and two in the lower row (baseline y = 940). Each triangle has its longest side horizontal as the base, except the triangle with sides 1, 5, 5 whose 1 cm side is the base. The base of each triangle is drawn in INK and its two other sides in ANSWER. Draw in this order (back to front): 1. Base of the triangle with sides 6 cm, 4 cm and 4 cm: straight line from (250, 540) to (760, 540), INK, 3 px, solid. 2. Left side of the triangle with sides 6 cm, 4 cm and 4 cm: straight line from (250, 540) to (505, 315.1), ANSWER, 3 px, solid. 3. Right side of the triangle with sides 6 cm, 4 cm and 4 cm: straight line from (760, 540) to (505, 315.1), ANSWER, 3 px, solid. 4. Base of the triangle with sides 5 cm, 3 cm and 4 cm: straight line from (960, 540) to (1385, 540), INK, 3 px, solid. 5. Left side of the triangle with sides 5 cm, 3 cm and 4 cm: straight line from (960, 540) to (1113, 336), ANSWER, 3 px, solid. 6. Right side of the triangle with sides 5 cm, 3 cm and 4 cm: straight line from (1385, 540) to (1113, 336), ANSWER, 3 px, solid. 7. Base of the triangle with sides 1 cm, 5 cm and 5 cm: straight line from (1585, 540) to (1670, 540), INK, 3 px, solid. 8. Left side of the triangle with sides 1 cm, 5 cm and 5 cm: straight line from (1585, 540) to (1627.5, 117.1), ANSWER, 3 px, solid. 9. Right side of the triangle with sides 1 cm, 5 cm and 5 cm: straight line from (1670, 540) to (1627.5, 117.1), ANSWER, 3 px, solid. 10. Base of the triangle with sides 8 cm, 4 cm and 6 cm: straight line from (371.2, 940) to (1051.2, 940), INK, 3 px, solid. 11. Left side of the triangle with sides 8 cm, 4 cm and 6 cm: straight line from (371.2, 940) to (605, 693.1), ANSWER, 3 px, solid. 12. Right side of the triangle with sides 8 cm, 4 cm and 6 cm: straight line from (1051.2, 940) to (605, 693.1), ANSWER, 3 px, solid. 13. Base of the triangle with sides 3.5 cm, 3.5 cm and 3.5 cm: straight line from (1251.2, 940) to (1548.8, 940), INK, 3 px, solid. 14. Left side of the triangle with sides 3.5 cm, 3.5 cm and 3.5 cm: straight line from (1251.2, 940) to (1400, 682.4), ANSWER, 3 px, solid. 15. Right side of the triangle with sides 3.5 cm, 3.5 cm and 3.5 cm: straight line from (1548.8, 940) to (1400, 682.4), ANSWER, 3 px, solid. 16. Base length of the triangle 6 cm, 4 cm, 4 cm: text \"6 cm\" centred at (505, 598), INK, sans-serif 48 px. 17. Left side length of the triangle 6 cm, 4 cm, 4 cm (written along the side): text \"4 cm\" centred at (336.5, 381.1), INK, sans-serif 48 px, rotated 41.4 degrees counter-clockwise (negative = clockwise). 18. Right side length of the triangle 6 cm, 4 cm, 4 cm (written along the side): text \"4 cm\" centred at (673.5, 381.1), INK, sans-serif 48 px, rotated -41.4 degrees counter-clockwise (negative = clockwise). 19. Equal-side tick on the left side of the triangle 6 cm, 4 cm, 4 cm: 1 short tick line, ANSWER, 3 px, from (367.6, 416.3) to (387.4, 438.8). 20. Equal-side tick on the right side of the triangle 6 cm, 4 cm, 4 cm: 1 short tick line, ANSWER, 3 px, from (622.6, 438.8) to (642.4, 416.3). 21. Base length of the triangle 5 cm, 3 cm, 4 cm: text \"5 cm\" centred at (1172.5, 598), INK, sans-serif 48 px. 22. Left side length of the triangle 5 cm, 3 cm, 4 cm (written along the side): text \"3 cm\" centred at (986.9, 400.8), INK, sans-serif 48 px, rotated 53.1 degrees counter-clockwise (negative = clockwise). 23. Right side length of the triangle 5 cm, 3 cm, 4 cm (written along the side): text \"4 cm\" centred at (1286.2, 388.4), INK, sans-serif 48 px, rotated -36.9 degrees counter-clockwise (negative = clockwise). 24. Base length of the triangle 1 cm, 5 cm, 5 cm: text \"1 cm\" centred at (1627.5, 598), INK, sans-serif 48 px. 25. Left side length of the triangle 1 cm, 5 cm, 5 cm (written along the side): text \"5 cm\" centred at (1544.6, 322.4), INK, sans-serif 48 px, rotated 84.3 degrees counter-clockwise (negative = clockwise). 26. Right side length of the triangle 1 cm, 5 cm, 5 cm (written along the side): text \"5 cm\" centred at (1710.4, 322.4), INK, sans-serif 48 px, rotated -84.3 degrees counter-clockwise (negative = clockwise). 27. Equal-side tick on the left side of the triangle 1 cm, 5 cm, 5 cm: 1 short tick line, ANSWER, 3 px, from (1591.3, 327.1) to (1621.2, 330.1). 28. Equal-side tick on the right side of the triangle 1 cm, 5 cm, 5 cm: 1 short tick line, ANSWER, 3 px, from (1633.8, 330.1) to (1663.7, 327.1). 29. Base length of the triangle 8 cm, 4 cm, 6 cm: text \"8 cm\" centred at (711.2, 998), INK, sans-serif 48 px. 30. Left side length of the triangle 8 cm, 4 cm, 6 cm (written along the side): text \"4 cm\" centred at (443.1, 773.9), INK, sans-serif 48 px, rotated 46.6 degrees counter-clockwise (negative = clockwise). 31. Right side length of the triangle 8 cm, 4 cm, 6 cm (written along the side): text \"6 cm\" centred at (858.1, 762.3), INK, sans-serif 48 px, rotated -29 degrees counter-clockwise (negative = clockwise). 32. Base length of the triangle 3.5 cm, 3.5 cm, 3.5 cm: text \"3.5 cm\" centred at (1400, 998), INK, sans-serif 48 px. 33. Left side length of the triangle 3.5 cm, 3.5 cm, 3.5 cm (written along the side): text \"3.5 cm\" centred at (1271.9, 780.2), INK, sans-serif 48 px, rotated 60 degrees counter-clockwise (negative = clockwise). 34. Right side length of the triangle 3.5 cm, 3.5 cm, 3.5 cm (written along the side): text \"3.5 cm\" centred at (1528.1, 780.2), INK, sans-serif 48 px, rotated -60 degrees counter-clockwise (negative = clockwise). 35. Equal-side tick on the base side of the triangle 3.5 cm, 3.5 cm, 3.5 cm: 1 short tick line, ANSWER, 3 px, from (1400, 925) to (1400, 955). 36. Equal-side tick on the left side of the triangle 3.5 cm, 3.5 cm, 3.5 cm: 1 short tick line, ANSWER, 3 px, from (1312.6, 803.7) to (1338.6, 818.7). 37. Equal-side tick on the right side of the triangle 3.5 cm, 3.5 cm, 3.5 cm: 1 short tick line, ANSWER, 3 px, from (1461.4, 818.7) to (1487.4, 803.7). 38. Part letter (a) of the triangle with sides 4 cm, 4 cm, 6 cm: text \"(a)\" centred at (200, 540), INK, sans-serif 48 px. 39. Part letter (b) of the triangle with sides 3 cm, 4 cm, 5 cm: text \"(b)\" centred at (910, 540), INK, sans-serif 48 px. 40. Part letter (c) of the triangle with sides 1 cm, 5 cm, 5 cm: text \"(c)\" centred at (1535, 540), INK, sans-serif 48 px. 41. Part letter (d) of the triangle with sides 4 cm, 6 cm, 8 cm: text \"(d)\" centred at (321, 940), INK, sans-serif 48 px. 42. Part letter (e) of the triangle with sides 3.5 cm, 3.5 cm, 3.5 cm: text \"(e)\" centred at (1201, 940), INK, sans-serif 48 px.",
+    "visible_text": [
+     "6 cm",
+     "4 cm",
+     "4 cm",
+     "5 cm",
+     "3 cm",
+     "4 cm",
+     "1 cm",
+     "5 cm",
+     "5 cm",
+     "8 cm",
+     "4 cm",
+     "6 cm",
+     "3.5 cm",
+     "3.5 cm",
+     "3.5 cm",
+     "(a)",
+     "(b)",
+     "(c)",
+     "(d)",
+     "(e)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the part letters (a) to (e) beside the five triangles",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words isosceles, scalene or equilateral",
+     "vertex letters A, B, C",
+     "construction arcs",
+     "the triangle inequality sums"
+    ],
+    "accuracy_checks": [
+     "each triangle's three side lengths in px divided by 85 equal its labelled lengths (code assertion)",
+     "4 + 4 > 6, 3 + 4 > 5, 1 + 5 > 5, 4 + 6 > 8, 3.5 + 3.5 > 3.5, so all five exist",
+     "ticks only where the LP names equal sides: 4, 4, 6 (two sides), 1, 5, 5 (two sides) and 3.5, 3.5, 3.5 (three sides)",
+     "no two triangles overlap: row 1 spans x 250 to 1670, row 2 spans x 371 to 1549",
+     "part letters (a) to (e) stand 50 px left of the base's left end of the triangles with sides 4-4-6, 3-4-5, 1-5-5, 4-6-8 and 3.5-3.5-3.5 (the order of the LP parts) and touch no line or label"
+    ],
+    "alt_text": "Five triangles tagged (a) to (e) drawn to one scale with their sides labelled (a) 4, 4, 6; (b) 3, 4, 5; (c) 1, 5, 5; (d) 4, 6, 8 and (e) 3.5, 3.5, 3.5 centimetres; equal sides carry tick marks.",
+    "render_note": "The LP says the longest side is the base, but also says the 1, 5, 5 triangle has 'a very short base'; this diagram follows the second statement (1 cm base). Part letters: (a) to (e) are drawn beside the triangles because the LP answer refers to the five triangles by letter."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C15",
+   "role": "question",
+   "lp_book_number": "Figure it Out 7.2, Q1",
+   "ncert_ref": "7.2.FiOA1",
+   "question_text": "A circle is drawn with its centre marked, and some points are marked on the circle. Use the points on the circle and/or the centre to form isosceles triangles.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "FIG_REFERENCED"
+   ],
+   "reason": "The book prints a circle with its centre marked beside the question and the learner acts on it (marks points on the circle and joins them). The figure gives only the circle and its centre.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S6.T6.C15.IMG1",
+   "manim_scene": "c7_7_s6_C15_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S6.T6.C15.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "circle": {
+      "centre": [
+       960,
+       540
+      ],
+      "radius_px": 330
+     },
+     "points_marked_on_circle": 0,
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "coordinates": "px from the top-left corner, x to the right, y downward; angles counter-clockwise on screen (0 = right, 90 = up)",
+     "elements": [
+      {
+       "k": "circle",
+       "name": "Circle",
+       "c": [
+        960.0,
+        540.0
+       ],
+       "r": 330.0,
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "dot",
+       "name": "Centre of the circle",
+       "p": [
+        960.0,
+        540.0
+       ],
+       "col": "INK",
+       "r": 11
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG (plain white), coordinates in px from the top-left corner (y grows downward), 16:9. Flat 2D figure: one circle with its centre marked by a dot, nothing else. Draw in this order (back to front): 1. Circle: full circle, centre (960, 540), radius 330 px, INK, 3 px, solid, no fill. 2. Centre of the circle: filled dot, centre (960, 540), radius 11 px, INK.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any point marked on the circle",
+     "any chord, radius or triangle",
+     "the word centre or any letter",
+     "an arrow pointing at the centre"
+    ],
+    "accuracy_checks": [
+     "exactly one circle, radius 330 px, centre (960, 540)",
+     "the only mark inside is the centre dot; no point is marked on the circle (as in the book figure)"
+    ],
+    "alt_text": "A plain circle with a dot at its centre."
+   },
+   "text_alternative": "Question text says 'some points are marked on the circle', but the given figure marks only the centre; change the text to 'A circle is drawn with its centre marked.'",
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C16",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 7.2, Q1",
+   "ncert_ref": "7.2.FiOA1",
+   "question_text": "A circle is drawn with its centre marked, and some points are marked on the circle. Use the points on the circle and/or the centre to form isosceles triangles.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The printed answer (p.28) is a picture: the circle with two points on it joined to the centre and to each other. The LP solution adds the equal radii OP = OQ and a third point R halfway between P and Q.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S6.T6.C16.IMG1",
+   "manim_scene": "c7_7_s6_C16_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S6.T6.C16.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S6.T6.C15.IMG1",
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "circle": {
+      "centre": [
+       960,
+       540
+      ],
+      "radius_px": 330
+     },
+     "centre_label": "O",
+     "points_on_circle": {
+      "P": 235,
+      "Q": 305,
+      "R": 270
+     },
+     "triangles": [
+      "OPQ (OP = OQ = radius)",
+      "RPQ (RP = RQ)"
+     ],
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "coordinates": "px from the top-left corner, x to the right, y downward; angles counter-clockwise on screen (0 = right, 90 = up)",
+     "elements": [
+      {
+       "k": "circle",
+       "name": "Circle",
+       "c": [
+        960.0,
+        540.0
+       ],
+       "r": 330.0,
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "dot",
+       "name": "Centre of the circle",
+       "p": [
+        960.0,
+        540.0
+       ],
+       "col": "INK",
+       "r": 11
+      },
+      {
+       "k": "seg",
+       "name": "Radius OP",
+       "p": [
+        960.0,
+        540.0
+       ],
+       "q": [
+        770.7,
+        810.3
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Radius OQ",
+       "p": [
+        960.0,
+        540.0
+       ],
+       "q": [
+        1149.3,
+        810.3
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Chord PQ",
+       "p": [
+        770.7,
+        810.3
+       ],
+       "q": [
+        1149.3,
+        810.3
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Chord RP",
+       "p": [
+        960.0,
+        870.0
+       ],
+       "q": [
+        770.7,
+        810.3
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Chord RQ",
+       "p": [
+        960.0,
+        870.0
+       ],
+       "q": [
+        1149.3,
+        810.3
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "ticks",
+       "name": "One equal-side tick on OP",
+       "marks": [
+        [
+         [
+          877.6,
+          683.8
+         ],
+         [
+          853.1,
+          666.6
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "ticks",
+       "name": "One equal-side tick on OQ",
+       "marks": [
+        [
+         [
+          1066.9,
+          666.6
+         ],
+         [
+          1042.4,
+          683.8
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "ticks",
+       "name": "Two equal-side ticks on RP",
+       "marks": [
+        [
+         [
+          867.5,
+          856.6
+         ],
+         [
+          876.5,
+          828.0
+         ]
+        ],
+        [
+         [
+          854.2,
+          852.4
+         ],
+         [
+          863.2,
+          823.7
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 2
+      },
+      {
+       "k": "ticks",
+       "name": "Two equal-side ticks on RQ",
+       "marks": [
+        [
+         [
+          1043.5,
+          828.0
+         ],
+         [
+          1052.5,
+          856.6
+         ]
+        ],
+        [
+         [
+          1056.8,
+          823.7
+         ],
+         [
+          1065.8,
+          852.4
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 2
+      },
+      {
+       "k": "dot",
+       "name": "Point P on the circle (235 degrees)",
+       "p": [
+        770.7,
+        810.3
+       ],
+       "col": "ANSWER",
+       "r": 10
+      },
+      {
+       "k": "dot",
+       "name": "Point Q on the circle (305 degrees)",
+       "p": [
+        1149.3,
+        810.3
+       ],
+       "col": "ANSWER",
+       "r": 10
+      },
+      {
+       "k": "dot",
+       "name": "Point R on the circle (270 degrees, halfway between P and Q)",
+       "p": [
+        960.0,
+        870.0
+       ],
+       "col": "ANSWER",
+       "r": 10
+      },
+      {
+       "k": "text",
+       "name": "Letter O at the centre",
+       "s": "O",
+       "p": [
+        1006.0,
+        500.0
+       ],
+       "col": "ANSWER",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter P",
+       "s": "P",
+       "p": [
+        714.7,
+        824.3
+       ],
+       "col": "ANSWER",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter Q",
+       "s": "Q",
+       "p": [
+        1205.3,
+        824.3
+       ],
+       "col": "ANSWER",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter R",
+       "s": "R",
+       "p": [
+        960.0,
+        932.0
+       ],
+       "col": "ANSWER",
+       "rot": 0
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG (plain white), coordinates in px from the top-left corner (y grows downward), 16:9. Flat 2D figure, same circle as the question figure (centre (960, 540), radius 330 px, INK, centre dot INK) with the answer added in ANSWER. Angles of P, Q and R are measured from the centre, counter-clockwise on screen. Draw in this order (back to front): 1. Circle: full circle, centre (960, 540), radius 330 px, INK, 3 px, solid, no fill. 2. Centre of the circle: filled dot, centre (960, 540), radius 11 px, INK. 3. Radius OP: straight line from (960, 540) to (770.7, 810.3), ANSWER, 3 px, solid. 4. Radius OQ: straight line from (960, 540) to (1149.3, 810.3), ANSWER, 3 px, solid. 5. Chord PQ: straight line from (770.7, 810.3) to (1149.3, 810.3), ANSWER, 3 px, solid. 6. Chord RP: straight line from (960, 870) to (770.7, 810.3), ANSWER, 3 px, solid. 7. Chord RQ: straight line from (960, 870) to (1149.3, 810.3), ANSWER, 3 px, solid. 8. One equal-side tick on OP: 1 short tick line, ANSWER, 3 px, from (877.6, 683.8) to (853.1, 666.6). 9. One equal-side tick on OQ: 1 short tick line, ANSWER, 3 px, from (1066.9, 666.6) to (1042.4, 683.8). 10. Two equal-side ticks on RP: 2 short tick lines, ANSWER, 3 px, from (867.5, 856.6) to (876.5, 828); (854.2, 852.4) to (863.2, 823.7). 11. Two equal-side ticks on RQ: 2 short tick lines, ANSWER, 3 px, from (1043.5, 828) to (1052.5, 856.6); (1056.8, 823.7) to (1065.8, 852.4). 12. Point P on the circle (235 degrees): filled dot, centre (770.7, 810.3), radius 10 px, ANSWER. 13. Point Q on the circle (305 degrees): filled dot, centre (1149.3, 810.3), radius 10 px, ANSWER. 14. Point R on the circle (270 degrees, halfway between P and Q): filled dot, centre (960, 870), radius 10 px, ANSWER. 15. Letter O at the centre: text \"O\" centred at (1006, 500), ANSWER, sans-serif 48 px. 16. Letter P: text \"P\" centred at (714.7, 824.3), ANSWER, sans-serif 48 px. 17. Letter Q: text \"Q\" centred at (1205.3, 824.3), ANSWER, sans-serif 48 px. 18. Letter R: text \"R\" centred at (960, 932), ANSWER, sans-serif 48 px.",
+    "visible_text": [
+     "O",
+     "P",
+     "Q",
+     "R"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words isosceles or equilateral",
+     "a right-angle mark",
+     "any other point on the circle",
+     "the radius value"
+    ],
+    "accuracy_checks": [
+     "OP = OQ = 330 px (both are radii; code assertion)",
+     "central angle POQ = 70 degrees, chord PQ = 2 x 330 x sin 35 = 378.6 px, not equal to the radius (so OPQ is isosceles but not equilateral)",
+     "R is halfway between P and Q on the circle (270 degrees), so RP = RQ = 2 x 330 x sin 17.5 = 198.5 px (code assertion)",
+     "circle and centre dot are at exactly the question figure's positions"
+    ],
+    "alt_text": "The circle with centre O and points P and Q on it joined to O and to each other, OP and OQ marked equal; a third point R halfway between P and Q on the circle joined to both."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C17",
+   "role": "question",
+   "lp_book_number": "Figure it Out 7.2, Q2",
+   "ncert_ref": "7.2.FiOA2",
+   "question_text": "Two circles of the same size have centres A and B, and each circle passes through the centre of the other. Then three circles of the same size have centres A, B and C, and each circle passes through the centres of the other two. Use the points on the circles and/or their centres to form isosceles and equilateral triangles.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book prints two circle pictures (two circles with centres A, B; three circles with centres A, B, C) and the learner forms triangles on them using the centres and crossing points. The positions on the pictures carry the question.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S6.T6.C17.IMG1",
+   "manim_scene": "c7_7_s6_C17_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S6.T6.C17.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "radius_px": 230,
+     "left_figure": {
+      "centres": {
+       "A": [
+        380.0,
+        540.0
+       ],
+       "B": [
+        610.0,
+        540.0
+       ]
+      }
+     },
+     "right_figure": {
+      "centres": {
+       "A": [
+        1310.0,
+        440.4
+       ],
+       "B": [
+        1540.0,
+        440.4
+       ],
+       "C": [
+        1425.0,
+        639.6
+       ]
+      }
+     },
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "coordinates": "px from the top-left corner, x to the right, y downward; angles counter-clockwise on screen (0 = right, 90 = up)",
+     "elements": [
+      {
+       "k": "circle",
+       "name": "Circle centred A (left figure)",
+       "c": [
+        380.0,
+        540.0
+       ],
+       "r": 230.0,
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "circle",
+       "name": "Circle centred B (left figure)",
+       "c": [
+        610.0,
+        540.0
+       ],
+       "r": 230.0,
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "circle",
+       "name": "Circle centred A (right figure)",
+       "c": [
+        1310.0,
+        440.4
+       ],
+       "r": 230.0,
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "circle",
+       "name": "Circle centred B (right figure)",
+       "c": [
+        1540.0,
+        440.4
+       ],
+       "r": 230.0,
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "circle",
+       "name": "Circle centred C (right figure)",
+       "c": [
+        1425.0,
+        639.6
+       ],
+       "r": 230.0,
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "dot",
+       "name": "Centre A (left figure)",
+       "p": [
+        380.0,
+        540.0
+       ],
+       "col": "INK",
+       "r": 10
+      },
+      {
+       "k": "dot",
+       "name": "Centre B (left figure)",
+       "p": [
+        610.0,
+        540.0
+       ],
+       "col": "INK",
+       "r": 10
+      },
+      {
+       "k": "dot",
+       "name": "Centre A (right figure)",
+       "p": [
+        1310.0,
+        440.4
+       ],
+       "col": "INK",
+       "r": 10
+      },
+      {
+       "k": "dot",
+       "name": "Centre B (right figure)",
+       "p": [
+        1540.0,
+        440.4
+       ],
+       "col": "INK",
+       "r": 10
+      },
+      {
+       "k": "dot",
+       "name": "Centre C (right figure)",
+       "p": [
+        1425.0,
+        639.6
+       ],
+       "col": "INK",
+       "r": 10
+      },
+      {
+       "k": "text",
+       "name": "Letter A (left figure)",
+       "s": "A",
+       "p": [
+        330.0,
+        540.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter B (left figure)",
+       "s": "B",
+       "p": [
+        660.0,
+        540.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter A (right figure)",
+       "s": "A",
+       "p": [
+        1252.0,
+        406.4
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter B (right figure)",
+       "s": "B",
+       "p": [
+        1598.0,
+        406.4
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter C (right figure)",
+       "s": "C",
+       "p": [
+        1425.0,
+        701.6
+       ],
+       "col": "INK",
+       "rot": 0
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG (plain white), coordinates in px from the top-left corner (y grows downward), 16:9. Flat 2D figure with two separate pictures side by side, no frame around them, every circle of radius 230 px. Left picture: two circles whose centres A and B are 230 px apart (each circle passes through the other's centre). Right picture: three circles whose centres A, B and C are the corners of an equilateral triangle of side 230 px (each circle passes through the other two centres). Draw in this order (back to front): 1. Circle centred A (left figure): full circle, centre (380, 540), radius 230 px, INK, 3 px, solid, no fill. 2. Circle centred B (left figure): full circle, centre (610, 540), radius 230 px, INK, 3 px, solid, no fill. 3. Circle centred A (right figure): full circle, centre (1310, 440.4), radius 230 px, INK, 3 px, solid, no fill. 4. Circle centred B (right figure): full circle, centre (1540, 440.4), radius 230 px, INK, 3 px, solid, no fill. 5. Circle centred C (right figure): full circle, centre (1425, 639.6), radius 230 px, INK, 3 px, solid, no fill. 6. Centre A (left figure): filled dot, centre (380, 540), radius 10 px, INK. 7. Centre B (left figure): filled dot, centre (610, 540), radius 10 px, INK. 8. Centre A (right figure): filled dot, centre (1310, 440.4), radius 10 px, INK. 9. Centre B (right figure): filled dot, centre (1540, 440.4), radius 10 px, INK. 10. Centre C (right figure): filled dot, centre (1425, 639.6), radius 10 px, INK. 11. Letter A (left figure): text \"A\" centred at (330, 540), INK, sans-serif 48 px. 12. Letter B (left figure): text \"B\" centred at (660, 540), INK, sans-serif 48 px. 13. Letter A (right figure): text \"A\" centred at (1252, 406.4), INK, sans-serif 48 px. 14. Letter B (right figure): text \"B\" centred at (1598, 406.4), INK, sans-serif 48 px. 15. Letter C (right figure): text \"C\" centred at (1425, 701.6), INK, sans-serif 48 px.",
+    "visible_text": [
+     "A",
+     "B",
+     "A",
+     "B",
+     "C"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any line joining the centres",
+     "crossing points marked or labelled",
+     "triangles, shading or ticks",
+     "the printed captions under the book figures"
+    ],
+    "accuracy_checks": [
+     "every circle has radius 230 px and AB = 230 px in the left picture (code assertion)",
+     "right picture: AB = BC = CA = 230 px, so each centre lies on the other two circles (code assertion)",
+     "left picture spans x 150 to 840, right picture x 1080 to 1770, no overlap between the pictures"
+    ],
+    "alt_text": "Two equal circles whose centres A and B each lie on the other circle, and beside them three equal circles with centres A, B and C each lying on the other two circles.",
+    "render_note": "The two pictures of the book question (p.6) are combined in one card because the LP holds the question as one item."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C18",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 7.2, Q2",
+   "ncert_ref": "7.2.FiOA2",
+   "question_text": "Two circles of the same size have centres A and B, and each circle passes through the centre of the other. Then three circles of the same size have centres A, B and C, and each circle passes through the centres of the other two. Use the points on the circles and/or their centres to form isosceles and equilateral triangles.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The printed answer (p.28) is a picture of the two circles with the crossing points C and D and the triangles joined up; the LP solution names the triangles ABC, ABD, ACD, BCD and, for three circles, the equilateral triangle ABC.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S6.T6.C18.IMG1",
+   "manim_scene": "c7_7_s6_C18_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S6.T6.C18.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S6.T6.C17.IMG1",
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "radius_px": 230,
+     "left_figure": {
+      "centres": {
+       "A": [
+        380.0,
+        540.0
+       ],
+       "B": [
+        610.0,
+        540.0
+       ]
+      },
+      "crossing_points": {
+       "C": [
+        495.0,
+        340.8
+       ],
+       "D": [
+        495.0,
+        739.2
+       ]
+      },
+      "triangles": [
+       "ABC equilateral",
+       "ABD equilateral",
+       "ACD isosceles",
+       "BCD isosceles"
+      ]
+     },
+     "right_figure": {
+      "triangle": "ABC equilateral"
+     },
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "coordinates": "px from the top-left corner, x to the right, y downward; angles counter-clockwise on screen (0 = right, 90 = up)",
+     "elements": [
+      {
+       "k": "circle",
+       "name": "Circle centred A (left figure)",
+       "c": [
+        380.0,
+        540.0
+       ],
+       "r": 230.0,
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "circle",
+       "name": "Circle centred B (left figure)",
+       "c": [
+        610.0,
+        540.0
+       ],
+       "r": 230.0,
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "circle",
+       "name": "Circle centred A (right figure)",
+       "c": [
+        1310.0,
+        440.4
+       ],
+       "r": 230.0,
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "circle",
+       "name": "Circle centred B (right figure)",
+       "c": [
+        1540.0,
+        440.4
+       ],
+       "r": 230.0,
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "circle",
+       "name": "Circle centred C (right figure)",
+       "c": [
+        1425.0,
+        639.6
+       ],
+       "r": 230.0,
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "dot",
+       "name": "Centre A (left figure)",
+       "p": [
+        380.0,
+        540.0
+       ],
+       "col": "INK",
+       "r": 10
+      },
+      {
+       "k": "dot",
+       "name": "Centre B (left figure)",
+       "p": [
+        610.0,
+        540.0
+       ],
+       "col": "INK",
+       "r": 10
+      },
+      {
+       "k": "dot",
+       "name": "Centre A (right figure)",
+       "p": [
+        1310.0,
+        440.4
+       ],
+       "col": "INK",
+       "r": 10
+      },
+      {
+       "k": "dot",
+       "name": "Centre B (right figure)",
+       "p": [
+        1540.0,
+        440.4
+       ],
+       "col": "INK",
+       "r": 10
+      },
+      {
+       "k": "dot",
+       "name": "Centre C (right figure)",
+       "p": [
+        1425.0,
+        639.6
+       ],
+       "col": "INK",
+       "r": 10
+      },
+      {
+       "k": "text",
+       "name": "Letter A (left figure)",
+       "s": "A",
+       "p": [
+        330.0,
+        540.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter B (left figure)",
+       "s": "B",
+       "p": [
+        660.0,
+        540.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter A (right figure)",
+       "s": "A",
+       "p": [
+        1252.0,
+        406.4
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter B (right figure)",
+       "s": "B",
+       "p": [
+        1598.0,
+        406.4
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter C (right figure)",
+       "s": "C",
+       "p": [
+        1425.0,
+        701.6
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "seg",
+       "name": "Segment AB (left figure)",
+       "p": [
+        380.0,
+        540.0
+       ],
+       "q": [
+        610.0,
+        540.0
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Segment AC (left figure)",
+       "p": [
+        380.0,
+        540.0
+       ],
+       "q": [
+        495.0,
+        340.8
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Segment BC (left figure)",
+       "p": [
+        610.0,
+        540.0
+       ],
+       "q": [
+        495.0,
+        340.8
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Segment AD (left figure)",
+       "p": [
+        380.0,
+        540.0
+       ],
+       "q": [
+        495.0,
+        739.2
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Segment BD (left figure)",
+       "p": [
+        610.0,
+        540.0
+       ],
+       "q": [
+        495.0,
+        739.2
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Segment CD (left figure)",
+       "p": [
+        495.0,
+        340.8
+       ],
+       "q": [
+        495.0,
+        739.2
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "ticks",
+       "name": "One equal-side tick on AB (left figure)",
+       "marks": [
+        [
+         [
+          449.0,
+          525.0
+         ],
+         [
+          449.0,
+          555.0
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "ticks",
+       "name": "One equal-side tick on AC (left figure)",
+       "marks": [
+        [
+         [
+          424.5,
+          432.9
+         ],
+         [
+          450.5,
+          447.9
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "ticks",
+       "name": "One equal-side tick on BC (left figure)",
+       "marks": [
+        [
+         [
+          539.5,
+          447.9
+         ],
+         [
+          565.5,
+          432.9
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "ticks",
+       "name": "One equal-side tick on AD (left figure)",
+       "marks": [
+        [
+         [
+          450.5,
+          632.1
+         ],
+         [
+          424.5,
+          647.1
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "ticks",
+       "name": "One equal-side tick on BD (left figure)",
+       "marks": [
+        [
+         [
+          565.5,
+          647.1
+         ],
+         [
+          539.5,
+          632.1
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "seg",
+       "name": "Segment AB (right figure)",
+       "p": [
+        1310.0,
+        440.4
+       ],
+       "q": [
+        1540.0,
+        440.4
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Segment BC (right figure)",
+       "p": [
+        1540.0,
+        440.4
+       ],
+       "q": [
+        1425.0,
+        639.6
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Segment CA (right figure)",
+       "p": [
+        1425.0,
+        639.6
+       ],
+       "q": [
+        1310.0,
+        440.4
+       ],
+       "col": "ANSWER",
+       "dash": false
+      },
+      {
+       "k": "ticks",
+       "name": "One equal-side tick on AB (right figure)",
+       "marks": [
+        [
+         [
+          1425.0,
+          425.4
+         ],
+         [
+          1425.0,
+          455.4
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "ticks",
+       "name": "One equal-side tick on BC (right figure)",
+       "marks": [
+        [
+         [
+          1495.5,
+          547.5
+         ],
+         [
+          1469.5,
+          532.5
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "ticks",
+       "name": "One equal-side tick on CA (right figure)",
+       "marks": [
+        [
+         [
+          1354.5,
+          547.5
+         ],
+         [
+          1380.5,
+          532.5
+         ]
+        ]
+       ],
+       "col": "ANSWER",
+       "count": 1
+      },
+      {
+       "k": "dot",
+       "name": "Crossing point C (left figure)",
+       "p": [
+        495.0,
+        340.8
+       ],
+       "col": "ANSWER",
+       "r": 10
+      },
+      {
+       "k": "dot",
+       "name": "Crossing point D (left figure)",
+       "p": [
+        495.0,
+        739.2
+       ],
+       "col": "ANSWER",
+       "r": 10
+      },
+      {
+       "k": "text",
+       "name": "Letter C (left figure)",
+       "s": "C",
+       "p": [
+        495.0,
+        286.8
+       ],
+       "col": "ANSWER",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter D (left figure)",
+       "s": "D",
+       "p": [
+        495.0,
+        793.2
+       ],
+       "col": "ANSWER",
+       "rot": 0
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG (plain white), coordinates in px from the top-left corner (y grows downward), 16:9. Flat 2D figure, the same two pictures at exactly the same positions as the question figure (all circles, centre dots and the letters A, B, A, B, C stay as in the question figure: INK); the answer is added in ANSWER. In the left picture the circles cross at C (above AB) and D (below AB), 230 px from both A and B. Draw in this order (back to front): 1. Circle centred A (left figure): full circle, centre (380, 540), radius 230 px, INK, 3 px, solid, no fill. 2. Circle centred B (left figure): full circle, centre (610, 540), radius 230 px, INK, 3 px, solid, no fill. 3. Circle centred A (right figure): full circle, centre (1310, 440.4), radius 230 px, INK, 3 px, solid, no fill. 4. Circle centred B (right figure): full circle, centre (1540, 440.4), radius 230 px, INK, 3 px, solid, no fill. 5. Circle centred C (right figure): full circle, centre (1425, 639.6), radius 230 px, INK, 3 px, solid, no fill. 6. Centre A (left figure): filled dot, centre (380, 540), radius 10 px, INK. 7. Centre B (left figure): filled dot, centre (610, 540), radius 10 px, INK. 8. Centre A (right figure): filled dot, centre (1310, 440.4), radius 10 px, INK. 9. Centre B (right figure): filled dot, centre (1540, 440.4), radius 10 px, INK. 10. Centre C (right figure): filled dot, centre (1425, 639.6), radius 10 px, INK. 11. Letter A (left figure): text \"A\" centred at (330, 540), INK, sans-serif 48 px. 12. Letter B (left figure): text \"B\" centred at (660, 540), INK, sans-serif 48 px. 13. Letter A (right figure): text \"A\" centred at (1252, 406.4), INK, sans-serif 48 px. 14. Letter B (right figure): text \"B\" centred at (1598, 406.4), INK, sans-serif 48 px. 15. Letter C (right figure): text \"C\" centred at (1425, 701.6), INK, sans-serif 48 px. 16. Segment AB (left figure): straight line from (380, 540) to (610, 540), ANSWER, 3 px, solid. 17. Segment AC (left figure): straight line from (380, 540) to (495, 340.8), ANSWER, 3 px, solid. 18. Segment BC (left figure): straight line from (610, 540) to (495, 340.8), ANSWER, 3 px, solid. 19. Segment AD (left figure): straight line from (380, 540) to (495, 739.2), ANSWER, 3 px, solid. 20. Segment BD (left figure): straight line from (610, 540) to (495, 739.2), ANSWER, 3 px, solid. 21. Segment CD (left figure): straight line from (495, 340.8) to (495, 739.2), ANSWER, 3 px, solid. 22. One equal-side tick on AB (left figure): 1 short tick line, ANSWER, 3 px, from (449, 525) to (449, 555). 23. One equal-side tick on AC (left figure): 1 short tick line, ANSWER, 3 px, from (424.5, 432.9) to (450.5, 447.9). 24. One equal-side tick on BC (left figure): 1 short tick line, ANSWER, 3 px, from (539.5, 447.9) to (565.5, 432.9). 25. One equal-side tick on AD (left figure): 1 short tick line, ANSWER, 3 px, from (450.5, 632.1) to (424.5, 647.1). 26. One equal-side tick on BD (left figure): 1 short tick line, ANSWER, 3 px, from (565.5, 647.1) to (539.5, 632.1). 27. Segment AB (right figure): straight line from (1310, 440.4) to (1540, 440.4), ANSWER, 3 px, solid. 28. Segment BC (right figure): straight line from (1540, 440.4) to (1425, 639.6), ANSWER, 3 px, solid. 29. Segment CA (right figure): straight line from (1425, 639.6) to (1310, 440.4), ANSWER, 3 px, solid. 30. One equal-side tick on AB (right figure): 1 short tick line, ANSWER, 3 px, from (1425, 425.4) to (1425, 455.4). 31. One equal-side tick on BC (right figure): 1 short tick line, ANSWER, 3 px, from (1495.5, 547.5) to (1469.5, 532.5). 32. One equal-side tick on CA (right figure): 1 short tick line, ANSWER, 3 px, from (1354.5, 547.5) to (1380.5, 532.5). 33. Crossing point C (left figure): filled dot, centre (495, 340.8), radius 10 px, ANSWER. 34. Crossing point D (left figure): filled dot, centre (495, 739.2), radius 10 px, ANSWER. 35. Letter C (left figure): text \"C\" centred at (495, 286.8), ANSWER, sans-serif 48 px. 36. Letter D (left figure): text \"D\" centred at (495, 793.2), ANSWER, sans-serif 48 px.",
+    "visible_text": [
+     "A",
+     "B",
+     "A",
+     "B",
+     "C",
+     "C",
+     "D"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words equilateral or isosceles",
+     "labels for the other crossing points of the three circles",
+     "angle marks",
+     "the radius value"
+    ],
+    "accuracy_checks": [
+     "AC = BC = AD = BD = AB = 230 px (all five are radii or the radius-long distance between centres; code assertion)",
+     "C and D are the crossing points of the two circles: (495, 340.8) and (495, 739.2), on the perpendicular bisector of AB",
+     "AC = AD and BC = BD, so triangles ACD and BCD are isosceles; CD = 398.4 px",
+     "right picture: AB = BC = CA = 230 px, so triangle ABC is equilateral",
+     "circles, centre dots and letters sit at exactly the question figure's positions"
+    ],
+    "alt_text": "The two circles with their crossing points C and D, the segments AB, AC, BC, AD, BD and CD drawn, and beside them the three circles with triangle ABC drawn between the centres.",
+    "render_note": "Segment CD is drawn so that the isosceles triangles ACD and BCD of the LP solution are visible. The book's own printed answer relabels the three-circle figure (C and D are crossing points there); the LP labelling (A, B, C are the centres) is kept."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C20",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "ti.path",
+   "question_text": "A tent, a tree and a pole are the three corners of a plot. The tent to the tree is 30 m in a straight line, the tent to the pole is 20 m and the pole to the tree is 25 m. Which way is shorter?",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "A labelled triangle with the tent, tree and pole at its corners (tent to tree 30 m, tent to pole 20 m, pole to tree 25 m) would help, but the question states every length in words and the teaching image of this concept already shows the tent, tree and pole with the direct and the roundabout path. Not added.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C23",
+   "role": "question",
+   "lp_book_number": "Triangle Inequality: try 3, 4, 8 and 2, 3, 6",
+   "ncert_ref": "imp.try",
+   "question_text": "Try to construct a triangle with sidelengths 3 cm, 4 cm and 8 cm, then 2 cm, 3 cm and 6 cm, and say what happens to the arcs.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure; it asks the learner to try the constructions. What happens to the arcs is shown on the solution side.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C24",
+   "role": "solution",
+   "lp_book_number": "Triangle Inequality: try 3, 4, 8 and 2, 3, 6",
+   "ncert_ref": "imp.try",
+   "question_text": "Try to construct a triangle with sidelengths 3 cm, 4 cm and 8 cm, then 2 cm, 3 cm and 6 cm, and say what happens to the arcs.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The question asks 'what happens to the arcs' and the answer is a picture: the failed construction with arcs that stop short of each other. The sums 3 + 4 = 7 < 8 and 2 + 3 = 5 < 6 tell why, the figure shows what. Same decision as the 3, 3, 7 sibling.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S8.T8.C24.IMG1",
+   "manim_scene": "c7_7_s8_C24_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S8.T8.C24.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "construction",
+     "scale_px_per_cm": 100,
+     "to_scale": true,
+     "panels": [
+      {
+       "base_cm": 8,
+       "radii_cm": [
+        3,
+        4
+       ],
+       "uncovered_cm": 1
+      },
+      {
+       "base_cm": 6,
+       "radii_cm": [
+        2,
+        3
+       ],
+       "uncovered_cm": 1
+      }
+     ],
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "coordinates": "px from the top-left corner, x to the right, y downward; angles counter-clockwise on screen (0 = right, 90 = up)",
+     "elements": [
+      {
+       "k": "seg",
+       "name": "Left picture (8 cm base): base AB",
+       "p": [
+        160.0,
+        470.0
+       ],
+       "q": [
+        460.0,
+        470.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Left picture (8 cm base): part of the base not covered by either arc",
+       "p": [
+        460.0,
+        470.0
+       ],
+       "q": [
+        560.0,
+        470.0
+       ],
+       "col": "FOCUS",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Left picture (8 cm base): base AB, remaining part",
+       "p": [
+        560.0,
+        470.0
+       ],
+       "q": [
+        960.0,
+        470.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "arc",
+       "name": "Left picture (8 cm base): arc of radius 300 px from A (reaches the base at x = 460)",
+       "c": [
+        160.0,
+        470.0
+       ],
+       "r": 300.0,
+       "a0": -35,
+       "a1": 35,
+       "col": "GUIDE",
+       "dash": false,
+       "start": [
+        405.7,
+        642.1
+       ],
+       "end": [
+        405.7,
+        297.9
+       ]
+      },
+      {
+       "k": "arc",
+       "name": "Left picture (8 cm base): arc of radius 400 px from B (reaches the base at x = 560)",
+       "c": [
+        960.0,
+        470.0
+       ],
+       "r": 400.0,
+       "a0": 145,
+       "a1": 215,
+       "col": "GUIDE",
+       "dash": false,
+       "start": [
+        632.3,
+        240.6
+       ],
+       "end": [
+        632.3,
+        699.4
+       ]
+      },
+      {
+       "k": "dot",
+       "name": "Left picture (8 cm base): point A",
+       "p": [
+        160.0,
+        470.0
+       ],
+       "col": "INK",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "Left picture (8 cm base): point B",
+       "p": [
+        960.0,
+        470.0
+       ],
+       "col": "INK",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "Left picture (8 cm base): where the arc from A reaches the base",
+       "p": [
+        460.0,
+        470.0
+       ],
+       "col": "ANSWER",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "Left picture (8 cm base): where the arc from B reaches the base",
+       "p": [
+        560.0,
+        470.0
+       ],
+       "col": "ANSWER",
+       "r": 9
+      },
+      {
+       "k": "text",
+       "name": "Left picture (8 cm base): letter A",
+       "s": "A",
+       "p": [
+        110.0,
+        480.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Left picture (8 cm base): letter B",
+       "s": "B",
+       "p": [
+        1010.0,
+        480.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Left picture (8 cm base): radius length from A",
+       "s": "3 cm",
+       "p": [
+        310.0,
+        418.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Left picture (8 cm base): radius length from B",
+       "s": "4 cm",
+       "p": [
+        760.0,
+        418.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "seg",
+       "name": "Left picture (8 cm base): guide line down from A",
+       "p": [
+        160.0,
+        488.0
+       ],
+       "q": [
+        160.0,
+        770.0
+       ],
+       "col": "GUIDE",
+       "dash": true
+      },
+      {
+       "k": "seg",
+       "name": "Left picture (8 cm base): guide line down from B",
+       "p": [
+        960.0,
+        488.0
+       ],
+       "q": [
+        960.0,
+        770.0
+       ],
+       "col": "GUIDE",
+       "dash": true
+      },
+      {
+       "k": "dim",
+       "name": "Left picture (8 cm base): dimension line of the whole base",
+       "p": [
+        160.0,
+        770.0
+       ],
+       "q": [
+        960.0,
+        770.0
+       ],
+       "col": "GUIDE"
+      },
+      {
+       "k": "text",
+       "name": "Left picture (8 cm base): base length",
+       "s": "8 cm",
+       "p": [
+        560.0,
+        828.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "seg",
+       "name": "Right picture (6 cm base): base AB",
+       "p": [
+        1160.0,
+        470.0
+       ],
+       "q": [
+        1360.0,
+        470.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Right picture (6 cm base): part of the base not covered by either arc",
+       "p": [
+        1360.0,
+        470.0
+       ],
+       "q": [
+        1460.0,
+        470.0
+       ],
+       "col": "FOCUS",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Right picture (6 cm base): base AB, remaining part",
+       "p": [
+        1460.0,
+        470.0
+       ],
+       "q": [
+        1760.0,
+        470.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "arc",
+       "name": "Right picture (6 cm base): arc of radius 200 px from A (reaches the base at x = 1360)",
+       "c": [
+        1160.0,
+        470.0
+       ],
+       "r": 200.0,
+       "a0": -35,
+       "a1": 35,
+       "col": "GUIDE",
+       "dash": false,
+       "start": [
+        1323.8,
+        584.7
+       ],
+       "end": [
+        1323.8,
+        355.3
+       ]
+      },
+      {
+       "k": "arc",
+       "name": "Right picture (6 cm base): arc of radius 300 px from B (reaches the base at x = 1460)",
+       "c": [
+        1760.0,
+        470.0
+       ],
+       "r": 300.0,
+       "a0": 145,
+       "a1": 215,
+       "col": "GUIDE",
+       "dash": false,
+       "start": [
+        1514.3,
+        297.9
+       ],
+       "end": [
+        1514.3,
+        642.1
+       ]
+      },
+      {
+       "k": "dot",
+       "name": "Right picture (6 cm base): point A",
+       "p": [
+        1160.0,
+        470.0
+       ],
+       "col": "INK",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "Right picture (6 cm base): point B",
+       "p": [
+        1760.0,
+        470.0
+       ],
+       "col": "INK",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "Right picture (6 cm base): where the arc from A reaches the base",
+       "p": [
+        1360.0,
+        470.0
+       ],
+       "col": "ANSWER",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "Right picture (6 cm base): where the arc from B reaches the base",
+       "p": [
+        1460.0,
+        470.0
+       ],
+       "col": "ANSWER",
+       "r": 9
+      },
+      {
+       "k": "text",
+       "name": "Right picture (6 cm base): letter A",
+       "s": "A",
+       "p": [
+        1110.0,
+        480.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Right picture (6 cm base): letter B",
+       "s": "B",
+       "p": [
+        1810.0,
+        480.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Right picture (6 cm base): radius length from A",
+       "s": "2 cm",
+       "p": [
+        1260.0,
+        418.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Right picture (6 cm base): radius length from B",
+       "s": "3 cm",
+       "p": [
+        1610.0,
+        418.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "seg",
+       "name": "Right picture (6 cm base): guide line down from A",
+       "p": [
+        1160.0,
+        488.0
+       ],
+       "q": [
+        1160.0,
+        770.0
+       ],
+       "col": "GUIDE",
+       "dash": true
+      },
+      {
+       "k": "seg",
+       "name": "Right picture (6 cm base): guide line down from B",
+       "p": [
+        1760.0,
+        488.0
+       ],
+       "q": [
+        1760.0,
+        770.0
+       ],
+       "col": "GUIDE",
+       "dash": true
+      },
+      {
+       "k": "dim",
+       "name": "Right picture (6 cm base): dimension line of the whole base",
+       "p": [
+        1160.0,
+        770.0
+       ],
+       "q": [
+        1760.0,
+        770.0
+       ],
+       "col": "GUIDE"
+      },
+      {
+       "k": "text",
+       "name": "Right picture (6 cm base): base length",
+       "s": "6 cm",
+       "p": [
+        1460.0,
+        828.0
+       ],
+       "col": "INK",
+       "rot": 0
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG (plain white), coordinates in px from the top-left corner (y grows downward), 16:9. Flat 2D construction figure, one common scale 1 cm = 100 px, to scale, two separate pictures side by side with no frame. Left picture: a base AB of 8 cm (800 px) with an arc of radius 3 cm from A and an arc of radius 4 cm from B that stop short of each other. Right picture: a base AB of 6 cm (600 px) with an arc of radius 2 cm from A and an arc of radius 3 cm from B that stop short of each other. In each picture the part of the base that neither arc reaches (100 px = 1 cm) is drawn in FOCUS. Both baselines are at y = 470. Draw in this order (back to front): 1. Left picture (8 cm base): base AB: straight line from (160, 470) to (460, 470), INK, 3 px, solid. 2. Left picture (8 cm base): part of the base not covered by either arc: straight line from (460, 470) to (560, 470), FOCUS, 3 px, solid. 3. Left picture (8 cm base): base AB, remaining part: straight line from (560, 470) to (960, 470), INK, 3 px, solid. 4. Left picture (8 cm base): arc of radius 300 px from A (reaches the base at x = 460): circular arc, centre (160, 470), radius 300 px, from -35 to 35 degrees (start point (405.7, 642.1), end point (405.7, 297.9)), GUIDE, 3 px, solid. 5. Left picture (8 cm base): arc of radius 400 px from B (reaches the base at x = 560): circular arc, centre (960, 470), radius 400 px, from 145 to 215 degrees (start point (632.3, 240.6), end point (632.3, 699.4)), GUIDE, 3 px, solid. 6. Left picture (8 cm base): point A: filled dot, centre (160, 470), radius 9 px, INK. 7. Left picture (8 cm base): point B: filled dot, centre (960, 470), radius 9 px, INK. 8. Left picture (8 cm base): where the arc from A reaches the base: filled dot, centre (460, 470), radius 9 px, ANSWER. 9. Left picture (8 cm base): where the arc from B reaches the base: filled dot, centre (560, 470), radius 9 px, ANSWER. 10. Left picture (8 cm base): letter A: text \"A\" centred at (110, 480), INK, sans-serif 48 px. 11. Left picture (8 cm base): letter B: text \"B\" centred at (1010, 480), INK, sans-serif 48 px. 12. Left picture (8 cm base): radius length from A: text \"3 cm\" centred at (310, 418), INK, sans-serif 48 px. 13. Left picture (8 cm base): radius length from B: text \"4 cm\" centred at (760, 418), INK, sans-serif 48 px. 14. Left picture (8 cm base): guide line down from A: straight line from (160, 488) to (160, 770), GUIDE, 3 px, dashed (18 px dash, 12 px gap). 15. Left picture (8 cm base): guide line down from B: straight line from (960, 488) to (960, 770), GUIDE, 3 px, dashed (18 px dash, 12 px gap). 16. Left picture (8 cm base): dimension line of the whole base: double-headed arrow line (arrowhead 16 px long at both ends) from (160, 770) to (960, 770), GUIDE, 2 px. 17. Left picture (8 cm base): base length: text \"8 cm\" centred at (560, 828), INK, sans-serif 48 px. 18. Right picture (6 cm base): base AB: straight line from (1160, 470) to (1360, 470), INK, 3 px, solid. 19. Right picture (6 cm base): part of the base not covered by either arc: straight line from (1360, 470) to (1460, 470), FOCUS, 3 px, solid. 20. Right picture (6 cm base): base AB, remaining part: straight line from (1460, 470) to (1760, 470), INK, 3 px, solid. 21. Right picture (6 cm base): arc of radius 200 px from A (reaches the base at x = 1360): circular arc, centre (1160, 470), radius 200 px, from -35 to 35 degrees (start point (1323.8, 584.7), end point (1323.8, 355.3)), GUIDE, 3 px, solid. 22. Right picture (6 cm base): arc of radius 300 px from B (reaches the base at x = 1460): circular arc, centre (1760, 470), radius 300 px, from 145 to 215 degrees (start point (1514.3, 297.9), end point (1514.3, 642.1)), GUIDE, 3 px, solid. 23. Right picture (6 cm base): point A: filled dot, centre (1160, 470), radius 9 px, INK. 24. Right picture (6 cm base): point B: filled dot, centre (1760, 470), radius 9 px, INK. 25. Right picture (6 cm base): where the arc from A reaches the base: filled dot, centre (1360, 470), radius 9 px, ANSWER. 26. Right picture (6 cm base): where the arc from B reaches the base: filled dot, centre (1460, 470), radius 9 px, ANSWER. 27. Right picture (6 cm base): letter A: text \"A\" centred at (1110, 480), INK, sans-serif 48 px. 28. Right picture (6 cm base): letter B: text \"B\" centred at (1810, 480), INK, sans-serif 48 px. 29. Right picture (6 cm base): radius length from A: text \"2 cm\" centred at (1260, 418), INK, sans-serif 48 px. 30. Right picture (6 cm base): radius length from B: text \"3 cm\" centred at (1610, 418), INK, sans-serif 48 px. 31. Right picture (6 cm base): guide line down from A: straight line from (1160, 488) to (1160, 770), GUIDE, 3 px, dashed (18 px dash, 12 px gap). 32. Right picture (6 cm base): guide line down from B: straight line from (1760, 488) to (1760, 770), GUIDE, 3 px, dashed (18 px dash, 12 px gap). 33. Right picture (6 cm base): dimension line of the whole base: double-headed arrow line (arrowhead 16 px long at both ends) from (1160, 770) to (1760, 770), GUIDE, 2 px. 34. Right picture (6 cm base): base length: text \"6 cm\" centred at (1460, 828), INK, sans-serif 48 px.",
+    "visible_text": [
+     "A",
+     "B",
+     "3 cm",
+     "4 cm",
+     "8 cm",
+     "A",
+     "B",
+     "2 cm",
+     "3 cm",
+     "6 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a third arc or any point where the arcs meet",
+     "a label on the uncovered part of the base",
+     "the words gap, no triangle or the sums 3 + 4 = 7",
+     "full circles",
+     "the figure letters"
+    ],
+    "accuracy_checks": [
+     "left picture: 3 + 4 = 7 < 8, arcs reach the base at x = 460 and x = 560, uncovered 100 px = 1 cm (code assertion)",
+     "right picture: 2 + 3 = 5 < 6, arcs reach the base at x = 1360 and x = 1460, uncovered 100 px = 1 cm",
+     "the circles of the two arcs in each picture do not intersect: distance between centres (800 or 600 px) is greater than the sum of the radii (700 or 500 px)",
+     "same scale in both pictures"
+    ],
+    "alt_text": "Two failed constructions: an 8 cm base with arcs of 3 cm and 4 cm that stop short of each other, and a 6 cm base with arcs of 2 cm and 3 cm that stop short of each other.",
+    "render_note": "The concept image M1.S7.T7.C19.IMG1 shows the 8 cm case already; it is not linked, this card draws both cases itself."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C25",
+   "role": "question",
+   "lp_book_number": "Triangle Inequality: do 10, 15 and 30 make a triangle",
+   "ncert_ref": "ti.ex",
+   "question_text": "Does a triangle exist with sidelengths 10 cm, 15 cm and 30 cm? Compare each direct length with the roundabout length.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure; the book's rough triangle (Fig. 7.4) belongs to the worked reasoning, not to the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C26",
+   "role": "solution",
+   "lp_book_number": "Triangle Inequality: do 10, 15 and 30 make a triangle",
+   "ncert_ref": "ti.ex",
+   "question_text": "Does a triangle exist with sidelengths 10 cm, 15 cm and 30 cm? Compare each direct length with the roundabout length.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The solution compares 'direct' and 'roundabout' paths using the corners A, B and C (BC, BA + AC, ...). The question never defines A, B and C; the book's rough triangle (Fig. 7.4, p.7) is what fixes AB = 15 cm, BC = 10 cm and CA = 30 cm.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S8.T8.C26.IMG1",
+   "manim_scene": "c7_7_s8_C26_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S8.T8.C26.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": false,
+     "vertices": {
+      "A": [
+       620.0,
+       270.0
+      ],
+      "B": [
+       920.0,
+       745.0
+      ],
+      "C": [
+       1295.0,
+       807.5
+      ]
+     },
+     "side_labels": {
+      "AB": "15 cm",
+      "BC": "10 cm",
+      "CA": "30 cm"
+     },
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "coordinates": "px from the top-left corner, x to the right, y downward; angles counter-clockwise on screen (0 = right, 90 = up)",
+     "elements": [
+      {
+       "k": "seg",
+       "name": "Side AB (the steep left side)",
+       "p": [
+        620.0,
+        270.0
+       ],
+       "q": [
+        920.0,
+        745.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Side AC (the long side)",
+       "p": [
+        620.0,
+        270.0
+       ],
+       "q": [
+        1295.0,
+        807.5
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Side BC (the short bottom side)",
+       "p": [
+        920.0,
+        745.0
+       ],
+       "q": [
+        1295.0,
+        807.5
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "dot",
+       "name": "Vertex A",
+       "p": [
+        620.0,
+        270.0
+       ],
+       "col": "INK",
+       "r": 8
+      },
+      {
+       "k": "dot",
+       "name": "Vertex B",
+       "p": [
+        920.0,
+        745.0
+       ],
+       "col": "INK",
+       "r": 8
+      },
+      {
+       "k": "dot",
+       "name": "Vertex C",
+       "p": [
+        1295.0,
+        807.5
+       ],
+       "col": "INK",
+       "r": 8
+      },
+      {
+       "k": "text",
+       "name": "Letter A",
+       "s": "A",
+       "p": [
+        568.0,
+        248.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter B",
+       "s": "B",
+       "p": [
+        865.0,
+        773.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter C",
+       "s": "C",
+       "p": [
+        1350.0,
+        835.5
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Length of AB (written along AB)",
+       "s": "15 cm",
+       "p": [
+        717.6,
+        540.6
+       ],
+       "col": "INK",
+       "rot": -57.724355685422374
+      },
+      {
+       "k": "text",
+       "name": "Length of AC (written along AC)",
+       "s": "30 cm",
+       "p": [
+        996.1,
+        490.2
+       ],
+       "col": "INK",
+       "rot": -38.53018001482683
+      },
+      {
+       "k": "text",
+       "name": "Length of BC (written along BC)",
+       "s": "10 cm",
+       "p": [
+        1097.3,
+        837.4
+       ],
+       "col": "INK",
+       "rot": -9.462322208025617
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG (plain white), coordinates in px from the top-left corner (y grows downward), 16:9. Flat 2D rough sketch, NOT to scale (lengths 10, 15 and 30 cannot form a real triangle, so the sketch only shows the shape of the book's Fig. 7.4): a long thin triangle ABC with A at the top left, B below and slightly right of A, and C far to the right and lowest. Draw in this order (back to front): 1. Side AB (the steep left side): straight line from (620, 270) to (920, 745), INK, 3 px, solid. 2. Side AC (the long side): straight line from (620, 270) to (1295, 807.5), INK, 3 px, solid. 3. Side BC (the short bottom side): straight line from (920, 745) to (1295, 807.5), INK, 3 px, solid. 4. Vertex A: filled dot, centre (620, 270), radius 8 px, INK. 5. Vertex B: filled dot, centre (920, 745), radius 8 px, INK. 6. Vertex C: filled dot, centre (1295, 807.5), radius 8 px, INK. 7. Letter A: text \"A\" centred at (568, 248), INK, sans-serif 48 px. 8. Letter B: text \"B\" centred at (865, 773), INK, sans-serif 48 px. 9. Letter C: text \"C\" centred at (1350, 835.5), INK, sans-serif 48 px. 10. Length of AB (written along AB): text \"15 cm\" centred at (717.6, 540.6), INK, sans-serif 48 px, rotated -57.7 degrees counter-clockwise (negative = clockwise). 11. Length of AC (written along AC): text \"30 cm\" centred at (996.1, 490.2), INK, sans-serif 48 px, rotated -38.5 degrees counter-clockwise (negative = clockwise). 12. Length of BC (written along BC): text \"10 cm\" centred at (1097.3, 837.4), INK, sans-serif 48 px, rotated -9.5 degrees counter-clockwise (negative = clockwise).",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "15 cm",
+     "30 cm",
+     "10 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the roundabout sums 45, 40 and 25",
+     "the words direct or roundabout",
+     "the caption Fig. 7.4",
+     "angle marks"
+    ],
+    "accuracy_checks": [
+     "labels agree with the LP solution: AB = 15 cm, BC = 10 cm, CA = 30 cm",
+     "drawn lengths are only a rough sketch: AB about 562 px, BC about 380 px, AC about 863 px (book proportions); to_scale is false"
+    ],
+    "alt_text": "A rough, long thin triangle ABC with AB labelled 15 cm, BC labelled 10 cm and CA labelled 30 cm.",
+    "render_note": "The LP solution names the corners A, B and C without defining them; this figure is where A, B and C are fixed. The sketch copies the book's Fig. 7.4 (p.7)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C27",
+   "role": "question",
+   "lp_book_number": "Triangle Inequality: lengths 3, 3 and 7",
+   "ncert_ref": "ti.337",
+   "question_text": "Can we say anything about the existence of a triangle having sidelengths 3 cm, 3 cm and 7 cm? Verify by construction.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure; 'verify by construction' is for the learner to draw.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C28",
+   "role": "solution",
+   "lp_book_number": "Triangle Inequality: lengths 3, 3 and 7",
+   "ncert_ref": "ti.337",
+   "question_text": "Can we say anything about the existence of a triangle having sidelengths 3 cm, 3 cm and 7 cm? Verify by construction.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The question says 'verify by construction' and the answer's check is the picture: base 7 cm with an arc of radius 3 cm from each end that never meet. Same decision as the 3, 4, 8 sibling.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S8.T8.C28.IMG1",
+   "manim_scene": "c7_7_s8_C28_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S8.T8.C28.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "construction",
+     "scale_px_per_cm": 150,
+     "to_scale": true,
+     "base_cm": 7,
+     "radii_cm": [
+      3,
+      3
+     ],
+     "uncovered_cm": 1,
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "coordinates": "px from the top-left corner, x to the right, y downward; angles counter-clockwise on screen (0 = right, 90 = up)",
+     "elements": [
+      {
+       "k": "seg",
+       "name": "The 7 cm base: base AB",
+       "p": [
+        435.0,
+        470.0
+       ],
+       "q": [
+        885.0,
+        470.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "The 7 cm base: part of the base not covered by either arc",
+       "p": [
+        885.0,
+        470.0
+       ],
+       "q": [
+        1035.0,
+        470.0
+       ],
+       "col": "FOCUS",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "The 7 cm base: base AB, remaining part",
+       "p": [
+        1035.0,
+        470.0
+       ],
+       "q": [
+        1485.0,
+        470.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "arc",
+       "name": "The 7 cm base: arc of radius 450 px from A (reaches the base at x = 885)",
+       "c": [
+        435.0,
+        470.0
+       ],
+       "r": 450.0,
+       "a0": -35,
+       "a1": 35,
+       "col": "GUIDE",
+       "dash": false,
+       "start": [
+        803.6,
+        728.1
+       ],
+       "end": [
+        803.6,
+        211.9
+       ]
+      },
+      {
+       "k": "arc",
+       "name": "The 7 cm base: arc of radius 450 px from B (reaches the base at x = 1035)",
+       "c": [
+        1485.0,
+        470.0
+       ],
+       "r": 450.0,
+       "a0": 145,
+       "a1": 215,
+       "col": "GUIDE",
+       "dash": false,
+       "start": [
+        1116.4,
+        211.9
+       ],
+       "end": [
+        1116.4,
+        728.1
+       ]
+      },
+      {
+       "k": "dot",
+       "name": "The 7 cm base: point A",
+       "p": [
+        435.0,
+        470.0
+       ],
+       "col": "INK",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "The 7 cm base: point B",
+       "p": [
+        1485.0,
+        470.0
+       ],
+       "col": "INK",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "The 7 cm base: where the arc from A reaches the base",
+       "p": [
+        885.0,
+        470.0
+       ],
+       "col": "ANSWER",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "The 7 cm base: where the arc from B reaches the base",
+       "p": [
+        1035.0,
+        470.0
+       ],
+       "col": "ANSWER",
+       "r": 9
+      },
+      {
+       "k": "text",
+       "name": "The 7 cm base: letter A",
+       "s": "A",
+       "p": [
+        385.0,
+        480.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "The 7 cm base: letter B",
+       "s": "B",
+       "p": [
+        1535.0,
+        480.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "The 7 cm base: radius length from A",
+       "s": "3 cm",
+       "p": [
+        660.0,
+        418.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "The 7 cm base: radius length from B",
+       "s": "3 cm",
+       "p": [
+        1260.0,
+        418.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "seg",
+       "name": "The 7 cm base: guide line down from A",
+       "p": [
+        435.0,
+        488.0
+       ],
+       "q": [
+        435.0,
+        770.0
+       ],
+       "col": "GUIDE",
+       "dash": true
+      },
+      {
+       "k": "seg",
+       "name": "The 7 cm base: guide line down from B",
+       "p": [
+        1485.0,
+        488.0
+       ],
+       "q": [
+        1485.0,
+        770.0
+       ],
+       "col": "GUIDE",
+       "dash": true
+      },
+      {
+       "k": "dim",
+       "name": "The 7 cm base: dimension line of the whole base",
+       "p": [
+        435.0,
+        770.0
+       ],
+       "q": [
+        1485.0,
+        770.0
+       ],
+       "col": "GUIDE"
+      },
+      {
+       "k": "text",
+       "name": "The 7 cm base: base length",
+       "s": "7 cm",
+       "p": [
+        960.0,
+        828.0
+       ],
+       "col": "INK",
+       "rot": 0
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG (plain white), coordinates in px from the top-left corner (y grows downward), 16:9. Flat 2D construction figure, 1 cm = 150 px, to scale. A base AB of 7 cm (1050 px) with an arc of radius 3 cm from A and an arc of radius 3 cm from B that stop short of each other. The part of the base that neither arc reaches (150 px = 1 cm) is drawn in FOCUS. The baseline is at y = 470. Draw in this order (back to front): 1. The 7 cm base: base AB: straight line from (435, 470) to (885, 470), INK, 3 px, solid. 2. The 7 cm base: part of the base not covered by either arc: straight line from (885, 470) to (1035, 470), FOCUS, 3 px, solid. 3. The 7 cm base: base AB, remaining part: straight line from (1035, 470) to (1485, 470), INK, 3 px, solid. 4. The 7 cm base: arc of radius 450 px from A (reaches the base at x = 885): circular arc, centre (435, 470), radius 450 px, from -35 to 35 degrees (start point (803.6, 728.1), end point (803.6, 211.9)), GUIDE, 3 px, solid. 5. The 7 cm base: arc of radius 450 px from B (reaches the base at x = 1035): circular arc, centre (1485, 470), radius 450 px, from 145 to 215 degrees (start point (1116.4, 211.9), end point (1116.4, 728.1)), GUIDE, 3 px, solid. 6. The 7 cm base: point A: filled dot, centre (435, 470), radius 9 px, INK. 7. The 7 cm base: point B: filled dot, centre (1485, 470), radius 9 px, INK. 8. The 7 cm base: where the arc from A reaches the base: filled dot, centre (885, 470), radius 9 px, ANSWER. 9. The 7 cm base: where the arc from B reaches the base: filled dot, centre (1035, 470), radius 9 px, ANSWER. 10. The 7 cm base: letter A: text \"A\" centred at (385, 480), INK, sans-serif 48 px. 11. The 7 cm base: letter B: text \"B\" centred at (1535, 480), INK, sans-serif 48 px. 12. The 7 cm base: radius length from A: text \"3 cm\" centred at (660, 418), INK, sans-serif 48 px. 13. The 7 cm base: radius length from B: text \"3 cm\" centred at (1260, 418), INK, sans-serif 48 px. 14. The 7 cm base: guide line down from A: straight line from (435, 488) to (435, 770), GUIDE, 3 px, dashed (18 px dash, 12 px gap). 15. The 7 cm base: guide line down from B: straight line from (1485, 488) to (1485, 770), GUIDE, 3 px, dashed (18 px dash, 12 px gap). 16. The 7 cm base: dimension line of the whole base: double-headed arrow line (arrowhead 16 px long at both ends) from (435, 770) to (1485, 770), GUIDE, 2 px. 17. The 7 cm base: base length: text \"7 cm\" centred at (960, 828), INK, sans-serif 48 px.",
+    "visible_text": [
+     "A",
+     "B",
+     "3 cm",
+     "3 cm",
+     "7 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a point where the arcs meet",
+     "the words gap, no triangle or 3 + 3 = 6",
+     "full circles"
+    ],
+    "accuracy_checks": [
+     "3 + 3 = 6 < 7: arcs reach the base at x = 885 and x = 1035, uncovered 150 px = 1 cm (code assertion)",
+     "distance between the centres (1050 px) is greater than the sum of the radii (900 px), so the arcs never cross"
+    ],
+    "alt_text": "A base AB of 7 cm with an arc of radius 3 cm drawn from each end; the two arcs stop short of each other."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C29",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "ti.FiOB1",
+   "question_text": "We checked by construction that there are no triangles having sidelengths 3 cm, 4 cm and 8 cm; and 2 cm, 3 cm and 6 cm. Check if you could have found this without trying to construct the triangle.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two sets of lengths in words; nothing to draw, the point is to avoid construction.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C30",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "ti.FiOB1",
+   "question_text": "We checked by construction that there are no triangles having sidelengths 3 cm, 4 cm and 8 cm; and 2 cm, 3 cm and 6 cm. Check if you could have found this without trying to construct the triangle.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is two sums (3 + 4 = 7 < 8 and 2 + 3 = 5 < 6); the book's printed answer has no picture and the LP says no construction is needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Two LaTeX lines: 3 + 4 = 7 < 8 and 2 + 3 = 5 < 6."
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C31",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "ti.FiOB2",
+   "question_text": "Can we say anything about the existence of a triangle for each of the following sets of lengths? (a) 10 km, 10 km and 25 km; (b) 5 mm, 10 mm and 20 mm; (c) 12 cm, 20 cm and 40 cm",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Three sets of lengths in words with units; nothing to draw.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C32",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "ti.FiOB2",
+   "question_text": "Can we say anything about the existence of a triangle for each of the following sets of lengths? (a) 10 km, 10 km and 25 km; (b) 5 mm, 10 mm and 20 mm; (c) 12 cm, 20 cm and 40 cm",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "LATEX_TABLE"
+   ],
+   "reason": "Three comparisons of the longest length with the sum of the other two; the book's printed answer is text only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines: (a) 10 + 10 = 20 < 25, (b) 5 + 10 = 15 < 20, (c) 12 + 20 = 32 < 40, all 'no triangle'."
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C33",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "ti.FiOB3",
+   "question_text": "For the set 10 cm, 15 cm and 30 cm, two comparisons hold (10 < 15 + 30 and 15 < 10 + 30) but the third does not (30 > 10 + 15). Will there always be at least two comparisons where the direct length is less than the sum of the other two? Explore for different sets of lengths. Is it possible to tell which lengths will immediately be less than the sum of the other two, without calculations? [Hint: Consider the lengths in increasing order.]",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "An exploration question about comparisons of lengths; the given set 10, 15, 30 is in the text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C34",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "ti.FiOB3",
+   "question_text": "For the set 10 cm, 15 cm and 30 cm, two comparisons hold (10 < 15 + 30 and 15 < 10 + 30) but the third does not (30 > 10 + 15). Will there always be at least two comparisons where the direct length is less than the sum of the other two? Explore for different sets of lengths. Is it possible to tell which lengths will immediately be less than the sum of the other two, without calculations? [Hint: Consider the lengths in increasing order.]",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a reasoning about p <= q <= r with inequalities and two numeric checks (7, 10, 15 and 10, 15, 30); no figure in the book answer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: p <= q <= r, then p < q + r, q < p + r always hold and only r < p + q is tested; checks 7 + 10 = 17 > 15 and 10 + 15 = 25 < 30."
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C36",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "c458.why_longest",
+   "question_text": "Check the lengths 6, 7 and 12 by comparing only the longest length with the sum of the other two, and then check the other two comparisons to see that they hold.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A numeric check of 6, 7 and 12 (12 < 13, 6 < 19, 7 < 18); a picture adds nothing the arithmetic does not already give.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines: 6 + 7 = 13 > 12; 7 + 12 = 19 > 6; 6 + 12 = 18 > 7.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C38",
+   "role": "question",
+   "lp_book_number": "Lengths 4, 5 and 8: does a triangle exist",
+   "ncert_ref": "c458.exists",
+   "question_text": "Does a triangle exist with sidelengths 4 cm, 5 cm and 8 cm? Picture the circles on the longest side.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure with this question ('picture the circles' is an instruction); the picture is the answer and sits on the solution side.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C39",
+   "role": "solution",
+   "lp_book_number": "Lengths 4, 5 and 8: does a triangle exist",
+   "ncert_ref": "c458.exists",
+   "question_text": "Does a triangle exist with sidelengths 4 cm, 5 cm and 8 cm? Picture the circles on the longest side.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The question asks the learner to picture the two circles on the base 8 cm; the answer is that picture (book Fig. 7.5, p.11): circle 4 cm at A, circle 5 cm at B, X with AX = BX = 4 cm, the circles crossing at two points.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C39.IMG1",
+   "manim_scene": "c7_7_s11_C39_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C39.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "scale_px_per_cm": 64,
+     "to_scale": true,
+     "base_cm": 8,
+     "circles": [
+      {
+       "centre": "A",
+       "radius_cm": 4
+      },
+      {
+       "centre": "B",
+       "radius_cm": 5
+      }
+     ],
+     "crossing_points_px": [
+      [
+       892.0,
+       299.1
+      ],
+      [
+       892.0,
+       560.9
+      ]
+     ],
+     "X_px": [
+      928.0,
+      430.0
+     ],
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "coordinates": "px from the top-left corner, x to the right, y downward; angles counter-clockwise on screen (0 = right, 90 = up)",
+     "elements": [
+      {
+       "k": "circle",
+       "name": "Circle of radius 4 cm centred A",
+       "c": [
+        672.0,
+        430.0
+       ],
+       "r": 256.0,
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "circle",
+       "name": "Circle of radius 5 cm centred B",
+       "c": [
+        1184.0,
+        430.0
+       ],
+       "r": 320.0,
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Base AB (8 cm)",
+       "p": [
+        672.0,
+        430.0
+       ],
+       "q": [
+        1184.0,
+        430.0
+       ],
+       "col": "INK",
+       "dash": false
+      },
+      {
+       "k": "seg",
+       "name": "Side AP of the triangle (A to the upper crossing point)",
+       "p": [
+        672.0,
+        430.0
+       ],
+       "q": [
+        892.0,
+        299.1
+       ],
+       "col": "ANSWER",
+       "dash": true
+      },
+      {
+       "k": "seg",
+       "name": "Side BP of the triangle (B to the upper crossing point)",
+       "p": [
+        1184.0,
+        430.0
+       ],
+       "q": [
+        892.0,
+        299.1
+       ],
+       "col": "ANSWER",
+       "dash": true
+      },
+      {
+       "k": "dot",
+       "name": "Point A",
+       "p": [
+        672.0,
+        430.0
+       ],
+       "col": "INK",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "Point B",
+       "p": [
+        1184.0,
+        430.0
+       ],
+       "col": "INK",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "Point X (where the circle at A meets AB)",
+       "p": [
+        928.0,
+        430.0
+       ],
+       "col": "INK",
+       "r": 9
+      },
+      {
+       "k": "dot",
+       "name": "Upper crossing point of the circles",
+       "p": [
+        892.0,
+        299.1
+       ],
+       "col": "ANSWER",
+       "r": 10
+      },
+      {
+       "k": "dot",
+       "name": "Lower crossing point of the circles",
+       "p": [
+        892.0,
+        560.9
+       ],
+       "col": "ANSWER",
+       "r": 10
+      },
+      {
+       "k": "text",
+       "name": "Letter A",
+       "s": "A",
+       "p": [
+        622.0,
+        442.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter B",
+       "s": "B",
+       "p": [
+        1236.0,
+        442.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Letter X",
+       "s": "X",
+       "p": [
+        958.0,
+        396.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "seg",
+       "name": "Guide line down from A",
+       "p": [
+        672.0,
+        444.0
+       ],
+       "q": [
+        672.0,
+        960.0
+       ],
+       "col": "GUIDE",
+       "dash": true
+      },
+      {
+       "k": "seg",
+       "name": "Guide line down from X",
+       "p": [
+        928.0,
+        444.0
+       ],
+       "q": [
+        928.0,
+        800.0
+       ],
+       "col": "GUIDE",
+       "dash": true
+      },
+      {
+       "k": "seg",
+       "name": "Guide line down from the point where the circle at B meets AB on its left",
+       "p": [
+        864.0,
+        444.0
+       ],
+       "q": [
+        864.0,
+        880.0
+       ],
+       "col": "GUIDE",
+       "dash": true
+      },
+      {
+       "k": "seg",
+       "name": "Guide line down from B",
+       "p": [
+        1184.0,
+        444.0
+       ],
+       "q": [
+        1184.0,
+        960.0
+       ],
+       "col": "GUIDE",
+       "dash": true
+      },
+      {
+       "k": "dim",
+       "name": "Dimension line AX",
+       "p": [
+        672.0,
+        800.0
+       ],
+       "q": [
+        928.0,
+        800.0
+       ],
+       "col": "GUIDE"
+      },
+      {
+       "k": "dim",
+       "name": "Dimension line XB",
+       "p": [
+        928.0,
+        800.0
+       ],
+       "q": [
+        1184.0,
+        800.0
+       ],
+       "col": "GUIDE"
+      },
+      {
+       "k": "dim",
+       "name": "Dimension line of the radius of the circle at B",
+       "p": [
+        864.0,
+        880.0
+       ],
+       "q": [
+        1184.0,
+        880.0
+       ],
+       "col": "GUIDE"
+      },
+      {
+       "k": "dim",
+       "name": "Dimension line AB",
+       "p": [
+        672.0,
+        960.0
+       ],
+       "q": [
+        1184.0,
+        960.0
+       ],
+       "col": "GUIDE"
+      },
+      {
+       "k": "text",
+       "name": "Length AX",
+       "s": "4 cm",
+       "p": [
+        780.0,
+        840.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Length XB (8 - 4)",
+       "s": "4 cm",
+       "p": [
+        1056.0,
+        840.0
+       ],
+       "col": "ANSWER",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Radius of the circle at B",
+       "s": "5 cm",
+       "p": [
+        1024.0,
+        920.0
+       ],
+       "col": "INK",
+       "rot": 0
+      },
+      {
+       "k": "text",
+       "name": "Length AB",
+       "s": "8 cm",
+       "p": [
+        928.0,
+        1000.0
+       ],
+       "col": "INK",
+       "rot": 0
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG (plain white), coordinates in px from the top-left corner (y grows downward), 16:9. Flat 2D figure, 1 cm = 64 px, to scale. A base AB of 8 cm (512 px) with a circle of radius 4 cm (256 px) centred A and a circle of radius 5 cm (320 px) centred B; the two circles cross at two points, each 4 cm from A and 5 cm from B (upper crossing point (892, 299.1), lower crossing point (892, 560.9)). X is the point where the circle at A meets AB, 4 cm from A and 4 cm from B. The circle at B meets AB on its left at x = 864. Draw in this order (back to front): 1. Circle of radius 4 cm centred A: full circle, centre (672, 430), radius 256 px, INK, 3 px, solid, no fill. 2. Circle of radius 5 cm centred B: full circle, centre (1184, 430), radius 320 px, INK, 3 px, solid, no fill. 3. Base AB (8 cm): straight line from (672, 430) to (1184, 430), INK, 3 px, solid. 4. Side AP of the triangle (A to the upper crossing point): straight line from (672, 430) to (892, 299.1), ANSWER, 3 px, dashed (18 px dash, 12 px gap). 5. Side BP of the triangle (B to the upper crossing point): straight line from (1184, 430) to (892, 299.1), ANSWER, 3 px, dashed (18 px dash, 12 px gap). 6. Point A: filled dot, centre (672, 430), radius 9 px, INK. 7. Point B: filled dot, centre (1184, 430), radius 9 px, INK. 8. Point X (where the circle at A meets AB): filled dot, centre (928, 430), radius 9 px, INK. 9. Upper crossing point of the circles: filled dot, centre (892, 299.1), radius 10 px, ANSWER. 10. Lower crossing point of the circles: filled dot, centre (892, 560.9), radius 10 px, ANSWER. 11. Letter A: text \"A\" centred at (622, 442), INK, sans-serif 48 px. 12. Letter B: text \"B\" centred at (1236, 442), INK, sans-serif 48 px. 13. Letter X: text \"X\" centred at (958, 396), INK, sans-serif 48 px. 14. Guide line down from A: straight line from (672, 444) to (672, 960), GUIDE, 3 px, dashed (18 px dash, 12 px gap). 15. Guide line down from X: straight line from (928, 444) to (928, 800), GUIDE, 3 px, dashed (18 px dash, 12 px gap). 16. Guide line down from the point where the circle at B meets AB on its left: straight line from (864, 444) to (864, 880), GUIDE, 3 px, dashed (18 px dash, 12 px gap). 17. Guide line down from B: straight line from (1184, 444) to (1184, 960), GUIDE, 3 px, dashed (18 px dash, 12 px gap). 18. Dimension line AX: double-headed arrow line (arrowhead 16 px long at both ends) from (672, 800) to (928, 800), GUIDE, 2 px. 19. Dimension line XB: double-headed arrow line (arrowhead 16 px long at both ends) from (928, 800) to (1184, 800), GUIDE, 2 px. 20. Dimension line of the radius of the circle at B: double-headed arrow line (arrowhead 16 px long at both ends) from (864, 880) to (1184, 880), GUIDE, 2 px. 21. Dimension line AB: double-headed arrow line (arrowhead 16 px long at both ends) from (672, 960) to (1184, 960), GUIDE, 2 px. 22. Length AX: text \"4 cm\" centred at (780, 840), INK, sans-serif 48 px. 23. Length XB (8 - 4): text \"4 cm\" centred at (1056, 840), ANSWER, sans-serif 48 px. 24. Radius of the circle at B: text \"5 cm\" centred at (1024, 920), INK, sans-serif 48 px. 25. Length AB: text \"8 cm\" centred at (928, 1000), INK, sans-serif 48 px.",
+    "visible_text": [
+     "A",
+     "B",
+     "X",
+     "4 cm",
+     "4 cm",
+     "5 cm",
+     "8 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words two points, triangle exists or yes",
+     "the sum 4 + 5 = 9",
+     "a label on the crossing points",
+     "the caption Fig. 7.5"
+    ],
+    "accuracy_checks": [
+     "AX = 4 cm and XB = 8 - 4 = 4 cm (256 px each); 4 cm < 5 cm radius of the circle at B, so the circle at B reaches past X into the circle at A",
+     "the crossing points are 4 cm (256 px) from A and 5 cm (320 px) from B (code assertion): x = 3.4375 cm from A, y = +-2.045 cm from AB",
+     "circle at B meets AB at 3 cm from A (x = 864), which is inside the circle at A (radius 4 cm)",
+     "triangle A-crossing point-B has sides 4 cm, 5 cm and 8 cm"
+    ],
+    "alt_text": "A base AB of 8 cm with a circle of radius 4 cm centred A and a circle of radius 5 cm centred B crossing at two points; X marks 4 cm from A, and AX and XB are both labelled 4 cm.",
+    "render_note": "Same picture as the book's Fig. 7.5 (p.11) but to scale; the book's hand-drawn lens is wider than the true overlap of 1 cm. The concept image M1.S10.T10.C35.IMG1 shows it too and is not linked."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C40",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "c458.FiOC1",
+   "question_text": "Which of the following lengths can be the sidelengths of a triangle? Explain your answers. Note that for each set, the three lengths have the same unit of measure. (a) 2, 2, 5 (b) 3, 4, 6 (c) 2, 4, 8 (d) 5, 5, 8 (e) 10, 20, 25 (f) 10, 20, 35 (g) 24, 26, 28",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Seven sets of lengths in words; nothing to draw.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C41",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "c458.FiOC1",
+   "question_text": "Which of the following lengths can be the sidelengths of a triangle? Explain your answers. Note that for each set, the three lengths have the same unit of measure. (a) 2, 2, 5 (b) 3, 4, 6 (c) 2, 4, 8 (d) 5, 5, 8 (e) 10, 20, 25 (f) 10, 20, 35 (g) 24, 26, 28",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "LATEX_TABLE"
+   ],
+   "reason": "Seven comparisons of the longest length with the sum of the other two; the book's printed answers are text only and the explanation is arithmetic. Different answer type from the construction answers, so no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array with columns: set, two shorter lengths added, longest length, triangle? for (a) to (g)."
+  },
+  {
+   "lp_concept_id": "M1.S13.T13.C42",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "case.three, case.touch, case.apart, case.overlap",
+   "question_text": "On a base AB, take two circles whose radii are the two smaller lengths. For the sets 3, 5, 8 and 2, 5, 8 and 5, 6, 8 say whether the circles touch, miss or cross, and whether a triangle exists.",
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three pictures of two circles on a base AB = 8 cm (radii 3 and 5 touching, 2 and 5 missing, 5 and 6 crossing) would help, but the radius sums 8, 7 and 11 decide each case in arithmetic and the teaching image of this concept already shows touch, miss and cross. Not added.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S13.T13.C43",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "case.examples, case.procedure, case.conclusion",
+   "question_text": "Frame a complete procedure to check whether three lengths can make a triangle, and use it on 3.5, 6 and 9, and on 4, 7 and 11.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A three-step procedure in words and two numeric checks (3.5 + 6 = 9.5 > 9, 4 + 7 = 11 = 11); this concept has no flow-chart image to repeat and the steps are plain text.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines: 3.5 + 6 = 9.5 > 9, so a triangle exists; 4 + 7 = 11 = 11, so no triangle.",
+   "block_index": 0
+  }
+ ]
+}

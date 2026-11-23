@@ -1,0 +1,1043 @@
+{
+ "meta": {
+  "chapter": "Operations with Integers",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 10",
+  "lp_plan_id": "cbse_eng_maths7_ch10_v69",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 1,
+    "optional": 0,
+    "none": 10
+   },
+   "solution": {
+    "required": 0,
+    "optional": 2,
+    "none": 9
+   },
+   "worked_example": {
+    "required": 2,
+    "optional": 0,
+    "none": 0
+   }
+  },
+  "notes": [
+   "Chunk D: topics M5.S30.T30, S31.T31, S32.T32, S33.T33, S35.T35, S36.T36 (13 units, 24 items).",
+   "Only the three 'machine' pictures of the book are drawn (Machine 1 and Machine 2 worked examples, Figure it Out Q7); everything else is arithmetic or word reasoning and stays text/LaTeX.",
+   "Judgement call for the reviewer: the LP text already lists the rows of the Figure it Out Q7 machine, so a text-only reading is also defensible; the figure is required because the book question is 'the machine shown below'.",
+   "Collatz (Figure it Out Q5): the book and the LP question text print 32 after 11; the rule gives -32 (the LP solution says so). No figure is drawn for it, so the slip is not copied into a picture.",
+   "Machine figures are drawn with the same panel geometry; the three rule checks (a + b - c, -(a x b) - c, a - b x c) and the three hidden last-row values (-13, -111, -70) were recomputed."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P18-machine-1",
+   "source": "chapter p.18",
+   "description": "Machine 1 panel, 6 rows (5,8,3 -> 10; 10,11,12 -> 9; 5,8,-3 -> 16; -3,10,2 -> 5; -4,-1,-6 -> 1; -10,-12,-9 -> empty star); operation circles empty. Base description checked against page_18.png: correct.",
+   "mapped_to": "item:M5.S31.T31.C112 (question)"
+  },
+  {
+   "fig_id": "P18-machine-2",
+   "source": "chapter p.18",
+   "description": "Machine 2 panel, 6 rows (4,8,-3 -> -29; 6,-11,12 -> 54; 5,3,7 -> -22; -3,9,-8 -> 35; -7,4,6 -> 22; -10,-12,-9 -> empty star); operation circles empty. Base description checked against page_18.png: correct.",
+   "mapped_to": "item:M5.S31.T31.C113 (question)"
+  },
+  {
+   "fig_id": "P19-flow-1",
+   "source": "chapter p.19",
+   "description": "Collatz example chain in two rows with a loop-back arrow: -7, 22, 11, 32 (printed 32; the rule gives -32), -16, -8, -4, then -2, -1, 4, 2, 1 and back to -2. Base description checked against page_19.png: correct, including the 32 print slip.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P20-machine-1",
+   "source": "chapter p.20",
+   "description": "Unnumbered machine of Figure it Out Q7, 6 rows (4,8,-3 -> 28; 6,9,6 -> -48; 2,3,-2 -> 8; -9,5,-8 -> 31; 7,-4,-6 -> -17; -16,-6,-9 -> empty star). Base description checked against page_20.png: correct.",
+   "mapped_to": "item:M5.S33.T33.C119 (question)"
+  },
+  {
+   "fig_id": "P21-blank_expression-1",
+   "source": "chapter p.21",
+   "description": "Three equations with empty boxes for Figure it Out Q16: (a) box + box x box = -36; (b) (box - box) x box = 12; (c) (box - (box - box)) = -1. Base description checked against page_21.png: correct.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P22-table-1",
+   "source": "chapter p.22",
+   "description": "Summary page: the 7 x 7 sign-rule table printed beside summary bullets 1 and 2. A plain table of products (print slip in column 4, rows 5-7 noted in the base inventory); no LP question or worked example uses it. Claimed at merge because it belongs to no unit.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P23-game_board-1",
+   "source": "chapter p.23",
+   "description": "Puzzle Time: the Terhuchu game board at the starting position. The game is described in the book text only and no LP question or worked example is built on it. Claimed at merge because it belongs to no unit.",
+   "mapped_to": "none:OPEN_ENDED"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 7,
+  "mapped_to_items": 3,
+  "mapped_to_concept_images": 0,
+  "mapped_none": 4,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M5.S31.T31.C112.IMG2",
+   "M5.S31.T31.C113.IMG2",
+   "M5.S33.T33.C119.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M5.S30.T30.C106",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q1a",
+   "question_text": "Find the value of the expression: (a) (−5) × (18 + (−3))",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A plain arithmetic expression, (-5) x (18 + (-3)); the book prints no figure with Q1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S30.T30.C107",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q1a",
+   "question_text": "Find the value of the expression: (a) (−5) × (18 + (−3))",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three lines of arithmetic ending in -75; nothing visual is added and the book's answer is not a picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S30.T30.C108",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "end.Q13",
+   "question_text": "Given that (−548) × 972 = −532656, write the values of: (a) (−547) × 972 (b) (−548) × 971 (c) (−547) × 971",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Given product and three neighbouring products: pure arithmetic, no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S30.T30.C109",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "end.Q13",
+   "question_text": "Given that (−548) × 972 = −532656, write the values of: (a) (−547) × 972 (b) (−548) × 971 (c) (−547) × 971",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Rewriting -547 as (-548) + 1 and 971 as 972 - 1 is arithmetic that LaTeX carries completely.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S30.T30.C110",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "end.Q14",
+   "question_text": "Given that 207 × (−33 + 7) = −5382, write the value of −207 × (33 − 7) = ___.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "One given product and one blank; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S30.T30.C111",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "end.Q14",
+   "question_text": "Given that 207 × (−33 + 7) = −5382, write the value of −207 × (33 − 7) = ___.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A short argument about additive inverses and signs, fully in words and LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S31.T31.C112",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.2.machine1",
+   "question_text": "Test the rule a + b − c on Machine 1.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The example tests a rule 'on Machine 1', and the machine's six rows exist only in the book's picture: the question text names the machine but gives none of its rows. Referred figure, so it is drawn even though the concept's teaching image M5.S31.T31.C112.IMG1 shows the completed machine (v3 rule B2: a teaching image is never linked).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M5.S31.T31.C112.IMG2",
+   "manim_scene": "c7_10_2_2_machine1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S31.T31.C112.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "arrow_map",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "arrow_map",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "background": "BG",
+     "plate": {
+      "text": "Machine 1",
+      "x": [
+       810,
+       1110
+      ],
+      "y": [
+       100,
+       160
+      ],
+      "fill": "CELL_FILL",
+      "stroke": "INK",
+      "text_height_px": 36
+     },
+     "panel": {
+      "x": [
+       560,
+       1360
+      ],
+      "y": [
+       160,
+       1030
+      ],
+      "stroke": "INK",
+      "stroke_px": 3,
+      "fill": "BG"
+     },
+     "columns": {
+      "input_square_centres_x": [
+       660,
+       840,
+       1020
+      ],
+      "input_square_size_px": 90,
+      "input_square_fill": "CELL_FILL",
+      "operation_circle_centres_x": [
+       750,
+       930
+      ],
+      "operation_circle_diameter_px": 56,
+      "operation_circle_style": "dashed GUIDE outline, empty, nothing written inside",
+      "arrow": {
+       "x_from": 1075,
+       "x_to": 1135,
+       "colour": "INK",
+       "direction": "right"
+      },
+      "star": {
+       "centre_x": 1230,
+       "outer_radius_px": 64,
+       "inner_radius_px": 34,
+       "points": 5
+      }
+     },
+     "rows": [
+      {
+       "row": 1,
+       "y_centre": 250,
+       "inputs": [
+        5,
+        8,
+        3
+       ],
+       "output": 10,
+       "output_state": "given"
+      },
+      {
+       "row": 2,
+       "y_centre": 386,
+       "inputs": [
+        10,
+        11,
+        12
+       ],
+       "output": 9,
+       "output_state": "given"
+      },
+      {
+       "row": 3,
+       "y_centre": 522,
+       "inputs": [
+        5,
+        8,
+        -3
+       ],
+       "output": 16,
+       "output_state": "given"
+      },
+      {
+       "row": 4,
+       "y_centre": 658,
+       "inputs": [
+        -3,
+        10,
+        2
+       ],
+       "output": 5,
+       "output_state": "given"
+      },
+      {
+       "row": 5,
+       "y_centre": 794,
+       "inputs": [
+        -4,
+        -1,
+        -6
+       ],
+       "output": 1,
+       "output_state": "given"
+      },
+      {
+       "row": 6,
+       "y_centre": 930,
+       "inputs": [
+        -10,
+        -12,
+        -9
+       ],
+       "output": null,
+       "output_state": "unknown_empty"
+      }
+     ],
+     "star_styles": {
+      "given": "fill MARK_FILL, INK outline 3 px, number inside",
+      "unknown_empty": "fill BG, dashed FOCUS outline, nothing inside"
+     },
+     "number_text": {
+      "colour": "INK",
+      "height_px": 38,
+      "minus_sign": "U+2212"
+     }
+    },
+    "manim_description": "On a white BG canvas of 1920 by 1080 px draw a machine panel: a tall rectangle outline in INK (3 px stroke) from x 560 to x 1360 and from y 160 to y 1030, with a name-plate tab above its top edge (rectangle x 810 to 1110, y 100 to 160, fill CELL_FILL, INK 3 px outline) holding the text 'Machine 1' in INK, 36 px high, centred. Inside the panel draw 6 rows from top to bottom; row i is centred at y = 250 + 136 x (i - 1), that is y 250, 386, 522, 658, 794 and 930. Each row, from left to right, holds: an input square 90 x 90 px (fill CELL_FILL, INK 3 px outline) centred at x 660 with the first number; an empty dotted circle (diameter 56 px, dashed GUIDE outline, nothing written inside) centred at x 750; an input square at x 840 with the second number; a second empty dotted circle at x 930; an input square at x 1020 with the third number; a short INK arrow pointing right from x 1075 to x 1135; and a five-pointed output star (outer radius 64 px, inner radius 34 px) centred at x 1230. All numbers are INK, 38 px high, centred in their square or star, negatives written with the minus sign U+2212. Rows (first, second, third -> star): 1: 5, 8, 3 -> 10; 2: 10, 11, 12 -> 9; 3: 5, 8, −3 -> 16; 4: −3, 10, 2 -> 5; 5: −4, −1, −6 -> 1; 6: −10, −12, −9 -> empty star. The stars of rows 1 to 5 are filled MARK_FILL with an INK 3 px outline and hold their number; the star of row 6 has BG fill and a dashed FOCUS outline and holds nothing. No operation sign is drawn in any circle, and no rule or formula is written anywhere.",
+    "visible_text": [
+     "Machine 1",
+     "5",
+     "8",
+     "3",
+     "10",
+     "10",
+     "11",
+     "12",
+     "9",
+     "5",
+     "8",
+     "−3",
+     "16",
+     "−3",
+     "10",
+     "2",
+     "5",
+     "−4",
+     "−1",
+     "−6",
+     "1",
+     "−10",
+     "−12",
+     "−9"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the rule a + b - c or any + or - sign inside the dotted circles",
+     "the value of the last row (-13)"
+    ],
+    "accuracy_checks": [
+     "rows 1 to 5 all satisfy first + second - third = star: 5+8-3=10, 10+11-12=9, 5+8-(-3)=16, (-3)+10-2=5, (-4)+(-1)-(-6)=1",
+     "the last row's value (-13) is NOT drawn: it is the open row of Example 1",
+     "6 rows, 18 input squares, 12 empty dotted circles, 6 arrows, 5 filled stars and 1 empty star",
+     "the star of row 6 stays empty: value -13 not shown",
+     "every number equals the book's machine picture row by row"
+    ],
+    "alt_text": "Machine 1: six rows of three input numbers each with an output star; rows 1 to 5 end in 10, 9, 16, 5, 1, and the last row −10, −12, −9 has an empty star.",
+    "render_note": "Book figure P18-machine-1 (left machine of page 18, as printed: rule signs hidden, last star empty). Worked-example figure for block 0 of C112. Row 6 (-10, -12, -9) is the open row that Example 1 (C115) fills in, so its star stays empty here. The teaching image M5.S31.T31.C112.IMG1 shows the completed machine and is not linked. Same panel geometry as the Machine 2 figure of C113 and the Figure it Out machine of C119; only the numbers and the plate text change."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S31.T31.C113",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.2.machine2",
+   "question_text": "Find Machine 2's rule by testing −(a × b) − c on every row.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The example tests a rule 'on Machine 2', and the machine's six rows exist only in the book's picture: the question text names the machine but gives none of its rows. Referred figure, so it is drawn even though the concept's teaching image M5.S31.T31.C113.IMG1 shows the completed machine (v3 rule B2: a teaching image is never linked).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M5.S31.T31.C113.IMG2",
+   "manim_scene": "c7_10_2_2_machine2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S31.T31.C113.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "arrow_map",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "arrow_map",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "background": "BG",
+     "plate": {
+      "text": "Machine 2",
+      "x": [
+       810,
+       1110
+      ],
+      "y": [
+       100,
+       160
+      ],
+      "fill": "CELL_FILL",
+      "stroke": "INK",
+      "text_height_px": 36
+     },
+     "panel": {
+      "x": [
+       560,
+       1360
+      ],
+      "y": [
+       160,
+       1030
+      ],
+      "stroke": "INK",
+      "stroke_px": 3,
+      "fill": "BG"
+     },
+     "columns": {
+      "input_square_centres_x": [
+       660,
+       840,
+       1020
+      ],
+      "input_square_size_px": 90,
+      "input_square_fill": "CELL_FILL",
+      "operation_circle_centres_x": [
+       750,
+       930
+      ],
+      "operation_circle_diameter_px": 56,
+      "operation_circle_style": "dashed GUIDE outline, empty, nothing written inside",
+      "arrow": {
+       "x_from": 1075,
+       "x_to": 1135,
+       "colour": "INK",
+       "direction": "right"
+      },
+      "star": {
+       "centre_x": 1230,
+       "outer_radius_px": 64,
+       "inner_radius_px": 34,
+       "points": 5
+      }
+     },
+     "rows": [
+      {
+       "row": 1,
+       "y_centre": 250,
+       "inputs": [
+        4,
+        8,
+        -3
+       ],
+       "output": -29,
+       "output_state": "given"
+      },
+      {
+       "row": 2,
+       "y_centre": 386,
+       "inputs": [
+        6,
+        -11,
+        12
+       ],
+       "output": 54,
+       "output_state": "given"
+      },
+      {
+       "row": 3,
+       "y_centre": 522,
+       "inputs": [
+        5,
+        3,
+        7
+       ],
+       "output": -22,
+       "output_state": "given"
+      },
+      {
+       "row": 4,
+       "y_centre": 658,
+       "inputs": [
+        -3,
+        9,
+        -8
+       ],
+       "output": 35,
+       "output_state": "given"
+      },
+      {
+       "row": 5,
+       "y_centre": 794,
+       "inputs": [
+        -7,
+        4,
+        6
+       ],
+       "output": 22,
+       "output_state": "given"
+      },
+      {
+       "row": 6,
+       "y_centre": 930,
+       "inputs": [
+        -10,
+        -12,
+        -9
+       ],
+       "output": null,
+       "output_state": "unknown_empty"
+      }
+     ],
+     "star_styles": {
+      "given": "fill MARK_FILL, INK outline 3 px, number inside",
+      "unknown_empty": "fill BG, dashed FOCUS outline, nothing inside"
+     },
+     "number_text": {
+      "colour": "INK",
+      "height_px": 38,
+      "minus_sign": "U+2212"
+     }
+    },
+    "manim_description": "On a white BG canvas of 1920 by 1080 px draw a machine panel: a tall rectangle outline in INK (3 px stroke) from x 560 to x 1360 and from y 160 to y 1030, with a name-plate tab above its top edge (rectangle x 810 to 1110, y 100 to 160, fill CELL_FILL, INK 3 px outline) holding the text 'Machine 2' in INK, 36 px high, centred. Inside the panel draw 6 rows from top to bottom; row i is centred at y = 250 + 136 x (i - 1), that is y 250, 386, 522, 658, 794 and 930. Each row, from left to right, holds: an input square 90 x 90 px (fill CELL_FILL, INK 3 px outline) centred at x 660 with the first number; an empty dotted circle (diameter 56 px, dashed GUIDE outline, nothing written inside) centred at x 750; an input square at x 840 with the second number; a second empty dotted circle at x 930; an input square at x 1020 with the third number; a short INK arrow pointing right from x 1075 to x 1135; and a five-pointed output star (outer radius 64 px, inner radius 34 px) centred at x 1230. All numbers are INK, 38 px high, centred in their square or star, negatives written with the minus sign U+2212. Rows (first, second, third -> star): 1: 4, 8, −3 -> −29; 2: 6, −11, 12 -> 54; 3: 5, 3, 7 -> −22; 4: −3, 9, −8 -> 35; 5: −7, 4, 6 -> 22; 6: −10, −12, −9 -> empty star. The stars of rows 1 to 5 are filled MARK_FILL with an INK 3 px outline and hold their number; the star of row 6 has BG fill and a dashed FOCUS outline and holds nothing. No operation sign is drawn in any circle, and no rule or formula is written anywhere.",
+    "visible_text": [
+     "Machine 2",
+     "4",
+     "8",
+     "−3",
+     "−29",
+     "6",
+     "−11",
+     "12",
+     "54",
+     "5",
+     "3",
+     "7",
+     "−22",
+     "−3",
+     "9",
+     "−8",
+     "35",
+     "−7",
+     "4",
+     "6",
+     "22",
+     "−10",
+     "−12",
+     "−9"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the rule -(a x b) - c or any sign, product or bracket inside the dotted circles",
+     "the value of the last row (-111)"
+    ],
+    "accuracy_checks": [
+     "rows 1 to 5 all satisfy -(first x second) - third = star: -(4x8)-(-3)=-29, -(6x(-11))-12=54, -(5x3)-7=-22, -((-3)x9)-(-8)=35, -((-7)x4)-6=22",
+     "the last row's value (-111) is NOT drawn: it is the open row of Example 2",
+     "6 rows, 18 input squares, 12 empty dotted circles, 6 arrows, 5 filled stars and 1 empty star",
+     "the star of row 6 stays empty: value -111 not shown",
+     "every number equals the book's machine picture row by row"
+    ],
+    "alt_text": "Machine 2: six rows of three input numbers each with an output star; rows 1 to 5 end in −29, 54, −22, 35, 22, and the last row −10, −12, −9 has an empty star.",
+    "render_note": "Book figure P18-machine-2 (right machine of page 18, as printed: rule signs hidden, last star empty). Worked-example figure for block 0 of C113. The rows follow the book's order (4, 8, -3 first); the LP steps list the same five rows in another order (5, 3, 7 first), which is fine because each step names its row. Row 6 (-10, -12, -9) is the open row that Example 2 (C117) fills in, so its star stays empty here. The teaching image M5.S31.T31.C113.IMG1 is not linked. Same panel geometry as the Machine 1 figure of C112 and the Figure it Out machine of C119."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S32.T32.C115",
+   "role": "question",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.2.machine1_last",
+   "question_text": "Find the output of Machine 1 for −10, −12, −9.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The three inputs -10, -12, -9 are in the text and the rule of Machine 1 was taught in the previous concept; the book's last row adds only those three numbers and an empty star. Differs from the worked example C112 because there the rows exist only in the picture. Machine 1 itself is drawn for C112.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S32.T32.C116",
+   "role": "solution",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.2.machine1_last",
+   "question_text": "Find the output of Machine 1 for −10, −12, −9.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two lines of arithmetic ending in -13; the book's answer is a number, not a picture, and the completed last row already sits in the teaching image C112.IMG1 (never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S32.T32.C117",
+   "role": "question",
+   "lp_book_number": "Example 2",
+   "ncert_ref": "2.2.machine2",
+   "question_text": "Fill in Machine 2's output for −10, −12, −9.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "Inputs -10, -12, -9 are in the text; the extra block 'make your own machine' is open-ended. Machine 2 itself is drawn for C113.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S32.T32.C118",
+   "role": "solution",
+   "lp_book_number": "Example 2",
+   "ncert_ref": "2.2.machine2",
+   "question_text": "Fill in Machine 2's output for −10, −12, −9.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two lines of arithmetic ending in -111 (and two for the own machine, -2); the completed last row is already in the teaching image C113.IMG1 (never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C119",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q7",
+   "question_text": "Pick the pattern: find the operations done by the machine shown below. Rows: 4, 8, −3 gives 28; 6, 9, 6 gives −48; 2, 3, −2 gives 8; −9, 5, −8 gives 31; 7, −4, −6 gives −17; −16, −6, −9 gives ?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book question is 'find the operations done by the machine shown below': the machine with its six rows is the whole given. The LP text only transcribes the rows and still says 'shown below'. Treated like the Machine 1 / Machine 2 figures (C112, C113).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S33.T33.C119.IMG1",
+   "manim_scene": "c7_10_fio_q7_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S33.T33.C119.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "arrow_map",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "arrow_map",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "background": "BG",
+     "plate": {
+      "text": "Machine",
+      "x": [
+       810,
+       1110
+      ],
+      "y": [
+       100,
+       160
+      ],
+      "fill": "CELL_FILL",
+      "stroke": "INK",
+      "text_height_px": 36
+     },
+     "panel": {
+      "x": [
+       560,
+       1360
+      ],
+      "y": [
+       160,
+       1030
+      ],
+      "stroke": "INK",
+      "stroke_px": 3,
+      "fill": "BG"
+     },
+     "columns": {
+      "input_square_centres_x": [
+       660,
+       840,
+       1020
+      ],
+      "input_square_size_px": 90,
+      "input_square_fill": "CELL_FILL",
+      "operation_circle_centres_x": [
+       750,
+       930
+      ],
+      "operation_circle_diameter_px": 56,
+      "operation_circle_style": "dashed GUIDE outline, empty, nothing written inside",
+      "arrow": {
+       "x_from": 1075,
+       "x_to": 1135,
+       "colour": "INK",
+       "direction": "right"
+      },
+      "star": {
+       "centre_x": 1230,
+       "outer_radius_px": 64,
+       "inner_radius_px": 34,
+       "points": 5
+      }
+     },
+     "rows": [
+      {
+       "row": 1,
+       "y_centre": 250,
+       "inputs": [
+        4,
+        8,
+        -3
+       ],
+       "output": 28,
+       "output_state": "given"
+      },
+      {
+       "row": 2,
+       "y_centre": 386,
+       "inputs": [
+        6,
+        9,
+        6
+       ],
+       "output": -48,
+       "output_state": "given"
+      },
+      {
+       "row": 3,
+       "y_centre": 522,
+       "inputs": [
+        2,
+        3,
+        -2
+       ],
+       "output": 8,
+       "output_state": "given"
+      },
+      {
+       "row": 4,
+       "y_centre": 658,
+       "inputs": [
+        -9,
+        5,
+        -8
+       ],
+       "output": 31,
+       "output_state": "given"
+      },
+      {
+       "row": 5,
+       "y_centre": 794,
+       "inputs": [
+        7,
+        -4,
+        -6
+       ],
+       "output": -17,
+       "output_state": "given"
+      },
+      {
+       "row": 6,
+       "y_centre": 930,
+       "inputs": [
+        -16,
+        -6,
+        -9
+       ],
+       "output": null,
+       "output_state": "unknown_empty"
+      }
+     ],
+     "star_styles": {
+      "given": "fill MARK_FILL, INK outline 3 px, number inside",
+      "unknown_empty": "fill BG, dashed FOCUS outline, nothing inside"
+     },
+     "number_text": {
+      "colour": "INK",
+      "height_px": 38,
+      "minus_sign": "U+2212"
+     }
+    },
+    "manim_description": "On a white BG canvas of 1920 by 1080 px draw a machine panel: a tall rectangle outline in INK (3 px stroke) from x 560 to x 1360 and from y 160 to y 1030, with a name-plate tab above its top edge (rectangle x 810 to 1110, y 100 to 160, fill CELL_FILL, INK 3 px outline) holding the text 'Machine' in INK, 36 px high, centred. Inside the panel draw 6 rows from top to bottom; row i is centred at y = 250 + 136 x (i - 1), that is y 250, 386, 522, 658, 794 and 930. Each row, from left to right, holds: an input square 90 x 90 px (fill CELL_FILL, INK 3 px outline) centred at x 660 with the first number; an empty dotted circle (diameter 56 px, dashed GUIDE outline, nothing written inside) centred at x 750; an input square at x 840 with the second number; a second empty dotted circle at x 930; an input square at x 1020 with the third number; a short INK arrow pointing right from x 1075 to x 1135; and a five-pointed output star (outer radius 64 px, inner radius 34 px) centred at x 1230. All numbers are INK, 38 px high, centred in their square or star, negatives written with the minus sign U+2212. Rows (first, second, third -> star): 1: 4, 8, −3 -> 28; 2: 6, 9, 6 -> −48; 3: 2, 3, −2 -> 8; 4: −9, 5, −8 -> 31; 5: 7, −4, −6 -> −17; 6: −16, −6, −9 -> empty star. The stars of rows 1 to 5 are filled MARK_FILL with an INK 3 px outline and hold their number; the star of row 6 has BG fill and a dashed FOCUS outline and holds nothing. No operation sign is drawn in any circle, and no rule or formula is written anywhere.",
+    "visible_text": [
+     "Machine",
+     "4",
+     "8",
+     "−3",
+     "28",
+     "6",
+     "9",
+     "6",
+     "−48",
+     "2",
+     "3",
+     "−2",
+     "8",
+     "−9",
+     "5",
+     "−8",
+     "31",
+     "7",
+     "−4",
+     "−6",
+     "−17",
+     "−16",
+     "−6",
+     "−9"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the rule a - b x c or any sign inside the dotted circles",
+     "the value of the last row (-70)"
+    ],
+    "accuracy_checks": [
+     "rows 1 to 5 all satisfy first - second x third = star: 4-8x(-3)=28, 6-9x6=-48, 2-3x(-2)=8, (-9)-5x(-8)=31, 7-(-4)x(-6)=-17",
+     "the last row's value (-70) is NOT drawn: it is the unknown of the question",
+     "6 rows, 18 input squares, 12 empty dotted circles, 6 arrows, 5 filled stars and 1 empty star",
+     "the star of row 6 stays empty: value -70 not shown",
+     "every number equals the book's machine picture row by row"
+    ],
+    "alt_text": "Machine: six rows of three input numbers each with an output star; rows 1 to 5 end in 28, −48, 8, 31, −17, and the last row −16, −6, −9 has an empty star.",
+    "render_note": "Book figure P20-machine-1 (page 20, Figure it Out Q7; the plate reads just 'Machine' with no number). Question figure only: the dotted circles stay empty and the last star stays empty, so nothing of the answer (rule a - b x c, last output -70) is shown. Same panel geometry as the two machines of page 18 (C112, C113); the book prints this panel slightly smaller, which does not matter."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C120",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q7",
+   "question_text": "Pick the pattern: find the operations done by the machine shown below. Rows: 4, 8, −3 gives 28; 6, 9, 6 gives −48; 2, 3, −2 gives 8; −9, 5, −8 gives 31; 7, −4, −6 gives −17; −16, −6, −9 gives ?",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A completed machine (a - b x c written in both circles of every row, last star -70) would help, but it is not needed: the LP answer is an expression and a number, every row is checked in the steps, and the book prints no answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C121",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "end.Q5",
+   "question_text": "Do you remember the Collatz Conjecture from last year? Try a modified version with integers. The rule is: start with any number; if the number is even, take half of it; if the number is odd, multiply it by −3 and add 1; repeat. An example sequence is shown below: −7, 22, 11, 32, −16, −8, −4, −2, −1, 4, 2, 1, and back to −2. Try this with different starting numbers: (−21), (−6), and so on. Describe the patterns you observe.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The rule and the example chain are both in the text; the book's picture is a number chain with a loop-back arrow (a sequence, which stays text/LaTeX), and the text already says 'and back to -2'.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optionally write the example as an arrow chain in LaTeX closed by 'and back to $-2$'. The book (and this LP text) prints 32 after 11 where the rule gives $-32$; the LP solution already says so."
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C122",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "end.Q5",
+   "question_text": "Do you remember the Collatz Conjecture from last year? Try a modified version with integers. The rule is: start with any number; if the number is even, take half of it; if the number is odd, multiply it by −3 and add 1; repeat. An example sequence is shown below: −7, 22, 11, 32, −16, −8, −4, −2, −1, 4, 2, 1, and back to −2. Try this with different starting numbers: (−21), (−6), and so on. Describe the patterns you observe.",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A flow picture of the loop 1, -2, -1, 4, 2, 1 with the chains from -21 and -6 joining it, and 13's own 31-number loop apart, would help the 'describe the patterns' answer, but the answer is a description plus number chains, which stay in LaTeX, so it is not needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C123",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "end.Q15",
+   "question_text": "Use the numbers 3, −2, 5, −6 exactly once and the operations '+', '−' and '×' exactly once and brackets as necessary to write an expression such that (a) the result is the maximum possible (b) the result is the minimum possible",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four numbers and three operations in words; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C124",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "end.Q15",
+   "question_text": "Use the numbers 3, −2, 5, −6 exactly once and the operations '+', '−' and '×' exactly once and brackets as necessary to write an expression such that (a) the result is the maximum possible (b) the result is the minimum possible",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is two bracketed expressions (60 and -60) with their arithmetic; LaTeX carries it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C125",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "end.Q16",
+   "question_text": "Fill in the blanks in at least 5 different ways with integers: (a) □ + □ × □ = −36 (b) (□ − □) × □ = 12 (c) (□ − (□ − □)) = −1",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's figure P21-blank_expression-1 is only three equations with empty boxes; the LP text already writes the boxes inside the equations, so LaTeX carries it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write each blank as a box symbol inside the equation, e.g. $\\square + \\square \\times \\square = -36$."
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C126",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "end.Q16",
+   "question_text": "Fill in the blanks in at least 5 different ways with integers: (a) □ + □ × □ = −36 (b) (□ − □) × □ = 12 (c) (□ − (□ − □)) = −1",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Fifteen filled-in equations (five ways for each of (a), (b), (c)); the same boxes filled with numbers stay LaTeX, and the book's answer is not a picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S35.T35.C129",
+   "role": "question",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "end.Q10.85",
+   "question_text": "Check that 10 coins of +13 and 5 coins of −9 make +85.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem about two coin denominations; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S35.T35.C130",
+   "role": "solution",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "end.Q10.85",
+   "question_text": "Check that 10 coins of +13 and 5 coins of −9 make +85.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three lines of arithmetic (130, -45, 85).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S36.T36.C131",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q10",
+   "question_text": "Using the two denominations, try to get the following totals: (a) +20 (b) +40 (c) −50 (d) +8 (e) +10 (f) −2 (g) +1 (h) Is it possible to purchase an item that costs 1568 pibs?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Totals to reach with +13 and -9 coins, listed as (a) to (h) in the text; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S36.T36.C132",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q10",
+   "question_text": "Using the two denominations, try to get the following totals: (a) +20 (b) +40 (c) −50 (d) +8 (e) +10 (f) −2 (g) +1 (h) Is it possible to purchase an item that costs 1568 pibs?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Eight lines of arithmetic (plus the multiples lists of the extra block); a plain list of products and sums stays LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

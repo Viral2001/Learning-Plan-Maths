@@ -1,0 +1,3182 @@
+{
+ "meta": {
+  "chapter": "Finding the Unknown",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 15",
+  "lp_plan_id": "cbse_eng_maths7_ch15_v27",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "none": 7,
+    "required": 1
+   },
+   "question": {
+    "required": 11,
+    "none": 1
+   },
+   "solution": {
+    "required": 5,
+    "none": 6,
+    "optional": 1
+   }
+  },
+  "notes": [
+   "Chunk A: topics M1.S1.T1, M1.S3.T3, M1.S4.T4, M1.S5.T5, M2.S6.T6 (20 units, 32 items).",
+   "Mobiles and balances use diagram_type balance_model; object glyphs are simple flat shapes named in each manim_description.",
+   "Solution diagrams of the mobiles and sack scales are derived_from their question diagrams (same layout, answer in ANSWER green).",
+   "See map/notes_A.md for the judgement calls (sack-scale solutions, worked example 10, Q3 'frame' question)."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P01-mobile_rule-1",
+   "source": "chapter p.1",
+   "description": "Teaching rule mobile: disc 4 over two hanging weights 2 and 2, level.",
+   "mapped_to": "concept_image:M1.S2.T2.C2.IMG1"
+  },
+  {
+   "fig_id": "P01-mobile_rule-2",
+   "source": "chapter p.1",
+   "description": "Teaching rule mobile: disc 7 over weights 4 and 3, tilting to the 4.",
+   "mapped_to": "concept_image:M1.S2.T2.C2.IMG1"
+  },
+  {
+   "fig_id": "P01-mobile-3",
+   "source": "chapter p.1 (Fig. 7.1)",
+   "description": "Mobile 1: disc 16; left leaf, bud, leaf; right flower; leaf = 3, bud and flower empty boxes.",
+   "mapped_to": "item:M1.S3.T3.C5 (question)"
+  },
+  {
+   "fig_id": "P01-mobile-4",
+   "source": "chapter p.1 (Fig. 7.2)",
+   "description": "Mobile 2: disc 24; left star, fish, star; right fish, submarine; star = 2, fish and submarine empty boxes.",
+   "mapped_to": "item:M1.S3.T3.C5 (question)"
+  },
+  {
+   "fig_id": "P01-mobile-5",
+   "source": "chapter p.1 (Fig. 7.3)",
+   "description": "Mobile 3: disc 8; left book; right a second small bar with two pencil boxes; boxes for book and pencil box empty.",
+   "mapped_to": "item:M1.S3.T3.C5 (question)"
+  },
+  {
+   "fig_id": "P02-mobile-1",
+   "source": "chapter p.2 (Fig. 7.4)",
+   "description": "Mobile 4: disc 18; left sun and 4 clouds; right 3 lightning bolts; sun = 5.",
+   "mapped_to": "item:M1.S3.T3.C7 (question)"
+  },
+  {
+   "fig_id": "P02-mobile-2",
+   "source": "chapter p.2 (Fig. 7.5)",
+   "description": "Mobile 5: disc 40; left crown and 5 gems; right 4 crowns; both boxes empty.",
+   "mapped_to": "item:M1.S3.T3.C7 (question)"
+  },
+  {
+   "fig_id": "P02-mobile-3",
+   "source": "chapter p.2 (Fig. 7.6)",
+   "description": "Mobile 6: hand-held; 3 bread slices against 2 fried eggs; bread slice = 2.",
+   "mapped_to": "item:M1.S3.T3.C9 (question)"
+  },
+  {
+   "fig_id": "P02-mobile-4",
+   "source": "chapter p.2 (Fig. 7.7)",
+   "description": "Mobile 7: hand-held; 4 crosses against donut, cross, donut; cross = 4.",
+   "mapped_to": "item:M1.S3.T3.C9 (question)"
+  },
+  {
+   "fig_id": "P02-mobile-5",
+   "source": "chapter p.2 (Fig. 7.8)",
+   "description": "Mobile 8: hand-held; watermelon against banana, orange, banana; watermelon = 10, orange = 4.",
+   "mapped_to": "item:M1.S3.T3.C9 (question)"
+  },
+  {
+   "fig_id": "P02-scale_balance-6",
+   "source": "chapter p.2 (Fig. 7.9)",
+   "description": "Sack scale 1: sack and 2 kg against 10 kg and 2 kg, level.",
+   "mapped_to": "item:M1.S3.T3.C11 (question)"
+  },
+  {
+   "fig_id": "P02-scale_balance-7",
+   "source": "chapter p.2 (Fig. 7.10)",
+   "description": "Sack scale 2: 2 sacks against 10 kg, 4 kg and a sack, level.",
+   "mapped_to": "item:M1.S3.T3.C11 (question)"
+  },
+  {
+   "fig_id": "P03-scale_balance-1",
+   "source": "chapter p.3 (Fig. 7.11)",
+   "description": "Sack scale 3: 5 sacks against 1 kg, 10 kg, 10 kg and 2 sacks, level.",
+   "mapped_to": "item:M1.S3.T3.C13 (question)"
+  },
+  {
+   "fig_id": "P03-scale_balance-2",
+   "source": "chapter p.3 (Fig. 7.12)",
+   "description": "Sack scale 4: 90 sacks and 50 kg against 60 sacks and 500 kg, level.",
+   "mapped_to": "item:M1.S3.T3.C13 (question)"
+  },
+  {
+   "fig_id": "P03-pattern-3",
+   "source": "chapter p.3",
+   "description": "Matchstick triangles at positions 1 to 4 (3, 5, 7, 9 sticks), numbered 1 to 4.",
+   "mapped_to": "item:M1.S5.T5.C18 (question)"
+  },
+  {
+   "fig_id": "P04-annotated_equation-1",
+   "source": "chapter p.4",
+   "description": "Teaching callout: 'Left Hand Side (LHS)' and 'Right Hand Side (RHS)' pointing at 2n + 1 = 99; no item of this chunk needs it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P22-dot_picture-1",
+   "source": "chapter p.22 (Figure it Out Q3)",
+   "description": "Three black blobs, 4 visible blue dots, label 25 dots.",
+   "mapped_to": "item:M1.S5.T5.C26 (question)"
+  },
+  {
+   "fig_id": "P25-pattern-1",
+   "source": "chapter p.25 (Figure it Out Q16)",
+   "description": "Squares in a row with a triangular cap: positions 1 to 3 (6, 9, 12 sticks).",
+   "mapped_to": "item:M1.S5.T5.C28 (question)"
+  },
+  {
+   "fig_id": "P25-pattern-2",
+   "source": "chapter p.25 (Figure it Out Q16)",
+   "description": "Staircase of squares: positions 1 to 4 (4, 7, 10, 13 squares; 13, 22, 31, 40 sticks).",
+   "mapped_to": "item:M1.S5.T5.C30 (question)"
+  },
+  {
+   "fig_id": "NEW-P02-mobile-3-C16",
+   "source": "chapter p.2 (Fig. 7.6), used again on p.5",
+   "description": "Mobile 6 again, for the worked example that frames the equation 6 = e + e.",
+   "mapped_to": "item:M1.S4.T4.C16 (question)"
+  },
+  {
+   "fig_id": "NEW-P02-mobile-4-C16",
+   "source": "chapter p.2 (Fig. 7.7), used again on p.5",
+   "description": "Mobile 7 again, for the worked example that frames the equation 4 + 2y = 16.",
+   "mapped_to": "item:M1.S4.T4.C16 (question)"
+  },
+  {
+   "fig_id": "NEW-P03-pattern-3-C20",
+   "source": "chapter p.3, used again on p.4",
+   "description": "Matchstick triangles again, for the 200-sticks question.",
+   "mapped_to": "item:M1.S5.T5.C20 (question)"
+  },
+  {
+   "fig_id": "NEW-P02-mobile-5-C22",
+   "source": "chapter p.2 (Fig. 7.8), used again on p.5",
+   "description": "Mobile 8 again, for the frame-the-equations question.",
+   "mapped_to": "item:M1.S5.T5.C22 (question)"
+  },
+  {
+   "fig_id": "NEW-P02-scale_balance-6-C22",
+   "source": "chapter p.2 (Fig. 7.9), used again on p.5",
+   "description": "Sack scale 1 again, for the frame-the-equations question.",
+   "mapped_to": "item:M1.S5.T5.C22 (question)"
+  },
+  {
+   "fig_id": "NEW-P02-scale_balance-7-C22",
+   "source": "chapter p.2 (Fig. 7.10), used again on p.5",
+   "description": "Sack scale 2 again, for the frame-the-equations question.",
+   "mapped_to": "item:M1.S5.T5.C22 (question)"
+  },
+  {
+   "fig_id": "NEW-P03-scale_balance-1-C22",
+   "source": "chapter p.3 (Fig. 7.11), used again on p.5",
+   "description": "Sack scale 3 again, for the frame-the-equations question.",
+   "mapped_to": "item:M1.S5.T5.C22 (question)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 26,
+  "mapped_to_items": 23,
+  "mapped_to_concept_images": 2,
+  "mapped_none": 1,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S3.T3.C5.IMG1",
+   "M1.S3.T3.C6.IMG1",
+   "M1.S3.T3.C7.IMG1",
+   "M1.S3.T3.C8.IMG1",
+   "M1.S3.T3.C9.IMG1",
+   "M1.S3.T3.C10.IMG1",
+   "M1.S3.T3.C11.IMG1",
+   "M1.S3.T3.C12.IMG1",
+   "M1.S3.T3.C13.IMG1",
+   "M1.S3.T3.C14.IMG1",
+   "M1.S4.T4.C16.IMG1",
+   "M1.S5.T5.C18.IMG1",
+   "M1.S5.T5.C20.IMG1",
+   "M1.S5.T5.C22.IMG1",
+   "M1.S5.T5.C26.IMG1",
+   "M1.S5.T5.C28.IMG1",
+   "M1.S5.T5.C30.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S1.T1.C1",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": null,
+   "question_text": "Ready check 1: what number goes in the box? 8 + 4 = □ + 5",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A one-line arithmetic sentence with a box; the three LP steps are plain sums. No book figure exists for this LP-made ready check.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 0,
+   "text_alternative": "Write the sentence $8 + 4 = \\square + 5$ in LaTeX.",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S1.T1.C1",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": null,
+   "question_text": "Ready check 2: is 9 = 5 + 4 a true sentence?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A true/false check of 9 = 5 + 4; text and LaTeX carry everything.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 1,
+   "text_alternative": "Write $9 = 5 + 4$ in LaTeX.",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S1.T1.C1",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": null,
+   "question_text": "Ready check 3: A common slip writes 3 + 5 = 8 + 2 = 10 while adding 3, 5 and 2. What is wrong?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The slip is the written chain 3 + 5 = 8 + 2 = 10; the question text already shows it and the steps are words and sums.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 2,
+   "text_alternative": "Show the chain as a LaTeX line: $3 + 5 = 8 + 2 = 10$.",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S1.T1.C1",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": null,
+   "question_text": "Ready check 4: if n = 7, what is 5n? If n = 2, what is 5n?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two substitutions into 5n; plain arithmetic.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 3,
+   "text_alternative": "LaTeX: $5n = 5 \\times 7 = 35$ and $5n = 5 \\times 2 = 10$.",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C5",
+   "role": "question",
+   "lp_book_number": "Unknown Weights: mobiles 1 to 3",
+   "ncert_ref": "7.1.Q_weights_a",
+   "question_text": "Find the unknown weights. Mobile 1 has 16 on top: one side holds a leaf, a bud and a leaf, the other side a flower; a leaf weighs 3. Mobile 2 has 24 on top: one side holds a star, a fish and a star, the other side a fish and a submarine; a star weighs 2. Mobile 3 has 8 on top: one side holds a book, the other side a small level bar with two pencil boxes.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question is 'find the unknown weights' in the three printed mobiles (Figs 7.1 to 7.3); the hanging structure (which objects hang on which string, the small bar of Mobile 3) and the empty boxes live only in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C5.IMG1",
+   "manim_scene": "c7_15_s3_mobiles1to3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C5.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "balance_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "panels": [
+      {
+       "panel": {
+        "label": "Mobile 1",
+        "x0": 28,
+        "width": 450,
+        "disc": 16,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "leaf",
+        "bud",
+        "leaf"
+       ],
+       "right_string": [
+        "flower"
+       ],
+       "key": [
+        {
+         "object": "leaf",
+         "given": 3,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "bud",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        },
+        {
+         "object": "flower",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        }
+       ]
+      },
+      {
+       "panel": {
+        "label": "Mobile 2",
+        "x0": 503,
+        "width": 450,
+        "disc": 24,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "star",
+        "fish",
+        "star"
+       ],
+       "right_string": [
+        "fish",
+        "submarine"
+       ],
+       "key": [
+        {
+         "object": "star",
+         "given": 2,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "fish",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        },
+        {
+         "object": "submarine",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        }
+       ]
+      },
+      {
+       "panel": {
+        "label": "Mobile 3",
+        "x0": 978,
+        "width": 450,
+        "disc": 8,
+        "beam": "wide"
+       },
+       "left_string": [
+        "book"
+       ],
+       "right_string": {
+        "bar": [
+         "pencil box",
+         "pencil box"
+        ]
+       },
+       "key": [
+        {
+         "object": "book",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        },
+        {
+         "object": "pencil box",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        }
+       ]
+      }
+     ],
+     "type": "balance_model"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Layout: 3 portrait panels side by side from left to right, in the order Mobile 1, Mobile 2, Mobile 3, each panel separated by a gap of 25 px. Panel for Mobile 1: a portrait rectangle from x=28 to x=478 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 1' in INK bold 30 px is centred at (225, 40). A round disc of radius 38 px, centre (225, 115), filled GUIDE, shows the numeral '16' in BG bold 36 px; its lowest point touches the middle of the beam. The beam is a horizontal INK line 5 px thick at y=153 from x=135 to x=315, level. Left string: a vertical INK line 3 px thick at x=135 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 leaf, 2 bud, 3 leaf; their centres are at y=245, 311, 377. Right string: a vertical INK line 3 px thick at x=315 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 flower; their centres are at y=245. Object glyphs, each drawn with an INK outline of 2 px: leaf = a pointed leaf (a lens-shaped ellipse tilted 30 degrees) filled MARK_FILL with one INK centre vein line; bud = a flower bud (a closed teardrop pointing up with a short INK stem) filled CELL_FILL; flower = a daisy flower (eight round petals filled FOCUS around a small INK centre circle). Key row at y=690, left to right: leaf: a 44 by 44 px leaf glyph centred at (42, 690), an INK '=' sign 30 px centred at (76, 690), then the numeral '3' in INK bold 30 px centred at (116, 690); bud: a 44 by 44 px bud glyph centred at (185, 690), an INK '=' sign 30 px centred at (219, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (259, 690); flower: a 44 by 44 px flower glyph centred at (328, 690), an INK '=' sign 30 px centred at (362, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (402, 690). Panel for Mobile 2: a portrait rectangle from x=503 to x=953 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 2' in INK bold 30 px is centred at (225, 40). A round disc of radius 38 px, centre (225, 115), filled GUIDE, shows the numeral '24' in BG bold 36 px; its lowest point touches the middle of the beam. The beam is a horizontal INK line 5 px thick at y=153 from x=135 to x=315, level. Left string: a vertical INK line 3 px thick at x=135 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 star, 2 fish, 3 star; their centres are at y=245, 311, 377. Right string: a vertical INK line 3 px thick at x=315 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 fish, 2 submarine; their centres are at y=245, 311. Object glyphs, each drawn with an INK outline of 2 px: star = a five-pointed star filled SET_B; fish = a fish (an ellipse body filled SET_A with a triangular tail on its right side and one small BG eye dot); submarine = a submarine (a horizontal capsule filled GUIDE with a short periscope on top and three round BG portholes). Key row at y=690, left to right: star: a 44 by 44 px star glyph centred at (42, 690), an INK '=' sign 30 px centred at (76, 690), then the numeral '2' in INK bold 30 px centred at (116, 690); fish: a 44 by 44 px fish glyph centred at (185, 690), an INK '=' sign 30 px centred at (219, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (259, 690); submarine: a 44 by 44 px submarine glyph centred at (328, 690), an INK '=' sign 30 px centred at (362, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (402, 690). Panel for Mobile 3: a portrait rectangle from x=978 to x=1428 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 3' in INK bold 30 px is centred at (225, 40). A round disc of radius 38 px, centre (225, 115), filled GUIDE, shows the numeral '8' in BG bold 36 px; its lowest point touches the middle of the beam. The beam is a horizontal INK line 5 px thick at y=153 from x=75 to x=375, level. Left string: a vertical INK line 3 px thick at x=75 from the beam down to a single book whose centre is at (75, 300) (glyph in a 64 by 56 px box). Right string: a vertical INK line 3 px thick at x=375 from the beam end down to the middle of a second, smaller beam. The second beam is a horizontal INK line 5 px thick at y=270 from x=310 to x=440, level. A vertical INK string 3 px thick hangs from each end of the second beam to a pencil box whose centre is at y=340: the first at x=310 and the second at x=440 (each glyph in a 64 by 48 px box). Object glyphs, each drawn with an INK outline of 2 px: book = a closed book (a rectangle filled SET_B with a narrow INK spine strip along its left edge); pencil box = a pencil box (a rectangle filled MARK_FILL with three short INK pencil lines sticking up out of its top edge). Key row at y=690, left to right: book: a 44 by 44 px book glyph centred at (68, 690), an INK '=' sign 30 px centred at (102, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (142, 690); pencil box: a 44 by 44 px pencil box glyph centred at (248, 690), an INK '=' sign 30 px centred at (282, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (322, 690). Nothing else is drawn: the boxes of the unknown weights stay empty.",
+    "visible_text": [
+     "Mobile 1",
+     "16",
+     "3",
+     "=",
+     "Mobile 2",
+     "24",
+     "2",
+     "Mobile 3",
+     "8"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "figure captions such as 'Fig. 7.1' and the book's coloured panel backgrounds",
+     "any weight written in the empty boxes",
+     "side totals",
+     "hands, faces, characters or other decoration"
+    ],
+    "accuracy_checks": [
+     "Mobile 1: left side weighs 8 and right side weighs 8 (equal); disc 16 = 8 + 8",
+     "Mobile 2: left side weighs 12 and right side weighs 12 (equal); disc 24 = 12 + 12",
+     "Mobile 3: left side weighs 4 and right side weighs 4 (equal); disc 8 = 4 + 4",
+     "every unknown box is empty; given values are exactly those of the question text"
+    ],
+    "alt_text": "Three hanging mobiles side by side: Mobile 1 with 16 on top, a leaf, a bud and a leaf on the left string and a flower on the right string, a leaf marked 3; Mobile 2 with 24 on top, a star, a fish and a star on the left and a fish and a submarine on the right, a star marked 2; Mobile 3 with 8 on top, a book on the left and a small bar with two pencil boxes on the right. Every unknown weight is an empty box."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C6",
+   "role": "solution",
+   "lp_book_number": "Unknown Weights: mobiles 1 to 3",
+   "ncert_ref": "7.1.Q_weights_a",
+   "question_text": "Find the unknown weights. Mobile 1 has 16 on top: one side holds a leaf, a bud and a leaf, the other side a flower; a leaf weighs 3. Mobile 2 has 24 on top: one side holds a star, a fish and a star, the other side a fish and a submarine; a star weighs 2. Mobile 3 has 8 on top: one side holds a book, the other side a small level bar with two pencil boxes.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The book's boxes are filled in as the answer, so the answer is the completed figure; the solution figure shows every box filled and each side total, which the steps then explain.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C6.IMG1",
+   "manim_scene": "c7_15_s3_mobiles1to3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C6.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "balance_model",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S3.T3.C5.IMG1",
+    "content": {
+     "panels": [
+      {
+       "panel": {
+        "label": "Mobile 1",
+        "x0": 28,
+        "width": 450,
+        "disc": 16,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "leaf",
+        "bud",
+        "leaf"
+       ],
+       "right_string": [
+        "flower"
+       ],
+       "key": [
+        {
+         "object": "leaf",
+         "given": 3,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "bud",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": 2
+        },
+        {
+         "object": "flower",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": 8
+        }
+       ],
+       "side_totals": {
+        "left": 8,
+        "right": 8
+       }
+      },
+      {
+       "panel": {
+        "label": "Mobile 2",
+        "x0": 503,
+        "width": 450,
+        "disc": 24,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "star",
+        "fish",
+        "star"
+       ],
+       "right_string": [
+        "fish",
+        "submarine"
+       ],
+       "key": [
+        {
+         "object": "star",
+         "given": 2,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "fish",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": 8
+        },
+        {
+         "object": "submarine",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": 4
+        }
+       ],
+       "side_totals": {
+        "left": 12,
+        "right": 12
+       }
+      },
+      {
+       "panel": {
+        "label": "Mobile 3",
+        "x0": 978,
+        "width": 450,
+        "disc": 8,
+        "beam": "wide"
+       },
+       "left_string": [
+        "book"
+       ],
+       "right_string": {
+        "bar": [
+         "pencil box",
+         "pencil box"
+        ]
+       },
+       "key": [
+        {
+         "object": "book",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": 4
+        },
+        {
+         "object": "pencil box",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": 2
+        }
+       ],
+       "side_totals": {
+        "left": 4,
+        "right": 4
+       }
+      }
+     ],
+     "type": "balance_model"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Layout identical to the question figure M1.S3.T3.C5.IMG1 (same panels, same positions); the additions are drawn in ANSWER. Panel for Mobile 1: a portrait rectangle from x=28 to x=478 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 1' in INK bold 30 px is centred at (225, 40). A round disc of radius 38 px, centre (225, 115), filled GUIDE, shows the numeral '16' in BG bold 36 px; its lowest point touches the middle of the beam. The beam is a horizontal INK line 5 px thick at y=153 from x=135 to x=315, level. Left string: a vertical INK line 3 px thick at x=135 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 leaf, 2 bud, 3 leaf; their centres are at y=245, 311, 377. Right string: a vertical INK line 3 px thick at x=315 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 flower; their centres are at y=245. Object glyphs, each drawn with an INK outline of 2 px: leaf = a pointed leaf (a lens-shaped ellipse tilted 30 degrees) filled MARK_FILL with one INK centre vein line; bud = a flower bud (a closed teardrop pointing up with a short INK stem) filled CELL_FILL; flower = a daisy flower (eight round petals filled FOCUS around a small INK centre circle). Key row at y=690, left to right: leaf: a 44 by 44 px leaf glyph centred at (42, 690), an INK '=' sign 30 px centred at (76, 690), then the numeral '3' in INK bold 30 px centred at (116, 690); bud: a 44 by 44 px bud glyph centred at (185, 690), an INK '=' sign 30 px centred at (219, 690), then a solid ANSWER-outlined rounded box 54 by 44 px, BG fill, centred at (259, 690), holding the numeral '2' in ANSWER bold 30 px; flower: a 44 by 44 px flower glyph centred at (328, 690), an INK '=' sign 30 px centred at (362, 690), then a solid ANSWER-outlined rounded box 54 by 44 px, BG fill, centred at (402, 690), holding the numeral '8' in ANSWER bold 30 px. Side totals in ANSWER: a rounded tag 56 by 34 px, ANSWER outline 3 px, BG fill, threaded on each string just under the beam: centred at (135, 188) showing '8' and centred at (315, 188) showing '8', in ANSWER bold 28 px. Panel for Mobile 2: a portrait rectangle from x=503 to x=953 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 2' in INK bold 30 px is centred at (225, 40). A round disc of radius 38 px, centre (225, 115), filled GUIDE, shows the numeral '24' in BG bold 36 px; its lowest point touches the middle of the beam. The beam is a horizontal INK line 5 px thick at y=153 from x=135 to x=315, level. Left string: a vertical INK line 3 px thick at x=135 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 star, 2 fish, 3 star; their centres are at y=245, 311, 377. Right string: a vertical INK line 3 px thick at x=315 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 fish, 2 submarine; their centres are at y=245, 311. Object glyphs, each drawn with an INK outline of 2 px: star = a five-pointed star filled SET_B; fish = a fish (an ellipse body filled SET_A with a triangular tail on its right side and one small BG eye dot); submarine = a submarine (a horizontal capsule filled GUIDE with a short periscope on top and three round BG portholes). Key row at y=690, left to right: star: a 44 by 44 px star glyph centred at (42, 690), an INK '=' sign 30 px centred at (76, 690), then the numeral '2' in INK bold 30 px centred at (116, 690); fish: a 44 by 44 px fish glyph centred at (185, 690), an INK '=' sign 30 px centred at (219, 690), then a solid ANSWER-outlined rounded box 54 by 44 px, BG fill, centred at (259, 690), holding the numeral '8' in ANSWER bold 30 px; submarine: a 44 by 44 px submarine glyph centred at (328, 690), an INK '=' sign 30 px centred at (362, 690), then a solid ANSWER-outlined rounded box 54 by 44 px, BG fill, centred at (402, 690), holding the numeral '4' in ANSWER bold 30 px. Side totals in ANSWER: a rounded tag 56 by 34 px, ANSWER outline 3 px, BG fill, threaded on each string just under the beam: centred at (135, 188) showing '12' and centred at (315, 188) showing '12', in ANSWER bold 28 px. Panel for Mobile 3: a portrait rectangle from x=978 to x=1428 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 3' in INK bold 30 px is centred at (225, 40). A round disc of radius 38 px, centre (225, 115), filled GUIDE, shows the numeral '8' in BG bold 36 px; its lowest point touches the middle of the beam. The beam is a horizontal INK line 5 px thick at y=153 from x=75 to x=375, level. Left string: a vertical INK line 3 px thick at x=75 from the beam down to a single book whose centre is at (75, 300) (glyph in a 64 by 56 px box). Right string: a vertical INK line 3 px thick at x=375 from the beam end down to the middle of a second, smaller beam. The second beam is a horizontal INK line 5 px thick at y=270 from x=310 to x=440, level. A vertical INK string 3 px thick hangs from each end of the second beam to a pencil box whose centre is at y=340: the first at x=310 and the second at x=440 (each glyph in a 64 by 48 px box). Object glyphs, each drawn with an INK outline of 2 px: book = a closed book (a rectangle filled SET_B with a narrow INK spine strip along its left edge); pencil box = a pencil box (a rectangle filled MARK_FILL with three short INK pencil lines sticking up out of its top edge). Key row at y=690, left to right: book: a 44 by 44 px book glyph centred at (68, 690), an INK '=' sign 30 px centred at (102, 690), then a solid ANSWER-outlined rounded box 54 by 44 px, BG fill, centred at (142, 690), holding the numeral '4' in ANSWER bold 30 px; pencil box: a 44 by 44 px pencil box glyph centred at (248, 690), an INK '=' sign 30 px centred at (282, 690), then a solid ANSWER-outlined rounded box 54 by 44 px, BG fill, centred at (322, 690), holding the numeral '2' in ANSWER bold 30 px. Side totals in ANSWER: a rounded tag 56 by 34 px, ANSWER outline 3 px, BG fill, threaded on each string just under the beam: centred at (75, 188) showing '4' and centred at (375, 188) showing '4', in ANSWER bold 28 px.",
+    "visible_text": [
+     "Mobile 1",
+     "16",
+     "3",
+     "2",
+     "8",
+     "=",
+     "Mobile 2",
+     "24",
+     "4",
+     "12",
+     "Mobile 3"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "figure captions such as 'Fig. 7.1' and the book's coloured panel backgrounds",
+     "the solution steps, divisions or equations",
+     "hands, faces, characters or other decoration"
+    ],
+    "accuracy_checks": [
+     "Mobile 1: left side weighs 8 and right side weighs 8 (equal); disc 16 = 8 + 8",
+     "Mobile 2: left side weighs 12 and right side weighs 12 (equal); disc 24 = 12 + 12",
+     "Mobile 3: left side weighs 4 and right side weighs 4 (equal); disc 8 = 4 + 4",
+     "every unknown box now holds the weight found in the solution; left and right side totals are equal in every mobile"
+    ],
+    "alt_text": "The same three mobiles with every empty box filled in: bud 2, flower 8; fish 8, submarine 4; book 4, pencil box 2, and each side total shown."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "question",
+   "lp_book_number": "Unknown Weights: mobiles 4 and 5",
+   "ncert_ref": "7.1.Q_weights_b",
+   "question_text": "Find the unknown weights. Mobile 4 has 18 on top: one side holds a sun and 4 clouds, the other side 3 lightning bolts; the sun weighs 5. Mobile 5 has 40 on top: one side holds a crown and 5 gems, the other side 4 crowns.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "'Find the unknown weights' for the printed Mobiles 4 and 5 (Figs 7.4, 7.5); the chains of 5, 3, 6 and 4 hanging objects and the empty boxes are only in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C7.IMG1",
+   "manim_scene": "c7_15_s3_mobiles4to5_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C7.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "balance_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "panels": [
+      {
+       "panel": {
+        "label": "Mobile 4",
+        "x0": 28,
+        "width": 690,
+        "disc": 18,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "sun",
+        "cloud",
+        "cloud",
+        "cloud",
+        "cloud"
+       ],
+       "right_string": [
+        "lightning bolt",
+        "lightning bolt",
+        "lightning bolt"
+       ],
+       "key": [
+        {
+         "object": "cloud",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        },
+        {
+         "object": "sun",
+         "given": 5,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "lightning bolt",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        }
+       ]
+      },
+      {
+       "panel": {
+        "label": "Mobile 5",
+        "x0": 738,
+        "width": 690,
+        "disc": 40,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "crown",
+        "gem",
+        "gem",
+        "gem",
+        "gem",
+        "gem"
+       ],
+       "right_string": [
+        "crown",
+        "crown",
+        "crown",
+        "crown"
+       ],
+       "key": [
+        {
+         "object": "crown",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        },
+        {
+         "object": "gem",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        }
+       ]
+      }
+     ],
+     "type": "balance_model"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Layout: 2 portrait panels side by side from left to right, in the order Mobile 4, Mobile 5, each panel separated by a gap of 20 px. Panel for Mobile 4: a portrait rectangle from x=28 to x=718 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 4' in INK bold 30 px is centred at (345, 40). A round disc of radius 38 px, centre (345, 115), filled GUIDE, shows the numeral '18' in BG bold 36 px; its lowest point touches the middle of the beam. The beam is a horizontal INK line 5 px thick at y=153 from x=255 to x=435, level. Left string: a vertical INK line 3 px thick at x=255 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 sun, 2 cloud, 3 cloud, 4 cloud, 5 cloud; their centres are at y=245, 311, 377, 443, 509. Right string: a vertical INK line 3 px thick at x=435 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 lightning bolt, 2 lightning bolt, 3 lightning bolt; their centres are at y=245, 311, 377. Object glyphs, each drawn with an INK outline of 2 px: sun = a sun (a circle filled SET_B ringed by eight short INK rays); cloud = a cloud (a flat-bottomed outline of three overlapping round bumps) filled CELL_FILL; lightning bolt = a zig-zag lightning bolt filled SET_A. Key row at y=690, left to right: cloud: a 44 by 44 px cloud glyph centred at (73, 690), an INK '=' sign 30 px centred at (107, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (147, 690); sun: a 44 by 44 px sun glyph centred at (293, 690), an INK '=' sign 30 px centred at (327, 690), then the numeral '5' in INK bold 30 px centred at (367, 690); lightning bolt: a 44 by 44 px lightning bolt glyph centred at (513, 690), an INK '=' sign 30 px centred at (547, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (587, 690). Panel for Mobile 5: a portrait rectangle from x=738 to x=1428 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 5' in INK bold 30 px is centred at (345, 40). A round disc of radius 38 px, centre (345, 115), filled GUIDE, shows the numeral '40' in BG bold 36 px; its lowest point touches the middle of the beam. The beam is a horizontal INK line 5 px thick at y=153 from x=255 to x=435, level. Left string: a vertical INK line 3 px thick at x=255 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 crown, 2 gem, 3 gem, 4 gem, 5 gem, 6 gem; their centres are at y=245, 311, 377, 443, 509, 575. Right string: a vertical INK line 3 px thick at x=435 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 crown, 2 crown, 3 crown, 4 crown; their centres are at y=245, 311, 377, 443. Object glyphs, each drawn with an INK outline of 2 px: crown = a crown (a flat-based shape with three triangular points) filled SET_B; gem = a hexagonal gem (a regular hexagon filled SET_A with a smaller inner hexagon outline). Key row at y=690, left to right: crown: a 44 by 44 px crown glyph centred at (168, 690), an INK '=' sign 30 px centred at (202, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (242, 690); gem: a 44 by 44 px gem glyph centred at (418, 690), an INK '=' sign 30 px centred at (452, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (492, 690). Nothing else is drawn: the boxes of the unknown weights stay empty.",
+    "visible_text": [
+     "Mobile 4",
+     "18",
+     "5",
+     "=",
+     "Mobile 5",
+     "40"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "figure captions such as 'Fig. 7.1' and the book's coloured panel backgrounds",
+     "any weight written in the empty boxes",
+     "side totals",
+     "hands, faces, characters or other decoration"
+    ],
+    "accuracy_checks": [
+     "Mobile 4: left side weighs 9 and right side weighs 9 (equal); disc 18 = 9 + 9",
+     "Mobile 5: left side weighs 20 and right side weighs 20 (equal); disc 40 = 20 + 20",
+     "every unknown box is empty; given values are exactly those of the question text"
+    ],
+    "alt_text": "Two hanging mobiles side by side: Mobile 4 with 18 on top, a sun and 4 clouds on the left string and 3 lightning bolts on the right string, the sun marked 5; Mobile 5 with 40 on top, a crown and 5 gems on the left and 4 crowns on the right. Every unknown weight is an empty box."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "solution",
+   "lp_book_number": "Unknown Weights: mobiles 4 and 5",
+   "ncert_ref": "7.1.Q_weights_b",
+   "question_text": "Find the unknown weights. Mobile 4 has 18 on top: one side holds a sun and 4 clouds, the other side 3 lightning bolts; the sun weighs 5. Mobile 5 has 40 on top: one side holds a crown and 5 gems, the other side 4 crowns.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "Sibling of Q1: the boxes of the book figure are completed as the answer.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C8.IMG1",
+   "manim_scene": "c7_15_s3_mobiles4to5_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C8.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "balance_model",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S3.T3.C7.IMG1",
+    "content": {
+     "panels": [
+      {
+       "panel": {
+        "label": "Mobile 4",
+        "x0": 28,
+        "width": 690,
+        "disc": 18,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "sun",
+        "cloud",
+        "cloud",
+        "cloud",
+        "cloud"
+       ],
+       "right_string": [
+        "lightning bolt",
+        "lightning bolt",
+        "lightning bolt"
+       ],
+       "key": [
+        {
+         "object": "cloud",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": 1
+        },
+        {
+         "object": "sun",
+         "given": 5,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "lightning bolt",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": 3
+        }
+       ],
+       "side_totals": {
+        "left": 9,
+        "right": 9
+       }
+      },
+      {
+       "panel": {
+        "label": "Mobile 5",
+        "x0": 738,
+        "width": 690,
+        "disc": 40,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "crown",
+        "gem",
+        "gem",
+        "gem",
+        "gem",
+        "gem"
+       ],
+       "right_string": [
+        "crown",
+        "crown",
+        "crown",
+        "crown"
+       ],
+       "key": [
+        {
+         "object": "crown",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": 5
+        },
+        {
+         "object": "gem",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": 3
+        }
+       ],
+       "side_totals": {
+        "left": 20,
+        "right": 20
+       }
+      }
+     ],
+     "type": "balance_model"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Layout identical to the question figure M1.S3.T3.C7.IMG1 (same panels, same positions); the additions are drawn in ANSWER. Panel for Mobile 4: a portrait rectangle from x=28 to x=718 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 4' in INK bold 30 px is centred at (345, 40). A round disc of radius 38 px, centre (345, 115), filled GUIDE, shows the numeral '18' in BG bold 36 px; its lowest point touches the middle of the beam. The beam is a horizontal INK line 5 px thick at y=153 from x=255 to x=435, level. Left string: a vertical INK line 3 px thick at x=255 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 sun, 2 cloud, 3 cloud, 4 cloud, 5 cloud; their centres are at y=245, 311, 377, 443, 509. Right string: a vertical INK line 3 px thick at x=435 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 lightning bolt, 2 lightning bolt, 3 lightning bolt; their centres are at y=245, 311, 377. Object glyphs, each drawn with an INK outline of 2 px: sun = a sun (a circle filled SET_B ringed by eight short INK rays); cloud = a cloud (a flat-bottomed outline of three overlapping round bumps) filled CELL_FILL; lightning bolt = a zig-zag lightning bolt filled SET_A. Key row at y=690, left to right: cloud: a 44 by 44 px cloud glyph centred at (73, 690), an INK '=' sign 30 px centred at (107, 690), then a solid ANSWER-outlined rounded box 54 by 44 px, BG fill, centred at (147, 690), holding the numeral '1' in ANSWER bold 30 px; sun: a 44 by 44 px sun glyph centred at (293, 690), an INK '=' sign 30 px centred at (327, 690), then the numeral '5' in INK bold 30 px centred at (367, 690); lightning bolt: a 44 by 44 px lightning bolt glyph centred at (513, 690), an INK '=' sign 30 px centred at (547, 690), then a solid ANSWER-outlined rounded box 54 by 44 px, BG fill, centred at (587, 690), holding the numeral '3' in ANSWER bold 30 px. Side totals in ANSWER: a rounded tag 56 by 34 px, ANSWER outline 3 px, BG fill, threaded on each string just under the beam: centred at (255, 188) showing '9' and centred at (435, 188) showing '9', in ANSWER bold 28 px. Panel for Mobile 5: a portrait rectangle from x=738 to x=1428 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 5' in INK bold 30 px is centred at (345, 40). A round disc of radius 38 px, centre (345, 115), filled GUIDE, shows the numeral '40' in BG bold 36 px; its lowest point touches the middle of the beam. The beam is a horizontal INK line 5 px thick at y=153 from x=255 to x=435, level. Left string: a vertical INK line 3 px thick at x=255 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 crown, 2 gem, 3 gem, 4 gem, 5 gem, 6 gem; their centres are at y=245, 311, 377, 443, 509, 575. Right string: a vertical INK line 3 px thick at x=435 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 crown, 2 crown, 3 crown, 4 crown; their centres are at y=245, 311, 377, 443. Object glyphs, each drawn with an INK outline of 2 px: crown = a crown (a flat-based shape with three triangular points) filled SET_B; gem = a hexagonal gem (a regular hexagon filled SET_A with a smaller inner hexagon outline). Key row at y=690, left to right: crown: a 44 by 44 px crown glyph centred at (168, 690), an INK '=' sign 30 px centred at (202, 690), then a solid ANSWER-outlined rounded box 54 by 44 px, BG fill, centred at (242, 690), holding the numeral '5' in ANSWER bold 30 px; gem: a 44 by 44 px gem glyph centred at (418, 690), an INK '=' sign 30 px centred at (452, 690), then a solid ANSWER-outlined rounded box 54 by 44 px, BG fill, centred at (492, 690), holding the numeral '3' in ANSWER bold 30 px. Side totals in ANSWER: a rounded tag 56 by 34 px, ANSWER outline 3 px, BG fill, threaded on each string just under the beam: centred at (255, 188) showing '20' and centred at (435, 188) showing '20', in ANSWER bold 28 px.",
+    "visible_text": [
+     "Mobile 4",
+     "18",
+     "1",
+     "5",
+     "3",
+     "9",
+     "=",
+     "Mobile 5",
+     "40",
+     "20"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "figure captions such as 'Fig. 7.1' and the book's coloured panel backgrounds",
+     "the solution steps, divisions or equations",
+     "hands, faces, characters or other decoration"
+    ],
+    "accuracy_checks": [
+     "Mobile 4: left side weighs 9 and right side weighs 9 (equal); disc 18 = 9 + 9",
+     "Mobile 5: left side weighs 20 and right side weighs 20 (equal); disc 40 = 20 + 20",
+     "every unknown box now holds the weight found in the solution; left and right side totals are equal in every mobile"
+    ],
+    "alt_text": "The same two mobiles with every empty box filled in: cloud 1, lightning bolt 3; crown 5, gem 3, and each side total shown."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C9",
+   "role": "question",
+   "lp_book_number": "Unknown Weights: mobiles 6 to 8",
+   "ncert_ref": "7.1.Q_weights_c",
+   "question_text": "Find the unknown weights. Mobile 6 hangs level: 3 bread slices against 2 eggs; a bread slice weighs 2. Mobile 7 hangs level: 4 crosses against a donut, a cross and a donut; a cross weighs 4. Mobile 8 hangs level: a watermelon against a banana, an orange and a banana; the watermelon weighs 10 and the orange 4.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "'Find the unknown weights' for the printed hand-held Mobiles 6 to 8 (Figs 7.6 to 7.8); which objects hang on which string and the given weights are in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C9.IMG1",
+   "manim_scene": "c7_15_s3_mobiles6to8_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C9.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "balance_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "panels": [
+      {
+       "panel": {
+        "label": "Mobile 6",
+        "x0": 28,
+        "width": 450,
+        "disc": null,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "bread slice",
+        "bread slice",
+        "bread slice"
+       ],
+       "right_string": [
+        "fried egg",
+        "fried egg"
+       ],
+       "key": [
+        {
+         "object": "bread slice",
+         "given": 2,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "fried egg",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        }
+       ]
+      },
+      {
+       "panel": {
+        "label": "Mobile 7",
+        "x0": 503,
+        "width": 450,
+        "disc": null,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "cross",
+        "cross",
+        "cross",
+        "cross"
+       ],
+       "right_string": [
+        "donut",
+        "cross",
+        "donut"
+       ],
+       "key": [
+        {
+         "object": "cross",
+         "given": 4,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "donut",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        }
+       ]
+      },
+      {
+       "panel": {
+        "label": "Mobile 8",
+        "x0": 978,
+        "width": 450,
+        "disc": null,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "watermelon slice"
+       ],
+       "right_string": [
+        "banana",
+        "orange",
+        "banana"
+       ],
+       "key": [
+        {
+         "object": "watermelon slice",
+         "given": 10,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "orange",
+         "given": 4,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "banana",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        }
+       ]
+      }
+     ],
+     "type": "balance_model"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Layout: 3 portrait panels side by side from left to right, in the order Mobile 6, Mobile 7, Mobile 8, each panel separated by a gap of 25 px. Panel for Mobile 6: a portrait rectangle from x=28 to x=478 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 6' in INK bold 30 px is centred at (225, 40). There is no number disc: an INK circle outline of radius 14 px (a hanging ring) is centred at (225, 100) and a vertical INK line 3 px thick joins it to the middle of the beam at (225, 153). The beam is a horizontal INK line 5 px thick at y=153 from x=135 to x=315, level. Left string: a vertical INK line 3 px thick at x=135 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 bread slice, 2 bread slice, 3 bread slice; their centres are at y=245, 311, 377. Right string: a vertical INK line 3 px thick at x=315 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 fried egg, 2 fried egg; their centres are at y=245, 311. Object glyphs, each drawn with an INK outline of 2 px: bread slice = a slice of bread (a square whose top corners bulge outward into a rounded top) filled CELL_FILL; fried egg = a fried egg (a rounded irregular white blob, fill BG, with a round yolk filled SET_B). Key row at y=690, left to right: bread slice: a 44 by 44 px bread slice glyph centred at (68, 690), an INK '=' sign 30 px centred at (102, 690), then the numeral '2' in INK bold 30 px centred at (142, 690); fried egg: a 44 by 44 px fried egg glyph centred at (248, 690), an INK '=' sign 30 px centred at (282, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (322, 690). Panel for Mobile 7: a portrait rectangle from x=503 to x=953 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 7' in INK bold 30 px is centred at (225, 40). There is no number disc: an INK circle outline of radius 14 px (a hanging ring) is centred at (225, 100) and a vertical INK line 3 px thick joins it to the middle of the beam at (225, 153). The beam is a horizontal INK line 5 px thick at y=153 from x=135 to x=315, level. Left string: a vertical INK line 3 px thick at x=135 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 cross, 2 cross, 3 cross, 4 cross; their centres are at y=245, 311, 377, 443. Right string: a vertical INK line 3 px thick at x=315 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 donut, 2 cross, 3 donut; their centres are at y=245, 311, 377. Object glyphs, each drawn with an INK outline of 2 px: cross = a cross-shaped biscuit (two thick bars crossing in an X shape) filled SET_B; donut = a ring donut (a circle filled FOCUS with a round BG hole in its middle). Key row at y=690, left to right: cross: a 44 by 44 px cross glyph centred at (68, 690), an INK '=' sign 30 px centred at (102, 690), then the numeral '4' in INK bold 30 px centred at (142, 690); donut: a 44 by 44 px donut glyph centred at (248, 690), an INK '=' sign 30 px centred at (282, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (322, 690). Panel for Mobile 8: a portrait rectangle from x=978 to x=1428 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 8' in INK bold 30 px is centred at (225, 40). There is no number disc: an INK circle outline of radius 14 px (a hanging ring) is centred at (225, 100) and a vertical INK line 3 px thick joins it to the middle of the beam at (225, 153). The beam is a horizontal INK line 5 px thick at y=153 from x=135 to x=315, level. Left string: a vertical INK line 3 px thick at x=135 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 watermelon slice; their centres are at y=245. Right string: a vertical INK line 3 px thick at x=315 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 banana, 2 orange, 3 banana; their centres are at y=245, 311, 377. Object glyphs, each drawn with an INK outline of 2 px: watermelon slice = a watermelon slice (a half-disc with its flat edge on top, outer rim filled MARK_FILL and inner part filled FOCUS); banana = a banana (a thin curved crescent) filled MARK_FILL; orange = an orange (a circle filled SET_B with a tiny INK stalk dot on top). Key row at y=690, left to right: watermelon slice: a 44 by 44 px watermelon slice glyph centred at (42, 690), an INK '=' sign 30 px centred at (76, 690), then the numeral '10' in INK bold 30 px centred at (116, 690); orange: a 44 by 44 px orange glyph centred at (185, 690), an INK '=' sign 30 px centred at (219, 690), then the numeral '4' in INK bold 30 px centred at (259, 690); banana: a 44 by 44 px banana glyph centred at (328, 690), an INK '=' sign 30 px centred at (362, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (402, 690). Nothing else is drawn: the boxes of the unknown weights stay empty.",
+    "visible_text": [
+     "Mobile 6",
+     "2",
+     "=",
+     "Mobile 7",
+     "4",
+     "Mobile 8",
+     "10"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "figure captions such as 'Fig. 7.1' and the book's coloured panel backgrounds",
+     "any weight written in the empty boxes",
+     "side totals",
+     "hands, faces, characters or other decoration"
+    ],
+    "accuracy_checks": [
+     "Mobile 6: left side weighs 6 and right side weighs 6 (equal)",
+     "Mobile 7: left side weighs 16 and right side weighs 16 (equal)",
+     "Mobile 8: left side weighs 10 and right side weighs 10 (equal)",
+     "every unknown box is empty; given values are exactly those of the question text"
+    ],
+    "alt_text": "Three level hand-held mobiles side by side: Mobile 6 with 3 bread slices against 2 fried eggs, a bread slice marked 2; Mobile 7 with 4 crosses against a donut, a cross and a donut, a cross marked 4; Mobile 8 with a watermelon slice against a banana, an orange and a banana, the watermelon marked 10 and the orange 4. Every unknown weight is an empty box."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C10",
+   "role": "solution",
+   "lp_book_number": "Unknown Weights: mobiles 6 to 8",
+   "ncert_ref": "7.1.Q_weights_c",
+   "question_text": "Find the unknown weights. Mobile 6 hangs level: 3 bread slices against 2 eggs; a bread slice weighs 2. Mobile 7 hangs level: 4 crosses against a donut, a cross and a donut; a cross weighs 4. Mobile 8 hangs level: a watermelon against a banana, an orange and a banana; the watermelon weighs 10 and the orange 4.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "Sibling of Q1: the boxes of the book figure are completed as the answer.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C10.IMG1",
+   "manim_scene": "c7_15_s3_mobiles6to8_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C10.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "balance_model",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S3.T3.C9.IMG1",
+    "content": {
+     "panels": [
+      {
+       "panel": {
+        "label": "Mobile 6",
+        "x0": 28,
+        "width": 450,
+        "disc": null,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "bread slice",
+        "bread slice",
+        "bread slice"
+       ],
+       "right_string": [
+        "fried egg",
+        "fried egg"
+       ],
+       "key": [
+        {
+         "object": "bread slice",
+         "given": 2,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "fried egg",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": 3
+        }
+       ],
+       "side_totals": {
+        "left": 6,
+        "right": 6
+       }
+      },
+      {
+       "panel": {
+        "label": "Mobile 7",
+        "x0": 503,
+        "width": 450,
+        "disc": null,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "cross",
+        "cross",
+        "cross",
+        "cross"
+       ],
+       "right_string": [
+        "donut",
+        "cross",
+        "donut"
+       ],
+       "key": [
+        {
+         "object": "cross",
+         "given": 4,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "donut",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": 6
+        }
+       ],
+       "side_totals": {
+        "left": 16,
+        "right": 16
+       }
+      },
+      {
+       "panel": {
+        "label": "Mobile 8",
+        "x0": 978,
+        "width": 450,
+        "disc": null,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "watermelon slice"
+       ],
+       "right_string": [
+        "banana",
+        "orange",
+        "banana"
+       ],
+       "key": [
+        {
+         "object": "watermelon slice",
+         "given": 10,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "orange",
+         "given": 4,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "banana",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": 3
+        }
+       ],
+       "side_totals": {
+        "left": 10,
+        "right": 10
+       }
+      }
+     ],
+     "type": "balance_model"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Layout identical to the question figure M1.S3.T3.C9.IMG1 (same panels, same positions); the additions are drawn in ANSWER. Panel for Mobile 6: a portrait rectangle from x=28 to x=478 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 6' in INK bold 30 px is centred at (225, 40). There is no number disc: an INK circle outline of radius 14 px (a hanging ring) is centred at (225, 100) and a vertical INK line 3 px thick joins it to the middle of the beam at (225, 153). The beam is a horizontal INK line 5 px thick at y=153 from x=135 to x=315, level. Left string: a vertical INK line 3 px thick at x=135 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 bread slice, 2 bread slice, 3 bread slice; their centres are at y=245, 311, 377. Right string: a vertical INK line 3 px thick at x=315 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 fried egg, 2 fried egg; their centres are at y=245, 311. Object glyphs, each drawn with an INK outline of 2 px: bread slice = a slice of bread (a square whose top corners bulge outward into a rounded top) filled CELL_FILL; fried egg = a fried egg (a rounded irregular white blob, fill BG, with a round yolk filled SET_B). Key row at y=690, left to right: bread slice: a 44 by 44 px bread slice glyph centred at (68, 690), an INK '=' sign 30 px centred at (102, 690), then the numeral '2' in INK bold 30 px centred at (142, 690); fried egg: a 44 by 44 px fried egg glyph centred at (248, 690), an INK '=' sign 30 px centred at (282, 690), then a solid ANSWER-outlined rounded box 54 by 44 px, BG fill, centred at (322, 690), holding the numeral '3' in ANSWER bold 30 px. Side totals in ANSWER: a rounded tag 56 by 34 px, ANSWER outline 3 px, BG fill, threaded on each string just under the beam: centred at (135, 188) showing '6' and centred at (315, 188) showing '6', in ANSWER bold 28 px. Panel for Mobile 7: a portrait rectangle from x=503 to x=953 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 7' in INK bold 30 px is centred at (225, 40). There is no number disc: an INK circle outline of radius 14 px (a hanging ring) is centred at (225, 100) and a vertical INK line 3 px thick joins it to the middle of the beam at (225, 153). The beam is a horizontal INK line 5 px thick at y=153 from x=135 to x=315, level. Left string: a vertical INK line 3 px thick at x=135 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 cross, 2 cross, 3 cross, 4 cross; their centres are at y=245, 311, 377, 443. Right string: a vertical INK line 3 px thick at x=315 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 donut, 2 cross, 3 donut; their centres are at y=245, 311, 377. Object glyphs, each drawn with an INK outline of 2 px: cross = a cross-shaped biscuit (two thick bars crossing in an X shape) filled SET_B; donut = a ring donut (a circle filled FOCUS with a round BG hole in its middle). Key row at y=690, left to right: cross: a 44 by 44 px cross glyph centred at (68, 690), an INK '=' sign 30 px centred at (102, 690), then the numeral '4' in INK bold 30 px centred at (142, 690); donut: a 44 by 44 px donut glyph centred at (248, 690), an INK '=' sign 30 px centred at (282, 690), then a solid ANSWER-outlined rounded box 54 by 44 px, BG fill, centred at (322, 690), holding the numeral '6' in ANSWER bold 30 px. Side totals in ANSWER: a rounded tag 56 by 34 px, ANSWER outline 3 px, BG fill, threaded on each string just under the beam: centred at (135, 188) showing '16' and centred at (315, 188) showing '16', in ANSWER bold 28 px. Panel for Mobile 8: a portrait rectangle from x=978 to x=1428 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 8' in INK bold 30 px is centred at (225, 40). There is no number disc: an INK circle outline of radius 14 px (a hanging ring) is centred at (225, 100) and a vertical INK line 3 px thick joins it to the middle of the beam at (225, 153). The beam is a horizontal INK line 5 px thick at y=153 from x=135 to x=315, level. Left string: a vertical INK line 3 px thick at x=135 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 watermelon slice; their centres are at y=245. Right string: a vertical INK line 3 px thick at x=315 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 banana, 2 orange, 3 banana; their centres are at y=245, 311, 377. Object glyphs, each drawn with an INK outline of 2 px: watermelon slice = a watermelon slice (a half-disc with its flat edge on top, outer rim filled MARK_FILL and inner part filled FOCUS); banana = a banana (a thin curved crescent) filled MARK_FILL; orange = an orange (a circle filled SET_B with a tiny INK stalk dot on top). Key row at y=690, left to right: watermelon slice: a 44 by 44 px watermelon slice glyph centred at (42, 690), an INK '=' sign 30 px centred at (76, 690), then the numeral '10' in INK bold 30 px centred at (116, 690); orange: a 44 by 44 px orange glyph centred at (185, 690), an INK '=' sign 30 px centred at (219, 690), then the numeral '4' in INK bold 30 px centred at (259, 690); banana: a 44 by 44 px banana glyph centred at (328, 690), an INK '=' sign 30 px centred at (362, 690), then a solid ANSWER-outlined rounded box 54 by 44 px, BG fill, centred at (402, 690), holding the numeral '3' in ANSWER bold 30 px. Side totals in ANSWER: a rounded tag 56 by 34 px, ANSWER outline 3 px, BG fill, threaded on each string just under the beam: centred at (135, 188) showing '10' and centred at (315, 188) showing '10', in ANSWER bold 28 px.",
+    "visible_text": [
+     "Mobile 6",
+     "2",
+     "3",
+     "6",
+     "=",
+     "Mobile 7",
+     "4",
+     "16",
+     "Mobile 8",
+     "10"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "figure captions such as 'Fig. 7.1' and the book's coloured panel backgrounds",
+     "the solution steps, divisions or equations",
+     "hands, faces, characters or other decoration"
+    ],
+    "accuracy_checks": [
+     "Mobile 6: left side weighs 6 and right side weighs 6 (equal)",
+     "Mobile 7: left side weighs 16 and right side weighs 16 (equal)",
+     "Mobile 8: left side weighs 10 and right side weighs 10 (equal)",
+     "every unknown box now holds the weight found in the solution; left and right side totals are equal in every mobile"
+    ],
+    "alt_text": "The same three mobiles with every empty box filled in: egg 3, donut 6, banana 3, and each side total shown."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C11",
+   "role": "question",
+   "lp_book_number": "Unknown Sacks: scales 1 and 2",
+   "ncert_ref": "7.1.Q_sacks_a",
+   "question_text": "Find the unknown weight of the sack. Sack scale 1 is level: a sack and 2 kg on the left, 10 kg and 2 kg on the right. Sack scale 2 is level: 2 sacks on the left, 10 kg, 4 kg and a sack on the right; all the sacks weigh the same.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "'Find the unknown weight of the sack' for the printed Figs 7.9 and 7.10; the pan contents (sacks, 2 kg, 10 kg, 4 kg blocks) are only in the picture and the LP text describes them in words only.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C11.IMG1",
+   "manim_scene": "c7_15_s3_sacks12_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C11.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "balance_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "scales": [
+      {
+       "label": "Sack scale 1",
+       "band_top_y": 70,
+       "pan_centres_x": [
+        468,
+        988
+       ],
+       "left_rows": [
+        [
+         "sack",
+         "2 kg"
+        ]
+       ],
+       "right_rows": [
+        [
+         "10 kg",
+         "2 kg"
+        ]
+       ],
+       "sack_weight_shown": null
+      },
+      {
+       "label": "Sack scale 2",
+       "band_top_y": 460,
+       "pan_centres_x": [
+        468,
+        988
+       ],
+       "left_rows": [
+        [
+         "sack",
+         "sack"
+        ]
+       ],
+       "right_rows": [
+        [
+         "10 kg",
+         "4 kg",
+         "sack"
+        ]
+       ],
+       "sack_weight_shown": null
+      }
+     ],
+     "type": "balance_model"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Layout: two balances stacked top to bottom, centred horizontally at x=728, in the order Sack scale 1, Sack scale 2, with band tops at y=70, 460. All sacks are the same sack glyph: a rounded body 84 px wide and 68 px high with a gathered neck 30 px wide and 18 px high on top, filled SET_B, INK outline 2 px. Weight blocks are rounded rectangles filled CELL_FILL with an INK outline of 2 px and an INK bold 26 px label inside. Sizes are pictorial, not to scale. Balance for 'Sack scale 1' (band top at y=70): the label 'Sack scale 1' in INK bold 30 px sits left-aligned at (36, 84). The beam is a horizontal INK line 6 px thick at y=106 from x=468 to x=988, level, with an INK round knob of radius 9 px at each end. The fulcrum is a triangle filled GUIDE with an INK outline of 3 px: apex at (728, 106), base from (658, 315) to (798, 315); two horizontal BG bars 44 by 8 px at y=265 and y=285, centred at x=728, form an equals sign on it. From each beam end a vertical INK string 3 px thick runs straight down to the pan: x=468 and x=988, from y=106 to y=283, drawn behind the items. Each pan is a rounded plate 320 by 22 px filled GUIDE with an INK outline of 2 px, top edge at y=283: left plate x=308 to x=628, right plate x=828 to x=1148. Left pan, bottom row resting on the plate top at y=283, left to right: a sack centred at x=423; a weight block '2 kg' (84 by 64 px) centred at x=513. Right pan, bottom row resting on the plate top at y=283, left to right: a weight block '10 kg' (84 by 64 px) centred at x=943; a weight block '2 kg' (84 by 64 px) centred at x=1033. Balance for 'Sack scale 2' (band top at y=460): the label 'Sack scale 2' in INK bold 30 px sits left-aligned at (36, 474). The beam is a horizontal INK line 6 px thick at y=496 from x=468 to x=988, level, with an INK round knob of radius 9 px at each end. The fulcrum is a triangle filled GUIDE with an INK outline of 3 px: apex at (728, 496), base from (658, 705) to (798, 705); two horizontal BG bars 44 by 8 px at y=655 and y=675, centred at x=728, form an equals sign on it. From each beam end a vertical INK string 3 px thick runs straight down to the pan: x=468 and x=988, from y=496 to y=673, drawn behind the items. Each pan is a rounded plate 320 by 22 px filled GUIDE with an INK outline of 2 px, top edge at y=673: left plate x=308 to x=628, right plate x=828 to x=1148. Left pan, bottom row resting on the plate top at y=673, left to right: a sack centred at x=423; a sack centred at x=513. Right pan, bottom row resting on the plate top at y=673, left to right: a weight block '10 kg' (84 by 64 px) centred at x=898; a weight block '4 kg' (84 by 64 px) centred at x=988; a sack centred at x=1078. No weight is written on any sack: the sack is the unknown.",
+    "visible_text": [
+     "Sack scale 1",
+     "2 kg",
+     "10 kg",
+     "Sack scale 2",
+     "4 kg"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "figure captions such as 'Fig. 7.9'",
+     "any weight written on a sack",
+     "hands, faces, characters or other decoration",
+     "the removal of weights or any solution step"
+    ],
+    "accuracy_checks": [
+     "Sack scale 1 is level for sack weight 10 kg (left 12 kg, right 12 kg) but no weight is written on the sacks",
+     "Sack scale 2 is level for sack weight 14 kg (left 28 kg, right 28 kg) but no weight is written on the sacks"
+    ],
+    "alt_text": "Two level balances, one above the other: Sack scale 1 holds a sack and a 2 kg block on the left pan and a 10 kg block and a 2 kg block on the right pan; Sack scale 2 holds 2 sacks on the left pan and a 10 kg block, a 4 kg block and a sack on the right pan.",
+    "render_note": "Pictorial standing balances (the book draws Figs 7.9 and 7.10 hanging and Figs 7.11 and 7.12 standing); weights are not to scale; the number of drawn sacks in a bundle is only a picture, the tag gives the count."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C12",
+   "role": "solution",
+   "lp_book_number": "Unknown Sacks: scales 1 and 2",
+   "ncert_ref": "7.1.Q_sacks_a",
+   "question_text": "Find the unknown weight of the sack. Sack scale 1 is level: a sack and 2 kg on the left, 10 kg and 2 kg on the right. Sack scale 2 is level: 2 sacks on the left, 10 kg, 4 kg and a sack on the right; all the sacks weigh the same.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The solution removes equal weights from both pans and ends with the weight of a sack; the figure shows the same balances with the sack weight written on every sack so that both pans visibly weigh the same (catalogue rule for balance_model). Borderline; see notes.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C12.IMG1",
+   "manim_scene": "c7_15_s3_sacks12_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C12.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "balance_model",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S3.T3.C11.IMG1",
+    "content": {
+     "scales": [
+      {
+       "label": "Sack scale 1",
+       "band_top_y": 70,
+       "pan_centres_x": [
+        468,
+        988
+       ],
+       "left_rows": [
+        [
+         "sack",
+         "2 kg"
+        ]
+       ],
+       "right_rows": [
+        [
+         "10 kg",
+         "2 kg"
+        ]
+       ],
+       "sack_weight_shown": 10
+      },
+      {
+       "label": "Sack scale 2",
+       "band_top_y": 460,
+       "pan_centres_x": [
+        468,
+        988
+       ],
+       "left_rows": [
+        [
+         "sack",
+         "sack"
+        ]
+       ],
+       "right_rows": [
+        [
+         "10 kg",
+         "4 kg",
+         "sack"
+        ]
+       ],
+       "sack_weight_shown": 14
+      }
+     ],
+     "type": "balance_model"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Layout identical to the question figure M1.S3.T3.C11.IMG1 (same balances, same positions); the additions are drawn in ANSWER. Balance for 'Sack scale 1' (band top at y=70): the label 'Sack scale 1' in INK bold 30 px sits left-aligned at (36, 84). The beam is a horizontal INK line 6 px thick at y=106 from x=468 to x=988, level, with an INK round knob of radius 9 px at each end. The fulcrum is a triangle filled GUIDE with an INK outline of 3 px: apex at (728, 106), base from (658, 315) to (798, 315); two horizontal BG bars 44 by 8 px at y=265 and y=285, centred at x=728, form an equals sign on it. From each beam end a vertical INK string 3 px thick runs straight down to the pan: x=468 and x=988, from y=106 to y=283, drawn behind the items. Each pan is a rounded plate 320 by 22 px filled GUIDE with an INK outline of 2 px, top edge at y=283: left plate x=308 to x=628, right plate x=828 to x=1148. Left pan, bottom row resting on the plate top at y=283, left to right: a sack centred at x=423; a weight block '2 kg' (84 by 64 px) centred at x=513. In the left pan every sack glyph (1 in all) carries the label '10 kg' in ANSWER bold 26 px, centred on the sack and 50 px above its bottom edge. Right pan, bottom row resting on the plate top at y=283, left to right: a weight block '10 kg' (84 by 64 px) centred at x=943; a weight block '2 kg' (84 by 64 px) centred at x=1033. Balance for 'Sack scale 2' (band top at y=460): the label 'Sack scale 2' in INK bold 30 px sits left-aligned at (36, 474). The beam is a horizontal INK line 6 px thick at y=496 from x=468 to x=988, level, with an INK round knob of radius 9 px at each end. The fulcrum is a triangle filled GUIDE with an INK outline of 3 px: apex at (728, 496), base from (658, 705) to (798, 705); two horizontal BG bars 44 by 8 px at y=655 and y=675, centred at x=728, form an equals sign on it. From each beam end a vertical INK string 3 px thick runs straight down to the pan: x=468 and x=988, from y=496 to y=673, drawn behind the items. Each pan is a rounded plate 320 by 22 px filled GUIDE with an INK outline of 2 px, top edge at y=673: left plate x=308 to x=628, right plate x=828 to x=1148. Left pan, bottom row resting on the plate top at y=673, left to right: a sack centred at x=423; a sack centred at x=513. In the left pan every sack glyph (2 in all) carries the label '14 kg' in ANSWER bold 26 px, centred on the sack and 50 px above its bottom edge. Right pan, bottom row resting on the plate top at y=673, left to right: a weight block '10 kg' (84 by 64 px) centred at x=898; a weight block '4 kg' (84 by 64 px) centred at x=988; a sack centred at x=1078. In the right pan every sack glyph (1 in all) carries the label '14 kg' in ANSWER bold 26 px, centred on the sack and 50 px above its bottom edge.",
+    "visible_text": [
+     "Sack scale 1",
+     "2 kg",
+     "10 kg",
+     "Sack scale 2",
+     "4 kg",
+     "14 kg"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "figure captions such as 'Fig. 7.9'",
+     "crossed-out or removed items",
+     "the solution steps, divisions or equations",
+     "hands, faces, characters or other decoration"
+    ],
+    "accuracy_checks": [
+     "Sack scale 1: with each sack 10 kg the left pan weighs 12 kg and the right pan weighs 12 kg (equal)",
+     "Sack scale 2: with each sack 14 kg the left pan weighs 28 kg and the right pan weighs 28 kg (equal)"
+    ],
+    "alt_text": "The same two balances with every sack labelled with its weight: 10 kg on Sack scale 1 and 14 kg on Sack scale 2.",
+    "render_note": "Only the weight of one sack is added to the question figure; both pans keep every item they had."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C13",
+   "role": "question",
+   "lp_book_number": "Unknown Sacks: scales 3 and 4",
+   "ncert_ref": "7.1.Q_sacks_b",
+   "question_text": "Find the unknown weight of the sack. Sack scale 3 is level: 5 sacks on the left; 1 kg, 10 kg, 10 kg and 2 sacks on the right. Sack scale 4 is level: 90 sacks and 50 kg on the left; 60 sacks and 500 kg on the right.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "'Find the unknown weight of the sack' for the printed Figs 7.11 and 7.12; the arrangement of 5 sacks, the 1 kg, 10 kg, 10 kg blocks and the tagged bundles of 90 and 60 sacks is in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C13.IMG1",
+   "manim_scene": "c7_15_s3_sacks34_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C13.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "balance_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "scales": [
+      {
+       "label": "Sack scale 3",
+       "band_top_y": 70,
+       "pan_centres_x": [
+        468,
+        988
+       ],
+       "left_rows": [
+        [
+         "sack",
+         "sack",
+         "sack"
+        ],
+        [
+         "sack",
+         "sack"
+        ]
+       ],
+       "right_rows": [
+        [
+         "10 kg",
+         "10 kg",
+         "sack"
+        ],
+        [
+         "1 kg",
+         "sack"
+        ]
+       ],
+       "sack_weight_shown": null
+      },
+      {
+       "label": "Sack scale 4",
+       "band_top_y": 460,
+       "pan_centres_x": [
+        468,
+        988
+       ],
+       "left_rows": [
+        [
+         [
+          "bundle",
+          90
+         ],
+         "50 kg"
+        ]
+       ],
+       "right_rows": [
+        [
+         [
+          "bundle",
+          60
+         ],
+         "500 kg"
+        ]
+       ],
+       "sack_weight_shown": null
+      }
+     ],
+     "type": "balance_model"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Layout: two balances stacked top to bottom, centred horizontally at x=728, in the order Sack scale 3, Sack scale 4, with band tops at y=70, 460. All sacks are the same sack glyph: a rounded body 84 px wide and 68 px high with a gathered neck 30 px wide and 18 px high on top, filled SET_B, INK outline 2 px. Weight blocks are rounded rectangles filled CELL_FILL with an INK outline of 2 px and an INK bold 26 px label inside. Sizes are pictorial, not to scale. Balance for 'Sack scale 3' (band top at y=70): the label 'Sack scale 3' in INK bold 30 px sits left-aligned at (36, 84). The beam is a horizontal INK line 6 px thick at y=106 from x=468 to x=988, level, with an INK round knob of radius 9 px at each end. The fulcrum is a triangle filled GUIDE with an INK outline of 3 px: apex at (728, 106), base from (658, 315) to (798, 315); two horizontal BG bars 44 by 8 px at y=265 and y=285, centred at x=728, form an equals sign on it. From each beam end a vertical INK string 3 px thick runs straight down to the pan: x=468 and x=988, from y=106 to y=283, drawn behind the items. Each pan is a rounded plate 320 by 22 px filled GUIDE with an INK outline of 2 px, top edge at y=283: left plate x=308 to x=628, right plate x=828 to x=1148. Left pan, bottom row resting on the plate top at y=283, left to right: a sack centred at x=378; a sack centred at x=468; a sack centred at x=558. Left pan, top row raised 66 px so that each item rests on the shoulders of the two items below it (drawn in front of their necks), left to right: a sack centred at x=423; a sack centred at x=513. Right pan, bottom row resting on the plate top at y=283, left to right: a weight block '10 kg' (84 by 64 px) centred at x=898; a weight block '10 kg' (84 by 64 px) centred at x=988; a sack centred at x=1078. Right pan, top row raised 66 px so that each item rests on the shoulders of the two items below it (drawn in front of their necks), left to right: a weight block '1 kg' (84 by 52 px) centred at x=943; a sack centred at x=1033. Balance for 'Sack scale 4' (band top at y=460): the label 'Sack scale 4' in INK bold 30 px sits left-aligned at (36, 474). The beam is a horizontal INK line 6 px thick at y=496 from x=468 to x=988, level, with an INK round knob of radius 9 px at each end. The fulcrum is a triangle filled GUIDE with an INK outline of 3 px: apex at (728, 496), base from (658, 705) to (798, 705); two horizontal BG bars 44 by 8 px at y=655 and y=675, centred at x=728, form an equals sign on it. From each beam end a vertical INK string 3 px thick runs straight down to the pan: x=468 and x=988, from y=496 to y=673, drawn behind the items. Each pan is a rounded plate 320 by 22 px filled GUIDE with an INK outline of 2 px, top edge at y=673: left plate x=308 to x=628, right plate x=828 to x=1148. Left pan: one bundle of sacks and one weight block, left to right. The bundle is a pyramid of 3 sack glyphs (two sacks side by side at x=370 and x=460, resting on the plate top at y=673, and one sack at x=415 raised 62 px, resting on the two below) with a white rounded tag 124 by 34 px (INK outline 2 px) centred at (415, 657) reading '90 sacks' in INK bold 26 px. The weight block '50 kg' is a rounded rectangle 100 by 76 px (fill CELL_FILL, INK outline 2 px) centred at (558, 635) with its label in INK bold 26 px. Right pan: one bundle of sacks and one weight block, left to right. The bundle is a pyramid of 3 sack glyphs (two sacks side by side at x=875 and x=965, resting on the plate top at y=673, and one sack at x=920 raised 62 px, resting on the two below) with a white rounded tag 124 by 34 px (INK outline 2 px) centred at (920, 657) reading '60 sacks' in INK bold 26 px. The weight block '500 kg' is a rounded rectangle 130 by 130 px (fill CELL_FILL, INK outline 2 px) centred at (1078, 608) with its label in INK bold 26 px. No weight is written on any sack: the sack is the unknown.",
+    "visible_text": [
+     "Sack scale 3",
+     "10 kg",
+     "1 kg",
+     "Sack scale 4",
+     "90 sacks",
+     "50 kg",
+     "60 sacks",
+     "500 kg"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "figure captions such as 'Fig. 7.9'",
+     "any weight written on a sack",
+     "hands, faces, characters or other decoration",
+     "the removal of weights or any solution step"
+    ],
+    "accuracy_checks": [
+     "Sack scale 3 is level for sack weight 7 kg (left 35 kg, right 35 kg) but no weight is written on the sacks",
+     "Sack scale 4 is level for sack weight 15 kg (left 1400 kg, right 1400 kg) but no weight is written on the sacks"
+    ],
+    "alt_text": "Two level balances, one above the other: Sack scale 3 holds 5 sacks on the left pan and 1 kg, 10 kg, 10 kg blocks and 2 sacks on the right pan; Sack scale 4 holds a bundle tagged 90 sacks and a 50 kg block on the left pan and a bundle tagged 60 sacks and a 500 kg block on the right pan.",
+    "render_note": "Pictorial standing balances (the book draws Figs 7.9 and 7.10 hanging and Figs 7.11 and 7.12 standing); weights are not to scale; the number of drawn sacks in a bundle is only a picture, the tag gives the count."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C14",
+   "role": "solution",
+   "lp_book_number": "Unknown Sacks: scales 3 and 4",
+   "ncert_ref": "7.1.Q_sacks_b",
+   "question_text": "Find the unknown weight of the sack. Sack scale 3 is level: 5 sacks on the left; 1 kg, 10 kg, 10 kg and 2 sacks on the right. Sack scale 4 is level: 90 sacks and 50 kg on the left; 60 sacks and 500 kg on the right.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "Sibling of Q4: same balances with the sack weight written on every sack.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C14.IMG1",
+   "manim_scene": "c7_15_s3_sacks34_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C14.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "balance_model",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S3.T3.C13.IMG1",
+    "content": {
+     "scales": [
+      {
+       "label": "Sack scale 3",
+       "band_top_y": 70,
+       "pan_centres_x": [
+        468,
+        988
+       ],
+       "left_rows": [
+        [
+         "sack",
+         "sack",
+         "sack"
+        ],
+        [
+         "sack",
+         "sack"
+        ]
+       ],
+       "right_rows": [
+        [
+         "10 kg",
+         "10 kg",
+         "sack"
+        ],
+        [
+         "1 kg",
+         "sack"
+        ]
+       ],
+       "sack_weight_shown": 7
+      },
+      {
+       "label": "Sack scale 4",
+       "band_top_y": 460,
+       "pan_centres_x": [
+        468,
+        988
+       ],
+       "left_rows": [
+        [
+         [
+          "bundle",
+          90
+         ],
+         "50 kg"
+        ]
+       ],
+       "right_rows": [
+        [
+         [
+          "bundle",
+          60
+         ],
+         "500 kg"
+        ]
+       ],
+       "sack_weight_shown": 15
+      }
+     ],
+     "type": "balance_model"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Layout identical to the question figure M1.S3.T3.C13.IMG1 (same balances, same positions); the additions are drawn in ANSWER. Balance for 'Sack scale 3' (band top at y=70): the label 'Sack scale 3' in INK bold 30 px sits left-aligned at (36, 84). The beam is a horizontal INK line 6 px thick at y=106 from x=468 to x=988, level, with an INK round knob of radius 9 px at each end. The fulcrum is a triangle filled GUIDE with an INK outline of 3 px: apex at (728, 106), base from (658, 315) to (798, 315); two horizontal BG bars 44 by 8 px at y=265 and y=285, centred at x=728, form an equals sign on it. From each beam end a vertical INK string 3 px thick runs straight down to the pan: x=468 and x=988, from y=106 to y=283, drawn behind the items. Each pan is a rounded plate 320 by 22 px filled GUIDE with an INK outline of 2 px, top edge at y=283: left plate x=308 to x=628, right plate x=828 to x=1148. Left pan, bottom row resting on the plate top at y=283, left to right: a sack centred at x=378; a sack centred at x=468; a sack centred at x=558. Left pan, top row raised 66 px so that each item rests on the shoulders of the two items below it (drawn in front of their necks), left to right: a sack centred at x=423; a sack centred at x=513. In the left pan every sack glyph (5 in all) carries the label '7 kg' in ANSWER bold 26 px, centred on the sack and 50 px above its bottom edge. Right pan, bottom row resting on the plate top at y=283, left to right: a weight block '10 kg' (84 by 64 px) centred at x=898; a weight block '10 kg' (84 by 64 px) centred at x=988; a sack centred at x=1078. Right pan, top row raised 66 px so that each item rests on the shoulders of the two items below it (drawn in front of their necks), left to right: a weight block '1 kg' (84 by 52 px) centred at x=943; a sack centred at x=1033. In the right pan every sack glyph (2 in all) carries the label '7 kg' in ANSWER bold 26 px, centred on the sack and 50 px above its bottom edge. Balance for 'Sack scale 4' (band top at y=460): the label 'Sack scale 4' in INK bold 30 px sits left-aligned at (36, 474). The beam is a horizontal INK line 6 px thick at y=496 from x=468 to x=988, level, with an INK round knob of radius 9 px at each end. The fulcrum is a triangle filled GUIDE with an INK outline of 3 px: apex at (728, 496), base from (658, 705) to (798, 705); two horizontal BG bars 44 by 8 px at y=655 and y=675, centred at x=728, form an equals sign on it. From each beam end a vertical INK string 3 px thick runs straight down to the pan: x=468 and x=988, from y=496 to y=673, drawn behind the items. Each pan is a rounded plate 320 by 22 px filled GUIDE with an INK outline of 2 px, top edge at y=673: left plate x=308 to x=628, right plate x=828 to x=1148. Left pan: one bundle of sacks and one weight block, left to right. The bundle is a pyramid of 3 sack glyphs (two sacks side by side at x=370 and x=460, resting on the plate top at y=673, and one sack at x=415 raised 62 px, resting on the two below) with a white rounded tag 124 by 34 px (INK outline 2 px) centred at (415, 657) reading '90 sacks' in INK bold 26 px. The weight block '50 kg' is a rounded rectangle 100 by 76 px (fill CELL_FILL, INK outline 2 px) centred at (558, 635) with its label in INK bold 26 px. In the left pan each of the 3 sack glyphs of the bundle carries the label '15 kg' in ANSWER bold 26 px, centred on the sack and 50 px above its bottom edge. Right pan: one bundle of sacks and one weight block, left to right. The bundle is a pyramid of 3 sack glyphs (two sacks side by side at x=875 and x=965, resting on the plate top at y=673, and one sack at x=920 raised 62 px, resting on the two below) with a white rounded tag 124 by 34 px (INK outline 2 px) centred at (920, 657) reading '60 sacks' in INK bold 26 px. The weight block '500 kg' is a rounded rectangle 130 by 130 px (fill CELL_FILL, INK outline 2 px) centred at (1078, 608) with its label in INK bold 26 px. In the right pan each of the 3 sack glyphs of the bundle carries the label '15 kg' in ANSWER bold 26 px, centred on the sack and 50 px above its bottom edge.",
+    "visible_text": [
+     "Sack scale 3",
+     "10 kg",
+     "1 kg",
+     "7 kg",
+     "Sack scale 4",
+     "90 sacks",
+     "50 kg",
+     "60 sacks",
+     "500 kg",
+     "15 kg"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "figure captions such as 'Fig. 7.9'",
+     "crossed-out or removed items",
+     "the solution steps, divisions or equations",
+     "hands, faces, characters or other decoration"
+    ],
+    "accuracy_checks": [
+     "Sack scale 3: with each sack 7 kg the left pan weighs 35 kg and the right pan weighs 35 kg (equal)",
+     "Sack scale 4: with each sack 15 kg the left pan weighs 1400 kg and the right pan weighs 1400 kg (equal)"
+    ],
+    "alt_text": "The same two balances with every sack labelled with its weight: 7 kg on Sack scale 3 and 15 kg on Sack scale 4.",
+    "render_note": "Only the weight of one sack is added to the question figure; both pans keep every item they had."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C16",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "7.1.frame_mobiles",
+   "question_text": "Frame equations for mobile 6 (3 bread slices of 2 against 2 eggs) and mobile 7 (4 crosses of 4 against a donut, a cross and a donut), and solve them.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The example frames equations 'for mobile 6 and mobile 7', which are the printed Figs 7.6 and 7.7 (the book writes 'For the problem in Fig. 7.6 ... Fig. 7.7'); the picture shows which objects sit on which side, so the equations 6 = e + e and 4 + 2y = 16 can be read off it.",
+   "lp_placeholder_action": "add_new_image",
+   "block_index": 0,
+   "media_id": "M1.S4.T4.C16.IMG1",
+   "manim_scene": "c7_15_s4_frame_mobiles67_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S4.T4.C16.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "balance_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "panels": [
+      {
+       "panel": {
+        "label": "Mobile 6",
+        "x0": 28,
+        "width": 690,
+        "disc": null,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "bread slice",
+        "bread slice",
+        "bread slice"
+       ],
+       "right_string": [
+        "fried egg",
+        "fried egg"
+       ],
+       "key": [
+        {
+         "object": "bread slice",
+         "given": 2,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "fried egg",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        }
+       ]
+      },
+      {
+       "panel": {
+        "label": "Mobile 7",
+        "x0": 738,
+        "width": 690,
+        "disc": null,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "cross",
+        "cross",
+        "cross",
+        "cross"
+       ],
+       "right_string": [
+        "donut",
+        "cross",
+        "donut"
+       ],
+       "key": [
+        {
+         "object": "cross",
+         "given": 4,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "donut",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        }
+       ]
+      }
+     ],
+     "type": "balance_model"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Layout: two portrait panels side by side, Mobile 6 on the left and Mobile 7 on the right, separated by a gap of 20 px. Panel for Mobile 6: a portrait rectangle from x=28 to x=718 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 6' in INK bold 30 px is centred at (345, 40). There is no number disc: an INK circle outline of radius 14 px (a hanging ring) is centred at (345, 100) and a vertical INK line 3 px thick joins it to the middle of the beam at (345, 153). The beam is a horizontal INK line 5 px thick at y=153 from x=255 to x=435, level. Left string: a vertical INK line 3 px thick at x=255 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 bread slice, 2 bread slice, 3 bread slice; their centres are at y=245, 311, 377. Right string: a vertical INK line 3 px thick at x=435 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 fried egg, 2 fried egg; their centres are at y=245, 311. Object glyphs, each drawn with an INK outline of 2 px: bread slice = a slice of bread (a square whose top corners bulge outward into a rounded top) filled CELL_FILL; fried egg = a fried egg (a rounded irregular white blob, fill BG, with a round yolk filled SET_B). Key row at y=690, left to right: bread slice: a 44 by 44 px bread slice glyph centred at (168, 690), an INK '=' sign 30 px centred at (202, 690), then the numeral '2' in INK bold 30 px centred at (242, 690); fried egg: a 44 by 44 px fried egg glyph centred at (418, 690), an INK '=' sign 30 px centred at (452, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (492, 690). Panel for Mobile 7: a portrait rectangle from x=738 to x=1428 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 7' in INK bold 30 px is centred at (345, 40). There is no number disc: an INK circle outline of radius 14 px (a hanging ring) is centred at (345, 100) and a vertical INK line 3 px thick joins it to the middle of the beam at (345, 153). The beam is a horizontal INK line 5 px thick at y=153 from x=255 to x=435, level. Left string: a vertical INK line 3 px thick at x=255 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 cross, 2 cross, 3 cross, 4 cross; their centres are at y=245, 311, 377, 443. Right string: a vertical INK line 3 px thick at x=435 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 donut, 2 cross, 3 donut; their centres are at y=245, 311, 377. Object glyphs, each drawn with an INK outline of 2 px: cross = a cross-shaped biscuit (two thick bars crossing in an X shape) filled SET_B; donut = a ring donut (a circle filled FOCUS with a round BG hole in its middle). Key row at y=690, left to right: cross: a 44 by 44 px cross glyph centred at (168, 690), an INK '=' sign 30 px centred at (202, 690), then the numeral '4' in INK bold 30 px centred at (242, 690); donut: a 44 by 44 px donut glyph centred at (418, 690), an INK '=' sign 30 px centred at (452, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (492, 690). Nothing else is drawn: the boxes of the unknown weights stay empty.",
+    "visible_text": [
+     "Mobile 6",
+     "2",
+     "=",
+     "Mobile 7",
+     "4"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "figure captions such as 'Fig. 7.6' and the book's coloured panel backgrounds",
+     "any weight or letter written in the empty boxes",
+     "side totals",
+     "hands, faces, characters or other decoration"
+    ],
+    "accuracy_checks": [
+     "Mobile 6: left side weighs 6 and right side weighs 6 (equal)",
+     "Mobile 7: left side weighs 16 and right side weighs 16 (equal)",
+     "every unknown box is empty; the given weights are bread slice 2 and cross 4"
+    ],
+    "alt_text": "Two level hand-held mobiles: Mobile 6 has 3 bread slices against 2 fried eggs with a bread slice marked 2; Mobile 7 has 4 crosses against a donut, a cross and a donut with a cross marked 4; the egg and donut weights are empty boxes.",
+    "render_note": "Same panels as the Mobile 6 and Mobile 7 panels of M1.S3.T3.C9.IMG1 (same as that diagram, two of its three panels, laid out two across)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C18",
+   "role": "question",
+   "lp_book_number": "Matchstick Pattern: Jasmine's 99 sticks",
+   "ncert_ref": "7.1.Q_jasmine",
+   "question_text": "Jasmine makes an arrangement from this sequence using exactly 99 sticks. Write what the position number n must satisfy.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question says 'this sequence' (the printed matchstick arrangements, positions 1 to 4); the shape of each position is only in the picture and the LP text does not describe it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S5.T5.C18.IMG1",
+   "manim_scene": "c7_15_s5_jasmine_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S5.T5.C18.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_pattern",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "stick_length_px": 150,
+     "triangle_height_px": 130,
+     "baseline_y_px": 450,
+     "gap_px": 90,
+     "positions": [
+      {
+       "position": 1,
+       "triangles": 1,
+       "sticks": 3,
+       "origin_x_px": 68,
+       "segments_half_stick_units": [
+        [
+         [
+          0,
+          0
+         ],
+         [
+          1,
+          1
+         ]
+        ],
+        [
+         [
+          0,
+          0
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          1
+         ],
+         [
+          2,
+          0
+         ]
+        ]
+       ]
+      },
+      {
+       "position": 2,
+       "triangles": 2,
+       "sticks": 5,
+       "origin_x_px": 308,
+       "segments_half_stick_units": [
+        [
+         [
+          0,
+          0
+         ],
+         [
+          1,
+          1
+         ]
+        ],
+        [
+         [
+          0,
+          0
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          1
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          1
+         ],
+         [
+          3,
+          1
+         ]
+        ],
+        [
+         [
+          2,
+          0
+         ],
+         [
+          3,
+          1
+         ]
+        ]
+       ]
+      },
+      {
+       "position": 3,
+       "triangles": 3,
+       "sticks": 7,
+       "origin_x_px": 623,
+       "segments_half_stick_units": [
+        [
+         [
+          0,
+          0
+         ],
+         [
+          1,
+          1
+         ]
+        ],
+        [
+         [
+          0,
+          0
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          1
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          1
+         ],
+         [
+          3,
+          1
+         ]
+        ],
+        [
+         [
+          2,
+          0
+         ],
+         [
+          3,
+          1
+         ]
+        ],
+        [
+         [
+          2,
+          0
+         ],
+         [
+          4,
+          0
+         ]
+        ],
+        [
+         [
+          3,
+          1
+         ],
+         [
+          4,
+          0
+         ]
+        ]
+       ]
+      },
+      {
+       "position": 4,
+       "triangles": 4,
+       "sticks": 9,
+       "origin_x_px": 1013,
+       "segments_half_stick_units": [
+        [
+         [
+          0,
+          0
+         ],
+         [
+          1,
+          1
+         ]
+        ],
+        [
+         [
+          0,
+          0
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          1
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          1
+         ],
+         [
+          3,
+          1
+         ]
+        ],
+        [
+         [
+          2,
+          0
+         ],
+         [
+          3,
+          1
+         ]
+        ],
+        [
+         [
+          2,
+          0
+         ],
+         [
+          4,
+          0
+         ]
+        ],
+        [
+         [
+          3,
+          1
+         ],
+         [
+          4,
+          0
+         ]
+        ],
+        [
+         [
+          3,
+          1
+         ],
+         [
+          5,
+          1
+         ]
+        ],
+        [
+         [
+          4,
+          0
+         ],
+         [
+          5,
+          1
+         ]
+        ]
+       ]
+      }
+     ],
+     "numerals_under": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "numerals_y_px": 510,
+     "type": "number_pattern"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Four matchstick arrangements in one row from left to right, with the bottom corners on the line y=450. Every stick is an INK line segment of 5 px with round ends, one stick = one triangle side; each triangle is equilateral with side 150 px and height 130 px (the triangle apex rises 130 px above its base). The arrangements are separated by gaps of 90 px. Triangle j of an arrangement (j = 1, 2, 3, 4) has its three corners at horizontal steps of half a stick: an up-pointing triangle j (j odd) has base corners at (j-1)*75 px and (j+1)*75 px from the arrangement's left edge on the baseline and its apex at j*75 px, 130 px higher; a down-pointing triangle j (j even) has its top corners at (j-1)*75 px and (j+1)*75 px, 130 px above the baseline, and its apex at j*75 px on the baseline; neighbouring triangles share the stick between them, so position k uses 2k + 1 sticks. Position 1: 1 triangle pointing up, joined side by side, drawn with 3 sticks; its bottom-left corner is at (68, 450) and its width is 150 px. Position 2: 2 triangles (up, down from the left), joined side by side, drawn with 5 sticks; its bottom-left corner is at (308, 450) and its width is 225 px. Position 3: 3 triangles (up, down, up from the left), joined side by side, drawn with 7 sticks; its bottom-left corner is at (623, 450) and its width is 300 px. Position 4: 4 triangles (up, down, up, down from the left), joined side by side, drawn with 9 sticks; its bottom-left corner is at (1013, 450) and its width is 375 px. The position numerals '1', '2', '3', '4' are drawn in INK 34 px, each centred horizontally under its arrangement at y=510. Nothing else is drawn.",
+    "visible_text": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "stick counts or the formula 2n + 1",
+     "any caption or heading such as 'Matchstick Pattern'",
+     "match heads, colours of real matchsticks, decoration"
+    ],
+    "accuracy_checks": [
+     "position 1 has 3 sticks, position 2 has 5, position 3 has 7, position 4 has 9 (2k + 1 for k = 1 to 4)",
+     "triangles alternate up, down, up, down and share sides",
+     "numerals 1 to 4 sit under the matching arrangement"
+    ],
+    "alt_text": "Four matchstick arrangements labelled 1 to 4: a row of 1, 2, 3 and 4 triangles joined side by side, alternately pointing up and down.",
+    "render_note": "Book Figure on p.3 (first four positions); the LP question says 'this sequence'."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C19",
+   "role": "solution",
+   "lp_book_number": "Matchstick Pattern: Jasmine's 99 sticks",
+   "ncert_ref": "7.1.Q_jasmine",
+   "question_text": "Jasmine makes an arrangement from this sequence using exactly 99 sticks. Write what the position number n must satisfy.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the equation 2n + 1 = 99; the stick counts 3, 5, 7 are one line of LaTeX. A picture would only repeat the question figure with counts.",
+   "lp_placeholder_action": "drop_image",
+   "text_alternative": "LaTeX lines: $2\\times1+1=3$, $2\\times2+1=5$, $2\\times3+1=7$, then $2n+1=99$.",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C20",
+   "role": "question",
+   "lp_book_number": "Two Hundred Sticks?",
+   "ncert_ref": "7.1.Q_200",
+   "question_text": "Is it possible to make a matchstick arrangement that appears in this sequence using exactly 200 sticks?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "Same sequence as the question above ('this sequence'); each item gets its own diagram, so this one repeats it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S5.T5.C20.IMG1",
+   "manim_scene": "c7_15_s5_200sticks_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S5.T5.C20.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_pattern",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "stick_length_px": 150,
+     "triangle_height_px": 130,
+     "baseline_y_px": 450,
+     "gap_px": 90,
+     "positions": [
+      {
+       "position": 1,
+       "triangles": 1,
+       "sticks": 3,
+       "origin_x_px": 68,
+       "segments_half_stick_units": [
+        [
+         [
+          0,
+          0
+         ],
+         [
+          1,
+          1
+         ]
+        ],
+        [
+         [
+          0,
+          0
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          1
+         ],
+         [
+          2,
+          0
+         ]
+        ]
+       ]
+      },
+      {
+       "position": 2,
+       "triangles": 2,
+       "sticks": 5,
+       "origin_x_px": 308,
+       "segments_half_stick_units": [
+        [
+         [
+          0,
+          0
+         ],
+         [
+          1,
+          1
+         ]
+        ],
+        [
+         [
+          0,
+          0
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          1
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          1
+         ],
+         [
+          3,
+          1
+         ]
+        ],
+        [
+         [
+          2,
+          0
+         ],
+         [
+          3,
+          1
+         ]
+        ]
+       ]
+      },
+      {
+       "position": 3,
+       "triangles": 3,
+       "sticks": 7,
+       "origin_x_px": 623,
+       "segments_half_stick_units": [
+        [
+         [
+          0,
+          0
+         ],
+         [
+          1,
+          1
+         ]
+        ],
+        [
+         [
+          0,
+          0
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          1
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          1
+         ],
+         [
+          3,
+          1
+         ]
+        ],
+        [
+         [
+          2,
+          0
+         ],
+         [
+          3,
+          1
+         ]
+        ],
+        [
+         [
+          2,
+          0
+         ],
+         [
+          4,
+          0
+         ]
+        ],
+        [
+         [
+          3,
+          1
+         ],
+         [
+          4,
+          0
+         ]
+        ]
+       ]
+      },
+      {
+       "position": 4,
+       "triangles": 4,
+       "sticks": 9,
+       "origin_x_px": 1013,
+       "segments_half_stick_units": [
+        [
+         [
+          0,
+          0
+         ],
+         [
+          1,
+          1
+         ]
+        ],
+        [
+         [
+          0,
+          0
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          1
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          1
+         ],
+         [
+          3,
+          1
+         ]
+        ],
+        [
+         [
+          2,
+          0
+         ],
+         [
+          3,
+          1
+         ]
+        ],
+        [
+         [
+          2,
+          0
+         ],
+         [
+          4,
+          0
+         ]
+        ],
+        [
+         [
+          3,
+          1
+         ],
+         [
+          4,
+          0
+         ]
+        ],
+        [
+         [
+          3,
+          1
+         ],
+         [
+          5,
+          1
+         ]
+        ],
+        [
+         [
+          4,
+          0
+         ],
+         [
+          5,
+          1
+         ]
+        ]
+       ]
+      }
+     ],
+     "numerals_under": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "numerals_y_px": 510,
+     "type": "number_pattern"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Four matchstick arrangements in one row from left to right, with the bottom corners on the line y=450. Every stick is an INK line segment of 5 px with round ends, one stick = one triangle side; each triangle is equilateral with side 150 px and height 130 px (the triangle apex rises 130 px above its base). The arrangements are separated by gaps of 90 px. Triangle j of an arrangement (j = 1, 2, 3, 4) has its three corners at horizontal steps of half a stick: an up-pointing triangle j (j odd) has base corners at (j-1)*75 px and (j+1)*75 px from the arrangement's left edge on the baseline and its apex at j*75 px, 130 px higher; a down-pointing triangle j (j even) has its top corners at (j-1)*75 px and (j+1)*75 px, 130 px above the baseline, and its apex at j*75 px on the baseline; neighbouring triangles share the stick between them, so position k uses 2k + 1 sticks. Position 1: 1 triangle pointing up, joined side by side, drawn with 3 sticks; its bottom-left corner is at (68, 450) and its width is 150 px. Position 2: 2 triangles (up, down from the left), joined side by side, drawn with 5 sticks; its bottom-left corner is at (308, 450) and its width is 225 px. Position 3: 3 triangles (up, down, up from the left), joined side by side, drawn with 7 sticks; its bottom-left corner is at (623, 450) and its width is 300 px. Position 4: 4 triangles (up, down, up, down from the left), joined side by side, drawn with 9 sticks; its bottom-left corner is at (1013, 450) and its width is 375 px. The position numerals '1', '2', '3', '4' are drawn in INK 34 px, each centred horizontally under its arrangement at y=510. Nothing else is drawn.",
+    "visible_text": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "stick counts or the formula 2n + 1",
+     "any caption or heading such as 'Matchstick Pattern'",
+     "match heads, colours of real matchsticks, decoration"
+    ],
+    "accuracy_checks": [
+     "position 1 has 3 sticks, position 2 has 5, position 3 has 7, position 4 has 9 (2k + 1 for k = 1 to 4)",
+     "triangles alternate up, down, up, down and share sides",
+     "numerals 1 to 4 sit under the matching arrangement"
+    ],
+    "alt_text": "Four matchstick arrangements labelled 1 to 4: a row of 1, 2, 3 and 4 triangles joined side by side, alternately pointing up and down.",
+    "render_note": "Same as M1.S5.T5.C18.IMG1 (identical spec)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C21",
+   "role": "solution",
+   "lp_book_number": "Two Hundred Sticks?",
+   "ncert_ref": "7.1.Q_200",
+   "question_text": "Is it possible to make a matchstick arrangement that appears in this sequence using exactly 200 sticks?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The reasoning is parity (2n + 1 is odd, 200 is even) with the neighbours 199 and 201; words and sums are enough.",
+   "lp_placeholder_action": "drop_image",
+   "text_alternative": "LaTeX: $2n+1$ is odd; positions 99 and 100 use $199$ and $201$ sticks.",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C22",
+   "role": "question",
+   "lp_book_number": "Frame the Mobiles and Scales",
+   "ncert_ref": "7.1.Q_frame_rest",
+   "question_text": "Frame equations for mobile 8 and sack scales 1, 2 and 3, using a letter for the unknown weight. Solve them and check that you get the weights found before.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question names 'mobile 8 and sack scales 1, 2 and 3' and states no data at all: every weight and every pan content lives only in the earlier printed Figs 7.8 to 7.11, so the figures are repeated here.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S5.T5.C22.IMG1",
+   "manim_scene": "c7_15_s5_frame_rest_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S5.T5.C22.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "balance_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "panels": [
+      {
+       "panel": {
+        "label": "Mobile 8",
+        "x0": 28,
+        "width": 400,
+        "disc": null,
+        "beam": "narrow"
+       },
+       "left_string": [
+        "watermelon slice"
+       ],
+       "right_string": [
+        "banana",
+        "orange",
+        "banana"
+       ],
+       "key": [
+        {
+         "object": "watermelon slice",
+         "given": 10,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "orange",
+         "given": 4,
+         "unknown_box": false,
+         "value_in_box": null
+        },
+        {
+         "object": "banana",
+         "given": null,
+         "unknown_box": true,
+         "value_in_box": null
+        }
+       ]
+      }
+     ],
+     "scales": [
+      {
+       "label": "Sack scale 1",
+       "band_top_y": 28,
+       "pan_centres_x": [
+        679,
+        1199
+       ],
+       "left_rows": [
+        [
+         "sack",
+         "2 kg"
+        ]
+       ],
+       "right_rows": [
+        [
+         "10 kg",
+         "2 kg"
+        ]
+       ],
+       "sack_weight_shown": null
+      },
+      {
+       "label": "Sack scale 2",
+       "band_top_y": 288,
+       "pan_centres_x": [
+        679,
+        1199
+       ],
+       "left_rows": [
+        [
+         "sack",
+         "sack"
+        ]
+       ],
+       "right_rows": [
+        [
+         "10 kg",
+         "4 kg",
+         "sack"
+        ]
+       ],
+       "sack_weight_shown": null
+      },
+      {
+       "label": "Sack scale 3",
+       "band_top_y": 548,
+       "pan_centres_x": [
+        679,
+        1199
+       ],
+       "left_rows": [
+        [
+         "sack",
+         "sack",
+         "sack"
+        ],
+        [
+         "sack",
+         "sack"
+        ]
+       ],
+       "right_rows": [
+        [
+         "10 kg",
+         "10 kg",
+         "sack"
+        ],
+        [
+         "1 kg",
+         "sack"
+        ]
+       ],
+       "sack_weight_shown": null
+      }
+     ],
+     "type": "balance_model"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Layout: on the left, the Mobile 8 panel (x=28 to x=428, y=28 to y=788); on the right, three balances stacked top to bottom in the order Sack scale 1, Sack scale 2, Sack scale 3, centred horizontally at x=939 with band tops at y=28, 288 and 548 (each band is 250 px high). Panel for Mobile 8: a portrait rectangle from x=28 to x=428 and y=28 to y=788 (every coordinate below is measured in px from this panel's top-left corner), GUIDE outline 2 px, BG fill. The label 'Mobile 8' in INK bold 30 px is centred at (200, 40). There is no number disc: an INK circle outline of radius 14 px (a hanging ring) is centred at (200, 100) and a vertical INK line 3 px thick joins it to the middle of the beam at (200, 153). The beam is a horizontal INK line 5 px thick at y=153 from x=110 to x=290, level. Left string: a vertical INK line 3 px thick at x=110 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 watermelon slice; their centres are at y=245. Right string: a vertical INK line 3 px thick at x=290 from the beam down to the last object of its chain. Objects on it, top to bottom, each centred on the string in a 56 by 56 px box: 1 banana, 2 orange, 3 banana; their centres are at y=245, 311, 377. Object glyphs, each drawn with an INK outline of 2 px: watermelon slice = a watermelon slice (a half-disc with its flat edge on top, outer rim filled MARK_FILL and inner part filled FOCUS); banana = a banana (a thin curved crescent) filled MARK_FILL; orange = an orange (a circle filled SET_B with a tiny INK stalk dot on top). Key row at y=690, left to right: watermelon slice: a 44 by 44 px watermelon slice glyph centred at (30, 690), an INK '=' sign 30 px centred at (64, 690), then the numeral '10' in INK bold 30 px centred at (104, 690); orange: a 44 by 44 px orange glyph centred at (161, 690), an INK '=' sign 30 px centred at (195, 690), then the numeral '4' in INK bold 30 px centred at (235, 690); banana: a 44 by 44 px banana glyph centred at (292, 690), an INK '=' sign 30 px centred at (326, 690), then an empty rounded box 54 by 44 px with a dashed GUIDE outline 2 px and BG fill, centred at (366, 690). All sacks are the same sack glyph: a rounded body 84 px wide and 68 px high with a gathered neck 30 px wide and 18 px high on top, filled SET_B, INK outline 2 px. Weight blocks are rounded rectangles filled CELL_FILL with an INK outline of 2 px and an INK bold 26 px label inside. Sizes are pictorial, not to scale. Balance for 'Sack scale 1' (band top at y=28): the label 'Sack scale 1' in INK bold 30 px sits left-aligned at (458, 42). The beam is a horizontal INK line 6 px thick at y=64 from x=679 to x=1199, level, with an INK round knob of radius 9 px at each end. The fulcrum is a triangle filled GUIDE with an INK outline of 3 px: apex at (939, 64), base from (869, 273) to (1009, 273); two horizontal BG bars 44 by 8 px at y=223 and y=243, centred at x=939, form an equals sign on it. From each beam end a vertical INK string 3 px thick runs straight down to the pan: x=679 and x=1199, from y=64 to y=241, drawn behind the items. Each pan is a rounded plate 320 by 22 px filled GUIDE with an INK outline of 2 px, top edge at y=241: left plate x=519 to x=839, right plate x=1039 to x=1359. Left pan, bottom row resting on the plate top at y=241, left to right: a sack centred at x=634; a weight block '2 kg' (84 by 64 px) centred at x=724. Right pan, bottom row resting on the plate top at y=241, left to right: a weight block '10 kg' (84 by 64 px) centred at x=1154; a weight block '2 kg' (84 by 64 px) centred at x=1244. Balance for 'Sack scale 2' (band top at y=288): the label 'Sack scale 2' in INK bold 30 px sits left-aligned at (458, 302). The beam is a horizontal INK line 6 px thick at y=324 from x=679 to x=1199, level, with an INK round knob of radius 9 px at each end. The fulcrum is a triangle filled GUIDE with an INK outline of 3 px: apex at (939, 324), base from (869, 533) to (1009, 533); two horizontal BG bars 44 by 8 px at y=483 and y=503, centred at x=939, form an equals sign on it. From each beam end a vertical INK string 3 px thick runs straight down to the pan: x=679 and x=1199, from y=324 to y=501, drawn behind the items. Each pan is a rounded plate 320 by 22 px filled GUIDE with an INK outline of 2 px, top edge at y=501: left plate x=519 to x=839, right plate x=1039 to x=1359. Left pan, bottom row resting on the plate top at y=501, left to right: a sack centred at x=634; a sack centred at x=724. Right pan, bottom row resting on the plate top at y=501, left to right: a weight block '10 kg' (84 by 64 px) centred at x=1109; a weight block '4 kg' (84 by 64 px) centred at x=1199; a sack centred at x=1289. Balance for 'Sack scale 3' (band top at y=548): the label 'Sack scale 3' in INK bold 30 px sits left-aligned at (458, 562). The beam is a horizontal INK line 6 px thick at y=584 from x=679 to x=1199, level, with an INK round knob of radius 9 px at each end. The fulcrum is a triangle filled GUIDE with an INK outline of 3 px: apex at (939, 584), base from (869, 793) to (1009, 793); two horizontal BG bars 44 by 8 px at y=743 and y=763, centred at x=939, form an equals sign on it. From each beam end a vertical INK string 3 px thick runs straight down to the pan: x=679 and x=1199, from y=584 to y=761, drawn behind the items. Each pan is a rounded plate 320 by 22 px filled GUIDE with an INK outline of 2 px, top edge at y=761: left plate x=519 to x=839, right plate x=1039 to x=1359. Left pan, bottom row resting on the plate top at y=761, left to right: a sack centred at x=589; a sack centred at x=679; a sack centred at x=769. Left pan, top row raised 66 px so that each item rests on the shoulders of the two items below it (drawn in front of their necks), left to right: a sack centred at x=634; a sack centred at x=724. Right pan, bottom row resting on the plate top at y=761, left to right: a weight block '10 kg' (84 by 64 px) centred at x=1109; a weight block '10 kg' (84 by 64 px) centred at x=1199; a sack centred at x=1289. Right pan, top row raised 66 px so that each item rests on the shoulders of the two items below it (drawn in front of their necks), left to right: a weight block '1 kg' (84 by 52 px) centred at x=1154; a sack centred at x=1244. No weight is written on any sack and the boxes of the mobile stay empty.",
+    "visible_text": [
+     "Mobile 8",
+     "10",
+     "4",
+     "=",
+     "Sack scale 1",
+     "2 kg",
+     "10 kg",
+     "Sack scale 2",
+     "4 kg",
+     "Sack scale 3",
+     "1 kg"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "figure captions such as 'Fig. 7.8' or 'Fig. 7.9'",
+     "any weight written on a sack or in a box",
+     "the letters b or s, equations or solution steps",
+     "hands, faces, characters or other decoration"
+    ],
+    "accuracy_checks": [
+     "Mobile 8: left side weighs 10 and right side weighs 10 (equal)",
+     "Sack scale 1 is level for sack weight 10 kg (left 12 kg, right 12 kg) but no weight is written on the sacks",
+     "Sack scale 2 is level for sack weight 14 kg (left 28 kg, right 28 kg) but no weight is written on the sacks",
+     "Sack scale 3 is level for sack weight 7 kg (left 35 kg, right 35 kg) but no weight is written on the sacks",
+     "the weights shown are the givens of Q3 (watermelon 10, orange 4) and of the sack scales 1 to 3 as in the earlier figures"
+    ],
+    "alt_text": "Mobile 8 (a watermelon against a banana, an orange and a banana, watermelon 10, orange 4) beside sack scales 1, 2 and 3: a sack and 2 kg against 10 kg and 2 kg; 2 sacks against 10 kg, 4 kg and a sack; 5 sacks against 1 kg, 10 kg, 10 kg and 2 sacks.",
+    "render_note": "Same pictures as the Mobile 8 panel of M1.S3.T3.C9.IMG1 and Sack scales 1 to 3 of M1.S3.T3.C11.IMG1 and M1.S3.T3.C13.IMG1 (same as those, combined on one card; the question text has no data of its own)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C23",
+   "role": "solution",
+   "lp_book_number": "Frame the Mobiles and Scales",
+   "ncert_ref": "7.1.Q_frame_rest",
+   "question_text": "Frame equations for mobile 8 and sack scales 1, 2 and 3, using a letter for the unknown weight. Solve them and check that you get the weights found before.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is four equations written in letters (10 = 2b + 4, s + 2 = 12, 2s = 14 + s, 5s = 21 + 2s) and their solving steps: LaTeX. The question figure already shows every pan; naming the unknown with a letter adds nothing visual. Unlike Q1 to Q5, no box is filled in.",
+   "lp_placeholder_action": "drop_image",
+   "text_alternative": "LaTeX equations $10=b+4+b$, $s+2=10+2$, $2s=10+4+s$, $5s=1+10+10+2s$ with their solving lines.",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C24",
+   "role": "question",
+   "lp_book_number": "Frame Five Equations",
+   "ncert_ref": "7.1.Q_frame5",
+   "question_text": "Frame 5 equations. Find methods to solve them.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "'Frame 5 equations. Find methods to solve them.' has no figure and no fixed data.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C25",
+   "role": "solution",
+   "lp_book_number": "Frame Five Equations",
+   "ncert_ref": "7.1.Q_frame5",
+   "question_text": "Frame 5 equations. Find methods to solve them.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The LP gives five sample equations with their solutions; they are LaTeX lines.",
+   "lp_placeholder_action": "drop_image",
+   "text_alternative": "LaTeX list: $p+3=8$, $4b=20$, $\\frac{r}{2}=6$, $2c+1=c+9$, $3n-2=13$ with the solutions.",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C26",
+   "role": "question",
+   "lp_book_number": "Chapter Exercises, Q3",
+   "ncert_ref": "end.FiO3",
+   "question_text": "In the given picture, each black blob hides an equal number of blue dots. There are 3 blobs and 4 blue dots can be seen. If there are 25 dots in total, how many dots are covered by one blob? Write an equation to describe this problem.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question says 'in the given picture': 3 blobs, 4 visible dots and the total 25 are the picture; the diagram is drawn even though a teaching image shows the same picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S5.T5.C26.IMG1",
+   "manim_scene": "c7_15_fio_q3_blobs_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S5.T5.C26.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "dot_array",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "blobs": 3,
+     "blob_centres_px": [
+      [
+       488,
+       253
+      ],
+      [
+       930,
+       330
+      ],
+      [
+       600,
+       560
+      ]
+     ],
+     "blob_rotation_deg": [
+      0,
+      -10,
+      8
+     ],
+     "visible_dots": 4,
+     "dot_centres_px": [
+      [
+       710,
+       260
+      ],
+      [
+       470,
+       405
+      ],
+      [
+       720,
+       425
+      ],
+      [
+       800,
+       600
+      ]
+     ],
+     "label": "25 dots",
+     "label_centre_px": [
+      880,
+      120
+     ],
+     "type": "dot_array"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. The figure is centred on the card. Three identical solid blobs, each an irregular ink-blot with five stubby rounded arms, filled INK, each fitting a 300 by 210 px box. Blob 1 has its box centred at (488, 253) and is not rotated; blob 2 has its box centred at (930, 330) and is rotated 10 degrees anticlockwise; blob 3 has its box centred at (600, 560) and is rotated 8 degrees clockwise. Exactly 4 plain round dots of diameter 54 px, filled SET_A with no outline, lie in the gaps between the blobs and touch no blob: dot 1 at (710, 260) between blob 1 and blob 2, dot 2 at (470, 405) under blob 1, dot 3 at (720, 425) in the middle between the three blobs, dot 4 at (800, 600) to the right of blob 3. No dot is drawn on or under a blob. The label '25 dots' is drawn in INK 34 px with its centre at (880, 120). Nothing else is drawn.",
+    "visible_text": [
+     "25 dots"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the number of dots hidden by a blob",
+     "the equation 3b + 4 = 25",
+     "any dot drawn on or under a blob",
+     "book watermark"
+    ],
+    "accuracy_checks": [
+     "exactly 3 blobs",
+     "exactly 4 visible blue dots",
+     "every dot is at least 10 px clear of every blob outline",
+     "label reads 25 dots (the total, hidden dots included)"
+    ],
+    "alt_text": "Three black blobs with 4 blue dots visible between them and the label 25 dots.",
+    "render_note": "Book picture of Figure it Out Q3 (also a teaching image elsewhere in the plan, not linked). Positions follow the book."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C27",
+   "role": "solution",
+   "lp_book_number": "Chapter Exercises, Q3",
+   "ncert_ref": "end.FiO3",
+   "question_text": "In the given picture, each black blob hides an equal number of blue dots. There are 3 blobs and 4 blue dots can be seen. If there are 25 dots in total, how many dots are covered by one blob? Write an equation to describe this problem.",
+   "decision": "optional",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The answer is the equation 3b + 4 = 25 and b = 7, all LaTeX. Not added: a picture of the same blobs each opened to show 7 hidden dots (3 x 7 + 4 = 25) would help but is not needed.",
+   "lp_placeholder_action": "drop_image",
+   "text_alternative": "LaTeX: $3b+4=25$, $3b=21$, $b=7$, check $3\\times7+4=25$.",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C28",
+   "role": "question",
+   "lp_book_number": "Chapter Exercises, Q16 (the first stick pattern)",
+   "ncert_ref": "end.FiO16i",
+   "question_text": "The first stick pattern: position 1 is a square with a triangle cap (6 sticks), position 2 is two squares in a row with the cap (9 sticks), position 3 is three squares with the cap (12 sticks). (a) How many squares are in position number 11? (b) How many sticks are needed for position number 11? (c) Can an arrangement be made using exactly 85 sticks? If yes, which position? (d) Can an arrangement be made using exactly 150 sticks? If yes, which position?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "'Two separate figures are given below ... the first few positions in a sequence of arrangements made with sticks': the arrangement of the squares and the cap is in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S5.T5.C28.IMG1",
+   "manim_scene": "c7_15_fio_q16i_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S5.T5.C28.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_pattern",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "square_side_px": 120,
+     "baseline_y_px": 460,
+     "gap_px": 100,
+     "positions": [
+      {
+       "position": 1,
+       "squares": 1,
+       "sticks": 6,
+       "origin_x_px": 112,
+       "width_px": 224
+      },
+      {
+       "position": 2,
+       "squares": 2,
+       "sticks": 9,
+       "origin_x_px": 436,
+       "width_px": 344
+      },
+      {
+       "position": 3,
+       "squares": 3,
+       "sticks": 12,
+       "origin_x_px": 880,
+       "width_px": 464
+      }
+     ],
+     "numerals_under": [
+      1,
+      2,
+      3
+     ],
+     "numerals_y_px": 520,
+     "type": "number_pattern"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Three stick arrangements in one row from left to right, with the bottom edges on the line y=460. Every stick is an INK line segment of 5 px with round ends and measures 120 px. Each arrangement is a horizontal row of squares of side 120 px (n squares side by side, sharing the vertical stick between neighbours) with one triangular cap on its right end: the cap is an equilateral triangle of side 120 px whose left side is the right side of the last square and whose apex lies 104 px to the right of that side at mid-height, so the cap adds 2 sticks. The arrangements are separated by gaps of 100 px. Position 1: 1 square in a row plus the triangular cap, 6 sticks; its bottom-left corner is at (112, 460) and its overall width is 224 px. Position 2: 2 squares in a row plus the triangular cap, 9 sticks; its bottom-left corner is at (436, 460) and its overall width is 344 px. Position 3: 3 squares in a row plus the triangular cap, 12 sticks; its bottom-left corner is at (880, 460) and its overall width is 464 px. The position numerals '1', '2', '3' are drawn in INK 34 px, each centred horizontally under its arrangement at y=520. Nothing else is drawn.",
+    "visible_text": [
+     "1",
+     "2",
+     "3"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "stick counts or the formula 3n + 3",
+     "colours of real matchsticks, match heads, decoration",
+     "a fourth position"
+    ],
+    "accuracy_checks": [
+     "position 1 has 1 square and 6 sticks, position 2 has 2 squares and 9 sticks, position 3 has 3 squares and 12 sticks (3n + 3)",
+     "the cap is a triangle, not a square, and is drawn with 2 sticks",
+     "numerals 1 to 3 sit under the matching arrangement"
+    ],
+    "alt_text": "Three stick arrangements numbered 1 to 3: a row of 1, 2 and 3 squares, each with a triangular cap on its right end.",
+    "render_note": "Book Figure it Out Q16, first figure (top row). The book prints no position numerals; they are added because the LP text numbers the positions."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C29",
+   "role": "solution",
+   "lp_book_number": "Chapter Exercises, Q16 (the first stick pattern)",
+   "ncert_ref": "end.FiO16i",
+   "question_text": "The first stick pattern: position 1 is a square with a triangle cap (6 sticks), position 2 is two squares in a row with the cap (9 sticks), position 3 is three squares with the cap (12 sticks). (a) How many squares are in position number 11? (b) How many sticks are needed for position number 11? (c) Can an arrangement be made using exactly 85 sticks? If yes, which position? (d) Can an arrangement be made using exactly 150 sticks? If yes, which position?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answers are numbers and the rule 3n + 3 = 85 / 150 with word reasoning; the solution steps are text and LaTeX and the question figure already shows the pattern. Position 11 is far too large to draw.",
+   "lp_placeholder_action": "drop_image",
+   "text_alternative": "LaTeX: $3n+3$ sticks, $3\\times11+3=36$, $3n+3=85$ has no whole solution, $3n+3=150$ gives $n=49$.",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C30",
+   "role": "question",
+   "lp_book_number": "Chapter Exercises, Q16 (the second stick pattern)",
+   "ncert_ref": "end.FiO16ii",
+   "question_text": "The second stick pattern is a staircase of squares: position 1 has 4 squares (13 sticks), position 2 has 7 squares (22 sticks), position 3 has 10 squares, position 4 has 13 squares. (a) How many squares are in position number 11? (b) How many sticks are needed for position number 11? (c) Can an arrangement be made using exactly 85 sticks? If yes, which position? (d) Can an arrangement be made using exactly 150 sticks? If yes, which position?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "Second figure of the same question: the staircase of squares and its first four positions are only in the picture (the LP text gives the counts 4, 7, 10, 13 but not the shape).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S5.T5.C30.IMG1",
+   "manim_scene": "c7_15_fio_q16ii_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S5.T5.C30.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_pattern",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "square_side_px": 48,
+     "top_y_px": 230,
+     "gap_px": 60,
+     "positions": [
+      {
+       "position": 1,
+       "squares": 4,
+       "sticks": 13,
+       "origin_x_px": 62,
+       "rows_columns": [
+        [
+         1,
+         2
+        ],
+        [
+         2,
+         3
+        ]
+       ]
+      },
+      {
+       "position": 2,
+       "squares": 7,
+       "sticks": 22,
+       "origin_x_px": 266,
+       "rows_columns": [
+        [
+         1,
+         2
+        ],
+        [
+         2,
+         4
+        ],
+        [
+         4,
+         5
+        ]
+       ]
+      },
+      {
+       "position": 3,
+       "squares": 10,
+       "sticks": 31,
+       "origin_x_px": 566,
+       "rows_columns": [
+        [
+         1,
+         2
+        ],
+        [
+         2,
+         4
+        ],
+        [
+         4,
+         6
+        ],
+        [
+         6,
+         7
+        ]
+       ]
+      },
+      {
+       "position": 4,
+       "squares": 13,
+       "sticks": 40,
+       "origin_x_px": 962,
+       "rows_columns": [
+        [
+         1,
+         2
+        ],
+        [
+         2,
+         4
+        ],
+        [
+         4,
+         6
+        ],
+        [
+         6,
+         8
+        ],
+        [
+         8,
+         9
+        ]
+       ]
+      }
+     ],
+     "numerals_under": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "numerals_y_px": 530,
+     "type": "number_pattern"
+    },
+    "manim_description": "The card is 16:9 (1456 by 816 px), plain BG white, flat 2D, uniform 2 to 3 px INK strokes, sans-serif text of at least 26 px, no shadows, no gradients. Four stair-step arrangements of squares made of sticks, in one row from left to right, all with the top edge of row 1 on the line y=230. Every stick is an INK line segment of 5 px with round ends and measures 48 px; every square has side 48 px; neighbouring squares share the stick between them. Columns are numbered from 1 at the left edge of each arrangement (column c spans (c-1)*48 px to c*48 px from the arrangement's left edge) and row r spans y=230 + (r-1)*48 to y=230 + r*48. The arrangements are separated by gaps of 60 px. Position 1: 4 squares, 13 sticks, left edge at x=62, 2 rows, row 1: columns 1 to 2; row 2: columns 2 to 3. Position 2: 7 squares, 22 sticks, left edge at x=266, 3 rows, row 1: columns 1 to 2; row 2: columns 2 to 4; row 3: columns 4 to 5. Position 3: 10 squares, 31 sticks, left edge at x=566, 4 rows, row 1: columns 1 to 2; row 2: columns 2 to 4; row 3: columns 4 to 6; row 4: columns 6 to 7. Position 4: 13 squares, 40 sticks, left edge at x=962, 5 rows, row 1: columns 1 to 2; row 2: columns 2 to 4; row 3: columns 4 to 6; row 4: columns 6 to 8; row 5: columns 8 to 9. The position numerals '1', '2', '3', '4' are drawn in INK 34 px, each centred horizontally under its arrangement on the line y=530. Nothing else is drawn.",
+    "visible_text": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "stick counts or the formulas 3n + 1 and 9n + 4",
+     "colours of real matchsticks, decoration",
+     "a fifth position"
+    ],
+    "accuracy_checks": [
+     "squares per position 4, 7, 10, 13 (3n + 1)",
+     "sticks per position 13, 22, 31, 40 (9n + 4), counted from the shared sides",
+     "each position adds one 3-square step to the staircase",
+     "numerals 1 to 4 sit under the matching arrangement"
+    ],
+    "alt_text": "Four staircases of stick-built squares numbered 1 to 4 with 4, 7, 10 and 13 squares, each step going down to the right.",
+    "render_note": "Book Figure it Out Q16, second figure (bottom row). The book prints no position numerals; they are added because the LP text numbers the positions."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C31",
+   "role": "solution",
+   "lp_book_number": "Chapter Exercises, Q16 (the second stick pattern)",
+   "ncert_ref": "end.FiO16ii",
+   "question_text": "The second stick pattern is a staircase of squares: position 1 has 4 squares (13 sticks), position 2 has 7 squares (22 sticks), position 3 has 10 squares, position 4 has 13 squares. (a) How many squares are in position number 11? (b) How many sticks are needed for position number 11? (c) Can an arrangement be made using exactly 85 sticks? If yes, which position? (d) Can an arrangement be made using exactly 150 sticks? If yes, which position?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Sibling of the first figure: numbers and the rule 9n + 4 in text and LaTeX; position 11 is far too large to draw.",
+   "lp_placeholder_action": "drop_image",
+   "text_alternative": "LaTeX: $3n+1$ squares, $9n+4$ sticks, $3\\times11+1=34$, $9\\times11+4=103$, $9n+4=85$ gives $n=9$, $9n+4=150$ has no whole solution.",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C34",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "7.2.Ex4",
+   "question_text": "It is known that (35/113) × 24 × 14 × (8/9) = 94080/1017. What is the value of (35/113) × 24 × 14?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic with fractions: dividing both sides by 8/9; the book shows it as printed equations only.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 0,
+   "text_alternative": "LaTeX: $\\left[\\tfrac{35}{113}\\times24\\times14\\times\\tfrac89\\right]\\div\\tfrac89=\\tfrac{94080}{1017}\\div\\tfrac89$.",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C35",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "7.2.Ex3",
+   "question_text": "It is known that 12345 − 5432 + 135 − 24 − (−67) = 7091. What is the value of 12345 − 5432 + 135 − 24?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic with integers; the book's strike-through of -(-67) + (-67) is a LaTeX cancel, not a diagram.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 0,
+   "text_alternative": "LaTeX with \\cancel on $-(-67)+(-67)$, then $7091+(-67)=7024$.",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C36",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "7.2.Ex2",
+   "question_text": "It is known that 23 × 41 × 11 × 8 × 7 = 5,80,888. What is the value of 23 × 41 × 11 × 8?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic: divide 5,80,888 by 7.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 0,
+   "text_alternative": "LaTeX: $580888\\div7=82984$ (keep the book's comma style 5,80,888 and 82,984).",
+   "media_id": null
+  }
+ ]
+}

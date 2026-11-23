@@ -1,0 +1,4675 @@
+{
+ "meta": {
+  "chapter": "Number Play",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 6",
+  "lp_plan_id": "cbse_eng_maths7_ch6_v62",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "none": 14,
+    "required": 4
+   },
+   "solution": {
+    "required": 9,
+    "none": 9
+   },
+   "worked_example": {
+    "none": 3
+   }
+  },
+  "notes": [
+   "Chunk C = topics M3.S14.T14, M3.S16.T16, M3.S17.T17, M3.S19.T19, M4.S21.T21, M4.S23.T23, M5.S24.T24, M5.S25.T25 (39 items).",
+   "All printed magic-square answers of 6.3 Figure it Out Q1, Q2, Q5, the generalising Q1, Q3, Q4, Q5 and end Q4 are drawn on the solution side; gFiO Q2 (answer 3m, text) and 6.3 Q4 (verbal answer) are not, with the reason in each item.",
+   "gFiO Q1, Q2, Q3 draw the generalised form on the QUESTION side (book: 'using this generalised form'); alternative reading in notes_C.md.",
+   "Not claimed (book sections of chunk B): P07 to P10 teaching figures of 6.3 and the 2 x 3 parity grid of end Q3 (P18-sum_grid-1, P30-sum_grid-1, P30-sum_grid-2).",
+   "Cryptarithm column sums, the Virahanka sequence lines and the staircase table stay LaTeX (LATEX_ARITHMETIC / LATEX_TABLE)."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P11-grid-1",
+   "source": "chapter p.11",
+   "description": "Empty 3 x 3 grid with only the italic letter m in the centre cell (the start of the 'express the other numbers in terms of m' activity). Checked against the page picture: base description is right.",
+   "mapped_to": "concept_image:M3.S15.T15.C80.IMG1"
+  },
+  {
+   "fig_id": "P11-grid-2",
+   "source": "chapter p.11",
+   "description": "Chautisa Yantra 4 x 4 grid (red lines): 7 12 1 14 / 2 13 8 11 / 16 3 10 5 / 9 6 15 4, every row, column and diagonal 34. The book asks 'can you find other patterns of four numbers in the square that add up to 34': it is the question's given figure.",
+   "mapped_to": "item:M3.S19.T19.C98 (question)"
+  },
+  {
+   "fig_id": "NEW-P11-grid-2-sol",
+   "source": "chapter p.11",
+   "description": "(another use of P11-grid-2) the same 4 x 4 numbers redrawn in four panels with one group of four ringed per panel: corners, centre block, top-left 2 x 2 block, broken diagonal.",
+   "mapped_to": "item:M3.S19.T19.C99 (solution)"
+  },
+  {
+   "fig_id": "P12-illustration-1",
+   "source": "chapter p.12",
+   "description": "Top-down drawing of the Lo Shu turtle with dot patterns on the shell (legend illustration; dot counts too small to count, they follow the Lo Shu square).",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P12-grid-2",
+   "source": "chapter p.12",
+   "description": "Lo Shu square 2 7 6 / 9 5 1 / 4 3 8 (red lines), every line 15. Checked: numbers match the page picture.",
+   "mapped_to": "concept_image:M3.S18.T18.C96.IMG1"
+  },
+  {
+   "fig_id": "P12-board-3",
+   "source": "chapter p.12",
+   "description": "Navagraha Yantra board: nine coloured panels each holding a 3 x 3 square in a themed shape (Mercury, Venus, Moon, Jupiter, Sun, Mars, Ketu, Saturn, Rahu). Ketu's bottom-left cell prints 19, which breaks that square (checked on the page picture); no LP item draws this board.",
+   "mapped_to": "none:NOT_RENDERABLE"
+  },
+  {
+   "fig_id": "P13-yantra-1",
+   "source": "chapter p.13",
+   "description": "Kubera Yantra artwork with an arrow to the enlarged 3 x 3 square 27 20 25 / 22 24 26 / 23 28 21 (every line 72). Checked: numbers match the page picture.",
+   "mapped_to": "concept_image:M3.S18.T18.C96.IMG1"
+  },
+  {
+   "fig_id": "P14-pattern-1",
+   "source": "chapter p.14",
+   "description": "Four text lines of long/short rhythms for 8 beats (long in bold type) with a vertical ellipsis.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P14-table-2",
+   "source": "chapter p.14",
+   "description": "Table of all ways to write n = 1, 2, 3, 4 as sums of 1s and 2s with counts 1, 2, 3, 5.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P15-table-1",
+   "source": "chapter p.15",
+   "description": "Table row n = 5: five rhythms starting 1 + and three starting 2 + (5 + 3 = 8).",
+   "mapped_to": "concept_image:M4.S20.T20.C101.IMG1"
+  },
+  {
+   "fig_id": "P15-sequence-2",
+   "source": "chapter p.15",
+   "description": "Text line 1, 2, 3, 5, 8, 13, 21, 34, 55, ... with 34 (the 8th term) highlighted.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P16-daisies-1",
+   "source": "chapter p.16",
+   "description": "Three daisy pictures captioned 13, 21 and 34 petals.",
+   "mapped_to": "concept_image:M4.S20.T20.C102.IMG1"
+  },
+  {
+   "fig_id": "P16-pattern-2",
+   "source": "chapter p.16",
+   "description": "Page art: three rows of short and long coloured dashes (8 beats each) beside the drum picture.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P17-cryptarithm-1",
+   "source": "chapter p.17",
+   "description": "Column sum T / T / + T / UT (stacked, right-aligned). The LP question C120 gives it as text, so it becomes a LaTeX array.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P17-cryptarithm-2",
+   "source": "chapter p.17",
+   "description": "Column sum K2 / + K2 / HMM (right margin).",
+   "mapped_to": "concept_image:M5.S24.T24.C114.IMG1"
+  },
+  {
+   "fig_id": "P17-cryptarithm-3",
+   "source": "chapter p.17",
+   "description": "Column sum YY / + Z / ZOO (first of four). Question C122 gives it as text, so a LaTeX array.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P17-cryptarithm-4",
+   "source": "chapter p.17",
+   "description": "Column sum B5 / + 3D / ED5. Worked example C118 gives it as text, so a LaTeX array.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P17-cryptarithm-5",
+   "source": "chapter p.17",
+   "description": "Column sum KP / + KP / PRR. Worked example C117 gives it as text, so a LaTeX array.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P17-cryptarithm-6",
+   "source": "chapter p.17",
+   "description": "Column sum C1 / + C / 1FF. Worked example C116 gives it as text, so a LaTeX array.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P18-cryptarithm-2",
+   "source": "chapter p.18",
+   "description": "Column sum UT / + TA / TAT (end of chapter Q11). Question C124 gives it as text, so a LaTeX array.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P32-cryptarithm-1",
+   "source": "chapter p.32",
+   "description": "Column sum UT / + TA / TAT repeated in the answer key (the printed answer is the text U = 9, T = 1, A = 0, no picture).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P25-magic_square-1",
+   "source": "chapter p.25",
+   "description": "Printed answer of Figure it Out Q1: the magic square 8 1 6 / 3 5 7 / 4 9 2 (one unique square if rotations and reflections are ignored). It is the first of the 8 squares the solution figure draws.",
+   "mapped_to": "item:M3.S14.T14.C75 (solution)"
+  },
+  {
+   "fig_id": "P25-magic_square-2",
+   "source": "chapter p.25",
+   "description": "Printed answer of Figure it Out Q2: the 2 to 10 square 9 2 7 / 4 6 8 / 5 10 3 (1 added to every cell), magic sum 18.",
+   "mapped_to": "item:M3.S14.T14.C77 (solution)"
+  },
+  {
+   "fig_id": "P25-magic_square-3",
+   "source": "chapter p.25",
+   "description": "Printed answer of Figure it Out Q3 (start): the 1 to 9 square 8 1 6 / 3 5 7 / 4 9 2. The LP has no separate question item for Q3; the left grid of teaching image M3.S12.T12.C71.IMG1 shows this square.",
+   "mapped_to": "concept_image:M3.S12.T12.C71.IMG1"
+  },
+  {
+   "fig_id": "P26-magic_square-1",
+   "source": "chapter p.26",
+   "description": "Printed answer of Figure it Out Q3(a): the square after adding 1 to every cell, 9 2 7 / 4 6 8 / 5 10 3. Same picture as P25-magic_square-2; the LP folds Q3(a) into the Q2 solution (C77), so it is that item's diagram.",
+   "mapped_to": "item:M3.S14.T14.C77 (solution)"
+  },
+  {
+   "fig_id": "P26-magic_square-2",
+   "source": "chapter p.26",
+   "description": "Printed answer of Figure it Out Q3(b): the doubled square 16 2 12 / 6 10 14 / 8 18 4 (magic sum 30; the bottom border is cut off in the page picture). The LP has no question item for Q3(b); the text of concept C71 states the result.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P26-magic_square-3",
+   "source": "chapter p.26",
+   "description": "Printed answer of Figure it Out Q5 (first picture): the 1 to 9 square 8 1 6 / 3 5 7 / 4 9 2.",
+   "mapped_to": "item:M3.S14.T14.C79 (solution)"
+  },
+  {
+   "fig_id": "P27-magic_square-1",
+   "source": "chapter p.27",
+   "description": "Printed answer of Figure it Out Q5 (second picture): the 2 to 10 square 9 2 7 / 4 6 8 / 5 10 3 (the lines for 3 to 11 and 9 to 17 have no picture in the book).",
+   "mapped_to": "item:M3.S14.T14.C79 (solution)"
+  },
+  {
+   "fig_id": "P27-magic_square-2",
+   "source": "chapter p.27",
+   "description": "The generalised form m + 3, m - 4, m + 1 / m - 2, m, m + 2 / m - 1, m + 4, m - 3, printed as the answer of the 'express in terms of m' activity; the given figure of gFiO Q1 ('using this generalised form').",
+   "mapped_to": "item:M3.S16.T16.C83 (question)"
+  },
+  {
+   "fig_id": "NEW-P27-magic_square-2-q2",
+   "source": "chapter p.27",
+   "description": "(another use of P27-magic_square-2) the generalised form as the given figure of gFiO Q2.",
+   "mapped_to": "item:M3.S16.T16.C85 (question)"
+  },
+  {
+   "fig_id": "NEW-P27-magic_square-2-q3",
+   "source": "chapter p.27",
+   "description": "(another use of P27-magic_square-2) the generalised form as the given figure of gFiO Q3.",
+   "mapped_to": "item:M3.S16.T16.C87 (question)"
+  },
+  {
+   "fig_id": "P27-magic_square-3",
+   "source": "chapter p.27",
+   "description": "Printed answer of generalising Figure it Out Q1: 28 21 26 / 23 25 27 / 24 29 22 (centre 25, magic sum 75).",
+   "mapped_to": "item:M3.S16.T16.C84 (solution)"
+  },
+  {
+   "fig_id": "P28-magic_square-1",
+   "source": "chapter p.28",
+   "description": "Printed answer of generalising Q3(a): m + 4, m - 3, m + 2 / m - 1, m + 1, m + 3 / m, m + 5, m - 2.",
+   "mapped_to": "item:M3.S16.T16.C88 (solution)"
+  },
+  {
+   "fig_id": "P28-magic_square-2",
+   "source": "chapter p.28",
+   "description": "Printed answer of generalising Q3(b): 2m + 6, 2m - 8, 2m + 2 / 2m - 4, 2m, 2m + 4 / 2m - 2, 2m + 8, 2m - 6 (bottom border cut off in the page picture).",
+   "mapped_to": "item:M3.S16.T16.C88 (solution)"
+  },
+  {
+   "fig_id": "P28-magic_square-3",
+   "source": "chapter p.28",
+   "description": "Printed answer of generalising Q4: 23 16 21 / 18 20 22 / 19 24 17 (magic sum 60).",
+   "mapped_to": "item:M3.S16.T16.C90 (solution)"
+  },
+  {
+   "fig_id": "P28-magic_square-4",
+   "source": "chapter p.28",
+   "description": "Printed answer of generalising Q5: 24 3 18 / 9 15 21 / 12 27 6 (magic sum 45).",
+   "mapped_to": "item:M3.S16.T16.C92 (solution)"
+  },
+  {
+   "fig_id": "P30-magic_square-3",
+   "source": "chapter p.30",
+   "description": "Printed answer of end of chapter Q4: 3 -4 1 / -2 0 2 / -1 4 -3 (magic sum 0).",
+   "mapped_to": "item:M3.S17.T17.C94 (solution)"
+  },
+  {
+   "fig_id": "P31-table-1",
+   "source": "chapter p.31",
+   "description": "Printed answer of end of chapter Q8: 2-column table (example paths | number of ways) with rows 1 / 7 / 15 / 10 / 1 and the text 1 + 7 + 15 + 10 + 1 = 34; plain table, no colour.",
+   "mapped_to": "none:LATEX_TABLE"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 38,
+  "mapped_to_items": 16,
+  "mapped_to_concept_images": 7,
+  "mapped_none": 15,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M3.S14.T14.C75.IMG1",
+   "M3.S14.T14.C77.IMG1",
+   "M3.S14.T14.C79.IMG1",
+   "M3.S16.T16.C83.IMG1",
+   "M3.S16.T16.C84.IMG1",
+   "M3.S16.T16.C85.IMG1",
+   "M3.S16.T16.C87.IMG1",
+   "M3.S16.T16.C88.IMG1",
+   "M3.S16.T16.C90.IMG1",
+   "M3.S16.T16.C92.IMG1",
+   "M3.S17.T17.C94.IMG1",
+   "M3.S19.T19.C98.IMG1",
+   "M3.S19.T19.C99.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M3.S14.T14.C75",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "6.3.FiO1",
+   "question_text": "How many different magic squares can be made using the numbers 1 to 9? (the LP block holds only its title; the question is the book's)",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book question gives no figure; it is a counting question answered in words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "block_index": 0,
+   "text_alternative": "Question text to show in the block: How many different magic squares can be made using the numbers $1$ to $9$?",
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C75",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "6.3.FiO1",
+   "question_text": "How many different magic squares can be made using the numbers 1 to 9?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The book's printed answer is a picture of the 1 to 9 square, and the LP/video answer (8 squares: 1 pattern turned and flipped) is an arrangement of squares.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S14.T14.C75.IMG1",
+   "manim_scene": "c7_6_3_14_fio1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S14.T14.C75.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "block_index": 0,
+   "needs_lp_text_sync": true,
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "canvas": {
+      "w": 1920,
+      "h": 1080,
+      "bg": "BG"
+     },
+     "grids": [
+      {
+       "id": "turned_0",
+       "origin": {
+        "x": 144,
+        "y": 190
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 112,
+       "cell_h": 96,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "8",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "1",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "7",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ]
+       ]
+      },
+      {
+       "id": "turned_1",
+       "origin": {
+        "x": 576,
+        "y": 190
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 112,
+       "cell_h": 96,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "8",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "1",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "7",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ]
+       ]
+      },
+      {
+       "id": "turned_2",
+       "origin": {
+        "x": 1008,
+        "y": 190
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 112,
+       "cell_h": 96,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "7",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "1",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "8",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ]
+       ]
+      },
+      {
+       "id": "turned_3",
+       "origin": {
+        "x": 1440,
+        "y": 190
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 112,
+       "cell_h": 96,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "7",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "1",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "8",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ]
+       ]
+      },
+      {
+       "id": "flipped_0",
+       "origin": {
+        "x": 144,
+        "y": 640
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 112,
+       "cell_h": 96,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "1",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "8",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "7",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ]
+       ]
+      },
+      {
+       "id": "flipped_1",
+       "origin": {
+        "x": 576,
+        "y": 640
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 112,
+       "cell_h": 96,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "8",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "1",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "7",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ]
+       ]
+      },
+      {
+       "id": "flipped_2",
+       "origin": {
+        "x": 1008,
+        "y": 640
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 112,
+       "cell_h": 96,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "7",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "8",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "1",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ]
+       ]
+      },
+      {
+       "id": "flipped_3",
+       "origin": {
+        "x": 1440,
+        "y": 640
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 112,
+       "cell_h": 96,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "7",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "1",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "8",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ]
+       ]
+      }
+     ],
+     "labels": [
+      {
+       "text": "turned",
+       "x": 960,
+       "y": 135,
+       "font_px": 52,
+       "colour": "INK"
+      },
+      {
+       "text": "flipped",
+       "x": 960,
+       "y": 585,
+       "font_px": 52,
+       "colour": "INK"
+      }
+     ],
+     "to_scale": false,
+     "rows_of_squares": {
+      "turned": "the 1 to 9 square turned 0, 1, 2, 3 quarter turns clockwise",
+      "flipped": "each turned square flipped left to right like a mirror"
+     }
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG. Draw eight 3 x 3 grids in two rows of four; every cell is 112 px wide and 96 px high, filled CELL_FILL, outlined INK 3 px, every number in the cell centre in ANSWER, bold 56 px; the gap between neighbouring grids is 96 px. Above the first row, centred at x = 960 and y = 135, write 'turned' in INK, 52 px; above the second row, centred at x = 960 and y = 585, write 'flipped' in INK, 52 px. Turned square 1: top-left corner at (144, 190), spanning x 144 to 480 and y 190 to 478; Row 1 left to right: 8, 1, 6; Row 2 left to right: 3, 5, 7; Row 3 left to right: 4, 9, 2. Turned square 2: top-left corner at (576, 190), spanning x 576 to 912 and y 190 to 478; Row 1 left to right: 4, 3, 8; Row 2 left to right: 9, 5, 1; Row 3 left to right: 2, 7, 6. Turned square 3: top-left corner at (1008, 190), spanning x 1008 to 1344 and y 190 to 478; Row 1 left to right: 2, 9, 4; Row 2 left to right: 7, 5, 3; Row 3 left to right: 6, 1, 8. Turned square 4: top-left corner at (1440, 190), spanning x 1440 to 1776 and y 190 to 478; Row 1 left to right: 6, 7, 2; Row 2 left to right: 1, 5, 9; Row 3 left to right: 8, 3, 4. Flipped square 1: top-left corner at (144, 640), spanning x 144 to 480 and y 640 to 928; Row 1 left to right: 6, 1, 8; Row 2 left to right: 7, 5, 3; Row 3 left to right: 2, 9, 4. Flipped square 2: top-left corner at (576, 640), spanning x 576 to 912 and y 640 to 928; Row 1 left to right: 8, 3, 4; Row 2 left to right: 1, 5, 9; Row 3 left to right: 6, 7, 2. Flipped square 3: top-left corner at (1008, 640), spanning x 1008 to 1344 and y 640 to 928; Row 1 left to right: 4, 9, 2; Row 2 left to right: 3, 5, 7; Row 3 left to right: 8, 1, 6. Flipped square 4: top-left corner at (1440, 640), spanning x 1440 to 1776 and y 640 to 928; Row 1 left to right: 2, 7, 6; Row 2 left to right: 9, 5, 1; Row 3 left to right: 4, 3, 8. Draw nothing else.",
+    "visible_text": [
+     "turned",
+     "flipped",
+     "8",
+     "1",
+     "6",
+     "3",
+     "5",
+     "7",
+     "4",
+     "9",
+     "2",
+     "4",
+     "3",
+     "8",
+     "9",
+     "5",
+     "1",
+     "2",
+     "7",
+     "6",
+     "2",
+     "9",
+     "4",
+     "7",
+     "5",
+     "3",
+     "6",
+     "1",
+     "8",
+     "6",
+     "7",
+     "2",
+     "1",
+     "5",
+     "9",
+     "8",
+     "3",
+     "4",
+     "6",
+     "1",
+     "8",
+     "7",
+     "5",
+     "3",
+     "2",
+     "9",
+     "4",
+     "8",
+     "3",
+     "4",
+     "1",
+     "5",
+     "9",
+     "6",
+     "7",
+     "2",
+     "4",
+     "9",
+     "2",
+     "3",
+     "5",
+     "7",
+     "8",
+     "1",
+     "6",
+     "2",
+     "7",
+     "6",
+     "9",
+     "5",
+     "1",
+     "4",
+     "3",
+     "8"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the count 8 as a written number",
+     "arrows or curved turn marks"
+    ],
+    "accuracy_checks": [
+     "each of the 8 squares has the numbers 1 to 9 once and every row, column and both diagonals add to 15",
+     "row 1 is the base square 8,1,6 / 3,5,7 / 4,9,2 turned 0, 1, 2, 3 quarter turns clockwise: 8,1,6/3,5,7/4,9,2; 4,3,8/9,5,1/2,7,6; 2,9,4/7,5,3/6,1,8; 6,7,2/1,5,9/8,3,4",
+     "row 2 is each square of row 1 reversed left to right: 6,1,8/7,5,3/2,9,4; 8,3,4/1,5,9/6,7,2; 4,9,2/3,5,7/8,1,6; 2,7,6/9,5,1/4,3,8",
+     "the 8 squares are all different and are exactly the 8 squares listed by the LP video (4 turns x 2 for the flip)",
+     "the centre of every square is 5"
+    ],
+    "alt_text": "Eight magic squares for the numbers 1 to 9: the first square turned by 0, 1, 2 and 3 quarter turns in the top row, and the same four flipped like a mirror in the bottom row.",
+    "render_note": "The book prints only the first square (its answer: exactly one square if rotations and reflections are ignored). The LP/video answer is 8 magic squares (1 pattern, turned and flipped), so all 8 are drawn; the book's square is the first one."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C76",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "6.3.FiO2 / 6.3.FiO3",
+   "question_text": "Make a magic square with 2 to 10.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure: it asks the student to make a square from the numbers 2 to 10.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C77",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "6.3.FiO2 / 6.3.FiO3",
+   "question_text": "Make a magic square with 2 to 10.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The printed answer is the picture of the 2 to 10 square (9, 2, 7 / 4, 6, 8 / 5, 10, 3); the LP answer is that square.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S14.T14.C77.IMG1",
+   "manim_scene": "c7_6_3_14_fio2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S14.T14.C77.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "canvas": {
+      "w": 1920,
+      "h": 1080,
+      "bg": "BG"
+     },
+     "grids": [
+      {
+       "id": "square",
+       "origin": {
+        "x": 630,
+        "y": 200
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 220,
+       "cell_h": 180,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "7",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "8",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "10",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         }
+        ]
+       ]
+      }
+     ],
+     "labels": [
+      {
+       "text": "magic sum 18",
+       "x": 960,
+       "y": 840,
+       "font_px": 60,
+       "colour": "ANSWER"
+      }
+     ],
+     "to_scale": false
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG. Draw one 3 x 3 grid of 9 equal cells, each 220 px wide and 180 px high, top-left corner at (630, 200), spanning x 630 to 1290 and y 200 to 740, centred on the canvas. Fill every cell with CELL_FILL and outline it with INK, 3 px. Write one number in every cell, centred in the cell, in ANSWER, bold 88 px. Row 1 left to right: 9, 2, 7; Row 2 left to right: 4, 6, 8; Row 3 left to right: 5, 10, 3. Below the grid, centred at x = 960 and y = 840, write 'magic sum 18' in ANSWER, 60 px. Draw nothing else.",
+    "visible_text": [
+     "9",
+     "2",
+     "7",
+     "4",
+     "6",
+     "8",
+     "5",
+     "10",
+     "3",
+     "magic sum 18"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the starting 1 to 9 square",
+     "the arrow or the words add 1"
+    ],
+    "accuracy_checks": [
+     "numbers 2 to 10 each once: 9,2,7 / 4,6,8 / 5,10,3",
+     "every row, column and both diagonals add to 18 (9+2+7, 4+6+8, 5+10+3, 9+4+5, 2+6+10, 7+8+3, 9+6+3, 7+6+5)",
+     "it is the 1 to 9 square 8,1,6 / 3,5,7 / 4,9,2 with 1 added to every cell, magic sum 15 + 3 = 18"
+    ],
+    "alt_text": "A 3 by 3 magic square with the numbers 2 to 10: 9, 2, 7 / 4, 6, 8 / 5, 10, 3, every line adding to 18."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C78",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "6.3.FiO4",
+   "question_text": "What other operations can be performed on a magic square to yield another magic square? (the LP block holds only its title; the question is the book's)",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "A Math Talk discussion question with no given figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "block_index": 0,
+   "text_alternative": "Question text to show in the block: What other operations can be performed on a magic square to give another magic square?",
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C78",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "6.3.FiO4",
+   "question_text": "What other operations can be performed on a magic square to yield another magic square?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's printed answer for Q4 is a sentence (add, subtract, multiply, divide) and the LP answer is a list of operations: no picture, so it differs from Q1, Q2, Q3, Q5 whose printed answers are pictures. A figure of example squares would only be nice (the video shows them).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C79",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "6.3.FiO5",
+   "question_text": "Discuss ways of creating a magic square using any set of 9 consecutive numbers (like 2 to 10, 3 to 11, 9 to 17). (the LP block holds only its title; the question is the book's)",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "A discussion question with no given figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "block_index": 0,
+   "text_alternative": "Question text to show in the block: Discuss ways of creating a magic square using any set of $9$ consecutive numbers (like $2$ to $10$, $3$ to $11$, $9$ to $17$).",
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C79",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "6.3.FiO5",
+   "question_text": "Discuss ways of creating a magic square using any set of 9 consecutive numbers (like 2 to 10, 3 to 11, 9 to 17).",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The book's printed answer shows the 1 to 9 and 2 to 10 squares as pictures; the LP/video answer is the 3 to 11 and 9 to 17 squares (add 2, add 8): the answer is a set of squares.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S14.T14.C79.IMG1",
+   "manim_scene": "c7_6_3_14_fio5_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S14.T14.C79.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "block_index": 0,
+   "needs_lp_text_sync": true,
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "canvas": {
+      "w": 1920,
+      "h": 1080,
+      "bg": "BG"
+     },
+     "grids": [
+      {
+       "id": "sq_0",
+       "origin": {
+        "x": 117,
+        "y": 380
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 118,
+       "cell_h": 100,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "8",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "1",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "7",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ]
+       ]
+      },
+      {
+       "id": "sq_1",
+       "origin": {
+        "x": 561,
+        "y": 380
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 118,
+       "cell_h": 100,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "7",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "8",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "10",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ]
+       ]
+      },
+      {
+       "id": "sq_2",
+       "origin": {
+        "x": 1005,
+        "y": 380
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 118,
+       "cell_h": 100,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "10",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "8",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "7",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "11",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ]
+       ]
+      },
+      {
+       "id": "sq_3",
+       "origin": {
+        "x": 1449,
+        "y": 380
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 118,
+       "cell_h": 100,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "16",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "14",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "11",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "13",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "15",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "12",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "17",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         },
+         {
+          "text": "10",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 56,
+          "bold": true
+         }
+        ]
+       ]
+      }
+     ],
+     "labels": [
+      {
+       "text": "1 to 9",
+       "x": 294,
+       "y": 330,
+       "font_px": 52,
+       "colour": "INK"
+      },
+      {
+       "text": "2 to 10",
+       "x": 738,
+       "y": 330,
+       "font_px": 52,
+       "colour": "INK"
+      },
+      {
+       "text": "add 1",
+       "x": 738,
+       "y": 760,
+       "font_px": 52,
+       "colour": "ANSWER"
+      },
+      {
+       "text": "3 to 11",
+       "x": 1182,
+       "y": 330,
+       "font_px": 52,
+       "colour": "INK"
+      },
+      {
+       "text": "add 2",
+       "x": 1182,
+       "y": 760,
+       "font_px": 52,
+       "colour": "ANSWER"
+      },
+      {
+       "text": "9 to 17",
+       "x": 1626,
+       "y": 330,
+       "font_px": 52,
+       "colour": "INK"
+      },
+      {
+       "text": "add 8",
+       "x": 1626,
+       "y": 760,
+       "font_px": 52,
+       "colour": "ANSWER"
+      }
+     ],
+     "to_scale": false,
+     "shift_rule": "every square is the 1 to 9 square with the same number added to every cell"
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG. Draw four 3 x 3 grids in one row, left to right; every cell is 118 px wide and 100 px high, filled CELL_FILL, outlined INK 3 px, every number in the cell centre in ANSWER, bold 56 px; the gap between neighbouring grids is 90 px. Square 1: top-left corner at (117, 380), spanning x 117 to 471 and y 380 to 680; label '1 to 9' in INK 52 px centred above it at y = 330; Row 1 left to right: 8, 1, 6; Row 2 left to right: 3, 5, 7; Row 3 left to right: 4, 9, 2; no tag below it. Square 2: top-left corner at (561, 380), spanning x 561 to 915 and y 380 to 680; label '2 to 10' in INK 52 px centred above it at y = 330; Row 1 left to right: 9, 2, 7; Row 2 left to right: 4, 6, 8; Row 3 left to right: 5, 10, 3; below it, centred at y = 760, the tag 'add 1' in ANSWER 52 px. Square 3: top-left corner at (1005, 380), spanning x 1005 to 1359 and y 380 to 680; label '3 to 11' in INK 52 px centred above it at y = 330; Row 1 left to right: 10, 3, 8; Row 2 left to right: 5, 7, 9; Row 3 left to right: 6, 11, 4; below it, centred at y = 760, the tag 'add 2' in ANSWER 52 px. Square 4: top-left corner at (1449, 380), spanning x 1449 to 1803 and y 380 to 680; label '9 to 17' in INK 52 px centred above it at y = 330; Row 1 left to right: 16, 9, 14; Row 2 left to right: 11, 13, 15; Row 3 left to right: 12, 17, 10; below it, centred at y = 760, the tag 'add 8' in ANSWER 52 px. Draw nothing else.",
+    "visible_text": [
+     "1 to 9",
+     "8",
+     "1",
+     "6",
+     "3",
+     "5",
+     "7",
+     "4",
+     "9",
+     "2",
+     "2 to 10",
+     "add 1",
+     "9",
+     "2",
+     "7",
+     "4",
+     "6",
+     "8",
+     "5",
+     "10",
+     "3",
+     "3 to 11",
+     "add 2",
+     "10",
+     "3",
+     "8",
+     "5",
+     "7",
+     "9",
+     "6",
+     "11",
+     "4",
+     "9 to 17",
+     "add 8",
+     "16",
+     "9",
+     "14",
+     "11",
+     "13",
+     "15",
+     "12",
+     "17",
+     "10"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the unchanged working steps",
+     "arrows between the squares"
+    ],
+    "accuracy_checks": [
+     "1 to 9 square 8,1,6 / 3,5,7 / 4,9,2: every line adds to 15",
+     "add 1 gives 9,2,7 / 4,6,8 / 5,10,3 (numbers 2 to 10, every line 18)",
+     "add 2 gives 10,3,8 / 5,7,9 / 6,11,4 (numbers 3 to 11, every line 21)",
+     "add 8 gives 16,9,14 / 11,13,15 / 12,17,10 (numbers 9 to 17, every line 39)",
+     "each square holds nine consecutive numbers with the labelled range, each once"
+    ],
+    "alt_text": "Four magic squares in a row for the numbers 1 to 9, 2 to 10, 3 to 11 and 9 to 17, each made from the first by adding 1, 2 and 8 to every cell.",
+    "render_note": "The book prints only the 1 to 9 and 2 to 10 squares; the 3 to 11 and 9 to 17 squares come from the LP answer (add 2 for 3 to 11 and add 8 for 9 to 17, magic sums 21 and 39)."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C83",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "6.3.gFiO1",
+   "question_text": "Find a magic square with centre 25.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book says 'using this generalised form': the form (m + 3, m - 4, ...) is data that lives only in the figure and the LP question text does not state it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C83.IMG1",
+   "manim_scene": "c7_6_3_16_g1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C83.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "canvas": {
+      "w": 1920,
+      "h": 1080,
+      "bg": "BG"
+     },
+     "grids": [
+      {
+       "id": "form",
+       "origin": {
+        "x": 600,
+        "y": 210
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 240,
+       "cell_h": 220,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "text_anchor": {
+        "h": "centre",
+        "v_from_cell_top_px": 80
+       },
+       "italic_letter": "m",
+       "cells": [
+        [
+         {
+          "text": "m + 3",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m − 4",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m + 1",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         }
+        ],
+        [
+         {
+          "text": "m − 2",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m + 2",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         }
+        ],
+        [
+         {
+          "text": "m − 1",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m + 4",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m − 3",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         }
+        ]
+       ]
+      }
+     ],
+     "labels": [],
+     "to_scale": false
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG. Draw one 3 x 3 grid of 9 equal cells, each 240 px wide and 220 px high, with its top-left corner at (600, 210), so the grid spans x 600 to 1320 and y 210 to 870 and is centred on the canvas. Fill every cell with CELL_FILL and outline every cell with INK, 3 px (shared edges drawn once). In every cell write the expression in INK, 56 px sans-serif, centred horizontally, with its vertical centre 80 px below the cell's top edge; the letter m is italic. Row 1 left to right: m + 3, m − 4, m + 1; Row 2 left to right: m − 2, m, m + 2; Row 3 left to right: m − 1, m + 4, m − 3. The expressions are the generalised form of a 3 x 3 magic square with the centre number called m. Draw nothing else: no numbers, no highlight, no labels.",
+    "visible_text": [
+     "m + 3",
+     "m − 4",
+     "m + 1",
+     "m − 2",
+     "m",
+     "m + 2",
+     "m − 1",
+     "m + 4",
+     "m − 3"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any number in place of m",
+     "any highlight on a row, column or diagonal",
+     "the sum 3m"
+    ],
+    "accuracy_checks": [
+     "centre cell is m; the other 8 cells are m+3, m-4, m+1, m-2, m+2, m-1, m+4, m-3 as in the book's generalised form",
+     "row sums: (m+3)+(m-4)+(m+1) = 3m; (m-2)+m+(m+2) = 3m; (m-1)+(m+4)+(m-3) = 3m",
+     "column sums: (m+3)+(m-2)+(m-1) = 3m; (m-4)+m+(m+4) = 3m; (m+1)+(m+2)+(m-3) = 3m; both diagonals (m+3)+m+(m-3) and (m+1)+m+(m-1) = 3m"
+    ],
+    "alt_text": "A 3 by 3 grid holding the generalised magic square with centre m: m + 3, m - 4, m + 1 in the top row, m - 2, m, m + 2 in the middle row, m - 1, m + 4, m - 3 in the bottom row."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C84",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "6.3.gFiO1",
+   "question_text": "Find a magic square with centre 25.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The printed answer is the magic square 28, 21, 26 / 23, 25, 27 / 24, 29, 22; the figure keeps the form's expressions and shows the numbers for m = 25.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C84.IMG1",
+   "manim_scene": "c7_6_3_16_g1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C84.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S16.T16.C83.IMG1",
+    "content": {
+     "type": "cell_grid",
+     "canvas": {
+      "w": 1920,
+      "h": 1080,
+      "bg": "BG"
+     },
+     "grids": [
+      {
+       "id": "form_m25",
+       "origin": {
+        "x": 600,
+        "y": 210
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 240,
+       "cell_h": 220,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "text_anchor": {
+        "h": "centre",
+        "v_from_cell_top_px": 80
+       },
+       "value_anchor": {
+        "h": "centre",
+        "v_from_cell_top_px": 165
+       },
+       "italic_letter": "m",
+       "cells": [
+        [
+         {
+          "text": "m + 3",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "value": "28",
+          "value_colour": "ANSWER",
+          "value_px": 66,
+          "value_bold": true
+         },
+         {
+          "text": "m − 4",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "value": "21",
+          "value_colour": "ANSWER",
+          "value_px": 66,
+          "value_bold": true
+         },
+         {
+          "text": "m + 1",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "value": "26",
+          "value_colour": "ANSWER",
+          "value_px": 66,
+          "value_bold": true
+         }
+        ],
+        [
+         {
+          "text": "m − 2",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "value": "23",
+          "value_colour": "ANSWER",
+          "value_px": 66,
+          "value_bold": true
+         },
+         {
+          "text": "m",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "value": "25",
+          "value_colour": "ANSWER",
+          "value_px": 66,
+          "value_bold": true
+         },
+         {
+          "text": "m + 2",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "value": "27",
+          "value_colour": "ANSWER",
+          "value_px": 66,
+          "value_bold": true
+         }
+        ],
+        [
+         {
+          "text": "m − 1",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "value": "24",
+          "value_colour": "ANSWER",
+          "value_px": 66,
+          "value_bold": true
+         },
+         {
+          "text": "m + 4",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "value": "29",
+          "value_colour": "ANSWER",
+          "value_px": 66,
+          "value_bold": true
+         },
+         {
+          "text": "m − 3",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "value": "22",
+          "value_colour": "ANSWER",
+          "value_px": 66,
+          "value_bold": true
+         }
+        ]
+       ]
+      }
+     ],
+     "labels": [
+      {
+       "text": "magic sum 75",
+       "x": 960,
+       "y": 950,
+       "font_px": 56,
+       "colour": "ANSWER"
+      }
+     ],
+     "to_scale": false
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG. Redraw the question figure M3.S16.T16.C83.IMG1 exactly: the same 3 x 3 grid of 9 cells, 240 px wide and 220 px high, top-left corner at (600, 210), CELL_FILL cells with INK 3 px outlines, and the same expressions in INK, 56 px, in the same positions (centred horizontally, vertical centre 80 px below the cell's top edge). Now add, in every cell, the number for m = 25 in ANSWER, bold 66 px, centred horizontally with its vertical centre 165 px below the cell's top edge. Row 1 left to right: 28, 21, 26; Row 2 left to right: 23, 25, 27; Row 3 left to right: 24, 29, 22. Below the grid, centred at x = 960 and y = 950, write 'magic sum 75' in ANSWER, 56 px. Draw nothing else.",
+    "visible_text": [
+     "m + 3",
+     "m − 4",
+     "m + 1",
+     "m − 2",
+     "m",
+     "m + 2",
+     "m − 1",
+     "m + 4",
+     "m − 3",
+     "28",
+     "21",
+     "26",
+     "23",
+     "25",
+     "27",
+     "24",
+     "29",
+     "22",
+     "magic sum 75"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the working 'm = 25'",
+     "any grid other than the one square for centre 25"
+    ],
+    "accuracy_checks": [
+     "m = 25: 25+3 = 28, 25-4 = 21, 25+1 = 26, 25-2 = 23, 25, 25+2 = 27, 25-1 = 24, 25+4 = 29, 25-3 = 22",
+     "every row, column and both diagonals add to 75 = 3 x 25 (28+21+26 = 75, 23+25+27 = 75, 24+29+22 = 75, 28+23+24 = 75, 21+25+29 = 75, 26+27+22 = 75, 28+25+22 = 75, 26+25+24 = 75)",
+     "expressions and positions are identical to the question figure; only the numbers and the tag are new"
+    ],
+    "alt_text": "The generalised form grid with m = 25: top row 28, 21, 26; middle row 23, 25, 27; bottom row 24, 29, 22, every line adding to 75."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C85",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "6.3.gFiO2",
+   "question_text": "Add the top row of the generalised form.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The top row m + 3, m - 4, m + 1 is data in the generalised form, which the question refers to and the LP text does not state.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C85.IMG1",
+   "manim_scene": "c7_6_3_16_g2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C85.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "canvas": {
+      "w": 1920,
+      "h": 1080,
+      "bg": "BG"
+     },
+     "grids": [
+      {
+       "id": "form",
+       "origin": {
+        "x": 600,
+        "y": 210
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 240,
+       "cell_h": 220,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "text_anchor": {
+        "h": "centre",
+        "v_from_cell_top_px": 80
+       },
+       "italic_letter": "m",
+       "cells": [
+        [
+         {
+          "text": "m + 3",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m − 4",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m + 1",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         }
+        ],
+        [
+         {
+          "text": "m − 2",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m + 2",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         }
+        ],
+        [
+         {
+          "text": "m − 1",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m + 4",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m − 3",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         }
+        ]
+       ]
+      }
+     ],
+     "labels": [],
+     "to_scale": false
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG. Draw one 3 x 3 grid of 9 equal cells, each 240 px wide and 220 px high, with its top-left corner at (600, 210), so the grid spans x 600 to 1320 and y 210 to 870 and is centred on the canvas. Fill every cell with CELL_FILL and outline every cell with INK, 3 px (shared edges drawn once). In every cell write the expression in INK, 56 px sans-serif, centred horizontally, with its vertical centre 80 px below the cell's top edge; the letter m is italic. Row 1 left to right: m + 3, m − 4, m + 1; Row 2 left to right: m − 2, m, m + 2; Row 3 left to right: m − 1, m + 4, m − 3. The expressions are the generalised form of a 3 x 3 magic square with the centre number called m. Draw nothing else: no numbers, no highlight, no labels.",
+    "visible_text": [
+     "m + 3",
+     "m − 4",
+     "m + 1",
+     "m − 2",
+     "m",
+     "m + 2",
+     "m − 1",
+     "m + 4",
+     "m − 3"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any number in place of m",
+     "any highlight on a row, column or diagonal",
+     "the sum 3m"
+    ],
+    "accuracy_checks": [
+     "centre cell is m; the other 8 cells are m+3, m-4, m+1, m-2, m+2, m-1, m+4, m-3 as in the book's generalised form",
+     "row sums: (m+3)+(m-4)+(m+1) = 3m; (m-2)+m+(m+2) = 3m; (m-1)+(m+4)+(m-3) = 3m",
+     "column sums: (m+3)+(m-2)+(m-1) = 3m; (m-4)+m+(m+4) = 3m; (m+1)+(m+2)+(m-3) = 3m; both diagonals (m+3)+m+(m-3) and (m+1)+m+(m-1) = 3m"
+    ],
+    "alt_text": "A 3 by 3 grid holding the generalised magic square with centre m: m + 3, m - 4, m + 1 in the top row, m - 2, m, m + 2 in the middle row, m - 1, m + 4, m - 3 in the bottom row.",
+    "render_note": "same as M3.S16.T16.C83.IMG1 (the one book picture, the generalised form, used by several items: one diagram per item)"
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C86",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "6.3.gFiO2",
+   "question_text": "Add the top row of the generalised form.",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The printed answer is the expression 3 x m (text, no picture) and the LP steps are algebra; a figure would only repeat the question figure. Different from gFiO Q1, Q3, Q4, Q5 whose printed answers are squares.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX only: $(m + 3) + (m - 4) + (m + 1) = 3m$"
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C87",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "6.3.gFiO3",
+   "question_text": "Add 1 to every term of the form, then double every term.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The terms to change (m + 3, m - 4, ...) are data in the generalised form, which the question refers to and the LP text does not state.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C87.IMG1",
+   "manim_scene": "c7_6_3_16_g3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C87.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "needs_lp_text_sync": true,
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "canvas": {
+      "w": 1920,
+      "h": 1080,
+      "bg": "BG"
+     },
+     "grids": [
+      {
+       "id": "form",
+       "origin": {
+        "x": 600,
+        "y": 210
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 240,
+       "cell_h": 220,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "text_anchor": {
+        "h": "centre",
+        "v_from_cell_top_px": 80
+       },
+       "italic_letter": "m",
+       "cells": [
+        [
+         {
+          "text": "m + 3",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m − 4",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m + 1",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         }
+        ],
+        [
+         {
+          "text": "m − 2",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m + 2",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         }
+        ],
+        [
+         {
+          "text": "m − 1",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m + 4",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         },
+         {
+          "text": "m − 3",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 56,
+          "bold": false
+         }
+        ]
+       ]
+      }
+     ],
+     "labels": [],
+     "to_scale": false
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG. Draw one 3 x 3 grid of 9 equal cells, each 240 px wide and 220 px high, with its top-left corner at (600, 210), so the grid spans x 600 to 1320 and y 210 to 870 and is centred on the canvas. Fill every cell with CELL_FILL and outline every cell with INK, 3 px (shared edges drawn once). In every cell write the expression in INK, 56 px sans-serif, centred horizontally, with its vertical centre 80 px below the cell's top edge; the letter m is italic. Row 1 left to right: m + 3, m − 4, m + 1; Row 2 left to right: m − 2, m, m + 2; Row 3 left to right: m − 1, m + 4, m − 3. The expressions are the generalised form of a 3 x 3 magic square with the centre number called m. Draw nothing else: no numbers, no highlight, no labels.",
+    "visible_text": [
+     "m + 3",
+     "m − 4",
+     "m + 1",
+     "m − 2",
+     "m",
+     "m + 2",
+     "m − 1",
+     "m + 4",
+     "m − 3"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any number in place of m",
+     "any highlight on a row, column or diagonal",
+     "the sum 3m"
+    ],
+    "accuracy_checks": [
+     "centre cell is m; the other 8 cells are m+3, m-4, m+1, m-2, m+2, m-1, m+4, m-3 as in the book's generalised form",
+     "row sums: (m+3)+(m-4)+(m+1) = 3m; (m-2)+m+(m+2) = 3m; (m-1)+(m+4)+(m-3) = 3m",
+     "column sums: (m+3)+(m-2)+(m-1) = 3m; (m-4)+m+(m+4) = 3m; (m+1)+(m+2)+(m-3) = 3m; both diagonals (m+3)+m+(m-3) and (m+1)+m+(m-1) = 3m"
+    ],
+    "alt_text": "A 3 by 3 grid holding the generalised magic square with centre m: m + 3, m - 4, m + 1 in the top row, m - 2, m, m + 2 in the middle row, m - 1, m + 4, m - 3 in the bottom row.",
+    "render_note": "same as M3.S16.T16.C83.IMG1 (the one book picture, the generalised form, used by several items: one diagram per item)"
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C88",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "6.3.gFiO3",
+   "question_text": "Add 1 to every term of the form, then double every term.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The printed answer is two squares of expressions (a: with 1 added, b: doubled); the LP answer says both are still magic squares.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C88.IMG1",
+   "manim_scene": "c7_6_3_16_g3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C88.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S16.T16.C87.IMG1",
+    "content": {
+     "type": "cell_grid",
+     "canvas": {
+      "w": 1920,
+      "h": 1080,
+      "bg": "BG"
+     },
+     "grids": [
+      {
+       "id": "plus1",
+       "origin": {
+        "x": 120,
+        "y": 330
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 260,
+       "cell_h": 150,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "italic_letter": "m",
+       "cells": [
+        [
+         {
+          "text": "m + 4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         },
+         {
+          "text": "m − 3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         },
+         {
+          "text": "m + 2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         }
+        ],
+        [
+         {
+          "text": "m − 1",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         },
+         {
+          "text": "m + 1",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         },
+         {
+          "text": "m + 3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         }
+        ],
+        [
+         {
+          "text": "m",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         },
+         {
+          "text": "m + 5",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         },
+         {
+          "text": "m − 2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         }
+        ]
+       ]
+      },
+      {
+       "id": "double",
+       "origin": {
+        "x": 1020,
+        "y": 330
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 260,
+       "cell_h": 150,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "italic_letter": "m",
+       "cells": [
+        [
+         {
+          "text": "2m + 6",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         },
+         {
+          "text": "2m − 8",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         },
+         {
+          "text": "2m + 2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         }
+        ],
+        [
+         {
+          "text": "2m − 4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         },
+         {
+          "text": "2m",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         },
+         {
+          "text": "2m + 4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         }
+        ],
+        [
+         {
+          "text": "2m − 2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         },
+         {
+          "text": "2m + 8",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         },
+         {
+          "text": "2m − 6",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 52,
+          "bold": false
+         }
+        ]
+       ]
+      }
+     ],
+     "labels": [
+      {
+       "text": "Adding 1",
+       "x": 510,
+       "y": 255,
+       "font_px": 52,
+       "colour": "INK"
+      },
+      {
+       "text": "Doubling",
+       "x": 1410,
+       "y": 255,
+       "font_px": 52,
+       "colour": "INK"
+      }
+     ],
+     "to_scale": false
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG. Draw two 3 x 3 grids side by side; every cell is 260 px wide and 150 px high, filled CELL_FILL, outlined INK 3 px; the cell order and cell size follow the question figure M3.S16.T16.C87.IMG1. Left grid: top-left corner at (120, 330), spanning x 120 to 900 and y 330 to 780. Right grid: top-left corner at (1020, 330), spanning x 1020 to 1800 and y 330 to 780. In every cell write the expression in ANSWER, 52 px, centred in the cell, the letter m italic. Left grid: Row 1 left to right: m + 4, m − 3, m + 2; Row 2 left to right: m − 1, m + 1, m + 3; Row 3 left to right: m, m + 5, m − 2. Right grid: Row 1 left to right: 2m + 6, 2m − 8, 2m + 2; Row 2 left to right: 2m − 4, 2m, 2m + 4; Row 3 left to right: 2m − 2, 2m + 8, 2m − 6. Above the left grid, centred over it at y = 255, write 'Adding 1' in INK, 52 px; above the right grid, centred over it at y = 255, write 'Doubling' in INK, 52 px. Draw nothing else.",
+    "visible_text": [
+     "Adding 1",
+     "Doubling",
+     "m + 4",
+     "m − 3",
+     "m + 2",
+     "m − 1",
+     "m + 1",
+     "m + 3",
+     "m",
+     "m + 5",
+     "m − 2",
+     "2m + 6",
+     "2m − 8",
+     "2m + 2",
+     "2m − 4",
+     "2m",
+     "2m + 4",
+     "2m − 2",
+     "2m + 8",
+     "2m − 6"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the original unchanged form",
+     "the line sums 3m + 3 and 6m"
+    ],
+    "accuracy_checks": [
+     "left grid = every cell of the form plus 1: m+4, m-3, m+2 / m-1, m+1, m+3 / m, m+5, m-2; every line adds to 3m + 3",
+     "right grid = every cell of the form doubled: 2m+6, 2m-8, 2m+2 / 2m-4, 2m, 2m+4 / 2m-2, 2m+8, 2m-6; every line adds to 6m",
+     "centre cells are m + 1 and 2m"
+    ],
+    "alt_text": "Two 3 by 3 grids: the form with 1 added to every term (m + 4, m - 3, m + 2 / m - 1, m + 1, m + 3 / m, m + 5, m - 2) and the form doubled (2m + 6, 2m - 8, 2m + 2 / 2m - 4, 2m, 2m + 4 / 2m - 2, 2m + 8, 2m - 6).",
+    "render_note": "Two panels because the answer is two forms (book Q3 a and b). Each panel keeps the question figure's 3 x 3 cell order. The LP solution doubles the ORIGINAL form (as the book does), not the form with 1 added."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C89",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "6.3.gFiO4",
+   "question_text": "Create a magic square with magic sum 60.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure (the book's Q4 has none); a question figure would invent a blank grid.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C90",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "6.3.gFiO4",
+   "question_text": "Create a magic square with magic sum 60.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The printed answer is the picture of the square 23, 16, 21 / 18, 20, 22 / 19, 24, 17.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C90.IMG1",
+   "manim_scene": "c7_6_3_16_g4_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C90.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "canvas": {
+      "w": 1920,
+      "h": 1080,
+      "bg": "BG"
+     },
+     "grids": [
+      {
+       "id": "square",
+       "origin": {
+        "x": 630,
+        "y": 200
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 220,
+       "cell_h": 180,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "23",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "16",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "21",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "18",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "20",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "22",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "19",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "24",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "17",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         }
+        ]
+       ]
+      }
+     ],
+     "labels": [
+      {
+       "text": "magic sum 60",
+       "x": 960,
+       "y": 840,
+       "font_px": 60,
+       "colour": "ANSWER"
+      }
+     ],
+     "to_scale": false
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG. Draw one 3 x 3 grid of 9 equal cells, each 220 px wide and 180 px high, top-left corner at (630, 200), spanning x 630 to 1290 and y 200 to 740, centred on the canvas. Fill every cell with CELL_FILL and outline it with INK, 3 px. Write one number in every cell, centred in the cell, in ANSWER, bold 88 px. Row 1 left to right: 23, 16, 21; Row 2 left to right: 18, 20, 22; Row 3 left to right: 19, 24, 17. Below the grid, centred at x = 960 and y = 840, write 'magic sum 60' in ANSWER, 60 px. Draw nothing else.",
+    "visible_text": [
+     "23",
+     "16",
+     "21",
+     "18",
+     "20",
+     "22",
+     "19",
+     "24",
+     "17",
+     "magic sum 60"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the working 3m = 60 and m = 20",
+     "the expressions m + 3 ..."
+    ],
+    "accuracy_checks": [
+     "centre 20: 3 x 20 = 60",
+     "numbers 16 to 24 each once, as m-4 to m+4 for m = 20: 20+3 = 23, 20-4 = 16, 20+1 = 21, 20-2 = 18, 20, 20+2 = 22, 20-1 = 19, 20+4 = 24, 20-3 = 17",
+     "every row, column and both diagonals add to 60 (23+16+21, 18+20+22, 19+24+17, 23+18+19, 16+20+24, 21+22+17, 23+20+17, 21+20+19)"
+    ],
+    "alt_text": "A 3 by 3 magic square 23, 16, 21 / 18, 20, 22 / 19, 24, 17 whose every line adds to 60."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C91",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "6.3.gFiO5",
+   "question_text": "Can nine non-consecutive numbers make a magic square?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A yes/no question with no given figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C92",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "6.3.gFiO5",
+   "question_text": "Can nine non-consecutive numbers make a magic square?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The printed answer is the picture of the square 24, 3, 18 / 9, 15, 21 / 12, 27, 6 (the LP answer 'Yes' rests on it).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C92.IMG1",
+   "manim_scene": "c7_6_3_16_g5_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C92.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "canvas": {
+      "w": 1920,
+      "h": 1080,
+      "bg": "BG"
+     },
+     "grids": [
+      {
+       "id": "square",
+       "origin": {
+        "x": 630,
+        "y": 200
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 220,
+       "cell_h": 180,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "24",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "18",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "15",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "21",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "12",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "27",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         }
+        ]
+       ]
+      }
+     ],
+     "labels": [
+      {
+       "text": "line sum 45",
+       "x": 960,
+       "y": 840,
+       "font_px": 60,
+       "colour": "ANSWER"
+      }
+     ],
+     "to_scale": false
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG. Draw one 3 x 3 grid of 9 equal cells, each 220 px wide and 180 px high, top-left corner at (630, 200), spanning x 630 to 1290 and y 200 to 740, centred on the canvas. Fill every cell with CELL_FILL and outline it with INK, 3 px. Write one number in every cell, centred in the cell, in ANSWER, bold 88 px. Row 1 left to right: 24, 3, 18; Row 2 left to right: 9, 15, 21; Row 3 left to right: 12, 27, 6. Below the grid, centred at x = 960 and y = 840, write 'line sum 45' in ANSWER, 60 px. Draw nothing else.",
+    "visible_text": [
+     "24",
+     "3",
+     "18",
+     "9",
+     "15",
+     "21",
+     "12",
+     "27",
+     "6",
+     "line sum 45"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words yes or no",
+     "the multiplication by 3"
+    ],
+    "accuracy_checks": [
+     "each number is 3 times the matching cell of 8,1,6 / 3,5,7 / 4,9,2: 24, 3, 18 / 9, 15, 21 / 12, 27, 6",
+     "every row, column and both diagonals add to 45 = 3 x 15 (24+3+18, 9+15+21, 12+27+6, 24+9+12, 3+15+27, 18+21+6, 24+15+6, 18+15+12)",
+     "the nine numbers 3, 6, 9, 12, 15, 18, 21, 24, 27 are not consecutive"
+    ],
+    "alt_text": "A 3 by 3 magic square 24, 3, 18 / 9, 15, 21 / 12, 27, 6 whose every line adds to 45, using nine numbers that are not consecutive."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C93",
+   "role": "question",
+   "lp_book_number": "End of chapter, Q4",
+   "ncert_ref": "end.FiO4",
+   "question_text": "Make a magic square with magic sum 0, not all zeros, using negative numbers.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C94",
+   "role": "solution",
+   "lp_book_number": "End of chapter, Q4",
+   "ncert_ref": "end.FiO4",
+   "question_text": "Make a magic square with magic sum 0, not all zeros, using negative numbers.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The printed answer is the picture of the square 3, -4, 1 / -2, 0, 2 / -1, 4, -3.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S17.T17.C94.IMG1",
+   "manim_scene": "c7_6_end_4_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S17.T17.C94.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "canvas": {
+      "w": 1920,
+      "h": 1080,
+      "bg": "BG"
+     },
+     "grids": [
+      {
+       "id": "square",
+       "origin": {
+        "x": 630,
+        "y": 200
+       },
+       "rows": 3,
+       "cols": 3,
+       "cell_w": 220,
+       "cell_h": 180,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "−4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "1",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "−2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "0",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         }
+        ],
+        [
+         {
+          "text": "−1",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         },
+         {
+          "text": "−3",
+          "fill": "CELL_FILL",
+          "text_colour": "ANSWER",
+          "font_px": 88,
+          "bold": true
+         }
+        ]
+       ]
+      }
+     ],
+     "labels": [
+      {
+       "text": "magic sum 0",
+       "x": 960,
+       "y": 840,
+       "font_px": 60,
+       "colour": "ANSWER"
+      }
+     ],
+     "to_scale": false
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG. Draw one 3 x 3 grid of 9 equal cells, each 220 px wide and 180 px high, top-left corner at (630, 200), spanning x 630 to 1290 and y 200 to 740, centred on the canvas. Fill every cell with CELL_FILL and outline it with INK, 3 px. Write one number in every cell, centred in the cell, in ANSWER, bold 88 px. Row 1 left to right: 3, −4, 1; Row 2 left to right: −2, 0, 2; Row 3 left to right: −1, 4, −3. Below the grid, centred at x = 960 and y = 840, write 'magic sum 0' in ANSWER, 60 px. Draw nothing else.",
+    "visible_text": [
+     "3",
+     "−4",
+     "1",
+     "−2",
+     "0",
+     "2",
+     "−1",
+     "4",
+     "−3",
+     "magic sum 0"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the working 3m = 0 and m = 0"
+    ],
+    "accuracy_checks": [
+     "centre 0 = m: 3, -4, 1 / -2, 0, 2 / -1, 4, -3 are m+3, m-4, m+1, m-2, m, m+2, m-1, m+4, m-3",
+     "every row, column and both diagonals add to 0 (3-4+1, -2+0+2, -1+4-3, 3-2-1, -4+0+4, 1+2-3, 3+0-3, 1+0-1)",
+     "negative numbers are written with a true minus sign and the numbers are not all zero"
+    ],
+    "alt_text": "A 3 by 3 magic square 3, -4, 1 / -2, 0, 2 / -1, 4, -3 whose every line adds to 0."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C98",
+   "role": "question",
+   "lp_book_number": "Chautisa Yantra: groups of four adding to 34",
+   "ncert_ref": "6.3.other_34_patterns",
+   "question_text": "Find other groups of four that add to 34.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book asks about patterns 'in the square' (the printed Chautisa Yantra); its 16 numbers live only in the picture and the LP question text does not state them.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S19.T19.C98.IMG1",
+   "manim_scene": "c7_6_3_19_yantra_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S19.T19.C98.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "canvas": {
+      "w": 1920,
+      "h": 1080,
+      "bg": "BG"
+     },
+     "grids": [
+      {
+       "id": "yantra",
+       "origin": {
+        "x": 580,
+        "y": 200
+       },
+       "rows": 4,
+       "cols": 4,
+       "cell_w": 190,
+       "cell_h": 170,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "7",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         },
+         {
+          "text": "12",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         },
+         {
+          "text": "1",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         },
+         {
+          "text": "14",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         }
+        ],
+        [
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         },
+         {
+          "text": "13",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         },
+         {
+          "text": "8",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         },
+         {
+          "text": "11",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         }
+        ],
+        [
+         {
+          "text": "16",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         },
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         },
+         {
+          "text": "10",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         },
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         }
+        ],
+        [
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         },
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         },
+         {
+          "text": "15",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         },
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 72,
+          "bold": false
+         }
+        ]
+       ]
+      }
+     ],
+     "labels": [],
+     "to_scale": false
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG. Draw one 4 x 4 grid of 16 equal cells, each 190 px wide and 170 px high, top-left corner at (580, 200), spanning x 580 to 1340 and y 200 to 880, centred on the canvas. Fill every cell with CELL_FILL and outline it with INK, 3 px. Write one number in every cell, centred in the cell, in INK, 72 px. Row 1 left to right: 7, 12, 1, 14; Row 2 left to right: 2, 13, 8, 11; Row 3 left to right: 16, 3, 10, 5; Row 4 left to right: 9, 6, 15, 4. This is the Chautisa Yantra magic square. Draw nothing else: no highlight, no ring, no sums.",
+    "visible_text": [
+     "7",
+     "12",
+     "1",
+     "14",
+     "2",
+     "13",
+     "8",
+     "11",
+     "16",
+     "3",
+     "10",
+     "5",
+     "9",
+     "6",
+     "15",
+     "4"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any shaded or ringed group of four cells",
+     "the sum 34",
+     "the photograph of the stone inscription"
+    ],
+    "accuracy_checks": [
+     "numbers 1 to 16 each once: 7,12,1,14 / 2,13,8,11 / 16,3,10,5 / 9,6,15,4",
+     "every row, column and both diagonals add to 34 (7+12+1+14, 2+13+8+11, 16+3+10+5, 9+6+15+4, 7+2+16+9, 12+13+3+6, 1+8+10+15, 14+11+5+4, 7+13+10+4, 14+8+3+9)"
+    ],
+    "alt_text": "A 4 by 4 grid holding the Chautisa Yantra: 7, 12, 1, 14 / 2, 13, 8, 11 / 16, 3, 10, 5 / 9, 6, 15, 4.",
+    "render_note": "Teaching concept image M3.S18.T18.C95.IMG1 shows the same grid with groups already coloured; it is not linked, and this question figure must stay plain."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C99",
+   "role": "solution",
+   "lp_book_number": "Chautisa Yantra: groups of four adding to 34",
+   "ncert_ref": "6.3.other_34_patterns",
+   "question_text": "Find other groups of four that add to 34.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The answer is groups of cells in the grid (corners, centre block, 2 x 2 block, broken diagonal); which cells form each group is shown only by marking them.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S19.T19.C99.IMG1",
+   "manim_scene": "c7_6_3_19_yantra_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S19.T19.C99.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S19.T19.C98.IMG1",
+    "content": {
+     "type": "cell_grid",
+     "canvas": {
+      "w": 1920,
+      "h": 1080,
+      "bg": "BG"
+     },
+     "grids": [
+      {
+       "id": "corners",
+       "origin": {
+        "x": 330,
+        "y": 120
+       },
+       "rows": 4,
+       "cols": 4,
+       "cell_w": 110,
+       "cell_h": 95,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "7",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         },
+         {
+          "text": "12",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "1",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "14",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         }
+        ],
+        [
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "13",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "8",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "11",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         }
+        ],
+        [
+         {
+          "text": "16",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "10",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         }
+        ],
+        [
+         {
+          "text": "9",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         },
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "15",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "4",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         }
+        ]
+       ],
+       "group_cells_row_col": [
+        [
+         1,
+         1
+        ],
+        [
+         1,
+         4
+        ],
+        [
+         4,
+         1
+        ],
+        [
+         4,
+         4
+        ]
+       ],
+       "group_values": [
+        7,
+        14,
+        9,
+        4
+       ],
+       "group_sum": 34
+      },
+      {
+       "id": "centre block",
+       "origin": {
+        "x": 1030,
+        "y": 120
+       },
+       "rows": 4,
+       "cols": 4,
+       "cell_w": 110,
+       "cell_h": 95,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "7",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "12",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "1",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "14",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         }
+        ],
+        [
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "13",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         },
+         {
+          "text": "8",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         },
+         {
+          "text": "11",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         }
+        ],
+        [
+         {
+          "text": "16",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "3",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         },
+         {
+          "text": "10",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         },
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         }
+        ],
+        [
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "15",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         }
+        ]
+       ],
+       "group_cells_row_col": [
+        [
+         2,
+         2
+        ],
+        [
+         2,
+         3
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         3,
+         3
+        ]
+       ],
+       "group_values": [
+        13,
+        8,
+        3,
+        10
+       ],
+       "group_sum": 34
+      },
+      {
+       "id": "top-left 2 x 2 block",
+       "origin": {
+        "x": 330,
+        "y": 580
+       },
+       "rows": 4,
+       "cols": 4,
+       "cell_w": 110,
+       "cell_h": 95,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "7",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         },
+         {
+          "text": "12",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         },
+         {
+          "text": "1",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "14",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         }
+        ],
+        [
+         {
+          "text": "2",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         },
+         {
+          "text": "13",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         },
+         {
+          "text": "8",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "11",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         }
+        ],
+        [
+         {
+          "text": "16",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "10",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "5",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         }
+        ],
+        [
+         {
+          "text": "9",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "15",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         }
+        ]
+       ],
+       "group_cells_row_col": [
+        [
+         1,
+         1
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         2,
+         2
+        ]
+       ],
+       "group_values": [
+        7,
+        12,
+        2,
+        13
+       ],
+       "group_sum": 34
+      },
+      {
+       "id": "broken diagonal",
+       "origin": {
+        "x": 1030,
+        "y": 580
+       },
+       "rows": 4,
+       "cols": 4,
+       "cell_w": 110,
+       "cell_h": 95,
+       "outline": {
+        "colour": "INK",
+        "width_px": 3
+       },
+       "cells": [
+        [
+         {
+          "text": "7",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "12",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         },
+         {
+          "text": "1",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "14",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         }
+        ],
+        [
+         {
+          "text": "2",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "13",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "8",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         },
+         {
+          "text": "11",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         }
+        ],
+        [
+         {
+          "text": "16",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "3",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "10",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "5",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         }
+        ],
+        [
+         {
+          "text": "9",
+          "fill": "MARK_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": {
+           "colour": "ANSWER",
+           "width_px": 6
+          }
+         },
+         {
+          "text": "6",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "15",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         },
+         {
+          "text": "4",
+          "fill": "CELL_FILL",
+          "text_colour": "INK",
+          "font_px": 48,
+          "outline": null
+         }
+        ]
+       ],
+       "group_cells_row_col": [
+        [
+         1,
+         2
+        ],
+        [
+         2,
+         3
+        ],
+        [
+         3,
+         4
+        ],
+        [
+         4,
+         1
+        ]
+       ],
+       "group_values": [
+        12,
+        8,
+        5,
+        9
+       ],
+       "group_sum": 34
+      }
+     ],
+     "labels": [
+      {
+       "text": "34",
+       "x": 840,
+       "y": 310,
+       "font_px": 64,
+       "colour": "ANSWER",
+       "bold": true
+      },
+      {
+       "text": "34",
+       "x": 1540,
+       "y": 310,
+       "font_px": 64,
+       "colour": "ANSWER",
+       "bold": true
+      },
+      {
+       "text": "34",
+       "x": 840,
+       "y": 770,
+       "font_px": 64,
+       "colour": "ANSWER",
+       "bold": true
+      },
+      {
+       "text": "34",
+       "x": 1540,
+       "y": 770,
+       "font_px": 64,
+       "colour": "ANSWER",
+       "bold": true
+      }
+     ],
+     "to_scale": false,
+     "panel_order": [
+      "corners",
+      "centre block",
+      "top-left 2 x 2 block",
+      "broken diagonal"
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080 px, background BG. Draw four panels in a 2 x 2 arrangement. Every panel is the Chautisa Yantra grid of the question figure M3.S19.T19.C98.IMG1 (same 4 x 4 numbers in the same positions: Row 1 left to right: 7, 12, 1, 14; Row 2 left to right: 2, 13, 8, 11; Row 3 left to right: 16, 3, 10, 5; Row 4 left to right: 9, 6, 15, 4), drawn with cells 110 px wide and 95 px high, INK 3 px outlines, INK numbers 48 px; cells outside the group keep the CELL_FILL fill. Panel 1 (corners): top-left corner at (330, 120), spanning x 330 to 770 and y 120 to 500; the cells (row, column) (1, 1), (1, 4), (4, 1), (4, 4), holding 7, 14, 9, 4, are filled MARK_FILL with an ANSWER 6 px outline; right of the panel, centred vertically on it at x = 840, write '34' in ANSWER, bold 64 px. Panel 2 (centre block): top-left corner at (1030, 120), spanning x 1030 to 1470 and y 120 to 500; the cells (row, column) (2, 2), (2, 3), (3, 2), (3, 3), holding 13, 8, 3, 10, are filled MARK_FILL with an ANSWER 6 px outline; right of the panel, centred vertically on it at x = 1540, write '34' in ANSWER, bold 64 px. Panel 3 (top-left 2 x 2 block): top-left corner at (330, 580), spanning x 330 to 770 and y 580 to 960; the cells (row, column) (1, 1), (1, 2), (2, 1), (2, 2), holding 7, 12, 2, 13, are filled MARK_FILL with an ANSWER 6 px outline; right of the panel, centred vertically on it at x = 840, write '34' in ANSWER, bold 64 px. Panel 4 (broken diagonal): top-left corner at (1030, 580), spanning x 1030 to 1470 and y 580 to 960; the cells (row, column) (1, 2), (2, 3), (3, 4), (4, 1), holding 12, 8, 5, 9, are filled MARK_FILL with an ANSWER 6 px outline; right of the panel, centred vertically on it at x = 1540, write '34' in ANSWER, bold 64 px. Draw nothing else: no words, no equations.",
+    "visible_text": [
+     "7",
+     "12",
+     "1",
+     "14",
+     "2",
+     "13",
+     "8",
+     "11",
+     "16",
+     "3",
+     "10",
+     "5",
+     "9",
+     "6",
+     "15",
+     "4",
+     "34",
+     "7",
+     "12",
+     "1",
+     "14",
+     "2",
+     "13",
+     "8",
+     "11",
+     "16",
+     "3",
+     "10",
+     "5",
+     "9",
+     "6",
+     "15",
+     "4",
+     "34",
+     "7",
+     "12",
+     "1",
+     "14",
+     "2",
+     "13",
+     "8",
+     "11",
+     "16",
+     "3",
+     "10",
+     "5",
+     "9",
+     "6",
+     "15",
+     "4",
+     "34",
+     "7",
+     "12",
+     "1",
+     "14",
+     "2",
+     "13",
+     "8",
+     "11",
+     "16",
+     "3",
+     "10",
+     "5",
+     "9",
+     "6",
+     "15",
+     "4",
+     "34"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the equations such as 7 + 14 + 9 + 4 = 34",
+     "arrows",
+     "more than one highlighted group in a panel"
+    ],
+    "accuracy_checks": [
+     "panel 1, four corners: 7 + 14 + 9 + 4 = 34",
+     "panel 2, centre block: 13 + 8 + 3 + 10 = 34",
+     "panel 3, top-left 2 x 2 block: 7 + 12 + 2 + 13 = 34",
+     "panel 4, broken diagonal that wraps round the edge (row 1 column 2, row 2 column 3, row 3 column 4, row 4 column 1): 12 + 8 + 5 + 9 = 34",
+     "the numbers and positions of the grid are identical to the question figure in every panel"
+    ],
+    "alt_text": "Four copies of the Chautisa Yantra, each with one group of four cells shaded that adds to 34: the four corners, the centre block, the top-left 2 by 2 block and the broken diagonal 12, 8, 5, 9.",
+    "render_note": "Four panels (not one grid) because the four groups share cells (7, 13, 12, 8, 9 each lie in two groups) and rings would overlap. Every panel reuses the question grid's numbers and cell order. The LP steps name four groups (the earlier author's hint named three)."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S21.T21.C104",
+   "role": "question",
+   "lp_book_number": "Virahanka Numbers: next terms after 55 and 89",
+   "ncert_ref": "6.4.next_after_55",
+   "question_text": "Write the next numbers after 55, then the next 3 after 89.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The sequence is a line of numbers in the book (text); no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S21.T21.C105",
+   "role": "solution",
+   "lp_book_number": "Virahanka Numbers: next terms after 55 and 89",
+   "ncert_ref": "6.4.next_after_55",
+   "question_text": "Write the next numbers after 55, then the next 3 after 89.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four additions and a number chain: LaTeX. (The book's printed answer line 144, 233, 3779 has a typo; the LP's 377 is right.)",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S21.T21.C106",
+   "role": "question",
+   "lp_book_number": "End of chapter, Q7",
+   "ncert_ref": "end.FiO7",
+   "question_text": "Two consecutive Virahanka numbers are 987 and 1597. Find the next 2 and the previous 2.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S21.T21.C107",
+   "role": "solution",
+   "lp_book_number": "End of chapter, Q7",
+   "ncert_ref": "end.FiO7",
+   "question_text": "Two consecutive Virahanka numbers are 987 and 1597. Find the next 2 and the previous 2.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four sums and differences and a sequence line printed as text in the book: LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: $\\ldots, 377, 610, 987, 1597, 2584, 4181, \\ldots$"
+  },
+  {
+   "lp_concept_id": "M4.S21.T21.C108",
+   "role": "question",
+   "lp_book_number": "End of chapter, Q8",
+   "ncert_ref": "end.FiO8",
+   "question_text": "Angaan climbs an 8-step staircase taking 1 or 2 steps at a time. In how many ways can he reach the top?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word problem with no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S21.T21.C109",
+   "role": "solution",
+   "lp_book_number": "End of chapter, Q8",
+   "ncert_ref": "end.FiO8",
+   "question_text": "Angaan climbs an 8-step staircase taking 1 or 2 steps at a time. In how many ways can he reach the top?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The book's printed answer is a plain 2-column table (example paths and counts 1, 7, 15, 10, 1) with no colour meaning; it stays a LaTeX table and the LP steps already carry the counts 1 + 7 + 15 + 10 + 1 = 34.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optional LaTeX array: columns 'number of 2-steps' 0, 1, 2, 3, 4 and 'ways' 1, 7, 15, 10, 1 (total 34); example paths 1,1,1,1,1,1,1,1 and 1,1,1,1,1,1,2 and 2,2,2,2."
+  },
+  {
+   "lp_concept_id": "M4.S23.T23.C112",
+   "role": "question",
+   "lp_book_number": "End of chapter, Q9",
+   "ncert_ref": "end.FiO9",
+   "question_text": "What is the parity of the 20th term of the Virahanka sequence?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S23.T23.C113",
+   "role": "solution",
+   "lp_book_number": "End of chapter, Q9",
+   "ncert_ref": "end.FiO9",
+   "question_text": "What is the parity of the 20th term of the Virahanka sequence?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A list of positions and one subtraction-free check: text and LaTeX. (The parity pattern is already a teaching image, M4.S22.T22.C110.IMG1.)",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S24.T24.C116",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "T10.D1.E3",
+   "question_text": "C1 + C = 1FF",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A column addition with letters is a LaTeX array; the place-value alignment is carried by the array and the steps give the digits. The column layout is already a teaching image (M5.S24.T24.C115.IMG1).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0,
+   "text_alternative": "LaTeX array column addition of C1 + C = 1FF (right-aligned columns, letters as printed)"
+  },
+  {
+   "lp_concept_id": "M5.S24.T24.C117",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "T10.D1.E2",
+   "question_text": "KP + KP = PRR",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A column addition with letters is a LaTeX array; the place-value alignment is carried by the array and the steps give the digits. The column layout is already a teaching image (M5.S24.T24.C115.IMG1).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0,
+   "text_alternative": "LaTeX array column addition of KP + KP = PRR (right-aligned columns, letters as printed)"
+  },
+  {
+   "lp_concept_id": "M5.S24.T24.C118",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "T10.D1.E1",
+   "question_text": "B5 + 3D = ED5",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A column addition with letters is a LaTeX array; the place-value alignment is carried by the array and the steps give the digits. The column layout is already a teaching image (M5.S24.T24.C115.IMG1).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0,
+   "text_alternative": "LaTeX array column addition of B5 + 3D = ED5 (right-aligned columns, letters as printed)"
+  },
+  {
+   "lp_concept_id": "M5.S25.T25.C120",
+   "role": "question",
+   "lp_book_number": "Cryptarithms: T + T + T = UT",
+   "ncert_ref": "6.5.TTT",
+   "question_text": "Solve T + T + T = UT.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A column addition with letters: LaTeX array (the book's picture is the stacked sum, already a teaching image M5.S24.T24.C114.IMG1).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array: T / T / + T / UT"
+  },
+  {
+   "lp_concept_id": "M5.S25.T25.C121",
+   "role": "solution",
+   "lp_book_number": "Cryptarithms: T + T + T = UT",
+   "ncert_ref": "6.5.TTT",
+   "question_text": "Solve T + T + T = UT.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Digit reasoning and 5 + 5 + 5 = 15 in text/LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S25.T25.C122",
+   "role": "question",
+   "lp_book_number": "Cryptarithms: YY + Z = ZOO",
+   "ncert_ref": "6.5.YY",
+   "question_text": "YY + Z = ZOO",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A column addition with letters: LaTeX array (already a teaching image, M5.S24.T24.C115.IMG1).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array: YY / + Z / ZOO"
+  },
+  {
+   "lp_concept_id": "M5.S25.T25.C123",
+   "role": "solution",
+   "lp_book_number": "Cryptarithms: YY + Z = ZOO",
+   "ncert_ref": "6.5.YY",
+   "question_text": "YY + Z = ZOO",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Digit reasoning and 99 + 1 = 100 in text/LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S25.T25.C124",
+   "role": "question",
+   "lp_book_number": "End of chapter, Q11",
+   "ncert_ref": "end.FiO11",
+   "question_text": "UT + TA = TAT",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A column addition with letters: LaTeX array (already a teaching image, M5.S24.T24.C115.IMG1).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array: UT / + TA / TAT"
+  },
+  {
+   "lp_concept_id": "M5.S25.T25.C125",
+   "role": "solution",
+   "lp_book_number": "End of chapter, Q11",
+   "ncert_ref": "end.FiO11",
+   "question_text": "UT + TA = TAT",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Digit reasoning and 91 + 10 = 101 in text/LaTeX; the book's printed answer is a text line (U = 9, T = 1, A = 0).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

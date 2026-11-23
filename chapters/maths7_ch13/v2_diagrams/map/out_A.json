@@ -1,0 +1,1595 @@
+{
+ "meta": {
+  "chapter": "Connecting the Dots...",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 13",
+  "lp_plan_id": "cbse_eng_maths7_ch13_v33",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "required": 2,
+    "optional": 0,
+    "none": 4
+   },
+   "question": {
+    "required": 2,
+    "optional": 0,
+    "none": 11
+   },
+   "solution": {
+    "required": 2,
+    "optional": 2,
+    "none": 9
+   }
+  },
+  "notes": [
+   "Chunk A: units 1 to 19 (topics M1.S2.T2 to M2.S12.T12, book pages 1 to 14).",
+   "Required: the onion dot plot of worked example C29, the Bookworm and Newspaper questions and solutions (empty frame, then the filled plot), and the two dot plots of the 'How long is a minute?' worked example C45.",
+   "Worked examples C29 and C45 duplicate the kept teaching images of the same concepts (same dot plots); v3 says a teaching image is never linked, so they get their own diagrams. Drop them if the duplication is unwanted.",
+   "Optional (not added): solution of C37 (dot plots with mean and median lines) and solution of C48 (whole-class dot plot with the 15 taller dots marked).",
+   "LP text to add: monthly price table in C28, height table in C47, and 'Mark the data, the mean and the median on the dot plot' in the questions C40 and C42 (needs_lp_text_sync).",
+   "LP defect: step 5 of M1.S6.T6.C17 says '4 gives 1 to 6'; it should read '6 gives 1 to 4'. The book prints 110 / 5 = 21 on p.3 (should be 22); the LP uses 22."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P02-table-1",
+   "source": "chapter p.02",
+   "description": "Plain 3 x 5 score table: Shubman 0, 17, 21, 90; Yashasvi 67, 55, 18, 35 (checked against the page picture). Data are also in the LP question text.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P03-table-1",
+   "source": "chapter p.03",
+   "description": "Plain 3 x 6 score table with a dash for Yashasvi's missed Match 4 (checked). Scores are also in the LP question text.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P04-pictograph-1",
+   "source": "chapter p.04",
+   "description": "Shreyas's guava stacks 3, 8, 10, 5, 4 levelled to 6 each (checked). Teaching illustration; the same levelling is the kept teaching image of M1.S5.T5.C11.",
+   "mapped_to": "concept_image:M1.S5.T5.C11.IMG1"
+  },
+  {
+   "fig_id": "P04-pictograph-2",
+   "source": "chapter p.04",
+   "description": "Parag's guava stacks 5, 4, 6, 3, 4, 8 levelled to 5 each (checked). Not in any teaching image (the kept image levels only Shreyas's group); the counts are in the LP question text.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P06-table-1",
+   "source": "chapter p.06",
+   "description": "Yahapur monthly onion prices, 12 rows (checked; total 458). Plain numbers.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P06-table-2",
+   "source": "chapter p.06",
+   "description": "Wahapur monthly onion prices, 12 rows (checked; total 450). Plain numbers.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P07-dot_plot-1",
+   "source": "chapter p.07",
+   "description": "Yahapur dot plot, 12 dots at 24, 25, 26, 28, 30, 35, 39, 43, 44, 49, 56, 59 (checked by position). Drawn in the worked example's own diagram.",
+   "mapped_to": "item:M2.S8.T8.C29 (question)"
+  },
+  {
+   "fig_id": "P07-dot_plot-2",
+   "source": "chapter p.07",
+   "description": "Wahapur dot plot, 12 diamonds at 17, 19, 23, 30, 35, 38, 39, 42, 42, 52, 53, 60 (checked by position; the two 42s are stacked). Drawn in the same diagram as the Yahapur plot.",
+   "mapped_to": "item:M2.S8.T8.C29 (question)"
+  },
+  {
+   "fig_id": "P10-dot_plot-1",
+   "source": "chapter p.10",
+   "description": "Yaangba's family dot plot with the mean line (checked: diamonds at 155, 160, 164, 165, 169, 173). Teaching figure of the two families.",
+   "mapped_to": "concept_image:M2.S9.T9.C32.IMG1"
+  },
+  {
+   "fig_id": "P10-dot_plot-2",
+   "source": "chapter p.10",
+   "description": "Poovizhi's family dot plot with the mean line (checked: circles at 118, 165, 170, 173, 175). Teaching figure of the two families.",
+   "mapped_to": "concept_image:M2.S9.T9.C32.IMG1"
+  },
+  {
+   "fig_id": "P10-dot_plot-3",
+   "source": "chapter p.10",
+   "description": "Yaangba's plot with mean 164.3 and median 164.5 (checked). The figure that would help the optional solution of M2.S10.T10.C37; mean and median are written in the LP steps.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P10-dot_plot-4",
+   "source": "chapter p.10",
+   "description": "Poovizhi's plot with mean 160.2 and median 170 (checked). The figure that would help the optional solution of M2.S10.T10.C37; mean and median are written in the LP steps.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P11-data_cards-1",
+   "source": "chapter p.11",
+   "description": "Fifteen paper slips with the story counts 6, 8, 5, 15, 3, 0, 2, 7, 12, 40, 0, 8, 10, 5, 1 (checked; same multiset as the LP list). All values are in the LP question text; slip colours carry no meaning.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P11-dot_plot-1",
+   "source": "chapter p.11",
+   "description": "Empty dot plot, 0 to 40 in steps of 5, 3 rows (checked at 3x zoom). Given in the book question: 'Mark the data, the mean, and the median'.",
+   "mapped_to": "item:M2.S10.T10.C40 (question)"
+  },
+  {
+   "fig_id": "NEW-P11-dot_plot-1-sol",
+   "source": "not printed (the book asks the learner to draw it)",
+   "description": "The same dot plot frame completed: 15 dots, mean 8.13 and median 6. Not printed in the book (no solutions section); it is the answer figure of M2.S10.T10.C41.",
+   "mapped_to": "item:M2.S10.T10.C41 (solution)"
+  },
+  {
+   "fig_id": "P12-dot_plot-1",
+   "source": "chapter p.12",
+   "description": "Empty dot plot, labels 0 to 25 in steps of 5, grid runs on to 30 with no label, 3 rows (checked at 4x zoom). Given in the book question: 'Mark the data, the mean, and the median'.",
+   "mapped_to": "item:M2.S10.T10.C42 (question)"
+  },
+  {
+   "fig_id": "NEW-P12-dot_plot-1-sol",
+   "source": "not printed (the book asks the learner to draw it)",
+   "description": "The same dot plot frame completed: 7 dots, mean 18.29 and median 18. Not printed in the book (no solutions section); it is the answer figure of M2.S10.T10.C43.",
+   "mapped_to": "item:M2.S10.T10.C43 (solution)"
+  },
+  {
+   "fig_id": "P13-table-1",
+   "source": "chapter p.13",
+   "description": "Grade 5 height table: 17 boys, 11 girls (checked; totals 2430 and 1616). Plain numbers; the LP question does not list them.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P13-dot_plot-1",
+   "source": "chapter p.13",
+   "description": "Whole-class dot plot, 28 dots, mean line 144.4 as printed (the exact mean is 144.5, the LP uses 144.5) and median 145 (checked). The figure that would help the optional solution of M2.S12.T12.C48; all numbers are in the LP text.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P13-dot_plot-2",
+   "source": "chapter p.13",
+   "description": "Boys dot plot, 17 dots, mean 142.94, median 144 (checked). Teaching figure; numbers are in the LP text.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P13-dot_plot-3",
+   "source": "chapter p.13",
+   "description": "Girls dot plot, 11 dots, mean 146.9, median 148 (checked). Teaching figure; numbers are in the LP text.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P14-dot_plot-1",
+   "source": "chapter p.14",
+   "description": "Group A dot plot: 33 dots, mean 58.21, median 60 (counts per value re-read at 4x zoom and confirmed: sum 1921, 17th value 60). Drawn as the first plot of the worked example's diagram.",
+   "mapped_to": "item:M2.S11.T11.C45 (question)"
+  },
+  {
+   "fig_id": "P14-dot_plot-2",
+   "source": "chapter p.14",
+   "description": "Group B dot plot: 28 dots, mean 59.28 as printed (59.2857 exactly), median 59.5 (counts per value re-read at 4x zoom and confirmed: sum 1660, 14th and 15th values 59 and 60). Drawn as the second plot of the same diagram.",
+   "mapped_to": "item:M2.S11.T11.C45 (question)"
+  },
+  {
+   "fig_id": "NEW-P01-statement-bubbles",
+   "source": "chapter p.01",
+   "description": "Six speech bubbles with plain sentences ('I take about 15 minutes to cycle from school to home.' and five more). No numbers to see or mark; the first sentence is quoted in the LP worked example.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 24,
+  "mapped_to_items": 8,
+  "mapped_to_concept_images": 3,
+  "mapped_none": 13,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M2.S8.T8.C29.IMG2",
+   "M2.S10.T10.C40.IMG1",
+   "M2.S10.T10.C41.IMG1",
+   "M2.S10.T10.C42.IMG1",
+   "M2.S10.T10.C43.IMG1",
+   "M2.S11.T11.C45.IMG2"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S2.T2.C3",
+   "role": "worked_example",
+   "lp_book_number": "Statistical statements around us",
+   "ncert_ref": "5.1.statements",
+   "question_text": "Read the statement 'I take about 15 minutes to cycle from school to home.' Why is it a statistical statement, and what data is behind it?",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example is about the wording of one verbal statement; the book gives no figure for it (the speech bubbles on page 1 are plain sentences) and the ride times are in the steps. The kept teaching image already shows the ride times.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C6",
+   "role": "question",
+   "lp_book_number": "Statistical Questions: sorting the seven",
+   "ncert_ref": "5.1.mathtalk_statq",
+   "question_text": "Which of these are statistical questions? (a) the price of a tennis ball in India (b) the ages of the dogs on this street (c) the fraction of your class who like walking up a hill (d) Do you like reading? (e) about how many bricks are in this wall (f) the best bowler in yesterday's match (g) the rainfall pattern in Barmer last year",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Seven verbal items (a) to (g) to sort; the book prints no figure and nothing needs to be seen.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "solution",
+   "lp_book_number": "Statistical Questions: sorting the seven",
+   "ncert_ref": "5.1.mathtalk_statq",
+   "question_text": "Which of these are statistical questions? (a) the price of a tennis ball in India (b) the ages of the dogs on this street (c) the fraction of your class who like walking up a hill (d) Do you like reading? (e) about how many bricks are in this wall (f) the best bowler in yesterday's match (g) the rainfall pattern in Barmer last year",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a statistical / not statistical label with a one-line reason for each item; the book prints no answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C8",
+   "role": "worked_example",
+   "lp_book_number": "Comparing two batters: highest score, total and range",
+   "ncert_ref": "5.2.series1",
+   "question_text": "Shubman scored 0, 17, 21 and 90 in four matches. Yashasvi scored 67, 55, 18 and 35. Compare them by highest score, total and the difference between the highest and lowest scores.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_TABLE"
+   ],
+   "reason": "Both players' four scores are in the question text; the book's 2 x 4 score table (P02-table-1) has no colour or marks, and the kept teaching image already shows the bars and totals.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "If a table is wanted, write a LaTeX array: Shubman 0, 17, 21, 90; Yashasvi 67, 55, 18, 35 (Matches 1 to 4)."
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C9",
+   "role": "worked_example",
+   "lp_book_number": "Unequal matches: the mean as one representative number",
+   "ncert_ref": "5.2.series2",
+   "question_text": "In the second series Shubman scored 23, 7, 10, 52 and 18 in 5 matches. Yashasvi scored 26, 53, 2 and 15 and did not play one match. Who performed better on average?",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_TABLE"
+   ],
+   "reason": "All scores are in the question text and the steps; the book's 2 x 5 score table (P03-table-1) is a plain table with one dash for the missed match, and the kept teaching image already shows the equal shares.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "If a table is wanted, write a LaTeX array: Shubman 23, 7, 10, 52, 18; Yashasvi 26, 53, 2, -, 15 (the dash is the match Yashasvi did not play, Match 4 in the book)."
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C14",
+   "role": "question",
+   "lp_book_number": "Fair Share: guavas in two groups",
+   "ncert_ref": "5.2.fair_share",
+   "question_text": "Shreyas's group of 5 collected 3, 8, 10, 5 and 4 guavas. Parag's group of 6 collected 5, 4, 6, 3, 4 and 8 guavas. Each group shares equally. In which group does each member get more?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Both groups' guava counts are written in the question; the book's guava stacks (P04) illustrate the working, not the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C15",
+   "role": "solution",
+   "lp_book_number": "Fair Share: guavas in two groups",
+   "ncert_ref": "5.2.fair_share",
+   "question_text": "Shreyas's group of 5 collected 3, 8, 10, 5 and 4 guavas. Parag's group of 6 collected 5, 4, 6, 3, 4 and 8 guavas. Each group shares equally. In which group does each member get more?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The solution is two sums and two divisions in LaTeX. The book's levelled-guava picture is a teaching illustration and the kept teaching image already levels Shreyas's group; a second picture would only repeat the arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C16",
+   "role": "question",
+   "lp_book_number": "Fair Share: hibiscus flowers per day",
+   "ncert_ref": "5.2.hibiscus",
+   "question_text": "Vaishnavi counted 2, 7, 9, 4 and 3 hibiscus flowers blooming on five days. Find the mean number of flowers per day and say what it means.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Five daily counts are in the question; the book's picture beside it is a girl and a hibiscus bush (decorative).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C17",
+   "role": "solution",
+   "lp_book_number": "Fair Share: hibiscus flowers per day",
+   "ncert_ref": "5.2.hibiscus",
+   "question_text": "Vaishnavi counted 2, 7, 9, 4 and 3 hibiscus flowers blooming on five days. Find the mean number of flowers per day and say what it means.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "One sum and one division; the book prints no answer picture. (LP defect: step 5 says '4 gives 1 to 6', it must be '6 gives 1 to 4'; see notes.)",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C18",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.2, Q1",
+   "ncert_ref": "5.2.FiO1_1",
+   "question_text": "Shreyas is playing with a bat and a ball, but not cricket. He counts the number of times he can bounce the ball on the bat before it falls to the ground. The data for 8 attempts is 6, 2, 9, 5, 4, 6, 3, 5. Calculate the average number of bounces of the ball that Shreyas is able to make with his bat.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "DECORATIVE_ONLY"
+   ],
+   "reason": "The eight bounce counts are in the question; the book's picture is a boy bouncing a ball on a bat (decorative).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C19",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.2, Q1",
+   "ncert_ref": "5.2.FiO1_1",
+   "question_text": "Shreyas is playing with a bat and a ball, but not cricket. He counts the number of times he can bounce the ball on the bat before it falls to the ground. The data for 8 attempts is 6, 2, 9, 5, 4, 6, 3, 5. Calculate the average number of bounces of the ball that Shreyas is able to make with his bat.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Sum 40 and 40 / 8 = 5 in LaTeX; the book prints no answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C20",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.2, Q2",
+   "ncert_ref": "5.2.FiO1_2",
+   "question_text": "Try the activity above on your own. Collect data for 7 or more attempts and find the average.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "A project: the learner collects their own bounce data; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C21",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.2, Q2",
+   "ncert_ref": "5.2.FiO1_2",
+   "question_text": "Try the activity above on your own. Collect data for 7 or more attempts and find the average.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The sample data 4, 7, 5, 9, 6, 3, 8 and its mean are written in the steps; no printed answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C22",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.2, Q3",
+   "ncert_ref": "5.2.FiO1_3",
+   "question_text": "Identify a flowering plant in your neighbourhood. Track the number of flowers that bloom every day over a week during its flowering season. What is the average number of flowers that bloomed per day?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "A week-long observation project; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C23",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.2, Q3",
+   "ncert_ref": "5.2.FiO1_3",
+   "question_text": "Identify a flowering plant in your neighbourhood. Track the number of flowers that bloom every day over a week during its flowering season. What is the average number of flowers that bloomed per day?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The sample data 3, 5, 4, 6, 2, 5, 3 and its mean are written in the steps; no printed answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C24",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.2, Q4",
+   "ncert_ref": "5.2.FiO1_4",
+   "question_text": "Two friends are training to run a 100 m race. Their running times over the past week are given in seconds: Nikhil: 17, 18, 17, 16, 19, 17, 18; Sunil: 20, 18, 18, 17, 16, 16, 17. Who on average ran quicker?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Both lists of seven running times are in the question; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C25",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.2, Q4",
+   "ncert_ref": "5.2.FiO1_4",
+   "question_text": "Two friends are training to run a 100 m race. Their running times over the past week are given in seconds: Nikhil: 17, 18, 17, 16, 19, 17, 18; Sunil: 20, 18, 18, 17, 16, 16, 17. Who on average ran quicker?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two totals of 122 and 122 / 7 in LaTeX; the book prints no answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C26",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.2, Q5",
+   "ncert_ref": "5.2.FiO1_5",
+   "question_text": "The enrolment in a school during six consecutive years was as follows: 1555, 1670, 1750, 2013, 2040, 2126. Find the mean enrolment in the school during this period.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The six enrolment numbers are in the question; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C27",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.2, Q5",
+   "ncert_ref": "5.2.FiO1_5",
+   "question_text": "The enrolment in a school during six consecutive years was as follows: 1555, 1670, 1750, 2013, 2040, 2126. Find the mean enrolment in the school during this period.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A sum of six numbers and 11154 / 6 = 1859 in LaTeX; the book prints no answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C28",
+   "role": "worked_example",
+   "lp_book_number": "Five ways to compare onion prices",
+   "ncert_ref": "5.2.onions_opinions",
+   "question_text": "Compare the onion prices of Yahapur and Wahapur by the highest price, the total, the range and the mean. Which town is costlier?",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The data live in the book's two 12-row price tables (P06-table-1 and P06-table-2): plain numbers with no colour meaning, so a LaTeX table. The question text does not list the monthly prices, so the table must be added to the text. The kept teaching image is a different 5-bar graph.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Add a LaTeX array with columns Month, Yahapur, Wahapur: Jan 25, 19; Feb 24, 17; Mar 26, 23; Apr 28, 30; May 30, 38; Jun 35, 35; Jul 39, 42; Aug 43, 39; Sep 49, 53; Oct 56, 60; Nov 59, 52; Dec 44, 42.",
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C29",
+   "role": "worked_example",
+   "lp_book_number": "Drawing the onion prices as a dot plot",
+   "ncert_ref": "5.2.dotplot",
+   "question_text": "Draw the 24 onion prices as a dot plot on a line from 10 to 60. What can it show, and what can it not show?",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The example is the drawing of the dot plot, and every step points at the picture (stack of 2 at 42, 39 in both towns, the 17 and 19 dots, the two ranges); the learner cannot follow the steps without it. The kept teaching image is never linked.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S8.T8.C29.IMG2",
+   "manim_scene": "c7_13_5_2_onion_dotplot_we",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C29.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "dot_plot",
+     "to_scale": true,
+     "frame": {
+      "x_min": 10,
+      "x_max": 62,
+      "vertical_grid_at": [
+       10,
+       20,
+       30,
+       40,
+       50,
+       60
+      ],
+      "labelled_ticks": [
+       10,
+       20,
+       30,
+       40,
+       50,
+       60
+      ],
+      "minor_tick_every": 2,
+      "dot_rows": 2,
+      "marker_diameter_in_units": 0.9,
+      "same_scale_in_both_plots": true
+     },
+     "axis_title": "Price of onions (in rupees per kg)",
+     "plots": [
+      {
+       "order": "top",
+       "row_label": "Yahapur",
+       "marker": "circle",
+       "colour": "SET_A",
+       "points": [
+        {
+         "value": 24,
+         "count": 1
+        },
+        {
+         "value": 25,
+         "count": 1
+        },
+        {
+         "value": 26,
+         "count": 1
+        },
+        {
+         "value": 28,
+         "count": 1
+        },
+        {
+         "value": 30,
+         "count": 1
+        },
+        {
+         "value": 35,
+         "count": 1
+        },
+        {
+         "value": 39,
+         "count": 1
+        },
+        {
+         "value": 43,
+         "count": 1
+        },
+        {
+         "value": 44,
+         "count": 1
+        },
+        {
+         "value": 49,
+         "count": 1
+        },
+        {
+         "value": 56,
+         "count": 1
+        },
+        {
+         "value": 59,
+         "count": 1
+        }
+       ],
+       "total_dots": 12
+      },
+      {
+       "order": "bottom",
+       "row_label": "Wahapur",
+       "marker": "diamond",
+       "colour": "SET_B",
+       "points": [
+        {
+         "value": 17,
+         "count": 1
+        },
+        {
+         "value": 19,
+         "count": 1
+        },
+        {
+         "value": 23,
+         "count": 1
+        },
+        {
+         "value": 30,
+         "count": 1
+        },
+        {
+         "value": 35,
+         "count": 1
+        },
+        {
+         "value": 38,
+         "count": 1
+        },
+        {
+         "value": 39,
+         "count": 1
+        },
+        {
+         "value": 42,
+         "count": 2
+        },
+        {
+         "value": 52,
+         "count": 1
+        },
+        {
+         "value": 53,
+         "count": 1
+        },
+        {
+         "value": 60,
+         "count": 1
+        }
+       ],
+       "total_dots": 12
+      }
+     ],
+     "stacking": "a repeated value stacks upward from the bottom row; only 42 in the Wahapur plot repeats",
+     "mean_line": null,
+     "median_line": null
+    },
+    "manim_description": "Draw two dot plots on a white 16:9 canvas, one above the other, with identical frame width and an identical horizontal scale from 10 to 62 rupees. Top plot: write the row label Yahapur in INK at the left of the frame. The frame is a rectangle outlined in GUIDE with a thick INK left edge at 10 and a thick INK baseline, two equal dot rows (a GUIDE line through the centre of each row) and vertical GUIDE grid lines at 10, 20, 30, 40, 50 and 60. Under the baseline draw small INK tick marks every 2 units from 10 to 60 and the INK labels 10, 20, 30, 40, 50, 60 centred under their grid lines. Place 12 filled circles in SET_A, each with a diameter of 0.9 unit, all in the bottom dot row at the values 24, 25, 26, 28, 30, 35, 39, 43, 44, 49, 56 and 59. Bottom plot: write the row label Wahapur in INK at the left of its frame; draw the same frame, grid lines, tick marks and labels. Place 12 filled diamonds in SET_B, each 0.9 unit wide, at the values 17, 19, 23, 30, 35, 38, 39, 42, 42, 52, 53 and 60; every diamond sits in the bottom dot row except the second 42, which is stacked directly above the first 42 in the second dot row. A value has the same horizontal position in both plots (39 is at the same x in both). Centre the INK axis title Price of onions (in rupees per kg) under the labels of the lower plot. No mean line, no median line, no call-out boxes.",
+    "visible_text": [
+     "Yahapur",
+     "Wahapur",
+     "10",
+     "20",
+     "30",
+     "40",
+     "50",
+     "60",
+     "Price of onions (in rupees per kg)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the book's call-out boxes ('Two of the values are 39 ...')",
+     "any mean or median line",
+     "month names"
+    ],
+    "accuracy_checks": [
+     "Yahapur has 12 circles at 24, 25, 26, 28, 30, 35, 39, 43, 44, 49, 56, 59: the 12 prices of the table, sum 458",
+     "Wahapur has 12 diamonds at 17, 19, 23, 30, 35, 38, 39, 42, 42, 52, 53, 60: the 12 prices of the table, sum 450",
+     "24 markers in all; 39 appears once in each plot; 42 appears twice in Wahapur as a stack of 2",
+     "Wahapur has exactly 2 values between 11 and 20 (17 and 19); Yahapur has none",
+     "Yahapur runs 24 to 59 (range 35); Wahapur runs 17 to 60 (range 43)",
+     "both plots use the same scale: equal pixel width per unit, the same x for the same value"
+    ],
+    "alt_text": "Two dot plots on a price line from 10 to 60: 12 circles for Yahapur from 24 to 59 and 12 diamonds for Wahapur from 17 to 60, with two stacked diamonds at 42.",
+    "render_note": "Same picture as the kept teaching image M2.S8.T8.C29.IMG1 (v3: never linked, so this block gets its own diagram). The book draws Yahapur in green and Wahapur in purple; here SET_A / SET_B plus circle / diamond are used so that colour is not the only cue. The book's call-out boxes are left out."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C36",
+   "role": "question",
+   "lp_book_number": "Heights of a Family: mean and median",
+   "ncert_ref": "5.2.family_height",
+   "question_text": "Find the mean and the median height of Yaangba's family (169, 173, 155, 165, 160, 164 cm) and of Poovizhi's family (170, 173, 165, 118, 175 cm). Which number represents each family better?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Both families' heights are listed in the question; the book gives no figure for the question itself.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C37",
+   "role": "solution",
+   "lp_book_number": "Heights of a Family: mean and median",
+   "ncert_ref": "5.2.family_height",
+   "question_text": "Find the mean and the median height of Yaangba's family (169, 173, 155, 165, 160, 164 cm) and of Poovizhi's family (170, 173, 165, 118, 175 cm). Which number represents each family better?",
+   "decision": "optional",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "OPTIONAL, not added: the answer is numbers and a choice, fully written in the steps. The figure that would help is the book's pair of dot plots (P10) with the mean line and the median line on each family: Yaangba 155, 160, 164, 165, 169, 173 (mean 164.33, median 164.5), Poovizhi 118, 165, 170, 173, 175 (mean 160.2, median 170).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C38",
+   "role": "question",
+   "lp_book_number": "Heights of a Family: without the outlier",
+   "ncert_ref": "5.2.outlier_def",
+   "question_text": "Find the mean and median of Poovizhi's family without the outlier 118 cm. What changes?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The five heights are written in the question (the LP's q_figure is only the same numbers in a row); the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C39",
+   "role": "solution",
+   "lp_book_number": "Heights of a Family: without the outlier",
+   "ncert_ref": "5.2.outlier_def",
+   "question_text": "Find the mean and median of Poovizhi's family without the outlier 118 cm. What changes?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Totals, divisions and a two-value median in LaTeX; the book prints no answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C40",
+   "role": "question",
+   "lp_book_number": "Bookworm: mean and median of stories read",
+   "ncert_ref": "5.2.bookworm",
+   "question_text": "Fifteen students read 6, 8, 5, 15, 3, 0, 2, 7, 12, 40, 10, 5, 0, 8 and 1 short stories. Find the mean and median, then find them again without the outlier.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The book gives an empty dot plot on which the learner must mark the data, the mean and the median (P11-dot_plot-1); the learner needs that frame to carry out the marking.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C40.IMG1",
+   "manim_scene": "c7_13_5_2_bookworm_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C40.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "dot_plot",
+     "state": "empty",
+     "to_scale": true,
+     "frame": {
+      "x_min": 0,
+      "x_max": 40,
+      "vertical_grid_at": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       25,
+       30,
+       35,
+       40
+      ],
+      "labelled_ticks": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       25,
+       30,
+       35,
+       40
+      ],
+      "dot_rows": 3,
+      "marker_diameter_in_units": 0.9
+     },
+     "axis_title": "Number of short stories read",
+     "points": [],
+     "mean_line": null,
+     "median_line": null
+    },
+    "manim_description": "Draw one empty dot plot frame on a white 16:9 canvas, with no dots, no mean line and no median line. The horizontal axis runs from 0 to 40. The frame is a rectangle with a thick INK left edge at 0 and a thick INK baseline, three equal horizontal bands (GUIDE lines at the top edge and two GUIDE lines inside, giving 3 dot rows), and vertical GUIDE grid lines at 0, 5, 10, 15, 20, 25, 30, 35 and 40; the line at 40 is the right edge. Under the baseline write the INK labels 0, 5, 10, 15, 20, 25, 30, 35, 40 centred under their grid lines, then centre the INK axis title Number of short stories read below the labels. Leave the frame completely empty.",
+    "visible_text": [
+     "0",
+     "5",
+     "10",
+     "15",
+     "20",
+     "25",
+     "30",
+     "35",
+     "40",
+     "Number of short stories read"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any dot, mean line or median line",
+     "the paper slips with the fifteen numbers"
+    ],
+    "accuracy_checks": [
+     "the plot has exactly 3 dot rows and 9 vertical grid lines at multiples of 5 from 0 to 40",
+     "every label is a multiple of 5 and sits under its grid line",
+     "no dot and no mean or median line is drawn"
+    ],
+    "alt_text": "An empty dot plot frame on a line from 0 to 40 in steps of 5, with three rows and no dots.",
+    "render_note": "The book also prints fifteen coloured paper slips above the frame; they are left out because the fifteen values are written in the question text (P11-data_cards-1). The LP question text does not say 'Mark the data, the mean and the median on the dot plot': add that sentence (needs_lp_text_sync)."
+   },
+   "text_alternative": "Add to the question text: 'Mark the data, the mean and the median on the dot plot below.'",
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C41",
+   "role": "solution",
+   "lp_book_number": "Bookworm: mean and median of stories read",
+   "ncert_ref": "5.2.bookworm",
+   "question_text": "Fifteen students read 6, 8, 5, 15, 3, 0, 2, 7, 12, 40, 10, 5, 0, 8 and 1 short stories. Find the mean and median, then find them again without the outlier.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The answer to 'mark the data, the mean and the median on the dot plot' is the filled plot itself; the LP's own s_figure describes it. It adds 15 dots and two lines to the question frame.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C41.IMG1",
+   "manim_scene": "c7_13_5_2_bookworm_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C41.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S10.T10.C40.IMG1",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "dot_plot",
+     "state": "filled",
+     "to_scale": true,
+     "frame": {
+      "x_min": 0,
+      "x_max": 40,
+      "vertical_grid_at": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       25,
+       30,
+       35,
+       40
+      ],
+      "labelled_ticks": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       25,
+       30,
+       35,
+       40
+      ],
+      "dot_rows": 3,
+      "marker_diameter_in_units": 0.9
+     },
+     "axis_title": "Number of short stories read",
+     "points": [
+      {
+       "value": 0,
+       "count": 2,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 1,
+       "count": 1,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 2,
+       "count": 1,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 3,
+       "count": 1,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 5,
+       "count": 2,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 6,
+       "count": 1,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 7,
+       "count": 1,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 8,
+       "count": 2,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 10,
+       "count": 1,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 12,
+       "count": 1,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 15,
+       "count": 1,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 40,
+       "count": 1,
+       "colour": "ANSWER",
+       "marker": "circle"
+      }
+     ],
+     "total_dots": 15,
+     "mean_line": {
+      "value": 8.13,
+      "exact": "122/15",
+      "style": "solid",
+      "colour": "ANSWER",
+      "legend": "Mean ≈ 8.13"
+     },
+     "median_line": {
+      "value": 6,
+      "style": "dashed",
+      "colour": "ANSWER",
+      "legend": "Median = 6"
+     }
+    },
+    "manim_description": "Redraw the question figure exactly as it is (same frame, grid lines, labels 0, 5, 10, 15, 20, 25, 30, 35, 40 and axis title Number of short stories read, same positions, all in INK and GUIDE) and add the answer in ANSWER green. Add 15 filled circles in ANSWER, each 0.9 unit wide, one per value, centred on the value; a repeated value stacks upward from the bottom row: 0 twice, 1 once, 2 once, 3 once, 5 twice, 6 once, 7 once, 8 twice, 10 once, 12 once, 15 once, 40 once. Draw a solid vertical ANSWER line through all three rows at x = 8.13 (the mean, 122 divided by 15) and a dashed vertical ANSWER line at x = 6 (the median), both reaching a little above the top edge and a little below the baseline. At the right of the frame draw a two-row legend: a short solid ANSWER line followed by the INK text Mean ≈ 8.13, and a short dashed ANSWER line followed by the INK text Median = 6.",
+    "visible_text": [
+     "0",
+     "5",
+     "10",
+     "15",
+     "20",
+     "25",
+     "30",
+     "35",
+     "40",
+     "Number of short stories read",
+     "Mean ≈ 8.13",
+     "Median = 6"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the recalculation without the outlier",
+     "an outlier tag"
+    ],
+    "accuracy_checks": [
+     "15 circles in all: counts per value 0:2, 1:1, 2:1, 3:1, 5:2, 6:1, 7:1, 8:2, 10:1, 12:1, 15:1, 40:1 (2+1+1+1+2+1+1+2+1+1+1+1 = 15)",
+     "sorted values 0, 0, 1, 2, 3, 5, 5, 6, 7, 8, 8, 10, 12, 15, 40 sum to 122; mean 122 / 15 = 8.133 so the solid line sits at 8.13",
+     "15 values: the median is the 8th value, 6, so the dashed line passes through the circle at 6",
+     "mean line is right of the median line (8.13 > 6): the high outlier 40 pulls the mean up"
+    ],
+    "alt_text": "The dot plot from 0 to 40 with 15 dots, a solid mean line at about 8.13 and a dashed median line at 6.",
+    "render_note": "Same frame as M2.S10.T10.C40.IMG1. The recalculation without 40 (mean 5.86, median 5.5) is a second calculation in the steps and is not drawn; the book only asks to mark the data, the mean and the median."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C42",
+   "role": "question",
+   "lp_book_number": "Newspaper Pages: mean and median of the week",
+   "ncert_ref": "5.2.same_page",
+   "question_text": "A newspaper had 16, 18, 20, 22, 26, 16 and 10 pages from Monday to Sunday. Find the mean and median and compare with the family heights and the stories read.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The book gives an empty dot plot on which the learner must mark the data, the mean and the median (P12-dot_plot-1); the learner needs that frame to carry out the marking. Same decision as the Bookworm question (sibling).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C42.IMG1",
+   "manim_scene": "c7_13_5_2_newspaper_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C42.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "dot_plot",
+     "state": "empty",
+     "to_scale": true,
+     "frame": {
+      "x_min": 0,
+      "x_max": 30,
+      "vertical_grid_at": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       25,
+       30
+      ],
+      "labelled_ticks": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       25
+      ],
+      "dot_rows": 3,
+      "marker_diameter_in_units": 0.9,
+      "note": "the right edge at 30 has a grid line but no label, as in the book"
+     },
+     "axis_title": "Number of pages",
+     "points": [],
+     "mean_line": null,
+     "median_line": null
+    },
+    "manim_description": "Draw one empty dot plot frame on a white 16:9 canvas, with no dots, no mean line and no median line. The horizontal axis runs from 0 to 30. The frame is a rectangle with a thick INK left edge at 0 and a thick INK baseline, three equal horizontal bands (GUIDE lines at the top edge and two GUIDE lines inside, giving 3 dot rows), and vertical GUIDE grid lines at 0, 5, 10, 15, 20, 25 and 30; the line at 30 is the right edge and carries no label. Under the baseline write the INK labels 0, 5, 10, 15, 20, 25 centred under their grid lines, then centre the INK axis title Number of pages below the labels. Leave the frame completely empty.",
+    "visible_text": [
+     "0",
+     "5",
+     "10",
+     "15",
+     "20",
+     "25",
+     "Number of pages"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any dot, mean line or median line",
+     "a label at 30",
+     "the newspaper clip-art"
+    ],
+    "accuracy_checks": [
+     "the plot has exactly 3 dot rows and 7 vertical grid lines at multiples of 5 from 0 to 30",
+     "labels exist only for 0, 5, 10, 15, 20, 25 (the right edge at 30 is unlabelled)",
+     "no dot and no mean or median line is drawn"
+    ],
+    "alt_text": "An empty dot plot frame on a line from 0 to 30 with labels 0 to 25 in steps of 5, with three rows and no dots.",
+    "render_note": "The book's grid runs one interval past the last label 25 (to 30) because the value 26 needs the room; the LP's q_figure says 'from 0 to 25', which cannot hold 26. The book's picture of tossed newspapers is left out. The LP question text does not say 'Mark the data, the mean and the median on the dot plot': add that sentence (needs_lp_text_sync)."
+   },
+   "text_alternative": "Add to the question text: 'Mark the data, the mean and the median on the dot plot below.'",
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C43",
+   "role": "solution",
+   "lp_book_number": "Newspaper Pages: mean and median of the week",
+   "ncert_ref": "5.2.same_page",
+   "question_text": "A newspaper had 16, 18, 20, 22, 26, 16 and 10 pages from Monday to Sunday. Find the mean and median and compare with the family heights and the stories read.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The answer to 'mark the data, the mean and the median on the dot plot' is the filled plot itself; the LP's own s_figure describes it. It adds 7 dots and two lines to the question frame. Same decision as the Bookworm solution (sibling).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C43.IMG1",
+   "manim_scene": "c7_13_5_2_newspaper_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C43.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S10.T10.C42.IMG1",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "dot_plot",
+     "state": "filled",
+     "to_scale": true,
+     "frame": {
+      "x_min": 0,
+      "x_max": 30,
+      "vertical_grid_at": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       25,
+       30
+      ],
+      "labelled_ticks": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       25
+      ],
+      "dot_rows": 3,
+      "marker_diameter_in_units": 0.9,
+      "note": "the right edge at 30 has a grid line but no label, as in the book"
+     },
+     "axis_title": "Number of pages",
+     "points": [
+      {
+       "value": 10,
+       "count": 1,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 16,
+       "count": 2,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 18,
+       "count": 1,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 20,
+       "count": 1,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 22,
+       "count": 1,
+       "colour": "ANSWER",
+       "marker": "circle"
+      },
+      {
+       "value": 26,
+       "count": 1,
+       "colour": "ANSWER",
+       "marker": "circle"
+      }
+     ],
+     "total_dots": 7,
+     "mean_line": {
+      "value": 18.29,
+      "exact": "128/7",
+      "style": "solid",
+      "colour": "ANSWER",
+      "legend": "Mean ≈ 18.29"
+     },
+     "median_line": {
+      "value": 18,
+      "style": "dashed",
+      "colour": "ANSWER",
+      "legend": "Median = 18"
+     }
+    },
+    "manim_description": "Redraw the question figure exactly as it is (same frame, grid lines, labels 0, 5, 10, 15, 20, 25 and axis title Number of pages, same positions, all in INK and GUIDE) and add the answer in ANSWER green. Add 7 filled circles in ANSWER, each 0.9 unit wide, one per value, centred on the value; a repeated value stacks upward from the bottom row: 10 once, 16 twice, 18 once, 20 once, 22 once, 26 once. Draw a solid vertical ANSWER line through all three rows at x = 18.29 (the mean, 128 divided by 7) and a dashed vertical ANSWER line at x = 18 (the median), both reaching a little above the top edge and a little below the baseline. At the right of the frame draw a two-row legend: a short solid ANSWER line followed by the INK text Mean ≈ 18.29, and a short dashed ANSWER line followed by the INK text Median = 18.",
+    "visible_text": [
+     "0",
+     "5",
+     "10",
+     "15",
+     "20",
+     "25",
+     "Number of pages",
+     "Mean ≈ 18.29",
+     "Median = 18"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a label at 30"
+    ],
+    "accuracy_checks": [
+     "7 circles in all: counts per value 10:1, 16:2, 18:1, 20:1, 22:1, 26:1 (1+2+1+1+1+1 = 7)",
+     "values sum to 128; mean 128 / 7 = 18.286 so the solid line sits at 18.29, a little right of the dashed line",
+     "7 values: the median is the 4th sorted value (10, 16, 16, 18, ...), 18, so the dashed line passes through the circle at 18",
+     "26 lies between the grid lines 25 and 30 and is drawn inside the frame"
+    ],
+    "alt_text": "The dot plot from 0 to 30 with 7 dots, two stacked at 16, a solid mean line at about 18.29 and a dashed median line at 18.",
+    "render_note": "Same frame as M2.S10.T10.C42.IMG1. Mean and median are 0.29 apart (about 14 px at 50 px per unit): keep the solid / dashed difference clear."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C45",
+   "role": "worked_example",
+   "lp_book_number": "How long is a minute? Two groups compared",
+   "ncert_ref": "5.2.minute",
+   "question_text": "The first group's 33 estimates run from 42 to 68 seconds, with mean ≈ 58.21 and median 60. The second group's 28 estimates run from 47 to 71 seconds, with mean ≈ 59.29 and median 59.5. Which group fared better?",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "FIG_REFERENCED"
+   ],
+   "reason": "The 61 individual estimates live only in the book's two dot plots (P14); the steps count them ('20 of the 33', 'the early estimates 42, 45, 46', '19 of 28') and the question only gives ranges, means and medians, so the learner needs the plots. The kept teaching image is never linked.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S11.T11.C45.IMG2",
+   "manim_scene": "c7_13_5_2_minute_we",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C45.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "dot_plot",
+     "to_scale": true,
+     "frame": {
+      "x_min": 40,
+      "x_max": 75,
+      "vertical_grid_at": [
+       40,
+       45,
+       50,
+       55,
+       60,
+       65,
+       70,
+       75
+      ],
+      "labelled_ticks": [
+       40,
+       45,
+       50,
+       55,
+       60,
+       65,
+       70
+      ],
+      "dot_rows": 4,
+      "marker_diameter_in_units": 0.9,
+      "same_scale_in_both_plots": true,
+      "note": "the right edge at 75 has a grid line but no label, as in the book"
+     },
+     "axis_title": "Time (in seconds)",
+     "plots": [
+      {
+       "order": "top",
+       "row_label": "First group",
+       "marker": "circle",
+       "colour": "SET_A",
+       "points": [
+        {
+         "value": 42,
+         "count": 1
+        },
+        {
+         "value": 45,
+         "count": 1
+        },
+        {
+         "value": 46,
+         "count": 1
+        },
+        {
+         "value": 47,
+         "count": 1
+        },
+        {
+         "value": 51,
+         "count": 2
+        },
+        {
+         "value": 53,
+         "count": 1
+        },
+        {
+         "value": 54,
+         "count": 1
+        },
+        {
+         "value": 55,
+         "count": 2
+        },
+        {
+         "value": 56,
+         "count": 1
+        },
+        {
+         "value": 57,
+         "count": 1
+        },
+        {
+         "value": 58,
+         "count": 2
+        },
+        {
+         "value": 59,
+         "count": 2
+        },
+        {
+         "value": 60,
+         "count": 4
+        },
+        {
+         "value": 61,
+         "count": 2
+        },
+        {
+         "value": 62,
+         "count": 3
+        },
+        {
+         "value": 63,
+         "count": 1
+        },
+        {
+         "value": 64,
+         "count": 1
+        },
+        {
+         "value": 65,
+         "count": 1
+        },
+        {
+         "value": 66,
+         "count": 2
+        },
+        {
+         "value": 67,
+         "count": 1
+        },
+        {
+         "value": 68,
+         "count": 2
+        }
+       ],
+       "total_dots": 33,
+       "mean_line": {
+        "value": 58.21,
+        "style": "solid",
+        "colour": "INK",
+        "legend": "Mean ≈ 58.21"
+       },
+       "median_line": {
+        "value": 60,
+        "style": "dashed",
+        "colour": "INK",
+        "legend": "Median = 60"
+       }
+      },
+      {
+       "order": "bottom",
+       "row_label": "Second group",
+       "marker": "circle",
+       "colour": "SET_B",
+       "points": [
+        {
+         "value": 47,
+         "count": 1
+        },
+        {
+         "value": 49,
+         "count": 1
+        },
+        {
+         "value": 50,
+         "count": 2
+        },
+        {
+         "value": 53,
+         "count": 1
+        },
+        {
+         "value": 55,
+         "count": 1
+        },
+        {
+         "value": 56,
+         "count": 2
+        },
+        {
+         "value": 57,
+         "count": 2
+        },
+        {
+         "value": 58,
+         "count": 1
+        },
+        {
+         "value": 59,
+         "count": 3
+        },
+        {
+         "value": 60,
+         "count": 3
+        },
+        {
+         "value": 61,
+         "count": 4
+        },
+        {
+         "value": 63,
+         "count": 1
+        },
+        {
+         "value": 64,
+         "count": 1
+        },
+        {
+         "value": 65,
+         "count": 1
+        },
+        {
+         "value": 68,
+         "count": 1
+        },
+        {
+         "value": 69,
+         "count": 1
+        },
+        {
+         "value": 71,
+         "count": 2
+        }
+       ],
+       "total_dots": 28,
+       "mean_line": {
+        "value": 59.29,
+        "exact": "1660/28",
+        "style": "solid",
+        "colour": "INK",
+        "legend": "Mean ≈ 59.29"
+       },
+       "median_line": {
+        "value": 59.5,
+        "style": "dashed",
+        "colour": "INK",
+        "legend": "Median = 59.5"
+       }
+      }
+     ],
+     "stacking": "a repeated value stacks upward from the bottom row; the tallest stack is 4 dots (60 in the first group, 61 in the second)"
+    },
+    "manim_description": "Draw two dot plots on a white 16:9 canvas, one above the other, with identical frame width and an identical horizontal scale from 40 to 75 seconds. Top plot: write the row label First group in INK at the left of the frame. The frame is a rectangle outlined in GUIDE with a thick INK baseline, four equal dot rows (a GUIDE line through the centre of each row and one at the top edge) and vertical GUIDE grid lines at 40, 45, 50, 55, 60, 65, 70 and 75; the line at 75 is the right edge and carries no label. Under the baseline write the INK labels 40, 45, 50, 55, 60, 65, 70 centred under their grid lines. Place 33 filled circles in SET_A, each 0.9 unit wide, centred on the value, a repeated value stacking upward from the bottom row: 42 once, 45 once, 46 once, 47 once, 51 twice, 53 once, 54 once, 55 twice, 56 once, 57 once, 58 twice, 59 twice, 60 4 times, 61 twice, 62 3 times, 63 once, 64 once, 65 once, 66 twice, 67 once, 68 twice. Draw a solid vertical INK line through all four rows at x = 58.21 (the mean) and a dashed vertical INK line at x = 60 (the median), both reaching a little above the top edge and a little below the baseline. To the right of the frame draw the legend: a short solid INK line followed by the INK text Mean ≈ 58.21 and a short dashed INK line followed by the INK text Median = 60. Bottom plot: write the row label Second group in INK at the left of its frame; draw the same frame, grid lines and labels. Place 28 filled circles in SET_B, each 0.9 unit wide, centred on the value, a repeated value stacking upward from the bottom row: 47 once, 49 once, 50 twice, 53 once, 55 once, 56 twice, 57 twice, 58 once, 59 3 times, 60 3 times, 61 4 times, 63 once, 64 once, 65 once, 68 once, 69 once, 71 twice. Draw a solid vertical INK line at x = 59.29 (the mean) and a dashed vertical INK line at x = 59.5 (the median), and to the right of the frame the legend: a short solid INK line followed by the INK text Mean ≈ 59.29 and a short dashed INK line followed by the INK text Median = 59.5. A value has the same horizontal position in both plots. Centre the INK axis title Time (in seconds) under the labels of the lower plot.",
+    "visible_text": [
+     "First group",
+     "Second group",
+     "40",
+     "45",
+     "50",
+     "55",
+     "60",
+     "65",
+     "70",
+     "Time (in seconds)",
+     "Mean ≈ 58.21",
+     "Median = 60",
+     "Mean ≈ 59.29",
+     "Median = 59.5"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the stopwatch picture",
+     "a label at 75",
+     "range brackets or counts such as 20 of 33"
+    ],
+    "accuracy_checks": [
+     "first group: 33 circles, sum 1921, mean 1921 / 33 = 58.21, the 17th sorted value is 60 (median 60), minimum 42, maximum 68",
+     "second group: 28 circles, sum 1660, mean 1660 / 28 = 59.286 (59.29), the 14th and 15th sorted values are 59 and 60 (median 59.5), minimum 47, maximum 71",
+     "first group: 20 of the 33 circles lie between 55 and 65 inclusive; second group: 19 of the 28",
+     "first group: the four lowest circles are at 42, 45, 46 and 47; second group: two circles at 71 and one at 47",
+     "both plots use the same scale: equal pixel width per second, the same x for the same value"
+    ],
+    "alt_text": "Two dot plots of seconds from 40 to 70: 33 dots for the first group and 28 dots for the second group, each with a solid mean line and a dashed median line near 60.",
+    "render_note": "Counts per value read from the page picture at 4x zoom and cross-checked: sums 1921 and 1660, medians 60 and 59.5. Group names follow the LP ('First group' / 'Second group'; the book says Group A / Group B). The book prints the second mean as 59.28 (truncated); the LP says 59.29 (1660 / 28 = 59.2857), so 59.29 is drawn. Same picture as the kept teaching image M2.S11.T11.C45.IMG1 (v3: never linked, so this block gets its own diagram)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C47",
+   "role": "question",
+   "lp_book_number": "How Tall is Your Class: students above the mean",
+   "ncert_ref": "5.2.grade5_heights",
+   "question_text": "A Grade 5 class has 17 boys and 11 girls with the heights in the table. Compare boys and girls, and count the students, and the boys, taller than the class mean.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The data are the book's 2-row height table (P13-table-1): plain numbers, so a LaTeX table; the question text says 'heights in the table' but does not list them, so the table must be added to the text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Add a LaTeX array: Boys 147, 135, 130, 154, 128, 135, 134, 158, 155, 146, 146, 142, 140, 141, 144, 145, 150; Girls 143, 136, 150, 144, 154, 140, 145, 148, 156, 150, 150.",
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C48",
+   "role": "solution",
+   "lp_book_number": "How Tall is Your Class: students above the mean",
+   "ncert_ref": "5.2.grade5_heights",
+   "question_text": "A Grade 5 class has 17 boys and 11 girls with the heights in the table. Compare boys and girls, and count the students, and the boys, taller than the class mean.",
+   "decision": "optional",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "OPTIONAL, not added: the counts (8 boys and 7 girls above 144.5) are fully written in the steps. The figure that would help is the book's whole-class dot plot (P13) with the mean line at 144.5 and the 15 dots above it marked (boys 128 ... 158 in SET_A, girls 136 ... 156 in SET_B).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+# Chunk B notes (Class 7 Ch 4, units 16-31)
+
+Result: 31 items = 7 required (4 question, 3 solution), 0 optional, 24 none. Validator: errors 0, warnings 0.
+Diagrams: Example 6 first part (C59 q, C60 sol), Example 6 second part (C63 q, C64 sol), Example 10 (C83 q, C84 sol), Example 11 (C85 q).
+
+## 1. Judgement calls
+
+- **Example 6 first part, C59 (question required).** The LP question already states the heights, widths and even the areas 4v and 3v in words, so a text-only reading is possible. I made it required because the book question is "split into two smaller rectangles *as shown*" and the whole point of the example is the area model; it also matches its lettered sibling C63. If you want text-only, flip C59 and C60 to none (TEXT_SUFFICIENT); the question figure only repeats the numbers in the text.
+- **Example 6 solutions, C60 and C64 (solution required).** The solution adds visual content to the figure (part areas, the widths 4 + 3 = 7 or 12 - 4 = 8, the shaded piece AEFD, 4n, 8n) so the two ways can be seen on it; the book prints no answer picture. Both are kept the same (sibling consistency). Weakest of my seven: an `optional` reading is defensible ("figure would help but the text is complete"). Both are derived_from their question diagram.
+- **Example 10, C83 and C84 (both required).** Clear: the book asks to fill the blanks of two arrow diagrams, and the printed answer (page 29) is the two filled diagrams. Each item gets ONE 16:9 picture that holds both stars side by side (the brief allows one diagram per side). The book's red/blue arrow-label colours are dropped (all INK; they carry no meaning).
+- **Example 11, C85 (question required, solution none).** The LP question describes the tile picture in words, but the book question is "the sum of the numbers in the picture" and the three ways (rows, like terms, upper half) read off the layout. The same picture is the teaching image M2.S19.T19.C80.IMG1 of the earlier topic T19; per v3 it is not linked and the item gets its own diagram. The solution only restates the picture with three expressions, so SAME_AS_QUESTION_DIAGRAM (a colour-grouped copy would be a nicety, not needed).
+- **Unit 20 worked example, C53 (none).** Text gives l and b; the book's own picture is an empty rectangle (l and b appear only in text), and the concept already keeps its labelled teaching image C53.IMG1 which is never linked. A second identical rectangle in the same card would only duplicate it. P07-shape-2 is mapped to that concept image (accounting only). Other chunks' worked examples inside teaching concepts may be decided differently; I did not coordinate.
+- **Plain tables, none.** Example 5 table (P08-table-1, used by C57 and C61) and the two Example 7 tables (P10-table-2/3, C69) are plain tables with the numbers already in the LP question text: LATEX_TABLE. `text_alternative` says which LaTeX array to write if the tables are wanted.
+- **Mind the Mistake cards, none (C51).** Nine rounded boxes with one claim each, position carries no meaning, all nine claims are in the three LP blocks: NUMBER_LIST_IN_BOXES / TEXT_SUFFICIENT. The earlier author's `s_figure` hint (nine corrected cards) is not followed: the book prints no answer picture for these cards, and the LP answer is text. Consistent with the later Mind the Mistake table (plain table, none).
+- **No question figure invented.** C45-C50, C71-C78 have no book figure and stay none on both sides.
+- **NEW- inventory entries.** `NEW-P09-shape-1-sol` and `NEW-P10-shape-1-sol` are the second uses (solution diagrams) of the two Example 6 book pictures, per the "a figure used by two items is two entries" rule. They exist only in this chunk; the merger can keep or drop them (dropping needs C60/C64 to stay claimed by something, otherwise the only effect is a 'required but no inventory figure' warning).
+- **Not claimed here (belong to chunk C, unit 32/34):** P13-arrow_diagram-1/2 and P29-arrow_diagram-3/4 (Math Talk 10y - 3 versus 10(y - 3)), P29-number_tiles-5/6/7 and P14-pattern-1/2/3 (Figure it Out Q1). All other base figures of pages 7-13 and the answers on page 29 for Example 10 are claimed.
+
+Geometry choices stated in the specs: Example 6 widths drawn 4 : 3 and the second figure drawn AB 12 : AE 8 : EB 4 (drawn 9 : 6 : 3); the heights v and n are not to scale (the book draws them freely). Colour: question content INK, solution additions ANSWER green, shaded piece AEFD MARK_FILL, tile squares MARK_FILL and circles CELL_FILL.
+
+## 2. Things in the LP that look wrong or thin
+
+- **M1.S12.T12.C52, block E2, claim 7**: "The claim 2 likely subtracts the numbers 3 and 1 before multiplying." Subtracting first and then multiplying by 2 gives 2 x (3 - 1) = 4, which is the correct value. The claimed 2 comes from 3 - 1 with the factors 2 left out. Suggest: "likely subtracts 3 and 1 and forgets the 2s".
+- **C52, block E2, claim 9**: "The claim 4 likely drops the sign of the bracket" - 5 - 3 - 6 = -4, so the claim matches only in size; wording is loose (e.g. "likely subtracts 3 and 6 separately and loses the sign").
+- **M2.S20.T20.C83 question text** ("Replace u by 11, 8, 2 and 5 in 5u and in 5 + u ...") does not tell the learner to fill the boxes of the two diagrams, and does not mention that the book gives the u = 2 case (10 and 7) as the example. With the diagram placed after the text this works, but a sentence "fill the boxes of the two diagrams; the u = 2 values are given" would help (LP text sync, not flagged as required).
+- **M2.S14.T14.C57 (Example 5 question)** covers only the pencil part of the book question; the eraser part and the total are in M2.S15.T15.C61. Fine, but C57 is therefore shown without the eraser row of the book table.
+- **C59** states "areas 4v and 3v" in the question; the book gives them after the figure as part of the explanation. The question figure follows the book (only v, 4, 3), the solution figure adds the areas.
+- **Item numbering**: the LP `book_number` strings are descriptive titles, not NCERT numbers; `ncert_ref` in the map is built as "Section <4.3|4.4> - <title>".
+
+## 3. Where the book is unclear
+
+- Page 10 figure (rectangle ABCD): the printed dashed line sits at about 70 % of AB although AE : AB = 8 : 12 = 66.7 %; the label 12 is printed left of the middle of the AB arrow although the arrow spans A to B. I drew the exact proportions and put 12 in the middle.
+- Page 9 figure: part widths 4 and 3 are drawn about 4 : 3 (left about 163 px, right about 130 px); height v is arbitrary. The book's grey fill and the callout bubble ("Another way of seeing the distributive property") are left out.
+- Page 7 (before 4.4): the book draws an empty rectangle with no labels; l and b are introduced only in the text of the next page (so that figure is a teaching figure, see C53).
+- The brief says the PDF has no printed-solutions section, but pages 26-41 do hold printed answers; the only one used here is page 29 (Example 10, the two filled diagrams). The 5u and 5 + u values (55, 10, 40, 25; 16, 7, 13, 10) match the LP solution text.

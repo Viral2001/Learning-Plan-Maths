@@ -1,0 +1,3868 @@
+{
+ "meta": {
+  "chapter": "Operations with Integers",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 10",
+  "lp_plan_id": "cbse_eng_maths7_ch10_v69",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "none": 37,
+    "required": 3
+   },
+   "solution": {
+    "none": 34,
+    "optional": 4,
+    "required": 2
+   },
+   "worked_example": {
+    "none": 27,
+    "required": 7,
+    "optional": 1
+   }
+  },
+  "notes": [
+   "[chunk A] Chunk A (topics M1.S3.T3 to M2.S11.T11): 2 required (Try This question figures; Math Talk token sets), 2 optional, rest text.",
+   "[chunk A] Teaching figures of the carrom, token-subtraction and token-bag narrative are accounted to the 18 concept images and not drawn again; the two figures the book GIVES in a question (Try This, Math Talk sets) are drawn.",
+   "[chunk A] Token colours in the C30 diagram (#6CC24A, #E8643C) are not in the style table; the signs + and - also tell the tokens apart.",
+   "[chunk B] Chunk B: topics M2.S12.T12, M2.S13.T13, M2.S14.T14, M2.S15.T15, M3.S17.T17, M3.S18.T18, M3.S19.T19, M3.S20.T20 (12 pairs, 8 worked examples, 32 items).",
+   "[chunk B] Only the three Magic Grid worked examples (C70, C71, C72) get a diagram; every other item is text/LaTeX. One solution (T12 Q1, token method) is optional.",
+   "[chunk B] Base figures of the token sets (P08-token_set-1..3) and the (-4) x 2 token block (P09-token_grid-1) belong to chunk A (M2.S10.T10.C30 and C32) and are not claimed here.",
+   "[chunk B] See map/notes_B.md for judgement calls and LP problems.",
+   "[chunk C] Chunk C: topics M3.S21.T21, M4.S22.T22, M4.S23.T23, M4.S24.T24, M5.S25.T25 to M5.S29.T29 (20 units, 30 items).",
+   "[chunk C] Required: T21 grid question and solution (C73, C74), worked example C100 (token rectangle), T29 Example 2 solution C105 (token arrangement). Everything else is arithmetic or words: none.",
+   "[chunk C] Token fills TOKEN_POS #5FB36B and TOKEN_NEG #E8744F are not in the style table; use the same two in every token picture.",
+   "[chunk C] Base P15-number_grid-1 is also in the book section of chunk B (T20 C71); this chunk uses a NEW- id for its own (second) use.",
+   "[chunk C] P22-table-1 (Summary sign-rule table) and P23-game_board-1 are in no unit of this chunk and are not claimed here.",
+   "[chunk D] Chunk D: topics M5.S30.T30, S31.T31, S32.T32, S33.T33, S35.T35, S36.T36 (13 units, 24 items).",
+   "[chunk D] Only the three 'machine' pictures of the book are drawn (Machine 1 and Machine 2 worked examples, Figure it Out Q7); everything else is arithmetic or word reasoning and stays text/LaTeX.",
+   "[chunk D] Judgement call for the reviewer: the LP text already lists the rows of the Figure it Out Q7 machine, so a text-only reading is also defensible; the figure is required because the book question is 'the machine shown below'.",
+   "[chunk D] Collatz (Figure it Out Q5): the book and the LP question text print 32 after 11; the rule gives -32 (the LP solution says so). No figure is drawn for it, so the slip is not copied into a picture.",
+   "[chunk D] Machine figures are drawn with the same panel geometry; the three rule checks (a + b - c, -(a x b) - c, a - b x c) and the three hidden last-row values (-13, -111, -70) were recomputed."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "NEW-P15-number_grid-1-T21",
+   "source": "chapter p.15",
+   "description": "Second use of the book's 4 × 4 magic grid (base P15-number_grid-1 / P14-number_grid-1: row 1: 8, −4, 12, −6; row 2: −28, 14, −42, 21; row 3: 12, −6, 18, −9; row 4: 20, −10, 30, −15, no circles or lines) by the T21 'Try again' question; checked against page_15.png, description is right. The base ids stay with the chunk that holds T20 (first use, C70 / C71).",
+   "mapped_to": "item:M3.S21.T21.C73 (question)"
+  },
+  {
+   "fig_id": "P01-table-1",
+   "source": "chapter p.01",
+   "description": "Plain 4-column table First Number, Second Number, Sum, Difference with the guesses 10/15, 20/5, 19/6, 18/7 (last row bold).",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P02-number_line-1",
+   "source": "chapter p.02",
+   "description": "Number line 0 to 12 with a coin over 4 and a rightward arrow spanning 3 units from 4 to 7 (carrom coin, first strike 4, second 3).",
+   "mapped_to": "concept_image:M1.S5.T5.C8.IMG1"
+  },
+  {
+   "fig_id": "P02-number_line-2",
+   "source": "chapter p.02",
+   "description": "Generic coin picture: arcs a then b to the right from 0 to P, with P = a + b.",
+   "mapped_to": "concept_image:M1.S5.T5.C8.IMG1"
+  },
+  {
+   "fig_id": "P03-number_line-1",
+   "source": "chapter p.03",
+   "description": "Coin at 0 on a line marked -ve and +ve with one left arrow and one right arrow above it.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P03-number_line-2",
+   "source": "chapter p.03",
+   "description": "Integer number line from -5 to 6 with -ve and +ve ends, no coin.",
+   "mapped_to": "concept_image:M1.S5.T5.C10.IMG1"
+  },
+  {
+   "fig_id": "P04-number_line-1",
+   "source": "chapter p.04",
+   "description": "Try This figure 1: a goes right from 0, longer b comes back left, final P left of 0.",
+   "mapped_to": "item:M1.S7.T7.C17 (question)"
+  },
+  {
+   "fig_id": "P04-number_line-2",
+   "source": "chapter p.04",
+   "description": "Try This figure 2: long a goes right from 0, shorter b comes back left, final P right of 0.",
+   "mapped_to": "item:M1.S7.T7.C17 (question)"
+  },
+  {
+   "fig_id": "P04-number_line-3",
+   "source": "chapter p.04",
+   "description": "Try This figure 3: a goes left from 0 and b comes back right over the same span, P = 0.",
+   "mapped_to": "item:M1.S7.T7.C17 (question)"
+  },
+  {
+   "fig_id": "P05-token_key-1",
+   "source": "chapter p.05",
+   "description": "Inline icons: a green + token for positive 1 and a red - token for negative 1.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P05-token_row-2",
+   "source": "chapter p.05",
+   "description": "A row of 7 green + tokens.",
+   "mapped_to": "concept_image:M1.S8.T8.C19.IMG1"
+  },
+  {
+   "fig_id": "P05-token_row-3",
+   "source": "chapter p.05",
+   "description": "18 green tokens over 11 red tokens placed under greens 8 to 18 (11 zero pairs added).",
+   "mapped_to": "concept_image:M1.S8.T8.C19.IMG1"
+  },
+  {
+   "fig_id": "P05-token_row-4",
+   "source": "chapter p.05",
+   "description": "Same 18 greens and 11 reds with a line struck through all 18 greens; 11 reds remain.",
+   "mapped_to": "concept_image:M1.S8.T8.C19.IMG1"
+  },
+  {
+   "fig_id": "P06-token_bags-1",
+   "source": "chapter p.06",
+   "description": "Four bags with 2 green tokens each, brace and caption 'Two green tokens 4 times = 8', 4 x 2 = 8.",
+   "mapped_to": "concept_image:M2.S10.T10.C26.IMG1"
+  },
+  {
+   "fig_id": "P06-token_bags-2",
+   "source": "chapter p.06",
+   "description": "Four bags with 2 red tokens each, caption 'Two red tokens 4 times = -8', 4 x (-2) = -8, callouts Multiplier, Multiplicand, Product.",
+   "mapped_to": "concept_image:M2.S10.T10.C26.IMG1"
+  },
+  {
+   "fig_id": "P07-token_bags-1",
+   "source": "chapter p.07",
+   "description": "Four bags, each with 2 greens (struck) beside 2 reds: (-4) x 2 = -8.",
+   "mapped_to": "concept_image:M2.S10.T10.C28.IMG1"
+  },
+  {
+   "fig_id": "P07-token_bags-2",
+   "source": "chapter p.07",
+   "description": "Four bags, each with 2 greens beside 2 reds (struck): (-4) x (-2) = 8.",
+   "mapped_to": "concept_image:M2.S10.T10.C28.IMG1"
+  },
+  {
+   "fig_id": "P08-token_set-1",
+   "source": "chapter p.08",
+   "description": "Math Talk set (a): 2 red tokens in one row.",
+   "mapped_to": "item:M2.S10.T10.C30 (question)"
+  },
+  {
+   "fig_id": "P08-token_set-2",
+   "source": "chapter p.08",
+   "description": "Math Talk set (b): bottom row red, red, green, green and 2 reds above the greens.",
+   "mapped_to": "item:M2.S10.T10.C30 (question)"
+  },
+  {
+   "fig_id": "P08-token_set-3",
+   "source": "chapter p.08",
+   "description": "Math Talk set (c): bottom row red, red, 4 greens and 4 reds above the greens.",
+   "mapped_to": "item:M2.S10.T10.C30 (question)"
+  },
+  {
+   "fig_id": "P09-pattern-2",
+   "source": "chapter p.09",
+   "description": "Five-line list 4 x 3 = 12 ... 0 x 3 = 0 with four -3 arrows (checked against the page picture: correct)",
+   "mapped_to": "concept_image:M2.S13.T13.C42.IMG1"
+  },
+  {
+   "fig_id": "P09-pattern-3",
+   "source": "chapter p.09",
+   "description": "Eight-line list 4 x 3 = 12 ... -3 x 3 = -9 with seven -3 arrows (checked: correct)",
+   "mapped_to": "concept_image:M2.S13.T13.C42.IMG1"
+  },
+  {
+   "fig_id": "P09-pattern-4",
+   "source": "chapter p.09",
+   "description": "Five-line list 4 x (-3) = -12 ... 0 x (-3) = 0 with four +3 arrows (checked: correct)",
+   "mapped_to": "concept_image:M2.S13.T13.C43.IMG1"
+  },
+  {
+   "fig_id": "P09-token_grid-1",
+   "source": "chapter p.09",
+   "description": "8 red tokens in 4 rows of 2 beside the text (-4) x 2 (adding 2 reds to the empty bag 4 times).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P10-pattern-1",
+   "source": "chapter p.10",
+   "description": "Eight-line list 4 x (-3) = -12 ... (-3) x (-3) = 9 with seven +3 arrows (checked: correct)",
+   "mapped_to": "concept_image:M2.S13.T13.C43.IMG1"
+  },
+  {
+   "fig_id": "P10-table-2",
+   "source": "chapter p.10",
+   "description": "Times-3 table: four columns of ten equations, no colour or marks (checked: correct); plain table, not needed by C45",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P11-table-1",
+   "source": "chapter p.11",
+   "description": "Swap table of 4 rows x 2 columns of equations with three blanks (checked: correct); plain table, the blanks of C47 are written in its question",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P13-scene-1",
+   "source": "chapter p.13",
+   "description": "Mine-shaft illustration with levels +180, +125, +100, +40, 0, -50, -80, -125, -175 m (checked: correct); scene only, Example 2 data is in the text; already the teaching image C56.IMG1",
+   "mapped_to": "concept_image:M3.S16.T16.C56.IMG1"
+  },
+  {
+   "fig_id": "P14-flowchart-2",
+   "source": "chapter p.14",
+   "description": "Three-box procedure flow chart: circle any number / strike out its row and column / circle any unstruck number, with a repeat arrow (checked: correct); the same steps are written in words in the LP",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P14-number_grid-1",
+   "source": "chapter p.14",
+   "description": "The 4 x 4 magic grid 8, -4, 12, -6 / -28, 14, -42, 21 / 12, -6, 18, -9 / 20, -10, 30, -15, no marks (checked: correct)",
+   "mapped_to": "item:M3.S20.T20.C70 (question)"
+  },
+  {
+   "fig_id": "P14-number_grid-3",
+   "source": "chapter p.14",
+   "description": "Four copies of the grid titled Round 1 to Round 4; as printed, Rounds 1 to 3 show the same three circles (-6, 14, 20) and the same six lines (rows 1, 2, 4; columns 4, 2, 1), Round 4 adds a circle on 18 (checked on the page picture, agreeing with the base note: correct). Item C70 draws this final state once.",
+   "mapped_to": "item:M3.S20.T20.C70 (question)"
+  },
+  {
+   "fig_id": "P15-number_grid-1",
+   "source": "chapter p.15",
+   "description": "The same 16-number grid as p.14 ('Play the same game with the grid below'), no marks (checked: identical numbers); basis of the C71 headed grid",
+   "mapped_to": "item:M3.S20.T20.C71 (question)"
+  },
+  {
+   "fig_id": "P18-integer_tokens-1",
+   "source": "chapter p.18",
+   "description": "Token rectangle for 4 × (2 + (−3)): left box 8 green + tokens (4 rows × 2), right box 12 red − tokens (4 rows × 3), braces 4 × (2 + (−3)) above, 4 × 2 and 4 × (−3) below. Checked against page_18.png: counts and labels are right. Drawn for the worked example M5.S28.T28.C100 (the 'Try This' on the same page is a different figure: the LP solution of C105).",
+   "mapped_to": "item:M5.S28.T28.C100 (question)"
+  },
+  {
+   "fig_id": "P18-machine-1",
+   "source": "chapter p.18",
+   "description": "Machine 1 panel, 6 rows (5,8,3 -> 10; 10,11,12 -> 9; 5,8,-3 -> 16; -3,10,2 -> 5; -4,-1,-6 -> 1; -10,-12,-9 -> empty star); operation circles empty. Base description checked against page_18.png: correct.",
+   "mapped_to": "item:M5.S31.T31.C112 (question)"
+  },
+  {
+   "fig_id": "P18-machine-2",
+   "source": "chapter p.18",
+   "description": "Machine 2 panel, 6 rows (4,8,-3 -> -29; 6,-11,12 -> 54; 5,3,7 -> -22; -3,9,-8 -> 35; -7,4,6 -> 22; -10,-12,-9 -> empty star); operation circles empty. Base description checked against page_18.png: correct.",
+   "mapped_to": "item:M5.S31.T31.C113 (question)"
+  },
+  {
+   "fig_id": "P19-flow-1",
+   "source": "chapter p.19",
+   "description": "Collatz example chain in two rows with a loop-back arrow: -7, 22, 11, 32 (printed 32; the rule gives -32), -16, -8, -4, then -2, -1, 4, 2, 1 and back to -2. Base description checked against page_19.png: correct, including the 32 print slip.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P20-machine-1",
+   "source": "chapter p.20",
+   "description": "Unnumbered machine of Figure it Out Q7, 6 rows (4,8,-3 -> 28; 6,9,6 -> -48; 2,3,-2 -> 8; -9,5,-8 -> 31; 7,-4,-6 -> -17; -16,-6,-9 -> empty star). Base description checked against page_20.png: correct.",
+   "mapped_to": "item:M5.S33.T33.C119 (question)"
+  },
+  {
+   "fig_id": "P21-blank_expression-1",
+   "source": "chapter p.21",
+   "description": "Three equations with empty boxes for Figure it Out Q16: (a) box + box x box = -36; (b) (box - box) x box = 12; (c) (box - (box - box)) = -1. Base description checked against page_21.png: correct.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P22-table-1",
+   "source": "chapter p.22",
+   "description": "Summary page: the 7 x 7 sign-rule table printed beside summary bullets 1 and 2. A plain table of products (print slip in column 4, rows 5-7 noted in the base inventory); no LP question or worked example uses it. Claimed at merge because it belongs to no unit.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P23-game_board-1",
+   "source": "chapter p.23",
+   "description": "Puzzle Time: the Terhuchu game board at the starting position. The game is described in the book text only and no LP question or worked example is built on it. Claimed at merge because it belongs to no unit.",
+   "mapped_to": "none:OPEN_ENDED"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 40,
+  "mapped_to_items": 14,
+  "mapped_to_concept_images": 15,
+  "mapped_none": 11,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S7.T7.C17.IMG1",
+   "M2.S10.T10.C30.IMG2",
+   "M3.S20.T20.C70.IMG2",
+   "M3.S20.T20.C71.IMG2",
+   "M3.S20.T20.C72.IMG1",
+   "M3.S21.T21.C73.IMG1",
+   "M3.S21.T21.C74.IMG1",
+   "M5.S28.T28.C100.IMG2",
+   "M5.S29.T29.C105.IMG1",
+   "M5.S31.T31.C112.IMG2",
+   "M5.S31.T31.C113.IMG2",
+   "M5.S33.T33.C119.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S3.T3.C4",
+   "role": "question",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.1.rakesh",
+   "question_text": "Find two numbers whose sum is 25 and whose difference is 11. || Find two numbers whose sum is 25 and whose difference is −11.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The sum and the difference are stated in words; the book's guess table is the working, not something the question gives.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C5",
+   "role": "solution",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.1.rakesh",
+   "question_text": "Find two numbers whose sum is 25 and whose difference is 11. || Find two numbers whose sum is 25 and whose difference is −11.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The trial pairs are a plain table of numbers (First Number, Second Number, Sum, Difference) with no colour meaning; bold only marks the right pair.",
+   "text_alternative": "LaTeX array, columns First Number, Second Number, Sum, Difference; rows 10, 15, 25, -5; 20, 5, 25, 15; 19, 6, 25, 13; 18, 7, 25, 11 (last row bold); for the second block one row 7, 18, 25, -11.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C6",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.1, Q1",
+   "ncert_ref": "2.1.FiO",
+   "question_text": "Let us try to find a few more pairs of numbers from their sums and differences: (a) Sum = 27, Difference = 9 (b) Sum = 4, Difference = 12 (c) Sum = 0, Difference = 10 (d) Sum = 0, Difference = −10 (e) Sum = −7, Difference = −1 (f) Sum = −7, Difference = −13",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six sum and difference pairs are written in words; the book draws no figure for them.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C7",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.1, Q1",
+   "ncert_ref": "2.1.FiO",
+   "question_text": "Let us try to find a few more pairs of numbers from their sums and differences: (a) Sum = 27, Difference = 9 (b) Sum = 4, Difference = 12 (c) Sum = 0, Difference = 10 (d) Sum = 0, Difference = −10 (e) Sum = −7, Difference = −1 (f) Sum = −7, Difference = −13",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Each part is two short equations; a plain table of the six pairs covers it.",
+   "text_alternative": "LaTeX array, columns part, first number, second number, sum, difference: (a) 18, 9, 27, 9; (b) 8, -4, 4, 12; (c) 5, -5, 0, 10; (d) -5, 5, 0, -10; (e) -4, -3, -7, -1; (f) -10, 3, -7, -13.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C8",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "2.1.carrom_right",
+   "question_text": "The coin starts at 0. The first strike moves it 4 units right and the second 3 units right. Where does it stop?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Both strikes are stated in the question (4 right, 3 right); the book's 0 to 12 line with the coin is a teaching figure, already the concept image C8.IMG1 of this same concept (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C9",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": null,
+   "question_text": "Write a formula for the final position after strikes of a units and b units to the right.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Asks for a formula in words and symbols; the book's arcs a, b and P are a teaching figure that concept image C8.IMG1 (caption P = a + b, same topic) already shows.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C10",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "2.1.carrom_both",
+   "question_text": "The first movement is 5 units right and the second 7 units left. Where is the coin?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question states 5 right and 7 left; the book's number line from -5 to 6 is a teaching figure, already the concept image C10.IMG1 of this same concept (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C11",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E3",
+   "ncert_ref": null,
+   "question_text": "What do the magnitude and the direction of the movement −4 tell us?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Magnitude 4 and direction left are answered in words; the book has no figure for this question.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C13",
+   "role": "question",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.1.carrom_Q1",
+   "question_text": "If the first movement is −4 and the final position is 5, what is the second movement?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "First movement -4 and final position 5 are given in words; the book prints no figure with this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C14",
+   "role": "solution",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.1.carrom_Q1",
+   "question_text": "If the first movement is −4 and the final position is 5, what is the second movement?",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer (9 to the right) is complete in words and arithmetic. One number line with a single arc from -4 to 5 would help but is not needed, and the book draws none.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C15",
+   "role": "question",
+   "lp_book_number": "Example 2",
+   "ncert_ref": "2.1.carrom_Q2",
+   "question_text": "The movements are 1, −2, 3, −4, and so on up to −10. Where does the coin end?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The movements 1, -2, 3, -4 up to -10 are given in words; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C16",
+   "role": "solution",
+   "lp_book_number": "Example 2",
+   "ncert_ref": "2.1.carrom_Q2",
+   "question_text": "The movements are 1, −2, 3, −4, and so on up to −10. Where does the coin end?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Five pairs that each sum to -1, then a sum of five -1 terms: arithmetic for LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C17",
+   "role": "question",
+   "lp_book_number": "Try This (section 2.1)",
+   "ncert_ref": "2.1.TryThis",
+   "question_text": "From the figures below, what can you conclude about the magnitudes of a and b compared to each other, and what are their directions? Remember to start from 0. Figure 1: jump a goes right from 0, jump b comes back left, and the coin ends at P left of 0. Figure 2: jump a goes right from 0, jump b comes back left, and the coin ends at P right of 0. Figure 3: jump a goes left from 0, jump b comes back right, and the coin ends at P, which is 0.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question asks for conclusions 'from the figures below': the three number lines (jumps a and b from 0, final position P) are the question's data, and the arc lengths and directions are compared by sight.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S7.T7.C17.IMG1",
+   "manim_scene": "c7_10_2_1_trythis_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S7.T7.C17.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "layout": "three strips stacked top to bottom (Figure 1, 2, 3), GUIDE divider lines at y = 1.5 and y = -1.5",
+     "frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ]
+     },
+     "to_scale": false,
+     "numeric_scale_printed": false,
+     "rows": [
+      {
+       "row": 1,
+       "band_y": [
+        1.5,
+        4.5
+       ],
+       "baseline_y": 2.5,
+       "line_x": [
+        -7.2,
+        7.2
+       ],
+       "arrowheads": "both ends",
+       "left_label": "−ve",
+       "right_label": "+ve",
+       "dot_zero_x": 1.0,
+       "P_x": -0.4,
+       "dashed_coin_x": 3.8,
+       "unit": 1.4,
+       "a_units": 2,
+       "b_units": -3,
+       "to_scale": false,
+       "arcs": {
+        "a": {
+         "start": [
+          1.0,
+          3.1
+         ],
+         "end": [
+          3.65,
+          3.1
+         ],
+         "centre_x": 2.325,
+         "half_width": 1.325,
+         "height": 0.55,
+         "apex_y": 3.65,
+         "label_xy": [
+          2.325,
+          3.4
+         ],
+         "outer": false,
+         "direction": "right"
+        },
+        "b": {
+         "start": [
+          3.95,
+          3.1
+         ],
+         "end": [
+          -0.4,
+          3.1
+         ],
+         "centre_x": 1.775,
+         "half_width": 2.175,
+         "height": 0.9,
+         "apex_y": 4.0,
+         "label_xy": [
+          1.775,
+          4.28
+         ],
+         "outer": true,
+         "direction": "left"
+        }
+       }
+      },
+      {
+       "row": 2,
+       "band_y": [
+        -1.5,
+        1.5
+       ],
+       "baseline_y": -0.5,
+       "line_x": [
+        -7.2,
+        7.2
+       ],
+       "arrowheads": "both ends",
+       "left_label": "−ve",
+       "right_label": "+ve",
+       "dot_zero_x": -3.4,
+       "P_x": -1.0,
+       "dashed_coin_x": 2.2,
+       "unit": 0.8,
+       "a_units": 7,
+       "b_units": -4,
+       "to_scale": false,
+       "arcs": {
+        "a": {
+         "start": [
+          -3.4,
+          0.1
+         ],
+         "end": [
+          2.32,
+          0.1
+         ],
+         "centre_x": -0.54,
+         "half_width": 2.86,
+         "height": 0.9,
+         "apex_y": 1.0,
+         "label_xy": [
+          -0.54,
+          1.28
+         ],
+         "outer": true,
+         "direction": "right"
+        },
+        "b": {
+         "start": [
+          2.08,
+          0.1
+         ],
+         "end": [
+          -1.0,
+          0.1
+         ],
+         "centre_x": 0.54,
+         "half_width": 1.54,
+         "height": 0.55,
+         "apex_y": 0.65,
+         "label_xy": [
+          0.54,
+          0.4
+         ],
+         "outer": false,
+         "direction": "left"
+        }
+       }
+      },
+      {
+       "row": 3,
+       "band_y": [
+        -4.5,
+        -1.5
+       ],
+       "baseline_y": -3.5,
+       "line_x": [
+        -7.2,
+        7.2
+       ],
+       "arrowheads": "both ends",
+       "left_label": "−ve",
+       "right_label": "+ve",
+       "dot_zero_x": 0.0,
+       "P_x": 0.0,
+       "dashed_coin_x": -4.2,
+       "unit": 1.4,
+       "a_units": -3,
+       "b_units": 3,
+       "to_scale": false,
+       "arcs": {
+        "a": {
+         "start": [
+          0.12,
+          -2.9
+         ],
+         "end": [
+          -4.32,
+          -2.9
+         ],
+         "centre_x": -2.1,
+         "half_width": 2.22,
+         "height": 0.9,
+         "apex_y": -2.0,
+         "label_xy": [
+          -2.1,
+          -1.72
+         ],
+         "outer": true,
+         "direction": "left"
+        },
+        "b": {
+         "start": [
+          -4.08,
+          -2.9
+         ],
+         "end": [
+          -0.12,
+          -2.9
+         ],
+         "centre_x": -2.1,
+         "half_width": 1.98,
+         "height": 0.55,
+         "apex_y": -2.35,
+         "label_xy": [
+          -2.1,
+          -2.6
+         ],
+         "outer": false,
+         "direction": "right"
+        }
+       }
+      }
+     ],
+     "coin_solid": {
+      "radius": 0.3,
+      "fill": "MARK_FILL",
+      "outline": "INK"
+     },
+     "coin_dashed": {
+      "radius": 0.3,
+      "fill": "CELL_FILL",
+      "outline": "GUIDE dashed"
+     },
+     "rule": "row 1: a right, b left, |b| > |a|, P left of 0; row 2: a right, b left, |a| > |b|, P right of 0; row 3: a left, b right, |a| = |b|, P = 0"
+    },
+    "manim_description": "16:9 canvas, frame x from -8 to 8 and y from -4.5 to 4.5, BG background, text height 0.3 (sans-serif, labels INK). Three number-line strips stacked top to bottom, separated by two GUIDE lines (2 px) at y = 1.5 and y = -1.5 running from x = -7.4 to x = 7.4. The strips are Figure 1 (top), Figure 2 (middle) and Figure 3 (bottom) of the question; no numbers or letters mark the strips. No numeric scale is drawn: positions are proportional jumps only. In each strip a coin starts at 0, is struck by jump a, then by jump b, and stops at P. Row 1 (band y from 1.5 to 4.5, baseline y = 2.5). Draw a straight INK line, 3 px, from x = -7.2 to x = 7.2 at y = 2.5 with an arrowhead at both ends. Under the left end write \"−ve\" centred at (-6.5, 2.15) and under the right end write \"+ve\" centred at (6.5, 2.15). Draw a filled INK dot (radius 0.07) at (1, 2.5) and write \"0\" centred at (1, 2.15). Draw a filled INK dot (radius 0.07) at (-0.4, 2.5) for the final position and write \"P\" centred at (-0.4, 2.15). Draw the solid coin (circle radius 0.3, fill MARK_FILL, INK outline 3 px) centred at (-0.4, 2.8), sitting on the dot at P. Draw the dashed coin (circle radius 0.3, fill CELL_FILL, GUIDE dashed outline 2.5 px) centred at (3.8, 2.8); it has no dot and no label. Arc a: INK half-ellipse, 3 px, from (1, 3.1) to (3.65, 3.1), horizontal semi-axis 1.325, height 0.55 above its end points (apex y = 3.65), arrowhead at the end point pointing down, so the jump runs rightwards. Arc b: INK half-ellipse, 3 px, from (3.95, 3.1) to (-0.4, 3.1), horizontal semi-axis 2.175, height 0.9 above its end points (apex y = 4), arrowhead at the end point pointing down, so the jump runs leftwards. Write the italic letter \"a\" centred at (2.325, 3.4), directly under the apex of its arc. Write the italic letter \"b\" centred at (1.775, 4.28), above the apex of its arc. Row 2 (band y from -1.5 to 1.5, baseline y = -0.5). Draw a straight INK line, 3 px, from x = -7.2 to x = 7.2 at y = -0.5 with an arrowhead at both ends. Under the left end write \"−ve\" centred at (-6.5, -0.85) and under the right end write \"+ve\" centred at (6.5, -0.85). Draw a filled INK dot (radius 0.07) at (-3.4, -0.5) and write \"0\" centred at (-3.4, -0.85). Draw a filled INK dot (radius 0.07) at (-1, -0.5) for the final position and write \"P\" centred at (-1, -0.85). Draw the solid coin (circle radius 0.3, fill MARK_FILL, INK outline 3 px) centred at (-1, -0.2), sitting on the dot at P. Draw the dashed coin (circle radius 0.3, fill CELL_FILL, GUIDE dashed outline 2.5 px) centred at (2.2, -0.2); it has no dot and no label. Arc a: INK half-ellipse, 3 px, from (-3.4, 0.1) to (2.32, 0.1), horizontal semi-axis 2.86, height 0.9 above its end points (apex y = 1), arrowhead at the end point pointing down, so the jump runs rightwards. Arc b: INK half-ellipse, 3 px, from (2.08, 0.1) to (-1, 0.1), horizontal semi-axis 1.54, height 0.55 above its end points (apex y = 0.65), arrowhead at the end point pointing down, so the jump runs leftwards. Write the italic letter \"a\" centred at (-0.54, 1.28), above the apex of its arc. Write the italic letter \"b\" centred at (0.54, 0.4), directly under the apex of its arc. Row 3 (band y from -4.5 to -1.5, baseline y = -3.5). Draw a straight INK line, 3 px, from x = -7.2 to x = 7.2 at y = -3.5 with an arrowhead at both ends. Under the left end write \"−ve\" centred at (-6.5, -3.85) and under the right end write \"+ve\" centred at (6.5, -3.85). Draw a filled INK dot (radius 0.07) at (0, -3.5) and write \"0\" centred at (0, -3.85). The final position P is the same point as 0: write \"P\" centred at (0, -4.22), directly below the \"0\". Draw the solid coin (circle radius 0.3, fill MARK_FILL, INK outline 3 px) centred at (0, -3.2), sitting on the dot at 0. Draw the dashed coin (circle radius 0.3, fill CELL_FILL, GUIDE dashed outline 2.5 px) centred at (-4.2, -3.2); it has no dot and no label. Arc a: INK half-ellipse, 3 px, from (0.12, -2.9) to (-4.32, -2.9), horizontal semi-axis 2.22, height 0.9 above its end points (apex y = -2), arrowhead at the end point pointing down, so the jump runs leftwards. Arc b: INK half-ellipse, 3 px, from (-4.08, -2.9) to (-0.12, -2.9), horizontal semi-axis 1.98, height 0.55 above its end points (apex y = -2.35), arrowhead at the end point pointing down, so the jump runs rightwards. Write the italic letter \"a\" centred at (-2.1, -1.72), above the apex of its arc. Write the italic letter \"b\" centred at (-2.1, -2.6), directly under the apex of its arc.",
+    "visible_text": [
+     "−ve",
+     "P",
+     "0",
+     "+ve",
+     "a",
+     "b",
+     "−ve",
+     "0",
+     "P",
+     "+ve",
+     "a",
+     "b",
+     "−ve",
+     "0",
+     "P",
+     "+ve",
+     "a",
+     "b"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "figure numbers 1, 2, 3 or the word Figure",
+     "any numeric scale, tick marks or tick values",
+     "numbers or lengths for the jumps a and b",
+     "the words greater, equal, magnitude, positive or negative",
+     "a coin drawn at 0 at the start"
+    ],
+    "accuracy_checks": [
+     "Row 1: 0 at x = 1.0, a = +2 units of 1.4 so the dashed coin is at x = 3.8, b = -3 units so P = 1.0 + 2.8 - 4.2 = -0.4: P is left of 0 and |b| (4.2) > |a| (2.8)",
+     "Row 2: 0 at x = -3.4, a = +7 units of 0.8 (5.6) so the dashed coin is at x = 2.2, b = -4 units (3.2) so P = -3.4 + 5.6 - 3.2 = -1.0: P is right of 0 and |a| (5.6) > |b| (3.2)",
+     "Row 3: 0 = P at x = 0.0, a = -3 units of 1.4 so the dashed coin is at x = -4.2, b = +3 units brings it back: |a| = |b| = 4.2",
+     "Arrowheads: a points right in rows 1 and 2 and left in row 3; b points left in rows 1 and 2 and right in row 3",
+     "Row 3 has the 0 and the P labels on the same x, P below 0; nothing is printed that gives the answer"
+    ],
+    "alt_text": "Three number lines: in the first the coin goes right by a then left by a longer b and ends left of 0; in the second it goes right by a then left by a shorter b and ends right of 0; in the third a left jump and a right jump of the same length bring it back to 0.",
+    "render_note": "Proportions follow the book's three figures (page 4); the book prints no scale, so the units 1.4, 0.8, 1.4 are drawing proportions only. Rows are told apart by their top-to-bottom order, as the question's Figure 1, 2, 3; the figure numbers are not drawn (v3 rule: no figure letters or numbers)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C18",
+   "role": "solution",
+   "lp_book_number": "Try This (section 2.1)",
+   "ncert_ref": "2.1.TryThis",
+   "question_text": "From the figures below, what can you conclude about the magnitudes of a and b compared to each other, and what are their directions? Remember to start from 0. Figure 1: jump a goes right from 0, jump b comes back left, and the coin ends at P left of 0. Figure 2: jump a goes right from 0, jump b comes back left, and the coin ends at P right of 0. Figure 3: jump a goes left from 0, jump b comes back right, and the coin ends at P, which is 0.",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM"
+   ],
+   "reason": "The solution only states the conclusion for each figure; it adds no mark, arc or label to the question diagram.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C19",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "2.1.tokens_recap",
+   "question_text": "Find (+7) − (+18) with tokens.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example is stated in symbols, (+7) - (+18); the book's three token rows are a teaching figure, already the concept image C19.IMG1 of this same concept (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C20",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "2.1.teacher_note",
+   "question_text": "Argue with tokens that 7 − 18 = 7 + (−18).",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The statement 7 - 18 = 7 + (-18) is given in symbols; the book draws no figure for this Math Talk, and the token rows for 7 - 18 are already in concept image C19.IMG1 of the previous concept.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C21",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": null,
+   "question_text": "Argue with tokens that 4 − (−12) = 4 + 12.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The statement 4 - (-12) = 4 + 12 is given in symbols; the book draws no figure for this Math Talk, and concept image C20.IMG1 of the previous concept already shows these token rows.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C22",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E2",
+   "ncert_ref": null,
+   "question_text": "Write the additive inverse of 18 and of −18.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Writing the additive inverse is words and symbols; the book has no figure for it.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C24",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q4",
+   "question_text": "If 47 − 56 + 14 − 8 + 2 − 8 + 5 = −4, then find the value of −47 + 56 − 14 + 8 − 2 + 8 − 5 without calculating the full expression.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "An expression to reason about; the book prints no figure with end-of-chapter Q4.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C25",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q4",
+   "question_text": "If 47 − 56 + 14 − 8 + 2 − 8 + 5 = −4, then find the value of −47 + 56 − 14 + 8 − 2 + 8 − 5 without calculating the full expression.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four lines of reasoning with additive inverses and one value, 4: no picture adds anything.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C26",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "2.2.bag_4x2",
+   "question_text": "Find 4 × 2 with the bag.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example is stated in symbols, 4 x 2; the book's bag picture is a teaching figure, already the concept image C26.IMG1 of this same concept (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C27",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": null,
+   "question_text": "Find 4 × (−2) with the bag.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example is stated in symbols, 4 x (-2); the book's picture (4 bags of 2 reds with the multiplier, multiplicand, product labels) is a teaching figure shown by concept image C26.IMG1 of the previous concept.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C28",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "2.2.four_results",
+   "question_text": "Find (−4) × 2 with the bag.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example is stated in symbols, (-4) x 2; the book's zero-pair bags with the greens struck are a teaching figure, already the concept image C28.IMG1 of this same concept (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C29",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": null,
+   "question_text": "Find (−4) × (−2) with the bag.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example is stated in symbols, (-4) x (-2); the book's bags with the reds struck are a teaching figure shown by concept image C28.IMG1 of the previous concept.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C30",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "2.2.token_sets",
+   "question_text": "Put each set into the bag 4 times: (a) 2 reds (b) 4 reds and 2 greens (c) 6 reds and 4 greens.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book gives the three token sets (a), (b), (c) only as pictures ('the following tokens'); under the lettered-figure rule they are drawn even though concept image C30.IMG1 shows them, and this figure holds only the given tokens.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S10.T10.C30.IMG2",
+   "manim_scene": "c7_10_2_2_tokensets_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C30.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "integer_tokens",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "integer_tokens",
+     "frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ]
+     },
+     "token_diameter": 1.0,
+     "token_colours": {
+      "positive": "#6CC24A",
+      "negative": "#E8643C",
+      "outline": "INK",
+      "note": "the chapter's green and red tokens; not part of the style-token table"
+     },
+     "dividers": [
+      {
+       "y": 1.5
+      },
+      {
+       "y": -1.5
+      }
+     ],
+     "sets": [
+      {
+       "part": "first",
+       "band_y": [
+        1.5,
+        4.5
+       ],
+       "negatives": 2,
+       "positives": 0,
+       "tokens": [
+        {
+         "x": -0.5,
+         "y": 3.0,
+         "sign": "−"
+        },
+        {
+         "x": 0.5,
+         "y": 3.0,
+         "sign": "−"
+        }
+       ],
+       "letter": "(a)",
+       "letter_colour": "INK",
+       "letter_centre": [
+        -4.5,
+        3.0
+       ]
+      },
+      {
+       "part": "second",
+       "band_y": [
+        -1.5,
+        1.5
+       ],
+       "negatives": 4,
+       "positives": 2,
+       "tokens": [
+        {
+         "x": -1.5,
+         "y": -0.5,
+         "sign": "−"
+        },
+        {
+         "x": -0.5,
+         "y": -0.5,
+         "sign": "−"
+        },
+        {
+         "x": 0.5,
+         "y": -0.5,
+         "sign": "+"
+        },
+        {
+         "x": 1.5,
+         "y": -0.5,
+         "sign": "+"
+        },
+        {
+         "x": 0.5,
+         "y": 0.5,
+         "sign": "−"
+        },
+        {
+         "x": 1.5,
+         "y": 0.5,
+         "sign": "−"
+        }
+       ],
+       "letter": "(b)",
+       "letter_colour": "INK",
+       "letter_centre": [
+        -4.5,
+        0.0
+       ]
+      },
+      {
+       "part": "third",
+       "band_y": [
+        -4.5,
+        -1.5
+       ],
+       "negatives": 6,
+       "positives": 4,
+       "tokens": [
+        {
+         "x": -2.5,
+         "y": -3.5,
+         "sign": "−"
+        },
+        {
+         "x": -1.5,
+         "y": -3.5,
+         "sign": "−"
+        },
+        {
+         "x": -0.5,
+         "y": -3.5,
+         "sign": "+"
+        },
+        {
+         "x": 0.5,
+         "y": -3.5,
+         "sign": "+"
+        },
+        {
+         "x": 1.5,
+         "y": -3.5,
+         "sign": "+"
+        },
+        {
+         "x": 2.5,
+         "y": -3.5,
+         "sign": "+"
+        },
+        {
+         "x": -0.5,
+         "y": -2.5,
+         "sign": "−"
+        },
+        {
+         "x": 0.5,
+         "y": -2.5,
+         "sign": "−"
+        },
+        {
+         "x": 1.5,
+         "y": -2.5,
+         "sign": "−"
+        },
+        {
+         "x": 2.5,
+         "y": -2.5,
+         "sign": "−"
+        }
+       ],
+       "letter": "(c)",
+       "letter_colour": "INK",
+       "letter_centre": [
+        -4.5,
+        -3.0
+       ]
+      }
+     ]
+    },
+    "manim_description": "16:9 canvas, frame x from -8 to 8 and y from -4.5 to 4.5, BG background. Three token sets stacked top to bottom, separated by two GUIDE lines (2 px) at y = 1.5 and y = -1.5 from x = -7.4 to x = 7.4; each set is centred in its band, read top to bottom as the question's parts. Each token is a circle of diameter 1.0 (radius 0.5) with an INK outline of 2.5 px; tokens in a row touch each other. A positive token has fill #6CC24A and an INK \"+\" sign (height 0.5) in its centre; a negative token has fill #E8643C and an INK \"−\" sign (height 0.5) in its centre. First set (band y from 1.5 to 4.5): one row of 2 negative tokens centred at (-0.5, 3) and (0.5, 3); no positive tokens. Second set (band y from -1.5 to 1.5): the bottom row has 4 tokens centred at y = -0.5, left to right at x = -1.5 negative, x = -0.5 negative, x = 0.5 positive, x = 1.5 positive; the top row has 2 negative tokens centred at y = 0.5 at x = 0.5 and x = 1.5, each directly above one of the 2 positive tokens. Third set (band y from -4.5 to -1.5): the bottom row has 6 tokens centred at y = -3.5, left to right at x = -2.5 negative, x = -1.5 negative, then x = -0.5, 0.5, 1.5, 2.5 all positive; the top row has 4 negative tokens centred at y = -2.5 at x = -0.5, 0.5, 1.5, 2.5, each directly above one of the 4 positive tokens. To the left of each set, centred on its band, write its part letter in INK sans-serif, height 0.5: (a) centred at (-4.5, 3), (b) centred at (-4.5, 0), (c) centred at (-4.5, -3). Nothing else is drawn: no totals, no outlines around pairs, no bag.",
+    "visible_text": [
+     "(a)",
+     "−",
+     "−",
+     "(b)",
+     "−",
+     "−",
+     "+",
+     "+",
+     "−",
+     "−",
+     "(c)",
+     "−",
+     "−",
+     "+",
+     "+",
+     "+",
+     "+",
+     "−",
+     "−",
+     "−",
+     "−"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the part letters (a) (b) (c) to the left of the sets",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the value -2 or any total",
+     "zero-pair outlines, circles or strike-through marks",
+     "part letters anywhere except to the left of the sets",
+     "a bag, braces or arrows",
+     "the words red, green, positive or negative"
+    ],
+    "accuracy_checks": [
+     "First set: 2 negative tokens, 0 positive tokens",
+     "Second set: 4 negative and 2 positive tokens (bottom row negative, negative, positive, positive; top row 2 negatives above positions 3 and 4)",
+     "Third set: 6 negative and 4 positive tokens (bottom row negative, negative, then 4 positives; top row 4 negatives above positions 3 to 6)",
+     "Every set stands for -2 (negatives minus positives = 2 in each set), but the value is not printed",
+     "Token counts 2 + 6 + 10 = 18 tokens drawn in all; visible_text holds 18 signs and the 3 part letters (a), (b), (c)",
+     "part letters (a), (b), (c) stand to the left of the first, second and third set, top to bottom, because the LP steps name the sets (a), (b), (c)"
+    ],
+    "alt_text": "Three token sets labelled (a), (b), (c), top to bottom: 2 red minus tokens; 4 red minus and 2 green plus tokens with 2 reds above the greens; 6 red minus and 4 green plus tokens with 4 reds above the greens.",
+    "render_note": "The book (page 8, Math Talk) shows these as three lettered token sets. The LP steps refer to the sets as (a), (b), (c), so the part letters are drawn to the left of the sets; the sets run top to bottom in the order of the question's parts. The teaching image C30.IMG1 shows the same sets with the value -2 and ringed zero pairs: it is not linked, this question figure shows only the given sets."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C31",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": null,
+   "question_text": "Check 5 × 4 with two different token sets for 4.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The two token sets for 4 are described in words (4 greens; 5 greens and 1 red); the book draws no token sets for this check.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C32",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E2",
+   "ncert_ref": null,
+   "question_text": "Find −4 × 2 by adding tokens instead of removing them.",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question and the three steps are complete in words. The book's picture (8 red tokens in 4 rows of 2 next to (-4) x 2) would help but is not needed, and no teaching image shows it.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C34",
+   "role": "question",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.2.similar",
+   "question_text": "Find 4 × (−6) and 9 × (−7).",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two products are stated in symbols; the book prints no figure for them.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C35",
+   "role": "solution",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.2.similar",
+   "question_text": "Find 4 × (−6) and 9 × (−7).",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word-and-arithmetic reasoning (put in 6 reds, 4 times, 24 reds); the book draws no figure for these two products.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C36",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.2, Q1",
+   "ncert_ref": "2.2.FiO_A.Q1",
+   "question_text": "Using the token interpretation, find the values of: (a) 3 × (−2) (b) (−5) × (−2) (c) (−4) × (−1) (d) (−7) × 3",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The four products are written in symbols and the book prints no figure with Q1; the token sets printed lower on p.8 belong to the next Math Talk, not to this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C37",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.2, Q1",
+   "ncert_ref": "2.2.FiO_A.Q1",
+   "question_text": "Using the token interpretation, find the values of: (a) 3 × (−2) (b) (−5) × (−2) (c) (−4) × (−1) (d) (−7) × 3",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is four numbers and the steps narrate every token move in words, so text is complete. A token-bag picture of the four parts (3 bags of 2 reds; 5 bags ending with 2 greens each; 4 bags ending with 1 green each; 7 bags of 3 reds each) would help, but it is not needed: teaching images M2.S10.T10.C26.IMG1 and M2.S10.T10.C28.IMG1 already show the bag method.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the numbered steps as text."
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C38",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.2, Q2",
+   "ncert_ref": "2.2.FiO_A.Q2",
+   "question_text": "If 123 × 456 = 56088, without calculating, find the value of: (a) (−123) × 456 (b) (−123) × (−456) (c) (123) × (−456)",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "All data is in the sentence: 123 x 456 = 56088 and three signed products. No figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C39",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.2, Q2",
+   "ncert_ref": "2.2.FiO_A.Q2",
+   "question_text": "If 123 × 456 = 56088, without calculating, find the value of: (a) (−123) × 456 (b) (−123) × (−456) (c) (123) × (−456)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is a sign decision plus the value 56088 written three times; nothing visual to add.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C40",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.2, Q3",
+   "ncert_ref": "2.2.FiO_A.Q3",
+   "question_text": "Try to frame a simple rule to multiply two integers.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "Open question 'frame a simple rule'; the book prints no figure with it (the token sets under it belong to the next Math Talk).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C41",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.2, Q3",
+   "ncert_ref": "2.2.FiO_A.Q3",
+   "question_text": "Try to frame a simple rule to multiply two integers.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a verbal rule (multiply the magnitudes; same signs positive, different signs negative); no drawing, arrangement or table is asked for.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C42",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.2.pattern_mult3, 2.2.pattern_below_zero",
+   "question_text": "Continue the pattern 4 × 3 = 12, 3 × 3 = 9, 2 × 3 = 6, 1 × 3 = 3, 0 × 3 = 0 below zero.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The five given equations are written in the question and the answer is the next three numbers of the list, so a careful student loses nothing without a picture. The book's ladder with -3 arrows is already the teaching image M2.S13.T13.C42.IMG1 (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C43",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.2.pattern_neg_multiplicand, 2.2.pattern_neg_neg",
+   "question_text": "Continue the pattern 4 × (−3) = −12, 3 × (−3) = −9, 2 × (−3) = −6, 1 × (−3) = −3, 0 × (−3) = 0 below zero.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The five given equations are written in the question and the answer is the next three numbers of the list. The book's ladder with +3 arrows is already the teaching image M2.S13.T13.C43.IMG1 (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C45",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.2.times3_tables, 2.2.observations",
+   "question_text": "Use the times 3 tables to find −7 × 3, 7 × −3 and −7 × −3.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_TABLE"
+   ],
+   "reason": "Only 7 x 3 = 21 and the sign rule are needed, all stated in the question and steps. The book's times-3 table (4 columns of 10 equations, no colour or marks) is a plain table of numbers, so it would be LaTeX, and the question does not need it shown.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Not needed; if the times-3 table is wanted, write the four columns of ten equations as a LaTeX array."
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C46",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.2.one_times_a, 2.2.minus_one_times_a",
+   "question_text": "Find 1 × (−5) and −1 × (−5).",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two products in symbols; the one-bag argument is in words. The book prints no figure here.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C47",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.2.commute_table, 2.2.commute_notice, 2.2.commute_always, 2.2.commute_sign",
+   "question_text": "Fill in the blanks: −30 × 12, 12 × −30, and −5 × ? = −70.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_TABLE"
+   ],
+   "reason": "The three blanks are written in the question, and the steps give the facts they need (30 x 12 = 360; 14 x -5 = -70). The book's 4 x 2 table of swapped pairs is a plain table of equations with blanks, so it would be LaTeX.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Not needed; if the table is wanted, a LaTeX array of 4 rows x 2 columns: '3 x -4 = -12 | -4 x 3 = -12', '-30 x 12 = ___ | 12 x -30 = ___', '-15 x -8 = 120 | -8 x -15 = 120', '14 x -5 = -70 | -5 x ___ = -70'."
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C49",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.2, Q1",
+   "ncert_ref": "2.2.FiO_B",
+   "question_text": "Find the following products. (a) 4 × (−3) (b) (−6) × (−3) (c) (−5) × (−1) (d) (−8) × 4 (e) (−9) × 10 (f) 10 × (−17)",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six products in symbols; the book prints no figure with this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C50",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.2, Q1",
+   "ncert_ref": "2.2.FiO_B",
+   "question_text": "Find the following products. (a) 4 × (−3) (b) (−6) × (−3) (c) (−5) × (−1) (d) (−8) × 4 (e) (−9) × 10 (f) 10 × (−17)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Each part is magnitude product plus a sign decision, six numeric answers; nothing visual to add.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C51",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q3",
+   "question_text": "Find the integer whose product with (−1) is: (a) 27 (b) −31 (c) −1 (d) 1 (e) 0",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Five numbers in the sentence; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C52",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q3",
+   "question_text": "Find the integer whose product with (−1) is: (a) 27 (b) −31 (c) −1 (d) 1 (e) 0",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Five numeric answers from multiplying by -1; nothing visual to add.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C53",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "end.Q12",
+   "question_text": "Arrange the expressions given below in increasing order. (a) (−348) + (−1064) (b) (−348) − (−1064) (c) 348 − (−1064) (d) (−348) × (−1064) (e) 348 × (−1064) (f) 348 × 964",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six expressions written in full in the question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C54",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "end.Q12",
+   "question_text": "Arrange the expressions given below in increasing order. (a) (−348) + (−1064) (b) (−348) − (−1064) (c) 348 − (−1064) (d) (−348) × (−1064) (e) 348 × (−1064) (f) 348 × 964",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is an ordered list of six numbers, written as one chain of inequalities. Values from -370272 to 370272 cannot sit on one true-to-scale line (-1412, 716 and 1412 would collapse onto 0), so a number line would add nothing the chain does not say.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C58",
+   "role": "question",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.2.Ex1",
+   "question_text": "Find Mala's marks: 30 correct answers at 5 marks and 20 wrong answers at −2 marks. || What are the maximum and the minimum possible marks?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Marks per answer and the counts are in the sentence; the book prints no figure with Example 1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C59",
+   "role": "solution",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.2.Ex1",
+   "question_text": "Find Mala's marks: 30 correct answers at 5 marks and 20 wrong answers at −2 marks. || What are the maximum and the minimum possible marks?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Products and one sum (150 + (-40) = 110; 50 x 5 and 50 x (-2)); nothing visual to add.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C60",
+   "role": "question",
+   "lp_book_number": "Example 2",
+   "ncert_ref": "2.2.Ex2",
+   "question_text": "(a) From ground level, the elevator moves down 3 m per minute for one hour. Use Method 1. || (a) The same question by Method 2. || (b) Starting 15 m above the ground, the elevator moves down for 45 minutes. Use Method 1. || (b) The same question by Method 2.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Every datum (3 m per minute, one hour or 45 minutes, start at 0 or 15 m) is in the question. The book's mine-shaft picture only sets the scene with levels the question never uses; the same scene is already the teaching image M3.S16.T16.C56.IMG1 (never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C61",
+   "role": "solution",
+   "lp_book_number": "Example 2",
+   "ncert_ref": "2.2.Ex2",
+   "question_text": "(a) From ground level, the elevator moves down 3 m per minute for one hour. Use Method 1. || (a) The same question by Method 2. || (b) Starting 15 m above the ground, the elevator moves down for 45 minutes. Use Method 1. || (b) The same question by Method 2.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answers -180 and -120 follow from 0 - 180 and 15 - 135 and are stated in words ('180 m below the ground'). A vertical position line would only make it nicer, and teaching image M3.S16.T16.C56.IMG1 already shows both descents.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C62",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.2, Q1",
+   "ncert_ref": "2.2.FiO_C.Q2",
+   "question_text": "A freezing process requires that the room temperature be lowered from 32°C at the rate of 5°C every hour. What will be the room temperature 10 hours after the process begins?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Start 32 degrees C, drop 5 degrees C per hour, 10 hours: all in the sentence; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C63",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.2, Q1",
+   "ncert_ref": "2.2.FiO_C.Q2",
+   "question_text": "A freezing process requires that the room temperature be lowered from 32°C at the rate of 5°C every hour. What will be the room temperature 10 hours after the process begins?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "One product and one sum (10 x (-5) = -50; 32 + (-50) = -18); nothing visual to add.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C64",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.2, Q2",
+   "ncert_ref": "2.2.FiO_C.Q3",
+   "question_text": "A cement company earns a profit of ₹8 per bag of white cement sold and a loss of ₹5 per bag of grey cement sold. [Represent the profit or loss as integers.] (a) The company sells 3,000 bags of white cement and 5,000 bags of grey cement in a month. What is its profit or loss? (b) If the number of bags of grey cement sold is 6,400 bags, what is the number of bags of white cement the company must sell to have neither profit nor loss?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Profit and loss per bag and the bag counts are in the sentence; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C65",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.2, Q2",
+   "ncert_ref": "2.2.FiO_C.Q3",
+   "question_text": "A cement company earns a profit of ₹8 per bag of white cement sold and a loss of ₹5 per bag of grey cement sold. [Represent the profit or loss as integers.] (a) The company sells 3,000 bags of white cement and 5,000 bags of grey cement in a month. What is its profit or loss? (b) If the number of bags of grey cement sold is 6,400 bags, what is the number of bags of white cement the company must sell to have neither profit nor loss?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Products, a sum and one division (3000 x 8, 5000 x (-5), 6400 x (-5), 32000 / 8); nothing visual to add.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C66",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q6",
+   "question_text": "In a test, (+4) marks are given for every correct answer and (−2) marks are given for every incorrect answer. (a) Anita answered all the questions in the test. She scored 40 marks even though 15 of her answers were correct. How many of her answers were incorrect? How many questions are in the test? (b) Anil scored (−10) marks even though he had 5 correct answers. How many of his answers were incorrect? Did he leave any questions unanswered?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Marks per answer, scores and counts are in the sentence; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C67",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q6",
+   "question_text": "In a test, (+4) marks are given for every correct answer and (−2) marks are given for every incorrect answer. (a) Anita answered all the questions in the test. She scored 40 marks even though 15 of her answers were correct. How many of her answers were incorrect? How many questions are in the test? (b) Anil scored (−10) marks even though he had 5 correct answers. How many of his answers were incorrect? Did he leave any questions unanswered?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A chain of products and differences leading to counts 10, 25, 15 and 5; nothing visual to add.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C68",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "end.Q8",
+   "question_text": "Imagine you're in a place where the temperature drops by 5°C each hour. If the temperature is currently at 8°C, write an expression which denotes the temperature after 4 hours.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Start 8 degrees C, drop 5 degrees C per hour, 4 hours: all in the sentence; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C69",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "end.Q8",
+   "question_text": "Imagine you're in a place where the temperature drops by 5°C each hour. If the temperature is currently at 8°C, write an expression which denotes the temperature after 4 hours.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the expression 8 + 4 x (-5) and its value -12; nothing visual to add.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C70",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.2.magic_grid_rules, 2.2.magic_grid_example",
+   "question_text": "Play the book's example: circle −6, then 14, then 20, then 18. Multiply.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The grid numbers live only in the picture (the question names -6, 14, 20, 18 but -6 occurs twice in the grid), and the steps strike out rows and columns of that grid. Circles and struck lines carry the meaning; LaTeX cannot show them reliably. The teaching image C70.IMG1 of this concept is never linked, so the example gets its own figure.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S20.T20.C70.IMG2",
+   "manim_scene": "c7_10_s20_c70_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S20.T20.C70.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "rows": 4,
+     "cols": 4,
+     "cells_row_by_row": [
+      [
+       "8",
+       "−4",
+       "12",
+       "−6"
+      ],
+      [
+       "−28",
+       "14",
+       "−42",
+       "21"
+      ],
+      [
+       "12",
+       "−6",
+       "18",
+       "−9"
+      ],
+      [
+       "20",
+       "−10",
+       "30",
+       "−15"
+      ]
+     ],
+     "cell_fill": "CELL_FILL",
+     "cell_outline": "INK",
+     "text_colour": "INK",
+     "circled_cells": [
+      {
+       "row": 1,
+       "col": 4,
+       "value": "−6",
+       "colour": "FOCUS"
+      },
+      {
+       "row": 2,
+       "col": 2,
+       "value": "14",
+       "colour": "FOCUS"
+      },
+      {
+       "row": 4,
+       "col": 1,
+       "value": "20",
+       "colour": "FOCUS"
+      },
+      {
+       "row": 3,
+       "col": 3,
+       "value": "18",
+       "colour": "FOCUS"
+      }
+     ],
+     "strike_lines": {
+      "rows": [
+       1,
+       2,
+       4
+      ],
+      "cols": [
+       4,
+       2,
+       1
+      ],
+      "colour": "GUIDE"
+     },
+     "cell_with_no_line_through_it": [
+      {
+       "row": 3,
+       "col": 3,
+       "value": "18"
+      }
+     ]
+    },
+    "manim_description": "On a plain BG canvas of 1920 x 1080 px, draw a square grid of 4 rows and 4 columns of equal square cells, each cell 190 px wide and 190 px high, the whole grid centred horizontally and vertically. Fill every cell with CELL_FILL and outline it with a 2 px INK line. Write these numbers in INK, 56 px high, centred in their cells, row by row from the top: row 1: 8, −4, 12, −6; row 2: −28, 14, −42, 21; row 3: 12, −6, 18, −9; row 4: 20, −10, 30, −15. Behind the numbers, draw 2 px GUIDE lines: one horizontal line through the middle of row 1, one through the middle of row 2 and one through the middle of row 4, each running the full width of the grid; and one vertical line through the middle of column 4, one through the middle of column 2 and one through the middle of column 1, each running the full height of the grid. Row 3 and column 3 get no line. Draw four FOCUS circles of 4 px stroke, one around each of these four numbers: −6 (row 1, column 4), 14 (row 2, column 2), 20 (row 4, column 1) and 18 (row 3, column 3). Draw nothing else: no product, no round labels, no title.",
+    "visible_text": [
+     "8",
+     "−4",
+     "12",
+     "−6",
+     "−28",
+     "14",
+     "−42",
+     "21",
+     "12",
+     "−6",
+     "18",
+     "−9",
+     "20",
+     "−10",
+     "30",
+     "−15"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the product −30240 or any multiplication",
+     "the words Round 1 to Round 4",
+     "a second copy of the grid"
+    ],
+    "accuracy_checks": [
+     "the 16 numbers equal the book grid row by row: 8, −4, 12, −6 / −28, 14, −42, 21 / 12, −6, 18, −9 / 20, −10, 30, −15",
+     "circled cells are (row 1, col 4) = −6, (row 2, col 2) = 14, (row 4, col 1) = 20, (row 3, col 3) = 18: exactly one circle in each row and in each column",
+     "struck rows 1, 2, 4 and struck columns 4, 2, 1 match the LP steps (Round 1: row 1 and column 4; Round 2: row 2 and column 2; Round 3: row 4 and column 1)",
+     "the only cell on no struck line is (row 3, col 3) = 18, which is circled in Round 4",
+     "the circled numbers multiply to (−6) × 14 × 20 × 18: 6 × 14 = 84, 84 × 20 = 1680, 1680 × 18 = 30240, one negative factor, so −30240 (not drawn)"
+    ],
+    "alt_text": "A 4 by 4 grid of numbers with −6, 14, 20 and 18 circled, one in every row and column, and grey lines through rows 1, 2, 4 and columns 4, 2, 1.",
+    "render_note": "Same picture as Round 4 of the book figure on p.14 (the book prints the circles and lines of Rounds 1 to 3 identically, so the rounds are not shown step by step); lines are GUIDE grey instead of the book's three colours. Teaching image C70.IMG1 stays and is not linked."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C71",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.2.magic_grid_second, 2.2.TryThis.magic_grid.why",
+   "question_text": "Why is the product always −30240? Build the grid from its row and column numbers.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "'Build the grid from its row and column numbers' asks for the grid: the 16 numbers of the book grid (printed twice, p.14 and p.15) appear nowhere in the question text, and the explanation rests on seeing every cell as row number x column number. Borderline (a headed multiplication table could also be a LaTeX array); drawn because the book prints this grid as a figure. Teaching image C71.IMG1 is never linked.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S20.T20.C71.IMG2",
+   "manim_scene": "c7_10_s20_c71_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S20.T20.C71.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "rows": 5,
+     "cols": 5,
+     "corner_cell": "×",
+     "column_numbers_left_to_right": [
+      "4",
+      "−2",
+      "6",
+      "−3"
+     ],
+     "row_numbers_top_to_bottom": [
+      "2",
+      "−7",
+      "3",
+      "5"
+     ],
+     "body_cells_row_by_row": [
+      [
+       "8",
+       "−4",
+       "12",
+       "−6"
+      ],
+      [
+       "−28",
+       "14",
+       "−42",
+       "21"
+      ],
+      [
+       "12",
+       "−6",
+       "18",
+       "−9"
+      ],
+      [
+       "20",
+       "−10",
+       "30",
+       "−15"
+      ]
+     ],
+     "header_outline": {
+      "row_numbers": "SET_A",
+      "column_numbers": "SET_B"
+     },
+     "body_fill": "CELL_FILL",
+     "focus_boxes": [
+      {
+       "body_row": 1,
+       "body_col": 1,
+       "value": "8",
+       "meaning": "2 × 4"
+      },
+      {
+       "body_row": 2,
+       "body_col": 2,
+       "value": "14",
+       "meaning": "(−7) × (−2)"
+      }
+     ]
+    },
+    "manim_description": "On a plain BG canvas of 1920 x 1080 px, draw a table of 5 rows and 5 columns of equal square cells, each cell 160 px wide and 160 px high, the whole table centred horizontally and vertically. Top-left cell (row 1, column 1): write × in INK, 56 px high, with no fill and no outline. Top row, columns 2 to 5, left to right: 4, −2, 6, −3, each in a BG-filled cell with a 4 px SET_B outline. Left column, rows 2 to 5, top to bottom: 2, −7, 3, 5, each in a BG-filled cell with a 4 px SET_A outline. The 16 body cells (rows 2 to 5, columns 2 to 5) are filled CELL_FILL with a 2 px INK outline and hold, row by row from the top: 8, −4, 12, −6; −28, 14, −42, 21; 12, −6, 18, −9; 20, −10, 30, −15. All numbers are INK, 52 px high, centred in their cells. Draw a 4 px FOCUS rectangle around the body cell holding 8 (row 2, column 2 of the table) and another around the body cell holding 14 (row 3, column 3 of the table). Draw nothing else: no product, no circles, no title.",
+    "visible_text": [
+     "×",
+     "4",
+     "−2",
+     "6",
+     "−3",
+     "2",
+     "−7",
+     "3",
+     "5",
+     "8",
+     "−4",
+     "12",
+     "−6",
+     "−28",
+     "14",
+     "−42",
+     "21",
+     "12",
+     "−6",
+     "18",
+     "−9",
+     "20",
+     "−10",
+     "30",
+     "−15"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the product −30240 or any total",
+     "circles or struck lines on the body cells",
+     "the words row, column or magic",
+     "the ringed −42 of the teaching image"
+    ],
+    "accuracy_checks": [
+     "every body cell equals its row number times its column number, recomputed: 2×4=8, 2×(−2)=−4, 2×6=12, 2×(−3)=−6; (−7)×4=−28, (−7)×(−2)=14, (−7)×6=−42, (−7)×(−3)=21; 3×4=12, 3×(−2)=−6, 3×6=18, 3×(−3)=−9; 5×4=20, 5×(−2)=−10, 5×6=30, 5×(−3)=−15",
+     "the body equals the book grid on p.14 and p.15 cell for cell",
+     "the two boxed cells are the LP step examples: 2 × 4 = 8 and (−7) × (−2) = 14",
+     "row numbers multiply to 2 × (−7) × 3 × 5 = −210 and column numbers to 4 × (−2) × 6 × (−3) = 144; −210 × 144 = −30240 (not drawn)"
+    ],
+    "alt_text": "A multiplication table with row numbers 2, −7, 3, 5 down the left, column numbers 4, −2, 6, −3 across the top, and the 16 products inside; the cells 8 and 14 are boxed.",
+    "render_note": "The 16 body numbers are the book grid; the row and column numbers are added from the LP steps (the book prints no headers). Teaching image C71.IMG1 (same table with −42 ringed) stays and is not linked."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C72",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Try This (magic grid)",
+   "ncert_ref": "2.2.TryThis.magic_grid.make",
+   "question_text": "Can you make more such grids?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The answer to 'Can you make more such grids?' is a grid: the LP gives one sample, row by row, in words (B2: words describing a filled figure do not replace it; prompt section 5 rule 4: draw the sample answer given in the LP). The question is open, so the figure is that one sample only.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S20.T20.C72.IMG1",
+   "manim_scene": "c7_10_s20_c72_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S20.T20.C72.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "rows": 5,
+     "cols": 5,
+     "corner_cell": "×",
+     "column_numbers_left_to_right": [
+      "2",
+      "5",
+      "−1",
+      "4"
+     ],
+     "row_numbers_top_to_bottom": [
+      "1",
+      "−2",
+      "3",
+      "−1"
+     ],
+     "body_cells_row_by_row": [
+      [
+       "2",
+       "5",
+       "−1",
+       "4"
+      ],
+      [
+       "−4",
+       "−10",
+       "2",
+       "−8"
+      ],
+      [
+       "6",
+       "15",
+       "−3",
+       "12"
+      ],
+      [
+       "−2",
+       "−5",
+       "1",
+       "−4"
+      ]
+     ],
+     "header_outline": {
+      "row_numbers": "SET_A",
+      "column_numbers": "SET_B"
+     },
+     "body_fill": "CELL_FILL"
+    },
+    "manim_description": "On a plain BG canvas of 1920 x 1080 px, draw a table of 5 rows and 5 columns of equal square cells, each cell 160 px wide and 160 px high, the whole table centred horizontally and vertically. Top-left cell (row 1, column 1): write × in INK, 56 px high, with no fill and no outline. Top row, columns 2 to 5, left to right: 2, 5, −1, 4, each in a BG-filled cell with a 4 px SET_B outline. Left column, rows 2 to 5, top to bottom: 1, −2, 3, −1, each in a BG-filled cell with a 4 px SET_A outline. The 16 body cells (rows 2 to 5, columns 2 to 5) are filled CELL_FILL with a 2 px INK outline and hold, row by row from the top: 2, 5, −1, 4; −4, −10, 2, −8; 6, 15, −3, 12; −2, −5, 1, −4. All numbers are INK, 52 px high, centred in their cells. Draw nothing else: no circles, no strike lines, no product, no title.",
+    "visible_text": [
+     "×",
+     "2",
+     "5",
+     "−1",
+     "4",
+     "1",
+     "−2",
+     "3",
+     "−1",
+     "2",
+     "5",
+     "−1",
+     "4",
+     "−4",
+     "−10",
+     "2",
+     "−8",
+     "6",
+     "15",
+     "−3",
+     "12",
+     "−2",
+     "−5",
+     "1",
+     "−4"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the product −240 or any total",
+     "circles or struck lines on the body cells",
+     "the words row, column or magic"
+    ],
+    "accuracy_checks": [
+     "every body cell equals its row number times its column number, recomputed: 1×2=2, 1×5=5, 1×(−1)=−1, 1×4=4; (−2)×2=−4, (−2)×5=−10, (−2)×(−1)=2, (−2)×4=−8; 3×2=6, 3×5=15, 3×(−1)=−3, 3×4=12; (−1)×2=−2, (−1)×5=−5, (−1)×(−1)=1, (−1)×4=−4",
+     "the four rows of body cells match the LP steps: 2, 5, −1, 4 / −4, −10, 2, −8 / 6, 15, −3, 12 / −2, −5, 1, −4",
+     "row numbers multiply to 1 × (−2) × 3 × (−1) = 6 and column numbers to 2 × 5 × (−1) × 4 = −40; 6 × (−40) = −240, the product the LP states (not drawn)"
+    ],
+    "alt_text": "A multiplication table with row numbers 1, −2, 3, −1 down the left, column numbers 2, 5, −1, 4 across the top, and the 16 products inside.",
+    "render_note": "Same layout as the C71 figure (kept consistent on purpose). The grid is the LP's own sample answer, not a book figure; the book only asks 'Can you make more such grids?' next to the p.15 grid."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S21.T21.C73",
+   "role": "question",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "Section 2.2 - 2.2.magic_grid_try_again",
+   "question_text": "Try again with different numbers: circle 8, then 14, then 18, then −15.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The learner must circle 8, 14, 18 and −15 on the 4 × 4 magic grid; the numbers and their places live only in the grid (the question text does not list the grid), so the figure is needed to attempt it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S21.T21.C73.IMG1",
+   "manim_scene": "c7_10_2_2_magic_try_again_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S21.T21.C73.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "rows": 4,
+     "cols": 4,
+     "cells_row_by_row": [
+      [
+       "8",
+       "−4",
+       "12",
+       "−6"
+      ],
+      [
+       "−28",
+       "14",
+       "−42",
+       "21"
+      ],
+      [
+       "12",
+       "−6",
+       "18",
+       "−9"
+      ],
+      [
+       "20",
+       "−10",
+       "30",
+       "−15"
+      ]
+     ],
+     "cell_fill": "CELL_FILL",
+     "cell_outline": "INK",
+     "text_colour": "INK",
+     "circled_cells": [],
+     "struck_lines": [],
+     "row_headers": false,
+     "col_headers": false
+    },
+    "manim_description": "On a 16:9 canvas with a plain BG background, draw one square grid of 4 rows and 4 columns of equal square cells, centred, about 75% of the canvas height tall. Every cell is filled CELL_FILL and outlined in INK (3 px). Write the numbers centred in the cells in INK, reading row by row from the top: row 1: 8, −4, 12, −6; row 2: −28, 14, −42, 21; row 3: 12, −6, 18, −9; row 4: 20, −10, 30, −15. Use the minus sign − (U+2212) for every negative number. Draw nothing else: no circle, no line through a row or a column, no row or column numbers, no heading.",
+    "visible_text": [
+     "8",
+     "−4",
+     "12",
+     "−6",
+     "−28",
+     "14",
+     "−42",
+     "21",
+     "12",
+     "−6",
+     "18",
+     "−9",
+     "20",
+     "−10",
+     "30",
+     "−15"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any circle, ring or strike line (the question gives none)",
+     "row or column numbers"
+    ],
+    "accuracy_checks": [
+     "grid has exactly 4 rows and 4 columns (16 cells)",
+     "cell values row by row equal the book grid: 8, −4, 12, −6 / −28, 14, −42, 21 / 12, −6, 18, −9 / 20, −10, 30, −15",
+     "no cell is circled and no line is drawn through any row or column"
+    ],
+    "alt_text": "A 4 by 4 grid of numbers: 8, −4, 12, −6; −28, 14, −42, 21; 12, −6, 18, −9; 20, −10, 30, −15.",
+    "render_note": "The book prints this grid twice (p.14 and p.15); same picture as the chunk-B grid figures, so the pictures should look alike. Pink cells of the book are drawn CELL_FILL."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S21.T21.C74",
+   "role": "solution",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "Section 2.2 - 2.2.magic_grid_try_again",
+   "question_text": "Try again with different numbers: circle 8, then 14, then 18, then −15.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The answer is the marked grid: the four circled numbers sit in row 1 column 1, row 2 column 2, row 3 column 3 and row 4 column 4; the circles carry the meaning, so the final state is drawn.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S21.T21.C74.IMG1",
+   "manim_scene": "c7_10_2_2_magic_try_again_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S21.T21.C74.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S21.T21.C73.IMG1",
+    "content": {
+     "type": "cell_grid",
+     "rows": 4,
+     "cols": 4,
+     "cells_row_by_row": [
+      [
+       "8",
+       "−4",
+       "12",
+       "−6"
+      ],
+      [
+       "−28",
+       "14",
+       "−42",
+       "21"
+      ],
+      [
+       "12",
+       "−6",
+       "18",
+       "−9"
+      ],
+      [
+       "20",
+       "−10",
+       "30",
+       "−15"
+      ]
+     ],
+     "cell_fill": "CELL_FILL",
+     "cell_outline": "INK",
+     "text_colour": "INK",
+     "circled_cells": [
+      {
+       "row": 1,
+       "col": 1,
+       "value": "8",
+       "ring": "FOCUS"
+      },
+      {
+       "row": 2,
+       "col": 2,
+       "value": "14",
+       "ring": "FOCUS"
+      },
+      {
+       "row": 3,
+       "col": 3,
+       "value": "18",
+       "ring": "FOCUS"
+      },
+      {
+       "row": 4,
+       "col": 4,
+       "value": "−15",
+       "ring": "FOCUS"
+      }
+     ],
+     "struck_lines": [],
+     "row_headers": false,
+     "col_headers": false
+    },
+    "manim_description": "Same grid as the question figure, same size and same positions: a 4 by 4 grid of equal square cells on a 16:9 BG canvas, every cell filled CELL_FILL with an INK outline (3 px), numbers in INK reading row by row from the top: row 1: 8, −4, 12, −6; row 2: −28, 14, −42, 21; row 3: 12, −6, 18, −9; row 4: 20, −10, 30, −15. Add exactly 4 rings in FOCUS (4 px), each an ellipse that encloses the whole number with a small margin and stays inside its cell: one round 8 (row 1, column 1), one round 14 (row 2, column 2), one round 18 (row 3, column 3) and one round −15 (row 4, column 4). The four rings lie on the diagonal from the top-left cell to the bottom-right cell. Draw no strike lines, no text and no other mark.",
+    "visible_text": [
+     "8",
+     "−4",
+     "12",
+     "−6",
+     "−28",
+     "14",
+     "−42",
+     "21",
+     "12",
+     "−6",
+     "18",
+     "−9",
+     "20",
+     "−10",
+     "30",
+     "−15"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "strike lines through rows or columns",
+     "the product or any equation",
+     "circle order numbers"
+    ],
+    "accuracy_checks": [
+     "rings are on exactly (row, column) = (1,1) value 8, (2,2) value 14, (3,3) value 18, (4,4) value −15",
+     "one ring in every row and one ring in every column (4 rings, none in the same row or column)",
+     "the 16 cell values are identical to the question figure",
+     "product of the circled numbers: 8 × 14 × 18 × (−15) = 112 × 18 × (−15) = 2016 × (−15) = −30240"
+    ],
+    "alt_text": "The same 4 by 4 grid with 8, 14, 18 and −15 circled, one number in each row and each column.",
+    "render_note": "Final state of the game: the book's strike lines are left out on purpose. After the fourth circle every row and every column is struck, so the lines would cross all 16 numbers and add nothing; the LP solution never mentions them."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S22.T22.C75",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - 2.2.div_m100_25",
+   "question_text": "Find (−100) ÷ 25.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Division turned into a missing-factor equation; the book shows no figure.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the LP steps as LaTeX lines: $25 \\times ? = -100$, $25 \\times (-4) = -100$, so $(-100) \\div 25 = -4$.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M4.S22.T22.C76",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - 2.2.div_m100_m4, 2.2.div_50_m25, 2.2.div_rules",
+   "question_text": "Find (−100) ÷ (−4).",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Plain arithmetic on one missing-factor equation; the book has no figure here.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M4.S22.T22.C77",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - 2.2.div_50_m25",
+   "question_text": "Find 50 ÷ (−25).",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Plain arithmetic on one missing-factor equation; the book has no figure here.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M4.S22.T22.C78",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - 2.2.div_rules",
+   "question_text": "Summarise the rules for dividing integers, with an example of each.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three sign rules written in words and with number examples; the book's sign table is in the Summary, not here, and the example sentences carry everything.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M4.S23.T23.C80",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.2, Q1",
+   "ncert_ref": "Section 2.2 - 2.2.FiO_C.Q1",
+   "question_text": "Find the values of: (a) 14 × (−15) (b) −16 × (−5) (c) 36 ÷ (−18) (d) (−46) ÷ (−23)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four plain product / quotient expressions; nothing to look at.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S23.T23.C81",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.2, Q1",
+   "ncert_ref": "Section 2.2 - 2.2.FiO_C.Q1",
+   "question_text": "Find the values of: (a) 14 × (−15) (b) −16 × (−5) (c) 36 ÷ (−18) (d) (−46) ÷ (−23)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic lines and sign checks written as LaTeX; the answers are numbers, not a drawing.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S23.T23.C82",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.2, Q2",
+   "ncert_ref": "Section 2.2 - 2.2.FiO_C.Q4",
+   "question_text": "Replace the blank with an integer to make a true statement. (a) (−3) × ___ = 27 (b) 5 × ___ = (−35) (c) ___ × (−8) = (−56) (d) ___ × (−12) = 132 (e) ___ ÷ (−8) = 7 (f) ___ ÷ 12 = −11",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Six fill-in-the-blank equations written out in full; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S23.T23.C83",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.2, Q2",
+   "ncert_ref": "Section 2.2 - 2.2.FiO_C.Q4",
+   "question_text": "Replace the blank with an integer to make a true statement. (a) (−3) × ___ = 27 (b) 5 × ___ = (−35) (c) ___ × (−8) = (−56) (d) ___ × (−12) = 132 (e) ___ ÷ (−8) = 7 (f) ___ ÷ 12 = −11",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Each blank is a single integer found by a division or product written in LaTeX; the answers are numbers, not a drawing.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C84",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 2.2 - end.Q2",
+   "question_text": "Find the values of the following expressions: (a) (−27) ÷ 9 (b) 84 ÷ (−4) (c) (−56) ÷ (−2)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three plain quotient expressions; nothing to look at.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C85",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 2.2 - end.Q2",
+   "question_text": "Find the values of the following expressions: (a) (−27) ÷ 9 (b) 84 ÷ (−4) (c) (−56) ÷ (−2)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic lines and sign checks in LaTeX; numeric answers.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C86",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 2.2 - end.Q11",
+   "question_text": "Find the values of: (a) (32 × (−18)) ÷ ((−36)) (b) (32) ÷ ((−36) × (−18)) (c) (25 × (−12)) ÷ ((45) × (−27)) (d) (280 × (−7)) ÷ ((−8) × (−35))",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four bracketed product-and-quotient expressions written out in full; no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C87",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 2.2 - end.Q11",
+   "question_text": "Find the values of: (a) (32 × (−18)) ÷ ((−36)) (b) (32) ÷ ((−36) × (−18)) (c) (25 × (−12)) ÷ ((45) × (−27)) (d) (280 × (−7)) ÷ ((−8) × (−35))",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic lines and fractions in LaTeX; numeric answers (parts b and c are fractions as printed).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S25.T25.C88",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - 2.2.assoc_rule, 2.2.expr_5m34, 2.2.assoc_5_4_m3, 2.2.assoc_orders, 2.2.assoc_more",
+   "question_text": "Find 5 × −3 × 4 in three ways.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three bracketings of one product shown as LaTeX chains; brackets in text are enough.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M5.S25.T25.C89",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - 2.2.assoc_more",
+   "question_text": "Check another product of three integers: (−2) × 7 × (−5).",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two bracketings of one product shown as LaTeX chains.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M5.S25.T25.C90",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - 2.2.minus_one_series, 2.2.MathTalk.sign_rule",
+   "question_text": "Multiply −1 by itself 2, 3, 4 and 5 times.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The −1 series is a list of equations (the book's box is text, not a figure); the plan already keeps its own ladder as the teaching image M5.S25.T25.C90.IMG1, which is not linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write the four products as LaTeX lines: $(-1)\\times(-1)=1$, then three, four and five factors.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M5.S25.T25.C91",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - 2.2.MathTalk.sign_rule",
+   "question_text": "Give a simple rule for the sign of a product of many integers, and use it on (−2) × 3 × (−1) × (−4).",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A counting rule (even or odd number of negative factors) plus one product; the whole worked example is words and arithmetic.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M5.S26.T26.C93",
+   "role": "question",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "Section 2.2 - 2.2.assoc_25m612",
+   "question_text": "Multiply 25 × −6 × 12 in different orders.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "One product to multiply in different orders; no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S26.T26.C94",
+   "role": "solution",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "Section 2.2 - 2.2.assoc_25m612",
+   "question_text": "Multiply 25 × −6 × 12 in different orders.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three orderings written as LaTeX chains; each ends in −1800.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S27.T27.C95",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 2.2 - end.Q1bc",
+   "question_text": "Find the values of the following expressions: (b) (−7) × 4 × (−1) (c) (−2) × (−1) × (−5) × (−3)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two products of several integers written out in full; no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S27.T27.C96",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 2.2 - end.Q1bc",
+   "question_text": "Find the values of the following expressions: (b) (−7) × 4 × (−1) (c) (−2) × (−1) × (−5) × (−3)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Count the negative factors, then multiply the magnitudes; all LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S27.T27.C97",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 2.2 - end.Q9",
+   "question_text": "Find 3 consecutive numbers with a product of (a) −6, (b) 120.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question about 3 consecutive numbers; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S27.T27.C98",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 2.2 - end.Q9",
+   "question_text": "Find 3 consecutive numbers with a product of (a) −6, (b) 120.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Trial products written as LaTeX; the answers are the numbers −3, −2, −1 and 4, 5, 6, not a drawing.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S28.T28.C99",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - 2.2.dist_5",
+   "question_text": "Check 5 × (4 + (−2)) against 5 × 4 + 5 × (−2).",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two numeric evaluations of one expression; the book has no figure for it (the rectangle starts in the next concept).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M5.S28.T28.C100",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - 2.2.dist_rule, 2.2.dist_tokens",
+   "question_text": "Read the rectangle for 4 × (2 + (−3)) two ways.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The example is to read the book's token rectangle two ways (row by row, block by block); its 4 rows of 2 green and 3 red tokens exist only in the picture, so the rectangle is drawn for this block even though the plan keeps a teaching image of it.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M5.S28.T28.C100.IMG2",
+   "manim_scene": "c7_10_2_2_dist_rectangle_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S28.T28.C100.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "integer_tokens",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "integer_tokens",
+     "token_colours": {
+      "positive": "TOKEN_POS #5FB36B",
+      "negative": "TOKEN_NEG #E8744F"
+     },
+     "outer_box": {
+      "outline": "GUIDE",
+      "contains": [
+       "left_box",
+       "right_box"
+      ]
+     },
+     "left_box": {
+      "token": "positive",
+      "symbol": "+",
+      "rows": 4,
+      "cols": 2,
+      "count": 8,
+      "pitch": 1.3,
+      "box_width": 3.1,
+      "box_height": 5.7
+     },
+     "right_box": {
+      "token": "negative",
+      "symbol": "−",
+      "rows": 4,
+      "cols": 3,
+      "count": 12,
+      "pitch": 1.3,
+      "box_width": 4.4,
+      "box_height": 5.7
+     },
+     "braces": [
+      {
+       "position": "above outer box",
+       "spans": "outer box",
+       "tip": "up",
+       "label": "4 × (2 + (−3))"
+      },
+      {
+       "position": "below left box",
+       "spans": "left box",
+       "tip": "down",
+       "label": "4 × 2"
+      },
+      {
+       "position": "below right box",
+       "spans": "right box",
+       "tip": "down",
+       "label": "4 × (−3)"
+      }
+     ]
+    },
+    "manim_description": "On a 16:9 canvas with a plain BG background draw the book's token rectangle, centred. A token is a disc of diameter 1.0 with a 2 px INK outline and a bold INK symbol centred in it: a plus sign on a green token (fill TOKEN_POS #5FB36B) and a minus sign on a red token (fill TOKEN_NEG #E8744F). One outer rounded rectangle (GUIDE outline 2 px, no fill) encloses two inner rounded rectangles that sit side by side with a gap of 0.4 (GUIDE outline 2 px, no fill). LEFT inner box (width 3.1, height 5.7): 8 green tokens in 4 rows and 2 columns, pitch 1.3 in both directions. RIGHT inner box (width 4.4, height 5.7): 12 red tokens in 4 rows and 3 columns, pitch 1.3 in both directions. Above the outer rectangle draw one INK curly brace spanning its full width, tip pointing up, with the label 4 × (2 + (−3)) centred above the tip. Below the outer rectangle draw two INK curly braces, tips pointing down: one spanning the left inner box with the label 4 × 2 under its tip, one spanning the right inner box with the label 4 × (−3) under its tip. Draw nothing else: no results, no equals sign, no totals, no zero pairs.",
+    "visible_text": [
+     "4 × (2 + (−3))",
+     "4 × 2",
+     "4 × (−3)",
+     "+",
+     "−"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any result such as −4, 8 or −12",
+     "zero-pair outlines",
+     "token counts written as numbers"
+    ],
+    "accuracy_checks": [
+     "left box holds 4 rows × 2 columns = 8 green tokens, each with a plus sign",
+     "right box holds 4 rows × 3 columns = 12 red tokens, each with a minus sign",
+     "every row reads 2 green then 3 red, which is 2 + (−3); 4 rows give 4 × (2 + (−3))",
+     "the brace labels are exactly 4 × (2 + (−3)) above, 4 × 2 under the left box and 4 × (−3) under the right box"
+    ],
+    "alt_text": "Four rows, each with 2 green plus tokens in a left box and 3 red minus tokens in a right box, braced as 4 × 2, 4 × (−3) and 4 × (2 + (−3)).",
+    "render_note": "Same figure as book p.18 (base P18-integer_tokens-1), drawn with the book's labels and no results. The kept teaching image M5.S28.T28.C100.IMG1 shows this rectangle with its results; it is not linked. TOKEN_POS (#5FB36B, green) and TOKEN_NEG (#E8744F, orange-red) are not in the style table: they are the book's green and orange-red token colours and should be the same two colours in every token picture of the plan."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M5.S29.T29.C102",
+   "role": "question",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "Section 2.2 - 2.2.dist_m2",
+   "question_text": "Check (−2) × (4 + (−3)) against (−2) × 4 + (−2) × (−3).",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two expressions to check against their distributed forms (the book's own example and 'one of your own'); text only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S29.T29.C103",
+   "role": "solution",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "Section 2.2 - 2.2.dist_m2",
+   "question_text": "Check (−2) × (4 + (−3)) against (−2) × 4 + (−2) × (−3).",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two numeric evaluations per block written as LaTeX; both sides come to the same number.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S29.T29.C104",
+   "role": "question",
+   "lp_book_number": "Example 2",
+   "ncert_ref": "Section 2.2 - 2.2.TryThis.dist_m4",
+   "question_text": "Show −4 × (2 + (−3)) with tokens.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure: the learner has to build the token picture (the book's Try This asks 'visually show'), so no question figure is invented; the picture is the answer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the question text as it is; no figure is given."
+  },
+  {
+   "lp_concept_id": "M5.S29.T29.C105",
+   "role": "solution",
+   "lp_book_number": "Example 2",
+   "ncert_ref": "Section 2.2 - 2.2.TryThis.dist_m4",
+   "question_text": "Show −4 × (2 + (−3)) with tokens.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The answer is an arrangement of tokens: 4 rows of 2 reds and 3 greens, with the 8 zero pairs outlined and 4 greens left; the steps only describe it in words, so the finished picture is drawn.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S29.T29.C105.IMG1",
+   "manim_scene": "c7_10_2_2_dist_m4_tokens_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S29.T29.C105.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "integer_tokens",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "integer_tokens",
+     "token_colours": {
+      "positive": "TOKEN_POS #5FB36B",
+      "negative": "TOKEN_NEG #E8744F"
+     },
+     "rows": 4,
+     "row_pitch": 1.8,
+     "row_tokens_left_to_right": [
+      {
+       "pos": 1,
+       "token": "negative",
+       "symbol": "−",
+       "x": 0.0
+      },
+      {
+       "pos": 2,
+       "token": "negative",
+       "symbol": "−",
+       "x": 1.5
+      },
+      {
+       "pos": 3,
+       "token": "positive",
+       "symbol": "+",
+       "x": 3.3
+      },
+      {
+       "pos": 4,
+       "token": "positive",
+       "symbol": "+",
+       "x": 4.8
+      },
+      {
+       "pos": 5,
+       "token": "positive",
+       "symbol": "+",
+       "x": 6.3
+      }
+     ],
+     "totals": {
+      "negative_tokens": 8,
+      "positive_tokens": 12,
+      "zero_pairs": 8,
+      "unpaired_positive_tokens": 4
+     },
+     "zero_pair_outlines_each_row": [
+      {
+       "kind": "inner dashed rounded rectangle",
+       "tokens": [
+        2,
+        3
+       ],
+       "padding": 0.1,
+       "colour": "FOCUS"
+      },
+      {
+       "kind": "outer dashed rounded rectangle",
+       "tokens": [
+        1,
+        2,
+        3,
+        4
+       ],
+       "padding": 0.25,
+       "colour": "FOCUS"
+      }
+     ],
+     "unpaired_token_in_each_row": 5,
+     "answer_tag": {
+      "text": "= 4",
+      "colour": "ANSWER",
+      "bracket_spans": "token 5 of rows 1 to 4, right of the arrangement"
+     },
+     "braces": [
+      {
+       "position": "above",
+       "spans": "columns 1 to 5",
+       "tip": "up",
+       "label": "−4 × (2 + (−3))"
+      },
+      {
+       "position": "below",
+       "spans": "columns 1 and 2",
+       "tip": "down",
+       "label": "(−4) × 2"
+      },
+      {
+       "position": "below",
+       "spans": "columns 3 to 5",
+       "tip": "down",
+       "label": "(−4) × (−3)"
+      }
+     ]
+    },
+    "manim_description": "On a 16:9 canvas with a plain BG background draw a token arrangement of 4 rows stacked top to bottom, row pitch 1.8, centred. A token is a disc of diameter 1.0 with a 2 px INK outline and a bold INK symbol centred in it: a minus sign on a red token (fill TOKEN_NEG #E8744F) and a plus sign on a green token (fill TOKEN_POS #5FB36B). Every row has 5 tokens with centres at x = 0, 1.5, 3.3, 4.8 and 6.3: tokens 1 and 2 are red, tokens 3, 4 and 5 are green. That is 8 red and 12 green tokens in all. In every row draw two FOCUS dashed rounded rectangles (2.5 px): an inner one that encloses tokens 2 and 3 (padding 0.1) and an outer one that encloses tokens 1 to 4 (padding 0.25), so each row shows 2 zero pairs, 8 zero pairs in all; token 5 of each row (a green token) stays outside both outlines. To the right of the arrangement draw one ANSWER-coloured bracket that spans the 4 unpaired green tokens (token 5 of rows 1 to 4) and put the label = 4 in ANSWER next to it. Above the arrangement draw one INK curly brace spanning all 5 columns, tip pointing up, with the label −4 × (2 + (−3)) above the tip. Below the arrangement draw two INK curly braces, tips pointing down: one spanning columns 1 and 2 with the label (−4) × 2 under its tip and one spanning columns 3 to 5 with the label (−4) × (−3) under its tip. Draw nothing else.",
+    "visible_text": [
+     "−4 × (2 + (−3))",
+     "(−4) × 2",
+     "(−4) × (−3)",
+     "= 4",
+     "+",
+     "−"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words zero pair, cancel or left",
+     "the check line −8 + 12 = 4"
+    ],
+    "accuracy_checks": [
+     "4 rows × 2 red tokens = 8 red tokens; 4 rows × 3 green tokens = 12 green tokens",
+     "each row is the inverse of 2 + (−3): 2 reds and 3 greens, and the multiplier −4 gives 4 such rows",
+     "2 zero pairs per row (token 2 with 3, token 1 with 4), 4 × 2 = 8 zero pairs in all",
+     "unpaired tokens: 12 greens − 8 reds = 4 greens, one per row (token 5), matching the tag = 4",
+     "(−4) × 2 + (−4) × (−3) = −8 + 12 = 4 = −4 × (2 + (−3))"
+    ],
+    "alt_text": "Four rows of 2 red and 3 green tokens; 8 zero pairs are outlined and 4 green tokens are left over, tagged = 4.",
+    "render_note": "The book's Try This (p.18) prints no answer picture; this is the token rectangle the LP solution describes (inverse of 2 + (−3) added 4 times). Same layout idea as base P18-integer_tokens-1 but without its inner boxes, because the zero-pair outlines cross the gap between reds and greens. TOKEN_POS (#5FB36B, green) and TOKEN_NEG (#E8744F, orange-red) are not in the style table: they are the book's green and orange-red token colours and should be the same two colours in every token picture of the plan."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S30.T30.C106",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q1a",
+   "question_text": "Find the value of the expression: (a) (−5) × (18 + (−3))",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A plain arithmetic expression, (-5) x (18 + (-3)); the book prints no figure with Q1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S30.T30.C107",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q1a",
+   "question_text": "Find the value of the expression: (a) (−5) × (18 + (−3))",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three lines of arithmetic ending in -75; nothing visual is added and the book's answer is not a picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S30.T30.C108",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "end.Q13",
+   "question_text": "Given that (−548) × 972 = −532656, write the values of: (a) (−547) × 972 (b) (−548) × 971 (c) (−547) × 971",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Given product and three neighbouring products: pure arithmetic, no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S30.T30.C109",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "end.Q13",
+   "question_text": "Given that (−548) × 972 = −532656, write the values of: (a) (−547) × 972 (b) (−548) × 971 (c) (−547) × 971",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Rewriting -547 as (-548) + 1 and 971 as 972 - 1 is arithmetic that LaTeX carries completely.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S30.T30.C110",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "end.Q14",
+   "question_text": "Given that 207 × (−33 + 7) = −5382, write the value of −207 × (33 − 7) = ___.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "One given product and one blank; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S30.T30.C111",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "end.Q14",
+   "question_text": "Given that 207 × (−33 + 7) = −5382, write the value of −207 × (33 − 7) = ___.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A short argument about additive inverses and signs, fully in words and LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S31.T31.C112",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.2.machine1",
+   "question_text": "Test the rule a + b − c on Machine 1.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The example tests a rule 'on Machine 1', and the machine's six rows exist only in the book's picture: the question text names the machine but gives none of its rows. Referred figure, so it is drawn even though the concept's teaching image M5.S31.T31.C112.IMG1 shows the completed machine (v3 rule B2: a teaching image is never linked).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M5.S31.T31.C112.IMG2",
+   "manim_scene": "c7_10_2_2_machine1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S31.T31.C112.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "arrow_map",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "arrow_map",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "background": "BG",
+     "plate": {
+      "text": "Machine 1",
+      "x": [
+       810,
+       1110
+      ],
+      "y": [
+       100,
+       160
+      ],
+      "fill": "CELL_FILL",
+      "stroke": "INK",
+      "text_height_px": 36
+     },
+     "panel": {
+      "x": [
+       560,
+       1360
+      ],
+      "y": [
+       160,
+       1030
+      ],
+      "stroke": "INK",
+      "stroke_px": 3,
+      "fill": "BG"
+     },
+     "columns": {
+      "input_square_centres_x": [
+       660,
+       840,
+       1020
+      ],
+      "input_square_size_px": 90,
+      "input_square_fill": "CELL_FILL",
+      "operation_circle_centres_x": [
+       750,
+       930
+      ],
+      "operation_circle_diameter_px": 56,
+      "operation_circle_style": "dashed GUIDE outline, empty, nothing written inside",
+      "arrow": {
+       "x_from": 1075,
+       "x_to": 1135,
+       "colour": "INK",
+       "direction": "right"
+      },
+      "star": {
+       "centre_x": 1230,
+       "outer_radius_px": 64,
+       "inner_radius_px": 34,
+       "points": 5
+      }
+     },
+     "rows": [
+      {
+       "row": 1,
+       "y_centre": 250,
+       "inputs": [
+        5,
+        8,
+        3
+       ],
+       "output": 10,
+       "output_state": "given"
+      },
+      {
+       "row": 2,
+       "y_centre": 386,
+       "inputs": [
+        10,
+        11,
+        12
+       ],
+       "output": 9,
+       "output_state": "given"
+      },
+      {
+       "row": 3,
+       "y_centre": 522,
+       "inputs": [
+        5,
+        8,
+        -3
+       ],
+       "output": 16,
+       "output_state": "given"
+      },
+      {
+       "row": 4,
+       "y_centre": 658,
+       "inputs": [
+        -3,
+        10,
+        2
+       ],
+       "output": 5,
+       "output_state": "given"
+      },
+      {
+       "row": 5,
+       "y_centre": 794,
+       "inputs": [
+        -4,
+        -1,
+        -6
+       ],
+       "output": 1,
+       "output_state": "given"
+      },
+      {
+       "row": 6,
+       "y_centre": 930,
+       "inputs": [
+        -10,
+        -12,
+        -9
+       ],
+       "output": null,
+       "output_state": "unknown_empty"
+      }
+     ],
+     "star_styles": {
+      "given": "fill MARK_FILL, INK outline 3 px, number inside",
+      "unknown_empty": "fill BG, dashed FOCUS outline, nothing inside"
+     },
+     "number_text": {
+      "colour": "INK",
+      "height_px": 38,
+      "minus_sign": "U+2212"
+     }
+    },
+    "manim_description": "On a white BG canvas of 1920 by 1080 px draw a machine panel: a tall rectangle outline in INK (3 px stroke) from x 560 to x 1360 and from y 160 to y 1030, with a name-plate tab above its top edge (rectangle x 810 to 1110, y 100 to 160, fill CELL_FILL, INK 3 px outline) holding the text 'Machine 1' in INK, 36 px high, centred. Inside the panel draw 6 rows from top to bottom; row i is centred at y = 250 + 136 x (i - 1), that is y 250, 386, 522, 658, 794 and 930. Each row, from left to right, holds: an input square 90 x 90 px (fill CELL_FILL, INK 3 px outline) centred at x 660 with the first number; an empty dotted circle (diameter 56 px, dashed GUIDE outline, nothing written inside) centred at x 750; an input square at x 840 with the second number; a second empty dotted circle at x 930; an input square at x 1020 with the third number; a short INK arrow pointing right from x 1075 to x 1135; and a five-pointed output star (outer radius 64 px, inner radius 34 px) centred at x 1230. All numbers are INK, 38 px high, centred in their square or star, negatives written with the minus sign U+2212. Rows (first, second, third -> star): 1: 5, 8, 3 -> 10; 2: 10, 11, 12 -> 9; 3: 5, 8, −3 -> 16; 4: −3, 10, 2 -> 5; 5: −4, −1, −6 -> 1; 6: −10, −12, −9 -> empty star. The stars of rows 1 to 5 are filled MARK_FILL with an INK 3 px outline and hold their number; the star of row 6 has BG fill and a dashed FOCUS outline and holds nothing. No operation sign is drawn in any circle, and no rule or formula is written anywhere.",
+    "visible_text": [
+     "Machine 1",
+     "5",
+     "8",
+     "3",
+     "10",
+     "10",
+     "11",
+     "12",
+     "9",
+     "5",
+     "8",
+     "−3",
+     "16",
+     "−3",
+     "10",
+     "2",
+     "5",
+     "−4",
+     "−1",
+     "−6",
+     "1",
+     "−10",
+     "−12",
+     "−9"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the rule a + b - c or any + or - sign inside the dotted circles",
+     "the value of the last row (-13)"
+    ],
+    "accuracy_checks": [
+     "rows 1 to 5 all satisfy first + second - third = star: 5+8-3=10, 10+11-12=9, 5+8-(-3)=16, (-3)+10-2=5, (-4)+(-1)-(-6)=1",
+     "the last row's value (-13) is NOT drawn: it is the open row of Example 1",
+     "6 rows, 18 input squares, 12 empty dotted circles, 6 arrows, 5 filled stars and 1 empty star",
+     "the star of row 6 stays empty: value -13 not shown",
+     "every number equals the book's machine picture row by row"
+    ],
+    "alt_text": "Machine 1: six rows of three input numbers each with an output star; rows 1 to 5 end in 10, 9, 16, 5, 1, and the last row −10, −12, −9 has an empty star.",
+    "render_note": "Book figure P18-machine-1 (left machine of page 18, as printed: rule signs hidden, last star empty). Worked-example figure for block 0 of C112. Row 6 (-10, -12, -9) is the open row that Example 1 (C115) fills in, so its star stays empty here. The teaching image M5.S31.T31.C112.IMG1 shows the completed machine and is not linked. Same panel geometry as the Machine 2 figure of C113 and the Figure it Out machine of C119; only the numbers and the plate text change."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S31.T31.C113",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.2.machine2",
+   "question_text": "Find Machine 2's rule by testing −(a × b) − c on every row.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The example tests a rule 'on Machine 2', and the machine's six rows exist only in the book's picture: the question text names the machine but gives none of its rows. Referred figure, so it is drawn even though the concept's teaching image M5.S31.T31.C113.IMG1 shows the completed machine (v3 rule B2: a teaching image is never linked).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M5.S31.T31.C113.IMG2",
+   "manim_scene": "c7_10_2_2_machine2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S31.T31.C113.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "arrow_map",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "arrow_map",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "background": "BG",
+     "plate": {
+      "text": "Machine 2",
+      "x": [
+       810,
+       1110
+      ],
+      "y": [
+       100,
+       160
+      ],
+      "fill": "CELL_FILL",
+      "stroke": "INK",
+      "text_height_px": 36
+     },
+     "panel": {
+      "x": [
+       560,
+       1360
+      ],
+      "y": [
+       160,
+       1030
+      ],
+      "stroke": "INK",
+      "stroke_px": 3,
+      "fill": "BG"
+     },
+     "columns": {
+      "input_square_centres_x": [
+       660,
+       840,
+       1020
+      ],
+      "input_square_size_px": 90,
+      "input_square_fill": "CELL_FILL",
+      "operation_circle_centres_x": [
+       750,
+       930
+      ],
+      "operation_circle_diameter_px": 56,
+      "operation_circle_style": "dashed GUIDE outline, empty, nothing written inside",
+      "arrow": {
+       "x_from": 1075,
+       "x_to": 1135,
+       "colour": "INK",
+       "direction": "right"
+      },
+      "star": {
+       "centre_x": 1230,
+       "outer_radius_px": 64,
+       "inner_radius_px": 34,
+       "points": 5
+      }
+     },
+     "rows": [
+      {
+       "row": 1,
+       "y_centre": 250,
+       "inputs": [
+        4,
+        8,
+        -3
+       ],
+       "output": -29,
+       "output_state": "given"
+      },
+      {
+       "row": 2,
+       "y_centre": 386,
+       "inputs": [
+        6,
+        -11,
+        12
+       ],
+       "output": 54,
+       "output_state": "given"
+      },
+      {
+       "row": 3,
+       "y_centre": 522,
+       "inputs": [
+        5,
+        3,
+        7
+       ],
+       "output": -22,
+       "output_state": "given"
+      },
+      {
+       "row": 4,
+       "y_centre": 658,
+       "inputs": [
+        -3,
+        9,
+        -8
+       ],
+       "output": 35,
+       "output_state": "given"
+      },
+      {
+       "row": 5,
+       "y_centre": 794,
+       "inputs": [
+        -7,
+        4,
+        6
+       ],
+       "output": 22,
+       "output_state": "given"
+      },
+      {
+       "row": 6,
+       "y_centre": 930,
+       "inputs": [
+        -10,
+        -12,
+        -9
+       ],
+       "output": null,
+       "output_state": "unknown_empty"
+      }
+     ],
+     "star_styles": {
+      "given": "fill MARK_FILL, INK outline 3 px, number inside",
+      "unknown_empty": "fill BG, dashed FOCUS outline, nothing inside"
+     },
+     "number_text": {
+      "colour": "INK",
+      "height_px": 38,
+      "minus_sign": "U+2212"
+     }
+    },
+    "manim_description": "On a white BG canvas of 1920 by 1080 px draw a machine panel: a tall rectangle outline in INK (3 px stroke) from x 560 to x 1360 and from y 160 to y 1030, with a name-plate tab above its top edge (rectangle x 810 to 1110, y 100 to 160, fill CELL_FILL, INK 3 px outline) holding the text 'Machine 2' in INK, 36 px high, centred. Inside the panel draw 6 rows from top to bottom; row i is centred at y = 250 + 136 x (i - 1), that is y 250, 386, 522, 658, 794 and 930. Each row, from left to right, holds: an input square 90 x 90 px (fill CELL_FILL, INK 3 px outline) centred at x 660 with the first number; an empty dotted circle (diameter 56 px, dashed GUIDE outline, nothing written inside) centred at x 750; an input square at x 840 with the second number; a second empty dotted circle at x 930; an input square at x 1020 with the third number; a short INK arrow pointing right from x 1075 to x 1135; and a five-pointed output star (outer radius 64 px, inner radius 34 px) centred at x 1230. All numbers are INK, 38 px high, centred in their square or star, negatives written with the minus sign U+2212. Rows (first, second, third -> star): 1: 4, 8, −3 -> −29; 2: 6, −11, 12 -> 54; 3: 5, 3, 7 -> −22; 4: −3, 9, −8 -> 35; 5: −7, 4, 6 -> 22; 6: −10, −12, −9 -> empty star. The stars of rows 1 to 5 are filled MARK_FILL with an INK 3 px outline and hold their number; the star of row 6 has BG fill and a dashed FOCUS outline and holds nothing. No operation sign is drawn in any circle, and no rule or formula is written anywhere.",
+    "visible_text": [
+     "Machine 2",
+     "4",
+     "8",
+     "−3",
+     "−29",
+     "6",
+     "−11",
+     "12",
+     "54",
+     "5",
+     "3",
+     "7",
+     "−22",
+     "−3",
+     "9",
+     "−8",
+     "35",
+     "−7",
+     "4",
+     "6",
+     "22",
+     "−10",
+     "−12",
+     "−9"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the rule -(a x b) - c or any sign, product or bracket inside the dotted circles",
+     "the value of the last row (-111)"
+    ],
+    "accuracy_checks": [
+     "rows 1 to 5 all satisfy -(first x second) - third = star: -(4x8)-(-3)=-29, -(6x(-11))-12=54, -(5x3)-7=-22, -((-3)x9)-(-8)=35, -((-7)x4)-6=22",
+     "the last row's value (-111) is NOT drawn: it is the open row of Example 2",
+     "6 rows, 18 input squares, 12 empty dotted circles, 6 arrows, 5 filled stars and 1 empty star",
+     "the star of row 6 stays empty: value -111 not shown",
+     "every number equals the book's machine picture row by row"
+    ],
+    "alt_text": "Machine 2: six rows of three input numbers each with an output star; rows 1 to 5 end in −29, 54, −22, 35, 22, and the last row −10, −12, −9 has an empty star.",
+    "render_note": "Book figure P18-machine-2 (right machine of page 18, as printed: rule signs hidden, last star empty). Worked-example figure for block 0 of C113. The rows follow the book's order (4, 8, -3 first); the LP steps list the same five rows in another order (5, 3, 7 first), which is fine because each step names its row. Row 6 (-10, -12, -9) is the open row that Example 2 (C117) fills in, so its star stays empty here. The teaching image M5.S31.T31.C113.IMG1 is not linked. Same panel geometry as the Machine 1 figure of C112 and the Figure it Out machine of C119."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S32.T32.C115",
+   "role": "question",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.2.machine1_last",
+   "question_text": "Find the output of Machine 1 for −10, −12, −9.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The three inputs -10, -12, -9 are in the text and the rule of Machine 1 was taught in the previous concept; the book's last row adds only those three numbers and an empty star. Differs from the worked example C112 because there the rows exist only in the picture. Machine 1 itself is drawn for C112.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S32.T32.C116",
+   "role": "solution",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "2.2.machine1_last",
+   "question_text": "Find the output of Machine 1 for −10, −12, −9.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two lines of arithmetic ending in -13; the book's answer is a number, not a picture, and the completed last row already sits in the teaching image C112.IMG1 (never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S32.T32.C117",
+   "role": "question",
+   "lp_book_number": "Example 2",
+   "ncert_ref": "2.2.machine2",
+   "question_text": "Fill in Machine 2's output for −10, −12, −9.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "Inputs -10, -12, -9 are in the text; the extra block 'make your own machine' is open-ended. Machine 2 itself is drawn for C113.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S32.T32.C118",
+   "role": "solution",
+   "lp_book_number": "Example 2",
+   "ncert_ref": "2.2.machine2",
+   "question_text": "Fill in Machine 2's output for −10, −12, −9.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two lines of arithmetic ending in -111 (and two for the own machine, -2); the completed last row is already in the teaching image C113.IMG1 (never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C119",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q7",
+   "question_text": "Pick the pattern: find the operations done by the machine shown below. Rows: 4, 8, −3 gives 28; 6, 9, 6 gives −48; 2, 3, −2 gives 8; −9, 5, −8 gives 31; 7, −4, −6 gives −17; −16, −6, −9 gives ?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book question is 'find the operations done by the machine shown below': the machine with its six rows is the whole given. The LP text only transcribes the rows and still says 'shown below'. Treated like the Machine 1 / Machine 2 figures (C112, C113).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S33.T33.C119.IMG1",
+   "manim_scene": "c7_10_fio_q7_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S33.T33.C119.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "arrow_map",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "arrow_map",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "background": "BG",
+     "plate": {
+      "text": "Machine",
+      "x": [
+       810,
+       1110
+      ],
+      "y": [
+       100,
+       160
+      ],
+      "fill": "CELL_FILL",
+      "stroke": "INK",
+      "text_height_px": 36
+     },
+     "panel": {
+      "x": [
+       560,
+       1360
+      ],
+      "y": [
+       160,
+       1030
+      ],
+      "stroke": "INK",
+      "stroke_px": 3,
+      "fill": "BG"
+     },
+     "columns": {
+      "input_square_centres_x": [
+       660,
+       840,
+       1020
+      ],
+      "input_square_size_px": 90,
+      "input_square_fill": "CELL_FILL",
+      "operation_circle_centres_x": [
+       750,
+       930
+      ],
+      "operation_circle_diameter_px": 56,
+      "operation_circle_style": "dashed GUIDE outline, empty, nothing written inside",
+      "arrow": {
+       "x_from": 1075,
+       "x_to": 1135,
+       "colour": "INK",
+       "direction": "right"
+      },
+      "star": {
+       "centre_x": 1230,
+       "outer_radius_px": 64,
+       "inner_radius_px": 34,
+       "points": 5
+      }
+     },
+     "rows": [
+      {
+       "row": 1,
+       "y_centre": 250,
+       "inputs": [
+        4,
+        8,
+        -3
+       ],
+       "output": 28,
+       "output_state": "given"
+      },
+      {
+       "row": 2,
+       "y_centre": 386,
+       "inputs": [
+        6,
+        9,
+        6
+       ],
+       "output": -48,
+       "output_state": "given"
+      },
+      {
+       "row": 3,
+       "y_centre": 522,
+       "inputs": [
+        2,
+        3,
+        -2
+       ],
+       "output": 8,
+       "output_state": "given"
+      },
+      {
+       "row": 4,
+       "y_centre": 658,
+       "inputs": [
+        -9,
+        5,
+        -8
+       ],
+       "output": 31,
+       "output_state": "given"
+      },
+      {
+       "row": 5,
+       "y_centre": 794,
+       "inputs": [
+        7,
+        -4,
+        -6
+       ],
+       "output": -17,
+       "output_state": "given"
+      },
+      {
+       "row": 6,
+       "y_centre": 930,
+       "inputs": [
+        -16,
+        -6,
+        -9
+       ],
+       "output": null,
+       "output_state": "unknown_empty"
+      }
+     ],
+     "star_styles": {
+      "given": "fill MARK_FILL, INK outline 3 px, number inside",
+      "unknown_empty": "fill BG, dashed FOCUS outline, nothing inside"
+     },
+     "number_text": {
+      "colour": "INK",
+      "height_px": 38,
+      "minus_sign": "U+2212"
+     }
+    },
+    "manim_description": "On a white BG canvas of 1920 by 1080 px draw a machine panel: a tall rectangle outline in INK (3 px stroke) from x 560 to x 1360 and from y 160 to y 1030, with a name-plate tab above its top edge (rectangle x 810 to 1110, y 100 to 160, fill CELL_FILL, INK 3 px outline) holding the text 'Machine' in INK, 36 px high, centred. Inside the panel draw 6 rows from top to bottom; row i is centred at y = 250 + 136 x (i - 1), that is y 250, 386, 522, 658, 794 and 930. Each row, from left to right, holds: an input square 90 x 90 px (fill CELL_FILL, INK 3 px outline) centred at x 660 with the first number; an empty dotted circle (diameter 56 px, dashed GUIDE outline, nothing written inside) centred at x 750; an input square at x 840 with the second number; a second empty dotted circle at x 930; an input square at x 1020 with the third number; a short INK arrow pointing right from x 1075 to x 1135; and a five-pointed output star (outer radius 64 px, inner radius 34 px) centred at x 1230. All numbers are INK, 38 px high, centred in their square or star, negatives written with the minus sign U+2212. Rows (first, second, third -> star): 1: 4, 8, −3 -> 28; 2: 6, 9, 6 -> −48; 3: 2, 3, −2 -> 8; 4: −9, 5, −8 -> 31; 5: 7, −4, −6 -> −17; 6: −16, −6, −9 -> empty star. The stars of rows 1 to 5 are filled MARK_FILL with an INK 3 px outline and hold their number; the star of row 6 has BG fill and a dashed FOCUS outline and holds nothing. No operation sign is drawn in any circle, and no rule or formula is written anywhere.",
+    "visible_text": [
+     "Machine",
+     "4",
+     "8",
+     "−3",
+     "28",
+     "6",
+     "9",
+     "6",
+     "−48",
+     "2",
+     "3",
+     "−2",
+     "8",
+     "−9",
+     "5",
+     "−8",
+     "31",
+     "7",
+     "−4",
+     "−6",
+     "−17",
+     "−16",
+     "−6",
+     "−9"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the rule a - b x c or any sign inside the dotted circles",
+     "the value of the last row (-70)"
+    ],
+    "accuracy_checks": [
+     "rows 1 to 5 all satisfy first - second x third = star: 4-8x(-3)=28, 6-9x6=-48, 2-3x(-2)=8, (-9)-5x(-8)=31, 7-(-4)x(-6)=-17",
+     "the last row's value (-70) is NOT drawn: it is the unknown of the question",
+     "6 rows, 18 input squares, 12 empty dotted circles, 6 arrows, 5 filled stars and 1 empty star",
+     "the star of row 6 stays empty: value -70 not shown",
+     "every number equals the book's machine picture row by row"
+    ],
+    "alt_text": "Machine: six rows of three input numbers each with an output star; rows 1 to 5 end in 28, −48, 8, 31, −17, and the last row −16, −6, −9 has an empty star.",
+    "render_note": "Book figure P20-machine-1 (page 20, Figure it Out Q7; the plate reads just 'Machine' with no number). Question figure only: the dotted circles stay empty and the last star stays empty, so nothing of the answer (rule a - b x c, last output -70) is shown. Same panel geometry as the two machines of page 18 (C112, C113); the book prints this panel slightly smaller, which does not matter."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C120",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q7",
+   "question_text": "Pick the pattern: find the operations done by the machine shown below. Rows: 4, 8, −3 gives 28; 6, 9, 6 gives −48; 2, 3, −2 gives 8; −9, 5, −8 gives 31; 7, −4, −6 gives −17; −16, −6, −9 gives ?",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A completed machine (a - b x c written in both circles of every row, last star -70) would help, but it is not needed: the LP answer is an expression and a number, every row is checked in the steps, and the book prints no answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C121",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "end.Q5",
+   "question_text": "Do you remember the Collatz Conjecture from last year? Try a modified version with integers. The rule is: start with any number; if the number is even, take half of it; if the number is odd, multiply it by −3 and add 1; repeat. An example sequence is shown below: −7, 22, 11, 32, −16, −8, −4, −2, −1, 4, 2, 1, and back to −2. Try this with different starting numbers: (−21), (−6), and so on. Describe the patterns you observe.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The rule and the example chain are both in the text; the book's picture is a number chain with a loop-back arrow (a sequence, which stays text/LaTeX), and the text already says 'and back to -2'.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optionally write the example as an arrow chain in LaTeX closed by 'and back to $-2$'. The book (and this LP text) prints 32 after 11 where the rule gives $-32$; the LP solution already says so."
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C122",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "end.Q5",
+   "question_text": "Do you remember the Collatz Conjecture from last year? Try a modified version with integers. The rule is: start with any number; if the number is even, take half of it; if the number is odd, multiply it by −3 and add 1; repeat. An example sequence is shown below: −7, 22, 11, 32, −16, −8, −4, −2, −1, 4, 2, 1, and back to −2. Try this with different starting numbers: (−21), (−6), and so on. Describe the patterns you observe.",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A flow picture of the loop 1, -2, -1, 4, 2, 1 with the chains from -21 and -6 joining it, and 13's own 31-number loop apart, would help the 'describe the patterns' answer, but the answer is a description plus number chains, which stay in LaTeX, so it is not needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C123",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "end.Q15",
+   "question_text": "Use the numbers 3, −2, 5, −6 exactly once and the operations '+', '−' and '×' exactly once and brackets as necessary to write an expression such that (a) the result is the maximum possible (b) the result is the minimum possible",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four numbers and three operations in words; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C124",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "end.Q15",
+   "question_text": "Use the numbers 3, −2, 5, −6 exactly once and the operations '+', '−' and '×' exactly once and brackets as necessary to write an expression such that (a) the result is the maximum possible (b) the result is the minimum possible",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is two bracketed expressions (60 and -60) with their arithmetic; LaTeX carries it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C125",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "end.Q16",
+   "question_text": "Fill in the blanks in at least 5 different ways with integers: (a) □ + □ × □ = −36 (b) (□ − □) × □ = 12 (c) (□ − (□ − □)) = −1",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's figure P21-blank_expression-1 is only three equations with empty boxes; the LP text already writes the boxes inside the equations, so LaTeX carries it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write each blank as a box symbol inside the equation, e.g. $\\square + \\square \\times \\square = -36$."
+  },
+  {
+   "lp_concept_id": "M5.S33.T33.C126",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "end.Q16",
+   "question_text": "Fill in the blanks in at least 5 different ways with integers: (a) □ + □ × □ = −36 (b) (□ − □) × □ = 12 (c) (□ − (□ − □)) = −1",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Fifteen filled-in equations (five ways for each of (a), (b), (c)); the same boxes filled with numbers stay LaTeX, and the book's answer is not a picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S35.T35.C129",
+   "role": "question",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "end.Q10.85",
+   "question_text": "Check that 10 coins of +13 and 5 coins of −9 make +85.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem about two coin denominations; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S35.T35.C130",
+   "role": "solution",
+   "lp_book_number": "Example 1",
+   "ncert_ref": "end.Q10.85",
+   "question_text": "Check that 10 coins of +13 and 5 coins of −9 make +85.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three lines of arithmetic (130, -45, 85).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S36.T36.C131",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q10",
+   "question_text": "Using the two denominations, try to get the following totals: (a) +20 (b) +40 (c) −50 (d) +8 (e) +10 (f) −2 (g) +1 (h) Is it possible to purchase an item that costs 1568 pibs?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Totals to reach with +13 and -9 coins, listed as (a) to (h) in the text; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S36.T36.C132",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "end.Q10",
+   "question_text": "Using the two denominations, try to get the following totals: (a) +20 (b) +40 (c) −50 (d) +8 (e) +10 (f) −2 (g) +1 (h) Is it possible to purchase an item that costs 1568 pibs?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Eight lines of arithmetic (plus the multiples lists of the extra block); a plain list of products and sums stays LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

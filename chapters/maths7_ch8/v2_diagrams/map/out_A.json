@@ -1,0 +1,1911 @@
+{
+ "meta": {
+  "chapter": "Working with Fractions",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 8",
+  "lp_plan_id": "cbse_eng_maths7_ch8_v35",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "none": 13,
+    "required": 0,
+    "optional": 0
+   },
+   "solution": {
+    "optional": 2,
+    "none": 7,
+    "required": 4
+   },
+   "worked_example": {
+    "required": 2,
+    "none": 4,
+    "optional": 0
+   }
+  },
+  "notes": [
+   "Chunk A: topics M1.S3.T3 to M1.S10.T10 (19 units, 32 items).",
+   "The four Figure-it-Out unit-square answers (Q1 and Q2) are one four-panel picture each, because the brief allows one solution diagram per answer.",
+   "Teaching images C25/C27/C28/C36/C37 stay unlinked; the worked example C28 and the T7 solutions redraw the same figures as their own diagrams (v3 rule).",
+   "The fifth part of Figure it Out Q1 (1/12 x 1/18 = 1/216) is not drawn: 216 cells, the book prints no picture and calls it cumbersome."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P01-number_line-1",
+   "source": "chapter p.1",
+   "description": "Number line, 3 equal segments of 1/4 km, 'Distance in 1 hour' over the first and 'Distance in 3 hour' below the whole line (teaching figure of the tortoise walk; closest plan image is the tortoise on the path).",
+   "mapped_to": "concept_image:M1.S1.T1.C1.IMG1"
+  },
+  {
+   "fig_id": "P02-number_line-1",
+   "source": "chapter p.2",
+   "description": "Number line 0 to 3 km cut into 5 equal parts, first part 'Distance in 1/5 hour' (teaching).",
+   "mapped_to": "concept_image:M1.S2.T2.C4.IMG1"
+  },
+  {
+   "fig_id": "P03-number_line-1",
+   "source": "chapter p.3",
+   "description": "Same 5-part line, arrows for 1/5 hour and 2/5 hour (teaching).",
+   "mapped_to": "concept_image:M1.S2.T2.C4.IMG1"
+  },
+  {
+   "fig_id": "P03-labelled_expression-2",
+   "source": "chapter p.3",
+   "description": "Expression 2/5 x 3 with the speech bubbles Multiplier and Multiplicand (terminology only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P04-flow_diagram-1",
+   "source": "chapter p.4",
+   "description": "Arrow summary of 2/5 x 3: 3 / 5 = 3/5, then 2 x 3/5 = 6/5 (arithmetic written with arrows).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P05-table-1",
+   "source": "chapter p.5",
+   "description": "Plain 2-column table Hour | Distance: 1 -> 1/4, 1/2 -> ?.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P05-fraction_grid-2",
+   "source": "chapter p.5",
+   "description": "Plain unit square next to the same square cut into 4 rows with the top row filled (1/4 of the whole) (teaching).",
+   "mapped_to": "concept_image:M1.S6.T6.C25.IMG1"
+  },
+  {
+   "fig_id": "P06-fraction_grid-1",
+   "source": "chapter p.6",
+   "description": "Unit square 4 rows x 2 columns, top row filled, its left cell hatched = 1/8 (teaching, 1/4 divided into 2 equal parts).",
+   "mapped_to": "concept_image:M1.S6.T6.C25.IMG1"
+  },
+  {
+   "fig_id": "NEW-P06-fraction_grid-1-sol",
+   "source": "chapter p.6 (second use)",
+   "description": "Second use of the P06-fraction_grid-1 picture: the solution of the tortoise-in-half-an-hour question draws it in full (band 1/4, product cell 1/8).",
+   "mapped_to": "item:M1.S7.T7.C31 (solution)"
+  },
+  {
+   "fig_id": "P06-fraction_grid-2",
+   "source": "chapter p.6",
+   "description": "Fig. 8.1: unit square 5 rows x 4 columns, top 2 rows filled (2/5), 2 cells of the left column hatched = 2/20 (teaching).",
+   "mapped_to": "concept_image:M1.S6.T6.C27.IMG1"
+  },
+  {
+   "fig_id": "P07-fraction_grid-1",
+   "source": "chapter p.7",
+   "description": "Same 5 x 4 square, top 2 rows filled, left 3 columns of them hatched = 6/20 (teaching).",
+   "mapped_to": "concept_image:M1.S6.T6.C27.IMG1"
+  },
+  {
+   "fig_id": "NEW-P07-fraction_grid-1-sol",
+   "source": "chapter p.7 (second use)",
+   "description": "Second use of the P07-fraction_grid-1 picture: the solution of the tortoise-in-3/4-hour question draws it in full (band 2/5, 6 product cells).",
+   "mapped_to": "item:M1.S7.T7.C33 (solution)"
+  },
+  {
+   "fig_id": "P07-labelled_expression-2",
+   "source": "chapter p.7",
+   "description": "Expression 3/4 x 2/5 with the speech bubbles Multiplier and Multiplicand (terminology only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P07-flow_diagram-3",
+   "source": "chapter p.7",
+   "description": "Two arrow rows: 2/5 / 4 = 2/20 and 3 x 2/20 = 6/20 (arithmetic written with arrows; the book prints a dangling '=' and 'Divide ... by 3' for the multiply step).",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P07-fraction_grid-4",
+   "source": "chapter p.7",
+   "description": "Fig. 8.2: whole (2 rows x 4 columns) in a dashed box labelled whole plus an extra half row of 4 cells, brace 3/2, first column (3 cells) hatched = 3/8 (Math Talk).",
+   "mapped_to": "concept_image:M1.S6.T6.C28.IMG1"
+  },
+  {
+   "fig_id": "NEW-P07-fraction_grid-4-we",
+   "source": "chapter p.7 (second use)",
+   "description": "Second use of Fig. 8.2: the worked example 5/4 x 3/2 needs its own copy because a teaching image is never linked.",
+   "mapped_to": "item:M1.S6.T6.C28 (question)"
+  },
+  {
+   "fig_id": "P08-fraction_grid-1",
+   "source": "chapter p.8",
+   "description": "Fig. 8.3: unit square 4 rows x 2 columns, top row filled, left cell hatched (the 1/2 by 1/4 rectangle) with an arrow to 1/8; the question asks for its length and breadth.",
+   "mapped_to": "item:M1.S6.T6.C26 (question)"
+  },
+  {
+   "fig_id": "P09-fraction_grid-1",
+   "source": "chapter p.9",
+   "description": "18 x 12 grid (216 cells), one corner cell hatched, 1/18 brace, '18 parts', '12 parts' (schematic of the unit-fraction rule).",
+   "mapped_to": "concept_image:M1.S9.T9.C36.IMG1"
+  },
+  {
+   "fig_id": "P09-fraction_grid-2",
+   "source": "chapter p.9",
+   "description": "18 x 12 grid, left column top 7 cells hatched (7/18 divided into 12 parts).",
+   "mapped_to": "concept_image:M1.S9.T9.C37.IMG1"
+  },
+  {
+   "fig_id": "P10-fraction_grid-1",
+   "source": "chapter p.10",
+   "description": "18 x 12 grid, top-left block 5 columns x 7 rows = 35 cells hatched (5/12 x 7/18 = 35/216).",
+   "mapped_to": "concept_image:M1.S9.T9.C37.IMG1"
+  },
+  {
+   "fig_id": "P32-grid-1",
+   "source": "chapter p.32 (printed answer)",
+   "description": "Printed answer picture for Figure it Out Q1(a): 3 columns x 5 rows, top row filled, top-left cell hatched = 1/15.",
+   "mapped_to": "item:M1.S8.T8.C35 (solution)"
+  },
+  {
+   "fig_id": "P33-area_model-1",
+   "source": "chapter p.33 (printed answer)",
+   "description": "CORRECTED: Printed answer picture for Q1(b): 4 columns x 3 rows, top row filled, top-left cell hatched = 1/12; the book prints '5 parts' under it although it has 4 columns (misprint, not copied).",
+   "mapped_to": "item:M1.S8.T8.C35 (solution)"
+  },
+  {
+   "fig_id": "P33-area_model-2",
+   "source": "chapter p.33 (printed answer)",
+   "description": "Printed answer picture for Q1(c): 5 columns x 2 rows, top row filled, top-left cell hatched = 1/10.",
+   "mapped_to": "item:M1.S8.T8.C35 (solution)"
+  },
+  {
+   "fig_id": "P33-area_model-3",
+   "source": "chapter p.33 (printed answer)",
+   "description": "Printed answer picture for Q1(d): 6 columns x 5 rows, top row filled, top-left cell hatched = 1/30.",
+   "mapped_to": "item:M1.S8.T8.C35 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 24,
+  "mapped_to_items": 8,
+  "mapped_to_concept_images": 11,
+  "mapped_none": 5,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S6.T6.C26.IMG1",
+   "M1.S6.T6.C28.IMG2",
+   "M1.S7.T7.C31.IMG1",
+   "M1.S7.T7.C33.IMG1",
+   "M1.S8.T8.C35.IMG1",
+   "M1.S10.T10.C42.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "question",
+   "lp_book_number": "Fraction and Whole Number: the tortoise in 3 hours",
+   "ncert_ref": "Section 8.1 - A Fraction and a Whole Number: tortoise in 3 hours (pp.1-2)",
+   "question_text": "Aaron's pet tortoise can walk 1/4 km in 1 hour. How far can it walk in 3 hours?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure with this question: the speed and the time are in the words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "solution",
+   "lp_book_number": "Fraction and Whole Number: the tortoise in 3 hours",
+   "ncert_ref": "Section 8.1 - A Fraction and a Whole Number: tortoise in 3 hours (pp.1-2)",
+   "question_text": "Aaron's pet tortoise can walk 1/4 km in 1 hour. How far can it walk in 3 hours?",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Steps 2-3 already show 3 x 1/4 = 1/4 + 1/4 + 1/4 = 3/4 in LaTeX and the answer is a number. A number line from 0 with three equal hops of 1/4 km ending at 3/4 (the book's own line, p.1) would make it nicer, not clearer: optional, not added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the LaTeX steps as they are: 3 x 1/4 = 1/4 + 1/4 + 1/4 = 3/4."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C9",
+   "role": "question",
+   "lp_book_number": "Fraction and Whole Number: Aaron in 2/5 of an hour",
+   "ncert_ref": "Section 8.1 - A Fraction and a Whole Number: Aaron in 2/5 of an hour (pp.2-3)",
+   "question_text": "Aaron can walk 3 km in 1 hour. How far can he walk in 2/5 of an hour?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure with this question: the speed and the time are in the words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C10",
+   "role": "solution",
+   "lp_book_number": "Fraction and Whole Number: Aaron in 2/5 of an hour",
+   "ncert_ref": "Section 8.1 - A Fraction and a Whole Number: Aaron in 2/5 of an hour (pp.2-3)",
+   "question_text": "Aaron can walk 3 km in 1 hour. How far can he walk in 2/5 of an hour?",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a number and steps 2-3 give the working in LaTeX. A 3 km bar cut into 5 equal parts with 1 part = 3/5 km and 2 parts = 6/5 km (the book's own line, p.3) would make it nicer, not clearer, and teaching image M1.S2.T2.C4.IMG1 already shows exactly that: optional, not added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the LaTeX steps as they are: 3 / 5 = 3/5 km, then 2 x 3/5 = 6/5 km."
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C11",
+   "role": "question",
+   "lp_book_number": "Example 1: the farmer's grandchildren",
+   "ncert_ref": "Section 8.1 - Example 1 (p.4)",
+   "question_text": "A farmer had 5 grandchildren. She gave 2/3 acre of land to each of them. How much land did she give in all?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure in the book; all data are in the words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C12",
+   "role": "solution",
+   "lp_book_number": "Example 1: the farmer's grandchildren",
+   "ncert_ref": "Section 8.1 - Example 1 (p.4)",
+   "question_text": "A farmer had 5 grandchildren. She gave 2/3 acre of land to each of them. How much land did she give in all?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The book solves it with the repeated-addition line 5 x 2/3 = 2/3 + 2/3 + 2/3 + 2/3 + 2/3 = 10/3, which LaTeX shows exactly; no figure is printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C13",
+   "role": "question",
+   "lp_book_number": "Example 2: the cost of internet time",
+   "ncert_ref": "Section 8.1 - Example 2 (p.4)",
+   "question_text": "1 hour of internet time costs ₹8. How much will 1 1/4 hours of internet time cost?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure in the book; all data are in the words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C14",
+   "role": "solution",
+   "lp_book_number": "Example 2: the cost of internet time",
+   "ncert_ref": "Section 8.1 - Example 2 (p.4)",
+   "question_text": "1 hour of internet time costs ₹8. How much will 1 1/4 hours of internet time cost?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Pure fraction arithmetic (5/4 x 8 = 5 x 2 = 10); no figure printed in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C15",
+   "role": "question",
+   "lp_book_number": "Figure it Out 8.1, Q1",
+   "ncert_ref": "Section 8.1 - Figure it Out (pp.4-5) Q1: Tenzin's milk in a week and in January",
+   "question_text": "Tenzin drinks 1/2 glass of milk every day. How many glasses of milk does he drink in a week? How many glasses of milk did he drink in the month of January?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure in the book for this question; all data are in the words or the expressions.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C16",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 8.1, Q1",
+   "ncert_ref": "Section 8.1 - Figure it Out (pp.4-5) Q1: Tenzin's milk in a week and in January",
+   "question_text": "Tenzin drinks 1/2 glass of milk every day. How many glasses of milk does he drink in a week? How many glasses of milk did he drink in the month of January?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The printed answer (p.31-32) is text and fractions only; the working is fraction arithmetic that LaTeX shows exactly.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C17",
+   "role": "question",
+   "lp_book_number": "Figure it Out 8.1, Q2",
+   "ncert_ref": "Section 8.1 - Figure it Out (pp.4-5) Q2: canal made in 1 day and in 5 days",
+   "question_text": "A team of workers can make 1 km of a water canal in 8 days. So, in one day, the team can make ___ km of the water canal. If they work 5 days a week, they can make ___ km of the water canal in a week.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure in the book for this question; all data are in the words or the expressions.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C18",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 8.1, Q2",
+   "ncert_ref": "Section 8.1 - Figure it Out (pp.4-5) Q2: canal made in 1 day and in 5 days",
+   "question_text": "A team of workers can make 1 km of a water canal in 8 days. So, in one day, the team can make ___ km of the water canal. If they work 5 days a week, they can make ___ km of the water canal in a week.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The printed answer (p.31-32) is text and fractions only; the working is fraction arithmetic that LaTeX shows exactly.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C19",
+   "role": "question",
+   "lp_book_number": "Figure it Out 8.1, Q3",
+   "ncert_ref": "Section 8.1 - Figure it Out (pp.4-5) Q3: oil shared among 3 families",
+   "question_text": "Manju and two of her neighbours buy 5 litres of oil every week and share it equally among the 3 families. How much oil does each family get in a week? How much oil will one family get in 4 weeks?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure in the book for this question; all data are in the words or the expressions.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C20",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 8.1, Q3",
+   "ncert_ref": "Section 8.1 - Figure it Out (pp.4-5) Q3: oil shared among 3 families",
+   "question_text": "Manju and two of her neighbours buy 5 litres of oil every week and share it equally among the 3 families. How much oil does each family get in a week? How much oil will one family get in 4 weeks?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The printed answer (p.31-32) is text and fractions only; the working is fraction arithmetic that LaTeX shows exactly.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C21",
+   "role": "question",
+   "lp_book_number": "Figure it Out 8.1, Q4",
+   "ncert_ref": "Section 8.1 - Figure it Out (pp.4-5) Q4: the Moon sets 5/6 hour later each day",
+   "question_text": "Safia saw the Moon setting on Monday at 10 pm. Her mother, who is a scientist, told her that every day the Moon sets 5/6 hour later than the previous day. How many hours after 10 pm will the moon set on Thursday?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure in the book for this question; all data are in the words or the expressions.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C22",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 8.1, Q4",
+   "ncert_ref": "Section 8.1 - Figure it Out (pp.4-5) Q4: the Moon sets 5/6 hour later each day",
+   "question_text": "Safia saw the Moon setting on Monday at 10 pm. Her mother, who is a scientist, told her that every day the Moon sets 5/6 hour later than the previous day. How many hours after 10 pm will the moon set on Thursday?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The printed answer (p.31-32) is text and fractions only; the working is fraction arithmetic that LaTeX shows exactly.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C23",
+   "role": "question",
+   "lp_book_number": "Figure it Out 8.1, Q5",
+   "ncert_ref": "Section 8.1 - Figure it Out (pp.4-5) Q5: multiply and convert to mixed fractions (a)-(d)",
+   "question_text": "Multiply and then convert it into a mixed fraction: (a) 7 × 3/5 (b) 4 × 1/3 (c) 9/7 × 6 (d) 13/11 × 6",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "No figure in the book for this question; all data are in the words or the expressions.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C24",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 8.1, Q5",
+   "ncert_ref": "Section 8.1 - Figure it Out (pp.4-5) Q5: multiply and convert to mixed fractions (a)-(d)",
+   "question_text": "Multiply and then convert it into a mixed fraction: (a) 7 × 3/5 (b) 4 × 1/3 (c) 9/7 × 6 (d) 13/11 × 6",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The printed answer (p.31-32) is text and fractions only; the working is fraction arithmetic that LaTeX shows exactly.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C26",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 8.1 - Connection between the Area of a Rectangle and Fraction Multiplication, Fig. 8.3 (p.8)",
+   "question_text": "In the unit square, a shaded rectangle has sides 1/2 unit and 1/4 unit, and 8 such rectangles fill the square. What is its area, and how does it relate to the sides?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book asks about the shaded rectangle of Fig. 8.3; the question speaks of the shaded rectangle in the unit square and of 8 such rectangles filling it, which the learner must see.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S6.T6.C26.IMG1",
+   "manim_scene": "c7_8_S6_C26_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S6.T6.C26.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "fraction_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "fraction_model",
+     "canvas": "1920x1080",
+     "unit_square": {
+      "left": 700,
+      "top": 285,
+      "side": 640,
+      "columns": 2,
+      "rows": 4,
+      "cell_px": [
+       320,
+       160
+      ],
+      "inner_vertical_lines_x": [
+       1020
+      ],
+      "inner_horizontal_lines_y": [
+       445,
+       605,
+       765
+      ]
+     },
+     "shaded_cells_1_based_row_col": {
+      "mark_fill": [
+       [
+        1,
+        1
+       ]
+      ]
+     },
+     "equal_rectangles": 8,
+     "rectangle_sides": [
+      "1/2",
+      "1/4"
+     ],
+     "dimension_arrows": [
+      {
+       "kind": "horizontal",
+       "y": 245,
+       "x_from": 700,
+       "x_to": 1020,
+       "label": "1/2",
+       "label_centre": [
+        860,
+        195
+       ]
+      },
+      {
+       "kind": "vertical",
+       "x": 660,
+       "y_from": 285,
+       "y_to": 445,
+       "label": "1/4",
+       "label_centre": [
+        590,
+        365
+       ]
+      }
+     ]
+    },
+    "manim_description": "On a plain white (BG) 1920x1080 canvas draw one unit square: left edge x=700, right edge x=1340, top edge y=285, bottom edge y=925 (side 640 px), outline INK 3 px. Cut it into 2 equal columns (inner vertical line at x=1020) and 4 equal rows (inner horizontal lines at y=445, 605, 765), grid lines INK 2 px, giving 8 equal rectangles of 320 x 160 px. Fill only the top-left rectangle (x 700 to 1020, y 285 to 445) with MARK_FILL; the other 7 rectangles stay BG. Above the top-left rectangle draw a horizontal double-headed GUIDE arrow at y=245 from x=700 to x=1020 and put the stacked fraction 1/2 in INK centred at (860, 195). To the left of the top-left rectangle draw a vertical double-headed GUIDE arrow at x=660 from y=285 to y=445 and put the stacked fraction 1/4 in INK centred at (590, 365). Nothing else: no area label, no 1/8.",
+    "visible_text": [
+     "1/2",
+     "1/4"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the area 1/8 or any arrow or label pointing at it",
+     "the word Fig. or the number 8.3",
+     "yellow or hatched fill (use MARK_FILL only)"
+    ],
+    "accuracy_checks": [
+     "2 columns x 4 rows = 8 equal rectangles, each 1/2 wide and 1/4 tall (320/640 and 160/640)",
+     "exactly 1 rectangle is shaded; 8 such rectangles fill the square so the area (not shown) is 1/8 = 1/2 x 1/4",
+     "the 1/2 arrow spans exactly the width of the shaded rectangle and the 1/4 arrow exactly its height"
+    ],
+    "alt_text": "A unit square cut into 2 columns and 4 rows with the top-left rectangle shaded, marked 1/2 wide and 1/4 tall.",
+    "render_note": "Book Fig. 8.3 (p.8) is the same grid with the whole top row yellow and the 1/8 arrow; only the single rectangle the question names is shaded here, and the 1/8 answer is left out."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C28",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 8.1 - Math Talk: 5/4 x 3/2, Fig. 8.2 (pp.7-8)",
+   "question_text": "Multiply 5/4 × 3/2, using a unit square as the whole.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The steps read their numbers off the picture (2 rows, 4 columns, 8 parts, 3 shaded); the book's Fig. 8.2 is referenced and must be drawn even though a teaching image shows it.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S6.T6.C28.IMG2",
+   "manim_scene": "c7_8_S6_C28_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S6.T6.C28.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "fraction_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "fraction_model",
+     "canvas": "1920x1080",
+     "whole_block": {
+      "left": 640,
+      "top": 185,
+      "width": 480,
+      "height": 480,
+      "columns": 4,
+      "rows": 2,
+      "cell_px": [
+       120,
+       240
+      ],
+      "inner_vertical_lines_x": [
+       760,
+       880,
+       1000
+      ],
+      "inner_horizontal_lines_y": [
+       425
+      ]
+     },
+     "half_block": {
+      "left": 640,
+      "top": 705,
+      "width": 480,
+      "height": 240,
+      "columns": 4,
+      "rows": 1,
+      "cell_px": [
+       120,
+       240
+      ],
+      "inner_vertical_lines_x": [
+       760,
+       880,
+       1000
+      ],
+      "inner_horizontal_lines_y": []
+     },
+     "cells": {
+      "total": 12,
+      "mark_fill": 9,
+      "answer": 3,
+      "answer_cells": [
+       [
+        "whole",
+        1,
+        1
+       ],
+       [
+        "whole",
+        2,
+        1
+       ],
+       [
+        "half",
+        1,
+        1
+       ]
+      ]
+     },
+     "dashed_outline": {
+      "colour": "FOCUS",
+      "box": [
+       630,
+       175,
+       1130,
+       675
+      ],
+      "label": "whole",
+      "label_centre": [
+       880,
+       135
+      ]
+     },
+     "brace": {
+      "x_from": 1160,
+      "x_to": 1185,
+      "y_from": 185,
+      "y_to": 945,
+      "label": "3/2",
+      "label_centre": [
+       1235,
+       565
+      ]
+     }
+    },
+    "manim_description": "On a plain white (BG) 1920x1080 canvas draw two stacked blocks of cells with the same left edge x=640 and right edge x=1120. UPPER block (the unit square, the whole): x 640 to 1120, y 185 to 665 (480 x 480 px), 4 equal columns (inner vertical lines at x=760, 880, 1000) and 2 equal rows (inner horizontal line at y=425), 8 cells of 120 x 240 px, outline INK 3 px, grid lines INK 2 px. LOWER block (the extra half): x 640 to 1120, y 705 to 945 (480 x 240 px), 4 equal columns (same inner vertical lines), 1 row, 4 cells of 120 x 240 px, same strokes. The gap between the blocks is 40 px (y 665 to 705). Fill all 12 cells with MARK_FILL except the 3 cells of the first column: the upper block's cell row 1 column 1 (x 640-760, y 185-425), its cell row 2 column 1 (x 640-760, y 425-665) and the lower block's cell column 1 (x 640-760, y 705-945), which are filled ANSWER. Draw a dashed FOCUS rounded rectangle around the upper block (x 630 to 1130, y 175 to 675) and write the word whole in INK centred at (880, 135). To the right of both blocks draw a GUIDE curly brace x 1160 to 1185 spanning y 185 to 945 and put the stacked fraction 3/2 in INK centred at (1235, 565). Nothing else.",
+    "visible_text": [
+     "whole",
+     "3/2"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the labels 3/8, 15/8 or 5/4",
+     "the words Fig. or 8.2",
+     "yellow or hatched fill (use MARK_FILL and ANSWER only)"
+    ],
+    "accuracy_checks": [
+     "upper block 4 x 2 = 8 cells = 1 whole; lower block 4 x 1 = 4 cells = 1/2 whole; together 12 cells = 3/2",
+     "first column holds 3 cells (2 upper + 1 lower) = 1/4 of the 12 cells = 3/8 of the whole's 8 cells",
+     "exactly 3 cells are ANSWER and 9 are MARK_FILL; blocks share the same column lines",
+     "5 x 3/8 = 15/8 (not drawn)"
+    ],
+    "alt_text": "A unit square of 8 cells with a half square of 4 cells beneath it, 3/2 in all, and the first column of 3 cells highlighted.",
+    "render_note": "Same drawing as the kept teaching image M1.S6.T6.C28.IMG1 (book Fig. 8.2, p.7); v3 forbids linking it, so this worked example gets its own copy."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C30",
+   "role": "question",
+   "lp_book_number": "Unit Square: the tortoise in half an hour",
+   "ncert_ref": "Section 8.1 - Multiplying Two Fractions: tortoise in half an hour (p.5)",
+   "question_text": "Aaron's pet tortoise walks 1/4 km in 1 hour. How far can it walk in half an hour?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_TABLE"
+   ],
+   "reason": "No figure is given: the book's Hour/Distance table (p.5) is a plain two-column table whose data are in the question; the unit-square picture belongs to the solution.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C31",
+   "role": "solution",
+   "lp_book_number": "Unit Square: the tortoise in half an hour",
+   "ncert_ref": "Section 8.1 - Multiplying Two Fractions: tortoise in half an hour (pp.5-6)",
+   "question_text": "Aaron's pet tortoise walks 1/4 km in 1 hour. How far can it walk in half an hour?",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "Steps 2-3 shade 1/4 of the unit square and cut it into 2 equal parts ('the whole is now cut into 8 equal parts and 1 is shaded'); the learner cannot follow that without the unit-square picture, and the book prints it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S7.T7.C31.IMG1",
+   "manim_scene": "c7_8_S7_C31_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S7.T7.C31.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "fraction_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "fraction_model",
+     "canvas": "1920x1080",
+     "unit_square": {
+      "left": 640,
+      "top": 150,
+      "side": 640,
+      "columns": 2,
+      "rows": 4,
+      "cell_px": [
+       320,
+       160
+      ],
+      "inner_vertical_lines_x": [
+       960
+      ],
+      "inner_horizontal_lines_y": [
+       310,
+       470,
+       630
+      ]
+     },
+     "cells_1_based_row_col": {
+      "answer": [
+       [
+        1,
+        1
+       ]
+      ],
+      "mark_fill": [
+       [
+        1,
+        2
+       ]
+      ]
+     },
+     "band": {
+      "rows": 1,
+      "fraction": "1/4"
+     },
+     "product": {
+      "cells": 1,
+      "fraction": "1/8"
+     },
+     "brace": {
+      "x_from": 1300,
+      "x_to": 1325,
+      "y_from": 150,
+      "y_to": 310,
+      "label": "1/4",
+      "label_left_x": 1350,
+      "label_centre_y": 230
+     },
+     "caption": {
+      "parts": [
+       [
+        "1/2 \\times 1/4 =",
+        "INK"
+       ],
+       [
+        "1/8",
+        "ANSWER"
+       ]
+      ],
+      "centre": [
+       960,
+       880
+      ]
+     }
+    },
+    "manim_description": "On a plain white (BG) 1920x1080 canvas draw one unit square: left edge x=640, right edge x=1280, top edge y=150, bottom edge y=790 (side 640 px), outline INK 3 px. Cut it into 2 equal columns (inner vertical line at x=960) and 4 equal rows (inner horizontal lines at y=310, 470, 630), grid lines INK 2 px, giving 8 equal cells of 320 x 160 px. The top row is the band that is 1/4 of the whole: fill its right cell (x 960 to 1280, y 150 to 310) with MARK_FILL and its left cell (x 640 to 960, y 150 to 310) with ANSWER, the product cell. The 6 cells of the lower three rows stay BG. To the right of the top row draw a GUIDE curly brace x 1300 to 1325 spanning y 150 to 310 and put the stacked fraction 1/4 in INK with its left edge at x=1350, vertically centred at y=230. Below the square, centred at x=960 and y=880, write the line 1/2 x 1/4 = 1/8 with stacked fractions and the multiplication sign, digit height at least 40 px, everything in INK except the final fraction 1/8 in ANSWER. Nothing else.",
+    "visible_text": [
+     "1/4",
+     "1/2 × 1/4 =",
+     "1/8"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words unit square, whole, km or hour",
+     "an arrow with a question mark",
+     "yellow or hatched fill (use MARK_FILL and ANSWER only)"
+    ],
+    "accuracy_checks": [
+     "2 columns x 4 rows = 8 equal cells; the top row (2 cells) is 2/8 = 1/4 of the whole",
+     "exactly 1 cell is ANSWER: 1/8 of the whole = 1/2 x 1/4 (half of the quarter band)",
+     "the brace spans exactly the height of the top row (160 of 640 px = 1/4)"
+    ],
+    "alt_text": "A unit square of 2 columns and 4 rows: the top row is shaded as 1/4 and its left cell is highlighted as 1/8, so 1/2 x 1/4 = 1/8.",
+    "render_note": "Book picture: p.6 figure '1/4 divided into 2 equal parts' (same grid as Fig. 8.3); the same layout as teaching image M1.S6.T6.C25.IMG1, which stays unlinked."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C32",
+   "role": "question",
+   "lp_book_number": "Unit Square: the tortoise in 3/4 of an hour",
+   "ncert_ref": "Section 8.1 - Multiplying Two Fractions: tortoise in 3/4 of an hour (pp.6-7)",
+   "question_text": "A tortoise covers 2/5 km in 1 hour. How far will it walk in 3/4 of an hour?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure is given: the speed and the time are in the words; the unit-square picture belongs to the solution.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C33",
+   "role": "solution",
+   "lp_book_number": "Unit Square: the tortoise in 3/4 of an hour",
+   "ncert_ref": "Section 8.1 - Multiplying Two Fractions: tortoise in 3/4 of an hour (pp.6-7)",
+   "question_text": "A tortoise covers 2/5 km in 1 hour. How far will it walk in 3/4 of an hour?",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "Steps 2-4 count 5 rows, 4 columns, 20 parts and 2 then 6 shaded parts of the unit square; the learner cannot follow that without the picture, and the book prints it (Fig. 8.1 and the next picture).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S7.T7.C33.IMG1",
+   "manim_scene": "c7_8_S7_C33_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S7.T7.C33.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "fraction_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "fraction_model",
+     "canvas": "1920x1080",
+     "unit_square": {
+      "left": 640,
+      "top": 150,
+      "side": 640,
+      "columns": 4,
+      "rows": 5,
+      "cell_px": [
+       160,
+       128
+      ],
+      "inner_vertical_lines_x": [
+       800,
+       960,
+       1120
+      ],
+      "inner_horizontal_lines_y": [
+       278,
+       406,
+       534,
+       662
+      ]
+     },
+     "cells_1_based_row_col": {
+      "answer": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "mark_fill": [
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        4
+       ]
+      ]
+     },
+     "band": {
+      "rows": 2,
+      "fraction": "2/5",
+      "cells": 8
+     },
+     "product": {
+      "columns": 3,
+      "rows": 2,
+      "cells": 6,
+      "fraction": "6/20 = 3/10"
+     },
+     "brace": {
+      "x_from": 1300,
+      "x_to": 1325,
+      "y_from": 150,
+      "y_to": 406,
+      "label": "2/5",
+      "label_left_x": 1350,
+      "label_centre_y": 278
+     },
+     "caption": {
+      "parts": [
+       [
+        "3/4 \\times 2/5 =",
+        "INK"
+       ],
+       [
+        "6/20 = 3/10",
+        "ANSWER"
+       ]
+      ],
+      "centre": [
+       960,
+       880
+      ]
+     }
+    },
+    "manim_description": "On a plain white (BG) 1920x1080 canvas draw one unit square: left edge x=640, right edge x=1280, top edge y=150, bottom edge y=790 (side 640 px), outline INK 3 px. Cut it into 4 equal columns (inner vertical lines at x=800, 960, 1120) and 5 equal rows (inner horizontal lines at y=278, 406, 534, 662), grid lines INK 2 px, giving 20 equal cells of 160 x 128 px. The top 2 rows (y 150 to 406, 8 cells) are the band that is 2/5 of the whole: fill the 2 cells of column 4 (x 1120 to 1280) with MARK_FILL and the 6 cells of columns 1 to 3 (x 640 to 1120) with ANSWER, the product cells. The 12 cells of the lower three rows stay BG. To the right of the band draw a GUIDE curly brace x 1300 to 1325 spanning y 150 to 406 and put the stacked fraction 2/5 in INK with its left edge at x=1350, vertically centred at y=278. Below the square, centred at x=960 and y=880, write the line 3/4 x 2/5 = 6/20 = 3/10 with stacked fractions and multiplication sign, digit height at least 40 px, INK for 3/4 x 2/5 = and ANSWER for 6/20 = 3/10. Nothing else.",
+    "visible_text": [
+     "2/5",
+     "3/4 × 2/5 =",
+     "6/20 = 3/10"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words unit square, whole, km or hour",
+     "the intermediate 2/20 label",
+     "Fig. 8.1 or any figure number",
+     "yellow or hatched fill (use MARK_FILL and ANSWER only)"
+    ],
+    "accuracy_checks": [
+     "4 columns x 5 rows = 20 equal cells (5 x 4 = 20, as in the solution)",
+     "band = top 2 rows = 8 cells = 8/20 = 2/5 of the whole",
+     "ANSWER cells = 3 columns x 2 rows = 6 = 3/4 of the 8 band cells; 6/20 = 3/10",
+     "the brace spans exactly 2 of the 5 rows (256 of 640 px = 2/5)"
+    ],
+    "alt_text": "A unit square of 4 columns and 5 rows: the top 2 rows are shaded as 2/5 and 6 of their cells are highlighted, giving 6/20 = 3/10.",
+    "render_note": "Book picture: second figure on p.7 (top right) after Fig. 8.1 on p.6; same layout as teaching image M1.S6.T6.C27.IMG1, which stays unlinked."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C34",
+   "role": "question",
+   "lp_book_number": "Figure it Out 8.1, Q1",
+   "ncert_ref": "Section 8.1 - Figure it Out (p.8, book p.180) Q1: products with a unit square",
+   "question_text": "Find the following products. Use a unit square as a whole for representing the fractions: (a) 1/3 × 1/5 (b) 1/4 × 1/3 (c) 1/5 × 1/2 (d) 1/6 × 1/5. Now, find 1/12 × 1/18.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure: the learner is asked to draw the unit square, so there is nothing to show on the question side.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C35",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 8.1, Q1",
+   "ncert_ref": "Section 8.1 - Figure it Out (p.8, book p.180) Q1: products with a unit square",
+   "question_text": "Find the following products. Use a unit square as a whole for representing the fractions: (a) 1/3 × 1/5 (b) 1/4 × 1/3 (c) 1/5 × 1/2 (d) 1/6 × 1/5. Now, find 1/12 × 1/18.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The question asks for each product with a unit square and the book's printed answers are pictures (p.32-33): unit squares with the top band and the product cell marked.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S8.T8.C35.IMG1",
+   "manim_scene": "c7_8_S8_FiOB1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S8.T8.C35.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "fraction_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "fraction_model",
+     "canvas": "1920x1080",
+     "panels": [
+      {
+       "left": 60,
+       "top": 230,
+       "side": 420,
+       "columns": 3,
+       "rows": 5,
+       "cell_px": [
+        140,
+        84
+       ],
+       "inner_vertical_lines_x": [
+        200,
+        340
+       ],
+       "inner_horizontal_lines_y": [
+        314,
+        398,
+        482,
+        566
+       ],
+       "band_rows": 1,
+       "band_cells": 3,
+       "product_columns": 1,
+       "product_rows": 1,
+       "product_cells": 1,
+       "cells_1_based_row_col": {
+        "answer": [
+         [
+          1,
+          1
+         ]
+        ],
+        "mark_fill": [
+         [
+          1,
+          2
+         ],
+         [
+          1,
+          3
+         ]
+        ]
+       },
+       "caption": "1/3 × 1/5 = 1/15",
+       "caption_parts": [
+        [
+         "1/3 \\times 1/5 =",
+         "INK"
+        ],
+        [
+         "1/15",
+         "ANSWER"
+        ]
+       ],
+       "caption_centre": [
+        270,
+        760
+       ],
+       "letter": "(a)",
+       "letter_colour": "INK",
+       "letter_centre": [
+        270,
+        185
+       ]
+      },
+      {
+       "left": 520,
+       "top": 230,
+       "side": 420,
+       "columns": 4,
+       "rows": 3,
+       "cell_px": [
+        105,
+        140
+       ],
+       "inner_vertical_lines_x": [
+        625,
+        730,
+        835
+       ],
+       "inner_horizontal_lines_y": [
+        370,
+        510
+       ],
+       "band_rows": 1,
+       "band_cells": 4,
+       "product_columns": 1,
+       "product_rows": 1,
+       "product_cells": 1,
+       "cells_1_based_row_col": {
+        "answer": [
+         [
+          1,
+          1
+         ]
+        ],
+        "mark_fill": [
+         [
+          1,
+          2
+         ],
+         [
+          1,
+          3
+         ],
+         [
+          1,
+          4
+         ]
+        ]
+       },
+       "caption": "1/4 × 1/3 = 1/12",
+       "caption_parts": [
+        [
+         "1/4 \\times 1/3 =",
+         "INK"
+        ],
+        [
+         "1/12",
+         "ANSWER"
+        ]
+       ],
+       "caption_centre": [
+        730,
+        760
+       ],
+       "letter": "(b)",
+       "letter_colour": "INK",
+       "letter_centre": [
+        730,
+        185
+       ]
+      },
+      {
+       "left": 980,
+       "top": 230,
+       "side": 420,
+       "columns": 5,
+       "rows": 2,
+       "cell_px": [
+        84,
+        210
+       ],
+       "inner_vertical_lines_x": [
+        1064,
+        1148,
+        1232,
+        1316
+       ],
+       "inner_horizontal_lines_y": [
+        440
+       ],
+       "band_rows": 1,
+       "band_cells": 5,
+       "product_columns": 1,
+       "product_rows": 1,
+       "product_cells": 1,
+       "cells_1_based_row_col": {
+        "answer": [
+         [
+          1,
+          1
+         ]
+        ],
+        "mark_fill": [
+         [
+          1,
+          2
+         ],
+         [
+          1,
+          3
+         ],
+         [
+          1,
+          4
+         ],
+         [
+          1,
+          5
+         ]
+        ]
+       },
+       "caption": "1/5 × 1/2 = 1/10",
+       "caption_parts": [
+        [
+         "1/5 \\times 1/2 =",
+         "INK"
+        ],
+        [
+         "1/10",
+         "ANSWER"
+        ]
+       ],
+       "caption_centre": [
+        1190,
+        760
+       ],
+       "letter": "(c)",
+       "letter_colour": "INK",
+       "letter_centre": [
+        1190,
+        185
+       ]
+      },
+      {
+       "left": 1440,
+       "top": 230,
+       "side": 420,
+       "columns": 6,
+       "rows": 5,
+       "cell_px": [
+        70,
+        84
+       ],
+       "inner_vertical_lines_x": [
+        1510,
+        1580,
+        1650,
+        1720,
+        1790
+       ],
+       "inner_horizontal_lines_y": [
+        314,
+        398,
+        482,
+        566
+       ],
+       "band_rows": 1,
+       "band_cells": 6,
+       "product_columns": 1,
+       "product_rows": 1,
+       "product_cells": 1,
+       "cells_1_based_row_col": {
+        "answer": [
+         [
+          1,
+          1
+         ]
+        ],
+        "mark_fill": [
+         [
+          1,
+          2
+         ],
+         [
+          1,
+          3
+         ],
+         [
+          1,
+          4
+         ],
+         [
+          1,
+          5
+         ],
+         [
+          1,
+          6
+         ]
+        ]
+       },
+       "caption": "1/6 × 1/5 = 1/30",
+       "caption_parts": [
+        [
+         "1/6 \\times 1/5 =",
+         "INK"
+        ],
+        [
+         "1/30",
+         "ANSWER"
+        ]
+       ],
+       "caption_centre": [
+        1650,
+        760
+       ],
+       "letter": "(d)",
+       "letter_colour": "INK",
+       "letter_centre": [
+        1650,
+        185
+       ]
+      }
+     ],
+     "band_meaning": "the top band is the multiplicand fraction of the whole; the product cell is the multiplier fraction of that band",
+     "convention": "rows = denominator of the multiplicand, columns = denominator of the multiplier (book p.9); band = top rows; product = left columns of the band"
+    },
+    "manim_description": "On a plain white (BG) 1920x1080 canvas draw four unit squares in one row, each 420 px wide and 420 px tall, tops at y=230, lefts at x=60, 520, 980, 1440 (40 px gaps), outline INK 3 px, grid lines INK 2 px. Panel 1: square x 60 to 480, y 230 to 650 (side 420 px, outline INK 3 px); 3 equal columns (inner vertical lines at x = 200, 340) and 5 equal rows (inner horizontal lines at y = 314, 398, 482, 566), grid lines INK 2 px, 15 equal cells of 140 x 84 px. Band = the top 1 row (3 cells). Fill the left 1 column of the top 1 row (1 cell, x 60 to 200, y 230 to 314) with ANSWER; fill the other 2 band cells with MARK_FILL; the remaining 12 cells stay BG. Below the square, centred at (270, 760), write the caption 1/3 x 1/5 = 1/15 as stacked fractions. Panel 2: square x 520 to 940, y 230 to 650 (side 420 px, outline INK 3 px); 4 equal columns (inner vertical lines at x = 625, 730, 835) and 3 equal rows (inner horizontal lines at y = 370, 510), grid lines INK 2 px, 12 equal cells of 105 x 140 px. Band = the top 1 row (4 cells). Fill the left 1 column of the top 1 row (1 cell, x 520 to 625, y 230 to 370) with ANSWER; fill the other 3 band cells with MARK_FILL; the remaining 8 cells stay BG. Below the square, centred at (730, 760), write the caption 1/4 x 1/3 = 1/12 as stacked fractions. Panel 3: square x 980 to 1400, y 230 to 650 (side 420 px, outline INK 3 px); 5 equal columns (inner vertical lines at x = 1064, 1148, 1232, 1316) and 2 equal rows (inner horizontal line at y = 440), grid lines INK 2 px, 10 equal cells of 84 x 210 px. Band = the top 1 row (5 cells). Fill the left 1 column of the top 1 row (1 cell, x 980 to 1064, y 230 to 440) with ANSWER; fill the other 4 band cells with MARK_FILL; the remaining 5 cells stay BG. Below the square, centred at (1190, 760), write the caption 1/5 x 1/2 = 1/10 as stacked fractions. Panel 4: square x 1440 to 1860, y 230 to 650 (side 420 px, outline INK 3 px); 6 equal columns (inner vertical lines at x = 1510, 1580, 1650, 1720, 1790) and 5 equal rows (inner horizontal lines at y = 314, 398, 482, 566), grid lines INK 2 px, 30 equal cells of 70 x 84 px. Band = the top 1 row (6 cells). Fill the left 1 column of the top 1 row (1 cell, x 1440 to 1510, y 230 to 314) with ANSWER; fill the other 5 band cells with MARK_FILL; the remaining 24 cells stay BG. Below the square, centred at (1650, 760), write the caption 1/6 x 1/5 = 1/30 as stacked fractions. Caption digit height between 34 and 40 px, each caption at most 440 px wide, INK for the product expression and the equals sign, ANSWER for the result. Above each square, centred on the square at y = 185, write its part letter in INK sans-serif, text height between 34 and 40 px: (a) at x = 270, (b) at x = 730, (c) at x = 1190, (d) at x = 1650. Nothing else: no part counts.",
+    "visible_text": [
+     "(a)",
+     "1/3 × 1/5 =",
+     "1/15",
+     "(b)",
+     "1/4 × 1/3 =",
+     "1/12",
+     "(c)",
+     "1/5 × 1/2 =",
+     "1/10",
+     "(d)",
+     "1/6 × 1/5 =",
+     "1/30"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the part letters (a) (b) (c) (d) above the squares",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "part letters under or inside the squares",
+     "the book's '3 parts' / '5 parts' length labels and braces",
+     "the product 1/12 x 1/18 or a 216-cell grid",
+     "yellow or hatched fill (use MARK_FILL and ANSWER only)"
+    ],
+    "accuracy_checks": [
+     "(a) 3 columns x 5 rows = 15 cells; band = 3 cells = 1/5; product cell = 1/15",
+     "(b) 4 columns x 3 rows = 12 cells; band = 4 cells = 1/3; product cell = 1/12",
+     "(c) 5 columns x 2 rows = 10 cells; band = 5 cells = 1/2; product cell = 1/10",
+     "(d) 6 columns x 5 rows = 30 cells; band = 6 cells = 1/5; product cell = 1/30",
+     "each whole is a square of side 420 px; every cell size is a whole number of px (140x84, 105x140, 84x210, 70x84)",
+     "exactly 1 ANSWER cell per panel, at row 1 column 1",
+     "each square carries its part letter directly above it, left to right (a) (b) (c) (d), in the same order as the four products, because the LP answer names the parts (a) to (d)"
+    ],
+    "alt_text": "Four unit squares labelled (a) to (d), showing 1/3 x 1/5 = 1/15, 1/4 x 1/3 = 1/12, 1/5 x 1/2 = 1/10 and 1/6 x 1/5 = 1/30, each with a top band and one highlighted cell.",
+    "render_note": "One picture for parts (a)-(d) because the brief allows one solution diagram per answer; the part letters (a)-(d) are drawn above the squares because the LP answer refers to the parts by letter. Book pictures: p.32 (a) and p.33 (b)-(d); the book prints '5 parts' under (b) although it has 4 columns, so no part labels are drawn. Part 'now find 1/12 x 1/18' (216 cells) is not drawn: the book itself calls the drawing cumbersome and prints none."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C36",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 8.1 - Multiplying Numerators and Denominators: 1/12 x 1/18 (p.9)",
+   "question_text": "Find 1/12 × 1/18 without drawing the unit square.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The question says 'without drawing the unit square'; 18 x 12 = 216 and the unit-fraction rule are plain arithmetic. The book's 18-by-12 grid (p.9) is a schematic and the rows-times-columns idea is already the teaching image M1.S9.T9.C36.IMG1.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C37",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 8.1 - Multiplying Numerators and Denominators: 5/12 x 7/18 (pp.9-10)",
+   "question_text": "Find 5/12 × 7/18.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The steps are arithmetic (12 x 18 = 216, 5 x 7 = 35). The book's 12-by-18 grids (pp.9-10) have 216 cells and are only schematic; the overlap idea is already the teaching image M1.S9.T9.C37.IMG1.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C38",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 8.1 - Whole numbers as fractions (p.10): 3 x 3/4",
+   "question_text": "Find 3 × 3/4.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Writing 3 as 3/1 and multiplying: pure fraction arithmetic; no figure in the book.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C39",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 8.1 - Whole numbers as fractions (p.10): 3/5 x 4",
+   "question_text": "Find 3/5 × 4.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Writing 4 as 4/1 and multiplying: pure fraction arithmetic; no figure in the book.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C41",
+   "role": "question",
+   "lp_book_number": "Figure it Out 8.1, Q1",
+   "ncert_ref": "Section 8.1 - Figure it Out (p.9, book p.181) Q2: products with a unit square",
+   "question_text": "Find the following products. Use a unit square as a whole for representing the fractions and carrying out the operations. (a) 2/3 × 4/5 (b) 1/4 × 2/3 (c) 3/5 × 1/2 (d) 4/6 × 3/5",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure: the learner is asked to draw the unit square, so there is nothing to show on the question side.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C42",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 8.1, Q1",
+   "ncert_ref": "Section 8.1 - Figure it Out (p.9, book p.181) Q2: products with a unit square",
+   "question_text": "Find the following products. Use a unit square as a whole for representing the fractions and carrying out the operations. (a) 2/3 × 4/5 (b) 1/4 × 2/3 (c) 3/5 × 1/2 (d) 4/6 × 3/5",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "Same kind of answer as Figure it Out Q1: the learner must represent each product in a unit square ('draw the figure in the same manner as in question 1'), so the answer is the picture (sibling consistency with Q1).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S10.T10.C42.IMG1",
+   "manim_scene": "c7_8_S10_FiOB2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S10.T10.C42.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "fraction_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "fraction_model",
+     "canvas": "1920x1080",
+     "panels": [
+      {
+       "left": 60,
+       "top": 230,
+       "side": 420,
+       "columns": 3,
+       "rows": 5,
+       "cell_px": [
+        140,
+        84
+       ],
+       "inner_vertical_lines_x": [
+        200,
+        340
+       ],
+       "inner_horizontal_lines_y": [
+        314,
+        398,
+        482,
+        566
+       ],
+       "band_rows": 4,
+       "band_cells": 12,
+       "product_columns": 2,
+       "product_rows": 4,
+       "product_cells": 8,
+       "cells_1_based_row_col": {
+        "answer": [
+         [
+          1,
+          1
+         ],
+         [
+          1,
+          2
+         ],
+         [
+          2,
+          1
+         ],
+         [
+          2,
+          2
+         ],
+         [
+          3,
+          1
+         ],
+         [
+          3,
+          2
+         ],
+         [
+          4,
+          1
+         ],
+         [
+          4,
+          2
+         ]
+        ],
+        "mark_fill": [
+         [
+          1,
+          3
+         ],
+         [
+          2,
+          3
+         ],
+         [
+          3,
+          3
+         ],
+         [
+          4,
+          3
+         ]
+        ]
+       },
+       "caption": "2/3 × 4/5 = 8/15",
+       "caption_parts": [
+        [
+         "2/3 \\times 4/5 =",
+         "INK"
+        ],
+        [
+         "8/15",
+         "ANSWER"
+        ]
+       ],
+       "caption_centre": [
+        270,
+        760
+       ],
+       "letter": "(a)",
+       "letter_colour": "INK",
+       "letter_centre": [
+        270,
+        185
+       ]
+      },
+      {
+       "left": 520,
+       "top": 230,
+       "side": 420,
+       "columns": 4,
+       "rows": 3,
+       "cell_px": [
+        105,
+        140
+       ],
+       "inner_vertical_lines_x": [
+        625,
+        730,
+        835
+       ],
+       "inner_horizontal_lines_y": [
+        370,
+        510
+       ],
+       "band_rows": 2,
+       "band_cells": 8,
+       "product_columns": 1,
+       "product_rows": 2,
+       "product_cells": 2,
+       "cells_1_based_row_col": {
+        "answer": [
+         [
+          1,
+          1
+         ],
+         [
+          2,
+          1
+         ]
+        ],
+        "mark_fill": [
+         [
+          1,
+          2
+         ],
+         [
+          1,
+          3
+         ],
+         [
+          1,
+          4
+         ],
+         [
+          2,
+          2
+         ],
+         [
+          2,
+          3
+         ],
+         [
+          2,
+          4
+         ]
+        ]
+       },
+       "caption": "1/4 × 2/3 = 2/12 = 1/6",
+       "caption_parts": [
+        [
+         "1/4 \\times 2/3 =",
+         "INK"
+        ],
+        [
+         "2/12 = 1/6",
+         "ANSWER"
+        ]
+       ],
+       "caption_centre": [
+        730,
+        760
+       ],
+       "letter": "(b)",
+       "letter_colour": "INK",
+       "letter_centre": [
+        730,
+        185
+       ]
+      },
+      {
+       "left": 980,
+       "top": 230,
+       "side": 420,
+       "columns": 5,
+       "rows": 2,
+       "cell_px": [
+        84,
+        210
+       ],
+       "inner_vertical_lines_x": [
+        1064,
+        1148,
+        1232,
+        1316
+       ],
+       "inner_horizontal_lines_y": [
+        440
+       ],
+       "band_rows": 1,
+       "band_cells": 5,
+       "product_columns": 3,
+       "product_rows": 1,
+       "product_cells": 3,
+       "cells_1_based_row_col": {
+        "answer": [
+         [
+          1,
+          1
+         ],
+         [
+          1,
+          2
+         ],
+         [
+          1,
+          3
+         ]
+        ],
+        "mark_fill": [
+         [
+          1,
+          4
+         ],
+         [
+          1,
+          5
+         ]
+        ]
+       },
+       "caption": "3/5 × 1/2 = 3/10",
+       "caption_parts": [
+        [
+         "3/5 \\times 1/2 =",
+         "INK"
+        ],
+        [
+         "3/10",
+         "ANSWER"
+        ]
+       ],
+       "caption_centre": [
+        1190,
+        760
+       ],
+       "letter": "(c)",
+       "letter_colour": "INK",
+       "letter_centre": [
+        1190,
+        185
+       ]
+      },
+      {
+       "left": 1440,
+       "top": 230,
+       "side": 420,
+       "columns": 6,
+       "rows": 5,
+       "cell_px": [
+        70,
+        84
+       ],
+       "inner_vertical_lines_x": [
+        1510,
+        1580,
+        1650,
+        1720,
+        1790
+       ],
+       "inner_horizontal_lines_y": [
+        314,
+        398,
+        482,
+        566
+       ],
+       "band_rows": 3,
+       "band_cells": 18,
+       "product_columns": 4,
+       "product_rows": 3,
+       "product_cells": 12,
+       "cells_1_based_row_col": {
+        "answer": [
+         [
+          1,
+          1
+         ],
+         [
+          1,
+          2
+         ],
+         [
+          1,
+          3
+         ],
+         [
+          1,
+          4
+         ],
+         [
+          2,
+          1
+         ],
+         [
+          2,
+          2
+         ],
+         [
+          2,
+          3
+         ],
+         [
+          2,
+          4
+         ],
+         [
+          3,
+          1
+         ],
+         [
+          3,
+          2
+         ],
+         [
+          3,
+          3
+         ],
+         [
+          3,
+          4
+         ]
+        ],
+        "mark_fill": [
+         [
+          1,
+          5
+         ],
+         [
+          1,
+          6
+         ],
+         [
+          2,
+          5
+         ],
+         [
+          2,
+          6
+         ],
+         [
+          3,
+          5
+         ],
+         [
+          3,
+          6
+         ]
+        ]
+       },
+       "caption": "4/6 × 3/5 = 12/30 = 2/5",
+       "caption_parts": [
+        [
+         "4/6 \\times 3/5 =",
+         "INK"
+        ],
+        [
+         "12/30 = 2/5",
+         "ANSWER"
+        ]
+       ],
+       "caption_centre": [
+        1650,
+        760
+       ],
+       "letter": "(d)",
+       "letter_colour": "INK",
+       "letter_centre": [
+        1650,
+        185
+       ]
+      }
+     ],
+     "band_meaning": "the top rows are the multiplicand fraction of the whole; the left columns of those rows (multiplier fraction) hold the product cells",
+     "convention": "rows = denominator of the multiplicand, columns = denominator of the multiplier (book p.9); band = top rows; product = left columns of the band"
+    },
+    "manim_description": "On a plain white (BG) 1920x1080 canvas draw four unit squares in one row, each 420 px wide and 420 px tall, tops at y=230, lefts at x=60, 520, 980, 1440 (40 px gaps), outline INK 3 px, grid lines INK 2 px. Panel 1: square x 60 to 480, y 230 to 650 (side 420 px, outline INK 3 px); 3 equal columns (inner vertical lines at x = 200, 340) and 5 equal rows (inner horizontal lines at y = 314, 398, 482, 566), grid lines INK 2 px, 15 equal cells of 140 x 84 px. Band = the top 4 rows (12 cells). Fill the left 2 columns of the top 4 rows (8 cells, x 60 to 340, y 230 to 566) with ANSWER; fill the other 4 band cells with MARK_FILL; the remaining 3 cells stay BG. Below the square, centred at (270, 760), write the caption 2/3 x 4/5 = 8/15 as stacked fractions. Panel 2: square x 520 to 940, y 230 to 650 (side 420 px, outline INK 3 px); 4 equal columns (inner vertical lines at x = 625, 730, 835) and 3 equal rows (inner horizontal lines at y = 370, 510), grid lines INK 2 px, 12 equal cells of 105 x 140 px. Band = the top 2 rows (8 cells). Fill the left 1 column of the top 2 rows (2 cells, x 520 to 625, y 230 to 510) with ANSWER; fill the other 6 band cells with MARK_FILL; the remaining 4 cells stay BG. Below the square, centred at (730, 760), write the caption 1/4 x 2/3 = 2/12 = 1/6 as stacked fractions. Panel 3: square x 980 to 1400, y 230 to 650 (side 420 px, outline INK 3 px); 5 equal columns (inner vertical lines at x = 1064, 1148, 1232, 1316) and 2 equal rows (inner horizontal line at y = 440), grid lines INK 2 px, 10 equal cells of 84 x 210 px. Band = the top 1 row (5 cells). Fill the left 3 columns of the top 1 row (3 cells, x 980 to 1232, y 230 to 440) with ANSWER; fill the other 2 band cells with MARK_FILL; the remaining 5 cells stay BG. Below the square, centred at (1190, 760), write the caption 3/5 x 1/2 = 3/10 as stacked fractions. Panel 4: square x 1440 to 1860, y 230 to 650 (side 420 px, outline INK 3 px); 6 equal columns (inner vertical lines at x = 1510, 1580, 1650, 1720, 1790) and 5 equal rows (inner horizontal lines at y = 314, 398, 482, 566), grid lines INK 2 px, 30 equal cells of 70 x 84 px. Band = the top 3 rows (18 cells). Fill the left 4 columns of the top 3 rows (12 cells, x 1440 to 1720, y 230 to 482) with ANSWER; fill the other 6 band cells with MARK_FILL; the remaining 12 cells stay BG. Below the square, centred at (1650, 760), write the caption 4/6 x 3/5 = 12/30 = 2/5 as stacked fractions. Caption digit height between 34 and 40 px, each caption at most 440 px wide, INK for the product expression and the equals sign, ANSWER for the result. Above each square, centred on the square at y = 185, write its part letter in INK sans-serif, text height between 34 and 40 px: (a) at x = 270, (b) at x = 730, (c) at x = 1190, (d) at x = 1650. Nothing else: no part counts.",
+    "visible_text": [
+     "(a)",
+     "2/3 × 4/5 =",
+     "8/15",
+     "(b)",
+     "1/4 × 2/3 =",
+     "2/12 = 1/6",
+     "(c)",
+     "3/5 × 1/2 =",
+     "3/10",
+     "(d)",
+     "4/6 × 3/5 =",
+     "12/30 = 2/5"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the part letters (a) (b) (c) (d) above the squares",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "part letters under or inside the squares",
+     "the book's 'parts' length labels and braces",
+     "yellow or hatched fill (use MARK_FILL and ANSWER only)"
+    ],
+    "accuracy_checks": [
+     "(a) 3 columns x 5 rows = 15 cells; band = top 4 rows = 12 cells = 4/5; product = 2 columns x 4 rows = 8 cells = 8/15",
+     "(b) 4 columns x 3 rows = 12 cells; band = top 2 rows = 8 cells = 2/3; product = 1 column x 2 rows = 2 cells = 2/12 = 1/6",
+     "(c) 5 columns x 2 rows = 10 cells; band = top 1 row = 5 cells = 1/2; product = 3 columns x 1 row = 3 cells = 3/10",
+     "(d) 6 columns x 5 rows = 30 cells; band = top 3 rows = 18 cells = 3/5; product = 4 columns x 3 rows = 12 cells = 12/30 = 2/5",
+     "each whole is a square of side 420 px; every cell size is a whole number of px (140x84, 105x140, 84x210, 70x84)",
+     "ANSWER cells per panel: 8, 2, 3, 12; MARK_FILL cells per panel: 4, 6, 2, 6",
+     "each square carries its part letter directly above it, left to right (a) (b) (c) (d), in the same order as the four products, because the LP answer names the parts (a) to (d)"
+    ],
+    "alt_text": "Four unit squares labelled (a) to (d), showing 2/3 x 4/5 = 8/15, 1/4 x 2/3 = 1/6, 3/5 x 1/2 = 3/10 and 4/6 x 3/5 = 2/5, each with a shaded band and highlighted product cells.",
+    "render_note": "One picture for parts (a)-(d) because the brief allows one solution diagram per answer; the part letters (a)-(d) are drawn above the squares because the LP answer refers to the parts by letter. The book prints no picture (p.34: 'Draw the figure in the same manner as shown in question 1'), so the layout follows the printed Q1 pictures (p.32-33) and the rule of p.9."
+   }
+  }
+ ]
+}

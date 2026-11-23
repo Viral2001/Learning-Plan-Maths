@@ -1,0 +1,37 @@
+# Chunk A notes (Class 7 Ch 3, units 1-16: M1.S2.T2, M1.S3.T3, M1.S5.T5, M1.S6.T6, M1.S7.T7)
+
+Result: 27 items = required 7 (C5 worked; C8 q; C24 q + sol; C25 q + sol; C26 q) / optional 4 (C3 worked, C17 q, C21 worked, C22 worked) / none 16. Validator: errors 0, warnings 0.
+Figures accounted: 44 (43 base figures that belong to chunk A, 14 of them on the printed-answer pages 36-42, plus one NEW- figure, the fish paintings of p.7).
+
+Note on the brief: it says the pdf has no printed-solutions section, but pages 36-55 are one (typeset answers, some with pictures). I used it only to check the figures and the LP answers; the LP solution text is still the answer followed.
+
+## 1. Judgement calls
+
+1. Ruler / scale reading questions (C8, C24, C25, C26, and the objects of C5) are REQUIRED on the question side. The book question is the picture (MEASUREMENT_READING, DATA_IN_FIGURE). The LP texts only transcribe the readings in words ("ends 4 parts after the 2 cm mark"), and v3 Step B2 says words that describe data are data for a picture, not a replacement for it. A strict reading of the tie-breaker (text alone is enough) would make all of them none, so this is the biggest call in the chunk. If the content owner prefers text-first for them, drop C8 q, C26 q, C24 q and C5; keep C25 (boxes to fill) and C24 sol.
+2. Written-reading solutions are NOT drawn (C8, C26: none, SAME_AS_QUESTION_DIAGRAM). The answer is numbers in text and the book's printed answer is the same picture with text under it. C25 and C24 solutions are required because the answer itself is a filled / magnified figure (ANSWER_IS_FIGURE). The difference in answer type is the reason for the different decisions inside the same lesson.
+3. C3 (screws) and C21 (wire at 1 14/100) worked examples: OPTIONAL, not required, although they are ruler readings. The concept images M1.S2.T2.C3.IMG1 and M1.S6.T6.C21.IMG1 already draw the same ruler picture inside the same concept, and the question gives the positions in words. Not drawn twice. If the user wants the book's second screw (3 2/10) on a ruler, it would be a new figure for C3.
+4. C4 worked (pencil 3 4/10 = 34/10): none, TEXT_SUFFICIENT; the concept image shows 3 4/10 = 34/10 with strips, the question is a conversion, not a reading.
+5. C5 worked (USB cable, hand, box, leaf): REQUIRED, because the LP text itself says the objects "are drawn on their own unit scales" and no picture exists in that concept. One figure, four rows, four different unit lengths; objects are plain bars with names (no clip-art); the box is drawn horizontally like the others (the book draws it vertically).
+6. C22 worked ("longest and shortest", groups a to g): OPTIONAL. The book asks "Mark each length on the scale" and the printed answers are seven marked scales, but the LP question text dropped the marking and its steps only convert and compare. Seven scales cannot be one worked-example picture. All 14 scale figures (7 blank, 7 printed answers) are mapped none:TEXT_SUFFICIENT with that explanation. Decision for the content owner: restore the marking (needs a question rewrite and seven figures) or leave it.
+7. C17 question (Shylaja's hand): OPTIONAL. The book says "as shown in the picture" (hand, palm, finger as overlapping boxes); the LP gives both lengths in words and the subtraction is plain. A bar picture of hand = palm + finger would help.
+8. C16 honeybee and C18 fish: none (DECORATIVE_ONLY); the paintings carry no data, all lengths are in the text.
+9. C24 question figure: shows the paper strip (8 9/10) and its folded half (ends at 4.45, between the 4 4/10 and 4 5/10 ticks, where the book's picture and the LP text put it) on a tenths-only ruler. The end is drawn at the exact middle of the gap, which a reader cannot read off to the hundredth on that scale; the question text already states "between 4 4/10 and 4 5/10". The solution figure is that same drawing plus the magnified stretch 4 4/10 to 4 5/10 (ten equal parts, end at the fifth), as the LP solution says; the book's magnifier (p.8) shows 4 to 5 with only tenth ticks, so I followed the LP.
+10. C25 question figure keeps the labels printed in the book (0, 1/100, 1/10, 2/10, 20/100, 99/100, 1, 1 3/10, 130/100, 2) and five empty boxes at 0.55, 1.55, 1.74, 2.02, 2.40 (checked tick by tick). See 2.2 below for the mismatch with the LP text.
+11. C26: the four rulers show windows of 13 tenth labels each, with the printed labels; the fourth ruler's first label is drawn 8 9/10 (see 3.1).
+12. Sibling consistency: C8 and C26 (written readings) both q required / sol none; C24 and C25 (figure answers) both q required / sol required derived from q.
+
+## 2. Things in the LP that look wrong
+
+1. M1.S2.T2.C5 (worked): LP numbers for the three extra objects do not match the book's picture on p.4. LP: hand 1 6/10, box 2 3/10, leaf 3 9/10. Picture (measured against the printed ticks): hand about 1 3/10, box about 2 8/10 (vertical ruler), leaf 11 whole units (ruler 0 to 11). Only the USB cable (4 8/10) matches. The book has no printed answer for this picture. The diagram follows the LP numbers because the question text carries them; if the book's readings were meant, the LP text, steps, answer and video all change. Needs the content owner's decision.
+2. M1.S7.T7.C25: the LP question asks to "write each length as a fraction" for all ten marks, but in the book four of them are already labelled in the figure (1/100, 20/100, 99/100, 130/100) and only five boxes are to be filled (the LP also lists "2 tenths" and "20 parts", which are the same mark). The figure follows the book, so four of the LP answers are visible in the question figure. Suggest rewording the LP question to "fill the five empty boxes".
+3. M1.S6.T6.C22 (e): the book group is 8/10 2/100, 9/100, 1 8/100 (three lengths: 8 tenths and 2 hundredths = 82/100). The LP writes 8/100, 2/100, 9/100, 1 8/100 (four lengths), and so its answer "shortest 2/100" differs from the book's printed answer (shortest 9/100). Check the LP step (e).
+4. Question texts in the 'Questions' topics start the lesson text with "Worked example:" in the block `text` field (e.g. C8: "Worked example: Along a ruler..."), although they are practice questions; harmless for the figures, noted only.
+5. C18 step 4 ("your finger, which is about 6 to 8 cm") is an LP addition; the book only asks how big the fish are compared with a finger.
+6. Checked and fine: C9 order, C10 counts (41, 4, 41, 411), C15 6 3/10, C16 15 2/10, C17 5 7/10, C18 1 5/10, C19 all six sequences, C21, C24, C25 values (55, 155, 174, 202, 240 parts), C26 readings (5 37/100, 15 3/100, 7 52/100, 9 80/100) against the pictures.
+
+## 3. Where the book itself is unclear
+
+1. p.10 / p.40: the first label of the fourth ruler is printed "4 9/10" although the next label is 9. It is a misprint for 8 9/10; the C26 figure draws 8 9/10.
+2. p.11 (g) and the printed answer p.42: the scale runs 5.7 to 6.7, so 5 7/100 cannot be marked on it ("can not be shown on this line"), and the group is printed "65/10 15/100" (read in the LP as 6 5/10 15/100 = 6.65). Only matters if C22 marking is restored.
+3. p.8: the text speaks of ten smaller parts in each tenth but the pictures show only tenth ticks; the C24 solution draws the hundredth parts as the LP solution describes them.
+4. p.3: the three object rulers run to about 4.7, drawn as the book shows; the pencil point is on the half tick between 4 and 5 (4.5).

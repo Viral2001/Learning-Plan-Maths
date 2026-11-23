@@ -1,0 +1,5302 @@
+{
+ "meta": {
+  "chapter": "Parallel and Intersecting Lines",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 5",
+  "lp_plan_id": "cbse_eng_maths7_ch5_v52",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "required": 3
+   },
+   "question": {
+    "required": 9,
+    "none": 2
+   },
+   "solution": {
+    "optional": 1,
+    "required": 10
+   }
+  },
+  "notes": [
+   "Chunk B: units 19-32 (T12 to T23, sections 5.5 to 5.8). Required 22, optional 1, none 2.",
+   "Rule used for geometry items: a question or worked example that works with named or numbered angles or points of a given configuration (Fig. 5.14, 5.17, 5.19, 5.23 to 5.29) is SPATIAL_GEOMETRY / DATA_IN_FIGURE and gets its figure even where the LP wording describes the corners in words; a question that gives no figure and asks the learner to draw (set-square questions) gets none on the question side and a solution figure of the finished drawing.",
+   "The book's clip art (ruler and set square pictures of Fig. 5.21, 5.22 and of the printed answer to Figure it Out 5.7 Q1) is not redrawn; only the geometry is.",
+   "Parallel arrow marks are drawn on l and m wherever the question says the lines are parallel, although the book's Fig. 5.25 and 5.28 omit them.",
+   "All figures are drawn to scale: every angle value stated in the figure is checked against the coordinates (accuracy_checks)."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P10-transversal_figure-1",
+   "source": "chapter p.10",
+   "description": "Fig. 5.14 (chapter p.10, checked against the page picture): lines l and m (not parallel) cut by t, angles 1 2 / 4 3 at l and 5 6 / 8 7 at m, no arcs or values. Teaching figure of 5.5 (concept image M3.S12.T12.C45.IMG1 exists); drawn again as the diagram of the worked example of C46 (the figure's second use, by the question of T13, is P30-transversal_figure-1).",
+   "mapped_to": "item:M3.S12.T12.C46 (question)"
+  },
+  {
+   "fig_id": "P11-transversal_figure-1",
+   "source": "chapter p.11",
+   "description": "Fig. 5.15 (checked): step 1 of Activity 3, line l, transversal t, dot X. Earlier stage of the construction whose finished figure is the teaching image M3.S14.T14.C50.IMG1.",
+   "mapped_to": "concept_image:M3.S14.T14.C50.IMG1"
+  },
+  {
+   "fig_id": "P11-transversal_figure-2",
+   "source": "chapter p.11",
+   "description": "Fig. 5.16 (checked): step 2, Fig. 5.15 plus angle a = 60 degrees at X. Earlier stage of the construction shown by M3.S14.T14.C50.IMG1.",
+   "mapped_to": "concept_image:M3.S14.T14.C50.IMG1"
+  },
+  {
+   "fig_id": "P11-transversal_figure-3",
+   "source": "chapter p.11",
+   "description": "Fig. 5.17 (checked): step 3, l, t, X, a = 60 degrees and the dot Y on t. This is what the question of T15 gives; drawn as its question diagram.",
+   "mapped_to": "item:M3.S15.T15.C54 (question)"
+  },
+  {
+   "fig_id": "P11-transversal_figure-4",
+   "source": "chapter p.11",
+   "description": "Fig. 5.18 (checked): step 4, Fig. 5.17 plus line m through Y and b = 60 degrees (the book draws no parallel marks). Drawn, with parallel marks added, as the solution diagram of T15.",
+   "mapped_to": "item:M3.S15.T15.C55 (solution)"
+  },
+  {
+   "fig_id": "P12-transversal_figure-1",
+   "source": "chapter p.12",
+   "description": "Fig. 5.19 (checked): parallel lines l and m with one '>' mark each, transversal t, arcs a at l and b at m (no values). Basis of the worked example of C51 (a = 65 degrees); teaching image M3.S14.T14.C51.IMG1 exists.",
+   "mapped_to": "item:M3.S14.T14.C51 (question)"
+  },
+  {
+   "fig_id": "P12-lines_given-2",
+   "source": "chapter p.12",
+   "description": "Fig. 5.20 (checked): two lines l and m that are not parallel (they diverge to the right), no transversal. Basis of the worked example of C52 (lines leaning 10 degrees apart, with a transversal and 30 / 20 degrees added).",
+   "mapped_to": "item:M3.S14.T14.C52 (question)"
+  },
+  {
+   "fig_id": "P13-construction-1",
+   "source": "chapter p.13",
+   "description": "Fig. 5.21 (checked): ruler and set square clip art with line l and two parallel lines drawn along the set square's upright edge. Basis of the solution diagram of the 90 degree question (tools left out); teaching image M4.S16.T16.C56.IMG1 exists.",
+   "mapped_to": "item:M4.S17.T17.C59 (solution)"
+  },
+  {
+   "fig_id": "P13-construction-2",
+   "source": "chapter p.13",
+   "description": "Fig. 5.22 (checked): ruler and set square clip art with line l and two parallel lines along the set square's long side at about 45 degrees. Basis of the solution diagram of the 45 degree question (tools left out).",
+   "mapped_to": "item:M4.S17.T17.C61 (solution)"
+  },
+  {
+   "fig_id": "P14-construction_given-1",
+   "source": "chapter p.14",
+   "description": "Fig. 5.23 (checked): horizontal line l with the dot A above it, to the right of the middle. The question diagram of Figure it Out 5.7 Q1.",
+   "mapped_to": "item:M4.S18.T18.C64 (question)"
+  },
+  {
+   "fig_id": "P14-paper_folding-2",
+   "source": "chapter p.14",
+   "description": "Fig. 5.24 (checked): four panels, sheet, crease l, point A, crease t, crease m. NOTE: A sits at about 85 percent of the width in the second panel but on t at about 70 percent in panels three and four (book inconsistency). Panel 2 is the question diagram of the folding question (T17 Q3); panel 4 is its solution diagram (printed-answers reprint P31-paper_folding-2).",
+   "mapped_to": "item:M4.S17.T17.C62 (question)"
+  },
+  {
+   "fig_id": "P15-transversal_figure-1",
+   "source": "chapter p.15",
+   "description": "Fig. 5.25 (checked): lines l and m (look parallel, no marks) cut by t that falls to the right, angles a b / d c at l and e f / h g at m. The question diagram of Activity 6 (f = 120 degrees); teaching image M5.S19.T19.C66.IMG1 exists.",
+   "mapped_to": "item:M5.S20.T20.C70 (question)"
+  },
+  {
+   "fig_id": "P16-transversal_figure-1",
+   "source": "chapter p.16",
+   "description": "Fig. 5.26 (checked): parallel lines l and m (one '>' each) rising to the right, t falling to the right, angles 1 left 2 top 3 right 4 bottom at l and 5 to 8 at m, angle 6 = 135 degrees. The question diagram of Example 1.",
+   "mapped_to": "item:M5.S21.T21.C72 (question)"
+  },
+  {
+   "fig_id": "P16-transversal_figure-2",
+   "source": "chapter p.16",
+   "description": "Fig. 5.27 (checked): l horizontal, m falling to the right (not parallel), t rising to the right, angles a to h, a = 120 degrees and f = 70 degrees. The question diagram of Example 2.",
+   "mapped_to": "item:M5.S21.T21.C74 (question)"
+  },
+  {
+   "fig_id": "P16-transversal_figure-3",
+   "source": "chapter p.16",
+   "description": "Fig. 5.28 (checked): parallel horizontal lines l and m (no marks), t falling to the right, angles 1 2 / 4 3 at l and 5 6 / 8 7 at m, angle 3 = 50 degrees. The question diagram of Example 3.",
+   "mapped_to": "item:M5.S23.T23.C79 (question)"
+  },
+  {
+   "fig_id": "P17-shape-1",
+   "source": "chapter p.17",
+   "description": "Fig. 5.29 (checked): parallelogram ABCD with diagonal AC, one '>' on AB and DC, two on AD and BC, DAC = 65 degrees, ADC = 60 degrees. The question diagram of Example 4.",
+   "mapped_to": "item:M5.S23.T23.C81 (question)"
+  },
+  {
+   "fig_id": "P30-transversal_figure-1",
+   "source": "chapter p.30",
+   "description": "Printed-answers page p.115 (checked): reprint of Fig. 5.14 above the eight-angles question, without caption. The question diagram of T13 Q1.",
+   "mapped_to": "item:M3.S13.T13.C48 (question)"
+  },
+  {
+   "fig_id": "P30-construction_given-2",
+   "source": "chapter p.30",
+   "description": "Printed-answers page p.119 (checked): reprint of Fig. 5.23 (line l, dot A) above the Figure it Out question; same picture as P14-construction_given-1, so the same question diagram.",
+   "mapped_to": "item:M4.S18.T18.C64 (question)"
+  },
+  {
+   "fig_id": "P31-construction-1",
+   "source": "chapter p.31",
+   "description": "Printed answer to Figure it Out 5.7 Q1 (checked): two clip-art pictures, a ruler and set square with line l and A, then the set square slid up the ruler so that its edge lies on a new line through A. Drawn as the solution diagram (final line through A parallel to l; ruler and set square left out).",
+   "mapped_to": "item:M4.S18.T18.C65 (solution)"
+  },
+  {
+   "fig_id": "P31-paper_folding-2",
+   "source": "chapter p.31",
+   "description": "Printed-answers page p.120 (checked): reprint of the four panels of Fig. 5.24 before 'Why are lines l and m parallel'. Its fourth panel is the solution diagram of the folding question.",
+   "mapped_to": "item:M4.S17.T17.C63 (solution)"
+  },
+  {
+   "fig_id": "NEW-P15-transversal_figure-1-C71",
+   "source": "chapter p.15 (second use)",
+   "description": "Second use of Fig. 5.25: the solution diagram of Activity 6 draws it again with b = 120 and d = 120 added.",
+   "mapped_to": "item:M5.S20.T20.C71 (solution)"
+  },
+  {
+   "fig_id": "NEW-P16-transversal_figure-1-C73",
+   "source": "chapter p.16 (second use)",
+   "description": "Second use of Fig. 5.26: the solution diagram of Example 1 draws it again with all eight angle values.",
+   "mapped_to": "item:M5.S21.T21.C73 (solution)"
+  },
+  {
+   "fig_id": "NEW-P16-transversal_figure-2-C75",
+   "source": "chapter p.16 (second use)",
+   "description": "Second use of Fig. 5.27: the solution diagram of Example 2 draws it again with b = 60 added and b, f highlighted.",
+   "mapped_to": "item:M5.S21.T21.C75 (solution)"
+  },
+  {
+   "fig_id": "NEW-P16-transversal_figure-3-C80",
+   "source": "chapter p.16 (second use)",
+   "description": "Second use of Fig. 5.28: the solution diagram of Example 3 draws it again with angles 2 and 6 = 130 and the interior angles 3 and 6 highlighted.",
+   "mapped_to": "item:M5.S23.T23.C80 (solution)"
+  },
+  {
+   "fig_id": "NEW-P17-shape-1-C82",
+   "source": "chapter p.17 (second use)",
+   "description": "Second use of Fig. 5.29: the solution diagram of Example 4 draws it again with DAB, CAB, ABC and BCD added.",
+   "mapped_to": "item:M5.S23.T23.C82 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 25,
+  "mapped_to_items": 23,
+  "mapped_to_concept_images": 2,
+  "mapped_none": 0,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M3.S12.T12.C46.IMG2",
+   "M3.S13.T13.C48.IMG1",
+   "M3.S14.T14.C51.IMG2",
+   "M3.S14.T14.C52.IMG1",
+   "M3.S15.T15.C54.IMG1",
+   "M3.S15.T15.C55.IMG1",
+   "M4.S17.T17.C59.IMG1",
+   "M4.S17.T17.C61.IMG1",
+   "M4.S17.T17.C62.IMG1",
+   "M4.S17.T17.C63.IMG1",
+   "M4.S18.T18.C64.IMG1",
+   "M4.S18.T18.C65.IMG1",
+   "M5.S20.T20.C70.IMG1",
+   "M5.S20.T20.C71.IMG1",
+   "M5.S21.T21.C72.IMG1",
+   "M5.S21.T21.C73.IMG1",
+   "M5.S21.T21.C74.IMG1",
+   "M5.S21.T21.C75.IMG1",
+   "M5.S23.T23.C79.IMG1",
+   "M5.S23.T23.C80.IMG1",
+   "M5.S23.T23.C81.IMG1",
+   "M5.S23.T23.C82.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M3.S12.T12.C46",
+   "role": "worked_example",
+   "lp_book_number": "Corresponding angles: name the corresponding angle of 2, 3 and 4",
+   "ncert_ref": "Section 5.6 - corresponding angles (Fig. 5.14, p.115)",
+   "question_text": "In the transversal figure, 1, 2, 3, 4 are at the crossing with l and 5, 6, 7, 8 at the crossing with m, with 1 and 5 in the same corner. Name the corresponding angle of each of 2, 3 and 4.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The example names angles 1 to 8 of 'the transversal figure'; which corner each number sits in, and so which angles correspond, is carried only by the figure (Fig. 5.14).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S12.T12.C46.IMG2",
+   "manim_scene": "c7_5_5_6_C46_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S12.T12.C46.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "block_index": 0,
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": false,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "t",
+       "to": [
+        0.7,
+        3.23
+       ],
+       "direction_deg": 75.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -1.0,
+        -3.15
+       ]
+      },
+      {
+       "id": "l",
+       "to": [
+        5.25,
+        1.15
+       ],
+       "direction_deg": 355.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -4.42,
+        2.0
+       ]
+      },
+      {
+       "id": "m",
+       "to": [
+        4.42,
+        -1.07
+       ],
+       "direction_deg": 5.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.25,
+        -1.92
+       ]
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        5.0,
+        1.65
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "m",
+       "at": [
+        4.17,
+        -0.57
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "t",
+       "at": [
+        -0.38,
+        -3.0
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "1",
+       "at": [
+        -0.19,
+        2.24
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "2",
+       "at": [
+        0.92,
+        2.04
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "3",
+       "at": [
+        0.72,
+        0.93
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "4",
+       "at": [
+        -0.39,
+        1.13
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "5",
+       "at": [
+        -1.08,
+        -0.89
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "6",
+       "at": [
+        0.05,
+        -0.99
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "7",
+       "at": [
+        -0.05,
+        -2.12
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "8",
+       "at": [
+        -1.18,
+        -2.02
+       ],
+       "colour": "INK"
+      }
+     ],
+     "facts": [
+      "l slopes down to the right (-5 degrees), m slopes up to the right (+5 degrees), t leans right going up (75 degrees)",
+      "angles numbered clockwise from the top-left at each crossing"
+     ]
+    },
+    "manim_description": "Two-lines-and-a-transversal figure with eight numbered angles, no angle values (the book's Fig. 5.14). Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line t: solid straight line from (-1.00, -3.15) to (0.70, 3.23), an arrowhead at both ends, colour INK. 2. Line l: solid straight line from (-4.42, 2.00) to (5.25, 1.15), an arrowhead at both ends, colour INK. 3. Line m: solid straight line from (-5.25, -1.92) to (4.42, -1.07), an arrowhead at both ends, colour INK. 4. Text 'l' centred at (5.00, 1.65), colour INK. 5. Text 'm' centred at (4.17, -0.57), colour INK. 6. Text 't' centred at (-0.38, -3.00), colour INK. 7. Text '1' centred at (-0.19, 2.24), colour INK. 8. Text '2' centred at (0.92, 2.04), colour INK. 9. Text '3' centred at (0.72, 0.93), colour INK. 10. Text '4' centred at (-0.39, 1.13), colour INK. 11. Text '5' centred at (-1.08, -0.89), colour INK. 12. Text '6' centred at (0.05, -0.99), colour INK. 13. Text '7' centred at (-0.05, -2.12), colour INK. 14. Text '8' centred at (-1.18, -2.02), colour INK.",
+    "visible_text": [
+     "l",
+     "m",
+     "t",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "angle arcs or degree values",
+     "colours, shading or lines linking corresponding or vertically opposite angles",
+     "the figure caption",
+     "parallel arrow marks"
+    ],
+    "accuracy_checks": [
+     "the numbers sit clockwise from the top-left: 1 top-left, 2 top-right, 3 bottom-right, 4 bottom-left at the crossing with l, and 5, 6, 7, 8 in the same corners at the crossing with m",
+     "corresponding positions: 1 and 5 top-left, 2 and 6 top-right, 3 and 7 bottom-right, 4 and 8 bottom-left; vertically opposite: 1-3, 2-4, 5-7, 6-8",
+     "l and m are not parallel (their directions differ by 10 degrees) and t crosses both; no angle value is drawn"
+    ],
+    "alt_text": "Two lines l and m cut by a transversal t; the angles at the crossing with l are numbered 1 to 4 and those at the crossing with m are numbered 5 to 8, clockwise from the top left.",
+    "render_note": "Same as M3.S13.T13.C48.IMG1."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S13.T13.C48",
+   "role": "question",
+   "lp_book_number": "Transversals: can all eight angles differ?",
+   "ncert_ref": "Section 5.5 - Transversals (Fig. 5.14, p.115)",
+   "question_text": "A transversal t crosses lines l and m. The angles are numbered 1, 2, 3, 4 going round the crossing with l, and 5, 6, 7, 8 going round the crossing with m in the same way, so that 1 and 3, 2 and 4, 5 and 7, 6 and 8 are vertically opposite. Can all eight angles have different measures? Can the five angles 6, 5, 4, 3 and 2 be all different?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book asks this about the eight angles of the transversal figure (Fig. 5.14); which angles sit where and which are vertically opposite is spatial, so the numbered figure is drawn (the LP wording only describes it).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S13.T13.C48.IMG1",
+   "manim_scene": "c7_5_5_5_C48_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S13.T13.C48.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": false,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "t",
+       "to": [
+        0.7,
+        3.23
+       ],
+       "direction_deg": 75.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -1.0,
+        -3.15
+       ]
+      },
+      {
+       "id": "l",
+       "to": [
+        5.25,
+        1.15
+       ],
+       "direction_deg": 355.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -4.42,
+        2.0
+       ]
+      },
+      {
+       "id": "m",
+       "to": [
+        4.42,
+        -1.07
+       ],
+       "direction_deg": 5.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.25,
+        -1.92
+       ]
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        5.0,
+        1.65
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "m",
+       "at": [
+        4.17,
+        -0.57
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "t",
+       "at": [
+        -0.38,
+        -3.0
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "1",
+       "at": [
+        -0.19,
+        2.24
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "2",
+       "at": [
+        0.92,
+        2.04
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "3",
+       "at": [
+        0.72,
+        0.93
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "4",
+       "at": [
+        -0.39,
+        1.13
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "5",
+       "at": [
+        -1.08,
+        -0.89
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "6",
+       "at": [
+        0.05,
+        -0.99
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "7",
+       "at": [
+        -0.05,
+        -2.12
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "8",
+       "at": [
+        -1.18,
+        -2.02
+       ],
+       "colour": "INK"
+      }
+     ],
+     "facts": [
+      "l slopes down to the right (-5 degrees), m slopes up to the right (+5 degrees), t leans right going up (75 degrees)",
+      "angles numbered clockwise from the top-left at each crossing"
+     ]
+    },
+    "manim_description": "Two-lines-and-a-transversal figure with eight numbered angles, no angle values (the book's Fig. 5.14). Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line t: solid straight line from (-1.00, -3.15) to (0.70, 3.23), an arrowhead at both ends, colour INK. 2. Line l: solid straight line from (-4.42, 2.00) to (5.25, 1.15), an arrowhead at both ends, colour INK. 3. Line m: solid straight line from (-5.25, -1.92) to (4.42, -1.07), an arrowhead at both ends, colour INK. 4. Text 'l' centred at (5.00, 1.65), colour INK. 5. Text 'm' centred at (4.17, -0.57), colour INK. 6. Text 't' centred at (-0.38, -3.00), colour INK. 7. Text '1' centred at (-0.19, 2.24), colour INK. 8. Text '2' centred at (0.92, 2.04), colour INK. 9. Text '3' centred at (0.72, 0.93), colour INK. 10. Text '4' centred at (-0.39, 1.13), colour INK. 11. Text '5' centred at (-1.08, -0.89), colour INK. 12. Text '6' centred at (0.05, -0.99), colour INK. 13. Text '7' centred at (-0.05, -2.12), colour INK. 14. Text '8' centred at (-1.18, -2.02), colour INK.",
+    "visible_text": [
+     "l",
+     "m",
+     "t",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "angle arcs or degree values",
+     "colours, shading or lines linking corresponding or vertically opposite angles",
+     "the figure caption",
+     "parallel arrow marks"
+    ],
+    "accuracy_checks": [
+     "the numbers sit clockwise from the top-left: 1 top-left, 2 top-right, 3 bottom-right, 4 bottom-left at the crossing with l, and 5, 6, 7, 8 in the same corners at the crossing with m",
+     "corresponding positions: 1 and 5 top-left, 2 and 6 top-right, 3 and 7 bottom-right, 4 and 8 bottom-left; vertically opposite: 1-3, 2-4, 5-7, 6-8",
+     "l and m are not parallel (their directions differ by 10 degrees) and t crosses both; no angle value is drawn"
+    ],
+    "alt_text": "Two lines l and m cut by a transversal t; the angles at the crossing with l are numbered 1 to 4 and those at the crossing with m are numbered 5 to 8, clockwise from the top left.",
+    "render_note": "Same as M3.S12.T12.C46.IMG2."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S13.T13.C49",
+   "role": "solution",
+   "lp_book_number": "Transversals: can all eight angles differ?",
+   "ncert_ref": "Section 5.5 - Transversals (Fig. 5.14, p.115)",
+   "question_text": "A transversal t crosses lines l and m. The angles are numbered 1, 2, 3, 4 going round the crossing with l, and 5, 6, 7, 8 going round the crossing with m in the same way, so that 1 and 3, 2 and 4, 5 and 7, 6 and 8 are vertically opposite. Can all eight angles have different measures? Can the five angles 6, 5, 4, 3 and 2 be all different?",
+   "decision": "optional",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Would help: the question figure with the four vertically opposite pairs 1-3, 2-4, 5-7, 6-8 in matching colours. Not needed: the steps already list all four pairs and the printed answer is words only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the four equalities 1=3, 2=4, 5=7, 6=8 as LaTeX in the steps (already there)."
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C51",
+   "role": "worked_example",
+   "lp_book_number": "Parallel lines: a = 65 degrees, find b and the other pairs",
+   "ncert_ref": "Section 5.6 - Activity 4 (Fig. 5.19, p.117)",
+   "question_text": "Lines l and m are parallel, with arrow marks, and t crosses both. The angle a at l is 65°, and b is its corresponding angle at m. Find b and the other three pairs of corresponding angles.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The example names angle a at l and its corresponding angle b at m and says the lines carry arrow marks; where a and b sit and the parallel marks are shown only by the figure (Fig. 5.19 with a = 65).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S14.T14.C51.IMG2",
+   "manim_scene": "c7_5_5_6_C51_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S14.T14.C51.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "block_index": 0,
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "t",
+       "to": [
+        1.77,
+        3.12
+       ],
+       "direction_deg": 65.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -1.1,
+        -3.04
+       ]
+      },
+      {
+       "id": "l",
+       "to": [
+        4.96,
+        0.95
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -4.44,
+        0.95
+       ]
+      },
+      {
+       "id": "m",
+       "to": [
+        4.44,
+        -1.45
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -4.96,
+        -1.45
+       ]
+      }
+     ],
+     "parallel_marks": [
+      {
+       "line": "l",
+       "at": [
+        -2.37,
+        0.95
+       ],
+       "marks": 1,
+       "direction_deg": 0.0,
+       "colour": "INK"
+      },
+      {
+       "line": "m",
+       "at": [
+        -2.89,
+        -1.45
+       ],
+       "marks": 1,
+       "direction_deg": 0.0,
+       "colour": "INK"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "centre": [
+        0.76,
+        0.95
+       ],
+       "radius": 0.75,
+       "from_deg": 0,
+       "to_deg": 65.0,
+       "colour": "INK"
+      },
+      {
+       "centre": [
+        -0.36,
+        -1.45
+       ],
+       "radius": 0.75,
+       "from_deg": 0,
+       "to_deg": 65.0,
+       "colour": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        -4.14,
+        1.45
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "m",
+       "at": [
+        -4.66,
+        -0.95
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "t",
+       "at": [
+        -0.48,
+        -2.89
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "a = 65°",
+       "at": [
+        2.85,
+        1.47
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "b",
+       "at": [
+        0.74,
+        -0.76
+       ],
+       "colour": "INK"
+      }
+     ],
+     "facts": [
+      "l and m horizontal and parallel, one '>' mark each",
+      "t at 65 degrees to l",
+      "a = 65 degrees upper-right at l, b unmarked upper-right at m"
+     ]
+    },
+    "manim_description": "Two parallel lines l and m with parallel marks, cut by a transversal t; angle a = 65 degrees at l and angle b (value not shown) at m (the book's Fig. 5.19). Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line t: solid straight line from (-1.10, -3.04) to (1.77, 3.12), an arrowhead at both ends, colour INK. 2. Line l: solid straight line from (-4.44, 0.95) to (4.96, 0.95), an arrowhead at both ends, colour INK. 3. Line m: solid straight line from (-4.96, -1.45) to (4.44, -1.45), an arrowhead at both ends, colour INK. 4. Parallel mark on line l: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (-2.37, 0.95), pointing along the direction of the line (0.0 degrees), colour INK. 5. Parallel mark on line m: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (-2.89, -1.45), pointing along the direction of the line (0.0 degrees), colour INK. 6. Angle arc: circular arc centred (0.76, 0.95), radius 0.75, from 0.0 to 65.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 7. Angle arc: circular arc centred (-0.36, -1.45), radius 0.75, from 0.0 to 65.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 8. Text 'l' centred at (-4.14, 1.45), colour INK. 9. Text 'm' centred at (-4.66, -0.95), colour INK. 10. Text 't' centred at (-0.48, -2.89), colour INK. 11. Text 'a = 65°' centred at (2.85, 1.47), colour INK. 12. Text 'b' centred at (0.74, -0.76), colour INK.",
+    "visible_text": [
+     "l",
+     "m",
+     "t",
+     "a = 65°",
+     "b"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the value of b or any of the other angles (115 or 65)",
+     "colours marking matching corners",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "angle between the directions of l and m = 0.0 degrees",
+     "angle a between t and l (arc and label agree) = 65.0 degrees",
+     "angle b drawn at m equals the corresponding angle a = 65.0 degrees",
+     "a sits in the upper-right corner at l and b in the upper-right corner at m (corresponding corners); only a carries a value"
+    ],
+    "alt_text": "Two parallel lines l and m with arrow marks cut by a transversal t; angle a at l is 65 degrees and the corresponding angle b at m is marked b.",
+    "render_note": "Based on the book's Fig. 5.19 (Activity 4) with a = 65 degrees from the worked example. The LP text does not say which corner a is in; the figure puts a in the upper-right corner as the book does, and the answer (65, 65, 115, 115) does not depend on the corner."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C52",
+   "role": "worked_example",
+   "lp_book_number": "Lines that are not parallel: 30 and 20 degrees",
+   "ncert_ref": "Section 5.6 - Activity 5 (Fig. 5.20, p.117)",
+   "question_text": "Two lines l and m lean 10° apart, so they are not parallel. A transversal t makes 30° with l, and m leans 10° more towards t than l does, so t makes 20° with m on the matching side. Can the two corresponding angles be made equal by turning t?",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "'m leans 10 degrees more towards t' and 'on the matching side' only make sense on a picture: the two lines that converge and the two corresponding corners that are compared are shown only by the figure.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S14.T14.C52.IMG1",
+   "manim_scene": "c7_5_5_6_C52_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S14.T14.C52.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "block_index": 0,
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "t",
+       "to": [
+        5.46,
+        2.09
+       ],
+       "direction_deg": 30.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -2.19,
+        -2.33
+       ]
+      },
+      {
+       "id": "l",
+       "to": [
+        6.96,
+        0.4
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.26,
+        0.4
+       ]
+      },
+      {
+       "id": "m",
+       "to": [
+        6.87,
+        -0.28
+       ],
+       "direction_deg": 10.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -6.96,
+        -2.71
+       ]
+      }
+     ],
+     "angle_arcs": [
+      {
+       "centre": [
+        2.54,
+        0.4
+       ],
+       "radius": 1.3,
+       "from_deg": 0,
+       "to_deg": 30,
+       "colour": "INK"
+      },
+      {
+       "centre": [
+        -1.07,
+        -1.68
+       ],
+       "radius": 1.56,
+       "from_deg": 10,
+       "to_deg": 30,
+       "colour": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        -4.87,
+        1.05
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "m",
+       "at": [
+        -6.57,
+        -2.06
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "t",
+       "at": [
+        6.18,
+        2.48
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "30°",
+       "at": [
+        5.52,
+        1.04
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "20°",
+       "at": [
+        2.17,
+        -0.5
+       ],
+       "colour": "INK"
+      }
+     ],
+     "facts": [
+      "l horizontal, m at +10 degrees, t at +30 degrees",
+      "l and m converge towards the right and would meet far beyond the right-hand ends"
+     ]
+    },
+    "manim_description": "Two lines l and m leaning 10 degrees apart (not parallel) and a transversal t making 30 degrees with l and 20 degrees with m in the same (upper-right) corner. Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line t: solid straight line from (-2.19, -2.33) to (5.46, 2.09), an arrowhead at both ends, colour INK. 2. Line l: solid straight line from (-5.26, 0.40) to (6.96, 0.40), an arrowhead at both ends, colour INK. 3. Line m: solid straight line from (-6.96, -2.71) to (6.87, -0.28), an arrowhead at both ends, colour INK. 4. Angle arc: circular arc centred (2.54, 0.40), radius 1.30, from 0.0 to 30.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 5. Angle arc: circular arc centred (-1.07, -1.68), radius 1.56, from 10.0 to 30.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 6. Text 'l' centred at (-4.87, 1.05), colour INK. 7. Text 'm' centred at (-6.57, -2.06), colour INK. 8. Text 't' centred at (6.18, 2.48), colour INK. 9. Text '30°' centred at (5.52, 1.04), colour INK. 10. Text '20°' centred at (2.17, -0.50), colour INK.",
+    "visible_text": [
+     "l",
+     "m",
+     "t",
+     "30°",
+     "20°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "parallel arrow marks",
+     "the second position of t (50 and 40 degrees)",
+     "the difference 10 or any equation"
+    ],
+    "accuracy_checks": [
+     "angle between t and l at X = 30.0 degrees",
+     "angle between t and m at Y, same (upper-right) corner = 20.0 degrees",
+     "angle between the directions of l and m (they lean 10 degrees apart, so they are not parallel) = 10.0 degrees",
+     "the difference of the two corresponding angles is 30 - 20 = 10 degrees, as in the example",
+     "no parallel marks are drawn because the lines are not parallel"
+    ],
+    "alt_text": "Two lines l and m that lean 10 degrees apart, crossed by a transversal t that makes 30 degrees with l and 20 degrees with m in matching corners.",
+    "render_note": "No figure of this exact example is printed; it is built on the book's Fig. 5.20 (two lines that are not parallel) with the transversal and angles the LP example gives. The LP says 'on the matching side' without naming the corner: the upper-right corner is used at both crossings."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S15.T15.C54",
+   "role": "question",
+   "lp_book_number": "Corresponding Angles: drawing a parallel line",
+   "ncert_ref": "Section 5.6 - Activity 3 (Fig. 5.17, p.116)",
+   "question_text": "A line l and a transversal t meet at X, and the angle between them, called a, is 60°. Describe how to draw a line m through a point Y on t that is parallel to l, and name the angles that are equal.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The student has to draw m on the given figure: l, the transversal t, the dot X with angle a = 60 degrees and the dot Y on t are all given by the book (Fig. 5.17); which side a is on and where Y lies are shown only by the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S15.T15.C54.IMG1",
+   "manim_scene": "c7_5_5_6_C54_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S15.T15.C54.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "t",
+       "to": [
+        1.95,
+        3.07
+       ],
+       "direction_deg": 60.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -1.55,
+        -2.99
+       ]
+      },
+      {
+       "id": "l",
+       "to": [
+        5.25,
+        0.82
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -3.95,
+        0.82
+       ]
+      }
+     ],
+     "angle_arcs": [
+      {
+       "centre": [
+        0.65,
+        0.82
+       ],
+       "radius": 0.85,
+       "from_deg": 0,
+       "to_deg": 60,
+       "colour": "INK"
+      }
+     ],
+     "dots": [
+      {
+       "at": [
+        0.65,
+        0.82
+       ],
+       "radius": 0.08,
+       "colour": "INK"
+      },
+      {
+       "at": [
+        -0.65,
+        -1.43
+       ],
+       "radius": 0.08,
+       "colour": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        -3.65,
+        1.32
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "t",
+       "at": [
+        -0.93,
+        -2.84
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "X",
+       "at": [
+        0.25,
+        1.22
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "Y",
+       "at": [
+        -1.05,
+        -1.03
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "a = 60°",
+       "at": [
+        2.82,
+        1.4
+       ],
+       "colour": "INK"
+      }
+     ],
+     "facts": [
+      "l horizontal, t at 60 degrees through X",
+      "Y on t at distance 2.6 below X"
+     ]
+    },
+    "manim_description": "A line l and a transversal t crossing at the dot X, angle a = 60 degrees marked at X, and a second dot Y on t below X (the book's Fig. 5.17). Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line t: solid straight line from (-1.55, -2.99) to (1.95, 3.07), an arrowhead at both ends, colour INK. 2. Line l: solid straight line from (-3.95, 0.82) to (5.25, 0.82), an arrowhead at both ends, colour INK. 3. Angle arc: circular arc centred (0.65, 0.82), radius 0.85, from 0.0 to 60.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 4. Dot: filled circle radius 0.08 at (0.65, 0.82), colour INK. 5. Dot: filled circle radius 0.08 at (-0.65, -1.43), colour INK. 6. Text 'l' centred at (-3.65, 1.32), colour INK. 7. Text 't' centred at (-0.93, -2.84), colour INK. 8. Text 'X' centred at (0.25, 1.22), colour INK. 9. Text 'Y' centred at (-1.05, -1.03), colour INK. 10. Text 'a = 60°' centred at (2.82, 1.40), colour INK.",
+    "visible_text": [
+     "l",
+     "t",
+     "X",
+     "Y",
+     "a = 60°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "line m",
+     "angle b",
+     "parallel arrow marks",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "angle a between t and l at X (arc and label agree) = 60.0 degrees",
+     "Y lies on t below X; nothing is drawn through Y (no line m, no b)"
+    ],
+    "alt_text": "A line l crossed by a transversal t at the point X, with angle a = 60 degrees marked and a point Y marked on t below X."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S15.T15.C55",
+   "role": "solution",
+   "lp_book_number": "Corresponding Angles: drawing a parallel line",
+   "ncert_ref": "Section 5.6 - Activity 3 (Fig. 5.18, p.116)",
+   "question_text": "A line l and a transversal t meet at X, and the angle between them, called a, is 60°. Describe how to draw a line m through a point Y on t that is parallel to l, and name the angles that are equal.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is a drawing: the line m through Y at 60 degrees to t with b = 60 degrees at Y and the parallel marks (the book's Fig. 5.18).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S15.T15.C55.IMG1",
+   "manim_scene": "c7_5_5_6_C55_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S15.T15.C55.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S15.T15.C54.IMG1",
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "t",
+       "to": [
+        1.95,
+        3.07
+       ],
+       "direction_deg": 60.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -1.55,
+        -2.99
+       ]
+      },
+      {
+       "id": "l",
+       "to": [
+        5.25,
+        0.82
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -3.95,
+        0.82
+       ]
+      },
+      {
+       "id": "m",
+       "to": [
+        3.95,
+        -1.43
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "ANSWER",
+       "from": [
+        -5.25,
+        -1.43
+       ]
+      }
+     ],
+     "parallel_marks": [
+      {
+       "line": "l",
+       "at": [
+        3.41,
+        0.82
+       ],
+       "marks": 1,
+       "direction_deg": 0.0,
+       "colour": "ANSWER"
+      },
+      {
+       "line": "m",
+       "at": [
+        2.11,
+        -1.43
+       ],
+       "marks": 1,
+       "direction_deg": 0.0,
+       "colour": "ANSWER"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "centre": [
+        0.65,
+        0.82
+       ],
+       "radius": 0.85,
+       "from_deg": 0,
+       "to_deg": 60,
+       "colour": "INK"
+      },
+      {
+       "centre": [
+        -0.65,
+        -1.43
+       ],
+       "radius": 0.85,
+       "from_deg": 0,
+       "to_deg": 60,
+       "colour": "ANSWER"
+      }
+     ],
+     "dots": [
+      {
+       "at": [
+        0.65,
+        0.82
+       ],
+       "radius": 0.08,
+       "colour": "INK"
+      },
+      {
+       "at": [
+        -0.65,
+        -1.43
+       ],
+       "radius": 0.08,
+       "colour": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        -3.65,
+        1.32
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "t",
+       "at": [
+        -0.93,
+        -2.84
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "X",
+       "at": [
+        0.25,
+        1.22
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "Y",
+       "at": [
+        -1.05,
+        -1.03
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "a = 60°",
+       "at": [
+        2.82,
+        1.4
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "m",
+       "at": [
+        -4.95,
+        -0.93
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "b = 60°",
+       "at": [
+        1.52,
+        -0.85
+       ],
+       "colour": "ANSWER"
+      }
+     ],
+     "facts": [
+      "everything of the question figure unchanged in INK",
+      "added in ANSWER: line m through Y parallel to l, b = 60 degrees at Y, one '>' mark on l and one on m"
+     ]
+    },
+    "manim_description": "The question figure plus the answer: line m drawn through Y at 60 degrees to t, angle b = 60 degrees, and parallel marks on l and m (the book's Fig. 5.18 with the arrow marks the LP solution ends on). Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line t: solid straight line from (-1.55, -2.99) to (1.95, 3.07), an arrowhead at both ends, colour INK. 2. Line l: solid straight line from (-3.95, 0.82) to (5.25, 0.82), an arrowhead at both ends, colour INK. 3. Line m: solid straight line from (-5.25, -1.43) to (3.95, -1.43), an arrowhead at both ends, colour ANSWER. 4. Parallel mark on line l: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (3.41, 0.82), pointing along the direction of the line (0.0 degrees), colour ANSWER. 5. Parallel mark on line m: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (2.11, -1.43), pointing along the direction of the line (0.0 degrees), colour ANSWER. 6. Angle arc: circular arc centred (0.65, 0.82), radius 0.85, from 0.0 to 60.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 7. Angle arc: circular arc centred (-0.65, -1.43), radius 0.85, from 0.0 to 60.0 degrees (anticlockwise from the +x axis), colour ANSWER, no fill. 8. Dot: filled circle radius 0.08 at (0.65, 0.82), colour INK. 9. Dot: filled circle radius 0.08 at (-0.65, -1.43), colour INK. 10. Text 'l' centred at (-3.65, 1.32), colour INK. 11. Text 't' centred at (-0.93, -2.84), colour INK. 12. Text 'X' centred at (0.25, 1.22), colour INK. 13. Text 'Y' centred at (-1.05, -1.03), colour INK. 14. Text 'a = 60°' centred at (2.82, 1.40), colour INK. 15. Text 'm' centred at (-4.95, -0.93), colour ANSWER. 16. Text 'b = 60°' centred at (1.52, -0.85), colour ANSWER.",
+    "visible_text": [
+     "l",
+     "t",
+     "X",
+     "Y",
+     "a = 60°",
+     "m",
+     "b = 60°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the figure caption",
+     "the words parallel or corresponding",
+     "any other angle value"
+    ],
+    "accuracy_checks": [
+     "angle a at X = 60.0 degrees",
+     "angle b at Y (corresponding to a), arc and label agree = 60.0 degrees",
+     "angle between the directions of l and m (parallel) = 0.0 degrees",
+     "m passes through Y; X, Y, l, t, a and their positions are identical to the question figure; the added items (m, b, parallel marks) are ANSWER green"
+    ],
+    "alt_text": "Lines l and m are parallel (arrow marks) and cut by the transversal t at X and Y; the corresponding angles a at X and b at Y are both 60 degrees.",
+    "render_note": "The book's Fig. 5.18 has no parallel marks; they are added because the LP solution concludes 'So l and m are parallel'."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S17.T17.C58",
+   "role": "question",
+   "lp_book_number": "Set Square: lines along the upright edge",
+   "ncert_ref": "Section 5.7 - Drawing Parallel Lines (Fig. 5.21, p.118)",
+   "question_text": "Draw a line l with a ruler. Slide a set square along l and draw two lines along its upright edge. Are the two lines parallel? Which angles prove it?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure: the learner draws l and the two lines with the set square, and the instruction is complete in words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "No question figure; the instruction 'draw a line l, slide the set square, draw two lines along its upright edge' is all the learner needs."
+  },
+  {
+   "lp_concept_id": "M4.S17.T17.C59",
+   "role": "solution",
+   "lp_book_number": "Set Square: lines along the upright edge",
+   "ncert_ref": "Section 5.7 - Drawing Parallel Lines (Fig. 5.21, p.118)",
+   "question_text": "Draw a line l with a ruler. Slide a set square along l and draw two lines along its upright edge. Are the two lines parallel? Which angles prove it?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The result of the drawing is the answer: l with the two lines along the set square's upright edge and the two 90 degree angles that prove them parallel (the book's Fig. 5.21).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S17.T17.C59.IMG1",
+   "manim_scene": "c7_5_5_7_C59_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S17.T17.C59.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "l",
+       "to": [
+        5.4,
+        0.0
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.4,
+        0.0
+       ]
+      },
+      {
+       "id": "drawn_1",
+       "to": [
+        -2.2,
+        3.2
+       ],
+       "direction_deg": 90.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "ANSWER",
+       "from": [
+        -2.2,
+        -3.2
+       ]
+      },
+      {
+       "id": "drawn_2",
+       "to": [
+        2.2,
+        3.2
+       ],
+       "direction_deg": 90.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "ANSWER",
+       "from": [
+        2.2,
+        -3.2
+       ]
+      }
+     ],
+     "parallel_marks": [
+      {
+       "line": "drawn_1",
+       "at": [
+        -2.2,
+        1.79
+       ],
+       "marks": 1,
+       "direction_deg": 90.0,
+       "colour": "ANSWER"
+      },
+      {
+       "line": "drawn_2",
+       "at": [
+        2.2,
+        1.79
+       ],
+       "marks": 1,
+       "direction_deg": 90.0,
+       "colour": "ANSWER"
+      }
+     ],
+     "right_angle_squares": [
+      {
+       "corner": [
+        -2.2,
+        0.0
+       ],
+       "side_dir_deg": 0.0,
+       "side": 0.46,
+       "colour": "ANSWER"
+      },
+      {
+       "corner": [
+        2.2,
+        0.0
+       ],
+       "side_dir_deg": 0.0,
+       "side": 0.46,
+       "colour": "ANSWER"
+      }
+     ],
+     "labels": [
+      {
+       "text": "90°",
+       "at": [
+        -0.95,
+        0.72
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "90°",
+       "at": [
+        3.45,
+        0.72
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "l",
+       "at": [
+        5.1,
+        0.5
+       ],
+       "colour": "INK"
+      }
+     ],
+     "facts": [
+      "two vertical lines at x = -2.2 and x = 2.2 before centring, 4.4 apart",
+      "right-angle squares in the upper-right angle at each crossing"
+     ]
+    },
+    "manim_description": "A horizontal line l crossed at 90 degrees by two parallel vertical lines drawn along the set square's upright edge, with a right-angle mark and 90 degrees at each crossing. Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line l: solid straight line from (-5.40, 0.00) to (5.40, 0.00), an arrowhead at both ends, colour INK. 2. Line drawn_1: solid straight line from (-2.20, -3.20) to (-2.20, 3.20), an arrowhead at both ends, colour ANSWER. 3. Line drawn_2: solid straight line from (2.20, -3.20) to (2.20, 3.20), an arrowhead at both ends, colour ANSWER. 4. Parallel mark on line drawn_1: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (-2.20, 1.79), pointing along the direction of the line (90.0 degrees), colour ANSWER. 5. Parallel mark on line drawn_2: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (2.20, 1.79), pointing along the direction of the line (90.0 degrees), colour ANSWER. 6. Right-angle square: corner at (-2.20, 0.00), first side along 0.0 degrees and second side along 90.0 degrees, side length 0.46, colour ANSWER, no fill. 7. Right-angle square: corner at (2.20, 0.00), first side along 0.0 degrees and second side along 90.0 degrees, side length 0.46, colour ANSWER, no fill. 8. Text '90°' centred at (-0.95, 0.72), colour ANSWER. 9. Text '90°' centred at (3.45, 0.72), colour ANSWER. 10. Text 'l' centred at (5.10, 0.50), colour INK.",
+    "visible_text": [
+     "90°",
+     "90°",
+     "l"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "ruler or set square pictures",
+     "names for the two drawn lines",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "angle between the first drawn line and l = 90.0 degrees",
+     "angle between the second drawn line and l = 90.0 degrees",
+     "angle between the two drawn lines (parallel) = 0.0 degrees",
+     "the two 90 degree marks are the upper-right angles at the two crossings, i.e. a pair of corresponding angles, as the solution says"
+    ],
+    "alt_text": "A line l crossed by two vertical parallel lines; each makes a 90 degree angle with l, shown by right-angle marks.",
+    "render_note": "Drawn from the book's Fig. 5.21; the ruler and set square clip art are left out because only the lines and the equal 90 degree corresponding angles are needed. The question has no figure of its own."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S17.T17.C60",
+   "role": "question",
+   "lp_book_number": "Set Square: the long side at 45°",
+   "ncert_ref": "Section 5.7 - Drawing Parallel Lines (Fig. 5.22, p.118)",
+   "question_text": "Place the long side of a 45° set square so that it makes 45° with l, and draw along it, then slide and draw again. Are the two lines parallel? How can you check?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure: the learner places the set square and draws the lines; the instruction is complete in words (same reasoning as the 90 degree question).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "No question figure; the instruction is complete in words."
+  },
+  {
+   "lp_concept_id": "M4.S17.T17.C61",
+   "role": "solution",
+   "lp_book_number": "Set Square: the long side at 45°",
+   "ncert_ref": "Section 5.7 - Drawing Parallel Lines (Fig. 5.22, p.118)",
+   "question_text": "Place the long side of a 45° set square so that it makes 45° with l, and draw along it, then slide and draw again. Are the two lines parallel? How can you check?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The result of the drawing is the answer: l with the two lines along the long side of the set square, each at 45 degrees to l (the book's Fig. 5.22); same decision as the 90 degree answer.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S17.T17.C61.IMG1",
+   "manim_scene": "c7_5_5_7_C61_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S17.T17.C61.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "l",
+       "to": [
+        5.6,
+        -0.21
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.6,
+        -0.21
+       ]
+      },
+      {
+       "id": "drawn_1",
+       "to": [
+        0.15,
+        2.33
+       ],
+       "direction_deg": 45.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "ANSWER",
+       "from": [
+        -4.52,
+        -2.33
+       ]
+      },
+      {
+       "id": "drawn_2",
+       "to": [
+        4.95,
+        2.33
+       ],
+       "direction_deg": 45.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "ANSWER",
+       "from": [
+        0.28,
+        -2.33
+       ]
+      }
+     ],
+     "parallel_marks": [
+      {
+       "line": "drawn_1",
+       "at": [
+        -0.79,
+        1.4
+       ],
+       "marks": 1,
+       "direction_deg": 45.0,
+       "colour": "ANSWER"
+      },
+      {
+       "line": "drawn_2",
+       "at": [
+        4.01,
+        1.4
+       ],
+       "marks": 1,
+       "direction_deg": 45.0,
+       "colour": "ANSWER"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "centre": [
+        -2.4,
+        -0.21
+       ],
+       "radius": 0.95,
+       "from_deg": 0,
+       "to_deg": 45,
+       "colour": "ANSWER"
+      },
+      {
+       "centre": [
+        2.4,
+        -0.21
+       ],
+       "radius": 0.95,
+       "from_deg": 0,
+       "to_deg": 45,
+       "colour": "ANSWER"
+      }
+     ],
+     "labels": [
+      {
+       "text": "45°",
+       "at": [
+        -0.35,
+        0.29
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "45°",
+       "at": [
+        4.45,
+        0.29
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "l",
+       "at": [
+        5.3,
+        0.29
+       ],
+       "colour": "INK"
+      }
+     ],
+     "facts": [
+      "two lines at 45 degrees through x = -2.4 and x = 2.4 before centring, 4.8 apart",
+      "arcs in the upper-right angle at each crossing"
+     ]
+    },
+    "manim_description": "A horizontal line l crossed by two parallel lines drawn along the long side of a 45 degree set square, each making 45 degrees with l, with an arc and 45 degrees at each crossing. Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line l: solid straight line from (-5.60, -0.21) to (5.60, -0.21), an arrowhead at both ends, colour INK. 2. Line drawn_1: solid straight line from (-4.52, -2.33) to (0.15, 2.33), an arrowhead at both ends, colour ANSWER. 3. Line drawn_2: solid straight line from (0.28, -2.33) to (4.95, 2.33), an arrowhead at both ends, colour ANSWER. 4. Parallel mark on line drawn_1: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (-0.79, 1.40), pointing along the direction of the line (45.0 degrees), colour ANSWER. 5. Parallel mark on line drawn_2: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (4.01, 1.40), pointing along the direction of the line (45.0 degrees), colour ANSWER. 6. Angle arc: circular arc centred (-2.40, -0.21), radius 0.95, from 0.0 to 45.0 degrees (anticlockwise from the +x axis), colour ANSWER, no fill. 7. Angle arc: circular arc centred (2.40, -0.21), radius 0.95, from 0.0 to 45.0 degrees (anticlockwise from the +x axis), colour ANSWER, no fill. 8. Text '45°' centred at (-0.35, 0.29), colour ANSWER. 9. Text '45°' centred at (4.45, 0.29), colour ANSWER. 10. Text 'l' centred at (5.30, 0.29), colour INK.",
+    "visible_text": [
+     "45°",
+     "45°",
+     "l"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "ruler or set square pictures",
+     "names for the two drawn lines",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "angle between the first drawn line and l (arc and label agree) = 45.0 degrees",
+     "angle between the second drawn line and l (arc and label agree) = 45.0 degrees",
+     "angle between the two drawn lines (parallel) = 0.0 degrees",
+     "the two 45 degree arcs are the upper-right angles at the two crossings, i.e. corresponding angles"
+    ],
+    "alt_text": "A line l crossed by two parallel lines that each make a 45 degree angle with l, marked by arcs.",
+    "render_note": "Drawn from the book's Fig. 5.22; the clip art tools are left out. The question has no figure of its own."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S17.T17.C62",
+   "role": "question",
+   "lp_book_number": "Parallel Lines by Folding: through the point A",
+   "ncert_ref": "Section 5.7 - Making Parallel Lines through Paper Folding (Fig. 5.24, p.119)",
+   "question_text": "A crease l and a point A are given. Fold a line m parallel to l through A, and say why it is parallel.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The folding is done on a given sheet with a crease l and a point A (the book's Fig. 5.24, second panel); where A lies relative to l is shown only by the figure (same decision as Figure it Out 5.7 Q1, which also gives l and A).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S17.T17.C62.IMG1",
+   "manim_scene": "c7_5_5_7_C62_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S17.T17.C62.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "sheet": [
+      {
+       "corner_from": [
+        -4.29,
+        -2.81
+       ],
+       "corner_to": [
+        3.71,
+        2.19
+       ],
+       "colour": "INK"
+      }
+     ],
+     "lines": [
+      {
+       "id": "l",
+       "to": [
+        3.71,
+        -0.31
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "none",
+       "dashed": true,
+       "colour": "INK",
+       "from": [
+        -4.29,
+        -0.31
+       ]
+      }
+     ],
+     "dots": [
+      {
+       "at": [
+        1.31,
+        1.29
+       ],
+       "radius": 0.08,
+       "colour": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        4.11,
+        -0.26
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "A",
+       "at": [
+        0.89,
+        1.67
+       ],
+       "colour": "INK"
+      }
+     ],
+     "facts": [
+      "sheet 8 x 5, crease l through the middle, A at 70 percent of the width and 1.6 above l"
+     ]
+    },
+    "manim_description": "A rectangular sheet of paper (8 wide, 5 tall) with a dashed horizontal crease l across it and a dot A above the crease (the book's Fig. 5.24, second panel). Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Sheet: rectangle outline INK, no fill, from corner (-4.29, -2.81) to corner (3.71, 2.19). 2. Line l: dashed (dash 0.25, gap 0.15) straight line from (-4.29, -0.31) to (3.71, -0.31), no arrowheads, colour INK. 3. Dot: filled circle radius 0.08 at (1.31, 1.29), colour INK. 4. Text 'l' centred at (4.11, -0.26), colour INK. 5. Text 'A' centred at (0.89, 1.67), colour INK.",
+    "visible_text": [
+     "l",
+     "A"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "creases t or m",
+     "right-angle marks",
+     "the four small panels of the book figure",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "A lies above the crease l, 1.6 above it and 1.6 from the centre line of the sheet, wholly inside the sheet",
+     "l is a dashed crease across the full width; nothing else is drawn"
+    ],
+    "alt_text": "A rectangular sheet with a dashed crease l across the middle and a point A marked above it on the right.",
+    "render_note": "The book draws A further right in its second panel than on t in its third and fourth panels; one position (70 percent of the width) is used here so that t can pass through A."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S17.T17.C63",
+   "role": "solution",
+   "lp_book_number": "Parallel Lines by Folding: through the point A",
+   "ncert_ref": "Section 5.7 - Making Parallel Lines through Paper Folding (Fig. 5.24, p.119)",
+   "question_text": "A crease l and a point A are given. Fold a line m parallel to l through A, and say why it is parallel.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is the folded result: the crease t through A at right angles to l and the crease m through A at right angles to t (the book's Fig. 5.24, fourth panel).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S17.T17.C63.IMG1",
+   "manim_scene": "c7_5_5_7_C63_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S17.T17.C63.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M4.S17.T17.C62.IMG1",
+    "content": {
+     "type": "other",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "sheet": [
+      {
+       "corner_from": [
+        -4.29,
+        -2.81
+       ],
+       "corner_to": [
+        3.71,
+        2.19
+       ],
+       "colour": "INK"
+      }
+     ],
+     "lines": [
+      {
+       "id": "l",
+       "to": [
+        3.71,
+        -0.31
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "none",
+       "dashed": true,
+       "colour": "INK",
+       "from": [
+        -4.29,
+        -0.31
+       ]
+      },
+      {
+       "id": "t",
+       "to": [
+        1.31,
+        2.19
+       ],
+       "direction_deg": 90.0,
+       "arrowheads": "none",
+       "dashed": true,
+       "colour": "ANSWER",
+       "from": [
+        1.31,
+        -2.81
+       ]
+      },
+      {
+       "id": "m",
+       "to": [
+        3.71,
+        1.29
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "none",
+       "dashed": true,
+       "colour": "ANSWER",
+       "from": [
+        -4.29,
+        1.29
+       ]
+      }
+     ],
+     "right_angle_squares": [
+      {
+       "corner": [
+        1.31,
+        -0.31
+       ],
+       "side_dir_deg": 0.0,
+       "side": 0.46,
+       "colour": "ANSWER"
+      },
+      {
+       "corner": [
+        1.31,
+        1.29
+       ],
+       "side_dir_deg": 0.0,
+       "side": 0.46,
+       "colour": "ANSWER"
+      }
+     ],
+     "dots": [
+      {
+       "at": [
+        1.31,
+        1.29
+       ],
+       "radius": 0.08,
+       "colour": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        4.11,
+        -0.26
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "A",
+       "at": [
+        0.89,
+        1.67
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "t",
+       "at": [
+        1.31,
+        2.58
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "m",
+       "at": [
+        4.11,
+        1.33
+       ],
+       "colour": "ANSWER"
+      }
+     ],
+     "facts": [
+      "unchanged in INK: sheet, crease l, point A",
+      "added in ANSWER: crease t (vertical through A), crease m (horizontal through A), two right-angle squares"
+     ]
+    },
+    "manim_description": "The question figure (sheet, dashed crease l, dot A) plus the answer in ANSWER green: a dashed vertical crease t through A and a dashed horizontal crease m through A, with a right-angle square at each crossing of t. Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Sheet: rectangle outline INK, no fill, from corner (-4.29, -2.81) to corner (3.71, 2.19). 2. Line l: dashed (dash 0.25, gap 0.15) straight line from (-4.29, -0.31) to (3.71, -0.31), no arrowheads, colour INK. 3. Line t: dashed (dash 0.25, gap 0.15) straight line from (1.31, -2.81) to (1.31, 2.19), no arrowheads, colour ANSWER. 4. Line m: dashed (dash 0.25, gap 0.15) straight line from (-4.29, 1.29) to (3.71, 1.29), no arrowheads, colour ANSWER. 5. Right-angle square: corner at (1.31, -0.31), first side along 0.0 degrees and second side along 90.0 degrees, side length 0.46, colour ANSWER, no fill. 6. Right-angle square: corner at (1.31, 1.29), first side along 0.0 degrees and second side along 90.0 degrees, side length 0.46, colour ANSWER, no fill. 7. Dot: filled circle radius 0.08 at (1.31, 1.29), colour INK. 8. Text 'l' centred at (4.11, -0.26), colour INK. 9. Text 'A' centred at (0.89, 1.67), colour INK. 10. Text 't' centred at (1.31, 2.58), colour ANSWER. 11. Text 'm' centred at (4.11, 1.33), colour ANSWER.",
+    "visible_text": [
+     "l",
+     "A",
+     "t",
+     "m"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the four small panels of the book figure",
+     "the words perpendicular or parallel",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "t is the vertical crease through A: x = 1.6 for both A and t, perpendicular to l",
+     "m is the horizontal crease through A (y = 1.6), perpendicular to t and parallel to l (same direction as l)",
+     "the two right-angle marks are the upper-right angles at the crossings of t with l and of t with m, a pair of corresponding angles of 90 degrees",
+     "sheet, l, A and their positions are identical to the question figure"
+    ],
+    "alt_text": "The sheet with crease l, point A, a vertical crease t through A at right angles to l, and a horizontal crease m through A at right angles to t, both right angles marked.",
+    "render_note": "The book's fourth panel marks only the right angle where t crosses l; the LP solution says t crosses both l and m at 90 degrees, so both right angles are marked."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S18.T18.C64",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.7, Q1",
+   "ncert_ref": "Section 5.7 - Figure it Out (Fig. 5.23, p.119)",
+   "question_text": "Can you draw a line parallel to l that goes through the point A? How will you do it with the tools from your geometry box? Describe your method.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The book gives the line l and the point A (Fig. 5.23) and asks for a line through A parallel to l; the learner acts on this given figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S18.T18.C64.IMG1",
+   "manim_scene": "c7_5_5_7_C64_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S18.T18.C64.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "construction",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "l",
+       "to": [
+        5.5,
+        -1.43
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.5,
+        -1.43
+       ]
+      }
+     ],
+     "dots": [
+      {
+       "at": [
+        2.53,
+        1.54
+       ],
+       "radius": 0.08,
+       "colour": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        -0.9,
+        -1.93
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "A",
+       "at": [
+        2.11,
+        1.93
+       ],
+       "colour": "INK"
+      }
+     ],
+     "facts": [
+      "l length 11, A at 73 percent along l and 2.97 above it"
+     ]
+    },
+    "manim_description": "A long horizontal line l (arrowheads both ends) and a dot A above it on the right (the book's Fig. 5.23). Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line l: solid straight line from (-5.50, -1.43) to (5.50, -1.43), an arrowhead at both ends, colour INK. 2. Dot: filled circle radius 0.08 at (2.53, 1.54), colour INK. 3. Text 'l' centred at (-0.90, -1.93), colour INK. 4. Text 'A' centred at (2.11, 1.93), colour INK.",
+    "visible_text": [
+     "l",
+     "A"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a line through A",
+     "ruler or set square",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "A lies above l (clear distance 2.97) and is not on l",
+     "nothing is drawn through A"
+    ],
+    "alt_text": "A horizontal line l with a point A above it, to the right of the middle."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S18.T18.C65",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.7, Q1",
+   "ncert_ref": "Section 5.7 - Figure it Out (printed answer p.119-120)",
+   "question_text": "Can you draw a line parallel to l that goes through the point A? How will you do it with the tools from your geometry box? Describe your method.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The printed answer is a picture: the line drawn through A parallel to l (with the set square slid up a ruler); the figure shows that final line.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S18.T18.C65.IMG1",
+   "manim_scene": "c7_5_5_7_C65_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S18.T18.C65.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": "M4.S18.T18.C64.IMG1",
+    "content": {
+     "type": "construction",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "l",
+       "to": [
+        5.5,
+        -1.43
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.5,
+        -1.43
+       ]
+      },
+      {
+       "id": "new_line",
+       "to": [
+        5.5,
+        1.54
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "ANSWER",
+       "from": [
+        -5.5,
+        1.54
+       ]
+      }
+     ],
+     "parallel_marks": [
+      {
+       "line": "l",
+       "at": [
+        -3.08,
+        -1.43
+       ],
+       "marks": 1,
+       "direction_deg": 0.0,
+       "colour": "ANSWER"
+      },
+      {
+       "line": "new_line",
+       "at": [
+        -3.08,
+        1.54
+       ],
+       "marks": 1,
+       "direction_deg": 0.0,
+       "colour": "ANSWER"
+      }
+     ],
+     "dots": [
+      {
+       "at": [
+        2.53,
+        1.54
+       ],
+       "radius": 0.08,
+       "colour": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        -0.9,
+        -1.93
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "A",
+       "at": [
+        2.11,
+        1.93
+       ],
+       "colour": "INK"
+      }
+     ],
+     "facts": [
+      "unchanged in INK: l, A",
+      "added in ANSWER: the new line through A parallel to l, one '>' mark on l and one on the new line"
+     ]
+    },
+    "manim_description": "The question figure (line l and dot A) plus the answer in ANSWER green: a horizontal line through A with the same length as l, and a parallel mark on l and on the new line. Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line l: solid straight line from (-5.50, -1.43) to (5.50, -1.43), an arrowhead at both ends, colour INK. 2. Line new_line: solid straight line from (-5.50, 1.54) to (5.50, 1.54), an arrowhead at both ends, colour ANSWER. 3. Parallel mark on line l: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (-3.08, -1.43), pointing along the direction of the line (0.0 degrees), colour ANSWER. 4. Parallel mark on line new_line: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (-3.08, 1.54), pointing along the direction of the line (0.0 degrees), colour ANSWER. 5. Dot: filled circle radius 0.08 at (2.53, 1.54), colour INK. 6. Text 'l' centred at (-0.90, -1.93), colour INK. 7. Text 'A' centred at (2.11, 1.93), colour INK.",
+    "visible_text": [
+     "l",
+     "A"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "ruler or set square pictures",
+     "the figure caption",
+     "the words parallel or through"
+    ],
+    "accuracy_checks": [
+     "the new line has the same direction as l (0 degrees) and its y equals the y of A (1.54)",
+     "angle between the directions of l and the new line = 0.0 degrees",
+     "l, A and their positions are identical to the question figure"
+    ],
+    "alt_text": "The line l and the point A, and a second line drawn through A parallel to l, both with arrow marks.",
+    "render_note": "The book's printed answer is a clip-art picture of a ruler and a set square sliding up to A. The ruler and set square are left out; the learner needs the final line through A, parallel to l."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S20.T20.C70",
+   "role": "question",
+   "lp_book_number": "Alternate Angles: f is 120°, find d",
+   "ncert_ref": "Section 5.8 - Activity 6 (Fig. 5.25, p.120)",
+   "question_text": "Lines l and m are parallel and t is a transversal. The angles a, b, d, c are at the upper crossing (a is top left, b is top right, d is bottom left, c is bottom right), and e, f, h, g are in the same corners at the lower crossing. If f is 120°, find its alternate angle d.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question works with named angles a to h of Fig. 5.25 and the value of f; which corner each letter names is carried only by the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S20.T20.C70.IMG1",
+   "manim_scene": "c7_5_5_8_C70_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S20.T20.C70.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "t",
+       "to": [
+        -1.34,
+        3.28
+       ],
+       "direction_deg": 110.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        1.05,
+        -3.29
+       ]
+      },
+      {
+       "id": "l",
+       "to": [
+        4.23,
+        0.63
+       ],
+       "direction_deg": 350.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.32,
+        2.31
+       ]
+      },
+      {
+       "id": "m",
+       "to": [
+        5.32,
+        -2.38
+       ],
+       "direction_deg": 350.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -4.23,
+        -0.69
+       ]
+      }
+     ],
+     "parallel_marks": [
+      {
+       "line": "l",
+       "at": [
+        2.13,
+        1.0
+       ],
+       "marks": 1,
+       "direction_deg": 350.0,
+       "colour": "INK"
+      },
+      {
+       "line": "m",
+       "at": [
+        3.22,
+        -2.01
+       ],
+       "marks": 1,
+       "direction_deg": 350.0,
+       "colour": "INK"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "centre": [
+        0.4,
+        -1.51
+       ],
+       "radius": 1.15,
+       "from_deg": 350.0,
+       "to_deg": 470.0,
+       "colour": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        -4.97,
+        2.81
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "m",
+       "at": [
+        -3.88,
+        -0.19
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "t",
+       "at": [
+        1.67,
+        -3.14
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "a",
+       "at": [
+        -1.35,
+        2.04
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "b",
+       "at": [
+        -0.34,
+        1.92
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "d",
+       "at": [
+        -1.05,
+        1.08
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "c",
+       "at": [
+        -0.04,
+        0.95
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "e",
+       "at": [
+        -0.25,
+        -0.96
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "f",
+       "at": [
+        0.75,
+        -1.09
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "h",
+       "at": [
+        0.05,
+        -1.93
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "g",
+       "at": [
+        1.05,
+        -2.06
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "120°",
+       "at": [
+        1.78,
+        0.14
+       ],
+       "colour": "INK"
+      }
+     ],
+     "facts": [
+      "l and m at -10 degrees (falling to the right), t at 110 degrees",
+      "f = 120 degrees, so b = 120, d = 120, a = 60, c = 60 (not drawn in the question figure)"
+     ]
+    },
+    "manim_description": "Two parallel lines l and m (parallel marks) cut by a transversal t, angles named a, b, d, c at the upper crossing and e, f, h, g at the lower crossing, f = 120 degrees marked (the book's Fig. 5.25). Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line t: solid straight line from (1.05, -3.29) to (-1.34, 3.28), an arrowhead at both ends, colour INK. 2. Line l: solid straight line from (-5.32, 2.31) to (4.23, 0.63), an arrowhead at both ends, colour INK. 3. Line m: solid straight line from (-4.23, -0.69) to (5.32, -2.38), an arrowhead at both ends, colour INK. 4. Parallel mark on line l: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (2.13, 1.00), pointing along the direction of the line (350.0 degrees), colour INK. 5. Parallel mark on line m: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (3.22, -2.01), pointing along the direction of the line (350.0 degrees), colour INK. 6. Angle arc: circular arc centred (0.40, -1.51), radius 1.15, from 350.0 to 470.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 7. Text 'l' centred at (-4.97, 2.81), colour INK. 8. Text 'm' centred at (-3.88, -0.19), colour INK. 9. Text 't' centred at (1.67, -3.14), colour INK. 10. Text 'a' centred at (-1.35, 2.04), colour INK. 11. Text 'b' centred at (-0.34, 1.92), colour INK. 12. Text 'd' centred at (-1.05, 1.08), colour INK. 13. Text 'c' centred at (-0.04, 0.95), colour INK. 14. Text 'e' centred at (-0.25, -0.96), colour INK. 15. Text 'f' centred at (0.75, -1.09), colour INK. 16. Text 'h' centred at (0.05, -1.93), colour INK. 17. Text 'g' centred at (1.05, -2.06), colour INK. 18. Text '120°' centred at (1.78, 0.14), colour INK.",
+    "visible_text": [
+     "l",
+     "m",
+     "t",
+     "a",
+     "b",
+     "d",
+     "c",
+     "e",
+     "f",
+     "h",
+     "g",
+     "120°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "values of any angle other than f",
+     "colours marking corresponding or alternate angles",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "l and m have the same direction (-10 degrees): parallel, with one '>' mark each",
+     "angle f (upper-right at m) is the sector between the right half of m and the upper half of t: 120.0 degrees (arc and label agree)",
+     "letters sit in the corners: a top-left, b top-right, d bottom-left, c bottom-right at l; e, f, h, g in the same corners at m"
+    ],
+    "alt_text": "Two parallel lines l and m cut by a transversal t with the eight angles named a to h, and angle f marked 120 degrees.",
+    "render_note": "The book's Fig. 5.25 has no parallel marks; the question says the lines are parallel and the LP figure note asks for arrow marks, so one '>' mark is drawn on each line."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S20.T20.C71",
+   "role": "solution",
+   "lp_book_number": "Alternate Angles: f is 120°, find d",
+   "ncert_ref": "Section 5.8 - Activity 6 (Fig. 5.25, p.120)",
+   "question_text": "Lines l and m are parallel and t is a transversal. The angles a, b, d, c are at the upper crossing (a is top left, b is top right, d is bottom left, c is bottom right), and e, f, h, g are in the same corners at the lower crossing. If f is 120°, find its alternate angle d.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The solution adds visual content: b = 120 (corresponding to f) and d = 120 (vertically opposite to b) are marked on the figure at their positions.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S20.T20.C71.IMG1",
+   "manim_scene": "c7_5_5_8_C71_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S20.T20.C71.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M5.S20.T20.C70.IMG1",
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "t",
+       "to": [
+        -1.34,
+        3.28
+       ],
+       "direction_deg": 110.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        1.05,
+        -3.29
+       ]
+      },
+      {
+       "id": "l",
+       "to": [
+        4.23,
+        0.63
+       ],
+       "direction_deg": 350.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.32,
+        2.31
+       ]
+      },
+      {
+       "id": "m",
+       "to": [
+        5.32,
+        -2.38
+       ],
+       "direction_deg": 350.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -4.23,
+        -0.69
+       ]
+      }
+     ],
+     "parallel_marks": [
+      {
+       "line": "l",
+       "at": [
+        2.13,
+        1.0
+       ],
+       "marks": 1,
+       "direction_deg": 350.0,
+       "colour": "INK"
+      },
+      {
+       "line": "m",
+       "at": [
+        3.22,
+        -2.01
+       ],
+       "marks": 1,
+       "direction_deg": 350.0,
+       "colour": "INK"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "centre": [
+        0.4,
+        -1.51
+       ],
+       "radius": 1.15,
+       "from_deg": 350.0,
+       "to_deg": 470.0,
+       "colour": "INK"
+      },
+      {
+       "centre": [
+        -0.69,
+        1.5
+       ],
+       "radius": 1.15,
+       "from_deg": 350.0,
+       "to_deg": 470.0,
+       "colour": "ANSWER"
+      },
+      {
+       "centre": [
+        -0.69,
+        1.5
+       ],
+       "radius": 1.15,
+       "from_deg": 170.0,
+       "to_deg": 290.0,
+       "colour": "ANSWER"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        -4.97,
+        2.81
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "m",
+       "at": [
+        -3.88,
+        -0.19
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "t",
+       "at": [
+        1.67,
+        -3.14
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "a",
+       "at": [
+        -1.35,
+        2.04
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "b",
+       "at": [
+        -0.34,
+        1.92
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "d",
+       "at": [
+        -1.05,
+        1.08
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "c",
+       "at": [
+        -0.04,
+        0.95
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "e",
+       "at": [
+        -0.25,
+        -0.96
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "f",
+       "at": [
+        0.75,
+        -1.09
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "h",
+       "at": [
+        0.05,
+        -1.93
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "g",
+       "at": [
+        1.05,
+        -2.06
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "120°",
+       "at": [
+        1.78,
+        0.14
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "120°",
+       "at": [
+        0.69,
+        3.14
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "120°",
+       "at": [
+        -2.08,
+        -0.15
+       ],
+       "colour": "ANSWER"
+      }
+     ],
+     "facts": [
+      "unchanged in INK: lines, parallel marks, letters, f = 120 degrees",
+      "added in ANSWER: b = 120 degrees, d = 120 degrees"
+     ]
+    },
+    "manim_description": "The question figure plus the answer in ANSWER green: arcs and labels 120 degrees on angle b (upper-right at l) and angle d (lower-left at l). Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line t: solid straight line from (1.05, -3.29) to (-1.34, 3.28), an arrowhead at both ends, colour INK. 2. Line l: solid straight line from (-5.32, 2.31) to (4.23, 0.63), an arrowhead at both ends, colour INK. 3. Line m: solid straight line from (-4.23, -0.69) to (5.32, -2.38), an arrowhead at both ends, colour INK. 4. Parallel mark on line l: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (2.13, 1.00), pointing along the direction of the line (350.0 degrees), colour INK. 5. Parallel mark on line m: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (3.22, -2.01), pointing along the direction of the line (350.0 degrees), colour INK. 6. Angle arc: circular arc centred (0.40, -1.51), radius 1.15, from 350.0 to 470.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 7. Angle arc: circular arc centred (-0.69, 1.50), radius 1.15, from 350.0 to 470.0 degrees (anticlockwise from the +x axis), colour ANSWER, no fill. 8. Angle arc: circular arc centred (-0.69, 1.50), radius 1.15, from 170.0 to 290.0 degrees (anticlockwise from the +x axis), colour ANSWER, no fill. 9. Text 'l' centred at (-4.97, 2.81), colour INK. 10. Text 'm' centred at (-3.88, -0.19), colour INK. 11. Text 't' centred at (1.67, -3.14), colour INK. 12. Text 'a' centred at (-1.35, 2.04), colour INK. 13. Text 'b' centred at (-0.34, 1.92), colour INK. 14. Text 'd' centred at (-1.05, 1.08), colour INK. 15. Text 'c' centred at (-0.04, 0.95), colour INK. 16. Text 'e' centred at (-0.25, -0.96), colour INK. 17. Text 'f' centred at (0.75, -1.09), colour INK. 18. Text 'h' centred at (0.05, -1.93), colour INK. 19. Text 'g' centred at (1.05, -2.06), colour INK. 20. Text '120°' centred at (1.78, 0.14), colour INK. 21. Text '120°' centred at (0.69, 3.14), colour ANSWER. 22. Text '120°' centred at (-2.08, -0.15), colour ANSWER.",
+    "visible_text": [
+     "l",
+     "m",
+     "t",
+     "a",
+     "b",
+     "d",
+     "c",
+     "e",
+     "f",
+     "h",
+     "g",
+     "120°",
+     "120°",
+     "120°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words move, corresponding or alternate",
+     "arrows between the angles",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "b = 120.0 degrees: the upper-right sector at l is the same sector as f at m (corresponding), drawn as the arc between the right half of l and the upper half of t",
+     "d = 120.0 degrees: the lower-left sector at l is vertically opposite to b (same measure); arc and label agree",
+     "f = 120 stays in INK exactly as in the question figure; only b and d are added in ANSWER green"
+    ],
+    "alt_text": "The parallel lines l and m cut by t with f = 120 degrees given; angles b and d at l are also marked 120 degrees."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S21.T21.C72",
+   "role": "question",
+   "lp_book_number": "Example 1: all angles from 135°",
+   "ncert_ref": "Section 5.8 - Example 1 (Fig. 5.26, p.121)",
+   "question_text": "Lines l and m are parallel and t is a transversal. The angles 1, 2, 3, 4 go round the crossing with l and 5, 6, 7, 8 round the crossing with m in the same corners, so 2 and 6 correspond, and 6 and 8 are vertically opposite, and 5 and 6 are a linear pair. If angle 6 is 135°, find the other angles.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "Example 1 is stated on Fig. 5.26 with angles numbered 1 to 8 and angle 6 = 135 degrees; the positions of the numbers and the parallel marks are carried only by the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S21.T21.C72.IMG1",
+   "manim_scene": "c7_5_5_8_C72_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S21.T21.C72.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "t",
+       "to": [
+        4.7,
+        -1.84
+       ],
+       "direction_deg": 340.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -4.7,
+        1.58
+       ]
+      },
+      {
+       "id": "l",
+       "to": [
+        1.64,
+        2.5
+       ],
+       "direction_deg": 25.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -6.15,
+        -1.13
+       ]
+      },
+      {
+       "id": "m",
+       "to": [
+        6.15,
+        0.86
+       ],
+       "direction_deg": 25.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -1.64,
+        -2.77
+       ]
+      }
+     ],
+     "parallel_marks": [
+      {
+       "line": "l",
+       "at": [
+        -0.07,
+        1.7
+       ],
+       "marks": 1,
+       "direction_deg": 25.0,
+       "colour": "INK"
+      },
+      {
+       "line": "m",
+       "at": [
+        4.44,
+        0.06
+       ],
+       "marks": 1,
+       "direction_deg": 25.0,
+       "colour": "INK"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "centre": [
+        2.26,
+        -0.96
+       ],
+       "radius": 1.25,
+       "from_deg": 25.0,
+       "to_deg": 160.0,
+       "colour": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        1.44,
+        3.0
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "m",
+       "at": [
+        5.95,
+        1.36
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "t",
+       "at": [
+        4.9,
+        -2.29
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "1",
+       "at": [
+        -3.35,
+        0.64
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "2",
+       "at": [
+        -2.29,
+        1.49
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "3",
+       "at": [
+        -1.16,
+        0.73
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "4",
+       "at": [
+        -2.22,
+        -0.11
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "5",
+       "at": [
+        1.16,
+        -1.0
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "6",
+       "at": [
+        2.22,
+        -0.16
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "7",
+       "at": [
+        3.35,
+        -0.91
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "8",
+       "at": [
+        2.29,
+        -1.75
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "135°",
+       "at": [
+        2.17,
+        1.09
+       ],
+       "colour": "INK"
+      }
+     ],
+     "facts": [
+      "l and m rise to the right at 25 degrees; t falls to the right at -20 degrees",
+      "wide sectors 135 degrees (top and bottom), narrow sectors 45 degrees (left and right)"
+     ]
+    },
+    "manim_description": "Two parallel lines l and m (parallel marks) cut by a transversal t that falls to the right; the angles at l are numbered 1 left, 2 top, 3 right, 4 bottom and those at m 5 left, 6 top, 7 right, 8 bottom; angle 6 is marked 135 degrees (the book's Fig. 5.26). Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line t: solid straight line from (-4.70, 1.58) to (4.70, -1.84), an arrowhead at both ends, colour INK. 2. Line l: solid straight line from (-6.15, -1.13) to (1.64, 2.50), an arrowhead at both ends, colour INK. 3. Line m: solid straight line from (-1.64, -2.77) to (6.15, 0.86), an arrowhead at both ends, colour INK. 4. Parallel mark on line l: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (-0.07, 1.70), pointing along the direction of the line (25.0 degrees), colour INK. 5. Parallel mark on line m: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (4.44, 0.06), pointing along the direction of the line (25.0 degrees), colour INK. 6. Angle arc: circular arc centred (2.26, -0.96), radius 1.25, from 25.0 to 160.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 7. Text 'l' centred at (1.44, 3.00), colour INK. 8. Text 'm' centred at (5.95, 1.36), colour INK. 9. Text 't' centred at (4.90, -2.29), colour INK. 10. Text '1' centred at (-3.35, 0.64), colour INK. 11. Text '2' centred at (-2.29, 1.49), colour INK. 12. Text '3' centred at (-1.16, 0.73), colour INK. 13. Text '4' centred at (-2.22, -0.11), colour INK. 14. Text '5' centred at (1.16, -1.00), colour INK. 15. Text '6' centred at (2.22, -0.16), colour INK. 16. Text '7' centred at (3.35, -0.91), colour INK. 17. Text '8' centred at (2.29, -1.75), colour INK. 18. Text '135°' centred at (2.17, 1.09), colour INK.",
+    "visible_text": [
+     "l",
+     "m",
+     "t",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "135°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "values of any angle other than angle 6",
+     "colours marking corresponding or opposite angles",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "l and m have the same direction (25 degrees): parallel, with one '>' mark each; t goes down to the right at -20 degrees",
+     "angle 6 (top sector at m) is the sector between the right half of m and the left half of t: 135.0 degrees (arc and label agree); the other top and bottom sectors are also 135 and the left and right sectors are 45 (not drawn)",
+     "numbers: 1 left, 2 top, 3 right, 4 bottom at l and 5 left, 6 top, 7 right, 8 bottom at m (the book's Fig. 5.26)"
+    ],
+    "alt_text": "Two parallel lines l and m cut by a transversal t; the eight angles are numbered 1 to 8 and angle 6 is marked 135 degrees."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S21.T21.C73",
+   "role": "solution",
+   "lp_book_number": "Example 1: all angles from 135°",
+   "ncert_ref": "Section 5.8 - Example 1 (Fig. 5.26, p.121)",
+   "question_text": "Lines l and m are parallel and t is a transversal. The angles 1, 2, 3, 4 go round the crossing with l and 5, 6, 7, 8 round the crossing with m in the same corners, so 2 and 6 correspond, and 6 and 8 are vertically opposite, and 5 and 6 are a linear pair. If angle 6 is 135°, find the other angles.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is all eight angles: 2, 4, 6, 8 are 135 degrees and 1, 3, 5, 7 are 45 degrees, each marked at its position on the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S21.T21.C73.IMG1",
+   "manim_scene": "c7_5_5_8_C73_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S21.T21.C73.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M5.S21.T21.C72.IMG1",
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "t",
+       "to": [
+        4.7,
+        -1.84
+       ],
+       "direction_deg": 340.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -4.7,
+        1.58
+       ]
+      },
+      {
+       "id": "l",
+       "to": [
+        1.64,
+        2.5
+       ],
+       "direction_deg": 25.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -6.15,
+        -1.13
+       ]
+      },
+      {
+       "id": "m",
+       "to": [
+        6.15,
+        0.86
+       ],
+       "direction_deg": 25.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -1.64,
+        -2.77
+       ]
+      }
+     ],
+     "parallel_marks": [
+      {
+       "line": "l",
+       "at": [
+        -0.07,
+        1.7
+       ],
+       "marks": 1,
+       "direction_deg": 25.0,
+       "colour": "INK"
+      },
+      {
+       "line": "m",
+       "at": [
+        4.44,
+        0.06
+       ],
+       "marks": 1,
+       "direction_deg": 25.0,
+       "colour": "INK"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "centre": [
+        2.26,
+        -0.96
+       ],
+       "radius": 1.25,
+       "from_deg": 25.0,
+       "to_deg": 160.0,
+       "colour": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        1.44,
+        3.0
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "m",
+       "at": [
+        5.95,
+        1.36
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "t",
+       "at": [
+        4.9,
+        -2.29
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "1",
+       "at": [
+        -3.35,
+        0.64
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "2",
+       "at": [
+        -2.29,
+        1.49
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "3",
+       "at": [
+        -1.16,
+        0.73
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "4",
+       "at": [
+        -2.22,
+        -0.11
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "5",
+       "at": [
+        1.16,
+        -1.0
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "6",
+       "at": [
+        2.22,
+        -0.16
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "7",
+       "at": [
+        3.35,
+        -0.91
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "8",
+       "at": [
+        2.29,
+        -1.75
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "135°",
+       "at": [
+        2.17,
+        1.09
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "45°",
+       "at": [
+        -4.35,
+        0.59
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "135°",
+       "at": [
+        -2.34,
+        2.73
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "45°",
+       "at": [
+        -0.16,
+        0.78
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "135°",
+       "at": [
+        -2.17,
+        -1.36
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "45°",
+       "at": [
+        0.16,
+        -1.05
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "45°",
+       "at": [
+        4.35,
+        -0.86
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "135°",
+       "at": [
+        2.34,
+        -3.0
+       ],
+       "colour": "ANSWER"
+      }
+     ],
+     "facts": [
+      "unchanged in INK: lines, marks, numbers 1 to 8, angle 6 with arc and 135 degrees",
+      "added in ANSWER: seven value labels"
+     ]
+    },
+    "manim_description": "The question figure plus the answer in ANSWER green: every other angle labelled with its value, 135 degrees for 2, 4, 8 and 45 degrees for 1, 3, 5, 7, each value just beyond its number in the same sector. Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line t: solid straight line from (-4.70, 1.58) to (4.70, -1.84), an arrowhead at both ends, colour INK. 2. Line l: solid straight line from (-6.15, -1.13) to (1.64, 2.50), an arrowhead at both ends, colour INK. 3. Line m: solid straight line from (-1.64, -2.77) to (6.15, 0.86), an arrowhead at both ends, colour INK. 4. Parallel mark on line l: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (-0.07, 1.70), pointing along the direction of the line (25.0 degrees), colour INK. 5. Parallel mark on line m: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (4.44, 0.06), pointing along the direction of the line (25.0 degrees), colour INK. 6. Angle arc: circular arc centred (2.26, -0.96), radius 1.25, from 25.0 to 160.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 7. Text 'l' centred at (1.44, 3.00), colour INK. 8. Text 'm' centred at (5.95, 1.36), colour INK. 9. Text 't' centred at (4.90, -2.29), colour INK. 10. Text '1' centred at (-3.35, 0.64), colour INK. 11. Text '2' centred at (-2.29, 1.49), colour INK. 12. Text '3' centred at (-1.16, 0.73), colour INK. 13. Text '4' centred at (-2.22, -0.11), colour INK. 14. Text '5' centred at (1.16, -1.00), colour INK. 15. Text '6' centred at (2.22, -0.16), colour INK. 16. Text '7' centred at (3.35, -0.91), colour INK. 17. Text '8' centred at (2.29, -1.75), colour INK. 18. Text '135°' centred at (2.17, 1.09), colour INK. 19. Text '45°' centred at (-4.35, 0.59), colour ANSWER. 20. Text '135°' centred at (-2.34, 2.73), colour ANSWER. 21. Text '45°' centred at (-0.16, 0.78), colour ANSWER. 22. Text '135°' centred at (-2.17, -1.36), colour ANSWER. 23. Text '45°' centred at (0.16, -1.05), colour ANSWER. 24. Text '45°' centred at (4.35, -0.86), colour ANSWER. 25. Text '135°' centred at (2.34, -3.00), colour ANSWER.",
+    "visible_text": [
+     "l",
+     "m",
+     "t",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "135°",
+     "45°",
+     "135°",
+     "45°",
+     "135°",
+     "45°",
+     "45°",
+     "135°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words corresponding, vertically opposite or linear pair",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "angles 2, 4, 6, 8 are the wide sectors (135.0 degrees) and 1, 3, 5, 7 are the narrow sectors (45.0 degrees): 135 + 45 = 180 for every linear pair",
+     "angle 6 = 135 stays in INK with its arc exactly as in the question figure; the seven added values are ANSWER green"
+    ],
+    "alt_text": "Parallel lines l and m cut by a transversal t with all eight angles numbered; angles 2, 4, 6 and 8 are 135 degrees and angles 1, 3, 5 and 7 are 45 degrees."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S21.T21.C74",
+   "role": "question",
+   "lp_book_number": "Example 2: are l and m parallel?",
+   "ncert_ref": "Section 5.8 - Example 2 (Fig. 5.27, p.121)",
+   "question_text": "Lines l and m are cut by a transversal t, with the angles a, b, d, c at the upper crossing and e, f, h, g in the same corners at the lower crossing. The angle a is 120° and the angle f is 70°. Are l and m parallel?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "Example 2 is stated on Fig. 5.27 with named angles a to h, a = 120 and f = 70; the corners the letters name and the slant of l and m are carried only by the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S21.T21.C74.IMG1",
+   "manim_scene": "c7_5_5_8_C74_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S21.T21.C74.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "t",
+       "to": [
+        1.97,
+        2.94
+       ],
+       "direction_deg": 60.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -1.63,
+        -3.29
+       ]
+      },
+      {
+       "id": "l",
+       "to": [
+        5.47,
+        0.34
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.33,
+        0.34
+       ]
+      },
+      {
+       "id": "m",
+       "to": [
+        4.78,
+        -3.47
+       ],
+       "direction_deg": 350.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.47,
+        -1.66
+       ]
+      }
+     ],
+     "angle_arcs": [
+      {
+       "centre": [
+        0.47,
+        0.34
+       ],
+       "radius": 1.1,
+       "from_deg": 60.0,
+       "to_deg": 180.0,
+       "colour": "INK"
+      },
+      {
+       "centre": [
+        -1.13,
+        -2.43
+       ],
+       "radius": 1.2,
+       "from_deg": 350.0,
+       "to_deg": 420.0,
+       "colour": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        5.22,
+        0.84
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "m",
+       "at": [
+        4.53,
+        -2.97
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "t",
+       "at": [
+        2.52,
+        3.24
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "a",
+       "at": [
+        0.17,
+        0.86
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "b",
+       "at": [
+        1.2,
+        0.77
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "d",
+       "at": [
+        -0.27,
+        -0.08
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "c",
+       "at": [
+        0.77,
+        -0.18
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "e",
+       "at": [
+        -1.39,
+        -1.88
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "f",
+       "at": [
+        -0.5,
+        -2.13
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "h",
+       "at": [
+        -1.77,
+        -2.72
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "g",
+       "at": [
+        -0.88,
+        -2.97
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "120°",
+       "at": [
+        -0.51,
+        2.03
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "70°",
+       "at": [
+        0.72,
+        -1.56
+       ],
+       "colour": "INK"
+      }
+     ],
+     "facts": [
+      "l horizontal, m at -10 degrees, t at 60 degrees to l",
+      "a = 120, b = 60 at l; f = 70 at m (angle between t and m on the upper-right side)"
+     ]
+    },
+    "manim_description": "Two lines l (horizontal) and m (falling 10 degrees to the right) cut by a transversal t at 60 degrees; angles named a, b, d, c at l and e, f, h, g at m; a = 120 degrees and f = 70 degrees marked (the book's Fig. 5.27). Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line t: solid straight line from (-1.63, -3.29) to (1.97, 2.94), an arrowhead at both ends, colour INK. 2. Line l: solid straight line from (-5.33, 0.34) to (5.47, 0.34), an arrowhead at both ends, colour INK. 3. Line m: solid straight line from (-5.47, -1.66) to (4.78, -3.47), an arrowhead at both ends, colour INK. 4. Angle arc: circular arc centred (0.47, 0.34), radius 1.10, from 60.0 to 180.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 5. Angle arc: circular arc centred (-1.13, -2.43), radius 1.20, from 350.0 to 420.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 6. Text 'l' centred at (5.22, 0.84), colour INK. 7. Text 'm' centred at (4.53, -2.97), colour INK. 8. Text 't' centred at (2.52, 3.24), colour INK. 9. Text 'a' centred at (0.17, 0.86), colour INK. 10. Text 'b' centred at (1.20, 0.77), colour INK. 11. Text 'd' centred at (-0.27, -0.08), colour INK. 12. Text 'c' centred at (0.77, -0.18), colour INK. 13. Text 'e' centred at (-1.39, -1.88), colour INK. 14. Text 'f' centred at (-0.50, -2.13), colour INK. 15. Text 'h' centred at (-1.77, -2.72), colour INK. 16. Text 'g' centred at (-0.88, -2.97), colour INK. 17. Text '120°' centred at (-0.51, 2.03), colour INK. 18. Text '70°' centred at (0.72, -1.56), colour INK.",
+    "visible_text": [
+     "l",
+     "m",
+     "t",
+     "a",
+     "b",
+     "d",
+     "c",
+     "e",
+     "f",
+     "h",
+     "g",
+     "120°",
+     "70°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the value of angle b or any other angle",
+     "parallel marks",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "angle a (upper-left at l) is the sector between the left half of l and the upper half of t: 120.0 degrees (arc and label agree)",
+     "angle f (upper-right at m) is the sector between the right half of m and the upper half of t: 70.0 degrees (arc and label agree)",
+     "l and m are not parallel: their directions differ by 10 degrees; no parallel marks",
+     "letters: a top-left, b top-right, d bottom-left, c bottom-right at l; e, f, h, g in the same corners at m"
+    ],
+    "alt_text": "Two lines l and m cut by a transversal t with the eight angles named a to h; angle a is marked 120 degrees and angle f is marked 70 degrees."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S21.T21.C75",
+   "role": "solution",
+   "lp_book_number": "Example 2: are l and m parallel?",
+   "ncert_ref": "Section 5.8 - Example 2 (Fig. 5.27, p.121)",
+   "question_text": "Lines l and m are cut by a transversal t, with the angles a, b, d, c at the upper crossing and e, f, h, g in the same corners at the lower crossing. The angle a is 120° and the angle f is 70°. Are l and m parallel?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The solution adds b = 60 and shows b and f, the corresponding pair that differs, highlighted on the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S21.T21.C75.IMG1",
+   "manim_scene": "c7_5_5_8_C75_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S21.T21.C75.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M5.S21.T21.C74.IMG1",
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "t",
+       "to": [
+        1.97,
+        2.94
+       ],
+       "direction_deg": 60.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -1.63,
+        -3.29
+       ]
+      },
+      {
+       "id": "l",
+       "to": [
+        5.47,
+        0.34
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.33,
+        0.34
+       ]
+      },
+      {
+       "id": "m",
+       "to": [
+        4.78,
+        -3.47
+       ],
+       "direction_deg": 350.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.47,
+        -1.66
+       ]
+      }
+     ],
+     "angle_arcs": [
+      {
+       "centre": [
+        0.47,
+        0.34
+       ],
+       "radius": 1.1,
+       "from_deg": 60.0,
+       "to_deg": 180.0,
+       "colour": "INK"
+      },
+      {
+       "centre": [
+        -1.13,
+        -2.43
+       ],
+       "radius": 1.2,
+       "from_deg": 350.0,
+       "to_deg": 420.0,
+       "colour": "INK"
+      },
+      {
+       "centre": [
+        0.47,
+        0.34
+       ],
+       "radius": 1.4,
+       "from_deg": 0.0,
+       "to_deg": 60.0,
+       "colour": "ANSWER"
+      }
+     ],
+     "filled_sectors": [
+      {
+       "centre": [
+        0.47,
+        0.34
+       ],
+       "radius": 1.4,
+       "from_deg": 0.0,
+       "to_deg": 60.0,
+       "fill": "MARK_FILL"
+      },
+      {
+       "centre": [
+        -1.13,
+        -2.43
+       ],
+       "radius": 1.2,
+       "from_deg": 350.0,
+       "to_deg": 420.0,
+       "fill": "MARK_FILL"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        5.22,
+        0.84
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "m",
+       "at": [
+        4.53,
+        -2.97
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "t",
+       "at": [
+        2.52,
+        3.24
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "a",
+       "at": [
+        0.17,
+        0.86
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "b",
+       "at": [
+        1.2,
+        0.77
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "d",
+       "at": [
+        -0.27,
+        -0.08
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "c",
+       "at": [
+        0.77,
+        -0.18
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "e",
+       "at": [
+        -1.39,
+        -1.88
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "f",
+       "at": [
+        -0.5,
+        -2.13
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "h",
+       "at": [
+        -1.77,
+        -2.72
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "g",
+       "at": [
+        -0.88,
+        -2.97
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "120°",
+       "at": [
+        -0.51,
+        2.03
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "70°",
+       "at": [
+        0.72,
+        -1.56
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "60°",
+       "at": [
+        2.42,
+        1.47
+       ],
+       "colour": "ANSWER"
+      }
+     ],
+     "facts": [
+      "unchanged in INK: lines, letters, a = 120 degrees with arc, f = 70 degrees with arc",
+      "added: MARK_FILL sectors on b and f, ANSWER arc and label 60 degrees on b"
+     ]
+    },
+    "manim_description": "The question figure plus the answer: angle b marked 60 degrees (arc and label in ANSWER green) and the corresponding angles b and f shaded MARK_FILL. Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Filled sector MARK_FILL: pie slice centred (0.47, 0.34), radius 1.40, from 0.0 to 60.0 degrees (anticlockwise from the +x axis), no outline, drawn under the lines. 2. Filled sector MARK_FILL: pie slice centred (-1.13, -2.43), radius 1.20, from 350.0 to 420.0 degrees (anticlockwise from the +x axis), no outline, drawn under the lines. 3. Line t: solid straight line from (-1.63, -3.29) to (1.97, 2.94), an arrowhead at both ends, colour INK. 4. Line l: solid straight line from (-5.33, 0.34) to (5.47, 0.34), an arrowhead at both ends, colour INK. 5. Line m: solid straight line from (-5.47, -1.66) to (4.78, -3.47), an arrowhead at both ends, colour INK. 6. Angle arc: circular arc centred (0.47, 0.34), radius 1.10, from 60.0 to 180.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 7. Angle arc: circular arc centred (-1.13, -2.43), radius 1.20, from 350.0 to 420.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 8. Angle arc: circular arc centred (0.47, 0.34), radius 1.40, from 0.0 to 60.0 degrees (anticlockwise from the +x axis), colour ANSWER, no fill. 9. Text 'l' centred at (5.22, 0.84), colour INK. 10. Text 'm' centred at (4.53, -2.97), colour INK. 11. Text 't' centred at (2.52, 3.24), colour INK. 12. Text 'a' centred at (0.17, 0.86), colour INK. 13. Text 'b' centred at (1.20, 0.77), colour INK. 14. Text 'd' centred at (-0.27, -0.08), colour INK. 15. Text 'c' centred at (0.77, -0.18), colour INK. 16. Text 'e' centred at (-1.39, -1.88), colour INK. 17. Text 'f' centred at (-0.50, -2.13), colour INK. 18. Text 'h' centred at (-1.77, -2.72), colour INK. 19. Text 'g' centred at (-0.88, -2.97), colour INK. 20. Text '120°' centred at (-0.51, 2.03), colour INK. 21. Text '70°' centred at (0.72, -1.56), colour INK. 22. Text '60°' centred at (2.42, 1.47), colour ANSWER.",
+    "visible_text": [
+     "l",
+     "m",
+     "t",
+     "a",
+     "b",
+     "d",
+     "c",
+     "e",
+     "f",
+     "h",
+     "g",
+     "120°",
+     "70°",
+     "60°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words not parallel, corresponding or not equal",
+     "the symbol for not equal",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "b = 60.0 degrees: the upper-right sector at l, between the right half of l and the upper half of t (a + b = 180 on a straight line: 120 + 60)",
+     "b (60) and f (70) are the corresponding angles (both upper-right corners): they are drawn shaded MARK_FILL and are not equal (70 - 60 = 10)",
+     "a = 120 and f = 70 stay in INK exactly as in the question figure; only b with its arc and 60 degrees is added in ANSWER green, plus the two shaded sectors"
+    ],
+    "alt_text": "Lines l and m cut by t with a = 120 degrees and f = 70 degrees; angle b is marked 60 degrees and the corresponding angles b and f are shaded."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S23.T23.C79",
+   "role": "question",
+   "lp_book_number": "Example 3: angle 6 from angle 3",
+   "ncert_ref": "Section 5.8 - Example 3 (Fig. 5.28, p.121)",
+   "question_text": "Lines l and m are parallel and t is a transversal. The angles 1, 2, 3, 4 go round the crossing with l and 5, 6, 7, 8 round the crossing with m in the same corners, with 2 and 6 corresponding and 2 and 3 a linear pair. If angle 3 is 50°, find angle 6, and say what relation angles 3 and 6 have.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "Example 3 is stated on Fig. 5.28 with angles numbered 1 to 8 and angle 3 = 50 degrees; the positions of the numbers are carried only by the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S23.T23.C79.IMG1",
+   "manim_scene": "c7_5_5_8_C79_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S23.T23.C79.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "t",
+       "to": [
+        2.1,
+        -2.84
+       ],
+       "direction_deg": 310.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -2.08,
+        2.14
+       ]
+      },
+      {
+       "id": "l",
+       "to": [
+        4.15,
+        0.91
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -6.25,
+        0.91
+       ]
+      },
+      {
+       "id": "m",
+       "to": [
+        6.25,
+        -1.59
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -4.15,
+        -1.59
+       ]
+      }
+     ],
+     "parallel_marks": [
+      {
+       "line": "l",
+       "at": [
+        -3.96,
+        0.91
+       ],
+       "marks": 1,
+       "direction_deg": 0.0,
+       "colour": "INK"
+      },
+      {
+       "line": "m",
+       "at": [
+        -1.86,
+        -1.59
+       ],
+       "marks": 1,
+       "direction_deg": 0.0,
+       "colour": "INK"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "centre": [
+        -1.05,
+        0.91
+       ],
+       "radius": 1.5,
+       "from_deg": 310.0,
+       "to_deg": 360.0,
+       "colour": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        -5.95,
+        1.41
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "m",
+       "at": [
+        -3.85,
+        -1.09
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "t",
+       "at": [
+        2.55,
+        -3.04
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "1",
+       "at": [
+        -2.0,
+        1.36
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "2",
+       "at": [
+        -0.75,
+        1.55
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "4",
+       "at": [
+        -1.34,
+        0.28
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "3",
+       "at": [
+        -0.1,
+        0.47
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "5",
+       "at": [
+        0.1,
+        -1.14
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "6",
+       "at": [
+        1.34,
+        -0.95
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "8",
+       "at": [
+        0.75,
+        -2.22
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "7",
+       "at": [
+        2.0,
+        -2.03
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "50°",
+       "at": [
+        1.06,
+        0.5
+       ],
+       "colour": "INK"
+      }
+     ],
+     "facts": [
+      "l and m horizontal, t at -50 degrees",
+      "angle 3 = 50, so 2 = 130 and 6 = 130 (not drawn in the question figure)"
+     ]
+    },
+    "manim_description": "Two parallel horizontal lines l and m (parallel marks) cut by a transversal t that falls to the right at 50 degrees; angles numbered 1 to 4 at l and 5 to 8 at m clockwise from the top-left; angle 3 marked 50 degrees (the book's Fig. 5.28). Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line t: solid straight line from (-2.08, 2.14) to (2.10, -2.84), an arrowhead at both ends, colour INK. 2. Line l: solid straight line from (-6.25, 0.91) to (4.15, 0.91), an arrowhead at both ends, colour INK. 3. Line m: solid straight line from (-4.15, -1.59) to (6.25, -1.59), an arrowhead at both ends, colour INK. 4. Parallel mark on line l: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (-3.96, 0.91), pointing along the direction of the line (0.0 degrees), colour INK. 5. Parallel mark on line m: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (-1.86, -1.59), pointing along the direction of the line (0.0 degrees), colour INK. 6. Angle arc: circular arc centred (-1.05, 0.91), radius 1.50, from 310.0 to 360.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 7. Text 'l' centred at (-5.95, 1.41), colour INK. 8. Text 'm' centred at (-3.85, -1.09), colour INK. 9. Text 't' centred at (2.55, -3.04), colour INK. 10. Text '1' centred at (-2.00, 1.36), colour INK. 11. Text '2' centred at (-0.75, 1.55), colour INK. 12. Text '4' centred at (-1.34, 0.28), colour INK. 13. Text '3' centred at (-0.10, 0.47), colour INK. 14. Text '5' centred at (0.10, -1.14), colour INK. 15. Text '6' centred at (1.34, -0.95), colour INK. 16. Text '8' centred at (0.75, -2.22), colour INK. 17. Text '7' centred at (2.00, -2.03), colour INK. 18. Text '50°' centred at (1.06, 0.50), colour INK.",
+    "visible_text": [
+     "l",
+     "m",
+     "t",
+     "1",
+     "2",
+     "4",
+     "3",
+     "5",
+     "6",
+     "8",
+     "7",
+     "50°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the values of any angle other than angle 3",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "l and m are horizontal (same direction): parallel, one '>' mark each; t falls to the right at -50 degrees",
+     "angle 3 (lower-right at l) is the sector between the right half of l and the lower half of t: 50.0 degrees (arc and label agree)",
+     "numbers: 1 top-left, 2 top-right, 3 bottom-right, 4 bottom-left at l and 5, 6, 7, 8 in the same corners at m (the book's Fig. 5.28)"
+    ],
+    "alt_text": "Two parallel lines l and m cut by a transversal t with the eight angles numbered 1 to 8; angle 3 is marked 50 degrees.",
+    "render_note": "The book's Fig. 5.28 has no parallel marks; the question says the lines are parallel, so one '>' mark is drawn on each line."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S23.T23.C80",
+   "role": "solution",
+   "lp_book_number": "Example 3: angle 6 from angle 3",
+   "ncert_ref": "Section 5.8 - Example 3 (Fig. 5.28, p.121-122)",
+   "question_text": "Lines l and m are parallel and t is a transversal. The angles 1, 2, 3, 4 go round the crossing with l and 5, 6, 7, 8 round the crossing with m in the same corners, with 2 and 6 corresponding and 2 and 3 a linear pair. If angle 3 is 50°, find angle 6, and say what relation angles 3 and 6 have.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The solution adds angle 2 = 130 and angle 6 = 130 and shows angles 3 and 6 as the interior angles on the same side of t.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S23.T23.C80.IMG1",
+   "manim_scene": "c7_5_5_8_C80_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S23.T23.C80.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M5.S23.T23.C79.IMG1",
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "t",
+       "to": [
+        2.1,
+        -2.84
+       ],
+       "direction_deg": 310.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -2.08,
+        2.14
+       ]
+      },
+      {
+       "id": "l",
+       "to": [
+        4.15,
+        0.91
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -6.25,
+        0.91
+       ]
+      },
+      {
+       "id": "m",
+       "to": [
+        6.25,
+        -1.59
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "both",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -4.15,
+        -1.59
+       ]
+      }
+     ],
+     "parallel_marks": [
+      {
+       "line": "l",
+       "at": [
+        -3.96,
+        0.91
+       ],
+       "marks": 1,
+       "direction_deg": 0.0,
+       "colour": "INK"
+      },
+      {
+       "line": "m",
+       "at": [
+        -1.86,
+        -1.59
+       ],
+       "marks": 1,
+       "direction_deg": 0.0,
+       "colour": "INK"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "centre": [
+        -1.05,
+        0.91
+       ],
+       "radius": 1.5,
+       "from_deg": 310.0,
+       "to_deg": 360.0,
+       "colour": "INK"
+      },
+      {
+       "centre": [
+        -1.05,
+        0.91
+       ],
+       "radius": 1.5,
+       "from_deg": 0.0,
+       "to_deg": 130.0,
+       "colour": "ANSWER"
+      },
+      {
+       "centre": [
+        1.05,
+        -1.59
+       ],
+       "radius": 1.5,
+       "from_deg": 0.0,
+       "to_deg": 130.0,
+       "colour": "ANSWER"
+      }
+     ],
+     "filled_sectors": [
+      {
+       "centre": [
+        -1.05,
+        0.91
+       ],
+       "radius": 1.5,
+       "from_deg": 310.0,
+       "to_deg": 360.0,
+       "fill": "MARK_FILL"
+      },
+      {
+       "centre": [
+        1.05,
+        -1.59
+       ],
+       "radius": 1.5,
+       "from_deg": 0.0,
+       "to_deg": 130.0,
+       "fill": "MARK_FILL"
+      }
+     ],
+     "labels": [
+      {
+       "text": "l",
+       "at": [
+        -5.95,
+        1.41
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "m",
+       "at": [
+        -3.85,
+        -1.09
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "t",
+       "at": [
+        2.55,
+        -3.04
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "1",
+       "at": [
+        -2.0,
+        1.36
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "2",
+       "at": [
+        -0.75,
+        1.55
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "4",
+       "at": [
+        -1.34,
+        0.28
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "3",
+       "at": [
+        -0.1,
+        0.47
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "5",
+       "at": [
+        0.1,
+        -1.14
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "6",
+       "at": [
+        1.34,
+        -0.95
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "8",
+       "at": [
+        0.75,
+        -2.22
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "7",
+       "at": [
+        2.0,
+        -2.03
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "50°",
+       "at": [
+        1.06,
+        0.5
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "130°",
+       "at": [
+        -0.06,
+        3.04
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "130°",
+       "at": [
+        3.27,
+        -0.69
+       ],
+       "colour": "ANSWER"
+      }
+     ],
+     "facts": [
+      "unchanged in INK: lines, marks, numbers, angle 3 = 50 degrees with arc",
+      "added: MARK_FILL sectors on angles 3 and 6, ANSWER arcs and 130 degrees on angles 2 and 6"
+     ]
+    },
+    "manim_description": "The question figure plus the answer: angle 2 and angle 6 marked 130 degrees (ANSWER green arcs and labels) and the interior angles 3 and 6 on the same side of t shaded MARK_FILL. Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Filled sector MARK_FILL: pie slice centred (-1.05, 0.91), radius 1.50, from 310.0 to 360.0 degrees (anticlockwise from the +x axis), no outline, drawn under the lines. 2. Filled sector MARK_FILL: pie slice centred (1.05, -1.59), radius 1.50, from 0.0 to 130.0 degrees (anticlockwise from the +x axis), no outline, drawn under the lines. 3. Line t: solid straight line from (-2.08, 2.14) to (2.10, -2.84), an arrowhead at both ends, colour INK. 4. Line l: solid straight line from (-6.25, 0.91) to (4.15, 0.91), an arrowhead at both ends, colour INK. 5. Line m: solid straight line from (-4.15, -1.59) to (6.25, -1.59), an arrowhead at both ends, colour INK. 6. Parallel mark on line l: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (-3.96, 0.91), pointing along the direction of the line (0.0 degrees), colour INK. 7. Parallel mark on line m: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (-1.86, -1.59), pointing along the direction of the line (0.0 degrees), colour INK. 8. Angle arc: circular arc centred (-1.05, 0.91), radius 1.50, from 310.0 to 360.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 9. Angle arc: circular arc centred (-1.05, 0.91), radius 1.50, from 0.0 to 130.0 degrees (anticlockwise from the +x axis), colour ANSWER, no fill. 10. Angle arc: circular arc centred (1.05, -1.59), radius 1.50, from 0.0 to 130.0 degrees (anticlockwise from the +x axis), colour ANSWER, no fill. 11. Text 'l' centred at (-5.95, 1.41), colour INK. 12. Text 'm' centred at (-3.85, -1.09), colour INK. 13. Text 't' centred at (2.55, -3.04), colour INK. 14. Text '1' centred at (-2.00, 1.36), colour INK. 15. Text '2' centred at (-0.75, 1.55), colour INK. 16. Text '4' centred at (-1.34, 0.28), colour INK. 17. Text '3' centred at (-0.10, 0.47), colour INK. 18. Text '5' centred at (0.10, -1.14), colour INK. 19. Text '6' centred at (1.34, -0.95), colour INK. 20. Text '8' centred at (0.75, -2.22), colour INK. 21. Text '7' centred at (2.00, -2.03), colour INK. 22. Text '50°' centred at (1.06, 0.50), colour INK. 23. Text '130°' centred at (-0.06, 3.04), colour ANSWER. 24. Text '130°' centred at (3.27, -0.69), colour ANSWER.",
+    "visible_text": [
+     "l",
+     "m",
+     "t",
+     "1",
+     "2",
+     "4",
+     "3",
+     "5",
+     "6",
+     "8",
+     "7",
+     "50°",
+     "130°",
+     "130°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words interior angles or corresponding",
+     "the sum 50 + 130 = 180",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "angle 2 (upper-right at l) is 130.0 degrees: 180 - 50 on the straight line l; arc and label agree",
+     "angle 6 (upper-right at m) is 130.0 degrees: the corresponding angle of angle 2",
+     "angles 3 (50) and 6 (130) are the interior angles on the same side of t, between the lines: shaded MARK_FILL; 50 + 130 = 180",
+     "angle 3 = 50 stays in INK with its arc exactly as in the question figure"
+    ],
+    "alt_text": "Parallel lines l and m cut by t with angle 3 = 50 degrees; angles 2 and 6 are marked 130 degrees and the interior angles 3 and 6 are shaded."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S23.T23.C81",
+   "role": "question",
+   "lp_book_number": "Example 4: finding CAB, ABC and BCD",
+   "ncert_ref": "Section 5.8 - Example 4 (Fig. 5.29, p.122)",
+   "question_text": "A four-sided figure ABCD has AB parallel to CD and AD parallel to BC, and a line from A to C inside it. Angle DAC is 65° and angle ADC is 60°. Find angles DAB, CAB, BCD and ABC.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "Example 4 is stated on Fig. 5.29: the parallelogram ABCD, its diagonal AC, the parallel marks and the two given angles are carried only by the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S23.T23.C81.IMG1",
+   "manim_scene": "c7_5_5_8_C81_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S23.T23.C81.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "AB",
+       "to": [
+        5.23,
+        2.82
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "none",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -1.97,
+        2.82
+       ]
+      },
+      {
+       "id": "DC",
+       "to": [
+        1.97,
+        -2.82
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "none",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.23,
+        -2.82
+       ]
+      },
+      {
+       "id": "AD",
+       "to": [
+        -1.97,
+        2.82
+       ],
+       "direction_deg": 60.0,
+       "arrowheads": "none",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.23,
+        -2.82
+       ]
+      },
+      {
+       "id": "BC",
+       "to": [
+        5.23,
+        2.82
+       ],
+       "direction_deg": 60.0,
+       "arrowheads": "none",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        1.97,
+        -2.82
+       ]
+      },
+      {
+       "id": "AC",
+       "to": [
+        1.97,
+        -2.82
+       ],
+       "direction_deg": 305.0,
+       "arrowheads": "none",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -1.97,
+        2.82
+       ]
+      }
+     ],
+     "parallel_marks": [
+      {
+       "line": "AB",
+       "at": [
+        1.63,
+        2.82
+       ],
+       "marks": 1,
+       "direction_deg": 0.0,
+       "colour": "INK"
+      },
+      {
+       "line": "DC",
+       "at": [
+        -1.63,
+        -2.82
+       ],
+       "marks": 1,
+       "direction_deg": 0.0,
+       "colour": "INK"
+      },
+      {
+       "line": "AD",
+       "at": [
+        -3.6,
+        0.0
+       ],
+       "marks": 2,
+       "direction_deg": 60.0,
+       "colour": "INK"
+      },
+      {
+       "line": "BC",
+       "at": [
+        3.6,
+        0.0
+       ],
+       "marks": 2,
+       "direction_deg": 60.0,
+       "colour": "INK"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "centre": [
+        -1.97,
+        2.82
+       ],
+       "radius": 0.85,
+       "from_deg": 240.0,
+       "to_deg": 305.0,
+       "colour": "INK"
+      },
+      {
+       "centre": [
+        -5.23,
+        -2.82
+       ],
+       "radius": 0.95,
+       "from_deg": 0.0,
+       "to_deg": 60.0,
+       "colour": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "A",
+       "at": [
+        -2.32,
+        3.24
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "B",
+       "at": [
+        5.63,
+        3.22
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "C",
+       "at": [
+        2.37,
+        -3.24
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "D",
+       "at": [
+        -5.63,
+        -3.24
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "65°",
+       "at": [
+        -1.91,
+        1.37
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "60°",
+       "at": [
+        -3.71,
+        -1.94
+       ],
+       "colour": "INK"
+      }
+     ],
+     "facts": [
+      "AB = DC = 7.20; AD = BC = 6.51; D at the bottom-left, A above D at 60 degrees",
+      "drawn to scale: DAC = 65 and ADC = 60 hold on the coordinates"
+     ]
+    },
+    "manim_description": "Parallelogram ABCD with diagonal AC: A top-left, B top-right, C bottom-right, D bottom-left; AB and DC parallel (one mark), AD and BC parallel (two marks); angle DAC = 65 degrees at A and angle ADC = 60 degrees at D (the book's Fig. 5.29). Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line AB: solid straight line from (-1.97, 2.82) to (5.23, 2.82), no arrowheads, colour INK. 2. Line DC: solid straight line from (-5.23, -2.82) to (1.97, -2.82), no arrowheads, colour INK. 3. Line AD: solid straight line from (-5.23, -2.82) to (-1.97, 2.82), no arrowheads, colour INK. 4. Line BC: solid straight line from (1.97, -2.82) to (5.23, 2.82), no arrowheads, colour INK. 5. Line AC: solid straight line from (-1.97, 2.82) to (1.97, -2.82), no arrowheads, colour INK. 6. Parallel mark on line AB: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (1.63, 2.82), pointing along the direction of the line (0.0 degrees), colour INK. 7. Parallel mark on line DC: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (-1.63, -2.82), pointing along the direction of the line (0.0 degrees), colour INK. 8. Parallel marks on line AD: two '>' shapes, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tips at (-3.66, -0.11) and (-3.53, 0.11), pointing along the direction of the line (60.0 degrees), colour INK. 9. Parallel marks on line BC: two '>' shapes, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tips at (3.53, -0.11) and (3.66, 0.11), pointing along the direction of the line (60.0 degrees), colour INK. 10. Angle arc: circular arc centred (-1.97, 2.82), radius 0.85, from 240.0 to 305.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 11. Angle arc: circular arc centred (-5.23, -2.82), radius 0.95, from 0.0 to 60.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 12. Text 'A' centred at (-2.32, 3.24), colour INK. 13. Text 'B' centred at (5.63, 3.22), colour INK. 14. Text 'C' centred at (2.37, -3.24), colour INK. 15. Text 'D' centred at (-5.63, -3.24), colour INK. 16. Text '65°' centred at (-1.91, 1.37), colour INK. 17. Text '60°' centred at (-3.71, -1.94), colour INK.",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "65°",
+     "60°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "angle values other than 65 and 60",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "angle DAC from the coordinates = 65.0 degrees",
+     "angle ADC from the coordinates = 60.0 degrees",
+     "AB and DC are horizontal and equal (7.20 each); AD and BC both run at 60 degrees: ABCD is a parallelogram with AB parallel to DC and AD parallel to BC",
+     "AB and DC carry one '>' mark each; AD and BC carry two '>' marks each; the diagonal AC joins A and C"
+    ],
+    "alt_text": "A parallelogram ABCD with the diagonal AC; angle DAC is marked 65 degrees and angle ADC is marked 60 degrees."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S23.T23.C82",
+   "role": "solution",
+   "lp_book_number": "Example 4: finding CAB, ABC and BCD",
+   "ncert_ref": "Section 5.8 - Example 4 (Fig. 5.29, p.122)",
+   "question_text": "A four-sided figure ABCD has AB parallel to CD and AD parallel to BC, and a line from A to C inside it. Angle DAC is 65° and angle ADC is 60°. Find angles DAB, CAB, BCD and ABC.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is four angles, DAB = 120, CAB = 55, ABC = 60 and BCD = 120, each marked at its vertex on the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S23.T23.C82.IMG1",
+   "manim_scene": "c7_5_5_8_C82_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S23.T23.C82.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M5.S23.T23.C81.IMG1",
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scene_frame": {
+      "x": [
+       -8,
+       8
+      ],
+      "y": [
+       -4.5,
+       4.5
+      ],
+      "units": "scene units, origin at the centre, y up"
+     },
+     "lines": [
+      {
+       "id": "AB",
+       "to": [
+        5.23,
+        2.82
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "none",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -1.97,
+        2.82
+       ]
+      },
+      {
+       "id": "DC",
+       "to": [
+        1.97,
+        -2.82
+       ],
+       "direction_deg": 0.0,
+       "arrowheads": "none",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.23,
+        -2.82
+       ]
+      },
+      {
+       "id": "AD",
+       "to": [
+        -1.97,
+        2.82
+       ],
+       "direction_deg": 60.0,
+       "arrowheads": "none",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -5.23,
+        -2.82
+       ]
+      },
+      {
+       "id": "BC",
+       "to": [
+        5.23,
+        2.82
+       ],
+       "direction_deg": 60.0,
+       "arrowheads": "none",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        1.97,
+        -2.82
+       ]
+      },
+      {
+       "id": "AC",
+       "to": [
+        1.97,
+        -2.82
+       ],
+       "direction_deg": 305.0,
+       "arrowheads": "none",
+       "dashed": false,
+       "colour": "INK",
+       "from": [
+        -1.97,
+        2.82
+       ]
+      }
+     ],
+     "parallel_marks": [
+      {
+       "line": "AB",
+       "at": [
+        1.63,
+        2.82
+       ],
+       "marks": 1,
+       "direction_deg": 0.0,
+       "colour": "INK"
+      },
+      {
+       "line": "DC",
+       "at": [
+        -1.63,
+        -2.82
+       ],
+       "marks": 1,
+       "direction_deg": 0.0,
+       "colour": "INK"
+      },
+      {
+       "line": "AD",
+       "at": [
+        -3.6,
+        0.0
+       ],
+       "marks": 2,
+       "direction_deg": 60.0,
+       "colour": "INK"
+      },
+      {
+       "line": "BC",
+       "at": [
+        3.6,
+        0.0
+       ],
+       "marks": 2,
+       "direction_deg": 60.0,
+       "colour": "INK"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "centre": [
+        -1.97,
+        2.82
+       ],
+       "radius": 0.85,
+       "from_deg": 240.0,
+       "to_deg": 305.0,
+       "colour": "INK"
+      },
+      {
+       "centre": [
+        -5.23,
+        -2.82
+       ],
+       "radius": 0.95,
+       "from_deg": 0.0,
+       "to_deg": 60.0,
+       "colour": "INK"
+      },
+      {
+       "centre": [
+        -1.97,
+        2.82
+       ],
+       "radius": 0.85,
+       "from_deg": 305.0,
+       "to_deg": 360.0,
+       "colour": "ANSWER"
+      },
+      {
+       "centre": [
+        -1.97,
+        2.82
+       ],
+       "radius": 2.15,
+       "from_deg": 240.0,
+       "to_deg": 360.0,
+       "colour": "ANSWER"
+      },
+      {
+       "centre": [
+        5.23,
+        2.82
+       ],
+       "radius": 0.95,
+       "from_deg": 180.0,
+       "to_deg": 240.0,
+       "colour": "ANSWER"
+      },
+      {
+       "centre": [
+        1.97,
+        -2.82
+       ],
+       "radius": 2.15,
+       "from_deg": 60.0,
+       "to_deg": 180.0,
+       "colour": "ANSWER"
+      }
+     ],
+     "labels": [
+      {
+       "text": "A",
+       "at": [
+        -2.32,
+        3.24
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "B",
+       "at": [
+        5.63,
+        3.22
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "C",
+       "at": [
+        2.37,
+        -3.24
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "D",
+       "at": [
+        -5.63,
+        -3.24
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "65°",
+       "at": [
+        -1.91,
+        1.37
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "60°",
+       "at": [
+        -3.71,
+        -1.94
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "55°",
+       "at": [
+        -0.57,
+        2.15
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "120°",
+       "at": [
+        0.9,
+        2.15
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "60°",
+       "at": [
+        3.71,
+        1.94
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "120°",
+       "at": [
+        -0.9,
+        -2.15
+       ],
+       "colour": "ANSWER"
+      }
+     ],
+     "facts": [
+      "unchanged in INK: parallelogram, marks, letters, 65 degrees at A, 60 degrees at D",
+      "added in ANSWER: 55 and 120 degrees at A, 60 degrees at B, 120 degrees at C"
+     ]
+    },
+    "manim_description": "The question figure plus the answer in ANSWER green: angle CAB = 55 degrees, angle DAB = 120 degrees (large arc at A), angle ABC = 60 degrees and angle BCD = 120 degrees (arc at C). Canvas 16:9 on plain white BG; scene frame x from -8 to 8 and y from -4.5 to 4.5, origin at the centre, y up. All strokes are 3 px and solid unless a line is called dashed; all text is sans-serif, 45 px high on a 1920-px canvas, centred on the stated point. Draw in this order (later items over earlier ones). 1. Line AB: solid straight line from (-1.97, 2.82) to (5.23, 2.82), no arrowheads, colour INK. 2. Line DC: solid straight line from (-5.23, -2.82) to (1.97, -2.82), no arrowheads, colour INK. 3. Line AD: solid straight line from (-5.23, -2.82) to (-1.97, 2.82), no arrowheads, colour INK. 4. Line BC: solid straight line from (1.97, -2.82) to (5.23, 2.82), no arrowheads, colour INK. 5. Line AC: solid straight line from (-1.97, 2.82) to (1.97, -2.82), no arrowheads, colour INK. 6. Parallel mark on line AB: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (1.63, 2.82), pointing along the direction of the line (0.0 degrees), colour INK. 7. Parallel mark on line DC: one '>' shape, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tip at (-1.63, -2.82), pointing along the direction of the line (0.0 degrees), colour INK. 8. Parallel marks on line AD: two '>' shapes, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tips at (-3.66, -0.11) and (-3.53, 0.11), pointing along the direction of the line (60.0 degrees), colour INK. 9. Parallel marks on line BC: two '>' shapes, each made of two strokes of length 0.26 that meet at the tip and open backwards at 30 degrees either side of the line, tips at (3.53, -0.11) and (3.66, 0.11), pointing along the direction of the line (60.0 degrees), colour INK. 10. Angle arc: circular arc centred (-1.97, 2.82), radius 0.85, from 240.0 to 305.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 11. Angle arc: circular arc centred (-5.23, -2.82), radius 0.95, from 0.0 to 60.0 degrees (anticlockwise from the +x axis), colour INK, no fill. 12. Angle arc: circular arc centred (-1.97, 2.82), radius 0.85, from 305.0 to 360.0 degrees (anticlockwise from the +x axis), colour ANSWER, no fill. 13. Angle arc: circular arc centred (-1.97, 2.82), radius 2.15, from 240.0 to 360.0 degrees (anticlockwise from the +x axis), colour ANSWER, no fill. 14. Angle arc: circular arc centred (5.23, 2.82), radius 0.95, from 180.0 to 240.0 degrees (anticlockwise from the +x axis), colour ANSWER, no fill. 15. Angle arc: circular arc centred (1.97, -2.82), radius 2.15, from 60.0 to 180.0 degrees (anticlockwise from the +x axis), colour ANSWER, no fill. 16. Text 'A' centred at (-2.32, 3.24), colour INK. 17. Text 'B' centred at (5.63, 3.22), colour INK. 18. Text 'C' centred at (2.37, -3.24), colour INK. 19. Text 'D' centred at (-5.63, -3.24), colour INK. 20. Text '65°' centred at (-1.91, 1.37), colour INK. 21. Text '60°' centred at (-3.71, -1.94), colour INK. 22. Text '55°' centred at (-0.57, 2.15), colour ANSWER. 23. Text '120°' centred at (0.90, 2.15), colour ANSWER. 24. Text '60°' centred at (3.71, 1.94), colour ANSWER. 25. Text '120°' centred at (-0.90, -2.15), colour ANSWER.",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "65°",
+     "60°",
+     "55°",
+     "120°",
+     "60°",
+     "120°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words interior angles or transversal",
+     "the figure caption"
+    ],
+    "accuracy_checks": [
+     "angle DAB from the coordinates = 120.0 degrees",
+     "angle CAB from the coordinates = 55.0 degrees",
+     "angle ABC from the coordinates = 60.0 degrees",
+     "angle BCD from the coordinates = 120.0 degrees",
+     "DAB = DAC + CAB: 120 = 65 + 55; ABC + BCD = 180 and ADC + BCD = 180",
+     "the given 65 and 60 stay in INK with their arcs exactly as in the question figure; the four added values are ANSWER green"
+    ],
+    "alt_text": "Parallelogram ABCD with diagonal AC; angle DAB is 120 degrees, CAB is 55 degrees, ABC is 60 degrees and BCD is 120 degrees."
+   }
+  }
+ ]
+}

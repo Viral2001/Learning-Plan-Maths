@@ -1,0 +1,1760 @@
+{
+ "meta": {
+  "chapter": "Connecting the Dots...",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 13",
+  "lp_plan_id": "cbse_eng_maths7_ch13_v33",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 2,
+    "optional": 0,
+    "none": 4
+   },
+   "solution": {
+    "required": 3,
+    "optional": 0,
+    "none": 3
+   },
+   "worked_example": {
+    "required": 0,
+    "optional": 2,
+    "none": 1
+   }
+  },
+  "notes": [
+   "Chunk C = Figure it Out 5.3 Q1-Q4 (units 36-39), Telling Tall Tales (40), Heights in India Q1-Q2 (41-42), zoomed chart and a mean decision (43-44).",
+   "Third series colour SERIES_3 = #56B4E9 is used in the speeds graph (air) and the electric-vehicle graph (2023), because only two series tokens exist.",
+   "The two 'Heights in India' questions keep the big table as LaTeX: the LP question text carries neither the table nor the six statements, so needs_lp_text_sync is true there and for the two-schools worked example (12 means).",
+   "No printed solutions exist in this pdf; solution diagrams come from the LP steps and the LP s_figure hints."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P27-bar_graph-1",
+   "source": "chapter p.27",
+   "description": "Infographic (printed rotated 90 degrees): horizontal bar graph of the top speeds of 15 animals in 3 colour groups of 5 (air: peregrine falcon 322, spine-tailed swift 170, free-tailed bat 96, green darner dragonfly 64, flying fish 56; land: cheetah 103, pronghorn antelope 88, ostrich 64, human 37, Australian tiger beetle 8; water: sailfish 109, dolphin 40, California sea lion 40, Gentoo penguin 35, humpback whale 26 kph), scale marks every 16 kph from 0 to 322, with decorative silhouettes, a falcon painting and a beetle photo. Checked against the page picture: base description is right.",
+   "mapped_to": "item:M3.S20.T20.C82 (question)"
+  },
+  {
+   "fig_id": "P28-table-1",
+   "source": "chapter p.28",
+   "description": "Two-row table of letters for Grade 5 and Grade 9 (25 letters each); counts Grade 5 a 13, w 6, s 2, n 4 and Grade 9 a 8, w 6, s 9, n 2 re-counted and right. Plain table, already in the question text.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P28-table-2",
+   "source": "chapter p.28",
+   "description": "3 x 9 table of times (12 am to 9 pm) with Day 1 and Day 2 temperatures in degrees C. Plain table, already in the question text.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P28-bar_graph-1",
+   "source": "chapter p.28",
+   "description": "Clustered column graph 'Number of Electric Vehicles Registered Per Year', 7 states, columns for 2022/2023/2024, Gujarat and Delhi empty. Heights re-measured on the page picture (+/-300): Uttarakhand 15100/16300/18800, West Bengal 10200/21200/42800, Andhra Pradesh 29100/34300/55000, Odisha 27300/44100/62300, Assam 40100/59900/64500; the LP solution's rounded readings are used. Gridlines every 5000 confirmed.",
+   "mapped_to": "item:M3.S20.T20.C88 (question)"
+  },
+  {
+   "fig_id": "NEW-P28-bar_graph-1-sol",
+   "source": "chapter p.28",
+   "description": "Second use of the book graph of Figure it Out Q4: the same graph completed with the Gujarat (69000, 89000, 78000) and Delhi (62000, 74000, 81000) columns, which is the picture the answer to part (a) calls for (the pdf has no printed solutions).",
+   "mapped_to": "item:M3.S20.T20.C89 (solution)"
+  },
+  {
+   "fig_id": "P29-table-1",
+   "source": "chapter p.29",
+   "description": "Table of Gujarat (69000, 89000, 78000) and Delhi (62000, 74000, 81000) for 2022, 2023, 2024. Plain table, already in the question text.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P30-dot_plot-1",
+   "source": "chapter p.30",
+   "description": "Dot plot of heights: School A Grade 6 boys (mean 134.8). Teaching figure shown in the concept image of the 12 dot plots.",
+   "mapped_to": "concept_image:M4.S21.T21.C90.IMG1"
+  },
+  {
+   "fig_id": "P30-dot_plot-2",
+   "source": "chapter p.30",
+   "description": "Dot plot of heights: School A Grade 6 girls (mean 137.78). Teaching figure shown in the concept image of the 12 dot plots.",
+   "mapped_to": "concept_image:M4.S21.T21.C90.IMG1"
+  },
+  {
+   "fig_id": "P30-dot_plot-3",
+   "source": "chapter p.30",
+   "description": "Dot plot of heights: School A Grade 7 boys (mean 141.8). Teaching figure shown in the concept image of the 12 dot plots.",
+   "mapped_to": "concept_image:M4.S21.T21.C90.IMG1"
+  },
+  {
+   "fig_id": "P30-dot_plot-4",
+   "source": "chapter p.30",
+   "description": "Dot plot of heights: School A Grade 7 girls (mean 141.83). Teaching figure shown in the concept image of the 12 dot plots.",
+   "mapped_to": "concept_image:M4.S21.T21.C90.IMG1"
+  },
+  {
+   "fig_id": "P30-dot_plot-5",
+   "source": "chapter p.30",
+   "description": "Dot plot of heights: School A Grade 8 boys (mean 149.35). Teaching figure shown in the concept image of the 12 dot plots.",
+   "mapped_to": "concept_image:M4.S21.T21.C90.IMG1"
+  },
+  {
+   "fig_id": "P30-dot_plot-6",
+   "source": "chapter p.30",
+   "description": "Dot plot of heights: School A Grade 8 girls (mean 147.81). Teaching figure shown in the concept image of the 12 dot plots.",
+   "mapped_to": "concept_image:M4.S21.T21.C90.IMG1"
+  },
+  {
+   "fig_id": "P30-dot_plot-7",
+   "source": "chapter p.30",
+   "description": "Dot plot of heights: School B Grade 6 boys (mean 149.84). Teaching figure shown in the concept image of the 12 dot plots.",
+   "mapped_to": "concept_image:M4.S21.T21.C90.IMG1"
+  },
+  {
+   "fig_id": "P30-dot_plot-8",
+   "source": "chapter p.30",
+   "description": "Dot plot of heights: School B Grade 6 girls (mean 150.2). Teaching figure shown in the concept image of the 12 dot plots.",
+   "mapped_to": "concept_image:M4.S21.T21.C90.IMG1"
+  },
+  {
+   "fig_id": "P30-dot_plot-9",
+   "source": "chapter p.30",
+   "description": "Dot plot of heights: School B Grade 7 boys (mean 156.14). Teaching figure shown in the concept image of the 12 dot plots.",
+   "mapped_to": "concept_image:M4.S21.T21.C90.IMG1"
+  },
+  {
+   "fig_id": "P30-dot_plot-10",
+   "source": "chapter p.30",
+   "description": "Dot plot of heights: School B Grade 7 girls (mean 155.41). Teaching figure shown in the concept image of the 12 dot plots.",
+   "mapped_to": "concept_image:M4.S21.T21.C90.IMG1"
+  },
+  {
+   "fig_id": "P30-dot_plot-11",
+   "source": "chapter p.30",
+   "description": "Dot plot of heights: School B Grade 8 boys (mean 156.14, printed identical to the Grade 7 boys plot; checked on the page picture). Teaching figure shown in the concept image of the 12 dot plots.",
+   "mapped_to": "concept_image:M4.S21.T21.C90.IMG1"
+  },
+  {
+   "fig_id": "P30-dot_plot-12",
+   "source": "chapter p.30",
+   "description": "Dot plot of heights: School B Grade 8 girls (mean 156.83). Teaching figure shown in the concept image of the 12 dot plots.",
+   "mapped_to": "concept_image:M4.S21.T21.C90.IMG1"
+  },
+  {
+   "fig_id": "P31-table-1",
+   "source": "chapter p.31",
+   "description": "Table of average heights in cm of boys and girls, ages 5 to 19 (15 rows), for 1989, 1999, 2009 and 2019 (boys column then girls column per year); checked against the page picture. Used by both questions of 'Heights in India' (M4.S22.T22.C94 and C96). Plain table of numbers.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P32-scatter_plot-1",
+   "source": "chapter p.32",
+   "description": "Marker chart of the average heights of 19-year-old boys (x) and girls (triangles) of 28 countries in 1989 (orange) and 2019 (blue), vertical axis starting at 145 cm; it is the concept image of the zoomed-chart concept.",
+   "mapped_to": "concept_image:M4.S23.T23.C98.IMG1"
+  },
+  {
+   "fig_id": "NEW-P33-mean-decision-cartoons",
+   "source": "chapter p.33",
+   "description": "Two cartoon circles at the top of the page under 'A Mean Decision!': a family at a door (speech 'Perhaps using the average height of the family to make the door was not a good idea!') and two children looking at a tablet ('Look at this picture of the current world's tallest and shortest humans together.'). Illustration only, no numbers.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 21,
+  "mapped_to_items": 3,
+  "mapped_to_concept_images": 13,
+  "mapped_none": 5,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M3.S20.T20.C82.IMG1",
+   "M3.S20.T20.C85.IMG1",
+   "M3.S20.T20.C87.IMG1",
+   "M3.S20.T20.C88.IMG1",
+   "M3.S20.T20.C89.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M3.S20.T20.C82",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.3, Q1",
+   "ncert_ref": "Section 5.3 - Figure it Out Q1 (book p.123)",
+   "question_text": "The following infographic shows the speeds of a few animals in air, on land, and in water. Can we call this graph a bar graph? (a) scale (b) interesting (c) pair about twice (d) sailfish vs humpback whale.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The question is about 'the following infographic': the 15 speeds, the colours and the scale exist only in the picture, and parts (a), (c), (d) cannot be attempted without it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S20.T20.C82.IMG1",
+   "manim_scene": "c7_13_5_3_FiO1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S20.T20.C82.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "horizontal_bar_graph",
+     "canvas": "1920x1080",
+     "zero_x": 520,
+     "step_px": 67,
+     "steps": 20,
+     "px_per_kph": 4.1615,
+     "tick_labels_by_k": [
+      "0",
+      "16",
+      "32",
+      "48",
+      "64",
+      "80",
+      "96",
+      "112",
+      "129",
+      "145",
+      "161",
+      "177",
+      "193",
+      "209",
+      "225",
+      "241",
+      "257",
+      "274",
+      "290",
+      "306",
+      "322"
+     ],
+     "tick_label_rows": {
+      "even_k_y": 118,
+      "odd_k_y": 165
+     },
+     "axis_title": "speed (kph)",
+     "legend": [
+      {
+       "text": "speed in air",
+       "fill": "SERIES_3 #56B4E9"
+      },
+      {
+       "text": "speed on land",
+       "fill": "SET_B"
+      },
+      {
+       "text": "speed in water",
+       "fill": "SET_A"
+      }
+     ],
+     "bars": [
+      {
+       "group": "air",
+       "fill": "SERIES_3",
+       "name": "peregrine falcon",
+       "value_kph": 322,
+       "y_centre": 225,
+       "x_end": 1860.0,
+       "label": "322 kph"
+      },
+      {
+       "group": "air",
+       "fill": "SERIES_3",
+       "name": "spine-tailed swift",
+       "value_kph": 170,
+       "y_centre": 277,
+       "x_end": 1227.5,
+       "label": "170 kph"
+      },
+      {
+       "group": "air",
+       "fill": "SERIES_3",
+       "name": "free-tailed bat",
+       "value_kph": 96,
+       "y_centre": 329,
+       "x_end": 919.5,
+       "label": "96 kph"
+      },
+      {
+       "group": "air",
+       "fill": "SERIES_3",
+       "name": "green darner dragonfly",
+       "value_kph": 64,
+       "y_centre": 381,
+       "x_end": 786.3,
+       "label": "64 kph"
+      },
+      {
+       "group": "air",
+       "fill": "SERIES_3",
+       "name": "flying fish",
+       "value_kph": 56,
+       "y_centre": 433,
+       "x_end": 753.0,
+       "label": "56 kph"
+      },
+      {
+       "group": "land",
+       "fill": "SET_B",
+       "name": "cheetah",
+       "value_kph": 103,
+       "y_centre": 509,
+       "x_end": 948.6,
+       "label": "103 kph"
+      },
+      {
+       "group": "land",
+       "fill": "SET_B",
+       "name": "pronghorn antelope",
+       "value_kph": 88,
+       "y_centre": 561,
+       "x_end": 886.2,
+       "label": "88 kph"
+      },
+      {
+       "group": "land",
+       "fill": "SET_B",
+       "name": "ostrich",
+       "value_kph": 64,
+       "y_centre": 613,
+       "x_end": 786.3,
+       "label": "64 kph"
+      },
+      {
+       "group": "land",
+       "fill": "SET_B",
+       "name": "human",
+       "value_kph": 37,
+       "y_centre": 665,
+       "x_end": 674.0,
+       "label": "37 kph"
+      },
+      {
+       "group": "land",
+       "fill": "SET_B",
+       "name": "Australian tiger beetle",
+       "value_kph": 8,
+       "y_centre": 717,
+       "x_end": 553.3,
+       "label": "8 kph"
+      },
+      {
+       "group": "water",
+       "fill": "SET_A",
+       "name": "sailfish",
+       "value_kph": 109,
+       "y_centre": 793,
+       "x_end": 973.6,
+       "label": "109 kph"
+      },
+      {
+       "group": "water",
+       "fill": "SET_A",
+       "name": "dolphin",
+       "value_kph": 40,
+       "y_centre": 845,
+       "x_end": 686.5,
+       "label": "40 kph"
+      },
+      {
+       "group": "water",
+       "fill": "SET_A",
+       "name": "California sea lion",
+       "value_kph": 40,
+       "y_centre": 897,
+       "x_end": 686.5,
+       "label": "40 kph"
+      },
+      {
+       "group": "water",
+       "fill": "SET_A",
+       "name": "Gentoo penguin",
+       "value_kph": 35,
+       "y_centre": 949,
+       "x_end": 665.7,
+       "label": "35 kph"
+      },
+      {
+       "group": "water",
+       "fill": "SET_A",
+       "name": "humpback whale",
+       "value_kph": 26,
+       "y_centre": 1001,
+       "x_end": 628.2,
+       "label": "26 kph"
+      }
+     ],
+     "value_label_style": "INK, right of the bar end (falcon inside the bar)"
+    },
+    "manim_description": "Canvas 1920x1080, BG white. Draw a horizontal bar graph of 15 animals in 3 groups of 5, top to bottom. Gridlines: 21 vertical GUIDE lines (1.5 px) at x = 520 + 67*k for k = 0..20 (k=20 is at x=1860); the k=0 line is an INK line (3 px) from y=140 to y=1050 and is the zero line; even k lines run from y=140 to y=1050, odd k lines from y=190 to y=1050. Tick labels (INK, 34 px, centred on their gridline): even k on the upper row at y=118, odd k on the lower row at y=165: k=0 '0', k=1 '16', k=2 '32', k=3 '48', k=4 '64', k=5 '80', k=6 '96', k=7 '112', k=8 '129', k=9 '145', k=10 '161', k=11 '177', k=12 '193', k=13 '209', k=14 '225', k=15 '241', k=16 '257', k=17 '274', k=18 '290', k=19 '306', k=20 '322'. Axis title 'speed (kph)' (INK, 34 px, left-aligned at x=40, y=140). Legend row at y=45 (INK 34 px text, each with a 28x28 swatch centred on y=45): swatch at x=520 filled SERIES_3 (#56B4E9) with the text 'speed in air' starting at x=565; swatch at x=900 filled SET_B with 'speed on land' starting at x=945; swatch at x=1300 filled SET_A with 'speed in water' starting at x=1345. Bars: each bar is 38 px thick, its left edge at x=520, centred on the listed y, length = value * 4.1615 px, no outline. Each animal name is INK 34 px, right-aligned at x=500 and centred on its bar's y. Bars (name, fill, value, y centre, right end, value label): peregrine falcon: fill SERIES_3, value 322, y centre 225, from x=520 to x=1860.0, label '322 kph' inside the bar, right-aligned at x=1850; spine-tailed swift: fill SERIES_3, value 170, y centre 277, from x=520 to x=1227.5, label '170 kph' left-aligned at x=1239.5; free-tailed bat: fill SERIES_3, value 96, y centre 329, from x=520 to x=919.5, label '96 kph' left-aligned at x=931.5; green darner dragonfly: fill SERIES_3, value 64, y centre 381, from x=520 to x=786.3, label '64 kph' left-aligned at x=798.3; flying fish: fill SERIES_3, value 56, y centre 433, from x=520 to x=753.0, label '56 kph' left-aligned at x=765.0; cheetah: fill SET_B, value 103, y centre 509, from x=520 to x=948.6, label '103 kph' left-aligned at x=960.6; pronghorn antelope: fill SET_B, value 88, y centre 561, from x=520 to x=886.2, label '88 kph' left-aligned at x=898.2; ostrich: fill SET_B, value 64, y centre 613, from x=520 to x=786.3, label '64 kph' left-aligned at x=798.3; human: fill SET_B, value 37, y centre 665, from x=520 to x=674.0, label '37 kph' left-aligned at x=686.0; Australian tiger beetle: fill SET_B, value 8, y centre 717, from x=520 to x=553.3, label '8 kph' left-aligned at x=565.3; sailfish: fill SET_A, value 109, y centre 793, from x=520 to x=973.6, label '109 kph' left-aligned at x=985.6; dolphin: fill SET_A, value 40, y centre 845, from x=520 to x=686.5, label '40 kph' left-aligned at x=698.5; California sea lion: fill SET_A, value 40, y centre 897, from x=520 to x=686.5, label '40 kph' left-aligned at x=698.5; Gentoo penguin: fill SET_A, value 35, y centre 949, from x=520 to x=665.7, label '35 kph' left-aligned at x=677.7; humpback whale: fill SET_A, value 26, y centre 1001, from x=520 to x=628.2, label '26 kph' left-aligned at x=640.2. Value labels are INK 34 px and vertically centred on their bar. Spacing: bars are 52 px apart inside a group; the first bar of the land group is 76 px below the last bar of the air group, and the first bar of the water group is 76 px below the last bar of the land group. Nothing is shaded or marked beyond the bars.",
+    "visible_text": [
+     "0",
+     "16",
+     "32",
+     "48",
+     "64",
+     "80",
+     "96",
+     "112",
+     "129",
+     "145",
+     "161",
+     "177",
+     "193",
+     "209",
+     "225",
+     "241",
+     "257",
+     "274",
+     "290",
+     "306",
+     "322",
+     "speed (kph)",
+     "speed in air",
+     "speed on land",
+     "speed in water",
+     "peregrine falcon",
+     "spine-tailed swift",
+     "free-tailed bat",
+     "green darner dragonfly",
+     "flying fish",
+     "cheetah",
+     "pronghorn antelope",
+     "ostrich",
+     "human",
+     "Australian tiger beetle",
+     "sailfish",
+     "dolphin",
+     "California sea lion",
+     "Gentoo penguin",
+     "humpback whale",
+     "322 kph",
+     "170 kph",
+     "96 kph",
+     "64 kph",
+     "56 kph",
+     "103 kph",
+     "88 kph",
+     "37 kph",
+     "8 kph",
+     "109 kph",
+     "40 kph",
+     "35 kph",
+     "26 kph"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art"
+    ],
+    "accuracy_checks": [
+     "15 bars, 5 per group (air, land, water)",
+     "gridline k is at x=520+67k for k=0..20; the 21 tick labels are the numbers printed in the book: 0, 16, 32, 48, 64, 80, 96, 112, 129, 145, 161, 177, 193, 209, 225, 241, 257, 274, 290, 306, 322",
+     "bar end x = 520 + value*4.1615, so the peregrine falcon (322) ends exactly on the k=20 gridline (x=1860) and the Australian tiger beetle (8) ends at x=553.3",
+     "values: air 322, 170, 96, 64, 56; land 103, 88, 64, 37, 8; water 109, 40, 40, 35, 26",
+     "water bars are SET_A, land bars SET_B, air bars SERIES_3 (#56B4E9), matching the legend"
+    ],
+    "alt_text": "Horizontal bar graph of the top speeds of 15 animals in kph: five in air from peregrine falcon 322 to flying fish 56, five on land from cheetah 103 to Australian tiger beetle 8, five in water from sailfish 109 to humpback whale 26, with gridlines every 16 kph.",
+    "render_note": "Book p.123 prints this infographic rotated 90 degrees; draw it upright with the bars horizontal as listed. The book prints each value inside its bar in white and a silhouette beside each name; here the value sits in INK beside the bar end and the silhouettes, the falcon painting, the tiger-beetle photo, the two fact sentences and the heading are left out. The book's scale labels (96, 112, 129, 145 ...) are 10-mph steps converted and rounded, so the gridlines are drawn at exactly equal spacing and labelled with the printed numbers; odd gridlines carry their label on a second row so that 34 px numbers do not touch."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C83",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.3, Q1",
+   "ncert_ref": "Section 5.3 - Figure it Out Q1 (book p.123)",
+   "question_text": "Answer of the infographic question: yes it is a bar graph, scale 16 kph, falcon and swift about twice, sailfish about 4 times the humpback whale, fastest in the world cannot be told.",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answers are words and ratios read from the question graph; nothing new is drawn, so a picture would only repeat the question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the steps as text and LaTeX; the speeds are printed on the question figure (322, 170, 109, 56, 26 kph)."
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C84",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.3, Q2",
+   "ncert_ref": "Section 5.3 - Figure it Out Q2 (book p.124)",
+   "question_text": "Preyashi's super-power question: draw a double-bar graph comparing how Grade 5 and Grade 9 chose each option (data as two rows of letters).",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives only a plain two-row table of letters, already written in the question text; the student draws the graph from nothing, so no figure is given and none may be invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the two rows of letters as text; the question never says what the letters mean (w water-borne, a air-borne, s spaceborne, n none), so the question text could add this key."
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C85",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.3, Q2",
+   "ncert_ref": "Section 5.3 - Figure it Out Q2 (book p.124)",
+   "question_text": "Preyashi's super-power question: draw a double-bar graph comparing how Grade 5 and Grade 9 chose each option.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The question asks to draw a double-bar graph, so the answer is the finished graph (the LP steps only list the counts and the scale); the question has no given figure, so this solution diagram draws the whole graph itself.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S20.T20.C85.IMG1",
+   "manim_scene": "c7_13_5_3_FiO2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S20.T20.C85.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "double_bar_graph",
+     "canvas": "1920x1080",
+     "y_axis": {
+      "min": 0,
+      "max": 14,
+      "step": 2,
+      "unit_per_gridline": 2,
+      "px_per_child": 52.1,
+      "baseline_y": 900,
+      "top_y": 170,
+      "labels": [
+       0,
+       2,
+       4,
+       6,
+       8,
+       10,
+       12,
+       14
+      ],
+      "title": "Number of children"
+     },
+     "series": [
+      {
+       "name": "Grade 5",
+       "fill": "SET_A"
+      },
+      {
+       "name": "Grade 9",
+       "fill": "SET_B"
+      }
+     ],
+     "categories": [
+      "Aerial",
+      "Water-borne",
+      "Spaceborne",
+      "None"
+     ],
+     "cluster_centres_x": [
+      405.0,
+      815.0,
+      1225.0,
+      1635.0
+     ],
+     "bars": [
+      {
+       "category": "Aerial",
+       "series": "Grade 5",
+       "value": 13,
+       "x0": 280.0,
+       "x1": 400.0,
+       "height_px": 677.9,
+       "y_top": 222.1,
+       "label_y_centre": 196.1,
+       "fill": "SET_A"
+      },
+      {
+       "category": "Aerial",
+       "series": "Grade 9",
+       "value": 8,
+       "x0": 410.0,
+       "x1": 530.0,
+       "height_px": 417.1,
+       "y_top": 482.9,
+       "label_y_centre": 456.9,
+       "fill": "SET_B"
+      },
+      {
+       "category": "Water-borne",
+       "series": "Grade 5",
+       "value": 6,
+       "x0": 690.0,
+       "x1": 810.0,
+       "height_px": 312.9,
+       "y_top": 587.1,
+       "label_y_centre": 561.1,
+       "fill": "SET_A"
+      },
+      {
+       "category": "Water-borne",
+       "series": "Grade 9",
+       "value": 6,
+       "x0": 820.0,
+       "x1": 940.0,
+       "height_px": 312.9,
+       "y_top": 587.1,
+       "label_y_centre": 561.1,
+       "fill": "SET_B"
+      },
+      {
+       "category": "Spaceborne",
+       "series": "Grade 5",
+       "value": 2,
+       "x0": 1100.0,
+       "x1": 1220.0,
+       "height_px": 104.3,
+       "y_top": 795.7,
+       "label_y_centre": 769.7,
+       "fill": "SET_A"
+      },
+      {
+       "category": "Spaceborne",
+       "series": "Grade 9",
+       "value": 9,
+       "x0": 1230.0,
+       "x1": 1350.0,
+       "height_px": 469.3,
+       "y_top": 430.7,
+       "label_y_centre": 404.7,
+       "fill": "SET_B"
+      },
+      {
+       "category": "None",
+       "series": "Grade 5",
+       "value": 4,
+       "x0": 1510.0,
+       "x1": 1630.0,
+       "height_px": 208.6,
+       "y_top": 691.4,
+       "label_y_centre": 665.4,
+       "fill": "SET_A"
+      },
+      {
+       "category": "None",
+       "series": "Grade 9",
+       "value": 2,
+       "x0": 1640.0,
+       "x1": 1760.0,
+       "height_px": 104.3,
+       "y_top": 795.7,
+       "label_y_centre": 769.7,
+       "fill": "SET_B"
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920x1080, BG white. Draw a double-bar graph (vertical bars) of how many children of Grade 5 and Grade 9 chose each option. Vertical axis: INK line (3 px) at x=200 from y=170 to y=900; horizontal axis: INK line (3 px) at y=900 from x=200 to x=1840. Gridlines: GUIDE lines (1.5 px) from x=200 to x=1840 at the values 0, 2, 4, 6, 8, 10, 12, 14 children, 52.14 px per child, so the value v is at y = 900 - 52.14*v (14 is at y=170). Vertical tick labels INK 34 px, right-aligned at x=180, centred on their gridline: 0, 2, 4, 6, 8, 10, 12, 14. Axis title 'Number of children' INK 34 px, left-aligned at x=40, y=100. Legend at y=60: swatch 28x28 at x=1280 filled SET_A with the text 'Grade 5' starting at x=1325; swatch 28x28 at x=1560 filled SET_B with the text 'Grade 9' starting at x=1605. Four clusters, centres at x=405.0, 815.0, 1225.0, 1635.0. In each cluster the Grade 5 bar (SET_A) is on the left and the Grade 9 bar (SET_B) on the right, each 120 px wide with a 10 px gap between them, no outline. Bars: Aerial Grade 5 13: x 280.0 to 400.0, height 677.9 px (top y=222.1), label '13' centred at y=196.1; Aerial Grade 9 8: x 410.0 to 530.0, height 417.1 px (top y=482.9), label '8' centred at y=456.9; Water-borne Grade 5 6: x 690.0 to 810.0, height 312.9 px (top y=587.1), label '6' centred at y=561.1; Water-borne Grade 9 6: x 820.0 to 940.0, height 312.9 px (top y=587.1), label '6' centred at y=561.1; Spaceborne Grade 5 2: x 1100.0 to 1220.0, height 104.3 px (top y=795.7), label '2' centred at y=769.7; Spaceborne Grade 9 9: x 1230.0 to 1350.0, height 469.3 px (top y=430.7), label '9' centred at y=404.7; None Grade 5 4: x 1510.0 to 1630.0, height 208.6 px (top y=691.4), label '4' centred at y=665.4; None Grade 9 2: x 1640.0 to 1760.0, height 104.3 px (top y=795.7), label '2' centred at y=769.7. Value labels are INK 34 px. Category labels INK 34 px centred under each cluster at y=940: Aerial, Water-borne, Spaceborne, None.",
+    "visible_text": [
+     "0",
+     "2",
+     "4",
+     "6",
+     "8",
+     "10",
+     "12",
+     "14",
+     "Number of children",
+     "Grade 5",
+     "Grade 9",
+     "Aerial",
+     "Water-borne",
+     "Spaceborne",
+     "None",
+     "13",
+     "9"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art"
+    ],
+    "accuracy_checks": [
+     "Grade 5 letters counted: a 13, w 6, s 2, n 4 (13+6+2+4 = 25)",
+     "Grade 9 letters counted: a 8, w 6, s 9, n 2 (8+6+9+2 = 25)",
+     "scale 1 unit = 2 children: gridlines every 2 from 0 to 14, 52.14 px per child; the tallest bar (13) is 677.9 px, below the 14 line at 730 px",
+     "bar heights in px: 13 -> 677.9, 8 -> 417.1, 6 -> 312.9, 2 -> 104.3, 9 -> 469.3, 4 -> 208.6",
+     "category order Aerial, Water-borne, Spaceborne, None as in the LP answer; Grade 5 bar left, Grade 9 bar right in every cluster"
+    ],
+    "alt_text": "Double-bar graph on a scale of 2 children per gridline: Aerial Grade 5 = 13 and Grade 9 = 8, Water-borne 6 and 6, Spaceborne 2 and 9, None 4 and 2.",
+    "render_note": "No question figure exists, so derived_from is null; all bars use their series colours (SET_A Grade 5, SET_B Grade 9) because the legend needs them, and the value labels sit above the bars in INK."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C86",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.3, Q3",
+   "ncert_ref": "Section 5.3 - Figure it Out Q3 (book p.124)",
+   "question_text": "Jodhpur temperatures of two days at 8 times: draw a double-bar graph with 1 unit = 4 degrees C and guess the two months.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives a plain 3 x 9 table of times and temperatures, already written in the question text; the student draws the graph, so no given figure exists.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the data as text or as a LaTeX array with the row Times (12 am ... 9 pm), Day 1 and Day 2."
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C87",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.3, Q3",
+   "ncert_ref": "Section 5.3 - Figure it Out Q3 (book p.124)",
+   "question_text": "Jodhpur temperatures of two days at 8 times: draw a double-bar graph with 1 unit = 4 degrees C.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The question asks to draw a double-bar graph on a stated scale, so the answer is the finished graph; there is no given figure, so this solution diagram draws the whole graph itself.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S20.T20.C87.IMG1",
+   "manim_scene": "c7_13_5_3_FiO3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S20.T20.C87.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "double_bar_graph",
+     "canvas": "1920x1080",
+     "y_axis": {
+      "min": 0,
+      "max": 48,
+      "step": 4,
+      "unit_per_gridline": 4,
+      "px_per_degree": 15.2083,
+      "baseline_y": 900,
+      "top_y": 170,
+      "labels": [
+       0,
+       4,
+       8,
+       12,
+       16,
+       20,
+       24,
+       28,
+       32,
+       36,
+       40,
+       44,
+       48
+      ],
+      "title": "Temperature (°C)"
+     },
+     "series": [
+      {
+       "name": "Day 1",
+       "fill": "SET_A"
+      },
+      {
+       "name": "Day 2",
+       "fill": "SET_B"
+      }
+     ],
+     "categories": [
+      "12 am",
+      "3 am",
+      "6 am",
+      "9 am",
+      "12 pm",
+      "3 pm",
+      "6 pm",
+      "9 pm"
+     ],
+     "cluster_centres_x": [
+      302.5,
+      507.5,
+      712.5,
+      917.5,
+      1122.5,
+      1327.5,
+      1532.5,
+      1737.5
+     ],
+     "bars": [
+      {
+       "category": "12 am",
+       "series": "Day 1",
+       "value": 20,
+       "x0": 219.5,
+       "x1": 299.5,
+       "height_px": 304.2,
+       "y_top": 595.8,
+       "label_y_centre": 569.8,
+       "fill": "SET_A"
+      },
+      {
+       "category": "12 am",
+       "series": "Day 2",
+       "value": 37,
+       "x0": 305.5,
+       "x1": 385.5,
+       "height_px": 562.7,
+       "y_top": 337.3,
+       "label_y_centre": 311.3,
+       "fill": "SET_B"
+      },
+      {
+       "category": "3 am",
+       "series": "Day 1",
+       "value": 18,
+       "x0": 424.5,
+       "x1": 504.5,
+       "height_px": 273.8,
+       "y_top": 626.3,
+       "label_y_centre": 600.3,
+       "fill": "SET_A"
+      },
+      {
+       "category": "3 am",
+       "series": "Day 2",
+       "value": 34,
+       "x0": 510.5,
+       "x1": 590.5,
+       "height_px": 517.1,
+       "y_top": 382.9,
+       "label_y_centre": 356.9,
+       "fill": "SET_B"
+      },
+      {
+       "category": "6 am",
+       "series": "Day 1",
+       "value": 16,
+       "x0": 629.5,
+       "x1": 709.5,
+       "height_px": 243.3,
+       "y_top": 656.7,
+       "label_y_centre": 630.7,
+       "fill": "SET_A"
+      },
+      {
+       "category": "6 am",
+       "series": "Day 2",
+       "value": 30,
+       "x0": 715.5,
+       "x1": 795.5,
+       "height_px": 456.3,
+       "y_top": 443.8,
+       "label_y_centre": 417.8,
+       "fill": "SET_B"
+      },
+      {
+       "category": "9 am",
+       "series": "Day 1",
+       "value": 20,
+       "x0": 834.5,
+       "x1": 914.5,
+       "height_px": 304.2,
+       "y_top": 595.8,
+       "label_y_centre": 569.8,
+       "fill": "SET_A"
+      },
+      {
+       "category": "9 am",
+       "series": "Day 2",
+       "value": 33,
+       "x0": 920.5,
+       "x1": 1000.5,
+       "height_px": 501.9,
+       "y_top": 398.1,
+       "label_y_centre": 372.1,
+       "fill": "SET_B"
+      },
+      {
+       "category": "12 pm",
+       "series": "Day 1",
+       "value": 26,
+       "x0": 1039.5,
+       "x1": 1119.5,
+       "height_px": 395.4,
+       "y_top": 504.6,
+       "label_y_centre": 478.6,
+       "fill": "SET_A"
+      },
+      {
+       "category": "12 pm",
+       "series": "Day 2",
+       "value": 37,
+       "x0": 1125.5,
+       "x1": 1205.5,
+       "height_px": 562.7,
+       "y_top": 337.3,
+       "label_y_centre": 311.3,
+       "fill": "SET_B"
+      },
+      {
+       "category": "3 pm",
+       "series": "Day 1",
+       "value": 34,
+       "x0": 1244.5,
+       "x1": 1324.5,
+       "height_px": 517.1,
+       "y_top": 382.9,
+       "label_y_centre": 356.9,
+       "fill": "SET_A"
+      },
+      {
+       "category": "3 pm",
+       "series": "Day 2",
+       "value": 43,
+       "x0": 1330.5,
+       "x1": 1410.5,
+       "height_px": 654.0,
+       "y_top": 246.0,
+       "label_y_centre": 220.0,
+       "fill": "SET_B"
+      },
+      {
+       "category": "6 pm",
+       "series": "Day 1",
+       "value": 30,
+       "x0": 1449.5,
+       "x1": 1529.5,
+       "height_px": 456.3,
+       "y_top": 443.8,
+       "label_y_centre": 417.8,
+       "fill": "SET_A"
+      },
+      {
+       "category": "6 pm",
+       "series": "Day 2",
+       "value": 42,
+       "x0": 1535.5,
+       "x1": 1615.5,
+       "height_px": 638.8,
+       "y_top": 261.3,
+       "label_y_centre": 235.3,
+       "fill": "SET_B"
+      },
+      {
+       "category": "9 pm",
+       "series": "Day 1",
+       "value": 24,
+       "x0": 1654.5,
+       "x1": 1734.5,
+       "height_px": 365.0,
+       "y_top": 535.0,
+       "label_y_centre": 509.0,
+       "fill": "SET_A"
+      },
+      {
+       "category": "9 pm",
+       "series": "Day 2",
+       "value": 39,
+       "x0": 1740.5,
+       "x1": 1820.5,
+       "height_px": 593.1,
+       "y_top": 306.9,
+       "label_y_centre": 280.9,
+       "fill": "SET_B"
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920x1080, BG white. Draw a double-bar graph (vertical bars) of the temperature at 8 times of two days. Vertical axis: INK line (3 px) at x=200 from y=170 to y=900; horizontal axis: INK line (3 px) at y=900 from x=200 to x=1840. Scale 1 unit = 4 degrees C: GUIDE gridlines (1.5 px) from x=200 to x=1840 at 0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 15.208 px per degree, so the value v is at y = 900 - 15.208*v (48 is at y=170). Vertical tick labels INK 34 px, right-aligned at x=180, centred on their gridline: 0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48. Axis title 'Temperature (°C)' INK 34 px, left-aligned at x=40, y=100. Legend at y=60: swatch 28x28 at x=1280 filled SET_A with the text 'Day 1' starting at x=1325; swatch 28x28 at x=1560 filled SET_B with the text 'Day 2' starting at x=1605. Eight clusters, centres at x=302.5, 507.5, 712.5, 917.5, 1122.5, 1327.5, 1532.5, 1737.5. In each cluster the Day 1 bar (SET_A) is on the left and the Day 2 bar (SET_B) on the right, each 80 px wide with a 6 px gap between them, no outline. Bars: 12 am Day 1 20: x 219.5 to 299.5, height 304.2 px (top y=595.8), label '20' centred at y=569.8; 12 am Day 2 37: x 305.5 to 385.5, height 562.7 px (top y=337.3), label '37' centred at y=311.3; 3 am Day 1 18: x 424.5 to 504.5, height 273.8 px (top y=626.3), label '18' centred at y=600.3; 3 am Day 2 34: x 510.5 to 590.5, height 517.1 px (top y=382.9), label '34' centred at y=356.9; 6 am Day 1 16: x 629.5 to 709.5, height 243.3 px (top y=656.7), label '16' centred at y=630.7; 6 am Day 2 30: x 715.5 to 795.5, height 456.3 px (top y=443.8), label '30' centred at y=417.8; 9 am Day 1 20: x 834.5 to 914.5, height 304.2 px (top y=595.8), label '20' centred at y=569.8; 9 am Day 2 33: x 920.5 to 1000.5, height 501.9 px (top y=398.1), label '33' centred at y=372.1; 12 pm Day 1 26: x 1039.5 to 1119.5, height 395.4 px (top y=504.6), label '26' centred at y=478.6; 12 pm Day 2 37: x 1125.5 to 1205.5, height 562.7 px (top y=337.3), label '37' centred at y=311.3; 3 pm Day 1 34: x 1244.5 to 1324.5, height 517.1 px (top y=382.9), label '34' centred at y=356.9; 3 pm Day 2 43: x 1330.5 to 1410.5, height 654.0 px (top y=246.0), label '43' centred at y=220.0; 6 pm Day 1 30: x 1449.5 to 1529.5, height 456.3 px (top y=443.8), label '30' centred at y=417.8; 6 pm Day 2 42: x 1535.5 to 1615.5, height 638.8 px (top y=261.3), label '42' centred at y=235.3; 9 pm Day 1 24: x 1654.5 to 1734.5, height 365.0 px (top y=535.0), label '24' centred at y=509.0; 9 pm Day 2 39: x 1740.5 to 1820.5, height 593.1 px (top y=306.9), label '39' centred at y=280.9. Value labels are the numbers only, INK 34 px. Time labels INK 34 px centred under each cluster at y=940: 12 am, 3 am, 6 am, 9 am, 12 pm, 3 pm, 6 pm, 9 pm.",
+    "visible_text": [
+     "0",
+     "4",
+     "8",
+     "12",
+     "16",
+     "20",
+     "24",
+     "28",
+     "32",
+     "36",
+     "40",
+     "44",
+     "48",
+     "Temperature (°C)",
+     "Day 1",
+     "Day 2",
+     "12 am",
+     "3 am",
+     "6 am",
+     "9 am",
+     "12 pm",
+     "3 pm",
+     "6 pm",
+     "9 pm",
+     "18",
+     "26",
+     "30",
+     "33",
+     "34",
+     "37",
+     "39",
+     "42",
+     "43"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art"
+    ],
+    "accuracy_checks": [
+     "Day 1 values left to right: 20, 18, 16, 20, 26, 34, 30, 24 (sum 188)",
+     "Day 2 values left to right: 37, 34, 30, 33, 37, 43, 42, 39 (sum 295)",
+     "scale 1 unit = 4 degrees C: gridlines every 4 from 0 to 48, 15.208 px per degree; 20 degrees -> 304.2 px (5 units), 43 degrees -> 654.0 px (10.75 units)",
+     "8 clusters, 2 bars each, 16 bars in all; Day 1 bar left, Day 2 bar right in every cluster"
+    ],
+    "alt_text": "Double-bar graph of the temperature at 12 am, 3 am, 6 am, 9 am, 12 pm, 3 pm, 6 pm and 9 pm: Day 1 from 16 to 34 degrees C and Day 2 from 30 to 43 degrees C, on a scale of 4 degrees C per gridline.",
+    "render_note": "Value labels are the numbers only (no unit) so that they fit above 80 px wide bars; the axis title carries the unit. The axis runs to 48 so that the label above the 43 bar stays inside the plot."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C88",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.3, Q4",
+   "ncert_ref": "Section 5.3 - Figure it Out Q4 (book p.124-125)",
+   "question_text": "The following clustered-bar graph shows the number of electric vehicles registered in some states every year from 2022 to 2024. (a) Mark the bars of Gujarat and Delhi (b) to (f) read the graph.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The graph is the given figure: parts (a) to (f) are read from and drawn on it, and Gujarat and Delhi are empty so that the student can mark their bars.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S20.T20.C88.IMG1",
+   "manim_scene": "c7_13_5_3_FiO4_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S20.T20.C88.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "clustered_bar_graph",
+     "canvas": "1920x1080",
+     "y_axis": {
+      "min": 0,
+      "max": 100000,
+      "labelled_at": [
+       0,
+       25000,
+       50000,
+       75000,
+       100000
+      ],
+      "gridline_every": 5000,
+      "px_per_1000": 7.8,
+      "baseline_y": 880,
+      "top_y": 100
+     },
+     "series": [
+      {
+       "year": "2022",
+       "fill": "SET_A"
+      },
+      {
+       "year": "2023",
+       "fill": "SERIES_3"
+      },
+      {
+       "year": "2024",
+       "fill": "SET_B"
+      }
+     ],
+     "categories": [
+      "Uttarakhand",
+      "West Bengal",
+      "Andhra Pradesh",
+      "Odisha",
+      "Assam",
+      "Gujarat",
+      "Delhi"
+     ],
+     "cluster_centres_x": [
+      365.0,
+      595.0,
+      825.0,
+      1055.0,
+      1285.0,
+      1515.0,
+      1745.0
+     ],
+     "bars_drawn": [
+      {
+       "state": "Uttarakhand",
+       "year": "2022",
+       "value": 15000,
+       "x0": 289.0,
+       "x1": 337.0,
+       "height_px": 117.0,
+       "y_top": 763.0,
+       "fill": "SET_A"
+      },
+      {
+       "state": "Uttarakhand",
+       "year": "2023",
+       "value": 16500,
+       "x0": 341.0,
+       "x1": 389.0,
+       "height_px": 128.7,
+       "y_top": 751.3,
+       "fill": "SERIES_3"
+      },
+      {
+       "state": "Uttarakhand",
+       "year": "2024",
+       "value": 19000,
+       "x0": 393.0,
+       "x1": 441.0,
+       "height_px": 148.2,
+       "y_top": 731.8,
+       "fill": "SET_B"
+      },
+      {
+       "state": "West Bengal",
+       "year": "2022",
+       "value": 10500,
+       "x0": 519.0,
+       "x1": 567.0,
+       "height_px": 81.9,
+       "y_top": 798.1,
+       "fill": "SET_A"
+      },
+      {
+       "state": "West Bengal",
+       "year": "2023",
+       "value": 21000,
+       "x0": 571.0,
+       "x1": 619.0,
+       "height_px": 163.8,
+       "y_top": 716.2,
+       "fill": "SERIES_3"
+      },
+      {
+       "state": "West Bengal",
+       "year": "2024",
+       "value": 43000,
+       "x0": 623.0,
+       "x1": 671.0,
+       "height_px": 335.4,
+       "y_top": 544.6,
+       "fill": "SET_B"
+      },
+      {
+       "state": "Andhra Pradesh",
+       "year": "2022",
+       "value": 29500,
+       "x0": 749.0,
+       "x1": 797.0,
+       "height_px": 230.1,
+       "y_top": 649.9,
+       "fill": "SET_A"
+      },
+      {
+       "state": "Andhra Pradesh",
+       "year": "2023",
+       "value": 34500,
+       "x0": 801.0,
+       "x1": 849.0,
+       "height_px": 269.1,
+       "y_top": 610.9,
+       "fill": "SERIES_3"
+      },
+      {
+       "state": "Andhra Pradesh",
+       "year": "2024",
+       "value": 55000,
+       "x0": 853.0,
+       "x1": 901.0,
+       "height_px": 429.0,
+       "y_top": 451.0,
+       "fill": "SET_B"
+      },
+      {
+       "state": "Odisha",
+       "year": "2022",
+       "value": 27500,
+       "x0": 979.0,
+       "x1": 1027.0,
+       "height_px": 214.5,
+       "y_top": 665.5,
+       "fill": "SET_A"
+      },
+      {
+       "state": "Odisha",
+       "year": "2023",
+       "value": 44000,
+       "x0": 1031.0,
+       "x1": 1079.0,
+       "height_px": 343.2,
+       "y_top": 536.8,
+       "fill": "SERIES_3"
+      },
+      {
+       "state": "Odisha",
+       "year": "2024",
+       "value": 62500,
+       "x0": 1083.0,
+       "x1": 1131.0,
+       "height_px": 487.5,
+       "y_top": 392.5,
+       "fill": "SET_B"
+      },
+      {
+       "state": "Assam",
+       "year": "2022",
+       "value": 40000,
+       "x0": 1209.0,
+       "x1": 1257.0,
+       "height_px": 312.0,
+       "y_top": 568.0,
+       "fill": "SET_A"
+      },
+      {
+       "state": "Assam",
+       "year": "2023",
+       "value": 60000,
+       "x0": 1261.0,
+       "x1": 1309.0,
+       "height_px": 468.0,
+       "y_top": 412.0,
+       "fill": "SERIES_3"
+      },
+      {
+       "state": "Assam",
+       "year": "2024",
+       "value": 64500,
+       "x0": 1313.0,
+       "x1": 1361.0,
+       "height_px": 503.1,
+       "y_top": 376.9,
+       "fill": "SET_B"
+      }
+     ],
+     "empty_clusters": [
+      "Gujarat",
+      "Delhi"
+     ]
+    },
+    "manim_description": "Canvas 1920x1080, BG white. Clustered column graph of electric vehicles registered per year. Axes: INK line (3 px) vertical at x=250 from y=100 to y=880 and INK line (3 px) horizontal at y=880 from x=250 to x=1860. Scale: 100000 vehicles = 780 px, so a value v is v*7.8/1000 px tall (7.8 px per 1000). Horizontal GUIDE gridlines (1.5 px) from x=250 to x=1860 at every 5000 from 5000 to 100000 (20 gridlines, 39 px apart, the 0 line being the horizontal axis itself). Y labels INK 34 px, right-aligned at x=225, centred on the gridline: 0, 25000, 50000, 75000, 100000, each with an INK tick mark (3 px, 14 px long) from x=236 to x=250. No axis titles. Legend at y=45: swatch 28x28 at x=760 filled SET_A with the text '2022' starting at x=800; swatch at x=960 filled SERIES_3 (#56B4E9) with '2023' starting at x=1000; swatch at x=1160 filled SET_B with '2024' starting at x=1200 (all legend text INK 34 px). Seven clusters with centres at x=365.0, 595.0, 825.0, 1055.0, 1285.0, 1515.0, 1745.0 in this left-to-right order: Uttarakhand, West Bengal, Andhra Pradesh, Odisha, Assam, Gujarat, Delhi. Each cluster has 3 columns, each 48 px wide with 4 px gaps: 2022 (SET_A) from cx-76 to cx-28, 2023 (SERIES_3) from cx-24 to cx+24, 2024 (SET_B) from cx+28 to cx+76. Under every cluster centre an INK tick mark (3 px, 14 px long) hangs below the baseline from y=880 to y=894. State names INK 34 px centred on the cluster centre: 'West Bengal' on two lines ('West' at y=925, 'Bengal' at y=967), 'Andhra Pradesh' on two lines ('Andhra' at y=925, 'Pradesh' at y=967), the other five names on one line at y=925. No value labels on any column. Columns drawn (state year value: x range, height): Uttarakhand 2022 15000: x 289.0 to 337.0, height 117.0 px; Uttarakhand 2023 16500: x 341.0 to 389.0, height 128.7 px; Uttarakhand 2024 19000: x 393.0 to 441.0, height 148.2 px; West Bengal 2022 10500: x 519.0 to 567.0, height 81.9 px; West Bengal 2023 21000: x 571.0 to 619.0, height 163.8 px; West Bengal 2024 43000: x 623.0 to 671.0, height 335.4 px; Andhra Pradesh 2022 29500: x 749.0 to 797.0, height 230.1 px; Andhra Pradesh 2023 34500: x 801.0 to 849.0, height 269.1 px; Andhra Pradesh 2024 55000: x 853.0 to 901.0, height 429.0 px; Odisha 2022 27500: x 979.0 to 1027.0, height 214.5 px; Odisha 2023 44000: x 1031.0 to 1079.0, height 343.2 px; Odisha 2024 62500: x 1083.0 to 1131.0, height 487.5 px; Assam 2022 40000: x 1209.0 to 1257.0, height 312.0 px; Assam 2023 60000: x 1261.0 to 1309.0, height 468.0 px; Assam 2024 64500: x 1313.0 to 1361.0, height 503.1 px. The clusters Gujarat (centre x=1515.0) and Delhi (centre x=1745.0) have NO columns: only their tick marks and names.",
+    "visible_text": [
+     "0",
+     "25000",
+     "50000",
+     "75000",
+     "100000",
+     "2022",
+     "2023",
+     "2024",
+     "Uttarakhand",
+     "West Bengal",
+     "Andhra Pradesh",
+     "Odisha",
+     "Assam",
+     "Gujarat",
+     "Delhi"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "any value label or title on the graph",
+     "bars for Gujarat or Delhi"
+    ],
+    "accuracy_checks": [
+     "5 drawn clusters x 3 columns = 15 columns; Gujarat and Delhi clusters hold no column",
+     "values (2022, 2023, 2024): Uttarakhand 15000, 16500, 19000; West Bengal 10500, 21000, 43000; Andhra Pradesh 29500, 34500, 55000; Odisha 27500, 44000, 62500; Assam 40000, 60000, 64500",
+     "7.8 px per 1000 vehicles: West Bengal 2024 (43000) is 335.4 px, Assam 2024 (64500) is 503.1 px",
+     "y labels at 0, 25000, 50000, 75000, 100000 land on gridlines 0, 5, 10, 15, 20 counting every 5000 gridline",
+     "the LP solution quotes the same readings: Uttarakhand 15000/16500/19000, West Bengal 10500 to 43000, Andhra Pradesh 29500 to 55000, Odisha 27500 to 62500, Assam 40000 to 64500 (2023 about 60000)"
+    ],
+    "alt_text": "Clustered column graph of electric vehicles registered in 2022, 2023 and 2024 for Uttarakhand, West Bengal, Andhra Pradesh, Odisha and Assam, with the Gujarat and Delhi clusters left empty and a scale of 0 to 100000.",
+    "render_note": "The book gives no numbers for the five drawn states; the heights are the LP solution's own readings (the book picture measures within 500 of them: West Bengal 2022 reads 10200 on the page, the LP uses 10500). Book legend colours are blue, red, yellow; here SET_A, SERIES_3 (#56B4E9), SET_B, because the legend carries the meaning. State names are horizontal (two lines for West Bengal and Andhra Pradesh) instead of the book's 45-degree text."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C89",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.3, Q4",
+   "ncert_ref": "Section 5.3 - Figure it Out Q4 (a) (book p.125)",
+   "question_text": "Electric vehicles clustered-bar graph: part (a) mark the bars for Gujarat and Delhi from the table.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "Part (a) asks the student to mark the Gujarat and Delhi bars on the graph, so the answer is the completed graph; the solution diagram is the question graph plus the six new bars.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S20.T20.C89.IMG1",
+   "manim_scene": "c7_13_5_3_FiO4_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S20.T20.C89.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S20.T20.C88.IMG1",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "clustered_bar_graph",
+     "canvas": "1920x1080",
+     "y_axis": {
+      "min": 0,
+      "max": 100000,
+      "labelled_at": [
+       0,
+       25000,
+       50000,
+       75000,
+       100000
+      ],
+      "gridline_every": 5000,
+      "px_per_1000": 7.8,
+      "baseline_y": 880,
+      "top_y": 100
+     },
+     "series": [
+      {
+       "year": "2022",
+       "fill": "SET_A"
+      },
+      {
+       "year": "2023",
+       "fill": "SERIES_3"
+      },
+      {
+       "year": "2024",
+       "fill": "SET_B"
+      }
+     ],
+     "categories": [
+      "Uttarakhand",
+      "West Bengal",
+      "Andhra Pradesh",
+      "Odisha",
+      "Assam",
+      "Gujarat",
+      "Delhi"
+     ],
+     "cluster_centres_x": [
+      365.0,
+      595.0,
+      825.0,
+      1055.0,
+      1285.0,
+      1515.0,
+      1745.0
+     ],
+     "bars_drawn": [
+      {
+       "state": "Uttarakhand",
+       "year": "2022",
+       "value": 15000,
+       "x0": 289.0,
+       "x1": 337.0,
+       "height_px": 117.0,
+       "y_top": 763.0,
+       "fill": "SET_A"
+      },
+      {
+       "state": "Uttarakhand",
+       "year": "2023",
+       "value": 16500,
+       "x0": 341.0,
+       "x1": 389.0,
+       "height_px": 128.7,
+       "y_top": 751.3,
+       "fill": "SERIES_3"
+      },
+      {
+       "state": "Uttarakhand",
+       "year": "2024",
+       "value": 19000,
+       "x0": 393.0,
+       "x1": 441.0,
+       "height_px": 148.2,
+       "y_top": 731.8,
+       "fill": "SET_B"
+      },
+      {
+       "state": "West Bengal",
+       "year": "2022",
+       "value": 10500,
+       "x0": 519.0,
+       "x1": 567.0,
+       "height_px": 81.9,
+       "y_top": 798.1,
+       "fill": "SET_A"
+      },
+      {
+       "state": "West Bengal",
+       "year": "2023",
+       "value": 21000,
+       "x0": 571.0,
+       "x1": 619.0,
+       "height_px": 163.8,
+       "y_top": 716.2,
+       "fill": "SERIES_3"
+      },
+      {
+       "state": "West Bengal",
+       "year": "2024",
+       "value": 43000,
+       "x0": 623.0,
+       "x1": 671.0,
+       "height_px": 335.4,
+       "y_top": 544.6,
+       "fill": "SET_B"
+      },
+      {
+       "state": "Andhra Pradesh",
+       "year": "2022",
+       "value": 29500,
+       "x0": 749.0,
+       "x1": 797.0,
+       "height_px": 230.1,
+       "y_top": 649.9,
+       "fill": "SET_A"
+      },
+      {
+       "state": "Andhra Pradesh",
+       "year": "2023",
+       "value": 34500,
+       "x0": 801.0,
+       "x1": 849.0,
+       "height_px": 269.1,
+       "y_top": 610.9,
+       "fill": "SERIES_3"
+      },
+      {
+       "state": "Andhra Pradesh",
+       "year": "2024",
+       "value": 55000,
+       "x0": 853.0,
+       "x1": 901.0,
+       "height_px": 429.0,
+       "y_top": 451.0,
+       "fill": "SET_B"
+      },
+      {
+       "state": "Odisha",
+       "year": "2022",
+       "value": 27500,
+       "x0": 979.0,
+       "x1": 1027.0,
+       "height_px": 214.5,
+       "y_top": 665.5,
+       "fill": "SET_A"
+      },
+      {
+       "state": "Odisha",
+       "year": "2023",
+       "value": 44000,
+       "x0": 1031.0,
+       "x1": 1079.0,
+       "height_px": 343.2,
+       "y_top": 536.8,
+       "fill": "SERIES_3"
+      },
+      {
+       "state": "Odisha",
+       "year": "2024",
+       "value": 62500,
+       "x0": 1083.0,
+       "x1": 1131.0,
+       "height_px": 487.5,
+       "y_top": 392.5,
+       "fill": "SET_B"
+      },
+      {
+       "state": "Assam",
+       "year": "2022",
+       "value": 40000,
+       "x0": 1209.0,
+       "x1": 1257.0,
+       "height_px": 312.0,
+       "y_top": 568.0,
+       "fill": "SET_A"
+      },
+      {
+       "state": "Assam",
+       "year": "2023",
+       "value": 60000,
+       "x0": 1261.0,
+       "x1": 1309.0,
+       "height_px": 468.0,
+       "y_top": 412.0,
+       "fill": "SERIES_3"
+      },
+      {
+       "state": "Assam",
+       "year": "2024",
+       "value": 64500,
+       "x0": 1313.0,
+       "x1": 1361.0,
+       "height_px": 503.1,
+       "y_top": 376.9,
+       "fill": "SET_B"
+      }
+     ],
+     "bars_added_in_solution": [
+      {
+       "state": "Gujarat",
+       "year": "2022",
+       "value": 69000,
+       "x0": 1439.0,
+       "x1": 1487.0,
+       "height_px": 538.2,
+       "y_top": 341.8,
+       "fill": "SET_A",
+       "outline": "ANSWER 5 px"
+      },
+      {
+       "state": "Gujarat",
+       "year": "2023",
+       "value": 89000,
+       "x0": 1491.0,
+       "x1": 1539.0,
+       "height_px": 694.2,
+       "y_top": 185.8,
+       "fill": "SERIES_3",
+       "outline": "ANSWER 5 px"
+      },
+      {
+       "state": "Gujarat",
+       "year": "2024",
+       "value": 78000,
+       "x0": 1543.0,
+       "x1": 1591.0,
+       "height_px": 608.4,
+       "y_top": 271.6,
+       "fill": "SET_B",
+       "outline": "ANSWER 5 px"
+      },
+      {
+       "state": "Delhi",
+       "year": "2022",
+       "value": 62000,
+       "x0": 1669.0,
+       "x1": 1717.0,
+       "height_px": 483.6,
+       "y_top": 396.4,
+       "fill": "SET_A",
+       "outline": "ANSWER 5 px"
+      },
+      {
+       "state": "Delhi",
+       "year": "2023",
+       "value": 74000,
+       "x0": 1721.0,
+       "x1": 1769.0,
+       "height_px": 577.2,
+       "y_top": 302.8,
+       "fill": "SERIES_3",
+       "outline": "ANSWER 5 px"
+      },
+      {
+       "state": "Delhi",
+       "year": "2024",
+       "value": 81000,
+       "x0": 1773.0,
+       "x1": 1821.0,
+       "height_px": 631.8,
+       "y_top": 248.2,
+       "fill": "SET_B",
+       "outline": "ANSWER 5 px"
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920x1080, BG white. Clustered column graph of electric vehicles registered per year. Axes: INK line (3 px) vertical at x=250 from y=100 to y=880 and INK line (3 px) horizontal at y=880 from x=250 to x=1860. Scale: 100000 vehicles = 780 px, so a value v is v*7.8/1000 px tall (7.8 px per 1000). Horizontal GUIDE gridlines (1.5 px) from x=250 to x=1860 at every 5000 from 5000 to 100000 (20 gridlines, 39 px apart, the 0 line being the horizontal axis itself). Y labels INK 34 px, right-aligned at x=225, centred on the gridline: 0, 25000, 50000, 75000, 100000, each with an INK tick mark (3 px, 14 px long) from x=236 to x=250. No axis titles. Legend at y=45: swatch 28x28 at x=760 filled SET_A with the text '2022' starting at x=800; swatch at x=960 filled SERIES_3 (#56B4E9) with '2023' starting at x=1000; swatch at x=1160 filled SET_B with '2024' starting at x=1200 (all legend text INK 34 px). Seven clusters with centres at x=365.0, 595.0, 825.0, 1055.0, 1285.0, 1515.0, 1745.0 in this left-to-right order: Uttarakhand, West Bengal, Andhra Pradesh, Odisha, Assam, Gujarat, Delhi. Each cluster has 3 columns, each 48 px wide with 4 px gaps: 2022 (SET_A) from cx-76 to cx-28, 2023 (SERIES_3) from cx-24 to cx+24, 2024 (SET_B) from cx+28 to cx+76. Under every cluster centre an INK tick mark (3 px, 14 px long) hangs below the baseline from y=880 to y=894. State names INK 34 px centred on the cluster centre: 'West Bengal' on two lines ('West' at y=925, 'Bengal' at y=967), 'Andhra Pradesh' on two lines ('Andhra' at y=925, 'Pradesh' at y=967), the other five names on one line at y=925. No value labels on any column. Columns of the given states (same as the question figure, unchanged, no outline): Uttarakhand 2022 15000: x 289.0 to 337.0, height 117.0 px; Uttarakhand 2023 16500: x 341.0 to 389.0, height 128.7 px; Uttarakhand 2024 19000: x 393.0 to 441.0, height 148.2 px; West Bengal 2022 10500: x 519.0 to 567.0, height 81.9 px; West Bengal 2023 21000: x 571.0 to 619.0, height 163.8 px; West Bengal 2024 43000: x 623.0 to 671.0, height 335.4 px; Andhra Pradesh 2022 29500: x 749.0 to 797.0, height 230.1 px; Andhra Pradesh 2023 34500: x 801.0 to 849.0, height 269.1 px; Andhra Pradesh 2024 55000: x 853.0 to 901.0, height 429.0 px; Odisha 2022 27500: x 979.0 to 1027.0, height 214.5 px; Odisha 2023 44000: x 1031.0 to 1079.0, height 343.2 px; Odisha 2024 62500: x 1083.0 to 1131.0, height 487.5 px; Assam 2022 40000: x 1209.0 to 1257.0, height 312.0 px; Assam 2023 60000: x 1261.0 to 1309.0, height 468.0 px; Assam 2024 64500: x 1313.0 to 1361.0, height 503.1 px. Added columns for Gujarat and Delhi, each filled with its year colour and outlined in ANSWER (5 px): Gujarat 2022 69000: x 1439.0 to 1487.0, height 538.2 px; Gujarat 2023 89000: x 1491.0 to 1539.0, height 694.2 px; Gujarat 2024 78000: x 1543.0 to 1591.0, height 608.4 px; Delhi 2022 62000: x 1669.0 to 1717.0, height 483.6 px; Delhi 2023 74000: x 1721.0 to 1769.0, height 577.2 px; Delhi 2024 81000: x 1773.0 to 1821.0, height 631.8 px.",
+    "visible_text": [
+     "0",
+     "25000",
+     "50000",
+     "75000",
+     "100000",
+     "2022",
+     "2023",
+     "2024",
+     "Uttarakhand",
+     "West Bengal",
+     "Andhra Pradesh",
+     "Odisha",
+     "Assam",
+     "Gujarat",
+     "Delhi"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, Q-numbers, figure letters",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "any value label or title on the graph"
+    ],
+    "accuracy_checks": [
+     "the five given clusters, the axes, gridlines, legend and labels are identical to the question figure",
+     "Gujarat columns: 69000 (538.2 px), 89000 (694.2 px), 78000 (608.4 px)",
+     "Delhi columns: 62000 (483.6 px), 74000 (577.2 px), 81000 (631.8 px)",
+     "Gujarat 2023 (89000) lies between the 85000 and 90000 gridlines, Delhi 2022 (62000) between 60000 and 65000",
+     "exactly six columns are outlined in ANSWER"
+    ],
+    "alt_text": "The same clustered column graph with columns added: Gujarat 69000, 89000, 78000 and Delhi 62000, 74000, 81000 for 2022, 2023 and 2024, outlined in green.",
+    "render_note": "Added columns keep their year colour (so the legend still holds) and carry the ANSWER outline to show what the solution added."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S21.T21.C90",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Telling Tall Tales (Math Talk, book p.125-126)",
+   "ncert_ref": "Section 5.4 - Telling Tall Tales",
+   "question_text": "Using the printed means, compare the two schools grade by grade, and boys with girls in each school.",
+   "decision": "optional",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "The example works only on the 12 printed means, which sit on the dot plots of book p.126; those 12 dot plots are already the concept image M4.S21.T21.C90.IMG1 of this very concept, so no second copy is drawn and nothing is linked. The figure that would help is that existing dot-plot picture, and the question text must state the 12 means.",
+   "needs_lp_text_sync": true,
+   "text_alternative": "Write the 12 printed means into the question text (LaTeX array, rows Grade 6, Grade 7, Grade 8, columns School A boys | School A girls | School B boys | School B girls): Grade 6: 134.8, 137.78, 149.84, 150.2; Grade 7: 141.8, 141.83, 156.14, 155.41; Grade 8: 149.35, 147.81, 156.14, 156.83.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S22.T22.C94",
+   "role": "question",
+   "lp_book_number": "Heights in India: which statements are justified",
+   "ncert_ref": "Section 5.4 - table of heights (book p.127)",
+   "question_text": "Test the six statements against the table of average heights.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book table is a plain table of numbers (age, then boys and girls for each of 1989, 1999, 2009, 2019): headings and numbers only, the colours do not carry meaning, so LaTeX shows it exactly. The LP question text carries neither the table nor the six statements, so the text must be completed.",
+   "needs_lp_text_sync": true,
+   "text_alternative": "Add to the question text (1) a LaTeX array with columns Age | 1989 Boys | 1989 Girls | 1999 Boys | 1999 Girls | 2009 Boys | 2009 Girls | 2019 Boys | 2019 Girls and the 15 rows for ages 5 to 19 exactly as printed on book p.127 (age 5: 101.3, 100, 102.4, 101.7, 105.1, 104, 107.1, 107.2 ... age 19: 163.5, 151.9, 164.2, 152.4, 165.1, 153, 166.5, 155.2); (2) the six statements as a numbered list.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S22.T22.C95",
+   "role": "solution",
+   "lp_book_number": "Heights in India: which statements are justified",
+   "ncert_ref": "Section 5.4 - table of heights (book p.127)",
+   "question_text": "Verdicts on the six statements about the table of average heights.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Each verdict compares two named cells whose values the steps already quote (for example 143.2 against 148); a copy of the 120-number table with cells highlighted would add nothing the steps do not say.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S22.T22.C96",
+   "role": "question",
+   "lp_book_number": "Heights in India: growth and estimates",
+   "ncert_ref": "Section 5.4 - table of heights (book p.127-128)",
+   "question_text": "Using the 2019 columns, find the largest growth between successive ages for boys and for girls. Then estimate heights for ages 1 to 4, and for age 12 in 2029.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Same plain table of numbers as the previous question (LaTeX array, no colour meaning); the LP question text does not carry it, so it must be added.",
+   "needs_lp_text_sync": true,
+   "text_alternative": "Add the same LaTeX array as the previous question (or at least the 2009 and 2019 Boys and Girls columns for ages 5 to 19: the 2019 columns give the growth, the age-12 values of 2009 and 2019 give the 2029 estimate).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S22.T22.C97",
+   "role": "solution",
+   "lp_book_number": "Heights in India: growth and estimates",
+   "ncert_ref": "Section 5.4 - table of heights (book p.128)",
+   "question_text": "Largest growth jumps, estimates for ages 1 to 4 and age 12 in 2029.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answers are subtractions and number estimates (6.2 cm, 5.8 cm, 75, 87, 95, 101 cm, 145.5 and 146.5 cm), not a drawing; the early-growth idea is already the concept image M4.S21.T21.C92.IMG1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S23.T23.C98",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Zoomed chart (book p.128)",
+   "ncert_ref": "Section 5.4 - the chart that starts at 145 cm",
+   "question_text": "On a chart whose axis starts at 145 cm, one marker sits at 165 cm and another at 155 cm. How do their lengths from the axis compare, and how do the heights compare?",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "GRAPH_CHART"
+   ],
+   "reason": "Both values are in the words and the work is two subtractions and two divisions, so text is enough. A figure that would help but is not added: two bars from the 145 line (lengths 20 and 10) beside the same two heights on a zero-based axis (165 and 155).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S23.T23.C99",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "A Mean Decision! (book p.129)",
+   "ncert_ref": "Section 5.4 - A Mean Decision!",
+   "question_text": "A family's heights are 169, 173, 155, 165, 160 and 164 cm. A door is made at the mean height. Who must bend, and what height should the door be?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "All six heights are in the question and the work is a sum, a division and a comparison; the sorted-heights-and-mean-line picture is already the concept image M4.S23.T23.C99.IMG1 of this concept.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  }
+ ]
+}

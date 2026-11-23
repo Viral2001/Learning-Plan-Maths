@@ -1,0 +1,33 @@
+# Notes, chunk C (Class 7 Ch 14, topics M4.S25.T25, M4.S26.T26, M4.S27.T27)
+
+Result: 13 items, required 11 / optional 0 / none 2. Validator: errors 0, one warning (T25 Ans4 has no printed book figure, expected).
+
+## 1. Judgement calls
+
+1. **T25 Q1, Q2, Q3 question figures: required.** The LP text already describes each 5 x 3 region in words ("top right square removed", "middle of the second row", "middle of the top row"), so a strict reading of the tie-breaker could say `none`. I chose `required` because the book gives each region as a picture (p.23, p.23, Fig. 6.13 on p.24), the task is spatial (the learner has to place tiles on it), and Q2 refers to "the following region" and Q3 to a lettered figure (Fig. 6.13, which v3 says is drawn even if a teaching image shows it). Teaching image M4.S24.T24.C86 already shows the Q1 region (with its tiling), but it is never linked, so Q1 still gets its own plain-region figure. If the user prefers text-first, Q1 and Q2 question figures are the two to demote to `none`; the solution figures do not depend on them except for `derived_from`.
+2. **T25 Q4 (colour_another) question: none.** The book gives no figure for "use this idea to find another unit square...". No question figure is invented (companion note). Its solution is `required` and stands alone (`derived_from` null).
+3. **Colouring solutions required (T25 Ans3, Ans4, FiO Ans2).** The proof is a colour pattern, which LaTeX cannot show reliably (`HIGHLIGHT_MEANING`); Ans3 is also the action the question asks for ("Colour it like a chessboard"). FiO Q2 is the borderline one (its answer is "no", with the argument in words and numbers); I kept it `required` for sibling consistency with Ans3/Ans4 (same kind of colouring answer) and because the key fact, that both removed corners are the same colour, is only visible in the picture. If one of these three is demoted, demote all three.
+3b. **Tilings required (T25 Ans1, Ans2, FiO Ans1).** The answer is an arrangement of tiles (`ANSWER_IS_FIGURE`), even though the steps list the tiles in words.
+4. **Worked example C101 (squares, triangles, hexagons tile the plane): none** (`TEXT_SUFFICIENT`, `LATEX_ARITHMETIC`). The example is angle arithmetic at one corner and gives no figure of its own; the three tilings are the teaching image of the same concept (M4.S27.T27.C101.IMG1) and are not linked. A picture of the three corners "would help but is not needed" (that is `optional`, not added); I used `none` because the teaching image already shows exactly that.
+5. **Hatching replaced by plain CELL_FILL.** The book hatches every region square. Hatching is not in the style tokens and, more importantly, a missing square inside a region (Q2) would read as a white square among white squares without a fill. Regions are CELL_FILL with INK outlines; removed squares are simply not drawn. Tiles in solutions are MARK_FILL pieces with an ANSWER outline, inset 0.1 units, on top of the squares. All strokes 3 px (style rule: uniform 2 to 3 px).
+6. **Chessboard colours.** White squares reuse CELL_FILL (the question figure's fill, reads as white), black squares INK. Rule: white if row + column is even, black if odd (white corners). Legend counts ("8 white", "6 black" etc.) are in ANSWER and use words the LP solution uses; they are the only text besides the FiO labels.
+7. **FiO labels "Region to be tiled" and "Tile".** These two italic labels are printed beside the book's figures and are the only way to tell the two objects apart, so I kept them as category labels (allowed by the brief). If the reviewer reads them as captions, drop them from `visible_text` and the descriptions of C97, C98, C99, C100; nothing else changes.
+8. **FiO Ans2 sample tile.** The solution figure keeps the question layout and recolours the sample tile white over black, matching LP step 4 ("each tile covers one white and one black square").
+9. **Q4 solution example.** The dashed FOCUS outline marks row 2, column 1, the LP's own example; the other six black squares are shown by the black fill only.
+10. **Honeycomb photograph (p.27).** Missing from the base inventory; added as `NEW-P27-honeycomb-photo`, mapped to concept image M4.S27.T27.C102.IMG1 (accounting only).
+11. **Fig. 6.14** (p.24): first use = teaching figure, mapped to concept image M4.S24.T24.C87.IMG1; its black-and-white region panel is redrawn as the solution figure of T25 Q3, entered as `NEW-P24-tiling-2-sol`. Same pattern for the five other "second use" entries `NEW-...-sol` (region redrawn with the LP's tiling or colouring).
+12. **Figures with no item:** P26-tiling-4 (Escher-style example a) `TEXT_SUFFICIENT`; P26-tiling-5 (hat tiling b), P27-tiling-1 and -2 (Escher artwork c, d) `NOT_RENDERABLE`.
+
+## 2. Things in the LP that look wrong or thin
+
+- **T25 Q4 question text (C95)** says "Use the colouring to find another unit square...", but the question never states the colouring convention. The solution depends on "white corners" (row + column odd is black). The `q_figure` hint ("a grid ... coloured like a chessboard with white corners") describes a figure the book does not give. Suggest adding "Colour the 5 x 3 grid like a chessboard with white corners" to the question text (`text_alternative` of the item says this).
+- **T25 Q4 answer:** "Removing any black square leaves 8 white and 6 black, which no set of tiles can cover" is right and sufficient; removing a white square leaves 7 and 7 and is not decided by this argument. The LP does not claim otherwise. Fine.
+- **Old card ids** (C92.IMG2, C94.IMG2, C96.IMG2, C98.IMG2, C100.IMG2) are being replaced; the new ids are all `<concept>.IMG1`, so there is no collision.
+- Every tiling and colouring in the LP solutions was re-checked in code while building the map: Ans1 (1 + 3 + 3 = 7 tiles covering the 14 squares), Ans2 (4 + 3 = 7 tiles, tile list covers the 14 squares exactly), FiO Ans1 (four L tiles cover the 12 squares, each tile an L inside a 2 x 2 block), colour counts 8 / 6 (Ans3), 8 / 7 (Ans4), 32 / 30 (FiO Ans2). All agree with the LP text; no contradiction found.
+- The book has no printed solutions section, so nothing could be cross-checked against printed answers.
+
+## 3. Places where the book is unclear
+
+- Row 1, column 2 of the Q2 region (P23-grid-3) is hatched more faintly in print; it is part of the region (the picture shows 14 squares).
+- In Fig. 6.14 the plain horizontal tile has only its left square hatched; a printing quirk, not redrawn (the Fig. 6.14 tiles panel is not used).
+- The page picture of FiO Q1 and Q2 matches the base inventory exactly (12 and 62 squares). Triangle patch (23 triangles) and hexagon patch (12 hexagons in columns 2, 3, 2, 3, 2) were re-counted and are correct; they are accounting only.

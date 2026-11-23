@@ -1,0 +1,2418 @@
+{
+ "meta": {
+  "chapter": "Finding Common Ground",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 11",
+  "lp_plan_id": "cbse_eng_maths7_ch11_v30",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "none": 12,
+    "required": 2
+   },
+   "solution": {
+    "none": 9,
+    "required": 5
+   },
+   "worked_example": {
+    "required": 1,
+    "none": 3
+   }
+  },
+  "notes": [
+   "Chunk C: topics M3.S29.T29, S31, S32, S33, S35, S36 (18 units, 32 items).",
+   "Required diagrams: the division ladders (C110 worked, C113/C114, C115/C116, C118 solution) and the two factorisation-matching solutions (C104, C106).",
+   "Every FiO 3.3 question, the whole HCF x LCM = product set (S35) and the three worked examples of S36 are text/LaTeX (none).",
+   "The LP's 630/770 LCM ladder stops at 9, 11 (the book divides once more by 3); the diagrams follow the LP."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P14-factorisation_match-1",
+   "source": "chapter p.14",
+   "description": "270 = 2 x 3 x 3 x 3 x 5 over 50 = 2 x 5 x 5, the 2 boxed in both rows, the last 5 of each row boxed and joined by an L outline, HCF = 2 x 5 = 10 (top half of the C104 solution diagram).",
+   "mapped_to": "item:M3.S31.T31.C104 (solution)"
+  },
+  {
+   "fig_id": "P14-factorisation_match-2",
+   "source": "chapter p.14",
+   "description": "540 = 2 x 2 x 3 x 3 x 3 x 5 over 100 = 2 x 2 x 5 x 5, two 2s boxed in both rows, last 5s boxed and joined, HCF = 2 x 2 x 5 = 20 (bottom half of the C104 solution diagram).",
+   "mapped_to": "item:M3.S31.T31.C104 (solution)"
+  },
+  {
+   "fig_id": "P14-factorisation_match-3",
+   "source": "chapter p.14",
+   "description": "14 x 6 = 2 x 7 x 2 x 3 over 14 x 9 = 2 x 7 x 3 x 3, the 2 x 7 braced as 14 and boxed in both rows, the last 3s boxed, HCF = 14 x 3 = 42.",
+   "mapped_to": "item:M3.S31.T31.C106 (solution)"
+  },
+  {
+   "fig_id": "P14-division_method-1",
+   "source": "chapter p.14",
+   "description": "Ladder 2 | 84, 180; 2 | 42, 90; 3 | 21, 45; last pair 7, 15, plain, given in the question (C113 question diagram).",
+   "mapped_to": "item:M3.S33.T33.C113 (question)"
+  },
+  {
+   "fig_id": "NEW-P14-division_method-1-sol",
+   "source": "chapter p.14",
+   "description": "Second use of P14-division_method-1: the same ladder with the divisors 2, 2, 3 ringed and HCF = 2 x 2 x 3 = 12 added (C114 solution diagram).",
+   "mapped_to": "item:M3.S33.T33.C114 (solution)"
+  },
+  {
+   "fig_id": "P15-division_method-1",
+   "source": "chapter p.15",
+   "description": "Ladder for 300 and 150 (divisors 2, 5, 5, 3, last pair 2, 1); the book prints a blue oval round the divisors and the caption HCF = 2 x 5 x 5 x 3, the question diagram draws the ladder without them (left half of the C115 question diagram).",
+   "mapped_to": "item:M3.S33.T33.C115 (question)"
+  },
+  {
+   "fig_id": "P15-division_method-2",
+   "source": "chapter p.15",
+   "description": "Ladder for 630 and 770 (divisors 2, 5, 7, last pair 9, 11); the book prints a blue oval round the divisors and the caption HCF = 2 x 5 x 7, the question diagram draws the ladder without them (right half of the C115 question diagram).",
+   "mapped_to": "item:M3.S33.T33.C115 (question)"
+  },
+  {
+   "fig_id": "NEW-P15-division_method-1-sol",
+   "source": "chapter p.15",
+   "description": "Second use of P15-division_method-1: the 300/150 ladder with the divisors ringed and HCF = 2 x 5 x 5 x 3 = 150 (left half of the C116 solution diagram).",
+   "mapped_to": "item:M3.S33.T33.C116 (solution)"
+  },
+  {
+   "fig_id": "NEW-P15-division_method-2-sol",
+   "source": "chapter p.15",
+   "description": "Second use of P15-division_method-2: the 630/770 ladder with the divisors ringed and HCF = 2 x 5 x 7 = 70 (right half of the C116 solution diagram).",
+   "mapped_to": "item:M3.S33.T33.C116 (solution)"
+  },
+  {
+   "fig_id": "P15-division_method-3",
+   "source": "chapter p.15",
+   "description": "Ladder for 300 and 150 with one long loop round the divisors 2, 5, 5, 3 and the last pair 2, 1 (LCM figure); left half of the C110 worked-example diagram (caption not drawn).",
+   "mapped_to": "item:M3.S32.T32.C110 (question)"
+  },
+  {
+   "fig_id": "P15-division_method-4",
+   "source": "chapter p.15",
+   "description": "Ladder for 630 and 770 with one long loop round the divisors and the last pair; the book has one more row (3 | 9, 11 and last pair 3, 11), the LP and the diagram stop at 9, 11, so the loop encloses 2, 5, 7 and 9, 11 (right half of the C110 worked-example diagram; caption not drawn).",
+   "mapped_to": "item:M3.S32.T32.C110 (question)"
+  },
+  {
+   "fig_id": "P15-division_method-5",
+   "source": "chapter p.15",
+   "description": "Guna's ladder: 50 | 300, 150; 3 | 6, 3; last pair 2, 1. Already the teaching image C111.IMG1 (A short ladder 300, 150 divided by 50 and by 3); accounting only, no item of this chunk needs it.",
+   "mapped_to": "concept_image:M3.S32.T32.C111.IMG1"
+  },
+  {
+   "fig_id": "P16-division_method-1",
+   "source": "chapter p.16",
+   "description": "Anshu's ladder: 10 | 630, 770; 7 | 63, 77; last pair 9, 11. It illustrates the teaching narration of concept C111 (all numbers and the results HCF 70, LCM 6930 are in the narration text); no question, solution or worked example of this chunk uses it, and C111.IMG1 already teaches the bigger-divisor idea.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 13,
+  "mapped_to_items": 11,
+  "mapped_to_concept_images": 1,
+  "mapped_none": 1,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M3.S31.T31.C104.IMG1",
+   "M3.S31.T31.C106.IMG1",
+   "M3.S32.T32.C110.IMG2",
+   "M3.S33.T33.C113.IMG1",
+   "M3.S33.T33.C114.IMG1",
+   "M3.S33.T33.C115.IMG1",
+   "M3.S33.T33.C116.IMG1",
+   "M3.S33.T33.C118.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M3.S29.T29.C94",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.3, Q1",
+   "ncert_ref": "Section 3.3 - FiO1",
+   "question_text": "Make a general statement about the HCF for the following pairs of numbers. You could consider examples before coming up with general statements. Look for possible explanations of why they hold. (a) Two consecutive even numbers (b) Two consecutive odd numbers (c) Two even numbers (d) Two consecutive numbers (e) Two co-prime numbers",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "Q1 gives five kinds of pairs in words and asks for a general statement; no figure is printed on p.59 (page 13). The question gives no figure, so no question figure (a blank one would imply something was given).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S29.T29.C95",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.3, Q1",
+   "ncert_ref": "Section 3.3 - FiO1",
+   "question_text": "Make a general statement about the HCF for the following pairs of numbers. You could consider examples before coming up with general statements. Look for possible explanations of why they hold. (a) Two consecutive even numbers (b) Two consecutive odd numbers (c) Two even numbers (d) Two consecutive numbers (e) Two co-prime numbers",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is five short statements with example pairs, written in words and numbers. No picture is the answer and none would change how correctly the student checks it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S29.T29.C96",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.3, Q2",
+   "ncert_ref": "Section 3.3 - FiO2",
+   "question_text": "The LCM of 3 and 24 is 24 (it is one of the two given numbers). (a) Find more such number pairs where the LCM is one of the two numbers. (b) Make a general statement about such numbers. Describe such number pairs using algebra.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "Q2 gives the pair 3 and 24 in words; no figure is printed on p.59 (page 13). The question gives no figure, so no question figure (a blank one would imply something was given).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S29.T29.C97",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.3, Q2",
+   "ncert_ref": "Section 3.3 - FiO2",
+   "question_text": "The LCM of 3 and 24 is 24 (it is one of the two given numbers). (a) Find more such number pairs where the LCM is one of the two numbers. (b) Make a general statement about such numbers. Describe such number pairs using algebra.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is example pairs and an algebra statement (n and kn); all text and LaTeX. No picture is the answer and none would change how correctly the student checks it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S29.T29.C98",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.3, Q3",
+   "ncert_ref": "Section 3.3 - FiO3",
+   "question_text": "Make a general statement about the LCM for the following pairs of numbers. You could consider examples before coming up with these general statements. Look for possible explanations of why they hold. (a) Two multiples of 3 (b) Two consecutive even numbers (c) Two consecutive numbers (d) Two co-prime numbers",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "Q3 gives four kinds of pairs in words and asks for a general statement; no figure is printed on p.59 (page 13). The question gives no figure, so no question figure (a blank one would imply something was given).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S29.T29.C99",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.3, Q3",
+   "ncert_ref": "Section 3.3 - FiO3",
+   "question_text": "Make a general statement about the LCM for the following pairs of numbers. You could consider examples before coming up with these general statements. Look for possible explanations of why they hold. (a) Two multiples of 3 (b) Two consecutive even numbers (c) Two consecutive numbers (d) Two co-prime numbers",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is four statements with example pairs and LCM values; all text and LaTeX. No picture is the answer and none would change how correctly the student checks it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C103",
+   "role": "question",
+   "lp_book_number": "Doubling: HCF of 270 and 50 and their doubles",
+   "ncert_ref": "Section 3.3 - double",
+   "question_text": "Find the HCF of 270 and 50, and then of the doubled numbers 540 and 100. What do you see?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives only the numbers 270, 50, 540 and 100. No figure is given, so no question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C104",
+   "role": "solution",
+   "lp_book_number": "Doubling: HCF of 270 and 50 and their doubles",
+   "ncert_ref": "Section 3.3 - double",
+   "question_text": "Find the HCF of 270 and 50, and then of the doubled numbers 540 and 100. What do you see?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The book answers this with a picture (p.60): the two factorisations with the common subparts boxed, including the 5 taken from different positions in the two rows, and the extra boxed 2 after doubling. LaTeX cannot show that matching reliably.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S31.T31.C104.IMG1",
+   "manim_scene": "c7_11_S31_C104_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S31.T31.C104.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "kind": "factorisation_match_pair_of_blocks",
+     "canvas": [
+      1920,
+      1080
+     ],
+     "font_px": 56,
+     "token_pitch_px": 70,
+     "blocks": [
+      {
+       "rows": [
+        {
+         "label": "270 =",
+         "label_right_x": 665,
+         "y": 200,
+         "tokens": [
+          {
+           "col": 1,
+           "text": "2",
+           "x": 715
+          },
+          {
+           "col": 2,
+           "text": "×",
+           "x": 785
+          },
+          {
+           "col": 3,
+           "text": "3",
+           "x": 855
+          },
+          {
+           "col": 4,
+           "text": "×",
+           "x": 925
+          },
+          {
+           "col": 5,
+           "text": "3",
+           "x": 995
+          },
+          {
+           "col": 6,
+           "text": "×",
+           "x": 1065
+          },
+          {
+           "col": 7,
+           "text": "3",
+           "x": 1135
+          },
+          {
+           "col": 8,
+           "text": "×",
+           "x": 1205
+          },
+          {
+           "col": 9,
+           "text": "5",
+           "x": 1275
+          }
+         ]
+        },
+        {
+         "label": "50 =",
+         "label_right_x": 665,
+         "y": 310,
+         "tokens": [
+          {
+           "col": 1,
+           "text": "2",
+           "x": 715
+          },
+          {
+           "col": 2,
+           "text": "×",
+           "x": 785
+          },
+          {
+           "col": 3,
+           "text": "5",
+           "x": 855
+          },
+          {
+           "col": 4,
+           "text": "×",
+           "x": 925
+          },
+          {
+           "col": 5,
+           "text": "5",
+           "x": 995
+          }
+         ]
+        }
+       ],
+       "highlight_boxes": [
+        {
+         "what": "the 2 of both rows",
+         "x0": 685,
+         "x1": 745,
+         "y0": 160,
+         "y1": 350
+        },
+        {
+         "what": "the last 5 of 270",
+         "x0": 1245,
+         "x1": 1305,
+         "y0": 160,
+         "y1": 240
+        },
+        {
+         "what": "the last 5 of 50",
+         "x0": 965,
+         "x1": 1025,
+         "y0": 270,
+         "y1": 350
+        }
+       ],
+       "connector": {
+        "points": [
+         [
+          1275,
+          240
+         ],
+         [
+          1275,
+          255
+         ],
+         [
+          995,
+          255
+         ],
+         [
+          995,
+          270
+         ]
+        ],
+        "colour": "FOCUS"
+       },
+       "result_line": {
+        "text": "HCF = 2 × 5 = 10",
+        "x_centre": 960,
+        "y": 420
+       },
+       "matched_digits": [
+        {
+         "row": 1,
+         "col": 1
+        },
+        {
+         "row": 2,
+         "col": 1
+        },
+        {
+         "row": 1,
+         "col": 9
+        },
+        {
+         "row": 2,
+         "col": 5
+        }
+       ]
+      },
+      {
+       "rows": [
+        {
+         "label": "540 =",
+         "label_right_x": 665,
+         "y": 650,
+         "tokens": [
+          {
+           "col": 1,
+           "text": "2",
+           "x": 715
+          },
+          {
+           "col": 2,
+           "text": "×",
+           "x": 785
+          },
+          {
+           "col": 3,
+           "text": "2",
+           "x": 855
+          },
+          {
+           "col": 4,
+           "text": "×",
+           "x": 925
+          },
+          {
+           "col": 5,
+           "text": "3",
+           "x": 995
+          },
+          {
+           "col": 6,
+           "text": "×",
+           "x": 1065
+          },
+          {
+           "col": 7,
+           "text": "3",
+           "x": 1135
+          },
+          {
+           "col": 8,
+           "text": "×",
+           "x": 1205
+          },
+          {
+           "col": 9,
+           "text": "3",
+           "x": 1275
+          },
+          {
+           "col": 10,
+           "text": "×",
+           "x": 1345
+          },
+          {
+           "col": 11,
+           "text": "5",
+           "x": 1415
+          }
+         ]
+        },
+        {
+         "label": "100 =",
+         "label_right_x": 665,
+         "y": 760,
+         "tokens": [
+          {
+           "col": 1,
+           "text": "2",
+           "x": 715
+          },
+          {
+           "col": 2,
+           "text": "×",
+           "x": 785
+          },
+          {
+           "col": 3,
+           "text": "2",
+           "x": 855
+          },
+          {
+           "col": 4,
+           "text": "×",
+           "x": 925
+          },
+          {
+           "col": 5,
+           "text": "5",
+           "x": 995
+          },
+          {
+           "col": 6,
+           "text": "×",
+           "x": 1065
+          },
+          {
+           "col": 7,
+           "text": "5",
+           "x": 1135
+          }
+         ]
+        }
+       ],
+       "highlight_boxes": [
+        {
+         "what": "the first 2 of both rows",
+         "x0": 685,
+         "x1": 745,
+         "y0": 610,
+         "y1": 800
+        },
+        {
+         "what": "the second 2 of both rows",
+         "x0": 825,
+         "x1": 885,
+         "y0": 610,
+         "y1": 800
+        },
+        {
+         "what": "the last 5 of 540",
+         "x0": 1385,
+         "x1": 1445,
+         "y0": 610,
+         "y1": 690
+        },
+        {
+         "what": "the last 5 of 100",
+         "x0": 1105,
+         "x1": 1165,
+         "y0": 720,
+         "y1": 800
+        }
+       ],
+       "connector": {
+        "points": [
+         [
+          1415,
+          690
+         ],
+         [
+          1415,
+          705
+         ],
+         [
+          1135,
+          705
+         ],
+         [
+          1135,
+          720
+         ]
+        ],
+        "colour": "FOCUS"
+       },
+       "result_line": {
+        "text": "HCF = 2 × 2 × 5 = 20",
+        "x_centre": 960,
+        "y": 870
+       },
+       "matched_digits": [
+        {
+         "row": 1,
+         "col": 1
+        },
+        {
+         "row": 2,
+         "col": 1
+        },
+        {
+         "row": 1,
+         "col": 3
+        },
+        {
+         "row": 2,
+         "col": 3
+        },
+        {
+         "row": 1,
+         "col": 11
+        },
+        {
+         "row": 2,
+         "col": 7
+        }
+       ]
+      }
+     ],
+     "colours": {
+      "factors": "INK",
+      "matched_digits": "ANSWER",
+      "boxes_and_connectors": "FOCUS",
+      "result_lines": "ANSWER"
+     }
+    },
+    "manim_description": "On a plain white 1920 x 1080 canvas draw two blocks of prime factorisations, one above the other, all in sans-serif 56 px. Every token sits on a fixed 70 px pitch: token k (1-based, counting digits and multiplication signs) is centred at x = 715 + 70 x (k - 1). Block 1 (top). 270/50, row y = 200: the label '270 =' is right-aligned with its right edge at x = 665, then the tokens left to right: '2' at x = 715, '×' at x = 785, '3' at x = 855, '×' at x = 925, '3' at x = 995, '×' at x = 1065, '3' at x = 1135, '×' at x = 1205, '5' at x = 1275. 270/50, row y = 310: the label '50 =' is right-aligned with its right edge at x = 665, then the tokens left to right: '2' at x = 715, '×' at x = 785, '5' at x = 855, '×' at x = 925, '5' at x = 995. Draw the factors in INK, except the highlighted digits listed next, which are drawn in ANSWER green. Highlighted digits of block 1: column 1 of both rows (the two 2s), column 9 of the 270 row (the last 5) and column 5 of the 50 row (the last 5). Block 1 shapes: a FOCUS rounded rectangle (3 px, no fill, corner radius 14) around the 2 of both rows with corners (685, 160) and (745, 350); a FOCUS rounded rectangle (3 px, no fill, corner radius 14) around the last 5 of 270 with corners (1245, 160) and (1305, 240); a FOCUS rounded rectangle (3 px, no fill, corner radius 14) around the last 5 of 50 with corners (965, 270) and (1025, 350); a FOCUS elbow line (3 px) joining the two boxes of the 5s through the points (1275, 240), (1275, 255), (995, 255), (995, 270). Under block 1, centred at x = 960 and y = 420, the line 'HCF = 2 × 5 = 10' in ANSWER green, 52 px. Block 2 (below, same pitch and same x positions). 540/100, row y = 650: the label '540 =' is right-aligned with its right edge at x = 665, then the tokens left to right: '2' at x = 715, '×' at x = 785, '2' at x = 855, '×' at x = 925, '3' at x = 995, '×' at x = 1065, '3' at x = 1135, '×' at x = 1205, '3' at x = 1275, '×' at x = 1345, '5' at x = 1415. 540/100, row y = 760: the label '100 =' is right-aligned with its right edge at x = 665, then the tokens left to right: '2' at x = 715, '×' at x = 785, '2' at x = 855, '×' at x = 925, '5' at x = 995, '×' at x = 1065, '5' at x = 1135. Draw the factors in INK, except the highlighted digits, drawn in ANSWER green: columns 1 and 3 of both rows (the four 2s), column 11 of the 540 row (the last 5) and column 7 of the 100 row (the last 5). Block 2 shapes: a FOCUS rounded rectangle (3 px, no fill, corner radius 14) around the first 2 of both rows with corners (685, 610) and (745, 800); a FOCUS rounded rectangle (3 px, no fill, corner radius 14) around the second 2 of both rows with corners (825, 610) and (885, 800); a FOCUS rounded rectangle (3 px, no fill, corner radius 14) around the last 5 of 540 with corners (1385, 610) and (1445, 690); a FOCUS rounded rectangle (3 px, no fill, corner radius 14) around the last 5 of 100 with corners (1105, 720) and (1165, 800); a FOCUS elbow line (3 px) joining the two boxes of the 5s through the points (1415, 690), (1415, 705), (1135, 705), (1135, 720). Under block 2, centred at x = 960 and y = 870, the line 'HCF = 2 × 2 × 5 = 20' in ANSWER green, 52 px. No other lines, arrows, captions or colours.",
+    "visible_text": [
+     "270 =",
+     "50 =",
+     "540 =",
+     "100 =",
+     "2",
+     "3",
+     "5",
+     "×",
+     "HCF = 2 × 5 = 10",
+     "HCF = 2 × 2 × 5 = 20"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words 'double' or 'doubled' or any arrow between the two blocks",
+     "any caption other than the two HCF lines"
+    ],
+    "accuracy_checks": [
+     "270 = 2 x 3 x 3 x 3 x 5 (2 x 27 x 5 = 270) and 50 = 2 x 5 x 5 (50)",
+     "common subpart of 270 and 50 is 2 x 5 = 10; the two 5s joined by the connector are the 5 at column 9 of the 270 row and the 5 at column 5 of the 50 row",
+     "540 = 2 x 2 x 3 x 3 x 3 x 5 (4 x 27 x 5 = 540) and 100 = 2 x 2 x 5 x 5 (100)",
+     "common subpart of 540 and 100 is 2 x 2 x 5 = 20 (two 2s boxed, one pair of 5s joined)",
+     "HCF 20 is 2 times HCF 10",
+     "every row keeps the 70 px pitch so the 2s of the two rows sit in the same columns"
+    ],
+    "alt_text": "Two blocks of prime factorisations: 270 and 50 with the common 2 and 5 boxed, HCF 10; 540 and 100 with the two 2s and a 5 boxed, HCF 20.",
+    "render_note": "Draws the book's two figures of p.60 (page 14) in one picture: 270/50 above, 540/100 below. Colours changed to the style tokens (the book prints red and green digits in blue boxes)."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C105",
+   "role": "question",
+   "lp_book_number": "Common Multipliers: HCF of 14 × 6 and 14 × 9",
+   "ncert_ref": "Section 3.3 - multiples14",
+   "question_text": "Find the HCF of 14 × 6 and 14 × 9.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives only the two products 14 x 6 and 14 x 9. No figure is given, so no question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C106",
+   "role": "solution",
+   "lp_book_number": "Common Multipliers: HCF of 14 × 6 and 14 × 9",
+   "ncert_ref": "Section 3.3 - multiples14",
+   "question_text": "Find the HCF of 14 × 6 and 14 × 9.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The book answers this with a picture (p.60): both factorisations, the common 14 braced and boxed, and the extra common 3 boxed. It shows that the HCF is more than 14; same kind of answer as C104, so the same decision.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S31.T31.C106.IMG1",
+   "manim_scene": "c7_11_S31_C106_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S31.T31.C106.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "kind": "factorisation_match_with_common_multiplier",
+     "canvas": [
+      1920,
+      1080
+     ],
+     "font_px": 56,
+     "token_pitch_px": 70,
+     "rows": [
+      {
+       "label": "14 × 6 =",
+       "label_right_x": 590,
+       "y": 310,
+       "tokens": [
+        {
+         "col": 1,
+         "text": "2",
+         "x": 640
+        },
+        {
+         "col": 2,
+         "text": "×",
+         "x": 710
+        },
+        {
+         "col": 3,
+         "text": "7",
+         "x": 780
+        },
+        {
+         "col": 4,
+         "text": "×",
+         "x": 850
+        },
+        {
+         "col": 5,
+         "text": "2",
+         "x": 920
+        },
+        {
+         "col": 6,
+         "text": "×",
+         "x": 990
+        },
+        {
+         "col": 7,
+         "text": "3",
+         "x": 1060
+        }
+       ]
+      },
+      {
+       "label": "14 × 9 =",
+       "label_right_x": 590,
+       "y": 550,
+       "tokens": [
+        {
+         "col": 1,
+         "text": "2",
+         "x": 640
+        },
+        {
+         "col": 2,
+         "text": "×",
+         "x": 710
+        },
+        {
+         "col": 3,
+         "text": "7",
+         "x": 780
+        },
+        {
+         "col": 4,
+         "text": "×",
+         "x": 850
+        },
+        {
+         "col": 5,
+         "text": "3",
+         "x": 920
+        },
+        {
+         "col": 6,
+         "text": "×",
+         "x": 990
+        },
+        {
+         "col": 7,
+         "text": "3",
+         "x": 1060
+        }
+       ]
+      }
+     ],
+     "shapes": {
+      "braces": [
+       {
+        "under": "2 × 7 of row 1",
+        "x0": 620,
+        "x1": 800,
+        "y": 355,
+        "colour": "ANSWER"
+       },
+       {
+        "under": "2 × 7 of row 2",
+        "x0": 620,
+        "x1": 800,
+        "y": 595,
+        "colour": "ANSWER"
+       }
+      ],
+      "brace_labels": [
+       {
+        "text": "14",
+        "x": 710,
+        "y": 405,
+        "colour": "ANSWER",
+        "font_px": 50
+       },
+       {
+        "text": "14",
+        "x": 710,
+        "y": 645,
+        "colour": "ANSWER",
+        "font_px": 50
+       }
+      ],
+      "big_box": {
+       "x0": 600,
+       "x1": 820,
+       "y0": 265,
+       "y1": 690,
+       "corner_radius": 24,
+       "colour": "FOCUS"
+      },
+      "narrow_box": {
+       "x0": 1030,
+       "x1": 1090,
+       "y0": 265,
+       "y1": 595,
+       "corner_radius": 18,
+       "colour": "FOCUS"
+      },
+      "result_line": {
+       "text": "HCF = 14 × 3 = 42",
+       "x_centre": 960,
+       "y": 780,
+       "colour": "ANSWER",
+       "font_px": 52
+      }
+     },
+     "colours": {
+      "plain_factors": "INK",
+      "common_subparts": "ANSWER",
+      "boxes": "FOCUS",
+      "braces_labels_result": "ANSWER"
+     }
+    },
+    "manim_description": "On a plain white 1920 x 1080 canvas draw two rows of prime factorisations, one above the other, all in sans-serif 56 px. Every token sits on a 70 px pitch: token k (1-based) is centred at x = 640 + 70 x (k - 1). Row 1 (y = 310): the label '14 × 6 =' is right-aligned with its right edge at x = 590, then the tokens left to right '2', '×', '7', '×', '2', '×', '3' at x = 640, 710, 780, 850, 920, 990, 1060. Row 2 (y = 550): the label '14 × 9 =' is right-aligned with its right edge at x = 590, then the tokens '2', '×', '7', '×', '3', '×', '3' at x = 640, 710, 780, 850, 920, 990, 1060. Draw the labels and the plain factors (the 2 at column 5 of row 1 and the 3 at column 5 of row 2, with their '×' signs) in INK. Draw in ANSWER green the '2 × 7' (columns 1 to 3) of both rows and the 3 at column 7 of both rows. Under the '2 × 7' of row 1 draw a ANSWER curly brace opening downwards from x = 620 to x = 800 at y = 355, with the label '14' in ANSWER 50 px centred at (710, 405). Under the '2 × 7' of row 2 draw the same brace at y = 595 with the label '14' centred at (710, 645). Draw a FOCUS rounded rectangle (3 px, no fill, corner radius 24) with corners (600, 265) and (820, 690) that encloses the '2 × 7', the brace and the '14' of BOTH rows, and a second narrow FOCUS rounded rectangle (corner radius 18) with corners (1030, 265) and (1090, 595) that encloses the final 3 of row 1 and the final 3 of row 2 (one tall box over both rows). Under the figure, centred at x = 960 and y = 780, the line 'HCF = 14 × 3 = 42' in ANSWER green, 52 px. No other lines, arrows, captions or colours.",
+    "visible_text": [
+     "14 × 6 =",
+     "14 × 9 =",
+     "2",
+     "7",
+     "3",
+     "×",
+     "14",
+     "HCF = 14 × 3 = 42"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any arrow",
+     "any caption other than the HCF line"
+    ],
+    "accuracy_checks": [
+     "14 x 6 = 84 = 2 x 7 x 2 x 3 (14 x 6 = 84; 2 x 7 x 2 x 3 = 84)",
+     "14 x 9 = 126 = 2 x 7 x 3 x 3 (14 x 9 = 126; 2 x 7 x 3 x 3 = 126)",
+     "2 x 7 = 14 is boxed in both rows and the brace label is 14",
+     "the two boxed final 3s are the common subpart beyond 14; HCF = 14 x 3 = 42 = 2 x 7 x 3"
+    ],
+    "alt_text": "14 x 6 and 14 x 9 as prime factors; the common 2 x 7 (14) and the last 3 are boxed, giving HCF 14 x 3 = 42.",
+    "render_note": "Draws the book's figure of p.60 (page 14, the 14 x 6, 14 x 9 figure). Same layout as the book; colours changed to the style tokens."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C107",
+   "role": "question",
+   "lp_book_number": "Common Multipliers: four more pairs",
+   "ncert_ref": "Section 3.3 - common_mult",
+   "question_text": "Find the HCF of (a) 18 × 10 and 18 × 15, (b) 10 × 38 and 10 × 21, (c) 5 × 13 and 5 × 20, (d) 12 × 16 and 12 × 20. In which is the HCF the common multiplier?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives four pairs of products in words and numbers. No figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C108",
+   "role": "solution",
+   "lp_book_number": "Common Multipliers: four more pairs",
+   "ncert_ref": "Section 3.3 - common_mult",
+   "question_text": "Find the HCF of (a) 18 × 10 and 18 × 15, (b) 10 × 38 and 10 × 21, (c) 5 × 13 and 5 × 20, (d) 12 × 16 and 12 × 20. In which is the HCF the common multiplier?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The book prints no picture for these four pairs, and the LP answer is a list of numbers with one line of reasoning each. Differs from C104/C106 only because their pictures are printed in the book; four factor figures would also break the one-diagram-per-solution rule.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Plain LaTeX lines, one per pair, as in the LP steps."
+  },
+  {
+   "lp_concept_id": "M3.S32.T32.C110",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 3.3 - div_lcm",
+   "question_text": "Use the ladders to find the LCM of 300 and 150, and of 630 and 770.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The example says 'use the ladders' for two pairs, but the text never shows the ladders (rows such as 150, 75 and 315, 385 live only in the picture). The kept teaching image C110.IMG1 shows only the 630/770 ladder and is never linked, so the example gets its own diagram with both ladders.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S32.T32.C110.IMG2",
+   "manim_scene": "c7_11_S32_C110_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S32.T32.C110.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "division_ladder",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "division_ladder",
+     "canvas": [
+      1920,
+      1080
+     ],
+     "font_px": 56,
+     "ladders": [
+      {
+       "divisor_column_x": 470,
+       "first_row_y": 320,
+       "row_pitch": 100,
+       "rows": [
+        {
+         "row": 1,
+         "y": 320,
+         "divisor": "2",
+         "divisor_x": 470,
+         "rule_x": 532,
+         "rule_y_from": 278,
+         "rule_y_to": 362,
+         "pair": [
+          "300",
+          "150"
+         ],
+         "pair_left_x": 558,
+         "underline_y": 362,
+         "underline_x_to": 783
+        },
+        {
+         "row": 2,
+         "y": 420,
+         "divisor": "5",
+         "divisor_x": 470,
+         "rule_x": 558,
+         "rule_y_from": 378,
+         "rule_y_to": 462,
+         "pair": [
+          "150",
+          "75"
+         ],
+         "pair_left_x": 584,
+         "underline_y": 462,
+         "underline_x_to": 778
+        },
+        {
+         "row": 3,
+         "y": 520,
+         "divisor": "5",
+         "divisor_x": 470,
+         "rule_x": 584,
+         "rule_y_from": 478,
+         "rule_y_to": 562,
+         "pair": [
+          "30",
+          "15"
+         ],
+         "pair_left_x": 610,
+         "underline_y": 562,
+         "underline_x_to": 773
+        },
+        {
+         "row": 4,
+         "y": 620,
+         "divisor": "3",
+         "divisor_x": 470,
+         "rule_x": 610,
+         "rule_y_from": 578,
+         "rule_y_to": 662,
+         "pair": [
+          "6",
+          "3"
+         ],
+         "pair_left_x": 636,
+         "underline_y": 662,
+         "underline_x_to": 737
+        }
+       ],
+       "last_row": {
+        "y": 720,
+        "pair": [
+         "2",
+         "1"
+        ],
+        "pair_left_x": 662,
+        "pair_right_x": 749
+       },
+       "left_edge_x": 422,
+       "right_edge_x": 783,
+       "centre_x": 602
+      },
+      {
+       "divisor_column_x": 1180,
+       "first_row_y": 320,
+       "row_pitch": 100,
+       "rows": [
+        {
+         "row": 1,
+         "y": 320,
+         "divisor": "2",
+         "divisor_x": 1180,
+         "rule_x": 1242,
+         "rule_y_from": 278,
+         "rule_y_to": 362,
+         "pair": [
+          "630",
+          "770"
+         ],
+         "pair_left_x": 1268,
+         "underline_y": 362,
+         "underline_x_to": 1493
+        },
+        {
+         "row": 2,
+         "y": 420,
+         "divisor": "5",
+         "divisor_x": 1180,
+         "rule_x": 1268,
+         "rule_y_from": 378,
+         "rule_y_to": 462,
+         "pair": [
+          "315",
+          "385"
+         ],
+         "pair_left_x": 1294,
+         "underline_y": 462,
+         "underline_x_to": 1519
+        },
+        {
+         "row": 3,
+         "y": 520,
+         "divisor": "7",
+         "divisor_x": 1180,
+         "rule_x": 1294,
+         "rule_y_from": 478,
+         "rule_y_to": 562,
+         "pair": [
+          "63",
+          "77"
+         ],
+         "pair_left_x": 1320,
+         "underline_y": 562,
+         "underline_x_to": 1483
+        }
+       ],
+       "last_row": {
+        "y": 620,
+        "pair": [
+         "9",
+         "11"
+        ],
+        "pair_left_x": 1346,
+        "pair_right_x": 1464
+       },
+       "left_edge_x": 1132,
+       "right_edge_x": 1519,
+       "centre_x": 1325
+      }
+     ],
+     "l_outlines": [
+      {
+       "polygon_clockwise": [
+        [
+         422,
+         272
+        ],
+        [
+         518,
+         272
+        ],
+        [
+         518,
+         677
+        ],
+        [
+         799,
+         677
+        ],
+        [
+         799,
+         768
+        ],
+        [
+         422,
+         768
+        ]
+       ],
+       "corner_radius": 30
+      },
+      {
+       "polygon_clockwise": [
+        [
+         1132,
+         272
+        ],
+        [
+         1228,
+         272
+        ],
+        [
+         1228,
+         577
+        ],
+        [
+         1514,
+         577
+        ],
+        [
+         1514,
+         668
+        ],
+        [
+         1132,
+         668
+        ]
+       ],
+       "corner_radius": 30
+      }
+     ],
+     "marked_numbers": [
+      [
+       "2",
+       "5",
+       "5",
+       "3",
+       "2",
+       "1"
+      ],
+      [
+       "2",
+       "5",
+       "7",
+       "9",
+       "11"
+      ]
+     ],
+     "colours": {
+      "numbers": "INK",
+      "rules": "GUIDE",
+      "outline": "FOCUS"
+     }
+    },
+    "manim_description": "On a plain white 1920 x 1080 canvas draw two division ladders side by side, all numbers in INK sans-serif 56 px, all rules in GUIDE 3 px. LEFT LADDER (for 300 and 150, divisor column at x = 470, first row at y = 320, row pitch 100 px). Left row 1 (y = 320): the divisor 2 is centred at x = 470; a vertical GUIDE rule at x = 532 runs from y = 278 to y = 362; the pair '300, 150' starts at x = 558 (left-aligned, centred on y = 320); a horizontal GUIDE rule at y = 362 runs from x = 532 to x = 783. Left row 2 (y = 420): the divisor 5 is centred at x = 470; a vertical GUIDE rule at x = 558 runs from y = 378 to y = 462; the pair '150, 75' starts at x = 584 (left-aligned, centred on y = 420); a horizontal GUIDE rule at y = 462 runs from x = 558 to x = 778. Left row 3 (y = 520): the divisor 5 is centred at x = 470; a vertical GUIDE rule at x = 584 runs from y = 478 to y = 562; the pair '30, 15' starts at x = 610 (left-aligned, centred on y = 520); a horizontal GUIDE rule at y = 562 runs from x = 584 to x = 773. Left row 4 (y = 620): the divisor 3 is centred at x = 470; a vertical GUIDE rule at x = 610 runs from y = 578 to y = 662; the pair '6, 3' starts at x = 636 (left-aligned, centred on y = 620); a horizontal GUIDE rule at y = 662 runs from x = 610 to x = 737. Left last row (y = 720): the pair '2, 1' starts at x = 662, with no divisor, no vertical rule and no horizontal rule. RIGHT LADDER (for 630 and 770, divisor column at x = 1180, first row at y = 320, row pitch 100 px). Right row 1 (y = 320): the divisor 2 is centred at x = 1180; a vertical GUIDE rule at x = 1242 runs from y = 278 to y = 362; the pair '630, 770' starts at x = 1268 (left-aligned, centred on y = 320); a horizontal GUIDE rule at y = 362 runs from x = 1242 to x = 1493. Right row 2 (y = 420): the divisor 5 is centred at x = 1180; a vertical GUIDE rule at x = 1268 runs from y = 378 to y = 462; the pair '315, 385' starts at x = 1294 (left-aligned, centred on y = 420); a horizontal GUIDE rule at y = 462 runs from x = 1268 to x = 1519. Right row 3 (y = 520): the divisor 7 is centred at x = 1180; a vertical GUIDE rule at x = 1294 runs from y = 478 to y = 562; the pair '63, 77' starts at x = 1320 (left-aligned, centred on y = 520); a horizontal GUIDE rule at y = 562 runs from x = 1294 to x = 1483. Right last row (y = 620): the pair '9, 11' starts at x = 1346, with no divisor, no vertical rule and no horizontal rule. Mark the numbers that make the LCM with one L-shaped FOCUS outline on each ladder. Left ladder outline: one closed FOCUS outline (3 px, no fill) shaped like a capital L with rounded corners (radius 30 px), through the points (422, 272), (518, 272), (518, 677), (799, 677), (799, 768), (422, 768). It encloses the four divisors 2, 5, 5, 3 and, through its foot, the last pair '2, 1'. Right ladder outline: one closed FOCUS outline (3 px, no fill) shaped like a capital L with rounded corners (radius 30 px), through the points (1132, 272), (1228, 272), (1228, 577), (1514, 577), (1514, 668), (1132, 668). It encloses the three divisors 2, 5, 7 and, through its foot, the last pair '9, 11'. Draw nothing else: no HCF line, no LCM line, no caption, no arrows.",
+    "visible_text": [
+     "300, 150",
+     "150, 75",
+     "30, 15",
+     "6, 3",
+     "2, 1",
+     "630, 770",
+     "315, 385",
+     "63, 77",
+     "9, 11",
+     "2",
+     "5",
+     "3",
+     "7"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any 'LCM =' or 'HCF =' line",
+     "the extra division by 3 that the book shows under 9, 11"
+    ],
+    "accuracy_checks": [
+     "300/2 = 150 and 150/2 = 75; 150/5 = 30 and 75/5 = 15; 30/5 = 6 and 15/5 = 3; 6/3 = 2 and 3/3 = 1",
+     "630/2 = 315 and 770/2 = 385; 315/5 = 63 and 385/5 = 77; 63/7 = 9 and 77/7 = 11",
+     "the marked numbers 2, 5, 5, 3, 2, 1 multiply to 300 (the LCM of 300 and 150)",
+     "the marked numbers 2, 5, 7, 9, 11 multiply to 6930 (the LCM of 630 and 770)",
+     "divisors are common to both numbers of each row; 2 and 1 share no prime and 9 and 11 share no prime"
+    ],
+    "alt_text": "Two division ladders, 300 and 150 down to 2 and 1, and 630 and 770 down to 9 and 11, each with an L-shaped outline around its divisors and last pair.",
+    "render_note": "Draws the book's two ladders of p.61 (page 15, the LCM figures). The LP text stops the 630/770 ladder at 9, 11 (LCM = 2 x 5 x 7 x 9 x 11) whereas the book divides once more by 3 to reach 3, 11; the diagram follows the LP. The book prints the outlines and the caption in the question, so the outlines are drawn here; the captions are not."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S33.T33.C113",
+   "role": "question",
+   "lp_book_number": "Common Division: HCF of 84 and 180",
+   "ncert_ref": "Section 3.3 - div_explore",
+   "question_text": "Use the ladder for 84 and 180 to find the HCF.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question says 'use the ladder for 84 and 180'; the ladder (and its rows 42, 90 and 21, 45) is given only in the book picture, not in the words.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S33.T33.C113.IMG1",
+   "manim_scene": "c7_11_S33_C113_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S33.T33.C113.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "division_ladder",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "division_ladder",
+     "canvas": [
+      1920,
+      1080
+     ],
+     "font_px": 56,
+     "ladders": [
+      {
+       "divisor_column_x": 825,
+       "first_row_y": 330,
+       "row_pitch": 100,
+       "rows": [
+        {
+         "row": 1,
+         "y": 330,
+         "divisor": "2",
+         "divisor_x": 825,
+         "rule_x": 887,
+         "rule_y_from": 288,
+         "rule_y_to": 372,
+         "pair": [
+          "84",
+          "180"
+         ],
+         "pair_left_x": 913,
+         "underline_y": 372,
+         "underline_x_to": 1107
+        },
+        {
+         "row": 2,
+         "y": 430,
+         "divisor": "2",
+         "divisor_x": 825,
+         "rule_x": 913,
+         "rule_y_from": 388,
+         "rule_y_to": 472,
+         "pair": [
+          "42",
+          "90"
+         ],
+         "pair_left_x": 939,
+         "underline_y": 472,
+         "underline_x_to": 1102
+        },
+        {
+         "row": 3,
+         "y": 530,
+         "divisor": "3",
+         "divisor_x": 825,
+         "rule_x": 939,
+         "rule_y_from": 488,
+         "rule_y_to": 572,
+         "pair": [
+          "21",
+          "45"
+         ],
+         "pair_left_x": 965,
+         "underline_y": 572,
+         "underline_x_to": 1128
+        }
+       ],
+       "last_row": {
+        "y": 630,
+        "pair": [
+         "7",
+         "15"
+        ],
+        "pair_left_x": 991,
+        "pair_right_x": 1109
+       },
+       "left_edge_x": 777,
+       "right_edge_x": 1128,
+       "centre_x": 952
+      }
+     ],
+     "colours": {
+      "numbers": "INK",
+      "rules": "GUIDE"
+     }
+    },
+    "manim_description": "On a plain white 1920 x 1080 canvas draw one division ladder in the middle, all numbers in INK sans-serif 56 px, all rules in GUIDE 3 px (divisor column at x = 825, first row at y = 330, row pitch 100 px). Ladder row 1 (y = 330): the divisor 2 is centred at x = 825; a vertical GUIDE rule at x = 887 runs from y = 288 to y = 372; the pair '84, 180' starts at x = 913 (left-aligned, centred on y = 330); a horizontal GUIDE rule at y = 372 runs from x = 887 to x = 1107. Ladder row 2 (y = 430): the divisor 2 is centred at x = 825; a vertical GUIDE rule at x = 913 runs from y = 388 to y = 472; the pair '42, 90' starts at x = 939 (left-aligned, centred on y = 430); a horizontal GUIDE rule at y = 472 runs from x = 913 to x = 1102. Ladder row 3 (y = 530): the divisor 3 is centred at x = 825; a vertical GUIDE rule at x = 939 runs from y = 488 to y = 572; the pair '21, 45' starts at x = 965 (left-aligned, centred on y = 530); a horizontal GUIDE rule at y = 572 runs from x = 939 to x = 1128. Ladder last row (y = 630): the pair '7, 15' starts at x = 991, with no divisor, no vertical rule and no horizontal rule. Draw nothing else: no ring, no outline, no HCF line, no arrows, no caption.",
+    "visible_text": [
+     "84, 180",
+     "42, 90",
+     "21, 45",
+     "7, 15",
+     "2",
+     "3"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any ring or outline round the divisors",
+     "any 'HCF =' line"
+    ],
+    "accuracy_checks": [
+     "84/2 = 42 and 180/2 = 90; 42/2 = 21 and 90/2 = 45; 21/3 = 7 and 45/3 = 15",
+     "7 and 15 share no prime factor, so the ladder stops",
+     "divisors from top to bottom are 2, 2, 3"
+    ],
+    "alt_text": "A division ladder: 84 and 180 divided by 2 give 42 and 90, divided by 2 give 21 and 45, divided by 3 give 7 and 15.",
+    "render_note": "Draws the book's ladder of p.60 (page 14, 'See the procedure on the right'), plain as printed. The 84/180 teaching image C109.IMG1 is never linked."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S33.T33.C114",
+   "role": "solution",
+   "lp_book_number": "Common Division: HCF of 84 and 180",
+   "ncert_ref": "Section 3.3 - div_explore",
+   "question_text": "Use the ladder for 84 and 180 to find the HCF.",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The ringed divisors are the answer to 'how do we use the ladder': their product is the HCF. The solution adds the ring and the result to the given ladder.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S33.T33.C114.IMG1",
+   "manim_scene": "c7_11_S33_C114_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S33.T33.C114.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "division_ladder",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S33.T33.C113.IMG1",
+    "content": {
+     "type": "division_ladder",
+     "canvas": [
+      1920,
+      1080
+     ],
+     "font_px": 56,
+     "ladders": [
+      {
+       "divisor_column_x": 825,
+       "first_row_y": 330,
+       "row_pitch": 100,
+       "rows": [
+        {
+         "row": 1,
+         "y": 330,
+         "divisor": "2",
+         "divisor_x": 825,
+         "rule_x": 887,
+         "rule_y_from": 288,
+         "rule_y_to": 372,
+         "pair": [
+          "84",
+          "180"
+         ],
+         "pair_left_x": 913,
+         "underline_y": 372,
+         "underline_x_to": 1107
+        },
+        {
+         "row": 2,
+         "y": 430,
+         "divisor": "2",
+         "divisor_x": 825,
+         "rule_x": 913,
+         "rule_y_from": 388,
+         "rule_y_to": 472,
+         "pair": [
+          "42",
+          "90"
+         ],
+         "pair_left_x": 939,
+         "underline_y": 472,
+         "underline_x_to": 1102
+        },
+        {
+         "row": 3,
+         "y": 530,
+         "divisor": "3",
+         "divisor_x": 825,
+         "rule_x": 939,
+         "rule_y_from": 488,
+         "rule_y_to": 572,
+         "pair": [
+          "21",
+          "45"
+         ],
+         "pair_left_x": 965,
+         "underline_y": 572,
+         "underline_x_to": 1128
+        }
+       ],
+       "last_row": {
+        "y": 630,
+        "pair": [
+         "7",
+         "15"
+        ],
+        "pair_left_x": 991,
+        "pair_right_x": 1109
+       },
+       "left_edge_x": 777,
+       "right_edge_x": 1128,
+       "centre_x": 952
+      }
+     ],
+     "divisor_rings": [
+      {
+       "x0": 777,
+       "x1": 873,
+       "y0": 282,
+       "y1": 578,
+       "corner_radius": 40
+      }
+     ],
+     "result_lines": [
+      {
+       "text": "HCF = 2 × 2 × 3 = 12",
+       "x_centre": 960,
+       "y": 770,
+       "colour": "ANSWER",
+       "font_px": 52
+      }
+     ],
+     "colours": {
+      "numbers": "INK",
+      "rules": "GUIDE",
+      "ring": "FOCUS",
+      "result": "ANSWER"
+     }
+    },
+    "manim_description": "Same ladder as the question diagram, in exactly the same positions and colours. On a plain white 1920 x 1080 canvas draw one division ladder in the middle, all numbers in INK sans-serif 56 px, all rules in GUIDE 3 px (divisor column at x = 825, first row at y = 330, row pitch 100 px). Ladder row 1 (y = 330): the divisor 2 is centred at x = 825; a vertical GUIDE rule at x = 887 runs from y = 288 to y = 372; the pair '84, 180' starts at x = 913 (left-aligned, centred on y = 330); a horizontal GUIDE rule at y = 372 runs from x = 887 to x = 1107. Ladder row 2 (y = 430): the divisor 2 is centred at x = 825; a vertical GUIDE rule at x = 913 runs from y = 388 to y = 472; the pair '42, 90' starts at x = 939 (left-aligned, centred on y = 430); a horizontal GUIDE rule at y = 472 runs from x = 913 to x = 1102. Ladder row 3 (y = 530): the divisor 3 is centred at x = 825; a vertical GUIDE rule at x = 939 runs from y = 488 to y = 572; the pair '21, 45' starts at x = 965 (left-aligned, centred on y = 530); a horizontal GUIDE rule at y = 572 runs from x = 939 to x = 1128. Ladder last row (y = 630): the pair '7, 15' starts at x = 991, with no divisor, no vertical rule and no horizontal rule. Added in the solution: a ring: a rounded rectangle with corners (777, 282) and (873, 578), corner radius 40 px, drawn in FOCUS (3 px, no fill) around the divisors 2, 2, 3. Under the ladder, centred at x = 960 and y = 770, the line 'HCF = 2 × 2 × 3 = 12' in ANSWER green, 52 px. No other additions.",
+    "visible_text": [
+     "84, 180",
+     "42, 90",
+     "21, 45",
+     "7, 15",
+     "2",
+     "3",
+     "HCF = 2 × 2 × 3 = 12"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any change to the ladder numbers or positions"
+    ],
+    "accuracy_checks": [
+     "same ladder as the question diagram; only the ring and the result line are added",
+     "ringed divisors 2, 2, 3 multiply to 12 = HCF of 84 and 180 (84 = 12 x 7, 180 = 12 x 15)"
+    ],
+    "alt_text": "The ladder for 84 and 180 with the divisors 2, 2, 3 ringed and HCF = 2 x 2 x 3 = 12.",
+    "render_note": "Solution version of M3.S33.T33.C113.IMG1: same layout, ring and result line added. The LP hint s_figure also says the three divisors are ringed."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S33.T33.C115",
+   "role": "question",
+   "lp_book_number": "Common Division: HCF of 300, 150 and 630, 770",
+   "ncert_ref": "Section 3.3 - div_hcf",
+   "question_text": "Use the ladders for 300 and 150, and for 630 and 770, to find the HCF in each case.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question says 'use the ladders for 300 and 150, and for 630 and 770'; the ladders are given only in the book picture, not in the words.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S33.T33.C115.IMG1",
+   "manim_scene": "c7_11_S33_C115_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S33.T33.C115.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "division_ladder",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "division_ladder",
+     "canvas": [
+      1920,
+      1080
+     ],
+     "font_px": 56,
+     "ladders": [
+      {
+       "divisor_column_x": 470,
+       "first_row_y": 320,
+       "row_pitch": 100,
+       "rows": [
+        {
+         "row": 1,
+         "y": 320,
+         "divisor": "2",
+         "divisor_x": 470,
+         "rule_x": 532,
+         "rule_y_from": 278,
+         "rule_y_to": 362,
+         "pair": [
+          "300",
+          "150"
+         ],
+         "pair_left_x": 558,
+         "underline_y": 362,
+         "underline_x_to": 783
+        },
+        {
+         "row": 2,
+         "y": 420,
+         "divisor": "5",
+         "divisor_x": 470,
+         "rule_x": 558,
+         "rule_y_from": 378,
+         "rule_y_to": 462,
+         "pair": [
+          "150",
+          "75"
+         ],
+         "pair_left_x": 584,
+         "underline_y": 462,
+         "underline_x_to": 778
+        },
+        {
+         "row": 3,
+         "y": 520,
+         "divisor": "5",
+         "divisor_x": 470,
+         "rule_x": 584,
+         "rule_y_from": 478,
+         "rule_y_to": 562,
+         "pair": [
+          "30",
+          "15"
+         ],
+         "pair_left_x": 610,
+         "underline_y": 562,
+         "underline_x_to": 773
+        },
+        {
+         "row": 4,
+         "y": 620,
+         "divisor": "3",
+         "divisor_x": 470,
+         "rule_x": 610,
+         "rule_y_from": 578,
+         "rule_y_to": 662,
+         "pair": [
+          "6",
+          "3"
+         ],
+         "pair_left_x": 636,
+         "underline_y": 662,
+         "underline_x_to": 737
+        }
+       ],
+       "last_row": {
+        "y": 720,
+        "pair": [
+         "2",
+         "1"
+        ],
+        "pair_left_x": 662,
+        "pair_right_x": 749
+       },
+       "left_edge_x": 422,
+       "right_edge_x": 783,
+       "centre_x": 602
+      },
+      {
+       "divisor_column_x": 1180,
+       "first_row_y": 320,
+       "row_pitch": 100,
+       "rows": [
+        {
+         "row": 1,
+         "y": 320,
+         "divisor": "2",
+         "divisor_x": 1180,
+         "rule_x": 1242,
+         "rule_y_from": 278,
+         "rule_y_to": 362,
+         "pair": [
+          "630",
+          "770"
+         ],
+         "pair_left_x": 1268,
+         "underline_y": 362,
+         "underline_x_to": 1493
+        },
+        {
+         "row": 2,
+         "y": 420,
+         "divisor": "5",
+         "divisor_x": 1180,
+         "rule_x": 1268,
+         "rule_y_from": 378,
+         "rule_y_to": 462,
+         "pair": [
+          "315",
+          "385"
+         ],
+         "pair_left_x": 1294,
+         "underline_y": 462,
+         "underline_x_to": 1519
+        },
+        {
+         "row": 3,
+         "y": 520,
+         "divisor": "7",
+         "divisor_x": 1180,
+         "rule_x": 1294,
+         "rule_y_from": 478,
+         "rule_y_to": 562,
+         "pair": [
+          "63",
+          "77"
+         ],
+         "pair_left_x": 1320,
+         "underline_y": 562,
+         "underline_x_to": 1483
+        }
+       ],
+       "last_row": {
+        "y": 620,
+        "pair": [
+         "9",
+         "11"
+        ],
+        "pair_left_x": 1346,
+        "pair_right_x": 1464
+       },
+       "left_edge_x": 1132,
+       "right_edge_x": 1519,
+       "centre_x": 1325
+      }
+     ],
+     "colours": {
+      "numbers": "INK",
+      "rules": "GUIDE"
+     }
+    },
+    "manim_description": "On a plain white 1920 x 1080 canvas draw two division ladders side by side, all numbers in INK sans-serif 56 px, all rules in GUIDE 3 px. LEFT LADDER (for 300 and 150, divisor column at x = 470, first row at y = 320, row pitch 100 px). Left row 1 (y = 320): the divisor 2 is centred at x = 470; a vertical GUIDE rule at x = 532 runs from y = 278 to y = 362; the pair '300, 150' starts at x = 558 (left-aligned, centred on y = 320); a horizontal GUIDE rule at y = 362 runs from x = 532 to x = 783. Left row 2 (y = 420): the divisor 5 is centred at x = 470; a vertical GUIDE rule at x = 558 runs from y = 378 to y = 462; the pair '150, 75' starts at x = 584 (left-aligned, centred on y = 420); a horizontal GUIDE rule at y = 462 runs from x = 558 to x = 778. Left row 3 (y = 520): the divisor 5 is centred at x = 470; a vertical GUIDE rule at x = 584 runs from y = 478 to y = 562; the pair '30, 15' starts at x = 610 (left-aligned, centred on y = 520); a horizontal GUIDE rule at y = 562 runs from x = 584 to x = 773. Left row 4 (y = 620): the divisor 3 is centred at x = 470; a vertical GUIDE rule at x = 610 runs from y = 578 to y = 662; the pair '6, 3' starts at x = 636 (left-aligned, centred on y = 620); a horizontal GUIDE rule at y = 662 runs from x = 610 to x = 737. Left last row (y = 720): the pair '2, 1' starts at x = 662, with no divisor, no vertical rule and no horizontal rule. RIGHT LADDER (for 630 and 770, divisor column at x = 1180, first row at y = 320, row pitch 100 px). Right row 1 (y = 320): the divisor 2 is centred at x = 1180; a vertical GUIDE rule at x = 1242 runs from y = 278 to y = 362; the pair '630, 770' starts at x = 1268 (left-aligned, centred on y = 320); a horizontal GUIDE rule at y = 362 runs from x = 1242 to x = 1493. Right row 2 (y = 420): the divisor 5 is centred at x = 1180; a vertical GUIDE rule at x = 1268 runs from y = 378 to y = 462; the pair '315, 385' starts at x = 1294 (left-aligned, centred on y = 420); a horizontal GUIDE rule at y = 462 runs from x = 1268 to x = 1519. Right row 3 (y = 520): the divisor 7 is centred at x = 1180; a vertical GUIDE rule at x = 1294 runs from y = 478 to y = 562; the pair '63, 77' starts at x = 1320 (left-aligned, centred on y = 520); a horizontal GUIDE rule at y = 562 runs from x = 1294 to x = 1483. Right last row (y = 620): the pair '9, 11' starts at x = 1346, with no divisor, no vertical rule and no horizontal rule. Draw nothing else: no ring, no outline, no HCF line, no arrows, no caption.",
+    "visible_text": [
+     "300, 150",
+     "150, 75",
+     "30, 15",
+     "6, 3",
+     "2, 1",
+     "630, 770",
+     "315, 385",
+     "63, 77",
+     "9, 11",
+     "2",
+     "5",
+     "3",
+     "7"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any ring or outline round the divisors",
+     "any 'HCF =' line"
+    ],
+    "accuracy_checks": [
+     "300/2 = 150 and 150/2 = 75; 150/5 = 30 and 75/5 = 15; 30/5 = 6 and 15/5 = 3; 6/3 = 2 and 3/3 = 1",
+     "630/2 = 315 and 770/2 = 385; 315/5 = 63 and 385/5 = 77; 63/7 = 9 and 77/7 = 11",
+     "2 and 1 share no prime; 9 and 11 share no prime, so both ladders stop",
+     "divisors top to bottom: 2, 5, 5, 3 on the left and 2, 5, 7 on the right"
+    ],
+    "alt_text": "Two division ladders: 300 and 150 down to 2 and 1, and 630 and 770 down to 9 and 11.",
+    "render_note": "Draws the two ladders of p.61 (page 15, 'Find the HCF in the following cases'). The book prints blue ovals round the divisors and the captions in the question; they are left out here because the LP treats the ringed divisors as the solution (s_figure hint) and the question diagram must not pre-solve; they appear in the solution diagram."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S33.T33.C116",
+   "role": "solution",
+   "lp_book_number": "Common Division: HCF of 300, 150 and 630, 770",
+   "ncert_ref": "Section 3.3 - div_hcf",
+   "question_text": "Use the ladders for 300 and 150, and for 630 and 770, to find the HCF in each case.",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The book answers with the ladders and the divisors ringed (p.61); the solution adds the rings and the two results to the given ladders. Same decision as C114.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S33.T33.C116.IMG1",
+   "manim_scene": "c7_11_S33_C116_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S33.T33.C116.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "division_ladder",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S33.T33.C115.IMG1",
+    "content": {
+     "type": "division_ladder",
+     "canvas": [
+      1920,
+      1080
+     ],
+     "font_px": 56,
+     "ladders": [
+      {
+       "divisor_column_x": 470,
+       "first_row_y": 320,
+       "row_pitch": 100,
+       "rows": [
+        {
+         "row": 1,
+         "y": 320,
+         "divisor": "2",
+         "divisor_x": 470,
+         "rule_x": 532,
+         "rule_y_from": 278,
+         "rule_y_to": 362,
+         "pair": [
+          "300",
+          "150"
+         ],
+         "pair_left_x": 558,
+         "underline_y": 362,
+         "underline_x_to": 783
+        },
+        {
+         "row": 2,
+         "y": 420,
+         "divisor": "5",
+         "divisor_x": 470,
+         "rule_x": 558,
+         "rule_y_from": 378,
+         "rule_y_to": 462,
+         "pair": [
+          "150",
+          "75"
+         ],
+         "pair_left_x": 584,
+         "underline_y": 462,
+         "underline_x_to": 778
+        },
+        {
+         "row": 3,
+         "y": 520,
+         "divisor": "5",
+         "divisor_x": 470,
+         "rule_x": 584,
+         "rule_y_from": 478,
+         "rule_y_to": 562,
+         "pair": [
+          "30",
+          "15"
+         ],
+         "pair_left_x": 610,
+         "underline_y": 562,
+         "underline_x_to": 773
+        },
+        {
+         "row": 4,
+         "y": 620,
+         "divisor": "3",
+         "divisor_x": 470,
+         "rule_x": 610,
+         "rule_y_from": 578,
+         "rule_y_to": 662,
+         "pair": [
+          "6",
+          "3"
+         ],
+         "pair_left_x": 636,
+         "underline_y": 662,
+         "underline_x_to": 737
+        }
+       ],
+       "last_row": {
+        "y": 720,
+        "pair": [
+         "2",
+         "1"
+        ],
+        "pair_left_x": 662,
+        "pair_right_x": 749
+       },
+       "left_edge_x": 422,
+       "right_edge_x": 783,
+       "centre_x": 602
+      },
+      {
+       "divisor_column_x": 1180,
+       "first_row_y": 320,
+       "row_pitch": 100,
+       "rows": [
+        {
+         "row": 1,
+         "y": 320,
+         "divisor": "2",
+         "divisor_x": 1180,
+         "rule_x": 1242,
+         "rule_y_from": 278,
+         "rule_y_to": 362,
+         "pair": [
+          "630",
+          "770"
+         ],
+         "pair_left_x": 1268,
+         "underline_y": 362,
+         "underline_x_to": 1493
+        },
+        {
+         "row": 2,
+         "y": 420,
+         "divisor": "5",
+         "divisor_x": 1180,
+         "rule_x": 1268,
+         "rule_y_from": 378,
+         "rule_y_to": 462,
+         "pair": [
+          "315",
+          "385"
+         ],
+         "pair_left_x": 1294,
+         "underline_y": 462,
+         "underline_x_to": 1519
+        },
+        {
+         "row": 3,
+         "y": 520,
+         "divisor": "7",
+         "divisor_x": 1180,
+         "rule_x": 1294,
+         "rule_y_from": 478,
+         "rule_y_to": 562,
+         "pair": [
+          "63",
+          "77"
+         ],
+         "pair_left_x": 1320,
+         "underline_y": 562,
+         "underline_x_to": 1483
+        }
+       ],
+       "last_row": {
+        "y": 620,
+        "pair": [
+         "9",
+         "11"
+        ],
+        "pair_left_x": 1346,
+        "pair_right_x": 1464
+       },
+       "left_edge_x": 1132,
+       "right_edge_x": 1519,
+       "centre_x": 1325
+      }
+     ],
+     "divisor_rings": [
+      {
+       "x0": 422,
+       "x1": 518,
+       "y0": 272,
+       "y1": 668,
+       "corner_radius": 40
+      },
+      {
+       "x0": 1132,
+       "x1": 1228,
+       "y0": 272,
+       "y1": 568,
+       "corner_radius": 40
+      }
+     ],
+     "result_lines": [
+      {
+       "text": "HCF = 2 × 5 × 5 × 3 = 150",
+       "x_centre": 602,
+       "y": 830,
+       "colour": "ANSWER",
+       "font_px": 48
+      },
+      {
+       "text": "HCF = 2 × 5 × 7 = 70",
+       "x_centre": 1325,
+       "y": 830,
+       "colour": "ANSWER",
+       "font_px": 48
+      }
+     ],
+     "colours": {
+      "numbers": "INK",
+      "rules": "GUIDE",
+      "ring": "FOCUS",
+      "result": "ANSWER"
+     }
+    },
+    "manim_description": "Same two ladders as the question diagram, in exactly the same positions and colours. Added in the solution: a ring: a rounded rectangle with corners (422, 272) and (518, 668), corner radius 40 px around the divisors 2, 5, 5, 3 of the left ladder; a ring: a rounded rectangle with corners (1132, 272) and (1228, 568), corner radius 40 px around the divisors 2, 5, 7 of the right ladder (both FOCUS, 3 px, no fill). Under the left ladder, centred at x = 602 and y = 830, the line 'HCF = 2 × 5 × 5 × 3 = 150' in ANSWER green, 48 px. Under the right ladder, centred at x = 1325 and y = 830, the line 'HCF = 2 × 5 × 7 = 70' in ANSWER green, 48 px. No other additions.",
+    "visible_text": [
+     "300, 150",
+     "150, 75",
+     "30, 15",
+     "6, 3",
+     "2, 1",
+     "630, 770",
+     "315, 385",
+     "63, 77",
+     "9, 11",
+     "2",
+     "5",
+     "3",
+     "7",
+     "HCF = 2 × 5 × 5 × 3 = 150",
+     "HCF = 2 × 5 × 7 = 70"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any change to the ladder numbers or positions",
+     "any LCM line"
+    ],
+    "accuracy_checks": [
+     "same ladders as the question diagram; only the rings and the two result lines are added",
+     "2 x 5 x 5 x 3 = 150 and 150 divides 300 and 150",
+     "2 x 5 x 7 = 70 and 70 divides 630 (70 x 9) and 770 (70 x 11)"
+    ],
+    "alt_text": "The two ladders with the divisors 2, 5, 5, 3 and 2, 5, 7 ringed, giving HCF 150 and HCF 70.",
+    "render_note": "Solution version of M3.S33.T33.C115.IMG1: same layout, rings and result lines added (the book's ovals, with numeric results from the LP steps)."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S33.T33.C117",
+   "role": "question",
+   "lp_book_number": "Common Division: bigger divisors for two pairs",
+   "ncert_ref": "Section 3.3 - try_pairs",
+   "question_text": "Use bigger common divisors to find the HCF and LCM of 90 and 150, and of 84 and 132.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question names the two pairs in words and gives no figure (the book says only 'you can try this method for these pairs'), so no question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S33.T33.C118",
+   "role": "solution",
+   "lp_book_number": "Common Division: bigger divisors for two pairs",
+   "ncert_ref": "Section 3.3 - try_pairs",
+   "question_text": "Use bigger common divisors to find the HCF and LCM of 90 and 150, and of 84 and 132.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The method asked for IS the division ladder, so the answer is two ladders (divisors, last pair, what is multiplied for the HCF and for the LCM); the LP steps only describe them in words (B2). Same kind of answer as C114/C116, so the same decision; one picture holds both pairs because the LP did not split the question into parts.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S33.T33.C118.IMG1",
+   "manim_scene": "c7_11_S33_C118_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S33.T33.C118.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "division_ladder",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "division_ladder",
+     "canvas": [
+      1920,
+      1080
+     ],
+     "font_px": 56,
+     "ladders": [
+      {
+       "divisor_column_x": 470,
+       "first_row_y": 340,
+       "row_pitch": 100,
+       "rows": [
+        {
+         "row": 1,
+         "y": 340,
+         "divisor": "10",
+         "divisor_x": 470,
+         "rule_x": 532,
+         "rule_y_from": 298,
+         "rule_y_to": 382,
+         "pair": [
+          "90",
+          "150"
+         ],
+         "pair_left_x": 558,
+         "underline_y": 382,
+         "underline_x_to": 752
+        },
+        {
+         "row": 2,
+         "y": 440,
+         "divisor": "3",
+         "divisor_x": 470,
+         "rule_x": 558,
+         "rule_y_from": 398,
+         "rule_y_to": 482,
+         "pair": [
+          "9",
+          "15"
+         ],
+         "pair_left_x": 584,
+         "underline_y": 482,
+         "underline_x_to": 716
+        }
+       ],
+       "last_row": {
+        "y": 540,
+        "pair": [
+         "3",
+         "5"
+        ],
+        "pair_left_x": 610,
+        "pair_right_x": 697
+       },
+       "left_edge_x": 422,
+       "right_edge_x": 752,
+       "centre_x": 587
+      },
+      {
+       "divisor_column_x": 1230,
+       "first_row_y": 340,
+       "row_pitch": 100,
+       "rows": [
+        {
+         "row": 1,
+         "y": 340,
+         "divisor": "12",
+         "divisor_x": 1230,
+         "rule_x": 1292,
+         "rule_y_from": 298,
+         "rule_y_to": 382,
+         "pair": [
+          "84",
+          "132"
+         ],
+         "pair_left_x": 1318,
+         "underline_y": 382,
+         "underline_x_to": 1512
+        }
+       ],
+       "last_row": {
+        "y": 440,
+        "pair": [
+         "7",
+         "11"
+        ],
+        "pair_left_x": 1344,
+        "pair_right_x": 1462
+       },
+       "left_edge_x": 1182,
+       "right_edge_x": 1512,
+       "centre_x": 1347
+      }
+     ],
+     "divisor_rings": [
+      {
+       "x0": 422,
+       "x1": 518,
+       "y0": 292,
+       "y1": 488,
+       "corner_radius": 40
+      },
+      {
+       "x0": 1182,
+       "x1": 1278,
+       "y0": 292,
+       "y1": 388,
+       "corner_radius": 40
+      }
+     ],
+     "last_pair_rings": [
+      {
+       "x0": 590,
+       "x1": 717,
+       "y0": 496,
+       "y1": 584,
+       "corner_radius": 30,
+       "dashed": true
+      },
+      {
+       "x0": 1324,
+       "x1": 1482,
+       "y0": 396,
+       "y1": 484,
+       "corner_radius": 30,
+       "dashed": true
+      }
+     ],
+     "result_lines": [
+      {
+       "text": "HCF = 10 × 3 = 30",
+       "x_centre": 587,
+       "y": 670,
+       "colour": "ANSWER",
+       "font_px": 48
+      },
+      {
+       "text": "LCM = 10 × 3 × 3 × 5 = 450",
+       "x_centre": 587,
+       "y": 745,
+       "colour": "ANSWER",
+       "font_px": 48
+      },
+      {
+       "text": "HCF = 12",
+       "x_centre": 1347,
+       "y": 670,
+       "colour": "ANSWER",
+       "font_px": 48
+      },
+      {
+       "text": "LCM = 12 × 7 × 11 = 924",
+       "x_centre": 1347,
+       "y": 745,
+       "colour": "ANSWER",
+       "font_px": 48
+      }
+     ],
+     "colours": {
+      "numbers": "INK",
+      "rules": "GUIDE",
+      "rings": "FOCUS",
+      "results": "ANSWER"
+     }
+    },
+    "manim_description": "On a plain white 1920 x 1080 canvas draw two division ladders side by side, all numbers in INK sans-serif 56 px, all rules in GUIDE 3 px. LEFT LADDER (for 90 and 150, divisor column at x = 470, first row at y = 340, row pitch 100 px). Left row 1 (y = 340): the divisor 10 is centred at x = 470; a vertical GUIDE rule at x = 532 runs from y = 298 to y = 382; the pair '90, 150' starts at x = 558 (left-aligned, centred on y = 340); a horizontal GUIDE rule at y = 382 runs from x = 532 to x = 752. Left row 2 (y = 440): the divisor 3 is centred at x = 470; a vertical GUIDE rule at x = 558 runs from y = 398 to y = 482; the pair '9, 15' starts at x = 584 (left-aligned, centred on y = 440); a horizontal GUIDE rule at y = 482 runs from x = 558 to x = 716. Left last row (y = 540): the pair '3, 5' starts at x = 610, with no divisor, no vertical rule and no horizontal rule. RIGHT LADDER (for 84 and 132, divisor column at x = 1230, first row at y = 340, row pitch 100 px). Right row 1 (y = 340): the divisor 12 is centred at x = 1230; a vertical GUIDE rule at x = 1292 runs from y = 298 to y = 382; the pair '84, 132' starts at x = 1318 (left-aligned, centred on y = 340); a horizontal GUIDE rule at y = 382 runs from x = 1292 to x = 1512. Right last row (y = 440): the pair '7, 11' starts at x = 1344, with no divisor, no vertical rule and no horizontal rule. Marks, all FOCUS 3 px with no fill: a solid ring round the divisors, and a dashed ring round the last pair. Left ladder: a solid ring: a rounded rectangle with corners (422, 292) and (518, 488), corner radius 40 px around the divisors 10, 3; a dashed ring: a rounded rectangle with corners (590, 496) and (717, 584), corner radius 30 px around the pair '3, 5'. Right ladder: a solid ring: a rounded rectangle with corners (1182, 292) and (1278, 388), corner radius 40 px around the divisor 12; a dashed ring: a rounded rectangle with corners (1324, 396) and (1482, 484), corner radius 30 px around the pair '7, 11'. Result lines in ANSWER green, 48 px, centred under each ladder: under the left ladder at x = 587, 'HCF = 10 × 3 = 30' at y = 670 and 'LCM = 10 × 3 × 3 × 5 = 450' at y = 745; under the right ladder at x = 1347, 'HCF = 12' at y = 670 and 'LCM = 12 × 7 × 11 = 924' at y = 745. No arrows, no other captions.",
+    "visible_text": [
+     "90, 150",
+     "9, 15",
+     "3, 5",
+     "84, 132",
+     "7, 11",
+     "10",
+     "3",
+     "12",
+     "HCF = 10 × 3 = 30",
+     "LCM = 10 × 3 × 3 × 5 = 450",
+     "HCF = 12",
+     "LCM = 12 × 7 × 11 = 924"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any arrow",
+     "the words 'bigger' or 'divisors'"
+    ],
+    "accuracy_checks": [
+     "90/10 = 9 and 150/10 = 15; 9/3 = 3 and 15/3 = 5; 3 and 5 are co-prime",
+     "84/12 = 7 and 132/12 = 11; 7 and 11 are co-prime",
+     "HCF of 90 and 150 = 10 x 3 = 30; LCM = 10 x 3 x 3 x 5 = 450 and 30 x 450 = 13500 = 90 x 150",
+     "HCF of 84 and 132 = 12; LCM = 12 x 7 x 11 = 924 and 12 x 924 = 11088 = 84 x 132"
+    ],
+    "alt_text": "Two division ladders: 90 and 150 divided by 10 and 3 down to 3 and 5; 84 and 132 divided by 12 down to 7 and 11; with the HCF and LCM of each.",
+    "render_note": "No book figure exists for 90/150 or 84/132 (the book says 'try this method'); the ladders are computed from the LP steps and drawn in the style of the book's ladders of p.61-62 (Guna's and Anshu's bigger divisors)."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S35.T35.C123",
+   "role": "question",
+   "lp_book_number": "HCF and LCM Property: LCM against the product",
+   "ncert_ref": "Section 3.3 - lcm_vs_product",
+   "question_text": "Compare the LCM with the product for 6 and 8, and for 7 and 9. Explain why the LCM is never greater.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives the numbers 6, 8, 7 and 9 only; the book (p.62) prints no figure for it. No figure is given, so no question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S35.T35.C124",
+   "role": "solution",
+   "lp_book_number": "HCF and LCM Property: LCM against the product",
+   "ncert_ref": "Section 3.3 - lcm_vs_product",
+   "question_text": "Compare the LCM with the product for 6 and 8, and for 7 and 9. Explain why the LCM is never greater.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two products and LCMs compared and a two-line argument; all arithmetic and words. The number-line teaching image C119.IMG1 is never linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S35.T35.C125",
+   "role": "question",
+   "lp_book_number": "HCF and LCM Property: 105 and 95",
+   "ncert_ref": "Section 3.3 - hcf_lcm_105_95",
+   "question_text": "For 105 and 95, find the HCF, the LCM and the product, and check that the product equals HCF × LCM.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives 105 and 95; the factorisations on p.62 are printed text lines, not a figure. No figure is given, so no question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S35.T35.C126",
+   "role": "solution",
+   "lp_book_number": "HCF and LCM Property: 105 and 95",
+   "ncert_ref": "Section 3.3 - hcf_lcm_105_95",
+   "question_text": "For 105 and 95, find the HCF, the LCM and the product, and check that the product equals HCF × LCM.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Factorisations, HCF, LCM, product and the check are arithmetic lines for LaTeX; the prime-tile teaching image C120.IMG1 is never linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S35.T35.C127",
+   "role": "question",
+   "lp_book_number": "HCF and LCM Property: three more pairs",
+   "ncert_ref": "Section 3.3 - hcf_lcm_try",
+   "question_text": "Find the number the LCM must be multiplied by to get the product, for (a) 45 and 105, (b) 275 and 352, (c) 222 and 370.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives three pairs of numbers; the book prints no figure for it. No figure is given, so no question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S35.T35.C128",
+   "role": "solution",
+   "lp_book_number": "HCF and LCM Property: three more pairs",
+   "ncert_ref": "Section 3.3 - hcf_lcm_try",
+   "question_text": "Find the number the LCM must be multiplied by to get the product, for (a) 45 and 105, (b) 275 and 352, (c) 222 and 370.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three arithmetic checks and a conclusion; a plain table of HCF, LCM and product would do, no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array with columns: pair, HCF, LCM, product (45 and 105: 15, 315, 4725; 275 and 352: 11, 8800, 96800; 222 and 370: 74, 1110, 82140)."
+  },
+  {
+   "lp_concept_id": "M3.S35.T35.C129",
+   "role": "question",
+   "lp_book_number": "HCF and LCM Property: why the product rule holds",
+   "ncert_ref": "Section 3.3 - hcf_lcm_why",
+   "question_text": "Explain with 12 = 2 × 2 × 3 and 18 = 2 × 3 × 3 why HCF × LCM equals the product.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives 12 = 2 x 2 x 3 and 18 = 2 x 3 x 3 in words; the book prints no figure for it. No figure is given, so no question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S35.T35.C130",
+   "role": "solution",
+   "lp_book_number": "HCF and LCM Property: why the product rule holds",
+   "ncert_ref": "Section 3.3 - hcf_lcm_why",
+   "question_text": "Explain with 12 = 2 × 2 × 3 and 18 = 2 × 3 × 3 why HCF × LCM equals the product.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a prime-by-prime counting argument (counts 2 and 1, then 1 and 2) plus 6 x 36 = 216 = 12 x 18; the LP steps carry it fully in text. The teaching image C121.IMG1 already shows the sharing-out for the same pair and is never linked; a figure here would only repeat it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S35.T35.C131",
+   "role": "question",
+   "lp_book_number": "HCF and LCM Property: three numbers",
+   "ncert_ref": "Section 3.3 - three_numbers",
+   "question_text": "Does HCF × LCM equal the product for three numbers? Test 4, 6 and 10.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives 4, 6 and 10; the book prints no figure for it. No figure is given, so no question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S35.T35.C132",
+   "role": "solution",
+   "lp_book_number": "HCF and LCM Property: three numbers",
+   "ncert_ref": "Section 3.3 - three_numbers",
+   "question_text": "Does HCF × LCM equal the product for three numbers? Test 4, 6 and 10.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Factorisations, HCF, LCM, two products and a comparison; all arithmetic for LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S36.T36.C133",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": null,
+   "question_text": "Two bells ring every 12 and 18 minutes. They ring together now. After how many minutes will they ring together again?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two bells, 12 and 18 minutes: the data are two numbers in the words and the LCM argument is three text lines. Not in the book. The kept teaching image C133.IMG1 (number line, meeting at 36) is never linked and is not needed for the example.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S36.T36.C134",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": null,
+   "question_text": "Two ribbons, 24 m and 36 m long, are cut into equal pieces of the greatest whole length with nothing left. Find the length of a piece and the number of pieces.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two ribbons, 24 m and 36 m: all data in the words, steps are factorisation and division lines. Not in the book. The kept teaching image C133.IMG1 (ribbons cut into 12 m) already shows it and is never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S36.T36.C135",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": null,
+   "question_text": "Find the HCF and LCM of 2 × 2 × 3 × 5 and 2 × 3 × 3 × 7, giving the answers as prime factorisations and as numbers.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The two factorisations are given in the question text and the steps are counts of primes and two products; all LaTeX. The kept teaching image C135.IMG1 (Venn diagram of the primes) is never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  }
+ ]
+}

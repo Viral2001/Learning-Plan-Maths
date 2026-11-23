@@ -1,0 +1,999 @@
+{
+ "meta": {
+  "chapter": "Finding Common Ground",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 11",
+  "lp_plan_id": "cbse_eng_maths7_ch11_v30",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "chunk": "A",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 0,
+    "optional": 0,
+    "none": 14
+   },
+   "solution": {
+    "required": 3,
+    "optional": 1,
+    "none": 10
+   },
+   "worked_example": {
+    "required": 1,
+    "optional": 0,
+    "none": 3
+   }
+  },
+  "notes": [
+   "Chunk A = section 3.1 units M1.S3.T3 to M1.S16.T16 (18 units, 32 items).",
+   "No question of this chunk gets a figure: the book gives no figure for any of them (only teaching figures and worked pictures).",
+   "Required: worked-example ladders for 105 and 30 (C26), ladder for 1200 (C29 solution), ringed-subpart figures of Examples 1 and 2 (C45, C47 solutions).",
+   "C29's ladder is not printed in the book (the book says only 'Try finding ... 1200'); it is computed from the LP steps.",
+   "Optional only: tiled-room picture for C9 (not added)."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P01-shape-1",
+   "source": "chapter p.01",
+   "description": "Hand-drawn rectangle (the room) with a '16 ft' double arrow above and a '12 ft' double arrow at the right; right-angle marks in three corners (top-left, top-right, bottom-left).",
+   "mapped_to": "concept_image:M1.S1.T1.C1.IMG1",
+   "note": "Teaching sketch of the tile room. Already a teaching image of the plan (Sameeksha's empty floor); the questions of unit 1 and 2 give the sides in words, so no item needs it."
+  },
+  {
+   "fig_id": "P03-factor_tree-1",
+   "source": "chapter p.03",
+   "description": "Circle tree for 105: circles 105 and 35, uncircled 7 at the bottom, left labels 3 and 5 joined by short lines.",
+   "mapped_to": "none:TEXT_SUFFICIENT",
+   "note": "Teaching figure of the circle-tree procedure. The LP teaches 105 and 30 through the division ladder (worked example C26, concept image C26.IMG1), no LP item works on the tree."
+  },
+  {
+   "fig_id": "P03-factor_tree-2",
+   "source": "chapter p.03",
+   "description": "Circle tree for 30: circles 30 and 15, uncircled 5 at the bottom, left labels 2 and 3 joined by short lines.",
+   "mapped_to": "none:TEXT_SUFFICIENT",
+   "note": "Same as P03-factor_tree-1, for 30; there is no image of this tree in the LP."
+  },
+  {
+   "fig_id": "P04-factor_tree-1",
+   "source": "chapter p.04",
+   "description": "The 105 circle tree again with one blue loop around the left labels 3, 5 and the bottom 7, caption '105 = 3 × 5 × 7'.",
+   "mapped_to": "none:TEXT_SUFFICIENT",
+   "note": "Same teaching figure with the collected primes looped; the LP states 105 = 3 × 5 × 7 in text."
+  },
+  {
+   "fig_id": "P04-division_method-1",
+   "source": "chapter p.04",
+   "description": "Division ladder for 105: 3 | 105, 5 | 35, last number 7.",
+   "mapped_to": "item:M1.S9.T9.C26 (question)",
+   "note": "Drawn as the left half of the worked-example diagram of C26."
+  },
+  {
+   "fig_id": "P04-division_method-2",
+   "source": "chapter p.04",
+   "description": "Division ladder for 30: 2 | 30, 3 | 15, last number 5.",
+   "mapped_to": "item:M1.S9.T9.C26 (question)",
+   "note": "Drawn as the right half of the worked-example diagram of C26."
+  },
+  {
+   "fig_id": "P05-division_method-1",
+   "source": "chapter p.05",
+   "description": "Division ladder for 225: 5 | 225, 5 | 45, 3 | 9, 3 | 3, last number 1.",
+   "mapped_to": "none:TEXT_SUFFICIENT",
+   "note": "Worked step of 'Find the factors of 225'; it only yields 225 = 5 × 5 × 3 × 3, which the LP steps state in text (borderline: could be optional on the solution side of C37)."
+  },
+  {
+   "fig_id": "P06-factorisation_match-1",
+   "source": "chapter p.06",
+   "description": "Three blocks of the rows 3 × 3 × 5 and 3 × 5 × 5 with the matching subparts circled (labels 3, 5, 3 × 5), 8 circles in all.",
+   "mapped_to": "item:M1.S15.T15.C45 (solution)",
+   "note": "Printed answer picture of Example 1; verified against the page picture, base description correct."
+  },
+  {
+   "fig_id": "P07-factorisation_match-1",
+   "source": "chapter p.07",
+   "description": "Five blocks of the rows 2 × 2 × 2 × 2 × 7 and 2 × 2 × 3 × 7 with the matching subparts circled (labels 2, 7, 2 × 2, 2 × 7, 2 × 2 × 7), 18 circles in all.",
+   "mapped_to": "item:M1.S15.T15.C47 (solution)",
+   "note": "Printed answer picture of Example 2; verified against the page picture, base description correct."
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 9,
+  "mapped_to_items": 4,
+  "mapped_to_concept_images": 1,
+  "mapped_none": 4,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S9.T9.C26.IMG2",
+   "M1.S10.T10.C29.IMG1",
+   "M1.S15.T15.C45.IMG1",
+   "M1.S15.T15.C47.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S3.T3.C6",
+   "role": "question",
+   "lp_book_number": "Tile Problem: the largest square tile",
+   "ncert_ref": "Section 3.1 - tile_largest",
+   "question_text": "Sameeksha's room is 12 ft by 16 ft. List the factors of 12 and of 16, find the common factors, and say which square tile side she should choose and why.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Both room sides (12 ft, 16 ft) are in the words and the task is listing factors; the book's room sketch (P01) is only a teaching figure and already exists as concept image M1.S1.T1.C1.IMG1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep 'room 12 ft by 16 ft' in the question text."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "solution",
+   "lp_book_number": "Tile Problem: the largest square tile",
+   "ncert_ref": "Section 3.1 - tile_largest",
+   "question_text": "Sameeksha's room is 12 ft by 16 ft. List the factors of 12 and of 16, find the common factors, and say which square tile side she should choose and why.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The solution is two factor lists, their common factors and the largest one: plain lists in LaTeX carry it (Venn picture is teaching image M1.S2.T2.C3.IMG1).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lists of the factors of 12 and of 16, then the common factors 1, 2, 4."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "question",
+   "lp_book_number": "Tile Problem: how many 4 ft tiles",
+   "ncert_ref": "Section 3.1 - tile_count",
+   "question_text": "Name the largest common factor of 12 and 16, and find how many 4 ft tiles cover the 12 ft by 16 ft room.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Room size and tile side are in the words; the book prints no figure for this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C9",
+   "role": "solution",
+   "lp_book_number": "Tile Problem: how many 4 ft tiles",
+   "ncert_ref": "Section 3.1 - tile_count",
+   "question_text": "Name the largest common factor of 12 and 16, and find how many 4 ft tiles cover the 12 ft by 16 ft room.",
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A 16 ft by 12 ft room tiled with 4 ft squares in 3 rows of 4 would help (the book itself suggests drawing such a rough diagram), but 12 ÷ 4 = 3, 16 ÷ 4 = 4, 3 × 4 = 12 is complete in text and teaching image M1.S2.T2.C4.IMG1 already shows the tiled room, so it is not added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the three division lines in LaTeX: 12 ÷ 4 = 3, 16 ÷ 4 = 4, 3 × 4 = 12."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C10",
+   "role": "question",
+   "lp_book_number": "Try This (Tiles): fractional tile sides",
+   "ncert_ref": "Section 3.1 - tile_fraction",
+   "question_text": "What if the tile side could be a fractional number of feet? Could a tile larger than 4 ft fit the 12 ft by 16 ft room?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A reasoning question about tile size; room size is in the words and the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C11",
+   "role": "solution",
+   "lp_book_number": "Try This (Tiles): fractional tile sides",
+   "ncert_ref": "Section 3.1 - tile_fraction",
+   "question_text": "What if the tile side could be a fractional number of feet? Could a tile larger than 4 ft fit the 12 ft by 16 ft room?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The argument (tile counts in the ratio 3 to 4, so the side is 4 ÷ k) is verbal and the numbers are 12, 16, 3, 4; a picture adds nothing.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C14",
+   "role": "question",
+   "lp_book_number": "Rice Bags: the greatest equal bag weight",
+   "ncert_ref": "Section 3.1 - rice",
+   "question_text": "Lekhana has 84 kg and 108 kg of rice from two farms. Find the greatest equal bag weight in whole kg, with each bag from one farm, and how many bags she needs.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word problem whose data (84 kg, 108 kg) are in the words; the book prints no figure for it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C15",
+   "role": "solution",
+   "lp_book_number": "Rice Bags: the greatest equal bag weight",
+   "ncert_ref": "Section 3.1 - rice",
+   "question_text": "Lekhana has 84 kg and 108 kg of rice from two farms. Find the greatest equal bag weight in whole kg, with each bag from one farm, and how many bags she needs.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two factor lists, the common factors, 84 ÷ 12 = 7, 108 ÷ 12 = 9 and 7 + 9 = 16 are all text and LaTeX (bags picture is teaching image M1.S4.T4.C12.IMG1).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lists and the three lines 84 ÷ 12 = 7, 108 ÷ 12 = 9, 7 + 9 = 16."
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C19",
+   "role": "question",
+   "lp_book_number": "Jump Jackpot: the longest jump on two numbers",
+   "ncert_ref": "Section 3.1 - jump_a",
+   "question_text": "Treasures are on 14 and 30. Find the longest jump from 0 that lands on both. Then do the same for 7 and 11.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The treasure numbers are in the words (14 and 30, 7 and 11, 30 and 50, 28 and 42); the book draws no figure for the game.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C20",
+   "role": "solution",
+   "lp_book_number": "Jump Jackpot: the longest jump on two numbers",
+   "ncert_ref": "Section 3.1 - jump_a",
+   "question_text": "Treasures are on 14 and 30. Find the longest jump from 0 that lands on both. Then do the same for 7 and 11.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Each answer is two factor lists and one number (2, 1, 10, 14); a number line of jumps would be nice but is not needed (teaching images M1.S6.T6.C16 to C18 already show jumps). Both blocks of the card share this decision.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lists of jump sizes for each pair, then the longest common one."
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C21",
+   "role": "question",
+   "lp_book_number": "Jump Jackpot: longest jump and the HCF",
+   "ncert_ref": "Section 3.1 - jump_hcf",
+   "question_text": "Is the longest jump size for two treasure numbers always their HCF? Explain with 30 and 50.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A why-question with 30 and 50 in the words; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C22",
+   "role": "solution",
+   "lp_book_number": "Jump Jackpot: longest jump and the HCF",
+   "ncert_ref": "Section 3.1 - jump_hcf",
+   "question_text": "Is the longest jump size for two treasure numbers always their HCF? Explain with 30 and 50.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A verbal argument (a jump that lands on 30 and 50 is a common factor, the longest is the HCF 10); text is enough (teaching image M1.S6.T6.C17.IMG1 shows the 10 jumps).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C23",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 3.1 - primes",
+   "question_text": "Which of 1, 2, 9, 13, 21 and 29 are prime? Give the factors that decide it.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six numbers with their factor lists, all in the steps; the book draws no figure for this example (the prime/composite dots are teaching image M1.S8.T8.C23.IMG1).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C25",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 3.1 - pf_90",
+   "question_text": "Find the prime factorisation of 90 by starting with 3 × 30, and again by starting with 2 × 45. Compare the primes.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The two routes are chains of equations, exactly as the book writes them (90 = 3 × 30 = 3 × 2 × 15 = ...); the book draws no figure and the two factor trees are teaching image M1.S9.T9.C25.IMG1.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX chains: 90 = 3 × 30 = 3 × 2 × 15 = 3 × 2 × 3 × 5 and 90 = 2 × 45 = 2 × 3 × 15 = 2 × 3 × 3 × 5."
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C26",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 3.1 - pf_trees",
+   "question_text": "Use the division method to find the prime factorisation of 105 and of 30.",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The method asked for IS the ladder layout (divisor on the left, number below it) and the book draws the two ladders for 105 and 30; the steps only describe the layout in words ('write 3 on the left and 35 below').",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S9.T9.C26.IMG2",
+   "manim_scene": "c7_11_3p1_c26_ladders_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S9.T9.C26.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "division_ladder",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "division_ladder",
+     "ladders": [
+      {
+       "start": 105,
+       "rows": [
+        {
+         "divisor": 3,
+         "number": 105
+        },
+        {
+         "divisor": 5,
+         "number": 35
+        }
+       ],
+       "last_number": 7,
+       "position": "left half"
+      },
+      {
+       "start": 30,
+       "rows": [
+        {
+         "divisor": 2,
+         "number": 30
+        },
+        {
+         "divisor": 3,
+         "number": 15
+        }
+       ],
+       "last_number": 5,
+       "position": "right half"
+      }
+     ],
+     "layout": "numbers right-aligned on one common right edge per ladder; each bar sits just left of its own number; last number centred under the number above it",
+     "colours": {
+      "numbers_in_rows": "INK",
+      "divisors_and_last_number": "ANSWER",
+      "bars_and_lines": "INK"
+     }
+    },
+    "manim_description": "On a plain BG canvas draw two division ladders of equal size side by side: the ladder for 105 centred in the left half and the ladder for 30 centred in the right half, both vertically centred. Draw every row of a ladder as: the divisor in a left column, a thin INK vertical bar immediately right of the divisor, the number immediately right of the bar, and a thin INK horizontal line directly under the number running from the bar to the right edge of the number. Inside one ladder the numbers are right-aligned on one common right edge, so each bar sits just left of its own number and the bars step to the right as the numbers get shorter. Left ladder, top to bottom: row 1: divisor 3, number 105; row 2: divisor 5, number 35; below row 2 the last number 7, centred under 35, with no bar and no line. Right ladder, top to bottom: row 1: divisor 2, number 30; row 2: divisor 3, number 15; below row 2 the last number 5, centred under 15, with no bar and no line. Colours: the numbers 105, 35, 30 and 15 are INK; the divisors 3, 5, 2, 3 and the last numbers 7 and 5 are ANSWER green; every bar and line is INK. All numbers use one font size, at least 34 px high on a 1920 px wide canvas. Nothing else is drawn.",
+    "visible_text": [
+     "3",
+     "105",
+     "5",
+     "35",
+     "7",
+     "2",
+     "30",
+     "3",
+     "15",
+     "5"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "factor-tree circles or loops around the primes",
+     "result lines such as '105 = 3 × 5 × 7' or '30 = 2 × 3 × 5'",
+     "any arrow, label or caption"
+    ],
+    "accuracy_checks": [
+     "105 ÷ 3 = 35 and 35 ÷ 5 = 7; 3 × 5 × 7 = 105",
+     "30 ÷ 2 = 15 and 15 ÷ 3 = 5; 2 × 3 × 5 = 30",
+     "every divisor (3, 5, 2, 3) and each last number (7, 5) is prime",
+     "row order and the numbers match the book's two ladders on page 4 and the LP steps"
+    ],
+    "alt_text": "Two division ladders: 3 beside 105, 5 beside 35, then 7; and 2 beside 30, 3 beside 15, then 5.",
+    "render_note": "Same layout as the book's two ladders (pdf page 4, left of the 105 figure); the book prints no result line under them and none is drawn here."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C28",
+   "role": "question",
+   "lp_book_number": "Division Method: prime factorisation of 1200",
+   "ncert_ref": "Section 3.1 - pf_division",
+   "question_text": "Find the prime factorisation of 1200 using the division method.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question names only the method and the number 1200; the book prints no figure for it (only 'Try finding ... using the method above'), so no question figure is invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C29",
+   "role": "solution",
+   "lp_book_number": "Division Method: prime factorisation of 1200",
+   "ncert_ref": "Section 3.1 - pf_division",
+   "question_text": "Find the prime factorisation of 1200 using the division method.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The question asks for the division method, so the working laid out as a ladder (6 rows, then the stopping prime 5) is the expected answer figure; the LP steps describe it only as a list of divisions. The question gives no figure, so none is added there.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S10.T10.C29.IMG1",
+   "manim_scene": "c7_11_3p1_c29_ladder_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S10.T10.C29.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "division_ladder",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "division_ladder",
+     "ladders": [
+      {
+       "start": 1200,
+       "rows": [
+        {
+         "divisor": 2,
+         "number": 1200
+        },
+        {
+         "divisor": 2,
+         "number": 600
+        },
+        {
+         "divisor": 2,
+         "number": 300
+        },
+        {
+         "divisor": 2,
+         "number": 150
+        },
+        {
+         "divisor": 3,
+         "number": 75
+        },
+        {
+         "divisor": 5,
+         "number": 25
+        }
+       ],
+       "last_number": 5,
+       "position": "centre"
+      }
+     ],
+     "layout": "numbers right-aligned on one common right edge; each bar sits just left of its own number; last number centred under 25",
+     "colours": {
+      "numbers_in_rows": "INK",
+      "divisors_and_last_number": "ANSWER",
+      "bars_and_lines": "INK"
+     }
+    },
+    "manim_description": "On a plain BG canvas draw one division ladder for 1200, centred horizontally and vertically, filling about 85 percent of the canvas height. Draw every row as: the divisor in a left column, a thin INK vertical bar immediately right of the divisor, the number immediately right of the bar, and a thin INK horizontal line directly under the number running from the bar to the right edge of the number. The numbers are right-aligned on one common right edge, so each bar sits just left of its own number and the bars step to the right as the numbers get shorter. Rows top to bottom: row 1: divisor 2, number 1200; row 2: divisor 2, number 600; row 3: divisor 2, number 300; row 4: divisor 2, number 150; row 5: divisor 3, number 75; row 6: divisor 5, number 25. Below row 6 draw the last number 5, centred under 25, with no bar and no line. Colours: the numbers 1200, 600, 300, 150, 75 and 25 are INK; the six divisors 2, 2, 2, 2, 3, 5 and the last number 5 are ANSWER green; every bar and line is INK. All numbers use one font size, at least 34 px high on a 1920 px wide canvas. Nothing else is drawn.",
+    "visible_text": [
+     "2",
+     "1200",
+     "2",
+     "600",
+     "2",
+     "300",
+     "2",
+     "150",
+     "3",
+     "75",
+     "5",
+     "25",
+     "5"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a result line such as '1200 = 2 × 2 × 2 × 2 × 3 × 5 × 5'",
+     "factor-tree circles",
+     "any arrow, label or caption"
+    ],
+    "accuracy_checks": [
+     "1200 ÷ 2 = 600, 600 ÷ 2 = 300, 300 ÷ 2 = 150, 150 ÷ 2 = 75, 75 ÷ 3 = 25, 25 ÷ 5 = 5",
+     "the divisors and the last number read 2, 2, 2, 2, 3, 5, 5; their product is 16 × 3 × 25 = 1200",
+     "every divisor and the last number 5 is prime; 5 is the stopping prime",
+     "seven lines in total: six rows and the last number"
+    ],
+    "alt_text": "Division ladder for 1200: divisors 2, 2, 2, 2, 3, 5 beside 1200, 600, 300, 150, 75, 25, ending in 5.",
+    "render_note": "The book prints no ladder for 1200 (it only says 'Try finding the prime factorisation of 1200 using the method above'); this ladder is computed from the LP steps, in the same layout as the book's ladders for 105 and 30."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C32",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 3.1 - anshu_claim",
+   "question_text": "Anshu says: the larger a number is, the longer its prime factorisation will be. Test this with 96 and 121.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two prime factorisations (96 and 121) written as products; the book gives only these two lines and the tile picture is teaching image M1.S11.T11.C32.IMG1.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C34",
+   "role": "question",
+   "lp_book_number": "Factors from Primes: is 28 a factor of 840",
+   "ncert_ref": "Section 3.1 - f840",
+   "question_text": "840 = 2 × 2 × 2 × 3 × 5 × 7. Is 28 = 2 × 2 × 7 a factor? What multiplies it to give 840? Are 14, 8 and 27 factors?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The factorisation of 840 and the numbers 28, 14, 8 and 27 are all in the words; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C35",
+   "role": "solution",
+   "lp_book_number": "Factors from Primes: is 28 a factor of 840",
+   "ncert_ref": "Section 3.1 - f840",
+   "question_text": "840 = 2 × 2 × 2 × 3 × 5 × 7. Is 28 = 2 × 2 × 7 a factor? What multiplies it to give 840? Are 14, 8 and 27 factors?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "840 = (2 × 2 × 7) × (2 × 3 × 5) = 28 × 30 and the counts of 2s and 3s are LaTeX (the grouping picture is teaching image M1.S11.T11.C30.IMG1).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: 840 = (2 × 2 × 7) × (2 × 3 × 5) = 28 × 30, then the checks for 14, 8 and 27."
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C36",
+   "role": "question",
+   "lp_book_number": "Factors from Primes: all the factors of 225",
+   "ncert_ref": "Section 3.1 - f225",
+   "question_text": "List all the factors of 225 using its prime factorisation.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Only the number 225 is given; the book's 225 division ladder (P05) is a worked step, not part of the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C37",
+   "role": "solution",
+   "lp_book_number": "Factors from Primes: all the factors of 225",
+   "ncert_ref": "Section 3.1 - f225",
+   "question_text": "List all the factors of 225 using its prime factorisation.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "225 = 5 × 5 × 3 × 3 is stated in the steps and the factors grouped by number of primes are a plain list; the book's ladder only produces that first line, and teaching image M1.S11.T11.C31.IMG1 already shows the table.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: 225 = 5 × 5 × 3 × 3, then one line per number of primes, then the nine factors."
+  },
+  {
+   "lp_concept_id": "M1.S13.T13.C38",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.1, Q1",
+   "ncert_ref": "Section 3.1 - FiO_factors",
+   "question_text": "List all the factors of the following numbers: (a) 90 (b) 105 (c) 132 (d) 360 (this number has 24 factors) (e) 840 (this number has 32 factors)",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Five numbers in the words; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S13.T13.C39",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.1, Q1",
+   "ncert_ref": "Section 3.1 - FiO_factors",
+   "question_text": "List all the factors of the following numbers: (a) 90 (b) 105 (c) 132 (d) 360 (this number has 24 factors) (e) 840 (this number has 32 factors)",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Five factorisations and five factor lists (12, 8, 12, 24, 32 factors); lists are text and LaTeX and the book prints no answer figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "One LaTeX line per part: the factorisation, then the list of factors."
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C44",
+   "role": "question",
+   "lp_book_number": "Example 1: Common factors of 45 and 75",
+   "ncert_ref": "Section 3.1 - ex1",
+   "question_text": "Find the common factors and the HCF of 45 and 75.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Only the numbers 45 and 75 are given; the book's picture (circled subparts) is the working, not part of the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C45",
+   "role": "solution",
+   "lp_book_number": "Example 1: Common factors of 45 and 75",
+   "ncert_ref": "Section 3.1 - ex1",
+   "question_text": "Find the common factors and the HCF of 45 and 75.",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The book answers by ringing the matching subparts of 3 × 3 × 5 and 3 × 5 × 5 (3, 5, 3 × 5); which factors match is carried only by the rings and LaTeX cannot show it reliably.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S15.T15.C45.IMG1",
+   "manim_scene": "c7_11_3p1_c45_match_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S15.T15.C45.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "subtype": "factorisation_match",
+     "upper_row": {
+      "label": "45 =",
+      "factors": [
+       "3",
+       "3",
+       "5"
+      ]
+     },
+     "lower_row": {
+      "label": "75 =",
+      "factors": [
+       "3",
+       "5",
+       "5"
+      ]
+     },
+     "blocks": [
+      {
+       "label": "3",
+       "upper_circled_positions": [
+        1
+       ],
+       "lower_circled_positions": [
+        1
+       ]
+      },
+      {
+       "label": "5",
+       "upper_circled_positions": [
+        3
+       ],
+       "lower_circled_positions": [
+        3
+       ]
+      },
+      {
+       "label": "3 × 5 = 15",
+       "upper_circled_positions": [
+        2,
+        3
+       ],
+       "lower_circled_positions": [
+        1,
+        2
+       ]
+      }
+     ],
+     "ring_total": 8,
+     "hcf_line": "HCF = 15",
+     "colours": {
+      "factors": "INK",
+      "rings": "FOCUS",
+      "block_labels_and_hcf_line": "ANSWER"
+     }
+    },
+    "manim_description": "On a plain BG canvas draw 3 blocks stacked top to bottom with equal vertical gaps; the whole stack is centred and scaled to fill about 85 percent of the canvas height. Each block is two text rows: the upper row for 45 and the lower row for 75. Left column, INK, right-aligned: '45 =' on every upper row and '75 =' on every lower row. Centre column, INK, left-aligned at one common left edge: the upper row reads '3 × 3 × 5' and the lower row reads '3 × 5 × 5' in every block, so factor position 1 is at the same horizontal place in every row. Rings: draw a FOCUS ring, 3 px stroke, no fill, around the single digit of each circled factor, with the digit staying INK. Circled factor positions (counted from 1 at the left of the row), block by block: block 1: upper row position 1, lower row position 1; block 2: upper row position 3, lower row position 3; block 3: upper row positions 2, 3, lower row positions 1, 2. The ring count is 2 + 2 + 4, 8 in all. Right column, ANSWER green, left-aligned, vertically centred on its block: block 1: '3'; block 2: '5'; block 3: '3 × 5 = 15'. Below the last block, centred, one line 'HCF = 15' in ANSWER green. No line, box or arrow joins the rows. All text uses one font size, at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "45 =",
+     "75 =",
+     "3 × 3 × 5",
+     "3 × 5 × 5",
+     "3",
+     "5",
+     "3 × 5 = 15",
+     "HCF = 15"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the number 1 as a common factor",
+     "a list of common factors",
+     "boxes, brackets or joining lines between the rows"
+    ],
+    "accuracy_checks": [
+     "45 = 3 × 3 × 5 and 75 = 3 × 5 × 5",
+     "ring counts per block 2, 2, 4; total 8",
+     "in each block the circled factors of the upper row and of the lower row multiply to the same value: 3, 5, 15",
+     "the highest block value 15 equals the HCF line"
+    ],
+    "alt_text": "45 = 3 × 3 × 5 above 75 = 3 × 5 × 5 three times, with the shared subparts 3, 5 and 3 × 5 = 15 ringed in both rows, and HCF = 15 below.",
+    "render_note": "Same figure as the book's Example 1 picture (pdf page 6: three blocks with circled subparts and labels 3, 5, 3 × 5). Row labels '45 =' and '75 =', the '= 15' and the HCF line come from the LP solution; the book prints none of them."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C46",
+   "role": "question",
+   "lp_book_number": "Example 2: Common factors of 112 and 84",
+   "ncert_ref": "Section 3.1 - ex2",
+   "question_text": "Find the common factors and the HCF of 112 and 84 from their prime factorisations.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Only the numbers 112 and 84 are given; the book's picture (circled subparts) is the working, not part of the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C47",
+   "role": "solution",
+   "lp_book_number": "Example 2: Common factors of 112 and 84",
+   "ncert_ref": "Section 3.1 - ex2",
+   "question_text": "Find the common factors and the HCF of 112 and 84 from their prime factorisations.",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The book answers by ringing the matching subparts of 2 × 2 × 2 × 2 × 7 and 2 × 2 × 3 × 7 in five blocks; which factors match is carried only by the rings and LaTeX cannot show it reliably.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S15.T15.C47.IMG1",
+   "manim_scene": "c7_11_3p1_c47_match_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S15.T15.C47.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "subtype": "factorisation_match",
+     "upper_row": {
+      "label": "112 =",
+      "factors": [
+       "2",
+       "2",
+       "2",
+       "2",
+       "7"
+      ]
+     },
+     "lower_row": {
+      "label": "84 =",
+      "factors": [
+       "2",
+       "2",
+       "3",
+       "7"
+      ]
+     },
+     "blocks": [
+      {
+       "label": "2",
+       "upper_circled_positions": [
+        1
+       ],
+       "lower_circled_positions": [
+        1
+       ]
+      },
+      {
+       "label": "7",
+       "upper_circled_positions": [
+        5
+       ],
+       "lower_circled_positions": [
+        4
+       ]
+      },
+      {
+       "label": "2 × 2 = 4",
+       "upper_circled_positions": [
+        2,
+        3
+       ],
+       "lower_circled_positions": [
+        1,
+        2
+       ]
+      },
+      {
+       "label": "2 × 7 = 14",
+       "upper_circled_positions": [
+        1,
+        5
+       ],
+       "lower_circled_positions": [
+        2,
+        4
+       ]
+      },
+      {
+       "label": "2 × 2 × 7 = 28",
+       "upper_circled_positions": [
+        1,
+        2,
+        5
+       ],
+       "lower_circled_positions": [
+        1,
+        2,
+        4
+       ]
+      }
+     ],
+     "ring_total": 18,
+     "hcf_line": "HCF = 28",
+     "colours": {
+      "factors": "INK",
+      "rings": "FOCUS",
+      "block_labels_and_hcf_line": "ANSWER"
+     }
+    },
+    "manim_description": "On a plain BG canvas draw 5 blocks stacked top to bottom with equal vertical gaps; the whole stack is centred and scaled to fill about 85 percent of the canvas height. Each block is two text rows: the upper row for 112 and the lower row for 84. Left column, INK, right-aligned: '112 =' on every upper row and '84 =' on every lower row. Centre column, INK, left-aligned at one common left edge: the upper row reads '2 × 2 × 2 × 2 × 7' and the lower row reads '2 × 2 × 3 × 7' in every block, so factor position 1 is at the same horizontal place in every row. Rings: draw a FOCUS ring, 3 px stroke, no fill, around the single digit of each circled factor, with the digit staying INK. Circled factor positions (counted from 1 at the left of the row), block by block: block 1: upper row position 1, lower row position 1; block 2: upper row position 5, lower row position 4; block 3: upper row positions 2, 3, lower row positions 1, 2; block 4: upper row positions 1, 5, lower row positions 2, 4; block 5: upper row positions 1, 2, 5, lower row positions 1, 2, 4. The ring count is 2 + 2 + 4 + 4 + 6, 18 in all. Right column, ANSWER green, left-aligned, vertically centred on its block: block 1: '2'; block 2: '7'; block 3: '2 × 2 = 4'; block 4: '2 × 7 = 14'; block 5: '2 × 2 × 7 = 28'. Below the last block, centred, one line 'HCF = 28' in ANSWER green. No line, box or arrow joins the rows. All text uses one font size, at least 34 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "112 =",
+     "84 =",
+     "2 × 2 × 2 × 2 × 7",
+     "2 × 2 × 3 × 7",
+     "2",
+     "7",
+     "2 × 2 = 4",
+     "2 × 7 = 14",
+     "2 × 2 × 7 = 28",
+     "HCF = 28"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the number 1 as a common factor",
+     "a list of common factors",
+     "boxes, brackets or joining lines between the rows"
+    ],
+    "accuracy_checks": [
+     "112 = 2 × 2 × 2 × 2 × 7 and 84 = 2 × 2 × 3 × 7",
+     "ring counts per block 2, 2, 4, 4, 6; total 18",
+     "in each block the circled factors of the upper row and of the lower row multiply to the same value: 2, 7, 4, 14, 28",
+     "the highest block value 28 equals the HCF line"
+    ],
+    "alt_text": "112 = 2 × 2 × 2 × 2 × 7 above 84 = 2 × 2 × 3 × 7 five times, with the shared subparts 2, 7, 2 × 2, 2 × 7 and 2 × 2 × 7 ringed in both rows, and HCF = 28 below.",
+    "render_note": "Same figure as the book's Example 2 picture (pdf page 7: five blocks with circled subparts and labels 2, 7, 2 × 2, 2 × 7, 2 × 2 × 7). Row labels '112 =' and '84 =', the '= 4', '= 14', '= 28' and the HCF line come from the LP solution; the book prints none of them. Five blocks make this figure tall, so the card is scaled to the full canvas height."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C48",
+   "role": "question",
+   "lp_book_number": "Example 3: Common factors of 96 and 275",
+   "ncert_ref": "Section 3.1 - ex3",
+   "question_text": "Find the common factors and the HCF of 96 and 275.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Only the numbers 96 and 275 are given; the book prints no figure for this example.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C49",
+   "role": "solution",
+   "lp_book_number": "Example 3: Common factors of 96 and 275",
+   "ncert_ref": "Section 3.1 - ex3",
+   "question_text": "Find the common factors and the HCF of 96 and 275.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The two factorisations share no prime, so there is no common subpart to ring and the book draws no figure for Example 3 (Examples 1 and 2 differ: their answers are ringed subparts the book prints).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the two factorisations 96 = 2 × 2 × 2 × 2 × 2 × 3 and 275 = 5 × 5 × 11 in the steps."
+  },
+  {
+   "lp_concept_id": "M1.S16.T16.C50",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.1, Q1",
+   "ncert_ref": "Section 3.1 - FiO_common",
+   "question_text": "Find the common factors and the HCF of the following numbers: (a) 50, 60 (b) 140, 275 (c) 77, 725 (d) 370, 592 (e) 81, 243",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Five pairs of numbers in the words; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S16.T16.C51",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.1, Q1",
+   "ncert_ref": "Section 3.1 - FiO_common",
+   "question_text": "Find the common factors and the HCF of the following numbers: (a) 50, 60 (b) 140, 275 (c) 77, 725 (d) 370, 592 (e) 81, 243",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Five factorisation lines with their common factors and HCF (10, 5, 1, 74, 81); the book prints no answer figure and a ringed-subpart picture per part is not needed to check a list.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "One LaTeX line per part: both factorisations, the common subparts, the common factors and the HCF."
+  }
+ ]
+}

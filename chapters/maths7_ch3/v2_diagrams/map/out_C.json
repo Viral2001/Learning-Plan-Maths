@@ -1,0 +1,2155 @@
+{
+ "meta": {
+  "chapter": "A Peek Beyond the Point",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 3",
+  "lp_plan_id": "cbse_eng_maths7_ch3_v44",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "none": 2,
+    "required": 1
+   },
+   "question": {
+    "none": 7,
+    "required": 6
+   },
+   "solution": {
+    "none": 6,
+    "required": 7
+   }
+  },
+  "notes": [
+   "Chunk C: topics M2.S14.T14 (C52, C54), M2.S15.T15 (C56-C61), M3.S17.T17 (C66-C72), M3.S18.T18 (C76).",
+   "Number-line and zoom-chain items follow the book pictures; the LP says a large mark at 5.2 (C67) while the book has none: LP followed, noted in render_note.",
+   "Plain conversion tables (C56-C59), the two word problems (C60, C61) and the two worked examples C52, C54 stay text/LaTeX.",
+   "No optional items: figures that would only help (a row of five rice heaps) are not needed."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P23-photograph-2",
+   "source": "chapter p.68",
+   "description": "Photograph of five rice heaps labelled 10 kg/10000 g, 1 kg/1000 g, 0.1 kg/100 g, 0.01 kg/10 g, 0.001 kg/1 g (base description checked against the page: correct). Real photograph, all five weights are in the LP question text.",
+   "mapped_to": "none:NOT_RENDERABLE"
+  },
+  {
+   "fig_id": "P23-photograph-3",
+   "source": "chapter p.68",
+   "description": "Margin strip of eight real old paise coins (1, 2, 3, 5, 10, 20, 25, 50). Base description checked: correct. No question works on it; real coin photographs cannot be drawn faithfully.",
+   "mapped_to": "none:NOT_RENDERABLE"
+  },
+  {
+   "fig_id": "P24-bill-2",
+   "source": "chapter p.69",
+   "description": "Photograph-style pink cafe bill dated 3/3/1970: 3 dosa 1.50, 2 tea 0.12, 1 cake 0.15, total Rs 1.77. Base description checked: correct. The LP worked example does not use the bill (it quotes 50 paise per dosa and Rs 2.45 for rice).",
+   "mapped_to": "none:NOT_RENDERABLE"
+  },
+  {
+   "fig_id": "P24-photograph-3",
+   "source": "chapter p.69",
+   "description": "Picture of old Indian postage stamps beside the 'Try This: discuss with adults' prompt. Base description checked: correct. Decorative, no number used.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P20-table-1",
+   "source": "chapter p.65",
+   "description": "Plain 3 x 2 table, no header: 12 mm = 1.2 cm | 56 mm = 5.6 cm | 70 mm = __ ; __ = 0.9 cm | 134 mm = __ | __ = 203.6 cm (base description checked: correct).",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P20-illustration-2",
+   "source": "chapter p.65",
+   "description": "Painted illustration of three blue stripes (1.5 mm, 1 mm, 0.5 mm) with mustard seeds, snail, ant, hair and newspaper, for an open 'take an approximate measurement' prompt (base description checked: correct). No LP item uses it.",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "P21-table-1",
+   "source": "chapter p.66",
+   "description": "Plain 3 x 2 table of cm-to-m blanks: 36 cm, 50 cm, __ = 0.89 m, 4 cm, 325 cm, __ = 2.07 m (base description checked: correct).",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P21-illustration-2",
+   "source": "chapter p.66",
+   "description": "Illustration of a goby fish, hummingbird egg, jellyfish and octopus on a 1 cm square grid (facts about small things). Decorative; no LP item uses it.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P23-table-1",
+   "source": "chapter p.68",
+   "description": "Plain 3 x 2 table of g-to-kg blanks: 465 g, 68 g, 1560 g, 704 g, __ = 0.56 kg, __ = 2.5 kg.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P24-table-1",
+   "source": "chapter p.69",
+   "description": "Plain 3 x 2 table of rupee-paise blanks: 10 p, __ p = Rs 0.05, __ p = Rs 0.36, __ = Rs 0.50, 99 p, 250 p.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P46-table-1",
+   "source": "solutions p.46",
+   "description": "Printed answer table for mm-to-cm: 12 mm = 1.2 cm, 56 mm = 5.6 cm, 70 mm = 7.0 cm, 9 mm = 0.9 cm, 134 mm = 13.4 cm, 2036 mm = 203.6 cm (answers in red underlined text). Plain table.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P46-table-2",
+   "source": "solutions p.46",
+   "description": "Printed answer table for cm-to-m: 0.36, 0.5, 89 cm, 0.04, 3.25, 207 cm; plus text answers 1 m = 1000 mm and Yes.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P46-table-3",
+   "source": "solutions p.46",
+   "description": "Printed answer table for g-to-kg: 0.465, 0.068, 1.56, 0.704 kg, 560 g, 2500 g.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P47-table-1",
+   "source": "solutions p.47",
+   "description": "Printed answer table for rupee-paise: Rs 0.10, 5 p, 36 p, 50 p, Rs 0.99, Rs 2.50.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P25-number_line-1",
+   "source": "chapter p.70",
+   "description": "Number line 1 to 2 with 1.4 circled (teaching demonstration 'Take the fourth part') (base description not re-checked in detail; page picture agrees: ticks 1, 1.1 ... 2, 1.4 in red and circled).",
+   "mapped_to": "concept_image:M3.S16.T16.C62.IMG1"
+  },
+  {
+   "fig_id": "P25-number_line-2",
+   "source": "chapter p.70",
+   "description": "Number line with arrowheads at both ends; long ticks at 1, 1.1, 1.2, 1.3; 9 short ticks between 1 and 1.1; red up-arrow on the 4th short tick labelled 1.04 (base description checked against the page picture: correct).",
+   "mapped_to": "item:M3.S17.T17.C66 (question)"
+  },
+  {
+   "fig_id": "P25-number_line-3",
+   "source": "chapter p.70",
+   "description": "Number line, arrowheads both ends, long ticks 5, 5.1, 5.3, 5.4 (labelled), no long tick at 5.2, small ticks every 0.01 (19 in a run between 5.1 and 5.3), four red up-arrows A (9th small tick after 5), B (3rd after 5.1), C (10th position after 5.1) and D (1st after 5.3). Base description CHECKED: correct. The diagram follows the LP text and draws an unlabelled long tick at 5.2 (see render_note).",
+   "mapped_to": "item:M3.S17.T17.C67 (question)"
+  },
+  {
+   "fig_id": "P47-number_line-1",
+   "source": "solutions p.47",
+   "description": "Printed answer: the same line with 5.09 above A, 5.13 above B, 5.2 above C, 5.31 above D (checked on the page picture).",
+   "mapped_to": "item:M3.S17.T17.C67 (solution)"
+  },
+  {
+   "fig_id": "P26-number_line-1",
+   "source": "chapter p.71",
+   "description": "Figure (a): four stacked lines 0-10, 4-5, 4.1-4.2, 4.18-4.19 with 4.185 marked in the middle of the last line (teaching figure, concept image C63.IMG1; base description checked against the page picture).",
+   "mapped_to": "concept_image:M3.S16.T16.C63.IMG1"
+  },
+  {
+   "fig_id": "NEW-P26-number_line-1-q",
+   "source": "chapter p.71",
+   "description": "Second use of Figure (a): drawn again as the left group of the question figure of M3.S17.T17.C68 (a concept image is never linked).",
+   "mapped_to": "item:M3.S17.T17.C68 (question)"
+  },
+  {
+   "fig_id": "P26-number_line-2",
+   "source": "chapter p.71",
+   "description": "Figure (b): four stacked lines, 11 ticks each, middle tick longer; row 1 labels 0 and 10, boxes over parts 4, 1, 6 of the lines above; last line has a down-arrow at the 10th tick with '?' under it (base description checked: correct).",
+   "mapped_to": "item:M3.S17.T17.C68 (question)"
+  },
+  {
+   "fig_id": "P48-number_line-1",
+   "source": "solutions p.48",
+   "description": "Printed answer: Figure (b) with range labels 3-4, 3-3.1, 3.05-3.06 and the value 3.059 in a red box at the arrow.",
+   "mapped_to": "item:M3.S17.T17.C68 (solution)"
+  },
+  {
+   "fig_id": "P48-number_line-2",
+   "source": "solutions p.48",
+   "description": "Printed answer (a): chain 0-10, 9-10, 9.8-9.9, 9.87-9.88 with 9.876 boxed (base description checked on the page picture).",
+   "mapped_to": "item:M3.S17.T17.C69 (solution)"
+  },
+  {
+   "fig_id": "P48-number_line-3",
+   "source": "solutions p.48",
+   "description": "Printed answer (b): chain 0-10, 0-1, 0.4-0.5, 0.40-0.41 with 0.407 boxed (base description checked on the page picture).",
+   "mapped_to": "item:M3.S17.T17.C69 (solution)"
+  },
+  {
+   "fig_id": "P26-number_line-3",
+   "source": "chapter p.71",
+   "description": "Number line 5 to 10, 11 ticks, arrows from ticks 3, 6, 10 to empty boxes a, b, c (base description checked on the page picture: correct).",
+   "mapped_to": "item:M3.S17.T17.C70 (question)"
+  },
+  {
+   "fig_id": "P49-number_line-1",
+   "source": "solutions p.49",
+   "description": "Printed answer: the same line with boxes 6, 7.5, 9.5.",
+   "mapped_to": "item:M3.S17.T17.C70 (solution)"
+  },
+  {
+   "fig_id": "P27-number_line-1",
+   "source": "chapter p.72",
+   "description": "Line 8 to 8.1, 11 ticks, arrows from ticks 2 and 6 to empty boxes d and e (base description checked on the page picture: correct).",
+   "mapped_to": "item:M3.S17.T17.C71 (question)"
+  },
+  {
+   "fig_id": "P27-number_line-2",
+   "source": "chapter p.72",
+   "description": "Line from 4.3, 12 ticks, 4.8 on tick 11, arrows from ticks 2, 5, 12 to empty boxes f, g, h (base description checked: correct).",
+   "mapped_to": "item:M3.S17.T17.C71 (question)"
+  },
+  {
+   "fig_id": "P49-number_line-2",
+   "source": "solutions p.49",
+   "description": "Printed answer: line 8 to 8.1 with boxes 8.01 and 8.05.",
+   "mapped_to": "item:M3.S17.T17.C71 (solution)"
+  },
+  {
+   "fig_id": "P49-number_line-3",
+   "source": "solutions p.49",
+   "description": "Printed answer: line from 4.3 with boxes 4.35, 4.5, 4.85.",
+   "mapped_to": "item:M3.S17.T17.C71 (solution)"
+  },
+  {
+   "fig_id": "P34-number_line-1",
+   "source": "chapter p.79",
+   "description": "Line 6.4 to 6.6, 9 ticks, labels 6.4/6.5/6.6 on ticks 1/5/9, arrows from ticks 3, 6, 7 to boxes a, c, b (base description checked on the page picture: correct).",
+   "mapped_to": "item:M3.S17.T17.C72 (question)"
+  },
+  {
+   "fig_id": "P53-number_line-1",
+   "source": "solutions p.53",
+   "description": "Printed answer: the same line with boxes 6.45, 6.525, 6.55.",
+   "mapped_to": "item:M3.S17.T17.C72 (solution)"
+  },
+  {
+   "fig_id": "P28-digit_boxes-1",
+   "source": "chapter p.73",
+   "description": "Three rows of empty digit tiles aligned on the decimal point: green 2+3, yellow 1+3 (only 4 tiles), pink 3+2 (base description checked: correct; the yellow row has 4 tiles although five digits are given).",
+   "mapped_to": "item:M3.S18.T18.C76 (question)"
+  },
+  {
+   "fig_id": "P50-digit_tiles-1",
+   "source": "solutions p.50",
+   "description": "Printed answer: green 25.148, yellow 8.542 (digit 1 missing in the book), pink 124.58, in aligned coloured tiles.",
+   "mapped_to": "item:M3.S18.T18.C76 (question)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 34,
+  "mapped_to_items": 18,
+  "mapped_to_concept_images": 2,
+  "mapped_none": 14,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M3.S17.T17.C66.IMG1",
+   "M3.S17.T17.C66.IMG2",
+   "M3.S17.T17.C67.IMG1",
+   "M3.S17.T17.C67.IMG2",
+   "M3.S17.T17.C68.IMG1",
+   "M3.S17.T17.C68.IMG2",
+   "M3.S17.T17.C69.IMG1",
+   "M3.S17.T17.C70.IMG1",
+   "M3.S17.T17.C70.IMG2",
+   "M3.S17.T17.C71.IMG1",
+   "M3.S17.T17.C71.IMG2",
+   "M3.S17.T17.C72.IMG1",
+   "M3.S17.T17.C72.IMG2",
+   "M3.S18.T18.C76.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M2.S14.T14.C52",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": "3.5.rice, 3.5.mg, 3.5.facts_nature",
+   "question_text": "Rice heaps start at 1 g and each next heap is 10 times heavier than the one before. There are five heaps: 1 g, 10 g, 100 g, 1 kg and 10 kg. Show their combined weight is 11.111 kg. Then write 1 mg in grams.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The question lists the five heaps (1 g, 10 g, 100 g, 1 kg, 10 kg) in words and the sum is plain arithmetic; the book's picture is a photograph of real rice heaps that adds no number the text lacks.",
+   "text_alternative": "Write the heaps in grams (1, 10, 100, 1000, 10000) and the sum 1 + 10 + 100 + 1000 + 10000 = 11111 g = 11.111 kg as LaTeX lines; no picture.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C54",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": "3.5.old_prices",
+   "question_text": "A masala dosa cost 50 paise in the 1970s, and a kg of rice cost ₹2.45. Write the dosa price in rupees, and say how many such dosas the rice price would buy.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Both prices (50 paise, Rs 2.45) are in the question text and the working is a conversion and a division; the cafe bill, old coins and stamps in the book are real-object pictures the question does not use.",
+   "text_alternative": "Write 50 paise = Rs 0.50, Rs 2.45 = 245 paise and 245 / 50 = 4.9 as LaTeX lines; no picture.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C56",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Length: millimetres and centimetres blanks",
+   "ncert_ref": "3.5.mm_cm_blanks",
+   "question_text": "Fill in the blanks (mm to cm): 12 mm, 56 mm, 70 mm, 9 mm, 134 mm, and the length in mm that is 203.6 cm.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The book table is a plain 3 x 2 table of fill-in-the-blank conversions (no colour or position meaning).",
+   "text_alternative": "LaTeX array (3 columns x 2 rows) of the six conversions: 12 mm = 1.2 cm, 56 mm = 5.6 cm, 70 mm = ____, ____ = 0.9 cm, 134 mm = ____, ____ = 203.6 cm; answers 1.2, 5.6, 7.0, 0.9 cm / 9 mm, 13.4, 2036 mm.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C56",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Length: millimetres and centimetres blanks",
+   "ncert_ref": "3.5.mm_cm_blanks",
+   "question_text": "Fill in the blanks (mm to cm): 12 mm, 56 mm, 70 mm, 9 mm, 134 mm, and the length in mm that is 203.6 cm.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "Plain table of conversions, same as the question table with the blanks filled; LaTeX array is enough.",
+   "text_alternative": "LaTeX array (3 columns x 2 rows) of the six conversions: 12 mm = 1.2 cm, 56 mm = 5.6 cm, 70 mm = ____, ____ = 0.9 cm, 134 mm = ____, ____ = 203.6 cm; answers 1.2, 5.6, 7.0, 0.9 cm / 9 mm, 13.4, 2036 mm.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C57",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Length: centimetres and metres blanks",
+   "ncert_ref": "3.5.cm_m_blanks",
+   "question_text": "Fill in the blanks (cm to m): 36 cm, 50 cm, the cm that make 0.89 m, 4 cm, 325 cm, and the cm that make 2.07 m. How many mm make 1 m, and can we write 1 mm = 1/1000 m?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The book table is a plain 3 x 2 table of fill-in-the-blank conversions; the two follow-up questions are text.",
+   "text_alternative": "LaTeX array of the six cm-to-m blanks: 36 cm = 0.36 m, 50 cm = 0.5 m, 89 cm = 0.89 m, 4 cm = 0.04 m, 325 cm = 3.25 m, 207 cm = 2.07 m, then the line 1 m = 1000 mm.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C57",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Length: centimetres and metres blanks",
+   "ncert_ref": "3.5.cm_m_blanks",
+   "question_text": "Fill in the blanks (cm to m): 36 cm, 50 cm, the cm that make 0.89 m, 4 cm, 325 cm, and the cm that make 2.07 m. How many mm make 1 m, and can we write 1 mm = 1/1000 m?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "Plain table of conversions plus two sentences; LaTeX array is enough.",
+   "text_alternative": "LaTeX array of the six cm-to-m blanks: 36 cm = 0.36 m, 50 cm = 0.5 m, 89 cm = 0.89 m, 4 cm = 0.04 m, 325 cm = 3.25 m, 207 cm = 2.07 m, then the line 1 m = 1000 mm.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C58",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Weight: grams and kilograms blanks",
+   "ncert_ref": "3.5.g_kg_blanks",
+   "question_text": "Fill in the blanks (g to kg): 465 g, 68 g, 1560 g, 704 g, and the grams in 0.56 kg and in 2.5 kg.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The book table is a plain 3 x 2 table of fill-in-the-blank conversions.",
+   "text_alternative": "LaTeX array of the six g-to-kg blanks: 465 g = 0.465 kg, 68 g = 0.068 kg, 1560 g = 1.56 kg, 704 g = 0.704 kg, 560 g = 0.56 kg, 2500 g = 2.5 kg.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C58",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Weight: grams and kilograms blanks",
+   "ncert_ref": "3.5.g_kg_blanks",
+   "question_text": "Fill in the blanks (g to kg): 465 g, 68 g, 1560 g, 704 g, and the grams in 0.56 kg and in 2.5 kg.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "Plain table of conversions; LaTeX array is enough.",
+   "text_alternative": "LaTeX array of the six g-to-kg blanks: 465 g = 0.465 kg, 68 g = 0.068 kg, 1560 g = 1.56 kg, 704 g = 0.704 kg, 560 g = 0.56 kg, 2500 g = 2.5 kg.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C59",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Money: paise and rupees blanks",
+   "ncert_ref": "3.5.paise_blanks",
+   "question_text": "Fill in the blanks (paise to rupees): 10 p, 5 p, 36 p, 50 p, 99 p, 250 p. Then write 75 paise in rupees, step by step.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The book table is a plain 3 x 2 table of fill-in-the-blank conversions.",
+   "text_alternative": "LaTeX array of the six paise-to-rupee blanks: 10 p = Rs 0.10, 5 p = Rs 0.05, 36 p = Rs 0.36, 50 p = Rs 0.50, 99 p = Rs 0.99, 250 p = Rs 2.50, plus the 75 paise working lines.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C59",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Money: paise and rupees blanks",
+   "ncert_ref": "3.5.paise_blanks",
+   "question_text": "Fill in the blanks (paise to rupees): 10 p, 5 p, 36 p, 50 p, 99 p, 250 p. Then write 75 paise in rupees, step by step.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "Plain table of conversions plus fraction-sum working lines; LaTeX array is enough.",
+   "text_alternative": "LaTeX array of the six paise-to-rupee blanks: 10 p = Rs 0.10, 5 p = Rs 0.05, 36 p = Rs 0.36, 50 p = Rs 0.50, 99 p = Rs 0.99, 250 p = Rs 2.50, plus the 75 paise working lines.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C60",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Figure it Out (end of chapter), Q11",
+   "ncert_ref": "end.FiO11",
+   "question_text": "How many millimetres make 1 kilometre?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "One-line word question; no figure in the book.",
+   "text_alternative": "No picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C60",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Figure it Out (end of chapter), Q11",
+   "ncert_ref": "end.FiO11",
+   "question_text": "How many millimetres make 1 kilometre?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Chain of two unit facts and one product, 1 km = 1000 m = 1000 x 1000 mm = 1000000 mm.",
+   "text_alternative": "LaTeX: 1 km = 1000 m, 1 m = 1000 mm, 1000 x 1000 = 1000000 mm.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C61",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Figure it Out (end of chapter), Q12",
+   "ncert_ref": "end.FiO12",
+   "question_text": "Indian Railways offers optional travel insurance for passengers who book e-tickets. It costs 45 paise per passenger. If 1 lakh people opt for insurance in a day, what is the total insurance fee paid?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem with all data in the text; no figure in the book.",
+   "text_alternative": "No picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C61",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Figure it Out (end of chapter), Q12",
+   "ncert_ref": "end.FiO12",
+   "question_text": "Indian Railways offers optional travel insurance for passengers who book e-tickets. It costs 45 paise per passenger. If 1 lakh people opt for insurance in a day, what is the total insurance fee paid?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Product 45 x 100000 = 4500000 paise and a division by 100; arithmetic only.",
+   "text_alternative": "LaTeX: 45 x 100000 = 4500000 paise; 4500000 / 100 = 45000 rupees.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C66",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Number Line: divisions between 1 and 1.1",
+   "ncert_ref": "Section 3.6 - Name all the divisions between 1 and 1.1 (p.70)",
+   "question_text": "Locate 1.4 on the number line. Then name all the divisions between 1 and 1.1.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book question prints a line whose first gap is cut into 10 parts (with 1.04 given as the example); the learner needs it to name the other divisions, and the ten-part cut appears only in the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S17.T17.C66.IMG1",
+   "manim_scene": "c7_3_17_C66_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S17.T17.C66.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": [
+      1920,
+      1080
+     ],
+     "line": {
+      "y": 420,
+      "x_from": 100,
+      "x_to": 1820,
+      "arrowheads": "both"
+     },
+     "long_ticks": [
+      {
+       "x": 300,
+       "label": "1"
+      },
+      {
+       "x": 620,
+       "label": "1.1"
+      },
+      {
+       "x": 940,
+       "label": "1.2"
+      },
+      {
+       "x": 1260,
+       "label": "1.3"
+      }
+     ],
+     "short_ticks_between_1_and_1.1": [
+      332,
+      364,
+      396,
+      428,
+      460,
+      492,
+      524,
+      556,
+      588
+     ],
+     "parts_between_1_and_1.1": 10,
+     "pointer": {
+      "x": 428,
+      "colour": "FOCUS",
+      "direction": "up",
+      "label": "1.04",
+      "short_tick_index": 4
+     },
+     "type": "number_line"
+    },
+    "manim_description": "Canvas 1920 x 1080, BG white. Draw one horizontal number line in INK (3 px) at y=420 from x=100 to x=1820 with an arrowhead at BOTH ends. Draw four long ticks (INK, 3 px, 120 px tall, y=360 to y=480) at x=300, 620, 940 and 1260, labelled below in INK 40 px at y=540: '1' at x=300, '1.1' at x=620, '1.2' at x=940, '1.3' at x=1260. Only the first gap (1 to 1.1) is divided: draw 9 short ticks (INK, 3 px, 60 px tall, y=390 to y=450) at x=332, 364, 396, 428, 460, 492, 524, 556, 588, which cuts the gap into 10 equal parts of 32 px. The gaps 1.1 to 1.2 and 1.2 to 1.3 get no short ticks. On the 4th short tick (x=428) stand a FOCUS up-arrow (shaft from y=470 to y=330, arrowhead at the top) and print the bold INK 40 px label '1.04' centred at x=428, y=285. Nothing else; the lower half of the canvas stays empty.",
+    "visible_text": [
+     "1",
+     "1.1",
+     "1.2",
+     "1.3",
+     "1.04"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as (a) or (b); box letters and point letters named in this spec are allowed, any other letter is not",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "Figure it Out labels"
+    ],
+    "accuracy_checks": [
+     "1 to 1.1 holds exactly 9 short ticks = 10 equal parts of 0.01",
+     "the pointer is on the 4th short tick, 1 + 4 x 0.01 = 1.04",
+     "long ticks at 300, 620, 940, 1260 are equally spaced (320 px = 0.1)",
+     "no label at any short tick other than 1.04"
+    ],
+    "alt_text": "A number line with long marks at 1, 1.1, 1.2 and 1.3; the gap from 1 to 1.1 has nine short marks, the fourth marked with an arrow and labelled 1.04.",
+    "render_note": "Draws the figure printed beside the book question 'Name all the divisions between 1 and 1.1' (p.70). The book's 'Locate 1.4' demonstration (line 1 to 2, 1.4 circled) is a teaching figure (concept image M3.S16.T16.C62.IMG1) and is not repeated here."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C66",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Number Line: divisions between 1 and 1.1",
+   "ncert_ref": "Section 3.6 - Name all the divisions between 1 and 1.1 (p.70)",
+   "question_text": "Locate 1.4 on the number line. Then name all the divisions between 1 and 1.1.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The answer is marks on a number line: 1.4 placed and the nine divisions 1.01 to 1.09 named; the figure adds a fifth long tick and a magnified, labelled strip that the question figure lacks.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S17.T17.C66.IMG2",
+   "manim_scene": "c7_3_17_C66_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S17.T17.C66.IMG2}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S17.T17.C66.IMG1",
+    "content": {
+     "canvas": [
+      1920,
+      1080
+     ],
+     "same_as_question": "M3.S17.T17.C66.IMG1",
+     "added_long_tick": {
+      "x": 1580,
+      "label": "1.4",
+      "colour": "ANSWER",
+      "ring": "FOCUS"
+     },
+     "strip": {
+      "y": 800,
+      "x_from": 200,
+      "x_to": 1720,
+      "tick_x": [
+       200,
+       352,
+       504,
+       656,
+       808,
+       960,
+       1112,
+       1264,
+       1416,
+       1568,
+       1720
+      ],
+      "end_labels": [
+       "1",
+       "1.1"
+      ],
+      "answer_labels": [
+       "1.01",
+       "1.02",
+       "1.03",
+       "1.04",
+       "1.05",
+       "1.06",
+       "1.07",
+       "1.08",
+       "1.09"
+      ]
+     },
+     "guide_lines": [
+      [
+       [
+        300,
+        570
+       ],
+       [
+        200,
+        740
+       ]
+      ],
+      [
+       [
+        620,
+        570
+       ],
+       [
+        1720,
+        740
+       ]
+      ]
+     ],
+     "type": "number_line"
+    },
+    "manim_description": "Keep every part of the question figure exactly as drawn (same coordinates, INK and FOCUS). Add, in ANSWER green: (1) a fifth long tick at x=1580 (120 px tall, y=360 to y=480) on the same line with the label '1.4' in ANSWER 40 px centred at x=1580, y=540, and a FOCUS ellipse (120 px wide, 240 px tall) centred at x=1580, y=460 around that tick and label. (2) A magnified strip below: a horizontal INK line at y=800 from x=200 to x=1720 (no arrowheads) with 11 ticks at x=200, 352, 504, 656, 808, 960, 1112, 1264, 1416, 1568, 1720; the two end ticks are 120 px tall (y=740 to y=860), the 9 inner ticks 80 px tall (y=760 to y=840). Two thin GUIDE (2 px) straight lines run from (300, 570) to (200, 740) and from (620, 570) to (1720, 740) to show that the gap 1 to 1.1 is magnified. Under the strip at y=915 write '1' in INK at x=200, '1.1' in INK at x=1720, and in ANSWER 40 px the nine labels '1.01' at x=352, '1.02' at x=504, '1.03' at x=656, '1.04' at x=808, '1.05' at x=960, '1.06' at x=1112, '1.07' at x=1264, '1.08' at x=1416, '1.09' at x=1568. Every text label has an 8 px BG-coloured outline so a guide line never cuts a glyph.",
+    "visible_text": [
+     "1",
+     "1.1",
+     "1.2",
+     "1.3",
+     "1.04",
+     "1.4",
+     "1.01",
+     "1.02",
+     "1.03",
+     "1.04",
+     "1.05",
+     "1.06",
+     "1.07",
+     "1.08",
+     "1.09"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as (a) or (b); box letters and point letters named in this spec are allowed, any other letter is not",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "Figure it Out labels"
+    ],
+    "accuracy_checks": [
+     "1.4 sits on the 4th long tick after 1 (1.1, 1.2, 1.3, 1.4), spacing 320 px = 0.1 continues to x=1580",
+     "the nine inner strip labels run 1.01 to 1.09 in steps of 0.01 and the 4th is 1.04 like the given label",
+     "strip has 10 equal parts of 152 px between x=200 and x=1720",
+     "all question-figure elements are unchanged"
+    ],
+    "alt_text": "The same number line with 1.4 marked and ringed, and a magnified strip of the gap from 1 to 1.1 whose nine inner marks are labelled 1.01 to 1.09.",
+    "render_note": "The book prints only text for this answer (p.47); this figure follows the LP solution (4th mark after 1 is 1.4; divisions 1.01 to 1.09)."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C67",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Number Line: reading letters A to D",
+   "ncert_ref": "Section 3.6 - Identify and write the decimal numbers against the letters (p.70)",
+   "question_text": "A line has large marks at 5, 5.1, 5.2, 5.3 and 5.4, with 10 small marks between neighbouring large marks. The letter A is 9 small marks after 5, B is 3 small marks after 5.1, C is on the large mark 5.2 and D is 1 small mark after 5.3. Read the decimal at each letter.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "MEASUREMENT_READING"
+   ],
+   "reason": "The learner reads a decimal at four arrows on a number line; the positions of A to D exist only in the figure (the book question is just the figure).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S17.T17.C67.IMG1",
+   "manim_scene": "c7_3_17_C67_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S17.T17.C67.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": [
+      1920,
+      1080
+     ],
+     "line": {
+      "y": 560,
+      "x_from": 100,
+      "x_to": 1820,
+      "arrowheads": "both"
+     },
+     "long_ticks": [
+      {
+       "x": 300,
+       "value": "5",
+       "label": "5"
+      },
+      {
+       "x": 640,
+       "value": "5.1",
+       "label": "5.1"
+      },
+      {
+       "x": 980,
+       "value": "5.2",
+       "label": ""
+      },
+      {
+       "x": 1320,
+       "value": "5.3",
+       "label": "5.3"
+      },
+      {
+       "x": 1660,
+       "value": "5.4",
+       "label": "5.4"
+      }
+     ],
+     "short_ticks_per_gap": 9,
+     "short_tick_spacing_px": 34,
+     "arrows": [
+      {
+       "letter": "A",
+       "x": 606,
+       "colour": "FOCUS",
+       "direction": "up"
+      },
+      {
+       "letter": "B",
+       "x": 742,
+       "colour": "FOCUS",
+       "direction": "up"
+      },
+      {
+       "letter": "C",
+       "x": 980,
+       "colour": "FOCUS",
+       "direction": "up"
+      },
+      {
+       "letter": "D",
+       "x": 1354,
+       "colour": "FOCUS",
+       "direction": "up"
+      }
+     ],
+     "type": "number_line"
+    },
+    "manim_description": "Canvas 1920 x 1080, BG white. Draw one horizontal number line in INK (3 px) at y=560 from x=100 to x=1820 with an arrowhead at BOTH ends. Draw five long ticks (INK, 3 px, 120 px tall, y=500 to y=620) at x=300, 640, 980, 1320, 1660 (values 5, 5.1, 5.2, 5.3, 5.4; 340 px = 0.1). Between each pair of neighbouring long ticks draw 9 short ticks (INK, 3 px, 60 px tall, y=530 to y=590) every 34 px (36 short ticks in all: x=334, 368, 402, 436, 470, 504, 538, 572, 606, 674, 708, 742, 776, 810, 844, 878, 912, 946, 1014, 1048, 1082, 1116, 1150, 1184, 1218, 1252, 1286, 1354, 1388, 1422, 1456, 1490, 1524, 1558, 1592, 1626). Label below the line in INK 40 px at y=690 only four long ticks: '5' at x=300, '5.1' at x=640, '5.3' at x=1320, '5.4' at x=1660; the long tick at x=980 (5.2) stays unlabelled. Draw four FOCUS up-arrows standing on the line (shaft from y=610 up to y=480, arrowhead at the top) at x=606 (9th short tick after 5), x=742 (3rd short tick after 5.1), x=980 (on the long tick 5.2) and x=1354 (1st short tick after 5.3). Print the letters 'A' at x=606, 'B' at x=742, 'C' at x=980, 'D' at x=1354 in INK 44 px, centred at y=430 above the arrowheads. Do not print any decimal value above a letter.",
+    "visible_text": [
+     "5",
+     "5.1",
+     "5.3",
+     "5.4",
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as (a) or (b); box letters and point letters named in this spec are allowed, any other letter is not",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "Figure it Out labels"
+    ],
+    "accuracy_checks": [
+     "A is 9 x 34 = 306 px after the 5 tick (9 hundredths), B is 3 x 34 = 102 px after the 5.1 tick, C is on the 5.2 long tick, D is 34 px after the 5.3 tick",
+     "each gap of 340 px holds 9 short ticks, one short tick = 0.01",
+     "5.2 is a long but unlabelled tick",
+     "no answer value drawn"
+    ],
+    "alt_text": "A number line from 5 to 5.4 with long marks every tenth (labels 5, 5.1, 5.3, 5.4), small marks every hundredth and four arrows labelled A, B, C and D.",
+    "render_note": "LP text says there is a large mark at 5.2 (unlabelled); the book picture (p.70) shows NO long tick at 5.2, only a continuous run of small ticks between 5.1 and 5.3. The LP text is followed (long tick, no label); every arrow position and reading is identical in both versions."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C67",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Number Line: reading letters A to D",
+   "ncert_ref": "Section 3.6 - Identify and write the decimal numbers against the letters (p.70)",
+   "question_text": "A line has large marks at 5, 5.1, 5.2, 5.3 and 5.4, with 10 small marks between neighbouring large marks. The letter A is 9 small marks after 5, B is 3 small marks after 5.1, C is on the large mark 5.2 and D is 1 small mark after 5.3. Read the decimal at each letter.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The printed answer is the same line with the four readings written above the letters; the figure adds those four values.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S17.T17.C67.IMG2",
+   "manim_scene": "c7_3_17_C67_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S17.T17.C67.IMG2}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S17.T17.C67.IMG1",
+    "content": {
+     "canvas": [
+      1920,
+      1080
+     ],
+     "same_as_question": "M3.S17.T17.C67.IMG1",
+     "added_text": [
+      {
+       "above_letter": "A",
+       "text": "5.09"
+      },
+      {
+       "above_letter": "B",
+       "text": "5.13"
+      },
+      {
+       "above_letter": "C",
+       "text": "5.2"
+      },
+      {
+       "above_letter": "D",
+       "text": "5.31"
+      }
+     ],
+     "type": "number_line"
+    },
+    "manim_description": "Keep every part of the question figure exactly as drawn (same coordinates, INK and FOCUS). Add, in ANSWER green 40 px, the decimal value above each letter, centred on the letter's x: '5.09' above A at (606, 360), '5.13' above B at (742, 360), '5.2' above C at (980, 360), '5.31' above D at (1354, 360). Nothing else changes.",
+    "visible_text": [
+     "5",
+     "5.1",
+     "5.3",
+     "5.4",
+     "A",
+     "B",
+     "C",
+     "D",
+     "5.09",
+     "5.13",
+     "5.2",
+     "5.31"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as (a) or (b); box letters and point letters named in this spec are allowed, any other letter is not",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "Figure it Out labels"
+    ],
+    "accuracy_checks": [
+     "5 + 9 x 0.01 = 5.09",
+     "5.1 + 3 x 0.01 = 5.13",
+     "C on 5.2",
+     "5.3 + 1 x 0.01 = 5.31",
+     "values sit above the matching letters"
+    ],
+    "alt_text": "The same number line with 5.09 written above A, 5.13 above B, 5.2 above C and 5.31 above D.",
+    "render_note": "Matches the printed answer on p.47 (5.09, 5.13, 5.2, 5.31)."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C68",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Zooming: the decimal at the last mark",
+   "ncert_ref": "Section 3.6 - Figures (a) and (b), identify '?' (p.71)",
+   "question_text": "Locate 4.185 by zooming. Then read the decimal marked '?' in a zoom that goes from 3 to 4, then 3.0 to 3.1, then 3.05 to 3.06, and ends at the 9th mark of the last gap of 10 parts.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The book question names Figure (a) and Figure (b): the learner reads the unknown at the end of the zoom chain of Figure (b); the boxes and the pointer position exist only in the picture. Both given figures are drawn (v3: lettered figures are drawn even when a teaching image shows (a)).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S17.T17.C68.IMG1",
+   "manim_scene": "c7_3_17_C68_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S17.T17.C68.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": [
+      1920,
+      1080
+     ],
+     "tick_spacing_px": 76,
+     "rows_y": [
+      160,
+      400,
+      640,
+      880
+     ],
+     "divider_x": 960,
+     "left_group": {
+      "x0": 100,
+      "rows": [
+       {
+        "labels": [
+         "0",
+         "10"
+        ],
+        "box_ticks": [
+         5,
+         6
+        ],
+        "pointer_x": 418.1
+       },
+       {
+        "labels": [
+         "4",
+         "5"
+        ],
+        "box_ticks": [
+         2,
+         3
+        ],
+        "pointer_x": 240.6
+       },
+       {
+        "labels": [
+         "4.1",
+         "4.2"
+        ],
+        "box_ticks": [
+         9,
+         10
+        ],
+        "pointer_x": 746.0
+       },
+       {
+        "labels": [
+         "4.18",
+         "4.19"
+        ],
+        "middle_label": "4.185",
+        "pointer_x": 480
+       }
+      ]
+     },
+     "right_group": {
+      "x0": 1040,
+      "rows": [
+       {
+        "labels": [
+         "0",
+         "10"
+        ],
+        "box_ticks": [
+         4,
+         5
+        ],
+        "pointer_x": 1272.5
+       },
+       {
+        "labels": [],
+        "box_ticks": [
+         1,
+         2
+        ],
+        "pointer_x": 1084.8
+       },
+       {
+        "labels": [],
+        "box_ticks": [
+         6,
+         7
+        ],
+        "pointer_x": 1488.4
+       },
+       {
+        "labels": [],
+        "unknown_label": "?",
+        "unknown_tick": 10,
+        "pointer_x": 1724
+       }
+      ]
+     },
+     "type": "number_line"
+    },
+    "manim_description": "Canvas 1920 x 1080, BG white. Two zoom-line groups side by side, separated by a thin GUIDE vertical divider at x=960 from y=60 to y=1020. Left group starts at x=100 (ticks at x=100, 176, 252, 328, 404, 480, 556, 632, 708, 784, 860), right group starts at x=1040 (ticks at x=1040, 1116, 1192, 1268, 1344, 1420, 1496, 1572, 1648, 1724, 1800). Each of the 4 rows is a horizontal INK line (3 px) with 11 ticks 76 px apart, numbered 1 to 11 from the left end (10 equal parts, no arrowheads): the two end ticks and the middle (6th) tick are 60 px tall, the other 8 ticks are 36 px tall. Rows sit at y=160, 400, 640 and 880. A zoom box is a rounded rectangle (GUIDE, 3 px, 100 px tall, y-50 to y+50) that encloses two neighbouring ticks with 14 px padding on each side; a red-style pointer is a short FOCUS arrow pointing DOWN onto the line (for rows 1 to 3 from y-46 to y-4 inside the box, for row 4 from y-80 to y-4). Two thin GUIDE (2 px) straight lines run from the bottom-left and bottom-right corners of each zoom box (y+50) to the top of the left end tick and the top of the right end tick of the next row (y_next-30). LEFT group (locating 4.185), labels INK 40 px below each line at y+75: row 1 '0' at x=100 and '10' at x=860, zoom box over ticks 5-6 (x=390 to 494), pointer at x=418.1; row 2 '4' at x=100 and '5' at x=860, zoom box over ticks 2-3 (x=162 to 266), pointer at x=240.6; row 3 '4.1' at x=100 and '4.2' at x=860, zoom box over ticks 9-10 (x=694 to 798), pointer at x=746.0; row 4 '4.18' at x=100, '4.19' at x=860 and '4.185' under the middle tick at x=480, no box, pointer at x=480. RIGHT group (the unknown), no end labels except row 1: row 1 '0' at x=1040 and '10' at x=1800, zoom box over ticks 4-5 (x=1254 to 1358), pointer at x=1272.5; row 2 no labels, zoom box over ticks 1-2 (x=1026 to 1130), pointer at x=1084.8; row 3 no labels, zoom box over ticks 6-7 (x=1406 to 1510), pointer at x=1488.4; row 4 no end labels, pointer at the 10th tick (x=1724) and the INK 44 px symbol '?' centred under that tick at y=955.",
+    "visible_text": [
+     "0",
+     "10",
+     "4",
+     "5",
+     "4.1",
+     "4.2",
+     "4.18",
+     "4.19",
+     "4.185",
+     "?"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as (a) or (b); box letters and point letters named in this spec are allowed, any other letter is not",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "Figure it Out labels"
+    ],
+    "accuracy_checks": [
+     "left chain: 0-10 -> 4-5 -> 4.1-4.2 -> 4.18-4.19 has pointers at 4.185 (middle tick of the last line, 4.18 + 5 x 0.001)",
+     "right chain: boxes pick part 4 of 0-10 (3 to 4), part 1 (3.0 to 3.1), part 6 (3.05 to 3.06); last pointer is on the 10th tick = 9th part",
+     "each line has 11 ticks = 10 equal parts of 76 px",
+     "pointer x values equal 76 px times the position inside the line (4.185, 1.85, 8.5; 3.059, 0.59, 5.9; 9)",
+     "right group shows no range labels except 0 and 10 and the symbol ?"
+    ],
+    "alt_text": "Two groups of four stacked number lines, each line zoomed from a box on the line above; the left group ends at 4.185, the right group ends at an arrow marked with a question mark.",
+    "render_note": "Left group = book Figure (a) (given in full, teaching figure also a concept image M3.S16.T16.C63.IMG1: not linked, drawn again here); right group = book Figure (b). The book prints no range labels on rows 2 to 4 of Figure (b); none are drawn in the question figure. No (a)/(b) letters are drawn. The LP question text turns the book's 'Observe the number lines in Figure (a)' into 'Locate 4.185 by zooming'."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C68",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Zooming: the decimal at the last mark",
+   "ncert_ref": "Section 3.6 - Figures (a) and (b), identify '?' (p.71)",
+   "question_text": "Locate 4.185 by zooming. Then read the decimal marked '?' in a zoom that goes from 3 to 4, then 3.0 to 3.1, then 3.05 to 3.06, and ends at the 9th mark of the last gap of 10 parts.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The printed answer is Figure (b) with the ranges written under each line and the value 3.059 boxed at the arrow; the figure adds those labels and the value.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S17.T17.C68.IMG2",
+   "manim_scene": "c7_3_17_C68_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S17.T17.C68.IMG2}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S17.T17.C68.IMG1",
+    "content": {
+     "canvas": [
+      1920,
+      1080
+     ],
+     "same_as_question": "M3.S17.T17.C68.IMG1",
+     "added_labels_right_group": [
+      {
+       "row": 2,
+       "left": "3",
+       "right": "4"
+      },
+      {
+       "row": 3,
+       "left": "3.0",
+       "right": "3.1"
+      },
+      {
+       "row": 4,
+       "left": "3.05",
+       "right": "3.06"
+      }
+     ],
+     "unknown_replaced_by": {
+      "text": "3.059",
+      "colour": "ANSWER",
+      "box": "FOCUS",
+      "x": 1724,
+      "y": 1020
+     },
+     "type": "number_line"
+    },
+    "manim_description": "Keep every part of the question figure exactly as drawn (same coordinates, INK, GUIDE and FOCUS); the left group is unchanged. In the right group add in ANSWER green 40 px the range labels that the LP solution gives: row 2 '3' at x=1040 and '4' at x=1800 (y=475); row 3 '3.0' at x=1040 and '3.1' at x=1800 (y=715); row 4 '3.05' at x=1040 and '3.06' at x=1800 (y=955). Remove the symbol '?' and write '3.059' in ANSWER 44 px centred at x=1724, y=1020, inside a FOCUS rectangle (3 px, 170 px wide, 56 px tall). Every text label has an 8 px BG-coloured outline so a guide line never cuts a glyph.",
+    "visible_text": [
+     "0",
+     "10",
+     "4",
+     "5",
+     "4.1",
+     "4.2",
+     "4.18",
+     "4.19",
+     "4.185",
+     "3",
+     "4",
+     "3.0",
+     "3.1",
+     "3.05",
+     "3.06",
+     "3.059"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as (a) or (b); box letters and point letters named in this spec are allowed, any other letter is not",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "Figure it Out labels"
+    ],
+    "accuracy_checks": [
+     "3 + 0.0 + 0.05 + 9 x 0.001 = 3.059",
+     "ranges 3-4, 3.0-3.1, 3.05-3.06 match the three boxes of the right group",
+     "the pointer stays on the 10th tick (9th part)",
+     "left group unchanged"
+    ],
+    "alt_text": "The same two zoom groups; the right group now shows the ranges 3 to 4, 3.0 to 3.1 and 3.05 to 3.06 and the value 3.059 boxed at its arrow.",
+    "render_note": "Printed answer p.48 writes '3' (not '3.0') on row 3; the LP solution says '3.0 to 3.1' and is followed."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C69",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Zooming: lines for 9.876 and 0.407",
+   "ncert_ref": "3.6.zoom_make",
+   "question_text": "Make the zoom lines for (a) 9.876 and (b) 0.407.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives only the two numbers 9.876 and 0.407 and asks the learner to make the zoom lines; the book gives no figure for it (it points back to Figures (a) and (b), which are teaching figures), so no question figure is invented.",
+   "text_alternative": "No picture; the two numbers are in the question text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C69",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Zooming: lines for 9.876 and 0.407",
+   "ncert_ref": "Section 3.6 - Make such number lines for 9.876 and 0.407 (p.71)",
+   "question_text": "Make the zoom lines for (a) 9.876 and (b) 0.407.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The learner has to draw the zoom lines, so the printed answer is the two finished zoom chains (book p.48); the LP steps describe them in words only. No question figure exists, so the solution draws the whole figure itself.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S17.T17.C69.IMG1",
+   "manim_scene": "c7_3_17_C69_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S17.T17.C69.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": [
+      1920,
+      1080
+     ],
+     "tick_spacing_px": 76,
+     "rows_y": [
+      160,
+      400,
+      640,
+      880
+     ],
+     "divider_x": 960,
+     "left_group_9.876": {
+      "x0": 100,
+      "rows": [
+       {
+        "labels": [
+         "0",
+         "10"
+        ],
+        "box_ticks": [
+         10,
+         11
+        ],
+        "pointer_x": 850.6
+       },
+       {
+        "labels": [
+         "9",
+         "10"
+        ],
+        "box_ticks": [
+         9,
+         10
+        ],
+        "pointer_x": 765.8
+       },
+       {
+        "labels": [
+         "9.8",
+         "9.9"
+        ],
+        "box_ticks": [
+         8,
+         9
+        ],
+        "pointer_x": 677.6
+       },
+       {
+        "labels": [
+         "9.87",
+         "9.88"
+        ],
+        "marked_tick": 7,
+        "value": "9.876",
+        "pointer_x": 556
+       }
+      ]
+     },
+     "right_group_0.407": {
+      "x0": 1040,
+      "rows": [
+       {
+        "labels": [
+         "0",
+         "10"
+        ],
+        "box_ticks": [
+         1,
+         2
+        ],
+        "pointer_x": 1070.9
+       },
+       {
+        "labels": [
+         "0",
+         "1"
+        ],
+        "box_ticks": [
+         5,
+         6
+        ],
+        "pointer_x": 1349.3
+       },
+       {
+        "labels": [
+         "0.4",
+         "0.5"
+        ],
+        "box_ticks": [
+         1,
+         2
+        ],
+        "pointer_x": 1093.2
+       },
+       {
+        "labels": [
+         "0.40",
+         "0.41"
+        ],
+        "marked_tick": 8,
+        "value": "0.407",
+        "pointer_x": 1572
+       }
+      ]
+     },
+     "type": "number_line",
+     "group_letters": [
+      {
+       "text": "(a)",
+       "group": "left_group_9.876",
+       "x_left": 100,
+       "y_centre": 70,
+       "size_px": 44,
+       "colour": "INK"
+      },
+      {
+       "text": "(b)",
+       "group": "right_group_0.407",
+       "x_left": 1040,
+       "y_centre": 70,
+       "size_px": 44,
+       "colour": "INK"
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080, BG white. Two zoom-line groups side by side, separated by a thin GUIDE vertical divider at x=960 from y=60 to y=1020. Left group (9.876) starts at x=100 (ticks at x=100, 176, 252, 328, 404, 480, 556, 632, 708, 784, 860), right group (0.407) starts at x=1040 (ticks at x=1040, 1116, 1192, 1268, 1344, 1420, 1496, 1572, 1648, 1724, 1800). Each of the 4 rows is a horizontal INK line (3 px) with 11 ticks 76 px apart, numbered 1 to 11 from the left end (10 equal parts, no arrowheads): the two end ticks and the middle (6th) tick are 60 px tall, the other 8 ticks are 36 px tall. Rows sit at y=160, 400, 640 and 880. A zoom box is a rounded rectangle (FOCUS, 3 px, 100 px tall, y-50 to y+50) enclosing two neighbouring ticks with 14 px padding on each side; a pointer is a short ANSWER arrow pointing DOWN onto the line (rows 1 to 3 from y-46 to y-4 inside the box, row 4 from y-80 to y-4). Two thin GUIDE (2 px) straight lines run from the bottom-left and bottom-right corners of each zoom box (y+50) to the top of the left end tick and of the right end tick of the next row (y_next-30). Labels INK 40 px below each line at y+75. LEFT group: row 1 labels '0' at x=100 and '10' at x=860, zoom box over ticks 10-11 (x=770 to 874), pointer at x=850.6; row 2 labels '9' and '10', zoom box over ticks 9-10 (x=694 to 798), pointer at x=765.8; row 3 labels '9.8' and '9.9', zoom box over ticks 8-9 (x=618 to 722), pointer at x=677.6; row 4 labels '9.87' at x=100 and '9.88' at x=860, pointer at the 7th tick (x=556) and, under that tick at y=955, the value '9.876' in ANSWER 40 px inside a FOCUS rectangle (3 px, 150 px wide, 56 px tall). RIGHT group: row 1 labels '0' at x=1040 and '10' at x=1800, zoom box over ticks 1-2 (x=1026 to 1130), pointer at x=1070.9; row 2 labels '0' and '1', zoom box over ticks 5-6 (x=1330 to 1434), pointer at x=1349.3; row 3 labels '0.4' and '0.5', zoom box over ticks 1-2 (x=1026 to 1130), pointer at x=1093.2; row 4 labels '0.40' at x=1040 and '0.41' at x=1800, pointer at the 8th tick (x=1572) and, under that tick at y=955, the value '0.407' in ANSWER 40 px inside a FOCUS rectangle (3 px, 150 px wide, 56 px tall). Every text label has an 8 px BG-coloured outline so a guide line never cuts a glyph. GROUP LETTERS: above each group write its letter in INK 44 px: \"(a)\" with its left edge at x=100 above the left group and \"(b)\" with its left edge at x=1040 above the right group, both vertically centred at y=70 (above the top row, clear of the divider that starts at x=960). Nothing else is added.",
+    "visible_text": [
+     "0",
+     "10",
+     "9",
+     "9.8",
+     "9.9",
+     "9.87",
+     "9.88",
+     "9.876",
+     "1",
+     "0.4",
+     "0.5",
+     "0.40",
+     "0.41",
+     "0.407",
+     "(a)",
+     "(b)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions other than the letters (a) and (b) named in this spec; box letters and point letters named in this spec are allowed, any other letter is not",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "Figure it Out labels"
+    ],
+    "accuracy_checks": [
+     "9.876: part 10 of 0-10 (9 to 10), part 9 of 9-10 (9.8 to 9.9), part 8 of 9.8-9.9 (9.87 to 9.88), marked tick 7 = 6th part after 9.87 = 9.876",
+     "0.407: part 1 of 0-10 (0 to 1), part 5 of 0-1 (0.4 to 0.5), part 1 of 0.4-0.5 (0.40 to 0.41), marked tick 8 = 7th part after 0.40 = 0.407",
+     "pointer x values equal 76 px times the position inside each line (9.876, 8.76, 7.6, 6; 0.407, 4.07, 0.7, 7)",
+     "each line has 11 ticks = 10 equal parts",
+     "group letter (a) sits above the 9.876 chain (left) and (b) above the 0.407 chain (right), the order of the LP answer"
+    ],
+    "alt_text": "Two groups of four stacked number lines, each zoomed from a box on the line above: group (a), on the left, ends at 9.876 on the line from 9.87 to 9.88; group (b), on the right, ends at 0.407 on the line from 0.40 to 0.41.",
+    "render_note": "The book answer (p.48) starts each chain with the line 0 to 10; the LP steps list three zooms (9 to 10, 9.8 to 9.9, 9.87 to 9.88); the figure follows the book and draws the first 0-10 line too. Same picture style as the figures of M3.S17.T17.C68 (not linked). Group letters: (a) and (b) are drawn above the two chains because the LP answer refers to them by letter."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C70",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Line from 5 to 10: boxes a, b and c",
+   "ncert_ref": "Section 3.6 - boxes a, b, c on the line 5 to 10 (p.71)",
+   "question_text": "On a line from 5 to 10 cut into 10 equal parts, the box b is at the 5th division, a is at the 2nd division and c is at the 9th. Find the decimals.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The learner reads the three boxes off the line; the ten equal parts and the arrow positions are the data and are drawn only in the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S17.T17.C70.IMG1",
+   "manim_scene": "c7_3_17_C70_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S17.T17.C70.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": [
+      1920,
+      1080
+     ],
+     "line": {
+      "y": 340,
+      "x_from": 120,
+      "x_to": 1800,
+      "arrowheads": "both"
+     },
+     "ticks_x": [
+      270,
+      410,
+      550,
+      690,
+      830,
+      970,
+      1110,
+      1250,
+      1390,
+      1530,
+      1670
+     ],
+     "tick_labels": {
+      "1": "5",
+      "11": "10"
+     },
+     "arrows": [
+      {
+       "from_tick": 3,
+       "to_box": "a",
+       "x": 550
+      },
+      {
+       "from_tick": 6,
+       "to_box": "b",
+       "x": 970
+      },
+      {
+       "from_tick": 10,
+       "to_box": "c",
+       "x": 1530
+      }
+     ],
+     "boxes": {
+      "w": 190,
+      "h": 140,
+      "top": 650,
+      "letters": {
+       "a": 550,
+       "b": 970,
+       "c": 1530
+      }
+     },
+     "type": "number_line"
+    },
+    "manim_description": "Canvas 1920 x 1080, BG white. Draw one horizontal number line in INK (3 px) at y=340 from x=120 to x=1800 with an arrowhead at BOTH ends. Draw 11 equally spaced ticks (INK, 3 px, 70 px tall, y=305 to y=375) at x=270, 410, 550, 690, 830, 970, 1110, 1250, 1390, 1530, 1670. Label '5' under the 1st tick (x=270) and '10' under the 11th tick (x=1670) in INK 40 px at y=430; no other tick is labelled. From the 3rd tick (x=550), the 6th tick (x=970) and the 10th tick (x=1530) draw INK vertical arrows (3 px) from y=340 down to y=650, each arrowhead touching the top edge of an empty box. Boxes: white fill (BG), INK outline 3 px, 190 px wide and 140 px tall, top edge y=650, centred at x=550, 970 and 1530. Write the letter 'a' in the first box, 'b' in the second, 'c' in the third, INK 40 px, centred in the upper half of the box at y=700; the lower half of each box stays empty.",
+    "visible_text": [
+     "5",
+     "10",
+     "a",
+     "b",
+     "c"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as (a) or (b); box letters and point letters named in this spec are allowed, any other letter is not",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "Figure it Out labels"
+    ],
+    "accuracy_checks": [
+     "line 5 to 10 is cut into 10 equal parts of 140 px, one part = (10 - 5) / 10 = 0.5",
+     "a on the 2nd division (tick 3), b on the 5th (tick 6), c on the 9th (tick 10)",
+     "boxes are empty except the letters"
+    ],
+    "alt_text": "A number line from 5 to 10 in ten equal parts with three arrows from the 2nd, 5th and 9th divisions down to boxes labelled a, b and c.",
+    "render_note": "Same style as C71 and C72 (letter at the top of the box, value written below it in the solution)."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C70",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Line from 5 to 10: boxes a, b and c",
+   "ncert_ref": "Section 3.6 - boxes a, b, c on the line 5 to 10 (p.71)",
+   "question_text": "On a line from 5 to 10 cut into 10 equal parts, the box b is at the 5th division, a is at the 2nd division and c is at the 9th. Find the decimals.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The printed answer is the same line with the boxes filled; the figure adds the three values.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S17.T17.C70.IMG2",
+   "manim_scene": "c7_3_17_C70_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S17.T17.C70.IMG2}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S17.T17.C70.IMG1",
+    "content": {
+     "canvas": [
+      1920,
+      1080
+     ],
+     "same_as_question": "M3.S17.T17.C70.IMG1",
+     "added_text": [
+      {
+       "box": "a",
+       "text": "6"
+      },
+      {
+       "box": "b",
+       "text": "7.5"
+      },
+      {
+       "box": "c",
+       "text": "9.5"
+      }
+     ],
+     "type": "number_line"
+    },
+    "manim_description": "Keep every part of the question figure exactly as drawn (same coordinates). Add in ANSWER green 40 px, centred in the lower half of each box at y=755: '6' in box a (x=550), '7.5' in box b (x=970), '9.5' in box c (x=1530). The letters stay in INK in the upper half of the boxes.",
+    "visible_text": [
+     "5",
+     "10",
+     "a",
+     "b",
+     "c",
+     "6",
+     "7.5",
+     "9.5"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as (a) or (b); box letters and point letters named in this spec are allowed, any other letter is not",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "Figure it Out labels"
+    ],
+    "accuracy_checks": [
+     "5 + 2 x 0.5 = 6",
+     "5 + 5 x 0.5 = 7.5",
+     "5 + 9 x 0.5 = 9.5"
+    ],
+    "alt_text": "The same number line with the boxes filled: a is 6, b is 7.5 and c is 9.5.",
+    "render_note": "Printed answer p.49 shows the values alone inside the boxes; here the letters stay and the values go below them so the labels match the question figure."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C71",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Other End Points: boxes d to h",
+   "ncert_ref": "Section 3.6 - boxes d to h on two lines (p.72)",
+   "question_text": "One line runs from 8 to 8.1 and is cut into 10 equal parts, with d at the 1st mark and e at the 5th. Another line starts at 4.3 and has marks every 0.05, with 4.8 at the 10th mark. The letter f is at the 1st mark, g is at the 4th mark and h is one mark past the 4.8 label. Find d, e, f, g and h.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The learner reads five boxes on two number lines with different steps; the tick positions and the two scales are the data and exist only in the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S17.T17.C71.IMG1",
+   "manim_scene": "c7_3_17_C71_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S17.T17.C71.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": [
+      1920,
+      1080
+     ],
+     "top_line": {
+      "y": 200,
+      "x_from": 100,
+      "x_to": 1850,
+      "ticks_x": [
+       250,
+       400,
+       550,
+       700,
+       850,
+       1000,
+       1150,
+       1300,
+       1450,
+       1600,
+       1750
+      ],
+      "labels": {
+       "1": "8",
+       "11": "8.1"
+      },
+      "arrows": [
+       {
+        "tick": 2,
+        "box": "d"
+       },
+       {
+        "tick": 6,
+        "box": "e"
+       }
+      ],
+      "box_top": 400
+     },
+     "bottom_line": {
+      "y": 700,
+      "x_from": 100,
+      "x_to": 1850,
+      "ticks_x": [
+       250,
+       385,
+       520,
+       655,
+       790,
+       925,
+       1060,
+       1195,
+       1330,
+       1465,
+       1600,
+       1735
+      ],
+      "labels": {
+       "1": "4.3",
+       "11": "4.8"
+      },
+      "arrows": [
+       {
+        "tick": 2,
+        "box": "f"
+       },
+       {
+        "tick": 5,
+        "box": "g"
+       },
+       {
+        "tick": 12,
+        "box": "h"
+       }
+      ],
+      "box_top": 870
+     },
+     "boxes": {
+      "w": 190,
+      "h": 140
+     },
+     "type": "number_line"
+    },
+    "manim_description": "Canvas 1920 x 1080, BG white. TOP number line: INK 3 px at y=200 from x=100 to x=1850 with an arrowhead at BOTH ends; 11 equally spaced ticks (INK, 3 px, 70 px tall, y=165 to y=235) at x=250, 400, 550, 700, 850, 1000, 1150, 1300, 1450, 1600, 1750; label '8' under the 1st tick (x=250) and '8.1' under the 11th tick (x=1750), INK 40 px at y=290. From the 2nd tick (x=400) and the 6th tick (x=1000) draw INK vertical arrows (3 px) from y=200 down to y=400, arrowheads touching the top of empty boxes with letters 'd' (x=400) and 'e' (x=1000). BOTTOM number line: INK 3 px at y=700 from x=100 to x=1850 with an arrowhead at BOTH ends; 12 equally spaced ticks (INK, 3 px, 70 px tall, y=665 to y=735) at x=250, 385, 520, 655, 790, 925, 1060, 1195, 1330, 1465, 1600, 1735; label '4.3' under the 1st tick (x=250) and '4.8' under the 11th tick (x=1600), INK 40 px at y=790; the 12th tick (x=1735) has no label. From the 2nd tick (x=385), the 5th tick (x=790) and the 12th tick (x=1735) draw INK vertical arrows from y=700 down to y=870, arrowheads touching the top of empty boxes with letters 'f' (x=385), 'g' (x=790), 'h' (x=1735). Boxes: white fill (BG), INK outline 3 px, 190 px wide, 140 px tall; the top row boxes have top edge y=400, the bottom row boxes top edge y=870. Letters INK 40 px centred in the upper half of each box (y=450 for d and e, y=920 for f, g, h); the lower half of every box stays empty.",
+    "visible_text": [
+     "8",
+     "8.1",
+     "4.3",
+     "4.8",
+     "d",
+     "e",
+     "f",
+     "g",
+     "h"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as (a) or (b); box letters and point letters named in this spec are allowed, any other letter is not",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "Figure it Out labels"
+    ],
+    "accuracy_checks": [
+     "top line 8 to 8.1 has 10 equal parts of 150 px, one part = 0.01; d on tick 2, e on tick 6",
+     "bottom line: 4.8 is on tick 11 = 10 steps of 0.05 after 4.3 (4.3 + 0.5 = 4.8); f on tick 2, g on tick 5, h on tick 12 (one tick after the 4.8 label)",
+     "boxes empty except the letters"
+    ],
+    "alt_text": "Two number lines: 8 to 8.1 in ten parts with arrows to boxes d and e, and a line from 4.3 in steps of 0.05 with 4.8 labelled and arrows to boxes f, g and h.",
+    "render_note": "One diagram holds both lines of the book question (one question, two pictures printed together)."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C71",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Other End Points: boxes d to h",
+   "ncert_ref": "Section 3.6 - boxes d to h on two lines (p.72)",
+   "question_text": "One line runs from 8 to 8.1 and is cut into 10 equal parts, with d at the 1st mark and e at the 5th. Another line starts at 4.3 and has marks every 0.05, with 4.8 at the 10th mark. The letter f is at the 1st mark, g is at the 4th mark and h is one mark past the 4.8 label. Find d, e, f, g and h.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The printed answer is the same two lines with all five boxes filled; the figure adds the five values.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S17.T17.C71.IMG2",
+   "manim_scene": "c7_3_17_C71_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S17.T17.C71.IMG2}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S17.T17.C71.IMG1",
+    "content": {
+     "canvas": [
+      1920,
+      1080
+     ],
+     "same_as_question": "M3.S17.T17.C71.IMG1",
+     "added_text": [
+      {
+       "box": "d",
+       "text": "8.01"
+      },
+      {
+       "box": "e",
+       "text": "8.05"
+      },
+      {
+       "box": "f",
+       "text": "4.35"
+      },
+      {
+       "box": "g",
+       "text": "4.5"
+      },
+      {
+       "box": "h",
+       "text": "4.85"
+      }
+     ],
+     "type": "number_line"
+    },
+    "manim_description": "Keep every part of the question figure exactly as drawn (same coordinates). Add in ANSWER green 40 px, centred in the lower half of each box: 'd' box (x=400) '8.01' at y=505, 'e' box (x=1000) '8.05' at y=505, 'f' box (x=385) '4.35' at y=975, 'g' box (x=790) '4.5' at y=975, 'h' box (x=1735) '4.85' at y=975. The letters stay in INK in the upper half.",
+    "visible_text": [
+     "8",
+     "8.1",
+     "4.3",
+     "4.8",
+     "d",
+     "e",
+     "f",
+     "g",
+     "h",
+     "8.01",
+     "8.05",
+     "4.35",
+     "4.5",
+     "4.85"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as (a) or (b); box letters and point letters named in this spec are allowed, any other letter is not",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "Figure it Out labels"
+    ],
+    "accuracy_checks": [
+     "8 + 1 x 0.01 = 8.01",
+     "8 + 5 x 0.01 = 8.05",
+     "4.3 + 1 x 0.05 = 4.35",
+     "4.3 + 4 x 0.05 = 4.5",
+     "4.8 + 0.05 = 4.85"
+    ],
+    "alt_text": "The same two number lines with the boxes filled: d is 8.01, e is 8.05, f is 4.35, g is 4.5 and h is 4.85.",
+    "render_note": "Printed answer p.49 shows the values alone inside the boxes; here the letters stay and the values go below them so the labels match the question figure."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C72",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Figure it Out (end of chapter), Q3",
+   "ncert_ref": "Figure it Out Q3 (p.78)",
+   "question_text": "What decimal number does each letter represent in the number line? The line runs from 6.4 to 6.6, with marks every 0.025 between them. The point a is at the 2nd mark after 6.4, the point c is at the 5th mark and the point b is at the 6th mark.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The learner reads three boxes off a line with only three labels; the 8 equal parts and the arrow positions are the data and exist only in the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S17.T17.C72.IMG1",
+   "manim_scene": "c7_3_17_C72_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S17.T17.C72.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": [
+      1920,
+      1080
+     ],
+     "line": {
+      "y": 340,
+      "x_from": 100,
+      "x_to": 1800,
+      "arrowheads": "both"
+     },
+     "ticks_x": [
+      250,
+      420,
+      590,
+      760,
+      930,
+      1100,
+      1270,
+      1440,
+      1610
+     ],
+     "tick_labels": {
+      "1": "6.4",
+      "5": "6.5",
+      "9": "6.6"
+     },
+     "arrows": [
+      {
+       "from_tick": 3,
+       "to_box": "a",
+       "x": 590
+      },
+      {
+       "from_tick": 6,
+       "to_box": "c",
+       "x": 1100
+      },
+      {
+       "from_tick": 7,
+       "to_box": "b",
+       "x": 1270
+      }
+     ],
+     "boxes": {
+      "w": 150,
+      "h": 140,
+      "top": 650
+     },
+     "type": "number_line"
+    },
+    "manim_description": "Canvas 1920 x 1080, BG white. Draw one horizontal number line in INK (3 px) at y=340 from x=100 to x=1800 with an arrowhead at BOTH ends. Draw 9 equally spaced ticks (INK, 3 px, 70 px tall, y=305 to y=375) at x=250, 420, 590, 760, 930, 1100, 1270, 1440, 1610. Label '6.4' under the 1st tick (x=250), '6.5' under the 5th tick (x=930) and '6.6' under the 9th tick (x=1610), INK 40 px at y=430; the other six ticks have no label. From the 3rd tick (x=590), the 6th tick (x=1100) and the 7th tick (x=1270) draw INK vertical arrows (3 px) from y=340 down to y=650, arrowheads touching the top edge of empty boxes. Boxes: white fill (BG), INK outline 3 px, 150 px wide, 140 px tall, top edge y=650, centred at x=590, 1100 and 1270 (the boxes at 1100 and 1270 stand side by side with a 20 px gap). Letters INK 40 px centred in the upper half of each box at y=700: 'a' at x=590, 'c' at x=1100, 'b' at x=1270 (left to right a, c, b); the lower half of each box stays empty.",
+    "visible_text": [
+     "6.4",
+     "6.5",
+     "6.6",
+     "a",
+     "c",
+     "b"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as (a) or (b); box letters and point letters named in this spec are allowed, any other letter is not",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "Figure it Out labels"
+    ],
+    "accuracy_checks": [
+     "6.4 to 6.6 is cut into 8 equal parts of 170 px, one part = 0.2 / 8 = 0.025",
+     "a on tick 3 (2nd mark after 6.4), c on tick 6 (5th mark), b on tick 7 (6th mark)",
+     "label 6.5 sits on tick 5 = 4 parts after 6.4",
+     "boxes empty except the letters"
+    ],
+    "alt_text": "A number line from 6.4 to 6.6 with nine marks, labels 6.4, 6.5 and 6.6, and arrows from the third, sixth and seventh marks to boxes a, c and b.",
+    "render_note": "Same style as C70 and C71."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C72",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Figure it Out (end of chapter), Q3",
+   "ncert_ref": "Figure it Out Q3 (p.78)",
+   "question_text": "What decimal number does each letter represent in the number line? The line runs from 6.4 to 6.6, with marks every 0.025 between them. The point a is at the 2nd mark after 6.4, the point c is at the 5th mark and the point b is at the 6th mark.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The printed answer is the same line with the three boxes filled; the figure adds the three values.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S17.T17.C72.IMG2",
+   "manim_scene": "c7_3_17_C72_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S17.T17.C72.IMG2}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S17.T17.C72.IMG1",
+    "content": {
+     "canvas": [
+      1920,
+      1080
+     ],
+     "same_as_question": "M3.S17.T17.C72.IMG1",
+     "added_text": [
+      {
+       "box": "a",
+       "text": "6.45"
+      },
+      {
+       "box": "c",
+       "text": "6.525"
+      },
+      {
+       "box": "b",
+       "text": "6.55"
+      }
+     ],
+     "type": "number_line"
+    },
+    "manim_description": "Keep every part of the question figure exactly as drawn (same coordinates). Add in ANSWER green 40 px, centred in the lower half of each box at y=755: '6.45' in box a (x=590), '6.525' in box c (x=1100), '6.55' in box b (x=1270). The letters stay in INK in the upper half of the boxes.",
+    "visible_text": [
+     "6.4",
+     "6.5",
+     "6.6",
+     "a",
+     "c",
+     "b",
+     "6.45",
+     "6.525",
+     "6.55"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as (a) or (b); box letters and point letters named in this spec are allowed, any other letter is not",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "Figure it Out labels"
+    ],
+    "accuracy_checks": [
+     "6.4 + 2 x 0.025 = 6.45",
+     "6.4 + 5 x 0.025 = 6.525",
+     "6.4 + 6 x 0.025 = 6.55",
+     "8 x 0.025 = 0.2 so the last tick is 6.6"
+    ],
+    "alt_text": "The same number line with the boxes filled: a is 6.45, c is 6.525 and b is 6.55.",
+    "render_note": "Printed answer p.53 shows the values alone inside the boxes; here the letters stay and the values go below them."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C76",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example E2",
+   "ncert_ref": "Math Talk - digits 4, 1, 8, 2, 5 closest to 25 (p.73)",
+   "question_text": "Use the digits 4, 1, 8, 2 and 5 exactly once each to make a decimal as close as possible to 25, with the point placed in different places.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The book prints the three digit-tile arrangements (point after 1, 2 and 3 digits) as its answer picture; the worked example is about those three placements of the point, so the figure shows them with the digits placed as the steps give.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S18.T18.C76.IMG1",
+   "manim_scene": "c7_3_18_C76_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S18.T18.C76.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": [
+      1920,
+      1080
+     ],
+     "tile_px": 130,
+     "tile_pitch_px": 140,
+     "point_x": 960,
+     "rows": [
+      {
+       "row": 1,
+       "y": 330,
+       "fill": "MARK_FILL",
+       "left_tiles": [
+        {
+         "x": 740,
+         "digit": 2
+        },
+        {
+         "x": 880,
+         "digit": 5
+        }
+       ],
+       "right_tiles": [
+        {
+         "x": 1040,
+         "digit": 1
+        },
+        {
+         "x": 1180,
+         "digit": 4
+        },
+        {
+         "x": 1320,
+         "digit": 8
+        }
+       ],
+       "point_x": 960
+      },
+      {
+       "row": 2,
+       "y": 540,
+       "fill": "CELL_FILL",
+       "left_tiles": [
+        {
+         "x": 880,
+         "digit": 8
+        }
+       ],
+       "right_tiles": [
+        {
+         "x": 1040,
+         "digit": 5
+        },
+        {
+         "x": 1180,
+         "digit": 4
+        },
+        {
+         "x": 1320,
+         "digit": 2
+        },
+        {
+         "x": 1460,
+         "digit": 1
+        }
+       ],
+       "point_x": 960
+      },
+      {
+       "row": 3,
+       "y": 750,
+       "fill": "CELL_FILL",
+       "left_tiles": [
+        {
+         "x": 600,
+         "digit": 1
+        },
+        {
+         "x": 740,
+         "digit": 2
+        },
+        {
+         "x": 880,
+         "digit": 4
+        }
+       ],
+       "right_tiles": [
+        {
+         "x": 1040,
+         "digit": 5
+        },
+        {
+         "x": 1180,
+         "digit": 8
+        }
+       ],
+       "point_x": 960
+      }
+     ],
+     "row_values": [
+      "25.148",
+      "8.5421",
+      "124.58"
+     ],
+     "type": "other"
+    },
+    "manim_description": "Canvas 1920 x 1080, BG white. Three rows of square digit tiles aligned on one decimal point at x=960. Each tile is 130 px x 130 px with an INK 3 px outline and one INK bold 72 px digit centred in it; neighbouring tile centres are 140 px apart (10 px gap). The decimal point is a filled INK dot of 14 px diameter at x=960 on the bottom baseline of each row (y_centre+50). The first tile left of the point is centred at x=880, the first tile right of the point at x=1040. row 1 (centre y=330, tile fill MARK_FILL): left of the point tiles at x=740, 880 with digits 2-5; right of the point tiles at x=1040, 1180, 1320 with digits 1-4-8; row 2 (centre y=540, tile fill CELL_FILL): left of the point tiles at x=880 with digits 8; right of the point tiles at x=1040, 1180, 1320, 1460 with digits 5-4-2-1; row 3 (centre y=750, tile fill CELL_FILL): left of the point tiles at x=600, 740, 880 with digits 1-2-4; right of the point tiles at x=1040, 1180 with digits 5-8. Rows read 25.148 (row 1), 8.5421 (row 2), 124.58 (row 3). Row 1 tiles are MARK_FILL (the closest to 25), rows 2 and 3 tiles are CELL_FILL. No other text.",
+    "visible_text": [
+     "2",
+     "5",
+     "1",
+     "4",
+     "8",
+     "8",
+     "5",
+     "4",
+     "2",
+     "1",
+     "1",
+     "2",
+     "4",
+     "5",
+     "8"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure captions such as (a) or (b); box letters and point letters named in this spec are allowed, any other letter is not",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "Figure it Out labels"
+    ],
+    "accuracy_checks": [
+     "each row uses the digits 4, 1, 8, 2, 5 exactly once (25.148, 8.5421, 124.58)",
+     "row 1 tiles: 2 then 5 before the point, 1, 4, 8 after it; row 2: 8 before, 5, 4, 2, 1 after; row 3: 1, 2, 4 before, 5, 8 after",
+     "distances from 25: 25.148 -> 0.148, 8.5421 -> 16.4579, 124.58 -> 99.58 (row 1 is the closest)",
+     "decimal points of the three rows share x=960"
+    ],
+    "alt_text": "Three rows of digit tiles aligned on the decimal point: 25.148, 8.5421 and 124.58.",
+    "render_note": "The book's answer (p.50) shows 8.542 in the yellow row (4 tiles, digit 1 missing, so not 'each digit once'); the LP uses 8.5421, which uses all five digits, and the figure follows the LP. Green row = the closest, matching the book's green row. Decimal-point positions carry the meaning, so this is not a plain list of boxed numbers."
+   }
+  }
+ ]
+}

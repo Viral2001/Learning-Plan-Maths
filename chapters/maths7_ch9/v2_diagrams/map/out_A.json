@@ -1,0 +1,3375 @@
+{
+ "meta": {
+  "chapter": "Geometric Twins",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 9",
+  "lp_plan_id": "cbse_eng_maths7_ch9_v61",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "required": 9,
+    "optional": 0,
+    "none": 11
+   },
+   "question": {
+    "required": 3,
+    "optional": 0,
+    "none": 1
+   },
+   "solution": {
+    "required": 2,
+    "optional": 0,
+    "none": 2
+   }
+  },
+  "notes": [
+   "Chunk A: topics M1.S1.T1, M1.S2.T2, M1.S3.T3, M1.S4.T4, M2.S5.T5 (24 units: 20 worked blocks and 4 question/answer pairs = 28 items).",
+   "The 'ask' blocks (C2, C3, C6 block 1, C8 block 1, C9, C19 block 1, C21 block 1) carry a talk picture through picture_key = a concept image; it is not touched and no diagram is added for them (optional where the question depends on it, none otherwise).",
+   "LP vs book conflicts are listed in notes_A.md (100-degree turn, 'three pairs', teardrop/leaf-pair moves).",
+   "Teaching-image audit 23 Nov 2026 (user decision): items that need a figure get their own diagram even when a teaching image shows it. Flipped to required in this chunk: M1.S2.T2.C6 block 1, M1.S3.T3.C8 block 1, M1.S3.T3.C9 block 0. This supersedes any earlier note here that says no diagram is added for them. See map/AUDIT_teaching_image.md."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P01-shape-1",
+   "source": "chapter p.01",
+   "description": "Bare signboard symbol with corner points A, B, C (the symbol of the arm-length question; its measured version is the block-1 drawing)",
+   "mapped_to": "item:M1.S2.T2.C4#1 (question)"
+  },
+  {
+   "fig_id": "P02-shape-1",
+   "source": "chapter p.02",
+   "description": "Row of four check-mark symbols with the same arm lengths and four different angles at B",
+   "mapped_to": "item:M1.S2.T2.C4#0 (question)"
+  },
+  {
+   "fig_id": "P01-signboard-1",
+   "source": "chapter p.01",
+   "description": "Signboard on a striped post in grass with one check-mark symbol (scenery; the symbol is redrawn bare in P01-shape-1)",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P02-cutout-1",
+   "source": "chapter p.02",
+   "description": "Pink notched-corner shape and its tilted copy with tracing paper laid over it",
+   "mapped_to": "item:M1.S2.T2.C5 (question)"
+  },
+  {
+   "fig_id": "P02-shape-2",
+   "source": "chapter p.02",
+   "description": "Two identical circles with the upper-right quadrant cut away",
+   "mapped_to": "item:M1.S2.T2.C5 (question)"
+  },
+  {
+   "fig_id": "P03-shape-1",
+   "source": "chapter p.03",
+   "description": "Pair of bent-strip brackets, the second turned through a half turn",
+   "mapped_to": "item:M1.S2.T2.C6#0 (question)"
+  },
+  {
+   "fig_id": "P03-shape-2",
+   "source": "chapter p.03",
+   "description": "Pair of half discs that are mirror images",
+   "mapped_to": "item:M1.S2.T2.C6#0 (question)"
+  },
+  {
+   "fig_id": "P03-shape-3",
+   "source": "chapter p.03",
+   "description": "Figure it Out Q1: two V-shaped symbols, equal arm lengths, angles about 90 and 72 degrees",
+   "mapped_to": "item:M1.S4.T4.C11 (question)"
+  },
+  {
+   "fig_id": "P03-shape-4",
+   "source": "chapter p.03",
+   "description": "Figure it Out Q2: four pairs (teardrops, clouds, starbursts, leaf pairs)",
+   "mapped_to": "item:M1.S4.T4.C13 (question)"
+  },
+  {
+   "fig_id": "P04-shape-1",
+   "source": "chapter p.04",
+   "description": "Figure it Out Q4: reference three-armed figure (a short arm ending on a long segment)",
+   "mapped_to": "item:M1.S4.T4.C17 (question)"
+  },
+  {
+   "fig_id": "P04-shape-2",
+   "source": "chapter p.04",
+   "description": "Figure it Out Q4: four identical copies of the figure in two rows of two",
+   "mapped_to": "item:M1.S4.T4.C17 (question)"
+  },
+  {
+   "fig_id": "P04-illustration-1",
+   "source": "chapter p.04",
+   "description": "Two schoolgirls beside a triangular cardboard frame with a round hole (scenery; sides are in the text on p.5)",
+   "mapped_to": "concept_image:M2.S5.T5.C19.IMG1"
+  },
+  {
+   "fig_id": "P05-construction-1",
+   "source": "chapter p.05",
+   "description": "Rabia's construction: AB = 6 cm, dashed circles of radius 4 cm round A and 8 cm round B, crossing at E and F, triangles ABE and ABF",
+   "mapped_to": "item:M2.S5.T5.C20#0 (question)"
+  },
+  {
+   "fig_id": "NEW-P05-construction-1-b1",
+   "source": "chapter p.05-06",
+   "description": "Second use of the p.5 construction: the same figure for the block that compares triangle ABE and triangle ABF",
+   "mapped_to": "item:M2.S5.T5.C20#1 (question)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 14,
+  "mapped_to_items": 12,
+  "mapped_to_concept_images": 1,
+  "mapped_none": 1,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S2.T2.C4.IMG1",
+   "M1.S2.T2.C4.IMG2",
+   "M1.S2.T2.C5.IMG2",
+   "M1.S2.T2.C6.IMG3",
+   "M1.S2.T2.C6.IMG4",
+   "M1.S3.T3.C8.IMG2",
+   "M1.S3.T3.C9.IMG2",
+   "M1.S4.T4.C11.IMG1",
+   "M1.S4.T4.C13.IMG1",
+   "M1.S4.T4.C14.IMG1",
+   "M1.S4.T4.C17.IMG1",
+   "M1.S4.T4.C18.IMG1",
+   "M2.S5.T5.C20.IMG2",
+   "M2.S5.T5.C20.IMG3"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S1.T1.C2",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: the three corners",
+   "ncert_ref": "Chapter opener (not in the book pages)",
+   "question_text": "The three corners of a triangle are torn off and laid side by side. How many degrees do the three angles add up to?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Torn-off corners add to 180 degrees: all the information is in the words; the talk picture of the concept (the three corners on a line) stays through the block's picture_key.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S1.T1.C2",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: the three corners",
+   "ncert_ref": "Chapter opener (not in the book pages)",
+   "question_text": "A triangle has two sides of equal length, shown with two matching tick marks. What is that kind of triangle called?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The words already give the data (two equal sides) and ask only for the name 'isosceles'; a picture would add nothing.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 1
+  },
+  {
+   "lp_concept_id": "M1.S1.T1.C3",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: where roads cross",
+   "ncert_ref": "Chapter opener (not in the book pages)",
+   "question_text": "Where two straight roads cross, the two angles facing each other, the green ones, are what?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "'The two angles facing each other' already names the vertically opposite pair; the colour 'green' is only a pointer into the talk picture (C3.IMG1) that stays with the block.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C4",
+   "role": "worked_example",
+   "lp_book_number": "Worked example p1.signboard",
+   "ncert_ref": "Section 1.1 - p.1-2 (signboard symbol, four symbols with the same arm lengths)",
+   "question_text": "A symbol painted on one signboard must be painted exactly the same on a second board across town. What can the painter carry across, and are the two arm lengths, four centimetres and eight centimetres, enough?",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The whole argument is four different symbols that share the arm lengths 4 cm and 8 cm; words cannot show how the elbow opens, and the plan has no teaching image of the symbol at all.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S2.T2.C4.IMG1",
+   "manim_scene": "c7_9_1_1_signboard_four_symbols_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S2.T2.C4.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": {
+      "width": 32,
+      "height": 18,
+      "px_per_unit": 60
+     },
+     "arm_AB": 3.2,
+     "arm_BC": 6.4,
+     "AB_direction_deg": 110.0,
+     "symbols": [
+      {
+       "A": [
+        -9.694,
+        5.207
+       ],
+       "B": [
+        -8.6,
+        2.2
+       ],
+       "C": [
+        -3.057,
+        5.4
+       ],
+       "angle_at_B_deg": 80,
+       "BC_direction_deg": 30.0,
+       "label_A": [
+        -9.917,
+        5.818
+       ],
+       "label_B": [
+        -8.6,
+        1.55
+       ],
+       "label_C": [
+        -2.495,
+        5.725
+       ]
+      },
+      {
+       "A": [
+        2.306,
+        5.207
+       ],
+       "B": [
+        3.4,
+        2.2
+       ],
+       "C": [
+        7.925,
+        6.725
+       ],
+       "angle_at_B_deg": 65,
+       "BC_direction_deg": 45.0,
+       "label_A": [
+        2.083,
+        5.818
+       ],
+       "label_B": [
+        3.4,
+        1.55
+       ],
+       "label_C": [
+        8.385,
+        7.185
+       ]
+      },
+      {
+       "A": [
+        -9.694,
+        -3.593
+       ],
+       "B": [
+        -8.6,
+        -6.6
+       ],
+       "C": [
+        -5.4,
+        -1.057
+       ],
+       "angle_at_B_deg": 50,
+       "BC_direction_deg": 60.0,
+       "label_A": [
+        -9.917,
+        -2.982
+       ],
+       "label_B": [
+        -8.6,
+        -7.25
+       ],
+       "label_C": [
+        -5.075,
+        -0.495
+       ]
+      },
+      {
+       "A": [
+        2.306,
+        -3.593
+       ],
+       "B": [
+        3.4,
+        -6.6
+       ],
+       "C": [
+        9.636,
+        -5.16
+       ],
+       "angle_at_B_deg": 97,
+       "BC_direction_deg": 13.0,
+       "label_A": [
+        2.083,
+        -2.982
+       ],
+       "label_B": [
+        3.4,
+        -7.25
+       ],
+       "label_C": [
+        10.269,
+        -5.014
+       ]
+      }
+     ],
+     "stroke_px": 6,
+     "stroke_colour": "INK",
+     "labels": [
+      "A",
+      "B",
+      "C"
+     ],
+     "label_cap_height": 0.65,
+     "to_scale": true,
+     "type": "geometry_figure"
+    },
+    "manim_description": "Canvas 32 by 18 units (16:9), origin at the centre, x to the right, y up, plain white BG, 60 pixels per unit on a 1920 by 1080 render. Draw four check-mark symbols in a 2 by 2 grid, reading left to right then top to bottom. Each symbol is two straight INK segments of stroke 6 px with round caps, meeting at B: the short arm BA has length 3.2 units and leaves B at direction 110 degrees in all four symbols; the long arm BC has length 6.4 units, exactly twice BA, and leaves B at the direction listed for that symbol. Symbol 1 (top left): B at (-8.6, 2.2), A at (-9.694, 5.207), C at (-3.057, 5.4) (angle ABC 80 degrees, BC direction 30 degrees). Symbol 2 (top right): B at (3.4, 2.2), A at (2.306, 5.207), C at (7.925, 6.725) (angle ABC 65 degrees, BC direction 45 degrees). Symbol 3 (bottom left): B at (-8.6, -6.6), A at (-9.694, -3.593), C at (-5.4, -1.057) (angle ABC 50 degrees, BC direction 60 degrees). Symbol 4 (bottom right): B at (3.4, -6.6), A at (2.306, -3.593), C at (9.636, -5.16) (angle ABC 97 degrees, BC direction 13 degrees). Next to every symbol write the capital letters A, B and C in INK sans-serif, cap height 0.65 units, centred 0.65 units beyond the free end of the arm: A beyond A along direction 110 degrees, C beyond C along the direction of BC, B 0.65 units straight below B. Draw no lengths, no angle values, no arcs, no tick marks and no fills.",
+    "visible_text": [
+     "A",
+     "B",
+     "C"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "lengths, angle values, arcs or tick marks (the book prints none)",
+     "a signboard, post, grass or any scenery",
+     "any symbol marked as 'the original'"
+    ],
+    "accuracy_checks": [
+     "every symbol has AB = 3.200 and BC = 6.400 (ratio 1:2) within 0.001",
+     "angle ABC of the four symbols is 80, 65, 50 and 97 degrees, all different",
+     "AB points in the same direction (110 degrees) in all four, so only BC swings",
+     "each letter A, B, C appears exactly four times, once per symbol"
+    ],
+    "alt_text": "Four check-mark symbols with identical short and long arms but four different elbow angles, each marked A, B, C.",
+    "render_note": "Same as the book's p.2 row of four symbols (shown as a 2x2 grid to suit a 16:9 card). The book prints no angles: it shows about 90, 65, 50 and 97 degrees by eye; here the first symbol is drawn at 80 degrees so that it is the signboard symbol of the next worked example (angle B = 80). Do NOT print the angles. Arm lengths in the book are not printed either; the figure only needs AB:BC = 1:2."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C4",
+   "role": "worked_example",
+   "lp_book_number": "Worked example p2.angle",
+   "ncert_ref": "Section 1.1 - p.2 (AB = 4 cm, BC = 8 cm, angle ABC = 80 degrees)",
+   "question_text": "Would any other measurement help? Draw the symbol with AB = 4 cm, BC = 8 cm and the angle at B equal to 80 degrees.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The block asks to draw the symbol from three measurements: the answer is the drawn symbol itself, which the steps only describe in words.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S2.T2.C4.IMG2",
+   "manim_scene": "c7_9_1_1_signboard_symbol_80_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S2.T2.C4.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": {
+      "width": 32,
+      "height": 18,
+      "px_per_unit": 60
+     },
+     "scale_units_per_cm": 1.6,
+     "B": [
+      -4.4,
+      -3.2
+     ],
+     "A": [
+      -6.589,
+      2.814
+     ],
+     "C": [
+      6.685,
+      3.2
+     ],
+     "AB_cm": 4,
+     "BC_cm": 8,
+     "angle_ABC_deg": 80,
+     "angle_arc": {
+      "centre": [
+       -4.4,
+       -3.2
+      ],
+      "radius": 2.2,
+      "from_deg": 30,
+      "to_deg": 110,
+      "colour": "FOCUS"
+     },
+     "labels": {
+      "A": [
+       -6.863,
+       3.566
+      ],
+      "B": [
+       -4.4,
+       -4.0
+      ],
+      "C": [
+       7.378,
+       3.6
+      ],
+      "4 cm": [
+       -6.716,
+       -0.638
+      ],
+      "8 cm": [
+       1.793,
+       -1.126
+      ],
+      "80°": [
+       -3.271,
+       -0.099
+      ]
+     },
+     "to_scale": true,
+     "type": "geometry_figure"
+    },
+    "manim_description": "Canvas 32 by 18 units (16:9), origin at the centre, x to the right, y up, plain white BG, 60 pixels per unit on a 1920 by 1080 render. Draw the signboard symbol to scale, 1.6 units per centimetre. Two straight INK segments of stroke 6 px with round caps meet at B (-4.4, -3.2): the short arm BA goes to A (-6.589, 2.814) (length 6.4 units = 4 cm, direction 110 degrees) and the long arm BC goes to C (6.685, 3.2) (length 12.8 units = 8 cm, direction 30 degrees). Draw the angle ABC as a FOCUS arc of stroke 4 px, centre B, radius 2.2 units, from direction 30 degrees to direction 110 degrees (80 degrees). Write in INK sans-serif, cap height 0.65 units, horizontal text: '80°' centred at (-3.271, -0.099); '4 cm' centred at (-6.716, -0.638) (beside arm BA, on its outer side); '8 cm' centred at (1.793, -1.126) (beside arm BC, below it); the letters A at (-6.863, 3.566), B at (-4.4, -4) and C at (7.378, 3.6). No other marks, no fills.",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "4 cm",
+     "8 cm",
+     "80°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a signboard, post or scenery",
+     "the words 'congruent', 'measurements' or any caption"
+    ],
+    "accuracy_checks": [
+     "|BA| = 6.400 units = 4 cm at 1.6 units per cm, |BC| = 12.800 units = 8 cm",
+     "angle between BA (110 deg) and BC (30 deg) is exactly 80 degrees",
+     "A is up-left of B and C is up-right of B, as on the signboard",
+     "labels read 4 cm on the short arm and 8 cm on the long arm"
+    ],
+    "alt_text": "The signboard symbol with corners A, B, C, arm AB = 4 cm, arm BC = 8 cm and the angle at B marked 80 degrees.",
+    "render_note": "The book has no picture for this step (it only asks 'Can you draw the symbol if AB = 4 cm, BC = 8 cm, angle ABC = 80 degrees?'). The drawing is the answer the LP steps describe: 4 cm arm, 80 degrees, 8 cm arm. Same corner letters as the symbol in p.1."
+   },
+   "block_index": 1
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C4",
+   "role": "worked_example",
+   "lp_book_number": "Check my thinking: Chintu",
+   "ncert_ref": "Section 1.1 - p.2",
+   "question_text": "Chintu says: if I know both arm lengths, I know the symbol. Is Chintu right?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Yes/No check on 'both arm lengths are enough'; the four-symbol picture of the first worked example already makes the point and the answer needs no new figure.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 2
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C5",
+   "role": "worked_example",
+   "lp_book_number": "Worked example p2.definition",
+   "ncert_ref": "Section 1.1 - p.2 (two congruent figures, tracing paper)",
+   "question_text": "Figures that are exact copies of each other, with the same shape and size, are said to be congruent. Congruent figures can be placed one exactly over the other. Test the two curvy shapes and the two round discs with a wedge cut out.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The block asks to test 'the two curvy shapes and the two round discs with a wedge cut out': those two pairs exist only as pictures; the teaching image of the concept shows the tracing test, not these pairs.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S2.T2.C5.IMG2",
+   "manim_scene": "c7_9_1_2_congruent_two_pairs_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S2.T2.C5.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": {
+      "width": 32,
+      "height": 18,
+      "px_per_unit": 60
+     },
+     "fill": "CELL_FILL",
+     "stroke_px": 4,
+     "pair_1": {
+      "shape": "square_with_quarter_disc_corner_notches",
+      "side": 5.0,
+      "notch_radius": 1.0,
+      "straight_middle_part": 3.0,
+      "copy_1": {
+       "centre": [
+        -11.35,
+        0.0
+       ],
+       "rotation_deg": 0
+      },
+      "copy_2": {
+       "centre": [
+        -4.55,
+        0.0
+       ],
+       "rotation_deg": 20
+      }
+     },
+     "pair_2": {
+      "shape": "disc_radius_2.8_without_upper_right_quadrant",
+      "radius": 2.8,
+      "copy_1": {
+       "circle_centre": [
+        4.25,
+        0.0
+       ],
+       "rotation_deg": 0
+      },
+      "copy_2": {
+       "circle_centre": [
+        11.05,
+        0.0
+       ],
+       "rotation_deg": 0
+      }
+     },
+     "to_scale": true,
+     "type": "other"
+    },
+    "manim_description": "Canvas 32 by 18 units (16:9), origin at the centre, x to the right, y up, plain white BG, 60 pixels per unit on a 1920 by 1080 render. Draw four flat shapes in one row, each filled CELL_FILL with an INK outline of stroke 4 px and no other marks. Shapes 1 and 2, left pair: a 5 by 5 square from which a quarter disc of radius 1 centred on each of the four corners has been removed, so every corner is a concave arc and every side keeps a straight middle part 3 units long. Shape 1 has centre (-11.35, 0) and sides parallel to the axes: its outline runs from (-12.85, -2.5) along the bottom side to (-9.85, -2.5), then the concave arc centred (-8.85, -2.5), up the right side, the concave arc centred (-8.85, 2.5), along the top side, the concave arc centred (-13.85, 2.5), down the left side and the concave arc centred (-13.85, -2.5) back to the start. Shape 2 is an exact copy of shape 1, same size, rotated 20 degrees counter-clockwise about its own centre (-4.55, 0). Shapes 3 and 4, right pair: a disc of radius 2.8 with its upper-right quarter removed. Its outline runs from the top point of the circle straight down the vertical radius to the centre, then along the horizontal radius to the rightmost point of the circle, then round the remaining three quarters of the circle, clockwise through the bottom and the left, back to the top point. Shape 3 has circle centre (4.25, 0), shape 4 is an identical copy with circle centre (11.05, 0), same orientation. Draw no letters, no numbers, no tracing paper, no arrows and no shadows.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "tracing paper, perspective, shadows or colour other than CELL_FILL",
+     "any caption such as 'congruent'"
+    ],
+    "accuracy_checks": [
+     "shape 2 is shape 1 turned by 20 degrees, so both have identical side 5 and notch radius 1",
+     "the two discs have identical radius 2.8 and the removed quadrant is the upper-right one in both",
+     "no two shapes overlap (smallest gap between neighbours is 1.2 units)"
+    ],
+    "alt_text": "Two congruent notched squares, the second turned, and two congruent discs each with a quarter cut away.",
+    "render_note": "Book figures: p.2 pink notched shape with a tracing-paper copy laid on it (a perspective picture) and p.2 'two congruent figures' discs with a quadrant cut away. The perspective/tracing-paper view is replaced by a flat turned copy so that the pair reads as two figures to test."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C6",
+   "role": "worked_example",
+   "lp_book_number": "Worked example p3.moved_pairs",
+   "ncert_ref": "Section 1.1 - p.3 (pairs of figures that are also congruent: bracket pair, half-disc pair)",
+   "question_text": "A figure can be turned or flipped before it is laid over another. Look at a pair of brackets where one is turned through 100 degrees, and a pair of figures where one is the mirror image of the other. Is each pair congruent, and which move does each need?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The question says 'look at a pair of brackets ... and a pair of figures where one is the mirror image': the learner must see the two pairs to say which move each needs; the plan's teaching images show flags and chairs, not these pairs.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S2.T2.C6.IMG3",
+   "manim_scene": "c7_9_1_2_bracket_halfdisc_pairs_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S2.T2.C6.IMG3}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": {
+      "width": 32,
+      "height": 18,
+      "px_per_unit": 60
+     },
+     "fill": "CELL_FILL",
+     "stroke_px": 4,
+     "bracket_1": {
+      "polygon": [
+       [
+        -12.5,
+        3.0
+       ],
+       [
+        -6.5,
+        3.0
+       ],
+       [
+        -7.5,
+        2.0
+       ],
+       [
+        -11.5,
+        2.0
+       ],
+       [
+        -11.5,
+        -2.0
+       ],
+       [
+        -12.5,
+        -3.0
+       ]
+      ],
+      "strip_width": 1,
+      "outer_edge": 6
+     },
+     "bracket_2": {
+      "polygon": [
+       [
+        -3.533,
+        -2.954
+       ],
+       [
+        -4.575,
+        2.954
+       ],
+       [
+        -3.417,
+        2.143
+       ],
+       [
+        -2.722,
+        -1.796
+       ],
+       [
+        1.217,
+        -1.101
+       ],
+       [
+        2.375,
+        -1.913
+       ]
+      ],
+      "is_bracket_1_turned_by_deg": 100,
+      "turn_about": "outer corner",
+      "direction": "counter-clockwise"
+     },
+     "half_disc_left": {
+      "circle_centre": [
+       8.5,
+       0
+      ],
+      "radius": 3.0,
+      "straight_edge": "vertical, on the right"
+     },
+     "half_disc_right": {
+      "circle_centre": [
+       9.5,
+       0
+      ],
+      "radius": 3.0,
+      "straight_edge": "vertical, on the left",
+      "is_mirror_image_of": "half_disc_left"
+     },
+     "to_scale": true,
+     "type": "other"
+    },
+    "manim_description": "Canvas 32 by 18 units (16:9), origin at the centre, x to the right, y up, plain white BG, 60 pixels per unit on a 1920 by 1080 render. Draw four flat shapes in one row, each filled CELL_FILL with an INK outline of stroke 4 px and no other marks. Shape 1, a corner bracket made of two equal strips: closed polygon through (-12.5, 3), (-6.5, 3), (-7.5, 2), (-11.5, 2), (-11.5, -2), (-12.5, -3) in this order, which gives a top strip and a left strip joined at the outer corner (-12.5, 3), strip width 1, both outer edges 6 long, both free ends cut at 45 degrees. Shape 2, the same bracket turned through 100 degrees counter-clockwise about its outer corner: closed polygon through (-3.533, -2.954), (-4.575, 2.954), (-3.417, 2.143), (-2.722, -1.796), (1.217, -1.101), (2.375, -1.913) in this order, same size and same strip width as shape 1 (its position is the polygon given here, centred on (-1.1, 0)). Shape 3, a half disc of radius 3 whose straight edge is vertical on its right side: boundary from (8.5, 3) along the circular arc centred (8.5, 0) through (5.5, 0) to (8.5, -3), then straight up the diameter. Shape 4, the mirror image of shape 3: a half disc of radius 3 whose straight edge is vertical on its left side: boundary from (9.5, 3) along the circular arc centred (9.5, 0) through (12.5, 0) to (9.5, -3), then straight up the diameter; the two straight edges face each other with a gap of 1 unit. Draw no letters, no numbers, no arrows, no rotation arcs and no shadows.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "rotation arrows or angle arcs",
+     "any caption such as 'turn' or 'flip'"
+    ],
+    "accuracy_checks": [
+     "bracket 2 vertices are bracket 1 vertices rotated by exactly 100 degrees, so all six edge lengths agree",
+     "the two half discs are mirror images across x = 9 and have equal radius 3",
+     "no shape overlaps another (smallest gap 1.925 units)"
+    ],
+    "alt_text": "A corner bracket and a copy of it turned through 100 degrees, and two half discs that are mirror images of each other.",
+    "render_note": "CONFLICT LP vs BOOK: the LP question says 'one is turned through 100 degrees' but the book's p.3 pair of brackets is a half turn (180 degrees). The figure follows the LP text (100 degrees) so that text and picture agree; if the LP text is changed to 'half turn', rotate shape 2 by 180 degrees instead. Shapes are the book's p.3 pictures (bracket pair and half-disc pair), redrawn flat."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C6",
+   "role": "worked_example",
+   "lp_book_number": "Ask: how many chairs",
+   "ncert_ref": "Section 1.1 - p.3 (turn, flip)",
+   "question_text": "How many chairs are in this picture?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "'How many chairs are in this picture?' cannot be answered without the picture: one chair drawn in four positions (upright, on its back, upside down, mirrored). Own diagram although the concept's teaching image shows the same figure (user decision 23 Nov).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S2.T2.C6.IMG4",
+   "block_index": 1,
+   "manim_scene": "c7_9_s2_c6_b1",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S2.T2.C6.IMG4}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 32,
+      "height": 18,
+      "px_per_unit": 60
+     },
+     "ground_line": {
+      "from": [
+       -15.4,
+       -3.6
+      ],
+      "to": [
+       15.4,
+       -3.6
+      ],
+      "colour": "GUIDE",
+      "style": "dotted",
+      "stroke_px": 4
+     },
+     "polygons": [
+      {
+       "name": "chair 1: upright, facing left",
+       "vertices": [
+        [
+         -14.1,
+         -0.4
+        ],
+        [
+         -10.7,
+         -0.4
+        ],
+        [
+         -10.7,
+         3.6
+        ],
+        [
+         -10.1,
+         3.6
+        ],
+        [
+         -10.1,
+         -3.6
+        ],
+        [
+         -10.7,
+         -3.6
+        ],
+        [
+         -10.7,
+         -1.0
+        ],
+        [
+         -13.5,
+         -1.0
+        ],
+        [
+         -13.5,
+         -3.6
+        ],
+        [
+         -14.1,
+         -3.6
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "stroke_px": 6
+      },
+      {
+       "name": "chair 2: tipped over onto its back (chair 1 turned 90 degrees clockwise)",
+       "vertices": [
+        [
+         -3.9,
+         0.4
+        ],
+        [
+         -3.9,
+         -3.0
+        ],
+        [
+         0.1,
+         -3.0
+        ],
+        [
+         0.1,
+         -3.6
+        ],
+        [
+         -7.1,
+         -3.6
+        ],
+        [
+         -7.1,
+         -3.0
+        ],
+        [
+         -4.5,
+         -3.0
+        ],
+        [
+         -4.5,
+         -0.2
+        ],
+        [
+         -7.1,
+         -0.2
+        ],
+        [
+         -7.1,
+         0.4
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "stroke_px": 6
+      },
+      {
+       "name": "chair 3: upside down (chair 1 turned 180 degrees)",
+       "vertices": [
+        [
+         7.1,
+         0.4
+        ],
+        [
+         3.7,
+         0.4
+        ],
+        [
+         3.7,
+         -3.6
+        ],
+        [
+         3.1,
+         -3.6
+        ],
+        [
+         3.1,
+         3.6
+        ],
+        [
+         3.7,
+         3.6
+        ],
+        [
+         3.7,
+         1.0
+        ],
+        [
+         6.5,
+         1.0
+        ],
+        [
+         6.5,
+         3.6
+        ],
+        [
+         7.1,
+         3.6
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "stroke_px": 6
+      },
+      {
+       "name": "chair 4: upright, facing right (the mirror image of chair 1)",
+       "vertices": [
+        [
+         14.1,
+         -0.4
+        ],
+        [
+         10.7,
+         -0.4
+        ],
+        [
+         10.7,
+         3.6
+        ],
+        [
+         10.1,
+         3.6
+        ],
+        [
+         10.1,
+         -3.6
+        ],
+        [
+         10.7,
+         -3.6
+        ],
+        [
+         10.7,
+         -1.0
+        ],
+        [
+         13.5,
+         -1.0
+        ],
+        [
+         13.5,
+         -3.6
+        ],
+        [
+         14.1,
+         -3.6
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "stroke_px": 6
+      }
+     ],
+     "labels": [],
+     "to_scale": true,
+     "scale_from_chair_outline": 2.0
+    },
+    "manim_description": "Canvas 32 by 18 units (16:9), origin at the centre, x to the right, y up, plain white BG, 60 pixels per unit on a 1920 by 1080 render, flat 2D. Draw a dotted GUIDE line of stroke 4 px along y = -3.6 from x = -15.4 to x = 15.4. Draw four identical chairs in a row, left to right, each as ONE closed ten-corner outline (stroke 6 px, INK, fill MARK_FILL) with a seat, a backrest and two legs; the lowest point of every chair touches the dotted line. Chair 1, upright, facing left: corners in order (-14.1, -0.4), (-10.7, -0.4), (-10.7, 3.6), (-10.1, 3.6), (-10.1, -3.6), (-10.7, -3.6), (-10.7, -1.0), (-13.5, -1.0), (-13.5, -3.6), (-14.1, -3.6), then back to the first corner. Chair 2, tipped over onto its back (chair 1 turned 90 degrees clockwise): corners in order (-3.9, 0.4), (-3.9, -3.0), (0.1, -3.0), (0.1, -3.6), (-7.1, -3.6), (-7.1, -3.0), (-4.5, -3.0), (-4.5, -0.2), (-7.1, -0.2), (-7.1, 0.4), then back to the first corner. Chair 3, upside down (chair 1 turned 180 degrees): corners in order (7.1, 0.4), (3.7, 0.4), (3.7, -3.6), (3.1, -3.6), (3.1, 3.6), (3.7, 3.6), (3.7, 1.0), (6.5, 1.0), (6.5, 3.6), (7.1, 3.6), then back to the first corner. Chair 4, upright, facing right (the mirror image of chair 1): corners in order (14.1, -0.4), (10.7, -0.4), (10.7, 3.6), (10.1, 3.6), (10.1, -3.6), (10.7, -3.6), (10.7, -1.0), (13.5, -1.0), (13.5, -3.6), (14.1, -3.6), then back to the first corner. All four outlines have the same ten side lengths: 0.6, 0.6, 0.6, 2.6, 2.6, 2.8, 3.2, 3.4, 4.0, 7.2 units. Draw no text, no numbers and no arrows.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any number, label or arrow",
+     "a floor, room or scenery",
+     "different chairs (all four are the same chair)"
+    ],
+    "accuracy_checks": [
+     "exactly four chairs",
+     "all four outlines have the identical ten side lengths [0.6, 0.6, 0.6, 2.6, 2.6, 2.8, 3.2, 3.4, 4.0, 7.2]",
+     "chair 4 is chair 1 with x negated (mirror image); chair 2 is chair 1 turned 90 degrees clockwise; chair 3 is chair 1 turned 180 degrees",
+     "the lowest point of every chair lies on y = -3.6"
+    ],
+    "alt_text": "One chair drawn four times on a dotted line: upright facing left, tipped on its back, upside down, and upright facing right.",
+    "render_note": "Same picture as the concept's teaching image M1.S2.T2.C6.IMG2 (four chairs in four positions); drawn here as its own diagram, the teaching image is not linked. The question must not tell the answer (one chair), so the chairs carry no label."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C6",
+   "role": "worked_example",
+   "lp_book_number": "Check my thinking: Chintu",
+   "ncert_ref": "Section 1.1 - p.3",
+   "question_text": "Chintu says: that bracket is standing on a corner, so it is a different shape from the flat one. Is Chintu right?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Yes/No check; the answer follows from 'a figure does not stop being itself when it is turned', which the block of the two pairs just showed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 2
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "worked_example",
+   "lp_book_number": "Worked example p3.arms",
+   "ncert_ref": "Section 1.1 - p.3 (same arm lengths: congruent?)",
+   "question_text": "If two symbols have the same arm lengths, can we say they are congruent?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The steps recall the four painters of the earlier worked example (whose figure is drawn there) and argue in words that the elbow angle is still free; repeating that picture would only duplicate it.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "worked_example",
+   "lp_book_number": "Ask: hardest to copy from a phone call",
+   "ncert_ref": "Section 1.1 - p.3 (what to measure for a circle, a rectangle, the symbol)",
+   "question_text": "Which of these three is hardest to copy from a phone call? Why?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "'Which of these three is hardest to copy?' names three things that exist only in the picture: a circle, a rectangle and the V-shaped signboard symbol. Own diagram although the concept's teaching image shows the same figure (user decision 23 Nov).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S3.T3.C8.IMG2",
+   "block_index": 1,
+   "manim_scene": "c7_9_s3_c8_b1",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C8.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 32,
+      "height": 18,
+      "px_per_unit": 60
+     },
+     "shapes": [
+      {
+       "name": "circle",
+       "centre": [
+        -10.5,
+        0.0
+       ],
+       "radius": 3.5,
+       "stroke": "INK",
+       "stroke_px": 6,
+       "fill": "none"
+      },
+      {
+       "name": "rectangle",
+       "vertices": [
+        [
+         -4.5,
+         -2.8
+        ],
+        [
+         4.5,
+         -2.8
+        ],
+        [
+         4.5,
+         2.8
+        ],
+        [
+         -4.5,
+         2.8
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_px": 6,
+       "fill": "none"
+      },
+      {
+       "name": "V symbol",
+       "B": [
+        7.831,
+        -1.92
+       ],
+       "A": [
+        6.518,
+        1.688
+       ],
+       "C": [
+        14.482,
+        1.92
+       ],
+       "arm_BA": 3.84,
+       "arm_BC": 7.68,
+       "angle_ABC_deg": 80,
+       "stroke": "INK",
+       "stroke_px": 6,
+       "round_caps": true
+      }
+     ],
+     "labels": [],
+     "to_scale": true
+    },
+    "manim_description": "Canvas 32 by 18 units (16:9), origin at the centre, x to the right, y up, plain white BG, 60 pixels per unit on a 1920 by 1080 render, flat 2D. Draw three plain outline shapes in a row, left to right, all in INK with stroke 6 px and no fill. Shape 1: a circle with centre (-10.5, 0.0) and radius 3.5. Shape 2: a rectangle with corners (-4.5, -2.8), (4.5, -2.8), (4.5, 2.8) and (-4.5, 2.8) (9 wide, 5.6 high). Shape 3: the V-shaped symbol made of two straight segments with round caps meeting at B = (7.831, -1.92): the short arm from B to A = (6.518, 1.688) (length 3.84, direction 110 degrees) and the long arm from B to C = (14.482, 1.92) (length 7.68, direction 30 degrees), so the angle at B is 80 degrees and the long arm is exactly twice the short arm. Draw no radius lines, no length lines, no angle arc, no letters and no numbers on any shape.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "radius, length, width or angle marks (they would answer the question)",
+     "a chapati, a notebook, a plate or any object picture",
+     "any number or letter"
+    ],
+    "accuracy_checks": [
+     "circle radius 3.5; rectangle 9 by 5.6",
+     "arm BC = 7.68 = 2 x arm BA = 2 x 3.84 (within 0.001)",
+     "angle ABC = 80 degrees (BA at 110 degrees, BC at 30 degrees)",
+     "three shapes only, in the order circle, rectangle, V symbol"
+    ],
+    "alt_text": "A plain circle, a plain rectangle and a V-shaped symbol side by side.",
+    "render_note": "Same three things as the concept's teaching image M1.S3.T3.C8.IMG1 (chapati, notebook, signboard symbol) but as plain geometric shapes and without the measuring marks, which would give the answer. The symbol has the arm ratio 1 : 2 and angle 80 degrees of the signboard symbol of M1.S2.T2.C4. The teaching image is not linked."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C9",
+   "role": "worked_example",
+   "lp_book_number": "Ask: same post, same boards",
+   "ncert_ref": "Section 1.1 - p.4 (figure with three arms from one point)",
+   "question_text": "Same post, same boards: what do you need to tell the painter?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "'Same post, same boards' points at a signpost with three boards of different lengths and a second post with three blank boards; the question cannot be read without that picture. Own diagram although the concept's teaching image shows the same figure (user decision 23 Nov).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S3.T3.C9.IMG2",
+   "block_index": 0,
+   "manim_scene": "c7_9_s3_c9_b0",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C9.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 32,
+      "height": 18,
+      "px_per_unit": 60
+     },
+     "posts": [
+      {
+       "side": "left",
+       "rect": [
+        [
+         -8.4,
+         -7.0
+        ],
+        [
+         -7.6,
+         7.0
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "stroke_px": 6,
+       "pivot": [
+        -8.0,
+        0.0
+       ]
+      },
+      {
+       "side": "right",
+       "rect": [
+        [
+         7.6,
+         -7.0
+        ],
+        [
+         8.4,
+         7.0
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "outline": "INK",
+       "stroke_px": 6,
+       "pivot": [
+        8.0,
+        0.0
+       ]
+      }
+     ],
+     "boards": [
+      {
+       "post": "left",
+       "arm": "long arm",
+       "direction_deg": 40.0,
+       "length": 7.0,
+       "kind": "arrow-shaped painted board",
+       "vertices": [
+        [
+         -8.386,
+         0.46
+        ],
+        [
+         -3.713,
+         4.381
+        ],
+        [
+         -3.906,
+         4.61
+        ],
+        [
+         -2.638,
+         4.5
+        ],
+        [
+         -2.749,
+         3.232
+        ],
+        [
+         -2.941,
+         3.461
+        ],
+        [
+         -7.614,
+         -0.46
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "stroke_px": 6
+      },
+      {
+       "post": "left",
+       "arm": "short arm",
+       "direction_deg": 195.0,
+       "length": 4.0,
+       "kind": "arrow-shaped painted board",
+       "vertices": [
+        [
+         -7.845,
+         -0.58
+        ],
+        [
+         -10.839,
+         -1.382
+        ],
+        [
+         -10.761,
+         -1.672
+        ],
+        [
+         -11.864,
+         -1.035
+        ],
+        [
+         -11.227,
+         0.067
+        ],
+        [
+         -11.15,
+         -0.223
+        ],
+        [
+         -8.155,
+         0.58
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "stroke_px": 6
+      },
+      {
+       "post": "left",
+       "arm": "medium arm",
+       "direction_deg": -50.0,
+       "length": 5.5,
+       "kind": "arrow-shaped painted board",
+       "vertices": [
+        [
+         -7.54,
+         0.386
+        ],
+        [
+         -4.584,
+         -3.138
+        ],
+        [
+         -4.354,
+         -2.945
+        ],
+        [
+         -4.465,
+         -4.213
+        ],
+        [
+         -5.733,
+         -4.102
+        ],
+        [
+         -5.503,
+         -3.909
+        ],
+        [
+         -8.46,
+         -0.386
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "stroke_px": 6
+      },
+      {
+       "post": "right",
+       "arm": "long arm",
+       "direction_deg": 40.0,
+       "length": 7.0,
+       "kind": "plain blank board",
+       "vertices": [
+        [
+         7.614,
+         0.46
+        ],
+        [
+         12.977,
+         4.959
+        ],
+        [
+         13.748,
+         4.04
+        ],
+        [
+         8.386,
+         -0.46
+        ]
+       ],
+       "fill": "BG",
+       "outline": "INK",
+       "stroke_px": 6
+      },
+      {
+       "post": "right",
+       "arm": "short arm",
+       "direction_deg": 195.0,
+       "length": 4.0,
+       "kind": "plain blank board",
+       "vertices": [
+        [
+         8.155,
+         -0.58
+        ],
+        [
+         4.292,
+         -1.615
+        ],
+        [
+         3.981,
+         -0.456
+        ],
+        [
+         7.845,
+         0.58
+        ]
+       ],
+       "fill": "BG",
+       "outline": "INK",
+       "stroke_px": 6
+      },
+      {
+       "post": "right",
+       "arm": "medium arm",
+       "direction_deg": -50.0,
+       "length": 5.5,
+       "kind": "plain blank board",
+       "vertices": [
+        [
+         8.46,
+         0.386
+        ],
+        [
+         11.995,
+         -3.828
+        ],
+        [
+         11.076,
+         -4.599
+        ],
+        [
+         7.54,
+         -0.386
+        ]
+       ],
+       "fill": "BG",
+       "outline": "INK",
+       "stroke_px": 6
+      }
+     ],
+     "arms": [
+      {
+       "name": "long arm",
+       "direction_deg": 40.0,
+       "length": 7.0
+      },
+      {
+       "name": "short arm",
+       "direction_deg": 195.0,
+       "length": 4.0
+      },
+      {
+       "name": "medium arm",
+       "direction_deg": -50.0,
+       "length": 5.5
+      }
+     ],
+     "gaps_between_arms_deg": [
+      155.0,
+      115.0,
+      90.0
+     ],
+     "labels": [],
+     "to_scale": true
+    },
+    "manim_description": "Canvas 32 by 18 units (16:9), origin at the centre, x to the right, y up, plain white BG, 60 pixels per unit on a 1920 by 1080 render, flat 2D. Draw two upright wooden posts, each a rectangle of width 0.8 and height 14 (INK outline stroke 6 px, fill CELL_FILL): the left post with corners (-8.4, -7.0) and (-7.6, 7.0), the right post with corners (7.6, -7.0) and (8.4, 7.0). On each post the boards start at the pivot point (the middle of the post, (-8, 0) on the left post and (8, 0) on the right post), marked by a small INK dot of radius 0.18. Three boards leave each pivot: a long board of length 7.0 at direction 40 degrees (up and to the right), a short board of length 4.0 at direction 195 degrees (to the left, slightly down) and a medium board of length 5.5 at direction -50 degrees (down and to the right); the angles between neighbouring boards are 90, 155 and 115 degrees. Boards are 1.2 wide. The three boards of the LEFT post are arrow-shaped (body plus a pointed tip, fill MARK_FILL, INK outline stroke 6 px); the three boards of the RIGHT post are plain rectangles of the same lengths, widths and directions, unpainted (fill BG, INK outline stroke 6 px). Exact corners, in order: left post, long arm (arrow-shaped painted board): corners (-8.386, 0.46), (-3.713, 4.381), (-3.906, 4.61), (-2.638, 4.5), (-2.749, 3.232), (-2.941, 3.461), (-7.614, -0.46); left post, short arm (arrow-shaped painted board): corners (-7.845, -0.58), (-10.839, -1.382), (-10.761, -1.672), (-11.864, -1.035), (-11.227, 0.067), (-11.15, -0.223), (-8.155, 0.58); left post, medium arm (arrow-shaped painted board): corners (-7.54, 0.386), (-4.584, -3.138), (-4.354, -2.945), (-4.465, -4.213), (-5.733, -4.102), (-5.503, -3.909), (-8.46, -0.386); right post, long arm (plain blank board): corners (7.614, 0.46), (12.977, 4.959), (13.748, 4.04), (8.386, -0.46); right post, short arm (plain blank board): corners (8.155, -0.58), (4.292, -1.615), (3.981, -0.456), (7.845, 0.58); right post, medium arm (plain blank board): corners (8.46, 0.386), (11.995, -3.828), (11.076, -4.599), (7.54, -0.386). Draw no text and no numbers.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "lengths, angle arcs or numbers (the question asks what must be told)",
+     "grass, ground, sky or village scenery",
+     "names on the boards"
+    ],
+    "accuracy_checks": [
+     "each board of the right post has the length and direction of the matching board of the left post (7.0 at 40, 4.0 at 195, 5.5 at -50 degrees)",
+     "the angles between neighbouring boards are 90, 155 and 115 degrees and add up to 360",
+     "left boards are arrow-shaped and painted, right boards are plain and blank"
+    ],
+    "alt_text": "Two posts side by side: the left post carries three arrow-shaped boards of different lengths pointing three ways, the right post has three blank boards in the same places.",
+    "render_note": "Same picture as the concept's teaching image M1.S3.T3.C9.IMG1 (village signpost with a second post and three unpainted boards) in plain geometry; the book's p.4 figure of three arms from one point is the same configuration. The teaching image is not linked."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C11",
+   "role": "question",
+   "lp_book_number": "What to Measure: the two V-shaped figures",
+   "ncert_ref": "Section 1.1 - Figure it Out Q1 (p.3)",
+   "question_text": "Look at the two V-shaped figures. Are they congruent? Decide, and give your reason.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The question asks about 'the two V-shaped figures': the figures are the data, and the learner has to see the opening of each elbow.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S4.T4.C11.IMG1",
+   "manim_scene": "c7_9_1_4_fio1_two_v_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S4.T4.C11.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": {
+      "width": 32,
+      "height": 18,
+      "px_per_unit": 60
+     },
+     "short_arm": 5.6,
+     "long_arm": 11.2,
+     "stroke_px": 6,
+     "figures": {
+      "left": {
+       "A": [
+        -12.9,
+        1.45
+       ],
+       "B": [
+        -10.1,
+        -3.4
+       ],
+       "C": [
+        -0.401,
+        2.2
+       ],
+       "AB_direction_deg": 120,
+       "BC_direction_deg": 30,
+       "elbow_angle_deg": 90
+      },
+      "right": {
+       "A": [
+        2.07,
+        2.326
+       ],
+       "B": [
+        3.8,
+        -3.0
+       ],
+       "C": [
+        12.861,
+        3.583
+       ],
+       "AB_direction_deg": 108,
+       "BC_direction_deg": 36,
+       "elbow_angle_deg": 72
+      }
+     },
+     "to_scale": true,
+     "type": "geometry_figure"
+    },
+    "manim_description": "Canvas 32 by 18 units (16:9), origin at the centre, x to the right, y up, plain white BG, 60 pixels per unit on a 1920 by 1080 render. Draw two V-shaped figures side by side, each made of two straight INK segments of stroke 6 px with round caps meeting at a corner point. The short arm is 5.6 units long and the long arm is 11.2 units long (exactly twice the short arm) in both figures. Left figure: corner at (-10.1, -3.4), short arm ends at (-12.9, 1.45) (direction 120 degrees), long arm ends at (-0.401, 2.2) (direction 30 degrees): the angle at the corner is 90 degrees. Right figure: corner at (3.8, -3), short arm ends at (2.07, 2.326) (direction 108 degrees), long arm ends at (12.861, 3.583) (direction 36 degrees): the angle at the corner is 72 degrees, so the short arm leans less and the long arm is steeper than on the left. Draw no letters, no lengths, no angle values, no arcs and no tick marks.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "letters, lengths, angle values, arcs or tick marks (the question gives none)",
+     "the verdict 'not congruent' or any hint of which angle is larger"
+    ],
+    "accuracy_checks": [
+     "both figures have short arm 5.600 and long arm 11.200 within 0.001",
+     "elbow angles are 90 and 72 degrees (left, right), clearly different by eye",
+     "the right figure sits 0.4 units higher than the left, as on the book page"
+    ],
+    "alt_text": "Two V-shaped figures with equal arm lengths but visibly different angles at the elbow.",
+    "render_note": "Book p.3 Figure it Out Q1: two unlabelled check-mark symbols. Angles are not printed; about 90 and 72 degrees were measured on the page picture, arm lengths measure equal. Draw them unmarked; the question must not reveal the answer."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C12",
+   "role": "solution",
+   "lp_book_number": "What to Measure: the two V-shaped figures",
+   "ncert_ref": "Section 1.1 - Figure it Out Q1 (p.3)",
+   "question_text": "Look at the two V-shaped figures. Are they congruent? Decide, and give your reason.",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a verdict reached by measuring the arms and the elbow angles; the LP gives no measured values, so a solution figure would only repeat the question figure with two bare arcs. Sibling Q4's solution is drawn because its steps use 'first, second, third arm', which need numbering; here the steps name the short arm, the long arm and the elbow, all clear on the question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C13",
+   "role": "question",
+   "lp_book_number": "What to Measure: which pairs are congruent",
+   "ncert_ref": "Section 1.1 - Figure it Out Q2 (p.3)",
+   "question_text": "Four pairs of figures are shown: teardrops, clouds, starbursts and leaf-pairs. Circle the pairs that are congruent.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "'Four pairs of figures are shown ... circle the pairs that are congruent': the pairs exist only as the picture and the learner has to act on it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S4.T4.C13.IMG1",
+   "manim_scene": "c7_9_1_4_fio2_four_pairs_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S4.T4.C13.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": {
+      "width": 32,
+      "height": 18,
+      "px_per_unit": 60
+     },
+     "fill": "CELL_FILL",
+     "stroke_px": 4,
+     "pairs": {
+      "teardrops": {
+       "circle_radius": 1.2,
+       "tip_distance": 2.64,
+       "tangent_angle_deg": 62.964,
+       "teardrop_1": {
+        "circle_centre": [
+         -10.5,
+         3.8
+        ],
+        "tip": [
+         -10.042,
+         6.4
+        ],
+        "tip_direction_deg": 80
+       },
+       "teardrop_2": {
+        "circle_centre": [
+         -5.0,
+         4.2
+        ],
+        "tip": [
+         -7.6,
+         4.658
+        ],
+        "tip_direction_deg": 170
+       }
+      },
+      "clouds": {
+       "discs": [
+        {
+         "centre": [
+          -1.6,
+          -0.1
+         ],
+         "radius": 0.8
+        },
+        {
+         "centre": [
+          -0.5,
+          0.6
+         ],
+         "radius": 1.05
+        },
+        {
+         "centre": [
+          0.9,
+          0.35
+         ],
+         "radius": 0.95
+        },
+        {
+         "centre": [
+          1.9,
+          -0.2
+         ],
+         "radius": 0.75
+        }
+       ],
+       "rectangle": [
+        [
+         -1.6,
+         -0.9
+        ],
+        [
+         1.9,
+         -0.9
+        ],
+        [
+         1.9,
+         -0.1
+        ],
+        [
+         -1.6,
+         -0.1
+        ]
+       ],
+       "cloud_1": {
+        "origin": [
+         6.0,
+         4.4
+        ],
+        "scale": 1.0,
+        "rotation_deg": 8,
+        "discs": [
+         {
+          "centre": [
+           4.429,
+           4.078
+          ],
+          "radius": 0.8
+         },
+         {
+          "centre": [
+           5.421,
+           4.925
+          ],
+          "radius": 1.05
+         },
+         {
+          "centre": [
+           6.843,
+           4.872
+          ],
+          "radius": 0.95
+         },
+         {
+          "centre": [
+           7.909,
+           4.466
+          ],
+          "radius": 0.75
+         }
+        ],
+        "rectangle": [
+         [
+          4.541,
+          3.286
+         ],
+         [
+          8.007,
+          3.773
+         ],
+         [
+          7.895,
+          4.565
+         ],
+         [
+          4.429,
+          4.078
+         ]
+        ]
+       },
+       "cloud_2": {
+        "origin": [
+         11.8,
+         4.2
+        ],
+        "scale": 0.6,
+        "rotation_deg": 0,
+        "discs": [
+         {
+          "centre": [
+           10.84,
+           4.14
+          ],
+          "radius": 0.48
+         },
+         {
+          "centre": [
+           11.5,
+           4.56
+          ],
+          "radius": 0.63
+         },
+         {
+          "centre": [
+           12.34,
+           4.41
+          ],
+          "radius": 0.57
+         },
+         {
+          "centre": [
+           12.94,
+           4.08
+          ],
+          "radius": 0.45
+         }
+        ],
+        "rectangle": [
+         [
+          10.84,
+          3.66
+         ],
+         [
+          12.94,
+          3.66
+         ],
+         [
+          12.94,
+          4.14
+         ],
+         [
+          10.84,
+          4.14
+         ]
+        ]
+       }
+      },
+      "starbursts": {
+       "outer_radii": [
+        1.0,
+        0.88,
+        1.0,
+        0.94,
+        0.98,
+        0.86,
+        1.0,
+        0.92,
+        0.88,
+        1.0,
+        0.94
+       ],
+       "notch_radius": 0.5,
+       "starburst_1": {
+        "centre": [
+         -11.0,
+         -4.0
+        ],
+        "scale": 1.5,
+        "vertices": [
+         [
+          -9.5,
+          -4.0
+         ],
+         [
+          -10.28,
+          -3.789
+         ],
+         [
+          -9.89,
+          -3.286
+         ],
+         [
+          -10.509,
+          -3.433
+         ],
+         [
+          -10.377,
+          -2.636
+         ],
+         [
+          -10.893,
+          -3.258
+         ],
+         [
+          -11.201,
+          -2.604
+         ],
+         [
+          -11.312,
+          -3.318
+         ],
+         [
+          -11.963,
+          -2.889
+         ],
+         [
+          -11.631,
+          -3.595
+         ],
+         [
+          -12.238,
+          -3.637
+         ],
+         [
+          -11.75,
+          -4.0
+         ],
+         [
+          -12.439,
+          -4.423
+         ],
+         [
+          -11.631,
+          -4.405
+         ],
+         [
+          -11.904,
+          -5.043
+         ],
+         [
+          -11.312,
+          -4.682
+         ],
+         [
+          -11.188,
+          -5.307
+         ],
+         [
+          -10.893,
+          -4.742
+         ],
+         [
+          -10.377,
+          -5.364
+         ],
+         [
+          -10.509,
+          -4.567
+         ],
+         [
+          -9.814,
+          -4.762
+         ],
+         [
+          -10.28,
+          -4.211
+         ]
+        ]
+       },
+       "starburst_2": {
+        "centre": [
+         -5.8,
+         -4.2
+        ],
+        "scale": 2.25,
+        "vertices": [
+         [
+          -3.55,
+          -4.2
+         ],
+         [
+          -4.721,
+          -3.883
+         ],
+         [
+          -4.134,
+          -3.13
+         ],
+         [
+          -5.063,
+          -3.35
+         ],
+         [
+          -4.865,
+          -2.153
+         ],
+         [
+          -5.64,
+          -3.086
+         ],
+         [
+          -6.101,
+          -2.107
+         ],
+         [
+          -6.267,
+          -3.177
+         ],
+         [
+          -7.244,
+          -2.534
+         ],
+         [
+          -6.746,
+          -3.592
+         ],
+         [
+          -7.657,
+          -3.655
+         ],
+         [
+          -6.925,
+          -4.2
+         ],
+         [
+          -7.959,
+          -4.834
+         ],
+         [
+          -6.746,
+          -4.808
+         ],
+         [
+          -7.156,
+          -5.764
+         ],
+         [
+          -6.267,
+          -5.223
+         ],
+         [
+          -6.082,
+          -6.16
+         ],
+         [
+          -5.64,
+          -5.314
+         ],
+         [
+          -4.865,
+          -6.247
+         ],
+         [
+          -5.063,
+          -5.05
+         ],
+         [
+          -4.021,
+          -5.343
+         ],
+         [
+          -4.721,
+          -4.517
+         ]
+        ]
+       }
+      },
+      "leaf_pairs": {
+       "tall": {
+        "length": 3.0,
+        "half_width": 0.5
+       },
+       "lying": {
+        "length": 2.8,
+        "half_width": 0.45
+       },
+       "left_pair": {
+        "joint": [
+         7.0,
+         -5.6
+        ],
+        "lying_direction_deg": 175
+       },
+       "right_pair": {
+        "joint": [
+         11.5,
+         -5.6
+        ],
+        "lying_direction_deg": 5,
+        "is_mirror_image_of": "left_pair"
+       }
+      }
+     },
+     "to_scale": true,
+     "type": "other"
+    },
+    "manim_description": "Canvas 32 by 18 units (16:9), origin at the centre, x to the right, y up, plain white BG, 60 pixels per unit on a 1920 by 1080 render. Draw eight flat shapes in four pairs, in a 2 by 2 arrangement: teardrops top left, clouds top right, starbursts bottom left, leaf pairs bottom right. Every shape is filled CELL_FILL with an INK outline of stroke 4 px; no letters, numbers or other marks. TEARDROPS: each is the convex hull of a circle of radius 1.2 and a tip point at distance 2.64 from the circle centre (outline: tip, straight tangent line to the circle, the long 234.07-degree arc round the circle, straight tangent line back to the tip). Teardrop 1: circle centre (-10.5, 3.8), tip at (-10.042, 6.4) (tip direction 80 degrees, pointing up and slightly right). Teardrop 2: circle centre (-5, 4.2), tip at (-7.6, 4.658) (tip direction 170 degrees, pointing left and slightly up): it is teardrop 1 turned a quarter turn counter-clockwise. CLOUDS: each cloud is the outline of the union of four discs and one rectangle, defined at origin (0, 0), scale 1: discs (centre, radius) (-1.6, -0.1) 0.8; (-0.5, 0.6) 1.05; (0.9, 0.35) 0.95; (1.9, -0.2) 0.75, and the rectangle with corners (-1.6, -0.9), (1.9, -0.9), (1.9, -0.1), (-1.6, -0.1), which gives a flat bottom at y = -0.9 and four bumps on top. Cloud 1: scale 1.0, rotated 8 degrees counter-clockwise about its origin, origin placed at (6, 4.4). Cloud 2: the same cloud at scale 0.6, no rotation, origin placed at (11.8, 4.2), so cloud 2 is plainly smaller. STARBURSTS: each is a closed polygon of 22 vertices round a centre, alternating spike tips and notches: spike tip k (k = 0 to 10) at angle k times 360/11 degrees with radius R_k times the scale, R = 1.00, 0.88, 1.00, 0.94, 0.98, 0.86, 1.00, 0.92, 0.88, 1.00, 0.94; notch k at angle (k + 0.5) times 360/11 degrees with radius 0.5 times the scale. Starburst 1: centre (-11, -4), scale 1.5. Starburst 2: centre (-5.8, -4.2), scale 2.25 (1.5 times the size of starburst 1, same shape). LEAF PAIRS: a leaf is a lens bounded by two circular arcs through its base point and its tip point, each arc bulging half the leaf width to its own side of the chord. Left leaf pair: joint at (7, -5.6); tall leaf from the joint straight up 3.0 units, lens half-width 0.5; lying leaf from the joint to the left, direction 175 degrees, 2.8 units long, lens half-width 0.45. Right leaf pair: joint at (11.5, -5.6); tall leaf from the joint straight up 3.0 units, half-width 0.5; lying leaf from the joint to the right, direction 5 degrees, 2.8 units long, half-width 0.45: the right pair is the exact mirror image of the left pair across a vertical line. Draw nothing circled and nothing shaded other than the CELL_FILL of the shapes.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any circle, tick, cross or label such as 'congruent'",
+     "colour other than CELL_FILL and INK"
+    ],
+    "accuracy_checks": [
+     "teardrop 2 is teardrop 1 turned by 90 degrees (same circle radius 1.2, same tip distance)",
+     "cloud 2 is cloud 1 scaled by 0.6, so it is plainly smaller",
+     "starburst 2 is starburst 1 scaled by 1.5 (outer radius 1.5 against 2.25), 11 spikes each",
+     "the right leaf pair is the mirror image of the left leaf pair, equal size",
+     "shapes of different pairs do not overlap; the two leaves of one leaf pair touch at their joint"
+    ],
+    "alt_text": "Four pairs of shapes: two teardrops, two clouds (one smaller), two starbursts (one bigger) and two mirrored leaf pairs.",
+    "render_note": "Book p.3 Figure it Out Q2 (2x2 layout kept). Clouds and starbursts in the book are similar but not identical outlines; the LP answer says 'the same shape, one plainly bigger', so the pair is drawn as a scaled copy. Teardrops: the book's second teardrop is a quarter turn of the first. Leaf pairs: the book's right pair is a mirror image of the left pair."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C14",
+   "role": "solution",
+   "lp_book_number": "What to Measure: which pairs are congruent",
+   "ncert_ref": "Section 1.1 - Figure it Out Q2 (p.3)",
+   "question_text": "Four pairs of figures are shown: teardrops, clouds, starbursts and leaf-pairs. Circle the pairs that are congruent.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The answer is a picture: the congruent pairs circled on the figure; the steps only describe it in words.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S4.T4.C14.IMG1",
+   "manim_scene": "c7_9_1_4_fio2_four_pairs_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S4.T4.C14.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S4.T4.C13.IMG1",
+    "content": {
+     "canvas": {
+      "width": 32,
+      "height": 18,
+      "px_per_unit": 60
+     },
+     "fill": "CELL_FILL",
+     "stroke_px": 4,
+     "pairs": {
+      "teardrops": {
+       "circle_radius": 1.2,
+       "tip_distance": 2.64,
+       "tangent_angle_deg": 62.964,
+       "teardrop_1": {
+        "circle_centre": [
+         -10.5,
+         3.8
+        ],
+        "tip": [
+         -10.042,
+         6.4
+        ],
+        "tip_direction_deg": 80
+       },
+       "teardrop_2": {
+        "circle_centre": [
+         -5.0,
+         4.2
+        ],
+        "tip": [
+         -7.6,
+         4.658
+        ],
+        "tip_direction_deg": 170
+       }
+      },
+      "clouds": {
+       "discs": [
+        {
+         "centre": [
+          -1.6,
+          -0.1
+         ],
+         "radius": 0.8
+        },
+        {
+         "centre": [
+          -0.5,
+          0.6
+         ],
+         "radius": 1.05
+        },
+        {
+         "centre": [
+          0.9,
+          0.35
+         ],
+         "radius": 0.95
+        },
+        {
+         "centre": [
+          1.9,
+          -0.2
+         ],
+         "radius": 0.75
+        }
+       ],
+       "rectangle": [
+        [
+         -1.6,
+         -0.9
+        ],
+        [
+         1.9,
+         -0.9
+        ],
+        [
+         1.9,
+         -0.1
+        ],
+        [
+         -1.6,
+         -0.1
+        ]
+       ],
+       "cloud_1": {
+        "origin": [
+         6.0,
+         4.4
+        ],
+        "scale": 1.0,
+        "rotation_deg": 8,
+        "discs": [
+         {
+          "centre": [
+           4.429,
+           4.078
+          ],
+          "radius": 0.8
+         },
+         {
+          "centre": [
+           5.421,
+           4.925
+          ],
+          "radius": 1.05
+         },
+         {
+          "centre": [
+           6.843,
+           4.872
+          ],
+          "radius": 0.95
+         },
+         {
+          "centre": [
+           7.909,
+           4.466
+          ],
+          "radius": 0.75
+         }
+        ],
+        "rectangle": [
+         [
+          4.541,
+          3.286
+         ],
+         [
+          8.007,
+          3.773
+         ],
+         [
+          7.895,
+          4.565
+         ],
+         [
+          4.429,
+          4.078
+         ]
+        ]
+       },
+       "cloud_2": {
+        "origin": [
+         11.8,
+         4.2
+        ],
+        "scale": 0.6,
+        "rotation_deg": 0,
+        "discs": [
+         {
+          "centre": [
+           10.84,
+           4.14
+          ],
+          "radius": 0.48
+         },
+         {
+          "centre": [
+           11.5,
+           4.56
+          ],
+          "radius": 0.63
+         },
+         {
+          "centre": [
+           12.34,
+           4.41
+          ],
+          "radius": 0.57
+         },
+         {
+          "centre": [
+           12.94,
+           4.08
+          ],
+          "radius": 0.45
+         }
+        ],
+        "rectangle": [
+         [
+          10.84,
+          3.66
+         ],
+         [
+          12.94,
+          3.66
+         ],
+         [
+          12.94,
+          4.14
+         ],
+         [
+          10.84,
+          4.14
+         ]
+        ]
+       }
+      },
+      "starbursts": {
+       "outer_radii": [
+        1.0,
+        0.88,
+        1.0,
+        0.94,
+        0.98,
+        0.86,
+        1.0,
+        0.92,
+        0.88,
+        1.0,
+        0.94
+       ],
+       "notch_radius": 0.5,
+       "starburst_1": {
+        "centre": [
+         -11.0,
+         -4.0
+        ],
+        "scale": 1.5,
+        "vertices": [
+         [
+          -9.5,
+          -4.0
+         ],
+         [
+          -10.28,
+          -3.789
+         ],
+         [
+          -9.89,
+          -3.286
+         ],
+         [
+          -10.509,
+          -3.433
+         ],
+         [
+          -10.377,
+          -2.636
+         ],
+         [
+          -10.893,
+          -3.258
+         ],
+         [
+          -11.201,
+          -2.604
+         ],
+         [
+          -11.312,
+          -3.318
+         ],
+         [
+          -11.963,
+          -2.889
+         ],
+         [
+          -11.631,
+          -3.595
+         ],
+         [
+          -12.238,
+          -3.637
+         ],
+         [
+          -11.75,
+          -4.0
+         ],
+         [
+          -12.439,
+          -4.423
+         ],
+         [
+          -11.631,
+          -4.405
+         ],
+         [
+          -11.904,
+          -5.043
+         ],
+         [
+          -11.312,
+          -4.682
+         ],
+         [
+          -11.188,
+          -5.307
+         ],
+         [
+          -10.893,
+          -4.742
+         ],
+         [
+          -10.377,
+          -5.364
+         ],
+         [
+          -10.509,
+          -4.567
+         ],
+         [
+          -9.814,
+          -4.762
+         ],
+         [
+          -10.28,
+          -4.211
+         ]
+        ]
+       },
+       "starburst_2": {
+        "centre": [
+         -5.8,
+         -4.2
+        ],
+        "scale": 2.25,
+        "vertices": [
+         [
+          -3.55,
+          -4.2
+         ],
+         [
+          -4.721,
+          -3.883
+         ],
+         [
+          -4.134,
+          -3.13
+         ],
+         [
+          -5.063,
+          -3.35
+         ],
+         [
+          -4.865,
+          -2.153
+         ],
+         [
+          -5.64,
+          -3.086
+         ],
+         [
+          -6.101,
+          -2.107
+         ],
+         [
+          -6.267,
+          -3.177
+         ],
+         [
+          -7.244,
+          -2.534
+         ],
+         [
+          -6.746,
+          -3.592
+         ],
+         [
+          -7.657,
+          -3.655
+         ],
+         [
+          -6.925,
+          -4.2
+         ],
+         [
+          -7.959,
+          -4.834
+         ],
+         [
+          -6.746,
+          -4.808
+         ],
+         [
+          -7.156,
+          -5.764
+         ],
+         [
+          -6.267,
+          -5.223
+         ],
+         [
+          -6.082,
+          -6.16
+         ],
+         [
+          -5.64,
+          -5.314
+         ],
+         [
+          -4.865,
+          -6.247
+         ],
+         [
+          -5.063,
+          -5.05
+         ],
+         [
+          -4.021,
+          -5.343
+         ],
+         [
+          -4.721,
+          -4.517
+         ]
+        ]
+       }
+      },
+      "leaf_pairs": {
+       "tall": {
+        "length": 3.0,
+        "half_width": 0.5
+       },
+       "lying": {
+        "length": 2.8,
+        "half_width": 0.45
+       },
+       "left_pair": {
+        "joint": [
+         7.0,
+         -5.6
+        ],
+        "lying_direction_deg": 175
+       },
+       "right_pair": {
+        "joint": [
+         11.5,
+         -5.6
+        ],
+        "lying_direction_deg": 5,
+        "is_mirror_image_of": "left_pair"
+       }
+      }
+     },
+     "to_scale": true,
+     "solution_marks": {
+      "colour": "ANSWER",
+      "stroke_px": 5,
+      "corner_radius": 1.0,
+      "loop_round_teardrops": [
+       [
+        -12.299,
+        2.001
+       ],
+       [
+        -3.201,
+        7.0
+       ]
+      ],
+      "loop_round_leaf_pairs": [
+       [
+        3.611,
+        -6.535
+       ],
+       [
+        14.889,
+        -2.0
+       ]
+      ]
+     },
+     "type": "other"
+    },
+    "manim_description": "Canvas 32 by 18 units (16:9), origin at the centre, x to the right, y up, plain white BG, 60 pixels per unit on a 1920 by 1080 render. Draw eight flat shapes in four pairs, in a 2 by 2 arrangement: teardrops top left, clouds top right, starbursts bottom left, leaf pairs bottom right. Every shape is filled CELL_FILL with an INK outline of stroke 4 px; no letters, numbers or other marks. TEARDROPS: each is the convex hull of a circle of radius 1.2 and a tip point at distance 2.64 from the circle centre (outline: tip, straight tangent line to the circle, the long 234.07-degree arc round the circle, straight tangent line back to the tip). Teardrop 1: circle centre (-10.5, 3.8), tip at (-10.042, 6.4) (tip direction 80 degrees, pointing up and slightly right). Teardrop 2: circle centre (-5, 4.2), tip at (-7.6, 4.658) (tip direction 170 degrees, pointing left and slightly up): it is teardrop 1 turned a quarter turn counter-clockwise. CLOUDS: each cloud is the outline of the union of four discs and one rectangle, defined at origin (0, 0), scale 1: discs (centre, radius) (-1.6, -0.1) 0.8; (-0.5, 0.6) 1.05; (0.9, 0.35) 0.95; (1.9, -0.2) 0.75, and the rectangle with corners (-1.6, -0.9), (1.9, -0.9), (1.9, -0.1), (-1.6, -0.1), which gives a flat bottom at y = -0.9 and four bumps on top. Cloud 1: scale 1.0, rotated 8 degrees counter-clockwise about its origin, origin placed at (6, 4.4). Cloud 2: the same cloud at scale 0.6, no rotation, origin placed at (11.8, 4.2), so cloud 2 is plainly smaller. STARBURSTS: each is a closed polygon of 22 vertices round a centre, alternating spike tips and notches: spike tip k (k = 0 to 10) at angle k times 360/11 degrees with radius R_k times the scale, R = 1.00, 0.88, 1.00, 0.94, 0.98, 0.86, 1.00, 0.92, 0.88, 1.00, 0.94; notch k at angle (k + 0.5) times 360/11 degrees with radius 0.5 times the scale. Starburst 1: centre (-11, -4), scale 1.5. Starburst 2: centre (-5.8, -4.2), scale 2.25 (1.5 times the size of starburst 1, same shape). LEAF PAIRS: a leaf is a lens bounded by two circular arcs through its base point and its tip point, each arc bulging half the leaf width to its own side of the chord. Left leaf pair: joint at (7, -5.6); tall leaf from the joint straight up 3.0 units, lens half-width 0.5; lying leaf from the joint to the left, direction 175 degrees, 2.8 units long, lens half-width 0.45. Right leaf pair: joint at (11.5, -5.6); tall leaf from the joint straight up 3.0 units, half-width 0.5; lying leaf from the joint to the right, direction 5 degrees, 2.8 units long, half-width 0.45: the right pair is the exact mirror image of the left pair across a vertical line. SOLUTION MARKS in ANSWER, stroke 5 px, no fill, drawn over the same layout: one closed loop with rounded corners (corner radius 1.0) round the two teardrops, spanning x from -12.299 to -3.201 and y from 2.001 to 7; one closed loop with rounded corners (corner radius 1.0) round the two leaf pairs, spanning x from 3.611 to 14.889 and y from -6.535 to -2. No loop round the clouds and none round the starbursts.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a loop round the clouds or the starbursts",
+     "words such as 'congruent' or 'not congruent'"
+    ],
+    "accuracy_checks": [
+     "same eight shapes at the same positions as the question figure",
+     "exactly two loops: round the teardrops and round the leaf pairs",
+     "the clouds (different size) and the starbursts (different size) stay unmarked"
+    ],
+    "alt_text": "The same four pairs of shapes with the two teardrops circled and the two leaf pairs circled.",
+    "render_note": "Answer = circling the congruent pairs (printed-answer-is-a-picture rule). Loops in ANSWER green because the circling is the answer itself. LP wording check: the LP says the leaf pairs 'land after a turn', but in the book picture the right leaf pair is the mirror image of the left one, which needs a flip, not a turn; for the teardrops the LP says 'flipped' while the book's second teardrop is a quarter turn of the first (a flip also works because a teardrop is symmetric). The verdicts (teardrops and leaf pairs congruent) are right. The picture follows the book."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C15",
+   "role": "question",
+   "lp_book_number": "What to Measure: copying a circle and a rectangle",
+   "ncert_ref": "Section 1.1 - Figure it Out Q3 (p.3-4)",
+   "question_text": "What would you measure to copy a circle, and what would you measure to copy a rectangle? How would you check that two of each are congruent?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure (the book only names 'Circle' and 'Rectangle'); no question figure is invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C16",
+   "role": "solution",
+   "lp_book_number": "What to Measure: copying a circle and a rectangle",
+   "ncert_ref": "Section 1.1 - Figure it Out Q3 (p.3-4)",
+   "question_text": "What would you measure to copy a circle, and what would you measure to copy a rectangle? How would you check that two of each are congruent?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is two short statements (circle: radius; rectangle: length and breadth); the words radius, length and breadth need no picture and the answer is not a drawing. Sibling note: the earlier hint s_figure (a labelled circle and rectangle) would only repeat what the teaching image already shows.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C17",
+   "role": "question",
+   "lp_book_number": "What Would You Measure?, Q4",
+   "ncert_ref": "Section 1.1 - Figure it Out Q4 (p.4)",
+   "question_text": "How would you check whether two figures like this one, three arms from a point, are congruent? Use it on each of the three pairs.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question says 'two figures like this one ... use it on each of the pairs': the reference figure and the pairs are given only as the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S4.T4.C17.IMG1",
+   "manim_scene": "c7_9_1_4_fio4_three_arms_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S4.T4.C17.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": {
+      "width": 32,
+      "height": 18,
+      "px_per_unit": 60
+     },
+     "stroke_px": 4,
+     "arms": {
+      "upper": {
+       "length": 4.3,
+       "direction_deg": 57
+      },
+      "lower": {
+       "length": 3.5,
+       "direction_deg": 237
+      },
+      "short": {
+       "length": 5.6,
+       "direction_deg": 139
+      }
+     },
+     "angles_deg": {
+      "upper_to_short": 82,
+      "short_to_lower": 98,
+      "lower_to_upper": 180
+     },
+     "reference_figure": {
+      "junction": [
+       -9.05,
+       0.3
+      ],
+      "end_upper_arm": [
+       -6.708,
+       3.906
+      ],
+      "end_short_arm": [
+       -13.276,
+       3.974
+      ],
+      "end_lower_arm": [
+       -10.956,
+       -2.635
+      ]
+     },
+     "copies": {
+      "top_row": [
+       {
+        "junction": [
+         1.95,
+         4.2
+        ],
+        "end_upper_arm": [
+         4.292,
+         7.806
+        ],
+        "end_short_arm": [
+         -2.276,
+         7.874
+        ],
+        "end_lower_arm": [
+         0.044,
+         1.265
+        ]
+       },
+       {
+        "junction": [
+         10.95,
+         4.2
+        ],
+        "end_upper_arm": [
+         13.292,
+         7.806
+        ],
+        "end_short_arm": [
+         6.724,
+         7.874
+        ],
+        "end_lower_arm": [
+         9.044,
+         1.265
+        ]
+       }
+      ],
+      "bottom_row": [
+       {
+        "junction": [
+         1.95,
+         -4.0
+        ],
+        "end_upper_arm": [
+         4.292,
+         -0.394
+        ],
+        "end_short_arm": [
+         -2.276,
+         -0.326
+        ],
+        "end_lower_arm": [
+         0.044,
+         -6.935
+        ]
+       },
+       {
+        "junction": [
+         10.95,
+         -4.0
+        ],
+        "end_upper_arm": [
+         13.292,
+         -0.394
+        ],
+        "end_short_arm": [
+         6.724,
+         -0.326
+        ],
+        "end_lower_arm": [
+         9.044,
+         -6.935
+        ]
+       }
+      ]
+     },
+     "to_scale": true,
+     "type": "geometry_figure"
+    },
+    "manim_description": "Canvas 32 by 18 units (16:9), origin at the centre, x to the right, y up, plain white BG, 60 pixels per unit on a 1920 by 1080 render. Draw five identical Y-shaped line figures, each made of three straight INK segments of stroke 4 px meeting at one junction point: the upper arm of length 4.3 units leaves the junction at direction 57 degrees; the lower arm of length 3.5 units leaves it at direction 237 degrees (so the upper and the lower arm lie on one straight line through the junction); the short arm of length 5.6 units leaves it at direction 139 degrees (82 degrees from the upper arm, 98 degrees from the lower arm). Reference figure on the left, junction at (-9.05, 0.3). Four copies on the right, same size and same orientation, in two rows of two (a pair in each row): junctions at (1.95, 4.2) (top left), (10.95, 4.2) (top right), (1.95, -4) (bottom left), (10.95, -4) (bottom right). Draw no letters, no numbers, no lengths, no angle marks and no arcs.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "letters, lengths, angle values, arcs or tick marks",
+     "any verdict about which pair is congruent",
+     "boxes or brackets round the pairs"
+    ],
+    "accuracy_checks": [
+     "the upper and lower arms are collinear (directions 57 and 237 degrees)",
+     "angle between the short arm and the upper arm is 82 degrees, to the lower arm 98 degrees",
+     "all five figures are identical in size and orientation, as the four copies are on the book page",
+     "the four copies make two pairs (two rows of two)"
+    ],
+    "alt_text": "One three-armed figure on the left and four identical copies of it on the right, in two pairs.",
+    "render_note": "Book p.4 Figure it Out Q4: a reference figure and four copies (two pairs). The book prints no lengths or angles; arm lengths (about 4.3, 3.5, 5.6 in these units) and the 82 degree angle were measured on the page picture and all five figures measure identical. WORDING CONFLICT: the LP question says 'each of the three pairs' but the book page shows four copies, that is two pairs; the figure follows the book. The book does not say whether the pairs are the rows or the columns; rows are used here."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C18",
+   "role": "solution",
+   "lp_book_number": "What Would You Measure?, Q4",
+   "ncert_ref": "Section 1.1 - Figure it Out Q4 (p.4)",
+   "question_text": "How would you check whether two figures like this one, three arms from a point, are congruent? Use it on each of the three pairs.",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The steps talk about 'the first and second arms' and 'the second and third arms' and 'what is left of the full turn': these only make sense on a numbered figure with the measured angles marked.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S4.T4.C18.IMG1",
+   "manim_scene": "c7_9_1_4_fio4_three_arms_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S4.T4.C18.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S4.T4.C17.IMG1",
+    "content": {
+     "canvas": {
+      "width": 32,
+      "height": 18,
+      "px_per_unit": 60
+     },
+     "stroke_px": 4,
+     "arms": {
+      "upper": {
+       "length": 4.3,
+       "direction_deg": 57
+      },
+      "lower": {
+       "length": 3.5,
+       "direction_deg": 237
+      },
+      "short": {
+       "length": 5.6,
+       "direction_deg": 139
+      }
+     },
+     "angles_deg": {
+      "upper_to_short": 82,
+      "short_to_lower": 98,
+      "lower_to_upper": 180
+     },
+     "reference_figure": {
+      "junction": [
+       -9.05,
+       0.3
+      ],
+      "end_upper_arm": [
+       -6.708,
+       3.906
+      ],
+      "end_short_arm": [
+       -13.276,
+       3.974
+      ],
+      "end_lower_arm": [
+       -10.956,
+       -2.635
+      ]
+     },
+     "copies": {
+      "top_row": [
+       {
+        "junction": [
+         1.95,
+         4.2
+        ],
+        "end_upper_arm": [
+         4.292,
+         7.806
+        ],
+        "end_short_arm": [
+         -2.276,
+         7.874
+        ],
+        "end_lower_arm": [
+         0.044,
+         1.265
+        ]
+       },
+       {
+        "junction": [
+         10.95,
+         4.2
+        ],
+        "end_upper_arm": [
+         13.292,
+         7.806
+        ],
+        "end_short_arm": [
+         6.724,
+         7.874
+        ],
+        "end_lower_arm": [
+         9.044,
+         1.265
+        ]
+       }
+      ],
+      "bottom_row": [
+       {
+        "junction": [
+         1.95,
+         -4.0
+        ],
+        "end_upper_arm": [
+         4.292,
+         -0.394
+        ],
+        "end_short_arm": [
+         -2.276,
+         -0.326
+        ],
+        "end_lower_arm": [
+         0.044,
+         -6.935
+        ]
+       },
+       {
+        "junction": [
+         10.95,
+         -4.0
+        ],
+        "end_upper_arm": [
+         13.292,
+         -0.394
+        ],
+        "end_short_arm": [
+         6.724,
+         -0.326
+        ],
+        "end_lower_arm": [
+         9.044,
+         -6.935
+        ]
+       }
+      ]
+     },
+     "to_scale": true,
+     "solution_marks": {
+      "colour": "ANSWER",
+      "arm_numbers": {
+       "1": "upper arm",
+       "2": "short arm",
+       "3": "lower arm"
+      },
+      "solid_arcs": [
+       {
+        "between": "1-2",
+        "from_deg": 57,
+        "to_deg": 139,
+        "radius": 1.0
+       },
+       {
+        "between": "2-3",
+        "from_deg": 139,
+        "to_deg": 237,
+        "radius": 1.0
+       }
+      ],
+      "dashed_arc": {
+       "between": "3-1",
+       "from_deg": 237,
+       "to_deg": 417,
+       "radius": 1.0,
+       "colour": "GUIDE",
+       "meaning": "left over of the full turn, not measured"
+      }
+     },
+     "type": "geometry_figure"
+    },
+    "manim_description": "Canvas 32 by 18 units (16:9), origin at the centre, x to the right, y up, plain white BG, 60 pixels per unit on a 1920 by 1080 render. Draw five identical Y-shaped line figures, each made of three straight INK segments of stroke 4 px meeting at one junction point: the upper arm of length 4.3 units leaves the junction at direction 57 degrees; the lower arm of length 3.5 units leaves it at direction 237 degrees (so the upper and the lower arm lie on one straight line through the junction); the short arm of length 5.6 units leaves it at direction 139 degrees (82 degrees from the upper arm, 98 degrees from the lower arm). Reference figure on the left, junction at (-9.05, 0.3). Four copies on the right, same size and same orientation, in two rows of two (a pair in each row): junctions at (1.95, 4.2) (top left), (10.95, 4.2) (top right), (1.95, -4) (bottom left), (10.95, -4) (bottom right). SOLUTION MARKS on the reference figure only, all in ANSWER (the four copies stay unmarked): the digit '1' beside the free end of the upper arm at (-6.354, 4.451); the digit '2' beside the free end of the short arm at (-13.767, 4.4); the digit '3' beside the free end of the lower arm at (-11.31, -3.18); each digit in ANSWER green, sans-serif, cap height 0.7 units. Two solid ANSWER arcs of stroke 4 px, radius 1.0, centre at the junction: arc 1-2 from direction 57 degrees to direction 139 degrees (82 degrees, between the first and second arms) and arc 2-3 from direction 139 degrees to direction 237 degrees (98 degrees, between the second and third arms). One dashed GUIDE arc of stroke 3 px (dash 0.2, gap 0.15), radius 1.0, centre at the junction, from direction 237 degrees through direction 327 degrees to direction 417 degrees (180 degrees, the part of the full turn that is left over, not measured). No numeric values anywhere.",
+    "visible_text": [
+     "1",
+     "2",
+     "3"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numeric lengths or angle values (the LP gives none)",
+     "marks on the four copies",
+     "words such as 'first arm' written in the picture"
+    ],
+    "accuracy_checks": [
+     "arm numbers go round the junction counter-clockwise from the upper arm: 1 = upper (57 deg), 2 = short (139 deg), 3 = lower (237 deg)",
+     "the two solid arcs are 82 and 98 degrees; the dashed arc is 360 - 82 - 98 = 180 degrees",
+     "five measurements shown: three arm numbers and two solid arcs"
+    ],
+    "alt_text": "The reference figure with its three arms numbered 1, 2, 3, two angle arcs drawn solid and the left-over angle dashed.",
+    "render_note": "The LP steps say 'the angle between the first and second arms, and between the second and third arms; the third angle is what is left of the full turn'. Arm numbering is chosen so that the two measured angles are the ordinary ones (82 and 98) and the left-over angle is the straight angle; the book does not number the arms. Marks only on the reference figure; the four copies stay as given."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C19",
+   "role": "worked_example",
+   "lp_book_number": "Worked example p5.meera",
+   "ncert_ref": "Section 1.2 - p.4-5 (Meera's claim)",
+   "question_text": "Meera and Rabia must copy a frame that is too big to trace. The sides measure forty, sixty and eighty centimetres. Rabia reaches for her protractor and Meera stops her: three sides are enough. Do you agree with Meera?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "DECORATIVE_ONLY"
+   ],
+   "reason": "All the data (sides 40, 60 and 80 cm) is in the words; the book picture is two girls and a school frame with no marks, kept as the concept image of this concept.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C19",
+   "role": "worked_example",
+   "lp_book_number": "Ask: what is left on the floor",
+   "ncert_ref": "Section 1.2 - p.4-5",
+   "question_text": "The tracing paper is out. What is left on the floor that could help?",
+   "decision": "none",
+   "reason_codes": [
+    "DECORATIVE_ONLY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The talk picture is a corridor scene (tape, protractor, scissors on the floor); the tools are named in the story text and there is nothing mathematical to draw.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 1
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C20",
+   "role": "worked_example",
+   "lp_book_number": "Worked example p5.sss_468",
+   "ncert_ref": "Section 1.2 - p.5 (Rabia: base 6 cm, circles of radius 4 cm and 8 cm)",
+   "question_text": "Is it enough to know the three sides, four centimetres, six centimetres and eight centimetres? Can you draw such a triangle?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is a construction (a 6 cm base with circles of radius 4 cm and 8 cm crossing at E and F) that the steps only describe; the teaching image is never linked, so the block draws its own.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S5.T5.C20.IMG2",
+   "manim_scene": "c7_9_1_5_sss_construction_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C20.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": {
+      "width": 32,
+      "height": 18,
+      "px_per_unit": 60
+     },
+     "units_per_cm": 1,
+     "A": [
+      -5.0,
+      0.0
+     ],
+     "B": [
+      1.0,
+      0.0
+     ],
+     "E": [
+      -6.0,
+      3.873
+     ],
+     "F": [
+      -6.0,
+      -3.873
+     ],
+     "circles": [
+      {
+       "centre": [
+        -5.0,
+        0.0
+       ],
+       "radius": 4,
+       "style": "dashed",
+       "colour": "GUIDE"
+      },
+      {
+       "centre": [
+        1.0,
+        0.0
+       ],
+       "radius": 8,
+       "style": "dashed",
+       "colour": "GUIDE"
+      }
+     ],
+     "segments_INK": [
+      "AB",
+      "AE",
+      "BE",
+      "AF",
+      "BF"
+     ],
+     "triangles": [
+      "ABE (above AB)",
+      "ABF (below AB)"
+     ],
+     "point_labels": {
+      "A": [
+       -4.38,
+       0.79
+      ],
+      "B": [
+       1.6,
+       0.0
+      ],
+      "E": [
+       -6.5,
+       4.5
+      ],
+      "F": [
+       -6.5,
+       -4.5
+      ]
+     },
+     "side_labels": {
+      "6 cm": [
+       -2.0,
+       0.0
+      ],
+      "4 cm (AE)": [
+       -5.5,
+       1.936
+      ],
+      "8 cm (BE)": [
+       -2.5,
+       1.936
+      ],
+      "4 cm (AF)": [
+       -5.5,
+       -1.936
+      ],
+      "8 cm (BF)": [
+       -2.5,
+       -1.936
+      ]
+     },
+     "label_plate": {
+      "width": 1.8,
+      "height": 0.8,
+      "colour": "BG"
+     },
+     "to_scale": true,
+     "type": "construction"
+    },
+    "manim_description": "Canvas 32 by 18 units (16:9), origin at the centre, x to the right, y up, plain white BG, 60 pixels per unit on a 1920 by 1080 render. Draw a ruler-and-compass construction to scale, 1 unit per centimetre. Segment AB in INK, stroke 5 px, from A (-5, 0) to B (1, 0) (6 units = 6 cm). Dashed circle in GUIDE, stroke 3 px (dash 0.3, gap 0.2): centre A, radius 4 units. Dashed circle in GUIDE, stroke 3 px, same dashes: centre B, radius 8 units. The two circles cross at E (-6, 3.873) (above AB) and F (-6, -3.873) (below AB); mark A, B, E and F with INK dots of radius 0.12. Draw the four segments AE, BE, AF and BF in INK, stroke 4 px, so that triangle ABE lies above AB and triangle ABF below it, mirror images across AB. Write in INK sans-serif, cap height 0.65 units, horizontal text: the point letters A at (-4.38, 0.79), B at (1.6, 0), E at (-6.5, 4.5) and F at (-6.5, -4.5); the side labels '6 cm' centred on the midpoint of AB (-2, 0), '4 cm' centred on the midpoint of AE (-5.5, 1.936), '8 cm' centred on the midpoint of BE (-2.5, 1.936), '4 cm' centred on the midpoint of AF (-5.5, -1.936) and '8 cm' centred on the midpoint of BF (-2.5, -1.936). Each side label sits on a BG-coloured plate 1.8 units wide and 0.8 units high that hides the line behind the text. Draw no fills, no angle arcs, no fold line and no other text.",
+    "visible_text": [
+     "A",
+     "B",
+     "E",
+     "F",
+     "6 cm",
+     "4 cm",
+     "8 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "fold line, 'fold here' or any caption",
+     "angle values",
+     "the teaching banner or logo of the concept image"
+    ],
+    "accuracy_checks": [
+     "AB = 6.000, AE = AF = 4.000, BE = BF = 8.000 within 0.001",
+     "E = (-6, 3.873) and F = (-6, -3.873): both lie on circle A (r 4) and circle B (r 8)",
+     "triangles ABE and ABF are mirror images across line AB",
+     "angles of ABE: A = 104.48, B = 28.96, E = 46.57 degrees (LP: about 104.5, 29, 46.6)"
+    ],
+    "alt_text": "Segment AB of 6 cm with a dashed circle of radius 4 cm round A and a dashed circle of radius 8 cm round B crossing at E above and F below, giving triangles ABE and ABF.",
+    "render_note": "Same picture as book p.5 (Rabia's construction) with the 4 cm and 8 cm sides labelled from the LP steps (the book labels only AB = 6 cm). The two blocks M2.S5.T5.C20 block 0 and block 1 use the identical figure: one diagram per block. The concept image M2.S5.T5.C20.IMG1 shows the same construction; it is not linked."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C20",
+   "role": "worked_example",
+   "lp_book_number": "Worked example p6.abe_abf",
+   "ncert_ref": "Section 1.2 - p.5-6 (triangles ABE and ABF)",
+   "question_text": "The two circles cross at E and F. Examine whether triangle ABE and triangle ABF are congruent. You may trace and compare, cut out and place one on the other, or notice that AB is a fold line.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "'The two circles cross at E and F ... triangle ABE and triangle ABF' needs the figure with its labelled points; same book picture as the block before, drawn once per block.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S5.T5.C20.IMG3",
+   "manim_scene": "c7_9_1_5_abe_abf_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C20.IMG3}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas": {
+      "width": 32,
+      "height": 18,
+      "px_per_unit": 60
+     },
+     "units_per_cm": 1,
+     "A": [
+      -5.0,
+      0.0
+     ],
+     "B": [
+      1.0,
+      0.0
+     ],
+     "E": [
+      -6.0,
+      3.873
+     ],
+     "F": [
+      -6.0,
+      -3.873
+     ],
+     "circles": [
+      {
+       "centre": [
+        -5.0,
+        0.0
+       ],
+       "radius": 4,
+       "style": "dashed",
+       "colour": "GUIDE"
+      },
+      {
+       "centre": [
+        1.0,
+        0.0
+       ],
+       "radius": 8,
+       "style": "dashed",
+       "colour": "GUIDE"
+      }
+     ],
+     "segments_INK": [
+      "AB",
+      "AE",
+      "BE",
+      "AF",
+      "BF"
+     ],
+     "triangles": [
+      "ABE (above AB)",
+      "ABF (below AB)"
+     ],
+     "point_labels": {
+      "A": [
+       -4.38,
+       0.79
+      ],
+      "B": [
+       1.6,
+       0.0
+      ],
+      "E": [
+       -6.5,
+       4.5
+      ],
+      "F": [
+       -6.5,
+       -4.5
+      ]
+     },
+     "side_labels": {
+      "6 cm": [
+       -2.0,
+       0.0
+      ],
+      "4 cm (AE)": [
+       -5.5,
+       1.936
+      ],
+      "8 cm (BE)": [
+       -2.5,
+       1.936
+      ],
+      "4 cm (AF)": [
+       -5.5,
+       -1.936
+      ],
+      "8 cm (BF)": [
+       -2.5,
+       -1.936
+      ]
+     },
+     "label_plate": {
+      "width": 1.8,
+      "height": 0.8,
+      "colour": "BG"
+     },
+     "to_scale": true,
+     "type": "construction"
+    },
+    "manim_description": "Canvas 32 by 18 units (16:9), origin at the centre, x to the right, y up, plain white BG, 60 pixels per unit on a 1920 by 1080 render. Draw a ruler-and-compass construction to scale, 1 unit per centimetre. Segment AB in INK, stroke 5 px, from A (-5, 0) to B (1, 0) (6 units = 6 cm). Dashed circle in GUIDE, stroke 3 px (dash 0.3, gap 0.2): centre A, radius 4 units. Dashed circle in GUIDE, stroke 3 px, same dashes: centre B, radius 8 units. The two circles cross at E (-6, 3.873) (above AB) and F (-6, -3.873) (below AB); mark A, B, E and F with INK dots of radius 0.12. Draw the four segments AE, BE, AF and BF in INK, stroke 4 px, so that triangle ABE lies above AB and triangle ABF below it, mirror images across AB. Write in INK sans-serif, cap height 0.65 units, horizontal text: the point letters A at (-4.38, 0.79), B at (1.6, 0), E at (-6.5, 4.5) and F at (-6.5, -4.5); the side labels '6 cm' centred on the midpoint of AB (-2, 0), '4 cm' centred on the midpoint of AE (-5.5, 1.936), '8 cm' centred on the midpoint of BE (-2.5, 1.936), '4 cm' centred on the midpoint of AF (-5.5, -1.936) and '8 cm' centred on the midpoint of BF (-2.5, -1.936). Each side label sits on a BG-coloured plate 1.8 units wide and 0.8 units high that hides the line behind the text. Draw no fills, no angle arcs, no fold line and no other text.",
+    "visible_text": [
+     "A",
+     "B",
+     "E",
+     "F",
+     "6 cm",
+     "4 cm",
+     "8 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "fold line, 'fold here' or any caption",
+     "angle values",
+     "the teaching banner or logo of the concept image"
+    ],
+    "accuracy_checks": [
+     "AB = 6.000, AE = AF = 4.000, BE = BF = 8.000 within 0.001",
+     "E = (-6, 3.873) and F = (-6, -3.873): both lie on circle A (r 4) and circle B (r 8)",
+     "triangles ABE and ABF are mirror images across line AB",
+     "angles of ABE: A = 104.48, B = 28.96, E = 46.57 degrees (LP: about 104.5, 29, 46.6)"
+    ],
+    "alt_text": "Segment AB of 6 cm with a dashed circle of radius 4 cm round A and a dashed circle of radius 8 cm round B crossing at E above and F below, giving triangles ABE and ABF.",
+    "render_note": "same as M2.S5.T5.C20.IMG2. Same picture as book p.5 (Rabia's construction) with the 4 cm and 8 cm sides labelled from the LP steps (the book labels only AB = 6 cm). The two blocks M2.S5.T5.C20 block 0 and block 1 use the identical figure: one diagram per block. The concept image M2.S5.T5.C20.IMG1 shows the same construction; it is not linked."
+   },
+   "block_index": 1
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C20",
+   "role": "worked_example",
+   "lp_book_number": "Check my thinking: sides 5, 7, 9",
+   "ncert_ref": "Section 1.2 - p.6 (SSS)",
+   "question_text": "Two triangles both have sides 5 cm, 7 cm and 9 cm. Must they be congruent?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Yes/No check on three given side lengths (5, 7, 9); all information is in the words and the SSS result answers it.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 2
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C21",
+   "role": "worked_example",
+   "lp_book_number": "Worked example p6.sss_rule",
+   "ncert_ref": "Section 1.2 - p.6 (SSS condition)",
+   "question_text": "If two triangles have the same side lengths, then they are congruent. This is called the SSS condition for congruence. Do the sides five, eight, eleven and eleven, five, eight make twins? Do six, six, nine and six, nine, nine?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Matching the side lists 5, 8, 11 / 11, 5, 8 and 6, 6, 9 / 6, 9, 9 is word and number reasoning; a picture adds nothing.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C21",
+   "role": "worked_example",
+   "lp_book_number": "Ask: a bag of three sticks",
+   "ncert_ref": "Section 1.2 - p.6 (SSS)",
+   "question_text": "If two people each get a bag like this and build a triangle, can they end up with different triangles?",
+   "decision": "none",
+   "reason_codes": [
+    "DECORATIVE_ONLY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The talk picture (concept image M2.S5.T5.C21.IMG2) shows two bags and the same three sticks with no numbers or lengths; the idea (same three sticks, one triangle) is in the words and the answer.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 1
+  }
+ ]
+}

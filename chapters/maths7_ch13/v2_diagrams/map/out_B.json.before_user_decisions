@@ -1,0 +1,2230 @@
+{
+ "meta": {
+  "chapter": "Connecting the Dots...",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 13",
+  "lp_plan_id": "cbse_eng_maths7_ch13_v33",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "none": 4,
+    "required": 1,
+    "optional": 1
+   },
+   "question": {
+    "none": 4,
+    "required": 6,
+    "optional": 0
+   },
+   "solution": {
+    "none": 7,
+    "required": 3,
+    "optional": 0
+   }
+  },
+  "notes": [
+   "Chunk B: topics T13 (zero median, no value, mangoes), T14 (Figure it Out 5.2), T15 (double column graph worked example), T16 (rocket graph questions), T17 (daylight), T19 (cricket graph questions).",
+   "Required diagrams are all data graphs: dot plots (Q3, Q5 and their filled solutions, Q6 given plots), the onion double column graph (worked example), the rocket graph (two questions) and the cricket graph (question and marked solution).",
+   "BOOK FLAW, Figure it Out 5.2 Q6: the printed whole-class dots are the first section's (mean 144.5) and contradict the printed mean 141.21 / median 142.5; the diagram draws boys + girls (32 dots), which reproduces the printed numbers. Needs the user's confirmation.",
+   "Dot-plot frames of Q3 are drawn with 4 rows (the book prints 3) because the answer has a stack of 4 at 60.",
+   "Cricket graph: the base inventory says red has 19 columns; the page shows 18 (red stops after over 18), as the LP text says.",
+   "LP text gaps (needs_lp_text_sync): C53 has no onion data (LaTeX table given in text_alternative); C73 has no statements (a) to (f) or options for the 2023 total.",
+   "Skipped as pure decoration (not in the base inventory): Kobel woodcut p.16, sumo and ballet see-saw p.17, midnight-sun photo p.25, cartoon characters."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P15-newspaper_clipping-1",
+   "source": "chapter p.15",
+   "description": "Newspaper clipping 'SPORTS' with England's 11 scores 19, 0, 0, 22, 158, 0, 184, 5, 0, 0, 0 and 19 extras (407/10); the numbers are all in the LP question text of the worked example.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P06-table-1",
+   "source": "chapter p.06",
+   "description": "Yahapur monthly onion prices, 12 rows (25, 24, 26, 28, 30, 35, 39, 43, 49, 56, 59, 44); the data for Figure it Out 5.2 Q1, a plain table.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P06-table-2",
+   "source": "chapter p.06",
+   "description": "Wahapur monthly onion prices, 12 rows (19, 17, 23, 30, 38, 35, 42, 39, 53, 60, 52, 42); the data for Figure it Out 5.2 Q1, a plain table.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P16-dot_plot-1",
+   "source": "chapter p.16",
+   "description": "Empty dot-plot frame for Figure it Out 5.2 Q3: axis 0 to 80 in steps of 5, 17 gridlines, 3 rows as printed (drawn with 4 rows so the stack of 4 at 60 fits).",
+   "mapped_to": "item:M2.S14.T14.C57 (question)"
+  },
+  {
+   "fig_id": "NEW-P16-dot_plot-1-sol",
+   "source": "chapter p.16 (solution use)",
+   "description": "The same frame used again for the filled solution plot of Figure it Out 5.2 Q3: 29 dots, mean 55.9, median 56.",
+   "mapped_to": "item:M2.S14.T14.C58 (solution)"
+  },
+  {
+   "fig_id": "P17-table-1",
+   "source": "chapter p.17",
+   "description": "Boys and girls newborn weights table of Figure it Out 5.2 Q5; a plain two-row table, also written in the LP question text.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P17-dot_plot-1",
+   "source": "chapter p.17",
+   "description": "Empty dot-plot frame for Figure it Out 5.2 Q5: axis 0 to 4.5 in steps of 0.5, 10 gridlines, 3 rows.",
+   "mapped_to": "item:M2.S14.T14.C61 (question)"
+  },
+  {
+   "fig_id": "NEW-P17-dot_plot-1-sol",
+   "source": "chapter p.17 (solution use)",
+   "description": "The same frame used again for the filled solution plot of Figure it Out 5.2 Q5: 6 boys and 6 girls dots in two colours.",
+   "mapped_to": "item:M2.S14.T14.C62 (solution)"
+  },
+  {
+   "fig_id": "P17-dot_plot-2",
+   "source": "chapter p.17",
+   "description": "Whole-class dot plot of Figure it Out 5.2 Q6, mean 141.21, median 142.5. The printed dots are the first section's (28 dots, mean 144.5) and contradict the labels; the diagram draws boys + girls = 32 dots.",
+   "mapped_to": "item:M2.S14.T14.C63 (question)"
+  },
+  {
+   "fig_id": "P17-dot_plot-3",
+   "source": "chapter p.17",
+   "description": "Boys dot plot of Figure it Out 5.2 Q6, 18 dots, mean 142.05, median 143 (as printed).",
+   "mapped_to": "item:M2.S14.T14.C63 (question)"
+  },
+  {
+   "fig_id": "P17-dot_plot-4",
+   "source": "chapter p.17",
+   "description": "Girls dot plot of Figure it Out 5.2 Q6, 14 dots, mean 140.14, median 140.",
+   "mapped_to": "item:M2.S14.T14.C63 (question)"
+  },
+  {
+   "fig_id": "P18-table-1",
+   "source": "chapter p.18",
+   "description": "Plain table of monthly onion prices for Yahapur and Wahapur, Jan to Dec; the data of the worked example C67 and of Figure it Out 5.2 Q1.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P18-bar_graph-1",
+   "source": "chapter p.18",
+   "description": "Single column graph of Yahapur's monthly onion prices (teaching step before the combined graph); the same numbers are in the table and in the double column graph.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P18-bar_graph-2",
+   "source": "chapter p.18",
+   "description": "Single column graph of Wahapur's monthly onion prices (teaching step before the combined graph); the same numbers are in the table and in the double column graph.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P19-bar_graph-1",
+   "source": "chapter p.19",
+   "description": "Double column graph of monthly onion prices, Yahapur and Wahapur, scale 0 to 60 (teaching figure, concept image of the combined graph).",
+   "mapped_to": "concept_image:M3.S15.T15.C67.IMG1"
+  },
+  {
+   "fig_id": "NEW-P19-bar_graph-1-C67",
+   "source": "chapter p.19 (worked example use)",
+   "description": "The same double column graph, redrawn as the figure of the worked example that draws it (own diagram; the teaching image is not linked).",
+   "mapped_to": "item:M3.S15.T15.C67 (question)"
+  },
+  {
+   "fig_id": "P20-bar_graph-1",
+   "source": "chapter p.20",
+   "description": "Horizontal clustered bar graph of rocket launches, 10 organisations x 3 years, scale 20 launches per labelled step; used by the p.22 questions (C71 first use).",
+   "mapped_to": "item:M3.S16.T16.C71 (question)"
+  },
+  {
+   "fig_id": "NEW-P20-bar_graph-1-C73",
+   "source": "chapter p.20 (second question use)",
+   "description": "The same rocket graph used again by the statements / 2023 total question (own diagram, identical spec).",
+   "mapped_to": "item:M3.S16.T16.C73 (question)"
+  },
+  {
+   "fig_id": "P21-bar_graph-1",
+   "source": "chapter p.21",
+   "description": "The rocket graph with the yellow annotation boxes of Step 1 and Step 2 (teaching figure); the plan's teaching image shows the graph itself.",
+   "mapped_to": "concept_image:M3.S15.T15.C68.IMG1"
+  },
+  {
+   "fig_id": "P22-table-1",
+   "source": "chapter p.22",
+   "description": "City 1 monthly daylight hours table (210 ... 186); plain table, the worked example C75 uses two of its values.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P22-table-2",
+   "source": "chapter p.22",
+   "description": "City 2 monthly daylight hours table (459 ... 468); plain table, the worked example C75 uses two of its values.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P23-bar_graph-1",
+   "source": "chapter p.23",
+   "description": "Clustered column graph of average daylight hours per day, City 1 and City 2, 12 months (teaching figure; the concept image of the worked example C76).",
+   "mapped_to": "concept_image:M3.S17.T17.C76.IMG1"
+  },
+  {
+   "fig_id": "P24-map-1",
+   "source": "chapter p.24",
+   "description": "World map with an orange pin on Finland (City 1) and a blue pin on New Zealand (City 2); a real map, not used by any question.",
+   "mapped_to": "none:NOT_RENDERABLE"
+  },
+  {
+   "fig_id": "P26-bar_graph-1",
+   "source": "chapter p.26",
+   "description": "CORRECTED: double column graph of runs per over, blue 20 columns (2, 11, 8, 7, 9, 6, 3, 4, 9, 8, 6, 15, 6, 9, 4, 10, 9, 13, 17, 7) and red only 18 columns (10, 8, 4, 2, 11, 8, 3, 6, 10, 9, 9, 5, 16, 11, 9, 7, 7, 17); over 19 has only blue 17 and over 20 only blue 7; wicket rings above blue at overs 1, 3, 6, 13, 18, 19, 20.",
+   "mapped_to": "item:M3.S19.T19.C80 (question)"
+  },
+  {
+   "fig_id": "NEW-P26-bar_graph-1-C81",
+   "source": "chapter p.26 (solution use)",
+   "description": "The same cricket graph with the blue over-12 column and the shortest red column (over 4) outlined and labelled in the solution figure.",
+   "mapped_to": "item:M3.S19.T19.C81 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 25,
+  "mapped_to_items": 12,
+  "mapped_to_concept_images": 3,
+  "mapped_none": 10,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M2.S14.T14.C57.IMG1",
+   "M2.S14.T14.C58.IMG1",
+   "M2.S14.T14.C61.IMG1",
+   "M2.S14.T14.C62.IMG1",
+   "M2.S14.T14.C63.IMG1",
+   "M3.S15.T15.C67.IMG2",
+   "M3.S16.T16.C71.IMG1",
+   "M3.S16.T16.C73.IMG1",
+   "M3.S19.T19.C80.IMG1",
+   "M3.S19.T19.C81.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M2.S13.T13.C49",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Zero median runs, yet a big total",
+   "ncert_ref": "Section 5.2 - zero_median",
+   "question_text": "England's eleven batters scored 19, 0, 0, 22, 158, 0, 184, 5, 0, 0, 0, and the team made 407 including 19 extras. Find the median and the mean runs per player.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "All eleven scores and the 19 extras are in the question text and the steps are sorting and arithmetic; the newspaper clipping in the book only repeats these numbers.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C50",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Zero runs or did not play?",
+   "ncert_ref": "Section 5.2 - zero_blank",
+   "question_text": "A player scores 57, 13, 0, 84, did not play, 51 and 27 in a series of seven matches. Find the mean runs per match.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The seven match results, including the one not played, are written in the question; the steps are a sum and a division.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C51",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Mangoes in season, and a mean foot",
+   "ncert_ref": "Section 5.2 - mangoes; Section 5.2 - mean_foot",
+   "question_text": "Sita's mango tree gave 0, 0, 8, 24, 41, 16, 5, 0, 0, 0, 0, 0 mangoes from January to December. Find the mean and median for all twelve months and for the five summer months.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The twelve monthly mango counts are in the question text and the steps are arithmetic and sorting; no figure is printed in the book for this example.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C53",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.2, Q1",
+   "ncert_ref": "Section 5.2 - FiO2_1",
+   "question_text": "Find the median of onion prices in Yahapur and Wahapur.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The data are the plain two-row table of monthly onion prices (rupees per kg) printed earlier in the book; a plain table of numbers stays LaTeX. The LP question text does not contain it, so the table must be added to the text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write this table under the question: \\begin{array}{|l|c|c|c|c|c|c|c|c|c|c|c|c|} \\hline & \\text{Jan} & \\text{Feb} & \\text{Mar} & \\text{Apr} & \\text{May} & \\text{Jun} & \\text{Jul} & \\text{Aug} & \\text{Sep} & \\text{Oct} & \\text{Nov} & \\text{Dec} \\\\ \\hline \\text{Yahapur} & 25 & 24 & 26 & 28 & 30 & 35 & 39 & 43 & 49 & 56 & 59 & 44 \\\\ \\hline \\text{Wahapur} & 19 & 17 & 23 & 30 & 38 & 35 & 42 & 39 & 53 & 60 & 52 & 42 \\\\ \\hline \\end{array}",
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C54",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.2, Q1",
+   "ncert_ref": "Section 5.2 - FiO2_1",
+   "question_text": "Find the median of onion prices in Yahapur and Wahapur.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The solution sorts two lists of 12 numbers and averages the 6th and 7th values: LaTeX lines, no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C55",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.2, Q2",
+   "ncert_ref": "Section 5.2 - FiO2_2",
+   "question_text": "Sanskruti asked her class how many domestic animals and pets each had at home. Some of the students were absent. The data values are 0, 1, 0, 4, 8, 0, 0, 2, 1, 1, 5, 3, 4, 0, 0, no entry, 10, 25, 2, no entry, 2, 4. Find the mean and median. How would you describe this data?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "All 22 entries, including the two 'no entry' blanks, are listed in the question text; no figure is printed for this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C56",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.2, Q2",
+   "ncert_ref": "Section 5.2 - FiO2_2",
+   "question_text": "Sanskruti asked her class how many domestic animals and pets each had at home. Some of the students were absent. The data values are 0, 1, 0, 4, 8, 0, 0, 2, 1, 1, 5, 3, 4, 0, 0, no entry, 10, 25, 2, no entry, 2, 4. Find the mean and median. How would you describe this data?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Sorted list, total 72, mean 3.6 and median 2 are written as arithmetic; a dot plot would be nice but is not asked and not needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C57",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.2, Q3",
+   "ncert_ref": "Section 5.2 - FiO2_3",
+   "question_text": "Rintu takes care of a date-palm tree farm in Habra. The heights of the trees (in feet) in his farm are given as: 50, 45, 43, 52, 61, 63, 46, 55, 60, 55, 59, 56, 56, 49, 54, 65, 66, 51, 44, 58, 60, 54, 52, 57, 61, 62, 60, 60, 67. Fill the dot plot, and mark the mean and median. How would you describe the heights of these palm trees? Can you think of quicker ways to find the mean? How many trees are shorter than the average height?",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The book gives an empty dot-plot frame that the learner must fill and mark; the empty frame is the figure the question gives.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S14.T14.C57.IMG1",
+   "manim_scene": "c7_13_s52_fio3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S14.T14.C57.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "dot_plot_frame_empty",
+     "axis": {
+      "min": 0,
+      "max": 80,
+      "label_step": 5,
+      "labels_left_to_right": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       25,
+       30,
+       35,
+       40,
+       45,
+       50,
+       55,
+       60,
+       65,
+       70,
+       75,
+       80
+      ]
+     },
+     "frame": {
+      "rows": 4,
+      "vertical_gridlines_at": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       25,
+       30,
+       35,
+       40,
+       45,
+       50,
+       55,
+       60,
+       65,
+       70,
+       75,
+       80
+      ],
+      "left_edge": "thick INK",
+      "baseline": "thick INK",
+      "suggested_px": {
+       "frame_width": 1340,
+       "frame_height": 128,
+       "row_pitch": 32
+      }
+     },
+     "dots": [],
+     "mean_line": null,
+     "median_line": null,
+     "to_scale": true
+    },
+    "manim_description": "Draw a plain white BG card. Centre one empty dot-plot frame on it: a rectangle 1340 px wide whose horizontal axis runs from 0 at the left edge to 80 at the right edge (1 unit = 16.75 px, 5 units = 83.75 px) and 128 px high, split into 4 equal rows of 32 px. Draw the left edge and the baseline (bottom edge) as thick INK lines (3 px). Draw the top edge and the 3 inner horizontal lines as thin GUIDE lines (2 px). Draw 17 thin GUIDE vertical gridlines at 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75 and 80 (the gridline at 0 is the left edge, the gridline at 80 the right edge). Under the baseline write the 17 labels 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80 in INK, each centred under its gridline. Draw no dots, no mean line, no median line, no title and no axis title.",
+    "visible_text": [
+     "0",
+     "5",
+     "10",
+     "15",
+     "20",
+     "25",
+     "30",
+     "35",
+     "40",
+     "45",
+     "50",
+     "55",
+     "60",
+     "65",
+     "70",
+     "75",
+     "80"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any dot, mean line or median line",
+     "the 29 tree heights",
+     "axis title, unit or legend"
+    ],
+    "accuracy_checks": [
+     "17 labels from 0 to 80 in steps of 5, each centred under its own gridline",
+     "equal spacing: every 5 units is 83.75 px",
+     "the frame has 4 equal rows (the book prints 3; 4 are needed so that the stack of 4 dots at 60 fits in the solution figure)",
+     "no data mark of any kind is drawn"
+    ],
+    "alt_text": "An empty dot-plot frame with a number line from 0 to 80 in steps of 5 and four empty rows above it.",
+    "render_note": "The book's frame has 3 rows, but the answer needs a stack of 4 dots at height 60, so this figure and its solution figure both use 4 rows (same layout, as the rules ask). The 29 tree heights stay in the question text."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C58",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.2, Q3",
+   "ncert_ref": "Section 5.2 - FiO2_3",
+   "question_text": "Rintu takes care of a date-palm tree farm in Habra. The heights of the trees (in feet) in his farm are given as: 50, 45, 43, 52, 61, 63, 46, 55, 60, 55, 59, 56, 56, 49, 54, 65, 66, 51, 44, 58, 60, 54, 52, 57, 61, 62, 60, 60, 67. Fill the dot plot, and mark the mean and median. How would you describe the heights of these palm trees? Can you think of quicker ways to find the mean? How many trees are shorter than the average height?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The answer to 'Fill the dot plot, and mark the mean and median' is the filled dot plot with the two markers; the solution text only describes it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S14.T14.C58.IMG1",
+   "manim_scene": "c7_13_s52_fio3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S14.T14.C58.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S14.T14.C57.IMG1",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "dot_plot_filled",
+     "axis": {
+      "min": 0,
+      "max": 80,
+      "label_step": 5,
+      "labels_left_to_right": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       25,
+       30,
+       35,
+       40,
+       45,
+       50,
+       55,
+       60,
+       65,
+       70,
+       75,
+       80
+      ]
+     },
+     "frame": {
+      "rows": 4,
+      "vertical_gridlines_at": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       25,
+       30,
+       35,
+       40,
+       45,
+       50,
+       55,
+       60,
+       65,
+       70,
+       75,
+       80
+      ],
+      "left_edge": "thick INK",
+      "baseline": "thick INK",
+      "suggested_px": {
+       "frame_width": 1340,
+       "frame_height": 128,
+       "row_pitch": 32
+      }
+     },
+     "dots": {
+      "colour": "ANSWER",
+      "diameter_px": 15,
+      "stack": "from the baseline row upward, one dot per tree",
+      "per_value": [
+       {
+        "value": 43,
+        "count": 1
+       },
+       {
+        "value": 44,
+        "count": 1
+       },
+       {
+        "value": 45,
+        "count": 1
+       },
+       {
+        "value": 46,
+        "count": 1
+       },
+       {
+        "value": 49,
+        "count": 1
+       },
+       {
+        "value": 50,
+        "count": 1
+       },
+       {
+        "value": 51,
+        "count": 1
+       },
+       {
+        "value": 52,
+        "count": 2
+       },
+       {
+        "value": 54,
+        "count": 2
+       },
+       {
+        "value": 55,
+        "count": 2
+       },
+       {
+        "value": 56,
+        "count": 2
+       },
+       {
+        "value": 57,
+        "count": 1
+       },
+       {
+        "value": 58,
+        "count": 1
+       },
+       {
+        "value": 59,
+        "count": 1
+       },
+       {
+        "value": 60,
+        "count": 4
+       },
+       {
+        "value": 61,
+        "count": 2
+       },
+       {
+        "value": 62,
+        "count": 1
+       },
+       {
+        "value": 63,
+        "count": 1
+       },
+       {
+        "value": 65,
+        "count": 1
+       },
+       {
+        "value": 66,
+        "count": 1
+       },
+       {
+        "value": 67,
+        "count": 1
+       }
+      ],
+      "total": 29
+     },
+     "mean_line": {
+      "x": 55.9,
+      "style": "solid",
+      "colour": "FOCUS",
+      "width_px": 3,
+      "label": "Mean ≈ 55.9",
+      "label_side": "left of the line top"
+     },
+     "median_line": {
+      "x": 56,
+      "style": "dashed",
+      "colour": "FOCUS",
+      "width_px": 3,
+      "label": "Median = 56",
+      "label_side": "right of the line top"
+     },
+     "to_scale": true
+    },
+    "manim_description": "Use the same card, frame, gridlines and labels as M2.S14.T14.C57.IMG1, with every given part in the same position and in INK or GUIDE. Add 29 ANSWER filled dots of 15 px diameter, one per palm tree, each centred on its height on the horizontal axis and stacked upward from the baseline row (row pitch 32 px). Number of dots per height: 43 one, 44 one, 45 one, 46 one, 49 one, 50 one, 51 one, 52 two, 54 two, 55 two, 56 two, 57 one, 58 one, 59 one, 60 four, 61 two, 62 one, 63 one, 65 one, 66 one, 67 one. Draw a solid FOCUS vertical line (3 px) at 55.9 and a dashed FOCUS vertical line (3 px) at 56; both run from the baseline up to 44 px above the top edge of the frame. At the top of the lines write 'Mean ≈ 55.9' in bold ANSWER, right-aligned so that it ends 10 px left of the lines, and 'Median = 56' in bold ANSWER, left-aligned so that it starts 10 px right of the lines. The two lines are 0.1 unit (1.7 px) apart and look like one line; the two labels tell them apart.",
+    "visible_text": [
+     "0",
+     "5",
+     "10",
+     "15",
+     "20",
+     "25",
+     "30",
+     "35",
+     "40",
+     "45",
+     "50",
+     "55",
+     "60",
+     "65",
+     "70",
+     "75",
+     "80",
+     "Mean ≈ 55.9",
+     "Median = 56"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the list of 29 heights",
+     "the count of trees shorter than the mean",
+     "any dot outside the heights listed"
+    ],
+    "accuracy_checks": [
+     "29 dots in total: 1+1+1+1+1+1+1+2+2+2+2+1+1+1+4+2+1+1+1+1+1 = 29",
+     "sum of the heights = 1621, mean = 1621 / 29 = 55.897, drawn at 55.9",
+     "sorted, the 15th height is 56, so the median line is at 56",
+     "13 dots lie to the left of the mean line (43, 44, 45, 46, 49, 50, 51, 52, 52, 54, 54, 55, 55)",
+     "the tallest stack is 4 dots at 60 and fits in the 4 rows"
+    ],
+    "alt_text": "The dot plot filled with 29 dots from 43 to 67, a stack of four at 60, with the mean line at 55.9 and the median line at 56.",
+    "render_note": "Layout identical to M2.S14.T14.C57.IMG1 (4-row frame). The mean and median lines are almost on top of each other, as the numbers 55.9 and 56 are."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C59",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.2, Q4",
+   "ncert_ref": "Section 5.2 - FiO2_4",
+   "question_text": "The daily water usage from a tap was measured. The usage in litres for the first few days are: 5.6, 8, 3.09, 12.9, 6.5, 12.1, 11.3, 20.5, 7.4. (a) Can the mean or median daily usage lie between 25 and 30? Justify your claim using the meaning of mean and median. (b) Can the mean or median be lesser than the minimum value or greater than the maximum value in a data?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Nine water readings are in the text and both parts are reasoning about mean and median; no figure is printed for this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C60",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.2, Q4",
+   "ncert_ref": "Section 5.2 - FiO2_4",
+   "question_text": "The daily water usage from a tap was measured. The usage in litres for the first few days are: 5.6, 8, 3.09, 12.9, 6.5, 12.1, 11.3, 20.5, 7.4. (a) Can the mean or median daily usage lie between 25 and 30? Justify your claim using the meaning of mean and median. (b) Can the mean or median be lesser than the minimum value or greater than the maximum value in a data?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The justification is word reasoning plus a check total of 87.39; no picture adds anything.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C61",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.2, Q5",
+   "ncert_ref": "Section 5.2 - FiO2_5",
+   "question_text": "The weights of a few newborn babies are given in kgs. Boys: 3.5, 4.1, 2.6, 3.2, 3.4, 3.8. Girls: 4.0, 3.1, 3.4, 3.7, 2.5, 3.4. Fill the dot plot provided below. Analyse and compare this data.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The book gives an empty dot-plot frame that the learner must fill; the empty frame is the figure the question gives.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S14.T14.C61.IMG1",
+   "manim_scene": "c7_13_s52_fio5_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S14.T14.C61.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "dot_plot_frame_empty",
+     "axis": {
+      "min": 0,
+      "max": 4.5,
+      "label_step": 0.5,
+      "labels_left_to_right": [
+       0,
+       0.5,
+       1,
+       1.5,
+       2,
+       2.5,
+       3,
+       3.5,
+       4,
+       4.5
+      ]
+     },
+     "frame": {
+      "rows": 3,
+      "vertical_gridlines_at": [
+       0,
+       0.5,
+       1,
+       1.5,
+       2,
+       2.5,
+       3,
+       3.5,
+       4,
+       4.5
+      ],
+      "left_edge": "thick INK",
+      "baseline": "thick INK",
+      "suggested_px": {
+       "frame_width": 1340,
+       "frame_height": 108,
+       "row_pitch": 36
+      }
+     },
+     "dots": [],
+     "mean_line": null,
+     "median_line": null,
+     "to_scale": true
+    },
+    "manim_description": "Draw a plain white BG card. Centre one empty dot-plot frame on it: a rectangle 1340 px wide whose horizontal axis runs from 0 at the left edge to 4.5 at the right edge (1 kg = 297.8 px, 0.5 kg = 148.9 px, 0.1 kg = 29.8 px) and 108 px high, split into 3 equal rows of 36 px. Draw the left edge and the baseline as thick INK lines (3 px). Draw the top edge and the 2 inner horizontal lines as thin GUIDE lines (2 px). Draw 10 thin GUIDE vertical gridlines at 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4 and 4.5 (the gridline at 0 is the left edge, the gridline at 4.5 the right edge). Under the baseline write the 10 labels 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5 in INK, each centred under its gridline. Draw no dots, no lines for mean or median, no legend, no title and no axis title.",
+    "visible_text": [
+     "0",
+     "0.5",
+     "1",
+     "1.5",
+     "2",
+     "2.5",
+     "3",
+     "3.5",
+     "4",
+     "4.5"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any dot",
+     "the boys' and girls' weights",
+     "legend, unit or axis title"
+    ],
+    "accuracy_checks": [
+     "10 labels from 0 to 4.5 in steps of 0.5, each centred under its own gridline",
+     "equal spacing: every 0.5 kg is 148.9 px",
+     "the frame has 3 equal rows, as printed in the book",
+     "no data mark of any kind is drawn"
+    ],
+    "alt_text": "An empty dot-plot frame with a number line from 0 to 4.5 in steps of 0.5 and three empty rows above it.",
+    "render_note": "The weights themselves (boys and girls) are a plain table and stay in the question text."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C62",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.2, Q5",
+   "ncert_ref": "Section 5.2 - FiO2_5",
+   "question_text": "The weights of a few newborn babies are given in kgs. Boys: 3.5, 4.1, 2.6, 3.2, 3.4, 3.8. Girls: 4.0, 3.1, 3.4, 3.7, 2.5, 3.4. Fill the dot plot provided below. Analyse and compare this data.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The answer to 'Fill the dot plot provided' is the dot plot filled with both groups; the solution text compares them but the plot itself is the picture answer.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S14.T14.C62.IMG1",
+   "manim_scene": "c7_13_s52_fio5_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S14.T14.C62.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S14.T14.C61.IMG1",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "dot_plot_filled_two_groups",
+     "axis": {
+      "min": 0,
+      "max": 4.5,
+      "label_step": 0.5,
+      "labels_left_to_right": [
+       0,
+       0.5,
+       1,
+       1.5,
+       2,
+       2.5,
+       3,
+       3.5,
+       4,
+       4.5
+      ]
+     },
+     "frame": {
+      "rows": 3,
+      "vertical_gridlines_at": [
+       0,
+       0.5,
+       1,
+       1.5,
+       2,
+       2.5,
+       3,
+       3.5,
+       4,
+       4.5
+      ],
+      "left_edge": "thick INK",
+      "baseline": "thick INK",
+      "suggested_px": {
+       "frame_width": 1340,
+       "frame_height": 108,
+       "row_pitch": 36
+      }
+     },
+     "dots": {
+      "diameter_px": 24,
+      "boys_colour": "SET_A",
+      "girls_colour": "SET_B",
+      "stack": "from the baseline row upward; at a shared value the boy dot is lowest, girl dots above it",
+      "per_value_bottom_to_top": {
+       "2.5": [
+        "girls"
+       ],
+       "2.6": [
+        "boys"
+       ],
+       "3.1": [
+        "girls"
+       ],
+       "3.2": [
+        "boys"
+       ],
+       "3.4": [
+        "boys",
+        "girls",
+        "girls"
+       ],
+       "3.5": [
+        "boys"
+       ],
+       "3.7": [
+        "girls"
+       ],
+       "3.8": [
+        "boys"
+       ],
+       "4": [
+        "girls"
+       ],
+       "4.1": [
+        "boys"
+       ]
+      },
+      "total": 12
+     },
+     "legend": {
+      "position": "above the frame, right-aligned",
+      "entries": [
+       {
+        "swatch": "SET_A",
+        "text": "Boys"
+       },
+       {
+        "swatch": "SET_B",
+        "text": "Girls"
+       }
+      ]
+     },
+     "mean_line": null,
+     "median_line": null,
+     "to_scale": true
+    },
+    "manim_description": "Use the same card, frame, gridlines and labels as M2.S14.T14.C61.IMG1, with every given part in the same position. Add 12 filled dots of 24 px diameter, one per baby, each centred on its weight on the horizontal axis and stacked upward from the baseline row (row pitch 36 px). Boys' dots (6) are SET_A, girls' dots (6) are SET_B. Dots by weight, bottom to top: 2.5 kg: girl; 2.6 kg: boy; 3.1 kg: girl; 3.2 kg: boy; 3.4 kg: boy, girl, girl; 3.5 kg: boy; 3.7 kg: girl; 3.8 kg: boy; 4 kg: girl; 4.1 kg: boy. Dots that are 0.1 kg apart are 29.8 px apart, so they do not overlap. Above the frame, right-aligned with its right edge, draw a legend: a 24 px SET_A dot followed by the word Boys in INK, then a 24 px SET_B dot followed by the word Girls in INK. Draw no mean line and no median line.",
+    "visible_text": [
+     "0",
+     "0.5",
+     "1",
+     "1.5",
+     "2",
+     "2.5",
+     "3",
+     "3.5",
+     "4",
+     "4.5",
+     "Boys",
+     "Girls"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "mean or median lines (they are 3.43 / 3.35 and 3.45 / 3.4, less than 30 px apart and would clutter)",
+     "range or comparison words"
+    ],
+    "accuracy_checks": [
+     "12 dots: boys 2.6, 3.2, 3.4, 3.5, 3.8, 4.1 (sum 20.6) and girls 2.5, 3.1, 3.4, 3.4, 3.7, 4.0 (sum 20.1)",
+     "the stack at 3.4 has 3 dots: 1 boy at the bottom, then 2 girls",
+     "the highest stack is 3 dots and fits the 3 rows",
+     "neighbouring values 0.1 kg apart (3.4 and 3.5) are 29.8 px apart and 24 px dots do not touch"
+    ],
+    "alt_text": "The dot plot filled with six blue dots for the boys and six orange dots for the girls between 2.5 and 4.1 kg.",
+    "render_note": "Two groups need two colours, so SET_A / SET_B are used for the added dots instead of ANSWER green; the legend decodes them. Mean and median are left out on purpose: the question only asks to fill the plot and the four values lie within 0.1 kg."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C63",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.2, Q6",
+   "ncert_ref": "Section 5.2 - FiO2_6",
+   "question_text": "The dot plots of heights of another section of Grade 5 students of the same school are shown below (whole class: mean 141.21, median 142.5; boys: mean 142.05, median 143; girls: mean 140.14, median 140). Can you share your observations? What can we infer from the dot plots and the central tendency measures? Compare the heights of the two sections. Share your observations.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The question asks to read the three dot plots 'shown below'; the individual heights exist only as dots in the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S14.T14.C63.IMG1",
+   "manim_scene": "c7_13_s52_fio6_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S14.T14.C63.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "three_dot_plots_stacked",
+     "axis_each_plot": {
+      "min": 125,
+      "max": 160,
+      "labelled_at": [
+       125,
+       130,
+       135,
+       140,
+       145,
+       150,
+       155
+      ],
+      "gridlines_at": [
+       125,
+       130,
+       135,
+       140,
+       145,
+       150,
+       155,
+       160
+      ]
+     },
+     "layout_suggested_px": {
+      "plot_width": 960,
+      "left_edge_x": 200,
+      "unit_px": 27.43,
+      "dot_diameter_px": 25,
+      "row_pitch_px": 32,
+      "plots_top_to_bottom": [
+       "Whole class (4 rows)",
+       "Boys (3 rows)",
+       "Girls (3 rows)"
+      ],
+      "gap_between_plots_px": 70
+     },
+     "plots": [
+      {
+       "row_label": "Whole class",
+       "rows": 4,
+       "dot_colour": "GUIDE",
+       "dots_per_value": {
+        "126": 1,
+        "128": 1,
+        "130": 1,
+        "132": 1,
+        "133": 1,
+        "136": 3,
+        "137": 1,
+        "138": 1,
+        "140": 3,
+        "141": 1,
+        "142": 2,
+        "143": 3,
+        "144": 2,
+        "145": 4,
+        "146": 3,
+        "148": 2,
+        "153": 1,
+        "158": 1
+       },
+       "total_dots": 32,
+       "mean_line": {
+        "x": 141.21,
+        "style": "solid",
+        "colour": "INK",
+        "label": "Mean = 141.21"
+       },
+       "median_line": {
+        "x": 142.5,
+        "style": "dashed",
+        "colour": "INK",
+        "label": "Median = 142.5"
+       }
+      },
+      {
+       "row_label": "Boys",
+       "rows": 3,
+       "dot_colour": "SET_A",
+       "dots_per_value": {
+        "130": 1,
+        "133": 1,
+        "136": 1,
+        "138": 1,
+        "140": 1,
+        "142": 1,
+        "143": 3,
+        "144": 2,
+        "145": 3,
+        "146": 3,
+        "148": 1
+       },
+       "total_dots": 18,
+       "mean_line": {
+        "x": 142.05,
+        "style": "solid",
+        "colour": "INK",
+        "label": "Mean = 142.05"
+       },
+       "median_line": {
+        "x": 143,
+        "style": "dashed",
+        "colour": "INK",
+        "label": "Median = 143"
+       }
+      },
+      {
+       "row_label": "Girls",
+       "rows": 3,
+       "dot_colour": "SET_B",
+       "dots_per_value": {
+        "126": 1,
+        "128": 1,
+        "132": 1,
+        "136": 2,
+        "137": 1,
+        "140": 2,
+        "141": 1,
+        "142": 1,
+        "145": 1,
+        "148": 1,
+        "153": 1,
+        "158": 1
+       },
+       "total_dots": 14,
+       "mean_line": {
+        "x": 140.14,
+        "style": "solid",
+        "colour": "INK",
+        "label": "Mean = 140.14"
+       },
+       "median_line": {
+        "x": 140,
+        "style": "dashed",
+        "colour": "INK",
+        "label": "Median = 140"
+       }
+      }
+     ],
+     "to_scale": true
+    },
+    "manim_description": "Draw a plain white BG card holding three dot plots stacked top to bottom, all with the same horizontal scale: 125 at the left edge of each frame to 160 at the right edge, 960 px wide (1 cm = 27.43 px), left edges aligned at x = 200 px. Each frame has thick INK left edge and baseline, a thin GUIDE top edge and thin GUIDE row lines (row pitch 32 px), and thin GUIDE vertical gridlines at 125, 130, 135, 140, 145, 150, 155 and 160. Under each baseline write the labels 125, 130, 135, 140, 145, 150, 155 in INK, centred under their gridlines (the gridline at 160 has no label). To the left of each frame write its row label in italic INK: Whole class (first frame, 4 rows), Boys (second frame, 3 rows), Girls (third frame, 3 rows). Dots are filled circles of 25 px diameter centred on their height, stacked upward from the baseline row, one dot per student. Whole class, 32 grey GUIDE dots: 126 one, 128 one, 130 one, 132 one, 133 one, 136 three, 137 one, 138 one, 140 three, 141 one, 142 two, 143 three, 144 two, 145 four, 146 three, 148 two, 153 one, 158 one. Boys, 18 SET_A dots: 130 one, 133 one, 136 one, 138 one, 140 one, 142 one, 143 three, 144 two, 145 three, 146 three, 148 one. Girls, 14 SET_B dots: 126 one, 128 one, 132 one, 136 two, 137 one, 140 two, 141 one, 142 one, 145 one, 148 one, 153 one, 158 one. In each frame draw a solid INK vertical line (3 px) at the mean and a dashed INK vertical line (3 px) at the median, both running from 14 px above the top edge to 14 px below the baseline: Whole class mean 141.21 and median 142.5; Boys mean 142.05 and median 143; Girls mean 140.14 and median 140 (the two girls' lines coincide). To the right of each frame (starting at x = 1190 px) write two lines of INK text, the mean label with a short solid line sample before it and the median label with a short dashed line sample before it: Mean = 141.21 and Median = 142.5 beside the first frame; Mean = 142.05 and Median = 143 beside the second; Mean = 140.14 and Median = 140 beside the third.",
+    "visible_text": [
+     "Whole class",
+     "Boys",
+     "Girls",
+     "125",
+     "130",
+     "135",
+     "140",
+     "145",
+     "150",
+     "155",
+     "Mean = 141.21",
+     "Median = 142.5",
+     "Mean = 142.05",
+     "Median = 143",
+     "Mean = 140.14",
+     "Median = 140"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any comparison or observation text",
+     "the first section's plots or its mean 144.5",
+     "axis title or unit"
+    ],
+    "accuracy_checks": [
+     "Boys 18 dots, sum 2557, mean 142.06 (printed 142.05)",
+     "Girls 14 dots, sum 1962, mean 140.14, median 140 (7th and 8th values are both 140)",
+     "Whole class = Boys + Girls = 32 dots, sum 4519, mean 141.22 (printed 141.21), median = mean of the 16th and 17th values (142, 143) = 142.5",
+     "tallest stacks: whole class 4 at 145, boys 3 at 143, 145 and 146, girls 2 at 136 and 140",
+     "boys' median: the 9th and 10th of 18 values are 143 and 144 (143.5), but the book prints and draws 143: the printed value is kept"
+    ],
+    "alt_text": "Three dot plots of Grade 5 heights from 125 to 160 cm for the whole class, the boys and the girls, each with a solid mean line and a dashed median line.",
+    "render_note": "BOOK FLAW: the printed whole-class plot (28 grey dots, mean 144.5) is the first section's plot repeated; it does not match its own labels (mean 141.21, median 142.5) or the Boys and Girls plots. Here the whole-class dots are the 18 boys plus the 14 girls (32 dots), which gives exactly the printed mean 141.21 and median 142.5. Boys and girls dots are read from the page and checked against the printed means."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C64",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.2, Q6",
+   "ncert_ref": "Section 5.2 - FiO2_6",
+   "question_text": "The dot plots of heights of another section of Grade 5 students of the same school are shown below (whole class: mean 141.21, median 142.5; boys: mean 142.05, median 143; girls: mean 140.14, median 140). Can you share your observations? What can we infer from the dot plots and the central tendency measures? Compare the heights of the two sections. Share your observations.",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a written comparison of the two sections using numbers; it adds no mark to the three dot plots, so it would only repeat the question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C65",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.2, Q7",
+   "ncert_ref": "Section 5.2 - FiO2_7",
+   "question_text": "The weights of some sumo wrestlers and ballet dancers are: Sumo wrestlers: 295.2 kg, 250.7 kg, 234.1 kg, 221.0 kg, 200.9 kg. Ballet dancers: 40.3 kg, 37.6 kg, 38.8 kg, 45.5 kg, 44.1 kg, 48.2 kg. Approximately how many times heavier is a sumo wrestler compared to a ballet dancer?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "DECORATIVE_ONLY"
+   ],
+   "reason": "All eleven weights are in the text; the book's see-saw picture of a sumo wrestler and ballet dancers is an illustration without data.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C66",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.2, Q7",
+   "ncert_ref": "Section 5.2 - FiO2_7",
+   "question_text": "The weights of some sumo wrestlers and ballet dancers are: Sumo wrestlers: 295.2 kg, 250.7 kg, 234.1 kg, 221.0 kg, 200.9 kg. Ballet dancers: 40.3 kg, 37.6 kg, 38.8 kg, 45.5 kg, 44.1 kg, 48.2 kg. Approximately how many times heavier is a sumo wrestler compared to a ballet dancer?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two totals, two means and a division: LaTeX arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S15.T15.C67",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Two column graphs become one clustered graph",
+   "ncert_ref": "Section 5.3 - onion_graphs",
+   "question_text": "Draw the onion prices of the two towns as one double column graph with 1 unit = 10 rupees. In which months is the second town costlier, and by how much in September?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The example's task is to draw the two towns' prices as one double column graph and then read it for the costlier months; the graph is the picture the example needs.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S15.T15.C67.IMG2",
+   "manim_scene": "c7_13_s53_onion_double_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S15.T15.C67.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "double_column_graph",
+     "y_axis": {
+      "min": 0,
+      "max": 60,
+      "labelled_at": [
+       0,
+       10,
+       20,
+       30,
+       40,
+       50,
+       60
+      ],
+      "major_gridlines_every": 10,
+      "minor_gridlines_every": 5,
+      "title": "Price (in ₹)",
+      "unit_note": "1 unit (one labelled step) = 10 rupees"
+     },
+     "x_axis": {
+      "categories": [
+       "Jan",
+       "Feb",
+       "Mar",
+       "Apr",
+       "May",
+       "Jun",
+       "Jul",
+       "Aug",
+       "Sep",
+       "Oct",
+       "Nov",
+       "Dec"
+      ]
+     },
+     "series": [
+      {
+       "name": "Yahapur",
+       "colour": "SET_A",
+       "values": {
+        "Jan": 25,
+        "Feb": 24,
+        "Mar": 26,
+        "Apr": 28,
+        "May": 30,
+        "Jun": 35,
+        "Jul": 39,
+        "Aug": 43,
+        "Sep": 49,
+        "Oct": 56,
+        "Nov": 59,
+        "Dec": 44
+       }
+      },
+      {
+       "name": "Wahapur",
+       "colour": "SET_B",
+       "values": {
+        "Jan": 19,
+        "Feb": 17,
+        "Mar": 23,
+        "Apr": 30,
+        "May": 38,
+        "Jun": 35,
+        "Jul": 42,
+        "Aug": 39,
+        "Sep": 53,
+        "Oct": 60,
+        "Nov": 52,
+        "Dec": 42
+       }
+      }
+     ],
+     "legend": {
+      "position": "above the plot, right-aligned",
+      "entries": [
+       "Yahapur",
+       "Wahapur"
+      ]
+     },
+     "layout_suggested_px": {
+      "plot_left": 190,
+      "plot_width": 1170,
+      "baseline_y": 690,
+      "px_per_rupee": 9.5,
+      "bar_width": 36,
+      "cluster_slot": 97.5
+     },
+     "to_scale": true
+    },
+    "manim_description": "Draw a plain white BG card with a double column graph (12 clusters of 2 touching columns). The vertical axis is a thick INK line at x = 190 px, from 0 at the baseline (y = 690 px) to 60 (y = 120 px), 9.5 px per rupee; label 0, 10, 20, 30, 40, 50 and 60 in INK to its left, with thin GUIDE horizontal gridlines at 10, 20, 30, 40, 50 and 60 across the 1170 px plot width and fainter GUIDE gridlines at 5, 15, 25, 35, 45 and 55. The horizontal axis is a thick INK baseline; each month owns a 97.5 px slot and the label sits centred under it in INK: Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec. In every slot draw two columns of 36 px width, touching, centred in the slot, Yahapur on the left in SET_A and Wahapur on the right in SET_B. Yahapur column heights in rupees, Jan to Dec: 25, 24, 26, 28, 30, 35, 39, 43, 49, 56, 59, 44. Wahapur column heights, Jan to Dec: 19, 17, 23, 30, 38, 35, 42, 39, 53, 60, 52, 42. Write the vertical axis title 'Price (in ₹)' in INK, rotated 90 degrees, at x = 60 px. Above the plot, right-aligned, draw a legend: a 28 px SET_A square followed by Yahapur, then a 28 px SET_B square followed by Wahapur. Draw no values on the columns and no title.",
+    "visible_text": [
+     "0",
+     "10",
+     "20",
+     "30",
+     "40",
+     "50",
+     "60",
+     "Jan",
+     "Feb",
+     "Mar",
+     "Apr",
+     "May",
+     "Jun",
+     "Jul",
+     "Aug",
+     "Sep",
+     "Oct",
+     "Nov",
+     "Dec",
+     "Price (in ₹)",
+     "Yahapur",
+     "Wahapur"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "value labels on the columns",
+     "highlights, circles or arrows marking the costlier months",
+     "chart title"
+    ],
+    "accuracy_checks": [
+     "24 columns: Yahapur sum 458, Wahapur sum 450",
+     "Wahapur is taller in Apr (30 > 28), May (38 > 30), Jul (42 > 39), Sep (53 > 49) and Oct (60 > 56): 5 months",
+     "Jun columns are equal at 35",
+     "Yahapur is taller in Jan, Feb, Mar, Aug, Nov and Dec: 6 months",
+     "September difference 53 - 49 = 4 rupees",
+     "a height of 59 is 59 / 10 = 5.9 labelled steps = 560.5 px"
+    ],
+    "alt_text": "A double column graph of monthly onion prices, a blue column for Yahapur and an amber column for Wahapur in each month, on a scale from 0 to 60 rupees.",
+    "render_note": "The concept image M3.S15.T15.C67.IMG1 shows the same graph as a teaching picture; it stays and is not linked. This diagram is the figure the worked example draws. The book separates the towns with stripes and dots; the colour-blind-safe pair SET_A / SET_B is used instead."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C71",
+   "role": "question",
+   "lp_book_number": "Rocket Launches: organisations that grew every year",
+   "ncert_ref": "Section 5.3 - rockets",
+   "question_text": "From the rocket graph (readings about SpaceX 31, 61, 96; Arianespace 15, 6, 3; ISRO 2, 5, 7; Galactic Energy 1, 2, 7), which organisations launched more rockets every year, and how did SpaceX change?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The question reads the rocket graph; the LP text gives readings for only four of the ten organisations, so the other bars (and the answer for them) exist only in the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C71.IMG1",
+   "manim_scene": "c7_13_s53_rocket1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C71.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "horizontal_clustered_bar_graph",
+     "x_axis": {
+      "min": 0,
+      "max": 100,
+      "labelled_at": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ],
+      "gridlines_at": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ],
+      "title": "Number of launches",
+      "scale_note": "20 launches = 200 px"
+     },
+     "rows_top_to_bottom": [
+      {
+       "organisation": "SpaceX",
+       "2021": 31,
+       "2022": 61,
+       "2023": 96
+      },
+      {
+       "organisation": "CASC",
+       "2021": 48,
+       "2022": 35,
+       "2023": 45
+      },
+      {
+       "organisation": "Roscosmos",
+       "2021": 16,
+       "2022": 21,
+       "2023": 18
+      },
+      {
+       "organisation": "Arianespace",
+       "2021": 15,
+       "2022": 6,
+       "2023": 3
+      },
+      {
+       "organisation": "Rocket Lab",
+       "2021": 6,
+       "2022": 6,
+       "2023": 9
+      },
+      {
+       "organisation": "United Launch Alliance",
+       "2021": 5,
+       "2022": 8,
+       "2023": 3
+      },
+      {
+       "organisation": "ISRO",
+       "2021": 2,
+       "2022": 5,
+       "2023": 7
+      },
+      {
+       "organisation": "Galactic Energy",
+       "2021": 1,
+       "2022": 2,
+       "2023": 7
+      },
+      {
+       "organisation": "Expace",
+       "2021": 4,
+       "2022": 4,
+       "2023": 6
+      },
+      {
+       "organisation": "Other",
+       "2021": 18,
+       "2022": 17,
+       "2023": 26
+      }
+     ],
+     "series_colours": {
+      "2021": "SET_A",
+      "2022": "SET_B",
+      "2023": "INK"
+     },
+     "bar_order_in_row_top_to_bottom": [
+      "2021",
+      "2022",
+      "2023"
+     ],
+     "legend": {
+      "position": "right side, inside the plot area, level with the rows Rocket Lab to ISRO",
+      "entries": [
+       "2021",
+       "2022",
+       "2023"
+      ]
+     },
+     "layout_suggested_px": {
+      "label_right_edge_x": 330,
+      "axis_zero_x": 350,
+      "px_per_launch": 10,
+      "first_row_top_y": 40,
+      "row_pitch": 64,
+      "bar_height": 16,
+      "baseline_y": 680
+     },
+     "to_scale": true
+    },
+    "manim_description": "Draw a plain white BG card with a horizontal clustered bar graph of 10 organisations, 3 bars each. The vertical axis is a thick INK line at x = 350 px from y = 40 px to y = 680 px; the horizontal axis is a thick INK baseline at y = 680 px with 0 at x = 350 px and 100 at x = 1350 px (1 launch = 10 px). Draw thin GUIDE vertical gridlines at 0, 20, 40, 60, 80 and 100 and write those six labels in INK under the baseline at y = 712 px. Write the axis title 'Number of launches' centred under the labels at y = 764 px. Organisation names are right-aligned in INK ending at x = 330 px, one per row of 64 px, top to bottom: SpaceX, CASC, Roscosmos, Arianespace, Rocket Lab, United Launch Alliance, ISRO, Galactic Energy, Expace, Other. In each row stack three horizontal bars of 16 px height with no gap, from the axis to the right, top to bottom 2021 (SET_A), 2022 (SET_B), 2023 (INK), leaving 16 px between rows. Launches (2021, 2022, 2023): SpaceX 31, 61, 96; CASC 48, 35, 45; Roscosmos 16, 21, 18; Arianespace 15, 6, 3; Rocket Lab 6, 6, 9; United Launch Alliance 5, 8, 3; ISRO 2, 5, 7; Galactic Energy 1, 2, 7; Expace 4, 4, 6; Other 18, 17, 26. Draw no numbers on the bars. At the right, in the empty area level with the rows Rocket Lab to ISRO (x from 1050 px to 1330 px), draw a legend of three entries, each a 24 px square followed by its year in INK: SET_A square and 2021, SET_B square and 2022, INK square and 2023.",
+    "visible_text": [
+     "SpaceX",
+     "CASC",
+     "Roscosmos",
+     "Arianespace",
+     "Rocket Lab",
+     "United Launch Alliance",
+     "ISRO",
+     "Galactic Energy",
+     "Expace",
+     "Other",
+     "0",
+     "20",
+     "40",
+     "60",
+     "80",
+     "100",
+     "Number of launches",
+     "2021",
+     "2022",
+     "2023"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers printed on the bars",
+     "flags, rocket drawing or the source line",
+     "chart title",
+     "highlights or annotations"
+    ],
+    "accuracy_checks": [
+     "30 bars, 3 per organisation, in the year order 2021, 2022, 2023 from top to bottom",
+     "bar lengths in px = launches x 10 (SpaceX 2022 = 610 px, SpaceX 2023 = 960 px, Other 2023 = 260 px)",
+     "SpaceX 2022 is about twice 2021 (61 vs 31) and 2023 is 35 more than 2022 (96 - 61)",
+     "Arianespace falls every year (15, 6, 3); United Launch Alliance rises then falls (5, 8, 3)",
+     "the 2023 bars sum to 96 + 45 + 18 + 3 + 9 + 3 + 7 + 7 + 6 + 26 = 220"
+    ],
+    "alt_text": "A horizontal clustered bar graph of rocket launches in 2021, 2022 and 2023 for ten organisations, from SpaceX with the longest bars to ISRO and Galactic Energy with the shortest.",
+    "render_note": "Bar values were measured from the page picture (about +/-0.5 launch) and agree with the book's own remarks: SpaceX 2022 'perhaps 61', 2023 about 35 more, Other 2023 'around 25' (read 26), Arianespace 2023 about half of 2022. The book's dark infographic (flags, rocket, source line) is redrawn flat in the house style; the concept image M3.S15.T15.C68.IMG1 shows the same graph and is not linked."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C72",
+   "role": "solution",
+   "lp_book_number": "Rocket Launches: organisations that grew every year",
+   "ncert_ref": "Section 5.3 - rockets",
+   "question_text": "From the rocket graph (readings about SpaceX 31, 61, 96; Arianespace 15, 6, 3; ISRO 2, 5, 7; Galactic Energy 1, 2, 7), which organisations launched more rockets every year, and how did SpaceX change?",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The solution lists readings and names the organisations that rose every year; it marks nothing on the graph, so a picture would only repeat the question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C73",
+   "role": "question",
+   "lp_book_number": "Rocket Launches: justified statements and the 2023 total",
+   "ncert_ref": "Section 5.3 - rockets_more",
+   "question_text": "Using the readings CASC 48, 35, 45; Roscosmos 16, 21, 18; Arianespace 15, 6, 3; ISRO 2, 5, 7; Galactic Energy 1, 2, 7; SpaceX 31, 61, 96, decide which statements (a) to (f) are justified, and estimate the 2023 world total.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The statements and the 2023 total estimate are judged from the same rocket graph; the LP text lacks the bars of Rocket Lab, United Launch Alliance, Expace and Other that the 'USA' statement and the world total need.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C73.IMG1",
+   "manim_scene": "c7_13_s53_rocket2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C73.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "horizontal_clustered_bar_graph",
+     "x_axis": {
+      "min": 0,
+      "max": 100,
+      "labelled_at": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ],
+      "gridlines_at": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ],
+      "title": "Number of launches",
+      "scale_note": "20 launches = 200 px"
+     },
+     "rows_top_to_bottom": [
+      {
+       "organisation": "SpaceX",
+       "2021": 31,
+       "2022": 61,
+       "2023": 96
+      },
+      {
+       "organisation": "CASC",
+       "2021": 48,
+       "2022": 35,
+       "2023": 45
+      },
+      {
+       "organisation": "Roscosmos",
+       "2021": 16,
+       "2022": 21,
+       "2023": 18
+      },
+      {
+       "organisation": "Arianespace",
+       "2021": 15,
+       "2022": 6,
+       "2023": 3
+      },
+      {
+       "organisation": "Rocket Lab",
+       "2021": 6,
+       "2022": 6,
+       "2023": 9
+      },
+      {
+       "organisation": "United Launch Alliance",
+       "2021": 5,
+       "2022": 8,
+       "2023": 3
+      },
+      {
+       "organisation": "ISRO",
+       "2021": 2,
+       "2022": 5,
+       "2023": 7
+      },
+      {
+       "organisation": "Galactic Energy",
+       "2021": 1,
+       "2022": 2,
+       "2023": 7
+      },
+      {
+       "organisation": "Expace",
+       "2021": 4,
+       "2022": 4,
+       "2023": 6
+      },
+      {
+       "organisation": "Other",
+       "2021": 18,
+       "2022": 17,
+       "2023": 26
+      }
+     ],
+     "series_colours": {
+      "2021": "SET_A",
+      "2022": "SET_B",
+      "2023": "INK"
+     },
+     "bar_order_in_row_top_to_bottom": [
+      "2021",
+      "2022",
+      "2023"
+     ],
+     "legend": {
+      "position": "right side, inside the plot area, level with the rows Rocket Lab to ISRO",
+      "entries": [
+       "2021",
+       "2022",
+       "2023"
+      ]
+     },
+     "layout_suggested_px": {
+      "label_right_edge_x": 330,
+      "axis_zero_x": 350,
+      "px_per_launch": 10,
+      "first_row_top_y": 40,
+      "row_pitch": 64,
+      "bar_height": 16,
+      "baseline_y": 680
+     },
+     "to_scale": true
+    },
+    "manim_description": "Draw a plain white BG card with a horizontal clustered bar graph of 10 organisations, 3 bars each. The vertical axis is a thick INK line at x = 350 px from y = 40 px to y = 680 px; the horizontal axis is a thick INK baseline at y = 680 px with 0 at x = 350 px and 100 at x = 1350 px (1 launch = 10 px). Draw thin GUIDE vertical gridlines at 0, 20, 40, 60, 80 and 100 and write those six labels in INK under the baseline at y = 712 px. Write the axis title 'Number of launches' centred under the labels at y = 764 px. Organisation names are right-aligned in INK ending at x = 330 px, one per row of 64 px, top to bottom: SpaceX, CASC, Roscosmos, Arianespace, Rocket Lab, United Launch Alliance, ISRO, Galactic Energy, Expace, Other. In each row stack three horizontal bars of 16 px height with no gap, from the axis to the right, top to bottom 2021 (SET_A), 2022 (SET_B), 2023 (INK), leaving 16 px between rows. Launches (2021, 2022, 2023): SpaceX 31, 61, 96; CASC 48, 35, 45; Roscosmos 16, 21, 18; Arianespace 15, 6, 3; Rocket Lab 6, 6, 9; United Launch Alliance 5, 8, 3; ISRO 2, 5, 7; Galactic Energy 1, 2, 7; Expace 4, 4, 6; Other 18, 17, 26. Draw no numbers on the bars. At the right, in the empty area level with the rows Rocket Lab to ISRO (x from 1050 px to 1330 px), draw a legend of three entries, each a 24 px square followed by its year in INK: SET_A square and 2021, SET_B square and 2022, INK square and 2023.",
+    "visible_text": [
+     "SpaceX",
+     "CASC",
+     "Roscosmos",
+     "Arianespace",
+     "Rocket Lab",
+     "United Launch Alliance",
+     "ISRO",
+     "Galactic Energy",
+     "Expace",
+     "Other",
+     "0",
+     "20",
+     "40",
+     "60",
+     "80",
+     "100",
+     "Number of launches",
+     "2021",
+     "2022",
+     "2023"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers printed on the bars",
+     "flags, rocket drawing or the source line",
+     "chart title",
+     "highlights or annotations"
+    ],
+    "accuracy_checks": [
+     "30 bars, 3 per organisation, in the year order 2021, 2022, 2023 from top to bottom",
+     "bar lengths in px = launches x 10 (SpaceX 2022 = 610 px, SpaceX 2023 = 960 px, Other 2023 = 260 px)",
+     "SpaceX 2022 is about twice 2021 (61 vs 31) and 2023 is 35 more than 2022 (96 - 61)",
+     "Arianespace falls every year (15, 6, 3); United Launch Alliance rises then falls (5, 8, 3)",
+     "the 2023 bars sum to 96 + 45 + 18 + 3 + 9 + 3 + 7 + 7 + 6 + 26 = 220"
+    ],
+    "alt_text": "A horizontal clustered bar graph of rocket launches in 2021, 2022 and 2023 for ten organisations, from SpaceX with the longest bars to ISRO and Galactic Energy with the shortest.",
+    "render_note": "Same as M3.S16.T16.C71.IMG1 (identical spec, one diagram per item). Bar values were measured from the page picture (about +/-0.5 launch) and agree with the book's own remarks: SpaceX 2022 'perhaps 61', 2023 about 35 more, Other 2023 'around 25' (read 26), Arianespace 2023 about half of 2022. The book's dark infographic (flags, rocket, source line) is redrawn flat in the house style; the concept image M3.S15.T15.C68.IMG1 shows the same graph and is not linked."
+   },
+   "text_alternative": "Add the six statements (a) to (f) and the four options (a) less than 200, (b) 200 to 400, (c) 400 to 600, (d) more than 600 to the question text; the figure holds only the graph.",
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C74",
+   "role": "solution",
+   "lp_book_number": "Rocket Launches: justified statements and the 2023 total",
+   "ncert_ref": "Section 5.3 - rockets_more",
+   "question_text": "Using the readings CASC 48, 35, 45; Roscosmos 16, 21, 18; Arianespace 15, 6, 3; ISRO 2, 5, 7; Galactic Energy 1, 2, 7; SpaceX 31, 61, 96, decide which statements (a) to (f) are justified, and estimate the 2023 world total.",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Each statement is checked with totals and averages in text; no mark is added to the graph, so a picture would only repeat the question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C75",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Daylight per day from monthly totals",
+   "ncert_ref": "Section 5.3 - daylight_daily",
+   "question_text": "City 1 had 564 hours of daylight in June and 186 in December; City 2 had 276 in June and 468 in December. Find the daylight per day in each case.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The four monthly totals are in the question and the steps divide by 30 or 31 days; the book's two plain tables of monthly hours (City 1, City 2) stay LaTeX tables if needed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C76",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: Reading the daylight graph: two hemispheres",
+   "ncert_ref": "Section 5.3 - daylight_graph; Section 5.3 - midnight_sun",
+   "question_text": "Using daylight per day (City 1: about 6.8 in January, 18.8 in June, 6 in December; City 2: about 14.8 in January, 9.2 in June, 15.1 in December), describe both patterns and compare them with a full day.",
+   "decision": "optional",
+   "reason_codes": [
+    "GRAPH_CHART",
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "OPTIONAL, not added: the question already gives the three readings per city that the answer uses (January, June, December), and the concept carries the 12-month clustered graph as its teaching image M3.S17.T17.C76.IMG1; the figure that would help is that clustered column graph of the 12 monthly daylight averages of City 1 and City 2, but a second copy would only repeat the teaching image.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C80",
+   "role": "question",
+   "lp_book_number": "Runs per Over: four questions on the graph",
+   "ncert_ref": "Section 5.3 - cricket",
+   "question_text": "The blue team's bars run through all 20 overs with several wickets; the red team's bars stop after over 18 with no wicket circles. Who batted first and who won? Read blue's over 12 and red's lowest over, and say whether the target is easy to find.",
+   "decision": "required",
+   "reason_codes": [
+    "GRAPH_CHART",
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The questions read the cricket graph (who batted first, blue over 12, red's lowest over, the target); every value lives only in the columns of the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S19.T19.C80.IMG1",
+   "manim_scene": "c7_13_s53_cricket_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S19.T19.C80.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "double_column_graph_with_wicket_rings",
+     "y_axis": {
+      "min": 0,
+      "max": 19,
+      "labelled_at": [
+       0,
+       5,
+       10,
+       15
+      ],
+      "gridlines_at": [
+       5,
+       10,
+       15
+      ],
+      "title": "Runs per over",
+      "scale_note": "1 unit = 5 runs"
+     },
+     "x_axis": {
+      "categories": [
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6",
+       "7",
+       "8",
+       "9",
+       "10",
+       "11",
+       "12",
+       "13",
+       "14",
+       "15",
+       "16",
+       "17",
+       "18",
+       "19",
+       "20"
+      ],
+      "title": "Overs"
+     },
+     "series": [
+      {
+       "name": "blue team",
+       "colour": "SET_A",
+       "runs_by_over": {
+        "1": 2,
+        "2": 11,
+        "3": 8,
+        "4": 7,
+        "5": 9,
+        "6": 6,
+        "7": 3,
+        "8": 4,
+        "9": 9,
+        "10": 8,
+        "11": 6,
+        "12": 15,
+        "13": 6,
+        "14": 9,
+        "15": 4,
+        "16": 10,
+        "17": 9,
+        "18": 13,
+        "19": 17,
+        "20": 7
+       }
+      },
+      {
+       "name": "red team",
+       "colour": "RED_TEAM (#D55E00)",
+       "runs_by_over": {
+        "1": 10,
+        "2": 8,
+        "3": 4,
+        "4": 2,
+        "5": 11,
+        "6": 8,
+        "7": 3,
+        "8": 6,
+        "9": 10,
+        "10": 9,
+        "11": 9,
+        "12": 5,
+        "13": 16,
+        "14": 11,
+        "15": 9,
+        "16": 7,
+        "17": 7,
+        "18": 17
+       },
+       "note": "18 columns, overs 1 to 18; none for overs 19 and 20"
+      }
+     ],
+     "wicket_rings_above_blue_columns_at_overs": [
+      1,
+      3,
+      6,
+      13,
+      18,
+      19,
+      20
+     ],
+     "layout_suggested_px": {
+      "axis_x": 170,
+      "plot_width": 1230,
+      "pair_slot": 61.5,
+      "bar_width": 24,
+      "baseline_y": 690,
+      "px_per_run": 30
+     },
+     "to_scale": true
+    },
+    "manim_description": "Draw a plain white BG card with a double column graph of runs per over for 20 overs (no legend, no title). The vertical axis is a thick INK line at x = 170 px from the baseline (y = 690 px) up to 19 runs (y = 120 px), 30 px per run; label 0, 5, 10 and 15 in INK to its left, and draw thin GUIDE horizontal gridlines at 5, 10 and 15 across the 1230 px plot width. Write the axis title 'Runs per over' in INK, rotated 90 degrees, at x = 60 px. The horizontal axis is a thick INK baseline; each over owns a 61.5 px slot and its number sits centred under it in INK: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20. Write the axis title 'Overs' in INK centred at y = 775 px. In every slot draw two touching columns of 24 px width centred in the slot: the blue team on the left in SET_A, the red team on the right in red #D55E00 (the palette vermilion, used here only as the team colour red). Blue team runs for overs 1 to 20: 2, 11, 8, 7, 9, 6, 3, 4, 9, 8, 6, 15, 6, 9, 4, 10, 9, 13, 17, 7. Red team runs for overs 1 to 18: 10, 8, 4, 2, 11, 8, 3, 6, 10, 9, 9, 5, 16, 11, 9, 7, 7, 17; draw no red column in overs 19 and 20. Draw a small open ring (14 px diameter, 3 px INK outline, BG fill) centred 14 px above the top of the blue column in overs 1, 3, 6, 13, 18, 19 and 20 only; draw no ring above any red column. Draw no numbers on the columns.",
+    "visible_text": [
+     "Runs per over",
+     "Overs",
+     "0",
+     "5",
+     "10",
+     "15",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers on the columns",
+     "legend or team names",
+     "highlights or marks on any column",
+     "chart title"
+    ],
+    "accuracy_checks": [
+     "20 blue columns and 18 red columns (red has none in overs 19 and 20)",
+     "blue over 12 is 15 and touches the 15 gridline; red's shortest column is over 4 at 2 runs",
+     "wicket rings above blue overs 1, 3, 6, 13, 18, 19 and 20 only: 7 rings, none above red",
+     "column height in px = runs x 30 (blue over 19 = 510 px)",
+     "blue total 163 runs, red total 152 runs (measured; the drawn graph does not show red passing blue)"
+    ],
+    "alt_text": "A double column graph of runs per over for 20 overs, blue columns for all 20 overs with seven wicket rings and red columns for overs 1 to 18 only.",
+    "render_note": "Values measured from the page picture (about +/-0.3 run; no numbers are printed in the book). The base inventory entry says red has 19 columns with 17 in over 19; the picture shows red stops after over 18 (17 in over 18) and over 19 has only the blue column of 17, as the LP text says."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C81",
+   "role": "solution",
+   "lp_book_number": "Runs per Over: four questions on the graph",
+   "ncert_ref": "Section 5.3 - cricket",
+   "question_text": "The blue team's bars run through all 20 overs with several wickets; the red team's bars stop after over 18 with no wicket circles. Who batted first and who won? Read blue's over 12 and red's lowest over, and say whether the target is easy to find.",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "GRAPH_CHART"
+   ],
+   "reason": "The LP solution reads two specific columns of the graph (blue over 12, red's lowest over); marking them is a highlighted part that the text only describes.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S19.T19.C81.IMG1",
+   "manim_scene": "c7_13_s53_cricket_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S19.T19.C81.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S19.T19.C80.IMG1",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "double_column_graph_with_wicket_rings",
+     "y_axis": {
+      "min": 0,
+      "max": 19,
+      "labelled_at": [
+       0,
+       5,
+       10,
+       15
+      ],
+      "gridlines_at": [
+       5,
+       10,
+       15
+      ],
+      "title": "Runs per over",
+      "scale_note": "1 unit = 5 runs"
+     },
+     "x_axis": {
+      "categories": [
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6",
+       "7",
+       "8",
+       "9",
+       "10",
+       "11",
+       "12",
+       "13",
+       "14",
+       "15",
+       "16",
+       "17",
+       "18",
+       "19",
+       "20"
+      ],
+      "title": "Overs"
+     },
+     "series": [
+      {
+       "name": "blue team",
+       "colour": "SET_A",
+       "runs_by_over": {
+        "1": 2,
+        "2": 11,
+        "3": 8,
+        "4": 7,
+        "5": 9,
+        "6": 6,
+        "7": 3,
+        "8": 4,
+        "9": 9,
+        "10": 8,
+        "11": 6,
+        "12": 15,
+        "13": 6,
+        "14": 9,
+        "15": 4,
+        "16": 10,
+        "17": 9,
+        "18": 13,
+        "19": 17,
+        "20": 7
+       }
+      },
+      {
+       "name": "red team",
+       "colour": "RED_TEAM (#D55E00)",
+       "runs_by_over": {
+        "1": 10,
+        "2": 8,
+        "3": 4,
+        "4": 2,
+        "5": 11,
+        "6": 8,
+        "7": 3,
+        "8": 6,
+        "9": 10,
+        "10": 9,
+        "11": 9,
+        "12": 5,
+        "13": 16,
+        "14": 11,
+        "15": 9,
+        "16": 7,
+        "17": 7,
+        "18": 17
+       },
+       "note": "18 columns, overs 1 to 18; none for overs 19 and 20"
+      }
+     ],
+     "wicket_rings_above_blue_columns_at_overs": [
+      1,
+      3,
+      6,
+      13,
+      18,
+      19,
+      20
+     ],
+     "layout_suggested_px": {
+      "axis_x": 170,
+      "plot_width": 1230,
+      "pair_slot": 61.5,
+      "bar_width": 24,
+      "baseline_y": 690,
+      "px_per_run": 30
+     },
+     "to_scale": true,
+     "highlights": [
+      {
+       "target": "blue column of over 12",
+       "outline": "dashed FOCUS rounded rectangle 6 px outside the column",
+       "label": "about 15",
+       "label_colour": "ANSWER"
+      },
+      {
+       "target": "red column of over 4",
+       "outline": "dashed FOCUS rounded rectangle 6 px outside the column",
+       "label": "about 2",
+       "label_colour": "ANSWER"
+      }
+     ]
+    },
+    "manim_description": "Use the same card, axes, gridlines, columns, colours and rings as M3.S19.T19.C80.IMG1, with every given part in the same position. Add a dashed FOCUS rounded rectangle (3 px) 6 px outside the blue column of over 12 (from 6 px above its top to the baseline) and another 6 px outside the red column of over 4 (from 6 px above its top to the baseline). In the empty area above the columns, with the text centred on y = 150 px, write 'about 15' in bold ANSWER centred on the blue column of over 12, and 'about 2' in bold ANSWER centred on the red column of over 4. Connect each label to its rectangle with a dotted FOCUS vertical line (2 px) running straight down from 14 px under the label to the top of the rectangle.",
+    "visible_text": [
+     "Runs per over",
+     "Overs",
+     "0",
+     "5",
+     "10",
+     "15",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20",
+     "about 15",
+     "about 2"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "team names or 'batted first' / 'won' text",
+     "the target or any total",
+     "marks on any other column"
+    ],
+    "accuracy_checks": [
+     "the rectangle around blue over 12 encloses the 15-run column that touches the 15 gridline",
+     "the rectangle around red over 4 encloses the shortest red column (2 runs; no other red column is lower)",
+     "labels 'about 15' and 'about 2' use the words of the LP solution",
+     "everything else is identical to the question figure"
+    ],
+    "alt_text": "The cricket graph with the blue column of over 12 outlined and labelled about 15, and the shortest red column, over 4, outlined and labelled about 2.",
+    "render_note": "Layout identical to M3.S19.T19.C80.IMG1. The LP solution accepts 14 to 16 and 1 to 3; the figure marks the best estimates 15 and 2."
+   }
+  }
+ ]
+}

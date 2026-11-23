@@ -1,0 +1,1664 @@
+{
+ "meta": {
+  "chapter": "A Peek Beyond the Point",
+  "class": 7,
+  "textbook": "Ganita Prakash, Grade 7, Chapter 3",
+  "lp_plan_id": "cbse_eng_maths7_ch3_v44",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "required": 1,
+    "optional": 3,
+    "none": 1
+   },
+   "question": {
+    "required": 4,
+    "optional": 1,
+    "none": 6
+   },
+   "solution": {
+    "required": 2,
+    "optional": 0,
+    "none": 9
+   }
+  },
+  "notes": [
+   "Chunk A: units 1-16 (topics M1.S2.T2, M1.S3.T3, M1.S5.T5, M1.S6.T6, M1.S7.T7); 5 worked examples, 11 singles (27 items).",
+   "Ruler and scale readings: the book figure is the question for C8, C24, C25, C26 and the objects of C5, so those question sides are required; written-reading solutions stay text (C8, C26).",
+   "C3 and C21 are optional only: their own teaching images (M1.S2.T2.C3.IMG1, M1.S6.T6.C21.IMG1) already draw the same ruler picture.",
+   "C5: LP numbers for hand, box and leaf differ from the book picture; the LP numbers are drawn (see render_note).",
+   "C22: the LP question dropped 'Mark each length on the scale'; the book's seven marked scales are not drawn (decision for the content owner)."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P02-ruler_measurement-1",
+   "source": "chapter p.02",
+   "description": "First screw (2 7/10 cm) measured on three scales: whole cm, half cm, tenths; checked against the picture, base description correct.",
+   "mapped_to": "concept_image:M1.S2.T2.C3.IMG1"
+  },
+  {
+   "fig_id": "P02-ruler_measurement-2",
+   "source": "chapter p.02",
+   "description": "Second, longer screw (3 2/10 cm) on the same three scales with blank answer lines; its reading is given in words in the C3 worked example (optional there).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P03-ruler_measurement-1",
+   "source": "chapter p.03",
+   "description": "Eraser above a 0-4 ruler with tenth ticks, dashed line at 2.4 (checked: right end at 2 4/10 cm).",
+   "mapped_to": "item:M1.S3.T3.C8 (question)"
+  },
+  {
+   "fig_id": "P03-ruler_measurement-2",
+   "source": "chapter p.03",
+   "description": "Pencil above an identical ruler, point on the half tick at 4.5 (checked: 4 5/10 = 4 1/2 cm).",
+   "mapped_to": "item:M1.S3.T3.C8 (question)"
+  },
+  {
+   "fig_id": "P03-ruler_measurement-3",
+   "source": "chapter p.03",
+   "description": "Chalk above an identical ruler, right end at 1.4 (checked: 1 4/10 cm).",
+   "mapped_to": "item:M1.S3.T3.C8 (question)"
+  },
+  {
+   "fig_id": "P03-ruler_measurement-4",
+   "source": "chapter p.03",
+   "description": "Teaching figure of the 3 4/10 pencil on a ruler with the row of ten 1/10 pieces; the same idea (3 4/10 = 34/10) is the teaching image of the C4 concept.",
+   "mapped_to": "concept_image:M1.S2.T2.C4.IMG1"
+  },
+  {
+   "fig_id": "P04-ruler_measurement-1",
+   "source": "chapter p.04",
+   "description": "USB cable above a 0-5 ruler, end at 4.8 (printed example 4 8/10 = 48/10); checked.",
+   "mapped_to": "item:M1.S2.T2.C5 (question)"
+  },
+  {
+   "fig_id": "P04-ruler_measurement-2",
+   "source": "chapter p.04",
+   "description": "Box beside a vertical 0-3 ruler; checked against the picture: top edge at about 2.8, but the LP text says 2 3/10, so the C5 figure follows the LP.",
+   "mapped_to": "item:M1.S2.T2.C5 (question)"
+  },
+  {
+   "fig_id": "P04-ruler_measurement-3",
+   "source": "chapter p.04",
+   "description": "Hand with outstretched thumb above a 0-1 ruler; checked: thumb tip at about 1.3, but the LP text says 1 6/10, so the C5 figure follows the LP.",
+   "mapped_to": "item:M1.S2.T2.C5 (question)"
+  },
+  {
+   "fig_id": "P04-ruler_measurement-4",
+   "source": "chapter p.04",
+   "description": "Leaf above a 0-11 ruler; checked: the tip is at 11, but the LP text says 3 9/10, so the C5 figure follows the LP.",
+   "mapped_to": "item:M1.S2.T2.C5 (question)"
+  },
+  {
+   "fig_id": "P06-labelled_photo-1",
+   "source": "chapter p.06",
+   "description": "Painted honeybee with three brackets labelled Head, Thorax and abdomen; the three lengths are printed in the text, so it is illustration only.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P06-labelled_photo-2",
+   "source": "chapter p.06",
+   "description": "Hand outline with two boxes labelled 12 4/10 units (whole hand) and 6 7/10 units (palm from the wrist); both lengths are in the LP question, bar picture is optional only.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P06-column_arithmetic-3",
+   "source": "chapter p.06",
+   "description": "Typeset column subtraction 12 4/10 - 6 7/10 with the regrouping arrow to 11 14/10 and the result 5 7/10.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P07-ruler_measurement-1",
+   "source": "chapter p.07",
+   "description": "Sheet of paper above a 0-10 ruler (tenth ticks), right edge at 8.9; the folded half is drawn in the same question figure.",
+   "mapped_to": "item:M1.S7.T7.C24 (question)"
+  },
+  {
+   "fig_id": "P08-ruler_measurement-1",
+   "source": "chapter p.08",
+   "description": "Three-part teaching picture: sheet on the ruler, folded sheet ending near 4.45, and a magnifier of the stretch 4 to 5; the magnified end-of-strip view is the C24 solution figure.",
+   "mapped_to": "item:M1.S7.T7.C24 (solution)"
+  },
+  {
+   "fig_id": "P08-ruler_measurement-2",
+   "source": "chapter p.08",
+   "description": "Enlarged strip 4 to 5 with the folded corner ending between 4 4/10 and 4 5/10 (only tenth ticks are printed); same view as the C24 solution figure.",
+   "mapped_to": "item:M1.S7.T7.C24 (solution)"
+  },
+  {
+   "fig_id": "P09-number_line-1",
+   "source": "chapter p.09",
+   "description": "Scale 0 to 2.5 with a hundredth tick everywhere, labelled marks 0, 1/100, 1/10, 2/10, 20/100, 99/100, 1, 1 3/10, 130/100, 2 and five empty boxes at 0.55, 1.55, 1.74, 2.02, 2.40; checked tick by tick.",
+   "mapped_to": "item:M1.S7.T7.C25 (question)"
+  },
+  {
+   "fig_id": "P09-ruler_measurement-2",
+   "source": "chapter p.09",
+   "description": "Wire above a ruler with hundredth ticks ending 4 hundredths after 1 1/10, written three ways; the same picture is the teaching image of the C21 concept.",
+   "mapped_to": "concept_image:M1.S6.T6.C21.IMG1"
+  },
+  {
+   "fig_id": "P09-ruler_measurement-3",
+   "source": "chapter p.09",
+   "description": "First of four rulers: wire end at 5 37/100 (labels 4 9/10 to 6 1/10); checked.",
+   "mapped_to": "item:M1.S7.T7.C26 (question)"
+  },
+  {
+   "fig_id": "P09-ruler_measurement-4",
+   "source": "chapter p.09",
+   "description": "Second ruler: wire end at 15 3/100 (labels 14 4/10 to 15 6/10); checked.",
+   "mapped_to": "item:M1.S7.T7.C26 (question)"
+  },
+  {
+   "fig_id": "P10-ruler_measurement-1",
+   "source": "chapter p.10",
+   "description": "Third ruler: wire end at 7 52/100 (labels 6 7/10 to 7 9/10); checked.",
+   "mapped_to": "item:M1.S7.T7.C26 (question)"
+  },
+  {
+   "fig_id": "P10-ruler_measurement-2",
+   "source": "chapter p.10",
+   "description": "Fourth ruler: wire end at 9 80/100; the first label is printed 4 9/10, a misprint for 8 9/10 (the next label is 9); the C26 figure draws 8 9/10.",
+   "mapped_to": "item:M1.S7.T7.C26 (question)"
+  },
+  {
+   "fig_id": "P10-number_line-3",
+   "source": "chapter p.10",
+   "description": "Blank scale for the book's 'mark each length on the scale': (a) 3/10, 3/100, 33/100 on a blank 0-1 scale. The LP question does not ask to mark, so no figure (optional only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P10-number_line-4",
+   "source": "chapter p.10",
+   "description": "Blank scale for the book's 'mark each length on the scale': (b) 3 1/10, 30/10, 1 3/10 on a blank 0-10 scale. The LP question does not ask to mark, so no figure (optional only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P10-number_line-5",
+   "source": "chapter p.10",
+   "description": "Blank scale for the book's 'mark each length on the scale': (c) 45/100, 54/100, 5/10, 4/10 on a blank 0-1 scale. The LP question does not ask to mark, so no figure (optional only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P10-number_line-6",
+   "source": "chapter p.10",
+   "description": "Blank scale for the book's 'mark each length on the scale': (d) 3 6/10, 3 6/100, 3 6/10 6/100 on a blank 30/10-40/10 scale. The LP question does not ask to mark, so no figure (optional only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P11-number_line-1",
+   "source": "chapter p.11",
+   "description": "Blank scale for the book's 'mark each length on the scale': (e) group on a blank 0-1.1 scale. The LP question does not ask to mark, so no figure (optional only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P11-number_line-2",
+   "source": "chapter p.11",
+   "description": "Blank scale for the book's 'mark each length on the scale': (f) group on a blank 68/10-78/10 scale. The LP question does not ask to mark, so no figure (optional only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P11-number_line-3",
+   "source": "chapter p.11",
+   "description": "Blank scale for the book's 'mark each length on the scale': (g) group on a blank 5.7-6.7 scale (5 7/100 does not fit). The LP question does not ask to mark, so no figure (optional only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "NEW-P07-fish-1",
+   "source": "chapter p.07",
+   "description": "Two paintings of fish, Celestial Pearl Danio and Philippine Goby, with their names; both lengths are in the question text (decoration, not in the base inventory).",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P36-ruler_picture-1",
+   "source": "chapter p.36",
+   "description": "Answer page: the eraser, pencil and chalk picture repeated above the written answer 2 4/10, 4 5/10 = 4 1/2, 1 4/10 cm.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P37-labelled_picture-1",
+   "source": "chapter p.37",
+   "description": "Answer page: the painted honeybee with the three lengths in a box beside it, above the written answer 15 2/10 units.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P39-number_line-1",
+   "source": "chapter p.39",
+   "description": "Printed answer picture: the same scale with the five boxes filled 55/100, 155/100, 174/100, 202/100, 240/100 (checked, agrees with the LP).",
+   "mapped_to": "item:M1.S7.T7.C25 (solution)"
+  },
+  {
+   "fig_id": "P39-ruler-1",
+   "source": "chapter p.39",
+   "description": "Answer page: first ruler (wire end 5 37/100) repeated above the written reading and words.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P39-ruler-2",
+   "source": "chapter p.39",
+   "description": "Answer page: second ruler (wire end 15 3/100) repeated above the written reading and words.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P40-ruler-1",
+   "source": "chapter p.40",
+   "description": "Answer page: third ruler (wire end 7 52/100) repeated above the written reading and words.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P40-ruler-2",
+   "source": "chapter p.40",
+   "description": "Answer page: fourth ruler (wire end 9 80/100) repeated above the written reading and words.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P40-ruler-3",
+   "source": "chapter p.40",
+   "description": "Printed answer picture for group (a) of 'longest and shortest': the blank scale with the group's lengths marked by coloured lines and labelled. The LP answer is the longest and shortest in text (marking is not in the LP question), so no figure (optional only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P41-ruler-1",
+   "source": "chapter p.41",
+   "description": "Printed answer picture for group (b) of 'longest and shortest': the blank scale with the group's lengths marked by coloured lines and labelled. The LP answer is the longest and shortest in text (marking is not in the LP question), so no figure (optional only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P41-ruler-2",
+   "source": "chapter p.41",
+   "description": "Printed answer picture for group (c) of 'longest and shortest': the blank scale with the group's lengths marked by coloured lines and labelled. The LP answer is the longest and shortest in text (marking is not in the LP question), so no figure (optional only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P41-ruler-3",
+   "source": "chapter p.41",
+   "description": "Printed answer picture for group (d) of 'longest and shortest': the blank scale with the group's lengths marked by coloured lines and labelled. The LP answer is the longest and shortest in text (marking is not in the LP question), so no figure (optional only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P42-ruler-1",
+   "source": "chapter p.42",
+   "description": "Printed answer picture for group (e) of 'longest and shortest': the blank scale with the group's lengths marked by coloured lines and labelled. The LP answer is the longest and shortest in text (marking is not in the LP question), so no figure (optional only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P42-ruler-2",
+   "source": "chapter p.42",
+   "description": "Printed answer picture for group (f) of 'longest and shortest': the blank scale with the group's lengths marked by coloured lines and labelled. The LP answer is the longest and shortest in text (marking is not in the LP question), so no figure (optional only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P42-ruler-3",
+   "source": "chapter p.42",
+   "description": "Printed answer picture for group (g) of 'longest and shortest': the blank scale with the group's lengths marked by coloured lines and labelled. The LP answer is the longest and shortest in text (marking is not in the LP question), so no figure (optional only).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 44,
+  "mapped_to_items": 16,
+  "mapped_to_concept_images": 3,
+  "mapped_none": 25,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S2.T2.C5.IMG1",
+   "M1.S3.T3.C8.IMG1",
+   "M1.S7.T7.C24.IMG1",
+   "M1.S7.T7.C24.IMG2",
+   "M1.S7.T7.C25.IMG1",
+   "M1.S7.T7.C25.IMG2",
+   "M1.S7.T7.C26.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S2.T2.C3",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example: Reading between the marks",
+   "ncert_ref": "Section 3 - 1.screws",
+   "question_text": "A ruler has every centimetre split into 10 equal parts. One screw ends 7 parts after the 2 cm mark and another ends 2 parts after the 3 cm mark. Write each length and say what the first one means.",
+   "decision": "optional",
+   "reason_codes": [
+    "MEASUREMENT_READING",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Optional: a ruler marked in tenths with the two screws (ends at 2 7/10 and 3 2/10) would help, but the question gives both positions in words and the concept's own teaching image M1.S2.T2.C3.IMG1 already draws the first screw on the tenth scale, so no extra image is added.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C4",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example: A tenth part: two ways to write a length",
+   "ncert_ref": "Section 3 - 2.pencil",
+   "question_text": "A pencil is 3 4/10 units long. Write its length as a count of tenths and show why it is the same length.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The pencil length 3 4/10 and the change to 34/10 are fully in the words and steps; the teaching image M1.S2.T2.C4.IMG1 already shows 3 4/10 = 34/10 with strips, and the book's pencil-on-ruler picture adds nothing the text lacks.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C5",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example: A tenth part: two ways to write a length",
+   "ncert_ref": "Section 3 - 2.reading",
+   "question_text": "A USB cable is 4 8/10 units long. Write it in two ways. Then read aloud 4 1/10, 4/10, 41/10 and 41 1/10. Three more objects are drawn on their own unit scales: a hand that reaches 1 unit and 6 tenths, a box that is 2 units and 3 tenths, and a leaf that is 3 units and 9 tenths. Write each of these in two ways.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "MEASUREMENT_READING",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The text says the three more objects 'are drawn on their own unit scales' and the book's picture (page 4) is the whole point of the example: reading four lengths on four scales whose unit is not the same. No teaching image of this concept shows it, so the example gets its own figure. The LP numbers (hand 1 6/10, box 2 3/10, leaf 3 9/10) are drawn, not the book picture's readings.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S2.T2.C5.IMG1",
+   "manim_scene": "c7_3_3_2_objects_on_scales_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S2.T2.C5.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "measurement_scale",
+    "aspect_ratio": "16:9",
+    "content": {
+     "type": "measurement_scale",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "x_zero_px": 360,
+     "x_end_px": 1760,
+     "rows": [
+      {
+       "object": "USB cable",
+       "row_top_y_px": 70,
+       "scale_max_units": 5,
+       "px_per_unit": 280.0,
+       "whole_labels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "bar_from_units": 0,
+       "bar_to_units": 4.8,
+       "bar_end_x_px": 1704.0,
+       "bar_style": "thin bar",
+       "bar_y_px": [
+        100,
+        116
+       ],
+       "strip_y_px": [
+        166,
+        270
+       ]
+      },
+      {
+       "object": "hand",
+       "row_top_y_px": 320,
+       "scale_max_units": 2,
+       "px_per_unit": 700.0,
+       "whole_labels": [
+        0,
+        1,
+        2
+       ],
+       "bar_from_units": 0,
+       "bar_to_units": 1.6,
+       "bar_end_x_px": 1480.0,
+       "bar_style": "bar",
+       "bar_y_px": [
+        330,
+        386
+       ],
+       "strip_y_px": [
+        416,
+        520
+       ]
+      },
+      {
+       "object": "box",
+       "row_top_y_px": 570,
+       "scale_max_units": 3,
+       "px_per_unit": 466.67,
+       "whole_labels": [
+        0,
+        1,
+        2,
+        3
+       ],
+       "bar_from_units": 0,
+       "bar_to_units": 2.3,
+       "bar_end_x_px": 1433.3,
+       "bar_style": "bar",
+       "bar_y_px": [
+        580,
+        636
+       ],
+       "strip_y_px": [
+        666,
+        770
+       ]
+      },
+      {
+       "object": "leaf",
+       "row_top_y_px": 820,
+       "scale_max_units": 4,
+       "px_per_unit": 350.0,
+       "whole_labels": [
+        0,
+        1,
+        2,
+        3,
+        4
+       ],
+       "bar_from_units": 0,
+       "bar_to_units": 3.9,
+       "bar_end_x_px": 1725.0,
+       "bar_style": "bar",
+       "bar_y_px": [
+        830,
+        886
+       ],
+       "strip_y_px": [
+        916,
+        1020
+       ]
+      }
+     ],
+     "tick_rule": "every 0.1 unit; whole 50 px, half 36 px, other tenths 22 px",
+     "drop_lines": "dashed FOCUS from each bar end to the strip top",
+     "no_length_written": true
+    },
+    "manim_description": "Canvas 1920x1080, white BG. Four rows from top to bottom, row tops at y=70, 320, 570 and 820. Every row has its own scale of the same pixel width: a ruler strip (CELL_FILL, INK 2 px outline) from x=360 to x=1760 and from y=top+96 to y=top+200. The number 0 is at x=360 and the last whole number is at x=1760, so one unit has a different length in each row. Ticks hang down from the strip's top edge in INK at every tenth of a unit: whole-number ticks 50 px long, the tick at each half 36 px long, every other tenth tick 22 px long. Bold INK labels (34 px) sit under every whole-number tick, centred at y=top+176. Row 1, the USB cable: scale 0 to 5 (280 px per unit, labels 0 1 2 3 4 5); the cable is a thin bar with INK fill, 16 px high (y=top+30 to top+46), from x=360 to x=1704 (4.8 units). Row 2, the hand: scale 0 to 2 (700 px per unit, labels 0 1 2); the hand is a bar with MARK_FILL fill and INK 3 px outline, 56 px high (y=top+10 to top+66), from x=360 to x=1480 (1.6 units). Row 3, the box: scale 0 to 3 (466.67 px per unit, labels 0 1 2 3); same bar style from x=360 to x=1433.3 (2.3 units). Row 4, the leaf: scale 0 to 4 (350 px per unit, labels 0 1 2 3 4); same bar style from x=360 to x=1725 (3.9 units). A thin GUIDE vertical line at x=360 runs in every row from the top of the bar to the bottom of the strip. A dashed FOCUS vertical line (3 px) drops from the right end of each bar to the strip's top edge. The object names USB cable, hand, box and leaf are written in INK (34 px), left-aligned at x=60 and centred vertically on each bar. No length is written anywhere.",
+    "visible_text": [
+     "USB cable",
+     "hand",
+     "box",
+     "leaf",
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any length written as a number or fraction (4 8/10, 1 6/10, 2 3/10, 3 9/10)",
+     "the same unit length in all four rows"
+    ],
+    "accuracy_checks": [
+     "bar ends at x = 360 + px_per_unit * value: USB 4.8 -> 1704, hand 1.6 -> 1480, box 2.3 -> 1433.3, leaf 3.9 -> 1725",
+     "each strip has 10 tenth intervals per whole unit (USB 28 px, hand 70 px, box 46.67 px, leaf 35 px per tenth)",
+     "the four rows use four different unit lengths (280, 700, 466.67, 350 px)",
+     "values match the LP question text: USB 4 8/10, hand 1 6/10, box 2 3/10, leaf 3 9/10"
+    ],
+    "alt_text": "Four objects, a USB cable, a hand, a box and a leaf, each lying along its own ruler marked in tenths of a unit, with a dashed line dropped from the right end of each to its ruler.",
+    "render_note": "The book's picture (page 4) reads about 4 8/10 for the USB cable but about 1 3/10 for the hand, 2 8/10 for the box (vertical ruler) and 11 for the leaf; the LP text says 1 6/10, 2 3/10 and 3 9/10, and the LP text wins, so those are drawn. The box is drawn horizontally like the others.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Tenths: eraser, pencil and chalk",
+   "ncert_ref": "Section 3 - 1.objects",
+   "question_text": "Along a ruler marked in tenths of a centimetre, an eraser ends 4 parts after the 2 cm mark, a pencil ends 5 parts after the 4 cm mark and a chalk ends 4 parts after the 1 cm mark. Write each length.",
+   "decision": "required",
+   "reason_codes": [
+    "MEASUREMENT_READING",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book question (page 3) is 'write the measurements of the objects shown in the picture': three objects against three tenth-scales. Reading the end of each object off a ruler is the skill, and the LP words ('4 parts after the 2 cm mark') are only a transcription of that picture; the figure shows only what is given, with no length written.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C8.IMG1",
+   "manim_scene": "c7_3_3_1_objects_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C8.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "measurement_scale",
+    "aspect_ratio": "16:9",
+    "content": {
+     "type": "measurement_scale",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "x_zero_px": 220,
+     "px_per_cm": 300,
+     "range_cm": [
+      0,
+      4.7
+     ],
+     "whole_labels": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "tick_rule": "every 0.1 cm; whole 56 px, half 44 px, other tenths 28 px",
+     "rows": [
+      {
+       "object": "eraser",
+       "row_top_y_px": 50,
+       "shape": "rounded rectangle",
+       "from_cm": 0,
+       "to_cm": 2.4,
+       "end_x_px": 940,
+       "height_px": 130
+      },
+      {
+       "object": "pencil",
+       "row_top_y_px": 390,
+       "shape": "rectangle with triangular tip",
+       "from_cm": 0,
+       "to_cm": 4.5,
+       "end_x_px": 1570,
+       "body_height_px": 70,
+       "tip_length_px": 60
+      },
+      {
+       "object": "chalk",
+       "row_top_y_px": 730,
+       "shape": "rounded rectangle",
+       "from_cm": 0,
+       "to_cm": 1.4,
+       "end_x_px": 640,
+       "height_px": 60
+      }
+     ],
+     "drop_lines": "dashed FOCUS from each object's right end to the strip top",
+     "no_length_written": true
+    },
+    "manim_description": "Canvas 1920x1080, white BG. Three rows from top to bottom, row tops at y=50, 390 and 730. In every row a ruler strip (CELL_FILL, INK 2 px outline) spans x=220 to x=1630 and y=top+170 to y=top+280. The scale has 0 at x=220 and 300 px per centimetre (one tenth = 30 px), so the strip ends at 4.7 cm. Ticks hang down from the strip's top edge in INK at every tenth from 0 to 4.7 cm: whole-number ticks 56 px long, the tick at each half 44 px long, every other tenth tick 28 px long. Bold INK labels 0, 1, 2, 3 and 4 (34 px) sit under the whole-number ticks, centred at y=top+255. A thin GUIDE vertical line at x=220 runs in every row from the top of the object to the bottom of the strip. Row 1, an eraser: a rounded rectangle (corner radius 24, MARK_FILL fill, INK 3 px outline) from x=220 to x=940 (0 to 2.4 cm), y=top to y=top+130. Row 2, a pencil: a rectangle (MARK_FILL fill, INK 3 px outline), 70 px high and vertically centred in the band y=top to y=top+130, from x=220 to x=1510, plus a triangular tip 60 px long whose point is at x=1570 (4.5 cm). Row 3, a chalk: a rounded rectangle (corner radius 30, MARK_FILL fill, INK 3 px outline), 60 px high, centred in the same band, from x=220 to x=640 (0 to 1.4 cm). From the right end of each object a dashed FOCUS vertical line (3 px) drops to the strip's top edge, at x=940, x=1570 and x=640. The names eraser, pencil and chalk are written in INK (34 px), left-aligned at x=1690 and centred on each object's band. No length is written anywhere.",
+    "visible_text": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "eraser",
+     "pencil",
+     "chalk"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any length written as a number or fraction (2 4/10, 4 5/10, 1 4/10)",
+     "hundredth ticks"
+    ],
+    "accuracy_checks": [
+     "eraser end x = 220 + 300*2.4 = 940 (2 cm and 4 parts of 1/10)",
+     "pencil tip x = 220 + 300*4.5 = 1570 (4 cm and 5 parts of 1/10, exactly on the half tick)",
+     "chalk end x = 220 + 300*1.4 = 640 (1 cm and 4 parts of 1/10)",
+     "9 tenth ticks between consecutive whole numbers, spacing 30 px; the strip ends at 4.7 cm (x = 1630)"
+    ],
+    "alt_text": "An eraser, a pencil and a piece of chalk, each lying above its own ruler marked in tenths of a centimetre, with a dashed line from the right end of each to its ruler.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Tenths: eraser, pencil and chalk",
+   "ncert_ref": "Section 3 - 1.objects",
+   "question_text": "Along a ruler marked in tenths of a centimetre, an eraser ends 4 parts after the 2 cm mark, a pencil ends 5 parts after the 4 cm mark and a chalk ends 4 parts after the 1 cm mark. Write each length.",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM"
+   ],
+   "reason": "The answer is three written lengths; a solution figure would only repeat the question figure with the three readings written in (the book's printed answer, page 36, is text under the same picture). Same kind of answer as C26 (four rulers): both solutions stay text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C9",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Ordering Tenths: eight mixed lengths",
+   "ncert_ref": "Section 3 - 2.order1",
+   "question_text": "Arrange these lengths in increasing order: 9/10, 1 7/10, 130/10, 13 1/10, 10 5/10, 7 6/10, 6 7/10, 4/10.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Eight lengths to put in increasing order; the book gives no figure and the working is a list of tenth counts.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C9",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Ordering Tenths: eight mixed lengths",
+   "ncert_ref": "Section 3 - 2.order1",
+   "question_text": "Arrange these lengths in increasing order: 9/10, 1 7/10, 130/10, 13 1/10, 10 5/10, 7 6/10, 6 7/10, 4/10.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is an ordered list of fractions and tenth counts: write it in LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX line of the counts of tenths and the ordered list"
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C10",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Ordering Tenths: four lengths to compare",
+   "ncert_ref": "Section 3 - 2.order2",
+   "question_text": "Arrange these lengths in increasing order: 4 1/10, 4/10, 41/10 and 41 1/10.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four lengths to put in increasing order; the book gives no figure and the working is a list of tenth counts.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C10",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Ordering Tenths: four lengths to compare",
+   "ncert_ref": "Section 3 - 2.order2",
+   "question_text": "Arrange these lengths in increasing order: 4 1/10, 4/10, 41/10 and 41 1/10.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is an ordered list of fractions and tenth counts: write it in LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX line of the counts of tenths and the ordered list"
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C15",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Adding Tenths: Sonu's arm length",
+   "ncert_ref": "Section 3 - 2.arm",
+   "question_text": "Sonu's lower arm is 2 7/10 units and his upper arm is 3 6/10 units. What is the total length of his arm? Add in the two ways.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two lengths to add; the book has no figure for Sonu's arm (page 5 is typeset working only).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C15",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Adding Tenths: Sonu's arm length",
+   "ncert_ref": "Section 3 - 2.arm",
+   "question_text": "Sonu's lower arm is 2 7/10 units and his upper arm is 3 6/10 units. What is the total length of his arm? Add in the two ways.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two ways of adding mixed numbers: LaTeX working, the book shows no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C16",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Adding Tenths: parts of a honeybee",
+   "ncert_ref": "Section 3 - 2.honeybee",
+   "question_text": "The parts of a honeybee are 2 3/10 units (head), 5 4/10 units (thorax) and 7 5/10 units (abdomen). Find its total length.",
+   "decision": "none",
+   "reason_codes": [
+    "DECORATIVE_ONLY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book picture (page 6) is a painted honeybee with three plain brackets over head, thorax and abdomen; every length is printed in the text, so the picture is illustration only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C16",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Adding Tenths: parts of a honeybee",
+   "ncert_ref": "Section 3 - 2.honeybee",
+   "question_text": "The parts of a honeybee are 2 3/10 units (head), 5 4/10 units (thorax) and 7 5/10 units (abdomen). Find its total length.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Adding three mixed numbers: LaTeX working.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C17",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Subtracting Tenths: Shylaja's middle finger",
+   "ncert_ref": "Section 3 - 2.finger",
+   "question_text": "Shylaja's hand is 12 4/10 units long and her palm is 6 7/10 units. How long is her middle finger? Solve it by breaking a unit, and check by converting to tenths.",
+   "decision": "optional",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Optional: the book says 'as shown in the picture' (a hand outline with two overlapping boxes, the whole hand 12 4/10 and the palm 6 7/10 from the wrist). A bar picture of hand = palm + finger would help but the LP question gives both lengths in words and the subtraction is clear from them.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C17",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Subtracting Tenths: Shylaja's middle finger",
+   "ncert_ref": "Section 3 - 2.finger",
+   "question_text": "Shylaja's hand is 12 4/10 units long and her palm is 6 7/10 units. How long is her middle finger? Solve it by breaking a unit, and check by converting to tenths.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Breaking a unit is typeset column working (the book's picture of it is plain typeset text): LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX column subtraction 12 4/10 - 6 7/10 with the regrouping 11 14/10"
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C18",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Subtracting Tenths: two small fish",
+   "ncert_ref": "Section 3 - 2.fish",
+   "question_text": "A Celestial Pearl Danio is 2 4/10 cm long and a Philippine Goby is 9/10 cm long. What is the difference in their lengths?",
+   "decision": "none",
+   "reason_codes": [
+    "DECORATIVE_ONLY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book shows two paintings of fish (page 7) with their names; both lengths are in the text, so the paintings are illustration only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C18",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Subtracting Tenths: two small fish",
+   "ncert_ref": "Section 3 - 2.fish",
+   "question_text": "A Celestial Pearl Danio is 2 4/10 cm long and a Philippine Goby is 9/10 cm long. What is the difference in their lengths?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "One subtraction in tenths: LaTeX working.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C19",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Patterns in Tenths: six number sequences",
+   "ncert_ref": "Section 3 - 2.seq",
+   "question_text": "Find the change and write the next four terms: (a) 4, 4 3/10, 4 6/10 and (b) 8 2/10, 8 7/10, 9 2/10. Then do (c) 7 6/10, 8 7/10 (d) 5 7/10, 5 3/10 (e) 13 5/10, 13, 12 5/10 (f) 11 5/10, 10 4/10, 9 3/10 in the same way.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Six number sequences to continue; the book has only blanks on lines, no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C19",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Patterns in Tenths: six number sequences",
+   "ncert_ref": "Section 3 - 2.seq",
+   "question_text": "Find the change and write the next four terms: (a) 4, 4 3/10, 4 6/10 and (b) 8 2/10, 8 7/10, 9 2/10. Then do (c) 7 6/10, 8 7/10 (d) 5 7/10, 5 3/10 (e) 13 5/10, 13, 12 5/10 (f) 11 5/10, 10 4/10, 9 3/10 in the same way.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Each sequence with its change and next four terms is a line of LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C21",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example: Reading lengths in hundredths",
+   "ncert_ref": "Section 3 - 3.wire",
+   "question_text": "A wire ends 4 small parts after the 1 1/10 mark. Write its length in three ways.",
+   "decision": "optional",
+   "reason_codes": [
+    "MEASUREMENT_READING",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Optional: the wire on the ruler ending at 1 14/100 would help, but the concept's own teaching image M1.S6.T6.C21.IMG1 already draws exactly this wire and its three fraction forms, and the question gives the position in words, so no extra image is added.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C22",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example: The longest and the shortest",
+   "ncert_ref": "Section 3 - 3.longest",
+   "question_text": "In each group find the longest and shortest length: (a) 3/10, 3/100, 33/100 (b) 3 1/10, 30/10, 1 3/10 (c) 45/100, 54/100, 5/10, 4/10 (d) 3 6/10, 3 6/100, 3 6/10 6/100 (e) 8/100, 2/100, 9/100, 1 8/100 (f) 7 3/10 5/100, 7 5/10, 7 41/100 (g) 6 5/10 15/100, 5 87/100, 5 7/100.",
+   "decision": "optional",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Optional: in the book each group (a) to (g) has its own blank scale and the printed answers are those scales with the lengths marked, but the LP question dropped 'Mark each length on the scale' and its steps only convert and compare. Seven different scales cannot be one worked-example picture; if the marking is wanted it needs a question change plus seven figures (decision for the content owner).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the conversions to tenths or hundredths in the steps; marking on scales is not asked in the LP question"
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C24",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Hundredths: the folded paper strip",
+   "ncert_ref": "Section 3 - 3.paper",
+   "question_text": "A paper strip 8 9/10 units long is folded in half. Its new length ends between 4 4/10 and 4 5/10. Split each tenth into 10 parts: what is one small part, and where does the folded strip end? Can the length also be said as 4 units and 45 hundredths?",
+   "decision": "required",
+   "reason_codes": [
+    "MEASUREMENT_READING",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book question (page 7) gives the sheet of paper lying along a ruler marked in tenths, and the question is about where its folded half ends on that ruler. The figure shows the strip and its folded half against the tenth scale; the end falls between the 4 4/10 and 4 5/10 ticks and no hundredth ticks are drawn, as in the book.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S7.T7.C24.IMG1",
+   "manim_scene": "c7_3_3_3_paper_strip_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S7.T7.C24.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "measurement_scale",
+    "aspect_ratio": "16:9",
+    "content": {
+     "type": "measurement_scale",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "x_zero_px": 110,
+     "px_per_unit": 170,
+     "range_units": [
+      0,
+      10
+     ],
+     "whole_labels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "tick_rule": "every 0.1; whole 60 px, half 46 px, other tenths 30 px; no hundredth ticks",
+     "bars": [
+      {
+       "name": "paper strip",
+       "from": 0,
+       "to": 8.9,
+       "x_px": [
+        110,
+        1623
+       ],
+       "y_px": [
+        150,
+        230
+       ]
+      },
+      {
+       "name": "folded strip",
+       "from": 0,
+       "to": 4.45,
+       "x_px": [
+        110,
+        866.5
+       ],
+       "y_px": [
+        270,
+        350
+       ]
+      }
+     ],
+     "strip_y_px": [
+      430,
+      560
+     ],
+     "drop_lines": "dashed FOCUS from each bar end to y=430",
+     "no_length_written": true
+    },
+    "manim_description": "Canvas 1920x1080, white BG. One ruler strip (CELL_FILL, INK 2 px outline) from x=110 to x=1810 and y=430 to y=560, marked in tenths from 0 to 10: x = 110 + 170*value (one unit = 170 px, one tenth = 17 px). Ticks hang down from the strip's top edge in INK at every tenth (101 ticks): whole-number ticks 60 px long, the tick at each half 46 px long, every other tenth tick 30 px long; there are no hundredth ticks. Bold INK labels 0 to 10 (34 px) sit under the whole-number ticks, centred at y=520. The paper strip is a rectangle (MARK_FILL fill, INK 3 px outline) from x=110 to x=1623 (0 to 8.9) and from y=150 to y=230. The folded strip is a second rectangle of the same style from x=110 to x=866.5 (0 to 4.45) and from y=270 to y=350. A dashed FOCUS vertical line (3 px) drops from the right end of the paper strip (x=1623, from y=230) to the strip's top edge at y=430, and another from the right end of the folded strip (x=866.5, from y=350) to y=430. No length is written.",
+    "visible_text": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any length written as a number or fraction",
+     "hundredth ticks",
+     "the magnified view"
+    ],
+    "accuracy_checks": [
+     "paper strip end x = 110 + 170*8.9 = 1623 (8 9/10, one tenth tick before 9)",
+     "folded strip end x = 110 + 170*4.45 = 866.5 (8.9 / 2 = 4.45), between the 4.4 tick (858) and the 4.5 tick (875)",
+     "9 tenth ticks between consecutive whole numbers, spacing 17 px"
+    ],
+    "alt_text": "A ruler from 0 to 10 marked in tenths with a long paper strip above it and its folded half below that, each with a dashed line dropped to the ruler.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C24",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Hundredths: the folded paper strip",
+   "ncert_ref": "Section 3 - 3.paper",
+   "question_text": "A paper strip 8 9/10 units long is folded in half. Its new length ends between 4 4/10 and 4 5/10. Split each tenth into 10 parts: what is one small part, and where does the folded strip end? Can the length also be said as 4 units and 45 hundredths?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The answer is a position on a scale that the question's ruler cannot show: the stretch from 4 4/10 to 4 5/10 split into ten small parts with the folded strip ending at the fifth. The book shows this as a magnifier (page 8) and the LP steps describe it in words; the figure is the question figure plus the magnified view, with the new content in ANSWER green.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S7.T7.C24.IMG2",
+   "manim_scene": "c7_3_3_3_paper_strip_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S7.T7.C24.IMG2}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "measurement_scale",
+    "aspect_ratio": "16:9",
+    "content": {
+     "type": "measurement_scale",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": false,
+     "same_as": "M1.S7.T7.C24.IMG1",
+     "added": {
+      "magnified_strip": {
+       "from_value": 4.4,
+       "to_value": 4.5,
+       "x_px": [
+        160,
+        1760
+       ],
+       "y_px": [
+        800,
+        900
+       ],
+       "parts": 10,
+       "part_px": 160,
+       "end_ticks_px_long": 70,
+       "inner_ticks_px_long": 45,
+       "end_labels": [
+        "4 4/10",
+        "4 5/10"
+       ]
+      },
+      "connector_lines": [
+       [
+        858,
+        560,
+        160,
+        800
+       ],
+       [
+        875,
+        560,
+        1760,
+        800
+       ]
+      ],
+      "folded_strip_piece": {
+       "x_px": [
+        160,
+        960
+       ],
+       "y_px": [
+        690,
+        770
+       ]
+      },
+      "answer_end_line": {
+       "x_px": 960,
+       "y_px": [
+        690,
+        900
+       ],
+       "after_parts": 5
+      },
+      "part_numbers": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      "answer_label": "4 4/10 5/100"
+     }
+    },
+    "manim_description": "Same canvas and same drawing as the question figure, kept exactly where they are: the ruler strip with its ticks and labels 0 to 10, the paper strip (x=110 to 1623), the folded strip (x=110 to 866.5) and the two dashed FOCUS lines. Added below, a magnified view of the stretch from 4 4/10 to 4 5/10. Two thin dashed GUIDE lines run from the main strip's bottom edge at y=560, from x=858 (the 4.4 tick) and x=875 (the 4.5 tick), to the ends of the magnified strip at (160, 800) and (1760, 800); the left line is drawn behind the folded-strip piece described below, so the opaque piece hides the part of the line it crosses. The magnified strip is a rectangle (CELL_FILL, INK 2 px outline) from x=160 to x=1760 and from y=800 to y=900 whose width stands for one tenth of a unit, cut into ten equal parts of 160 px by 11 ticks hanging from y=800: the end ticks at x=160 and x=1760 are 70 px long, the nine inner ticks at x=320, 480, 640, 800, 960, 1120, 1280, 1440 and 1600 are 45 px long. Under the strip, INK 34 px labels: 4 4/10 centred at (160, 940) and 4 5/10 centred at (1760, 940). Above the magnified strip, a piece of the folded strip is drawn as a rectangle (MARK_FILL fill, INK 3 px outline) from x=160 to x=960 and from y=690 to y=770; its left edge is open because the strip continues to the left. In ANSWER green: a vertical line 4 px wide at x=960 from y=690 to y=900 (the end of the folded strip, on the fifth inner tick); the numbers 1, 2, 3, 4, 5 (34 px) centred inside the strip at x=240, 400, 560, 720 and 880 and y=855, counting the small parts from the 4 4/10 mark; a leader line from (960, 900) to (960, 980) and the label 4 4/10 5/100 centred at (960, 1020).",
+    "visible_text": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "4 4/10",
+     "4 5/10",
+     "4 4/10 5/100"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any text sentence",
+     "hundredth labels on the inner ticks"
+    ],
+    "accuracy_checks": [
+     "the folded end is at 8.9 / 2 = 4.45, the fifth of ten equal parts between 4.4 and 4.5 (x = 160 + 160*5 = 960)",
+     "ten equal parts of 160 px between the end ticks (nine inner ticks)",
+     "each small part is 1/100 of a unit and 5 parts after 4 4/10 gives 4 4/10 5/100 = 4 45/100",
+     "the connector lines start at the main ruler's 4.4 and 4.5 ticks (x = 858 and 875), so the folded end (866.5) lies midway"
+    ],
+    "alt_text": "The same ruler and strips, with the stretch from 4 4/10 to 4 5/10 magnified into ten equal parts and the folded strip ending at the fifth part, 4 4/10 5/100.",
+    "render_note": "The book's magnifier (page 8) shows the stretch from 4 to 5 with only tenth ticks; the LP step text splits one tenth into 10 parts, so the zoom here is 4 4/10 to 4 5/10 as the LP solution says.",
+    "derived_from": "M1.S7.T7.C24.IMG1"
+   }
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C25",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Hundredths: marks on a long wire",
+   "ncert_ref": "Section 3 - 3.wire_boxes",
+   "question_text": "Marks on a wire, measured from 0, are 1 part, 2 tenths, 20 parts, 55 parts, 99 parts, 130 parts, 155 parts, 174 parts, 202 parts and 240 parts from 0, where each part is one hundredth. Write each length as a fraction of a unit.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The book question (page 9) is 'fill the lengths in the empty boxes' on a scale of hundredths: the marks, their labels and five empty boxes are only in the picture. The figure shows exactly the printed labels and the five empty boxes; the learner works out each box from its place on the scale.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S7.T7.C25.IMG1",
+   "manim_scene": "c7_3_3_3_wire_boxes_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S7.T7.C25.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "x_of_value": "110 + 680*value",
+     "range": [
+      0,
+      2.5
+     ],
+     "tenth_ticks": 26,
+     "hundredth_ticks_between_tenths": 9,
+     "axis_y_px": 380,
+     "upper_labels": [
+      {
+       "text": "0",
+       "value": 0,
+       "x_px": 110
+      },
+      {
+       "text": "1/10",
+       "value": 0.1,
+       "x_px": 178
+      },
+      {
+       "text": "2/10",
+       "value": 0.2,
+       "x_px": 246
+      },
+      {
+       "text": "1",
+       "value": 1.0,
+       "x_px": 816
+      },
+      {
+       "text": "1 3/10",
+       "value": 1.3,
+       "x_px": 1039
+      },
+      {
+       "text": "2",
+       "value": 2.0,
+       "x_px": 1450
+      }
+     ],
+     "lower_labels": [
+      {
+       "text": "1/100",
+       "mark_value": 0.01,
+       "x_px": 65
+      },
+      {
+       "text": "20/100",
+       "mark_value": 0.2,
+       "x_px": 246
+      },
+      {
+       "text": "99/100",
+       "mark_value": 0.99,
+       "x_px": 783
+      },
+      {
+       "text": "130/100",
+       "mark_value": 1.3,
+       "x_px": 994
+      }
+     ],
+     "boxes": [
+      {
+       "n": 1,
+       "mark_value": 0.55,
+       "mark_x_px": 484.0,
+       "box_x_centre_px": 484,
+       "box_y_px": [
+        640,
+        736
+       ],
+       "content": ""
+      },
+      {
+       "n": 2,
+       "mark_value": 1.55,
+       "mark_x_px": 1164.0,
+       "box_x_centre_px": 1164,
+       "box_y_px": [
+        640,
+        736
+       ],
+       "content": ""
+      },
+      {
+       "n": 3,
+       "mark_value": 1.74,
+       "mark_x_px": 1293.2,
+       "box_x_centre_px": 1293,
+       "box_y_px": [
+        640,
+        736
+       ],
+       "content": ""
+      },
+      {
+       "n": 4,
+       "mark_value": 2.02,
+       "mark_x_px": 1483.6,
+       "box_x_centre_px": 1484,
+       "box_y_px": [
+        640,
+        736
+       ],
+       "content": ""
+      },
+      {
+       "n": 5,
+       "mark_value": 2.4,
+       "mark_x_px": 1742.0,
+       "box_x_centre_px": 1742,
+       "box_y_px": [
+        640,
+        736
+       ],
+       "content": ""
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920x1080, white BG. One horizontal scale of hundredths from 0 to 2.5 units: x = 110 + 680*value, so one tenth is 68 px and one hundredth is 6.8 px. An INK 3 px horizontal line at y=380 runs from x=110 to x=1810. Ticks hang down from it in INK 2 px: 26 tenth ticks (value 0, 0.1, 0.2 and so on up to 2.5) 70 px long (y=380 to 450) and the 9 hundredth ticks between each pair of tenth ticks 30 px long (y=380 to 410). Upper label row (INK, 34 px, centre y=490): 0 under the tick at 0; the fraction 1/10 under the tick at 0.1; the fraction 2/10 under the tick at 0.2; 1 at x=816 (26 px right of the tick at 1.0); the mixed number 1 3/10 at x=1039 (45 px right of the tick at 1.3); 2 at x=1450 (20 px left of the tick at 2.0). Lower label row (INK, 34 px, centre y=690): 1/100 centred at x=65; 20/100 centred at x=246; 99/100 centred at x=783; 130/100 centred at x=994. Thin INK 2 px leader lines: from the hundredth tick at 0.01 (x=116.8, y=410) curving down and to the left, clear of the label 0, to the top of 1/100 at (65, 645); a straight vertical line at x=246 from y=537 to y=643 joining 2/10 to 20/100; a straight vertical line at x=783.2 from the hundredth tick at 0.99 (y=410) to the top of 99/100 at y=645; a straight vertical line at x=994 from the tenth tick at 1.3 (y=450) to the top of 130/100 at y=645. Five empty squares (INK 2 px outline, no fill, 96 px by 96 px, y=640 to y=736) centred at x=484, 1164, 1293, 1484 and 1742, each joined by a gentle INK 2 px leader to the top of its square from the scale: box 1 from the hundredth tick at 0.55 (x=484, y=410), box 2 from the tick at 1.55 (x=1164, y=410), box 3 from the tick at 1.74 (x=1293.2, y=410), box 4 from the tick at 2.02 (x=1483.6, y=410), box 5 from the tenth tick at 2.4 (x=1742, y=450).",
+    "visible_text": [
+     "0",
+     "1/10",
+     "2/10",
+     "1",
+     "1 3/10",
+     "2",
+     "1/100",
+     "20/100",
+     "99/100",
+     "130/100"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "anything inside the five boxes",
+     "55/100, 155/100, 174/100, 202/100, 240/100 anywhere"
+    ],
+    "accuracy_checks": [
+     "mark positions: 0.01 -> x=116.8, 0.2 -> 246, 0.55 -> 484, 0.99 -> 783.2, 1.3 -> 994, 1.55 -> 1164, 1.74 -> 1293.2, 2.02 -> 1483.6, 2.40 -> 1742",
+     "26 tenth ticks from 0 to 2.5 and 9 hundredth ticks between neighbouring tenth ticks (251 ticks in all)",
+     "box 5 sits on the tenth tick at 2.4 and box 1 is the fifth hundredth tick after 0.5",
+     "the label 20/100 hangs from the same mark as 2/10 and the label 130/100 from the same mark as 1 3/10"
+    ],
+    "alt_text": "A scale from 0 to 2.5 with a tick for every hundredth, ten marks labelled 0, 1/100, 1/10, 2/10, 20/100, 99/100, 1, 1 3/10, 130/100 and 2, and five empty boxes joined to five more marks.",
+    "render_note": "The labels printed in the book figure are drawn as printed (page 9). The LP question text asks for all ten marks as fractions, so four of its answers (1/100, 20/100, 99/100, 130/100) are visible on the figure as in the book.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C25",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Hundredths: marks on a long wire",
+   "ncert_ref": "Section 3 - 3.wire_boxes",
+   "question_text": "Marks on a wire, measured from 0, are 1 part, 2 tenths, 20 parts, 55 parts, 99 parts, 130 parts, 155 parts, 174 parts, 202 parts and 240 parts from 0, where each part is one hundredth. Write each length as a fraction of a unit.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The task fills the five boxes on the scale and the printed answer (page 39) is the same scale with the boxes filled, so the answer is a picture; the LP steps give the same five values (55, 155, 174, 202, 240 parts over 100).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S7.T7.C25.IMG2",
+   "manim_scene": "c7_3_3_3_wire_boxes_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S7.T7.C25.IMG2}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "same_as": "M1.S7.T7.C25.IMG1",
+     "box_fill": [
+      {
+       "n": 1,
+       "box_x_centre_px": 484,
+       "text": "55/100"
+      },
+      {
+       "n": 2,
+       "box_x_centre_px": 1164,
+       "text": "155/100"
+      },
+      {
+       "n": 3,
+       "box_x_centre_px": 1293,
+       "text": "174/100"
+      },
+      {
+       "n": 4,
+       "box_x_centre_px": 1484,
+       "text": "202/100"
+      },
+      {
+       "n": 5,
+       "box_x_centre_px": 1742,
+       "text": "240/100"
+      }
+     ],
+     "fill_colour": "ANSWER"
+    },
+    "manim_description": "Same canvas and same drawing as the question figure, kept exactly where it is: the scale, all ticks, the six upper labels, the four lower labels, the leader lines and the five squares at the same positions. The only addition, in ANSWER green (34 px, centred in each square as a stacked fraction): 55/100 in the square centred at x=484, 155/100 in the square at x=1164, 174/100 in the square at x=1293, 202/100 in the square at x=1484 and 240/100 in the square at x=1742. The square outlines stay INK.",
+    "visible_text": [
+     "0",
+     "1/10",
+     "2/10",
+     "1",
+     "1 3/10",
+     "2",
+     "1/100",
+     "20/100",
+     "99/100",
+     "130/100",
+     "55/100",
+     "155/100",
+     "174/100",
+     "202/100",
+     "240/100"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any text sentence"
+    ],
+    "accuracy_checks": [
+     "box values equal 100 x mark value: 0.55 -> 55/100, 1.55 -> 155/100, 1.74 -> 174/100, 2.02 -> 202/100, 2.40 -> 240/100",
+     "given labels and positions are unchanged from the question figure",
+     "the five filled values agree with the LP answer list"
+    ],
+    "alt_text": "The same scale with the five boxes filled in: 55/100, 155/100, 174/100, 202/100 and 240/100.",
+    "derived_from": "M1.S7.T7.C25.IMG1"
+   }
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C26",
+   "role": "question",
+   "block_index": 0,
+   "lp_book_number": "Hundredths: four rulers to read",
+   "ncert_ref": "Section 3 - 3.read_lengths",
+   "question_text": "Four rulers show lengths in hundredths: one reaches 37 parts after the 5 mark, another 3 parts after the 15 mark, another 52 parts after the 7 mark and the last 80 parts after the 9 mark. Write each measurement and read it in words.",
+   "decision": "required",
+   "reason_codes": [
+    "MEASUREMENT_READING",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book question (pages 9 and 10) is 'for the lengths shown below write the measurements': four wires against rulers with hundredth ticks. The LP text only transcribes them ('37 parts after the 5 mark'); reading the hundredth ticks is the skill, so the four rulers are drawn with no length written.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S7.T7.C26.IMG1",
+   "manim_scene": "c7_3_3_3_four_rulers_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S7.T7.C26.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "measurement_scale",
+    "aspect_ratio": "16:9",
+    "content": {
+     "type": "measurement_scale",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "x_left_px": 100,
+     "x_right_px": 1820,
+     "tenth_px": 143.33,
+     "hundredth_px": 14.33,
+     "tick_rule": "tenth 50 px, fifth hundredth 34 px, other hundredths 22 px",
+     "rows": [
+      {
+       "row": 1,
+       "row_top_y_px": 30,
+       "labels_left_to_right": [
+        "4 9/10",
+        "5",
+        "5 1/10",
+        "5 2/10",
+        "5 3/10",
+        "5 4/10",
+        "5 5/10",
+        "5 6/10",
+        "5 7/10",
+        "5 8/10",
+        "5 9/10",
+        "6",
+        "6 1/10"
+       ],
+       "left_end_value": 4.9,
+       "right_end_value": 6.1,
+       "bar_from_x_px": 100,
+       "bar_end_value": 5.37,
+       "bar_end_x_px": 773.7
+      },
+      {
+       "row": 2,
+       "row_top_y_px": 290,
+       "labels_left_to_right": [
+        "14 4/10",
+        "14 5/10",
+        "14 6/10",
+        "14 7/10",
+        "14 8/10",
+        "14 9/10",
+        "15",
+        "15 1/10",
+        "15 2/10",
+        "15 3/10",
+        "15 4/10",
+        "15 5/10",
+        "15 6/10"
+       ],
+       "left_end_value": 14.4,
+       "right_end_value": 15.6,
+       "bar_from_x_px": 100,
+       "bar_end_value": 15.03,
+       "bar_end_x_px": 1003.0
+      },
+      {
+       "row": 3,
+       "row_top_y_px": 550,
+       "labels_left_to_right": [
+        "6 7/10",
+        "6 8/10",
+        "6 9/10",
+        "7",
+        "7 1/10",
+        "7 2/10",
+        "7 3/10",
+        "7 4/10",
+        "7 5/10",
+        "7 6/10",
+        "7 7/10",
+        "7 8/10",
+        "7 9/10"
+       ],
+       "left_end_value": 6.7,
+       "right_end_value": 7.9,
+       "bar_from_x_px": 100,
+       "bar_end_value": 7.52,
+       "bar_end_x_px": 1275.3
+      },
+      {
+       "row": 4,
+       "row_top_y_px": 810,
+       "labels_left_to_right": [
+        "8 9/10",
+        "9",
+        "9 1/10",
+        "9 2/10",
+        "9 3/10",
+        "9 4/10",
+        "9 5/10",
+        "9 6/10",
+        "9 7/10",
+        "9 8/10",
+        "9 9/10",
+        "10",
+        "10 1/10"
+       ],
+       "left_end_value": 8.9,
+       "right_end_value": 10.1,
+       "bar_from_x_px": 100,
+       "bar_end_value": 9.8,
+       "bar_end_x_px": 1390.0
+      }
+     ],
+     "bar": "INK, 24 px high, from the left edge to the end line",
+     "end_line": "FOCUS vertical line at the end x",
+     "no_length_written": true
+    },
+    "manim_description": "Canvas 1920x1080, white BG. Four rows from top to bottom, row tops at y=30, 290, 550 and 810. In every row a ruler strip (CELL_FILL, INK 2 px outline) spans x=100 to x=1820 and y=top+54 to y=top+204; it holds 12 tenth intervals of 143.33 px, and each tenth interval is cut into 10 hundredth parts of 14.33 px. Ticks hang down from the strip's top edge in INK at every hundredth: the 13 tenth ticks (at x=100, 243.3 and so on every 143.33 px up to x=1820) are 50 px long, the tick in the middle of each tenth (the fifth hundredth tick) is 34 px long, the other hundredth ticks are 22 px long. Under each tenth tick, centred at y=top+159, an INK label of 34 px height: whole numbers in bold, tenths written as a mixed number with a stacked fraction over 10. Row 1 (top y=30): labels from left to right 4 9/10, 5, 5 1/10, 5 2/10, 5 3/10, 5 4/10, 5 5/10, 5 6/10, 5 7/10, 5 8/10, 5 9/10, 6, 6 1/10; the bar ends at x=773.7. Row 2 (top y=290): labels from left to right 14 4/10, 14 5/10, 14 6/10, 14 7/10, 14 8/10, 14 9/10, 15, 15 1/10, 15 2/10, 15 3/10, 15 4/10, 15 5/10, 15 6/10; the bar ends at x=1003.0. Row 3 (top y=550): labels from left to right 6 7/10, 6 8/10, 6 9/10, 7, 7 1/10, 7 2/10, 7 3/10, 7 4/10, 7 5/10, 7 6/10, 7 7/10, 7 8/10, 7 9/10; the bar ends at x=1275.3. Row 4 (top y=810): labels from left to right 8 9/10, 9, 9 1/10, 9 2/10, 9 3/10, 9 4/10, 9 5/10, 9 6/10, 9 7/10, 9 8/10, 9 9/10, 10, 10 1/10; the bar ends at x=1390.0. In every row a wire is drawn as a bar (INK fill, 24 px high, y=top+10 to y=top+34) from x=100 (the left edge of the strip) to the end x given for the row, and a FOCUS vertical line (3 px) at the end x runs from y=top+4 down to the strip's top edge at y=top+54. No length is written anywhere.",
+    "visible_text": [
+     "4 9/10",
+     "5",
+     "5 1/10",
+     "5 2/10",
+     "5 3/10",
+     "5 4/10",
+     "5 5/10",
+     "5 6/10",
+     "5 7/10",
+     "5 8/10",
+     "5 9/10",
+     "6",
+     "6 1/10",
+     "14 4/10",
+     "14 5/10",
+     "14 6/10",
+     "14 7/10",
+     "14 8/10",
+     "14 9/10",
+     "15",
+     "15 1/10",
+     "15 2/10",
+     "15 3/10",
+     "15 4/10",
+     "15 5/10",
+     "15 6/10",
+     "6 7/10",
+     "6 8/10",
+     "6 9/10",
+     "7",
+     "7 1/10",
+     "7 2/10",
+     "7 3/10",
+     "7 4/10",
+     "7 5/10",
+     "7 6/10",
+     "7 7/10",
+     "7 8/10",
+     "7 9/10",
+     "8 9/10",
+     "9",
+     "9 1/10",
+     "9 2/10",
+     "9 3/10",
+     "9 4/10",
+     "9 5/10",
+     "9 6/10",
+     "9 7/10",
+     "9 8/10",
+     "9 9/10",
+     "10",
+     "10 1/10"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any length written as a number or fraction under or beside a bar (5 37/100, 15 3/100, 7 52/100, 9 80/100)",
+     "words reading the measures"
+    ],
+    "accuracy_checks": [
+     "row 1 end 5.37: 3 tenths and 7 hundredths after 5, x = 100 + 143.33*4.7 = 773.7",
+     "row 2 end 15.03: 3 hundredths after 15, x = 100 + 143.33*6.3 = 1003.0",
+     "row 3 end 7.52: 5 tenths and 2 hundredths after 7, x = 100 + 143.33*8.2 = 1275.3",
+     "row 4 end 9.80: exactly on the 9 8/10 tick, x = 100 + 143.33*9 = 1390.0",
+     "13 labelled tenth ticks per row, 9 hundredth ticks between neighbouring tenth ticks"
+    ],
+    "alt_text": "Four rulers marked in tenths and hundredths, each with a dark bar running from the left edge of the ruler to a dashed marker on the scale.",
+    "render_note": "In the book (page 10) the first label of the fourth ruler is printed '4 9/10' although the next label is 9; it is a misprint for 8 9/10 and 8 9/10 is drawn.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C26",
+   "role": "solution",
+   "block_index": 0,
+   "lp_book_number": "Hundredths: four rulers to read",
+   "ncert_ref": "Section 3 - 3.read_lengths",
+   "question_text": "Four rulers show lengths in hundredths: one reaches 37 parts after the 5 mark, another 3 parts after the 15 mark, another 52 parts after the 7 mark and the last 80 parts after the 9 mark. Write each measurement and read it in words.",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM"
+   ],
+   "reason": "The answer is four written measurements; a solution figure would only repeat the four rulers with the readings written under the bars (the book's printed answer, pages 39 and 40, is the same rulers with text answers). Same kind of answer as C8: both solutions stay text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}
