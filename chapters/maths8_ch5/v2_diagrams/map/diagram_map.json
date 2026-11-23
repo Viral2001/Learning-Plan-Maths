@@ -1,0 +1,3924 @@
+{
+ "meta": {
+  "chapter": "Number Play",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 5",
+  "lp_plan_id": "cbse_eng_maths8_ch5_v36",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "none": 18,
+    "optional": 2,
+    "required": 1
+   },
+   "question": {
+    "none": 50,
+    "required": 2
+   },
+   "solution": {
+    "none": 49,
+    "required": 2,
+    "optional": 1
+   }
+  },
+  "notes": [
+   "[chunk A] Chunk A = topics M1.S2.T2 to M1.S11.T11 (book pp.1-10 and the Figure it Out items Q1-Q3, Q9 with printed answers on pp.25-26, 32, 34).",
+   "[chunk A] One required diagram: the question figure of M1.S8.T8.C25 (the book's dot picture of 4p + (4q + 2)). Everything else is text/LaTeX; the book's other dot pictures are teaching figures already in the plan as teaching images, never linked.",
+   "[chunk A] The pdf does hold printed answers (pp.25-37); the figure-bearing answer pages for this chunk (25, 26, 32, 34) were looked at and carry no figure.",
+   "[chunk B] Chunk B: topics M1.S12.T12 to M2.S17.T17 (32 items: 14 pairs and 4 worked examples).",
+   "[chunk B] Three diagrams: the four Venn options of Q16 (question), the Venn answer (iv) with example numbers (solution), the dot-row picture for 'show visually' in Q7 (solution only, the question has no given figure).",
+   "[chunk B] All worked examples (C47, C48, C68, C69) are none: text arithmetic; their kept teaching images are never linked.",
+   "[chunk B] LP numbering differs from the book's (LP 'Q1-Q4' = book Q11, Q12, Q14, Q16 of the end-of-chapter Figure it Out; LP T15 mixes book FiO1 Q5-Q8 and end-of-chapter Q2, Q7, Q13).",
+   "[chunk C] Chunk C = topics M2.S18.T18 to M2.S25.T25 (book 5.2 from 'A Shortcut for Divisibility by 9' to 'More on Divisibility Shortcuts'; pdf pages 13-19, 21-22, 29).",
+   "[chunk C] One diagram only: the completed divisibility table of the C106 worked example (book printed answer, 128 row corrected to Yes under 4).",
+   "[chunk C] Two optional (not added): the tile pictures of C79 (427 and 7309) and the excess/shortfall pictures of C95 (320185).",
+   "[chunk C] All other items are arithmetic or word reasoning with no given figure: none.",
+   "[chunk D] Chunk D: topics M2.S26.T26, M2.S27.T27, M2.S28.T28, M2.S29.T29, M3.S31.T31, M3.S32.T32, M3.S33.T33 (33 items: 15 question, 15 solution, 3 worked example).",
+   "[chunk D] No item of this chunk needs a diagram: the book prints no figure with any question or answer of these topics except the column-addition layout of the four addition cryptarithms (typeset arithmetic, so LaTeX by the v3 rule) and decorative art.",
+   "[chunk D] Navakankari worked example M3.S33.T33.C152 is optional (a three-point line with the blocking pawn would help) but is not added.",
+   "[chunk D] The book's printed answers for the cryptarithms give one solution where the LP gives all of them (ON + ON + ON = PO, L2N x 2 = 2NP, PP x QQ = PRP); the LP is mathematically right and wins.",
+   "[chunk D] Venn figures of Figure it Out Q16 (P23-venn-*, P37-venn-*) belong to the chunk that holds FiO4.q16 (M1.S12.T12.C44), not to this chunk, and are not claimed here."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "NEW-P11-pebble-pot",
+   "source": "chapter p.11 (book p.122)",
+   "description": "Figure it Out Q5 (pebbles riddle): a cartoon pot character with a few loose pebbles beside it, at the right of the verse. Pure illustration; every condition of the riddle is in the verse, no number or count is read from the picture.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P01-boxed_expressions-1",
+   "source": "chapter p.1",
+   "description": "Yellow box of six sums: 7 = 3 + 4, 10 = 1 + 2 + 3 + 4, 12 = 3 + 4 + 5, 15 = 7 + 8 = 4 + 5 + 6 = 1 + 2 + 3 + 4 + 5. Teaching figure; checked against the page picture, base description correct.",
+   "mapped_to": "concept_image:M1.S2.T2.C2.IMG1"
+  },
+  {
+   "fig_id": "P01-boxed_expressions-2",
+   "source": "chapter p.1",
+   "description": "Pink box with the first two of the eight sign patterns, 3 + 4 - 5 + 6 and 3 - 4 - 5 - 6 (a format example in the Math Talk question). Not needed to attempt 'list all eight'; base description correct.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P02-boxed_expressions-2",
+   "source": "chapter p.2",
+   "description": "Three dashed boxes: 3 + 4 - 5 + 6 = 8 / 3 - 4 - 5 - 6 = -12; 5 + 6 - 7 + 8 = 12 / 5 - 6 - 7 - 8 = -16; one blank template. Values re-added (8, -12, 12, -16 are right); base description correct.",
+   "mapped_to": "concept_image:M1.S1.T1.C1.IMG1"
+  },
+  {
+   "fig_id": "P02-tree_diagram-1",
+   "source": "chapter p.2",
+   "description": "Binary tree of + / - choices for 3, 4, 5, 6 with eight leaves, only the top two completed in red (3 + 4 + 5 + 6, 3 + 4 + 5 - 6). Edge labels re-checked on the page picture: upper edge +, lower edge - everywhere; base description correct.",
+   "mapped_to": "concept_image:M1.S2.T2.C3.IMG1"
+  },
+  {
+   "fig_id": "P04-expression_cards-2",
+   "source": "chapter p.4",
+   "description": "Eight plain cards 43 + 37, 672 - 348, 4 x 347 x 3, 708 - 477, 809 + 214, 119 x 303, 543 - 479, 513^3 in two rows of four (item M1.S6.T6.C18); nothing but the expressions, the LP question lists all eight.",
+   "mapped_to": "none:NUMBER_LIST_IN_BOXES"
+  },
+  {
+   "fig_id": "P04-expression_cards-3",
+   "source": "chapter p.4",
+   "description": "Nine plain cards 2a + 2b, 3g + 5h, 4m + 2n, 2u - 4v / 13k - 5k, 6m - 3n, x^2 + 2, b^2 + 1, 4k x 3j (item M1.S6.T6.C20, which leaves x^2 + 2 to the worked example); expressions in boxes only.",
+   "mapped_to": "none:NUMBER_LIST_IN_BOXES"
+  },
+  {
+   "fig_id": "P04-tree_diagram-1",
+   "source": "chapter p.4",
+   "description": "The same tree with letters a, b, c, d (Explanation 3, token model): 1 a, 2 b, 4 c, 8 d. Teaching figure, no concept image shows the lettered version; the plan's tree image M1.S2.T2.C3.IMG1 is the numeric version of the same shape.",
+   "mapped_to": "concept_image:M1.S2.T2.C3.IMG1"
+  },
+  {
+   "fig_id": "P05-dot_array-1",
+   "source": "chapter p.5",
+   "description": "Rectangle of blue dots, 4 per row, top row, ellipsis, bottom row: multiples of 4 leave remainder 0. Teaching figure; ellipsis dot count is not significant.",
+   "mapped_to": "concept_image:M1.S7.T7.C22.IMG1"
+  },
+  {
+   "fig_id": "P05-dot_array-2",
+   "source": "chapter p.5",
+   "description": "L-shaped array of blue dots, 4 per row, last row of 2 at the bottom left: even numbers that are not multiples of 4 leave remainder 2. Teaching figure.",
+   "mapped_to": "concept_image:M1.S7.T7.C22.IMG1"
+  },
+  {
+   "fig_id": "P06-dot_array-2",
+   "source": "chapter p.6",
+   "description": "Row 1 visualisation: blue p-row block + yellow q-row block, all rows of 4, = stack of (p + q) rows. Teaching figure, no concept image shows it; the algebra is in the worked example M1.S7.T7.C23 text (12 + 16 = 4 x (3 + 4)). Rotated label reads '(p + q) rows'.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P06-dot_array-3",
+   "source": "chapter p.6",
+   "description": "Row 2 visualisation: two L-shaped blocks (rows of 4 plus a row of 2) whose rows of 2 join into one mixed row, '1 row', total (p + q + 1) rows. Teaching figure; checked against the page picture, base description correct.",
+   "mapped_to": "concept_image:M1.S7.T7.C23.IMG1"
+  },
+  {
+   "fig_id": "P06-table-1",
+   "source": "chapter p.6",
+   "description": "Explanation / algebra / visualisation / examples table, rows 1 and 2 (4p + 4q = 4(p + q); (4p + 2) + (4q + 2) = 4(p + q + 1)); its words and algebra are text.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P07-dot_array-2",
+   "source": "chapter p.7",
+   "description": "Given picture of the task: blue rectangle (p rows of 4) + yellow L-block (q rows of 4 and 2 over) = stack, long arrow '(p + q) rows with a remainder 2'. Checked on a zoom of the page: blue rectangle top row 4, ellipsis, bottom row 4; yellow L: row 4, ellipsis, row 4, row of 2 flush left; q arrow spans the two rows of 4 only. Base description correct.",
+   "mapped_to": "item:M1.S8.T8.C25 (question)"
+  },
+  {
+   "fig_id": "P07-dot_array-4",
+   "source": "chapter p.7",
+   "description": "Blue block of a rows and yellow block of b rows, 8 dots per row, long arrow (a + b) rows. Teaching figure; same idea as the plan's teaching image of 16 + 56 = 72 in rows of 8.",
+   "mapped_to": "concept_image:M1.S10.T10.C29.IMG1"
+  },
+  {
+   "fig_id": "P07-table-1",
+   "source": "chapter p.7",
+   "description": "Third row of the table (4p and (4q + 2)): explanation and examples columns left blank for the learner, algebra and the picture given. The table frame and algebra are text; the picture is P07-dot_array-2.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P07-table-3",
+   "source": "chapter p.7",
+   "description": "Statement 1 table (8a and 8b, 8a + 8b = 8(a + b)); text and the picture P07-dot_array-4.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P08-dot_array-2",
+   "source": "chapter p.8",
+   "description": "8m as a + b rows of 8 and, beside it, the same rectangle cut by a staircase line into regions p and q (not along a row). Teaching figure, no concept image shows it; the numbers 72 = 48 + 24 and 72 = 50 + 22 are in the worked example M1.S10.T10.C29 text. Staircase shape unclear in print (as the base notes).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P08-dot_array-4",
+   "source": "chapter p.8",
+   "description": "Blocks of j rows of 7 dots, 'm times'. Teaching figure, no concept image shows it; the statement is argued in the worked example M1.S10.T10.C30 text (108 = 36 x 3).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P08-table-1",
+   "source": "chapter p.8",
+   "description": "Statement 2 table (8m = 8a + 8b, 8m = p + q); text and the picture P08-dot_array-2.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P08-table-3",
+   "source": "chapter p.8",
+   "description": "Statement 3 table (7j, (7j) x m); text and the picture P08-dot_array-4.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P09-dot_array-2",
+   "source": "chapter p.9",
+   "description": "A row of 12 dots drawn as 3 + ellipsis + 3, m rows. Teaching figure, no concept image shows it; the statement is argued in the worked example M1.S10.T10.C30 text (factors of 12 and 36).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P09-dot_array-4",
+   "source": "chapter p.9",
+   "description": "Rectangle of 7 dots per row, k rows (7k). Teaching figure; the plan's teaching image shows 42 = 7 x 6 in rows of 7.",
+   "mapped_to": "concept_image:M1.S10.T10.C30.IMG1"
+  },
+  {
+   "fig_id": "P09-dot_array-5",
+   "source": "chapter p.9",
+   "description": "Blocks of m rows of 7 dots, k rows in all (k = ym). Teaching figure; the plan's teaching image shows 42 in groups of 14 and 28.",
+   "mapped_to": "concept_image:M1.S10.T10.C30.IMG1"
+  },
+  {
+   "fig_id": "P09-table-1",
+   "source": "chapter p.9",
+   "description": "Statement 4 table (12m = 2 x 6 x m = 3 x 4 x m); text and the picture P09-dot_array-2.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P09-table-3",
+   "source": "chapter p.9",
+   "description": "Statement 5 table (7k, 7m, 7k / 7m = y; 42 not divisible by 28, divisible by 14); text and the pictures P09-dot_array-4 and -5.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P10-dot_array-1",
+   "source": "chapter p.10",
+   "description": "Teaching figure of the concept 'Writing numbers with a given remainder' (accounting only, the kept teaching image M1.S13.T13.C46.IMG1 covers the same idea: 5k + 3 as rows of 5 with 3 over / values 3, 8, 13, 18, 23): A horizontal double-headed arrow across the top with the number '5' in the middle (row width). Under it yellow (thin black outline) filled circles, 5 per row: top row of 5; a short column of three small black dots (ellipsis); a row of 5; and below it one more row of only 3 yellow dots, left-aligned under the first three columns. No box outline. At the right a vertical double-headed arrow labelled (rotated) 'k rows' that spans the top row to the last full row of 5 (it does not include the row of 3). So the picture shows k full rows of 5 plus 3 extra = 5k + 3.",
+   "mapped_to": "concept_image:M1.S13.T13.C46.IMG1"
+  },
+  {
+   "fig_id": "P10-table-2",
+   "source": "chapter p.10",
+   "description": "Teaching figure of the concept 'Writing numbers with a given remainder' (accounting only, the kept teaching image M1.S13.T13.C46.IMG1 covers the same idea: 5k + 3 as rows of 5 with 3 over / values 3, 8, 13, 18, 23): Two-row value table with a vertical rule after the row labels and a horizontal rule between the rows, no box. Row 1: 'k =' | 0, 1, 2, 3, 4. Row 2: '5k + 3 =' | 3, 8, 13, 18, 23. (5 value columns.)",
+   "mapped_to": "concept_image:M1.S13.T13.C46.IMG1"
+  },
+  {
+   "fig_id": "P11-table-1",
+   "source": "chapter p.11",
+   "description": "Teaching figure of the concept 'Writing numbers with a given remainder' (accounting only, the kept teaching image M1.S13.T13.C46.IMG1 covers the same idea: 5k + 3 as rows of 5 with 3 over / values 3, 8, 13, 18, 23): Two-row value table, vertical rule after the row labels, horizontal rule between rows, no box. Row 1: 'k =' | 1, 2, 3, 4, 5. Row 2: '5k – 2 =' | 3, 8, 13, 18, 23. (5 value columns; the text states k ≥ 1.)",
+   "mapped_to": "concept_image:M1.S13.T13.C46.IMG1"
+  },
+  {
+   "fig_id": "P13-tile_model-1",
+   "source": "chapter p.13",
+   "description": "Five unlabelled tile pairs beside the text on 99 and 109: two blue 99|1 pairs and three green 9|1 pairs (checked on the page picture). No number is attached to it and the text says everything about 99 and 109, so no item needs it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P13-tile_model-2",
+   "source": "chapter p.13",
+   "description": "427 as tile columns labelled 400, 20, 7: four 99|1 bars, two 9|1 bars, seven loose 1s (checked). Teaching figure; the same model is teaching image C74.IMG1. The pair C78/C79 solution is optional, so nothing is drawn from it.",
+   "mapped_to": "concept_image:M2.S18.T18.C74.IMG1"
+  },
+  {
+   "fig_id": "P13-tile_model-3",
+   "source": "chapter p.13",
+   "description": "The same tiles with dashed rings: the four 1s of the 99|1 bars give 4 (Remainder), the two 1s of the 9|1 bars and seven loose 1s give 9 (checked). Same idea as teaching image C77.IMG1 (427 split, 13 ones, remainder 4).",
+   "mapped_to": "concept_image:M2.S18.T18.C77.IMG1"
+  },
+  {
+   "fig_id": "P14-annotated_equation-3",
+   "source": "chapter p.14",
+   "description": "Four-line equation chain for 7309 with two underlined brackets and two caption arrows (checked). LaTeX with underbraces writes it; the LP steps of C79 already carry it.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P14-tile_model-1",
+   "source": "chapter p.14",
+   "description": "Tile pairs 9999|1, 999|1, 99|1, 9|1 for 'each place value is nines plus one' (checked). Teaching figure; same idea as C74.IMG1.",
+   "mapped_to": "concept_image:M2.S18.T18.C74.IMG1"
+  },
+  {
+   "fig_id": "P14-tile_model-2",
+   "source": "chapter p.14",
+   "description": "Two-panel picture for 7309: left 7 x 1000 / 3 x 100 / 9 x 1 as 7 purple 999|1, 3 blue 99|1, 9 ones; right 7 x 999, 3 x 99 plus loose 7, 3, 9 ones with braces 'multiple of 9' and 7 + 3 + 9 = 19 (checked). Same idea as teaching image C75.IMG1 (7309, digit sum 19, remainder 1).",
+   "mapped_to": "concept_image:M2.S18.T18.C75.IMG1"
+  },
+  {
+   "fig_id": "P16-table-1",
+   "source": "chapter p.16",
+   "description": "Place-value table: units 1 = 11 x 0 + 1 (one more), tens 10 = 11 x 1 - 1 (one less), hundreds 100 = 11 x 9 + 1, thousands 1000 = 11 x 91 - 1, with circle models (checked). Teaching figure; same idea as teaching image C94.IMG1 (462: one more, one less, one more).",
+   "mapped_to": "concept_image:M2.S21.T21.C94.IMG1"
+  },
+  {
+   "fig_id": "P17-dot_model-1",
+   "source": "chapter p.17",
+   "description": "Excess tree for 320185: digits 2, 1, 5 green; 2 x 10,000 (two 11 x 909 blocks), 1 x 100 (one 11 x 9 block), 5 x 1 (five circles); 'Total excess, 2 + 1 + 5 = 8' (checked). C95 worked example is optional, so nothing is drawn; teaching image C95.IMG1 covers it.",
+   "mapped_to": "concept_image:M2.S21.T21.C95.IMG1"
+  },
+  {
+   "fig_id": "P17-dot_model-2",
+   "source": "chapter p.17",
+   "description": "Shortfall tree for 320185: digits 3, 0, 8 red; printed labels 3 x 10,000 (three 11 x 9091 blocks), 0 x 100 (nothing), 8 x 10 (eight strips of 11); 'Total short, 3 + 0 + 8 = 11'. Print slip: the 9091 blocks stand for lakhs, so 3 x 10,000 should read 3 x 1,00,000, and 0 x 100 should read 0 x 1000 (digit 0 of 320185 is in the thousands place). Not drawn (C95 optional).",
+   "mapped_to": "concept_image:M2.S21.T21.C95.IMG1"
+  },
+  {
+   "fig_id": "P17-dot_model-3",
+   "source": "chapter p.17",
+   "description": "Eight green circles over eleven red circles with '8 - 11 = -3 (3 short of a multiple of 11)' (checked). Not drawn (C95 optional); teaching image C95.IMG1 covers it.",
+   "mapped_to": "concept_image:M2.S21.T21.C95.IMG1"
+  },
+  {
+   "fig_id": "P17-table-1",
+   "source": "chapter p.17",
+   "description": "Three-step table (Steps | Purpose | Example for 320185) holding the three pictures below (checked). Teaching figure; same content as teaching image C95.IMG1 (excess 8, shortfall 11, 8 - 11 = -3).",
+   "mapped_to": "concept_image:M2.S21.T21.C95.IMG1"
+  },
+  {
+   "fig_id": "P18-table-1",
+   "source": "chapter p.18",
+   "description": "Plain two-column procedure table for 328105: signs -3 + 2 - 8 + 1 - 0 + 5, = -3, '3 less than or 8 more than a multiple of 11' (checked). Teaching figure; same content as teaching image C96.IMG1.",
+   "mapped_to": "concept_image:M2.S21.T21.C96.IMG1"
+  },
+  {
+   "fig_id": "P18-table-2",
+   "source": "chapter p.18",
+   "description": "Divisibility table to complete: 10 numbers x divisors 2, 3, 4, 5, 6, 8, 9, 10, 11; only the 128 row is pre-filled, and it prints No under 4 (print slip: 128 = 4 x 32 is Yes, as the printed answer says). Becomes the layout of the single diagram of the C106 worked example, drawn with the corrected Yes.",
+   "mapped_to": "item:M2.S24.T24.C106 (question)"
+  },
+  {
+   "fig_id": "P19-illustration-1",
+   "source": "chapter p.19",
+   "description": "Digital Root Club cartoon beside the riddle (chapter p.19): number characters 10000000, 100, 10584, 37, 1000, 1 inside, 1001 and 110 outside the door. Checked on the page picture: it is page art; no question or answer uses its numbers (the riddle answer is 111111111). Note: 10584 has digital root 9, not 1, so the 'root #1' club picture is not even consistent.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P20-cryptarithm-1",
+   "source": "chapter p.20",
+   "description": "Column addition written right-aligned: first line 'A1'; second line '+ 1B' with a rule (underline) under it; result line 'B0'. Two addends, label '(i)' on the left. The four puzzles (i)-(iv) are printed side by side in one row; each letter stands for one digit, the first digit is never 0. Plain column-addition layout, black text, no colour.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P20-cryptarithm-2",
+   "source": "chapter p.20",
+   "description": "Column addition written right-aligned: first line 'AB'; second line '+ 37' with a rule under it; result line '6A'. Two addends, label '(ii)' on the left. The four puzzles (i)-(iv) are printed side by side in one row; each letter stands for one digit, the first digit is never 0. Plain column-addition layout, black text, no colour.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P20-cryptarithm-3",
+   "source": "chapter p.20",
+   "description": "Column addition written right-aligned: three lines, 'ON', 'ON', '+ ON' (the plus sign only on the third line), a rule under them, result line 'PO'. Three equal addends, label '(iii)' on the left. The four puzzles (i)-(iv) are printed side by side in one row; each letter stands for one digit, the first digit is never 0. Plain column-addition layout, black text, no colour.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P20-cryptarithm-4",
+   "source": "chapter p.20",
+   "description": "Column addition written right-aligned: three lines, 'QR', 'QR', '+ QR' (plus sign only on the third line), a rule under them, result line 'PRR' (3 letters, one more place than the addends). Three equal addends, label '(iv)' on the left. The four puzzles (i)-(iv) are printed side by side in one row; each letter stands for one digit, the first digit is never 0. Plain column-addition layout, black text, no colour.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P23-venn_diagram-1",
+   "source": "chapter p.23",
+   "description": "Option (i): three overlapping ellipses in a horizontal chain, left to right: a sky-blue ellipse, a yellow ellipse and a green ellipse. The blue and yellow ellipses overlap (overlap lens shown light green); the yellow and green ellipses overlap (overlap lens shown darker green); the blue and green ellipses do NOT overlap each other. Labels under the diagram with dashed arrows: 'Multiples of 4' points to the blue ellipse (left), 'Multiples of 8' points (arrow starting inside the yellow ellipse, near its top centre, going straight down) to the yellow ellipse (centre), 'Multiples of 32' points to the green ellipse (right). Label '(i)' at the top left.",
+   "mapped_to": "item:M1.S12.T12.C44 (question)"
+  },
+  {
+   "fig_id": "P23-venn_diagram-2",
+   "source": "chapter p.23",
+   "description": "Option (ii): two overlapping ellipses of similar size: a sky-blue ellipse on the left and a yellow ellipse on the right, with a light-green lens where they overlap. Three labels with dashed arrows: 'Multiples of 4' points to the blue ellipse (arrow from its bottom-left), 'Multiples of 32' points to the yellow ellipse (arrow from its bottom-right), and 'Multiples of 8' is the middle label whose dashed arrow starts INSIDE the overlap lens and goes straight down, so the overlap region is labelled multiples of 8. Label '(ii)' at the top left.",
+   "mapped_to": "item:M1.S12.T12.C44 (question)"
+  },
+  {
+   "fig_id": "P23-venn_diagram-3",
+   "source": "chapter p.23",
+   "description": "Option (iii): three nested shapes, each lying inside the next: a large light-green circle (outermost), inside it a yellow-green ellipse (middle), inside that a small teal-green circle (innermost); the shapes are not concentric - each inner shape sits slightly right of and a little below the centre of the next outer one. Labels with dashed arrows: 'Multiples of 32' (left) points to the OUTERMOST circle, 'Multiples of 8' (middle, arrow from the bottom of the yellow-green ellipse) points to the MIDDLE ellipse, 'Multiples of 4' (right, arrow from the innermost circle going down-right) points to the INNERMOST circle. So it shows 4 inside 8 inside 32. Label '(iii)' at the top left.",
+   "mapped_to": "item:M1.S12.T12.C44 (question)"
+  },
+  {
+   "fig_id": "P23-venn_diagram-4",
+   "source": "chapter p.23",
+   "description": "Option (iv): three nested shapes: a large sky-blue circle (outermost), inside it a light-green ellipse (middle), inside that a small green circle (innermost); not concentric - each inner shape sits slightly right of and a little below the centre of the next outer one. Labels with dashed arrows: 'Multiples of 4' (left) points to the OUTERMOST blue circle, 'Multiples of 8' (middle, arrow from the bottom of the light-green ellipse) points to the MIDDLE ellipse, 'Multiples of 32' (right, arrow from the innermost circle going down-right) points to the INNERMOST circle. So it shows 32 inside 8 inside 4. Label '(iv)' at the top left.",
+   "mapped_to": "item:M1.S12.T12.C44 (question)"
+  },
+  {
+   "fig_id": "P24-board-1",
+   "source": "chapter p.24",
+   "description": "Navakankari board with 9 brown and 9 yellow pawns beside it (chapter p.24), three nested squares with 24 points. Checked on the page picture: the base description is right. It is the board and goal image already in the plan as the teaching image of the Navakankari concept (accounting only, nothing is linked).",
+   "mapped_to": "concept_image:M3.S33.T33.C152.IMG1"
+  },
+  {
+   "fig_id": "P29-table-1",
+   "source": "solutions p.[29]",
+   "description": "Printed answer: the completed 10 x 9 Yes/No table (checked against the mathematics: all 90 cells correct). Becomes the content of the single diagram of the C106 worked example.",
+   "mapped_to": "item:M2.S24.T24.C106 (question)"
+  },
+  {
+   "fig_id": "P30-illustration-2",
+   "source": "chapter p.30",
+   "description": "Reprint, smaller, of the 'Digital Root Club' cartoon of P19-illustration-1, to the right of the riddle text and answer: golden club front with '#1' badge and 'DIGITAL ROOT CLUB' sign, number characters inside (10000000, 100, 10584, 37, 1000, a purple 1) and '1001', '110' and three tiny black figures at the 'MEMBERS ONLY!' door. No new content.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P30-table-1",
+   "source": "chapter p.30",
+   "description": "Two columns of worked lines separated by a long vertical rule, no fill colour. Left column (5 lines): '10 -> 1 + 0 = 1', '21 -> 2 + 1 = 3', '32 -> 3 + 2 = 5', '43 -> 4 + 3 = 7', '54 -> 5 + 4 = 9'. Right column (6 lines): '65 -> 2', '76 -> 4', '87 -> 6', '98 -> 8', '109 -> 1', '120 -> 3', followed by three vertically stacked dots. Starting number 10, adding 11 each time. The vertical rule continues below the last left-hand line.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P31-cryptarithm-1",
+   "source": "chapter p.31",
+   "description": "Reprint of P20-cryptarithm-1 in the same layout. Column addition written right-aligned: first line 'A1'; second line '+ 1B' with a rule (underline) under it; result line 'B0'. Two addends, label '(i)' on the left. The letters are NOT replaced by digits in the picture; the solution values are given only in the lines below.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P31-cryptarithm-2",
+   "source": "chapter p.31",
+   "description": "Reprint of P20-cryptarithm-2 in the same layout. Column addition written right-aligned: first line 'AB'; second line '+ 37' with a rule under it; result line '6A'. Two addends, label '(ii)' on the left. The letters are NOT replaced by digits in the picture; the solution values are given only in the lines below.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P31-cryptarithm-3",
+   "source": "chapter p.31",
+   "description": "Reprint of P20-cryptarithm-3 in the same layout. Column addition written right-aligned: three lines, 'ON', 'ON', '+ ON' (the plus sign only on the third line), a rule under them, result line 'PO'. Three equal addends, label '(iii)' on the left. The letters are NOT replaced by digits in the picture; the solution values are given only in the lines below.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P31-cryptarithm-4",
+   "source": "chapter p.31",
+   "description": "Reprint of P20-cryptarithm-4 in the same layout. Column addition written right-aligned: three lines, 'QR', 'QR', '+ QR' (plus sign only on the third line), a rule under them, result line 'PRR' (3 letters, one more place than the addends). Three equal addends, label '(iv)' on the left. The letters are NOT replaced by digits in the picture; the solution values are given only in the lines below.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P37-venn-1",
+   "source": "chapter p.37",
+   "description": "Reprint of option (i) of Q16 on the printed solutions page (pdf page 37, printed answer '(iv)'); the same drawing as the question figure's panel, so no separate diagram: Option (i) of Q16, printed top-left, small label '(i)' to its left. Three plain ellipses in a horizontal chain, each wider than tall, all at the same height: LEFT ellipse light blue (labelled Multiples of 4); MIDDLE ellipse light yellow (labelled Multiples of 8); RIGHT ellipse light green (labelled Multiples of 32). The left and middle ellipses overlap in a lens (light green-yellow, the colours blended); the middle and right ellipses overlap in a second lens (a darker green). The left and right ellipses do NOT touch or overlap each other (a gap between them), so no region is common to all three. All outlines thin grey. Labels, left to right under the figure: 'Multiples of 4' with a dashed arrow starting at the lower-left edge of the blue ellipse and pointing down-left; 'Multiples of 8' with a dashed arrow starting INSIDE the yellow ellipse at its centre (just right of the left lens) and pointing straight down; 'Multiples of 32' with a dashed arrow starting at the lower-right edge of the green ellipse and pointing down-right. Each label is two lines of text ('Multiples' above 'of N') at the lower end of a black dashed arrow with a filled arrowhead. Meaning of the drawing: 4 and 8 share elements, 8 and 32 share elements, 4 and 32 share none (not the correct answer).",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P37-venn-2",
+   "source": "chapter p.37",
+   "description": "Reprint of option (ii) of Q16 on the printed solutions page (pdf page 37, printed answer '(iv)'); the same drawing as the question figure's panel, so no separate diagram: Option (ii) of Q16, printed top-right (right of option (i)), small label '(ii)' to its upper left. TWO plain ellipses only (no third set drawn), side by side, same height: LEFT ellipse light blue (Multiples of 4), RIGHT ellipse light yellow; they overlap in a lens (light green). Thin grey outlines. Three labels sit under the figure, left to right, each with a dashed arrow: 'Multiples of 4' arrow starts at the lower-left edge of the blue ellipse and points down-left; 'Multiples of 8' arrow starts INSIDE the overlap lens (at the lens centre) and points straight down; 'Multiples of 32' arrow starts at the lower-right edge of the yellow ellipse and points down-right. Each label is two lines of text ('Multiples' above 'of N') at the lower end of a black dashed arrow with a filled arrowhead. The three labels are crowded close together (their texts nearly touch). Meaning of the drawing: only two circles for three sets, so it cannot show 4, 8 and 32 separately (not the correct answer).",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P37-venn-3",
+   "source": "chapter p.37",
+   "description": "Reprint of option (iii) of Q16 on the printed solutions page (pdf page 37, printed answer '(iv)'); the same drawing as the question figure's panel, so no separate diagram: Option (iii) of Q16, printed in the second row, left, small label '(iii)' to its upper left. THREE nested filled shapes (each wholly inside the next, no part sticking out): OUTER large circle pale green; MIDDLE ellipse/circle yellow (smaller, inside the outer one, sitting slightly right of and below the outer centre, its bottom edge close to but inside the outer circle's bottom); INNER small circle teal-green (inside the yellow one, again slightly right and below its centre). Thin grey/dark outlines. Labels under the figure, left to right: 'Multiples of 32' with a dashed arrow from the lower-left rim of the outer pale-green ring, pointing down-left (so OUTER = multiples of 32); 'Multiples of 8' with a dashed arrow from the bottom edge of the yellow ellipse pointing straight down (MIDDLE = multiples of 8); 'Multiples of 4' with a dashed arrow starting INSIDE the innermost teal circle at its lower right, running down-right across the yellow and green areas (INNER = multiples of 4). Each label is two lines of text ('Multiples' above 'of N') at the lower end of a black dashed arrow with a filled arrowhead. Meaning: multiples of 4 inside multiples of 8 inside multiples of 32, i.e. the wrong nesting order (not the correct answer).",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P37-venn-4",
+   "source": "chapter p.37",
+   "description": "Option (iv) of Q16 reprinted on the printed solutions page under 'Ans. (iv)': the printed answer picture; it becomes the solution diagram (panel (iv) alone). Option (iv) of Q16, printed in the second row, right, small label '(iv)' to its upper left. Same layout as option (iii): THREE nested filled shapes, each wholly inside the next: OUTER large circle light blue; MIDDLE ellipse light yellow-green (inside the outer one, slightly right of and below its centre); INNER small circle medium green (inside the middle one, slightly right of and below its centre). Thin grey/dark outlines. Labels under the figure, left to right: 'Multiples of 4' with a dashed arrow from the lower-left rim of the outer blue ring pointing down-left (OUTER = multiples of 4); 'Multiples of 8' with a dashed arrow from the bottom edge of the middle ellipse pointing straight down (MIDDLE = multiples of 8); 'Multiples of 32' with a dashed arrow starting INSIDE the innermost green circle at its lower right, running down-right (INNER = multiples of 32). Each label is two lines of text ('Multiples' above 'of N') at the lower end of a black dashed arrow with a filled arrowhead. Meaning: multiples of 32 inside multiples of 8 inside multiples of 4 - the correct relationship; the book's printed answer is (iv).",
+   "mapped_to": "item:M1.S12.T12.C45 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 63,
+  "mapped_to_items": 8,
+  "mapped_to_concept_images": 24,
+  "mapped_none": 31,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S12.T12.C44.IMG1",
+   "M1.S12.T12.C45.IMG1",
+   "M1.S15.T15.C59.IMG1",
+   "M1.S8.T8.C25.IMG1",
+   "M2.S24.T24.C106.IMG2"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S2.T2.C2",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Sum of Consecutive Numbers (book p.1; refs 5.1.anshu, 5.1.anshu_questions)",
+   "question_text": "Find every way to write 15 and 9 as a sum of consecutive natural numbers. Can 8 be written this way?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Every step is a sum of consecutive numbers written as arithmetic (7 + 8 = 15, 4 + 5 + 6 = 15, 1 + 2 + 3 + 4 + 5 = 15, 4 + 5 = 9, 2 + 3 + 4 = 9); the question gives no figure and the book's yellow box of sums is a teaching figure (the plan's teaching image M1.S2.T2.C2.IMG1 stays, never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write the sums as lines of LaTeX arithmetic.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C4",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Explanation 1 (book p.3; refs 5.1.any4, 5.1.expl1, 5.1.expl1_task)",
+   "question_text": "Take 3 + 4 − 5 − 6. Switch +4 to −4, then switch −5 to +5 in the original. How much does the value change each time, and what happens to its parity?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Pure signed arithmetic (3 + 4 - 5 - 6 = -4, 3 - 4 - 5 - 6 = -12, change 8 = 2 x 4, change 10 = 2 x 5); the question gives no figure and the working is equations.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the four equations as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C5",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Explanations 2 and 3 (book p.3-4; refs 5.1.expl2, 5.1.expl3, 5.1.limit4)",
+   "question_text": "Place signs between 2, 7, 4, 9 and 6 in three different ways and evaluate. Do all results have the same parity, and why?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Three signed sums of 2, 7, 4, 9, 6 (28, -4, -24) and a parity argument; all in equations and words, no figure given.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the three sums as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "question",
+   "lp_book_number": "Consecutive Numbers and Signs: the eight expressions",
+   "ncert_ref": "Section 5.1, Math Talk: the eight sign patterns (book p.1-2; ref 5.1.signs_list)",
+   "question_text": "List all eight signed expressions for 3, 4, 5 and 6 and evaluate each. What do you notice?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives only the numbers 3, 4, 5, 6 and asks for all eight sign patterns; the book's pink box shows two of the eight patterns as a format example, which the learner does not need to attempt it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "solution",
+   "lp_book_number": "Consecutive Numbers and Signs: the eight expressions",
+   "ncert_ref": "Section 5.1, Math Talk: the eight sign patterns (book p.1-2; ref 5.1.signs_list)",
+   "question_text": "List all eight signed expressions for 3, 4, 5 and 6 and evaluate each. What do you notice?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is eight signed expressions with their values, an arithmetic list the LP already writes as two LaTeX lines (the book's sign tree is the plan's teaching image M1.S2.T2.C3.IMG1). Borderline: a completed tree with all eight results next to its leaves would also be a faithful answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Two LaTeX lines of four expressions each, then the sentence that all eight results are even."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C9",
+   "role": "question",
+   "lp_book_number": "Multiples and Remainders, Q1",
+   "ncert_ref": "Figure it Out Q1 (book p.11, printed answer p.25; ref FiO1.q1)",
+   "question_text": "The sum of four consecutive numbers is 34. What are these numbers?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem about four consecutive numbers with sum 34; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C10",
+   "role": "solution",
+   "lp_book_number": "Multiples and Remainders, Q1",
+   "ncert_ref": "Figure it Out Q1 (book p.11, printed answer p.25; ref FiO1.q1)",
+   "question_text": "The sum of four consecutive numbers is 34. What are these numbers?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Algebra n, n + 1, n + 2, n + 3 and a check sum; the printed answer is the four numbers 7, 8, 9, 10 as text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C11",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out Q2 (book p.11, printed answer p.25; ref FiO1.q2)",
+   "question_text": "Suppose p is the greatest of five consecutive numbers. Describe the other four numbers in terms of p.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem about the greatest of five consecutive numbers; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C12",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out Q2 (book p.11, printed answer p.25; ref FiO1.q2)",
+   "question_text": "Suppose p is the greatest of five consecutive numbers. Describe the other four numbers in terms of p.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the expression sequence p - 4, p - 3, p - 2, p - 1, which LaTeX writes exactly; the book's printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C13",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Figure it Out Q9 (end of chapter, book p.22, printed answer p.34; ref FiO4.q9)",
+   "question_text": "The middle number in the sequence of 5 consecutive even numbers is 5p. Express the other four numbers in sequence in terms of p.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem about five consecutive even numbers with middle number 5p; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C14",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Figure it Out Q9 (end of chapter, book p.22, printed answer p.34; ref FiO4.q9)",
+   "question_text": "The middle number in the sequence of 5 consecutive even numbers is 5p. Express the other four numbers in sequence in terms of p.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the expression sequence 5p - 4, 5p - 2, 5p, 5p + 2, 5p + 4; the book's printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C16",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Breaking Even: 4m + 2q (book p.5; refs 5.1.breaking_algebra, 5.1.breaking_4m2q)",
+   "question_text": "Show that 4m + 2q is always even and try it with m = 4, q = −9. Then decide whether x² + 2 is always even by trying x = 6 and x = 3.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Factorising 4m + 2q = 2(2m + q) and three numeric trials (-2, 38, 11); all algebra and arithmetic, no figure given (teaching image M1.S5.T5.C16.IMG1 stays, never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the factorisation and the three trials as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C18",
+   "role": "question",
+   "lp_book_number": "Breaking Even: which are even without computing",
+   "ncert_ref": "Section 5.1, Breaking Even: arithmetic expressions (book p.4; ref 5.1.breaking_numeric)",
+   "question_text": "Without computing, which of these are even: 43 + 37, 672 − 348, 4 × 347 × 3, 708 − 477, 809 + 214, 119 × 303, 543 − 479, 513³?",
+   "decision": "none",
+   "reason_codes": [
+    "NUMBER_LIST_IN_BOXES",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's eight cards (43 + 37, 672 - 348, 4 x 347 x 3, 708 - 477, 809 + 214, 119 x 303, 543 - 479, 513^3) are plain expressions in boxes where neither position nor colour carries meaning; the LP question already lists all eight.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "List the eight expressions in the question text."
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C19",
+   "role": "solution",
+   "lp_book_number": "Breaking Even: which are even without computing",
+   "ncert_ref": "Section 5.1, Breaking Even: arithmetic expressions (book p.4; ref 5.1.breaking_numeric)",
+   "question_text": "Without computing, which of these are even: 43 + 37, 672 − 348, 4 × 347 × 3, 708 − 477, 809 + 214, 119 × 303, 543 − 479, 513³?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer sorts eight expressions into even and odd with a parity rule for each; the printed/LP answer is a text sort, not a drawing. Sibling of C21 (same kind of answer, same decision). Borderline: the eight cards could be redrawn with the four even ones in ANSWER green.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the four steps of parity reasoning as LaTeX lines."
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C20",
+   "role": "question",
+   "lp_book_number": "Breaking Even: which expressions are always even",
+   "ncert_ref": "Section 5.1, Breaking Even: algebraic expressions (book p.4-5; ref 5.1.breaking_task)",
+   "question_text": "Determine and explain which of these expressions always give even numbers: 2a + 2b, 3g + 5h, 4m + 2n, 2u − 4v, 13k − 5k, 6m − 3n, b² + 1, 4k × 3j. Write examples and non-examples, as appropriate, for each. Then write a few algebraic expressions which always give an even number.",
+   "decision": "none",
+   "reason_codes": [
+    "NUMBER_LIST_IN_BOXES",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's nine algebraic cards are plain expressions in boxes (the LP lists eight, leaving x^2 + 2 to the worked example); no position or colour carries meaning.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "List the expressions in the question text."
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C21",
+   "role": "solution",
+   "lp_book_number": "Breaking Even: which expressions are always even",
+   "ncert_ref": "Section 5.1, Breaking Even: algebraic expressions (book p.4-5; ref 5.1.breaking_task)",
+   "question_text": "Determine and explain which of these expressions always give even numbers: 2a + 2b, 3g + 5h, 4m + 2n, 2u − 4v, 13k − 5k, 6m − 3n, b² + 1, 4k × 3j. Write examples and non-examples, as appropriate, for each. Then write a few algebraic expressions which always give an even number.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Factorisations such as 2(a + b), 8k, 12kj and one numeric counter-example per expression; all equations. Same decision as C19.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the five steps as LaTeX lines."
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C22",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Pairs to Make Fours: two kinds of even numbers (book p.5-6; refs 5.1.pairs_question, 5.1.pairs_types)",
+   "question_text": "Sort 4, 12, 18, 22, 36 and 42 into numbers of the form 4p and numbers of the form 4p + 2.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Sorting six numbers by remainder on division by 4 (4 = 4 x 1 ... 42 = 4 x 10 + 2); the question gives no figure. The book's dot rectangles are teaching figures and the plan already carries them as teaching image M1.S7.T7.C22.IMG1 (stays, never linked). Borderline: six dot arrays in rows of four would help but are not needed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the six equations as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C23",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Pairs to Make Fours: the three cases (book p.6; ref 5.1.pairs_cases)",
+   "question_text": "Show that 12 + 16 and 22 + 6 are multiples of 4, using the forms 4p + 4q and (4p + 2) + (4q + 2).",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "12 + 16 and 22 + 6 written in the forms 4p + 4q and (4p + 2) + (4q + 2); equations only, no figure given. The book's visualisation is the plan's teaching image M1.S7.T7.C23.IMG1 (stays, never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the two derivations as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C25",
+   "role": "question",
+   "lp_book_number": "Pairs to Make Fours: a multiple of 4 plus 4q + 2",
+   "ncert_ref": "Section 5.1, Pairs to Make Fours: third row of the table (book p.6-7; ref 5.1.pairs_task)",
+   "question_text": "What happens when we add a multiple of 4 to an even number that is not a multiple of 4? Is it similar to the case of the parity of the sum of an even and an odd number? For 4p and (4q + 2), write the explanation and examples.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book's task says 'Look at the following expressions and the visualisation' and GIVES the dot picture (p rows of 4 plus q rows of 4 with 2 over make (p + q) rows with a remainder 2) as the third row of its table; the learner writes the explanation and examples from it. The LP question text carries the algebra but not the picture (see notes, LP text issues). Not a concept image: the teaching image M1.S7.T7.C24.IMG1 uses the numbers 4 + 6 = 10 and is never linked.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S8.T8.C25.IMG1",
+   "manim_scene": "c8_5_pairs_task_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S8.T8.C25.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "dot_array",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "dot_array",
+     "canvas": {
+      "aspect_ratio": "16:9",
+      "content_width_units": 22.9,
+      "content_height_units": 9.0,
+      "unit": "1 unit = distance between neighbouring dot centres; dot diameter 0.78 units; y grows downward; content centred with an even margin"
+     },
+     "layout": "one line, left to right: blue block + yellow L-block = stacked figure (the book prints the three pictures in two lines; the content is identical)",
+     "to_scale": false,
+     "dots_per_full_row": 4,
+     "blocks": [
+      {
+       "name": "p_block",
+       "shape": "rectangle",
+       "outline_corners": [
+        [
+         0,
+         2.5
+        ],
+        [
+         4.4,
+         2.5
+        ],
+        [
+         4.4,
+         6.5
+        ],
+        [
+         0,
+         6.5
+        ]
+       ],
+       "dot_fill": "SET_A",
+       "dot_outline": "INK",
+       "dots": [
+        {
+         "row": 1,
+         "y": 3.2,
+         "x": [
+          0.7,
+          1.7,
+          2.7,
+          3.7
+         ]
+        },
+        {
+         "row": 2,
+         "y": 5.8,
+         "x": [
+          0.7,
+          1.7,
+          2.7,
+          3.7
+         ]
+        }
+       ],
+       "ellipsis_dots": {
+        "count": 3,
+        "x": 2.2,
+        "y": [
+         4.1,
+         4.5,
+         4.9
+        ],
+        "diameter": 0.12,
+        "fill": "INK"
+       },
+       "row_arrow": {
+        "x": 4.8,
+        "y_from": 2.5,
+        "y_to": 6.5,
+        "heads": "both",
+        "label": "p rows",
+        "label_centre": [
+         5.4,
+         4.5
+        ],
+        "label_rotation": "90 degrees clockwise, reads top to bottom"
+       }
+      },
+      {
+       "name": "q_block",
+       "shape": "L",
+       "outline_corners": [
+        [
+         8.1,
+         2.0
+        ],
+        [
+         12.5,
+         2.0
+        ],
+        [
+         12.5,
+         6.0
+        ],
+        [
+         10.5,
+         6.0
+        ],
+        [
+         10.5,
+         7.0
+        ],
+        [
+         8.1,
+         7.0
+        ]
+       ],
+       "dot_fill": "SET_B",
+       "dot_outline": "INK",
+       "dots": [
+        {
+         "row": 1,
+         "y": 2.7,
+         "x": [
+          8.8,
+          9.8,
+          10.8,
+          11.8
+         ]
+        },
+        {
+         "row": 2,
+         "y": 5.3,
+         "x": [
+          8.8,
+          9.8,
+          10.8,
+          11.8
+         ]
+        },
+        {
+         "row": 3,
+         "y": 6.3,
+         "x": [
+          8.8,
+          9.8
+         ]
+        }
+       ],
+       "ellipsis_dots": {
+        "count": 3,
+        "x": 10.3,
+        "y": [
+         3.6,
+         4.0,
+         4.4
+        ],
+        "diameter": 0.12,
+        "fill": "INK"
+       },
+       "row_arrow": {
+        "x": 12.9,
+        "y_from": 2.0,
+        "y_to": 6.0,
+        "heads": "both",
+        "label": "q rows",
+        "label_centre": [
+         13.5,
+         4.0
+        ],
+        "label_rotation": "90 degrees clockwise, reads top to bottom",
+        "note": "spans rows 1 and 2 (the rows of 4) only, not the row of 2"
+       }
+      },
+      {
+       "name": "stack_top_p_block",
+       "shape": "rectangle",
+       "outline_corners": [
+        [
+         16.2,
+         0
+        ],
+        [
+         20.6,
+         0
+        ],
+        [
+         20.6,
+         4.0
+        ],
+        [
+         16.2,
+         4.0
+        ]
+       ],
+       "dot_fill": "SET_A",
+       "dot_outline": "INK",
+       "dots": [
+        {
+         "row": 1,
+         "y": 0.7,
+         "x": [
+          16.9,
+          17.9,
+          18.9,
+          19.9
+         ]
+        },
+        {
+         "row": 2,
+         "y": 3.3,
+         "x": [
+          16.9,
+          17.9,
+          18.9,
+          19.9
+         ]
+        }
+       ],
+       "ellipsis_dots": {
+        "count": 3,
+        "x": 18.4,
+        "y": [
+         1.6,
+         2.0,
+         2.4
+        ],
+        "diameter": 0.12,
+        "fill": "INK"
+       }
+      },
+      {
+       "name": "stack_bottom_q_block",
+       "shape": "L",
+       "outline_corners": [
+        [
+         16.2,
+         4.0
+        ],
+        [
+         20.6,
+         4.0
+        ],
+        [
+         20.6,
+         8.0
+        ],
+        [
+         18.6,
+         8.0
+        ],
+        [
+         18.6,
+         9.0
+        ],
+        [
+         16.2,
+         9.0
+        ]
+       ],
+       "dot_fill": "SET_B",
+       "dot_outline": "INK",
+       "note": "shares the border y = 4.0 with the blue rectangle above it",
+       "dots": [
+        {
+         "row": 1,
+         "y": 4.7,
+         "x": [
+          16.9,
+          17.9,
+          18.9,
+          19.9
+         ]
+        },
+        {
+         "row": 2,
+         "y": 7.3,
+         "x": [
+          16.9,
+          17.9,
+          18.9,
+          19.9
+         ]
+        },
+        {
+         "row": 3,
+         "y": 8.3,
+         "x": [
+          16.9,
+          17.9
+         ]
+        }
+       ],
+       "ellipsis_dots": {
+        "count": 3,
+        "x": 18.4,
+        "y": [
+         5.6,
+         6.0,
+         6.4
+        ],
+        "diameter": 0.12,
+        "fill": "INK"
+       }
+      }
+     ],
+     "operators": [
+      {
+       "symbol": "+",
+       "centre": [
+        7.0,
+        4.5
+       ]
+      },
+      {
+       "symbol": "=",
+       "centre": [
+        15.1,
+        4.5
+       ]
+      }
+     ],
+     "stack_arrow": {
+      "x": 21.0,
+      "y_from": 0,
+      "y_to": 9.0,
+      "heads": "both",
+      "labels": [
+       {
+        "text": "(p + q) rows",
+        "centre": [
+         21.6,
+         4.5
+        ]
+       },
+       {
+        "text": "with a remainder 2",
+        "centre": [
+         22.3,
+         4.5
+        ]
+       }
+      ],
+      "label_rotation": "90 degrees clockwise, reads top to bottom"
+     },
+     "visible_dot_totals": {
+      "p_block": 8,
+      "q_block": 10,
+      "stack": 18
+     }
+    },
+    "manim_description": "Draw one single line, left to right, on a plain BG canvas of aspect 16:9; the content is 22.9 units wide and 9.0 units tall and is centred with an even margin. One unit is the distance between neighbouring dot centres, a dot has diameter 0.78 units, every outline, arrow and sign is INK with 2 to 3 px strokes, y grows downward. (1) Blue block: an unfilled rectangle with corners (0, 2.5), (4.4, 2.5), (4.4, 6.5), (0, 6.5). Inside it exactly 2 rows of exactly 4 dots, each dot filled SET_A with an INK outline: row 1 centred at y = 3.2 and row 2 centred at y = 5.8, dot centres at x = 0.7, 1.7, 2.7 and 3.7. Between the rows a vertical column of exactly 3 small INK dots (diameter 0.12) at x = 2.2 and y = 4.1, 4.5, 4.9. At x = 4.8 a vertical double-headed INK arrow from y = 2.5 to y = 6.5; to its right the INK label 'p rows', rotated 90 degrees clockwise so that it reads top to bottom, centred at (5.4, 4.5), the letter p in italics. (2) A '+' sign centred at (7.0, 4.5). (3) Yellow block: an unfilled L-shaped outline through the corners (8.1, 2.0), (12.5, 2.0), (12.5, 6.0), (10.5, 6.0), (10.5, 7.0), (8.1, 7.0): a rectangle 4.4 wide and 4.0 tall (y = 2.0 to 6.0) with a strip 2.4 wide and 1.0 tall added under its left end (y = 6.0 to 7.0). Dots filled SET_B with an INK outline: row 1 centred at y = 2.7 and row 2 centred at y = 5.3, each with exactly 4 dots at x = 8.8, 9.8, 10.8 and 11.8; row 3 centred at y = 6.3 with exactly 2 dots at x = 8.8 and 9.8; the notch to the right of the strip (x = 10.5 to 12.5, y = 6.0 to 7.0) lies outside the outline and holds no dots. Between row 1 and row 2 a column of exactly 3 small INK dots at x = 10.3 and y = 3.6, 4.0, 4.4. At x = 12.9 a vertical double-headed INK arrow from y = 2.0 to y = 6.0, covering rows 1 and 2 only and not the row of 2; to its right the INK label 'q rows' (q in italics), rotated 90 degrees clockwise, centred at (13.5, 4.0). (4) An '=' sign centred at (15.1, 4.5). (5) Stacked figure: first the blue rectangle exactly as in (1) but with corners (16.2, 0), (20.6, 0), (20.6, 4.0), (16.2, 4.0), dots at y = 0.7 and y = 3.3 with x = 16.9, 17.9, 18.9, 19.9, and its 3 small ellipsis dots at x = 18.4 and y = 1.6, 2.0, 2.4. Directly beneath it, sharing the border y = 4.0, the yellow L-shape exactly as in (3) but with corners (16.2, 4.0), (20.6, 4.0), (20.6, 8.0), (18.6, 8.0), (18.6, 9.0), (16.2, 9.0); SET_B dots at y = 4.7 and y = 7.3 with 4 dots each at x = 16.9, 17.9, 18.9, 19.9, and at y = 8.3 with exactly 2 dots at x = 16.9 and 17.9; its 3 small ellipsis dots at x = 18.4 and y = 5.6, 6.0, 6.4. At x = 21.0 one vertical double-headed INK arrow from y = 0 to y = 9.0 over the whole stack; to its right two INK label lines rotated 90 degrees clockwise, reading top to bottom: '(p + q) rows' centred at (21.6, 4.5) and 'with a remainder 2' centred at (22.3, 4.5). Draw nothing else: no table border, no heading, no numbers, no answer text.",
+    "visible_text": [
+     "p rows",
+     "q rows",
+     "(p + q) rows",
+     "with a remainder 2",
+     "+",
+     "="
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the algebra 4p + (4q + 2) = 4(p + q) + 2 (it is written in the text, not drawn)",
+     "the table frame, the table header 'Explanation with Algebra and Visualisation' or the empty explanation and examples columns",
+     "any number for p or q, or any example sum such as 4 + 6 = 10"
+    ],
+    "accuracy_checks": [
+     "every full row in all three pictures has exactly 4 dots",
+     "blue block shows 2 rows of 4 = 8 dots; yellow L-block shows 2 rows of 4 and 1 row of 2 = 10 dots; the stacked figure shows exactly the same 8 blue and 10 yellow dots, 18 in all, at the same relative positions",
+     "the 2 dots of the last yellow row are flush left and the 2 places to their right are empty (the notch)",
+     "the q-rows arrow covers the 2 yellow rows of 4 only; the long arrow covers the blue block and the whole yellow L-block",
+     "meaning check: p rows of 4 + (q rows of 4 and 2 more) = (p + q) rows of 4 and 2 more, i.e. 4p + (4q + 2) = 4(p + q) + 2, remainder 2 on division by 4"
+    ],
+    "alt_text": "A blue block of p rows of 4 dots plus a yellow block of q rows of 4 dots and 2 extra dots equals both stacked, (p + q) rows with a remainder 2.",
+    "render_note": "Content copied from book p.7, third row of the Pairs to Make Fours table, 'visualisation' column (base figure P07-dot_array-2); the book prints it in two lines (top: blue + yellow L; below: = stack), here re-flowed into one line for the 16:9 card, nothing added or removed. The label '(p + q) rows with a remainder 2' is printed in the book's own figure, so it is part of what the question gives. Ellipsis = 3 small dots standing for 'more rows'. Not the same as teaching image M1.S7.T7.C24.IMG1 (numbers 4 + 6 = 10), which is never linked."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C26",
+   "role": "solution",
+   "lp_book_number": "Pairs to Make Fours: a multiple of 4 plus 4q + 2",
+   "ncert_ref": "Section 5.1, Pairs to Make Fours: third row of the table (book p.6-7; ref 5.1.pairs_task)",
+   "question_text": "What happens when we add a multiple of 4 to an even number that is not a multiple of 4? Is it similar to the case of the parity of the sum of an even and an odd number? For 4p and (4q + 2), write the explanation and examples.",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM"
+   ],
+   "reason": "The book's table already gives the complete dot picture (p rows + q rows with 2 over = (p + q) rows with a remainder 2); the solution adds algebra and number examples (4 + 6 = 10, 12 + 18 = 30, 8 + 22 = 30) in text, nothing new to draw, so it would only repeat the question diagram M1.S8.T8.C25.IMG1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the algebra and the three examples as LaTeX lines."
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C27",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out Q3 (end of chapter, book p.21, printed answer p.32; ref FiO4.q3)",
+   "question_text": "When is the sum of two multiples of 3, a multiple of 6 and when is it not? Explain the different possible cases, and generalise the pattern.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question about sums of two multiples of 3; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C28",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out Q3 (end of chapter, book p.21, printed answer p.32; ref FiO4.q3)",
+   "question_text": "When is the sum of two multiples of 3, a multiple of 6 and when is it not? Explain the different possible cases, and generalise the pattern.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Algebra 3m + 3n = 3(m + n) and three number examples (12, 18, 9); the printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C29",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Always, Sometimes or Never: statements 1 and 2 (book p.7-8; refs 5.1.asn_s1, 5.1.asn_s2)",
+   "question_text": "Check that 8 divides 16 + 56 and 80 − 24. Then decide whether 8 must divide two numbers that add up to 72.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Checks 16 + 56 = 72, 80 - 24 = 56, 72 = 48 + 24 and 72 = 50 + 22; all arithmetic with no figure given. The book's rectangles of 8 dots per row are teaching figures (teaching image M1.S10.T10.C29.IMG1 stays, never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the four checks as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C30",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Always, Sometimes or Never: statements 3, 4 and 5 (book p.8-9; refs 5.1.asn_s3, 5.1.asn_s4, 5.1.asn_s5)",
+   "question_text": "36 is divisible by 12. Check that 36 is divisible by every factor of 12 and that its multiple 108 is divisible by 12. Then decide whether 42, a multiple of 7, is divisible by 28 and by 14.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Factor and multiple checks for 36, 108 and 42 (42 = 7 x 6, 42 / 14 = 3, 42 = 28 + 14); arithmetic only, no figure given. The book's 7-dot rows are teaching figures (teaching image M1.S10.T10.C30.IMG1 stays, never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the four checks as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C32",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Always, Sometimes or Never: statement 8 (book p.10; ref 5.1.asn_s8)",
+   "question_text": "Try 7 + 8 and 9 + 12, then explain with algebra why an odd number plus an even number is never a multiple of 6.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two trials (7 + 8 = 15, 9 + 12 = 21) and the algebra 2n + (2m + 1) = 2(n + m) + 1 against 6j; no figure is given in the book for this statement (teaching image M1.S10.T10.C32.IMG1 stays, never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the four steps as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C34",
+   "role": "question",
+   "lp_book_number": "Always, Sometimes or Never: divisible by two numbers",
+   "ncert_ref": "Section 5.1, Always, Sometimes or Never: statements 6 and 7 (book p.10; ref 5.1.asn_mt67)",
+   "question_text": "Decide whether each claim is always, sometimes or never true: a number divisible by both 9 and 4 is divisible by 36; a number divisible by both 6 and 4 is divisible by 24.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two always/sometimes/never claims about divisibility by 9 and 4, and by 6 and 4; the book gives no figure for statements 6 and 7.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C35",
+   "role": "solution",
+   "lp_book_number": "Always, Sometimes or Never: divisible by two numbers",
+   "ncert_ref": "Section 5.1, Always, Sometimes or Never: statements 6 and 7 (book p.10; ref 5.1.asn_mt67)",
+   "question_text": "Decide whether each claim is always, sometimes or never true: a number divisible by both 9 and 4 is divisible by 36; a number divisible by both 6 and 4 is divisible by 24.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "LCM reasoning (36, and 12 not 24) with 72, 12 and 48 as checks; the answer is text. The number line of multiples of 6 and 4 is the plan's teaching image M1.S10.T10.C31.IMG1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C36",
+   "role": "question",
+   "lp_book_number": "Multiples and Remainders, Q3",
+   "ncert_ref": "Figure it Out Q3 (book p.11, printed answer p.25-26; ref FiO1.q3)",
+   "question_text": "For each statement below, determine whether it is always true, sometimes true, or never true. Explain your answer, with examples and non-examples, and justify your claim using algebra. (i) The sum of two even numbers is a multiple of 3. (ii) If a number is not divisible by 18, then it is also not divisible by 9. (iii) If two numbers are not divisible by 6, then their sum is not divisible by 6. (iv) The sum of a multiple of 6 and a multiple of 9 is a multiple of 3. (v) The sum of a multiple of 6 and a multiple of 3 is a multiple of 9.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Five statements to classify as always/sometimes/never; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C37",
+   "role": "solution",
+   "lp_book_number": "Multiples and Remainders, Q3",
+   "ncert_ref": "Figure it Out Q3 (book p.11, printed answer p.25-26; ref FiO1.q3)",
+   "question_text": "For each statement below, determine whether it is always true, sometimes true, or never true. Explain your answer, with examples and non-examples, and justify your claim using algebra. (i) The sum of two even numbers is a multiple of 3. (ii) If a number is not divisible by 18, then it is also not divisible by 9. (iii) If two numbers are not divisible by 6, then their sum is not divisible by 6. (iv) The sum of a multiple of 6 and a multiple of 9 is a multiple of 3. (v) The sum of a multiple of 6 and a multiple of 3 is a multiple of 9.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Per statement a counter-example or an algebraic line (6a + 9b = 3(2a + 3b), 6a + 3b = 3(2a + b)) and a verdict; all text, and the printed answer (book p.25-26) is text too.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C38",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out (end of chapter), Q11, book p.133",
+   "question_text": "Deepak claims, \"There are some multiples of 11 which, when doubled, are still multiples of 11. But other multiples of 11 don't remain multiples of 11 when doubled.\" Examine if his conjecture is true; explain your conclusion.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word claim about doubling multiples of 11; the book prints no figure and nothing in the question is visual.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C39",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out (end of chapter), Q11, book p.133",
+   "question_text": "Deepak claims, \"There are some multiples of 11 which, when doubled, are still multiples of 11. But other multiples of 11 don't remain multiples of 11 when doubled.\" Examine if his conjecture is true; explain your conclusion.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Algebra (11k doubled is 11 x 2k) and two number checks; the printed answer is text only, no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C40",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Figure it Out (end of chapter), Q12, book p.133",
+   "question_text": "Determine whether the statements below are always true, sometimes true, or never true, and explain. (i) The product of a multiple of 6 and a multiple of 3 is a multiple of 9. (ii) The sum of three consecutive even numbers will be divisible by 6. (iii) If abcdef is a multiple of 6, then badcef will be a multiple of 6. (iv) 8(7b − 3) − 4(11b + 1) is a multiple of 12.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four statements in words and algebra; the book prints no figure and a student loses nothing without a picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C41",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Figure it Out (end of chapter), Q12, book p.133",
+   "question_text": "Determine whether the statements below are always true, sometimes true, or never true, and explain. (i) The product of a multiple of 6 and a multiple of 3 is a multiple of 9. (ii) The sum of three consecutive even numbers will be divisible by 6. (iii) If abcdef is a multiple of 6, then badcef will be a multiple of 6. (iv) 8(7b − 3) − 4(11b + 1) is a multiple of 12.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Algebraic working for (i) to (iv) and a verdict for each; the printed answer is a list of words, no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C42",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Figure it Out (end of chapter), Q14, book p.133",
+   "question_text": "Is the product of two consecutive integers always a multiple of 2? Why? Is the product of three consecutive integers always a multiple of 6? Why or why not? What can you say about the product of 4 consecutive integers? What about the product of five consecutive integers?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Reasoning question about products of consecutive integers; no figure is printed or needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C43",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Figure it Out (end of chapter), Q14, book p.133",
+   "question_text": "Is the product of two consecutive integers always a multiple of 2? Why? Is the product of three consecutive integers always a multiple of 6? Why or why not? What can you say about the product of 4 consecutive integers? What about the product of five consecutive integers?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Reasoning with 4 x 5 x 6 = 120, 1 x 2 x 3 x 4 = 24 and 1 x 2 x 3 x 4 x 5 = 120; the printed answer is text only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C44",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "Figure it Out (end of chapter), Q16, book p.133 (Venn options on p.134; printed answer: (iv))",
+   "question_text": "Which of the four Venn diagrams captures the relationship between the multiples of 4, 8, and 32?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The four options of the question are four Venn pictures that exist only as pictures (two chained ellipses, two ellipses with a labelled overlap, two nestings); the student cannot choose without seeing them. The book prints all four as the given figure (book p.134). Drawn exactly as printed, option (ii) included (it is a deliberate distractor with two ellipses for three labels). Roman numerals (i) to (iv) are shown because the LP answer refers to 'Diagram (iv)'. One figure holds all four options.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S12.T12.C44.IMG1",
+   "manim_scene": "c8_5_FiO4_q16_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S12.T12.C44.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "kind": "venn_options_2x2",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": false,
+     "set_colours": {
+      "multiples of 4": "SET_A @35%",
+      "multiples of 8": "SET_B @35%",
+      "multiples of 32": "MARK_FILL @80%"
+     },
+     "outline": "INK 2.5 px",
+     "label_font_px": 38,
+     "numeral_font_px": 44,
+     "panels": [
+      {
+       "panel": "(i)",
+       "top_left_px": [
+        60,
+        40
+       ],
+       "size_px": [
+        880,
+        480
+       ],
+       "numeral_text": "(i)",
+       "numeral_left_px": [
+        100,
+        90
+       ],
+       "shapes_in_draw_order": [
+        {
+         "set": "multiples of 4",
+         "fill": "SET_A",
+         "fill_opacity": 0.35,
+         "centre_px": [
+          330,
+          210
+         ],
+         "rx": 130,
+         "ry": 90
+        },
+        {
+         "set": "multiples of 8",
+         "fill": "SET_B",
+         "fill_opacity": 0.35,
+         "centre_px": [
+          500,
+          210
+         ],
+         "rx": 130,
+         "ry": 90
+        },
+        {
+         "set": "multiples of 32",
+         "fill": "MARK_FILL",
+         "fill_opacity": 0.8,
+         "centre_px": [
+          670,
+          210
+         ],
+         "rx": 130,
+         "ry": 90
+        }
+       ],
+       "labels": [
+        {
+         "text": "Multiples of 4",
+         "centre_x_px": 260,
+         "line_1_y_px": 436,
+         "line_2_y_px": 480,
+         "arrow_start_px": [
+          275,
+          265
+         ],
+         "arrow_end_px": [
+          260,
+          400
+         ],
+         "arrow_start_region": "the ring/ellipse of multiples of 4"
+        },
+        {
+         "text": "Multiples of 8",
+         "centre_x_px": 500,
+         "line_1_y_px": 436,
+         "line_2_y_px": 480,
+         "arrow_start_px": [
+          500,
+          190
+         ],
+         "arrow_end_px": [
+          500,
+          400
+         ],
+         "arrow_start_region": "the ring/ellipse of multiples of 8"
+        },
+        {
+         "text": "Multiples of 32",
+         "centre_x_px": 740,
+         "line_1_y_px": 436,
+         "line_2_y_px": 480,
+         "arrow_start_px": [
+          725,
+          255
+         ],
+         "arrow_end_px": [
+          740,
+          400
+         ],
+         "arrow_start_region": "the ring/ellipse of multiples of 32"
+        }
+       ]
+      },
+      {
+       "panel": "(ii)",
+       "top_left_px": [
+        980,
+        40
+       ],
+       "size_px": [
+        880,
+        480
+       ],
+       "numeral_text": "(ii)",
+       "numeral_left_px": [
+        1020,
+        90
+       ],
+       "shapes_in_draw_order": [
+        {
+         "set": "multiples of 4",
+         "fill": "SET_A",
+         "fill_opacity": 0.35,
+         "centre_px": [
+          1340,
+          210
+         ],
+         "rx": 150,
+         "ry": 90
+        },
+        {
+         "set": "multiples of 32",
+         "fill": "MARK_FILL",
+         "fill_opacity": 0.8,
+         "centre_px": [
+          1500,
+          210
+         ],
+         "rx": 150,
+         "ry": 90
+        }
+       ],
+       "labels": [
+        {
+         "text": "Multiples of 4",
+         "centre_x_px": 1180,
+         "line_1_y_px": 436,
+         "line_2_y_px": 480,
+         "arrow_start_px": [
+          1250,
+          255
+         ],
+         "arrow_end_px": [
+          1180,
+          400
+         ],
+         "arrow_start_region": "the ring/ellipse of multiples of 4"
+        },
+        {
+         "text": "Multiples of 8",
+         "centre_x_px": 1420,
+         "line_1_y_px": 436,
+         "line_2_y_px": 480,
+         "arrow_start_px": [
+          1420,
+          210
+         ],
+         "arrow_end_px": [
+          1420,
+          400
+         ],
+         "arrow_start_region": "overlap of the two ellipses"
+        },
+        {
+         "text": "Multiples of 32",
+         "centre_x_px": 1660,
+         "line_1_y_px": 436,
+         "line_2_y_px": 480,
+         "arrow_start_px": [
+          1590,
+          255
+         ],
+         "arrow_end_px": [
+          1660,
+          400
+         ],
+         "arrow_start_region": "the ring/ellipse of multiples of 32"
+        }
+       ]
+      },
+      {
+       "panel": "(iii)",
+       "top_left_px": [
+        60,
+        560
+       ],
+       "size_px": [
+        880,
+        480
+       ],
+       "numeral_text": "(iii)",
+       "numeral_left_px": [
+        100,
+        610
+       ],
+       "shapes_in_draw_order": [
+        {
+         "set": "multiples of 32",
+         "fill": "MARK_FILL",
+         "fill_opacity": 0.8,
+         "centre_px": [
+          500,
+          725
+         ],
+         "rx": 150,
+         "ry": 150
+        },
+        {
+         "set": "multiples of 8",
+         "fill": "SET_B",
+         "fill_opacity": 0.35,
+         "centre_px": [
+          522,
+          745
+         ],
+         "rx": 105,
+         "ry": 95
+        },
+        {
+         "set": "multiples of 4",
+         "fill": "SET_A",
+         "fill_opacity": 0.35,
+         "centre_px": [
+          542,
+          765
+         ],
+         "rx": 50,
+         "ry": 50
+        }
+       ],
+       "labels": [
+        {
+         "text": "Multiples of 32",
+         "centre_x_px": 260,
+         "line_1_y_px": 956,
+         "line_2_y_px": 1000,
+         "arrow_start_px": [
+          390,
+          790
+         ],
+         "arrow_end_px": [
+          260,
+          920
+         ],
+         "arrow_start_region": "the ring/ellipse of multiples of 32"
+        },
+        {
+         "text": "Multiples of 8",
+         "centre_x_px": 500,
+         "line_1_y_px": 956,
+         "line_2_y_px": 1000,
+         "arrow_start_px": [
+          522,
+          822
+         ],
+         "arrow_end_px": [
+          500,
+          920
+         ],
+         "arrow_start_region": "the ring/ellipse of multiples of 8"
+        },
+        {
+         "text": "Multiples of 4",
+         "centre_x_px": 740,
+         "line_1_y_px": 956,
+         "line_2_y_px": 1000,
+         "arrow_start_px": [
+          560,
+          785
+         ],
+         "arrow_end_px": [
+          740,
+          920
+         ],
+         "arrow_start_region": "the ring/ellipse of multiples of 4"
+        }
+       ]
+      },
+      {
+       "panel": "(iv)",
+       "top_left_px": [
+        980,
+        560
+       ],
+       "size_px": [
+        880,
+        480
+       ],
+       "numeral_text": "(iv)",
+       "numeral_left_px": [
+        1020,
+        610
+       ],
+       "shapes_in_draw_order": [
+        {
+         "set": "multiples of 4",
+         "fill": "SET_A",
+         "fill_opacity": 0.35,
+         "centre_px": [
+          1420,
+          725
+         ],
+         "rx": 150,
+         "ry": 150
+        },
+        {
+         "set": "multiples of 8",
+         "fill": "SET_B",
+         "fill_opacity": 0.35,
+         "centre_px": [
+          1442,
+          745
+         ],
+         "rx": 105,
+         "ry": 95
+        },
+        {
+         "set": "multiples of 32",
+         "fill": "MARK_FILL",
+         "fill_opacity": 0.8,
+         "centre_px": [
+          1462,
+          765
+         ],
+         "rx": 50,
+         "ry": 50
+        }
+       ],
+       "labels": [
+        {
+         "text": "Multiples of 4",
+         "centre_x_px": 1180,
+         "line_1_y_px": 956,
+         "line_2_y_px": 1000,
+         "arrow_start_px": [
+          1310,
+          790
+         ],
+         "arrow_end_px": [
+          1180,
+          920
+         ],
+         "arrow_start_region": "the ring/ellipse of multiples of 4"
+        },
+        {
+         "text": "Multiples of 8",
+         "centre_x_px": 1420,
+         "line_1_y_px": 956,
+         "line_2_y_px": 1000,
+         "arrow_start_px": [
+          1442,
+          822
+         ],
+         "arrow_end_px": [
+          1420,
+          920
+         ],
+         "arrow_start_region": "the ring/ellipse of multiples of 8"
+        },
+        {
+         "text": "Multiples of 32",
+         "centre_x_px": 1660,
+         "line_1_y_px": 956,
+         "line_2_y_px": 1000,
+         "arrow_start_px": [
+          1480,
+          785
+         ],
+         "arrow_end_px": [
+          1660,
+          920
+         ],
+         "arrow_start_region": "the ring/ellipse of multiples of 32"
+        }
+       ]
+      }
+     ],
+     "meaning": {
+      "(i)": "4 and 8 overlap, 8 and 32 overlap, 4 and 32 do not (wrong)",
+      "(ii)": "two ellipses only, overlap labelled 8 (wrong)",
+      "(iii)": "4 inside 8 inside 32 (wrong order)",
+      "(iv)": "32 inside 8 inside 4 (the book's printed answer, not marked here)"
+     }
+    },
+    "manim_description": "Canvas 1920 x 1080 px, BG white, origin at the top-left, y grows downwards. Draw four panels in a 2 x 2 grid, each panel 880 x 480 px: panel (i) top-left corner (60, 40), panel (ii) top-left corner (980, 40), panel (iii) top-left corner (60, 560), panel (iv) top-left corner (980, 560). No panel frames. Set colours, the same in every panel: multiples of 4 = SET_A at 35 percent opacity, multiples of 8 = SET_B at 35 percent opacity, multiples of 32 = MARK_FILL at 80 percent opacity. Every outline INK, 2.5 px. Draw the shapes in the order listed so that overlaps blend. Panel (i): write the text (i) in INK, 44 px, with its left edge at (100, 90) (centre height y = 90). Draw three ellipses left to right in a chain: ellipse for multiples of 4: centre (330, 210) horizontal radius 130 vertical radius 90; ellipse for multiples of 8: centre (500, 210) horizontal radius 130 vertical radius 90; ellipse for multiples of 32: centre (670, 210) horizontal radius 130 vertical radius 90. The multiples-of-4 and multiples-of-8 ellipses overlap in a lens, the multiples-of-8 and multiples-of-32 ellipses overlap in a second lens, and the multiples-of-4 and multiples-of-32 ellipses do not touch (gap of 80 px between x = 460 and x = 540). Label 'Multiples of 4': dashed INK arrow from (275, 265), inside the multiples-of-4 ellipse only, to (260, 400) with a filled INK arrowhead at the end; the text is centred at x = 260 on two lines, 'Multiples' centred at y = 436 and 'of 4' centred at y = 480, INK, 38 px. Label 'Multiples of 8': dashed INK arrow from (500, 190), inside the multiples-of-8 ellipse only, to (500, 400) with a filled INK arrowhead at the end; the text is centred at x = 500 on two lines, 'Multiples' centred at y = 436 and 'of 8' centred at y = 480, INK, 38 px. Label 'Multiples of 32': dashed INK arrow from (725, 255), inside the multiples-of-32 ellipse only, to (740, 400) with a filled INK arrowhead at the end; the text is centred at x = 740 on two lines, 'Multiples' centred at y = 436 and 'of 32' centred at y = 480, INK, 38 px. Panel (ii): write the text (ii) in INK, 44 px, with its left edge at (1020, 90) (centre height y = 90). Draw only two overlapping ellipses (the book prints this option with two ellipses for three labels): multiples of 4: ellipse centre (1340, 210) horizontal radius 150 vertical radius 90; multiples of 32: ellipse centre (1500, 210) horizontal radius 150 vertical radius 90. They overlap in one lens. Label 'Multiples of 4': dashed INK arrow from (1250, 255), inside the left ellipse only, to (1180, 400) with a filled INK arrowhead at the end; the text is centred at x = 1180 on two lines, 'Multiples' centred at y = 436 and 'of 4' centred at y = 480, INK, 38 px. Label 'Multiples of 8': dashed INK arrow from (1420, 210), inside the overlap lens, to (1420, 400) with a filled INK arrowhead at the end; the text is centred at x = 1420 on two lines, 'Multiples' centred at y = 436 and 'of 8' centred at y = 480, INK, 38 px. Label 'Multiples of 32': dashed INK arrow from (1590, 255), inside the right ellipse only, to (1660, 400) with a filled INK arrowhead at the end; the text is centred at x = 1660 on two lines, 'Multiples' centred at y = 436 and 'of 32' centred at y = 480, INK, 38 px. Panel (iii): write the text (iii) in INK, 44 px, with its left edge at (100, 610) (centre height y = 610). Draw three nested shapes, outermost first, each wholly inside the one before and slightly right of and below its centre: outer set (multiples of 32): circle centre (500, 725) radius 150; middle set (multiples of 8): ellipse centre (522, 745) horizontal radius 105 vertical radius 95; inner set (multiples of 4): circle centre (542, 765) radius 50. Label 'Multiples of 32': dashed INK arrow from (390, 790), inside the outer set only, to (260, 920) with a filled INK arrowhead at the end; the text is centred at x = 260 on two lines, 'Multiples' centred at y = 956 and 'of 32' centred at y = 1000, INK, 38 px. Label 'Multiples of 8': dashed INK arrow from (522, 822), inside the middle set only (outside the inner set), to (500, 920) with a filled INK arrowhead at the end; the text is centred at x = 500 on two lines, 'Multiples' centred at y = 956 and 'of 8' centred at y = 1000, INK, 38 px. Label 'Multiples of 4': dashed INK arrow from (560, 785), inside the inner set, to (740, 920) with a filled INK arrowhead at the end; the text is centred at x = 740 on two lines, 'Multiples' centred at y = 956 and 'of 4' centred at y = 1000, INK, 38 px. Panel (iv): write the text (iv) in INK, 44 px, with its left edge at (1020, 610) (centre height y = 610). Draw three nested shapes, outermost first, each wholly inside the one before and slightly right of and below its centre: outer set (multiples of 4): circle centre (1420, 725) radius 150; middle set (multiples of 8): ellipse centre (1442, 745) horizontal radius 105 vertical radius 95; inner set (multiples of 32): circle centre (1462, 765) radius 50. Label 'Multiples of 4': dashed INK arrow from (1310, 790), inside the outer set only, to (1180, 920) with a filled INK arrowhead at the end; the text is centred at x = 1180 on two lines, 'Multiples' centred at y = 956 and 'of 4' centred at y = 1000, INK, 38 px. Label 'Multiples of 8': dashed INK arrow from (1442, 822), inside the middle set only (outside the inner set), to (1420, 920) with a filled INK arrowhead at the end; the text is centred at x = 1420 on two lines, 'Multiples' centred at y = 956 and 'of 8' centred at y = 1000, INK, 38 px. Label 'Multiples of 32': dashed INK arrow from (1480, 785), inside the inner set, to (1660, 920) with a filled INK arrowhead at the end; the text is centred at x = 1660 on two lines, 'Multiples' centred at y = 956 and 'of 32' centred at y = 1000, INK, 38 px. Give no panel any tick, outline or colour that marks one option as the correct one.",
+    "visible_text": [
+     "(i)",
+     "(ii)",
+     "(iii)",
+     "(iv)",
+     "Multiples of 4",
+     "Multiples of 8",
+     "Multiples of 32"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "any tick, outline, highlight or colour that marks option (iv) as correct",
+     "the numbers 4, 8 or 32 inside the regions",
+     "the printed NCERT watermark"
+    ],
+    "accuracy_checks": [
+     "four panels exactly: (i) chain of 3 ellipses, (ii) 2 overlapping ellipses, (iii) 3 nested shapes, (iv) 3 nested shapes",
+     "(i): 4-8 overlap, 8-32 overlap, 4 and 32 apart (blue right edge x = 400 < green left edge x = 480, panel-local)",
+     "(iii): outer = multiples of 32, middle = multiples of 8, inner = multiples of 4 (4 inside 8 inside 32 is the wrong order)",
+     "(iv): outer = multiples of 4, middle = multiples of 8, inner = multiples of 32 (the book's printed answer, not marked)",
+     "in (iii) and (iv) each shape lies wholly inside the previous one (sampled check on 360 points)",
+     "every dashed arrow starts inside the region its label names: (ii) 'Multiples of 8' starts inside the overlap lens",
+     "colours follow the label, not the book's tints: 4 = SET_A, 8 = SET_B, 32 = MARK_FILL in all panels"
+    ],
+    "alt_text": "Four Venn options (i) to (iv) for multiples of 4, 8 and 32: a chain of three ellipses, two overlapping ellipses with the overlap labelled 8, and two sets of three nested circles in opposite orders.",
+    "render_note": "Redraw of the book's four panels (pdf page 23, book p.134; also reprinted on pdf page 37). Panel positions follow the book's 2 x 2 layout. The book's option (ii) labels the overlap 'Multiples of 8' and the right ellipse 'Multiples of 32'; draw it that way, do not 'fix' it."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C45",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "Figure it Out (end of chapter), Q16, book p.133 (Venn options on p.134; printed answer: (iv))",
+   "question_text": "Which of the four Venn diagrams captures the relationship between the multiples of 4, 8, and 32?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "FIG_REFERENCED"
+   ],
+   "reason": "The answer is a picture: 'Diagram (iv)', a Venn drawing of three nested circles (book prints 'Ans. (iv)' under the four options). Drawn alone and large, with the three example numbers 4, 8 and 32 that the LP steps use placed in their regions (4 only in the outer set, 8 in the middle ring, 32 in the innermost set), so it shows more than the (iv) panel of the question figure. Borderline: without the numbers it would only repeat one panel of the question figure (SAME_AS_QUESTION_DIAGRAM).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S12.T12.C45.IMG1",
+   "manim_scene": "c8_5_FiO4_q16_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S12.T12.C45.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S12.T12.C44.IMG1",
+    "content": {
+     "type": "other",
+     "kind": "venn_nested_three",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": false,
+     "scale_vs_question_panel": 1.9,
+     "numeral_text": "(iv)",
+     "numeral_left_px": [
+      162,
+      221
+     ],
+     "shapes_in_draw_order": [
+      {
+       "set": "multiples of 4",
+       "fill": "SET_A",
+       "fill_opacity": 0.35,
+       "centre_px": [
+        922,
+        439
+       ],
+       "rx": 285,
+       "ry": 285
+      },
+      {
+       "set": "multiples of 8",
+       "fill": "SET_B",
+       "fill_opacity": 0.35,
+       "centre_px": [
+        964,
+        477
+       ],
+       "rx": 200,
+       "ry": 180
+      },
+      {
+       "set": "multiples of 32",
+       "fill": "MARK_FILL",
+       "fill_opacity": 0.8,
+       "centre_px": [
+        1002,
+        515
+       ],
+       "rx": 95,
+       "ry": 95
+      }
+     ],
+     "labels": [
+      {
+       "text": "Multiples of 4",
+       "centre_x_px": 466,
+       "line_1_y_px": 878,
+       "line_2_y_px": 962,
+       "arrow_start_px": [
+        713,
+        563
+       ],
+       "arrow_end_px": [
+        466,
+        810
+       ]
+      },
+      {
+       "text": "Multiples of 8",
+       "centre_x_px": 922,
+       "line_1_y_px": 878,
+       "line_2_y_px": 962,
+       "arrow_start_px": [
+        964,
+        624
+       ],
+       "arrow_end_px": [
+        922,
+        810
+       ]
+      },
+      {
+       "text": "Multiples of 32",
+       "centre_x_px": 1378,
+       "line_1_y_px": 878,
+       "line_2_y_px": 962,
+       "arrow_start_px": [
+        1036,
+        553
+       ],
+       "arrow_end_px": [
+        1378,
+        810
+       ]
+      }
+     ],
+     "added_in_answer_green": [
+      {
+       "text": "4",
+       "centre_px": [
+        704,
+        430
+       ],
+       "region": "outer set only"
+      },
+      {
+       "text": "8",
+       "centre_px": [
+        837,
+        487
+       ],
+       "region": "middle set only"
+      },
+      {
+       "text": "32",
+       "centre_px": [
+        1002,
+        515
+       ],
+       "region": "innermost set"
+      }
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080 px, BG white, origin top-left, y grows downwards. This is panel (iv) of the question figure redrawn alone at 1.9 times the size (same relative geometry), centred on the canvas. Write the text (iv) in INK, 52 px, with its left edge at (162, 221). Colours and outlines as in the question figure: multiples of 4 = SET_A at 35 percent opacity, multiples of 8 = SET_B at 35 percent opacity, multiples of 32 = MARK_FILL at 80 percent opacity, outlines INK 3 px. Draw three nested shapes, outermost first: multiples of 4 as a circle centre (922, 439) radius 285; multiples of 8 as an ellipse centre (964, 477) horizontal radius 200 vertical radius 180; multiples of 32 as a circle centre (1002, 515) radius 95. Label 'Multiples of 4': dashed INK arrow from (713, 563), inside the outer set only, to (466, 810) with a filled INK arrowhead at the end; text centred at x = 466 on two lines, 'Multiples' centred at y = 878 and 'of 4' centred at y = 962, INK, 44 px. Label 'Multiples of 8': dashed INK arrow from (964, 624), inside the middle set only (outside the innermost set), to (922, 810) with a filled INK arrowhead at the end; text centred at x = 922 on two lines, 'Multiples' centred at y = 878 and 'of 8' centred at y = 962, INK, 44 px. Label 'Multiples of 32': dashed INK arrow from (1036, 553), inside the innermost set, to (1378, 810) with a filled INK arrowhead at the end; text centred at x = 1378 on two lines, 'Multiples' centred at y = 878 and 'of 32' centred at y = 962, INK, 44 px. Added by the solution, in ANSWER green, bold, centred on the given point: the number 4 at (704, 430) in the outer set only, 60 px; the number 8 at (837, 487) in the middle set only, 60 px; the number 32 at (1002, 515) in the innermost set, 64 px.",
+    "visible_text": [
+     "(iv)",
+     "Multiples of 4",
+     "Multiples of 8",
+     "Multiples of 32",
+     "4",
+     "8",
+     "32"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "the other three Venn options (i), (ii) and (iii)",
+     "any word such as 'correct' or 'answer'",
+     "a tick mark"
+    ],
+    "accuracy_checks": [
+     "outer = multiples of 4, middle = multiples of 8, innermost = multiples of 32 (32 inside 8 inside 4)",
+     "4 is a multiple of 4 only: placed in the outer set outside the middle set",
+     "8 is a multiple of 8 and of 4 but not of 32: placed in the middle set outside the innermost set (8 / 32 is not whole)",
+     "32 is a multiple of 4, 8 and 32: placed in the innermost set (32 = 8 x 4)",
+     "geometry equals panel (iv) of the question figure scaled by 1.9; each shape lies wholly inside the previous one"
+    ],
+    "alt_text": "Three nested circles: multiples of 32 innermost, multiples of 8 in the middle ring and multiples of 4 outermost, with 32, 8 and 4 written in their regions.",
+    "render_note": "Panel (iv) of the question figure (same id family, derived_from) drawn alone at 1.9x so the nesting can be read; the example numbers come from step 3 of the LP solution."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S13.T13.C47",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1 What Remains? (LP worked example, not printed in the book)",
+   "question_text": "17 leaves remainder 2 and 24 leaves remainder 4 on division by 5. Without adding, find the remainders of 17 + 24 and 24 − 17 on division by 5.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Remainder arithmetic (17 = 5 x 3 + 2, 24 = 5 x 4 + 4, 41 = 5 x 8 + 1, 7 = 5 x 1 + 2); the book prints no figure for this worked example and the kept teaching image already pictures the loose dots.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S13.T13.C48",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1 What Remains? (LP worked example, not printed in the book)",
+   "question_text": "Find numbers that leave remainder 1 on division by 2 and remainder 1 on division by 3, and write one expression for all of them.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A short list of numbers (1, 3, 5, 7, 9, 11, 13 and then 1, 7, 13) and the form 6k + 1; text carries everything, the book prints no figure.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S14.T14.C50",
+   "role": "question",
+   "lp_book_number": "What Remains?: remainder 3 on division by 5",
+   "ncert_ref": "Section 5.1 What Remains?, book p.121",
+   "question_text": "Which of 3k + 5, 3k − 5, 3k ÷ 5, 5k + 3, 5k − 2 and 5k − 3 give exactly the numbers that leave remainder 3 on division by 5?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six algebraic expressions listed in the question; the dot-array and value tables of the book belong to the teaching concept, not to this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S14.T14.C51",
+   "role": "solution",
+   "lp_book_number": "What Remains?: remainder 3 on division by 5",
+   "ncert_ref": "Section 5.1 What Remains?, book p.121",
+   "question_text": "Which of 3k + 5, 3k − 5, 3k ÷ 5, 5k + 3, 5k − 2 and 5k − 3 give exactly the numbers that leave remainder 3 on division by 5?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Testing the six expressions with small values of k is plain arithmetic; a plain value table is LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optional LaTeX array: k = 0, 1, 2, 3 and 5k + 3 = 3, 8, 13, 18; k = 1, 2, 3, 4 and 5k - 2 = 3, 8, 13, 18."
+  },
+  {
+   "lp_concept_id": "M1.S14.T14.C52",
+   "role": "question",
+   "lp_book_number": "Multiples and Remainders, Q4",
+   "ncert_ref": "Section 5.1 Figure it Out, Q4, book p.122",
+   "question_text": "Find a few numbers that leave a remainder of 2 when divided by 3 and a remainder of 2 when divided by 4. Write an algebraic expression to describe all such numbers.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Find numbers with remainder 2 on division by 3 and by 4; words and numbers only, no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S14.T14.C53",
+   "role": "solution",
+   "lp_book_number": "Multiples and Remainders, Q4",
+   "ncert_ref": "Section 5.1 Figure it Out, Q4, book p.122",
+   "question_text": "Find a few numbers that leave a remainder of 2 when divided by 3 and a remainder of 2 when divided by 4. Write an algebraic expression to describe all such numbers.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Subtract 2, take the LCM 12, list 2, 14, 26, 38 and check 14; all arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C54",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.1 Figure it Out, Q5, book p.122",
+   "question_text": "\"I hold some pebbles, not too many. When I group them in 3's, one stays with me. Try pairing them up, it simply won't do, a stubborn odd pebble remains in my view. Group them by 5, yet one's still around, but grouping by seven, perfection is found. More than one hundred would be far too bold. Can you tell me the number of pebbles I hold?\"",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Pebble riddle in verse; the pot-and-pebbles picture in the book is decoration and every condition is in the words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C55",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.1 Figure it Out, Q5, book p.122",
+   "question_text": "\"I hold some pebbles, not too many. When I group them in 3's, one stays with me. Try pairing them up, it simply won't do, a stubborn odd pebble remains in my view. Group them by 5, yet one's still around, but grouping by seven, perfection is found. More than one hundred would be far too bold. Can you tell me the number of pebbles I hold?\"",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Remainder 1 by 3, 2 and 5 gives 30k + 1, so 31, 61, 91, and 91 = 7 x 13; the book's answer is text only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C56",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 5.1 Figure it Out, Q6, book p.122",
+   "question_text": "Tathagat has written several numbers that leave a remainder of 2 when divided by 6. He claims, \"If you add any three such numbers, the sum will always be a multiple of 6.\" Is Tathagat's claim true?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Claim about adding three numbers that leave remainder 2 on division by 6; no figure printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C57",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 5.1 Figure it Out, Q6, book p.122",
+   "question_text": "Tathagat has written several numbers that leave a remainder of 2 when divided by 6. He claims, \"If you add any three such numbers, the sum will always be a multiple of 6.\" Is Tathagat's claim true?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Algebra (6a + 2) + (6b + 2) + (6c + 2) = 6(a + b + c + 1) and the check 2 + 8 + 14 = 24; text answer only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C58",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 5.1 Figure it Out, Q7, book p.123 (printed answer: 'For visual method refer P. 120')",
+   "question_text": "When divided by 7, the number 661 leaves a remainder of 3, and 4779 leaves a remainder of 5. Without calculating, can you say what remainders the following expressions will leave when divided by 7? Show the solution both algebraically and visually. (i) 4779 + 661 (ii) 4779 − 661",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives all its data in words (661 leaves 3, 4779 leaves 5, divisor 7) and the book prints no figure with it; a question with no given figure gets no question figure even though its solution does.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C59",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 5.1 Figure it Out, Q7, book p.123 (printed answer: 'For visual method refer P. 120')",
+   "question_text": "When divided by 7, the number 661 leaves a remainder of 3, and 4779 leaves a remainder of 5. Without calculating, can you say what remainders the following expressions will leave when divided by 7? Show the solution both algebraically and visually. (i) 4779 + 661 (ii) 4779 − 661",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "FIG_REFERENCED"
+   ],
+   "reason": "The question says 'show the solution both algebraically and visually', so the answer includes a picture. The book's printed answer gives the algebra and then only says 'for visual method refer P. 120 of the textbook' (the 7-wide dot rows of pdf page 9), and LP step 4 describes the picture in words: rows of 7 dots with 5 and 3 left over, the leftovers join into a full row and 1 more, or 5 minus 3 leaves 2. A word description of a dot picture is not a replacement for it. Two panels (i) and (ii) in one figure; the question side has no given figure, so there is no question diagram and this figure draws everything (derived_from null).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S15.T15.C59.IMG1",
+   "manim_scene": "c8_5_FiO1_q7_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S15.T15.C59.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "dot_array",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "dot_array",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "dot_radius_px": 20,
+     "column_pitch_px": 56,
+     "to_scale": false,
+     "facts": {
+      "661": "7m + 3",
+      "4779": "7n + 5",
+      "sum": "5 + 3 = 8 = 7 + 1 -> remainder 1",
+      "difference": "5 - 3 = 2 -> remainder 2"
+     },
+     "panels": {
+      "(i)": {
+       "x_offset_px": 20,
+       "stage_1": {
+        "number_text": "4779",
+        "sign": null,
+        "number_colour": "SET_A",
+        "full_rows_drawn": 2,
+        "dots_per_full_row": 7,
+        "row_y_px": [
+         222,
+         278
+        ],
+        "ellipsis_dots_y_px": [
+         320,
+         336,
+         352
+        ],
+        "ellipsis_x_px": 438,
+        "partial_row_y_px": 398,
+        "partial_row_dots": 5,
+        "arrow_x_px": 670,
+        "arrow_y_px": [
+         197,
+         360
+        ],
+        "row_label": "n rows",
+        "leftover_label": "5 left over",
+        "column_x_px": [
+         270,
+         326,
+         382,
+         438,
+         494,
+         550,
+         606
+        ]
+       },
+       "stage_2": {
+        "number_text": "661",
+        "sign": "+",
+        "number_colour": "SET_B",
+        "full_rows_drawn": 2,
+        "dots_per_full_row": 7,
+        "row_y_px": [
+         472,
+         528
+        ],
+        "ellipsis_dots_y_px": [
+         570,
+         586,
+         602
+        ],
+        "ellipsis_x_px": 438,
+        "partial_row_y_px": 648,
+        "partial_row_dots": 3,
+        "arrow_x_px": 670,
+        "arrow_y_px": [
+         447,
+         610
+        ],
+        "row_label": "m rows",
+        "leftover_label": "3 left over",
+        "column_x_px": [
+         270,
+         326,
+         382,
+         438,
+         494,
+         550,
+         606
+        ]
+       },
+       "stage_3": {
+        "tag": "5 + 3",
+        "row_y_px": 802,
+        "row_dots": [
+         {
+          "col": 1,
+          "fill": "SET_A"
+         },
+         {
+          "col": 2,
+          "fill": "SET_A"
+         },
+         {
+          "col": 3,
+          "fill": "SET_A"
+         },
+         {
+          "col": 4,
+          "fill": "SET_A"
+         },
+         {
+          "col": 5,
+          "fill": "SET_A"
+         },
+         {
+          "col": 6,
+          "fill": "SET_B"
+         },
+         {
+          "col": 7,
+          "fill": "SET_B"
+         }
+        ],
+        "focus_box": "dashed FOCUS rounded rectangle",
+        "box_label": "full row",
+        "single_dot": {
+         "col": 1,
+         "y_px": 868,
+         "fill": "SET_B",
+         "ring": "ANSWER"
+        },
+        "single_label": "1 left over"
+       }
+      },
+      "(ii)": {
+       "x_offset_px": 980,
+       "stage_1": {
+        "number_text": "4779",
+        "sign": null,
+        "number_colour": "SET_A",
+        "full_rows_drawn": 2,
+        "dots_per_full_row": 7,
+        "row_y_px": [
+         222,
+         278
+        ],
+        "ellipsis_dots_y_px": [
+         320,
+         336,
+         352
+        ],
+        "ellipsis_x_px": 1398,
+        "partial_row_y_px": 398,
+        "partial_row_dots": 5,
+        "arrow_x_px": 1630,
+        "arrow_y_px": [
+         197,
+         360
+        ],
+        "row_label": "n rows",
+        "leftover_label": "5 left over",
+        "column_x_px": [
+         1230,
+         1286,
+         1342,
+         1398,
+         1454,
+         1510,
+         1566
+        ]
+       },
+       "stage_2": {
+        "number_text": "661",
+        "sign": "−",
+        "number_colour": "SET_B",
+        "full_rows_drawn": 2,
+        "dots_per_full_row": 7,
+        "row_y_px": [
+         472,
+         528
+        ],
+        "ellipsis_dots_y_px": [
+         570,
+         586,
+         602
+        ],
+        "ellipsis_x_px": 1398,
+        "partial_row_y_px": 648,
+        "partial_row_dots": 3,
+        "arrow_x_px": 1630,
+        "arrow_y_px": [
+         447,
+         610
+        ],
+        "row_label": "m rows",
+        "leftover_label": "3 left over",
+        "column_x_px": [
+         1230,
+         1286,
+         1342,
+         1398,
+         1454,
+         1510,
+         1566
+        ]
+       },
+       "stage_3": {
+        "tag": "5 − 3",
+        "row_y_px": 802,
+        "row_dots": [
+         {
+          "col": 1,
+          "fill": "SET_A"
+         },
+         {
+          "col": 2,
+          "fill": "SET_A"
+         },
+         {
+          "col": 3,
+          "fill": "none (hollow, dashed GUIDE)"
+         },
+         {
+          "col": 4,
+          "fill": "none (hollow, dashed GUIDE)"
+         },
+         {
+          "col": 5,
+          "fill": "none (hollow, dashed GUIDE)"
+         }
+        ],
+        "answer_box": "ANSWER rounded rectangle around columns 1-2",
+        "leftover_label": "2 left over"
+       }
+      }
+     },
+     "divider": {
+      "x_px": 960,
+      "y_px": [
+       60,
+       1020
+      ],
+      "colour": "GUIDE"
+     }
+    },
+    "manim_description": "Canvas 1920 x 1080 px, BG white, origin top-left, y grows downwards. Two panels side by side: panel (i) uses x offset 20, panel (ii) uses x offset 980; every x written below is the panel's own x plus its offset. Draw a vertical GUIDE line (2 px) at x = 960 from y = 60 to y = 1020. All dots have radius 20 px and a 2 px INK outline; dot columns are 56 px apart, column x values (before the offset) 250, 306, 362, 418, 474, 530, 586. The rows drawn stand for the n or m full rows of 7 (not to scale). PANEL (i). Write the text (i) in INK, 52 px, left edge at (60, 102). Stage 1, the number 4779 in SET_A: write the text 4779 in SET_A, 48 px, left edge at (60, 222). Draw two full rows of 7 filled SET_A dots (radius 20, INK outline 2 px) at y = 222 and y = 278, dot centres at x = 270, 326, 382, 438, 494, 550, 606. Under them draw 3 small GUIDE dots (radius 4) stacked at x = 438, y = 320, 336 and 352 (a vertical ellipsis). Then draw one partial row of 5 filled SET_A dots at y = 398, dot centres at x = 270, 326, 382, 438, 494 (the first 5 columns). Draw a vertical double-headed GUIDE arrow (3 px) at x = 670 from y = 197 to y = 360 and write 'n rows' in SET_A, 40 px, left edge at x = 700, centred at y = 284. Write '5 left over' in SET_A, 40 px, left edge at x = 540, centred at y = 398. Stage 2, the number 661 in SET_B: write the sign '+' in INK, 48 px, left edge at (60, 472) and the text 661 in SET_B, 48 px, left edge at (120, 472). Draw two full rows of 7 filled SET_B dots at y = 472 and y = 528, dot centres at x = 270, 326, 382, 438, 494, 550, 606. Under them draw 3 small GUIDE dots (radius 4) stacked at x = 438, y = 570, 586 and 602. Then draw one partial row of 3 filled SET_B dots at y = 648, dot centres at x = 270, 326, 382. Draw a vertical double-headed GUIDE arrow (3 px) at x = 670 from y = 447 to y = 610 and write 'm rows' in SET_B, 40 px, left edge at x = 700, centred at y = 534. Write '3 left over' in SET_B, 40 px, left edge at x = 540, centred at y = 648. Draw a downward GUIDE arrow (3 px, filled arrowhead) at x = 438 from y = 684 to y = 744. Stage 3 of (i), the leftovers join: write '5 + 3' in INK, 44 px, left edge at (60, 802). Draw one row of 7 dots at y = 802, dot centres at x = 270, 326, 382, 438, 494, 550, 606: the first 5 dots filled SET_A and the last 2 dots filled SET_B. Surround the 7 dots with a dashed FOCUS rounded rectangle (3 px) from x = 240 to x = 636 and y = 772 to y = 832, and write 'full row' in FOCUS, 40 px, left edge at x = 660, centred at y = 802. Below the row, draw 1 filled SET_B dot at (270, 868) and surround it with an ANSWER ring of radius 27 (3 px); write '1 left over' in ANSWER, 40 px, left edge at x = 340, centred at y = 868. PANEL (ii). Write the text (ii) in INK, 52 px, left edge at (1020, 102). Stage 1, the number 4779 in SET_A: write the text 4779 in SET_A, 48 px, left edge at (1020, 222). Draw two full rows of 7 filled SET_A dots (radius 20, INK outline 2 px) at y = 222 and y = 278, dot centres at x = 1230, 1286, 1342, 1398, 1454, 1510, 1566. Under them draw 3 small GUIDE dots (radius 4) stacked at x = 1398, y = 320, 336 and 352 (a vertical ellipsis). Then draw one partial row of 5 filled SET_A dots at y = 398, dot centres at x = 1230, 1286, 1342, 1398, 1454 (the first 5 columns). Draw a vertical double-headed GUIDE arrow (3 px) at x = 1630 from y = 197 to y = 360 and write 'n rows' in SET_A, 40 px, left edge at x = 1660, centred at y = 284. Write '5 left over' in SET_A, 40 px, left edge at x = 1500, centred at y = 398. Stage 2, the number 661 in SET_B: write the sign '−' in INK, 48 px, left edge at (1020, 472) and the text 661 in SET_B, 48 px, left edge at (1080, 472). Draw two full rows of 7 filled SET_B dots at y = 472 and y = 528, dot centres at x = 1230, 1286, 1342, 1398, 1454, 1510, 1566. Under them draw 3 small GUIDE dots (radius 4) stacked at x = 1398, y = 570, 586 and 602. Then draw one partial row of 3 filled SET_B dots at y = 648, dot centres at x = 1230, 1286, 1342. Draw a vertical double-headed GUIDE arrow (3 px) at x = 1630 from y = 447 to y = 610 and write 'm rows' in SET_B, 40 px, left edge at x = 1660, centred at y = 534. Write '3 left over' in SET_B, 40 px, left edge at x = 1500, centred at y = 648. Draw a downward GUIDE arrow (3 px, filled arrowhead) at x = 1398 from y = 684 to y = 744. Stage 3 of (ii), the leftovers are taken away: write '5 − 3' in INK, 44 px, left edge at (1020, 802). Draw one row of 5 dots at y = 802, dot centres at x = 1230, 1286, 1342, 1398, 1454: the first 2 dots filled SET_A (INK outline 2 px) and the last 3 dots hollow with a dashed GUIDE outline (2 px, no fill, radius 20). Surround the first 2 filled dots with an ANSWER rounded rectangle (3 px) from x = 1202 to x = 1314 and y = 772 to y = 832. Write '2 left over' in ANSWER, 40 px, left edge at x = 1500, centred at y = 802.",
+    "visible_text": [
+     "(i)",
+     "(ii)",
+     "4779",
+     "661",
+     "+",
+     "−",
+     "n rows",
+     "m rows",
+     "5 left over",
+     "3 left over",
+     "5 + 3",
+     "5 − 3",
+     "full row",
+     "1 left over",
+     "2 left over"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "the algebra 7p + 7q + 8 or 7(m + n) + 8",
+     "the numbers 94 or 682 (the true row counts are not drawn)",
+     "the words 'remainder' or 'Visually'"
+    ],
+    "accuracy_checks": [
+     "661 = 7 x 94 + 3 and 4779 = 7 x 682 + 5 (the figure shows 3 and 5 loose dots and writes the row counts as m and n)",
+     "(i): 5 + 3 = 8 loose dots = one full row of 7 (5 SET_A + 2 SET_B) + 1 SET_B dot left over; 4779 + 661 = 5440 = 7 x 777 + 1",
+     "(ii): 5 - 3 = 2 loose dots left; 4779 - 661 = 4118 = 7 x 588 + 2 (the 3 hollow dots are the 3 taken away)",
+     "each stage shows 2 full rows of 7 + a vertical ellipsis standing for m or n rows; not to scale",
+     "dot counts: stage 1 = 14 + 5, stage 2 = 14 + 3, joined row 7 + 1 single dot, difference row 2 filled + 3 hollow"
+    ],
+    "alt_text": "Two dot pictures with rows of 7: in (i) 5 and 3 loose dots join to make a full row of 7 and 1 left over; in (ii) 3 of the 5 loose dots are taken away, leaving 2.",
+    "render_note": "No printed figure: the book's answer only points to 'P. 120' (7k dot rows, pdf page 9, base figures P09-dot_array-4/5, which belong to another chunk). This figure is drawn from LP step 4 and the book's dot-row style (rows of 7, 'k rows' arrow). Rows are m and n (letters) as in LP step 1; 94 and 682 are not drawn."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C60",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "Section 5.1 Figure it Out, Q8, book p.123",
+   "question_text": "Find a number that leaves a remainder of 2 when divided by 3, a remainder of 3 when divided by 4, and a remainder of 4 when divided by 5. What is the smallest such number? Can you give a simple explanation of why it is the smallest?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Three remainder conditions in words; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C61",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "Section 5.1 Figure it Out, Q8, book p.123",
+   "question_text": "Find a number that leaves a remainder of 2 when divided by 3, a remainder of 3 when divided by 4, and a remainder of 4 when divided by 5. What is the smallest such number? Can you give a simple explanation of why it is the smallest?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Each remainder is one less than its divisor, LCM 60, so 59; plain arithmetic and a check.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C62",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "Figure it Out (end of chapter), Q2, book p.132",
+   "question_text": "\"I take a number that leaves a remainder of 8 when divided by 12. I take another number which is 4 short of a multiple of 12. Their sum will always be a multiple of 8\", claims Snehal. Examine his claim and justify your conclusion.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Claim about the sum of two numbers with stated remainders on division by 12; no figure printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C63",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "Figure it Out (end of chapter), Q2, book p.132",
+   "question_text": "\"I take a number that leaves a remainder of 8 when divided by 12. I take another number which is 4 short of a multiple of 12. Their sum will always be a multiple of 8\", claims Snehal. Examine his claim and justify your conclusion.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "12n + 8 and 12m - 4 add to 12(n + m) + 4; counter-example 20 + 8 = 28; the printed answer is text only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C64",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q6",
+   "ncert_ref": "Figure it Out (end of chapter), Q7, book p.133",
+   "question_text": "Find three consecutive numbers such that the first number is a multiple of 2, the second number is a multiple of 3, and the third number is a multiple of 4. Are there more such numbers? How often do they occur?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Find three consecutive numbers that are multiples of 2, 3 and 4 and say how often they recur; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C65",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q6",
+   "ncert_ref": "Figure it Out (end of chapter), Q7, book p.133",
+   "question_text": "Find three consecutive numbers such that the first number is a multiple of 2, the second number is a multiple of 3, and the third number is a multiple of 4. Are there more such numbers? How often do they occur?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "n - 2 is a multiple of 12, so n = 12k + 2: 2, 3, 4 then 14, 15, 16 then 26, 27, 28; text answer only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C66",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q7",
+   "ncert_ref": "Figure it Out (end of chapter), Q13, book p.133",
+   "question_text": "Choose any 3 numbers. When is their sum divisible by 3? Explore all possible cases and generalise.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Open exploration of when three numbers add to a multiple of 3; no figure printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S15.T15.C67",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q7",
+   "ncert_ref": "Figure it Out (end of chapter), Q13, book p.133",
+   "question_text": "Choose any 3 numbers. When is their sum divisible by 3? Explore all possible cases and generalise.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Case analysis on the three remainders 0, 1, 2 (sums 0, 3, 6 work); the book's answer is text only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optional LaTeX array of remainder triples: (0, 0, 0), (1, 1, 1), (2, 2, 2) and (0, 1, 2) give sums 0, 3, 6, 3, all divisible by 3."
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C68",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 Checking Divisibility Quickly, book p.123 (divisibility by 10)",
+   "question_text": "Write 4075 and 4070 as sums of place values and decide which is divisible by 10.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Place-value sums 4075 = 4 x 1000 + 0 x 100 + 7 x 10 + 5; the book prints no figure and the kept teaching image already shows the split.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C69",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 Checking Divisibility Quickly, book p.123 (shortcuts for 5 and 2)",
+   "question_text": "Use place values to decide whether 3716 and 4075 are divisible by 5 and by 2.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Place-value sums for 3716 and 4075 and a units-digit test; the book prints no figure and the kept teaching image already shows the split.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C71",
+   "role": "question",
+   "lp_book_number": "Divisibility Shortcuts: why 4 and 8 work",
+   "ncert_ref": "Section 5.2 Checking Divisibility Quickly, book p.123 ('explain why the shortcuts for 5, 2, 4 and 8 work')",
+   "question_text": "Explain using algebra why the divisibility shortcuts for 4 and 8 work. Use them to test 3716 for 4 and 51240 for 8.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Explain the shortcuts for 4 and 8 and test 3716 and 51240; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C72",
+   "role": "solution",
+   "lp_book_number": "Divisibility Shortcuts: why 4 and 8 work",
+   "ncert_ref": "Section 5.2 Checking Divisibility Quickly, book p.123 ('explain why the shortcuts for 5, 2, 4 and 8 work')",
+   "question_text": "Explain using algebra why the divisibility shortcuts for 4 and 8 work. Use them to test 3716 for 4 and 51240 for 8.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "100 = 4 x 25, 1000 = 8 x 125, 3716 ends in 16 = 4 x 4, 51240 ends in 240 = 8 x 30; text answer only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S18.T18.C73",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 - A Shortcut for Divisibility by 9 (pdf p.13, book p.124)",
+   "question_text": "Explain why 99009 is divisible by 9, and why 109 is not even though it ends in 9.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The question gives no figure: 99009 = 9 x 10000 + 9 x 1000 + 0 x 100 + 0 x 10 + 9 x 1 and 109 = 99 + 10 = 99 + 9 + 1 are equation chains that LaTeX writes in full. The book's tile picture beside the text (P13-tile_model-1) is an unlabelled preview that carries no number the item needs.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write the expansion of 99009 as one LaTeX equation chain, then 109 = 99 + 10 and 10 = 9 + 1.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S18.T18.C76",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 - A Shortcut for Divisibility by 3 (pdf p.15, book p.126)",
+   "question_text": "Explain why 87 is divisible by 3 but not by 9, and test 123456 for divisibility by 3.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "No figure in the book or in the question; the digit sums 8 + 7 = 15 and 1 + 2 + 3 + 4 + 5 + 6 = 21 and the remainders are plain arithmetic.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write 87 = 8 x 9 + 8 + 7 and the digit sum 1 + 2 + 3 + 4 + 5 + 6 = 21 as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C78",
+   "role": "question",
+   "lp_book_number": "Shortcut for 9: remainders of 427 and 7309",
+   "ncert_ref": "Section 5.2 - Shortcut for 9, remainder of 427 (pdf p.13, book p.124) and 7309 (pdf p.14, book p.125)",
+   "question_text": "Find the remainders of 427 and 7309 on division by 9 without dividing.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives only the numbers 427 and 7309. The book's tile pictures for them (P13-tile_model-2, P14-tile_model-2) are part of the explanation, not given with the question, so a careful student loses nothing without them.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the question as text: both numbers are in the sentence."
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C79",
+   "role": "solution",
+   "lp_book_number": "Shortcut for 9: remainders of 427 and 7309",
+   "ncert_ref": "Section 5.2 - Shortcut for 9, remainder of 427 (pdf p.13, book p.124) and 7309 (pdf p.14, book p.125)",
+   "question_text": "Find the remainders of 427 and 7309 on division by 9 without dividing.",
+   "decision": "optional",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "OPTIONAL, not added: the book prints a tile picture for each answer (427 as four 99+1 bars, two 9+1 bars and seven 1s regrouped as 9 + 4; 7309 as seven 999+1, three 99+1 and nine 1s) and it would help, but the answer is a pair of remainders and the four LP steps already write every sum (4 + 2 + 7 = 13, 7 + 3 + 0 + 9 = 19). Teaching images C74.IMG1, C75.IMG1 and C77.IMG1 stay and are not linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the four steps as LaTeX equation lines, as the LP already does."
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C80",
+   "role": "question",
+   "lp_book_number": "Shortcut for 9: which statements are correct",
+   "ncert_ref": "Section 5.2 - Shortcut for 9, the four statements (pdf p.14-15, book p.125-126)",
+   "question_text": "Test the four statements with 7309 and 4581, then decide which are correct.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The four statements (i) to (iv) are sentences printed one under the other in the book; no picture is given. The numbers 7309 and 4581 are in the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "List the four statements as a text list (i) to (iv) under the question."
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C81",
+   "role": "solution",
+   "lp_book_number": "Shortcut for 9: which statements are correct",
+   "ncert_ref": "Section 5.2 - Shortcut for 9, the four statements (pdf p.14-15, book p.125-126)",
+   "question_text": "Test the four statements with 7309 and 4581, then decide which are correct.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The solution compares digit sums with remainders in words and arithmetic (19 and 1; 18 and 0); no figure is printed for it. Teaching image C75.IMG1 shows the same idea and stays.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C82",
+   "role": "question",
+   "lp_book_number": "Multiples of Nine, Q1",
+   "ncert_ref": "Section 5.2 - Figure it Out Q1 (pdf p.15, book p.126)",
+   "question_text": "Find, without dividing, whether the following numbers are divisible by 9. (i) 123 (ii) 405 (iii) 8888 (iv) 93547 (v) 358095",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Five plain numbers (123, 405, 8888, 93547, 358095) are listed in the text; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C83",
+   "role": "solution",
+   "lp_book_number": "Multiples of Nine, Q1",
+   "ncert_ref": "Section 5.2 - Figure it Out Q1 (pdf p.15, book p.126)",
+   "question_text": "Find, without dividing, whether the following numbers are divisible by 9. (i) 123 (ii) 405 (iii) 8888 (iv) 93547 (v) 358095",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Five digit sums (6, 9, 32, 28, 30) written as LaTeX sums; the printed answer 'only (ii)' is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C84",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.2 - Figure it Out Q2 (pdf p.15, book p.126)",
+   "question_text": "Find the smallest multiple of 9 with no odd digits.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question about digits; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C85",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.2 - Figure it Out Q2 (pdf p.15, book p.126)",
+   "question_text": "Find the smallest multiple of 9 with no odd digits.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The reasoning (digit sum 18, three even digits 2, 8, 8, answer 288) is arithmetic and words; the printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C86",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 5.2 - Figure it Out Q3 (pdf p.15, book p.126)",
+   "question_text": "Find the multiple of 9 that is closest to the number 6000.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question about the number 6000; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C87",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 5.2 - Figure it Out Q3 (pdf p.15, book p.126)",
+   "question_text": "Find the multiple of 9 that is closest to the number 6000.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Digit sum 6, 5994, 6003 and the distances 6 and 3 are arithmetic; the printed answer is the number 6003. A three-mark number line (5994, 6000, 6003) would only make it nicer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C88",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 5.2 - Figure it Out Q4 (pdf p.15, book p.126)",
+   "question_text": "How many multiples of 9 are there between the numbers 4300 and 4400?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question about the numbers 4300 and 4400; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C89",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 5.2 - Figure it Out Q4 (pdf p.15, book p.126)",
+   "question_text": "How many multiples of 9 are there between the numbers 4300 and 4400?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "4302, 4392, 90 = 10 x 9 and the count 11 are arithmetic; the printed answer is the number 11.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C90",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "End-of-chapter Figure it Out Q1 (pdf p.21, book p.132)",
+   "question_text": "If 31z5 is a multiple of 9, where z is a digit, what is the value of z? Explain why there are two answers to this problem.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The number 31z5 is written in the text; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C91",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "End-of-chapter Figure it Out Q1 (pdf p.21, book p.132)",
+   "question_text": "If 31z5 is a multiple of 9, where z is a digit, what is the value of z? Explain why there are two answers to this problem.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The digit sum 3 + 1 + z + 5 = 9 + z and the two values z = 0 and z = 9 are algebra and arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C92",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "End-of-chapter Figure it Out Q4 (pdf p.21, book p.132)",
+   "question_text": "Sreelatha says, \"I have a number that is divisible by 9. If I reverse its digits, it will still be divisible by 9\". (i) Examine if her conjecture is true for any multiple of 9. (ii) Are any other digit shuffles possible such that the number formed is still a multiple of 9?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question with a claim by Sreelatha; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C93",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "End-of-chapter Figure it Out Q4 (pdf p.21, book p.132)",
+   "question_text": "Sreelatha says, \"I have a number that is divisible by 9. If I reverse its digits, it will still be divisible by 9\". (i) Examine if her conjecture is true for any multiple of 9. (ii) Are any other digit shuffles possible such that the number formed is still a multiple of 9?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Reversing or shuffling digits keeps the digit sum; the examples 468 = 9 x 52, 864 = 9 x 96, 648 = 9 x 72 are arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S21.T21.C95",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 - A Shortcut for Divisibility by 11, 3-step table (pdf p.17, book p.128)",
+   "question_text": "Use the excess and the shortfall to find the remainder of 320185 on division by 11.",
+   "decision": "optional",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "OPTIONAL, not added: the book's three pictures for 320185 (P17-dot_model-1 to -3: digits 2, 1, 5 in green as the excess places, digits 3, 0, 8 in red as the shortfall places, then 8 green circles over 11 red circles) would help, but the LP steps already name every place and write every sum (2 + 1 + 5 = 8, 3 + 0 + 8 = 11, 8 - 11 = -3), and the tie-breaker says a careful student loses nothing. Teaching image C95.IMG1 stays and is not linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write the two place lists and the three sums as LaTeX lines, as the LP steps do.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S21.T21.C96",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 - A Shortcut for Divisibility by 11, alternating signs (pdf p.18, book p.129)",
+   "question_text": "Use alternating signs to find the remainder of 328105 on division by 11.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "LATEX_TABLE"
+   ],
+   "reason": "One signed expression, -3 + 2 - 8 + 1 - 0 + 5 = -3, and a remainder; the book's table of steps (P18-table-1) is a plain two-column text table. Both are LaTeX.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write -3 + 2 - 8 + 1 - 0 + 5 = -3 as a LaTeX line.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C98",
+   "role": "question",
+   "lp_book_number": "Shortcut for 11: is 462 divisible by 11",
+   "ncert_ref": "Section 5.2 - Shortcut for 11, is 462 divisible by 11 (pdf p.16, book p.127)",
+   "question_text": "Use the remainders of the place values to decide whether 462 is divisible by 11.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The number 462 is in the sentence; the book's place-value table with circle models (P16-table-1) is the teaching figure, not given with this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C99",
+   "role": "solution",
+   "lp_book_number": "Shortcut for 11: is 462 divisible by 11",
+   "ncert_ref": "Section 5.2 - Shortcut for 11, is 462 divisible by 11 (pdf p.16, book p.127)",
+   "question_text": "Use the remainders of the place values to decide whether 462 is divisible by 11.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "400 = 396 + 4, 60 = 66 - 6, 2 = 0 + 2, 4 + 2 - 6 = 0, 462 = 11 x 42 are LaTeX arithmetic; the book prints no picture for this answer. Teaching image C94.IMG1 stays.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C100",
+   "role": "question",
+   "lp_book_number": "Shortcut for 11: test six numbers",
+   "ncert_ref": "Section 5.2 - Shortcut for 11, six numbers (pdf p.17, book p.128)",
+   "question_text": "Using this shortcut, find out whether the following numbers are divisible by 11. Further, find the remainder if the number is not divisible by 11. (i) 158 (ii) 841 (iii) 481 (iv) 5529 (v) 90904 (vi) 857076",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six plain numbers (158, 841, 481, 5529, 90904, 857076) are listed in the text; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C101",
+   "role": "solution",
+   "lp_book_number": "Shortcut for 11: test six numbers",
+   "ncert_ref": "Section 5.2 - Shortcut for 11, six numbers (pdf p.17, book p.128)",
+   "question_text": "Using this shortcut, find out whether the following numbers are divisible by 11. Further, find the remainder if the number is not divisible by 11. (i) 158 (ii) 841 (iii) 481 (iv) 5529 (v) 90904 (vi) 857076",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Six alternating-sign sums written as LaTeX; the printed answer is a text list of remainders.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S23.T23.C102",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "End-of-chapter Figure it Out Q6 (pdf p.22, book p.133)",
+   "question_text": "If 3p7q8 is divisible by 44, list all possible pairs of values for p and q.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The number 3p7q8 is written in the text; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S23.T23.C103",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "End-of-chapter Figure it Out Q6 (pdf p.22, book p.133)",
+   "question_text": "If 3p7q8 is divisible by 44, list all possible pairs of values for p and q.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The two tests (q8 a multiple of 4, 18 - (p + q) a multiple of 11) and the four pairs are algebra and arithmetic; the printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S24.T24.C106",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 - Fill in the divisibility table (pdf p.18, book p.129; printed answer pdf p.29)",
+   "question_text": "Fill in the following table: for each of 128, 990, 1586, 275, 6686, 639210, 429714, 2856, 3060 and 406839, write Yes or No for divisibility by 2, 3, 4, 5, 6, 8, 9, 10 and 11. Find a quick way to do this.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "Step B2: the book's printed answer to this question is the completed 10 x 9 Yes/No table (P29-table-1), and the question gives the table to complete (P18-table-2): the answer IS a filled table of 90 position-dependent cells, which the LP can only give as ten lines of nine Yes/No words. Borderline against LATEX_TABLE (plain table, no colour meaning): drawn because B2 says a printed answer picture overrides text-first. The book prints No under 4 for 128 in the question row, a slip: the diagram shows Yes (128 = 4 x 32, as the printed answer and the LP say).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S24.T24.C106.IMG2",
+   "manim_scene": "c8_5_S24_C106_worked",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S24.T24.C106.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "rows": 12,
+     "columns": 10,
+     "outline": "INK",
+     "stroke_px": 2,
+     "header_fill": "CELL_FILL",
+     "data_fill": "BG",
+     "text_colour": "INK",
+     "header_cells": [
+      {
+       "row": 1,
+       "col": 1,
+       "row_span": 2,
+       "col_span": 1,
+       "text": "Number"
+      },
+      {
+       "row": 1,
+       "col": 2,
+       "row_span": 1,
+       "col_span": 9,
+       "text": "Divisible by"
+      },
+      {
+       "row": 2,
+       "col": 2,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "2"
+      },
+      {
+       "row": 2,
+       "col": 3,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "3"
+      },
+      {
+       "row": 2,
+       "col": 4,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "4"
+      },
+      {
+       "row": 2,
+       "col": 5,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "5"
+      },
+      {
+       "row": 2,
+       "col": 6,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "6"
+      },
+      {
+       "row": 2,
+       "col": 7,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "8"
+      },
+      {
+       "row": 2,
+       "col": 8,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "9"
+      },
+      {
+       "row": 2,
+       "col": 9,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "10"
+      },
+      {
+       "row": 2,
+       "col": 10,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "11"
+      }
+     ],
+     "divisor_columns": {
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "8": 7,
+      "9": 8,
+      "10": 9,
+      "11": 10
+     },
+     "data_rows": [
+      {
+       "row": 3,
+       "number": "128",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "No",
+        "Yes",
+        "No",
+        "No",
+        "Yes",
+        "No",
+        "No",
+        "No"
+       ]
+      },
+      {
+       "row": 4,
+       "number": "990",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "Yes",
+        "No",
+        "Yes",
+        "Yes",
+        "No",
+        "Yes",
+        "Yes",
+        "Yes"
+       ]
+      },
+      {
+       "row": 5,
+       "number": "1586",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No"
+       ]
+      },
+      {
+       "row": 6,
+       "number": "275",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "No",
+        "No",
+        "No",
+        "Yes",
+        "No",
+        "No",
+        "No",
+        "No",
+        "Yes"
+       ]
+      },
+      {
+       "row": 7,
+       "number": "6686",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No"
+       ]
+      },
+      {
+       "row": 8,
+       "number": "639210",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "Yes",
+        "No",
+        "Yes",
+        "Yes",
+        "No",
+        "No",
+        "Yes",
+        "Yes"
+       ]
+      },
+      {
+       "row": 9,
+       "number": "429714",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "Yes",
+        "No",
+        "No",
+        "Yes",
+        "No",
+        "Yes",
+        "No",
+        "No"
+       ]
+      },
+      {
+       "row": 10,
+       "number": "2856",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "Yes",
+        "Yes",
+        "No",
+        "Yes",
+        "Yes",
+        "No",
+        "No",
+        "No"
+       ]
+      },
+      {
+       "row": 11,
+       "number": "3060",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "Yes",
+        "Yes",
+        "Yes",
+        "Yes",
+        "No",
+        "Yes",
+        "Yes",
+        "No"
+       ]
+      },
+      {
+       "row": 12,
+       "number": "406839",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "No",
+        "Yes",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No"
+       ]
+      }
+     ],
+     "shaded_cells": [],
+     "yes_count_per_row": {
+      "128": 3,
+      "990": 7,
+      "1586": 1,
+      "275": 2,
+      "6686": 1,
+      "639210": 6,
+      "429714": 4,
+      "2856": 5,
+      "3060": 7,
+      "406839": 1
+     },
+     "yes_count_per_divisor": {
+      "2": 8,
+      "3": 6,
+      "4": 3,
+      "5": 4,
+      "6": 5,
+      "8": 2,
+      "9": 3,
+      "10": 3,
+      "11": 3
+     },
+     "total_yes": 37
+    },
+    "manim_description": "Draw one table of 12 rows and 10 columns on a plain BG canvas, cells outlined in INK with 2 px strokes, read left to right and top to bottom. Header block: the cell of column 1 that spans rows 1 and 2 holds the text Number; the cell of row 1 that spans columns 2 to 10 holds the text Divisible by; row 2, columns 2 to 10, hold 2, 3, 4, 5, 6, 8, 9, 10, 11 in that order (no column for 7). All header cells are filled CELL_FILL. Rows 3 to 12 are plain BG cells: column 1 holds the numbers 128, 990, 1586, 275, 6686, 639210, 429714, 2856, 3060, 406839 from top to bottom, and columns 2 to 10 hold Yes or No for the divisors 2, 3, 4, 5, 6, 8, 9, 10, 11 in that order. Row 3, 128: Yes, No, Yes, No, No, Yes, No, No, No. Row 4, 990: Yes, Yes, No, Yes, Yes, No, Yes, Yes, Yes. Row 5, 1586: Yes, No, No, No, No, No, No, No, No. Row 6, 275: No, No, No, Yes, No, No, No, No, Yes. Row 7, 6686: Yes, No, No, No, No, No, No, No, No. Row 8, 639210: Yes, Yes, No, Yes, Yes, No, No, Yes, Yes. Row 9, 429714: Yes, Yes, No, No, Yes, No, Yes, No, No. Row 10, 2856: Yes, Yes, Yes, No, Yes, Yes, No, No, No. Row 11, 3060: Yes, Yes, Yes, Yes, Yes, No, Yes, Yes, No. Row 12, 406839: No, Yes, No, No, No, No, No, No, No. Every string is INK, centred in its cell, with a capital first letter for Yes and No. No cell is shaded, circled or coloured.",
+    "visible_text": [
+     "Number",
+     "Divisible by",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "8",
+     "9",
+     "10",
+     "11",
+     "128",
+     "990",
+     "1586",
+     "275",
+     "6686",
+     "639210",
+     "429714",
+     "2856",
+     "3060",
+     "406839",
+     "Yes",
+     "No"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words 'Quick check' or any caption under the table",
+     "a column for the divisor 7",
+     "any shading, circling or colour that marks Yes or No cells",
+     "a No under the divisor 4 in the 128 row (the book's pre-filled row prints No by a slip)"
+    ],
+    "accuracy_checks": [
+     "every cell equals (number mod divisor == 0) computed in code for all 10 x 9 = 90 cells; the printed answer table and the LP steps give the same 90 values",
+     "128 under 4 is Yes (128 = 4 x 32); the book's question row prints No, which is a print slip",
+     "row Yes counts: 128:3, 990:7, 1586:1, 275:2, 6686:1, 639210:6, 429714:4, 2856:5, 3060:7, 406839:1; total 37 Yes and 53 No",
+     "column Yes counts: 2:8, 3:6, 4:3, 5:4, 6:5, 8:2, 9:3, 10:3, 11:3",
+     "implications hold in every row: Yes for 4 or 8 needs Yes for 2 (8 needs 4); Yes for 9 needs Yes for 3; 6 is Yes exactly when 2 and 3 are; 10 is Yes exactly when 2 and 5 are",
+     "table has 10 data rows, 9 divisor columns in the order 2, 3, 4, 5, 6, 8, 9, 10, 11"
+    ],
+    "alt_text": "A table of ten numbers against the divisors 2, 3, 4, 5, 6, 8, 9, 10 and 11 with Yes or No in every cell; for example 990 is Yes for every divisor except 4 and 8.",
+    "render_note": "Complete final table = the book's printed answer (pdf p.29). The book's question table (pdf p.18) pre-fills only the 128 row and prints No under 4 for it: a print slip, corrected to Yes here (128 = 4 x 32; the printed answer and the LP agree). A worked example carries a single diagram, so the finished table is drawn; the LP steps list the same rows in words."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S25.T25.C107",
+   "role": "question",
+   "lp_book_number": "More on Shortcuts: divisibility by 6",
+   "ncert_ref": "Section 5.2 - More on Divisibility Shortcuts, divisibility by 6 (pdf p.18, book p.129)",
+   "question_text": "Use the shortcuts for 2 and 3 to decide which of 38, 225, 186 and 64 are divisible by 6, then check by dividing.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four plain numbers (38, 225, 186, 64) are listed in the text; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S25.T25.C108",
+   "role": "solution",
+   "lp_book_number": "More on Shortcuts: divisibility by 6",
+   "ncert_ref": "Section 5.2 - More on Divisibility Shortcuts, divisibility by 6 (pdf p.18, book p.129)",
+   "question_text": "Use the shortcuts for 2 and 3 to decide which of 38, 225, 186 and 64 are divisible by 6, then check by dividing.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Digit sums and parity of four numbers and 186 = 6 x 31 are arithmetic; the book prints no answer picture. Teaching image C104.IMG1 stays.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S25.T25.C109",
+   "role": "question",
+   "lp_book_number": "More on Shortcuts: divisibility by 24",
+   "ncert_ref": "Section 5.2 - More on Divisibility Shortcuts, divisibility by 24 (pdf p.19, book p.130)",
+   "question_text": "Use prime factorisation to explain why 12 passes the tests for 4 and 6 but is not divisible by 24, and why the tests for 3 and 8 never let such a number through.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question about 12, 24 and prime factorisation; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S25.T25.C110",
+   "role": "solution",
+   "lp_book_number": "More on Shortcuts: divisibility by 24",
+   "ncert_ref": "Section 5.2 - More on Divisibility Shortcuts, divisibility by 24 (pdf p.19, book p.130)",
+   "question_text": "Use prime factorisation to explain why 12 passes the tests for 4 and 6 but is not divisible by 24, and why the tests for 3 and 8 never let such a number through.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Prime factorisations written as products (12 = 2 x 2 x 3, 24 = 2 x 2 x 2 x 3, 8 = 2 x 2 x 2) and the two LCMs are LaTeX; the book prints no picture. Teaching image C105.IMG1 stays.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S26.T26.C111",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.3 - Figure it Out Q5 (FiO4.q5), chapter p.21; printed answer p.33",
+   "question_text": "If 48a23b is a multiple of 18, list all possible pairs of values for a and b.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The question gives the number 48a23b and nothing else; no figure is printed with it in the book and none is needed to attempt it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S26.T26.C112",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.3 - Figure it Out Q5 (FiO4.q5), chapter p.21; printed answer p.33",
+   "question_text": "If 48a23b is a multiple of 18, list all possible pairs of values for a and b.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a list of five pairs (a, b) found by the tests for 2 and 9; the printed answer is also plain text, so there is no picture to draw.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the five pairs (a, b) = (1, 0), (2, 8), (4, 6), (6, 4), (8, 2) in one LaTeX line."
+  },
+  {
+   "lp_concept_id": "M2.S26.T26.C113",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 5.3 - Figure it Out Q8 (FiO4.q8), chapter p.22; printed answer p.34",
+   "question_text": "Write five multiples of 36 between 45000 and 47000. Share your approach with the class.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "Word question about multiples of 36 between 45000 and 47000; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S26.T26.C114",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 5.3 - Figure it Out Q8 (FiO4.q8), chapter p.22; printed answer p.34",
+   "question_text": "Write five multiples of 36 between 45000 and 47000. Share your approach with the class.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is five numbers found by adding 36 each time; a plain number list stays text, and the printed answer is text too.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "List 45036, 45072, 45108, 45144, 45180 in one LaTeX line."
+  },
+  {
+   "lp_concept_id": "M2.S26.T26.C115",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 5.3 - Figure it Out Q10 (FiO4.q10), chapter p.22; printed answer pp.34-35",
+   "question_text": "Write a 6-digit number that is divisible by 15, such that when the digits are reversed, it is divisible by 6.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "Word question about divisibility and digit reversal; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S26.T26.C116",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 5.3 - Figure it Out Q10 (FiO4.q10), chapter p.22; printed answer pp.34-35",
+   "question_text": "Write a 6-digit number that is divisible by 15, such that when the digits are reversed, it is divisible by 6.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The sample answer 200025 and its reversal 520002 are two numbers with digit sums; they read perfectly in text, and the printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write 200025 (digit sum 9, ends in 5) and its reversal 520002 (even, digit sum 9) in LaTeX."
+  },
+  {
+   "lp_concept_id": "M2.S27.T27.C117",
+   "role": "worked_example",
+   "lp_book_number": "Finding a digital root",
+   "ncert_ref": "5.2.dr_def; 5.2.aryabhata (chapter p.19-20)",
+   "question_text": "Find the digital roots of 489710 and 4581, and say what they tell you about division by 9.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Worked example on the digital roots of 489710 and 4581: the reductions 4+8+9+7+1+0 = 29, 2+9 = 11, 1+1 = 2 are number chains, and no figure is printed in the book. The same chain already exists as concept image M2.S27.T27.C117.IMG1, which is never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S27.T27.C119",
+   "role": "worked_example",
+   "lp_book_number": "Patterns in digital roots",
+   "ncert_ref": "5.2.dr_consec; 5.2.dr_multiples (chapter p.19)",
+   "question_text": "Write the digital roots of the consecutive multiples of 4 from 4 to 36, and of the numbers 7, 13, 19, 25, 31, which are 1 more than multiples of 6.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Worked example listing the digital roots of 4, 8, ..., 36 and of 7, 13, ..., 31: two plain number sequences, no figure in the book. The 7, 4, 1 cycle ring already exists as concept image M2.S27.T27.C119.IMG1, which is never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "A two-row LaTeX array: 4, 8, 12, 16, 20, 24, 28, 32, 36 over 4, 8, 3, 7, 2, 6, 1, 5, 9; and 7, 13, 19, 25, 31 over 7, 4, 1, 7, 4.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S28.T28.C122",
+   "role": "question",
+   "lp_book_number": "Digital Roots: numbers between 600 and 700",
+   "ncert_ref": "Section 5.2 - Digital Roots, Math Talk (numbers between 600 and 700), chapter p.19; printed answer pp.29-30 (5.2.dr_range)",
+   "question_text": "Between 600 and 700, list the numbers with digital root 5, 7 and 3.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question: list the numbers between 600 and 700 with digital root 5, 7 and 3. Nothing is printed with it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S28.T28.C123",
+   "role": "solution",
+   "lp_book_number": "Digital Roots: numbers between 600 and 700",
+   "ncert_ref": "Section 5.2 - Digital Roots, Math Talk (numbers between 600 and 700), chapter p.19; printed answer pp.29-30 (5.2.dr_range)",
+   "question_text": "Between 600 and 700, list the numbers with digital root 5, 7 and 3.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is three plain lists of eleven numbers each (steps of 9); lists of numbers stay text. The 'up in nines' picture of root 5 already exists as concept image M2.S27.T27.C118.IMG1, which is never linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Three LaTeX lines of eleven numbers each, as in the LP steps."
+  },
+  {
+   "lp_concept_id": "M2.S28.T28.C124",
+   "role": "question",
+   "lp_book_number": "Digital Roots: the riddle",
+   "ncert_ref": "Section 5.2 - Digital Roots, the riddle (5.2.dr_riddle), chapter p.19; printed answer p.30",
+   "question_text": "Solve the riddle: digits each the tiniest odd digit, with the digit count, digit sum and digital root all equal to the largest odd single digit.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "DECORATIVE_ONLY"
+   ],
+   "reason": "The riddle is words only; the 'Digital Root Club' cartoon beside it carries no number the riddle needs.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S28.T28.C125",
+   "role": "solution",
+   "lp_book_number": "Digital Roots: the riddle",
+   "ncert_ref": "Section 5.2 - Digital Roots, the riddle (5.2.dr_riddle), chapter p.19; printed answer p.30",
+   "question_text": "Solve the riddle: digits each the tiniest odd digit, with the digit count, digit sum and digital root all equal to the largest odd single digit.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is one number, 111111111 (nine ones); the printed answer is text only (11,11,11,111). The nine-ones picture already exists as concept image M2.S27.T27.C120.IMG1, which is never linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S28.T28.C126",
+   "role": "question",
+   "lp_book_number": "Digital Roots, Q1",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q1 (FiO3.q1), chapter p.20; printed answer p.30",
+   "question_text": "The digital root of an 8-digit number is 5. What will be the digital root of 10 more than that number?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question about the digital root of 10 more than an 8-digit number; no figure is printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S28.T28.C127",
+   "role": "solution",
+   "lp_book_number": "Digital Roots, Q1",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q1 (FiO3.q1), chapter p.20; printed answer p.30",
+   "question_text": "The digital root of an 8-digit number is 5. What will be the digital root of 10 more than that number?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the number 6 with a short reason and one numeric check (10000004 to 10000014); no picture in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S29.T29.C128",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q2 (FiO3.q2), chapter p.20; printed answer p.30",
+   "question_text": "Write any number. Generate a sequence of numbers by repeatedly adding 11. What would be the digital roots of this sequence of numbers? Share your observations.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "Open question ('write any number... share your observations'); nothing is printed with it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S29.T29.C129",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q2 (FiO3.q2), chapter p.20; printed answer p.30",
+   "question_text": "Write any number. Generate a sequence of numbers by repeatedly adding 11. What would be the digital roots of this sequence of numbers? Share your observations.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The printed answer (p.30) is a two-column list of equations (10 -> 1+0 = 1 ... 120 -> 3), and the LP answer is the sequence 5, 16, 27, 38, 49, 60 with roots 5, 7, 9, 2, 4, 6. Sequences and equations stay text/LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the pairs number -> digital root in a LaTeX array of two rows: 5, 16, 27, 38, 49, 60 over 5, 7, 9, 2, 4, 6."
+  },
+  {
+   "lp_concept_id": "M2.S29.T29.C130",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q3 (FiO3.q3), chapter p.20; printed answer p.31",
+   "question_text": "What will be the digital root of the number 9a + 36b + 13?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Algebra question about the digital root of 9a + 36b + 13; no figure is printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S29.T29.C131",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q3 (FiO3.q3), chapter p.20; printed answer p.31",
+   "question_text": "What will be the digital root of the number 9a + 36b + 13?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is the number 4 by an algebra argument; the printed answer is algebra lines, no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S29.T29.C132",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q4 (FiO3.q4), chapter p.20; printed answer p.31",
+   "question_text": "Make conjectures by examining if there are any patterns or relations between (i) the parity of a number and its digital root. (ii) the digital root of a number and the remainder obtained when the number is divided by 3 or 9.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "Open 'make conjectures' question; no figure is printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S29.T29.C133",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q4 (FiO3.q4), chapter p.20; printed answer p.31",
+   "question_text": "Make conjectures by examining if there are any patterns or relations between (i) the parity of a number and its digital root. (ii) the digital root of a number and the remainder obtained when the number is divided by 3 or 9.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is two written conjectures with examples (10, 11, 12 and the remainders on division by 3 and 9); the printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C139",
+   "role": "question",
+   "lp_book_number": "Digits in Disguise: four addition cryptarithms",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, cryptarithms (i)-(iv) (5.3.add_more), chapter p.20; printed answer p.31",
+   "question_text": "Solve the cryptarithm A1 + 1B = B0. | Solve the cryptarithms: (i) AB + 37 = 6A (ii) ON + ON + ON = PO (iii) QR + QR + QR = PRR",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book prints four column additions (A1 + 1B = B0, AB + 37 = 6A, ON + ON + ON = PO, QR + QR + QR = PRR). They are plain typeset column arithmetic, and the LP question already writes every one of them as an equation in its text (v3: column addition goes to LaTeX).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write each cryptarithm as a LaTeX array column addition: A1 over +1B over B0; AB over +37 over 6A; ON, ON, +ON over PO; QR, QR, +QR over PRR."
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C140",
+   "role": "solution",
+   "lp_book_number": "Digits in Disguise: four addition cryptarithms",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, cryptarithms (i)-(iv) (5.3.add_more), chapter p.20; printed answer p.31",
+   "question_text": "Solve the cryptarithm A1 + 1B = B0. | Solve the cryptarithms: (i) AB + 37 = 6A (ii) ON + ON + ON = PO (iii) QR + QR + QR = PRR",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The printed answer is only text (A = 7, B = 9 and so on) under a reprint of the question layout; the LP answer gives the solved sums 71 + 19 = 90, 25 + 37 = 62, 17/24/31 times 3, 85 + 85 + 85 = 255, all as LaTeX equations.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Show each solved sum as a LaTeX array column addition with the digits filled in: 71 + 19 = 90; 25 + 37 = 62; 17 x 3 = 51, 24 x 3 = 72, 31 x 3 = 93; 85 + 85 + 85 = 255."
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C141",
+   "role": "question",
+   "lp_book_number": "Digits in Disguise: PQ × 8 = RS",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, (v) PQ x 8 = RS (5.3.mult_pq8), chapter p.20",
+   "question_text": "Solve PQ × 8 = RS.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A single multiplication written in one line, PQ x 8 = RS; nothing else is printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C142",
+   "role": "solution",
+   "lp_book_number": "Digits in Disguise: PQ × 8 = RS",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, (v) PQ x 8 = RS (5.3.mult_pq8), chapter p.20",
+   "question_text": "Solve PQ × 8 = RS.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is 12 x 8 = 96 after ruling out 10, 11 and 13; no picture in the book. The picture 'The product must stay two digits' already exists as concept image M3.S30.T30.C135.IMG1, which is never linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C143",
+   "role": "question",
+   "lp_book_number": "Digits in Disguise: GH × H = 9K",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, (vi) GH x H = 9K (5.3.mult_gh), chapter p.21",
+   "question_text": "Pick the solution of GH × H = 9K from 11 × 9, 12 × 8, 46 × 2, 24 × 4, 47 × 2, 31 × 3 and 16 × 6.",
+   "decision": "none",
+   "reason_codes": [
+    "NUMBER_LIST_IN_BOXES",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A one-line cryptarithm plus a plain list of seven products to pick from; the list stays text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C144",
+   "role": "solution",
+   "lp_book_number": "Digits in Disguise: GH × H = 9K",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, (vi) GH x H = 9K (5.3.mult_gh), chapter p.21",
+   "question_text": "Pick the solution of GH × H = 9K from 11 × 9, 12 × 8, 46 × 2, 24 × 4, 47 × 2, 31 × 3 and 16 × 6.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is the single option 24 x 4 = 96 with a short elimination of the others; text and LaTeX carry it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C145",
+   "role": "question",
+   "lp_book_number": "Digits in Disguise: BYE × 6 = RAY",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, (vii) BYE x 6 = RAY (5.3.mult_bye), chapter p.21",
+   "question_text": "Solve BYE × 6 = RAY.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A one-line cryptarithm; the only picture on the page is Anshu's cartoon, which carries no data.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C146",
+   "role": "solution",
+   "lp_book_number": "Digits in Disguise: BYE × 6 = RAY",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, (vii) BYE x 6 = RAY (5.3.mult_bye), chapter p.21",
+   "question_text": "Solve BYE × 6 = RAY.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is 105 x 6 = 630 with B = 1, Y = 0, E = 5, R = 6, A = 3, reached by digit reasoning; no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C147",
+   "role": "question",
+   "lp_book_number": "Digits in Disguise, Q5",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, 'Solve the following' (i)-(vi) (5.3.solve_six), chapter p.21; printed answer p.32",
+   "question_text": "Solve the following: (i) UT × 3 = PUT (ii) AB × 5 = BC (iii) L2N × 2 = 2NP (iv) XY × 4 = ZX (v) PP × QQ = PRP (vi) JK × 6 = KKK",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six one-line multiplication cryptarithms; no figure is printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C148",
+   "role": "solution",
+   "lp_book_number": "Digits in Disguise, Q5",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, 'Solve the following' (i)-(vi) (5.3.solve_six), chapter p.21; printed answer p.32",
+   "question_text": "Solve the following: (i) UT × 3 = PUT (ii) AB × 5 = BC (iii) L2N × 2 = 2NP (iv) XY × 4 = ZX (v) PP × QQ = PRP (vi) JK × 6 = KKK",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answers are six lines of solved multiplications (50 x 3 = 150, 19 x 5 = 95, 124 x 2 = 248 or 125 x 2 = 250, 23 x 4 = 92, 22/33/44 x 11, 74 x 6 = 444); the printed answer is text, no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "One LaTeX line per part with the solved multiplication, as in the LP answer."
+  },
+  {
+   "lp_concept_id": "M3.S32.T32.C149",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.3 - Figure it Out Q15 (FiO4.q15), chapter p.22; printed answer p.37",
+   "question_text": "Solve the cryptarithms: (i) EF × E = GGG (ii) WOW × 5 = MEOW",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two one-line multiplication cryptarithms (EF x E = GGG, WOW x 5 = MEOW); no figure is printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S32.T32.C150",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.3 - Figure it Out Q15 (FiO4.q15), chapter p.22; printed answer p.37",
+   "question_text": "Solve the cryptarithms: (i) EF × E = GGG (ii) WOW × 5 = MEOW",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answers are 37 x 3 = 111 and 575 x 5 = 2875, reached by factor and last-digit reasoning; no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S33.T33.C152",
+   "role": "worked_example",
+   "lp_book_number": "Navakankari",
+   "ncert_ref": "navakankari (chapter p.24)",
+   "question_text": "Your partner has two pawns in a line with the third point empty, and it is your turn to place a pawn. What should you do, and why?",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Navakankari worked example. The situation (two partner pawns in a line, third point empty) is fully stated in words and the answer is one move, so the text alone is enough (tie-breaker). A small picture would help: three connected board points on one line, two partner pawns on the first two and the third empty, with the blocking pawn added in ANSWER green. It is not needed, so it is not added.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  }
+ ]
+}

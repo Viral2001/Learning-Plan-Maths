@@ -1,0 +1,634 @@
+{
+ "meta": {
+  "chapter": "Number Play",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 5",
+  "lp_plan_id": "cbse_eng_maths8_ch5_v36",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 0,
+    "optional": 0,
+    "none": 15
+   },
+   "solution": {
+    "required": 0,
+    "optional": 0,
+    "none": 15
+   },
+   "worked_example": {
+    "required": 0,
+    "optional": 1,
+    "none": 2
+   }
+  },
+  "notes": [
+   "Chunk D: topics M2.S26.T26, M2.S27.T27, M2.S28.T28, M2.S29.T29, M3.S31.T31, M3.S32.T32, M3.S33.T33 (33 items: 15 question, 15 solution, 3 worked example).",
+   "No item of this chunk needs a diagram: the book prints no figure with any question or answer of these topics except the column-addition layout of the four addition cryptarithms (typeset arithmetic, so LaTeX by the v3 rule) and decorative art.",
+   "Navakankari worked example M3.S33.T33.C152 is optional (a three-point line with the blocking pawn would help) but is not added.",
+   "The book's printed answers for the cryptarithms give one solution where the LP gives all of them (ON + ON + ON = PO, L2N x 2 = 2NP, PP x QQ = PRP); the LP is mathematically right and wins.",
+   "Venn figures of Figure it Out Q16 (P23-venn-*, P37-venn-*) belong to the chunk that holds FiO4.q16 (M1.S12.T12.C44), not to this chunk, and are not claimed here."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P19-illustration-1",
+   "source": "chapter p.19",
+   "description": "Digital Root Club cartoon beside the riddle (chapter p.19): number characters 10000000, 100, 10584, 37, 1000, 1 inside, 1001 and 110 outside the door. Checked on the page picture: it is page art; no question or answer uses its numbers (the riddle answer is 111111111). Note: 10584 has digital root 9, not 1, so the 'root #1' club picture is not even consistent.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P20-cryptarithm-1",
+   "source": "chapter p.20",
+   "description": "Column addition written right-aligned: first line 'A1'; second line '+ 1B' with a rule (underline) under it; result line 'B0'. Two addends, label '(i)' on the left. The four puzzles (i)-(iv) are printed side by side in one row; each letter stands for one digit, the first digit is never 0. Plain column-addition layout, black text, no colour.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P20-cryptarithm-2",
+   "source": "chapter p.20",
+   "description": "Column addition written right-aligned: first line 'AB'; second line '+ 37' with a rule under it; result line '6A'. Two addends, label '(ii)' on the left. The four puzzles (i)-(iv) are printed side by side in one row; each letter stands for one digit, the first digit is never 0. Plain column-addition layout, black text, no colour.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P20-cryptarithm-3",
+   "source": "chapter p.20",
+   "description": "Column addition written right-aligned: three lines, 'ON', 'ON', '+ ON' (the plus sign only on the third line), a rule under them, result line 'PO'. Three equal addends, label '(iii)' on the left. The four puzzles (i)-(iv) are printed side by side in one row; each letter stands for one digit, the first digit is never 0. Plain column-addition layout, black text, no colour.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P20-cryptarithm-4",
+   "source": "chapter p.20",
+   "description": "Column addition written right-aligned: three lines, 'QR', 'QR', '+ QR' (plus sign only on the third line), a rule under them, result line 'PRR' (3 letters, one more place than the addends). Three equal addends, label '(iv)' on the left. The four puzzles (i)-(iv) are printed side by side in one row; each letter stands for one digit, the first digit is never 0. Plain column-addition layout, black text, no colour.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P24-board-1",
+   "source": "chapter p.24",
+   "description": "Navakankari board with 9 brown and 9 yellow pawns beside it (chapter p.24), three nested squares with 24 points. Checked on the page picture: the base description is right. It is the board and goal image already in the plan as the teaching image of the Navakankari concept (accounting only, nothing is linked).",
+   "mapped_to": "concept_image:M3.S33.T33.C152.IMG1"
+  },
+  {
+   "fig_id": "P30-table-1",
+   "source": "chapter p.30",
+   "description": "Two columns of worked lines separated by a long vertical rule, no fill colour. Left column (5 lines): '10 -> 1 + 0 = 1', '21 -> 2 + 1 = 3', '32 -> 3 + 2 = 5', '43 -> 4 + 3 = 7', '54 -> 5 + 4 = 9'. Right column (6 lines): '65 -> 2', '76 -> 4', '87 -> 6', '98 -> 8', '109 -> 1', '120 -> 3', followed by three vertically stacked dots. Starting number 10, adding 11 each time. The vertical rule continues below the last left-hand line.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P30-illustration-2",
+   "source": "chapter p.30",
+   "description": "Reprint, smaller, of the 'Digital Root Club' cartoon of P19-illustration-1, to the right of the riddle text and answer: golden club front with '#1' badge and 'DIGITAL ROOT CLUB' sign, number characters inside (10000000, 100, 10584, 37, 1000, a purple 1) and '1001', '110' and three tiny black figures at the 'MEMBERS ONLY!' door. No new content.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P31-cryptarithm-1",
+   "source": "chapter p.31",
+   "description": "Reprint of P20-cryptarithm-1 in the same layout. Column addition written right-aligned: first line 'A1'; second line '+ 1B' with a rule (underline) under it; result line 'B0'. Two addends, label '(i)' on the left. The letters are NOT replaced by digits in the picture; the solution values are given only in the lines below.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P31-cryptarithm-2",
+   "source": "chapter p.31",
+   "description": "Reprint of P20-cryptarithm-2 in the same layout. Column addition written right-aligned: first line 'AB'; second line '+ 37' with a rule under it; result line '6A'. Two addends, label '(ii)' on the left. The letters are NOT replaced by digits in the picture; the solution values are given only in the lines below.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P31-cryptarithm-3",
+   "source": "chapter p.31",
+   "description": "Reprint of P20-cryptarithm-3 in the same layout. Column addition written right-aligned: three lines, 'ON', 'ON', '+ ON' (the plus sign only on the third line), a rule under them, result line 'PO'. Three equal addends, label '(iii)' on the left. The letters are NOT replaced by digits in the picture; the solution values are given only in the lines below.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P31-cryptarithm-4",
+   "source": "chapter p.31",
+   "description": "Reprint of P20-cryptarithm-4 in the same layout. Column addition written right-aligned: three lines, 'QR', 'QR', '+ QR' (plus sign only on the third line), a rule under them, result line 'PRR' (3 letters, one more place than the addends). Three equal addends, label '(iv)' on the left. The letters are NOT replaced by digits in the picture; the solution values are given only in the lines below.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 12,
+  "mapped_to_items": 0,
+  "mapped_to_concept_images": 1,
+  "mapped_none": 11,
+  "unmapped": 0,
+  "new_media_ids_created": [],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M2.S26.T26.C111",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.3 - Figure it Out Q5 (FiO4.q5), chapter p.21; printed answer p.33",
+   "question_text": "If 48a23b is a multiple of 18, list all possible pairs of values for a and b.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The question gives the number 48a23b and nothing else; no figure is printed with it in the book and none is needed to attempt it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S26.T26.C112",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.3 - Figure it Out Q5 (FiO4.q5), chapter p.21; printed answer p.33",
+   "question_text": "If 48a23b is a multiple of 18, list all possible pairs of values for a and b.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a list of five pairs (a, b) found by the tests for 2 and 9; the printed answer is also plain text, so there is no picture to draw.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the five pairs (a, b) = (1, 0), (2, 8), (4, 6), (6, 4), (8, 2) in one LaTeX line."
+  },
+  {
+   "lp_concept_id": "M2.S26.T26.C113",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 5.3 - Figure it Out Q8 (FiO4.q8), chapter p.22; printed answer p.34",
+   "question_text": "Write five multiples of 36 between 45000 and 47000. Share your approach with the class.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "Word question about multiples of 36 between 45000 and 47000; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S26.T26.C114",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 5.3 - Figure it Out Q8 (FiO4.q8), chapter p.22; printed answer p.34",
+   "question_text": "Write five multiples of 36 between 45000 and 47000. Share your approach with the class.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is five numbers found by adding 36 each time; a plain number list stays text, and the printed answer is text too.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "List 45036, 45072, 45108, 45144, 45180 in one LaTeX line."
+  },
+  {
+   "lp_concept_id": "M2.S26.T26.C115",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 5.3 - Figure it Out Q10 (FiO4.q10), chapter p.22; printed answer pp.34-35",
+   "question_text": "Write a 6-digit number that is divisible by 15, such that when the digits are reversed, it is divisible by 6.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "Word question about divisibility and digit reversal; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S26.T26.C116",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 5.3 - Figure it Out Q10 (FiO4.q10), chapter p.22; printed answer pp.34-35",
+   "question_text": "Write a 6-digit number that is divisible by 15, such that when the digits are reversed, it is divisible by 6.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The sample answer 200025 and its reversal 520002 are two numbers with digit sums; they read perfectly in text, and the printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write 200025 (digit sum 9, ends in 5) and its reversal 520002 (even, digit sum 9) in LaTeX."
+  },
+  {
+   "lp_concept_id": "M2.S27.T27.C117",
+   "role": "worked_example",
+   "lp_book_number": "Finding a digital root",
+   "ncert_ref": "5.2.dr_def; 5.2.aryabhata (chapter p.19-20)",
+   "question_text": "Find the digital roots of 489710 and 4581, and say what they tell you about division by 9.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Worked example on the digital roots of 489710 and 4581: the reductions 4+8+9+7+1+0 = 29, 2+9 = 11, 1+1 = 2 are number chains, and no figure is printed in the book. The same chain already exists as concept image M2.S27.T27.C117.IMG1, which is never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S27.T27.C119",
+   "role": "worked_example",
+   "lp_book_number": "Patterns in digital roots",
+   "ncert_ref": "5.2.dr_consec; 5.2.dr_multiples (chapter p.19)",
+   "question_text": "Write the digital roots of the consecutive multiples of 4 from 4 to 36, and of the numbers 7, 13, 19, 25, 31, which are 1 more than multiples of 6.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Worked example listing the digital roots of 4, 8, ..., 36 and of 7, 13, ..., 31: two plain number sequences, no figure in the book. The 7, 4, 1 cycle ring already exists as concept image M2.S27.T27.C119.IMG1, which is never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "A two-row LaTeX array: 4, 8, 12, 16, 20, 24, 28, 32, 36 over 4, 8, 3, 7, 2, 6, 1, 5, 9; and 7, 13, 19, 25, 31 over 7, 4, 1, 7, 4.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S28.T28.C122",
+   "role": "question",
+   "lp_book_number": "Digital Roots: numbers between 600 and 700",
+   "ncert_ref": "Section 5.2 - Digital Roots, Math Talk (numbers between 600 and 700), chapter p.19; printed answer pp.29-30 (5.2.dr_range)",
+   "question_text": "Between 600 and 700, list the numbers with digital root 5, 7 and 3.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question: list the numbers between 600 and 700 with digital root 5, 7 and 3. Nothing is printed with it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S28.T28.C123",
+   "role": "solution",
+   "lp_book_number": "Digital Roots: numbers between 600 and 700",
+   "ncert_ref": "Section 5.2 - Digital Roots, Math Talk (numbers between 600 and 700), chapter p.19; printed answer pp.29-30 (5.2.dr_range)",
+   "question_text": "Between 600 and 700, list the numbers with digital root 5, 7 and 3.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is three plain lists of eleven numbers each (steps of 9); lists of numbers stay text. The 'up in nines' picture of root 5 already exists as concept image M2.S27.T27.C118.IMG1, which is never linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Three LaTeX lines of eleven numbers each, as in the LP steps."
+  },
+  {
+   "lp_concept_id": "M2.S28.T28.C124",
+   "role": "question",
+   "lp_book_number": "Digital Roots: the riddle",
+   "ncert_ref": "Section 5.2 - Digital Roots, the riddle (5.2.dr_riddle), chapter p.19; printed answer p.30",
+   "question_text": "Solve the riddle: digits each the tiniest odd digit, with the digit count, digit sum and digital root all equal to the largest odd single digit.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "DECORATIVE_ONLY"
+   ],
+   "reason": "The riddle is words only; the 'Digital Root Club' cartoon beside it carries no number the riddle needs.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S28.T28.C125",
+   "role": "solution",
+   "lp_book_number": "Digital Roots: the riddle",
+   "ncert_ref": "Section 5.2 - Digital Roots, the riddle (5.2.dr_riddle), chapter p.19; printed answer p.30",
+   "question_text": "Solve the riddle: digits each the tiniest odd digit, with the digit count, digit sum and digital root all equal to the largest odd single digit.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is one number, 111111111 (nine ones); the printed answer is text only (11,11,11,111). The nine-ones picture already exists as concept image M2.S27.T27.C120.IMG1, which is never linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S28.T28.C126",
+   "role": "question",
+   "lp_book_number": "Digital Roots, Q1",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q1 (FiO3.q1), chapter p.20; printed answer p.30",
+   "question_text": "The digital root of an 8-digit number is 5. What will be the digital root of 10 more than that number?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question about the digital root of 10 more than an 8-digit number; no figure is printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S28.T28.C127",
+   "role": "solution",
+   "lp_book_number": "Digital Roots, Q1",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q1 (FiO3.q1), chapter p.20; printed answer p.30",
+   "question_text": "The digital root of an 8-digit number is 5. What will be the digital root of 10 more than that number?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the number 6 with a short reason and one numeric check (10000004 to 10000014); no picture in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S29.T29.C128",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q2 (FiO3.q2), chapter p.20; printed answer p.30",
+   "question_text": "Write any number. Generate a sequence of numbers by repeatedly adding 11. What would be the digital roots of this sequence of numbers? Share your observations.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "Open question ('write any number... share your observations'); nothing is printed with it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S29.T29.C129",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q2 (FiO3.q2), chapter p.20; printed answer p.30",
+   "question_text": "Write any number. Generate a sequence of numbers by repeatedly adding 11. What would be the digital roots of this sequence of numbers? Share your observations.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The printed answer (p.30) is a two-column list of equations (10 -> 1+0 = 1 ... 120 -> 3), and the LP answer is the sequence 5, 16, 27, 38, 49, 60 with roots 5, 7, 9, 2, 4, 6. Sequences and equations stay text/LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the pairs number -> digital root in a LaTeX array of two rows: 5, 16, 27, 38, 49, 60 over 5, 7, 9, 2, 4, 6."
+  },
+  {
+   "lp_concept_id": "M2.S29.T29.C130",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q3 (FiO3.q3), chapter p.20; printed answer p.31",
+   "question_text": "What will be the digital root of the number 9a + 36b + 13?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Algebra question about the digital root of 9a + 36b + 13; no figure is printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S29.T29.C131",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q3 (FiO3.q3), chapter p.20; printed answer p.31",
+   "question_text": "What will be the digital root of the number 9a + 36b + 13?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is the number 4 by an algebra argument; the printed answer is algebra lines, no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S29.T29.C132",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q4 (FiO3.q4), chapter p.20; printed answer p.31",
+   "question_text": "Make conjectures by examining if there are any patterns or relations between (i) the parity of a number and its digital root. (ii) the digital root of a number and the remainder obtained when the number is divided by 3 or 9.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "Open 'make conjectures' question; no figure is printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S29.T29.C133",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 5.2 - Digital Roots, Figure it Out Q4 (FiO3.q4), chapter p.20; printed answer p.31",
+   "question_text": "Make conjectures by examining if there are any patterns or relations between (i) the parity of a number and its digital root. (ii) the digital root of a number and the remainder obtained when the number is divided by 3 or 9.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is two written conjectures with examples (10, 11, 12 and the remainders on division by 3 and 9); the printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C139",
+   "role": "question",
+   "lp_book_number": "Digits in Disguise: four addition cryptarithms",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, cryptarithms (i)-(iv) (5.3.add_more), chapter p.20; printed answer p.31",
+   "question_text": "Solve the cryptarithm A1 + 1B = B0. | Solve the cryptarithms: (i) AB + 37 = 6A (ii) ON + ON + ON = PO (iii) QR + QR + QR = PRR",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book prints four column additions (A1 + 1B = B0, AB + 37 = 6A, ON + ON + ON = PO, QR + QR + QR = PRR). They are plain typeset column arithmetic, and the LP question already writes every one of them as an equation in its text (v3: column addition goes to LaTeX).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write each cryptarithm as a LaTeX array column addition: A1 over +1B over B0; AB over +37 over 6A; ON, ON, +ON over PO; QR, QR, +QR over PRR."
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C140",
+   "role": "solution",
+   "lp_book_number": "Digits in Disguise: four addition cryptarithms",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, cryptarithms (i)-(iv) (5.3.add_more), chapter p.20; printed answer p.31",
+   "question_text": "Solve the cryptarithm A1 + 1B = B0. | Solve the cryptarithms: (i) AB + 37 = 6A (ii) ON + ON + ON = PO (iii) QR + QR + QR = PRR",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The printed answer is only text (A = 7, B = 9 and so on) under a reprint of the question layout; the LP answer gives the solved sums 71 + 19 = 90, 25 + 37 = 62, 17/24/31 times 3, 85 + 85 + 85 = 255, all as LaTeX equations.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Show each solved sum as a LaTeX array column addition with the digits filled in: 71 + 19 = 90; 25 + 37 = 62; 17 x 3 = 51, 24 x 3 = 72, 31 x 3 = 93; 85 + 85 + 85 = 255."
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C141",
+   "role": "question",
+   "lp_book_number": "Digits in Disguise: PQ × 8 = RS",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, (v) PQ x 8 = RS (5.3.mult_pq8), chapter p.20",
+   "question_text": "Solve PQ × 8 = RS.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A single multiplication written in one line, PQ x 8 = RS; nothing else is printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C142",
+   "role": "solution",
+   "lp_book_number": "Digits in Disguise: PQ × 8 = RS",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, (v) PQ x 8 = RS (5.3.mult_pq8), chapter p.20",
+   "question_text": "Solve PQ × 8 = RS.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is 12 x 8 = 96 after ruling out 10, 11 and 13; no picture in the book. The picture 'The product must stay two digits' already exists as concept image M3.S30.T30.C135.IMG1, which is never linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C143",
+   "role": "question",
+   "lp_book_number": "Digits in Disguise: GH × H = 9K",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, (vi) GH x H = 9K (5.3.mult_gh), chapter p.21",
+   "question_text": "Pick the solution of GH × H = 9K from 11 × 9, 12 × 8, 46 × 2, 24 × 4, 47 × 2, 31 × 3 and 16 × 6.",
+   "decision": "none",
+   "reason_codes": [
+    "NUMBER_LIST_IN_BOXES",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A one-line cryptarithm plus a plain list of seven products to pick from; the list stays text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C144",
+   "role": "solution",
+   "lp_book_number": "Digits in Disguise: GH × H = 9K",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, (vi) GH x H = 9K (5.3.mult_gh), chapter p.21",
+   "question_text": "Pick the solution of GH × H = 9K from 11 × 9, 12 × 8, 46 × 2, 24 × 4, 47 × 2, 31 × 3 and 16 × 6.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is the single option 24 x 4 = 96 with a short elimination of the others; text and LaTeX carry it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C145",
+   "role": "question",
+   "lp_book_number": "Digits in Disguise: BYE × 6 = RAY",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, (vii) BYE x 6 = RAY (5.3.mult_bye), chapter p.21",
+   "question_text": "Solve BYE × 6 = RAY.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A one-line cryptarithm; the only picture on the page is Anshu's cartoon, which carries no data.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C146",
+   "role": "solution",
+   "lp_book_number": "Digits in Disguise: BYE × 6 = RAY",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, (vii) BYE x 6 = RAY (5.3.mult_bye), chapter p.21",
+   "question_text": "Solve BYE × 6 = RAY.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is 105 x 6 = 630 with B = 1, Y = 0, E = 5, R = 6, A = 3, reached by digit reasoning; no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C147",
+   "role": "question",
+   "lp_book_number": "Digits in Disguise, Q5",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, 'Solve the following' (i)-(vi) (5.3.solve_six), chapter p.21; printed answer p.32",
+   "question_text": "Solve the following: (i) UT × 3 = PUT (ii) AB × 5 = BC (iii) L2N × 2 = 2NP (iv) XY × 4 = ZX (v) PP × QQ = PRP (vi) JK × 6 = KKK",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six one-line multiplication cryptarithms; no figure is printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S31.T31.C148",
+   "role": "solution",
+   "lp_book_number": "Digits in Disguise, Q5",
+   "ncert_ref": "Section 5.3 - Digits in Disguise, 'Solve the following' (i)-(vi) (5.3.solve_six), chapter p.21; printed answer p.32",
+   "question_text": "Solve the following: (i) UT × 3 = PUT (ii) AB × 5 = BC (iii) L2N × 2 = 2NP (iv) XY × 4 = ZX (v) PP × QQ = PRP (vi) JK × 6 = KKK",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answers are six lines of solved multiplications (50 x 3 = 150, 19 x 5 = 95, 124 x 2 = 248 or 125 x 2 = 250, 23 x 4 = 92, 22/33/44 x 11, 74 x 6 = 444); the printed answer is text, no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "One LaTeX line per part with the solved multiplication, as in the LP answer."
+  },
+  {
+   "lp_concept_id": "M3.S32.T32.C149",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.3 - Figure it Out Q15 (FiO4.q15), chapter p.22; printed answer p.37",
+   "question_text": "Solve the cryptarithms: (i) EF × E = GGG (ii) WOW × 5 = MEOW",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two one-line multiplication cryptarithms (EF x E = GGG, WOW x 5 = MEOW); no figure is printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S32.T32.C150",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.3 - Figure it Out Q15 (FiO4.q15), chapter p.22; printed answer p.37",
+   "question_text": "Solve the cryptarithms: (i) EF × E = GGG (ii) WOW × 5 = MEOW",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answers are 37 x 3 = 111 and 575 x 5 = 2875, reached by factor and last-digit reasoning; no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S33.T33.C152",
+   "role": "worked_example",
+   "lp_book_number": "Navakankari",
+   "ncert_ref": "navakankari (chapter p.24)",
+   "question_text": "Your partner has two pawns in a line with the third point empty, and it is your turn to place a pawn. What should you do, and why?",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Navakankari worked example. The situation (two partner pawns in a line, third point empty) is fully stated in words and the answer is one move, so the text alone is enough (tie-breaker). A small picture would help: three connected board points on one line, two partner pawns on the first two and the third empty, with the blocking pawn added in ANSWER green. It is not needed, so it is not added.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  }
+ ]
+}

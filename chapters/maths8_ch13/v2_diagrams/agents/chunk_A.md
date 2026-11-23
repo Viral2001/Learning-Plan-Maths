@@ -1,0 +1,6 @@
+You are doing diagram decisions for CHUNK A of the Class 8 Chapter 13 learning plan ("Algebra Play"). Everything you need is in the brief: read `/root/maths-learning-plan/Learning-Plan-Maths/chapters/maths8_ch13/v2_diagrams/AGENT_BRIEF.md` first and follow it exactly (HERE = `/root/maths-learning-plan/Learning-Plan-Maths/chapters/maths8_ch13/v2_diagrams/`). Your chunk is A: the units in `HERE/map/in_A.json` (topics: M1.S2.T2, M1.S3.T3, M2.S5.T5). Your output files are `HERE/map/out_A.json` and `HERE/map/notes_A.md`.
+
+All base figure inventories exist (`HERE/map/inv_base_chapter_01_13.json`). The inventory agents listed doubts in each entry's `unclear`: check those figures against the page pictures yourself.
+The validator checks your output with `--chunk A`; the base-inventory completeness check (every base figure claimed) only runs on the merged map, so claim only the figures that belong to your chunk (brief, Step 0).
+Do not read `HERE/map/out_*.json` of other chunks; decide from the rules. Do not edit any file other than your two output files; do not touch staging; upload nothing.
+Final message: at most 60 words, as the brief says.

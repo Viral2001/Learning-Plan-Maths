@@ -1,0 +1,5069 @@
+{
+ "meta": {
+  "chapter": "Quadrilaterals",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 4",
+  "lp_plan_id": "cbse_eng_maths8_ch4_v29",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "none": 1,
+    "optional": 2
+   },
+   "question": {
+    "none": 9,
+    "required": 2
+   },
+   "solution": {
+    "none": 1,
+    "required": 10
+   }
+  },
+  "notes": [
+   "Chunk B (topics M3.S11.T11, M3.S12.T12, M4.S14.T14 to M4.S19.T19): 14 units, 25 items.",
+   "Questions with no printed figure get no question diagram; construction and angle-finding solutions get one solution figure (stand-alone, derived_from null).",
+   "Where the LP labelling differs from the book's printed answer (constructions, Q9) the LP is followed.",
+   "Teaching images are never linked; the two worked examples whose figure is the concept's own teaching image are marked optional (not added).",
+   "See map/notes_B.md for borderline calls and LP text issues."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P14-shape-1",
+   "source": "chapter p.14",
+   "description": "teaching figure: 4.2 Angles in a Quadrilateral - 'Consider a quadrilateral SOME. Draw a diagonal SM. We get two triangles SEM and SOM.' (angles 1 to 6)",
+   "mapped_to": "concept_image:M3.S11.T11.C44.IMG1"
+  },
+  {
+   "fig_id": "P14-shape-2",
+   "source": "chapter p.14",
+   "description": "teaching figure: 4.3 More Quadrilaterals with Parallel Opposite Sides - 'Construct such a figure ... Observe the quadrilateral ABCD. It has parallel opposite sides but is not a rectangle.",
+   "mapped_to": "concept_image:M4.S13.T13.C51.IMG1"
+  },
+  {
+   "fig_id": "P15-venn_diagram-1",
+   "source": "chapter p.15",
+   "description": "teaching figure: 'Is a rectangle a parallelogram? ... Let us represent this relation using a Venn diagram.' (Parallelogram contains Rectangle contains Square)",
+   "mapped_to": "concept_image:M5.S26.T26.C104.IMG1"
+  },
+  {
+   "fig_id": "P15-shape-2",
+   "source": "chapter p.15",
+   "description": "worked example picture: 'Draw a parallelogram with adjacent sides of lengths 4 cm and 5 cm, and an angle of 30 deg between them.' - the required parallelogram ABCD",
+   "mapped_to": "item:M4.S14.T14.C56 (solution)"
+  },
+  {
+   "fig_id": "P15-construction-3",
+   "source": "chapter p.15",
+   "description": "worked example picture: 'Step 1: Draw line segments AB = 4 cm and AD = 5 cm with an angle of 30 deg between them. Step 2: Draw a line parallel to AB through the point D, and a line parallel to A",
+   "mapped_to": "item:M4.S14.T14.C56 (solution)"
+  },
+  {
+   "fig_id": "P16-shape-1",
+   "source": "chapter p.16",
+   "description": "teaching figure: Deduction 6 - 'In the parallelogram ABCD, AB || CD, and AD is a transversal to them. angle A + angle D = 180 deg'",
+   "mapped_to": "concept_image:M4.S13.T13.C52.IMG1"
+  },
+  {
+   "fig_id": "P16-shape-2",
+   "source": "chapter p.16",
+   "description": "teaching figure: Deduction 6 - 'What about the opposite angles? Will they be equal in all parallelograms? ... Let us take one of the angles to be x.' (parallelogram PEAR)",
+   "mapped_to": "concept_image:M4.S13.T13.C52.IMG1"
+  },
+  {
+   "fig_id": "P17-shape-1",
+   "source": "chapter p.17",
+   "description": "teaching figure: Deduction 7: triangles ABD and CDB in a parallelogram are congruent (AAS), so opposite sides are equal",
+   "mapped_to": "item:M4.S14.T14.C60 (solution)"
+  },
+  {
+   "fig_id": "P17-shape-2",
+   "source": "chapter p.17",
+   "description": "worked example picture: 'From these deductions we can find the remaining sides and angles of the parallelogram' (parallelogram with 4 cm, 5 cm, 30 degrees)",
+   "mapped_to": "item:M4.S14.T14.C58 (solution)"
+  },
+  {
+   "fig_id": "P18-shape-1",
+   "source": "chapter p.18",
+   "description": "teaching figure: Deduction 8: diagonals of parallelogram EASY bisect each other, triangles AOE and YOS congruent (ASA)",
+   "mapped_to": "concept_image:M4.S15.T15.C63.IMG1"
+  },
+  {
+   "fig_id": "P18-construction-2",
+   "source": "chapter p.18",
+   "description": "teaching figure: 'Draw two equal sides AD and AB, that are not perpendicular to each other' (start of the rhombus construction, angle 50 degrees)",
+   "mapped_to": "concept_image:M4.S17.T17.C67.IMG1"
+  },
+  {
+   "fig_id": "P18-construction-3",
+   "source": "chapter p.18",
+   "description": "teaching figure: 'Can we complete this quadrilateral so that all its sides are of the same length?' - mark C using arcs from B and D (rhombus ABCD, angle 50 degrees)",
+   "mapped_to": "item:M4.S18.T18.C72 (solution)"
+  },
+  {
+   "fig_id": "P19-shape-1",
+   "source": "chapter p.19",
+   "description": "teaching figure: Deduction 9: rhombus GAME, diagonal EA, angles a, b, c, d; triangles GAE and MAE congruent",
+   "mapped_to": "concept_image:M4.S17.T17.C68.IMG1"
+  },
+  {
+   "fig_id": "P19-shape-2",
+   "source": "chapter p.19",
+   "description": "worked example picture: Worked step: the rhombus ABCD (50 degrees) with the four equal angles a formed by diagonal DB; 'In triangle ADB, a + a + 50 = 180, so a = 65'",
+   "mapped_to": "concept_image:M4.S17.T17.C68.IMG1"
+  },
+  {
+   "fig_id": "P19-shape-3",
+   "source": "chapter p.19",
+   "description": "worked example picture: Worked result: angles of rhombus ABCD are 50, 130, 50, 130 (a = 65 degrees substituted)",
+   "mapped_to": "item:M4.S18.T18.C74 (solution)"
+  },
+  {
+   "fig_id": "P19-shape-4",
+   "source": "chapter p.19",
+   "description": "teaching figure: 'Consider the lines EM and GA and its transversal AE. Since the alternate angles are equal, EM || GA' (left figure of the pair)",
+   "mapped_to": "concept_image:M4.S17.T17.C68.IMG1"
+  },
+  {
+   "fig_id": "P19-shape-5",
+   "source": "chapter p.19",
+   "description": "teaching figure: 'Similarly consider the lines GE and AM and its transversal AE. Since the alternate angles are equal, GE || AM' (right figure of the pair)",
+   "mapped_to": "concept_image:M4.S17.T17.C68.IMG1"
+  },
+  {
+   "fig_id": "P20-shape-1",
+   "source": "chapter p.20",
+   "description": "worked example picture: 'Thus, in rhombus ABCD, angle A = angle C = 50 degrees and angle D = angle B = 130 degrees' (parallelogram properties applied to the rhombus)",
+   "mapped_to": "concept_image:M4.S17.T17.C68.IMG1"
+  },
+  {
+   "fig_id": "P20-venn-2",
+   "source": "chapter p.20",
+   "description": "teaching figure: 'How can this be represented using a Venn diagram?' (rectangle and rhombus, with the set of squares in the overlap) - left diagram",
+   "mapped_to": "concept_image:M5.S26.T26.C104.IMG1"
+  },
+  {
+   "fig_id": "P20-venn-3",
+   "source": "chapter p.20",
+   "description": "teaching figure: 'Where will the set of squares occur in this diagram?' / 'Thus, the Venn diagram will be as follows' (parallelogram added) - right diagram",
+   "mapped_to": "concept_image:M5.S26.T26.C104.IMG1"
+  },
+  {
+   "fig_id": "P21-shape-1",
+   "source": "chapter p.21",
+   "description": "teaching figure: Deduction 10: diagonals of rhombus GAME meet at O, triangles GEO and MEO congruent, so angle GOE = 90 degrees",
+   "mapped_to": "concept_image:M4.S17.T17.C69.IMG1"
+  },
+  {
+   "fig_id": "P21-shape-2",
+   "source": "chapter p.21",
+   "description": "given in question: Figure it Out Q1 (i): 'Find the remaining angles in the following quadrilaterals' - quadrilateral PEAR with 40 degrees at P",
+   "mapped_to": "item:M4.S18.T18.C75 (question)"
+  },
+  {
+   "fig_id": "P21-shape-3",
+   "source": "chapter p.21",
+   "description": "given in question: Figure it Out Q1 (ii): quadrilateral SRQP with 110 degrees at P",
+   "mapped_to": "item:M4.S18.T18.C75 (question)"
+  },
+  {
+   "fig_id": "P21-shape-4",
+   "source": "chapter p.21",
+   "description": "given in question: Figure it Out Q1 (iii): quadrilateral UVWX with diagonal XV and 30 degrees at V | Vertex layout of (iii) checked against page_21.png: X top-left, W top-right, U bottom-left, V bottom-right, U right of X and V right of W, as the base entry says.",
+   "mapped_to": "item:M4.S18.T18.C75 (question)"
+  },
+  {
+   "fig_id": "P21-shape-5",
+   "source": "chapter p.21",
+   "description": "given in question: Figure it Out Q1 (iv): quadrilateral OIEA with diagonal OE and 20 degrees at E",
+   "mapped_to": "item:M4.S18.T18.C75 (question)"
+  },
+  {
+   "fig_id": "P27-shape-3",
+   "source": "chapter p.27",
+   "description": "given in question: Figure it Out Q10 (Try This): 'Will the sum of the angles in a quadrilateral such as the following one also be 360 degrees?' (non-convex quadrilateral ABCD)",
+   "mapped_to": "item:M3.S12.T12.C49 (question)"
+  },
+  {
+   "fig_id": "P33-shape-1",
+   "source": "chapter p.33",
+   "description": "given in question: Figure it Out (Page No. 102) Q1(i): 'Find the remaining angles in the following quadrilaterals' - figure (i) | Printed copy of the question figure (i) on the solutions page, no added marks; the answers beside it are text.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P33-shape-2",
+   "source": "chapter p.33",
+   "description": "given in question: Figure it Out (Page No. 102) Q1(ii): figure (ii) | Printed copy of the question figure (ii) on the solutions page, no added marks.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P33-shape-3",
+   "source": "chapter p.33",
+   "description": "given in question: Figure it Out (Page No. 102) Q1(iii): figure (iii) | Printed copy of the question figure (iii) on the solutions page, no added marks.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P33-shape-4",
+   "source": "chapter p.33",
+   "description": "given in question: Figure it Out (Page No. 102) Q1(iv): figure (iv) | Printed copy of the question figure (iv) on the solutions page, no added marks.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P33-construction-1",
+   "source": "chapter p.33",
+   "description": "printed answer picture: Printed answer to Figure it Out (Page No. 102) Q2: 'Using the diagonal properties, construct a parallelogram whose diagonals are of lengths 7 cm and 5 cm, and intersect a",
+   "mapped_to": "item:M4.S16.T16.C66 (solution)"
+  },
+  {
+   "fig_id": "P34-construction-1",
+   "source": "chapter p.34",
+   "description": "printed answer picture: Printed answer to Figure it Out (Page No. 102) Q3: 'Using the diagonal properties, construct a rhombus whose diagonals are of lengths 4 cm and 5 cm'",
+   "mapped_to": "item:M4.S19.T19.C78 (solution)"
+  },
+  {
+   "fig_id": "P38-shape-1",
+   "source": "chapter p.38",
+   "description": "printed answer picture: Printed answer to Figure it Out (Page No. 107) Q9: 'What type of a quadrilateral is one in which the opposite sides are equal?' - triangles ABC and ACD with AB = CD, BC =",
+   "mapped_to": "item:M4.S14.T14.C62 (solution)"
+  },
+  {
+   "fig_id": "P38-shape-2",
+   "source": "chapter p.38",
+   "description": "CORRECTED: printed copy of the question figure of FiO Q10 (same dart as P27-shape-3). The base text says C is lower than A; on the page picture C is slightly higher than A (B apex, A bottom-left, C bottom-right slightly higher, D inner vertex above AC), exactly as on p.27.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P38-shape-3",
+   "source": "chapter p.38",
+   "description": "printed answer picture: Printed answer to Figure it Out (Page No. 107) Q10: 'Join BD, now sum of angles of triangle ADB = 180 and of triangle BDC = 180 ... = 360'",
+   "mapped_to": "item:M3.S12.T12.C50 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 35,
+  "mapped_to_items": 15,
+  "mapped_to_concept_images": 15,
+  "mapped_none": 5,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M3.S12.T12.C49.IMG1",
+   "M3.S12.T12.C50.IMG1",
+   "M4.S14.T14.C56.IMG1",
+   "M4.S14.T14.C58.IMG1",
+   "M4.S14.T14.C60.IMG1",
+   "M4.S14.T14.C62.IMG1",
+   "M4.S16.T16.C66.IMG1",
+   "M4.S18.T18.C72.IMG1",
+   "M4.S18.T18.C74.IMG1",
+   "M4.S18.T18.C75.IMG1",
+   "M4.S18.T18.C76.IMG1",
+   "M4.S19.T19.C78.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M3.S11.T11.C44",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: The four angles add up to 360°",
+   "ncert_ref": "4.2.angle_sum",
+   "question_text": "Three angles of a quadrilateral are 75°, 95° and 110°. Find the fourth angle.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example gives three numbers and no figure, and the working is arithmetic (75 + 95 + 110 = 280, 360 - 280 = 80). The quadrilateral split by a diagonal is already this concept's own teaching image (C44.IMG1), which stays and is not linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Steps in LaTeX: $75 + 95 + 110 = 280$ and $360 - 280 = 80$.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S12.T12.C47",
+   "role": "question",
+   "lp_book_number": "Quadrilateral Angles: find the fourth angle",
+   "ncert_ref": "4.2.three_right",
+   "question_text": "A quadrilateral has three angles of 90°. Find the fourth angle.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives only numbers (three angles of 90 degrees) and refers to no figure; the book section 4.2 only states the result in a sentence.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S12.T12.C48",
+   "role": "solution",
+   "lp_book_number": "Quadrilateral Angles: find the fourth angle",
+   "ncert_ref": "4.2.three_right",
+   "question_text": "A quadrilateral has three angles of 90°. Find the fourth angle.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The steps are 90 + 90 + 90 = 270 and 360 - 270 = 90; a picture of a rectangle adds nothing the sum does not say (C45.IMG1 teaches the same idea).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S12.T12.C49",
+   "role": "question",
+   "lp_book_number": "Kites and Trapeziums, Q10",
+   "ncert_ref": "FiO3.q10",
+   "question_text": "Will the sum of the angles in a quadrilateral such as the following one also be 360°? Find the answer using geometric reasoning as well as by constructing this figure and measuring. (ABCD has one corner that caves in.)",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book question asks about 'a quadrilateral such as the following one' and 'constructing this figure' (figure on p.27, repeated on the solutions page): the caved-in shape with its reflex corner D exists only in the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S12.T12.C49.IMG1",
+   "manim_scene": "c8_4_s12_c49_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S12.T12.C49.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width_units": 16.0,
+      "height_units": 9.0,
+      "px": "1920x1080",
+      "origin": "centre",
+      "x": "right",
+      "y": "up",
+      "unit_px": 120
+     },
+     "stroke_px": 3,
+     "points": {
+      "A": [
+       -2.9,
+       -3.2
+      ],
+      "B": [
+       -0.6,
+       3.2
+      ],
+      "C": [
+       2.9,
+       -2.8
+      ],
+      "D": [
+       0.0,
+       -1.6
+      ]
+     },
+     "elements": [
+      {
+       "kind": "polygon",
+       "colour": "INK",
+       "vertices": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ]
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "A",
+       "radius": 0.75,
+       "start_deg": 28.887,
+       "sweep_deg": 41.346,
+       "note": "angle A inside the figure"
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "B",
+       "radius": 0.6,
+       "start_deg": 250.233,
+       "sweep_deg": 50.024,
+       "note": "angle B inside the figure"
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "C",
+       "radius": 0.75,
+       "start_deg": 120.256,
+       "sweep_deg": 37.264,
+       "note": "angle C inside the figure"
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "D",
+       "radius": 0.55,
+       "start_deg": 337.521,
+       "sweep_deg": 231.366,
+       "note": "the reflex angle at D, drawn on the inside of the figure above D"
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "colour": "INK",
+       "pos": [
+        -3.3,
+        -3.55
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "colour": "INK",
+       "pos": [
+        -0.6,
+        3.7
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "colour": "INK",
+       "pos": [
+        3.3,
+        -3.15
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "D",
+       "colour": "INK",
+       "pos": [
+        0.0,
+        -2.15
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      }
+     ],
+     "to_scale": false,
+     "shape": "concave quadrilateral (dart)",
+     "reflex_vertex": "D"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), plain BG background, origin at the centre, x to the right, y up. All lines and arcs 3 px wide with round ends; labels in a sans-serif font at 0.34 units (vertex letters 0.40 units), both above 34 px. Draw in this order. 1. Draw the closed polygon A-B-C-D-A with straight sides in INK, with vertices A at (-2.9, -3.2); B at (-0.6, 3.2); C at (2.9, -2.8); D at (0.0, -1.6). 2. Draw an arc in INK centred at A (-2.9, -3.2), radius 0.75, starting at 28.887 degrees and sweeping 41.346 degrees counter-clockwise (angle A inside the figure). 3. Draw an arc in INK centred at B (-0.6, 3.2), radius 0.6, starting at 250.233 degrees and sweeping 50.024 degrees counter-clockwise (angle B inside the figure). 4. Draw an arc in INK centred at C (2.9, -2.8), radius 0.75, starting at 120.256 degrees and sweeping 37.264 degrees counter-clockwise (angle C inside the figure). 5. Draw an arc in INK centred at D (0.0, -1.6), radius 0.55, starting at 337.521 degrees and sweeping 231.366 degrees counter-clockwise (the reflex angle at D, drawn on the inside of the figure above D). 6. Write \"A\" in INK, centred at (-3.3, -3.55), font size 0.4 units. 7. Write \"B\" in INK, centred at (-0.6, 3.7), font size 0.4 units. 8. Write \"C\" in INK, centred at (3.3, -3.15), font size 0.4 units. 9. Write \"D\" in INK, centred at (0.0, -2.15), font size 0.4 units.",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "figure letters such as a. or b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any angle value",
+     "the diagonal BD",
+     "the numbers 1 to 6 of the printed answer"
+    ],
+    "accuracy_checks": [
+     "D lies above the line AC, so the interior angle at D is a reflex angle (more than 180 degrees)",
+     "B is the highest point; AB and BC are the long sides; AD and DC are the short sides that cave in",
+     "no angle value is written anywhere"
+    ],
+    "alt_text": "A quadrilateral ABCD with a corner that caves in at D, with angle arcs at A, B and C and a large reflex arc at D, and no angle values.",
+    "render_note": "Redrawn from book p.27 / p.38 (same figure twice). Proportions follow the book picture: B is the highest point, C sits slightly higher than A, D lies about a quarter of the way up from the chord AC. The base inventory entry P38-shape-2 says C is lower than A; the page picture shows C slightly higher (corrected)."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S12.T12.C50",
+   "role": "solution",
+   "lp_book_number": "Kites and Trapeziums, Q10",
+   "ncert_ref": "FiO3.q10",
+   "question_text": "Will the sum of the angles in a quadrilateral such as the following one also be 360°? Find the answer using geometric reasoning as well as by constructing this figure and measuring. (ABCD has one corner that caves in.)",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The book's printed answer is a picture (diagonal BD drawn in the dart with its six triangle angles marked, p.38) and the LP steps (diagonal from the caved-in corner, two triangles, the two angles that make the reflex angle) only make sense on that figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S12.T12.C50.IMG1",
+   "manim_scene": "c8_4_s12_c50_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S12.T12.C50.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S12.T12.C49.IMG1",
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width_units": 16.0,
+      "height_units": 9.0,
+      "px": "1920x1080",
+      "origin": "centre",
+      "x": "right",
+      "y": "up",
+      "unit_px": 120
+     },
+     "stroke_px": 3,
+     "points": {
+      "A": [
+       -2.9,
+       -3.2
+      ],
+      "B": [
+       -0.6,
+       3.2
+      ],
+      "C": [
+       2.9,
+       -2.8
+      ],
+      "D": [
+       0.0,
+       -1.6
+      ]
+     },
+     "elements": [
+      {
+       "kind": "polygon",
+       "colour": "INK",
+       "vertices": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ]
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "A",
+       "radius": 0.75,
+       "start_deg": 28.887,
+       "sweep_deg": 41.346,
+       "note": "angle A inside the figure"
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "B",
+       "radius": 0.6,
+       "start_deg": 250.233,
+       "sweep_deg": 50.024,
+       "note": "angle B inside the figure"
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "C",
+       "radius": 0.75,
+       "start_deg": 120.256,
+       "sweep_deg": 37.264,
+       "note": "angle C inside the figure"
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "D",
+       "radius": 0.55,
+       "start_deg": 337.521,
+       "sweep_deg": 231.366,
+       "note": "the reflex angle at D, drawn on the inside of the figure above D"
+      },
+      {
+       "kind": "segment",
+       "colour": "ANSWER",
+       "from": "B",
+       "to": "D"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "B",
+       "radius": 0.35,
+       "start_deg": 250.233,
+       "sweep_deg": 26.892,
+       "note": "angle ABD"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "B",
+       "radius": 0.35,
+       "start_deg": 277.125,
+       "sweep_deg": 23.131,
+       "note": "angle DBC"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "D",
+       "radius": 0.3,
+       "start_deg": 97.125,
+       "sweep_deg": 111.762,
+       "note": "angle ADB"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "D",
+       "radius": 0.3,
+       "start_deg": 337.521,
+       "sweep_deg": 119.604,
+       "note": "angle BDC"
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "colour": "INK",
+       "pos": [
+        -3.3,
+        -3.55
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "colour": "INK",
+       "pos": [
+        -0.6,
+        3.7
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "colour": "INK",
+       "pos": [
+        3.3,
+        -3.15
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "D",
+       "colour": "INK",
+       "pos": [
+        0.0,
+        -2.15
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      }
+     ],
+     "to_scale": false,
+     "shape": "concave quadrilateral (dart) with the inside diagonal BD"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), plain BG background, origin at the centre, x to the right, y up. All lines and arcs 3 px wide with round ends; labels in a sans-serif font at 0.34 units (vertex letters 0.40 units), both above 34 px. Draw in this order. 1. Draw the closed polygon A-B-C-D-A with straight sides in INK, with vertices A at (-2.9, -3.2); B at (-0.6, 3.2); C at (2.9, -2.8); D at (0.0, -1.6). 2. Draw an arc in INK centred at A (-2.9, -3.2), radius 0.75, starting at 28.887 degrees and sweeping 41.346 degrees counter-clockwise (angle A inside the figure). 3. Draw an arc in INK centred at B (-0.6, 3.2), radius 0.6, starting at 250.233 degrees and sweeping 50.024 degrees counter-clockwise (angle B inside the figure). 4. Draw an arc in INK centred at C (2.9, -2.8), radius 0.75, starting at 120.256 degrees and sweeping 37.264 degrees counter-clockwise (angle C inside the figure). 5. Draw an arc in INK centred at D (0.0, -1.6), radius 0.55, starting at 337.521 degrees and sweeping 231.366 degrees counter-clockwise (the reflex angle at D, drawn on the inside of the figure above D). 6. Draw the straight segment B to D in ANSWER, from (-0.6, 3.2) to (0.0, -1.6). 7. Draw an arc in ANSWER centred at B (-0.6, 3.2), radius 0.35, starting at 250.233 degrees and sweeping 26.892 degrees counter-clockwise (angle ABD). 8. Draw an arc in ANSWER centred at B (-0.6, 3.2), radius 0.35, starting at 277.125 degrees and sweeping 23.131 degrees counter-clockwise (angle DBC). 9. Draw an arc in ANSWER centred at D (0.0, -1.6), radius 0.3, starting at 97.125 degrees and sweeping 111.762 degrees counter-clockwise (angle ADB). 10. Draw an arc in ANSWER centred at D (0.0, -1.6), radius 0.3, starting at 337.521 degrees and sweeping 119.604 degrees counter-clockwise (angle BDC). 11. Write \"A\" in INK, centred at (-3.3, -3.55), font size 0.4 units. 12. Write \"B\" in INK, centred at (-0.6, 3.7), font size 0.4 units. 13. Write \"C\" in INK, centred at (3.3, -3.15), font size 0.4 units. 14. Write \"D\" in INK, centred at (0.0, -2.15), font size 0.4 units.",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "figure letters such as a. or b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "angle values",
+     "the numbers 1 to 6"
+    ],
+    "accuracy_checks": [
+     "BD lies inside the figure and splits ABCD into triangle ABD and triangle CBD",
+     "the two arcs at D (angle ADB = 111.762 degrees and angle BDC = 119.604 degrees as drawn) together fill the reflex angle at D: 231.366 degrees, more than 180",
+     "the two small arcs at B together fill the given arc at B",
+     "the six small angles are those of the two triangles: A, B(left), D(left) and C, B(right), D(right)"
+    ],
+    "alt_text": "The same caved-in quadrilateral ABCD with the diagonal BD drawn from B to D, splitting it into triangles ABD and CBD with their six angles marked by arcs.",
+    "render_note": "Same layout and positions as the question figure (elements 1 to 9 unchanged); BD and the four small arcs are the additions in ANSWER green. The book's printed answer also numbers the six angles 1 to 6; the LP solution does not use those numbers, so none are drawn."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S14.T14.C55",
+   "role": "question",
+   "lp_book_number": "Parallelograms: construct with 4 cm, 5 cm and 30°",
+   "ncert_ref": "4.3.construct_4_5_30",
+   "question_text": "Construct a parallelogram ABCD with AB = 4 cm, AD = 5 cm and an angle of 30° between them.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives AB, AD and the angle in words and no figure; no question figure is invented (companion note). The finished construction is the solution figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S14.T14.C56",
+   "role": "solution",
+   "lp_book_number": "Parallelograms: construct with 4 cm, 5 cm and 30°",
+   "ncert_ref": "4.3.construct_4_5_30",
+   "question_text": "Construct a parallelogram ABCD with AB = 4 cm, AD = 5 cm and an angle of 30° between them.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is a construction: the finished parallelogram ABCD with the two constructed parallels (book p.15, step 2 picture). The question has no figure, so the solution figure stands alone (derived_from null).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S14.T14.C56.IMG1",
+   "manim_scene": "c8_4_s14_c56_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S14.T14.C56.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "construction",
+     "canvas": {
+      "width_units": 16.0,
+      "height_units": 9.0,
+      "px": "1920x1080",
+      "origin": "centre",
+      "x": "right",
+      "y": "up",
+      "unit_px": 120
+     },
+     "stroke_px": 3,
+     "points": {
+      "A": [
+       -5.415,
+       -1.625
+      ],
+      "B": [
+       -0.215,
+       -1.625
+      ],
+      "D": [
+       0.215,
+       1.625
+      ],
+      "C": [
+       5.415,
+       1.625
+      ],
+      "E1": [
+       0.734,
+       1.925
+      ],
+      "E2": [
+       -0.385,
+       1.625
+      ],
+      "E3": [
+       6.015,
+       1.625
+      ],
+      "E4": [
+       5.934,
+       1.925
+      ]
+     },
+     "elements": [
+      {
+       "kind": "segment",
+       "colour": "INK",
+       "from": "A",
+       "to": "B"
+      },
+      {
+       "kind": "segment",
+       "colour": "INK",
+       "from": "A",
+       "to": "D"
+      },
+      {
+       "kind": "segment",
+       "colour": "ANSWER",
+       "from": "D",
+       "to": "C"
+      },
+      {
+       "kind": "segment",
+       "colour": "ANSWER",
+       "from": "B",
+       "to": "C"
+      },
+      {
+       "kind": "segment",
+       "colour": "GUIDE",
+       "from": "D",
+       "to": "E1"
+      },
+      {
+       "kind": "segment",
+       "colour": "GUIDE",
+       "from": "D",
+       "to": "E2"
+      },
+      {
+       "kind": "segment",
+       "colour": "GUIDE",
+       "from": "C",
+       "to": "E3"
+      },
+      {
+       "kind": "segment",
+       "colour": "GUIDE",
+       "from": "C",
+       "to": "E4"
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "A",
+       "radius": 0.9,
+       "start_deg": 0.0,
+       "sweep_deg": 30.0,
+       "note": "the 30 degree angle at A"
+      },
+      {
+       "kind": "label",
+       "text": "30°",
+       "colour": "INK",
+       "pos": [
+        -3.917,
+        -1.224
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "4 cm",
+       "colour": "INK",
+       "pos": [
+        -2.815,
+        -2.125
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "5 cm",
+       "colour": "INK",
+       "pos": [
+        -2.85,
+        0.43
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "colour": "INK",
+       "pos": [
+        -5.815,
+        -1.925
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "colour": "INK",
+       "pos": [
+        0.135,
+        -1.925
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "D",
+       "colour": "INK",
+       "pos": [
+        -0.085,
+        2.075
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "colour": "ANSWER",
+       "pos": [
+        5.265,
+        2.125
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      }
+     ],
+     "to_scale": true,
+     "scale": "1.3 units per cm",
+     "construction": "parallelogram from two sides and the included angle"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), plain BG background, origin at the centre, x to the right, y up. All lines and arcs 3 px wide with round ends; labels in a sans-serif font at 0.34 units (vertex letters 0.40 units), both above 34 px. Draw in this order. 1. Draw the straight segment A to B in INK, from (-5.415, -1.625) to (-0.215, -1.625). 2. Draw the straight segment A to D in INK, from (-5.415, -1.625) to (0.215, 1.625). 3. Draw the straight segment D to C in ANSWER, from (0.215, 1.625) to (5.415, 1.625). 4. Draw the straight segment B to C in ANSWER, from (-0.215, -1.625) to (5.415, 1.625). 5. Draw the straight segment D to E1 in GUIDE, from (0.215, 1.625) to (0.734, 1.925). 6. Draw the straight segment D to E2 in GUIDE, from (0.215, 1.625) to (-0.385, 1.625). 7. Draw the straight segment C to E3 in GUIDE, from (5.415, 1.625) to (6.015, 1.625). 8. Draw the straight segment C to E4 in GUIDE, from (5.415, 1.625) to (5.934, 1.925). 9. Draw an arc in INK centred at A (-5.415, -1.625), radius 0.9, starting at 0.0 degrees and sweeping 30.0 degrees counter-clockwise (the 30 degree angle at A). 10. Write \"30°\" in INK, centred at (-3.917, -1.224), font size 0.34 units. 11. Write \"4 cm\" in INK, centred at (-2.815, -2.125), font size 0.34 units. 12. Write \"5 cm\" in INK, centred at (-2.85, 0.43), font size 0.34 units. 13. Write \"A\" in INK, centred at (-5.815, -1.925), font size 0.4 units. 14. Write \"B\" in INK, centred at (0.135, -1.925), font size 0.4 units. 15. Write \"D\" in INK, centred at (-0.085, 2.075), font size 0.4 units. 16. Write \"C\" in ANSWER, centred at (5.265, 2.125), font size 0.4 units.",
+    "visible_text": [
+     "30°",
+     "4 cm",
+     "5 cm",
+     "A",
+     "B",
+     "D",
+     "C"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "figure letters such as a. or b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "step numbers or captions",
+     "compass arcs",
+     "parallel arrowheads",
+     "the diagonals"
+    ],
+    "accuracy_checks": [
+     "AB = 5.2 units = 4 cm at 1.3 units per cm",
+     "AD = 6.5 units = 5 cm at 1.3 units per cm",
+     "angle between AB and AD = 30.0 degrees (30)",
+     "DC is parallel to AB (both horizontal) and BC is parallel to AD (both at 30 degrees)",
+     "DC = AB = 5.2 units and BC = AD = 6.5 units, so ABCD is a parallelogram that is not a rectangle"
+    ],
+    "alt_text": "Parallelogram ABCD built from AB = 4 cm, AD = 5 cm and a 30° angle at A, with the lines through D and B parallel to AB and AD meeting at C.",
+    "render_note": "Final state of the construction (book p.15, step 2 picture, drawn to scale). Given parts in INK, the two constructed sides and C in ANSWER, the extensions of the constructed lines in GUIDE. No compass tick is drawn because the LP steps do not use a compass."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S14.T14.C57",
+   "role": "question",
+   "lp_book_number": "Parallelograms: remaining angles when ∠A = 30°",
+   "ncert_ref": "4.3.ded6",
+   "question_text": "In parallelogram ABCD, ∠A = 30°. Find ∠B, ∠C and ∠D.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question names the parallelogram and gives angle A in the text and refers to no figure; the book shows the parallelogram beside Deduction 6 but a careful student solves this from the text alone.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S14.T14.C58",
+   "role": "solution",
+   "lp_book_number": "Parallelograms: remaining angles when ∠A = 30°",
+   "ncert_ref": "4.3.ded6",
+   "question_text": "In parallelogram ABCD, ∠A = 30°. Find ∠B, ∠C and ∠D.",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The LP steps use parallel sides and transversals that can only be followed on the figure, and the book answers this deduction with the filled parallelogram (30, 150, 30, 150 on p.17). The question has no figure, so the solution figure stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S14.T14.C58.IMG1",
+   "manim_scene": "c8_4_s14_c58_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S14.T14.C58.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width_units": 16.0,
+      "height_units": 9.0,
+      "px": "1920x1080",
+      "origin": "centre",
+      "x": "right",
+      "y": "up",
+      "unit_px": 120
+     },
+     "stroke_px": 3,
+     "points": {
+      "A": [
+       -5.415,
+       -1.625
+      ],
+      "B": [
+       -0.215,
+       -1.625
+      ],
+      "D": [
+       0.215,
+       1.625
+      ],
+      "C": [
+       5.415,
+       1.625
+      ]
+     },
+     "elements": [
+      {
+       "kind": "polygon",
+       "colour": "INK",
+       "vertices": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "A",
+        "B"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -2.815,
+        -1.625
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "D",
+        "C"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        2.815,
+        1.625
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "A",
+        "D"
+       ],
+       "t": 0.5,
+       "count": 2,
+       "at": [
+        -2.6,
+        0.0
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "B",
+        "C"
+       ],
+       "t": 0.5,
+       "count": 2,
+       "at": [
+        2.6,
+        0.0
+       ]
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "A",
+       "radius": 0.9,
+       "start_deg": 0.0,
+       "sweep_deg": 30.0,
+       "note": "given angle A"
+      },
+      {
+       "kind": "label",
+       "text": "30°",
+       "colour": "INK",
+       "pos": [
+        -3.917,
+        -1.224
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "B",
+       "radius": 0.7,
+       "start_deg": 30.0,
+       "sweep_deg": 150.0,
+       "note": ""
+      },
+      {
+       "kind": "label",
+       "text": "150°",
+       "colour": "ANSWER",
+       "pos": [
+        -0.551,
+        -0.369
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "C",
+       "radius": 0.9,
+       "start_deg": 180.0,
+       "sweep_deg": 30.0,
+       "note": ""
+      },
+      {
+       "kind": "label",
+       "text": "30°",
+       "colour": "ANSWER",
+       "pos": [
+        3.917,
+        1.224
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "D",
+       "radius": 0.7,
+       "start_deg": 210.0,
+       "sweep_deg": 150.0,
+       "note": ""
+      },
+      {
+       "kind": "label",
+       "text": "150°",
+       "colour": "ANSWER",
+       "pos": [
+        0.551,
+        0.369
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "colour": "INK",
+       "pos": [
+        -5.846,
+        -1.754
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "colour": "INK",
+       "pos": [
+        -0.273,
+        -2.071
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "colour": "INK",
+       "pos": [
+        5.846,
+        1.754
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "D",
+       "colour": "INK",
+       "pos": [
+        0.273,
+        2.071
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      }
+     ],
+     "to_scale": true,
+     "scale_note": "angle A = 30 degrees exactly; side lengths are not given and are not labelled"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), plain BG background, origin at the centre, x to the right, y up. All lines and arcs 3 px wide with round ends; labels in a sans-serif font at 0.34 units (vertex letters 0.40 units), both above 34 px. Draw in this order. 1. Draw the closed polygon A-B-C-D-A with straight sides in INK, with vertices A at (-5.415, -1.625); B at (-0.215, -1.625); C at (5.415, 1.625); D at (0.215, 1.625). 2. Draw 1 open arrowhead in INK on side AB, the tip at (-2.815, -1.625) pointing at 0.0 degrees (arms of length 0.22 at 30 degrees either side of the side). 3. Draw 1 open arrowhead in INK on side DC, the tip at (2.815, 1.625) pointing at 0.0 degrees (arms of length 0.22 at 30 degrees either side of the side). 4. Draw 2 open arrowheads in INK on side AD, the tip at (-2.6, 0.0) pointing at 30.0 degrees (arms of length 0.22 at 30 degrees either side of the side); the second arrowhead sits 0.16 behind the first along the side. 5. Draw 2 open arrowheads in INK on side BC, the tip at (2.6, 0.0) pointing at 30.0 degrees (arms of length 0.22 at 30 degrees either side of the side); the second arrowhead sits 0.16 behind the first along the side. 6. Draw an arc in INK centred at A (-5.415, -1.625), radius 0.9, starting at 0.0 degrees and sweeping 30.0 degrees counter-clockwise (given angle A). 7. Write \"30°\" in INK, centred at (-3.917, -1.224), font size 0.34 units. 8. Draw an arc in ANSWER centred at B (-0.215, -1.625), radius 0.7, starting at 30.0 degrees and sweeping 150.0 degrees counter-clockwise. 9. Write \"150°\" in ANSWER, centred at (-0.551, -0.369), font size 0.34 units. 10. Draw an arc in ANSWER centred at C (5.415, 1.625), radius 0.9, starting at 180.0 degrees and sweeping 30.0 degrees counter-clockwise. 11. Write \"30°\" in ANSWER, centred at (3.917, 1.224), font size 0.34 units. 12. Draw an arc in ANSWER centred at D (0.215, 1.625), radius 0.7, starting at 210.0 degrees and sweeping 150.0 degrees counter-clockwise. 13. Write \"150°\" in ANSWER, centred at (0.551, 0.369), font size 0.34 units. 14. Write \"A\" in INK, centred at (-5.846, -1.754), font size 0.4 units. 15. Write \"B\" in INK, centred at (-0.273, -2.071), font size 0.4 units. 16. Write \"C\" in INK, centred at (5.846, 1.754), font size 0.4 units. 17. Write \"D\" in INK, centred at (0.273, 2.071), font size 0.4 units.",
+    "visible_text": [
+     "30°",
+     "150°",
+     "30°",
+     "150°",
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "figure letters such as a. or b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "side lengths",
+     "the diagonals"
+    ],
+    "accuracy_checks": [
+     "A = 30 and B = 180 - 30 = 150 (AD parallel to BC, transversal AB)",
+     "D = 180 - 30 = 150 (AB parallel to CD, transversal AD)",
+     "C = 180 - 150 = 30, so the four angles are 30, 150, 30, 150 and add up to 360",
+     "angle at A measured from the coordinates = 30.0 degrees"
+    ],
+    "alt_text": "Parallelogram ABCD with parallel-side marks and its four angles 30°, 150°, 30° and 150°.",
+    "render_note": "Drawn like the book's picture on p.16 and p.17 (A bottom-left, D up-right of A) but without the 4 cm and 5 cm labels, because the LP question gives only angle A. The book's answer to this deduction is this filled parallelogram."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S14.T14.C59",
+   "role": "question",
+   "lp_book_number": "Parallelograms: remaining sides of the 4 cm by 5 cm one",
+   "ncert_ref": "4.3.ded7",
+   "question_text": "In parallelogram ABCD, AB = 4 cm and AD = 5 cm. Find CB and CD, and say why ∆ABD ≅ ∆CBD is wrong.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives AB = 4 cm and AD = 5 cm in the text and refers to no figure; the wording of the wrong congruence statement is also text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S14.T14.C60",
+   "role": "solution",
+   "lp_book_number": "Parallelograms: remaining sides of the 4 cm by 5 cm one",
+   "ncert_ref": "4.3.ded7",
+   "question_text": "In parallelogram ABCD, AB = 4 cm and AD = 5 cm. Find CB and CD, and say why ∆ABD ≅ ∆CBD is wrong.",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The solution joins the diagonal BD and argues with single and double angle arcs on triangles ABD and CDB (book Deduction 7 figure, p.17, whose filled version gives CD = 4 cm and CB = 5 cm); this cannot be followed without the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S14.T14.C60.IMG1",
+   "manim_scene": "c8_4_s14_c60_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S14.T14.C60.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width_units": 16.0,
+      "height_units": 9.0,
+      "px": "1920x1080",
+      "origin": "centre",
+      "x": "right",
+      "y": "up",
+      "unit_px": 120
+     },
+     "stroke_px": 3,
+     "points": {
+      "A": [
+       -5.415,
+       -1.625
+      ],
+      "B": [
+       -0.215,
+       -1.625
+      ],
+      "D": [
+       0.215,
+       1.625
+      ],
+      "C": [
+       5.415,
+       1.625
+      ]
+     },
+     "elements": [
+      {
+       "kind": "polygon",
+       "colour": "INK",
+       "vertices": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "A",
+        "B"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -2.815,
+        -1.625
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "D",
+        "C"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        2.815,
+        1.625
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "A",
+        "D"
+       ],
+       "t": 0.5,
+       "count": 2,
+       "at": [
+        -2.6,
+        0.0
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "B",
+        "C"
+       ],
+       "t": 0.5,
+       "count": 2,
+       "at": [
+        2.6,
+        0.0
+       ]
+      },
+      {
+       "kind": "segment",
+       "colour": "ANSWER",
+       "from": "B",
+       "to": "D"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "A",
+       "radius": 0.8,
+       "start_deg": 0.0,
+       "sweep_deg": 30.0,
+       "note": "angle BAD, single arc"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "C",
+       "radius": 0.8,
+       "start_deg": 180.0,
+       "sweep_deg": 30.0,
+       "note": "angle DCB, single arc"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "D",
+       "radius": 0.7,
+       "start_deg": 210.0,
+       "sweep_deg": 52.478,
+       "note": "angle ADB, first of two arcs"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "D",
+       "radius": 0.84,
+       "start_deg": 210.0,
+       "sweep_deg": 52.478,
+       "note": "angle ADB, second of two arcs"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "B",
+       "radius": 0.7,
+       "start_deg": 30.0,
+       "sweep_deg": 52.478,
+       "note": "angle CBD, first of two arcs"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "B",
+       "radius": 0.84,
+       "start_deg": 30.0,
+       "sweep_deg": 52.478,
+       "note": "angle CBD, second of two arcs"
+      },
+      {
+       "kind": "label",
+       "text": "4 cm",
+       "colour": "INK",
+       "pos": [
+        -2.815,
+        -2.125
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "5 cm",
+       "colour": "INK",
+       "pos": [
+        -2.85,
+        0.43
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "4 cm",
+       "colour": "ANSWER",
+       "pos": [
+        2.815,
+        2.125
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "5 cm",
+       "colour": "ANSWER",
+       "pos": [
+        2.96,
+        -0.58
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "colour": "INK",
+       "pos": [
+        -5.846,
+        -1.754
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "colour": "INK",
+       "pos": [
+        -0.273,
+        -2.071
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "colour": "INK",
+       "pos": [
+        5.846,
+        1.754
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "D",
+       "colour": "INK",
+       "pos": [
+        0.273,
+        2.071
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      }
+     ],
+     "to_scale": true,
+     "scale": "1.3 units per cm for the two given sides; the angle at A is drawn as 30 degrees as in the book figure but is not labelled"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), plain BG background, origin at the centre, x to the right, y up. All lines and arcs 3 px wide with round ends; labels in a sans-serif font at 0.34 units (vertex letters 0.40 units), both above 34 px. Draw in this order. 1. Draw the closed polygon A-B-C-D-A with straight sides in INK, with vertices A at (-5.415, -1.625); B at (-0.215, -1.625); C at (5.415, 1.625); D at (0.215, 1.625). 2. Draw 1 open arrowhead in INK on side AB, the tip at (-2.815, -1.625) pointing at 0.0 degrees (arms of length 0.22 at 30 degrees either side of the side). 3. Draw 1 open arrowhead in INK on side DC, the tip at (2.815, 1.625) pointing at 0.0 degrees (arms of length 0.22 at 30 degrees either side of the side). 4. Draw 2 open arrowheads in INK on side AD, the tip at (-2.6, 0.0) pointing at 30.0 degrees (arms of length 0.22 at 30 degrees either side of the side); the second arrowhead sits 0.16 behind the first along the side. 5. Draw 2 open arrowheads in INK on side BC, the tip at (2.6, 0.0) pointing at 30.0 degrees (arms of length 0.22 at 30 degrees either side of the side); the second arrowhead sits 0.16 behind the first along the side. 6. Draw the straight segment B to D in ANSWER, from (-0.215, -1.625) to (0.215, 1.625). 7. Draw an arc in ANSWER centred at A (-5.415, -1.625), radius 0.8, starting at 0.0 degrees and sweeping 30.0 degrees counter-clockwise (angle BAD, single arc). 8. Draw an arc in ANSWER centred at C (5.415, 1.625), radius 0.8, starting at 180.0 degrees and sweeping 30.0 degrees counter-clockwise (angle DCB, single arc). 9. Draw an arc in ANSWER centred at D (0.215, 1.625), radius 0.7, starting at 210.0 degrees and sweeping 52.478 degrees counter-clockwise (angle ADB, first of two arcs). 10. Draw an arc in ANSWER centred at D (0.215, 1.625), radius 0.84, starting at 210.0 degrees and sweeping 52.478 degrees counter-clockwise (angle ADB, second of two arcs). 11. Draw an arc in ANSWER centred at B (-0.215, -1.625), radius 0.7, starting at 30.0 degrees and sweeping 52.478 degrees counter-clockwise (angle CBD, first of two arcs). 12. Draw an arc in ANSWER centred at B (-0.215, -1.625), radius 0.84, starting at 30.0 degrees and sweeping 52.478 degrees counter-clockwise (angle CBD, second of two arcs). 13. Write \"4 cm\" in INK, centred at (-2.815, -2.125), font size 0.34 units. 14. Write \"5 cm\" in INK, centred at (-2.85, 0.43), font size 0.34 units. 15. Write \"4 cm\" in ANSWER, centred at (2.815, 2.125), font size 0.34 units. 16. Write \"5 cm\" in ANSWER, centred at (2.96, -0.58), font size 0.34 units. 17. Write \"A\" in INK, centred at (-5.846, -1.754), font size 0.4 units. 18. Write \"B\" in INK, centred at (-0.273, -2.071), font size 0.4 units. 19. Write \"C\" in INK, centred at (5.846, 1.754), font size 0.4 units. 20. Write \"D\" in INK, centred at (0.273, 2.071), font size 0.4 units.",
+    "visible_text": [
+     "4 cm",
+     "5 cm",
+     "4 cm",
+     "5 cm",
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "figure letters such as a. or b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words Common Side",
+     "triangle fills",
+     "angle values"
+    ],
+    "accuracy_checks": [
+     "AB = 5.2 units = 4 cm and AD = 6.5 units = 5 cm at 1.3 units per cm",
+     "CD = 5.2 units = AB and CB = 6.5 units = AD (opposite sides of a parallelogram)",
+     "angle ADB = 52.478 degrees equals angle CBD = 52.478 degrees (alternate angles, AD parallel to BC)",
+     "angle BAD = angle DCB = 30.0 degrees (opposite angles)",
+     "BD is drawn once and is the common side of triangle ABD and triangle CDB"
+    ],
+    "alt_text": "Parallelogram ABCD with AB = CD = 4 cm and AD = CB = 5 cm, the diagonal BD drawn, and equal-angle arcs at A and C and at D and B.",
+    "render_note": "Redrawn from the book's Deduction 7 figure (p.17) without its colour fills and without the words 'Common Side'. Single arcs mark the opposite angles A and C, double arcs mark the alternate angles ADB and CBD. Arrowheads on the sides are the parallel marks of a parallelogram."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S14.T14.C61",
+   "role": "question",
+   "lp_book_number": "Kites and Trapeziums, Q9",
+   "ncert_ref": "FiO3.q9",
+   "question_text": "What type of a quadrilateral is one in which the opposite sides are equal? Justify your answer. (Hint: Draw a diagonal and check for congruent triangles.)",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure (book Q9 is words only with a hint); no question figure is invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S14.T14.C62",
+   "role": "solution",
+   "lp_book_number": "Kites and Trapeziums, Q9",
+   "ncert_ref": "FiO3.q9",
+   "question_text": "What type of a quadrilateral is one in which the opposite sides are equal? Justify your answer. (Hint: Draw a diagonal and check for congruent triangles.)",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book's printed answer is a picture (quadrilateral with equal-side ticks, a diagonal and numbered angles, p.38) and the LP steps argue on the diagonal BD and the alternate angles; the question has no figure, so the solution figure stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S14.T14.C62.IMG1",
+   "manim_scene": "c8_4_s14_c62_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S14.T14.C62.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width_units": 16.0,
+      "height_units": 9.0,
+      "px": "1920x1080",
+      "origin": "centre",
+      "x": "right",
+      "y": "up",
+      "unit_px": 120
+     },
+     "stroke_px": 3,
+     "points": {
+      "A": [
+       -5.415,
+       -1.625
+      ],
+      "B": [
+       -0.215,
+       -1.625
+      ],
+      "D": [
+       0.215,
+       1.625
+      ],
+      "C": [
+       5.415,
+       1.625
+      ]
+     },
+     "elements": [
+      {
+       "kind": "polygon",
+       "colour": "INK",
+       "vertices": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "A",
+        "B"
+       ],
+       "t": 0.4,
+       "count": 1,
+       "at": [
+        -3.335,
+        -1.625
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "D",
+        "C"
+       ],
+       "t": 0.4,
+       "count": 1,
+       "at": [
+        2.295,
+        1.625
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "A",
+        "D"
+       ],
+       "t": 0.4,
+       "count": 2,
+       "at": [
+        -3.163,
+        -0.325
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "B",
+        "C"
+       ],
+       "t": 0.4,
+       "count": 2,
+       "at": [
+        2.037,
+        -0.325
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "ANSWER",
+       "side": [
+        "A",
+        "B"
+       ],
+       "t": 0.75,
+       "count": 1,
+       "at": [
+        -1.515,
+        -1.625
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "ANSWER",
+       "side": [
+        "D",
+        "C"
+       ],
+       "t": 0.75,
+       "count": 1,
+       "at": [
+        4.115,
+        1.625
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "ANSWER",
+       "side": [
+        "A",
+        "D"
+       ],
+       "t": 0.75,
+       "count": 2,
+       "at": [
+        -1.193,
+        0.812
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "ANSWER",
+       "side": [
+        "B",
+        "C"
+       ],
+       "t": 0.75,
+       "count": 2,
+       "at": [
+        4.007,
+        0.812
+       ]
+      },
+      {
+       "kind": "segment",
+       "colour": "ANSWER",
+       "from": "B",
+       "to": "D"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "B",
+       "radius": 0.55,
+       "start_deg": 180.0,
+       "sweep_deg": -97.522,
+       "note": "angle ABD, single arc"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "D",
+       "radius": 0.55,
+       "start_deg": 0.0,
+       "sweep_deg": -97.522,
+       "note": "angle CDB, single arc"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "D",
+       "radius": 0.85,
+       "start_deg": 210.0,
+       "sweep_deg": 52.478,
+       "note": "angle ADB, first of two arcs"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "D",
+       "radius": 1.0,
+       "start_deg": 210.0,
+       "sweep_deg": 52.478,
+       "note": "angle ADB, second of two arcs"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "B",
+       "radius": 0.85,
+       "start_deg": 30.0,
+       "sweep_deg": 52.478,
+       "note": "angle CBD, first of two arcs"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "B",
+       "radius": 1.0,
+       "start_deg": 30.0,
+       "sweep_deg": 52.478,
+       "note": "angle CBD, second of two arcs"
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "colour": "INK",
+       "pos": [
+        -5.846,
+        -1.754
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "colour": "INK",
+       "pos": [
+        -0.273,
+        -2.071
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "colour": "INK",
+       "pos": [
+        5.846,
+        1.754
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "D",
+       "colour": "INK",
+       "pos": [
+        0.273,
+        2.071
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      }
+     ],
+     "to_scale": false,
+     "shape": "parallelogram (the conclusion of the argument)"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), plain BG background, origin at the centre, x to the right, y up. All lines and arcs 3 px wide with round ends; labels in a sans-serif font at 0.34 units (vertex letters 0.40 units), both above 34 px. Draw in this order. 1. Draw the closed polygon A-B-C-D-A with straight sides in INK, with vertices A at (-5.415, -1.625); B at (-0.215, -1.625); C at (5.415, 1.625); D at (0.215, 1.625). 2. Draw 1 tick mark of length 0.30 in INK across side AB, centred at (-3.335, -1.625) and perpendicular to the side. 3. Draw 1 tick mark of length 0.30 in INK across side DC, centred at (2.295, 1.625) and perpendicular to the side. 4. Draw 2 tick marks of length 0.30 in INK across side AD, centred at (-3.163, -0.325) and perpendicular to the side, the marks 0.14 apart along the side. 5. Draw 2 tick marks of length 0.30 in INK across side BC, centred at (2.037, -0.325) and perpendicular to the side, the marks 0.14 apart along the side. 6. Draw 1 open arrowhead in ANSWER on side AB, the tip at (-1.515, -1.625) pointing at 0.0 degrees (arms of length 0.22 at 30 degrees either side of the side). 7. Draw 1 open arrowhead in ANSWER on side DC, the tip at (4.115, 1.625) pointing at 0.0 degrees (arms of length 0.22 at 30 degrees either side of the side). 8. Draw 2 open arrowheads in ANSWER on side AD, the tip at (-1.193, 0.812) pointing at 30.0 degrees (arms of length 0.22 at 30 degrees either side of the side); the second arrowhead sits 0.16 behind the first along the side. 9. Draw 2 open arrowheads in ANSWER on side BC, the tip at (4.007, 0.812) pointing at 30.0 degrees (arms of length 0.22 at 30 degrees either side of the side); the second arrowhead sits 0.16 behind the first along the side. 10. Draw the straight segment B to D in ANSWER, from (-0.215, -1.625) to (0.215, 1.625). 11. Draw an arc in ANSWER centred at B (-0.215, -1.625), radius 0.55, starting at 180.0 degrees and sweeping 97.522 degrees clockwise (angle ABD, single arc). 12. Draw an arc in ANSWER centred at D (0.215, 1.625), radius 0.55, starting at 0.0 degrees and sweeping 97.522 degrees clockwise (angle CDB, single arc). 13. Draw an arc in ANSWER centred at D (0.215, 1.625), radius 0.85, starting at 210.0 degrees and sweeping 52.478 degrees counter-clockwise (angle ADB, first of two arcs). 14. Draw an arc in ANSWER centred at D (0.215, 1.625), radius 1.0, starting at 210.0 degrees and sweeping 52.478 degrees counter-clockwise (angle ADB, second of two arcs). 15. Draw an arc in ANSWER centred at B (-0.215, -1.625), radius 0.85, starting at 30.0 degrees and sweeping 52.478 degrees counter-clockwise (angle CBD, first of two arcs). 16. Draw an arc in ANSWER centred at B (-0.215, -1.625), radius 1.0, starting at 30.0 degrees and sweeping 52.478 degrees counter-clockwise (angle CBD, second of two arcs). 17. Write \"A\" in INK, centred at (-5.846, -1.754), font size 0.4 units. 18. Write \"B\" in INK, centred at (-0.273, -2.071), font size 0.4 units. 19. Write \"C\" in INK, centred at (5.846, 1.754), font size 0.4 units. 20. Write \"D\" in INK, centred at (0.273, 2.071), font size 0.4 units.",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "figure letters such as a. or b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbered angles 1 to 4",
+     "angle values",
+     "side lengths"
+    ],
+    "accuracy_checks": [
+     "AB and CD carry one tick each, AD and CB carry two ticks each (opposite sides equal: AB = CD, AD = CB)",
+     "angle ABD = 97.522 degrees equals angle CDB = 97.522 degrees (single arcs, alternate angles for AB and DC with transversal BD)",
+     "angle ADB = 52.478 degrees equals angle CBD = 52.478 degrees (double arcs, alternate angles for AD and BC with transversal BD)",
+     "BD is common to triangle ABD and triangle CDB (SSS), so both pairs of opposite sides are parallel"
+    ],
+    "alt_text": "Quadrilateral ABCD with equal opposite sides marked by ticks, the diagonal BD, two pairs of equal alternate angles marked by arcs, and parallel marks on opposite sides.",
+    "render_note": "The LP solution uses ABCD with diagonal BD (the book's printed answer uses AB = CD, BC = AD with diagonal AC and numbered angles 1 to 4); the LP is followed. The arrowheads in ANSWER green show the conclusion that both pairs of opposite sides are parallel."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S15.T15.C63",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: The diagonals of a parallelogram bisect each other",
+   "ncert_ref": "4.3.diag_equal, 4.3.diag_angle, 4.3.ded8, 4.3.wrong_aoe",
+   "question_text": "In parallelogram EASY the diagonals AY and ES meet at O, with AY = 10 cm and ES = 6 cm. Find OA, OY, OE and OS, and say why ∆AOE ≅ ∆SOY is wrong.",
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A picture would clearly help (parallelogram EASY with diagonals AY and ES crossing at O, AY = 10 cm, ES = 6 cm) but is not needed: the question names every point and length, and exactly this figure is already the concept's own teaching image (C63.IMG1), which stays and is not linked. Not added (optional).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M4.S16.T16.C65",
+   "role": "question",
+   "lp_book_number": "Parallelograms and Rhombuses, Q2",
+   "ncert_ref": "FiO2.q2",
+   "question_text": "Using the diagonal properties, construct a parallelogram whose diagonals are of lengths 7 cm and 5 cm, and intersect at an angle of 140°.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives the two diagonals and the angle in words and no figure; no question figure is invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S16.T16.C66",
+   "role": "solution",
+   "lp_book_number": "Parallelograms and Rhombuses, Q2",
+   "ncert_ref": "FiO2.q2",
+   "question_text": "Using the diagonal properties, construct a parallelogram whose diagonals are of lengths 7 cm and 5 cm, and intersect at an angle of 140°.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is a construction and the book's printed answer is a picture (p.33: diagonals crossing at O with the 140 degree angle). The question has no figure, so the solution figure stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S16.T16.C66.IMG1",
+   "manim_scene": "c8_4_s16_c66_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S16.T16.C66.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "construction",
+     "canvas": {
+      "width_units": 16.0,
+      "height_units": 9.0,
+      "px": "1920x1080",
+      "origin": "centre",
+      "x": "right",
+      "y": "up",
+      "unit_px": 120
+     },
+     "stroke_px": 3,
+     "points": {
+      "A": [
+       -4.9,
+       0.0
+      ],
+      "C": [
+       4.9,
+       0.0
+      ],
+      "O": [
+       0.0,
+       0.0
+      ],
+      "D": [
+       -2.681,
+       2.25
+      ],
+      "B": [
+       2.681,
+       -2.25
+      ]
+     },
+     "elements": [
+      {
+       "kind": "segment",
+       "colour": "INK",
+       "from": "A",
+       "to": "C"
+      },
+      {
+       "kind": "segment",
+       "colour": "INK",
+       "from": "B",
+       "to": "D"
+      },
+      {
+       "kind": "polygon",
+       "colour": "ANSWER",
+       "vertices": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ]
+      },
+      {
+       "kind": "dot",
+       "colour": "INK",
+       "at": "O"
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "O",
+       "radius": 0.7,
+       "start_deg": 0.0,
+       "sweep_deg": 140.0,
+       "note": "the 140 degree angle between OC and OD"
+      },
+      {
+       "kind": "label",
+       "text": "3.5 cm",
+       "colour": "INK",
+       "pos": [
+        -3.2,
+        0.5
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "3.5 cm",
+       "colour": "INK",
+       "pos": [
+        3.2,
+        -0.5
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "2.5 cm",
+       "colour": "INK",
+       "pos": [
+        -1.727,
+        0.665
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "2.5 cm",
+       "colour": "INK",
+       "pos": [
+        1.727,
+        -0.665
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "colour": "INK",
+       "pos": [
+        -5.3,
+        0.0
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "colour": "INK",
+       "pos": [
+        5.3,
+        0.0
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "colour": "INK",
+       "pos": [
+        3.026,
+        -2.539
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "D",
+       "colour": "INK",
+       "pos": [
+        -3.026,
+        2.539
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "O",
+       "colour": "INK",
+       "pos": [
+        -0.3,
+        -0.38
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "140°",
+       "colour": "INK",
+       "pos": [
+        0.214,
+        0.926
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      }
+     ],
+     "to_scale": true,
+     "scale": "1.4 units per cm",
+     "construction": "parallelogram from its two diagonals and the angle between them"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), plain BG background, origin at the centre, x to the right, y up. All lines and arcs 3 px wide with round ends; labels in a sans-serif font at 0.34 units (vertex letters 0.40 units), both above 34 px. Draw in this order. 1. Draw the straight segment A to C in INK, from (-4.9, 0.0) to (4.9, 0.0). 2. Draw the straight segment B to D in INK, from (2.681, -2.25) to (-2.681, 2.25). 3. Draw the closed polygon A-B-C-D-A with straight sides in ANSWER, with vertices A at (-4.9, 0.0); B at (2.681, -2.25); C at (4.9, 0.0); D at (-2.681, 2.25). 4. Draw a filled dot of radius 0.07 in INK at O (0.0, 0.0). 5. Draw an arc in INK centred at O (0.0, 0.0), radius 0.7, starting at 0.0 degrees and sweeping 140.0 degrees counter-clockwise (the 140 degree angle between OC and OD). 6. Write \"3.5 cm\" in INK, centred at (-3.2, 0.5), font size 0.34 units. 7. Write \"3.5 cm\" in INK, centred at (3.2, -0.5), font size 0.34 units. 8. Write \"2.5 cm\" in INK, centred at (-1.727, 0.665), font size 0.34 units. 9. Write \"2.5 cm\" in INK, centred at (1.727, -0.665), font size 0.34 units. 10. Write \"A\" in INK, centred at (-5.3, 0.0), font size 0.4 units. 11. Write \"C\" in INK, centred at (5.3, 0.0), font size 0.4 units. 12. Write \"B\" in INK, centred at (3.026, -2.539), font size 0.4 units. 13. Write \"D\" in INK, centred at (-3.026, 2.539), font size 0.4 units. 14. Write \"O\" in INK, centred at (-0.3, -0.38), font size 0.4 units. 15. Write \"140°\" in INK, centred at (0.214, 0.926), font size 0.34 units.",
+    "visible_text": [
+     "3.5 cm",
+     "3.5 cm",
+     "2.5 cm",
+     "2.5 cm",
+     "A",
+     "C",
+     "B",
+     "D",
+     "O",
+     "140°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "figure letters such as a. or b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the totals 7 cm and 5 cm",
+     "step numbers or captions",
+     "the line label l"
+    ],
+    "accuracy_checks": [
+     "AC = 9.8 units = 7 cm and BD = 7.0 units = 5 cm at 1.4 units per cm",
+     "O is the midpoint of AC (OA = OC = 4.9 units = 3.5 cm) and of BD (OB = OD = 3.5 units = 2.5 cm)",
+     "angle between OC and OD = 140.0 degrees (140)",
+     "A + C = B + D = (0, 0), so ABCD is a parallelogram"
+    ],
+    "alt_text": "Parallelogram ABCD whose diagonals AC (7 cm) and BD (5 cm) cross at the midpoint O at 140°, with each half-diagonal labelled.",
+    "render_note": "Labelled as in the LP steps (AC = 7 cm and BD = 5 cm, halves 3.5 cm and 2.5 cm); the book's printed answer names the same figure ACBD with the 7 cm label under OB only. D is placed on the arm that makes 140° with OC and B on the opposite arm (the LP does not say which side)."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S17.T17.C69",
+   "role": "worked_example",
+   "lp_book_number": "Worked example: The diagonals of a rhombus meet at right angles",
+   "ncert_ref": "4.4.venn, 4.4.props, 4.4.ded10",
+   "question_text": "In rhombus GAME the diagonals meet at O, with GM = 8 cm and EA = 6 cm. Find the angle at O, GO and EO.",
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A picture would clearly help (rhombus GAME with diagonals GM and EA crossing at O, GM = 8 cm, EA = 6 cm) but is not needed: the question names every point and length, and exactly this figure is already the concept's own teaching image (C69.IMG1), which stays and is not linked. Not added (optional).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M4.S18.T18.C71",
+   "role": "question",
+   "lp_book_number": "Rhombus: construct with a 50° angle",
+   "ncert_ref": "4.4.construct_rhombus",
+   "question_text": "Construct a quadrilateral ABCD with all sides 5 cm and ∠A = 50°.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives the side length and the angle in words and no figure; no question figure is invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S18.T18.C72",
+   "role": "solution",
+   "lp_book_number": "Rhombus: construct with a 50° angle",
+   "ncert_ref": "4.4.construct_rhombus",
+   "question_text": "Construct a quadrilateral ABCD with all sides 5 cm and ∠A = 50°.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is a construction: the finished rhombus ABCD with the two compass arcs from B and D crossing at C (book p.18 step 2 picture). The question has no figure, so the solution figure stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S18.T18.C72.IMG1",
+   "manim_scene": "c8_4_s18_c72_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S18.T18.C72.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "construction",
+     "canvas": {
+      "width_units": 16.0,
+      "height_units": 9.0,
+      "px": "1920x1080",
+      "origin": "centre",
+      "x": "right",
+      "y": "up",
+      "unit_px": 120
+     },
+     "stroke_px": 3,
+     "points": {
+      "A": [
+       -4.928,
+       -2.298
+      ],
+      "B": [
+       1.072,
+       -2.298
+      ],
+      "D": [
+       -1.072,
+       2.298
+      ],
+      "C": [
+       4.928,
+       2.298
+      ]
+     },
+     "elements": [
+      {
+       "kind": "segment",
+       "colour": "INK",
+       "from": "A",
+       "to": "B"
+      },
+      {
+       "kind": "segment",
+       "colour": "INK",
+       "from": "A",
+       "to": "D"
+      },
+      {
+       "kind": "segment",
+       "colour": "ANSWER",
+       "from": "B",
+       "to": "C"
+      },
+      {
+       "kind": "segment",
+       "colour": "ANSWER",
+       "from": "D",
+       "to": "C"
+      },
+      {
+       "kind": "arc",
+       "colour": "GUIDE",
+       "centre": "B",
+       "radius": 6.0,
+       "start_deg": 42.0,
+       "sweep_deg": 16.0,
+       "note": "compass arc from B, radius 6.0 units = 5 cm, passes through C"
+      },
+      {
+       "kind": "arc",
+       "colour": "GUIDE",
+       "centre": "D",
+       "radius": 6.0,
+       "start_deg": 352.0,
+       "sweep_deg": 16.0,
+       "note": "compass arc from D, radius 6.0 units = 5 cm, passes through C"
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "A",
+       "radius": 1.0,
+       "start_deg": 0.0,
+       "sweep_deg": 50.0,
+       "note": "the 50 degree angle at A"
+      },
+      {
+       "kind": "label",
+       "text": "50°",
+       "colour": "INK",
+       "pos": [
+        -3.433,
+        -1.601
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "5 cm",
+       "colour": "INK",
+       "pos": [
+        -1.928,
+        -2.798
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "A",
+        "B"
+       ],
+       "t": 0.25,
+       "count": 1,
+       "at": [
+        -3.428,
+        -2.298
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "A",
+        "D"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -3.0,
+        0.0
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "ANSWER",
+       "side": [
+        "B",
+        "C"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        3.0,
+        0.0
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "ANSWER",
+       "side": [
+        "D",
+        "C"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        1.928,
+        2.298
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "colour": "INK",
+       "pos": [
+        -5.328,
+        -2.598
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "colour": "INK",
+       "pos": [
+        1.422,
+        -2.598
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "D",
+       "colour": "INK",
+       "pos": [
+        -1.472,
+        2.648
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "colour": "ANSWER",
+       "pos": [
+        5.328,
+        2.648
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      }
+     ],
+     "to_scale": true,
+     "scale": "1.2 units per cm",
+     "construction": "rhombus from one angle and the side length"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), plain BG background, origin at the centre, x to the right, y up. All lines and arcs 3 px wide with round ends; labels in a sans-serif font at 0.34 units (vertex letters 0.40 units), both above 34 px. Draw in this order. 1. Draw the straight segment A to B in INK, from (-4.928, -2.298) to (1.072, -2.298). 2. Draw the straight segment A to D in INK, from (-4.928, -2.298) to (-1.072, 2.298). 3. Draw the straight segment B to C in ANSWER, from (1.072, -2.298) to (4.928, 2.298). 4. Draw the straight segment D to C in ANSWER, from (-1.072, 2.298) to (4.928, 2.298). 5. Draw an arc in GUIDE centred at B (1.072, -2.298), radius 6.0, starting at 42.0 degrees and sweeping 16.0 degrees counter-clockwise (compass arc from B, radius 6.0 units = 5 cm, passes through C). 6. Draw an arc in GUIDE centred at D (-1.072, 2.298), radius 6.0, starting at 352.0 degrees and sweeping 16.0 degrees counter-clockwise (compass arc from D, radius 6.0 units = 5 cm, passes through C). 7. Draw an arc in INK centred at A (-4.928, -2.298), radius 1.0, starting at 0.0 degrees and sweeping 50.0 degrees counter-clockwise (the 50 degree angle at A). 8. Write \"50°\" in INK, centred at (-3.433, -1.601), font size 0.34 units. 9. Write \"5 cm\" in INK, centred at (-1.928, -2.798), font size 0.34 units. 10. Draw 1 tick mark of length 0.30 in INK across side AB, centred at (-3.428, -2.298) and perpendicular to the side. 11. Draw 1 tick mark of length 0.30 in INK across side AD, centred at (-3.0, 0.0) and perpendicular to the side. 12. Draw 1 tick mark of length 0.30 in ANSWER across side BC, centred at (3.0, 0.0) and perpendicular to the side. 13. Draw 1 tick mark of length 0.30 in ANSWER across side DC, centred at (1.928, 2.298) and perpendicular to the side. 14. Write \"A\" in INK, centred at (-5.328, -2.598), font size 0.4 units. 15. Write \"B\" in INK, centred at (1.422, -2.598), font size 0.4 units. 16. Write \"D\" in INK, centred at (-1.472, 2.648), font size 0.4 units. 17. Write \"C\" in ANSWER, centred at (5.328, 2.648), font size 0.4 units.",
+    "visible_text": [
+     "50°",
+     "5 cm",
+     "A",
+     "B",
+     "D",
+     "C"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "figure letters such as a. or b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "step numbers or captions",
+     "extended rays beyond D and C"
+    ],
+    "accuracy_checks": [
+     "AB = 6.0 units = 5 cm and AD = 6.0 units = 5 cm at 1.2 units per cm",
+     "BC = 6.0 units and CD = 6.0 units, both equal to 5 cm = 6.0 units",
+     "angle DAB = 50.0 degrees (50)",
+     "the compass arcs of radius 6.0 units centred at B and D both pass through C",
+     "all four sides are equal, so ABCD is a rhombus and not a square (angle A is not 90)"
+    ],
+    "alt_text": "Rhombus ABCD with all sides 5 cm and angle A = 50°, with the two compass arcs from B and D crossing at C.",
+    "render_note": "Final state of the book's p.18 construction (step 2 picture) with the LP labels. Given parts (AB, AD, the 50° arc, the 5 cm label) in INK, BC, CD and C in ANSWER, compass arcs in GUIDE."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S18.T18.C73",
+   "role": "question",
+   "lp_book_number": "Rhombus: remaining angles when ∠A = 50°",
+   "ncert_ref": "4.4.ded9",
+   "question_text": "Rhombus ABCD has ∠A = 50°. Find its other angles.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question names the rhombus and gives angle A in the text and refers to no figure; the book shows the rhombus beside the working but a careful student solves this from the text alone.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S18.T18.C74",
+   "role": "solution",
+   "lp_book_number": "Rhombus: remaining angles when ∠A = 50°",
+   "ncert_ref": "4.4.ded9",
+   "question_text": "Rhombus ABCD has ∠A = 50°. Find its other angles.",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The LP steps use the four equal angles that the diagonal BD makes, and the book shows the answer as a filled rhombus (50, 65 on p.19). The question has no figure, so the solution figure stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S18.T18.C74.IMG1",
+   "manim_scene": "c8_4_s18_c74_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S18.T18.C74.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width_units": 16.0,
+      "height_units": 9.0,
+      "px": "1920x1080",
+      "origin": "centre",
+      "x": "right",
+      "y": "up",
+      "unit_px": 120
+     },
+     "stroke_px": 3,
+     "points": {
+      "A": [
+       -4.764,
+       -2.222
+      ],
+      "B": [
+       1.036,
+       -2.222
+      ],
+      "D": [
+       -1.036,
+       2.222
+      ],
+      "C": [
+       4.764,
+       2.222
+      ]
+     },
+     "elements": [
+      {
+       "kind": "polygon",
+       "colour": "INK",
+       "vertices": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "A",
+        "B"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -1.864,
+        -2.222
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "B",
+        "C"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        2.9,
+        0.0
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "C",
+        "D"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        1.864,
+        2.222
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "D",
+        "A"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -2.9,
+        0.0
+       ]
+      },
+      {
+       "kind": "segment",
+       "colour": "ANSWER",
+       "from": "B",
+       "to": "D"
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "A",
+       "radius": 1.0,
+       "start_deg": 0.0,
+       "sweep_deg": 50.0,
+       "note": "given angle A"
+      },
+      {
+       "kind": "label",
+       "text": "50°",
+       "colour": "INK",
+       "pos": [
+        -3.178,
+        -1.482
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "C",
+       "radius": 1.0,
+       "start_deg": 180.0,
+       "sweep_deg": 50.0,
+       "note": ""
+      },
+      {
+       "kind": "label",
+       "text": "50°",
+       "colour": "ANSWER",
+       "pos": [
+        3.178,
+        1.482
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "B",
+       "radius": 0.65,
+       "start_deg": 50.0,
+       "sweep_deg": 65.0,
+       "note": "angle CBD = 65 degrees"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "B",
+       "radius": 0.65,
+       "start_deg": 115.0,
+       "sweep_deg": 65.0,
+       "note": "angle DBA = 65 degrees"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "B",
+       "radius": 1.55,
+       "start_deg": 50.0,
+       "sweep_deg": 130.0,
+       "note": "whole angle B = 130 degrees"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "D",
+       "radius": 0.65,
+       "start_deg": 230.0,
+       "sweep_deg": 65.0,
+       "note": "angle ADB = 65 degrees"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "D",
+       "radius": 0.65,
+       "start_deg": 295.0,
+       "sweep_deg": 65.0,
+       "note": "angle BDC = 65 degrees"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "D",
+       "radius": 1.55,
+       "start_deg": 230.0,
+       "sweep_deg": 130.0,
+       "note": "whole angle D = 130 degrees"
+      },
+      {
+       "kind": "label",
+       "text": "65°",
+       "colour": "ANSWER",
+       "pos": [
+        1.186,
+        -1.081
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "65°",
+       "colour": "ANSWER",
+       "pos": [
+        0.066,
+        -1.604
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "65°",
+       "colour": "ANSWER",
+       "pos": [
+        -1.186,
+        1.081
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "65°",
+       "colour": "ANSWER",
+       "pos": [
+        -0.066,
+        1.604
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "130°",
+       "colour": "ANSWER",
+       "pos": [
+        0.212,
+        -0.454
+       ],
+       "size": 0.34,
+       "bg": true,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "130°",
+       "colour": "ANSWER",
+       "pos": [
+        -0.212,
+        0.454
+       ],
+       "size": 0.34,
+       "bg": true,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "colour": "INK",
+       "pos": [
+        -5.172,
+        -2.412
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "colour": "INK",
+       "pos": [
+        1.226,
+        -2.629
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "colour": "INK",
+       "pos": [
+        5.172,
+        2.412
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "D",
+       "colour": "INK",
+       "pos": [
+        -1.226,
+        2.629
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      }
+     ],
+     "to_scale": true,
+     "scale_note": "angle A = 50 degrees exactly, side 5.8 units"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), plain BG background, origin at the centre, x to the right, y up. All lines and arcs 3 px wide with round ends; labels in a sans-serif font at 0.34 units (vertex letters 0.40 units), both above 34 px. Draw in this order. 1. Draw the closed polygon A-B-C-D-A with straight sides in INK, with vertices A at (-4.764, -2.222); B at (1.036, -2.222); C at (4.764, 2.222); D at (-1.036, 2.222). 2. Draw 1 tick mark of length 0.30 in INK across side AB, centred at (-1.864, -2.222) and perpendicular to the side. 3. Draw 1 tick mark of length 0.30 in INK across side BC, centred at (2.9, 0.0) and perpendicular to the side. 4. Draw 1 tick mark of length 0.30 in INK across side CD, centred at (1.864, 2.222) and perpendicular to the side. 5. Draw 1 tick mark of length 0.30 in INK across side DA, centred at (-2.9, 0.0) and perpendicular to the side. 6. Draw the straight segment B to D in ANSWER, from (1.036, -2.222) to (-1.036, 2.222). 7. Draw an arc in INK centred at A (-4.764, -2.222), radius 1.0, starting at 0.0 degrees and sweeping 50.0 degrees counter-clockwise (given angle A). 8. Write \"50°\" in INK, centred at (-3.178, -1.482), font size 0.34 units. 9. Draw an arc in ANSWER centred at C (4.764, 2.222), radius 1.0, starting at 180.0 degrees and sweeping 50.0 degrees counter-clockwise. 10. Write \"50°\" in ANSWER, centred at (3.178, 1.482), font size 0.34 units. 11. Draw an arc in ANSWER centred at B (1.036, -2.222), radius 0.65, starting at 50.0 degrees and sweeping 65.0 degrees counter-clockwise (angle CBD = 65 degrees). 12. Draw an arc in ANSWER centred at B (1.036, -2.222), radius 0.65, starting at 115.0 degrees and sweeping 65.0 degrees counter-clockwise (angle DBA = 65 degrees). 13. Draw an arc in ANSWER centred at B (1.036, -2.222), radius 1.55, starting at 50.0 degrees and sweeping 130.0 degrees counter-clockwise (whole angle B = 130 degrees). 14. Draw an arc in ANSWER centred at D (-1.036, 2.222), radius 0.65, starting at 230.0 degrees and sweeping 65.0 degrees counter-clockwise (angle ADB = 65 degrees). 15. Draw an arc in ANSWER centred at D (-1.036, 2.222), radius 0.65, starting at 295.0 degrees and sweeping 65.0 degrees counter-clockwise (angle BDC = 65 degrees). 16. Draw an arc in ANSWER centred at D (-1.036, 2.222), radius 1.55, starting at 230.0 degrees and sweeping 130.0 degrees counter-clockwise (whole angle D = 130 degrees). 17. Write \"65°\" in ANSWER, centred at (1.186, -1.081), font size 0.34 units. 18. Write \"65°\" in ANSWER, centred at (0.066, -1.604), font size 0.34 units. 19. Write \"65°\" in ANSWER, centred at (-1.186, 1.081), font size 0.34 units. 20. Write \"65°\" in ANSWER, centred at (-0.066, 1.604), font size 0.34 units. 21. Write \"130°\" in ANSWER, centred at (0.212, -0.454), font size 0.34 units, on a BG-filled rectangle that hides the line behind the text. 22. Write \"130°\" in ANSWER, centred at (-0.212, 0.454), font size 0.34 units, on a BG-filled rectangle that hides the line behind the text. 23. Write \"A\" in INK, centred at (-5.172, -2.412), font size 0.4 units. 24. Write \"B\" in INK, centred at (1.226, -2.629), font size 0.4 units. 25. Write \"C\" in INK, centred at (5.172, 2.412), font size 0.4 units. 26. Write \"D\" in INK, centred at (-1.226, 2.629), font size 0.4 units.",
+    "visible_text": [
+     "50°",
+     "50°",
+     "65°",
+     "65°",
+     "65°",
+     "65°",
+     "130°",
+     "130°",
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "figure letters such as a. or b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the letter a for the equal angles",
+     "side lengths"
+    ],
+    "accuracy_checks": [
+     "AB = BC = CD = DA = 5.8 units (one tick on each side)",
+     "angle A = 50.0 degrees = angle C and the diagonal BD splits angle B and angle D into 65 + 65",
+     "in triangle ADB: 65 + 65 + 50 = 180",
+     "angle B = angle D = 65 + 65 = 130, and the four angles 50 + 130 + 50 + 130 = 360",
+     "angle DBA measured from the coordinates = 65.0 degrees"
+    ],
+    "alt_text": "Rhombus ABCD with diagonal BD, four 65° angles, and corner angles 50°, 130°, 50° and 130°.",
+    "render_note": "Combines the book's two pictures on p.19 (the four equal angles a, then the values 50 and 65) and adds 130 degrees at B and D, which the LP answer states. The 130 degree labels sit on the diagonal on a BG rectangle, just outside the outer arcs."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S18.T18.C75",
+   "role": "question",
+   "lp_book_number": "Parallelograms and Rhombuses, Q1",
+   "ncert_ref": "FiO2.q1",
+   "question_text": "Find the remaining angles in the following quadrilaterals. (i) Parallelogram PEAR with ∠P = 40°. (ii) Parallelogram PQRS with ∠P = 110°. (iii) Rhombus UVWX with diagonal XV and ∠XVU = 30°. (iv) Rhombus OIEA with diagonal OE and ∠OEA = 20°.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The book question says 'the following quadrilaterals' and gives four figures whose arrow marks (parallel sides) and tick marks (equal sides) carry the meaning. The LP text restates the numbers in words, but the book's figures are given with the question (borderline, kept required). One combined picture with four panels (a question card gets one diagram).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S18.T18.C75.IMG1",
+   "manim_scene": "c8_4_s18_c75_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S18.T18.C75.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width_units": 16.0,
+      "height_units": 9.0,
+      "px": "1920x1080",
+      "origin": "centre",
+      "x": "right",
+      "y": "up",
+      "unit_px": 120
+     },
+     "stroke_px": 3,
+     "points": {
+      "i_P": [
+       -6.534,
+       1.332
+      ],
+      "i_E": [
+       -3.134,
+       1.332
+      ],
+      "i_R": [
+       -4.466,
+       3.068
+      ],
+      "i_A": [
+       -1.066,
+       3.068
+      ],
+      "ii_P": [
+       3.046,
+       0.837
+      ],
+      "ii_Q": [
+       6.346,
+       0.837
+      ],
+      "ii_S": [
+       2.054,
+       3.563
+      ],
+      "ii_R": [
+       5.354,
+       3.563
+      ],
+      "iii_U": [
+       -5.125,
+       -3.629
+      ],
+      "iii_V": [
+       -1.825,
+       -3.629
+      ],
+      "iii_W": [
+       -3.475,
+       -0.771
+      ],
+      "iii_X": [
+       -6.775,
+       -0.771
+      ],
+      "iv_A": [
+       3.602,
+       -3.293
+      ],
+      "iv_E": [
+       7.002,
+       -3.293
+      ],
+      "iv_I": [
+       4.398,
+       -1.107
+      ],
+      "iv_O": [
+       0.998,
+       -1.107
+      ]
+     },
+     "elements": [
+      {
+       "kind": "label",
+       "text": "(i)",
+       "colour": "INK",
+       "pos": [
+        -7.35,
+        3.9
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "(ii)",
+       "colour": "INK",
+       "pos": [
+        0.6,
+        3.9
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "(iii)",
+       "colour": "INK",
+       "pos": [
+        -7.35,
+        0.0
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "(iv)",
+       "colour": "INK",
+       "pos": [
+        0.6,
+        0.0
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "polygon",
+       "colour": "INK",
+       "vertices": [
+        "i_P",
+        "i_E",
+        "i_A",
+        "i_R"
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "i_P",
+        "i_E"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -4.834,
+        1.332
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "i_R",
+        "i_A"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -2.766,
+        3.068
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "i_P",
+        "i_R"
+       ],
+       "t": 0.5,
+       "count": 2,
+       "at": [
+        -5.5,
+        2.2
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "i_E",
+        "i_A"
+       ],
+       "t": 0.5,
+       "count": 2,
+       "at": [
+        -2.1,
+        2.2
+       ]
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "i_P",
+       "radius": 0.7,
+       "start_deg": 0.0,
+       "sweep_deg": 40.0,
+       "note": "given angle P"
+      },
+      {
+       "kind": "label",
+       "text": "P",
+       "colour": "INK",
+       "pos": [
+        -6.934,
+        1.205
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "E",
+       "colour": "INK",
+       "pos": [
+        -2.878,
+        0.999
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "colour": "INK",
+       "pos": [
+        -0.666,
+        3.195
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "R",
+       "colour": "INK",
+       "pos": [
+        -4.722,
+        3.401
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "polygon",
+       "colour": "INK",
+       "vertices": [
+        "ii_P",
+        "ii_Q",
+        "ii_R",
+        "ii_S"
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "ii_P",
+        "ii_Q"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        4.696,
+        0.837
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "ii_S",
+        "ii_R"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        3.704,
+        3.563
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "ii_P",
+        "ii_S"
+       ],
+       "t": 0.5,
+       "count": 2,
+       "at": [
+        2.55,
+        2.2
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "ii_Q",
+        "ii_R"
+       ],
+       "t": 0.5,
+       "count": 2,
+       "at": [
+        5.85,
+        2.2
+       ]
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "ii_P",
+       "radius": 0.7,
+       "start_deg": 0.0,
+       "sweep_deg": 110.0,
+       "note": "given angle P"
+      },
+      {
+       "kind": "label",
+       "text": "P",
+       "colour": "INK",
+       "pos": [
+        2.774,
+        0.517
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "Q",
+       "colour": "INK",
+       "pos": [
+        6.7,
+        0.612
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "R",
+       "colour": "INK",
+       "pos": [
+        5.626,
+        3.883
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "S",
+       "colour": "INK",
+       "pos": [
+        1.7,
+        3.788
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "polygon",
+       "colour": "INK",
+       "vertices": [
+        "iii_U",
+        "iii_V",
+        "iii_W",
+        "iii_X"
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iii_U",
+        "iii_V"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -3.475,
+        -3.629
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iii_V",
+        "iii_W"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -2.65,
+        -2.2
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iii_W",
+        "iii_X"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -5.125,
+        -0.771
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iii_X",
+        "iii_U"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -5.95,
+        -2.2
+       ]
+      },
+      {
+       "kind": "segment",
+       "colour": "INK",
+       "from": "iii_X",
+       "to": "iii_V"
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "iii_V",
+       "radius": 0.8,
+       "start_deg": 180.0,
+       "sweep_deg": -30.0,
+       "note": "given angle XVU"
+      },
+      {
+       "kind": "label",
+       "text": "U",
+       "colour": "INK",
+       "pos": [
+        -5.335,
+        -3.993
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "V",
+       "colour": "INK",
+       "pos": [
+        -1.461,
+        -3.839
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "W",
+       "colour": "INK",
+       "pos": [
+        -3.265,
+        -0.407
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "X",
+       "colour": "INK",
+       "pos": [
+        -7.139,
+        -0.561
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "polygon",
+       "colour": "INK",
+       "vertices": [
+        "iv_O",
+        "iv_I",
+        "iv_E",
+        "iv_A"
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iv_O",
+        "iv_I"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        2.698,
+        -1.107
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iv_I",
+        "iv_E"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        5.7,
+        -2.2
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iv_E",
+        "iv_A"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        5.302,
+        -3.293
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iv_A",
+        "iv_O"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        2.3,
+        -2.2
+       ]
+      },
+      {
+       "kind": "segment",
+       "colour": "INK",
+       "from": "iv_O",
+       "to": "iv_E"
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "iv_E",
+       "radius": 1.0,
+       "start_deg": 180.0,
+       "sweep_deg": -20.0,
+       "note": "given angle OEA"
+      },
+      {
+       "kind": "label",
+       "text": "O",
+       "colour": "INK",
+       "pos": [
+        0.603,
+        -0.964
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "I",
+       "colour": "INK",
+       "pos": [
+        4.541,
+        -0.713
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "E",
+       "colour": "INK",
+       "pos": [
+        7.397,
+        -3.436
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "colour": "INK",
+       "pos": [
+        3.459,
+        -3.687
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "40°",
+       "colour": "INK",
+       "pos": [
+        -5.482,
+        1.654
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "110°",
+       "colour": "INK",
+       "pos": [
+        3.677,
+        1.739
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "30°",
+       "colour": "INK",
+       "pos": [
+        -3.097,
+        -3.359
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "20°",
+       "colour": "INK",
+       "pos": [
+        4.968,
+        -3.043
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      }
+     ],
+     "to_scale": true,
+     "panels": {
+      "(i)": "top left",
+      "(ii)": "top right",
+      "(iii)": "bottom left",
+      "(iv)": "bottom right"
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), plain BG background, origin at the centre, x to the right, y up. All lines and arcs 3 px wide with round ends; labels in a sans-serif font at 0.34 units (vertex letters 0.40 units), both above 34 px. Draw in this order. 1. Write \"(i)\" in INK, centred at (-7.35, 3.9), font size 0.34 units. 2. Write \"(ii)\" in INK, centred at (0.6, 3.9), font size 0.34 units. 3. Write \"(iii)\" in INK, centred at (-7.35, 0.0), font size 0.34 units. 4. Write \"(iv)\" in INK, centred at (0.6, 0.0), font size 0.34 units. 5. Draw the closed polygon i_P-i_E-i_A-i_R-i_P with straight sides in INK, with vertices i_P at (-6.534, 1.332); i_E at (-3.134, 1.332); i_A at (-1.066, 3.068); i_R at (-4.466, 3.068). 6. Draw 1 open arrowhead in INK on side i_Pi_E, the tip at (-4.834, 1.332) pointing at 0.0 degrees (arms of length 0.22 at 30 degrees either side of the side). 7. Draw 1 open arrowhead in INK on side i_Ri_A, the tip at (-2.766, 3.068) pointing at 0.0 degrees (arms of length 0.22 at 30 degrees either side of the side). 8. Draw 2 open arrowheads in INK on side i_Pi_R, the tip at (-5.5, 2.2) pointing at 40.0 degrees (arms of length 0.22 at 30 degrees either side of the side); the second arrowhead sits 0.16 behind the first along the side. 9. Draw 2 open arrowheads in INK on side i_Ei_A, the tip at (-2.1, 2.2) pointing at 40.0 degrees (arms of length 0.22 at 30 degrees either side of the side); the second arrowhead sits 0.16 behind the first along the side. 10. Draw an arc in INK centred at i_P (-6.534, 1.332), radius 0.7, starting at 0.0 degrees and sweeping 40.0 degrees counter-clockwise (given angle P). 11. Write \"P\" in INK, centred at (-6.934, 1.205), font size 0.4 units. 12. Write \"E\" in INK, centred at (-2.878, 0.999), font size 0.4 units. 13. Write \"A\" in INK, centred at (-0.666, 3.195), font size 0.4 units. 14. Write \"R\" in INK, centred at (-4.722, 3.401), font size 0.4 units. 15. Draw the closed polygon ii_P-ii_Q-ii_R-ii_S-ii_P with straight sides in INK, with vertices ii_P at (3.046, 0.837); ii_Q at (6.346, 0.837); ii_R at (5.354, 3.563); ii_S at (2.054, 3.563). 16. Draw 1 open arrowhead in INK on side ii_Pii_Q, the tip at (4.696, 0.837) pointing at 0.0 degrees (arms of length 0.22 at 30 degrees either side of the side). 17. Draw 1 open arrowhead in INK on side ii_Sii_R, the tip at (3.704, 3.563) pointing at 0.0 degrees (arms of length 0.22 at 30 degrees either side of the side). 18. Draw 2 open arrowheads in INK on side ii_Pii_S, the tip at (2.55, 2.2) pointing at 110.0 degrees (arms of length 0.22 at 30 degrees either side of the side); the second arrowhead sits 0.16 behind the first along the side. 19. Draw 2 open arrowheads in INK on side ii_Qii_R, the tip at (5.85, 2.2) pointing at 110.0 degrees (arms of length 0.22 at 30 degrees either side of the side); the second arrowhead sits 0.16 behind the first along the side. 20. Draw an arc in INK centred at ii_P (3.046, 0.837), radius 0.7, starting at 0.0 degrees and sweeping 110.0 degrees counter-clockwise (given angle P). 21. Write \"P\" in INK, centred at (2.774, 0.517), font size 0.4 units. 22. Write \"Q\" in INK, centred at (6.7, 0.612), font size 0.4 units. 23. Write \"R\" in INK, centred at (5.626, 3.883), font size 0.4 units. 24. Write \"S\" in INK, centred at (1.7, 3.788), font size 0.4 units. 25. Draw the closed polygon iii_U-iii_V-iii_W-iii_X-iii_U with straight sides in INK, with vertices iii_U at (-5.125, -3.629); iii_V at (-1.825, -3.629); iii_W at (-3.475, -0.771); iii_X at (-6.775, -0.771). 26. Draw 1 tick mark of length 0.30 in INK across side iii_Uiii_V, centred at (-3.475, -3.629) and perpendicular to the side. 27. Draw 1 tick mark of length 0.30 in INK across side iii_Viii_W, centred at (-2.65, -2.2) and perpendicular to the side. 28. Draw 1 tick mark of length 0.30 in INK across side iii_Wiii_X, centred at (-5.125, -0.771) and perpendicular to the side. 29. Draw 1 tick mark of length 0.30 in INK across side iii_Xiii_U, centred at (-5.95, -2.2) and perpendicular to the side. 30. Draw the straight segment iii_X to iii_V in INK, from (-6.775, -0.771) to (-1.825, -3.629). 31. Draw an arc in INK centred at iii_V (-1.825, -3.629), radius 0.8, starting at 180.0 degrees and sweeping 30.0 degrees clockwise (given angle XVU). 32. Write \"U\" in INK, centred at (-5.335, -3.993), font size 0.4 units. 33. Write \"V\" in INK, centred at (-1.461, -3.839), font size 0.4 units. 34. Write \"W\" in INK, centred at (-3.265, -0.407), font size 0.4 units. 35. Write \"X\" in INK, centred at (-7.139, -0.561), font size 0.4 units. 36. Draw the closed polygon iv_O-iv_I-iv_E-iv_A-iv_O with straight sides in INK, with vertices iv_O at (0.998, -1.107); iv_I at (4.398, -1.107); iv_E at (7.002, -3.293); iv_A at (3.602, -3.293). 37. Draw 1 tick mark of length 0.30 in INK across side iv_Oiv_I, centred at (2.698, -1.107) and perpendicular to the side. 38. Draw 1 tick mark of length 0.30 in INK across side iv_Iiv_E, centred at (5.7, -2.2) and perpendicular to the side. 39. Draw 1 tick mark of length 0.30 in INK across side iv_Eiv_A, centred at (5.302, -3.293) and perpendicular to the side. 40. Draw 1 tick mark of length 0.30 in INK across side iv_Aiv_O, centred at (2.3, -2.2) and perpendicular to the side. 41. Draw the straight segment iv_O to iv_E in INK, from (0.998, -1.107) to (7.002, -3.293). 42. Draw an arc in INK centred at iv_E (7.002, -3.293), radius 1.0, starting at 180.0 degrees and sweeping 20.0 degrees clockwise (given angle OEA). 43. Write \"O\" in INK, centred at (0.603, -0.964), font size 0.4 units. 44. Write \"I\" in INK, centred at (4.541, -0.713), font size 0.4 units. 45. Write \"E\" in INK, centred at (7.397, -3.436), font size 0.4 units. 46. Write \"A\" in INK, centred at (3.459, -3.687), font size 0.4 units. 47. Write \"40°\" in INK, centred at (-5.482, 1.654), font size 0.34 units. 48. Write \"110°\" in INK, centred at (3.677, 1.739), font size 0.34 units. 49. Write \"30°\" in INK, centred at (-3.097, -3.359), font size 0.34 units. 50. Write \"20°\" in INK, centred at (4.968, -3.043), font size 0.34 units.",
+    "visible_text": [
+     "(i)",
+     "(ii)",
+     "(iii)",
+     "(iv)",
+     "P",
+     "E",
+     "A",
+     "R",
+     "P",
+     "Q",
+     "R",
+     "S",
+     "U",
+     "V",
+     "W",
+     "X",
+     "O",
+     "I",
+     "E",
+     "A",
+     "40°",
+     "110°",
+     "30°",
+     "20°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "figure letters such as a. or b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any angle value that is not given",
+     "a figure letter other than (i), (ii), (iii), (iv)"
+    ],
+    "accuracy_checks": [
+     "panel (i): angle RPE = 40.0 degrees (40); PE = RA = 3.4 units and PR = EA = 2.7 units; single arrowhead on PE and RA, double on PR and EA",
+     "panel (ii): angle SPQ = 110.0 degrees (110); PQ = SR = 3.3 units and PS = QR = 2.9 units; single arrowhead on PQ and SR, double on PS and QR",
+     "panel (iii): UV = VW = WX = XU = 3.3 units (one tick each), angle UVX = 30.0 degrees (30), the diagonal XV is drawn",
+     "panel (iv): OI = IE = EA = AO = 3.4 units (one tick each), angle AEO = 20.0 degrees (20), the diagonal OE is drawn"
+    ],
+    "alt_text": "Four quadrilaterals side by side: parallelogram PEAR with 40° at P, parallelogram PQRS with 110° at P, rhombus UVWX with diagonal XV and 30° at V, and rhombus OIEA with diagonal OE and 20° at E.",
+    "render_note": "One picture with four panels because a question card gets one diagram; panel letters (i) to (iv) are shown because the LP text refers to the figures by those letters. Vertex layout checked against page_21.png and page_33.png. The book draws (i) at about 47 degrees and (ii) at about 108 degrees although it labels 40 and 110; the spec draws the labelled angles exactly."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S18.T18.C76",
+   "role": "solution",
+   "lp_book_number": "Parallelograms and Rhombuses, Q1",
+   "ncert_ref": "FiO2.q1",
+   "question_text": "Find the remaining angles in the following quadrilaterals. (i) Parallelogram PEAR with ∠P = 40°. (ii) Parallelogram PQRS with ∠P = 110°. (iii) Rhombus UVWX with diagonal XV and ∠XVU = 30°. (iv) Rhombus OIEA with diagonal OE and ∠OEA = 20°.",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The solution adds every remaining angle to the four given figures (the diagonal bisecting the angles in (iii) and (iv)); the complete final state is the four figures with all angles marked. Derived from the question figure, same layout.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S18.T18.C76.IMG1",
+   "manim_scene": "c8_4_s18_c76_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S18.T18.C76.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M4.S18.T18.C75.IMG1",
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width_units": 16.0,
+      "height_units": 9.0,
+      "px": "1920x1080",
+      "origin": "centre",
+      "x": "right",
+      "y": "up",
+      "unit_px": 120
+     },
+     "stroke_px": 3,
+     "points": {
+      "i_P": [
+       -6.534,
+       1.332
+      ],
+      "i_E": [
+       -3.134,
+       1.332
+      ],
+      "i_R": [
+       -4.466,
+       3.068
+      ],
+      "i_A": [
+       -1.066,
+       3.068
+      ],
+      "ii_P": [
+       3.046,
+       0.837
+      ],
+      "ii_Q": [
+       6.346,
+       0.837
+      ],
+      "ii_S": [
+       2.054,
+       3.563
+      ],
+      "ii_R": [
+       5.354,
+       3.563
+      ],
+      "iii_U": [
+       -5.125,
+       -3.629
+      ],
+      "iii_V": [
+       -1.825,
+       -3.629
+      ],
+      "iii_W": [
+       -3.475,
+       -0.771
+      ],
+      "iii_X": [
+       -6.775,
+       -0.771
+      ],
+      "iv_A": [
+       3.602,
+       -3.293
+      ],
+      "iv_E": [
+       7.002,
+       -3.293
+      ],
+      "iv_I": [
+       4.398,
+       -1.107
+      ],
+      "iv_O": [
+       0.998,
+       -1.107
+      ]
+     },
+     "elements": [
+      {
+       "kind": "label",
+       "text": "(i)",
+       "colour": "INK",
+       "pos": [
+        -7.35,
+        3.9
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "(ii)",
+       "colour": "INK",
+       "pos": [
+        0.6,
+        3.9
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "(iii)",
+       "colour": "INK",
+       "pos": [
+        -7.35,
+        0.0
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "(iv)",
+       "colour": "INK",
+       "pos": [
+        0.6,
+        0.0
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "polygon",
+       "colour": "INK",
+       "vertices": [
+        "i_P",
+        "i_E",
+        "i_A",
+        "i_R"
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "i_P",
+        "i_E"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -4.834,
+        1.332
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "i_R",
+        "i_A"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -2.766,
+        3.068
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "i_P",
+        "i_R"
+       ],
+       "t": 0.5,
+       "count": 2,
+       "at": [
+        -5.5,
+        2.2
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "i_E",
+        "i_A"
+       ],
+       "t": 0.5,
+       "count": 2,
+       "at": [
+        -2.1,
+        2.2
+       ]
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "i_P",
+       "radius": 0.7,
+       "start_deg": 0.0,
+       "sweep_deg": 40.0,
+       "note": "given angle P"
+      },
+      {
+       "kind": "label",
+       "text": "P",
+       "colour": "INK",
+       "pos": [
+        -6.934,
+        1.205
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "E",
+       "colour": "INK",
+       "pos": [
+        -2.878,
+        0.999
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "colour": "INK",
+       "pos": [
+        -0.666,
+        3.195
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "R",
+       "colour": "INK",
+       "pos": [
+        -4.722,
+        3.401
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "i_E",
+       "radius": 0.7,
+       "start_deg": 40.0,
+       "sweep_deg": 140.0,
+       "note": ""
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "i_A",
+       "radius": 0.7,
+       "start_deg": 180.0,
+       "sweep_deg": 40.0,
+       "note": ""
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "i_R",
+       "radius": 0.7,
+       "start_deg": 220.0,
+       "sweep_deg": 140.0,
+       "note": ""
+      },
+      {
+       "kind": "polygon",
+       "colour": "INK",
+       "vertices": [
+        "ii_P",
+        "ii_Q",
+        "ii_R",
+        "ii_S"
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "ii_P",
+        "ii_Q"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        4.696,
+        0.837
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "ii_S",
+        "ii_R"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        3.704,
+        3.563
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "ii_P",
+        "ii_S"
+       ],
+       "t": 0.5,
+       "count": 2,
+       "at": [
+        2.55,
+        2.2
+       ]
+      },
+      {
+       "kind": "parallel_mark",
+       "colour": "INK",
+       "side": [
+        "ii_Q",
+        "ii_R"
+       ],
+       "t": 0.5,
+       "count": 2,
+       "at": [
+        5.85,
+        2.2
+       ]
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "ii_P",
+       "radius": 0.7,
+       "start_deg": 0.0,
+       "sweep_deg": 110.0,
+       "note": "given angle P"
+      },
+      {
+       "kind": "label",
+       "text": "P",
+       "colour": "INK",
+       "pos": [
+        2.774,
+        0.517
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "Q",
+       "colour": "INK",
+       "pos": [
+        6.7,
+        0.612
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "R",
+       "colour": "INK",
+       "pos": [
+        5.626,
+        3.883
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "S",
+       "colour": "INK",
+       "pos": [
+        1.7,
+        3.788
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "ii_Q",
+       "radius": 0.7,
+       "start_deg": 110.0,
+       "sweep_deg": 70.0,
+       "note": ""
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "ii_R",
+       "radius": 0.7,
+       "start_deg": 180.0,
+       "sweep_deg": 110.0,
+       "note": ""
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "ii_S",
+       "radius": 0.7,
+       "start_deg": 290.0,
+       "sweep_deg": 70.0,
+       "note": ""
+      },
+      {
+       "kind": "polygon",
+       "colour": "INK",
+       "vertices": [
+        "iii_U",
+        "iii_V",
+        "iii_W",
+        "iii_X"
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iii_U",
+        "iii_V"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -3.475,
+        -3.629
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iii_V",
+        "iii_W"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -2.65,
+        -2.2
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iii_W",
+        "iii_X"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -5.125,
+        -0.771
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iii_X",
+        "iii_U"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        -5.95,
+        -2.2
+       ]
+      },
+      {
+       "kind": "segment",
+       "colour": "INK",
+       "from": "iii_X",
+       "to": "iii_V"
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "iii_V",
+       "radius": 0.8,
+       "start_deg": 180.0,
+       "sweep_deg": -30.0,
+       "note": "given angle XVU"
+      },
+      {
+       "kind": "label",
+       "text": "U",
+       "colour": "INK",
+       "pos": [
+        -5.335,
+        -3.993
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "V",
+       "colour": "INK",
+       "pos": [
+        -1.461,
+        -3.839
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "W",
+       "colour": "INK",
+       "pos": [
+        -3.265,
+        -0.407
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "X",
+       "colour": "INK",
+       "pos": [
+        -7.139,
+        -0.561
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "iii_V",
+       "radius": 0.8,
+       "start_deg": 150.0,
+       "sweep_deg": -30.0,
+       "note": "angle XVW, equal to the given angle XVU"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "iii_V",
+       "radius": 1.2,
+       "start_deg": 120.0,
+       "sweep_deg": 60.0,
+       "note": "whole angle V = 60 degrees"
+      },
+      {
+       "kind": "label",
+       "text": "60°",
+       "colour": "ANSWER",
+       "pos": [
+        -3.557,
+        -2.629
+       ],
+       "size": 0.34,
+       "bg": true,
+       "anchor": null
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "iii_X",
+       "radius": 0.8,
+       "start_deg": 0.0,
+       "sweep_deg": -30.0,
+       "note": "angle WXV"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "iii_X",
+       "radius": 0.8,
+       "start_deg": 330.0,
+       "sweep_deg": -30.0,
+       "note": "angle VXU, equal to angle WXV"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "iii_X",
+       "radius": 1.2,
+       "start_deg": 300.0,
+       "sweep_deg": 60.0,
+       "note": "whole angle X = 60 degrees"
+      },
+      {
+       "kind": "label",
+       "text": "60°",
+       "colour": "ANSWER",
+       "pos": [
+        -5.043,
+        -1.771
+       ],
+       "size": 0.34,
+       "bg": true,
+       "anchor": null
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "iii_U",
+       "radius": 0.8,
+       "start_deg": 0.0,
+       "sweep_deg": 120.0,
+       "note": ""
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "iii_W",
+       "radius": 0.8,
+       "start_deg": 180.0,
+       "sweep_deg": 120.0,
+       "note": ""
+      },
+      {
+       "kind": "polygon",
+       "colour": "INK",
+       "vertices": [
+        "iv_O",
+        "iv_I",
+        "iv_E",
+        "iv_A"
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iv_O",
+        "iv_I"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        2.698,
+        -1.107
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iv_I",
+        "iv_E"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        5.7,
+        -2.2
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iv_E",
+        "iv_A"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        5.302,
+        -3.293
+       ]
+      },
+      {
+       "kind": "tick",
+       "colour": "INK",
+       "side": [
+        "iv_A",
+        "iv_O"
+       ],
+       "t": 0.5,
+       "count": 1,
+       "at": [
+        2.3,
+        -2.2
+       ]
+      },
+      {
+       "kind": "segment",
+       "colour": "INK",
+       "from": "iv_O",
+       "to": "iv_E"
+      },
+      {
+       "kind": "arc",
+       "colour": "INK",
+       "centre": "iv_E",
+       "radius": 1.0,
+       "start_deg": 180.0,
+       "sweep_deg": -20.0,
+       "note": "given angle OEA"
+      },
+      {
+       "kind": "label",
+       "text": "O",
+       "colour": "INK",
+       "pos": [
+        0.603,
+        -0.964
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "I",
+       "colour": "INK",
+       "pos": [
+        4.541,
+        -0.713
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "E",
+       "colour": "INK",
+       "pos": [
+        7.397,
+        -3.436
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "colour": "INK",
+       "pos": [
+        3.459,
+        -3.687
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "iv_E",
+       "radius": 1.0,
+       "start_deg": 160.0,
+       "sweep_deg": -20.0,
+       "note": "angle OEI, equal to the given angle OEA"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "iv_E",
+       "radius": 1.4,
+       "start_deg": 140.0,
+       "sweep_deg": 40.0,
+       "note": "whole angle E = 40 degrees"
+      },
+      {
+       "kind": "label",
+       "text": "40°",
+       "colour": "ANSWER",
+       "pos": [
+        5.123,
+        -2.609
+       ],
+       "size": 0.34,
+       "bg": true,
+       "anchor": null
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "iv_O",
+       "radius": 1.0,
+       "start_deg": 0.0,
+       "sweep_deg": -20.0,
+       "note": "angle IOE"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "iv_O",
+       "radius": 1.0,
+       "start_deg": 340.0,
+       "sweep_deg": -20.0,
+       "note": "angle EOA, equal to angle IOE"
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "iv_O",
+       "radius": 1.4,
+       "start_deg": 320.0,
+       "sweep_deg": 40.0,
+       "note": "whole angle O = 40 degrees"
+      },
+      {
+       "kind": "label",
+       "text": "40°",
+       "colour": "ANSWER",
+       "pos": [
+        2.877,
+        -1.791
+       ],
+       "size": 0.34,
+       "bg": true,
+       "anchor": null
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "iv_I",
+       "radius": 0.5,
+       "start_deg": 180.0,
+       "sweep_deg": 140.0,
+       "note": ""
+      },
+      {
+       "kind": "arc",
+       "colour": "ANSWER",
+       "centre": "iv_A",
+       "radius": 0.5,
+       "start_deg": 0.0,
+       "sweep_deg": 140.0,
+       "note": ""
+      },
+      {
+       "kind": "label",
+       "text": "40°",
+       "colour": "INK",
+       "pos": [
+        -5.482,
+        1.654
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "140°",
+       "colour": "ANSWER",
+       "pos": [
+        -3.961,
+        2.131
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "40°",
+       "colour": "ANSWER",
+       "pos": [
+        -2.118,
+        2.746
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "140°",
+       "colour": "ANSWER",
+       "pos": [
+        -3.378,
+        2.561
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "110°",
+       "colour": "INK",
+       "pos": [
+        3.677,
+        1.739
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "70°",
+       "colour": "ANSWER",
+       "pos": [
+        5.541,
+        1.588
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "110°",
+       "colour": "ANSWER",
+       "pos": [
+        4.723,
+        2.661
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "70°",
+       "colour": "ANSWER",
+       "pos": [
+        2.776,
+        2.732
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "30°",
+       "colour": "INK",
+       "pos": [
+        -3.37,
+        -3.215
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "120°",
+       "colour": "ANSWER",
+       "pos": [
+        -4.855,
+        -2.357
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "120°",
+       "colour": "ANSWER",
+       "pos": [
+        -3.745,
+        -2.043
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "20°",
+       "colour": "INK",
+       "pos": [
+        4.968,
+        -3.043
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "140°",
+       "colour": "ANSWER",
+       "pos": [
+        4.507,
+        -2.001
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "140°",
+       "colour": "ANSWER",
+       "pos": [
+        3.493,
+        -2.399
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      }
+     ],
+     "to_scale": true,
+     "panels": {
+      "(i)": "top left",
+      "(ii)": "top right",
+      "(iii)": "bottom left",
+      "(iv)": "bottom right"
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), plain BG background, origin at the centre, x to the right, y up. All lines and arcs 3 px wide with round ends; labels in a sans-serif font at 0.34 units (vertex letters 0.40 units), both above 34 px. Draw in this order. 1. Write \"(i)\" in INK, centred at (-7.35, 3.9), font size 0.34 units. 2. Write \"(ii)\" in INK, centred at (0.6, 3.9), font size 0.34 units. 3. Write \"(iii)\" in INK, centred at (-7.35, 0.0), font size 0.34 units. 4. Write \"(iv)\" in INK, centred at (0.6, 0.0), font size 0.34 units. 5. Draw the closed polygon i_P-i_E-i_A-i_R-i_P with straight sides in INK, with vertices i_P at (-6.534, 1.332); i_E at (-3.134, 1.332); i_A at (-1.066, 3.068); i_R at (-4.466, 3.068). 6. Draw 1 open arrowhead in INK on side i_Pi_E, the tip at (-4.834, 1.332) pointing at 0.0 degrees (arms of length 0.22 at 30 degrees either side of the side). 7. Draw 1 open arrowhead in INK on side i_Ri_A, the tip at (-2.766, 3.068) pointing at 0.0 degrees (arms of length 0.22 at 30 degrees either side of the side). 8. Draw 2 open arrowheads in INK on side i_Pi_R, the tip at (-5.5, 2.2) pointing at 40.0 degrees (arms of length 0.22 at 30 degrees either side of the side); the second arrowhead sits 0.16 behind the first along the side. 9. Draw 2 open arrowheads in INK on side i_Ei_A, the tip at (-2.1, 2.2) pointing at 40.0 degrees (arms of length 0.22 at 30 degrees either side of the side); the second arrowhead sits 0.16 behind the first along the side. 10. Draw an arc in INK centred at i_P (-6.534, 1.332), radius 0.7, starting at 0.0 degrees and sweeping 40.0 degrees counter-clockwise (given angle P). 11. Write \"P\" in INK, centred at (-6.934, 1.205), font size 0.4 units. 12. Write \"E\" in INK, centred at (-2.878, 0.999), font size 0.4 units. 13. Write \"A\" in INK, centred at (-0.666, 3.195), font size 0.4 units. 14. Write \"R\" in INK, centred at (-4.722, 3.401), font size 0.4 units. 15. Draw an arc in ANSWER centred at i_E (-3.134, 1.332), radius 0.7, starting at 40.0 degrees and sweeping 140.0 degrees counter-clockwise. 16. Draw an arc in ANSWER centred at i_A (-1.066, 3.068), radius 0.7, starting at 180.0 degrees and sweeping 40.0 degrees counter-clockwise. 17. Draw an arc in ANSWER centred at i_R (-4.466, 3.068), radius 0.7, starting at 220.0 degrees and sweeping 140.0 degrees counter-clockwise. 18. Draw the closed polygon ii_P-ii_Q-ii_R-ii_S-ii_P with straight sides in INK, with vertices ii_P at (3.046, 0.837); ii_Q at (6.346, 0.837); ii_R at (5.354, 3.563); ii_S at (2.054, 3.563). 19. Draw 1 open arrowhead in INK on side ii_Pii_Q, the tip at (4.696, 0.837) pointing at 0.0 degrees (arms of length 0.22 at 30 degrees either side of the side). 20. Draw 1 open arrowhead in INK on side ii_Sii_R, the tip at (3.704, 3.563) pointing at 0.0 degrees (arms of length 0.22 at 30 degrees either side of the side). 21. Draw 2 open arrowheads in INK on side ii_Pii_S, the tip at (2.55, 2.2) pointing at 110.0 degrees (arms of length 0.22 at 30 degrees either side of the side); the second arrowhead sits 0.16 behind the first along the side. 22. Draw 2 open arrowheads in INK on side ii_Qii_R, the tip at (5.85, 2.2) pointing at 110.0 degrees (arms of length 0.22 at 30 degrees either side of the side); the second arrowhead sits 0.16 behind the first along the side. 23. Draw an arc in INK centred at ii_P (3.046, 0.837), radius 0.7, starting at 0.0 degrees and sweeping 110.0 degrees counter-clockwise (given angle P). 24. Write \"P\" in INK, centred at (2.774, 0.517), font size 0.4 units. 25. Write \"Q\" in INK, centred at (6.7, 0.612), font size 0.4 units. 26. Write \"R\" in INK, centred at (5.626, 3.883), font size 0.4 units. 27. Write \"S\" in INK, centred at (1.7, 3.788), font size 0.4 units. 28. Draw an arc in ANSWER centred at ii_Q (6.346, 0.837), radius 0.7, starting at 110.0 degrees and sweeping 70.0 degrees counter-clockwise. 29. Draw an arc in ANSWER centred at ii_R (5.354, 3.563), radius 0.7, starting at 180.0 degrees and sweeping 110.0 degrees counter-clockwise. 30. Draw an arc in ANSWER centred at ii_S (2.054, 3.563), radius 0.7, starting at 290.0 degrees and sweeping 70.0 degrees counter-clockwise. 31. Draw the closed polygon iii_U-iii_V-iii_W-iii_X-iii_U with straight sides in INK, with vertices iii_U at (-5.125, -3.629); iii_V at (-1.825, -3.629); iii_W at (-3.475, -0.771); iii_X at (-6.775, -0.771). 32. Draw 1 tick mark of length 0.30 in INK across side iii_Uiii_V, centred at (-3.475, -3.629) and perpendicular to the side. 33. Draw 1 tick mark of length 0.30 in INK across side iii_Viii_W, centred at (-2.65, -2.2) and perpendicular to the side. 34. Draw 1 tick mark of length 0.30 in INK across side iii_Wiii_X, centred at (-5.125, -0.771) and perpendicular to the side. 35. Draw 1 tick mark of length 0.30 in INK across side iii_Xiii_U, centred at (-5.95, -2.2) and perpendicular to the side. 36. Draw the straight segment iii_X to iii_V in INK, from (-6.775, -0.771) to (-1.825, -3.629). 37. Draw an arc in INK centred at iii_V (-1.825, -3.629), radius 0.8, starting at 180.0 degrees and sweeping 30.0 degrees clockwise (given angle XVU). 38. Write \"U\" in INK, centred at (-5.335, -3.993), font size 0.4 units. 39. Write \"V\" in INK, centred at (-1.461, -3.839), font size 0.4 units. 40. Write \"W\" in INK, centred at (-3.265, -0.407), font size 0.4 units. 41. Write \"X\" in INK, centred at (-7.139, -0.561), font size 0.4 units. 42. Draw an arc in ANSWER centred at iii_V (-1.825, -3.629), radius 0.8, starting at 150.0 degrees and sweeping 30.0 degrees clockwise (angle XVW, equal to the given angle XVU). 43. Draw an arc in ANSWER centred at iii_V (-1.825, -3.629), radius 1.2, starting at 120.0 degrees and sweeping 60.0 degrees counter-clockwise (whole angle V = 60 degrees). 44. Write \"60°\" in ANSWER, centred at (-3.557, -2.629), font size 0.34 units, on a BG-filled rectangle that hides the line behind the text. 45. Draw an arc in ANSWER centred at iii_X (-6.775, -0.771), radius 0.8, starting at 0.0 degrees and sweeping 30.0 degrees clockwise (angle WXV). 46. Draw an arc in ANSWER centred at iii_X (-6.775, -0.771), radius 0.8, starting at 330.0 degrees and sweeping 30.0 degrees clockwise (angle VXU, equal to angle WXV). 47. Draw an arc in ANSWER centred at iii_X (-6.775, -0.771), radius 1.2, starting at 300.0 degrees and sweeping 60.0 degrees counter-clockwise (whole angle X = 60 degrees). 48. Write \"60°\" in ANSWER, centred at (-5.043, -1.771), font size 0.34 units, on a BG-filled rectangle that hides the line behind the text. 49. Draw an arc in ANSWER centred at iii_U (-5.125, -3.629), radius 0.8, starting at 0.0 degrees and sweeping 120.0 degrees counter-clockwise. 50. Draw an arc in ANSWER centred at iii_W (-3.475, -0.771), radius 0.8, starting at 180.0 degrees and sweeping 120.0 degrees counter-clockwise. 51. Draw the closed polygon iv_O-iv_I-iv_E-iv_A-iv_O with straight sides in INK, with vertices iv_O at (0.998, -1.107); iv_I at (4.398, -1.107); iv_E at (7.002, -3.293); iv_A at (3.602, -3.293). 52. Draw 1 tick mark of length 0.30 in INK across side iv_Oiv_I, centred at (2.698, -1.107) and perpendicular to the side. 53. Draw 1 tick mark of length 0.30 in INK across side iv_Iiv_E, centred at (5.7, -2.2) and perpendicular to the side. 54. Draw 1 tick mark of length 0.30 in INK across side iv_Eiv_A, centred at (5.302, -3.293) and perpendicular to the side. 55. Draw 1 tick mark of length 0.30 in INK across side iv_Aiv_O, centred at (2.3, -2.2) and perpendicular to the side. 56. Draw the straight segment iv_O to iv_E in INK, from (0.998, -1.107) to (7.002, -3.293). 57. Draw an arc in INK centred at iv_E (7.002, -3.293), radius 1.0, starting at 180.0 degrees and sweeping 20.0 degrees clockwise (given angle OEA). 58. Write \"O\" in INK, centred at (0.603, -0.964), font size 0.4 units. 59. Write \"I\" in INK, centred at (4.541, -0.713), font size 0.4 units. 60. Write \"E\" in INK, centred at (7.397, -3.436), font size 0.4 units. 61. Write \"A\" in INK, centred at (3.459, -3.687), font size 0.4 units. 62. Draw an arc in ANSWER centred at iv_E (7.002, -3.293), radius 1.0, starting at 160.0 degrees and sweeping 20.0 degrees clockwise (angle OEI, equal to the given angle OEA). 63. Draw an arc in ANSWER centred at iv_E (7.002, -3.293), radius 1.4, starting at 140.0 degrees and sweeping 40.0 degrees counter-clockwise (whole angle E = 40 degrees). 64. Write \"40°\" in ANSWER, centred at (5.123, -2.609), font size 0.34 units, on a BG-filled rectangle that hides the line behind the text. 65. Draw an arc in ANSWER centred at iv_O (0.998, -1.107), radius 1.0, starting at 0.0 degrees and sweeping 20.0 degrees clockwise (angle IOE). 66. Draw an arc in ANSWER centred at iv_O (0.998, -1.107), radius 1.0, starting at 340.0 degrees and sweeping 20.0 degrees clockwise (angle EOA, equal to angle IOE). 67. Draw an arc in ANSWER centred at iv_O (0.998, -1.107), radius 1.4, starting at 320.0 degrees and sweeping 40.0 degrees counter-clockwise (whole angle O = 40 degrees). 68. Write \"40°\" in ANSWER, centred at (2.877, -1.791), font size 0.34 units, on a BG-filled rectangle that hides the line behind the text. 69. Draw an arc in ANSWER centred at iv_I (4.398, -1.107), radius 0.5, starting at 180.0 degrees and sweeping 140.0 degrees counter-clockwise. 70. Draw an arc in ANSWER centred at iv_A (3.602, -3.293), radius 0.5, starting at 0.0 degrees and sweeping 140.0 degrees counter-clockwise. 71. Write \"40°\" in INK, centred at (-5.482, 1.654), font size 0.34 units. 72. Write \"140°\" in ANSWER, centred at (-3.961, 2.131), font size 0.34 units. 73. Write \"40°\" in ANSWER, centred at (-2.118, 2.746), font size 0.34 units. 74. Write \"140°\" in ANSWER, centred at (-3.378, 2.561), font size 0.34 units. 75. Write \"110°\" in INK, centred at (3.677, 1.739), font size 0.34 units. 76. Write \"70°\" in ANSWER, centred at (5.541, 1.588), font size 0.34 units. 77. Write \"110°\" in ANSWER, centred at (4.723, 2.661), font size 0.34 units. 78. Write \"70°\" in ANSWER, centred at (2.776, 2.732), font size 0.34 units. 79. Write \"30°\" in INK, centred at (-3.37, -3.215), font size 0.34 units. 80. Write \"120°\" in ANSWER, centred at (-4.855, -2.357), font size 0.34 units. 81. Write \"120°\" in ANSWER, centred at (-3.745, -2.043), font size 0.34 units. 82. Write \"20°\" in INK, centred at (4.968, -3.043), font size 0.34 units. 83. Write \"140°\" in ANSWER, centred at (4.507, -2.001), font size 0.34 units. 84. Write \"140°\" in ANSWER, centred at (3.493, -2.399), font size 0.34 units.",
+    "visible_text": [
+     "(i)",
+     "(ii)",
+     "(iii)",
+     "(iv)",
+     "P",
+     "E",
+     "A",
+     "R",
+     "P",
+     "Q",
+     "R",
+     "S",
+     "U",
+     "V",
+     "W",
+     "X",
+     "60°",
+     "60°",
+     "O",
+     "I",
+     "E",
+     "A",
+     "40°",
+     "40°",
+     "40°",
+     "140°",
+     "40°",
+     "140°",
+     "110°",
+     "70°",
+     "110°",
+     "70°",
+     "30°",
+     "120°",
+     "120°",
+     "20°",
+     "140°",
+     "140°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "figure letters such as a. or b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a figure letter other than (i), (ii), (iii), (iv)"
+    ],
+    "accuracy_checks": [
+     "panel (i): angle RPE = 40.0 degrees (40); PE = RA = 3.4 units and PR = EA = 2.7 units; single arrowhead on PE and RA, double on PR and EA",
+     "panel (ii): angle SPQ = 110.0 degrees (110); PQ = SR = 3.3 units and PS = QR = 2.9 units; single arrowhead on PQ and SR, double on PS and QR",
+     "panel (iii): UV = VW = WX = XU = 3.3 units (one tick each), angle UVX = 30.0 degrees (30), the diagonal XV is drawn",
+     "panel (iv): OI = IE = EA = AO = 3.4 units (one tick each), angle AEO = 20.0 degrees (20), the diagonal OE is drawn",
+     "(i) E = R = 180 - 40 = 140 and A = P = 40; as drawn angle PEA = 140.0, angle EAR = 40.0, angle ARP = 140.0 degrees; 40 + 140 + 40 + 140 = 360",
+     "(ii) Q = S = 180 - 110 = 70 and R = P = 110; as drawn angle PQR = 70.0, angle QRS = 110.0, angle RSP = 70.0 degrees; 110 + 70 + 110 + 70 = 360",
+     "(iii) angle UVW = angle UXW = 30 + 30 = 60 (drawn: 60.0 and 60.0 degrees), angle XUV = angle VWX = 180 - 60 = 120 (drawn: 120.0 and 120.0 degrees); 60 + 120 + 60 + 120 = 360",
+     "(iv) angle AEI = angle AOI = 20 + 20 = 40 (drawn: 40.0 and 40.0 degrees), angle OIE = angle OAE = 180 - 40 = 140 (drawn: 140.0 and 140.0 degrees); 40 + 140 + 40 + 140 = 360"
+    ],
+    "alt_text": "The same four quadrilaterals with every remaining angle marked: 140°, 40°, 140° in the first, 70°, 110°, 70° in the second, 60°, 60°, 120°, 120° in the third and 40°, 40°, 140°, 140° in the fourth.",
+    "render_note": "Same panels, positions and given marks as the question figure; every remaining angle is added in ANSWER green. In (iii) and (iv) the diagonal splits the angle at its two ends into two equal halves (equal arcs, no label on the new half) and the whole angle is labelled on the diagonal (BG rectangle)."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S19.T19.C77",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO2.q3",
+   "question_text": "Using the diagonal properties, construct a rhombus whose diagonals are of lengths 4 cm and 5 cm.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives the two diagonals in words and no figure; no question figure is invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S19.T19.C78",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO2.q3",
+   "question_text": "Using the diagonal properties, construct a rhombus whose diagonals are of lengths 4 cm and 5 cm.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is a construction and the book's printed answer is a picture (p.34: perpendicular diagonals 5 cm and 4 cm with the right-angle mark at O). The question has no figure, so the solution figure stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S19.T19.C78.IMG1",
+   "manim_scene": "c8_4_s19_c78_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S19.T19.C78.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "construction",
+     "canvas": {
+      "width_units": 16.0,
+      "height_units": 9.0,
+      "px": "1920x1080",
+      "origin": "centre",
+      "x": "right",
+      "y": "up",
+      "unit_px": 120
+     },
+     "stroke_px": 3,
+     "points": {
+      "A": [
+       -3.75,
+       0.0
+      ],
+      "C": [
+       3.75,
+       0.0
+      ],
+      "O": [
+       0.0,
+       0.0
+      ],
+      "B": [
+       0.0,
+       3.0
+      ],
+      "D": [
+       0.0,
+       -3.0
+      ]
+     },
+     "elements": [
+      {
+       "kind": "segment",
+       "colour": "INK",
+       "from": "A",
+       "to": "C"
+      },
+      {
+       "kind": "segment",
+       "colour": "INK",
+       "from": "B",
+       "to": "D"
+      },
+      {
+       "kind": "polygon",
+       "colour": "ANSWER",
+       "vertices": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ]
+      },
+      {
+       "kind": "dot",
+       "colour": "INK",
+       "at": "O"
+      },
+      {
+       "kind": "right_angle",
+       "colour": "INK",
+       "vertex": "O",
+       "dir1_deg": 0.0,
+       "dir2_deg": 90.0,
+       "size": 0.35
+      },
+      {
+       "kind": "label",
+       "text": "2.5 cm",
+       "colour": "INK",
+       "pos": [
+        -1.9,
+        -0.45
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "2.5 cm",
+       "colour": "INK",
+       "pos": [
+        1.9,
+        -0.45
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "2 cm",
+       "colour": "INK",
+       "pos": [
+        0.7,
+        1.5
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "2 cm",
+       "colour": "INK",
+       "pos": [
+        0.7,
+        -1.5
+       ],
+       "size": 0.34,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "colour": "INK",
+       "pos": [
+        -4.15,
+        0.0
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "colour": "INK",
+       "pos": [
+        4.15,
+        0.0
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "colour": "INK",
+       "pos": [
+        0.0,
+        3.4
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "D",
+       "colour": "INK",
+       "pos": [
+        0.0,
+        -3.4
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      },
+      {
+       "kind": "label",
+       "text": "O",
+       "colour": "INK",
+       "pos": [
+        -0.32,
+        0.36
+       ],
+       "size": 0.4,
+       "bg": false,
+       "anchor": null
+      }
+     ],
+     "to_scale": true,
+     "scale": "1.5 units per cm",
+     "construction": "rhombus from its two diagonals"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), plain BG background, origin at the centre, x to the right, y up. All lines and arcs 3 px wide with round ends; labels in a sans-serif font at 0.34 units (vertex letters 0.40 units), both above 34 px. Draw in this order. 1. Draw the straight segment A to C in INK, from (-3.75, 0.0) to (3.75, 0.0). 2. Draw the straight segment B to D in INK, from (0.0, 3.0) to (0.0, -3.0). 3. Draw the closed polygon A-B-C-D-A with straight sides in ANSWER, with vertices A at (-3.75, 0.0); B at (0.0, 3.0); C at (3.75, 0.0); D at (0.0, -3.0). 4. Draw a filled dot of radius 0.07 in INK at O (0.0, 0.0). 5. Draw a right-angle square of side 0.35 in INK with its corner at O (0.0, 0.0), between the rays at 0.0 and 90.0 degrees. 6. Write \"2.5 cm\" in INK, centred at (-1.9, -0.45), font size 0.34 units. 7. Write \"2.5 cm\" in INK, centred at (1.9, -0.45), font size 0.34 units. 8. Write \"2 cm\" in INK, centred at (0.7, 1.5), font size 0.34 units. 9. Write \"2 cm\" in INK, centred at (0.7, -1.5), font size 0.34 units. 10. Write \"A\" in INK, centred at (-4.15, 0.0), font size 0.4 units. 11. Write \"C\" in INK, centred at (4.15, 0.0), font size 0.4 units. 12. Write \"B\" in INK, centred at (0.0, 3.4), font size 0.4 units. 13. Write \"D\" in INK, centred at (0.0, -3.4), font size 0.4 units. 14. Write \"O\" in INK, centred at (-0.32, 0.36), font size 0.4 units.",
+    "visible_text": [
+     "2.5 cm",
+     "2.5 cm",
+     "2 cm",
+     "2 cm",
+     "A",
+     "C",
+     "B",
+     "D",
+     "O"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers",
+     "figure letters such as a. or b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the totals 5 cm and 4 cm",
+     "step numbers or captions",
+     "the arrowheads at the ends of the perpendicular line"
+    ],
+    "accuracy_checks": [
+     "AC = 7.5 units = 5 cm and BD = 6.0 units = 4 cm at 1.5 units per cm",
+     "O is the midpoint of both diagonals: OA = OC = 3.75 units = 2.5 cm and OB = OD = 3.0 units = 2 cm",
+     "the diagonals are perpendicular (AC horizontal, BD vertical)",
+     "AB = BC = CD = DA = 4.802 units, so ABCD is a rhombus"
+    ],
+    "alt_text": "Rhombus ABCD built from perpendicular diagonals AC = 5 cm and BD = 4 cm that bisect each other at O.",
+    "render_note": "Labelled as in the LP steps (AC = 5 cm, BD = 4 cm, halves 2.5 cm and 2 cm); the book's printed answer names the same figure ADBC. Right-angle mark at O between OC and OB."
+   }
+  }
+ ]
+}

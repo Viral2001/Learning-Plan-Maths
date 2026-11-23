@@ -1,0 +1,6 @@
+You are doing diagram decisions for CHUNK B of the Class 8 Chapter 5 learning plan ("Number Play"). Everything you need is in the brief: read `/root/maths-learning-plan/Learning-Plan-Maths/chapters/maths8_ch5/v2_diagrams/AGENT_BRIEF.md` first and follow it exactly (HERE = `/root/maths-learning-plan/Learning-Plan-Maths/chapters/maths8_ch5/v2_diagrams/`). Your chunk is B: the units in `HERE/map/in_B.json` (topics: M1.S12.T12, M1.S13.T13, M1.S14.T14, M1.S15.T15, M2.S16.T16, M2.S17.T17). Your output files are `HERE/map/out_B.json` and `HERE/map/notes_B.md`.
+
+All base figure inventories exist (`HERE/map/inv_base_chapter_01_16.json`, `HERE/map/inv_base_chapter_17_32.json`, `HERE/map/inv_base_chapter_33_37.json`). The inventory agents listed doubts in each entry's `unclear`: check those figures against the page pictures yourself.
+The validator checks your output with `--chunk B`; the base-inventory completeness check (every base figure claimed) only runs on the merged map, so claim only the figures that belong to your chunk (brief, Step 0).
+Do not read `HERE/map/out_*.json` of other chunks; decide from the rules. Do not edit any file other than your two output files; do not touch staging; upload nothing.
+Final message: at most 60 words, as the brief says.

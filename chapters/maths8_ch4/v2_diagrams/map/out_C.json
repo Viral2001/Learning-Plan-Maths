@@ -1,0 +1,5220 @@
+{
+ "meta": {
+  "chapter": "Quadrilaterals",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 4",
+  "lp_plan_id": "cbse_eng_maths8_ch4_v29",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "none": 7,
+    "required": 2,
+    "optional": 0
+   },
+   "solution": {
+    "required": 7,
+    "none": 2,
+    "optional": 0
+   },
+   "worked_example": {
+    "required": 3,
+    "none": 1,
+    "optional": 2
+   }
+  },
+  "notes": [
+   "Chunk C of Class 8 Ch 4 (topics M5.S21.T21, S23, S24, S25, S26, S27 and M6.S28.T28): 24 items, 12 required diagrams.",
+   "Question-side diagrams only where the book itself gives or references a figure that carries data (kite proof C93, trapeziums C100); word questions with a figure answer get a solution diagram only (geoboard, joining triangles, equilateral rhombus, kite construction).",
+   "Worked-example diagrams show the given state only ('?' for the asked angles), except the Venn diagram C104 whose answer is the figure.",
+   "Book mistakes handled by following the LP: printed answer to Figure it Out Q4 (ii) says 'No' (a square is both a kite and a rectangle); printed reason for Q11 (i) is not the reason the LP gives.",
+   "No decision was changed because of LP text issues; they are listed in notes_C.md under 'LP text issues'."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P22-geoboard-1",
+   "source": "chapter p.22",
+   "description": "Geoboard with two equal rubber bands crossing as a plus at the centre peg (9 x 9 pegs, bands 5 pegs long); the bands reappear in the left panel of the solution figure.",
+   "mapped_to": "item:M5.S21.T21.C84 (solution)"
+  },
+  {
+   "fig_id": "P22-geoboard-2",
+   "source": "chapter p.22",
+   "description": "Same geoboard, the vertical band extended by one peg gap at each end (7 pegs); the bands reappear in the right panel of the solution figure.",
+   "mapped_to": "item:M5.S21.T21.C84 (solution)"
+  },
+  {
+   "fig_id": "P23-shape-1",
+   "source": "chapter p.23",
+   "description": "Two cut-out equilateral triangles of side 8 cm (Joining Triangles 1); no LP question of its own, the case is only a remark in the answer to the 8, 8, 6 question.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P23-shape-2",
+   "source": "chapter p.23",
+   "description": "Two equilateral triangles of 8 cm joined into a rhombus with four 8 cm sides: the same shape as the rhombus panel of the 8, 8, 6 solution figure, so not drawn again.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P23-shape-3",
+   "source": "chapter p.23",
+   "description": "Two cut-out isosceles triangles with sides 8 cm, 8 cm, 6 cm, given with the question; the sides are in the text.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P23-shape-4",
+   "source": "chapter p.23",
+   "description": "The two 8, 8, 6 triangles joined along the 6 cm side: rhombus, outer sides 8 cm, joined diagonal 6 cm.",
+   "mapped_to": "item:M5.S21.T21.C86 (solution)"
+  },
+  {
+   "fig_id": "P23-shape-5",
+   "source": "chapter p.23",
+   "description": "The two 8, 8, 6 triangles joined along an 8 cm side: parallelogram with horizontal sides 6 cm, slanting sides 8 cm, joined diagonal 8 cm.",
+   "mapped_to": "item:M5.S21.T21.C86 (solution)"
+  },
+  {
+   "fig_id": "P24-shape-1",
+   "source": "chapter p.24",
+   "description": "Two cut-out scalene triangles with sides 6 cm, 9 cm, 12 cm, given with the question; the sides are in the text.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P24-shape-2",
+   "source": "chapter p.24",
+   "description": "Kite made by joining the 6, 9, 12 triangles flipped over the 12 cm side: sides 6, 6, 9, 9, diagonal 12.",
+   "mapped_to": "item:M5.S21.T21.C88 (solution)"
+  },
+  {
+   "fig_id": "P24-shape-3",
+   "source": "chapter p.24",
+   "description": "Kite ABCD (D top, B bottom) with ticks on equal sides (one on DA and DC, two on AB and CB) and both diagonals meeting at O.",
+   "mapped_to": "item:M5.S23.T23.C93 (question)"
+  },
+  {
+   "fig_id": "P25-shape-1",
+   "source": "chapter p.25",
+   "description": "Trapezium PQRS with PQ parallel to SR and the base angles marked by arcs without values.",
+   "mapped_to": "item:M5.S24.T24.C97 (question)"
+  },
+  {
+   "fig_id": "P25-construction-2",
+   "source": "chapter p.25",
+   "description": "Two construction panels of the isosceles trapezium UVWX with UV parallel to XW and UX = VW; its finished panel is the given state of the worked example.",
+   "mapped_to": "item:M5.S24.T24.C98 (question)"
+  },
+  {
+   "fig_id": "P25-shape-3",
+   "source": "chapter p.25",
+   "description": "Isosceles trapezium UVWX with the dashed perpendiculars XY and WZ and the rectangle XWZY (teaching figure of the same concept).",
+   "mapped_to": "concept_image:M5.S24.T24.C98.IMG1"
+  },
+  {
+   "fig_id": "P26-shape-1",
+   "source": "chapter p.26",
+   "description": "Figure Out Q3 (i): trapezium with a long top and a short bottom parallel side, 135 and 105 degrees at the ends of the bottom side.",
+   "mapped_to": "item:M5.S25.T25.C100 (question)"
+  },
+  {
+   "fig_id": "P26-shape-2",
+   "source": "chapter p.26",
+   "description": "Figure Out Q3 (ii): tilted isosceles trapezium with parallel arrows, one tick on each slanting side and 100 degrees at the top left.",
+   "mapped_to": "item:M5.S25.T25.C100 (question)"
+  },
+  {
+   "fig_id": "P29-venn-1",
+   "source": "chapter p.29",
+   "description": "Summary Venn diagram of kite, trapezium, parallelogram, rectangle, rhombus and square (teaching figure of the Summary topic).",
+   "mapped_to": "concept_image:M6.S28.T28.C109.IMG1"
+  },
+  {
+   "fig_id": "P30-paper_fold-1",
+   "source": "chapter p.30",
+   "description": "Puzzle step 1: the flat sheet and the sheet folded in half.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P30-paper_fold-2",
+   "source": "chapter p.30",
+   "description": "Puzzle step 2: the half-folded sheet folded again into a quarter.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P30-paper_fold-3",
+   "source": "chapter p.30",
+   "description": "Puzzle step 3: the triangular crease at the corner that is the middle of the paper.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P30-paper_fold-4",
+   "source": "chapter p.30",
+   "description": "Puzzle step 4: the opened sheet with the two fold lines and the rhombus of creases (the concept's teaching image).",
+   "mapped_to": "concept_image:M6.S28.T28.C110.IMG1"
+  },
+  {
+   "fig_id": "P30-paper_fold-5",
+   "source": "chapter p.30",
+   "description": "Puzzle step 5: the opened sheet with nested rhombus creases; the LP only states in words that parallel creases give nested rhombuses.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P34-shape-1",
+   "source": "chapter p.34",
+   "description": "Printed answer of Q1: rhombus ABCD from two equilateral triangles of 4 cm joined along DB, six 60 degree angles marked.",
+   "mapped_to": "item:M5.S21.T21.C90 (solution)"
+  },
+  {
+   "fig_id": "P34-construction-2",
+   "source": "chapter p.34",
+   "description": "Printed answer of Q2: finished kite PRQS with PQ horizontal, perpendicular line SR through T, no numbers printed.",
+   "mapped_to": "item:M5.S23.T23.C96 (solution)"
+  },
+  {
+   "fig_id": "P35-shape-1",
+   "source": "chapter p.35",
+   "description": "Q3 (i) repeated in the answers page: trapezium with 135 and 105 degrees.",
+   "mapped_to": "item:M5.S25.T25.C100 (question)"
+  },
+  {
+   "fig_id": "P35-shape-2",
+   "source": "chapter p.35",
+   "description": "Q3 (ii) repeated in the answers page: isosceles trapezium with 100 degrees.",
+   "mapped_to": "item:M5.S25.T25.C100 (question)"
+  },
+  {
+   "fig_id": "P35-shape-3",
+   "source": "chapter p.35",
+   "description": "Printed answer of Q3 (i): trapezium PQRS (S top left, R top right, P bottom left, Q bottom right) with 135 and 105 degrees; the answers 75 and 45 are only in words.",
+   "mapped_to": "item:M5.S25.T25.C101 (solution)"
+  },
+  {
+   "fig_id": "P35-shape-4",
+   "source": "chapter p.35",
+   "description": "Printed answer of Q3 (ii): trapezium ABCD with equal legs and 100 degrees at D; the answers 80 and 80 are only in words.",
+   "mapped_to": "item:M5.S25.T25.C101 (solution)"
+  },
+  {
+   "fig_id": "P35-venn_diagram-1",
+   "source": "chapter p.35",
+   "description": "Printed answer of Q4: Venn diagram with kite and parallelogram overlapping in the rhombus region, rectangle inside parallelogram reaching into the lens (squares).",
+   "mapped_to": "item:M5.S26.T26.C104 (question)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 28,
+  "mapped_to_items": 17,
+  "mapped_to_concept_images": 3,
+  "mapped_none": 8,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M5.S21.T21.C84.IMG1",
+   "M5.S21.T21.C86.IMG1",
+   "M5.S21.T21.C88.IMG1",
+   "M5.S21.T21.C90.IMG1",
+   "M5.S23.T23.C93.IMG1",
+   "M5.S23.T23.C94.IMG1",
+   "M5.S23.T23.C96.IMG1",
+   "M5.S24.T24.C97.IMG2",
+   "M5.S24.T24.C98.IMG2",
+   "M5.S25.T25.C100.IMG1",
+   "M5.S25.T25.C101.IMG1",
+   "M5.S26.T26.C104.IMG2"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M5.S21.T21.C83",
+   "role": "question",
+   "lp_book_number": "Geoboard: two perpendicular rubber bands",
+   "ncert_ref": "4.5.geoboard",
+   "question_text": "Two rubber bands of 4 cm cross at right angles at their midpoints. Name the quadrilateral their ends make, and name it again after one band is extended by 2 cm at each end.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "DECORATIVE_ONLY"
+   ],
+   "reason": "The text gives everything: two 4 cm bands crossing at right angles at their midpoints, and one band extended by 2 cm at each end. The book's geoboard picture only illustrates the activity (no numbers are printed on it).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S21.T21.C84",
+   "role": "solution",
+   "lp_book_number": "Geoboard: two perpendicular rubber bands",
+   "ncert_ref": "4.5.geoboard",
+   "question_text": "Two rubber bands of 4 cm cross at right angles at their midpoints. Name the quadrilateral their ends make, and name it again after one band is extended by 2 cm at each end.",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "Word question, figure answer: the answer is the two quadrilaterals the joined band ends make. The figure shows the square (bands 4 cm and 4 cm) and the rhombus (bands 4 cm and 2 + 4 + 2 = 8 cm) with the crossing at the midpoints, so the diagonal reasoning in the steps can be checked. The question has no figure, so this diagram stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S21.T21.C84.IMG1",
+   "manim_scene": "c8_4_s21_c84_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S21.T21.C84.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre of the card",
+      "y_axis": "up",
+      "unit": "1 canvas unit = 120 px on the 1920 x 1080 card"
+     },
+     "to_scale": true,
+     "scale": "0.7 canvas units per cm",
+     "panels": [
+      "left panel: square made by joining the ends of two 4 cm bands",
+      "right panel: rhombus made after the vertical band is extended to 8 cm"
+     ],
+     "polygons": [
+      {
+       "id": "square",
+       "points": [
+        [
+         -5.4,
+         0.7
+        ],
+        [
+         -4.0,
+         2.0999999999999996
+        ],
+        [
+         -2.6,
+         0.7
+        ],
+        [
+         -4.0,
+         -0.7
+        ]
+       ],
+       "stroke": "ANSWER",
+       "stroke_width": 5,
+       "fill": null
+      },
+      {
+       "id": "rhombus",
+       "points": [
+        [
+         2.6,
+         0.7
+        ],
+        [
+         4.0,
+         3.5
+        ],
+        [
+         5.4,
+         0.7
+        ],
+        [
+         4.0,
+         -2.0999999999999996
+        ]
+       ],
+       "stroke": "ANSWER",
+       "stroke_width": 5,
+       "fill": null
+      }
+     ],
+     "segments": [
+      {
+       "from": [
+        -5.4,
+        0.7
+       ],
+       "to": [
+        -2.6,
+        0.7
+       ],
+       "stroke": "INK",
+       "stroke_width": 5,
+       "dash": null
+      },
+      {
+       "from": [
+        -4.0,
+        -0.7
+       ],
+       "to": [
+        -4.0,
+        2.1
+       ],
+       "stroke": "INK",
+       "stroke_width": 5,
+       "dash": null
+      },
+      {
+       "from": [
+        2.6,
+        0.7
+       ],
+       "to": [
+        5.4,
+        0.7
+       ],
+       "stroke": "INK",
+       "stroke_width": 5,
+       "dash": null
+      },
+      {
+       "from": [
+        4.0,
+        -0.7
+       ],
+       "to": [
+        4.0,
+        2.1
+       ],
+       "stroke": "INK",
+       "stroke_width": 5,
+       "dash": null
+      },
+      {
+       "from": [
+        4.0,
+        2.1
+       ],
+       "to": [
+        4.0,
+        3.5
+       ],
+       "stroke": "FOCUS",
+       "stroke_width": 7,
+       "dash": null
+      },
+      {
+       "from": [
+        4.0,
+        -2.1
+       ],
+       "to": [
+        4.0,
+        -0.7
+       ],
+       "stroke": "FOCUS",
+       "stroke_width": 7,
+       "dash": null
+      },
+      {
+       "from": [
+        -5.4,
+        0.7
+       ],
+       "to": [
+        -5.4,
+        -1.3
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 2,
+       "dash": "dotted"
+      },
+      {
+       "from": [
+        -2.6,
+        0.7
+       ],
+       "to": [
+        -2.6,
+        -1.3
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 2,
+       "dash": "dotted"
+      },
+      {
+       "from": [
+        -4.0,
+        2.1
+       ],
+       "to": [
+        -1.9,
+        2.1
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 2,
+       "dash": "dotted"
+      },
+      {
+       "from": [
+        -4.0,
+        -0.7
+       ],
+       "to": [
+        -1.9,
+        -0.7
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 2,
+       "dash": "dotted"
+      },
+      {
+       "from": [
+        1.9,
+        3.5
+       ],
+       "to": [
+        6.2,
+        3.5
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 2,
+       "dash": "dotted"
+      },
+      {
+       "from": [
+        1.9,
+        -2.1
+       ],
+       "to": [
+        6.2,
+        -2.1
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 2,
+       "dash": "dotted"
+      },
+      {
+       "from": [
+        4.0,
+        2.1
+       ],
+       "to": [
+        6.2,
+        2.1
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 2,
+       "dash": "dotted"
+      },
+      {
+       "from": [
+        4.0,
+        -0.7
+       ],
+       "to": [
+        6.2,
+        -0.7
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 2,
+       "dash": "dotted"
+      },
+      {
+       "from": [
+        2.6,
+        0.7
+       ],
+       "to": [
+        2.6,
+        -2.7
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 2,
+       "dash": "dotted"
+      },
+      {
+       "from": [
+        5.4,
+        0.7
+       ],
+       "to": [
+        5.4,
+        -2.7
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 2,
+       "dash": "dotted"
+      }
+     ],
+     "dimension_lines": [
+      {
+       "from": [
+        -5.4,
+        -1.3
+       ],
+       "to": [
+        -2.6,
+        -1.3
+       ],
+       "stroke": "GUIDE"
+      },
+      {
+       "from": [
+        -1.9,
+        -0.7
+       ],
+       "to": [
+        -1.9,
+        2.1
+       ],
+       "stroke": "GUIDE"
+      },
+      {
+       "from": [
+        1.9,
+        -2.1
+       ],
+       "to": [
+        1.9,
+        3.5
+       ],
+       "stroke": "GUIDE"
+      },
+      {
+       "from": [
+        6.2,
+        -2.1
+       ],
+       "to": [
+        6.2,
+        -0.7
+       ],
+       "stroke": "GUIDE"
+      },
+      {
+       "from": [
+        6.2,
+        -0.7
+       ],
+       "to": [
+        6.2,
+        2.1
+       ],
+       "stroke": "GUIDE"
+      },
+      {
+       "from": [
+        6.2,
+        2.1
+       ],
+       "to": [
+        6.2,
+        3.5
+       ],
+       "stroke": "GUIDE"
+      },
+      {
+       "from": [
+        2.6,
+        -2.7
+       ],
+       "to": [
+        5.4,
+        -2.7
+       ],
+       "stroke": "GUIDE"
+      }
+     ],
+     "ticks": [
+      {
+       "segment": [
+        [
+         -4.0,
+         0.7
+        ],
+        [
+         -5.4,
+         0.7
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         -4.0,
+         0.7
+        ],
+        [
+         -2.6,
+         0.7
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         -4.0,
+         0.7
+        ],
+        [
+         -4.0,
+         2.0999999999999996
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         -4.0,
+         0.7
+        ],
+        [
+         -4.0,
+         -0.7
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      }
+     ],
+     "right_angle_marks": [
+      {
+       "vertex": [
+        -4.0,
+        0.7
+       ],
+       "toward_a": [
+        -2.6,
+        0.7
+       ],
+       "toward_b": [
+        -4.0,
+        2.1
+       ],
+       "size": 0.25,
+       "stroke": "INK"
+      },
+      {
+       "vertex": [
+        4.0,
+        0.7
+       ],
+       "toward_a": [
+        5.4,
+        0.7
+       ],
+       "toward_b": [
+        4.0,
+        3.5
+       ],
+       "size": 0.25,
+       "stroke": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "4 cm",
+       "at": [
+        -4.0,
+        -1.7
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "4 cm",
+       "at": [
+        -1.25,
+        0.7
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "8 cm",
+       "at": [
+        1.25,
+        0.7
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "2 cm",
+       "at": [
+        6.85,
+        -1.4
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "4 cm",
+       "at": [
+        6.85,
+        0.7
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "2 cm",
+       "at": [
+        6.85,
+        2.8
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "4 cm",
+       "at": [
+        4.0,
+        -3.1
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "square",
+       "at": [
+        -4.0,
+        -3.9
+       ],
+       "colour": "ANSWER",
+       "height": 0.45,
+       "background": false
+      },
+      {
+       "text": "rhombus",
+       "at": [
+        4.0,
+        -3.9
+       ],
+       "colour": "ANSWER",
+       "height": 0.45,
+       "background": false
+      }
+     ]
+    },
+    "manim_description": "Draw two panels side by side on the 16 x 9 card (origin at the centre, y up, 0.7 canvas units per cm, plain BG). LEFT panel, centre (-4, 0.7): draw the square with vertices (-5.4, 0.7), (-4, 2.1), (-2.6, 0.7), (-4, -0.7) in ANSWER (stroke 5); this is the quadrilateral made by joining the four band ends. Inside it draw the two equal bands as INK straight segments crossing at the centre: horizontal (-5.4, 0.7) to (-2.6, 0.7) and vertical (-4, -0.7) to (-4, 2.1), each 4 cm long (2.8 units). Put a right-angle mark (0.25 units, INK) at the crossing (-4, 0.7) and one INK tick across the middle of each of the four half-bands to show that the crossing is the midpoint of both bands. Below the square draw a GUIDE dimension line with arrowheads at both ends from (-5.4, -1.3) to (-2.6, -1.3), with dotted GUIDE extension lines down from the left and right band ends, and the label '4 cm' centred at (-4, -1.7). To the right of the square draw a GUIDE vertical dimension line from (-1.9, -0.7) to (-1.9, 2.1) with dotted extension lines from the top and bottom band ends, and the label '4 cm' centred at (-1.25, 0.7). Below the square, at (-4, -3.9), write 'square' in ANSWER. RIGHT panel, centre (4, 0.7): draw the rhombus with vertices (2.6, 0.7), (4, 3.5), (5.4, 0.7), (4, -2.1) in ANSWER (stroke 5). Draw the horizontal band (2.6, 0.7) to (5.4, 0.7) in INK (4 cm, 2.8 units) and the vertical band from (4, -0.7) to (4, 2.1) in INK for the original 4 cm; draw the two 2 cm extensions (4, 2.1) to (4, 3.5) and (4, -2.1) to (4, -0.7) in FOCUS (stroke 7), so the vertical band runs from (4, -2.1) to (4, 3.5) and is 8 cm long. Put a right-angle mark (0.25 units, INK) at the crossing (4, 0.7). Left of the rhombus draw a GUIDE vertical dimension line from (1.9, -2.1) to (1.9, 3.5) with dotted extension lines at the top and bottom ends and the label '8 cm' centred at (1.25, 0.7). Right of the rhombus draw a GUIDE vertical dimension line at x = 6.2 split at y = -0.7 and y = 2.1 into three parts, with dotted extension lines at the four heights -2.1, -0.7, 2.1 and 3.5 and the labels '2 cm' centred at (6.85, -1.4), '4 cm' centred at (6.85, 0.7) and '2 cm' centred at (6.85, 2.8). Below the rhombus draw a GUIDE horizontal dimension line from (2.6, -2.7) to (5.4, -2.7) with dotted extension lines up to the left and right ends of the horizontal band and the label '4 cm' centred at (4, -3.1). Below it, at (4, -3.9), write 'rhombus' in ANSWER. All labels are 0.4 units high (the two names 0.45) in a plain sans-serif font; no label may overlap a line; no board, pegs or rubber-band texture.",
+    "visible_text": [
+     "4 cm",
+     "4 cm",
+     "8 cm",
+     "2 cm",
+     "4 cm",
+     "2 cm",
+     "4 cm",
+     "square",
+     "rhombus"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure titles",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "geoboard board, pegs or rubber-band texture",
+     "quadrilateral names other than 'square' and 'rhombus'"
+    ],
+    "accuracy_checks": [
+     "left panel: both diagonals are 4 cm (2.8 units), equal, crossing at right angles at their midpoints, so the joined ends make a square with four equal sides",
+     "right panel: horizontal diagonal 4 cm (2.8 units), vertical diagonal 2 + 4 + 2 = 8 cm (5.6 units), crossing at right angles at the shared midpoint",
+     "the four sides of the right panel are equal (each sqrt(2^2 + 4^2) cm) and its diagonals are unequal, so it is a rhombus and not a square"
+    ],
+    "alt_text": "Two panels: a square made by joining the ends of two crossing 4 cm bands, and a rhombus made after one band is extended by 2 cm at each end to 8 cm.",
+    "render_note": "The book prints no band length (its picture shows a 9 x 9 peg board with bands 4 gaps long, the extended band 6 gaps long); the numbers 4 cm, 2 cm and 8 cm come from the LP text and solution."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S21.T21.C85",
+   "role": "question",
+   "lp_book_number": "Joining Triangles: sides 8 cm, 8 cm and 6 cm",
+   "ncert_ref": "4.5.join_isosceles",
+   "question_text": "Join two copies of the triangle with sides 8 cm, 8 cm and 6 cm in different ways and name the quadrilaterals.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The triangle is fully given by its sides 8 cm, 8 cm and 6 cm in the text; the book's picture of the two cut-out triangles adds nothing the text lacks.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S21.T21.C86",
+   "role": "solution",
+   "lp_book_number": "Joining Triangles: sides 8 cm, 8 cm and 6 cm",
+   "ncert_ref": "4.5.join_isosceles",
+   "question_text": "Join two copies of the triangle with sides 8 cm, 8 cm and 6 cm in different ways and name the quadrilaterals.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "Word question, figure answer: the answer is the arrangements of the two triangles. The figure shows the three ways of the LP solution (rhombus along the 6 cm side, parallelogram along an 8 cm side with one copy turned half round, kite along an 8 cm side with one copy flipped over), with all outer side lengths; the book prints the first two (page 23). The question has no figure to derive from.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S21.T21.C86.IMG1",
+   "manim_scene": "c8_4_s21_c86_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S21.T21.C86.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre of the card",
+      "y_axis": "up",
+      "unit": "1 canvas unit = 120 px on the 1920 x 1080 card"
+     },
+     "to_scale": true,
+     "scale": "each of the three shapes is scaled separately to fit a cell 4.2 units wide; lengths are true within each shape",
+     "polygons": [
+      {
+       "id": "rhombus_copy1",
+       "points": [
+        [
+         -7.4,
+         0.5
+        ],
+        [
+         -5.3,
+         1.35
+        ],
+        [
+         -5.3,
+         -0.35
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_A",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "rhombus_copy2",
+       "points": [
+        [
+         -3.2,
+         0.5
+        ],
+        [
+         -5.3,
+         1.35
+        ],
+        [
+         -5.3,
+         -0.35
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_B",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "rhombus",
+       "points": [
+        [
+         -7.4,
+         0.5
+        ],
+        [
+         -5.3,
+         1.35
+        ],
+        [
+         -3.2,
+         0.5
+        ],
+        [
+         -5.3,
+         -0.35
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 4,
+       "fill": null
+      },
+      {
+       "id": "parallelogram_copy1",
+       "points": [
+        [
+         -2.1,
+         -1.23
+        ],
+        [
+         0.7,
+         -1.23
+        ],
+        [
+         -0.7,
+         2.23
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_A",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "parallelogram_copy2",
+       "points": [
+        [
+         0.7,
+         -1.23
+        ],
+        [
+         2.1,
+         2.23
+        ],
+        [
+         -0.7,
+         2.23
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_B",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "parallelogram",
+       "points": [
+        [
+         -2.1,
+         -1.23
+        ],
+        [
+         0.7,
+         -1.23
+        ],
+        [
+         2.1,
+         2.23
+        ],
+        [
+         -0.7,
+         2.23
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 4,
+       "fill": null
+      },
+      {
+       "id": "kite_copy1",
+       "points": [
+        [
+         5.3,
+         2.01
+        ],
+        [
+         7.4,
+         -0.16
+        ],
+        [
+         5.3,
+         -1.01
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_A",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "kite_copy2",
+       "points": [
+        [
+         5.3,
+         2.01
+        ],
+        [
+         3.2,
+         -0.16
+        ],
+        [
+         5.3,
+         -1.01
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_B",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "kite",
+       "points": [
+        [
+         5.3,
+         2.01
+        ],
+        [
+         7.4,
+         -0.16
+        ],
+        [
+         5.3,
+         -1.01
+        ],
+        [
+         3.2,
+         -0.16
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 4,
+       "fill": null
+      }
+     ],
+     "segments": [
+      {
+       "from": [
+        -5.3,
+        1.35
+       ],
+       "to": [
+        -5.3,
+        -0.35
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 3,
+       "dash": "dashed"
+      },
+      {
+       "from": [
+        0.7,
+        -1.23
+       ],
+       "to": [
+        -0.7,
+        2.23
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 3,
+       "dash": "dashed"
+      },
+      {
+       "from": [
+        5.3,
+        2.01
+       ],
+       "to": [
+        5.3,
+        -1.01
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 3,
+       "dash": "dashed"
+      }
+     ],
+     "labels": [
+      {
+       "text": "6 cm",
+       "at": [
+        -5.3,
+        0.5
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "8 cm",
+       "at": [
+        -6.53,
+        1.37
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "8 cm",
+       "at": [
+        -4.07,
+        1.37
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "8 cm",
+       "at": [
+        -4.07,
+        -0.37
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "8 cm",
+       "at": [
+        -6.53,
+        -0.37
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "rhombus",
+       "at": [
+        -5.3,
+        -3.0
+       ],
+       "colour": "ANSWER",
+       "height": 0.45,
+       "background": false
+      },
+      {
+       "text": "8 cm",
+       "at": [
+        0.0,
+        0.5
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "6 cm",
+       "at": [
+        -0.7,
+        -1.55
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "8 cm",
+       "at": [
+        1.97,
+        0.27
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "6 cm",
+       "at": [
+        0.7,
+        2.55
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "8 cm",
+       "at": [
+        -1.97,
+        0.73
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "parallelogram",
+       "at": [
+        0.0,
+        -3.0
+       ],
+       "colour": "ANSWER",
+       "height": 0.45,
+       "background": false
+      },
+      {
+       "text": "8 cm",
+       "at": [
+        5.3,
+        0.5
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "8 cm",
+       "at": [
+        6.77,
+        1.33
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "6 cm",
+       "at": [
+        6.53,
+        -1.03
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "6 cm",
+       "at": [
+        4.07,
+        -1.03
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "8 cm",
+       "at": [
+        3.83,
+        1.33
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "kite",
+       "at": [
+        5.3,
+        -3.0
+       ],
+       "colour": "ANSWER",
+       "height": 0.45,
+       "background": false
+      }
+     ]
+    },
+    "manim_description": "Draw three shapes side by side on the 16 x 9 card (origin at the centre, y up, plain BG), in three equal cells centred at x = -5.3, 0 and 5.3, shapes centred at y = 0.5. Every shape is two copies of the triangle with sides 8 cm, 8 cm and 6 cm joined along one side. FIRST PANEL (cell centre x = -5.3): outline with vertices (-7.4, 0.5), (-5.3, 1.35), (-3.2, 0.5), (-5.3, -0.35) in order, INK stroke 4. Fill the first copy (-7.4, 0.5), (-5.3, 1.35), (-5.3, -0.35) with SET_A at 18% opacity and the second copy (-3.2, 0.5), (-5.3, 1.35), (-5.3, -0.35) with SET_B at 18% opacity. Draw the joined side from (-5.3, 1.35) to (-5.3, -0.35) as a dashed GUIDE line labelled '6 cm' centred on it with a BG background box. Outer side labels, starting from the side that runs from the first vertex to the second and going round in order: '8 cm' at (-6.53, 1.37); '8 cm' at (-4.07, 1.37); '8 cm' at (-4.07, -0.37); '8 cm' at (-6.53, -0.37). Write the name 'rhombus' in ANSWER (0.45 units high) centred at (-5.3, -3). SECOND PANEL (cell centre x = 0): outline with vertices (-2.1, -1.23), (0.7, -1.23), (2.1, 2.23), (-0.7, 2.23) in order, INK stroke 4. Fill the first copy (-2.1, -1.23), (0.7, -1.23), (-0.7, 2.23) with SET_A at 18% opacity and the second copy (0.7, -1.23), (2.1, 2.23), (-0.7, 2.23) with SET_B at 18% opacity. Draw the joined side from (0.7, -1.23) to (-0.7, 2.23) as a dashed GUIDE line labelled '8 cm' centred on it with a BG background box. Outer side labels, starting from the side that runs from the first vertex to the second and going round in order: '6 cm' at (-0.7, -1.55); '8 cm' at (1.97, 0.27); '6 cm' at (0.7, 2.55); '8 cm' at (-1.97, 0.73). Write the name 'parallelogram' in ANSWER (0.45 units high) centred at (0, -3). THIRD PANEL (cell centre x = 5.3): outline with vertices (5.3, 2.01), (7.4, -0.16), (5.3, -1.01), (3.2, -0.16) in order, INK stroke 4. Fill the first copy (5.3, 2.01), (7.4, -0.16), (5.3, -1.01) with SET_A at 18% opacity and the second copy (5.3, 2.01), (3.2, -0.16), (5.3, -1.01) with SET_B at 18% opacity. Draw the joined side from (5.3, 2.01) to (5.3, -1.01) as a dashed GUIDE line labelled '8 cm' centred on it with a BG background box. Outer side labels, starting from the side that runs from the first vertex to the second and going round in order: '8 cm' at (6.77, 1.33); '6 cm' at (6.53, -1.03); '6 cm' at (4.07, -1.03); '8 cm' at (3.83, 1.33). Write the name 'kite' in ANSWER (0.45 units high) centred at (5.3, -3). All labels are 0.4 units high in a plain sans-serif font; no label may overlap a line.",
+    "visible_text": [
+     "6 cm",
+     "8 cm",
+     "8 cm",
+     "8 cm",
+     "8 cm",
+     "rhombus",
+     "8 cm",
+     "6 cm",
+     "8 cm",
+     "6 cm",
+     "8 cm",
+     "parallelogram",
+     "8 cm",
+     "8 cm",
+     "6 cm",
+     "6 cm",
+     "8 cm",
+     "kite"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure titles",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a fourth panel for the equilateral triangles",
+     "angle values"
+    ],
+    "accuracy_checks": [
+     "rhombus: four outer sides 8 cm, joined side 6 cm; each copy has sides 8, 8, 6",
+     "parallelogram: outer sides 6, 8, 6, 8 so opposite sides are equal; joined side is the 8 cm diagonal; the two copies are turned half round (a 180 degree turn about the middle of the joined side)",
+     "kite: outer sides 8, 6, 6, 8 with equal neighbouring sides (8 and 8 at the top corner, 6 and 6 at the bottom corner); joined side 8 cm; the second copy is the mirror image of the first over the joined side",
+     "every triangle drawn has sides 8, 8 and 6 (recomputed from the coordinates)"
+    ],
+    "alt_text": "Three quadrilaterals made from two 8-8-6 triangles: a rhombus joined along the 6 cm side, a parallelogram joined along an 8 cm side with one copy turned half round, and a kite joined along an 8 cm side with one copy flipped over.",
+    "render_note": "Same layout as the book's two printed 'Joining them in this way you get' figures (rhombus and parallelogram), plus the flipped-over kite from the LP solution. The remark about two 8 cm equilateral triangles (step 4) gives a rhombus with four 8 cm sides, which is the left panel's shape, so it is not drawn separately."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S21.T21.C87",
+   "role": "question",
+   "lp_book_number": "Joining Triangles: sides 6 cm, 9 cm and 12 cm",
+   "ncert_ref": "4.5.join_scalene",
+   "question_text": "Two copies of a triangle with sides 6 cm, 9 cm and 12 cm are joined along a side. List the quadrilaterals you can get.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The triangle is fully given by its sides 6 cm, 9 cm and 12 cm in the text; the book's picture of the two cut-out triangles adds nothing the text lacks.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S21.T21.C88",
+   "role": "solution",
+   "lp_book_number": "Joining Triangles: sides 6 cm, 9 cm and 12 cm",
+   "ncert_ref": "4.5.join_scalene",
+   "question_text": "Two copies of a triangle with sides 6 cm, 9 cm and 12 cm are joined along a side. List the quadrilaterals you can get.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "Word question, figure answer: the answer lists six quadrilaterals made by joining two copies of the 6, 9, 12 triangle (three turned half round, three flipped over). Which side is joined and which kites cave in at a corner cannot be seen from words alone; the figure shows all six with their outer side lengths. The question has no figure to derive from.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S21.T21.C88.IMG1",
+   "manim_scene": "c8_4_s21_c88_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S21.T21.C88.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre of the card",
+      "y_axis": "up",
+      "unit": "1 canvas unit = 120 px on the 1920 x 1080 card"
+     },
+     "to_scale": true,
+     "scale": "each of the six shapes is scaled separately to fit its cell; lengths are true within each shape; all numbers are cm",
+     "polygons": [
+      {
+       "id": "p1_copy1",
+       "points": [
+        [
+         -5.75,
+         2.13
+        ],
+        [
+         -7.45,
+         3.07
+        ],
+        [
+         -4.85,
+         3.07
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_A",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "p1_copy2",
+       "points": [
+        [
+         -5.75,
+         2.13
+        ],
+        [
+         -3.15,
+         2.13
+        ],
+        [
+         -4.85,
+         3.07
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_B",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "p1",
+       "points": [
+        [
+         -5.75,
+         2.13
+        ],
+        [
+         -7.45,
+         3.07
+        ],
+        [
+         -4.85,
+         3.07
+        ],
+        [
+         -3.15,
+         2.13
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 4,
+       "fill": null
+      },
+      {
+       "id": "p2_copy1",
+       "points": [
+        [
+         -1.05,
+         2.02
+        ],
+        [
+         -2.15,
+         3.18
+        ],
+        [
+         1.05,
+         3.18
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_A",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "p2_copy2",
+       "points": [
+        [
+         -1.05,
+         2.02
+        ],
+        [
+         2.15,
+         2.02
+        ],
+        [
+         1.05,
+         3.18
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_B",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "p2",
+       "points": [
+        [
+         -1.05,
+         2.02
+        ],
+        [
+         -2.15,
+         3.18
+        ],
+        [
+         1.05,
+         3.18
+        ],
+        [
+         2.15,
+         2.02
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 4,
+       "fill": null
+      },
+      {
+       "id": "p3_copy1",
+       "points": [
+        [
+         3.15,
+         1.41
+        ],
+        [
+         3.76,
+         3.79
+        ],
+        [
+         7.45,
+         3.79
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_A",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "p3_copy2",
+       "points": [
+        [
+         3.15,
+         1.41
+        ],
+        [
+         6.84,
+         1.41
+        ],
+        [
+         7.45,
+         3.79
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_B",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "p3",
+       "points": [
+        [
+         3.15,
+         1.41
+        ],
+        [
+         3.76,
+         3.79
+        ],
+        [
+         7.45,
+         3.79
+        ],
+        [
+         6.84,
+         1.41
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 4,
+       "fill": null
+      },
+      {
+       "id": "p4_copy1",
+       "points": [
+        [
+         -4.97,
+         -1.45
+        ],
+        [
+         -6.65,
+         -0.53
+        ],
+        [
+         -4.09,
+         -0.53
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_A",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "p4_copy2",
+       "points": [
+        [
+         -4.97,
+         -1.45
+        ],
+        [
+         -3.95,
+         -3.08
+        ],
+        [
+         -4.09,
+         -0.53
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_B",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "p4",
+       "points": [
+        [
+         -4.97,
+         -1.45
+        ],
+        [
+         -6.65,
+         -0.53
+        ],
+        [
+         -4.09,
+         -0.53
+        ],
+        [
+         -3.95,
+         -3.08
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 4,
+       "fill": null
+      },
+      {
+       "id": "p5_copy1",
+       "points": [
+        [
+         -0.47,
+         -1.62
+        ],
+        [
+         -1.5,
+         -0.53
+        ],
+        [
+         1.5,
+         -0.53
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_A",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "p5_copy2",
+       "points": [
+        [
+         -0.47,
+         -1.62
+        ],
+        [
+         -0.09,
+         -3.08
+        ],
+        [
+         1.5,
+         -0.53
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_B",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "p5",
+       "points": [
+        [
+         -0.47,
+         -1.62
+        ],
+        [
+         -1.5,
+         -0.53
+        ],
+        [
+         1.5,
+         -0.53
+        ],
+        [
+         -0.09,
+         -3.08
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 4,
+       "fill": null
+      },
+      {
+       "id": "p6_copy1",
+       "points": [
+        [
+         4.0,
+         -2.98
+        ],
+        [
+         4.0,
+         -1.19
+        ],
+        [
+         6.6,
+         -0.53
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_A",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "p6_copy2",
+       "points": [
+        [
+         4.0,
+         -2.98
+        ],
+        [
+         5.79,
+         -3.08
+        ],
+        [
+         6.6,
+         -0.53
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_B",
+       "fill_opacity": 0.18
+      },
+      {
+       "id": "p6",
+       "points": [
+        [
+         4.0,
+         -2.98
+        ],
+        [
+         4.0,
+         -1.19
+        ],
+        [
+         6.6,
+         -0.53
+        ],
+        [
+         5.79,
+         -3.08
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 4,
+       "fill": null
+      }
+     ],
+     "segments": [
+      {
+       "from": [
+        -5.75,
+        2.13
+       ],
+       "to": [
+        -4.85,
+        3.07
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 3,
+       "dash": "dashed"
+      },
+      {
+       "from": [
+        -1.05,
+        2.02
+       ],
+       "to": [
+        1.05,
+        3.18
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 3,
+       "dash": "dashed"
+      },
+      {
+       "from": [
+        3.15,
+        1.41
+       ],
+       "to": [
+        7.45,
+        3.79
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 3,
+       "dash": "dashed"
+      },
+      {
+       "from": [
+        -4.97,
+        -1.45
+       ],
+       "to": [
+        -4.09,
+        -0.53
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 3,
+       "dash": "dashed"
+      },
+      {
+       "from": [
+        -0.47,
+        -1.62
+       ],
+       "to": [
+        1.5,
+        -0.53
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 3,
+       "dash": "dashed"
+      },
+      {
+       "from": [
+        4.0,
+        -2.98
+       ],
+       "to": [
+        6.6,
+        -0.53
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 3,
+       "dash": "dashed"
+      }
+     ],
+     "labels": [
+      {
+       "text": "6",
+       "at": [
+        -5.3,
+        2.6
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "9",
+       "at": [
+        -6.78,
+        2.28
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "12",
+       "at": [
+        -6.15,
+        3.39
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "9",
+       "at": [
+        -3.82,
+        2.92
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "12",
+       "at": [
+        -4.45,
+        1.81
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "parallelogram",
+       "at": [
+        -5.3,
+        0.5
+       ],
+       "colour": "ANSWER",
+       "height": 0.42,
+       "background": false
+      },
+      {
+       "text": "9",
+       "at": [
+        0.0,
+        2.6
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "6",
+       "at": [
+        -1.86,
+        2.35
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "12",
+       "at": [
+        -0.55,
+        3.5
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "6",
+       "at": [
+        1.86,
+        2.85
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "12",
+       "at": [
+        0.55,
+        1.7
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "parallelogram",
+       "at": [
+        0.0,
+        0.5
+       ],
+       "colour": "ANSWER",
+       "height": 0.42,
+       "background": false
+      },
+      {
+       "text": "12",
+       "at": [
+        5.3,
+        2.6
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "6",
+       "at": [
+        3.16,
+        2.68
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "9",
+       "at": [
+        5.61,
+        4.11
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "6",
+       "at": [
+        7.44,
+        2.52
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "9",
+       "at": [
+        5.0,
+        1.09
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "parallelogram",
+       "at": [
+        5.3,
+        0.5
+       ],
+       "colour": "ANSWER",
+       "height": 0.42,
+       "background": false
+      },
+      {
+       "text": "6",
+       "at": [
+        -4.53,
+        -0.99
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "9",
+       "at": [
+        -5.99,
+        -1.31
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "12",
+       "at": [
+        -5.37,
+        -0.21
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "12",
+       "at": [
+        -3.64,
+        -1.78
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "9",
+       "at": [
+        -4.76,
+        -2.45
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "kite",
+       "at": [
+        -5.3,
+        -3.9
+       ],
+       "colour": "ANSWER",
+       "height": 0.42,
+       "background": false
+      },
+      {
+       "text": "9",
+       "at": [
+        0.52,
+        -1.08
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "6",
+       "at": [
+        -1.25,
+        -1.32
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "12",
+       "at": [
+        0.0,
+        -0.21
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "12",
+       "at": [
+        1.08,
+        -2.04
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "6",
+       "at": [
+        -0.58,
+        -2.43
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "kite",
+       "at": [
+        0.0,
+        -3.9
+       ],
+       "colour": "ANSWER",
+       "height": 0.42,
+       "background": false
+      },
+      {
+       "text": "12",
+       "at": [
+        5.3,
+        -1.75
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "6",
+       "at": [
+        3.74,
+        -2.08
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "9",
+       "at": [
+        5.21,
+        -0.52
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "9",
+       "at": [
+        6.5,
+        -1.9
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "6",
+       "at": [
+        4.88,
+        -3.36
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "kite",
+       "at": [
+        5.3,
+        -3.9
+       ],
+       "colour": "ANSWER",
+       "height": 0.42,
+       "background": false
+      }
+     ]
+    },
+    "manim_description": "Draw six quadrilaterals in a grid of 3 columns and 2 rows on the 16 x 9 card (origin at the centre, y up, plain BG), cell centres x = -5.3, 0, 5.3 and y = 2.45 (top row), -1.95 (bottom row). Every shape is two copies of the triangle with sides 6, 9 and 12 (cm) joined along one side. The top row shows the three parallelograms (copy turned half round), joined along the 6, 9 and 12 side from left to right; the bottom row shows the three kites (copy flipped over), joined along the 6, 9 and 12 side from left to right. All numbers on the sides are lengths in cm. PANEL 1 (column 1, row 1, cell centre (-5.3, 2.45)): the two triangles joined along the 6 side with a copy turned half round (a 180 degree turn about the middle of the joined side). Outline vertices (-5.75, 2.13), (-7.45, 3.07), (-4.85, 3.07), (-3.15, 2.13) in order (INK stroke 4); first copy (-5.75, 2.13), (-7.45, 3.07), (-4.85, 3.07) filled SET_A at 18% opacity, second copy (-5.75, 2.13), (-3.15, 2.13), (-4.85, 3.07) filled SET_B at 18% opacity; dashed GUIDE joined side from (-5.75, 2.13) to (-4.85, 3.07) labelled '6' centred on it with a BG background box; outer side labels in order: '9' at (-6.78, 2.28); '12' at (-6.15, 3.39); '9' at (-3.82, 2.92); '12' at (-4.45, 1.81); name 'parallelogram' in ANSWER (0.42 units high) centred at (-5.3, 0.5). PANEL 2 (column 2, row 1, cell centre (0, 2.45)): the two triangles joined along the 9 side with a copy turned half round (a 180 degree turn about the middle of the joined side). Outline vertices (-1.05, 2.02), (-2.15, 3.18), (1.05, 3.18), (2.15, 2.02) in order (INK stroke 4); first copy (-1.05, 2.02), (-2.15, 3.18), (1.05, 3.18) filled SET_A at 18% opacity, second copy (-1.05, 2.02), (2.15, 2.02), (1.05, 3.18) filled SET_B at 18% opacity; dashed GUIDE joined side from (-1.05, 2.02) to (1.05, 3.18) labelled '9' centred on it with a BG background box; outer side labels in order: '6' at (-1.86, 2.35); '12' at (-0.55, 3.5); '6' at (1.86, 2.85); '12' at (0.55, 1.7); name 'parallelogram' in ANSWER (0.42 units high) centred at (0, 0.5). PANEL 3 (column 3, row 1, cell centre (5.3, 2.45)): the two triangles joined along the 12 side with a copy turned half round (a 180 degree turn about the middle of the joined side). Outline vertices (3.15, 1.41), (3.76, 3.79), (7.45, 3.79), (6.84, 1.41) in order (INK stroke 4); first copy (3.15, 1.41), (3.76, 3.79), (7.45, 3.79) filled SET_A at 18% opacity, second copy (3.15, 1.41), (6.84, 1.41), (7.45, 3.79) filled SET_B at 18% opacity; dashed GUIDE joined side from (3.15, 1.41) to (7.45, 3.79) labelled '12' centred on it with a BG background box; outer side labels in order: '6' at (3.16, 2.68); '9' at (5.61, 4.11); '6' at (7.44, 2.52); '9' at (5, 1.09); name 'parallelogram' in ANSWER (0.42 units high) centred at (5.3, 0.5). PANEL 4 (column 1, row 2, cell centre (-5.3, -1.95)): the two triangles joined along the 6 side with a copy flipped over (the mirror image over the joined side). Outline vertices (-4.97, -1.45), (-6.65, -0.53), (-4.09, -0.53), (-3.95, -3.08) in order (INK stroke 4); first copy (-4.97, -1.45), (-6.65, -0.53), (-4.09, -0.53) filled SET_A at 18% opacity, second copy (-4.97, -1.45), (-3.95, -3.08), (-4.09, -0.53) filled SET_B at 18% opacity; dashed GUIDE joined side from (-4.97, -1.45) to (-4.09, -0.53) labelled '6' centred on it with a BG background box; outer side labels in order: '9' at (-5.99, -1.31); '12' at (-5.37, -0.21); '12' at (-3.64, -1.78); '9' at (-4.76, -2.45); name 'kite' in ANSWER (0.42 units high) centred at (-5.3, -3.9). PANEL 5 (column 2, row 2, cell centre (0, -1.95)): the two triangles joined along the 9 side with a copy flipped over (the mirror image over the joined side). Outline vertices (-0.47, -1.62), (-1.5, -0.53), (1.5, -0.53), (-0.09, -3.08) in order (INK stroke 4); first copy (-0.47, -1.62), (-1.5, -0.53), (1.5, -0.53) filled SET_A at 18% opacity, second copy (-0.47, -1.62), (-0.09, -3.08), (1.5, -0.53) filled SET_B at 18% opacity; dashed GUIDE joined side from (-0.47, -1.62) to (1.5, -0.53) labelled '9' centred on it with a BG background box; outer side labels in order: '6' at (-1.25, -1.32); '12' at (0, -0.21); '12' at (1.08, -2.04); '6' at (-0.58, -2.43); name 'kite' in ANSWER (0.42 units high) centred at (0, -3.9). PANEL 6 (column 3, row 2, cell centre (5.3, -1.95)): the two triangles joined along the 12 side with a copy flipped over (the mirror image over the joined side). Outline vertices (4, -2.98), (4, -1.19), (6.6, -0.53), (5.79, -3.08) in order (INK stroke 4); first copy (4, -2.98), (4, -1.19), (6.6, -0.53) filled SET_A at 18% opacity, second copy (4, -2.98), (5.79, -3.08), (6.6, -0.53) filled SET_B at 18% opacity; dashed GUIDE joined side from (4, -2.98) to (6.6, -0.53) labelled '12' centred on it with a BG background box; outer side labels in order: '6' at (3.74, -2.08); '9' at (5.21, -0.52); '9' at (6.5, -1.9); '6' at (4.88, -3.36); name 'kite' in ANSWER (0.42 units high) centred at (5.3, -3.9). Labels are 0.4 units high (names 0.42) in a plain sans-serif font; no label may overlap a line.",
+    "visible_text": [
+     "6",
+     "9",
+     "12",
+     "9",
+     "12",
+     "parallelogram",
+     "9",
+     "6",
+     "12",
+     "6",
+     "12",
+     "parallelogram",
+     "12",
+     "6",
+     "9",
+     "6",
+     "9",
+     "parallelogram",
+     "6",
+     "9",
+     "12",
+     "12",
+     "9",
+     "kite",
+     "9",
+     "6",
+     "12",
+     "12",
+     "6",
+     "kite",
+     "12",
+     "6",
+     "9",
+     "9",
+     "6",
+     "kite"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure titles",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "angle values",
+     "units other than the plain numbers"
+    ],
+    "accuracy_checks": [
+     "every panel is two copies of the triangle with sides 6, 9, 12 (outer sides recomputed from the coordinates are integers)",
+     "top row: outer sides 9,12,9,12 (joined along 6), 6,12,6,12 (joined along 9), 6,9,6,9 (joined along 12): opposite sides equal, so parallelograms",
+     "bottom row: outer sides 9,12,12,9 (joined along 6), 6,12,12,6 (joined along 9) and 6,9,9,6 (joined along 12): two pairs of equal neighbouring sides, so kites",
+     "the kites joined along the 6 side and along the 9 side have a reflex corner (twice the obtuse angle of 104.5 degrees = 209 degrees) so they cave in; the kite joined along the 12 side is convex"
+    ],
+    "alt_text": "Six quadrilaterals made from two 6-9-12 triangles: three parallelograms (copy turned half round) joined along the 6, 9 and 12 sides, and three kites (copy flipped over) of which the ones joined along the 6 and 9 sides cave in at one corner.",
+    "render_note": "The book prints only the two cut-out triangles and one of the six results (the kite joined along the 12 cm side, page 24); the other five come from the LP solution steps 1 to 5. Outer side labels are plain numbers in cm, as in the LP steps."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S21.T21.C89",
+   "role": "question",
+   "lp_book_number": "Kites and Trapeziums, Q1",
+   "ncert_ref": "FiO3.q1",
+   "question_text": "Find all the sides and the angles of the quadrilateral obtained by joining two equilateral triangles with sides 4 cm.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure for this question (the picture is only in its printed answer); the text gives two equilateral triangles of side 4 cm.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S21.T21.C90",
+   "role": "solution",
+   "lp_book_number": "Kites and Trapeziums, Q1",
+   "ncert_ref": "FiO3.q1",
+   "question_text": "Find all the sides and the angles of the quadrilateral obtained by joining two equilateral triangles with sides 4 cm.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book's printed answer is a picture ('Refer the diagram', page 34): rhombus ABCD made of two equilateral triangles of side 4 cm, every side 4 cm and the angles marked. The solution figure shows the final state with the LP's angles 60, 120, 60, 120 degrees. The question gives no figure, so none is added on the question side.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S21.T21.C90.IMG1",
+   "manim_scene": "c8_4_s21_c90_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S21.T21.C90.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre of the card",
+      "y_axis": "up",
+      "unit": "1 canvas unit = 120 px on the 1920 x 1080 card"
+     },
+     "to_scale": true,
+     "scale": "1.6 canvas units per cm",
+     "polygons": [
+      {
+       "id": "ABCD",
+       "points": [
+        [
+         -4.8,
+         -2.57
+        ],
+        [
+         1.6,
+         -2.57
+        ],
+        [
+         4.8,
+         2.97
+        ],
+        [
+         -1.6,
+         2.97
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 5,
+       "fill": null
+      }
+     ],
+     "segments": [
+      {
+       "from": [
+        -1.6,
+        2.97
+       ],
+       "to": [
+        1.6,
+        -2.57
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 3,
+       "dash": "dashed"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "vertex": [
+        -4.8,
+        -2.57
+       ],
+       "toward_a": [
+        -1.6,
+        2.97
+       ],
+       "toward_b": [
+        1.6,
+        -2.57
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "ANSWER"
+      },
+      {
+       "vertex": [
+        1.6,
+        -2.57
+       ],
+       "toward_a": [
+        -4.8,
+        -2.57
+       ],
+       "toward_b": [
+        4.8,
+        2.97
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "ANSWER"
+      },
+      {
+       "vertex": [
+        4.8,
+        2.97
+       ],
+       "toward_a": [
+        1.6,
+        -2.57
+       ],
+       "toward_b": [
+        -1.6,
+        2.97
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "ANSWER"
+      },
+      {
+       "vertex": [
+        -1.6,
+        2.97
+       ],
+       "toward_a": [
+        4.8,
+        2.97
+       ],
+       "toward_b": [
+        -4.8,
+        -2.57
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "ANSWER"
+      }
+     ],
+     "labels": [
+      {
+       "text": "A",
+       "at": [
+        -5.15,
+        -2.77
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "B",
+       "at": [
+        1.81,
+        -2.94
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "C",
+       "at": [
+        5.15,
+        3.17
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "D",
+       "at": [
+        -1.81,
+        3.34
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "4 cm",
+       "at": [
+        -1.6,
+        -2.89
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "4 cm",
+       "at": [
+        3.73,
+        -0.11
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "4 cm",
+       "at": [
+        1.6,
+        3.29
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "4 cm",
+       "at": [
+        -3.73,
+        0.51
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "60°",
+       "at": [
+        -3.8,
+        -2.0
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "120°",
+       "at": [
+        1.08,
+        -1.66
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "60°",
+       "at": [
+        3.8,
+        2.4
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "120°",
+       "at": [
+        -1.08,
+        2.06
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": true
+      }
+     ]
+    },
+    "manim_description": "Draw the rhombus ABCD on the 16 x 9 card (origin at the centre, y up, plain BG, 1.6 canvas units per cm) with vertices A (-4.8, -2.57) (bottom left), B (1.6, -2.57) (bottom right), C (4.8, 2.97) (top right) and D (-1.6, 2.97) (top left), joined in the order A, B, C, D, INK stroke 5; it leans to the right. Draw the joining diagonal DB as a dashed GUIDE line (stroke 3) with no label. Write the vertex letters A, B, C, D (0.45 units, INK) outside the corners at (-5.15, -2.77), (1.81, -2.94), (5.15, 3.17) and (-1.81, 3.34). Label every side '4 cm' in ANSWER, outside the side, at (-1.6, -2.89) (AB), (3.73, -0.11) (BC), (1.6, 3.29) (CD) and (-3.73, 0.51) (DA). At each corner draw an ANSWER angle arc of radius 0.55 inside the corner and write the angle in ANSWER with a BG background box: '60°' at A (-3.8, -2), '120°' at B (1.08, -1.66), '60°' at C (3.8, 2.4) and '120°' at D (-1.08, 2.06). No other marks; no triangle sub-angles.",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "4 cm",
+     "4 cm",
+     "4 cm",
+     "4 cm",
+     "60°",
+     "120°",
+     "60°",
+     "120°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure titles",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the six separate 60 degree triangle angles",
+     "triangle names"
+    ],
+    "accuracy_checks": [
+     "all four sides 4 cm (recomputed from the coordinates)",
+     "angles at A and C 60 degrees, at B and D 120 degrees (60 + 60 on each side of the dashed diagonal)",
+     "60 + 120 + 60 + 120 = 360"
+    ],
+    "alt_text": "Rhombus ABCD with every side 4 cm and angles 60 degrees at A, 120 degrees at B, 60 degrees at C and 120 degrees at D, made of two equilateral triangles joined along the dashed diagonal DB.",
+    "render_note": "Layout of the book's printed answer (page 34): A bottom left, B bottom right, C top right, D top left, joined along DB. The book marks six 60-degree angles (the angles of the two triangles); the LP answer gives the four angles of the quadrilateral, so the corners at B and D show 120 degrees."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S23.T23.C93",
+   "role": "question",
+   "lp_book_number": "Kite: properties of the diagonal BD",
+   "ncert_ref": "4.6.kite_prop",
+   "question_text": "ABCD is a kite with AB = BC and CD = DA, and its diagonals meet at O. Show that BD bisects ∠ABC and that BD is perpendicular to AC with AO = OC.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book asks 'In the kite, show that the diagonal BD ...' on a printed figure (page 24): kite ABCD with the equal sides given only by tick marks (one tick on DA and CD, two ticks on AB and BC), the lettered vertices and the crossing O. The figure shows only these given facts, no right-angle marks and no lengths.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S23.T23.C93.IMG1",
+   "manim_scene": "c8_4_s23_c93_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S23.T23.C93.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre of the card",
+      "y_axis": "up",
+      "unit": "1 canvas unit = 120 px on the 1920 x 1080 card"
+     },
+     "to_scale": false,
+     "polygons": [
+      {
+       "id": "ABCD",
+       "points": [
+        [
+         -2.88,
+         1.2
+        ],
+        [
+         0.0,
+         -3.6
+        ],
+        [
+         2.88,
+         1.2
+        ],
+        [
+         0.0,
+         3.6
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 5,
+       "fill": null
+      }
+     ],
+     "segments": [
+      {
+       "from": [
+        -2.88,
+        1.2
+       ],
+       "to": [
+        2.88,
+        1.2
+       ],
+       "stroke": "INK",
+       "stroke_width": 4,
+       "dash": null
+      },
+      {
+       "from": [
+        0.0,
+        -3.6
+       ],
+       "to": [
+        0.0,
+        3.6
+       ],
+       "stroke": "INK",
+       "stroke_width": 4,
+       "dash": null
+      }
+     ],
+     "ticks": [
+      {
+       "segment": [
+        [
+         0.0,
+         3.6
+        ],
+        [
+         -2.88,
+         1.2
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         2.88,
+         1.2
+        ],
+        [
+         0.0,
+         3.6
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         -2.88,
+         1.2
+        ],
+        [
+         0.0,
+         -3.6
+        ]
+       ],
+       "count": 2,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         0.0,
+         -3.6
+        ],
+        [
+         2.88,
+         1.2
+        ]
+       ],
+       "count": 2,
+       "stroke": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "A",
+       "at": [
+        -3.28,
+        1.2
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "C",
+       "at": [
+        3.28,
+        1.2
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "D",
+       "at": [
+        0.0,
+        4.0
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "B",
+       "at": [
+        0.0,
+        -4.0
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "O",
+       "at": [
+        0.3,
+        1.5
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      }
+     ]
+    },
+    "manim_description": "Draw the kite ABCD on the 16 x 9 card (origin at the centre, y up, plain BG) with vertices A (-2.88, 1.2) (left), B (0, -3.6) (bottom), C (2.88, 1.2) (right) and D (0, 3.6) (top), joined in the order A, B, C, D, INK stroke 5. Draw both diagonals in INK (stroke 4): AC horizontal from (-2.88, 1.2) to (2.88, 1.2) and BD vertical from (0, 3.6) to (0, -3.6); they cross at O (0, 1.2). Mark the equal sides with INK tick marks across the middle of each side: ONE tick on DA and ONE tick on CD, TWO ticks on AB and TWO ticks on BC. Write the letters A at (-3.28, 1.2), C at (3.28, 1.2), D at (0, 4), B at (0, -4) and O at (0.3, 1.5) (above and to the right of the crossing), each 0.4 units high in INK. No angle arcs, no right-angle mark, no lengths, no shading.",
+    "visible_text": [
+     "A",
+     "C",
+     "D",
+     "B",
+     "O"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure titles",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "right-angle marks",
+     "equal-angle arcs",
+     "shading",
+     "lengths"
+    ],
+    "accuracy_checks": [
+     "AB = BC (two ticks) and CD = DA (one tick) from the coordinates; the two pairs are different lengths, so the kite is not a rhombus",
+     "diagonal AC is horizontal and BD vertical, crossing at O; nothing is marked about the angles at O or the lengths AO, OC (those are what the question asks to show)"
+    ],
+    "alt_text": "Kite ABCD with AB equal to BC and CD equal to DA marked by tick marks, and its diagonals AC and BD crossing at O.",
+    "render_note": "Same kite and layout as the book figure on page 24 (D top, B bottom, A left, C right; one tick on the two upper sides, two ticks on the two lower sides). Not to scale."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S23.T23.C94",
+   "role": "solution",
+   "lp_book_number": "Kite: properties of the diagonal BD",
+   "ncert_ref": "4.6.kite_prop",
+   "question_text": "ABCD is a kite with AB = BC and CD = DA, and its diagonals meet at O. Show that BD bisects ∠ABC and that BD is perpendicular to AC with AO = OC.",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The solution adds what is proved, so it is not a repeat of the question figure: right angles at O, AO = OC, the equal angles at B and D (BD bisects angle ABC and angle ADC) and triangles AOB and COB shaded in two colours with the common side BO. Same kite, same layout (derived from the question figure).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S23.T23.C94.IMG1",
+   "manim_scene": "c8_4_s23_c94_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S23.T23.C94.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M5.S23.T23.C93.IMG1",
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre of the card",
+      "y_axis": "up",
+      "unit": "1 canvas unit = 120 px on the 1920 x 1080 card"
+     },
+     "to_scale": false,
+     "derived_layout": "identical to the question figure",
+     "polygons": [
+      {
+       "id": "AOB",
+       "points": [
+        [
+         -2.88,
+         1.2
+        ],
+        [
+         0.0,
+         1.2
+        ],
+        [
+         0.0,
+         -3.6
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_A",
+       "fill_opacity": 0.25
+      },
+      {
+       "id": "COB",
+       "points": [
+        [
+         2.88,
+         1.2
+        ],
+        [
+         0.0,
+         1.2
+        ],
+        [
+         0.0,
+         -3.6
+        ]
+       ],
+       "stroke": null,
+       "fill": "SET_B",
+       "fill_opacity": 0.25
+      },
+      {
+       "id": "ABCD",
+       "points": [
+        [
+         -2.88,
+         1.2
+        ],
+        [
+         0.0,
+         -3.6
+        ],
+        [
+         2.88,
+         1.2
+        ],
+        [
+         0.0,
+         3.6
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 5,
+       "fill": null
+      }
+     ],
+     "segments": [
+      {
+       "from": [
+        -2.88,
+        1.2
+       ],
+       "to": [
+        2.88,
+        1.2
+       ],
+       "stroke": "INK",
+       "stroke_width": 4,
+       "dash": null
+      },
+      {
+       "from": [
+        0.0,
+        -3.6
+       ],
+       "to": [
+        0.0,
+        3.6
+       ],
+       "stroke": "INK",
+       "stroke_width": 4,
+       "dash": null
+      }
+     ],
+     "ticks": [
+      {
+       "segment": [
+        [
+         0.0,
+         3.6
+        ],
+        [
+         -2.88,
+         1.2
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         2.88,
+         1.2
+        ],
+        [
+         0.0,
+         3.6
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         -2.88,
+         1.2
+        ],
+        [
+         0.0,
+         -3.6
+        ]
+       ],
+       "count": 2,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         0.0,
+         -3.6
+        ],
+        [
+         2.88,
+         1.2
+        ]
+       ],
+       "count": 2,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         -2.88,
+         1.2
+        ],
+        [
+         0.0,
+         1.2
+        ]
+       ],
+       "count": 3,
+       "stroke": "ANSWER"
+      },
+      {
+       "segment": [
+        [
+         0.0,
+         1.2
+        ],
+        [
+         2.88,
+         1.2
+        ]
+       ],
+       "count": 3,
+       "stroke": "ANSWER"
+      }
+     ],
+     "right_angle_marks": [
+      {
+       "vertex": [
+        0.0,
+        1.2
+       ],
+       "toward_a": [
+        -2.88,
+        1.2
+       ],
+       "toward_b": [
+        0.0,
+        -3.6
+       ],
+       "size": 0.3,
+       "stroke": "ANSWER"
+      },
+      {
+       "vertex": [
+        0.0,
+        1.2
+       ],
+       "toward_a": [
+        0.0,
+        -3.6
+       ],
+       "toward_b": [
+        2.88,
+        1.2
+       ],
+       "size": 0.3,
+       "stroke": "ANSWER"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "vertex": [
+        0.0,
+        -3.6
+       ],
+       "toward_a": [
+        -2.88,
+        1.2
+       ],
+       "toward_b": [
+        0.0,
+        1.2
+       ],
+       "radius": 0.9,
+       "arcs": 1,
+       "stroke": "ANSWER",
+       "trim_deg": 4
+      },
+      {
+       "vertex": [
+        0.0,
+        -3.6
+       ],
+       "toward_a": [
+        2.88,
+        1.2
+       ],
+       "toward_b": [
+        0.0,
+        1.2
+       ],
+       "radius": 0.9,
+       "arcs": 1,
+       "stroke": "ANSWER",
+       "trim_deg": 4
+      },
+      {
+       "vertex": [
+        0.0,
+        3.6
+       ],
+       "toward_a": [
+        -2.88,
+        1.2
+       ],
+       "toward_b": [
+        0.0,
+        1.2
+       ],
+       "radius": 0.9,
+       "arcs": 2,
+       "stroke": "ANSWER",
+       "trim_deg": 4
+      },
+      {
+       "vertex": [
+        0.0,
+        3.6
+       ],
+       "toward_a": [
+        2.88,
+        1.2
+       ],
+       "toward_b": [
+        0.0,
+        1.2
+       ],
+       "radius": 0.9,
+       "arcs": 2,
+       "stroke": "ANSWER",
+       "trim_deg": 4
+      }
+     ],
+     "labels": [
+      {
+       "text": "A",
+       "at": [
+        -3.28,
+        1.2
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "C",
+       "at": [
+        3.28,
+        1.2
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "D",
+       "at": [
+        0.0,
+        4.0
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "B",
+       "at": [
+        0.0,
+        -4.0
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "O",
+       "at": [
+        0.3,
+        1.5
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      }
+     ]
+    },
+    "manim_description": "Redraw the question kite exactly as it is, same canvas, same coordinates and same letters: A (-2.88, 1.2), B (0, -3.6), C (2.88, 1.2), D (0, 3.6) joined A, B, C, D in INK stroke 5; diagonals AC (-2.88, 1.2) to (2.88, 1.2) and BD (0, -3.6) to (0, 3.6) in INK stroke 4 crossing at O (0, 1.2); ONE INK tick on DA and on CD, TWO INK ticks on AB and on BC; letters A (-3.28, 1.2), C (3.28, 1.2), D (0, 4), B (0, -4) and O (0.3, 1.5) (above and to the right of the crossing) in INK, 0.4 units high. Then add in ANSWER green: (1) two right-angle marks of 0.3 units at O, one in angle AOB (between OA and OB) and one in angle COB (between OC and OB); (2) THREE ticks on AO and THREE ticks on OC (AO = OC); (3) equal-angle arcs of radius 0.9 at B: ONE arc inside angle ABO and ONE arc inside angle CBO; and at D: TWO arcs (radii 0.9 and 0.99) inside angle ADO and TWO arcs inside angle CDO (BD bisects angle ABC and angle ADC); every arc stops 4 degrees short of the line BD so that the two arcs at a corner read as two separate arcs. Shade triangle AOB (vertices (-2.88, 1.2), (0, 1.2), (0, -3.6)) with SET_A at 25% opacity and triangle COB (vertices (2.88, 1.2), (0, 1.2), (0, -3.6)) with SET_B at 25% opacity, below all lines; their common side is BO. No other text.",
+    "visible_text": [
+     "A",
+     "C",
+     "D",
+     "B",
+     "O"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure titles",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "lengths in cm"
+    ],
+    "accuracy_checks": [
+     "layout, vertices and letters identical to the question figure",
+     "angle AOB = angle COB = 90 degrees (marked) and AO = OC (marked), recomputed from the coordinates",
+     "angle ABO = angle CBO and angle ADO = angle CDO (the kite is symmetric about BD)"
+    ],
+    "alt_text": "The same kite ABCD with right angles marked at O, AO and OC marked equal, equal angle arcs at B and at D, and triangles AOB and COB shaded in two colours with BO as their common side.",
+    "render_note": "Final state of the proof: BD bisects angle ABC and angle ADC, and BD cuts AC in half at right angles. The LP question text asks only for angle ABC; the LP answer also states angle ADC, so the arcs at D are drawn."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S23.T23.C95",
+   "role": "question",
+   "lp_book_number": "Kites and Trapeziums, Q2",
+   "ncert_ref": "FiO3.q2",
+   "question_text": "Construct a kite whose diagonals are of lengths 6 cm and 8 cm.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A construction question: the book gives no figure, and the figure is the answer (drawn on the solution side).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S23.T23.C96",
+   "role": "solution",
+   "lp_book_number": "Kites and Trapeziums, Q2",
+   "ncert_ref": "FiO3.q2",
+   "question_text": "Construct a kite whose diagonals are of lengths 6 cm and 8 cm.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is a construction: the book prints the finished kite (page 34, PRQS, no numbers) and the LP solution fixes AC = 6 cm, OB = 2 cm, OD = 6 cm, BD = 8 cm. The question gives no figure, so none is added on the question side.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S23.T23.C96.IMG1",
+   "manim_scene": "c8_4_s23_c96_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S23.T23.C96.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "construction",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre of the card",
+      "y_axis": "up",
+      "unit": "1 canvas unit = 120 px on the 1920 x 1080 card"
+     },
+     "to_scale": true,
+     "scale": "0.8 canvas units per cm",
+     "polygons": [
+      {
+       "id": "ABCD",
+       "points": [
+        [
+         -2.4,
+         1.6
+        ],
+        [
+         0.0,
+         3.2
+        ],
+        [
+         2.4,
+         1.6
+        ],
+        [
+         0.0,
+         -3.2
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 5,
+       "fill": null
+      }
+     ],
+     "segments": [
+      {
+       "from": [
+        -2.4,
+        1.6
+       ],
+       "to": [
+        2.4,
+        1.6
+       ],
+       "stroke": "INK",
+       "stroke_width": 4,
+       "dash": null
+      },
+      {
+       "from": [
+        0.0,
+        3.2
+       ],
+       "to": [
+        0.0,
+        -3.2
+       ],
+       "stroke": "INK",
+       "stroke_width": 4,
+       "dash": null
+      },
+      {
+       "from": [
+        0.0,
+        3.2
+       ],
+       "to": [
+        3.3,
+        3.2
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 2,
+       "dash": "dotted"
+      },
+      {
+       "from": [
+        0.0,
+        -3.2
+       ],
+       "to": [
+        3.3,
+        -3.2
+       ],
+       "stroke": "GUIDE",
+       "stroke_width": 2,
+       "dash": "dotted"
+      }
+     ],
+     "dimension_lines": [
+      {
+       "from": [
+        3.3,
+        -3.2
+       ],
+       "to": [
+        3.3,
+        3.2
+       ],
+       "stroke": "GUIDE"
+      }
+     ],
+     "ticks": [
+      {
+       "segment": [
+        [
+         -2.4000000000000004,
+         1.6
+        ],
+        [
+         0.0,
+         1.6
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         0.0,
+         1.6
+        ],
+        [
+         2.4000000000000004,
+         1.6
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         0.0,
+         3.2
+        ],
+        [
+         -2.4000000000000004,
+         1.6
+        ]
+       ],
+       "count": 2,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         0.0,
+         3.2
+        ],
+        [
+         2.4000000000000004,
+         1.6
+        ]
+       ],
+       "count": 2,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         0.0,
+         -3.2000000000000006
+        ],
+        [
+         -2.4000000000000004,
+         1.6
+        ]
+       ],
+       "count": 3,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         0.0,
+         -3.2000000000000006
+        ],
+        [
+         2.4000000000000004,
+         1.6
+        ]
+       ],
+       "count": 3,
+       "stroke": "INK"
+      }
+     ],
+     "right_angle_marks": [
+      {
+       "vertex": [
+        0.0,
+        1.6
+       ],
+       "toward_a": [
+        2.4,
+        1.6
+       ],
+       "toward_b": [
+        0.0,
+        3.2
+       ],
+       "size": 0.3,
+       "stroke": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "A",
+       "at": [
+        -2.8,
+        1.6
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "C",
+       "at": [
+        2.8,
+        1.6
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "B",
+       "at": [
+        0.0,
+        3.6
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "D",
+       "at": [
+        0.0,
+        -3.6
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "O",
+       "at": [
+        0.3,
+        1.3
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "6 cm",
+       "at": [
+        -1.2,
+        1.1
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "2 cm",
+       "at": [
+        0.0,
+        2.4
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "6 cm",
+       "at": [
+        0.0,
+        -0.8
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "8 cm",
+       "at": [
+        4.0,
+        0.0
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": false
+      }
+     ]
+    },
+    "manim_description": "Draw the finished kite construction on the 16 x 9 card (origin at the centre, y up, plain BG, 0.8 canvas units per cm). Draw AC horizontal from A (-2.4, 1.6) to C (2.4, 1.6) (6 cm, 4.8 units) and its perpendicular bisector line BD vertical from B (0, 3.2) (top) to D (0, -3.2) (bottom), crossing AC at O (0, 1.6); OB = 2 cm (1.6 units), OD = 6 cm (4.8 units), BD = 8 cm (6.4 units). Draw the kite A, B, C, D (joined in that order) in INK stroke 5 and both diagonals AC and BD in INK stroke 4. Mark a right-angle square of 0.3 units at O (INK) in the angle between OC and OB; mark AO = OC with ONE INK tick on each; mark BA = BC with TWO INK ticks on each of those sides and DA = DC with THREE INK ticks on each of those sides. Letters in INK: A at (-2.8, 1.6), C at (2.8, 1.6), B at (0, 3.6), D at (0, -3.6), O at (0.3, 1.3) (below and to the right of the crossing). Length labels: '6 cm' in INK for AC at (-1.2, 1.1) (just below AC, left of BD); '2 cm' in ANSWER for OB at (0, 2.4) and '6 cm' in ANSWER for OD at (0, -0.8), each centred on the line BD with a BG background box. To the right of the kite draw a GUIDE dimension line with arrowheads at both ends at x = 3.3 from (3.3, -3.2) to (3.3, 3.2), with dotted GUIDE extension lines from B and D, and the label '8 cm' in ANSWER at (4, 0). Labels are 0.4 units high. No arcs, no step numbers, no construction text.",
+    "visible_text": [
+     "A",
+     "C",
+     "B",
+     "D",
+     "O",
+     "6 cm",
+     "2 cm",
+     "6 cm",
+     "8 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure titles",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "compass arcs",
+     "step numbers or step text"
+    ],
+    "accuracy_checks": [
+     "AC = 6 cm, OB = 2 cm, OD = 6 cm, BD = 2 + 6 = 8 cm (from the coordinates)",
+     "BD is the perpendicular bisector of AC: AO = OC and the angle at O is 90 degrees, so BA = BC and DA = DC",
+     "O is not the midpoint of BD (2 cm against 6 cm), so ABCD is a kite and not a rhombus"
+    ],
+    "alt_text": "Kite ABCD with diagonal AC of 6 cm and the perpendicular bisector BD of 8 cm crossing at O, with OB 2 cm and OD 6 cm so that O is not the middle of BD.",
+    "render_note": "The book's printed answer (page 34) draws PRQS with S short above and R long below, with no numbers; the LP solution fixes OB = 2 cm and OD = 6 cm, which are used here. Letters follow the LP (A, B, C, D, O), not the book's (P, Q, R, S, T)."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S24.T24.C97",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "4.6.trap_def, 4.6.trap_prop1",
+   "question_text": "Trapezium PQRS has PQ || SR, ∠P = 70° and ∠Q = 55°. Find ∠S and ∠R.",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The example works on the book's trapezium PQRS with PQ parallel to SR (page 25 figure and Property 1): which angle sits next to which slanting side, and which sides are parallel, is what the figure shows. The figure after the question text shows only what the question gives (angle P = 70 degrees, angle Q = 55 degrees, parallel sides) and '?' for the asked angles. The concept's teaching image is not linked.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M5.S24.T24.C97.IMG2",
+   "manim_scene": "c8_4_s24_c97_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S24.T24.C97.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre of the card",
+      "y_axis": "up",
+      "unit": "1 canvas unit = 120 px on the 1920 x 1080 card"
+     },
+     "to_scale": true,
+     "scale": "angles drawn true (70, 55, 125, 110 degrees)",
+     "polygons": [
+      {
+       "id": "PQRS",
+       "points": [
+        [
+         -4.9,
+         -2.1
+        ],
+        [
+         4.9,
+         -2.1
+        ],
+        [
+         1.96,
+         2.1
+        ],
+        [
+         -3.37,
+         2.1
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 5,
+       "fill": null
+      }
+     ],
+     "parallel_marks": [
+      {
+       "segment": [
+        [
+         -4.9,
+         -2.1
+        ],
+        [
+         4.9,
+         -2.1
+        ]
+       ],
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         -3.37,
+         2.1
+        ],
+        [
+         1.96,
+         2.1
+        ]
+       ],
+       "stroke": "INK"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "vertex": [
+        -4.9,
+        -2.1
+       ],
+       "toward_a": [
+        -3.37,
+        2.1
+       ],
+       "toward_b": [
+        4.9,
+        -2.1
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "INK"
+      },
+      {
+       "vertex": [
+        4.9,
+        -2.1
+       ],
+       "toward_a": [
+        -4.9,
+        -2.1
+       ],
+       "toward_b": [
+        1.96,
+        2.1
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "INK"
+      },
+      {
+       "vertex": [
+        1.96,
+        2.1
+       ],
+       "toward_a": [
+        4.9,
+        -2.1
+       ],
+       "toward_b": [
+        -3.37,
+        2.1
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "INK"
+      },
+      {
+       "vertex": [
+        -3.37,
+        2.1
+       ],
+       "toward_a": [
+        1.96,
+        2.1
+       ],
+       "toward_b": [
+        -4.9,
+        -2.1
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "P",
+       "at": [
+        -5.24,
+        -2.34
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "Q",
+       "at": [
+        5.25,
+        -2.28
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "R",
+       "at": [
+        2.16,
+        2.48
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "S",
+       "at": [
+        -3.62,
+        2.45
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "70°",
+       "at": [
+        -3.96,
+        -1.44
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "55°",
+       "at": [
+        3.88,
+        -1.57
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "?",
+       "at": [
+        1.52,
+        1.26
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "?",
+       "at": [
+        -2.83,
+        1.32
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      }
+     ]
+    },
+    "manim_description": "Draw the trapezium PQRS on the 16 x 9 card (origin at the centre, y up, plain BG) with vertices P (-4.9, -2.1) (bottom left), Q (4.9, -2.1) (bottom right), R (1.96, 2.1) (top right) and S (-3.37, 2.1) (top left), joined P, Q, R, S, INK stroke 5. PQ (the longer bottom side) and SR (the shorter top side) are horizontal and parallel: put one INK parallel arrow-mark (a small chevron pointing right, 0.3 units) on the middle of PQ and one on the middle of SR. Write the vertex letters P, Q, R, S (0.45 units, INK) outside the corners at (-5.24, -2.34), (5.25, -2.28), (2.16, 2.48) and (-3.62, 2.45). At every corner draw an INK angle arc of radius 0.55 inside the corner and write its value inside with a BG background box: '70°' at P (-3.96, -1.44), '55°' at Q (3.88, -1.57), and the unknown angles as '?' at R (1.52, 1.26) and at S (-2.83, 1.32). No other marks, no dropped lines, no values for the unknown angles.",
+    "visible_text": [
+     "P",
+     "Q",
+     "R",
+     "S",
+     "70°",
+     "55°",
+     "?",
+     "?"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure titles",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "values of angle R or angle S",
+     "dropped perpendiculars"
+    ],
+    "accuracy_checks": [
+     "PQ and SR are horizontal, so PQ is parallel to SR",
+     "angle P = 70 and angle Q = 55 recomputed from the coordinates; the drawn R and S are 125 and 110 degrees (true to the answer, but their values are not written)",
+     "angles P + S = 180 and Q + R = 180 hold in the drawing"
+    ],
+    "alt_text": "Trapezium PQRS with PQ parallel to SR, angle P marked 70 degrees, angle Q marked 55 degrees, and angles R and S marked with question marks.",
+    "render_note": "The figure of a worked example sits after the question text, so it shows only what the question gives: the two given angles and '?' for the two asked angles. The book's figure on page 25 marks the base angles at S and R; the LP example gives the angles at P and Q, so the LP numbers are drawn."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S24.T24.C98",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "4.6.iso_trap, 4.6.iso_prop2",
+   "question_text": "UVWX is an isosceles trapezium with UV || XW, UX = VW and ∠U = 65°. Find ∠V, ∠W and ∠X.",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The example works on the book's isosceles trapezium UVWX with UV parallel to XW and UX = VW (page 25 constructions): the parallel and equal sides are shown by marks. The figure shows only the given state (angle U = 65 degrees, parallel arrows, equal-side ticks) and '?' for the asked angles; the perpendiculars XY and WZ belong to the working. The concept's teaching image is not linked.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M5.S24.T24.C98.IMG2",
+   "manim_scene": "c8_4_s24_c98_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S24.T24.C98.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre of the card",
+      "y_axis": "up",
+      "unit": "1 canvas unit = 120 px on the 1920 x 1080 card"
+     },
+     "to_scale": true,
+     "scale": "angles drawn true (65, 65, 115, 115 degrees)",
+     "polygons": [
+      {
+       "id": "UVWX",
+       "points": [
+        [
+         -4.5,
+         -1.8
+        ],
+        [
+         4.5,
+         -1.8
+        ],
+        [
+         2.82,
+         1.8
+        ],
+        [
+         -2.82,
+         1.8
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 5,
+       "fill": null
+      }
+     ],
+     "parallel_marks": [
+      {
+       "segment": [
+        [
+         -4.5,
+         -1.8
+        ],
+        [
+         4.5,
+         -1.8
+        ]
+       ],
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         -2.82,
+         1.8
+        ],
+        [
+         2.82,
+         1.8
+        ]
+       ],
+       "stroke": "INK"
+      }
+     ],
+     "ticks": [
+      {
+       "segment": [
+        [
+         -4.5,
+         -1.8
+        ],
+        [
+         -2.82,
+         1.8
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         4.5,
+         -1.8
+        ],
+        [
+         2.82,
+         1.8
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "vertex": [
+        -4.5,
+        -1.8
+       ],
+       "toward_a": [
+        -2.82,
+        1.8
+       ],
+       "toward_b": [
+        4.5,
+        -1.8
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "INK"
+      },
+      {
+       "vertex": [
+        4.5,
+        -1.8
+       ],
+       "toward_a": [
+        -4.5,
+        -1.8
+       ],
+       "toward_b": [
+        2.82,
+        1.8
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "INK"
+      },
+      {
+       "vertex": [
+        2.82,
+        1.8
+       ],
+       "toward_a": [
+        4.5,
+        -1.8
+       ],
+       "toward_b": [
+        -2.82,
+        1.8
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "INK"
+      },
+      {
+       "vertex": [
+        -2.82,
+        1.8
+       ],
+       "toward_a": [
+        2.82,
+        1.8
+       ],
+       "toward_b": [
+        -4.5,
+        -1.8
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "U",
+       "at": [
+        -4.84,
+        -2.02
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "V",
+       "at": [
+        4.84,
+        -2.02
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "W",
+       "at": [
+        3.05,
+        2.16
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "X",
+       "at": [
+        -3.05,
+        2.16
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "65°",
+       "at": [
+        -3.53,
+        -1.18
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "?",
+       "at": [
+        3.7,
+        -1.29
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "?",
+       "at": [
+        2.31,
+        1.0
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "?",
+       "at": [
+        -2.31,
+        1.0
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      }
+     ]
+    },
+    "manim_description": "Draw the isosceles trapezium UVWX on the 16 x 9 card (origin at the centre, y up, plain BG) with vertices U (-4.5, -1.8) (bottom left), V (4.5, -1.8) (bottom right), W (2.82, 1.8) (top right) and X (-2.82, 1.8) (top left), joined U, V, W, X, INK stroke 5. UV (the longer bottom side) and XW (the shorter top side) are horizontal and parallel: put one INK parallel arrow-mark (a small chevron pointing right, 0.3 units) on the middle of UV and one on the middle of XW. Mark the equal slanting sides UX and VW with ONE INK tick each, across the middle of the side. Write the vertex letters U, V, W, X (0.45 units, INK) outside the corners at (-4.84, -2.02), (4.84, -2.02), (3.05, 2.16) and (-3.05, 2.16). At every corner draw an INK angle arc of radius 0.55 inside the corner and write its value inside with a BG background box: '65°' at U (-3.53, -1.18), and '?' at V (3.7, -1.29), at W (2.31, 1) and at X (-2.31, 1). Do not draw the perpendiculars XY and WZ and do not write the values of the unknown angles.",
+    "visible_text": [
+     "U",
+     "V",
+     "W",
+     "X",
+     "65°",
+     "?",
+     "?",
+     "?"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure titles",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "values of angles V, W, X",
+     "perpendiculars XY and WZ",
+     "points Y and Z"
+    ],
+    "accuracy_checks": [
+     "UV and XW are horizontal (parallel); UX = VW from the coordinates (one tick each)",
+     "angle U = 65 recomputed from the coordinates; the drawn V, W and X are 65, 115 and 115 degrees but their values are not written",
+     "U + X = 180 and V + W = 180 hold in the drawing"
+    ],
+    "alt_text": "Isosceles trapezium UVWX with UV parallel to XW, equal slanting sides UX and VW marked by ticks, angle U marked 65 degrees, and angles V, W and X marked with question marks.",
+    "render_note": "Only the given state is drawn (what the question gives). The perpendiculars XY and WZ that step 1 of the example draws are part of the working and are not in this figure."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S25.T25.C100",
+   "role": "question",
+   "lp_book_number": "Kites and Trapeziums, Q3",
+   "ncert_ref": "FiO3.q3",
+   "question_text": "Find the remaining angles in the following trapeziums. (i) A trapezium with angles 105° and 135° at the ends of one parallel side. (ii) An isosceles trapezium with an angle of 100°.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book asks 'Find the remaining angles in the following trapeziums' on two printed figures (pages 26 and 35): (i) with 135 and 105 degrees at the ends of the short parallel side, (ii) an isosceles trapezium (equal-side ticks, parallel arrows) with 100 degrees. Where the given angles sit and which sides are parallel or equal is shown only in the figures. Only the given angles are drawn.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S25.T25.C100.IMG1",
+   "manim_scene": "c8_4_s25_c100_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S25.T25.C100.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre of the card",
+      "y_axis": "up",
+      "unit": "1 canvas unit = 120 px on the 1920 x 1080 card"
+     },
+     "to_scale": true,
+     "scale": "angles drawn true",
+     "polygons": [
+      {
+       "id": "trapezium_i",
+       "points": [
+        [
+         -4.26,
+         -1.15
+        ],
+        [
+         -1.47,
+         -1.15
+        ],
+        [
+         -0.64,
+         1.95
+        ],
+        [
+         -7.36,
+         1.95
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 5,
+       "fill": null
+      },
+      {
+       "id": "trapezium_ii",
+       "points": [
+        [
+         1.59,
+         -1.15
+        ],
+        [
+         6.41,
+         -1.15
+        ],
+        [
+         5.86,
+         1.95
+        ],
+        [
+         2.14,
+         1.95
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 5,
+       "fill": null
+      }
+     ],
+     "parallel_marks": [
+      {
+       "segment": [
+        [
+         -4.26,
+         -1.15
+        ],
+        [
+         -1.47,
+         -1.15
+        ]
+       ],
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         -7.36,
+         1.95
+        ],
+        [
+         -0.64,
+         1.95
+        ]
+       ],
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         1.59,
+         -1.15
+        ],
+        [
+         6.41,
+         -1.15
+        ]
+       ],
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         2.14,
+         1.95
+        ],
+        [
+         5.86,
+         1.95
+        ]
+       ],
+       "stroke": "INK"
+      }
+     ],
+     "ticks": [
+      {
+       "segment": [
+        [
+         1.59,
+         -1.15
+        ],
+        [
+         2.14,
+         1.95
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         6.41,
+         -1.15
+        ],
+        [
+         5.86,
+         1.95
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "vertex": [
+        -4.26,
+        -1.15
+       ],
+       "toward_a": [
+        -7.36,
+        1.95
+       ],
+       "toward_b": [
+        -1.47,
+        -1.15
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "INK"
+      },
+      {
+       "vertex": [
+        -1.47,
+        -1.15
+       ],
+       "toward_a": [
+        -4.26,
+        -1.15
+       ],
+       "toward_b": [
+        -0.64,
+        1.95
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "INK"
+      },
+      {
+       "vertex": [
+        2.14,
+        1.95
+       ],
+       "toward_a": [
+        5.86,
+        1.95
+       ],
+       "toward_b": [
+        1.59,
+        -1.15
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "135°",
+       "at": [
+        -3.88,
+        -0.23
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "105°",
+       "at": [
+        -2.14,
+        -0.28
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "100°",
+       "at": [
+        2.88,
+        1.07
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "(i)",
+       "at": [
+        -3.43,
+        -1.9
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "(ii)",
+       "at": [
+        4.0,
+        -1.9
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      }
+     ]
+    },
+    "manim_description": "Draw two trapeziums side by side on the 16 x 9 card (origin at the centre, y up, plain BG), each with INK stroke 5. FIGURE (i), centred at (-4, 0.4): vertices bottom-left (-4.26, -1.15), bottom-right (-1.47, -1.15), top-right (-0.64, 1.95), top-left (-7.36, 1.95), joined in that order; the top side is the long parallel side and the bottom side the short one, both horizontal; the left slanting side leans out to the left going up and the right slanting side leans out to the right. Put one INK parallel arrow-mark (small chevron pointing right, 0.3 units) on the middle of the top side and one on the middle of the bottom side. At the bottom-left corner draw an INK angle arc (radius 0.55) with '135°' inside at (-3.88, -0.23), and at the bottom-right corner an INK arc with '105°' inside at (-2.14, -0.28), each with a BG background box. FIGURE (ii), centred at (4, 0.4): an isosceles trapezium with vertices bottom-left (1.59, -1.15), bottom-right (6.41, -1.15), top-right (5.86, 1.95), top-left (2.14, 1.95), joined in that order; the top side is the short parallel side and the bottom side the long one, both horizontal; the two slanting sides are equal. Put one INK parallel arrow-mark on the middle of the top side and one on the middle of the bottom side, and ONE INK tick across the middle of each slanting side. At the top-left corner draw an INK angle arc (radius 0.55) with '100°' inside at (2.88, 1.07) with a BG background box. Under each figure write its caption in INK (0.4 units): '(i)' at (-3.43, -1.9) and '(ii)' at (4, -1.9). No vertex letters and no other angles are marked.",
+    "visible_text": [
+     "135°",
+     "105°",
+     "100°",
+     "(i)",
+     "(ii)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure titles",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any remaining angle",
+     "vertex letters"
+    ],
+    "accuracy_checks": [
+     "(i): angles at the ends of the short parallel side are 135 and 105 degrees, recomputed from the coordinates; the two parallel sides are horizontal",
+     "(ii): equal slanting sides (one tick each), parallel horizontal sides, the 100 degree angle is at an end of the short parallel side (an obtuse angle of an isosceles trapezium); the drawn other angles are 100, 80, 80 but only 100 is written",
+     "no remaining angle of either figure is written in this question figure"
+    ],
+    "alt_text": "Two trapeziums: (i) with parallel sides top and bottom and angles 135 and 105 degrees at the ends of the short bottom side; (ii) an isosceles trapezium with equal slanting sides and a 100 degree angle at the top left.",
+    "render_note": "Redrawn from the book (pages 26 and 35). The book prints (ii) tilted by about 20 degrees; it is drawn upright here, the shape is the same. The captions (i) and (ii) are kept because the LP question and answer refer to the two figures by (i) and (ii)."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S25.T25.C101",
+   "role": "solution",
+   "lp_book_number": "Kites and Trapeziums, Q3",
+   "ncert_ref": "FiO3.q3",
+   "question_text": "Find the remaining angles in the following trapeziums. (i) A trapezium with angles 105° and 135° at the ends of one parallel side. (ii) An isosceles trapezium with an angle of 100°.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The solution fills in every remaining angle on the same two trapeziums (45 and 75 degrees in (i); 100, 80 and 80 degrees in (ii)); the book's printed answer repeats the figures with letters and gives the values in words. Same layout as the question figure (derived from it); the answers are added in ANSWER green.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M5.S25.T25.C101.IMG1",
+   "manim_scene": "c8_4_s25_c101_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S25.T25.C101.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M5.S25.T25.C100.IMG1",
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre of the card",
+      "y_axis": "up",
+      "unit": "1 canvas unit = 120 px on the 1920 x 1080 card"
+     },
+     "to_scale": true,
+     "scale": "angles drawn true",
+     "derived_layout": "identical to the question figure",
+     "polygons": [
+      {
+       "id": "trapezium_i",
+       "points": [
+        [
+         -4.26,
+         -1.15
+        ],
+        [
+         -1.47,
+         -1.15
+        ],
+        [
+         -0.64,
+         1.95
+        ],
+        [
+         -7.36,
+         1.95
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 5,
+       "fill": null
+      },
+      {
+       "id": "trapezium_ii",
+       "points": [
+        [
+         1.59,
+         -1.15
+        ],
+        [
+         6.41,
+         -1.15
+        ],
+        [
+         5.86,
+         1.95
+        ],
+        [
+         2.14,
+         1.95
+        ]
+       ],
+       "stroke": "INK",
+       "stroke_width": 5,
+       "fill": null
+      }
+     ],
+     "parallel_marks": [
+      {
+       "segment": [
+        [
+         -4.26,
+         -1.15
+        ],
+        [
+         -1.47,
+         -1.15
+        ]
+       ],
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         -7.36,
+         1.95
+        ],
+        [
+         -0.64,
+         1.95
+        ]
+       ],
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         1.59,
+         -1.15
+        ],
+        [
+         6.41,
+         -1.15
+        ]
+       ],
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         2.14,
+         1.95
+        ],
+        [
+         5.86,
+         1.95
+        ]
+       ],
+       "stroke": "INK"
+      }
+     ],
+     "ticks": [
+      {
+       "segment": [
+        [
+         1.59,
+         -1.15
+        ],
+        [
+         2.14,
+         1.95
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      },
+      {
+       "segment": [
+        [
+         6.41,
+         -1.15
+        ],
+        [
+         5.86,
+         1.95
+        ]
+       ],
+       "count": 1,
+       "stroke": "INK"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "vertex": [
+        -4.26,
+        -1.15
+       ],
+       "toward_a": [
+        -7.36,
+        1.95
+       ],
+       "toward_b": [
+        -1.47,
+        -1.15
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "INK"
+      },
+      {
+       "vertex": [
+        -1.47,
+        -1.15
+       ],
+       "toward_a": [
+        -4.26,
+        -1.15
+       ],
+       "toward_b": [
+        -0.64,
+        1.95
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "INK"
+      },
+      {
+       "vertex": [
+        2.14,
+        1.95
+       ],
+       "toward_a": [
+        5.86,
+        1.95
+       ],
+       "toward_b": [
+        1.59,
+        -1.15
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "INK"
+      },
+      {
+       "vertex": [
+        -0.64,
+        1.95
+       ],
+       "toward_a": [
+        -1.47,
+        -1.15
+       ],
+       "toward_b": [
+        -7.36,
+        1.95
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "ANSWER"
+      },
+      {
+       "vertex": [
+        -7.36,
+        1.95
+       ],
+       "toward_a": [
+        -0.64,
+        1.95
+       ],
+       "toward_b": [
+        -4.26,
+        -1.15
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "ANSWER"
+      },
+      {
+       "vertex": [
+        5.86,
+        1.95
+       ],
+       "toward_a": [
+        6.41,
+        -1.15
+       ],
+       "toward_b": [
+        2.14,
+        1.95
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "ANSWER"
+      },
+      {
+       "vertex": [
+        1.59,
+        -1.15
+       ],
+       "toward_a": [
+        2.14,
+        1.95
+       ],
+       "toward_b": [
+        6.41,
+        -1.15
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "ANSWER"
+      },
+      {
+       "vertex": [
+        6.41,
+        -1.15
+       ],
+       "toward_a": [
+        1.59,
+        -1.15
+       ],
+       "toward_b": [
+        5.86,
+        1.95
+       ],
+       "radius": 0.55,
+       "arcs": 1,
+       "stroke": "ANSWER"
+      }
+     ],
+     "labels": [
+      {
+       "text": "135°",
+       "at": [
+        -3.88,
+        -0.23
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "105°",
+       "at": [
+        -2.14,
+        -0.28
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "100°",
+       "at": [
+        2.88,
+        1.07
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "75°",
+       "at": [
+        -1.51,
+        1.28
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "45°",
+       "at": [
+        -6.21,
+        1.47
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "100°",
+       "at": [
+        5.12,
+        1.07
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "80°",
+       "at": [
+        2.43,
+        -0.44
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "80°",
+       "at": [
+        5.57,
+        -0.44
+       ],
+       "colour": "ANSWER",
+       "height": 0.4,
+       "background": true
+      },
+      {
+       "text": "(i)",
+       "at": [
+        -3.43,
+        -1.9
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "(ii)",
+       "at": [
+        4.0,
+        -1.9
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      }
+     ]
+    },
+    "manim_description": "Redraw the two question trapeziums exactly as they are (same canvas, same coordinates, same parallel arrow-marks, same tick marks, same captions): FIGURE (i) centred at (-4, 0.4) with vertices bottom-left (-4.26, -1.15), bottom-right (-1.47, -1.15), top-right (-0.64, 1.95), top-left (-7.36, 1.95), and FIGURE (ii) centred at (4, 0.4) with vertices bottom-left (1.59, -1.15), bottom-right (6.41, -1.15), top-right (5.86, 1.95), top-left (2.14, 1.95), INK stroke 5; given angle arcs and values stay INK: '135°' at the bottom-left of (i) (-3.88, -0.23), '105°' at the bottom-right of (i) (-2.14, -0.28), '100°' at the top-left of (ii) (2.88, 1.07); captions '(i)' at (-3.43, -1.9) and '(ii)' at (4, -1.9) in INK. Then add the remaining angles in ANSWER green, each with an ANSWER arc of radius 0.55 inside the corner and its value in a BG background box: figure (i) '75°' at the top-right corner (-1.51, 1.28) and '45°' at the top-left corner (-6.21, 1.47); figure (ii) '100°' at the top-right corner (5.12, 1.07), '80°' at the bottom-left corner (2.43, -0.44) and '80°' at the bottom-right corner (5.57, -0.44). Nothing else is added.",
+    "visible_text": [
+     "135°",
+     "105°",
+     "100°",
+     "75°",
+     "45°",
+     "100°",
+     "80°",
+     "80°",
+     "(i)",
+     "(ii)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure titles",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "vertex letters",
+     "sums such as 180"
+    ],
+    "accuracy_checks": [
+     "layout identical to the question figure",
+     "(i): 135 + 45 = 180 and 105 + 75 = 180 (each slanting side is a transversal of the parallel sides); 135 + 105 + 75 + 45 = 360",
+     "(ii): equal slanting sides, so the angles at the ends of each parallel side are equal: 100, 100 and 80, 80; 100 + 80 = 180 and 100 + 100 + 80 + 80 = 360"
+    ],
+    "alt_text": "The same two trapeziums with every angle marked: (i) 135, 105, 75 and 45 degrees; (ii) 100, 100, 80 and 80 degrees.",
+    "render_note": "Final state of the answer: the book's printed answer picture (page 35) repeats the question figures with letters P, Q, R, S and A, B, C, D and gives the results only in words; the LP answer text refers to the two figures by (i) and (ii), so those captions are kept and no vertex letters are drawn."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S26.T26.C102",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": null,
+   "question_text": "Give every family name that belongs to a square.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The example asks for the list of family names of a square; it gives no figure and the answer is a list of words (the concept's teaching image already shows the square with its five names).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S26.T26.C103",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": null,
+   "question_text": "The diagonals AC and BD of ABCD bisect each other at O at right angles. Show that ABCD is a rhombus.",
+   "block_index": 0,
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Optional: a quadrilateral ABCD with its diagonals AC and BD crossing at O at a right angle and OA = OC, OB = OD marked would help to follow the SAS steps. Not added: this is an LP-written example, the book has no figure for it, and the text names every point and every equality it uses.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S26.T26.C104",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "FiO3.q4",
+   "question_text": "Draw a Venn diagram showing the set of parallelograms, kites, rhombuses, rectangles, and squares. Then, answer the following questions. (i) What is the quadrilateral that is both a kite and a parallelogram? (ii) Can there be a quadrilateral that is both a kite and a rectangle? (iii) Is every kite a rhombus? If not, what is the correct relationship between these two types of quadrilaterals?",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The example asks to draw a Venn diagram of parallelograms, kites, rhombuses, rectangles and squares, and the book's printed answer is that Venn diagram (page 35). The question gives no figure, so the single diagram is the finished Venn diagram: rectangles inside parallelograms, kites overlapping parallelograms exactly in the rhombuses, squares where rectangles meet kites. The concept's teaching image (family rings) is not linked.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M5.S26.T26.C104.IMG2",
+   "manim_scene": "c8_4_s26_c104_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S26.T26.C104.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "kind": "venn_diagram",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre of the card",
+      "y_axis": "up",
+      "unit": "1 canvas unit = 120 px on the 1920 x 1080 card"
+     },
+     "to_scale": false,
+     "ellipses": [
+      {
+       "id": "kites",
+       "centre": [
+        -3.5,
+        -0.1
+       ],
+       "semi_axes": [
+        3.0,
+        2.6
+       ],
+       "stroke": "SET_A",
+       "stroke_width": 5
+      },
+      {
+       "id": "parallelograms",
+       "centre": [
+        1.8,
+        -0.1
+       ],
+       "semi_axes": [
+        5.9,
+        3.6
+       ],
+       "stroke": "INK",
+       "stroke_width": 5
+      },
+      {
+       "id": "rectangles",
+       "centre": [
+        2.0,
+        -0.1
+       ],
+       "semi_axes": [
+        3.7,
+        1.9
+       ],
+       "stroke": "SET_B",
+       "stroke_width": 5
+      }
+     ],
+     "region_fills": [
+      {
+       "inside": [
+        "kites",
+        "parallelograms"
+       ],
+       "fill": "MARK_FILL",
+       "fill_opacity": 1.0
+      },
+      {
+       "inside": [
+        "rectangles",
+        "kites"
+       ],
+       "fill": "FOCUS",
+       "fill_opacity": 0.45
+      }
+     ],
+     "leaders": [
+      {
+       "from": [
+        -0.9,
+        3.7
+       ],
+       "to": [
+        -0.9,
+        0.3
+       ],
+       "stroke": "GUIDE"
+      }
+     ],
+     "labels": [
+      {
+       "text": "Kites",
+       "at": [
+        -5.3,
+        -0.1
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "Parallelograms",
+       "at": [
+        3.4,
+        2.65
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "Rectangles",
+       "at": [
+        2.8,
+        -0.1
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "Rhombuses",
+       "at": [
+        -2.3,
+        -1.3
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      },
+      {
+       "text": "Squares",
+       "at": [
+        -0.9,
+        3.95
+       ],
+       "colour": "INK",
+       "height": 0.4,
+       "background": false
+      }
+     ],
+     "regions": {
+      "kites only": "kites that are not parallelograms",
+      "kites and parallelograms (green)": "rhombuses (squares included)",
+      "rectangles and kites (pink, inside the green)": "squares",
+      "rectangles only": "rectangles that are not squares",
+      "parallelograms only": "parallelograms that are neither kites nor rectangles"
+     }
+    },
+    "manim_description": "Draw a Venn diagram of three ellipses on the 16 x 9 card (origin at the centre, y up, plain BG), all strokes 5. Ellipse P (parallelograms): centre (1.8, -0.1), horizontal semi-axis 5.9, vertical semi-axis 3.6, INK outline, no fill. Ellipse K (kites): centre (-3.5, -0.1), horizontal semi-axis 3.0, vertical semi-axis 2.6, SET_A outline, overlapping the left part of P. Ellipse R (rectangles): centre (2, -0.1), horizontal semi-axis 3.7, vertical semi-axis 1.9, SET_B outline, entirely inside P and reaching into the right part of K. Fill the region inside both K and P (the lens-shaped overlap) with MARK_FILL, then fill the region inside both R and K (the small overlap at the left tip of R, which lies inside the lens) with FOCUS at 45% opacity; keep all three outlines on top of the fills. Write the set names in INK, 0.4 units high, centred at: 'Kites' at (-5.3, -0.1) (inside K only), 'Parallelograms' at (3.4, 2.65) (inside P only, above R), 'Rectangles' at (2.8, -0.1) (inside R only), 'Rhombuses' at (-2.3, -1.3) (inside the green lens, outside R). Write 'Squares' in INK centred at (-0.9, 3.95) above the diagram, and draw a GUIDE arrow with a filled head from (-0.9, 3.7) straight down to (-0.9, 0.3), which ends inside the pink region (the overlap of R and K). No other text, no shading of the remaining regions, no headings.",
+    "visible_text": [
+     "Kites",
+     "Parallelograms",
+     "Rectangles",
+     "Rhombuses",
+     "Squares"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure titles",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a sixth set for trapeziums",
+     "answers (i) to (iii) as text"
+    ],
+    "accuracy_checks": [
+     "ellipse R lies entirely inside ellipse P (every rectangle is a parallelogram)",
+     "K and P overlap in a lens that is the rhombus region; R reaches into K only inside that lens, and the part of R inside K is the squares (checked with polygon intersections)",
+     "kite-and-parallelogram = rhombuses (answer i), kite-and-rectangle = squares (answer ii: yes, a square), a kite outside P exists so not every kite is a rhombus, every rhombus is inside K (answer iii)"
+    ],
+    "alt_text": "Venn diagram: rectangles lie inside parallelograms; kites overlap parallelograms exactly in the rhombuses; squares are where rectangles meet kites.",
+    "render_note": "Same structure as the book's printed answer picture (page 35) and the summary picture (page 29). The book's printed text answers (ii) with 'No' although its own Venn puts the squares in the overlap of kite and rectangle; the LP answer (yes, a square) is mathematically right and is followed."
+   }
+  },
+  {
+   "lp_concept_id": "M5.S27.T27.C105",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO3.q8",
+   "question_text": "If a quadrilateral has four equal sides and one angle of 90°, will it be a square? Find the answer using geometric reasoning as well as by construction and measurement.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word reasoning about a quadrilateral with four equal sides and one right angle; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S27.T27.C106",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO3.q8",
+   "question_text": "If a quadrilateral has four equal sides and one angle of 90°, will it be a square? Find the answer using geometric reasoning as well as by construction and measurement.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a chain of word reasoning ending in 'Yes, it is a square'; the book's printed answer has no figure either.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S27.T27.C107",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "FiO3.q11",
+   "question_text": "State whether the following statements are true or false. Justify your answers. (i) A quadrilateral whose diagonals are equal and bisect each other must be a square. (ii) A quadrilateral having three right angles must be a rectangle. (iii) A quadrilateral whose diagonals bisect each other must be a parallelogram. (iv) A quadrilateral whose diagonals are perpendicular to each other must be a rhombus. (v) A quadrilateral in which the opposite angles are equal must be a parallelogram. (vi) A quadrilateral in which all the angles are equal is a rectangle. (vii) Isosceles trapeziums are parallelograms.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Seven true/false statements in words; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S27.T27.C108",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "FiO3.q11",
+   "question_text": "State whether the following statements are true or false. Justify your answers. (i) A quadrilateral whose diagonals are equal and bisect each other must be a square. (ii) A quadrilateral having three right angles must be a rectangle. (iii) A quadrilateral whose diagonals bisect each other must be a parallelogram. (iv) A quadrilateral whose diagonals are perpendicular to each other must be a rhombus. (v) A quadrilateral in which the opposite angles are equal must be a parallelogram. (vi) A quadrilateral in which all the angles are equal is a rectangle. (vii) Isosceles trapeziums are parallelograms.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Seven true/false verdicts with word reasons; the book's printed answers have no figure either.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M6.S28.T28.C110",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "puzzle",
+   "question_text": "A sheet is folded in half and then into a quarter, and one slanting crease is made across the corner at the middle of the sheet. What shape do the creases make, and how should you fold to get a square?",
+   "block_index": 0,
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Optional: the quarter-folded sheet with its slanting crease across the centre corner, next to the opened sheet with the rhombus of creases and the 45 degree crease that gives a square, would help. Not added: the LP question describes every fold in words, gives no numbers, and the opened sheet is already the concept's teaching image.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  }
+ ]
+}

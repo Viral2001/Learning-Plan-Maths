@@ -1,0 +1,790 @@
+{
+ "meta": {
+  "chapter": "Proportional Reasoning",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 7",
+  "lp_plan_id": "cbse_eng_maths8_ch7_v22",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "none": 17,
+    "required": 0,
+    "optional": 0
+   },
+   "solution": {
+    "none": 16,
+    "optional": 1,
+    "required": 0
+   },
+   "worked_example": {
+    "none": 3,
+    "required": 1,
+    "optional": 0
+   }
+  },
+  "notes": [
+   "Chunk C (topics M3.S19.T19 to M5.S31.T31): 38 items, 1 required (the Binairo row), 1 optional (C93 solution), 36 none.",
+   "Almost every item here is a word problem or proportion arithmetic with no figure in the book; the book prints no figure for any of these questions or their answers.",
+   "No book print slip was found in the chunk's figures; all base descriptions checked against the page pictures were right. One figure was missing from the base and is added as NEW-P18-crane-girl.",
+   "The Binairo worked example is the only item whose answer is an arrangement of drawn symbols; borderline calls are listed in notes_C.md."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P13-table-2",
+   "source": "chapter p.13",
+   "description": "Shampoo table, 3 columns x 5 rows: Container | Volume | Price; Sachet 6 mL Rs 2; Small Bottle 180 mL Rs 154; Medium Bottle 340 mL Rs 276; Large Bottle 1000 mL Rs 540. Plain banded rows, no colour meaning; checked against the page picture. The worked example M3.S21.T21.C82 already lists these four sizes and prices in its sentence.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P14-illustration-1",
+   "source": "chapter p.14",
+   "description": "Two children at a table with a heap of 12 seeds (about 12, loosely clustered); checked against the page picture. Characters and a heap with no numbers: decoration. The question C92 gives 12 counters in its sentence.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P14-pattern-2",
+   "source": "chapter p.14",
+   "description": "Three pink circles of 12 seeds split in two heaps: 3 + 9, 8 + 4, 2 + 10 (counts re-checked on a zoomed crop and confirmed). Open examples of 'share in different ways'; no question of the LP uses them and the splits are none of the ratios asked (3 : 1, 4 : 3).",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "P15-diagram-1",
+   "source": "chapter p.15",
+   "description": "Teaching flow diagram 'Sharing 12 in the ratio 3 : 1' (whole 12 in an ellipse, 3 : 1 times 3 gives 9 : 3). Teaching figure with no concept image of its own; the LP steps of C93 carry the same numbers, and C93's solution figure is optional (not added).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P16-diagram-1",
+   "source": "chapter p.16",
+   "description": "Teaching flow diagram 'Sharing 42 in the ratio 4 : 3' (whole 42, 4 : 3 times 6 gives 24 : 18). Its teaching figure in the plan is the counters picture of 42 in 7 groups of 6 (4 and 3 groups, 24 and 18).",
+   "mapped_to": "concept_image:M4.S24.T24.C88.IMG1"
+  },
+  {
+   "fig_id": "P20-binairo_grid-1",
+   "source": "chapter p.20",
+   "description": "Book's solved example, left grid 'Puzzle': 6 x 6, given cells V at (1,2), (2,5), (3,1), (3,3), (3,6), (4,2), (4,6) and H at (5,5), (6,3), (6,6); checked against the page picture. The LP replaces this 6 x 6 example by a one-row worked example, drawn as one figure whose dashed outlines mark the given cells.",
+   "mapped_to": "item:M5.S31.T31.C120 (question)"
+  },
+  {
+   "fig_id": "P20-binairo_grid-2",
+   "source": "chapter p.20",
+   "description": "Book's solved example, right grid 'Solution': 6 x 6 completed, given cells dotted; checked against the page picture. The LP's one-row worked example (H H V H V V) is the row version of this solved example and gets its own diagram.",
+   "mapped_to": "item:M5.S31.T31.C120 (question)"
+  },
+  {
+   "fig_id": "P20-binairo_grid-3",
+   "source": "chapter p.20",
+   "description": "Practice puzzle 1 of 3 (6 x 6, 9 given cells: R2 V at 3, H at 5 and 6; R3 H at 2; R4 V at 3 and 5; R5 H at 1 and 5; R6 V at 3); checked against the page picture. No LP item uses it (the LP has only the one-row worked example); noted under LP text issues.",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "P20-binairo_grid-4",
+   "source": "chapter p.20",
+   "description": "Practice puzzle 2 of 3 (6 x 6, 9 given cells: R1 H at 1; R2 H at 1 and 6; R3 V at 4; R4 V at 2 and 3; R5 H at 6; R6 V at 2 and 5); checked against the page picture. No LP item uses it.",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "P20-binairo_grid-5",
+   "source": "chapter p.20",
+   "description": "Practice puzzle 3 of 3 (6 x 6, 8 given cells: R1 H at 5; R2 H at 6; R3 H at 1, 3 and 6; R5 V at 3 and 4; R6 V at 1); checked against the page picture. No LP item uses it.",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "P21-dot_grid-1",
+   "source": "chapter p.21",
+   "description": "Blank 'Dot Grid' sheet, 14 dots across and 22 rows (checked against the page picture). A drawing aid for the learner's own work; no question of the LP refers to it.",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "P22-dot_grid-1",
+   "source": "chapter p.22",
+   "description": "Second identical blank 'Dot Grid' sheet (14 x 22 dots). Drawing aid; no question of the LP refers to it.",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "NEW-P18-crane-girl",
+   "source": "chapter p.18",
+   "description": "Missing from the base inventory: a joke illustration beside Figure it Out Q3 to Q5 on p.176: a crane (stork) standing on one leg next to a girl with a very long neck; no numbers, labels or measures. The crane question C108 gives its height and ratio in the sentence.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 13,
+  "mapped_to_items": 2,
+  "mapped_to_concept_images": 1,
+  "mapped_none": 10,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M5.S31.T31.C120.IMG2"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M3.S19.T19.C75",
+   "role": "question",
+   "lp_book_number": "Speed and Time: Lucknow to Kanpur",
+   "ncert_ref": "7.4.puneeth",
+   "question_text": "Puneeth's father rides from Lucknow to Kanpur in 2 hours at 50 km/h. How long does the trip take at 75 km/h?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Speed-and-time word problem: every number is in the sentence and the book prints no figure for it (only a thinking-face emoji). The teaching image of T17 is not linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C76",
+   "role": "solution",
+   "lp_book_number": "Speed and Time: Lucknow to Kanpur",
+   "ncert_ref": "7.4.puneeth",
+   "question_text": "Puneeth's father rides from Lucknow to Kanpur in 2 hours at 50 km/h. How long does the trip take at 75 km/h?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Steps are arithmetic (2 x 75 / 50 = 3 wrong, 50 x 2 = 100 km, 100 / 75 = 4/3 h = 1 h 20 min); the answer is a time, not a drawing.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C77",
+   "role": "question",
+   "lp_book_number": "Unit Conversions, Q6",
+   "ncert_ref": "FiO4.q6",
+   "question_text": "Harmain is a 1 year old girl. Her elder brother is 5 years old. What will be Harmain's age when the ratio of her age to her brother's age is 1 : 2?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Age word problem: all data in the sentence; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C78",
+   "role": "solution",
+   "lp_book_number": "Unit Conversions, Q6",
+   "ncert_ref": "FiO4.q6",
+   "question_text": "Harmain is a 1 year old girl. Her elder brother is 5 years old. What will be Harmain's age when the ratio of her age to her brother's age is 1 : 2?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Algebra and a check (x : (x + 4) = 1 : 2, x = 4); the answer is a number. The book's own answer (x = 3 years later, age 4) reaches the same age.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C79",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q11",
+   "question_text": "A tractor can plough the same area of a field 4 times faster than a pair of oxen. A farmer wants to plough his 20 acre field. A pair of oxen takes 6 hours to plough an acre of land. How much time would it take if the farmer used a pair of oxen to plough the field? How much time would it take him if he decides to use a tractor instead?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Tractor and oxen word problem: area, speed factor and hours per acre are all in the text; no book figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C80",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q11",
+   "question_text": "A tractor can plough the same area of a field 4 times faster than a pair of oxen. A farmer wants to plough his 20 acre field. A pair of oxen takes 6 hours to plough an acre of land. How much time would it take if the farmer used a pair of oxen to plough the field? How much time would it take him if he decides to use a tractor instead?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic chain (20 x 6 = 120 h, 6 / 4 = 1.5 h per acre, 20 x 1.5 = 30 h); the answer is two numbers.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S21.T21.C82",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example: Shampoo sizes: is price proportional to volume?",
+   "ncert_ref": "7.4.note_project, 7.4.act2, 7.4.act2_eco",
+   "question_text": "A sachet of 6 mL costs ₹2, a 180 mL bottle ₹154, a 340 mL bottle ₹276 and a 1000 mL bottle ₹540. Which size gives the cheapest shampoo per mL?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The book's Activity 2 table (Container, Volume, Price for sachet 6 mL Rs 2, small 180 mL Rs 154, medium 340 mL Rs 276, large 1000 mL Rs 540) is a plain table with banded rows and no colour meaning; the question sentence already lists all four sizes and prices and the answer is per-mL arithmetic. The teaching image C82.IMG1 is kept and never linked.",
+   "text_alternative": "LaTeX array with columns Container, Volume, Price and rows Sachet 6 mL Rs 2; Small Bottle 180 mL Rs 154; Medium Bottle 340 mL Rs 276; Large Bottle 1000 mL Rs 540",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C84",
+   "role": "question",
+   "lp_book_number": "Example 10: Example: Himachal and Meghalaya Tea",
+   "ncert_ref": "7.4.ex10",
+   "question_text": "Himachal tea costs ₹200 for 200 g. Meghalaya tea costs ₹800 for 1 kg. Which tea is more expensive?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Example 10 as a question: prices and weights are in the sentence; the book prints no figure (the teaching image of T21 shows the five 200 g packets but is never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C85",
+   "role": "solution",
+   "lp_book_number": "Example 10: Example: Himachal and Meghalaya Tea",
+   "ncert_ref": "7.4.ex10",
+   "question_text": "Himachal tea costs ₹200 for 200 g. Meghalaya tea costs ₹800 for 1 kg. Which tea is more expensive?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Unit conversion and ratio arithmetic (200 : 200 and 1000 : 800, 1 : 1 and 5 : 4, 200 x 5 = 1000); the answer is a comparison of two prices.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S23.T23.C86",
+   "role": "question",
+   "lp_book_number": "Unit Conversions, Q3",
+   "ncert_ref": "FiO4.q3",
+   "question_text": "The area of Delhi is 1484 sq. km and the area of Mumbai is 550 sq. km. The population of Delhi is approximately 30 million and that of Mumbai is 20 million people. Which city is more crowded? Why do you say so?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Delhi and Mumbai data (areas and populations) are all in the sentence; the book prints no figure for it (the crane picture on the same page belongs to Q4).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S23.T23.C87",
+   "role": "solution",
+   "lp_book_number": "Unit Conversions, Q3",
+   "ncert_ref": "FiO4.q3",
+   "question_text": "The area of Delhi is 1484 sq. km and the area of Mumbai is 550 sq. km. The population of Delhi is approximately 30 million and that of Mumbai is 20 million people. Which city is more crowded? Why do you say so?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two divisions (30000000 / 1484, 20000000 / 550) and a comparison; the answer is a city name with two numbers.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S25.T25.C92",
+   "role": "question",
+   "lp_book_number": "Activity: Sharing 12 and 42 Counters",
+   "ncert_ref": "7.5.act3",
+   "question_text": "Share 12 counters in the ratio 3 : 1, and then 42 counters in the ratio 4 : 3.",
+   "decision": "none",
+   "reason_codes": [
+    "DECORATIVE_ONLY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure: 12 counters and the ratios 3 : 1 and 4 : 3 are in the sentence. The book's picture of two children with a heap of 12 seeds is an illustration, and its three pink circles (3 + 9, 8 + 4, 2 + 10 seeds) are open examples of 'different ways', not data of this question. A question with no given figure gets no question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S25.T25.C93",
+   "role": "solution",
+   "lp_book_number": "Activity: Sharing 12 and 42 Counters",
+   "ncert_ref": "7.5.act3",
+   "question_text": "Share 12 counters in the ratio 3 : 1, and then 42 counters in the ratio 4 : 3.",
+   "decision": "optional",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A figure would help but is not needed: the book's flow diagrams (whole 12 -> 3 : 1 x 3 -> 9 : 3 and whole 42 -> 4 : 3 x 6 -> 24 : 18) would show the method, but the four LP steps carry every number and the answer is two pairs of numbers, not an arrangement. The 42 half also has a teaching image (M4.S24.T24.C88.IMG1) that is never linked. Not added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S25.T25.C94",
+   "role": "question",
+   "lp_book_number": "Ratio Sharing, Q1",
+   "ncert_ref": "FiO3.q1",
+   "question_text": "Divide ₹4500 into two parts in the ratio 2 : 3.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Plain division of an amount in a ratio; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S25.T25.C95",
+   "role": "solution",
+   "lp_book_number": "Ratio Sharing, Q1",
+   "ncert_ref": "FiO3.q1",
+   "question_text": "Divide ₹4500 into two parts in the ratio 2 : 3.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three arithmetic lines (2 + 3 = 5, 4500 / 5 = 900, 1800 and 2700); the answer is two amounts. The teaching image of T24 (bar of 5 groups of 900) is not linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C96",
+   "role": "question",
+   "lp_book_number": "Example 11: Example: Sharing a Food Cart Profit",
+   "ncert_ref": "7.5.ex11",
+   "question_text": "Prashanti invests ₹75000 and Bhuvan ₹25000. They share a profit of ₹4000 in the ratio of their investments. What does each get?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Example 11 as a question: both investments and the profit are in the sentence; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C97",
+   "role": "solution",
+   "lp_book_number": "Example 11: Example: Sharing a Food Cart Profit",
+   "ncert_ref": "7.5.ex11",
+   "question_text": "Prashanti invests ₹75000 and Bhuvan ₹25000. They share a profit of ₹4000 in the ratio of their investments. What does each get?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Ratio reduction and sharing arithmetic (75000 : 25000 = 3 : 1, 4000 / 4 = 1000); the answer is two amounts.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C98",
+   "role": "question",
+   "lp_book_number": "Example 12: Example: Cement to Add to a Mixture",
+   "ncert_ref": "7.5.ex12",
+   "question_text": "A 40 kg mixture has sand and cement in the ratio 3 : 1. How much cement must be added to make the ratio 5 : 2?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Example 12 as a question: the mixture and both ratios are in the sentence; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C99",
+   "role": "solution",
+   "lp_book_number": "Example 12: Example: Cement to Add to a Mixture",
+   "ncert_ref": "7.5.ex12",
+   "question_text": "A 40 kg mixture has sand and cement in the ratio 3 : 1. How much cement must be added to make the ratio 5 : 2?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic chain (30 kg sand and 10 kg cement, 5 : 2 :: 30 : 12, 12 - 10 = 2 kg); the answer is one number. The teaching image of T24 is not linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C100",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO3.q2",
+   "question_text": "In a science lab, acid and water are mixed in the ratio of 1 : 5 to make a solution. In a bottle that has 240 mL of the solution, how much acid and water does the solution contain?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Acid and water mixture: ratio and volume in the sentence; no book figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C101",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO3.q2",
+   "question_text": "In a science lab, acid and water are mixed in the ratio of 1 : 5 to make a solution. In a bottle that has 240 mL of the solution, how much acid and water does the solution contain?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic (1 + 5 = 6, 240 / 6 = 40, 40 mL and 200 mL); the answer is two volumes.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C102",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "FiO3.q3",
+   "question_text": "Blue and yellow paints are mixed in the ratio of 3 : 5 to produce green paint. To produce 40 mL of green paint, how much of these two colours are needed? To make the paint a lighter shade of green, I added 20 mL of yellow to the mixture. What is the new ratio of blue and yellow in the paint?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Paint mixing in two stages: ratio, volume and the added yellow are in the sentence; no book figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C103",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "FiO3.q3",
+   "question_text": "Blue and yellow paints are mixed in the ratio of 3 : 5 to produce green paint. To produce 40 mL of green paint, how much of these two colours are needed? To make the paint a lighter shade of green, I added 20 mL of yellow to the mixture. What is the new ratio of blue and yellow in the paint?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic (3 + 5 = 8, 40 / 8 = 5, 15 mL and 25 mL, 15 : 45 = 1 : 3); the answer is two volumes and a ratio.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C104",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "FiO3.q4",
+   "question_text": "To make soft idlis, you need to mix rice and urad dal in the ratio of 2 : 1. If you need 6 cups of this mixture to make idlis tomorrow morning, how many cups of rice and urad dal will you need?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Idli mixture: ratio and cups are in the sentence; no book figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C105",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "FiO3.q4",
+   "question_text": "To make soft idlis, you need to mix rice and urad dal in the ratio of 2 : 1. If you need 6 cups of this mixture to make idlis tomorrow morning, how many cups of rice and urad dal will you need?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic (2 + 1 = 3, 6 / 3 = 2, 4 cups and 2 cups); the answer is two numbers.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C106",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "FiO3.q5",
+   "question_text": "I have one bucket of orange paint that I made by mixing red and yellow paints in the ratio of 3 : 5. I added another bucket of yellow paint to this mixture. What is the ratio of red paint to yellow paint in the new mixture?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Bucket of orange paint then one more bucket of yellow: everything is in the sentence; no book figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C107",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "FiO3.q5",
+   "question_text": "I have one bucket of orange paint that I made by mixing red and yellow paints in the ratio of 3 : 5. I added another bucket of yellow paint to this mixture. What is the ratio of red paint to yellow paint in the new mixture?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Fraction-of-a-bucket reasoning (3/8 red, 5/8 + 1 = 13/8 yellow, ratio 3 : 13); the answer is a ratio, not a drawing.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C108",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "FiO4.q4",
+   "question_text": "A crane of height 155 cm has its neck and the rest of its body in the ratio 4 : 6. For your height, if your neck and the rest of the body also had this ratio, how tall would your neck be?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Crane of height 155 cm with neck : body = 4 : 6 is fully stated in the sentence. The book's crane-and-girl picture is a joke illustration (the girl has a very long neck) with no measures on it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C109",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "FiO4.q4",
+   "question_text": "A crane of height 155 cm has its neck and the rest of its body in the ratio 4 : 6. For your height, if your neck and the rest of the body also had this ratio, how tall would your neck be?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "4/10 of the height (62 cm for the crane, 60 cm for a 150 cm learner); the answer is a fraction of the learner's own height.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C110",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q6",
+   "ncert_ref": "FiO4.q12",
+   "question_text": "The ₹10 coin is an alloy of copper and nickel called cupro-nickel. Copper and nickel are mixed in a 3 : 1 ratio to get this alloy. The mass of the coin is 7.74 grams. If the cost of copper is ₹906 per kg and the cost of nickel is ₹1341 per kg, what is the cost of these metals in a ₹10 coin?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Cupro-nickel coin: ratio, mass and prices per kg are all in the sentence; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C111",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q6",
+   "ncert_ref": "FiO4.q12",
+   "question_text": "The ₹10 coin is an alloy of copper and nickel called cupro-nickel. Copper and nickel are mixed in a 3 : 1 ratio to get this alloy. The mass of the coin is 7.74 grams. If the cost of copper is ₹906 per kg and the cost of nickel is ₹1341 per kg, what is the cost of these metals in a ₹10 coin?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic with unit conversion (7.74 x 3/4 = 5.805 g, 906 x 5.805 / 1000 = 5.26, 1341 x 1.935 / 1000 = 2.59, total 7.85); the answer is money amounts.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S28.T28.C112",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example: Unit conversions are proportions",
+   "ncert_ref": "7.6.units",
+   "question_text": "A field is 2 hectares. How many acres is it? How many square metres?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Unit conversion by proportion (1 : 2.471 :: 2 : x, 2 x 2.471 = 4.942, 2 x 10000 = 20000); the book prints no figure and the answer is two numbers. The teaching image C112.IMG1 is kept and never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S28.T28.C113",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example: Temperature: not a simple ratio",
+   "ncert_ref": "7.6.temperature",
+   "question_text": "Convert 25 °C to Fahrenheit, and convert the answer back to Celsius.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Temperature conversion is a formula chain (9/5 x 25 = 45, 45 + 32 = 77, 77 - 32 = 45, 5/9 x 45 = 25); no instrument reading is asked and the book prints no figure. The teaching image C113.IMG1 is kept and never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S29.T29.C115",
+   "role": "question",
+   "lp_book_number": "Unit Conversions, Q8",
+   "ncert_ref": "FiO4.q8",
+   "question_text": "It is good farming practice to apply 10 tonnes of cow manure for 1 acre of land. A farmer is planning to grow tomatoes in a plot of size 200 ft by 500 ft. How much manure should he buy?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Plot of 200 ft by 500 ft and 10 tonnes per acre are in the sentence; a rectangle with two side lengths would add nothing the numbers do not say (the teaching image of T28 shows this plot and is never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S29.T29.C116",
+   "role": "solution",
+   "lp_book_number": "Unit Conversions, Q8",
+   "ncert_ref": "FiO4.q8",
+   "question_text": "It is good farming practice to apply 10 tonnes of cow manure for 1 acre of land. A farmer is planning to grow tomatoes in a plot of size 200 ft by 500 ft. How much manure should he buy?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Area and proportion arithmetic (200 x 500 = 100000 sq ft, 43560 : 10000 :: 100000 : x, about 22956.8 kg); the answer is a mass.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S30.T30.C117",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q10",
+   "question_text": "One acre of land costs ₹1500000. What is the cost of 2400 square feet of the same land?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Cost of land: price per acre and the plot area are in the sentence; no book figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S30.T30.C118",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q10",
+   "question_text": "One acre of land costs ₹1500000. What is the cost of 2400 square feet of the same land?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Proportion arithmetic (43560 : 1500000 :: 2400 : x, about 82645); the answer is an amount of money.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S31.T31.C120",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example: Binairo",
+   "ncert_ref": "puzzle",
+   "question_text": "In a Binairo row of 6 cells, the first two cells hold horizontal lines and the fifth holds a vertical line. Fill the row.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The example asks to fill a row of line symbols and the answer is an arrangement of drawn horizontal and vertical bars (H H V H V V in the LP): the letters only abbreviate bars, and the steps point at cells by number, so the row is drawn once, with the three given cells (1, 2, 5) outlined and the three found cells (3, 4, 6) in ANSWER green, as the book's solved example outlines its given cells. Rule B2: an arrangement answer is drawn even when the steps describe it in words. The book's own example is a 6 by 6 grid (Puzzle / Solution); the LP uses a one-row version, so this row stands for it. Borderline: the text alone could carry it (see notes).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M5.S31.T31.C120.IMG2",
+   "manim_scene": "c8_7_puzzle_binairo_row_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S31.T31.C120.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_row",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_row",
+     "cells": 6,
+     "cell_fill": "CELL_FILL",
+     "cell_outline": "INK",
+     "cells_left_to_right": [
+      {
+       "pos": 1,
+       "symbol": "horizontal_bar",
+       "colour": "INK",
+       "given": true
+      },
+      {
+       "pos": 2,
+       "symbol": "horizontal_bar",
+       "colour": "INK",
+       "given": true
+      },
+      {
+       "pos": 3,
+       "symbol": "vertical_bar",
+       "colour": "ANSWER",
+       "given": false
+      },
+      {
+       "pos": 4,
+       "symbol": "horizontal_bar",
+       "colour": "ANSWER",
+       "given": false
+      },
+      {
+       "pos": 5,
+       "symbol": "vertical_bar",
+       "colour": "INK",
+       "given": true
+      },
+      {
+       "pos": 6,
+       "symbol": "vertical_bar",
+       "colour": "ANSWER",
+       "given": false
+      }
+     ],
+     "given_cells_outline": {
+      "cells": [
+       1,
+       2,
+       5
+      ],
+      "style": "dashed",
+      "colour": "FOCUS"
+     },
+     "position_numbers": {
+      "values": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6
+      ],
+      "placement": "below each cell, centred",
+      "colour": "GUIDE"
+     },
+     "reading_order": "left to right",
+     "totals": {
+      "horizontal_bars": 3,
+      "vertical_bars": 3
+     },
+     "to_scale": true
+    },
+    "manim_description": "On a 16:9 canvas with a plain white BG, draw one horizontal row of 6 equal squares, touching side by side and centred on the canvas; the row is about 80 percent of the canvas width. Each square is filled CELL_FILL and has a 3 px INK outline. Under each square, centred, write its position number in GUIDE, left to right: 1, 2, 3, 4, 5, 6. Inside every square draw one short thick bar centred in the square, 60 percent of the square's width long and 12 px thick, with rounded ends; horizontal bars lie along the square's horizontal midline and vertical bars along its vertical midline. Square 1: horizontal bar in INK. Square 2: horizontal bar in INK. Square 3: vertical bar in ANSWER. Square 4: horizontal bar in ANSWER. Square 5: vertical bar in INK. Square 6: vertical bar in ANSWER. Around squares 1, 2 and 5 only draw a dashed square outline in FOCUS, 6 px inside the square's own border (the three given cells). Squares 3, 4 and 6 get no dashed outline. The row therefore shows horizontal, horizontal, vertical, horizontal, vertical, vertical. Draw no letters H or V, no words and no legend.",
+    "visible_text": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the letters H or V inside the cells",
+     "words such as given or found, or a legend",
+     "the book's 6 by 6 Binairo grids",
+     "red bars (the colours are INK and ANSWER only)"
+    ],
+    "accuracy_checks": [
+     "exactly 6 cells in one row",
+     "given cells: 1 and 2 horizontal, 5 vertical (INK, dashed FOCUS outline)",
+     "found cells: 3 vertical, 4 horizontal, 6 vertical (ANSWER, no dashed outline)",
+     "3 horizontal bars and 3 vertical bars in total (the row needs 3 of each symbol)",
+     "no three equal bars side by side: the order H H V H V V has at most two equal neighbours (cells 5 and 6 are V V, cells 1 and 2 are H H)",
+     "the only other way to fill cells 4 and 6 (V then H) would put three verticals in cells 3, 4 and 5, so the filled row is unique"
+    ],
+    "alt_text": "A row of six cells holding a horizontal bar, a horizontal bar, a vertical bar, a horizontal bar, a vertical bar and a vertical bar, with the first, second and fifth cells outlined as the given ones.",
+    "render_note": "Book print and LP agree on the answer H H V H V V. The picture is a one-row version of the book's solved Binairo example (the book draws a 6 by 6 grid with dotted outlines on the given cells); the LP's row is not printed in the book. Position numbers 1 to 6 are drawn because the LP steps refer to cells by number (third, fourth, cell 4, cell 6)."
+   }
+  }
+ ]
+}

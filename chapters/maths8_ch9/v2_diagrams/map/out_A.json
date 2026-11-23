@@ -1,0 +1,4083 @@
+{
+ "meta": {
+  "chapter": "The Baudhāyana-Pythagoras Theorem",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 9",
+  "lp_plan_id": "cbse_eng_maths8_ch9_v54",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "none": 8,
+    "required": 9,
+    "optional": 0
+   },
+   "question": {
+    "required": 2,
+    "none": 4,
+    "optional": 0
+   },
+   "solution": {
+    "required": 2,
+    "none": 4,
+    "optional": 0
+   }
+  },
+  "notes": [
+   "Chunk A: topics M1.S2.T2, M2.S3.T3, M2.S4.T4, M2.S5.T5 (17 worked examples + 6 question/answer pairs).",
+   "Worked-example policy: the one diagram shows the whole figure the steps use (given parts INK, parts added by the steps ANSWER); numeric answers (counts, areas) are never printed on it.",
+   "Solution diagrams of pairs are ANSWER-coloured additions on the question's layout where a question diagram exists (Q1); Q4's solution is a rearrangement of the same four pieces.",
+   "Several base figures are teaching figures AND the source of a worked example's own diagram: each such figure has one entry for the teaching use (concept image) and a NEW- entry for the item.",
+   "Base remark corrected: P02-construction-2 (only one of the four triangles of the dotted square lies inside the original square).",
+   "Book mistakes: none found in the figures of this chunk (all printed numbers re-computed). LP text issues are listed in notes_A.md only; no LP text is edited here."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P01-shape-1",
+   "source": "chapter p.01",
+   "description": "One plain square with ticks on its right and bottom sides, beside the book's question about doubling a given square. It carries no number or letter; the original square is redrawn inside the C4 diagram and the text says everything else.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P01-shape-2",
+   "source": "chapter p.01",
+   "description": "Original square beside the doubled square (side 2s) cut by a dashed cross into 4 small squares: the 'double the side gives 4 times the area' picture. Teaching figure.",
+   "mapped_to": "concept_image:M1.S2.T2.C3.IMG1"
+  },
+  {
+   "fig_id": "P02-construction-1",
+   "source": "chapter p.02",
+   "description": "Original square, its diagonal, and the dotted tilted square built on the diagonal: the 'square on the diagonal' picture. Teaching figure.",
+   "mapped_to": "concept_image:M1.S2.T2.C3.IMG2"
+  },
+  {
+   "fig_id": "NEW-P02-construction-1-C4",
+   "source": "chapter p.02",
+   "description": "Second use of P02-construction-1: the C4 worked example's own diagram of the square built on the diagonal.",
+   "mapped_to": "item:M1.S2.T2.C4 (question)"
+  },
+  {
+   "fig_id": "P02-construction-2",
+   "source": "chapter p.02",
+   "description": "CORRECTED: original square with its diagonal, the dotted square on the diagonal, and the horizontal and vertical lines through the original's top-right corner; they cut the dotted square into 4 congruent triangles. Only ONE of those 4 triangles lies inside the original square (the half above the diagonal); the other half of the original, below the diagonal, is outside the dotted square. Teaching figure.",
+   "mapped_to": "concept_image:M1.S2.T2.C5.IMG1"
+  },
+  {
+   "fig_id": "NEW-P02-construction-2-C5",
+   "source": "chapter p.02",
+   "description": "Second use of P02-construction-2 (CORRECTED as above): the C5 worked example's own diagram.",
+   "mapped_to": "item:M1.S2.T2.C5 (question)"
+  },
+  {
+   "fig_id": "NEW-P02-construction-2-C9",
+   "source": "chapter p.02",
+   "description": "Third use of P02-construction-2 (CORRECTED as above): the C9 worked example's own diagram, identical to the C5 one.",
+   "mapped_to": "item:M1.S2.T2.C9 (question)"
+  },
+  {
+   "fig_id": "P02-construction-3",
+   "source": "chapter p.02",
+   "description": "Outer square of side 2s with the original square as its lower-left quarter, a cross, the dashed diamond on the side midpoints (8 small congruent triangles), 8 single ticks and 4 double ticks; the figure for 'all these small triangles are congruent'.",
+   "mapped_to": "item:M1.S2.T2.C8 (question)"
+  },
+  {
+   "fig_id": "P03-construction-1",
+   "source": "chapter p.03",
+   "description": "The sequence of squares: three identical grids with the counted shape heavy (quarter square, diamond, whole square) and the plain resulting shape below each arrow. Teaching figure.",
+   "mapped_to": "concept_image:M1.S2.T2.C5.IMG2"
+  },
+  {
+   "fig_id": "NEW-P03-construction-1-C7",
+   "source": "chapter p.03",
+   "description": "Second use of P03-construction-1: the C7 worked example's own diagram of the sequence of squares.",
+   "mapped_to": "item:M1.S2.T2.C7 (question)"
+  },
+  {
+   "fig_id": "P03-paper_cutout-2",
+   "source": "chapter p.03",
+   "description": "Square 1 with both diagonals (pieces 1 left, 2 top, 3 right, 4 bottom) and the identical Square 2 cut along both diagonals (pieces 5 left, 6 top, 7 right, 8 bottom); the C6 diagram draws the pieces 5-8 placed around Square 1.",
+   "mapped_to": "item:M1.S2.T2.C6 (question)"
+  },
+  {
+   "fig_id": "P04-shape-1",
+   "source": "chapter p.04",
+   "description": "One plain square with ticks on its right and bottom sides, given beside the 'half the area' question; no number or letter, the C10 diagram redraws the square.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P04-construction-2",
+   "source": "chapter p.04",
+   "description": "Square with the tilted square on the side midpoints drawn dotted; covered by the teaching image of the midpoint square.",
+   "mapped_to": "concept_image:M1.S2.T2.C10.IMG1"
+  },
+  {
+   "fig_id": "P04-construction-3",
+   "source": "chapter p.04",
+   "description": "Square with the inscribed tilted square solid and a dashed cross through the centre (8 congruent triangles, 4 inside the tilted square). Teaching figure.",
+   "mapped_to": "concept_image:M1.S2.T2.C10.IMG1"
+  },
+  {
+   "fig_id": "NEW-P04-construction-3-C10",
+   "source": "chapter p.04",
+   "description": "Second use of P04-construction-3: the C10 worked example's own diagram.",
+   "mapped_to": "item:M1.S2.T2.C10 (question)"
+  },
+  {
+   "fig_id": "P04-paper_cutout-4",
+   "source": "chapter p.04",
+   "description": "A plain sheet and the folded sheet with the tilted square PQRS (R top, Q right, P bottom, S left), creases RP and SQ and four fold arrows. Teaching figure.",
+   "mapped_to": "concept_image:M1.S2.T2.C10.IMG2"
+  },
+  {
+   "fig_id": "NEW-P04-paper_cutout-4-C11",
+   "source": "chapter p.04",
+   "description": "Second use of P04-paper_cutout-4: the C11 worked example's own diagram of the paper with PQRS and the lines QS and PR (fold arrows and texture left out).",
+   "mapped_to": "item:M1.S2.T2.C11 (question)"
+  },
+  {
+   "fig_id": "P05-shape-1",
+   "source": "chapter p.05",
+   "description": "Right triangle, right angle at the bottom-left, the two short sides marked 1 and the hypotenuse marked ?: the figure given with 'Find the hypotenuse of this isosceles right triangle'.",
+   "mapped_to": "item:M2.S5.T5.C27 (question)"
+  },
+  {
+   "fig_id": "P05-construction-2",
+   "source": "chapter p.05",
+   "description": "Unit square PEAR (P bottom-left, E bottom-right, A top-right, R top-left) with sides 1, diagonal RE and the dashed square REST on it (T above A, S right of A), right-angle marks at P and A. Teaching figure.",
+   "mapped_to": "concept_image:M2.S4.T4.C20.IMG1"
+  },
+  {
+   "fig_id": "NEW-P05-construction-2-C28",
+   "source": "chapter p.05",
+   "description": "Second use of P05-construction-2: the Q1 solution diagram (PEAR, ER, REST with the root-two result and the area tags).",
+   "mapped_to": "item:M2.S5.T5.C28 (solution)"
+  },
+  {
+   "fig_id": "P05-shape-3",
+   "source": "chapter p.05",
+   "description": "Two summary figures under the working: the right triangle with sides 1, 1 and hypotenuse root two, and the unit square with its diagonal root two. Teaching figure.",
+   "mapped_to": "concept_image:M2.S4.T4.C20.IMG1"
+  },
+  {
+   "fig_id": "P06-table-1",
+   "source": "chapter p.06",
+   "description": "Three dashed boxes of squares of decimals (1.1^2 to 1.5^2; 1.41^2 and 1.42^2; 1.411^2 to 1.415^2) with the two squares around 2 in red; covered by the teaching image that zooms in on root 2.",
+   "mapped_to": "concept_image:M2.S4.T4.C21.IMG1"
+  },
+  {
+   "fig_id": "P06-digit_boxes-2",
+   "source": "chapter p.06",
+   "description": "A row of empty boxes, a point and an ellipsis ending in the digit 6: the form of the square of 1.414...4. A digit pattern that LaTeX can write.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P07-paper_cutout-1",
+   "source": "chapter p.07",
+   "description": "Figure it Out Q1: two identical square papers each cut along the diagonal from top-left to bottom-right, pieces 1 (lower-left) and 2 (upper-right) in the left square, 3 and 4 in the right square.",
+   "mapped_to": "item:M2.S5.T5.C33 (question)"
+  },
+  {
+   "fig_id": "P08-construction-1",
+   "source": "chapter p.08",
+   "description": "General Solution figure: square PQRS (P bottom-left, Q bottom-right, R top-right, S top-left) with side a, hypotenuse SQ = c, dashed square SQVU on SQ (U above R, V right of R) and a dashed cross through R. Teaching figure.",
+   "mapped_to": "concept_image:M2.S3.T3.C14.IMG1"
+  },
+  {
+   "fig_id": "NEW-P08-construction-1-C14",
+   "source": "chapter p.08",
+   "description": "Second use of P08-construction-1: the C14 worked example's own lettered diagram.",
+   "mapped_to": "item:M2.S3.T3.C14 (question)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 26,
+  "mapped_to_items": 12,
+  "mapped_to_concept_images": 11,
+  "mapped_none": 3,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S2.T2.C4.IMG1",
+   "M1.S2.T2.C5.IMG3",
+   "M1.S2.T2.C6.IMG1",
+   "M1.S2.T2.C7.IMG1",
+   "M1.S2.T2.C8.IMG1",
+   "M1.S2.T2.C9.IMG1",
+   "M1.S2.T2.C10.IMG3",
+   "M1.S2.T2.C11.IMG1",
+   "M2.S3.T3.C14.IMG2",
+   "M2.S5.T5.C27.IMG1",
+   "M2.S5.T5.C28.IMG1",
+   "M2.S5.T5.C33.IMG1",
+   "M2.S5.T5.C34.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S2.T2.C3",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.1 - first_guess",
+   "question_text": "A square has side 1 unit. Each side is doubled. How many times the area is the new square?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem with every number in the text (side 1 doubled to 2, areas 1 and 4); the working is the arithmetic 2 x 2 = 4. The book's picture of the doubled square cut into 4 copies is teaching image C3.IMG1 (never linked) and the question does not point to a figure.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C4",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.1 - verse_1_9",
+   "question_text": "Where does Baudhāyana build the square with double the area?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer of this example is a construction (the square built on the diagonal of the original square); the steps only describe it in words, so the learner needs to see it (B2: answer is a construction).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S2.T2.C4.IMG1",
+   "manim_scene": "c8_9_2_1_C4_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S2.T2.C4.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "unit_px": 220,
+     "bounding_box": [
+      [
+       0,
+       0
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "polygons": [
+      {
+       "id": "original_square",
+       "vertices": [
+        [
+         0,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         0,
+         2
+        ]
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "fill": "none",
+       "stroke_px": 3
+      },
+      {
+       "id": "square_on_diagonal",
+       "vertices": [
+        [
+         0,
+         2
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         4,
+         2
+        ],
+        [
+         2,
+         4
+        ]
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "fill": "none",
+       "stroke_px": 3
+      }
+     ],
+     "note": "the side (0,2)-(2,0) of the tilted square is the diagonal of the original square",
+     "labels": [],
+     "to_scale": true,
+     "type": "construction"
+    },
+    "manim_description": "On a plain BG card of 1920 x 1080 px, with 1 unit = 220 px, x to the right and y upwards, centre the figure on the card (its bounding box runs from (0,0) to (4,4)). Draw the original square with corners (0,0), (2,0), (2,2), (0,2) as a solid INK outline, 3 px stroke, no fill. Draw the tilted square built on the diagonal of the original square: its corners are (0,2), (2,0), (4,2) and (2,4), its side from (0,2) to (2,0) is the diagonal of the original square, and all four of its sides are dashed ANSWER lines, 3 px stroke, no fill. Draw nothing else: no letters, no numbers, no angle marks, no shading.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters such as (a) or (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "area numbers",
+     "any text at all"
+    ],
+    "accuracy_checks": [
+     "tilted square side = distance (0,2)-(2,0) = 2*sqrt(2) = 2.828 units = the diagonal of the original square (side 2)",
+     "all four corners of the tilted square are right angles",
+     "tilted square area 8 = 2 x original area 4 (the doubling the example is about)"
+    ],
+    "alt_text": "A square with a larger tilted dashed square standing on its diagonal.",
+    "render_note": "Book picture p.2 (first figure, base id P02-construction-1). Worked example: ONE diagram showing the whole construction the steps describe: the original square (INK, given) and the tilted square on its diagonal (ANSWER). The book prints no letters, so none are drawn."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C5",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.1 - Q_why_double",
+   "question_text": "Why does the new dotted square have double the area of the original square?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The question points at 'the new dotted square' and 'the original square' and the steps use the diagonal and the extended lines; none of that can be followed without the figure. The teaching image C5.IMG1 shows the same idea but is never linked, so the example gets its own diagram.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S2.T2.C5.IMG3",
+   "manim_scene": "c8_9_2_1_C5_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S2.T2.C5.IMG3}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "unit_px": 200,
+     "bounding_box": [
+      [
+       0,
+       0
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "polygons": [
+      {
+       "id": "original_square",
+       "vertices": [
+        [
+         0,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         0,
+         2
+        ]
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "fill": "none",
+       "stroke_px": 3
+      },
+      {
+       "id": "dotted_square",
+       "vertices": [
+        [
+         0,
+         2
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         4,
+         2
+        ],
+        [
+         2,
+         4
+        ]
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "fill": "none",
+       "stroke_px": 3
+      }
+     ],
+     "segments": [
+      {
+       "from": [
+        2,
+        2
+       ],
+       "to": [
+        4,
+        2
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        2,
+        2
+       ],
+       "to": [
+        2,
+        4
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      }
+     ],
+     "note": "the dotted square's side (0,2)-(2,0) is the diagonal of the original square; the horizontal line y=2 (x from 0 to 4) and the vertical line x=2 (y from 0 to 4) cut it into 4 congruent right triangles that meet at (2,2)",
+     "labels": [],
+     "to_scale": true,
+     "type": "construction"
+    },
+    "manim_description": "On a plain BG card of 1920 x 1080 px, with 1 unit = 200 px, x to the right and y upwards, centre the figure on the card (its bounding box runs from (0,0) to (4,4)). Draw the original square with corners (0,0), (2,0), (2,2), (0,2) as a solid INK outline, 3 px stroke, no fill. Draw the dotted square with corners (0,2), (2,0), (4,2), (2,4) as a dashed INK outline, 3 px stroke, no fill; its side from (0,2) to (2,0) is the diagonal of the original square. Draw two dashed ANSWER lines, 3 px stroke: a horizontal line from (2,2) to (4,2) and a vertical line from (2,2) to (2,4). They carry the top side and the right side of the original square across the dotted square, up to its corners (4,2) and (2,4), and together with those two sides they cut the dotted square into 4 congruent right triangles that meet at (2,2). Draw nothing else: no letters, no numbers, no shading.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters such as (a) or (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "area numbers",
+     "triangle counts",
+     "any text at all"
+    ],
+    "accuracy_checks": [
+     "dotted square corners (0,2),(2,0),(4,2),(2,4): side 2*sqrt(2), four right angles, area 8",
+     "the lines y=2 and x=2 meet at (2,2), the centre of the dotted square, and cut it into 4 right triangles with legs 2 and 2 (area 2 each, 4 x 2 = 8)",
+     "the original square (area 4) is 2 of these triangles (split by the diagonal), the dotted square is 4: the area is double"
+    ],
+    "alt_text": "An upright square with a dashed tilted square on its diagonal, cut into four triangles by a horizontal and a vertical line through the original square's top-right corner.",
+    "render_note": "Book picture p.2 (second figure, base id P02-construction-2). Worked example: the figure the steps use (original square, dotted square on its diagonal, the two added lines). CORRECTED base remark: only ONE of the dotted square's 4 triangles lies inside the original square (the half above the diagonal); the other half of the original square, below the diagonal, lies outside the dotted square. No letters are printed in the book or used in the LP text, so none are drawn."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C6",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.1 - paper",
+   "question_text": "Doubling a square using paper: draw both diagonals on Square 1 (pieces 1, 2, 3, 4) and cut an identical Square 2 along both diagonals (pieces 5, 6, 7, 8). Place pieces 5, 6, 7 and 8 around Square 1.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The question names pieces 1 to 8 (which triangle carries which number is only in the book's picture) and its answer is an arrangement (pieces 5-8 around Square 1 make a tilted square), so the finished arrangement is drawn (B2: answer is an arrangement).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S2.T2.C6.IMG1",
+   "manim_scene": "c8_9_2_1_C6_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S2.T2.C6.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "tiling",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "unit_px": 220,
+     "bounding_box": [
+      [
+       -2,
+       -2
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     "origin": "centre of the card",
+     "square_1": {
+      "corners": [
+       [
+        -1,
+        -1
+       ],
+       [
+        1,
+        -1
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        -1,
+        1
+       ]
+      ],
+      "both_diagonals_drawn": true
+     },
+     "pieces": [
+      {
+       "number": "1",
+       "corners": [
+        [
+         -1,
+         1
+        ],
+        [
+         -1,
+         -1
+        ],
+        [
+         0,
+         0
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "stroke": "INK",
+       "label_at": [
+        -0.667,
+        0.0
+       ]
+      },
+      {
+       "number": "2",
+       "corners": [
+        [
+         -1,
+         1
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         0,
+         0
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "stroke": "INK",
+       "label_at": [
+        0.0,
+        0.667
+       ]
+      },
+      {
+       "number": "3",
+       "corners": [
+        [
+         1,
+         1
+        ],
+        [
+         1,
+         -1
+        ],
+        [
+         0,
+         0
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "stroke": "INK",
+       "label_at": [
+        0.667,
+        0.0
+       ]
+      },
+      {
+       "number": "4",
+       "corners": [
+        [
+         -1,
+         -1
+        ],
+        [
+         1,
+         -1
+        ],
+        [
+         0,
+         0
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "stroke": "INK",
+       "label_at": [
+        0.0,
+        -0.667
+       ]
+      },
+      {
+       "number": "5",
+       "corners": [
+        [
+         -1,
+         -1
+        ],
+        [
+         -1,
+         1
+        ],
+        [
+         -2,
+         0
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "stroke": "INK",
+       "label_at": [
+        -1.333,
+        0.0
+       ]
+      },
+      {
+       "number": "6",
+       "corners": [
+        [
+         -1,
+         1
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         0,
+         2
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "stroke": "INK",
+       "label_at": [
+        0.0,
+        1.333
+       ]
+      },
+      {
+       "number": "7",
+       "corners": [
+        [
+         1,
+         1
+        ],
+        [
+         1,
+         -1
+        ],
+        [
+         2,
+         0
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "stroke": "INK",
+       "label_at": [
+        1.333,
+        0.0
+       ]
+      },
+      {
+       "number": "8",
+       "corners": [
+        [
+         1,
+         -1
+        ],
+        [
+         -1,
+         -1
+        ],
+        [
+         0,
+         -2
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "stroke": "INK",
+       "label_at": [
+        0.0,
+        -1.333
+       ]
+      }
+     ],
+     "outer_outline": {
+      "corners": [
+       [
+        -2,
+        0
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        0,
+        -2
+       ]
+      ],
+      "stroke": "ANSWER",
+      "style": "solid",
+      "stroke_px": 3
+     },
+     "placement_rule": "piece 5 left, 6 top, 7 right, 8 bottom of Square 1 (the book does not fix which side takes which piece; any assignment gives the same shape)",
+     "labels": [
+      {
+       "text": "1",
+       "at": [
+        -0.667,
+        0.0
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "2",
+       "at": [
+        0.0,
+        0.667
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "3",
+       "at": [
+        0.667,
+        0.0
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "4",
+       "at": [
+        0.0,
+        -0.667
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "5",
+       "at": [
+        -1.333,
+        0.0
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "6",
+       "at": [
+        0.0,
+        1.333
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "7",
+       "at": [
+        1.333,
+        0.0
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "8",
+       "at": [
+        0.0,
+        -1.333
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      }
+     ],
+     "to_scale": true,
+     "type": "tiling"
+    },
+    "manim_description": "On a plain BG card of 1920 x 1080 px, with 1 unit = 220 px, x to the right and y upwards, centre the figure on the card (bounding box (-2,-2) to (2,2), centre (0,0)). Square 1 has corners (-1,-1), (1,-1), (1,1), (-1,1) and both diagonals drawn, which cut it into 4 right triangles, each with its right angle at (0,0): piece 1 = (-1,1),(-1,-1),(0,0) on the left; piece 2 = (-1,1),(1,1),(0,0) on top; piece 3 = (1,1),(1,-1),(0,0) on the right; piece 4 = (-1,-1),(1,-1),(0,0) at the bottom. Fill these 4 pieces CELL_FILL with INK 3 px outlines. Around Square 1 place 4 more congruent right triangles, each with its long side lying on one side of Square 1 and its right-angle corner pointing away from Square 1: piece 5 = (-1,-1),(-1,1),(-2,0) on the left side; piece 6 = (-1,1),(1,1),(0,2) on the top side; piece 7 = (1,1),(1,-1),(2,0) on the right side; piece 8 = (1,-1),(-1,-1),(0,-2) on the bottom side. Fill these 4 pieces MARK_FILL with INK 3 px outlines. Write the digits 1 to 8 in INK, 44 px, one in each piece, centred on the piece's centroid: 1 at (-0.667,0), 2 at (0,0.667), 3 at (0.667,0), 4 at (0,-0.667), 5 at (-1.333,0), 6 at (0,1.333), 7 at (1.333,0), 8 at (0,-1.333). Draw the outer boundary of the whole shape, the tilted square with corners (-2,0), (0,2), (2,0), (0,-2), as a solid ANSWER outline, 3 px stroke, on top of the INK lines. Draw nothing else: no captions such as 'Square 1', no area numbers.",
+    "visible_text": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters such as (a) or (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "captions 'Square 1' or 'Square 2'",
+     "area numbers or the ratio 8 to 4",
+     "scissors, hands or paper texture"
+    ],
+    "accuracy_checks": [
+     "every piece is a right triangle with legs sqrt(2) and sqrt(2) and long side 2: area 1 each (computed with the shoelace formula)",
+     "Square 1 = pieces 1-4, area 4; the 8 pieces together fill the tilted square with corners (-2,0),(0,2),(2,0),(0,-2): side 2*sqrt(2), area 8 = 2 x 4",
+     "long sides of pieces 5-8 (length 2) coincide exactly with the 4 sides of Square 1; their right-angle corners are (-2,0),(0,2),(2,0),(0,-2)",
+     "numbers 1 (left), 2 (top), 3 (right), 4 (bottom) in Square 1 as printed in the book"
+    ],
+    "alt_text": "A square cut by both diagonals into pieces 1 to 4, with pieces 5 to 8 placed on its four sides to make a tilted square.",
+    "render_note": "Book picture p.3 (paper cutting, base id P03-paper_cutout-2) gives the piece numbers: Square 1 pieces 1 (left), 2 (top), 3 (right), 4 (bottom); Square 2 pieces 5 (left), 6 (top), 7 (right), 8 (bottom). The worked example's answer is the arrangement, so the diagram shows the finished arrangement. Which side takes which of the pieces 5-8 is NOT stated in the book or the LP: the spec puts 5 left, 6 top, 7 right, 8 bottom (any order gives the same outline)."
+   },
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C7",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.1 - more_lines",
+   "question_text": "Adding more lines gives a sequence of squares. How many small triangles make each square?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "'A sequence of squares' and 'how many small triangles make each square' can only be answered by looking at the book's sequence (the counted square, the tilted square, the big square on one grid). Teaching image C5.IMG2 shows it too but is never linked.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S2.T2.C7.IMG1",
+   "manim_scene": "c8_9_2_1_C7_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S2.T2.C7.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "unit_px": 85,
+     "bounding_box": [
+      [
+       -8,
+       -4.8
+      ],
+      [
+       8,
+       5.6
+      ]
+     ],
+     "top_row_polygons": [
+      {
+       "id": "p1_outer",
+       "vertices": [
+        [
+         -8,
+         1.6
+        ],
+        [
+         -4,
+         1.6
+        ],
+        [
+         -4,
+         5.6
+        ],
+        [
+         -8,
+         5.6
+        ]
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "fill": "none",
+       "stroke_px": 3
+      },
+      {
+       "id": "p1_diamond_guide",
+       "vertices": [
+        [
+         -6,
+         1.6
+        ],
+        [
+         -4,
+         3.6
+        ],
+        [
+         -6,
+         5.6
+        ],
+        [
+         -8,
+         3.6
+        ]
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "fill": "none",
+       "stroke_px": 3
+      },
+      {
+       "id": "p1_counted_quarter_square",
+       "vertices": [
+        [
+         -8,
+         1.6
+        ],
+        [
+         -6,
+         1.6
+        ],
+        [
+         -6,
+         3.6
+        ],
+        [
+         -8,
+         3.6
+        ]
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "fill": "MARK_FILL",
+       "stroke_px": 3
+      },
+      {
+       "id": "p2_outer",
+       "vertices": [
+        [
+         -2,
+         1.6
+        ],
+        [
+         2,
+         1.6
+        ],
+        [
+         2,
+         5.6
+        ],
+        [
+         -2,
+         5.6
+        ]
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "fill": "none",
+       "stroke_px": 3
+      },
+      {
+       "id": "p2_counted_diamond",
+       "vertices": [
+        [
+         0,
+         1.6
+        ],
+        [
+         2,
+         3.6
+        ],
+        [
+         0,
+         5.6
+        ],
+        [
+         -2,
+         3.6
+        ]
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "fill": "MARK_FILL",
+       "stroke_px": 3
+      },
+      {
+       "id": "p3_outer_counted",
+       "vertices": [
+        [
+         4,
+         1.6
+        ],
+        [
+         8,
+         1.6
+        ],
+        [
+         8,
+         5.6
+        ],
+        [
+         4,
+         5.6
+        ]
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "fill": "MARK_FILL",
+       "stroke_px": 3
+      },
+      {
+       "id": "p3_diamond_guide",
+       "vertices": [
+        [
+         6,
+         1.6
+        ],
+        [
+         8,
+         3.6
+        ],
+        [
+         6,
+         5.6
+        ],
+        [
+         4,
+         3.6
+        ]
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "fill": "none",
+       "stroke_px": 3
+      }
+     ],
+     "top_row_segments": [
+      {
+       "from": [
+        -6,
+        1.6
+       ],
+       "to": [
+        -6,
+        5.6
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        -8,
+        3.6
+       ],
+       "to": [
+        -4,
+        3.6
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        0,
+        1.6
+       ],
+       "to": [
+        0,
+        5.6
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        -2,
+        3.6
+       ],
+       "to": [
+        2,
+        3.6
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        6,
+        1.6
+       ],
+       "to": [
+        6,
+        5.6
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        4,
+        3.6
+       ],
+       "to": [
+        8,
+        3.6
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "stroke_px": 3
+      }
+     ],
+     "result_row_polygons": [
+      {
+       "id": "result_small_square",
+       "vertices": [
+        [
+         -7,
+         -3.8
+        ],
+        [
+         -5,
+         -3.8
+        ],
+        [
+         -5,
+         -1.7999999999999998
+        ],
+        [
+         -7,
+         -1.7999999999999998
+        ]
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "fill": "MARK_FILL",
+       "stroke_px": 3
+      },
+      {
+       "id": "result_tilted_square",
+       "vertices": [
+        [
+         0,
+         -4.8
+        ],
+        [
+         2,
+         -2.8
+        ],
+        [
+         0,
+         -0.7999999999999998
+        ],
+        [
+         -2,
+         -2.8
+        ]
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "fill": "MARK_FILL",
+       "stroke_px": 3
+      },
+      {
+       "id": "result_large_square",
+       "vertices": [
+        [
+         4,
+         -4.8
+        ],
+        [
+         8,
+         -4.8
+        ],
+        [
+         8,
+         -0.7999999999999998
+        ],
+        [
+         4,
+         -0.7999999999999998
+        ]
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "fill": "MARK_FILL",
+       "stroke_px": 3
+      }
+     ],
+     "arrows": [
+      {
+       "from": [
+        -6,
+        1.3
+       ],
+       "to": [
+        -6,
+        -0.5
+       ],
+       "stroke": "INK",
+       "stroke_px": 3,
+       "head": "open"
+      },
+      {
+       "from": [
+        0,
+        1.3
+       ],
+       "to": [
+        0,
+        -0.5
+       ],
+       "stroke": "INK",
+       "stroke_px": 3,
+       "head": "open"
+      },
+      {
+       "from": [
+        6,
+        1.3
+       ],
+       "to": [
+        6,
+        -0.5
+       ],
+       "stroke": "INK",
+       "stroke_px": 3,
+       "head": "open"
+      }
+     ],
+     "panel_outer_squares_lower_left": [
+      [
+       -8,
+       1.6
+      ],
+      [
+       -2,
+       1.6
+      ],
+      [
+       4,
+       1.6
+      ]
+     ],
+     "note": "each 4 x 4 outer square holds 8 congruent triangles (cut by the cross and the diamond); the counted part is 2, 4 and 8 of them",
+     "labels": [],
+     "to_scale": true,
+     "type": "construction"
+    },
+    "manim_description": "On a plain BG card of 1920 x 1080 px, with 1 unit = 85 px, x to the right and y upwards, centre the figure on the card (bounding box (-8,-4.8) to (8,5.6)). Draw a top row of three outer squares of side 4 with lower-left corners (-8,1.6), (-2,1.6) and (4,1.6), and a result row below them. In each outer square draw the same inner grid as dashed INK lines, 3 px: the vertical line through the centre, the horizontal line through the centre, and the diamond joining the midpoints of the four sides (this makes 8 small congruent triangles). Panel 1 (left): the outer square outline is dashed INK; the lower-left quarter square, corners (-8,1.6), (-6,1.6), (-6,3.6), (-8,3.6), has a solid INK 3 px outline and MARK_FILL. Panel 2 (middle): the outer square outline is dashed INK; the diamond with corners (0,1.6), (2,3.6), (0,5.6), (-2,3.6) has a solid INK 3 px outline and MARK_FILL. Panel 3 (right): the whole outer square, corners (4,1.6), (8,1.6), (8,5.6), (4,5.6), has a solid INK 3 px outline and MARK_FILL, with the inner grid still dashed INK. Under each panel draw a vertical INK arrow with an open arrowhead, 3 px, from y=1.3 down to y=-0.5, at x=-6, x=0 and x=6. In the result row draw three plain solid INK 3 px shapes with MARK_FILL and no inner lines, all centred on y=-2.8: a small square with corners (-7,-3.8), (-5,-3.8), (-5,-1.8), (-7,-1.8); a tilted square with corners (0,-4.8), (2,-2.8), (0,-0.8), (-2,-2.8); a large square with corners (4,-4.8), (8,-4.8), (8,-0.8), (4,-0.8). Draw all fills first and the dashed grid lines on top of them. Draw nothing else: no numbers, no letters, no triangle counts.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters such as (a) or (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "the triangle counts 2, 4 and 8",
+     "captions under the panels"
+    ],
+    "accuracy_checks": [
+     "each outer square has side 4 and area 16 = 8 triangles of area 2",
+     "panel 1 counted square: side 2, area 4 = 2 triangles; panel 2 diamond: side 2*sqrt(2), area 8 = 4 triangles; panel 3 whole square: area 16 = 8 triangles",
+     "result shapes are the counted shapes alone: side 2, side 2*sqrt(2) (width 4), side 4, areas 4, 8, 16, each double the one before",
+     "the tilted result square is as wide as the large one (4 units), as in the book"
+    ],
+    "alt_text": "Three copies of the same square grid with a small square, a tilted square and the whole square picked out, and below each the plain shape it makes.",
+    "render_note": "Book picture p.3 top (base id P03-construction-1). The book's 'sequence of squares'. The counted shapes are given MARK_FILL (the book has only heavy outlines) so that the part being counted is clear; the triangle counts 2, 4, 8 are the answer and stay in the text. Same picture is teaching image C5.IMG2 (never linked)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C8",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.1 - Q_congruent",
+   "question_text": "All these small triangles are congruent to each other. Can you explain why?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "'All these small triangles' refers to the book's 8-triangle figure with tick marks; without it the learner does not know which triangles are meant.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S2.T2.C8.IMG1",
+   "manim_scene": "c8_9_2_1_C8_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S2.T2.C8.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "unit_px": 200,
+     "bounding_box": [
+      [
+       0,
+       0
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "segments_dashed_outer": [
+      {
+       "from": [
+        0,
+        4
+       ],
+       "to": [
+        4,
+        4
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        4,
+        0
+       ],
+       "to": [
+        4,
+        4
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        0,
+        2
+       ],
+       "to": [
+        0,
+        4
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        2,
+        0
+       ],
+       "to": [
+        4,
+        0
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "stroke_px": 3
+      }
+     ],
+     "segments_solid_outer": [
+      {
+       "from": [
+        0,
+        0
+       ],
+       "to": [
+        0,
+        2
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        0,
+        0
+       ],
+       "to": [
+        2,
+        0
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "stroke_px": 3
+      }
+     ],
+     "segments_cross": [
+      {
+       "from": [
+        0,
+        2
+       ],
+       "to": [
+        4,
+        2
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        2,
+        0
+       ],
+       "to": [
+        2,
+        4
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "stroke_px": 3
+      }
+     ],
+     "segments_diamond": [
+      {
+       "from": [
+        2,
+        0
+       ],
+       "to": [
+        4,
+        2
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        4,
+        2
+       ],
+       "to": [
+        2,
+        4
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        2,
+        4
+       ],
+       "to": [
+        0,
+        2
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        0,
+        2
+       ],
+       "to": [
+        2,
+        0
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "stroke_px": 3
+      }
+     ],
+     "single_ticks": [
+      {
+       "at": [
+        1,
+        0
+       ],
+       "side_direction": [
+        1,
+        0
+       ],
+       "strokes": 1,
+       "length": 0.25,
+       "spacing": 0.12,
+       "stroke": "INK",
+       "stroke_px": 3
+      },
+      {
+       "at": [
+        3,
+        0
+       ],
+       "side_direction": [
+        1,
+        0
+       ],
+       "strokes": 1,
+       "length": 0.25,
+       "spacing": 0.12,
+       "stroke": "INK",
+       "stroke_px": 3
+      },
+      {
+       "at": [
+        1,
+        4
+       ],
+       "side_direction": [
+        1,
+        0
+       ],
+       "strokes": 1,
+       "length": 0.25,
+       "spacing": 0.12,
+       "stroke": "INK",
+       "stroke_px": 3
+      },
+      {
+       "at": [
+        3,
+        4
+       ],
+       "side_direction": [
+        1,
+        0
+       ],
+       "strokes": 1,
+       "length": 0.25,
+       "spacing": 0.12,
+       "stroke": "INK",
+       "stroke_px": 3
+      },
+      {
+       "at": [
+        0,
+        1
+       ],
+       "side_direction": [
+        0,
+        1
+       ],
+       "strokes": 1,
+       "length": 0.25,
+       "spacing": 0.12,
+       "stroke": "INK",
+       "stroke_px": 3
+      },
+      {
+       "at": [
+        0,
+        3
+       ],
+       "side_direction": [
+        0,
+        1
+       ],
+       "strokes": 1,
+       "length": 0.25,
+       "spacing": 0.12,
+       "stroke": "INK",
+       "stroke_px": 3
+      },
+      {
+       "at": [
+        4,
+        1
+       ],
+       "side_direction": [
+        0,
+        1
+       ],
+       "strokes": 1,
+       "length": 0.25,
+       "spacing": 0.12,
+       "stroke": "INK",
+       "stroke_px": 3
+      },
+      {
+       "at": [
+        4,
+        3
+       ],
+       "side_direction": [
+        0,
+        1
+       ],
+       "strokes": 1,
+       "length": 0.25,
+       "spacing": 0.12,
+       "stroke": "INK",
+       "stroke_px": 3
+      }
+     ],
+     "double_ticks": [
+      {
+       "at": [
+        1,
+        1
+       ],
+       "side_direction": [
+        0.707107,
+        -0.707107
+       ],
+       "strokes": 2,
+       "length": 0.25,
+       "spacing": 0.12,
+       "stroke": "INK",
+       "stroke_px": 3
+      },
+      {
+       "at": [
+        3,
+        1
+       ],
+       "side_direction": [
+        0.707107,
+        0.707107
+       ],
+       "strokes": 2,
+       "length": 0.25,
+       "spacing": 0.12,
+       "stroke": "INK",
+       "stroke_px": 3
+      },
+      {
+       "at": [
+        3,
+        3
+       ],
+       "side_direction": [
+        0.707107,
+        -0.707107
+       ],
+       "strokes": 2,
+       "length": 0.25,
+       "spacing": 0.12,
+       "stroke": "INK",
+       "stroke_px": 3
+      },
+      {
+       "at": [
+        1,
+        3
+       ],
+       "side_direction": [
+        0.707107,
+        0.707107
+       ],
+       "strokes": 2,
+       "length": 0.25,
+       "spacing": 0.12,
+       "stroke": "INK",
+       "stroke_px": 3
+      }
+     ],
+     "small_triangles": [
+      [
+       [
+        0,
+        0
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      [
+       [
+        2,
+        0
+       ],
+       [
+        4,
+        0
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      [
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        4
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      [
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        4
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      [
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      [
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      [
+       [
+        2,
+        2
+       ],
+       [
+        4,
+        2
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      [
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        4
+       ],
+       [
+        0,
+        2
+       ]
+      ]
+     ],
+     "labels": [],
+     "to_scale": true,
+     "type": "geometry_figure"
+    },
+    "manim_description": "On a plain BG card of 1920 x 1080 px, with 1 unit = 200 px, x to the right and y upwards, centre the figure on the card (bounding box (0,0) to (4,4)); every line is INK, 3 px stroke, no fill. Outer square of side 4: draw its top side (0,4)-(4,4), right side (4,0)-(4,4), upper left side (0,2)-(0,4) and right half of the bottom side (2,0)-(4,0) as dashed lines; draw the lower left side (0,0)-(0,2) and the left half of the bottom side (0,0)-(2,0) as solid lines (they are the left and bottom edges of the original square, the lower-left quarter). Draw a solid horizontal line from (0,2) to (4,2) and a solid vertical line from (2,0) to (2,4). Draw the dashed diamond joining (2,0), (4,2), (2,4), (0,2); its lower-left side from (0,2) to (2,0) is the diagonal of the original square. This gives 8 small congruent right triangles, each with legs 2 and 2. Single tick marks: draw one short tick, 0.25 unit long, across each of the 8 half-sides of the outer square, centred at (1,0), (3,0), (1,4), (3,4), (0,1), (0,3), (4,1), (4,3), perpendicular to the side. Double tick marks: draw two short parallel ticks, 0.25 unit long and 0.12 unit apart, across each of the 4 diamond sides, centred at (1,1), (3,1), (3,3), (1,3), perpendicular to the side. Draw nothing else: no letters, no numbers, no shading.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters such as (a) or (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "right-angle marks",
+     "triangle counts",
+     "any text at all"
+    ],
+    "accuracy_checks": [
+     "8 small triangles, each right-angled with legs 2 and 2 (hypotenuse 2*sqrt(2)): area 2 each, total 16 = the outer square",
+     "the 8 single ticks sit on sides of length 2 (the legs, equal to the side of the original square, length 2); the 4 double ticks sit on the 4 equal diamond sides of length 2*sqrt(2)",
+     "the original square (lower-left quarter, corners (0,0),(2,0),(2,2),(0,2)) has the diamond side (0,2)-(2,0) as its diagonal"
+    ],
+    "alt_text": "A square cut by a horizontal and a vertical line and by a tilted square joining the side midpoints into 8 small right triangles, with tick marks showing equal sides.",
+    "render_note": "Book picture p.2 bottom (base id P02-construction-3). Ticks and dashed/solid pattern as printed. The book's picture has no right-angle marks, so none are drawn; the right angle at the centre and at the outer corners is told in the steps."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C9",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.1 - Q_extensions",
+   "question_text": "Why should the extension of the vertical and horizontal sides of the original square pass through the vertices of the dotted square?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The question speaks of the extension of the sides of the original square through the vertices of 'the dotted square': the figure must be seen. Same book picture as C5, so the same diagram.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S2.T2.C9.IMG1",
+   "manim_scene": "c8_9_2_1_C9_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S2.T2.C9.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "unit_px": 200,
+     "bounding_box": [
+      [
+       0,
+       0
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "polygons": [
+      {
+       "id": "original_square",
+       "vertices": [
+        [
+         0,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         0,
+         2
+        ]
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "fill": "none",
+       "stroke_px": 3
+      },
+      {
+       "id": "dotted_square",
+       "vertices": [
+        [
+         0,
+         2
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         4,
+         2
+        ],
+        [
+         2,
+         4
+        ]
+       ],
+       "stroke": "INK",
+       "style": "dashed",
+       "fill": "none",
+       "stroke_px": 3
+      }
+     ],
+     "segments": [
+      {
+       "from": [
+        2,
+        2
+       ],
+       "to": [
+        4,
+        2
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        2,
+        2
+       ],
+       "to": [
+        2,
+        4
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      }
+     ],
+     "note": "the dotted square's side (0,2)-(2,0) is the diagonal of the original square; the horizontal line y=2 (x from 0 to 4) and the vertical line x=2 (y from 0 to 4) cut it into 4 congruent right triangles that meet at (2,2)",
+     "labels": [],
+     "to_scale": true,
+     "type": "construction"
+    },
+    "manim_description": "On a plain BG card of 1920 x 1080 px, with 1 unit = 200 px, x to the right and y upwards, centre the figure on the card (its bounding box runs from (0,0) to (4,4)). Draw the original square with corners (0,0), (2,0), (2,2), (0,2) as a solid INK outline, 3 px stroke, no fill. Draw the dotted square with corners (0,2), (2,0), (4,2), (2,4) as a dashed INK outline, 3 px stroke, no fill; its side from (0,2) to (2,0) is the diagonal of the original square. Draw two dashed ANSWER lines, 3 px stroke: a horizontal line from (2,2) to (4,2) and a vertical line from (2,2) to (2,4). They carry the top side and the right side of the original square across the dotted square, up to its corners (4,2) and (2,4), and together with those two sides they cut the dotted square into 4 congruent right triangles that meet at (2,2). Draw nothing else: no letters, no numbers, no shading.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters such as (a) or (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "area numbers",
+     "triangle counts",
+     "any text at all"
+    ],
+    "accuracy_checks": [
+     "dotted square corners (0,2),(2,0),(4,2),(2,4): side 2*sqrt(2), four right angles, area 8",
+     "the lines y=2 and x=2 meet at (2,2), the centre of the dotted square, and cut it into 4 right triangles with legs 2 and 2 (area 2 each, 4 x 2 = 8)",
+     "the original square (area 4) is 2 of these triangles (split by the diagonal), the dotted square is 4: the area is double"
+    ],
+    "alt_text": "An upright square with a dashed tilted square on its diagonal, cut into four triangles by a horizontal and a vertical line through the original square's top-right corner.",
+    "render_note": "Same as M1.S2.T2.C5.IMG3 (same book picture, base id P02-construction-2, identical spec). The angle story of the LP steps (45 degrees at the ends of the diagonal) is told in text; no angle marks are added because the book's picture has none."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C10",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - question",
+   "question_text": "Why is the smaller inside square half the area of the larger square?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "'The smaller inside square' of 'the larger square' is a figure (the tilted square on the midpoints); the steps add the east-west and north-south lines and count 4 of 8 triangles. Teaching images C10.IMG1/IMG2 are never linked, so the example gets its own diagram.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S2.T2.C10.IMG3",
+   "manim_scene": "c8_9_2_2_C10_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S2.T2.C10.IMG3}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "unit_px": 200,
+     "bounding_box": [
+      [
+       0,
+       0
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "polygons": [
+      {
+       "id": "larger_square",
+       "vertices": [
+        [
+         0,
+         0
+        ],
+        [
+         4,
+         0
+        ],
+        [
+         4,
+         4
+        ],
+        [
+         0,
+         4
+        ]
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "fill": "none",
+       "stroke_px": 3
+      },
+      {
+       "id": "tilted_inside_square",
+       "vertices": [
+        [
+         2,
+         0
+        ],
+        [
+         4,
+         2
+        ],
+        [
+         2,
+         4
+        ],
+        [
+         0,
+         2
+        ]
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "fill": "MARK_FILL",
+       "stroke_px": 3
+      }
+     ],
+     "segments": [
+      {
+       "from": [
+        0,
+        2
+       ],
+       "to": [
+        4,
+        2
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        2,
+        0
+       ],
+       "to": [
+        2,
+        4
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      }
+     ],
+     "note": "the tilted square joins the midpoints of the four sides; the two dashed lines through the centre (2,2) cut the larger square into 4 small squares and 8 congruent triangles",
+     "labels": [],
+     "to_scale": true,
+     "type": "construction"
+    },
+    "manim_description": "On a plain BG card of 1920 x 1080 px, with 1 unit = 200 px, x to the right and y upwards, centre the figure on the card (bounding box (0,0) to (4,4)). Draw the larger square with corners (0,0), (4,0), (4,4), (0,4) as a solid INK outline, 3 px stroke, no fill. Draw the tilted square inside it with corners (2,0), (4,2), (2,4), (0,2), joining the midpoints of the four sides, as a solid INK outline, 3 px stroke, filled MARK_FILL. Draw two dashed ANSWER lines, 3 px stroke, on top of the fill: a horizontal line from (0,2) to (4,2) and a vertical line from (2,0) to (2,4); they meet at (2,2) and cut the larger square into 4 small squares and into 8 congruent right triangles, 4 of them inside the tilted square (shaded) and 4 in the corners (not shaded). Draw nothing else: no letters, no numbers.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters such as (a) or (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "area numbers",
+     "the fraction one half",
+     "any text at all"
+    ],
+    "accuracy_checks": [
+     "tilted square corners (2,0),(4,2),(2,4),(0,2): side 2*sqrt(2), four right angles, area 8",
+     "larger square area 16, so the tilted square is 8/16 = half of it",
+     "the 2 dashed lines give 8 triangles of area 2 each (legs 2 and 2); 4 of them (area 8) are shaded"
+    ],
+    "alt_text": "A square with a tilted square joining the midpoints of its sides, shaded, and a dashed horizontal and vertical line through the centre cutting everything into 8 triangles.",
+    "render_note": "Book picture p.4 (base id P04-construction-3). The inside square is shaded MARK_FILL so 'the smaller inside square' is identifiable; the book's picture has no shading. Same figure as teaching image C10.IMG1 (never linked)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C11",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - fold",
+   "question_text": "Fold the corners inward so the creases pass through the midpoints of the sides. Why is PQRS a square, and why is its area half that of the original paper?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "PQRS and the lines QS and PR are lettered in the book's figure only (the LP text uses the letters without saying where they sit): the lettered figure must be drawn (B2: lettered figure).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S2.T2.C11.IMG1",
+   "manim_scene": "c8_9_2_2_C11_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S2.T2.C11.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "unit_px": 200,
+     "bounding_box": [
+      [
+       0,
+       0
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "polygons": [
+      {
+       "id": "paper",
+       "vertices": [
+        [
+         0,
+         0
+        ],
+        [
+         4,
+         0
+        ],
+        [
+         4,
+         4
+        ],
+        [
+         0,
+         4
+        ]
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "fill": "none",
+       "stroke_px": 3
+      },
+      {
+       "id": "PQRS",
+       "vertices": [
+        [
+         2,
+         0
+        ],
+        [
+         4,
+         2
+        ],
+        [
+         2,
+         4
+        ],
+        [
+         0,
+         2
+        ]
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "fill": "MARK_FILL",
+       "stroke_px": 3
+      }
+     ],
+     "segments": [
+      {
+       "from": [
+        0,
+        2
+       ],
+       "to": [
+        4,
+        2
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        2,
+        0
+       ],
+       "to": [
+        2,
+        4
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      }
+     ],
+     "right_angle_marks": [
+      {
+       "corner": [
+        2,
+        2
+       ],
+       "toward": [
+        [
+         1,
+         0
+        ],
+        [
+         0,
+         1
+        ]
+       ],
+       "size": 0.18,
+       "stroke": "ANSWER",
+       "stroke_px": 3
+      }
+     ],
+     "points": {
+      "P": [
+       2,
+       0
+      ],
+      "Q": [
+       4,
+       2
+      ],
+      "R": [
+       2,
+       4
+      ],
+      "S": [
+       0,
+       2
+      ]
+     },
+     "labels": [
+      {
+       "text": "P",
+       "at": [
+        2,
+        -0.3
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "Q",
+       "at": [
+        4.3,
+        2
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "R",
+       "at": [
+        2,
+        4.3
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "S",
+       "at": [
+        -0.3,
+        2
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      }
+     ],
+     "to_scale": true,
+     "type": "construction"
+    },
+    "manim_description": "On a plain BG card of 1920 x 1080 px, with 1 unit = 200 px, x to the right and y upwards, centre the figure on the card (bounding box (0,0) to (4,4), plus the four letters just outside). Draw the paper as a solid INK square outline with corners (0,0), (4,0), (4,4), (0,4), 3 px stroke, no fill. Draw the folded square PQRS as a solid INK outline, 3 px stroke, filled MARK_FILL, with corners P (2,0), Q (4,2), R (2,4), S (0,2): the midpoints of the bottom, right, top and left sides of the paper. Draw two dashed ANSWER lines, 3 px stroke: QS, the horizontal line from (4,2) to (0,2), and PR, the vertical line from (2,0) to (2,4); they cross at the centre (2,2). At the centre draw one right-angle mark in ANSWER, 3 px: a square of side 0.18 unit with one corner at (2,2) and its sides along the two crossing lines, in the upper-right quadrant (between the rays towards Q and towards R). Write the letters P, Q, R, S in INK, 44 px, centred at (2,-0.3), (4.3,2), (2,4.3) and (-0.3,2). Draw nothing else: no fold arrows, no area numbers, no centre letter.",
+    "visible_text": [
+     "P",
+     "Q",
+     "R",
+     "S"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters such as (a) or (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "fold arrows",
+     "paper texture or shadows",
+     "area numbers"
+    ],
+    "accuracy_checks": [
+     "P,Q,R,S are the midpoints of the sides of the paper: (2,0),(4,2),(2,4),(0,2) on a paper of side 4",
+     "PQ = QR = RS = SP = 2*sqrt(2) and all four corners of PQRS are right angles; area 8 = half of 16",
+     "QS and PR cross at the centre (2,2) at right angles and each half is 2 long (half the side of the paper), as in step 3"
+    ],
+    "alt_text": "A square sheet with the square PQRS joining the midpoints of its sides, shaded, and the lines QS and PR crossing at the centre at right angles.",
+    "render_note": "Book picture p.4 bottom right (base id P04-paper_cutout-4), drawn as clean geometry: letters P (bottom), Q (right), R (top), S (left) as in the book. The book's fold arrows and paper texture are left out; the shading marks PQRS = 4 of the 8 triangles. The 'centre' has no letter in the LP text, so it gets none. Same figure as teaching image C10.IMG2 (never linked)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C12",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.2 - paper",
+   "question_text": "Will the square having half the sidelength have half the area? Why not? How many such squares will fill the original square?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question and its answer are words and one fraction (half the side gives one quarter of the area, 4 such squares fill the original). The book gives no figure with this question (its folded-paper picture belongs to the PQRS fold, C11). A square folded both ways into 4 equal small squares would help, but it is not needed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S3.T3.C14",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.3 - general",
+   "question_text": "Show that c² = 2a² for an isosceles right triangle with equal sides a and hypotenuse c.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The steps use the letters P, Q, R, S, U, V, which exist only in the book's General Solution figure (B2: lettered figure). Teaching image C14.IMG1 shows the same geometry but is never linked, so the example gets its own diagram.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S3.T3.C14.IMG2",
+   "manim_scene": "c8_9_2_3_C14_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S3.T3.C14.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "unit_px": 200,
+     "bounding_box": [
+      [
+       0,
+       0
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "segments": [
+      {
+       "from": [
+        0,
+        2
+       ],
+       "to": [
+        0,
+        0
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        0,
+        0
+       ],
+       "to": [
+        2,
+        0
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        0,
+        2
+       ],
+       "to": [
+        2,
+        0
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        0,
+        2
+       ],
+       "to": [
+        2,
+        2
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        2,
+        2
+       ],
+       "to": [
+        2,
+        0
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        0,
+        2
+       ],
+       "to": [
+        2,
+        4
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        2,
+        4
+       ],
+       "to": [
+        4,
+        2
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        4,
+        2
+       ],
+       "to": [
+        2,
+        0
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        2,
+        2
+       ],
+       "to": [
+        4,
+        2
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        2,
+        4
+       ],
+       "to": [
+        2,
+        2
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      }
+     ],
+     "right_angle_marks": [
+      {
+       "corner": [
+        0,
+        0
+       ],
+       "toward": [
+        [
+         1,
+         0
+        ],
+        [
+         0,
+         1
+        ]
+       ],
+       "size": 0.18,
+       "stroke": "INK",
+       "stroke_px": 3
+      },
+      {
+       "corner": [
+        2,
+        2
+       ],
+       "toward": [
+        [
+         -1,
+         0
+        ],
+        [
+         0,
+         -1
+        ]
+       ],
+       "size": 0.18,
+       "stroke": "ANSWER",
+       "stroke_px": 3
+      }
+     ],
+     "points": {
+      "P": [
+       0,
+       0
+      ],
+      "Q": [
+       2,
+       0
+      ],
+      "R": [
+       2,
+       2
+      ],
+      "S": [
+       0,
+       2
+      ],
+      "U": [
+       2,
+       4
+      ],
+      "V": [
+       4,
+       2
+      ]
+     },
+     "side_lengths": {
+      "SP": "a",
+      "PQ": "a",
+      "SQ": "c"
+     },
+     "labels": [
+      {
+       "text": "a",
+       "at": [
+        -0.3,
+        1.0
+       ],
+       "colour": "INK",
+       "italic": true,
+       "font_px": 44
+      },
+      {
+       "text": "a",
+       "at": [
+        1.0,
+        -0.3
+       ],
+       "colour": "INK",
+       "italic": true,
+       "font_px": 44
+      },
+      {
+       "text": "c",
+       "at": [
+        1.25,
+        1.3
+       ],
+       "colour": "INK",
+       "italic": true,
+       "font_px": 44
+      },
+      {
+       "text": "P",
+       "at": [
+        -0.25,
+        -0.25
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "Q",
+       "at": [
+        2.25,
+        -0.25
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "R",
+       "at": [
+        1.78,
+        2.25
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "S",
+       "at": [
+        -0.3,
+        2.2
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "U",
+       "at": [
+        2.0,
+        4.3
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "V",
+       "at": [
+        4.3,
+        2.0
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      }
+     ],
+     "to_scale": true,
+     "type": "geometry_figure"
+    },
+    "manim_description": "On a plain BG card of 1920 x 1080 px, with 1 unit = 200 px, x to the right and y upwards, centre the figure on the card (bounding box (0,0) to (4,4), plus the letters just outside). Draw the isosceles right triangle PQS as solid INK lines, 3 px: the side S(0,2)-P(0,0), the side P(0,0)-Q(2,0) and the hypotenuse S(0,2)-Q(2,0). Complete the square PQRS with two dashed ANSWER lines, 3 px: S(0,2)-R(2,2) and R(2,2)-Q(2,0). Build the square SQVU on the hypotenuse with four dashed ANSWER lines, 3 px: S(0,2)-U(2,4), U(2,4)-V(4,2), V(4,2)-Q(2,0), and, through R, the horizontal line R(2,2)-V(4,2) and the vertical line U(2,4)-R(2,2) (so the full lines S-V and U-Q cross at R). Draw a right-angle mark of side 0.18 unit at P in INK and at R in ANSWER (inside the square PQRS, with its sides along RS and RQ). Write the letters in INK, 44 px: P at (-0.25,-0.25), Q at (2.25,-0.25), R at (1.78,2.25), S at (-0.3,2.2), U at (2,4.3), V at (4.3,2); write a in italic INK at (-0.3,1) beside SP and a at (1,-0.3) below PQ; write c in italic INK at (1.25,1.3) above SQ. Draw nothing else: no area formulas, no 'c squared' or '2a squared'.",
+    "visible_text": [
+     "P",
+     "Q",
+     "R",
+     "S",
+     "U",
+     "V",
+     "a",
+     "a",
+     "c"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters such as (a) or (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "area formulas such as a squared, c squared or 2 a squared",
+     "shading"
+    ],
+    "accuracy_checks": [
+     "PQRS is a square of side a = 2 (P(0,0), Q(2,0), R(2,2), S(0,2)); PS = PQ = 2 and the angle at P is 90 degrees",
+     "SQ = c = 2*sqrt(2) is the diagonal of PQRS and the side of SQVU: S(0,2), Q(2,0), V(4,2), U(2,4) has four equal sides and four right angles",
+     "area SQVU = 8 = 2 x area PQRS (4), so c^2 = 2a^2 holds for the drawn numbers (8 = 2 x 4)",
+     "R(2,2) is the centre of SQVU, RU = RV = 2 and U, R, Q are on one vertical line, S, R, V on one horizontal line"
+    ],
+    "alt_text": "An isosceles right triangle PQS inside the square PQRS, with the larger tilted square SQVU standing on the hypotenuse SQ and a dashed cross through R.",
+    "render_note": "Book picture p.8 (General Solution, base id P08-construction-1): letters, a and c placed as printed. The numbers a = 2 and c = 2*sqrt(2) are only the drawing scale: the figure is generic (the example is about any a), so no number is written on it. Same geometry as teaching image C14.IMG1 (never linked), which is also lettered: this item still gets its own diagram (v3 rule)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S3.T3.C16",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.3 - Ex1",
+   "question_text": "Find the hypotenuse of an isosceles right triangle whose equal sides have length 12.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Example 1 of the book has no figure of its own; every number is in the text (a = 12, c^2 = 2 x 144 = 288, 16^2 = 256 < 288 < 289 = 17^2).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S3.T3.C17",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.3 - check_note",
+   "question_text": "Use c² = 2a² to check two earlier answers: the hypotenuse for equal sides 3, and the equal sides for hypotenuse 10.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two numeric checks (2 x 3^2 = 18 with 4^2 < 18 < 5^2, and 10^2 / 2 = 50); the book gives no figure for this check.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S3.T3.C18",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.3 - Ex2",
+   "question_text": "If the hypotenuse of an isosceles right triangle is √72, find its other two sides.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Example 2 of the book has no figure; the working is the chain c^2 = 72, 2a^2 = 72, a^2 = 36, a = 6.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S3.T3.C19",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Chapter Exercises, Q1",
+   "ncert_ref": "Section 2.7 - Figure it Out Q1",
+   "question_text": "Find the diagonal of a square with sidelength 5 cm.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Find the diagonal of a square of side 5 cm: the book gives no figure, the question gives the number and the steps are arithmetic (2 x 25 = 50, 7.07^2 and 7.08^2). Nothing is drawn that the text does not already say.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S4.T4.C22",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.3 - Q_closer",
+   "question_text": "Can we find closer bounds for √2?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "LATEX_TABLE"
+   ],
+   "reason": "The book's three dashed boxes are plain lists of squares of decimals; the red pairs that trap root 2 (1.4^2 < 2 < 1.5^2 and so on) are already stated in words in the steps. The same boxes are covered by teaching image C21.IMG1 (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Optional LaTeX array of the squares 1.4^2 = 1.96, 1.5^2 = 2.25, 1.41^2 = 1.9881, 1.42^2 = 2.0164, 1.414^2 = 1.999396, 1.415^2 = 2.002225."
+  },
+  {
+   "lp_concept_id": "M2.S4.T4.C25",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 2.3 - Q_fraction",
+   "question_text": "Can √2 be expressed as a fraction m/n, where m and n are counting numbers?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The proof by contradiction is algebra (2 = m^2 / n^2, 2n^2 = m^2) and prime-factor counting, all written in the steps; the book has no figure.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C27",
+   "role": "question",
+   "lp_book_number": "Hidden Length: the hypotenuse for sides 1 and 1",
+   "ncert_ref": "Section 2.3 - Q_hyp_1_1",
+   "question_text": "Find the hypotenuse of the isosceles right triangle whose equal sides are 1 unit.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book question gives this triangle with the lengths marked on its sides (1, 1 and ? on the hypotenuse); the figure is what the solution is built on (the same triangle becomes half of the unit square PEAR). BORDERLINE: the LP text already states the lengths.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S5.T5.C27.IMG1",
+   "manim_scene": "c8_9_2_3_Q1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C27.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "unit_px": 330,
+     "bounding_box": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "segments": [
+      {
+       "from": [
+        0,
+        0
+       ],
+       "to": [
+        0,
+        1
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        0,
+        0
+       ],
+       "to": [
+        1,
+        0
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        0,
+        1
+       ],
+       "to": [
+        1,
+        0
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "stroke_px": 3
+      }
+     ],
+     "right_angle_marks": [
+      {
+       "corner": [
+        0,
+        0
+       ],
+       "toward": [
+        [
+         1,
+         0
+        ],
+        [
+         0,
+         1
+        ]
+       ],
+       "size": 0.1,
+       "stroke": "INK",
+       "stroke_px": 3
+      }
+     ],
+     "labels": [
+      {
+       "text": "1",
+       "at": [
+        -0.16,
+        0.5
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "1",
+       "at": [
+        0.5,
+        -0.17
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "?",
+       "at": [
+        0.64,
+        0.64
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      }
+     ],
+     "to_scale": true,
+     "type": "geometry_figure"
+    },
+    "manim_description": "On a plain BG card of 1920 x 1080 px, with 1 unit = 330 px, x to the right and y upwards, centre the figure on the card (bounding box (0,0) to (1,1)). Draw a right triangle with corners (0,0), (1,0) and (0,1) as a solid INK outline, 3 px stroke, no fill: the vertical side from (0,0) to (0,1), the horizontal side from (0,0) to (1,0) and the hypotenuse from (0,1) to (1,0). Draw a right-angle mark in INK, 3 px, a square of side 0.1 unit at the corner (0,0) with its sides along the two short sides. Write the digit 1 in INK, 44 px, at (-0.16,0.5) to the left of the vertical side and another 1 at (0.5,-0.17) below the horizontal side; write the question mark ? in INK, 44 px, at (0.64,0.64), just above and to the right of the middle of the hypotenuse. Draw nothing else: no letters at the corners, no square, no square root.",
+    "visible_text": [
+     "1",
+     "1",
+     "?"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters such as (a) or (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "corner letters",
+     "the value of the hypotenuse",
+     "the unit square or the larger square"
+    ],
+    "accuracy_checks": [
+     "the two short sides are both 1 and meet at 90 degrees (the right-angle mark is at (0,0))",
+     "the hypotenuse carries ? and no number",
+     "the triangle sits at the same place and the same scale (330 px per unit) as the triangle P-E-R in the solution diagram"
+    ],
+    "alt_text": "A right triangle whose two short sides are each marked 1 and whose longest side is marked with a question mark.",
+    "render_note": "Book picture p.5 top right (base id P05-shape-1): 'Find the hypotenuse of this isosceles right triangle'. The LP text already states 'equal sides are 1 unit', so this is a BORDERLINE call (see notes): kept required because the book question gives this figure with the lengths marked on its sides. No corner letters are printed in the book; the solution diagram introduces P, E, A, R, T, S."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C28",
+   "role": "solution",
+   "lp_book_number": "Hidden Length: the hypotenuse for sides 1 and 1",
+   "ncert_ref": "Section 2.3 - Q_hyp_1_1",
+   "question_text": "Find the hypotenuse of the isosceles right triangle whose equal sides are 1 unit.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The steps use the letters PEAR, ER and REST, which exist only in the figure, and the answer is the construction (unit square, its diagonal, the square on the diagonal with area 2); derived from the question triangle.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S5.T5.C28.IMG1",
+   "manim_scene": "c8_9_2_3_Q1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C28.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S5.T5.C27.IMG1",
+    "content": {
+     "unit_px": 330,
+     "bounding_box": [
+      [
+       -1.5,
+       -0.3
+      ],
+      [
+       3.5,
+       2.3
+      ]
+     ],
+     "given_in_question_diagram": {
+      "triangle_PER": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        0,
+        1
+       ]
+      ]
+     },
+     "segments": [
+      {
+       "from": [
+        0,
+        0
+       ],
+       "to": [
+        0,
+        1
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        0,
+        0
+       ],
+       "to": [
+        1,
+        0
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        0,
+        1
+       ],
+       "to": [
+        1,
+        0
+       ],
+       "stroke": "INK",
+       "style": "solid",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        0,
+        1
+       ],
+       "to": [
+        1,
+        1
+       ],
+       "stroke": "ANSWER",
+       "style": "solid",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        1,
+        1
+       ],
+       "to": [
+        1,
+        0
+       ],
+       "stroke": "ANSWER",
+       "style": "solid",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        0,
+        1
+       ],
+       "to": [
+        1,
+        2
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        1,
+        2
+       ],
+       "to": [
+        2,
+        1
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        2,
+        1
+       ],
+       "to": [
+        1,
+        0
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        1,
+        2
+       ],
+       "to": [
+        1,
+        1
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      },
+      {
+       "from": [
+        1,
+        1
+       ],
+       "to": [
+        2,
+        1
+       ],
+       "stroke": "ANSWER",
+       "style": "dashed",
+       "stroke_px": 3
+      }
+     ],
+     "right_angle_marks": [
+      {
+       "corner": [
+        0,
+        0
+       ],
+       "toward": [
+        [
+         1,
+         0
+        ],
+        [
+         0,
+         1
+        ]
+       ],
+       "size": 0.1,
+       "stroke": "INK",
+       "stroke_px": 3
+      },
+      {
+       "corner": [
+        1,
+        1
+       ],
+       "toward": [
+        [
+         -1,
+         0
+        ],
+        [
+         0,
+         -1
+        ]
+       ],
+       "size": 0.1,
+       "stroke": "ANSWER",
+       "stroke_px": 3
+      }
+     ],
+     "points": {
+      "P": [
+       0,
+       0
+      ],
+      "E": [
+       1,
+       0
+      ],
+      "A": [
+       1,
+       1
+      ],
+      "R": [
+       0,
+       1
+      ],
+      "T": [
+       1,
+       2
+      ],
+      "S": [
+       2,
+       1
+      ]
+     },
+     "labels": [
+      {
+       "text": "1",
+       "at": [
+        -0.16,
+        0.5
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "1",
+       "at": [
+        0.5,
+        -0.17
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "1",
+       "at": [
+        0.5,
+        1.17
+       ],
+       "colour": "ANSWER",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "1",
+       "at": [
+        1.17,
+        0.5
+       ],
+       "colour": "ANSWER",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "√2",
+       "at": [
+        0.64,
+        0.64
+       ],
+       "colour": "ANSWER",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "P",
+       "at": [
+        -0.15,
+        -0.15
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "E",
+       "at": [
+        1.08,
+        -0.18
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "A",
+       "at": [
+        1.13,
+        0.88
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "R",
+       "at": [
+        -0.15,
+        1.1
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "T",
+       "at": [
+        1.0,
+        2.2
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "S",
+       "at": [
+        2.2,
+        1.0
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "1 square unit",
+       "at": [
+        -1.0,
+        0.25
+       ],
+       "colour": "ANSWER",
+       "italic": false,
+       "font_px": 40
+      },
+      {
+       "text": "2 square units",
+       "at": [
+        3.05,
+        1.5
+       ],
+       "colour": "ANSWER",
+       "italic": false,
+       "font_px": 40
+      }
+     ],
+     "pointers": [
+      {
+       "from": [
+        -0.52,
+        0.25
+       ],
+       "to": [
+        0.2,
+        0.22
+       ],
+       "stroke": "FOCUS",
+       "stroke_px": 3,
+       "end": "dot"
+      },
+      {
+       "from": [
+        2.58,
+        1.5
+       ],
+       "to": [
+        1.38,
+        1.38
+       ],
+       "stroke": "FOCUS",
+       "stroke_px": 3,
+       "end": "dot"
+      }
+     ],
+     "to_scale": true,
+     "type": "geometry_figure"
+    },
+    "manim_description": "On a plain BG card of 1920 x 1080 px, with 1 unit = 330 px, x to the right and y upwards (bounding box (-1.5,-0.3) to (3.5,2.3), centred on the card). Draw the question's triangle P(0,0), E(1,0), R(0,1) in INK, 3 px, at the same place and scale as in the question diagram: sides P-R, P-E and the hypotenuse R-E, with a right-angle mark of side 0.1 unit at P. Complete the unit square PEAR with two solid ANSWER lines, 3 px: R(0,1)-A(1,1) and A(1,1)-E(1,0), and an ANSWER right-angle mark of side 0.1 unit at A with its sides along AR and AE. Build the square REST on the diagonal RE with three dashed ANSWER lines, 3 px: R(0,1)-T(1,2), T(1,2)-S(2,1), S(2,1)-E(1,0); the side E-R is the INK hypotenuse already drawn. Add two dashed ANSWER lines through A, 3 px: T(1,2)-A(1,1) and A(1,1)-S(2,1). Write the sides 1 in INK, 44 px, at (-0.16,0.5) and (0.5,-0.17) and the sides 1 in ANSWER at (0.5,1.17) and (1.17,0.5); write the root-two label in ANSWER, 44 px, at (0.64,0.64), above and to the right of the middle of RE: the square-root sign over the digit 2. Write the letters in INK, 44 px: P at (-0.15,-0.15), E at (1.08,-0.18), A at (1.13,0.88), R at (-0.15,1.1), T at (1,2.2), S at (2.2,1). Write the tag '1 square unit' in ANSWER, 40 px, centred at (-1.0,0.25), with a FOCUS pointer line, 3 px, from (-0.52,0.25) to a small FOCUS dot at (0.2,0.22) inside PEAR; write the tag '2 square units' in ANSWER, 40 px, centred at (3.05,1.5), with a FOCUS pointer line from (2.58,1.5) to a small FOCUS dot at (1.38,1.38) inside REST. Draw nothing else: no 'c squared equals 2', no equation, no shading.",
+    "visible_text": [
+     "P",
+     "E",
+     "A",
+     "R",
+     "T",
+     "S",
+     "1",
+     "1",
+     "1",
+     "1",
+     "√2",
+     "1 square unit",
+     "2 square units"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters such as (a) or (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "c squared equals 2 or any equation",
+     "shading",
+     "decorative clip-art"
+    ],
+    "accuracy_checks": [
+     "PEAR is a unit square: P(0,0), E(1,0), A(1,1), R(0,1), area 1 x 1 = 1",
+     "ER is its diagonal, length sqrt(2); REST = R(0,1), T(1,2), S(2,1), E(1,0) has four sides sqrt(2) and four right angles, area 2 = 2 x 1",
+     "T is directly above A and S directly right of A, both at distance 1; A is the centre of REST",
+     "the INK triangle P-E-R is the question diagram's triangle at the same place, orientation and scale"
+    ],
+    "alt_text": "A unit square PEAR with its diagonal ER, and the tilted square REST standing on ER, tagged one square unit and two square units.",
+    "render_note": "Built from the book's p.5 figure (base id P05-construction-2) plus the printed result of the working (hypotenuse root two). The triangle P-E-R is the question diagram's triangle (derived_from M2.S5.T5.C27.IMG1: same triangle, same place, same scale; everything added is ANSWER). Same picture as teaching image C20.IMG1 (never linked). The tags '1 square unit' and '2 square units' use the LP solution's own words."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C29",
+   "role": "question",
+   "lp_book_number": "Hidden Length: √2 against 1 and 2",
+   "ncert_ref": "Section 2.3 - Q_gt_1",
+   "question_text": "Is √2 less than or greater than 1? Is it less than or greater than 2?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question with two numbers (1 and 2) to compare with root 2; the book gives no figure with it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C30",
+   "role": "solution",
+   "lp_book_number": "Hidden Length: √2 against 1 and 2",
+   "ncert_ref": "Section 2.3 - Q_gt_1",
+   "question_text": "Is √2 less than or greater than 1? Is it less than or greater than 2?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "1^2 = 1 < 2 and 2^2 = 4 > 2, so 1 < root 2 < 2: arithmetic written in the steps. The book prints no picture for this answer; nested squares of area 1, 2 and 4 would be nicer but are not needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C31",
+   "role": "question",
+   "lp_book_number": "Hidden Length: can √2 be a terminating decimal",
+   "ncert_ref": "Section 2.3 - Q_terminating",
+   "question_text": "If √2 were a terminating decimal of the form 1.414...4, what would be the last digit of its square?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The decimal form 1.414...4 is typed in the question. The book's row of empty boxes ending in 6 (base figure P06-digit_boxes-2) is only a digit pattern for the answer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "If the pattern is wanted in the text: $\\square.\\square\\square\\ldots\\square 6$ (the last digit of the square)."
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C32",
+   "role": "solution",
+   "lp_book_number": "Hidden Length: can √2 be a terminating decimal",
+   "ncert_ref": "Section 2.3 - Q_terminating",
+   "question_text": "If √2 were a terminating decimal of the form 1.414...4, what would be the last digit of its square?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Last digits of the squares of 1 to 9 (1, 4, 9, 6, 5, 6, 9, 4, 1): a plain list of numbers, written in the steps.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C33",
+   "role": "question",
+   "lp_book_number": "Isosceles Right Triangles, Q1",
+   "ncert_ref": "Section 2.3 - Figure it Out Q1",
+   "question_text": "Earlier, we saw a method to create a square with double the area of a given square paper. There is another method to do this in which two identical square papers are cut in the following way: each square is cut along one diagonal, into pieces 1 and 2, and 3 and 4. Can you arrange these pieces to create a square with double the area of either square?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The question asks to arrange 'these pieces' cut 'in the following way'; which triangle is piece 1, 2, 3 or 4 is only in the book's picture and the learner has to act on the pieces.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S5.T5.C33.IMG1",
+   "manim_scene": "c8_9_2_3_FiO1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C33.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "tiling",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "unit_px": 250,
+     "bounding_box": [
+      [
+       0,
+       0
+      ],
+      [
+       5.35,
+       2.15
+      ]
+     ],
+     "pieces": [
+      {
+       "number": "1",
+       "corners": [
+        [
+         0,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         0,
+         2
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "stroke": "INK",
+       "label_at": [
+        0.667,
+        0.667
+       ]
+      },
+      {
+       "number": "2",
+       "corners": [
+        [
+         0.15,
+         2.15
+        ],
+        [
+         2.15,
+         2.15
+        ],
+        [
+         2.15,
+         0.15
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "stroke": "INK",
+       "label_at": [
+        1.483,
+        1.483
+       ]
+      },
+      {
+       "number": "3",
+       "corners": [
+        [
+         3.2,
+         0
+        ],
+        [
+         5.2,
+         0
+        ],
+        [
+         3.2,
+         2
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "stroke": "INK",
+       "label_at": [
+        3.867,
+        0.667
+       ]
+      },
+      {
+       "number": "4",
+       "corners": [
+        [
+         3.35,
+         2.15
+        ],
+        [
+         5.3500000000000005,
+         2.15
+        ],
+        [
+         5.3500000000000005,
+         0.15
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "stroke": "INK",
+       "label_at": [
+        4.683,
+        1.483
+       ]
+      }
+     ],
+     "cut": "each square is cut along its diagonal from the top-left corner to the bottom-right corner; the upper-right piece is drawn 0.15 unit up and 0.15 unit right of its place, leaving a white diagonal gap",
+     "labels": [
+      {
+       "text": "1",
+       "at": [
+        0.667,
+        0.667
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "2",
+       "at": [
+        1.483,
+        1.483
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "3",
+       "at": [
+        3.867,
+        0.667
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "4",
+       "at": [
+        4.683,
+        1.483
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      }
+     ],
+     "to_scale": true,
+     "type": "tiling"
+    },
+    "manim_description": "On a plain BG card of 1920 x 1080 px, with 1 unit = 250 px, x to the right and y upwards, centre the figure on the card (bounding box (0,0) to (5.35,2.15)). Draw two identical squares of side 2, one with its lower-left corner at (0,0) and one at (3.2,0), each cut along the diagonal that runs from its top-left corner to its bottom-right corner into two right triangles. Left square: piece 1 = (0,0),(2,0),(0,2) (right angle at the lower-left corner); piece 2 = (0.15,2.15),(2.15,2.15),(2.15,0.15) (right angle at its upper-right corner), moved 0.15 unit to the right and 0.15 unit up so a white diagonal gap shows. Right square: piece 3 = (3.2,0),(5.2,0),(3.2,2); piece 4 = (3.35,2.15),(5.35,2.15),(5.35,0.15), moved the same way. Give each piece an INK outline, 3 px, and fill CELL_FILL. Write the digits 1, 2, 3, 4 in INK, 44 px, at the centroids of the pieces: 1 at (0.667,0.667), 2 at (1.483,1.483), 3 at (3.867,0.667), 4 at (4.683,1.483). Draw nothing else: no captions, no arrows, no arranged square.",
+    "visible_text": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters such as (a) or (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "the arranged square or any hint of the answer",
+     "scissors, hands or paper texture",
+     "captions"
+    ],
+    "accuracy_checks": [
+     "two identical squares of side 2, each cut along one diagonal into 2 congruent right triangles with legs 2 and 2 (area 2 each)",
+     "pieces 1 and 3 are the lower-left triangles, pieces 2 and 4 the upper-right triangles, numbered as in the book",
+     "the gap is a pure shift of 0.15 unit right and 0.15 unit up, so every piece keeps its shape and size"
+    ],
+    "alt_text": "Two identical square papers, each cut along a diagonal into two triangles, numbered 1 and 2 on the first and 3 and 4 on the second.",
+    "render_note": "Book picture p.7 (Figure it Out Q1, base id P07-paper_cutout-1): pieces numbered as printed. The question asks to arrange these pieces, so the given pieces must be seen."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C34",
+   "role": "solution",
+   "lp_book_number": "Isosceles Right Triangles, Q1",
+   "ncert_ref": "Section 2.3 - Figure it Out Q1",
+   "question_text": "Earlier, we saw a method to create a square with double the area of a given square paper. There is another method to do this in which two identical square papers are cut in the following way: each square is cut along one diagonal, into pieces 1 and 2, and 3 and 4. Can you arrange these pieces to create a square with double the area of either square?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer IS an arrangement (the four right angles at one point, the four diagonals forming a square with double the area); the steps describe it in words, so the arrangement is drawn (B2: answer is an arrangement).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S5.T5.C34.IMG1",
+   "manim_scene": "c8_9_2_3_FiO1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C34.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "tiling",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S5.T5.C33.IMG1",
+    "content": {
+     "unit_px": 200,
+     "bounding_box": [
+      [
+       -2,
+       -2
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     "origin": "centre of the card",
+     "pieces": [
+      {
+       "number": "1",
+       "corners": [
+        [
+         0,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         0,
+         2
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "stroke": "INK",
+       "label_at": [
+        0.667,
+        0.667
+       ]
+      },
+      {
+       "number": "2",
+       "corners": [
+        [
+         0,
+         0
+        ],
+        [
+         0,
+         2
+        ],
+        [
+         -2,
+         0
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "stroke": "INK",
+       "label_at": [
+        -0.667,
+        0.667
+       ]
+      },
+      {
+       "number": "3",
+       "corners": [
+        [
+         0,
+         0
+        ],
+        [
+         -2,
+         0
+        ],
+        [
+         0,
+         -2
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "stroke": "INK",
+       "label_at": [
+        -0.667,
+        -0.667
+       ]
+      },
+      {
+       "number": "4",
+       "corners": [
+        [
+         0,
+         0
+        ],
+        [
+         0,
+         -2
+        ],
+        [
+         2,
+         0
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "stroke": "INK",
+       "label_at": [
+        0.667,
+        -0.667
+       ]
+      }
+     ],
+     "outer_outline": {
+      "corners": [
+       [
+        2,
+        0
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        -2,
+        0
+       ],
+       [
+        0,
+        -2
+       ]
+      ],
+      "stroke": "ANSWER",
+      "style": "solid",
+      "stroke_px": 3
+     },
+     "right_angle_marks": [
+      {
+       "corner": [
+        0,
+        0
+       ],
+       "toward": [
+        [
+         1,
+         0
+        ],
+        [
+         0,
+         1
+        ]
+       ],
+       "size": 0.2,
+       "stroke": "FOCUS",
+       "stroke_px": 3
+      },
+      {
+       "corner": [
+        0,
+        0
+       ],
+       "toward": [
+        [
+         0,
+         1
+        ],
+        [
+         -1,
+         0
+        ]
+       ],
+       "size": 0.2,
+       "stroke": "FOCUS",
+       "stroke_px": 3
+      },
+      {
+       "corner": [
+        0,
+        0
+       ],
+       "toward": [
+        [
+         -1,
+         0
+        ],
+        [
+         0,
+         -1
+        ]
+       ],
+       "size": 0.2,
+       "stroke": "FOCUS",
+       "stroke_px": 3
+      },
+      {
+       "corner": [
+        0,
+        0
+       ],
+       "toward": [
+        [
+         0,
+         -1
+        ],
+        [
+         1,
+         0
+        ]
+       ],
+       "size": 0.2,
+       "stroke": "FOCUS",
+       "stroke_px": 3
+      }
+     ],
+     "placement_rule": "the four right-angle corners meet at (0,0); piece k goes in the quadrant listed (the book and LP do not fix which piece takes which quadrant)",
+     "labels": [
+      {
+       "text": "1",
+       "at": [
+        0.667,
+        0.667
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "2",
+       "at": [
+        -0.667,
+        0.667
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "3",
+       "at": [
+        -0.667,
+        -0.667
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      },
+      {
+       "text": "4",
+       "at": [
+        0.667,
+        -0.667
+       ],
+       "colour": "INK",
+       "italic": false,
+       "font_px": 44
+      }
+     ],
+     "to_scale": true,
+     "type": "tiling"
+    },
+    "manim_description": "On a plain BG card of 1920 x 1080 px, with 1 unit = 200 px, x to the right and y upwards, centre the figure on the card (bounding box (-2,-2) to (2,2), centre (0,0)). Draw the four pieces of the question diagram (same shapes, same numbers 1 to 4, same style: CELL_FILL with INK 3 px outlines) rearranged so that their right-angle corners all meet at (0,0): piece 1 = (0,0),(2,0),(0,2) in the upper-right quadrant; piece 2 = (0,0),(0,2),(-2,0) in the upper-left quadrant; piece 3 = (0,0),(-2,0),(0,-2) in the lower-left quadrant; piece 4 = (0,0),(0,-2),(2,0) in the lower-right quadrant. The pieces touch along the two axes. Draw the outer boundary of the whole shape, the tilted square with corners (2,0), (0,2), (-2,0), (0,-2) made of the four long sides, as a solid ANSWER outline, 3 px, on top of the INK lines. Draw a FOCUS right-angle mark, 3 px, a square of side 0.2 unit with one corner at (0,0), in each of the four quadrants, sides along the axes. Write the digits 1, 2, 3, 4 in INK, 44 px, at the centroids of the pieces: 1 at (0.667,0.667), 2 at (-0.667,0.667), 3 at (-0.667,-0.667), 4 at (0.667,-0.667). Draw nothing else: no captions, no area numbers.",
+    "visible_text": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters such as (a) or (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art",
+     "area numbers or the word double",
+     "scissors, hands or paper texture",
+     "captions"
+    ],
+    "accuracy_checks": [
+     "four right isosceles triangles with legs 2 and 2 (area 2 each) fill the full turn around (0,0): 4 right angles = 360 degrees, no gap",
+     "the four long sides (length 2*sqrt(2), each a diagonal of an original square of side 2) form the tilted square (2,0),(0,2),(-2,0),(0,-2): four equal sides and four right angles, area 8",
+     "area 8 = 2 x 4, double the area of either original square"
+    ],
+    "alt_text": "The four numbered triangles placed with their right angles meeting at the centre, their long sides forming a tilted square.",
+    "render_note": "The book prints no solution picture (this pdf has no solutions section); the figure is built from the LP solution text. derived_from M2.S5.T5.C33.IMG1: the same four pieces, numbers and style, but the positions change because the answer IS the rearrangement. The book and the LP do not say which piece takes which quadrant: this spec fixes 1 upper-right, 2 upper-left, 3 lower-left, 4 lower-right (any assignment gives the same outline)."
+   },
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C35",
+   "role": "question",
+   "lp_book_number": "Isosceles Right Triangles, Q2 (i)",
+   "ncert_ref": "Section 2.3 - Figure it Out Q2 (i)-(v)",
+   "question_text": "The length of the two equal sides of an isosceles right triangle is given. Find the length of the hypotenuse. Find bounds on the length of the hypotenuse such that they have at least one digit after the decimal point. (i) 3",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Five side lengths (3, 4, 6, 8, 9) to work with; the book gives no figure with this question. One card for all five parts, so the same decision for each part.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C36",
+   "role": "solution",
+   "lp_book_number": "Isosceles Right Triangles, Q2 (i)",
+   "ncert_ref": "Section 2.3 - Figure it Out Q2 (i)-(v)",
+   "question_text": "The length of the two equal sides of an isosceles right triangle is given. Find the length of the hypotenuse. Find bounds on the length of the hypotenuse such that they have at least one digit after the decimal point. (i) 3",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Five numeric chains (square of the side, double it, root, bounds by squaring); the book prints no solution picture, and the five parts keep the same decision (sibling consistency, as with Q6 and the Q3 answer).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C37",
+   "role": "question",
+   "lp_book_number": "Isosceles Right Triangles, Q3",
+   "ncert_ref": "Section 2.3 - Figure it Out Q3",
+   "question_text": "The hypotenuse of an isosceles right triangle is 10. What are its other two sidelengths? [Hint: Find the area of the square composed of two such right triangles.]",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Hypotenuse 10 is given in the words; the book gives no figure with this question and its hint is about areas, in words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C38",
+   "role": "solution",
+   "lp_book_number": "Isosceles Right Triangles, Q3",
+   "ncert_ref": "Section 2.3 - Figure it Out Q3",
+   "question_text": "The hypotenuse of an isosceles right triangle is 10. What are its other two sidelengths? [Hint: Find the area of the square composed of two such right triangles.]",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "10 x 10 = 100, 100 / 2 = 50, root 50 between 7.07 and 7.08: arithmetic in the steps; the book prints no solution picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

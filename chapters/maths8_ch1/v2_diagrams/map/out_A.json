@@ -1,0 +1,1439 @@
+{
+ "meta": {
+  "chapter": "A Square and A Cube",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 1",
+  "lp_plan_id": "cbse_eng_maths8_ch1_v45",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "required": 0,
+    "optional": 0,
+    "none": 5
+   },
+   "question": {
+    "required": 1,
+    "optional": 0,
+    "none": 12
+   },
+   "solution": {
+    "required": 1,
+    "optional": 0,
+    "none": 12
+   }
+  },
+  "notes": [
+   "Chunk A (units 1 to 18: the opening locker puzzle and section 1.1 up to Figure it Out Q8): 31 items, 2 required (the triangular-number question and its solution), 29 none, 0 optional.",
+   "The chapter pdf does have printed answers (pdf pages 19 to 22); every printed answer of chunk A is a number, a list or typeset equations, none is a picture.",
+   "No book print slip affects a chunk A diagram spec."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P02-factor_box-1",
+   "source": "chapter p.02",
+   "description": "Teaching box for locker 6: 6: / 1 x 6 / 2 x 3 / Factors are 1, 2, 3 and 6. (light green box in the margin, no highlighting). Checked against the page picture: matches the base.",
+   "mapped_to": "concept_image:M1.S2.T2.C2.IMG1"
+  },
+  {
+   "fig_id": "P02-factor_boxes-2",
+   "source": "chapter p.02",
+   "description": "Teaching boxes for 1, 4 and 9 (the repeated pairs 2 x 2 and 3 x 3 are not marked). Checked against the page picture: matches the base.",
+   "mapped_to": "concept_image:M1.S2.T2.C3.IMG1"
+  },
+  {
+   "fig_id": "P03-table-1",
+   "source": "chapter p.03",
+   "description": "Plain table of side length and area for sides 1, 2, 3, 4, 5, 10 (alternate row tint carries no meaning). Checked: matches the base.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P03-grid-2",
+   "source": "chapter p.03",
+   "description": "Empty 5 by 5 grid of unit squares beside the area table; checked against the page picture: 5 columns and 5 rows (6 + 6 lines), so it is the 5 x 5 = 25 square, teaching figure like C12.IMG1.",
+   "mapped_to": "concept_image:M2.S4.T4.C12.IMG1"
+  },
+  {
+   "fig_id": "P04-table-1",
+   "source": "chapter p.04",
+   "description": "Fill-in table of the squares of the first 30 natural numbers (3 columns x 10 rows, 1 to 22 labelled, the last 8 cells of column 3 are empty and unlabelled, as the base says). No LP item uses it as a figure; a plain fill-in table is LaTeX.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P05-callout_diagram-1",
+   "source": "chapter p.05",
+   "description": "Two cloud-and-brace callouts: 10^2, 20^2, 40^2 (one zero becomes two) and 100^2, 200^2, 700^2, 900^2 (two zeros become four); teaching figure for the 'squares double the end zeros' idea.",
+   "mapped_to": "concept_image:M2.S4.T4.C15.IMG1"
+  },
+  {
+   "fig_id": "P05-number_pattern-2",
+   "source": "chapter p.05",
+   "description": "One line of differences 4 - 1 = 3, 9 - 4 = 5, 16 - 9 = 7, 25 - 16 = 9 with the answers in red: plain subtractions, LaTeX.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P05-dot_pattern-3",
+   "source": "chapter p.05",
+   "description": "Equations 1 = 1 ... 1 + 3 + 5 + 7 + 9 + 11 = 36 beside a 6 x 6 dot square with six nested red inverted L lines (11, 9, 7, 5, 3, 1 dots); teaching figure, the same picture as C25.IMG1.",
+   "mapped_to": "concept_image:M2.S6.T6.C25.IMG1"
+  },
+  {
+   "fig_id": "P06-dot_pattern-1",
+   "source": "chapter p.06",
+   "description": "Visual proof in five dot panels (1 + 3, 1 + 3 + (3 + 2), 1 + 3 + 5, 1 + 3 + 5 + (5 + 2), 1 + 3 + 5 + 7) showing that each inverted L gives the next odd number; teaching figure of the same idea as C25.IMG1 (closest concept image, not identical).",
+   "mapped_to": "concept_image:M2.S6.T6.C25.IMG1"
+  },
+  {
+   "fig_id": "P06-number_chain-2",
+   "source": "chapter p.06",
+   "description": "Chain 25 - 1 = 24, 24 - 3 = 21, 21 - 5 = 16, 16 - 7 = 9, 9 - 9 = 0 on a cream band (introduces the subtraction test; no LP item): a number chain, LaTeX.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P06-number_chain-3",
+   "source": "chapter p.06",
+   "description": "Chain 38 - 1 = 37, 37 - 3 = 34, 34 - 5 = 29, 29 - 7 = 22, 22 - 9 = 13 / 13 - 11 = 2, 2 - 13 = - 11 on a cream band (the worked example of M2.S6.T6.C26): a number chain, LaTeX.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P07-table-1",
+   "source": "chapter p.07",
+   "description": "Plain table of ten block labels 1-100 ... 901-1000 with a blank under each (counts of squares to fill in); a plain fill-in table, LaTeX. The LP question C39 does not ask for the whole table.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P07-dot_pattern-2",
+   "source": "chapter p.07",
+   "description": "Five staircase dot triangles of 1, 3, 6, 10 and 15 dots (Do you remember triangular numbers?); teaching figure, closest concept image C37.IMG1 (a 5 x 5 square cut into triangles of 15 and 10), not identical.",
+   "mapped_to": "concept_image:M2.S9.T9.C37.IMG1"
+  },
+  {
+   "fig_id": "P07-dot_pattern-3",
+   "source": "chapter p.07",
+   "description": "Question figure: three dot squares 2 x 2, 3 x 3, 4 x 4 each cut by a staircase line into two triangles (1 + 3, 3 + 6, 6 + 10), captions '1 + 3 = 4 = 2²', '3 + 6 = 9 = 3²', '6 + 10 = 16 = 4²', then an empty square outline (size of a 5 x 5 array) with an empty caption rectangle below. Checked against the page picture: matches the base (slot 4 label is not printed; the next term 10 + 15 = 25 = 5² follows the pattern and the LP solution).",
+   "mapped_to": "item:M2.S10.T10.C41 (question)"
+  },
+  {
+   "fig_id": "NEW-P07-dot_pattern-3-sol",
+   "source": "derived from chapter p.07 + LP solution of C42",
+   "description": "Second use of the p.07 figure: the same row with slot 4 filled in (5 x 5 dots cut into triangles of 10 and 15, caption 10 + 15 = 25 = 5²); the book does not print this answer.",
+   "mapped_to": "item:M2.S10.T10.C42 (solution)"
+  },
+  {
+   "fig_id": "P11-number_pattern-1",
+   "source": "chapter p.11",
+   "description": "Figure it Out Q8 given pattern: five typeset equations with blanks '(___)'; checked against the page picture: plain text equations, LaTeX.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P21-pattern-1",
+   "source": "chapter p.21",
+   "description": "Printed answer of Figure it Out Q8: the same five equations with 21, 90 and 91 in bold underline inside brackets; checked against the page picture: typeset equations, not a drawn picture, so LaTeX.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 17,
+  "mapped_to_items": 2,
+  "mapped_to_concept_images": 7,
+  "mapped_none": 8,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M2.S10.T10.C41.IMG1",
+   "M2.S10.T10.C42.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S2.T2.C2",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Opening puzzle, chapter p.2 (1.0.factors, 1.0.even_factors)",
+   "question_text": "How many times is locker 12 toggled, and does it end open or closed?",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure is given: the question names locker 12 and the steps write its factor pairs 12 = 1 x 12 = 2 x 6 = 3 x 4 in words, so a careful student loses nothing without a picture. The teaching image of this concept (C2.IMG1) already shows the pairs and is never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C6",
+   "role": "question",
+   "lp_book_number": "Lockers: counting the factors of 36",
+   "ncert_ref": "Opening puzzle, chapter p.2 (1.0.odd_insight)",
+   "question_text": "Count the factors of 36 and say why the count is odd.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The number 36 is in the words; the book gives no figure for 36 (the three factor boxes for 1, 4 and 9 on chapter p.2 are teaching figures).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "solution",
+   "lp_book_number": "Lockers: counting the factors of 36",
+   "ncert_ref": "Opening puzzle, chapter p.2 (1.0.odd_insight)",
+   "question_text": "Count the factors of 36 and say why the count is odd.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the pair equation 36 = 1 x 36 = 2 x 18 = 3 x 12 = 4 x 9 = 6 x 6 and a list of 9 factors, which LaTeX shows exactly; the book prints no picture answer (it only says 'Check if this is true'). The pairs picture is a teaching image (C3.IMG1).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the LaTeX pair equation and the list of the 9 factors."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "question",
+   "lp_book_number": "Lockers: which lockers stay open",
+   "ncert_ref": "Opening puzzle, chapter p.3 (1.0.open_lockers)",
+   "question_text": "Which lockers remain open after all 100 people pass?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book asks only 'Write the locker numbers that remain open' and gives no figure; all the data (100 lockers) is in the words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C9",
+   "role": "solution",
+   "lp_book_number": "Lockers: which lockers stay open",
+   "ncert_ref": "Opening puzzle, chapter p.3 (1.0.open_lockers)",
+   "question_text": "Which lockers remain open after all 100 people pass?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The printed answer (chapter p.19) is the plain list 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, not a picture; the 10 by 10 locker grid is a teaching image (C4.IMG1) and is never linked. A grid would only make the list nicer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the ten locker numbers as a list in LaTeX."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C10",
+   "role": "question",
+   "lp_book_number": "Lockers: the five lockers touched twice",
+   "ncert_ref": "Opening puzzle, chapter p.3 (1.0.five_lockers)",
+   "question_text": "The first five lockers that were touched exactly twice hold the code to the treasure. Which are these five lockers?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure is given; the condition (touched exactly twice, first five lockers) is fully in the words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C11",
+   "role": "solution",
+   "lp_book_number": "Lockers: the five lockers touched twice",
+   "ncert_ref": "Opening puzzle, chapter p.3 (1.0.five_lockers)",
+   "question_text": "The first five lockers that were touched exactly twice hold the code to the treasure. Which are these five lockers?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is the list 2, 3, 5, 7, 11 (the book prints 'the code is 2-3-5-7-11' in text); nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S4.T4.C12",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 1.1, chapter p.3 (area_table, notation)",
+   "question_text": "Find the areas of squares with sides 6 units, 3/5 unit and 2.5 units.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "No figure is given: three squarings (6 x 6, (3/5)^2, 2.5^2) that LaTeX shows. The book's side/area table and 5 by 5 grid on chapter p.3 are teaching figures (the concept image C12.IMG1 shows a square of unit cells) and a square of side 3/5 or 2.5 is not drawn by the book.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C17",
+   "role": "question",
+   "lp_book_number": "Last Digits: squares ending in 1 and non-squares",
+   "ncert_ref": "Section 1.1, chapter p.4 (ends1)",
+   "question_text": "Write the next two squares ending in 1 after 29², and five numbers that cannot be squares.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The numbers are all in the words; the book's table of squares on chapter p.4 is a fill-in table that this question does not use as a figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C18",
+   "role": "solution",
+   "lp_book_number": "Last Digits: squares ending in 1 and non-squares",
+   "ncert_ref": "Section 1.1, chapter p.4 (ends1)",
+   "question_text": "Write the next two squares ending in 1 after 29², and five numbers that cannot be squares.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is 31^2 = 961, 39^2 = 1521 and five numbers ending in 2, 3, 7 or 8: arithmetic and a list, shown in LaTeX; the book prints no figure for this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C19",
+   "role": "question",
+   "lp_book_number": "Last Digits: which squares end in 6",
+   "ncert_ref": "Section 1.1, chapter p.4-5 (which6)",
+   "question_text": "Which of 38², 34², 46², 56², 74² and 82² end in 6?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The six numbers to test are in the words (book chapter p.5 prints them as text); no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C20",
+   "role": "solution",
+   "lp_book_number": "Last Digits: which squares end in 6",
+   "ncert_ref": "Section 1.1, chapter p.4-5 (which6)",
+   "question_text": "Which of 38², 34², 46², 56², 74² and 82² end in 6?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is last-digit arithmetic (8^2 = 64, 4^2 = 16, 6^2 = 36) and a list of which squares end in 6, all LaTeX; the printed answer (chapter p.19) is a text list.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C21",
+   "role": "question",
+   "lp_book_number": "Zeros and Parity: the square of 3000",
+   "ncert_ref": "Section 1.1, chapter p.5 (zeros)",
+   "question_text": "How many zeros end 3000², and is 3000² odd or even?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The number 3000 is in the words; the book gives no figure for this question (the zeros callouts on chapter p.5 are a teaching figure).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C22",
+   "role": "solution",
+   "lp_book_number": "Zeros and Parity: the square of 3000",
+   "ncert_ref": "Section 1.1, chapter p.5 (zeros)",
+   "question_text": "How many zeros end 3000², and is 3000² odd or even?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is 3000 x 3000 = 9000000, a count of 6 zeros and a parity remark, all LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C23",
+   "role": "question",
+   "lp_book_number": "Square Numbers, Q2",
+   "ncert_ref": "Figure it Out Q2, chapter p.10",
+   "question_text": "Which of the following numbers have the digit 4 in the units place? (i) 64² (ii) 108² (iii) 292² (iv) 36²",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Figure it Out Q2 gives four squares as text (64^2, 108^2, 292^2, 36^2) and no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C24",
+   "role": "solution",
+   "lp_book_number": "Square Numbers, Q2",
+   "ncert_ref": "Figure it Out Q2, chapter p.10",
+   "question_text": "Which of the following numbers have the digit 4 in the units place? (i) 64² (ii) 108² (iii) 292² (iv) 36²",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is last-digit arithmetic and a choice of (ii) and (iii); the printed answer (chapter p.20) is the text '108^2 and 292^2'.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C25",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 1.1, chapter p.5-6 (odd_sum)",
+   "question_text": "Find 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 without adding term by term.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question is the sum 1 + 3 + ... + 15 given in the words and the answer uses the rule 'first n odd numbers add to n^2' (8^2 = 64). The L-shaped dot square is a teaching figure (C25.IMG1, a 6 by 6 square) and an 8 by 8 copy would only make it nicer.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C26",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 1.1, chapter p.6 (subtract_test)",
+   "question_text": "Use successive subtraction of odd numbers to decide whether 38 is a perfect square.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The book prints this as a chain of subtractions on a cream band (38 - 1 = 37 ... 2 - 13 = - 11); a number chain is LaTeX. The bar picture C26.IMG1 is a teaching image and is never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C29",
+   "role": "question",
+   "lp_book_number": "Odd Numbers and Squares: 36² from 35²",
+   "ncert_ref": "Section 1.1, chapter p.6 (next_square)",
+   "question_text": "Given 35² = 1225, find 36² without multiplying.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Given 35^2 = 1225, find 36^2: all data is in the words; the book gives no figure for this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C30",
+   "role": "solution",
+   "lp_book_number": "Odd Numbers and Squares: 36² from 35²",
+   "ncert_ref": "Section 1.1, chapter p.6 (next_square)",
+   "question_text": "Given 35² = 1225, find 36² without multiplying.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is 36^2 = 1225 + 71 = 1296 (the 36th odd number is 2 x 36 - 1 = 71); pure arithmetic. The L-strip picture C27.IMG1 is a teaching image.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C31",
+   "role": "question",
+   "lp_book_number": "Square Numbers, Q3",
+   "ncert_ref": "Figure it Out Q3, chapter p.10",
+   "question_text": "Given that 125² = 15625, what is the value of 126²? (i) 15625 + 126 (ii) 15625 + 26² (iii) 15625 + 253 (iv) 15625 + 251 (v) 15625 + 512",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Figure it Out Q3 is a multiple-choice question with the five options printed as text; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C32",
+   "role": "solution",
+   "lp_book_number": "Square Numbers, Q3",
+   "ncert_ref": "Figure it Out Q3, chapter p.10",
+   "question_text": "Given that 125² = 15625, what is the value of 126²? (i) 15625 + 126 (ii) 15625 + 26² (iii) 15625 + 253 (iv) 15625 + 251 (v) 15625 + 512",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the choice (iv) 15625 + 251 = 15876, from 2 x 126 - 1 = 251; arithmetic, and the printed answer (chapter p.20) is the text '(iv)'.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C33",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out Q8, chapter p.10-11",
+   "question_text": "Look at the pattern 1² + 2² + 2² = 3², 2² + 3² + 6² = 7², 3² + 4² + 12² = 13². Fill in 4² + 5² + 20² = (___)² and 9² + 10² + (___)² = (___)².",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Figure it Out Q8 prints the pattern as five typeset equations with blanks (chapter p.10-11); a list of equations and blanks is LaTeX, and the LP question already carries the whole pattern. No drawn figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C34",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out Q8, chapter p.10-11",
+   "question_text": "Look at the pattern 1² + 2² + 2² = 3², 2² + 3² + 6² = 7², 3² + 4² + 12² = 13². Fill in 4² + 5² + 20² = (___)² and 9² + 10² + (___)² = (___)².",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The printed answer (chapter p.21) is the same five typeset equations with the three filled blanks in bold underline (21, 90, 91); these are LaTeX equations, not a drawn picture, and the LP steps give them.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX equations: 4^2 + 5^2 + 20^2 = 21^2 and 9^2 + 10^2 + 90^2 = 91^2 (filled numbers may be bold)."
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C35",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 1.1, chapter p.7 (between)",
+   "question_text": "How many whole numbers lie strictly between 25 and 36?",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure is given: the numbers 26 to 35 and the count 36 - 25 - 1 = 10 are in the words. The number line is a teaching image (C35.IMG1) and is never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C39",
+   "role": "question",
+   "lp_book_number": "Gaps Between Squares: squares in each hundred",
+   "ncert_ref": "Section 1.1, chapter p.7 (blocks)",
+   "question_text": "How many perfect squares lie between 101 and 200, and what is the largest square less than 1000?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_TABLE"
+   ],
+   "reason": "The LP question asks only for the squares between 101 and 200 and the largest square below 1000, all stated in words. The book's block-of-100 table (chapter p.7) is a plain table of ten ranges with blanks, so a LaTeX table, not a picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "If the ten-block table is wanted, write it as a LaTeX array of the ranges 1-100 ... 901-1000 with the count of squares under each."
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C40",
+   "role": "solution",
+   "lp_book_number": "Gaps Between Squares: squares in each hundred",
+   "ncert_ref": "Section 1.1, chapter p.7 (blocks)",
+   "question_text": "How many perfect squares lie between 101 and 200, and what is the largest square less than 1000?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is 11^2 = 121 ... 14^2 = 196 (4 squares) and 31^2 = 961 < 1000 < 32^2 = 1024; LaTeX arithmetic. The dot-column picture C36.IMG1 is a teaching image.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C41",
+   "role": "question",
+   "lp_book_number": "Triangular Numbers: the next pair",
+   "ncert_ref": "Section 1.1 Perfect Squares and Triangular Numbers, chapter p.7",
+   "question_text": "Add the next pair of consecutive triangular numbers after 6 and 10, and check that the sum is a square.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "ACTION_ON_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book question is 'Extend the pattern shown and draw the next term': the pattern (three dot squares each cut into two triangles, plus an empty fourth slot) exists only in the picture, so the learner needs it to attempt the question. The question figure shows exactly what the book prints.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C41.IMG1",
+   "manim_scene": "c8_1_1_tri_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C41.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "dot_array",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "dot_array",
+     "layout": "four square slots in one row, left to right, all sitting on the baseline y = 0 (y points up), the whole row centred on the card",
+     "units": "1 unit = 1 dot pitch (distance between neighbouring dot centres); dot diameter 0.55; outline and staircase stroke 3 px at 1920 px width; caption text height 0.5 (never below 34 px)",
+     "dot_position_rule": "dot (col, row) has col and row from 1, row 1 on top; its centre is x = centre_x - side/2 + col - 0.5, y = side - row + 0.5",
+     "staircase_rule": "points are in edge units of the slot square (col-edge 0..side from the left, row-edge 0..side from the top); the polyline goes from the top edge between column 1 and column 2 down and right in unit steps to the right edge; dots with col > row lie upper-right of it, the others lower-left",
+     "slots": [
+      {
+       "slot": 1,
+       "centre_x": 0.0,
+       "bottom_y": 0,
+       "side": 2,
+       "dots_per_side": 2,
+       "dots": [
+        {
+         "col": 1,
+         "row": 1,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 2,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 2,
+         "group": "lower_left"
+        }
+       ],
+       "dots_colour": "INK",
+       "upper_right_count": 1,
+       "lower_left_count": 3,
+       "staircase_edge_points_col_row": [
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         2,
+         1
+        ]
+       ],
+       "staircase_colour": "INK",
+       "caption": "1 + 3 = 4 = 2²",
+       "caption_colour": "INK"
+      },
+      {
+       "slot": 2,
+       "centre_x": 4.6,
+       "bottom_y": 0,
+       "side": 3,
+       "dots_per_side": 3,
+       "dots": [
+        {
+         "col": 1,
+         "row": 1,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 3,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 2,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 2,
+         "group": "lower_left"
+        },
+        {
+         "col": 3,
+         "row": 2,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 3,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 3,
+         "group": "lower_left"
+        },
+        {
+         "col": 3,
+         "row": 3,
+         "group": "lower_left"
+        }
+       ],
+       "dots_colour": "INK",
+       "upper_right_count": 3,
+       "lower_left_count": 6,
+       "staircase_edge_points_col_row": [
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         3,
+         2
+        ]
+       ],
+       "staircase_colour": "INK",
+       "caption": "3 + 6 = 9 = 3²",
+       "caption_colour": "INK"
+      },
+      {
+       "slot": 3,
+       "centre_x": 9.4,
+       "bottom_y": 0,
+       "side": 4,
+       "dots_per_side": 4,
+       "dots": [
+        {
+         "col": 1,
+         "row": 1,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 3,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 4,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 2,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 2,
+         "group": "lower_left"
+        },
+        {
+         "col": 3,
+         "row": 2,
+         "group": "upper_right"
+        },
+        {
+         "col": 4,
+         "row": 2,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 3,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 3,
+         "group": "lower_left"
+        },
+        {
+         "col": 3,
+         "row": 3,
+         "group": "lower_left"
+        },
+        {
+         "col": 4,
+         "row": 3,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 4,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 4,
+         "group": "lower_left"
+        },
+        {
+         "col": 3,
+         "row": 4,
+         "group": "lower_left"
+        },
+        {
+         "col": 4,
+         "row": 4,
+         "group": "lower_left"
+        }
+       ],
+       "dots_colour": "INK",
+       "upper_right_count": 6,
+       "lower_left_count": 10,
+       "staircase_edge_points_col_row": [
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         3,
+         3
+        ],
+        [
+         4,
+         3
+        ]
+       ],
+       "staircase_colour": "INK",
+       "caption": "6 + 10 = 16 = 4²",
+       "caption_colour": "INK"
+      },
+      {
+       "slot": 4,
+       "centre_x": 14.8,
+       "bottom_y": 0,
+       "side": 5,
+       "dots_per_side": 5,
+       "dots": [],
+       "staircase_edge_points_col_row": [],
+       "caption": null,
+       "state": "empty square outline of side 5, nothing inside"
+      }
+     ],
+     "slot4_caption_box": {
+      "centre": [
+       14.8,
+       -0.6
+      ],
+      "width": 5.2,
+      "height": 0.95,
+      "outline": "INK",
+      "text": null,
+      "text_colour": null
+     },
+     "caption_centre_y": -0.6,
+     "bounding_box": {
+      "x_from": -2.0,
+      "x_to": 17.4,
+      "y_from": -1.1,
+      "y_to": 5.0
+     },
+     "fit": "scale the group so its width is 92% of the card width and centre it on the 16:9 BG card",
+     "fills": "all squares and boxes have BG fill"
+    },
+    "manim_description": "On a plain white BG 16:9 card draw one row of four square slots, left to right, all sitting on the same baseline y = 0, the whole row centred. Use one unit = one dot pitch; solid INK dots of diameter 0.55; INK outlines and lines of 3 px; BG fill everywhere. Slot 1: centre x = 0, a square INK outline of side 2 holding a 2 by 2 array of 4 INK dots (columns 1 to 2, rows 1 to 2, row 1 on top). A thin INK staircase line starts on the top edge between column 1 and column 2, runs down one row, then right to the right edge, so the upper-right group is the one dot at row 1 column 2 and the lower-left group is the other 3 dots. Caption centred under the slot at y = -0.6, INK, height 0.5: '1 + 3 = 4 = 2²'. Slot 2: centre x = 4.6, outline of side 3 holding a 3 by 3 array of 9 INK dots; the INK staircase starts on the top edge between column 1 and column 2, goes down one row, right one column, down one row, then right to the right edge; the upper-right group is row 1 columns 2 and 3 plus row 2 column 3 (3 dots) and the lower-left group is the other 6 dots. Caption '3 + 6 = 9 = 3²'. Slot 3: centre x = 9.4, outline of side 4 holding a 4 by 4 array of 16 INK dots; the INK staircase has three steps: down one row, right one column, down one row, right one column, down one row, then right to the right edge; the upper-right group is row 1 columns 2 to 4, row 2 columns 3 to 4 and row 3 column 4 (6 dots) and the lower-left group is the other 10 dots. Caption '6 + 10 = 16 = 4²'. Slot 4: centre x = 14.8, an EMPTY square INK outline of side 5 with no dot, no line and no text inside it. Directly under it, at the caption level (centre y = -0.6), an EMPTY rectangle INK outline of width 5.2 and height 0.95 that holds no text. Nothing else is drawn: no title, no letters, no numbers on the dot groups. Scale the group to 92% of the card width and centre it.",
+    "visible_text": [
+     "1 + 3 = 4 = 2²",
+     "3 + 6 = 9 = 3²",
+     "6 + 10 = 16 = 4²"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any dot, line or text inside slot 4 or inside its caption rectangle",
+     "the sum 10 + 15 = 25 = 5² or the numbers 10 and 15 as triangular numbers",
+     "labels, numbers or colours on the two dot groups of a slot",
+     "the row of single triangles 1, 3, 6, 10, 15 (a separate teaching figure)"
+    ],
+    "accuracy_checks": [
+     "slot k holds (k+1) x (k+1) dots: 2 x 2 = 4, 3 x 3 = 9, 4 x 4 = 16",
+     "the staircase splits slot 1 into 1 + 3, slot 2 into 3 + 6 and slot 3 into 6 + 10 dots (upper-right group + lower-left group)",
+     "the captions agree with the dot counts: 1 + 3 = 4 = 2², 3 + 6 = 9 = 3², 6 + 10 = 16 = 4²",
+     "slot 4 is an empty square of side 5, the size of a 5 x 5 array at the same dot pitch, and its caption rectangle is empty"
+    ],
+    "alt_text": "Three squares of dots, 2 by 2, 3 by 3 and 4 by 4, each cut by a staircase line into two triangles of dots, captioned 1 + 3 = 4 = 2 squared, 3 + 6 = 9 = 3 squared and 6 + 10 = 16 = 4 squared, followed by an empty larger square and an empty caption box.",
+    "render_note": "Reproduces the book figure on chapter p.7 (slots 1 to 3 as printed, slot 4 and its caption box left empty as printed). The LP question text does not mention the figure; see notes (LP text issues)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C42",
+   "role": "solution",
+   "lp_book_number": "Triangular Numbers: the next pair",
+   "ncert_ref": "Section 1.1 Perfect Squares and Triangular Numbers, chapter p.7",
+   "question_text": "Add the next pair of consecutive triangular numbers after 6 and 10, and check that the sum is a square.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The book's task is to draw the next term, so the answer is a drawing: the 5 by 5 dot square cut into triangles of 10 and 15 dots (the LP's own s_figure describes it). The LP steps give only the numbers, which is the B2 case 'answer is an arrangement even if the steps describe it in words'.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C42.IMG1",
+   "manim_scene": "c8_1_1_tri_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C42.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "dot_array",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S10.T10.C41.IMG1",
+    "content": {
+     "type": "dot_array",
+     "layout": "four square slots in one row, left to right, all sitting on the baseline y = 0 (y points up), the whole row centred on the card",
+     "units": "1 unit = 1 dot pitch (distance between neighbouring dot centres); dot diameter 0.55; outline and staircase stroke 3 px at 1920 px width; caption text height 0.5 (never below 34 px)",
+     "dot_position_rule": "dot (col, row) has col and row from 1, row 1 on top; its centre is x = centre_x - side/2 + col - 0.5, y = side - row + 0.5",
+     "staircase_rule": "points are in edge units of the slot square (col-edge 0..side from the left, row-edge 0..side from the top); the polyline goes from the top edge between column 1 and column 2 down and right in unit steps to the right edge; dots with col > row lie upper-right of it, the others lower-left",
+     "slots": [
+      {
+       "slot": 1,
+       "centre_x": 0.0,
+       "bottom_y": 0,
+       "side": 2,
+       "dots_per_side": 2,
+       "dots": [
+        {
+         "col": 1,
+         "row": 1,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 2,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 2,
+         "group": "lower_left"
+        }
+       ],
+       "dots_colour": "INK",
+       "upper_right_count": 1,
+       "lower_left_count": 3,
+       "staircase_edge_points_col_row": [
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         2,
+         1
+        ]
+       ],
+       "staircase_colour": "INK",
+       "caption": "1 + 3 = 4 = 2²",
+       "caption_colour": "INK"
+      },
+      {
+       "slot": 2,
+       "centre_x": 4.6,
+       "bottom_y": 0,
+       "side": 3,
+       "dots_per_side": 3,
+       "dots": [
+        {
+         "col": 1,
+         "row": 1,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 3,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 2,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 2,
+         "group": "lower_left"
+        },
+        {
+         "col": 3,
+         "row": 2,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 3,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 3,
+         "group": "lower_left"
+        },
+        {
+         "col": 3,
+         "row": 3,
+         "group": "lower_left"
+        }
+       ],
+       "dots_colour": "INK",
+       "upper_right_count": 3,
+       "lower_left_count": 6,
+       "staircase_edge_points_col_row": [
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         3,
+         2
+        ]
+       ],
+       "staircase_colour": "INK",
+       "caption": "3 + 6 = 9 = 3²",
+       "caption_colour": "INK"
+      },
+      {
+       "slot": 3,
+       "centre_x": 9.4,
+       "bottom_y": 0,
+       "side": 4,
+       "dots_per_side": 4,
+       "dots": [
+        {
+         "col": 1,
+         "row": 1,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 3,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 4,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 2,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 2,
+         "group": "lower_left"
+        },
+        {
+         "col": 3,
+         "row": 2,
+         "group": "upper_right"
+        },
+        {
+         "col": 4,
+         "row": 2,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 3,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 3,
+         "group": "lower_left"
+        },
+        {
+         "col": 3,
+         "row": 3,
+         "group": "lower_left"
+        },
+        {
+         "col": 4,
+         "row": 3,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 4,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 4,
+         "group": "lower_left"
+        },
+        {
+         "col": 3,
+         "row": 4,
+         "group": "lower_left"
+        },
+        {
+         "col": 4,
+         "row": 4,
+         "group": "lower_left"
+        }
+       ],
+       "dots_colour": "INK",
+       "upper_right_count": 6,
+       "lower_left_count": 10,
+       "staircase_edge_points_col_row": [
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         3,
+         3
+        ],
+        [
+         4,
+         3
+        ]
+       ],
+       "staircase_colour": "INK",
+       "caption": "6 + 10 = 16 = 4²",
+       "caption_colour": "INK"
+      },
+      {
+       "slot": 4,
+       "centre_x": 14.8,
+       "bottom_y": 0,
+       "side": 5,
+       "dots_per_side": 5,
+       "dots": [
+        {
+         "col": 1,
+         "row": 1,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 3,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 4,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 5,
+         "row": 1,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 2,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 2,
+         "group": "lower_left"
+        },
+        {
+         "col": 3,
+         "row": 2,
+         "group": "upper_right"
+        },
+        {
+         "col": 4,
+         "row": 2,
+         "group": "upper_right"
+        },
+        {
+         "col": 5,
+         "row": 2,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 3,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 3,
+         "group": "lower_left"
+        },
+        {
+         "col": 3,
+         "row": 3,
+         "group": "lower_left"
+        },
+        {
+         "col": 4,
+         "row": 3,
+         "group": "upper_right"
+        },
+        {
+         "col": 5,
+         "row": 3,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 4,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 4,
+         "group": "lower_left"
+        },
+        {
+         "col": 3,
+         "row": 4,
+         "group": "lower_left"
+        },
+        {
+         "col": 4,
+         "row": 4,
+         "group": "lower_left"
+        },
+        {
+         "col": 5,
+         "row": 4,
+         "group": "upper_right"
+        },
+        {
+         "col": 1,
+         "row": 5,
+         "group": "lower_left"
+        },
+        {
+         "col": 2,
+         "row": 5,
+         "group": "lower_left"
+        },
+        {
+         "col": 3,
+         "row": 5,
+         "group": "lower_left"
+        },
+        {
+         "col": 4,
+         "row": 5,
+         "group": "lower_left"
+        },
+        {
+         "col": 5,
+         "row": 5,
+         "group": "lower_left"
+        }
+       ],
+       "dots_colour": "ANSWER",
+       "upper_right_count": 10,
+       "lower_left_count": 15,
+       "staircase_edge_points_col_row": [
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         3,
+         3
+        ],
+        [
+         4,
+         3
+        ],
+        [
+         4,
+         4
+        ],
+        [
+         5,
+         4
+        ]
+       ],
+       "staircase_colour": "ANSWER",
+       "caption": "10 + 15 = 25 = 5²",
+       "caption_colour": "ANSWER"
+      }
+     ],
+     "slot4_caption_box": {
+      "centre": [
+       14.8,
+       -0.6
+      ],
+      "width": 5.2,
+      "height": 0.95,
+      "outline": "INK",
+      "text": "10 + 15 = 25 = 5²",
+      "text_colour": "ANSWER"
+     },
+     "caption_centre_y": -0.6,
+     "bounding_box": {
+      "x_from": -2.0,
+      "x_to": 17.4,
+      "y_from": -1.1,
+      "y_to": 5.0
+     },
+     "fit": "scale the group so its width is 92% of the card width and centre it on the 16:9 BG card",
+     "fills": "all squares and boxes have BG fill"
+    },
+    "manim_description": "Draw exactly the question figure and add the answer to slot 4. On a plain white BG 16:9 card keep the row of four slots on the baseline y = 0 with the same centres (0, 4.6, 9.4, 14.8), sizes (sides 2, 3, 4, 5), outlines, dot pitch, stroke and scale as the question figure. Slot 1 (INK): 2 by 2 array of 4 INK dots, staircase splitting it into 1 dot upper-right and 3 dots lower-left, caption '1 + 3 = 4 = 2²'. Slot 2 (INK): 3 by 3 array of 9 INK dots, staircase splitting it into 3 and 6, caption '3 + 6 = 9 = 3²'. Slot 3 (INK): 4 by 4 array of 16 INK dots, staircase splitting it into 6 and 10, caption '6 + 10 = 16 = 4²'. Slot 4: keep its INK square outline of side 5 and its INK caption rectangle (width 5.2, height 0.95) and fill them in ANSWER green: a 5 by 5 array of 25 ANSWER dots (columns 1 to 5, rows 1 to 5, row 1 on top) inside the square. An ANSWER staircase line with four steps starts on the top edge between column 1 and column 2 and goes down one row, right one column, down one row, right one column, down one row, right one column, down one row, then right to the right edge. The upper-right group is row 1 columns 2 to 5, row 2 columns 3 to 5, row 3 columns 4 to 5 and row 4 column 5 (10 dots); the lower-left group is row 1 column 1, row 2 columns 1 to 2, row 3 columns 1 to 3, row 4 columns 1 to 4 and row 5 columns 1 to 5 (15 dots). Write the caption '10 + 15 = 25 = 5²' in ANSWER green, height 0.5, centred inside the caption rectangle. Nothing else is drawn: no title, no letters, no labels on the two dot groups. Scale the group to 92% of the card width and centre it.",
+    "visible_text": [
+     "1 + 3 = 4 = 2²",
+     "3 + 6 = 9 = 3²",
+     "6 + 10 = 16 = 4²",
+     "10 + 15 = 25 = 5²"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "labels or numbers on the two dot groups of a slot",
+     "extra dots, extra slots or a sixth row or column in slot 4",
+     "the row of single triangles 1, 3, 6, 10, 15 (a separate teaching figure)"
+    ],
+    "accuracy_checks": [
+     "slot 4 holds 5 x 5 = 25 dots",
+     "upper-right group 4 + 3 + 2 + 1 = 10 dots, lower-left group 1 + 2 + 3 + 4 + 5 = 15 dots",
+     "10 + 15 = 25 = 5² and 10 and 15 are the triangular numbers after 6 and 10",
+     "slots 1 to 3, all outlines, centres, sizes and the dot pitch are identical to the question figure"
+    ],
+    "alt_text": "The same four squares of dots; the fourth square is now a 5 by 5 array cut by a staircase into a triangle of 10 dots and a triangle of 15 dots, captioned 10 + 15 = 25 = 5 squared in green.",
+    "render_note": "Complete final state of the book figure on chapter p.7 with the empty fourth slot filled (the LP solution gives 10 + 15 = 25 = 5^2; the book prints no answer for this question). Everything added to the question figure is ANSWER green."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C43",
+   "role": "question",
+   "lp_book_number": "Square Numbers, Q7",
+   "ncert_ref": "Figure it Out Q7, chapter p.10",
+   "question_text": "How many numbers lie between the squares of the following numbers? (i) 16 and 17 (ii) 99 and 100",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Figure it Out Q7 gives two pairs of numbers in the words (16 and 17, 99 and 100); no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C44",
+   "role": "solution",
+   "lp_book_number": "Square Numbers, Q7",
+   "ncert_ref": "Figure it Out Q7, chapter p.10",
+   "question_text": "How many numbers lie between the squares of the following numbers? (i) 16 and 17 (ii) 99 and 100",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is 2 x 16 = 32 and 2 x 99 = 198 with the checks 289 - 256 - 1 and 10000 - 9801 - 1; arithmetic, and the printed answers (chapter p.20) are the numbers 32 and 198.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

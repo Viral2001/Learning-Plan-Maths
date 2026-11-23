@@ -1,0 +1,857 @@
+{
+  "meta": {
+    "chapter": "Fractions in Disguise",
+    "class": 8,
+    "textbook": "Ganita Prakash, Grade 8, Chapter 8",
+    "lp_plan_id": "cbse_eng_maths8_ch8_v56",
+    "prompt": "diagram_identification_prompt.md v3",
+    "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+    "counts_by_role_and_decision": {
+      "question": {
+        "required": 1,
+        "optional": 1,
+        "none": 10
+      },
+      "solution": {
+        "required": 1,
+        "optional": 5,
+        "none": 6
+      }
+    },
+    "notes": [
+      "Chunk B = topic M2.S6.T6 (Questions: Example), 12 pairs, units 25 to 36, 24 items.",
+      "Only the 0% to 400% band of Example 11 (C53/C54) is drawn: it is the one place where the learner must act on a given figure and the answer is a marked figure. Plain tables are LaTeX; numeric word-problem solutions are text-first.",
+      "Optional, not added (solution side): C34, C42, C44, C46, C48. Optional, not added (question side): C49. Each names the book figure that would help.",
+      "LP question texts of this topic omit the data the examples need (see notes_B.md, LP text issues); no decision was changed because of that."
+    ]
+  },
+  "style_tokens": {
+    "BG": "#FFFFFF",
+    "INK": "#2B2B2B",
+    "MARK_FILL": "#CDEBD9",
+    "ANSWER": "#009E73",
+    "FOCUS": "#CC79A7",
+    "WRONG": "#D55E00",
+    "GUIDE": "#6B7280",
+    "SET_A": "#0072B2",
+    "SET_B": "#E69F00",
+    "CELL_FILL": "#F1EEF6"
+  },
+  "figure_inventory": [
+    {
+      "fig_id": "P06-bar_model-1",
+      "source": "chapter p.06",
+      "description": "Example 1 double scale: top 0, 25%, 50%, 75%, 100%, bottom 0, 30 g (highlighted), 60 g, 90 g, 120 g, a Sugar bar from 0 to 25%. One of the book's solution methods; the same quantity (25% of 120 g = 30 g, Madhu's bar) is the teaching image.",
+      "mapped_to": "concept_image:M2.S5.T5.C24.IMG1"
+    },
+    {
+      "fig_id": "P07-table-1",
+      "source": "chapter p.07",
+      "description": "Free-hand Computations table: columns 100, 200, 50, 80, 10, 35, 287, rows 25%, 10%, 20%, 5%, only 25 filled (row 25%, column 100). Plain grid of numbers; the answer side is the same grid filled (LP adds rows 40% and 15%).",
+      "mapped_to": "none:LATEX_TABLE"
+    },
+    {
+      "fig_id": "P08-table-1",
+      "source": "chapter p.08",
+      "description": "FDP table: Per cent 50%, 100%, 25%, 75%, 10%, 1%, 5%, 43%; Fraction and Decimal rows empty except the 50% column (50/100, 0.5). Plain table of numbers.",
+      "mapped_to": "none:LATEX_TABLE"
+    },
+    {
+      "fig_id": "P09-bar_model-1",
+      "source": "chapter p.09",
+      "description": "Example 3 double scale 0 to 75 marks over 0 to 1.0 (20% steps), band shaded from 0 to 60 'Minimum marks for A grade', 'Total marks' at the right. Worked-example picture of the arithmetic 80% of 75 = 60, which is written in full in the LP steps; its solution side is optional (not added).",
+      "mapped_to": "none:TEXT_SUFFICIENT"
+    },
+    {
+      "fig_id": "P09-bar_model-2",
+      "source": "chapter p.09",
+      "description": "Example 4 ratio bar: empty rectangle split into a short left part (arrow 2) and a long right part (arrow 7), one long arrow under the whole labelled 9. Same bar as the teaching image (millet 2 parts, water 7 parts, mixture 9 parts). Book print slip, not copied: the left part is drawn about 0.29 of the width instead of 2/9 = 0.22.",
+      "mapped_to": "concept_image:M2.S5.T5.C30.IMG1"
+    },
+    {
+      "fig_id": "P10-bar_model-1",
+      "source": "chapter p.10",
+      "description": "Example 5 bar: empty rectangle Delhi to Agra, a line at 40%, arrow '92 km' over the left part and '?' over the right part, labels 40% and 100% below. Same model as the teaching image (five 20% pieces).",
+      "mapped_to": "concept_image:M2.S5.T5.C31.IMG1"
+    },
+    {
+      "fig_id": "P11-bar_model-1",
+      "source": "chapter p.11",
+      "description": "Example 6 Day 1: bar 0 to 5000 (0 to 100%), red outline, green fill to 2000, label 'Day 1: 2000', computed 40% printed beneath in the book. Worked-example picture; solution side optional (not added).",
+      "mapped_to": "none:TEXT_SUFFICIENT"
+    },
+    {
+      "fig_id": "P11-bar_model-2",
+      "source": "chapter p.11",
+      "description": "Example 6 Day 2: same bar, green fill to 3500, label 'Day 2: 3500', computed 70% printed beneath. Worked-example picture; solution side optional (not added).",
+      "mapped_to": "none:TEXT_SUFFICIENT"
+    },
+    {
+      "fig_id": "P11-bar_model-3",
+      "source": "chapter p.11",
+      "description": "Example 6 Day 3: bar 0 to 5000 fully green (exactly 100%), label 'Day 3: 5000', computed 100% printed beneath. Worked-example picture; solution side optional (not added).",
+      "mapped_to": "none:TEXT_SUFFICIENT"
+    },
+    {
+      "fig_id": "P11-bar_model-4",
+      "source": "chapter p.11",
+      "description": "Example 6 Day 4: bar to 6000, green runs 20% past the 5000 / 100% line (small arrow '20%'), label 'Day 4: 6000', computed 120% printed beneath. Worked-example picture; solution side optional (not added).",
+      "mapped_to": "none:TEXT_SUFFICIENT"
+    },
+    {
+      "fig_id": "P11-bar_model-5",
+      "source": "chapter p.11",
+      "description": "Example 6 Day 5 given with the question: scale 0, 5000, 10,000 over 0%, 100%, 200%, red outline 0 to 5000, green to 7800 (156%), arrow '2800' from the 100% line. Question side optional (numbers are in the question words); same bars as the teaching image.",
+      "mapped_to": "concept_image:M2.S5.T5.C32.IMG1"
+    },
+    {
+      "fig_id": "P11-bar_model-6",
+      "source": "chapter p.11",
+      "description": "Example 6 Day 6 given with the question: same scale, green to 9550 (191%), arrow '4550' from the 100% line. Question side optional; same bars as the teaching image.",
+      "mapped_to": "concept_image:M2.S5.T5.C32.IMG1"
+    },
+    {
+      "fig_id": "P12-table-1",
+      "source": "chapter p.12",
+      "description": "Percent / Fraction / Decimal table for 90%, 110%, 200%, 250%, 15%, 173%, 358%, 28.9%, 305%; Fraction and Decimal rows empty. Plain table of numbers.",
+      "mapped_to": "none:LATEX_TABLE"
+    },
+    {
+      "fig_id": "P12-bar_model-1",
+      "source": "chapter p.12",
+      "description": "0% to 400% band, four 100% sections (first solid, rest dashed), labels 0%, 100%, 200%, 300%, 400% and (0) to (4), one up arrow at 90%. Becomes the question figure of C53.",
+      "mapped_to": "item:M2.S6.T6.C53 (question)"
+    },
+    {
+      "fig_id": "NEW-P12-bar_model-1-sol",
+      "source": "chapter p.12",
+      "description": "Second use of the same printed band: the solution figure of C54 adds the eight remaining arrows (15%, 28.9%, 110%, 173%, 200%, 250%, 305%, 358%) in ANSWER green, the 90% arrow unchanged.",
+      "mapped_to": "item:M2.S6.T6.C54 (solution)"
+    }
+  ],
+  "coverage_report": {
+    "inventory_figures": 15,
+    "mapped_to_items": 2,
+    "mapped_to_concept_images": 5,
+    "mapped_none": 8,
+    "unmapped": 0,
+    "new_media_ids_created": [
+      "M2.S6.T6.C53.IMG1",
+      "M2.S6.T6.C54.IMG1"
+    ],
+    "lp_ids_dropped": []
+  },
+  "items": [
+    {
+      "lp_concept_id": "M2.S6.T6.C33",
+      "role": "question",
+      "lp_book_number": "Example 1: Who ate more sugar",
+      "ncert_ref": "Section 1.2 - 1.2.ex1",
+      "question_text": "Who ate more sugar?",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The book question is plain text (Madhu 25% sugar in 120 g of biscuits, Madhav 35% sugar in 95 g) and prints no figure with it. The book's scale picture on p.6 is one of the solution methods, not something the learner is given.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C34",
+      "role": "solution",
+      "lp_book_number": "Example 1: Who ate more sugar",
+      "ncert_ref": "Section 1.2 - 1.2.ex1",
+      "question_text": "Who ate more sugar?",
+      "decision": "optional",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Optional, not added. 25% of 120 g = 30 g and 35% of 95 g = 33.25 g are plain arithmetic, fully written in the steps. The book's double scale (0, 25%, 50%, 75%, 100% over 0, 30 g, 60 g, 90 g, 120 g, with a Sugar bar from 0 to 25%) would make it nicer, not clearer, and teaching image M2.S5.T5.C24.IMG1 already shows the two biscuit bars.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C35",
+      "role": "question",
+      "lp_book_number": "Example 2: Free-hand Computations: filling the mental table",
+      "ncert_ref": "Section 1.2 - 1.2.free_hand_table",
+      "question_text": "The table $(25$%, $10$%, $20$%, $5$%, then $40$% and $15$%) for $100$, $200$, $50$, $80$, $10$, $35$, $287$",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_TABLE"
+      ],
+      "reason": "The book table (p.7) is a plain grid of numbers with percent row heads and value column heads: no colour carries meaning, the learner only writes numbers into cells. Plain table, so LaTeX.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "LaTeX array: header row with an empty corner then 100, 200, 50, 80, 10, 35, 287; rows 25%, 10%, 20%, 5%, 40%, 15%; every cell empty except 25 (row 25%, column 100)."
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C36",
+      "role": "solution",
+      "lp_book_number": "Example 2: Free-hand Computations: filling the mental table",
+      "ncert_ref": "Section 1.2 - 1.2.free_hand_table",
+      "question_text": "The table (25%, 10%, 20%, 5%, then 40% and 15%) for 100, 200, 50, 80, 10, 35, 287",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_TABLE"
+      ],
+      "reason": "The answer is the same plain table filled with numbers (no colour meaning, no arrangement): a LaTeX array carries it completely.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "LaTeX array, same layout as the question: 25%: 25, 50, 12.5, 20, 2.5, 8.75, 71.75; 10%: 10, 20, 5, 8, 1, 3.5, 28.7; 20%: 20, 40, 10, 16, 2, 7, 57.4; 5%: 5, 10, 2.5, 4, 0.5, 1.75, 14.35; 40%: 40, 80, 20, 32, 4, 14, 114.8; 15%: 15, 30, 7.5, 12, 1.5, 5.25, 43.05."
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C37",
+      "role": "question",
+      "lp_book_number": "Example 2: The decimal multiplier for 10%",
+      "ncert_ref": "Section 1.2 - 1.2.ex2",
+      "question_text": "To find $10$% of a quantity, multiply by?",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "One-line text question, no figure in the book for it (p.8).",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C38",
+      "role": "solution",
+      "lp_book_number": "Example 2: The decimal multiplier for 10%",
+      "ncert_ref": "Section 1.2 - 1.2.ex2",
+      "question_text": "To find 10% of a quantity, multiply by?",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "10/100 = 0.1 is a one-line LaTeX equality; the book prints no picture for it.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C39",
+      "role": "question",
+      "lp_book_number": "Example 4: FDP Trio: completing the table",
+      "ncert_ref": "Section 1.2 - 1.2.fdp_table",
+      "question_text": "Complete the $FDP$ table",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_TABLE"
+      ],
+      "reason": "The book table (p.8) is a plain Per cent / Fraction / Decimal grid with one worked column (50%: 50/100, 0.5); the learner writes numbers. No colour meaning, so LaTeX.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "LaTeX array with rows Per cent, Fraction, Decimal and columns 50%, 100%, 25%, 75%, 10%, 1%, 5%, 43%; only the 50% column is filled (\\frac{50}{100} and 0.5), the other 14 cells are empty."
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C40",
+      "role": "solution",
+      "lp_book_number": "Example 4: FDP Trio: completing the table",
+      "ncert_ref": "Section 1.2 - 1.2.fdp_table",
+      "question_text": "Complete the FDP table",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_TABLE"
+      ],
+      "reason": "The answer is the same plain table filled with fractions and decimals: a LaTeX array carries it completely.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "Same LaTeX array filled: 50%: 1/2, 0.5; 100%: 1, 1.0; 25%: 1/4, 0.25; 75%: 3/4, 0.75; 10%: 1/10, 0.1; 1%: 1/100, 0.01; 5%: 1/20, 0.05; 43%: 43/100, 0.43."
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C41",
+      "role": "question",
+      "lp_book_number": "Example 3: Zubin's A grade score",
+      "ncert_ref": "Section 1.2 - 1.2.ex3",
+      "question_text": "Zubin's minimum score",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Word question (maximum marks 75, A grade at 80% or above); the book prints no figure with the question.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C42",
+      "role": "solution",
+      "lp_book_number": "Example 3: Zubin's A grade score",
+      "ncert_ref": "Section 1.2 - 1.2.ex3",
+      "question_text": "Zubin's minimum score",
+      "decision": "optional",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Optional, not added. 80% of 75 = 60 is one line of arithmetic (fraction, decimal or proportion), fully written in the steps. The book's double scale (0, 15, 30, 45, 60, 75 marks over 0, 0.2, 0.4, 0.6, 0.8, 1.0 with the band to 60 shaded) would make it nicer, not clearer.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C43",
+      "role": "question",
+      "lp_book_number": "Example 4: Millet in the kanji mixture",
+      "ncert_ref": "Section 1.2 - 1.2.ex4",
+      "question_text": "Millet kanji",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Word question (millet to water 2:7, 500 ml of mixture); the book prints its bar model as part of the explanation, not with the question.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C44",
+      "role": "solution",
+      "lp_book_number": "Example 4: Millet in the kanji mixture",
+      "ncert_ref": "Section 1.2 - 1.2.ex4",
+      "question_text": "Millet kanji",
+      "decision": "optional",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Optional, not added. 2 + 7 = 9, 2/9 x 100 = 22.22 and 500 x 2/9 = 111.1 are arithmetic written in the steps. The book's ratio bar (parts 2 and 7, whole 9) would make it nicer, not clearer, and teaching image M2.S5.T5.C30.IMG1 already shows the nine-part bar.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C45",
+      "role": "question",
+      "lp_book_number": "Example 5: Cycling from Delhi to Agra",
+      "ncert_ref": "Section 1.2 - 1.2.ex5",
+      "question_text": "How many more kilometres to Agra?",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Word question (40% of the journey is 92 km); the book's bar model is introduced in the explanation, not given with the question.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C46",
+      "role": "solution",
+      "lp_book_number": "Example 5: Cycling from Delhi to Agra",
+      "ncert_ref": "Section 1.2 - 1.2.ex5",
+      "question_text": "How many more kilometres to Agra?",
+      "decision": "optional",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Optional, not added. 40% = 92 km, so 20% = 46 km, 60% = 138 km and the whole trip = 230 km: arithmetic written in the steps and answer. A bar of five 20% pieces (92 km on the first two, 138 km on the last three) would make it nicer, not clearer, and teaching image M2.S5.T5.C31.IMG1 already shows that bar.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C47",
+      "role": "question",
+      "lp_book_number": "Example 6: Kishanlal's daily sales target",
+      "ncert_ref": "Section 1.2 - 1.2.ex6",
+      "question_text": "Days $1$ to $4$",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Word question (target 5000 a day, sales 2000, 3500, 5000, 6000); the book draws its bars as the explanation ('the percentage target achieved is visualised below'), not with the question.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C48",
+      "role": "solution",
+      "lp_book_number": "Example 6: Kishanlal's daily sales target",
+      "ncert_ref": "Section 1.2 - 1.2.ex6",
+      "question_text": "Days 1 to 4",
+      "decision": "optional",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Optional, not added. 2000/5000, 3500/5000, 5000/5000 and 6000/5000 times 100 give 40%, 70%, 100%, 120%: four one-line fractions. The book's four bars on a 0 to 5000 scale (the last one running 20% past the target line) would make it nicer, not clearer.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C49",
+      "role": "question",
+      "lp_book_number": "Example 9: Percentages Past 100: Days 5 and 6",
+      "ncert_ref": "Section 1.2 - 1.2.ex6_days_5_6",
+      "question_text": "Days $5$ and $6$",
+      "decision": "optional",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Optional, not added. The book prints two bars with this question (Day 5: 7800 with 2800 past the 5000 line; Day 6: 9550 with 4550 past it, on a 0 to 10,000 scale marked 0%, 100%, 200%), but every number in them (target 5000, sales 7800 and 9550) is also in the question words, so the learner loses nothing without the picture. Teaching image M2.S5.T5.C32.IMG1 already shows these bars and is never linked.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "The question text must carry the data the book's figure shows: the target is 5000 a day; on Day 5 the sales were 7800 and on Day 6 they were 9550; find the percentage of the target achieved on each day."
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C50",
+      "role": "solution",
+      "lp_book_number": "Example 9: Percentages Past 100: Days 5 and 6",
+      "ncert_ref": "Section 1.2 - 1.2.ex6_days_5_6",
+      "question_text": "Days 5 and 6",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "7800/5000 = 1.56 and 9550/5000 = 1.91, so 156% and 191%: two LaTeX fractions. The question side adds no diagram, and the book prints no answer picture.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C51",
+      "role": "question",
+      "lp_book_number": "Example 10: Percentages Past 100: Days 7 and 8",
+      "ncert_ref": "Section 1.2 - 1.2.ex6_days_7_8",
+      "question_text": "Days $7$ and $8$",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Word question (150% and 210% of a 5000 target); the book prints no figure for it (p.12).",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C52",
+      "role": "solution",
+      "lp_book_number": "Example 10: Percentages Past 100: Days 7 and 8",
+      "ncert_ref": "Section 1.2 - 1.2.ex6_days_7_8",
+      "question_text": "Days 7 and 8",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "150% of 5000 = 7500 and 210% of 5000 = 10,500: arithmetic in LaTeX; the book prints no figure for it.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C53",
+      "role": "question",
+      "lp_book_number": "Example 11: Percentages Past 100: table and number line",
+      "ncert_ref": "Section 1.2 - table_beyond_100 (p.12)",
+      "question_text": "The fraction and decimal table",
+      "decision": "required",
+      "reason_codes": [
+        "ACTION_ON_FIGURE",
+        "FIG_REFERENCED"
+      ],
+      "reason": "The book asks the learner to mark the approximate locations of nine percentages on the printed 0% to 400% band (the 90% arrow is shown as the worked first mark), so the band is what the learner acts on and cannot be replaced by words. The percent/fraction/decimal table that comes with it is plain numbers and stays LaTeX (figure P12-table-1, LATEX_TABLE).",
+      "text_alternative": "LaTeX array for the table: rows Percent, Fraction, Decimal; columns 90%, 110%, 200%, 250%, 15%, 173%, 358%, 28.9%, 305%; Fraction and Decimal cells empty. The figure carries only the 0% to 400% band with the 90% arrow.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M2.S6.T6.C53.IMG1",
+      "manim_scene": "c8_8_1_2_table_beyond_100_q",
+      "placeholder": {
+        "token": "{{DIAGRAM:M2.S6.T6.C53.IMG1}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "number_line",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "number_line",
+          "to_scale": true,
+          "canvas": {
+            "width": 1920,
+            "height": 1080
+          },
+          "scale": {
+            "min_percent": 0,
+            "max_percent": 400,
+            "x_at_0": 160,
+            "x_at_400": 1760,
+            "px_per_percent": 4
+          },
+          "band": {
+            "x_left": 160,
+            "x_right": 1760,
+            "y_top": 470,
+            "y_bottom": 670,
+            "fill": "CELL_FILL",
+            "section_1": {
+              "x_from": 160,
+              "x_to": 560,
+              "outline": "solid INK 3 px"
+            },
+            "sections_2_to_4": {
+              "x_from": 560,
+              "x_to": 1760,
+              "outline": "dashed INK 3 px (dash 12 px, gap 8 px)",
+              "dashed_dividers_x": [
+                960,
+                1360
+              ]
+            }
+          },
+          "ticks": [
+            {
+              "index": 1,
+              "percent": 0,
+              "x": 160,
+              "label": "0%",
+              "bracket_label": "(0)"
+            },
+            {
+              "index": 2,
+              "percent": 100,
+              "x": 560,
+              "label": "100%",
+              "bracket_label": "(1)"
+            },
+            {
+              "index": 3,
+              "percent": 200,
+              "x": 960,
+              "label": "200%",
+              "bracket_label": "(2)"
+            },
+            {
+              "index": 4,
+              "percent": 300,
+              "x": 1360,
+              "label": "300%",
+              "bracket_label": "(3)"
+            },
+            {
+              "index": 5,
+              "percent": 400,
+              "x": 1760,
+              "label": "400%",
+              "bracket_label": "(4)"
+            }
+          ],
+          "marked_points": [
+            {
+              "percent": 90,
+              "x": 520,
+              "label": "90%",
+              "tier": 1,
+              "arrow_tip_y": 370,
+              "label_centre_y": 338,
+              "shaft_from_y": 690,
+              "colour": "INK",
+              "given_in_question": true
+            }
+          ]
+        },
+        "manim_description": "Canvas 1920 x 1080 px, plain white BG. Draw one wide horizontal band: left edge x=160, right edge x=1760, top y=470, bottom y=670, filled CELL_FILL. The first section, from x=160 to x=560 (0% to 100%), has a solid INK outline of 3 px (top, bottom, left and right edges). The other three sections, from x=560 to x=1760, have dashed INK outlines of 3 px (dash 12 px, gap 8 px) along the top edge, the bottom edge and the right edge at x=1760, plus dashed vertical dividers at x=960 and x=1360 running from y=470 to y=670; the 100% edge at x=560 stays solid. Below the band draw five short solid INK tick lines from y=670 to y=700 at x=160, 560, 960, 1360 and 1760. Under the ticks, left to right, write the labels 0%, 100%, 200%, 300%, 400% in INK, 38 px, centred on the ticks at y=745. On a second row at y=805 write (0), (1), (2), (3), (4) in INK, 38 px, centred under the same ticks. Mark exactly one value: a vertical INK arrow at x=520 (90%, which is 160 + 4 x 90). The shaft is a 4 px line from y=690 up to y=400, it crosses the band, and a filled triangular arrowhead (22 px wide, 30 px long) points up with its tip at y=370. Write 90% in INK, 38 px, centred at x=520, y=338, directly above the arrowhead. Nothing else is drawn: no other arrows, no fractions or decimals.",
+        "visible_text": [
+          "0%",
+          "100%",
+          "200%",
+          "300%",
+          "400%",
+          "(0)",
+          "(1)",
+          "(2)",
+          "(3)",
+          "(4)",
+          "90%"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "the table of fractions and decimals",
+          "any arrow or mark other than 90%",
+          "fraction or decimal values"
+        ],
+        "accuracy_checks": [
+          "Band is 1600 px wide for 0% to 400%, so 4 px per 1%; x(p) = 160 + 4 x p.",
+          "Ticks at x = 160, 560, 960, 1360, 1760 carry 0%, 100%, 200%, 300%, 400% with (0), (1), (2), (3), (4) below.",
+          "Section 1 (0% to 100%) is solid-outlined; sections 2 to 4 (100% to 400%) are dashed, as printed in the book.",
+          "The 90% arrow is at x = 160 + 4 x 90 = 520, 40 px left of the 100% tick (x = 560), as in the book.",
+          "No value other than 90% is marked."
+        ],
+        "alt_text": "A band from 0% to 400% with ticks at every 100% (also written (0) to (4)); the first section is solid, the rest dashed, and an arrow marks 90% just left of 100%.",
+        "render_note": "Book picture P12-bar_model-1. The book draws the band blue; CELL_FILL is used instead, the colour carries no meaning. The table of the book is LaTeX text, not part of this picture."
+      }
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C54",
+      "role": "solution",
+      "lp_book_number": "Example 11: Percentages Past 100: table and number line",
+      "ncert_ref": "Section 1.2 - table_beyond_100 (p.12)",
+      "question_text": "The fraction and decimal table",
+      "decision": "required",
+      "reason_codes": [
+        "ANSWER_IS_FIGURE",
+        "ACTION_ON_FIGURE"
+      ],
+      "reason": "The LP answer ends 'Mark each on the 0% to 400% diagram at its decimal position': the answer is a marked band, with all nine values at their places (0.15, 0.289, 0.9, 1.1, 1.73, 2.0, 2.5, 3.05, 3.58 of the 0 to 4 scale). The table part of the answer stays a LaTeX array.",
+      "text_alternative": "LaTeX array filled: 90%: 9/10, 0.9; 110%: 11/10, 1.1; 200%: 2, 2.0; 250%: 5/2, 2.5; 15%: 3/20, 0.15; 173%: 173/100, 1.73; 358%: 179/50, 3.58; 28.9%: 289/1000, 0.289; 305%: 61/20, 3.05.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M2.S6.T6.C54.IMG1",
+      "manim_scene": "c8_8_1_2_table_beyond_100_sol",
+      "placeholder": {
+        "token": "{{DIAGRAM:M2.S6.T6.C54.IMG1}}",
+        "insert_into": "steps_tex",
+        "position": "before_first_step"
+      },
+      "diagram": {
+        "diagram_type": "number_line",
+        "aspect_ratio": "16:9",
+        "derived_from": "M2.S6.T6.C53.IMG1",
+        "content": {
+          "type": "number_line",
+          "to_scale": true,
+          "canvas": {
+            "width": 1920,
+            "height": 1080
+          },
+          "scale": {
+            "min_percent": 0,
+            "max_percent": 400,
+            "x_at_0": 160,
+            "x_at_400": 1760,
+            "px_per_percent": 4
+          },
+          "band": {
+            "x_left": 160,
+            "x_right": 1760,
+            "y_top": 470,
+            "y_bottom": 670,
+            "fill": "CELL_FILL",
+            "section_1": {
+              "x_from": 160,
+              "x_to": 560,
+              "outline": "solid INK 3 px"
+            },
+            "sections_2_to_4": {
+              "x_from": 560,
+              "x_to": 1760,
+              "outline": "dashed INK 3 px (dash 12 px, gap 8 px)",
+              "dashed_dividers_x": [
+                960,
+                1360
+              ]
+            }
+          },
+          "ticks": [
+            {
+              "index": 1,
+              "percent": 0,
+              "x": 160,
+              "label": "0%",
+              "bracket_label": "(0)"
+            },
+            {
+              "index": 2,
+              "percent": 100,
+              "x": 560,
+              "label": "100%",
+              "bracket_label": "(1)"
+            },
+            {
+              "index": 3,
+              "percent": 200,
+              "x": 960,
+              "label": "200%",
+              "bracket_label": "(2)"
+            },
+            {
+              "index": 4,
+              "percent": 300,
+              "x": 1360,
+              "label": "300%",
+              "bracket_label": "(3)"
+            },
+            {
+              "index": 5,
+              "percent": 400,
+              "x": 1760,
+              "label": "400%",
+              "bracket_label": "(4)"
+            }
+          ],
+          "marked_points": [
+            {
+              "percent": 15,
+              "x": 220,
+              "label": "15%",
+              "tier": 1,
+              "arrow_tip_y": 370,
+              "label_centre_y": 338,
+              "shaft_from_y": 690,
+              "colour": "ANSWER",
+              "given_in_question": false
+            },
+            {
+              "percent": 28.9,
+              "x": 275.6,
+              "label": "28.9%",
+              "tier": 2,
+              "arrow_tip_y": 250,
+              "label_centre_y": 218,
+              "shaft_from_y": 690,
+              "colour": "ANSWER",
+              "given_in_question": false
+            },
+            {
+              "percent": 90,
+              "x": 520,
+              "label": "90%",
+              "tier": 1,
+              "arrow_tip_y": 370,
+              "label_centre_y": 338,
+              "shaft_from_y": 690,
+              "colour": "INK",
+              "given_in_question": true
+            },
+            {
+              "percent": 110,
+              "x": 600,
+              "label": "110%",
+              "tier": 2,
+              "arrow_tip_y": 250,
+              "label_centre_y": 218,
+              "shaft_from_y": 690,
+              "colour": "ANSWER",
+              "given_in_question": false
+            },
+            {
+              "percent": 173,
+              "x": 852,
+              "label": "173%",
+              "tier": 1,
+              "arrow_tip_y": 370,
+              "label_centre_y": 338,
+              "shaft_from_y": 690,
+              "colour": "ANSWER",
+              "given_in_question": false
+            },
+            {
+              "percent": 200,
+              "x": 960,
+              "label": "200%",
+              "tier": 1,
+              "arrow_tip_y": 370,
+              "label_centre_y": 338,
+              "shaft_from_y": 690,
+              "colour": "ANSWER",
+              "given_in_question": false
+            },
+            {
+              "percent": 250,
+              "x": 1160,
+              "label": "250%",
+              "tier": 1,
+              "arrow_tip_y": 370,
+              "label_centre_y": 338,
+              "shaft_from_y": 690,
+              "colour": "ANSWER",
+              "given_in_question": false
+            },
+            {
+              "percent": 305,
+              "x": 1380,
+              "label": "305%",
+              "tier": 1,
+              "arrow_tip_y": 370,
+              "label_centre_y": 338,
+              "shaft_from_y": 690,
+              "colour": "ANSWER",
+              "given_in_question": false
+            },
+            {
+              "percent": 358,
+              "x": 1592,
+              "label": "358%",
+              "tier": 1,
+              "arrow_tip_y": 370,
+              "label_centre_y": 338,
+              "shaft_from_y": 690,
+              "colour": "ANSWER",
+              "given_in_question": false
+            }
+          ]
+        },
+        "manim_description": "Same canvas and layout as M2.S6.T6.C53.IMG1: 1920 x 1080 px, plain white BG; band x=160 to x=1760, y=470 to y=670, CELL_FILL; first section (x=160 to 560) solid INK outline 3 px, sections 2 to 4 (x=560 to 1760) dashed INK outline 3 px with dashed dividers at x=960 and x=1360; five solid INK ticks from y=670 to y=700 at x=160, 560, 960, 1360, 1760; tick labels 0%, 100%, 200%, 300%, 400% at y=745 and (0), (1), (2), (3), (4) at y=805, all INK 38 px. Positions follow x = 160 + 4 x percent. The 90% arrow stays exactly as given in INK at x=520 with its label 90% at y=338. Add eight vertical ANSWER arrows, each with a 4 px shaft from y=690 up, a filled triangular arrowhead (22 px wide, 30 px long) pointing up, and its label in ANSWER, 38 px, centred above the arrowhead. Low row (arrowhead tip y=370, label centre y=338): 15% at x=220, 173% at x=852, 200% at x=960, 250% at x=1160, 305% at x=1380, 358% at x=1592. High row (arrowhead tip y=250, label centre y=218): 28.9% at x=275.6, 110% at x=600. From left to right the nine arrows are therefore 15% (x=220), 28.9% (x=275.6), 90% (x=520, INK), 110% (x=600), 173% (x=852), 200% (x=960), 250% (x=1160), 305% (x=1380), 358% (x=1592). The shafts of the two high-row arrows pass beside the low-row labels without touching them. No fractions, decimals or table are drawn.",
+        "visible_text": [
+          "0%",
+          "100%",
+          "200%",
+          "300%",
+          "400%",
+          "(0)",
+          "(1)",
+          "(2)",
+          "(3)",
+          "(4)",
+          "90%",
+          "15%",
+          "28.9%",
+          "110%",
+          "173%",
+          "250%",
+          "305%",
+          "358%"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "the table of fractions and decimals",
+          "fraction or decimal values on the arrows",
+          "any arrow label other than the nine percentages"
+        ],
+        "accuracy_checks": [
+          "Band is 1600 px wide for 0% to 400%, so 4 px per 1%; x(p) = 160 + 4 x p.",
+          "Ticks at x = 160, 560, 960, 1360, 1760 carry 0%, 100%, 200%, 300%, 400% with (0), (1), (2), (3), (4) below.",
+          "Section 1 (0% to 100%) is solid-outlined; sections 2 to 4 (100% to 400%) are dashed, as printed in the book.",
+          "Arrow x positions: 15% -> 220, 28.9% -> 275.6, 90% -> 520, 110% -> 600, 173% -> 852, 200% -> 960, 250% -> 1160, 305% -> 1380, 358% -> 1592 (x = 160 + 4 x percent).",
+          "Equivalent decimal positions on the 0 to 4 scale: 0.15, 0.289, 0.9, 1.1, 1.73, 2.0, 2.5, 3.05, 3.58; the 200% arrow sits on the 200% tick, the 305% arrow 20 px right of the 300% tick.",
+          "28.9% (x = 275.6) and 110% (x = 600) are on the high row so no two labels overlap; the nearest low-row labels are 15% (x = 220) and 90% (x = 520).",
+          "The 90% arrow and everything given in the question picture are unchanged and stay INK; only the eight new arrows are ANSWER green."
+        ],
+        "alt_text": "The 0% to 400% band with nine arrows: 15%, 28.9% and 90% in the first section, 110% just right of 100%, 173%, 200%, 250%, 305% and 358% further right.",
+        "render_note": "Same as M2.S6.T6.C53.IMG1 with the eight answer arrows added. The book prints only the 90% arrow; the others are placed from their decimal values."
+      }
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C55",
+      "role": "question",
+      "lp_book_number": "Example 7: The wheat harvest",
+      "ncert_ref": "Section 1.2 - 1.2.ex7",
+      "question_text": "Wheat harvest",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Word question (260 kg last year, 650 kg this year); the book prints no figure for Example 7 (p.12).",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M2.S6.T6.C56",
+      "role": "solution",
+      "lp_book_number": "Example 7: The wheat harvest",
+      "ncert_ref": "Section 1.2 - 1.2.ex7",
+      "question_text": "Wheat harvest",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "650/260 x 100 = 250% is one line of arithmetic; the book prints no figure for it.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    }
+  ]
+}

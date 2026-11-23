@@ -1,0 +1,2810 @@
+{
+ "meta": {
+  "chapter": "Area",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 14",
+  "lp_plan_id": "cbse_eng_maths8_ch14_v39",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 6,
+    "optional": 0,
+    "none": 6
+   },
+   "solution": {
+    "required": 6,
+    "optional": 1,
+    "none": 5
+   },
+   "worked_example": {
+    "required": 4,
+    "optional": 0,
+    "none": 0
+   }
+  },
+  "notes": [
+   "Chunk C: units 36-51 (parallelogram Figure it Out Q2-Q9, rhombus section and questions, trapezium section and questions).",
+   "Book mistakes: none found in the printed figures of this chunk; the book's picture of Q3 (QN) puts N slightly farther from S than the exact geometry allows, and the picture of Q2 (iii) is almost a rhombus (no number printed is wrong).",
+   "The 16 required diagrams are listed in coverage_report.new_media_ids_created; solutions of C60 and C75 are derived_from their question diagrams.",
+   "Decision 5 applied: worked examples C63, C64, C71, C72 and the grid pair C74/C75 get their own diagrams although teaching images (C63.IMG1, C64.IMG1, C69.IMG1, C70.IMG1, C71.IMG1, C72.IMG1, C73.IMG1) exist; none is linked.",
+   "See notes_C.md for judgement calls, LP text issues and borderline items."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P16-shape-1",
+   "source": "chapter p.16",
+   "description": "Parallelogram (i): base 7 cm, dotted height 4 cm.",
+   "mapped_to": "item:M2.S16.T16.C55 (question)"
+  },
+  {
+   "fig_id": "P16-shape-2",
+   "source": "chapter p.16",
+   "description": "Parallelogram (ii): base 5 cm, dotted height 3 cm, diagonal drawn.",
+   "mapped_to": "item:M2.S16.T16.C55 (question)"
+  },
+  {
+   "fig_id": "P16-shape-3",
+   "source": "chapter p.16",
+   "description": "Parallelogram (iii): side 5 cm, dotted perpendicular 4.8 cm drawn to it.",
+   "mapped_to": "item:M2.S16.T16.C55 (question)"
+  },
+  {
+   "fig_id": "P16-shape-4",
+   "source": "chapter p.16",
+   "description": "Parallelogram (iv): side 2 cm, dotted perpendicular 4.4 cm drawn to it.",
+   "mapped_to": "item:M2.S16.T16.C55 (question)"
+  },
+  {
+   "fig_id": "P16-shape-5",
+   "source": "chapter p.16",
+   "description": "Parallelogram PQRS with SR 12, QM 6, PS 7.6 and QN perpendicular to PS.",
+   "mapped_to": "item:M2.S16.T16.C56 (question)"
+  },
+  {
+   "fig_id": "P16-shape-6",
+   "source": "chapter p.16",
+   "description": "Rectangle 5 by 4 and a parallelogram with slanting side 4 on the same 5 cm base.",
+   "mapped_to": "item:M2.S16.T16.C57 (question)"
+  },
+  {
+   "fig_id": "P17-shape-1",
+   "source": "chapter p.17",
+   "description": "Isosceles triangle ABC with altitude AD (right angle at D, D the midpoint of BC).",
+   "mapped_to": "item:M2.S16.T16.C60 (question)"
+  },
+  {
+   "fig_id": "P17-shape-2",
+   "source": "chapter p.17",
+   "description": "Rhombus ABCD with both diagonals cut into four right triangles pulled apart (Sulba-Sutras dissection, first part).",
+   "mapped_to": "item:M2.S17.T17.C63 (question)"
+  },
+  {
+   "fig_id": "P18-shape-1",
+   "source": "chapter p.18",
+   "description": "The four right triangles joined in pairs into two rectangles and then into one rectangle WXYZ.",
+   "mapped_to": "item:M2.S17.T17.C63 (question)"
+  },
+  {
+   "fig_id": "P18-shape-2",
+   "source": "chapter p.18",
+   "description": "Rhombus ABCD with diagonals AC and BD meeting at O (area as two triangles).",
+   "mapped_to": "item:M2.S17.T17.C64 (question)"
+  },
+  {
+   "fig_id": "P19-shape_on_grid-1",
+   "source": "chapter p.19",
+   "description": "Three trapeziums on one square grid: ABCD (4, 6, height 4), isosceles SPQR (10, 6, height 3) and WXYZ (5, 9, height 4); the LP question uses ABCD and WXYZ.",
+   "mapped_to": "item:M2.S21.T21.C74 (question)"
+  },
+  {
+   "fig_id": "P19-shape-2",
+   "source": "chapter p.19",
+   "description": "Trapezium WXYZ with WM and XN perpendicular to ZY (teaching figure for the rectangle-and-triangles method).",
+   "mapped_to": "concept_image:M2.S20.T20.C70.IMG1"
+  },
+  {
+   "fig_id": "P19-shape-3",
+   "source": "chapter p.19",
+   "description": "The same trapezium with the lengths named x, h, a, y, b (teaching figure).",
+   "mapped_to": "concept_image:M2.S20.T20.C70.IMG1"
+  },
+  {
+   "fig_id": "P20-shape-1",
+   "source": "chapter p.20",
+   "description": "Slanting trapezium (top-left vertex left of bottom-left) with a, h, b.",
+   "mapped_to": "item:M2.S20.T20.C71 (question)"
+  },
+  {
+   "fig_id": "P20-shape-2",
+   "source": "chapter p.20",
+   "description": "Approach 1 figure: rectangle ABED and triangle BEC with F, D, E, h and b (teaching figure; no item of this plan draws Approach 1).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P20-shape-3",
+   "source": "chapter p.20",
+   "description": "Approach 2 figure: BG drawn parallel to AD (the figure the worked example uses).",
+   "mapped_to": "item:M2.S20.T20.C71 (question)"
+  },
+  {
+   "fig_id": "P21-shape-1",
+   "source": "chapter p.21",
+   "description": "Two copies of the trapezium, the second turned by a half turn (A, B, C, D and C-prime, D-prime, B-prime, A-prime with angles x, y).",
+   "mapped_to": "item:M2.S20.T20.C72 (question)"
+  },
+  {
+   "fig_id": "P21-shape-2",
+   "source": "chapter p.21",
+   "description": "The ruled-out 6-sided figure when the copies are joined along BC wrongly (teaching figure).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P21-shape-3",
+   "source": "chapter p.21",
+   "description": "The two copies joined along BC form a quadrilateral (parallelogram) with x and y at B and C.",
+   "mapped_to": "item:M2.S20.T20.C72 (question)"
+  },
+  {
+   "fig_id": "P21-shape-4",
+   "source": "chapter p.21",
+   "description": "The same quadrilateral with the angles u and v marked (proof that it is a parallelogram; teaching figure).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P21-shape-5",
+   "source": "chapter p.21",
+   "description": "Trapezium with a, b, h beside the parallelogram of two copies with top a + b and bottom b + a.",
+   "mapped_to": "item:M2.S20.T20.C72 (question)"
+  },
+  {
+   "fig_id": "P22-shape-1",
+   "source": "chapter p.22",
+   "description": "Figure it Out Q3 trapezium (i) tilted, 10 ft and 7 ft with 16 ft between.",
+   "mapped_to": "item:M2.S21.T21.C76 (question)"
+  },
+  {
+   "fig_id": "P22-shape-2",
+   "source": "chapter p.22",
+   "description": "Figure it Out Q3 trapezium (ii) 24 m and 36 m, height 14 m.",
+   "mapped_to": "item:M2.S21.T21.C76 (question)"
+  },
+  {
+   "fig_id": "P22-shape-3",
+   "source": "chapter p.22",
+   "description": "Figure it Out Q3 trapezium (iii) vertical sides 14 in and 6 in, 10 in between.",
+   "mapped_to": "item:M2.S21.T21.C76 (question)"
+  },
+  {
+   "fig_id": "P22-shape-4",
+   "source": "chapter p.22",
+   "description": "Figure it Out Q3 trapezium (iv) 12 ft and 18 ft, height 8 ft.",
+   "mapped_to": "item:M2.S21.T21.C76 (question)"
+  },
+  {
+   "fig_id": "NEW-P17-shape-1-sol",
+   "source": "chapter p.17",
+   "description": "Second use of the book triangle ABC with altitude AD: the left figure of the solution diagram of Q7 (same position, fills added).",
+   "mapped_to": "item:M2.S16.T16.C60 (solution)"
+  },
+  {
+   "fig_id": "NEW-P19-shape_on_grid-1-sol",
+   "source": "chapter p.19",
+   "description": "Second use of the grid trapeziums ABCD and WXYZ: the solution diagram adds the fills and the piece areas.",
+   "mapped_to": "item:M2.S21.T21.C75 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 27,
+  "mapped_to_items": 22,
+  "mapped_to_concept_images": 2,
+  "mapped_none": 3,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M2.S16.T16.C55.IMG1",
+   "M2.S16.T16.C56.IMG1",
+   "M2.S16.T16.C57.IMG1",
+   "M2.S16.T16.C58.IMG1",
+   "M2.S16.T16.C59.IMG1",
+   "M2.S16.T16.C60.IMG1",
+   "M2.S16.T16.C60.IMG2",
+   "M2.S16.T16.C61.IMG1",
+   "M2.S17.T17.C63.IMG2",
+   "M2.S17.T17.C64.IMG2",
+   "M2.S19.T19.C68.IMG1",
+   "M2.S20.T20.C71.IMG2",
+   "M2.S20.T20.C72.IMG2",
+   "M2.S21.T21.C74.IMG1",
+   "M2.S21.T21.C75.IMG1",
+   "M2.S21.T21.C76.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M2.S16.T16.C55",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q2 - Section Parallelogram, Figure it Out Q2 (pdf p.16)",
+   "question_text": "Find the areas of the following parallelograms: (i) base 7 cm, height 4 cm, (ii) base 5 cm, height 3 cm, (iii) side 5 cm with height 4.8 cm drawn to it, (iv) side 2 cm with height 4.4 cm drawn to it.",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "FIG_REFERENCED"
+   ],
+   "reason": "The book question 'Find the areas of the following parallelograms' refers to four printed figures; which side is the base, where the height is drawn (and the extra diagonal in (ii), the slanting side in (iii) and (iv)) lives only in the pictures.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S16.T16.C55.IMG1",
+   "manim_scene": "c8_14_s16_fio4q2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S16.T16.C55.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "mensuration_figure",
+     "to_scale": true,
+     "scale_units_per_cm": 0.62,
+     "panels": [
+      {
+       "tag": "(i)",
+       "origin": [
+        1.4,
+        5.6
+       ],
+       "polygon_cm": [
+        [
+         0,
+         0
+        ],
+        [
+         7,
+         0
+        ],
+        [
+         8,
+         4
+        ],
+        [
+         1,
+         4
+        ]
+       ],
+       "base_cm": 7,
+       "height_cm": 4,
+       "dashed_height": [
+        [
+         1,
+         4
+        ],
+        [
+         1,
+         0
+        ]
+       ]
+      },
+      {
+       "tag": "(ii)",
+       "origin": [
+        9.9,
+        5.6
+       ],
+       "polygon_cm": [
+        [
+         0,
+         0
+        ],
+        [
+         5,
+         0
+        ],
+        [
+         5.8,
+         3
+        ],
+        [
+         0.8,
+         3
+        ]
+       ],
+       "base_cm": 5,
+       "height_cm": 3,
+       "diagonal": [
+        [
+         0.8,
+         3
+        ],
+        [
+         5,
+         0
+        ]
+       ],
+       "dashed_height": [
+        [
+         0.8,
+         3
+        ],
+        [
+         0.8,
+         0
+        ]
+       ]
+      },
+      {
+       "tag": "(iii)",
+       "origin": [
+        3.4,
+        1.0
+       ],
+       "polygon_cm": [
+        [
+         0,
+         0
+        ],
+        [
+         5.0,
+         0
+        ],
+        [
+         3.6,
+         4.8
+        ],
+        [
+         -1.4,
+         4.8
+        ]
+       ],
+       "side_cm": 5,
+       "perpendicular_cm": 4.8,
+       "foot": [
+        4.608,
+        1.344
+       ]
+      },
+      {
+       "tag": "(iv)",
+       "origin": [
+        10.4,
+        1.0
+       ],
+       "polygon_cm": [
+        [
+         0,
+         0
+        ],
+        [
+         4.5,
+         0
+        ],
+        [
+         4.081,
+         1.956
+        ],
+        [
+         -0.419,
+         1.956
+        ]
+       ],
+       "side_cm": 2,
+       "perpendicular_cm": 4.4,
+       "foot": [
+        4.302,
+        0.922
+       ]
+      }
+     ]
+    },
+    "manim_description": "Canvas 16 by 9 units, plain BG, x to the right, y up, origin at the bottom-left corner of the canvas. Draw four parallelograms in a 2 by 2 arrangement: (i) top-left, (ii) top-right, (iii) bottom-left, (iv) bottom-right. Every outline is INK, 3 px stroke, no fill. Each panel has its own local coordinates in cm with the local origin at the bottom-left corner of its bottom side, and is placed by canvas = panel origin + 0.62 * local (panel origins (i) (1.4,5.6), (ii) (9.9,5.6), (iii) (3.4,1.0), (iv) (10.4,1.0)). Dimension arrows are double-headed GUIDE arrows; where an arrow carries a label the label is INK and centred on the arrow. Right-angle marks are INK squares drawn inside the figure. Dashed segments are INK, 2 px, dash 0.15 cm. Panel (i): polygon (0,0), (7,0), (8,4), (1,4). Dashed segment (1,4) to (1,0); right-angle mark with corners (1,0), (1.4,0), (1.4,0.4), (1,0.4); label '4 cm' centred at (1.75,2); dimension arrow (0,-0.5) to (7,-0.5) labelled '7 cm' centred at (3.5,-0.5); tag '(i)' centred at (3.5,-1.3). Panel (ii): polygon (0,0), (5,0), (5.8,3), (0.8,3). Solid INK diagonal (0.8,3) to (5,0). Dashed segment (0.8,3) to (0.8,0); right-angle mark with corners (0.8,0), (1.2,0), (1.2,0.4), (0.8,0.4); label '3 cm' centred at (1.55,1.5); dimension arrow (0,-0.5) to (5,-0.5) labelled '5 cm' centred at (2.5,-0.5); tag '(ii)' centred at (2.5,-1.3). Panel (iii): polygon (0,0), (5,0), (3.6,4.8), (-1.4,4.8); the right side from (5,0) to (3.6,4.8) has length 5; no other side is labelled. Dashed segment from (0,0) to (4.608,1.344) (length 4.8, perpendicular to the right side) with a right-angle mark with corners (4.608,1.344), (4.224,1.232), (4.112,1.616), (4.496,1.728) at the foot; label '4.8 cm' above the dashed segment, rotated to its direction (16.26 degrees), centred 0.3 cm above its midpoint; dimension arrow parallel to the right side from (5.576,0.168) to (4.176,4.968) labelled '5 cm' placed horizontally immediately right of the arrow midpoint (4.876,2.568); tag '(iii)' centred at (2.5,-0.8). Panel (iv): polygon (0,0), (4.5,0), (4.081,1.956), (-0.419,1.956); the right side from (4.5,0) to (4.081,1.956) has length 2; no other side is labelled. Dashed segment from (0,0) to (4.302,0.922) (length 4.4, perpendicular to the right side) with a right-angle mark with corners (4.302,0.922), (3.911,0.839), (3.827,1.23), (4.218,1.314) at the foot; label '4.4 cm' above the dashed segment, rotated to its direction (12.101 degrees), centred 0.3 cm above its midpoint; dimension arrow parallel to the right side from (5.087,0.126) to (4.667,2.081) labelled '2 cm' placed horizontally immediately right of the arrow midpoint (4.877,1.104); tag '(iv)' centred at (2.25,-0.8).",
+    "visible_text": [
+     "(i)",
+     "7 cm",
+     "4 cm",
+     "(ii)",
+     "5 cm",
+     "3 cm",
+     "(iii)",
+     "5 cm",
+     "4.8 cm",
+     "(iv)",
+     "2 cm",
+     "4.4 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "the areas 28, 15, 24, 8.8",
+     "any label on an unlabelled side",
+     "figure letters other than (i), (ii), (iii), (iv)"
+    ],
+    "accuracy_checks": [
+     "panel (i): base 7 and perpendicular height 4 (area 28); the dashed segment is vertical and 4 long",
+     "panel (ii): base 5 and perpendicular height 3 (area 15); the diagonal joins (0.8,3) to (5,0) and carries no label",
+     "panel (iii): |(5,0)-(3.6,4.8)| = sqrt(1.4^2+4.8^2) = 5.0; distance from (0,0) to (4.608,1.344) = 4.8 and the dashed segment is perpendicular to the right side",
+     "panel (iv): |(4.5,0)-(4.081,1.956)| = 2.0; distance from (0,0) to (4.302,0.922) = 4.4 and the dashed segment is perpendicular to the right side",
+     "each polygon is a parallelogram (opposite sides parallel and equal)"
+    ],
+    "alt_text": "Four parallelograms: (i) base 7 cm with a dotted height of 4 cm; (ii) base 5 cm with a dotted height of 3 cm and a diagonal; (iii) a side of 5 cm with a dotted perpendicular of 4.8 cm drawn to it; (iv) a side of 2 cm with a dotted perpendicular of 4.4 cm drawn to it.",
+    "render_note": "Unlabelled sides are drawn to the lengths implied by the given numbers: in (iii) the horizontal sides are 5 cm (the book's picture is almost a rhombus), in (iv) 4.5 cm. No length is printed on them."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C55",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q2",
+   "question_text": "Find the areas of the following parallelograms: (i) base 7 cm, height 4 cm, (ii) base 5 cm, height 3 cm, (iii) side 5 cm with height 4.8 cm drawn to it, (iv) side 2 cm with height 4.4 cm drawn to it.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answers 28, 15, 24 and 8.8 cm2 are products of a printed base and height; a solution figure would only repeat the question figure.",
+   "text_alternative": "LaTeX: four lines base x height = area for (i) to (iv).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C56",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q3 - Section Parallelogram, Figure it Out Q3 (pdf p.16)",
+   "question_text": "Find QN in parallelogram PQRS, where SR = 12 cm, the height QM to SR is 6 cm, PS = 7.6 cm, and QN is perpendicular to PS.",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "'Find QN' needs the figure: the positions of M on SR, N on PS and the two perpendiculars QM and QN are shown only in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S16.T16.C56.IMG1",
+   "manim_scene": "c8_14_s16_fio4q3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S16.T16.C56.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "mensuration_figure",
+     "to_scale": true,
+     "scale_units_per_cm": 0.8,
+     "origin": [
+      5.2,
+      1.9
+     ],
+     "points_cm": {
+      "P": [
+       -4.665,
+       6
+      ],
+      "Q": [
+       7.335,
+       6
+      ],
+      "R": [
+       12,
+       0
+      ],
+      "S": [
+       0,
+       0
+      ],
+      "M": [
+       7.335,
+       0
+      ],
+      "N": [
+       -0.144,
+       0.185
+      ]
+     },
+     "segments": [
+      "PQ",
+      "QR",
+      "RS",
+      "SP",
+      "QM (6 cm, perpendicular to SR)",
+      "QN (perpendicular to PS)"
+     ],
+     "given": {
+      "SR_cm": 12,
+      "QM_cm": 6,
+      "PS_cm": 7.6
+     },
+     "QN_cm_exact": 9.474
+    },
+    "manim_description": "Canvas 16 by 9 units, plain BG, y up. Local coordinates in cm, canvas = (5.2,1.9) + 0.8 * local. Draw parallelogram PQRS with INK outline, 3 px, no fill: P(-4.665,6), Q(7.335,6), R(12,0), S(0,0) (PQ and SR horizontal, 12 cm each; PS and QR slant down to the right, 7.6 cm each). Draw point M(7.335,0) on SR directly below Q and the INK segment QM (vertical, 6 cm). Draw point N(-0.144,0.185) on PS and the INK segment QN (QN is perpendicular to PS, so N lies 0.23 cm from S). Right-angle marks as INK squares of side 0.3 cm: at M with corners (7.335,0), (7.335,0.3), (7.635,0.3), (7.635,0), and at N with corners (-0.144,0.185), (0.093,0.369), (-0.091,0.606), (-0.328,0.422) (between NQ and NP). Dots (radius 0.06 cm, INK) at M and at N. Letters P above-left of P, Q above Q, S below-left of S, M below M, R below-right of R, N to the left of N (centre (-0.544,0.235)). Labels: '6 cm' centred 0.45 cm left of the midpoint of QM, at (6.885,3); dimension arrow (GUIDE, double-headed) from (-5.099,5.662) to (-0.434,-0.338), parallel to PS and outside the figure on its left, labelled '7.6 cm' (rotated to the arrow, -52.136 degrees) centred on the arrow; dimension arrow (GUIDE) from (0,-0.6) to (12,-0.6) labelled '12 cm' centred at (6,-0.6). No other number or letter.",
+    "visible_text": [
+     "P",
+     "Q",
+     "N",
+     "S",
+     "M",
+     "R",
+     "6 cm",
+     "7.6 cm",
+     "12 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "the value of QN (about 9.47)",
+     "the area 72"
+    ],
+    "accuracy_checks": [
+     "|PS| = distance from (-4.665,6) to (0,0) = 7.6 = 7.6",
+     "QM is perpendicular to SR: Q and M share x = 7.335, |QM| = 6",
+     "QN is perpendicular to PS: (Q-N).(S-P) = 0 (zero)",
+     "PQ = SR = 12 and PQ parallel to SR; PS parallel to QR",
+     "the picture must NOT print the value of QN"
+    ],
+    "alt_text": "Parallelogram PQRS with SR = 12 cm along the bottom, QM = 6 cm drawn from Q perpendicular to SR at M, PS = 7.6 cm on the left, and QN drawn from Q perpendicular to PS meeting it at N close to S.",
+    "render_note": "The book draws N a little farther from S than the exact geometry gives; with SR = 12, QM = 6, PS = 7.6 the foot N is 0.23 cm from S, so N and S nearly touch (QN is almost equal to QS). Keep the exact positions and offset the letters N and S so they do not overlap."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C56",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q3",
+   "question_text": "Find QN in parallelogram PQRS, where SR = 12 cm, the height QM to SR is 6 cm, PS = 7.6 cm, and QN is perpendicular to PS.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The solution writes the area two ways and divides (72 / 7.6); it adds nothing to the question figure.",
+   "text_alternative": "LaTeX: area = 12 x 6 = 72 = 7.6 x QN, so QN = 72 / 7.6, about 9.47 cm.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C57",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q4 - Section Parallelogram, Figure it Out Q4 (pdf p.16)",
+   "question_text": "Consider a rectangle and a parallelogram of the same sidelengths: 5 cm and 4 cm. Which has the greater area? (Hint: imagine constructing them on the same base.)",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "Borderline: the book prints the 5 by 4 rectangle and the parallelogram on the same base under the question as the picture for its hint; seeing the parallelogram's top lower than the rectangle's changes how easily the learner reaches the answer. Drawn as the book gives it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S16.T16.C57.IMG1",
+   "manim_scene": "c8_14_s16_fio4q4_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S16.T16.C57.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "mensuration_figure",
+     "to_scale": true,
+     "scale_units_per_cm": 0.9,
+     "origin": [
+      3.6,
+      2.0
+     ],
+     "rectangle_cm": [
+      [
+       0,
+       0
+      ],
+      [
+       5,
+       0
+      ],
+      [
+       5,
+       4
+      ],
+      [
+       0,
+       4
+      ]
+     ],
+     "parallelogram_cm": [
+      [
+       0,
+       0
+      ],
+      [
+       5,
+       0
+      ],
+      [
+       7,
+       3.464
+      ],
+      [
+       2,
+       3.464
+      ]
+     ],
+     "given": {
+      "rectangle": "5 by 4",
+      "parallelogram_sides": "5 and 4",
+      "common_base_cm": 5
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units, plain BG, y up. Local coordinates in cm, canvas = (3.6,2.0) + 0.9 * local. Draw a rectangle with corners (0,0), (5,0), (5,4), (0,4) (INK outline 3 px, no fill) and a parallelogram on the same base with corners (0,0), (5,0), (7,3.464), (2,3.464) (INK outline 3 px, no fill); the parallelogram's left side runs from (0,0) to (2,3.464) and is 4 cm long, and its top side from (2,3.464) to (7,3.464) crosses the rectangle's right side x = 5 at y = 3.464, below the rectangle's top side y = 4. Both shapes overlap. Labels: '4 cm' centred at (-0.6,2) left of the rectangle's left side; '5 cm' centred at (2.5,-0.55) below the common base; a GUIDE double-headed arrow from (0.404,0) to (2.404,3.464) parallel to and just inside the parallelogram's left side, labelled '4 cm' placed horizontally to the right of the arrow midpoint (1.404,1.732) at (1.9,1.732). No vertex letters, no height lines, no area values.",
+    "visible_text": [
+     "4 cm",
+     "5 cm",
+     "4 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "areas 20 or 15",
+     "the parallelogram's height line or value",
+     "vertex letters"
+    ],
+    "accuracy_checks": [
+     "rectangle is 5 wide and 4 tall",
+     "parallelogram has base 5 and slanting sides |(0,0)-(2,3.464)| = 4 = 4",
+     "parallelogram height 3.464 is smaller than 4, so its top side lies below the rectangle's top side",
+     "do not print any area"
+    ],
+    "alt_text": "A 5 cm by 4 cm rectangle and a parallelogram on the same 5 cm base with slanting sides of 4 cm leaning right; the parallelogram's top is lower than the rectangle's top.",
+    "render_note": "The book's picture shows the same two shapes (parallelogram height about 3.4 cm). Here the horizontal lean is exactly 2 cm, which gives the height 2*sqrt(3) = 3.464 cm; nothing about this lean is printed."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C57",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q4",
+   "question_text": "Consider a rectangle and a parallelogram of the same sidelengths: 5 cm and 4 cm. Which has the greater area? (Hint: imagine constructing them on the same base.)",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Borderline: the solution only states that the parallelogram's height is less than 4 cm, which the question figure already shows (top lower than the rectangle's); a marked height would be a small extra, not needed.",
+   "text_alternative": "LaTeX: rectangle 5 x 4 = 20; parallelogram 5 x height with height < 4, so area < 20.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C58",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q5 - Section Parallelogram, Figure it Out Q5 (pdf p.16)",
+   "question_text": "Give a method to obtain a rectangle whose area is twice that of a given triangle. What are the different methods that you can think of?",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure for this question (a method for 'a given triangle'); nothing is given to draw on the question side.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C58",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q5",
+   "question_text": "Give a method to obtain a rectangle whose area is twice that of a given triangle. What are the different methods that you can think of?",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The answer is a construction: a rectangle on the base and height, and the parallelogram that is cut and slid into a rectangle; the steps only describe these arrangements in words.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S16.T16.C58.IMG1",
+   "manim_scene": "c8_14_s16_fio4q5_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S16.T16.C58.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "description": "two methods for a rectangle of twice a triangle's area: (1) rectangle on the base and height; (2) two copies make a parallelogram, cut along the height and slide to a rectangle",
+     "to_scale": true,
+     "method1": {
+      "origin": [
+       1.3,
+       2.6
+      ],
+      "scale": 0.95,
+      "triangle": [
+       [
+        0,
+        0
+       ],
+       [
+        6,
+        0
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "rectangle": [
+       [
+        0,
+        0
+       ],
+       [
+        6,
+        0
+       ],
+       [
+        6,
+        4
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "altitude": [
+       [
+        2,
+        4
+       ],
+       [
+        2,
+        0
+       ]
+      ]
+     },
+     "method2_parallelogram": {
+      "origin": [
+       9.0,
+       5.6
+      ],
+      "scale": 0.62,
+      "polygon": [
+       [
+        0,
+        0
+       ],
+       [
+        6,
+        0
+       ],
+       [
+        8,
+        4
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "diagonal": [
+       [
+        6,
+        0
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "cut": [
+       [
+        2,
+        4
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "pieces": [
+       {
+        "corners": [
+         [
+          0,
+          0
+         ],
+         [
+          2,
+          0
+         ],
+         [
+          2,
+          4
+         ]
+        ],
+        "fill": "MARK_FILL"
+       },
+       {
+        "corners": [
+         [
+          2,
+          0
+         ],
+         [
+          6,
+          0
+         ],
+         [
+          2,
+          4
+         ]
+        ],
+        "fill": "MARK_FILL"
+       },
+       {
+        "corners": [
+         [
+          6,
+          0
+         ],
+         [
+          8,
+          4
+         ],
+         [
+          2,
+          4
+         ]
+        ],
+        "fill": "CELL_FILL"
+       }
+      ]
+     },
+     "method2_rectangle": {
+      "origin": [
+       9.0,
+       2.0
+      ],
+      "scale": 0.62,
+      "polygon": [
+       [
+        2,
+        0
+       ],
+       [
+        8,
+        0
+       ],
+       [
+        8,
+        4
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "pieces": [
+       {
+        "corners": [
+         [
+          2,
+          0
+         ],
+         [
+          6,
+          0
+         ],
+         [
+          2,
+          4
+         ]
+        ],
+        "fill": "MARK_FILL"
+       },
+       {
+        "corners": [
+         [
+          6,
+          0
+         ],
+         [
+          8,
+          4
+         ],
+         [
+          2,
+          4
+         ]
+        ],
+        "fill": "CELL_FILL"
+       },
+       {
+        "corners": [
+         [
+          6,
+          0
+         ],
+         [
+          8,
+          0
+         ],
+         [
+          8,
+          4
+         ]
+        ],
+        "fill": "MARK_FILL",
+        "moved_from": [
+         [
+          0,
+          0
+         ],
+         [
+          2,
+          0
+         ],
+         [
+          2,
+          4
+         ]
+        ]
+       }
+      ]
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units, plain BG, y up. Two panels with no printed lengths; local coordinates are drawing units. LEFT PANEL, canvas = (1.3,2.6) + 0.95 * local. Triangle ABC with B(0,0), C(6,0), A(2,4): INK outline 3 px, fill MARK_FILL. ANSWER outline 3 px of the rectangle (0,0), (6,0), (6,4), (0,4) drawn around it (its top side y = 4 passes through A; its sides x = 0 and x = 6 stand on B and C). Dashed INK altitude from A(2,4) to D(2,0) with an INK right-angle square with corners (2,0), (2.4,0), (2.4,0.4), (2,0.4). Labels in INK: 'Method 1' centred at (3,4.75); 'base' centred at (3,-0.55); 'height' rotated 90 degrees centred at (1.55,2). RIGHT PANEL, two figures. Upper figure, canvas = (9.0,5.6) + 0.62 * local: parallelogram with corners B(0,0), C(6,0), (8,4), A(2,4), INK outline 3 px, made of triangle ABC and a copy of it turned by a half turn about the midpoint (4,2) of AC. Solid INK diagonal from C(6,0) to A(2,4). Fill triangle with corners (0,0), (2,0), (2,4) with MARK_FILL; fill triangle (2,0), (6,0), (2,4) with MARK_FILL; fill triangle (6,0), (8,4), (2,4) (the copy) with CELL_FILL. Dashed INK cut line from A(2,4) to D(2,0) with an INK right-angle square with corners (2,0), (2.4,0), (2.4,0.4), (2,0.4). Label 'Method 2' in INK centred at (4,4.75). One ANSWER arrow pointing down from canvas (12.1,5.35) to (12.1,4.75). Lower figure, canvas = (9.0,2.0) + 0.62 * local, ANSWER outline 3 px: rectangle (2,0), (8,0), (8,4), (2,4) made of three INK-outlined pieces: triangle (2,0), (6,0), (2,4) filled MARK_FILL; triangle (6,0), (8,4), (2,4) filled CELL_FILL; triangle (6,0), (8,0), (8,4) filled MARK_FILL (this is the left triangle (0,0), (2,0), (2,4) slid 6 units to the right). INK interior lines: (6,0) to (2,4) and (6,0) to (8,4). ANSWER right-angle squares of side 0.4 inside the four corners of the rectangle. Labels in INK: 'base' centred at (5,-0.55); 'height' rotated 90 degrees centred at (8.45,2).",
+    "visible_text": [
+     "Method 1",
+     "base",
+     "height",
+     "Method 2",
+     "base",
+     "height"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "any numeric length or area",
+     "the sentences of the two methods"
+    ],
+    "accuracy_checks": [
+     "area of triangle ABC = 1/2 x 6 x 4 = 12; area of the rectangle (6 x 4) = 24 = 2 x 12 (method 1)",
+     "parallelogram base 6, height 4, area 24 = 2 x 12; the copy is the half turn of ABC about (4,2): B(0,0) goes to (8,4)",
+     "pieces of the lower rectangle: 8 + 12 + 4 = 24 = area of the 6 by 4 rectangle",
+     "the slid triangle (6,0), (8,0), (8,4) is the left triangle (0,0), (2,0), (2,4) shifted by (6,0)",
+     "no length is printed"
+    ],
+    "alt_text": "Method 1: a triangle inside the rectangle on its base and height. Method 2: two copies of the triangle form a parallelogram, which is cut along its height and slid into a rectangle.",
+    "render_note": "The book prints no triangle for this question, so the triangle is chosen (base 6, height 4 in drawing units, apex above x = 2); no length is printed. Method 2 follows the video: a half turn of a copy about the midpoint of AC."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C59",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q6 - Section Parallelogram, Figure it Out Q6 (pdf p.17)",
+   "question_text": "[Śulba-Sūtras] Give a method to obtain a rectangle of the same area as a given triangle.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure for this question (a method for 'a given triangle'); nothing is given to draw on the question side.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C59",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q6",
+   "question_text": "[Śulba-Sūtras] Give a method to obtain a rectangle of the same area as a given triangle.",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The answer is a dissection: the triangle is cut at half its height and the two top pieces are turned down into the gaps to give a rectangle; the steps describe it only in words.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S16.T16.C59.IMG1",
+   "manim_scene": "c8_14_s16_fio4q6_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S16.T16.C59.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "description": "triangle cut at half its height; the two top pieces are turned about the midpoints D and E to fill the gaps and form a rectangle on the same base with half the height",
+     "to_scale": true,
+     "left": {
+      "origin": [
+       0.9,
+       2.2
+      ],
+      "scale": 0.7,
+      "B": [
+       0,
+       0
+      ],
+      "C": [
+       8,
+       0
+      ],
+      "A": [
+       3,
+       6
+      ],
+      "D": [
+       1.5,
+       3
+      ],
+      "E": [
+       5.5,
+       3
+      ],
+      "M": [
+       3,
+       3
+      ]
+     },
+     "right": {
+      "origin": [
+       9.9,
+       2.2
+      ],
+      "scale": 0.7,
+      "rectangle": [
+       [
+        0,
+        0
+       ],
+       [
+        8,
+        0
+       ],
+       [
+        8,
+        3
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "quadrilateral_DBCE": [
+       [
+        1.5,
+        3
+       ],
+       [
+        0,
+        0
+       ],
+       [
+        8,
+        0
+       ],
+       [
+        5.5,
+        3
+       ]
+      ],
+      "turned_pieces": [
+       {
+        "corners": [
+         [
+          0,
+          0
+         ],
+         [
+          0,
+          3
+         ],
+         [
+          1.5,
+          3
+         ]
+        ],
+        "fill": "MARK_FILL",
+        "from": "triangle A M D, half turn about D"
+       },
+       {
+        "corners": [
+         [
+          8,
+          0
+         ],
+         [
+          8,
+          3
+         ],
+         [
+          5.5,
+          3
+         ]
+        ],
+        "fill": "CELL_FILL",
+        "from": "triangle A M E, half turn about E"
+       }
+      ]
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units, plain BG, y up. Two panels with no printed lengths; local coordinates are drawing units. LEFT PANEL, canvas = (0.9,2.2) + 0.7 * local. Triangle ABC with B(0,0), C(8,0), A(3,6): INK outline 3 px. D(1.5,3) is the midpoint of AB and E(5.5,3) is the midpoint of AC. Fill triangle A, M, D with corners (3,6), (3,3), (1.5,3) using MARK_FILL and triangle A, M, E with corners (3,6), (3,3), (5.5,3) using CELL_FILL, where M is the point (3,3). The lower part (trapezium D, B, C, E) stays unfilled. ANSWER solid segment DE from (1.5,3) to (5.5,3); ANSWER dashed segment AM from (3,6) to (3,3) with an ANSWER right-angle square with corners (3,3), (3.3,3), (3.3,3.3), (3,3.3). INK equal-length tick marks (0.25 long, perpendicular to the side) at the midpoints of the four half-sides: (2.362,4.444) to (2.138,4.556); (0.862,1.444) to (0.638,1.556); (4.346,4.58) to (4.154,4.42); (6.846,1.58) to (6.654,1.42). A GUIDE double-headed arrow from (-0.7,0) to (-0.7,6) labelled 'height' (INK, rotated 90 degrees) centred on it. One ANSWER right-pointing arrow from canvas (7.0,3.6) to (8.4,3.6). RIGHT PANEL, canvas = (9.9,2.2) + 0.7 * local. Quadrilateral D, B, C, E with corners (1.5,3), (0,0), (8,0), (5.5,3), INK outline 3 px, unfilled. Triangle with corners (0,0), (0,3), (1.5,3) filled MARK_FILL (the triangle ADM turned half a turn about D). Triangle with corners (8,0), (8,3), (5.5,3) filled CELL_FILL (the triangle AEM turned half a turn about E). ANSWER outline 3 px of the rectangle (0,0), (8,0), (8,3), (0,3). ANSWER right-angle squares of side 0.3 inside its four corners. Labels in INK: 'base' centred at (4,-0.5); a GUIDE double-headed arrow from (-0.6,0) to (-0.6,3) labelled 'half the height' (rotated 90 degrees) centred on it.",
+    "visible_text": [
+     "height",
+     "base",
+     "half the height"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "any numeric length or area",
+     "vertex letters"
+    ],
+    "accuracy_checks": [
+     "D = midpoint of AB = (1.5,3); E = midpoint of AC = (5.5,3); DE is parallel to BC at half the height (y = 3 of 6)",
+     "half turn of A(3,6) about D(1.5,3) gives (0,0) = B; half turn of M(3,3) about D gives (0,3)",
+     "half turn of A about E(5.5,3) gives (8,0) = C; half turn of M about E gives (8,3)",
+     "area of triangle ABC = 1/2 x 8 x 6 = 24 = area of the rectangle 8 x 3 = 24",
+     "no length is printed"
+    ],
+    "alt_text": "A triangle cut by the line joining the midpoints of two sides, its top part split by a perpendicular from the apex into two small right triangles, and beside it the rectangle on the same base with half the height made by turning those two pieces down into the gaps.",
+    "render_note": "The video (and the LP answer and last step) cut the top triangle by the perpendicular AM from the apex to DE and turn its two halves about D and E; the LP step 2 'drop perpendiculars from these midpoints to the base' does not belong to this method, so those perpendiculars are not drawn (see notes_C.md). Triangle chosen: base 8, height 6 in drawing units, apex above x = 3; no length is printed."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C60",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q7 - Section Parallelogram, Figure it Out Q7 (pdf p.17)",
+   "question_text": "[Śulba-Sūtras] An isosceles triangle can be converted into a rectangle by dissection in a simpler way. Can you find out how to do it? (Hint: show that ΔADB and ΔADC can be made into halves of a rectangle.)",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book prints the isosceles triangle ABC with the altitude AD and the right angle at D; the hint names triangles ADB and ADC, which exist only in the picture (the LP text does not define D).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S16.T16.C60.IMG1",
+   "manim_scene": "c8_14_s16_fio4q7_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S16.T16.C60.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": false,
+     "scale_units_per_cm": 0.85,
+     "origin": [
+      4.8,
+      1.5
+     ],
+     "points": {
+      "A": [
+       0,
+       6
+      ],
+      "B": [
+       -3,
+       0
+      ],
+      "C": [
+       3,
+       0
+      ],
+      "D": [
+       0,
+       0
+      ]
+     },
+     "segments": [
+      "AB",
+      "AC",
+      "BC",
+      "AD"
+     ],
+     "right_angle_at": "D",
+     "isosceles": "AB = AC"
+    },
+    "manim_description": "Canvas 16 by 9 units, plain BG, y up. Local coordinates are drawing units (no length is printed), canvas = (4.8,1.5) + 0.85 * local. Draw isosceles triangle ABC with INK outline 3 px, no fill: A(0,6), B(-3,0), C(3,0). Mark D(0,0) on BC (the midpoint of BC) and draw the INK solid segment AD (the altitude, vertical). Draw a right-angle mark at D as an INK square with corners (0,0), (0.4,0), (0.4,0.4), (0,0.4) (to the right of AD, between AD and DC). Letters in INK: A centred 0.35 above A, B centred 0.3 below-left of B, D centred 0.3 below D, C centred 0.3 below-right of C. No numbers, no ticks, no fill.",
+    "visible_text": [
+     "A",
+     "B",
+     "D",
+     "C"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "any length or angle value",
+     "the rectangle or the cut pieces"
+    ],
+    "accuracy_checks": [
+     "|AB| = |AC| = sqrt(45) = 6.708",
+     "D is the midpoint of BC",
+     "AD is perpendicular to BC (right-angle mark at D)",
+     "no lengths printed"
+    ],
+    "alt_text": "Isosceles triangle ABC standing on base BC with the altitude AD from A to the midpoint D of BC and a right angle marked at D.",
+    "render_note": "Matches the book's picture for this question (base and height about equal). The triangle is placed on the left half of the canvas so that the solution diagram can keep it at the same position and add the rectangle on the right."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C60",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q7",
+   "question_text": "[Śulba-Sūtras] An isosceles triangle can be converted into a rectangle by dissection in a simpler way. Can you find out how to do it? (Hint: show that ΔADB and ΔADC can be made into halves of a rectangle.)",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is an arrangement: the two right triangles ADB and ADC joined along their slanting sides into a rectangle BD by AD; the steps describe it only in words.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S16.T16.C60.IMG2",
+   "manim_scene": "c8_14_s16_fio4q7_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S16.T16.C60.IMG2}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S16.T16.C60.IMG1",
+    "content": {
+     "type": "other",
+     "description": "dissection: isosceles triangle ABC cut along the altitude AD, the two right triangles joined along their hypotenuses into a rectangle BD by AD",
+     "to_scale": false,
+     "scale_units_per_cm": 0.85,
+     "origin": [
+      4.8,
+      1.5
+     ],
+     "left": {
+      "points": {
+       "A": [
+        0,
+        6
+       ],
+       "B": [
+        -3,
+        0
+       ],
+       "C": [
+        3,
+        0
+       ],
+       "D": [
+        0,
+        0
+       ]
+      },
+      "fills": {
+       "ADB": "MARK_FILL",
+       "ADC": "CELL_FILL"
+      }
+     },
+     "right": {
+      "canvas_origin_of_local_minus3_0": [
+       10.0,
+       1.5
+      ],
+      "rectangle_local": [
+       [
+        -3,
+        0
+       ],
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        6
+       ],
+       [
+        -3,
+        6
+       ]
+      ],
+      "diagonal_local": [
+       [
+        0,
+        6
+       ],
+       [
+        -3,
+        0
+       ]
+      ],
+      "pieces": [
+       {
+        "name": "ADB in place",
+        "corners": [
+         [
+          0,
+          6
+         ],
+         [
+          0,
+          0
+         ],
+         [
+          -3,
+          0
+         ]
+        ],
+        "fill": "MARK_FILL"
+       },
+       {
+        "name": "ADC turned over",
+        "corners": [
+         [
+          -3,
+          6
+         ],
+         [
+          0,
+          6
+         ],
+         [
+          -3,
+          0
+         ]
+        ],
+        "fill": "CELL_FILL"
+       }
+      ],
+      "side_labels": {
+       "bottom": "BD",
+       "right": "AD"
+      }
+     }
+    },
+    "manim_description": "Same canvas, scale and triangle position as the question diagram M2.S16.T16.C60.IMG1: canvas = (4.8,1.5) + 0.85 * local, local drawing units. Left figure (given content, INK): isosceles triangle ABC with A(0,6), B(-3,0), C(3,0), D(0,0), the solid altitude AD and the right-angle mark at D with corners (0,0), (0.4,0), (0.4,0.4), (0,0.4), letters A, B, D, C placed exactly as in the question diagram. Added by the solution: fill triangle ADB (corners A, D, B) with MARK_FILL and triangle ADC (corners A, D, C) with CELL_FILL, both keeping their INK outlines. Between the figures draw one ANSWER right-pointing arrow from canvas (8.3,4.0) to (9.4,4.0). Right figure (ANSWER outline 3 px): a rectangle with canvas corners (10,1.5), (12.55,1.5), (12.55,6.6), (10,6.6); in its own coordinates (x from -3 to 0, y from 0 to 6) it is split by the diagonal from (0,6) to (-3,0) into the lower-right triangle with corners (0,6), (0,0), (-3,0), filled MARK_FILL (this is triangle ADB in place), and the upper-left triangle with corners (-3,6), (0,6), (-3,0), filled CELL_FILL (this is triangle ADC turned over and placed against ADB with the hypotenuses together). Draw INK right-angle squares of side 0.4 inside all four corners of the rectangle. Label the bottom side 'BD' in ANSWER, centred 0.45 below its midpoint, and the right side 'AD' in ANSWER, centred 0.5 to the right of its midpoint.",
+    "visible_text": [
+     "A",
+     "B",
+     "D",
+     "C",
+     "BD",
+     "AD"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "numbers or areas",
+     "the sentence 'turn triangle ADC over'"
+    ],
+    "accuracy_checks": [
+     "rectangle sides: BD = 3 (width) and AD = 6 (height); area 3 x 6 = 18 = 1/2 x BC x AD = 1/2 x 6 x 6",
+     "the two pieces are congruent right triangles with legs 3 and 6 (ADC turned over equals the other half of the rectangle)",
+     "the left figure is identical in position to the question diagram"
+    ],
+    "alt_text": "The isosceles triangle ABC with its altitude AD, and beside it the rectangle with sides BD and AD made of the two right triangles ADB and ADC joined along their slanting sides.",
+    "render_note": "Drawing units are used (BC = 6, AD = 6); no length is printed."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C61",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q8 - Section Parallelogram, Figure it Out Q8 (pdf p.17)",
+   "question_text": "[Śulba-Sūtras] Give a method to convert a rectangle into an isosceles triangle by dissection.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure for this question (a rectangle to convert into an isosceles triangle); nothing is given to draw on the question side.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C61",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q8",
+   "question_text": "[Śulba-Sūtras] Give a method to convert a rectangle into an isosceles triangle by dissection.",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The answer is a dissection: the rectangle cut along a diagonal and the two right triangles stood back to back as an isosceles triangle; the steps describe it only in words.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S16.T16.C61.IMG1",
+   "manim_scene": "c8_14_s16_fio4q8_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S16.T16.C61.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "description": "rectangle l by w cut along a diagonal; the two right triangles are stood back to back along the leg w to give an isosceles triangle with base 2l and height w",
+     "to_scale": true,
+     "l": 4,
+     "w": 3,
+     "left": {
+      "origin": [
+       0.9,
+       3.2
+      ],
+      "scale": 0.95,
+      "rectangle": [
+       [
+        0,
+        0
+       ],
+       [
+        4,
+        0
+       ],
+       [
+        4,
+        3
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "diagonal": [
+       [
+        0,
+        0
+       ],
+       [
+        4,
+        3
+       ]
+      ]
+     },
+     "right": {
+      "origin": [
+       11.0,
+       3.2
+      ],
+      "scale": 0.95,
+      "triangle": [
+       [
+        -4,
+        0
+       ],
+       [
+        4,
+        0
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "altitude": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        3
+       ]
+      ]
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units, plain BG, y up. Local coordinates are drawing units (l = 4, w = 3); only the letters l, w, 2l are printed. LEFT FIGURE, canvas = (0.9,3.2) + 0.95 * local. Rectangle (0,0), (4,0), (4,3), (0,3), INK outline 3 px, cut by the INK diagonal from (0,0) to (4,3) into triangle (0,0), (4,0), (4,3) filled MARK_FILL and triangle (0,0), (4,3), (0,3) filled CELL_FILL. Labels in INK: 'l' centred at (2,-0.55); 'w' centred at (-0.5,1.5). One ANSWER right-pointing arrow from canvas (5.3,4.6) to (6.6,4.6). RIGHT FIGURE, canvas = (11.0,3.2) + 0.95 * local. Isosceles triangle with corners (-4,0), (4,0), (0,3), ANSWER outline 3 px, made of two INK-outlined pieces joined along the INK vertical segment from (0,0) to (0,3): left piece (-4,0), (0,0), (0,3) filled CELL_FILL (the upper-left triangle of the rectangle turned half a turn); right piece (0,0), (4,0), (0,3) filled MARK_FILL (the other triangle turned over). INK right-angle squares of side 0.35 at the foot of the vertical segment with corners (0,0), (-0.35,0), (-0.35,0.35), (0,0.35) and (0,0), (0.35,0), (0.35,0.35), (0,0.35). Labels in INK: a GUIDE double-headed arrow from (-4,-0.55) to (4,-0.55) labelled '2l' centred on it; 'w' centred at (-0.45,1.5).",
+    "visible_text": [
+     "l",
+     "w",
+     "2l",
+     "w"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "numeric values of l or w",
+     "areas"
+    ],
+    "accuracy_checks": [
+     "rectangle legs of each piece: 4 (= l) and 3 (= w)",
+     "isosceles triangle base 8 = 2l, height 3 = w; its two slanting sides are the diagonal of the rectangle, sqrt(4^2+3^2) = 5, equal",
+     "area of the rectangle 4 x 3 = 12 = 1/2 x 8 x 3 = area of the triangle",
+     "only the letters l, w, 2l are printed; no numbers"
+    ],
+    "alt_text": "A rectangle of length l and width w cut along a diagonal, and beside it the isosceles triangle of base 2l and height w made by standing the two right triangles back to back.",
+    "render_note": "The book prints no figure for this question; the video's letters l and w are used with drawing units l = 4, w = 3 (not printed)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C62",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q9 - Section Parallelogram, Figure it Out Q9 (pdf p.17)",
+   "question_text": "Which has greater area: an equilateral triangle or a square of the same sidelength as the triangle? Which has greater area: two identical equilateral triangles together or a square of the same sidelength as the triangle? Give reasons.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure for this question; it is a comparison of two shapes described in words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C62",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q9",
+   "question_text": "Which has greater area: an equilateral triangle or a square of the same sidelength as the triangle? Which has greater area: two identical equilateral triangles together or a square of the same sidelength as the triangle? Give reasons.",
+   "block_index": 0,
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "Borderline: the reasoning (height of an equilateral triangle is less than its side) is complete in three text steps and the answer is not a drawing. A picture of the triangle beside the square with the height marked, and of the two triangles joined as a rhombus, would clearly help but is not needed.",
+   "text_alternative": "Keep the three LP steps as text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C63",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "rhom.dissect, rhom.sides - Section Rhombus (pdf p.17-18)",
+   "question_text": "A rhombus has diagonals 12 cm and 8 cm. Dissect it into a rectangle and find the area.",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "Borderline: the example asks to dissect the rhombus into a rectangle; which side of the rectangle is the whole diagonal and which is half the other diagonal is seen in the four-triangle arrangement the book draws. Own diagram although a teaching image (M2.S17.T17.C63.IMG1) shows the same idea.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S17.T17.C63.IMG2",
+   "manim_scene": "c8_14_s17_rhom_dissect_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S17.T17.C63.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "description": "rhombus with diagonals 12 and 8 dissected into four right triangles that form a rectangle 12 by 4",
+     "to_scale": true,
+     "scale_units_per_cm": 0.46,
+     "rhombus": {
+      "origin": [
+       4.06,
+       4.5
+      ],
+      "corners": [
+       [
+        -6,
+        0
+       ],
+       [
+        0,
+        4
+       ],
+       [
+        6,
+        0
+       ],
+       [
+        0,
+        -4
+       ]
+      ],
+      "diagonals": [
+       [
+        [
+         -6,
+         0
+        ],
+        [
+         6,
+         0
+        ]
+       ],
+       [
+        [
+         0,
+         -4
+        ],
+        [
+         0,
+         4
+        ]
+       ]
+      ]
+     },
+     "rectangle": {
+      "origin": [
+       8.8,
+       3.66
+      ],
+      "corners": [
+       [
+        0,
+        0
+       ],
+       [
+        12,
+        0
+       ],
+       [
+        12,
+        4
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "halves": [
+       {
+        "x": [
+         0,
+         6
+        ],
+        "fill": "MARK_FILL"
+       },
+       {
+        "x": [
+         6,
+         12
+        ],
+        "fill": "CELL_FILL"
+       }
+      ]
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units, plain BG, y up. Local coordinates in cm, scale 0.46 canvas units per cm in both figures. LEFT FIGURE, canvas = (4.06,4.5) + 0.46 * local (local origin at the centre of the rhombus). Rhombus with corners (-6,0), (0,4), (6,0), (0,-4), INK outline 3 px. Both diagonals drawn as INK solid segments: horizontal from (-6,0) to (6,0) and vertical from (0,-4) to (0,4). Fill the two upper triangles (-6,0), (0,0), (0,4) and (0,0), (6,0), (0,4) with MARK_FILL; fill the two lower triangles (-6,0), (0,0), (0,-4) and (0,0), (6,0), (0,-4) with CELL_FILL. INK right-angle square at the centre with corners (0,0), (0.4,0), (0.4,0.4), (0,0.4). Labels: GUIDE double-headed arrow from (-6,-4.9) to (6,-4.9) labelled '12 cm' (INK) centred on it; GUIDE double-headed arrow from (-7.3,-4) to (-7.3,4) labelled '8 cm' (INK, rotated 90 degrees) centred on it. One ANSWER right-pointing arrow from canvas (7.2,4.5) to (8.4,4.5). RIGHT FIGURE, canvas = (8.8,3.66) + 0.46 * local (local origin at the bottom-left corner of the rectangle). Rectangle (0,0), (12,0), (12,4), (0,4), ANSWER outline 3 px, made of two halves: left half (0,0), (6,0), (6,4), (0,4) filled MARK_FILL and right half (6,0), (12,0), (12,4), (6,4) filled CELL_FILL, separated by an INK vertical segment from (6,0) to (6,4); INK diagonals from (0,0) to (6,4) and from (6,0) to (12,4) show the four right triangles. Labels: GUIDE double-headed arrow from (0,4.9) to (12,4.9) labelled '12 cm' (INK) centred on it; GUIDE double-headed arrow from (12.9,0) to (12.9,4) labelled '4 cm' (INK, rotated 90 degrees) centred on it.",
+    "visible_text": [
+     "12 cm",
+     "8 cm",
+     "12 cm",
+     "4 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "the area 48 cm2",
+     "vertex letters"
+    ],
+    "accuracy_checks": [
+     "diagonals 12 (horizontal) and 8 (vertical) meet at right angles at their midpoint",
+     "four right triangles with legs 6 and 4: area 4 x 12 = 48 = rectangle 12 x 4 = 48 = 1/2 x 12 x 8",
+     "upper half of the rhombus (area 24) becomes the left half of the rectangle (6 x 4 = 24); lower half the right half",
+     "the area 48 is not printed"
+    ],
+    "alt_text": "A rhombus with diagonals 12 cm and 8 cm cut into four right triangles, and beside it the 12 cm by 4 cm rectangle they form.",
+    "render_note": "The book's dissection (rhombus ABCD stood on a corner, rectangle WXYZ) is redrawn with the 12 and 8 of this example; the rhombus has its long diagonal horizontal so that the rectangle is 12 wide and 4 tall. Same drawing idea as the kept teaching image M2.S17.T17.C63.IMG1, which is not linked."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C64",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "rhom.triangles, rhom.simplify - Section Rhombus (pdf p.18)",
+   "question_text": "A rhombus has diagonals 10 cm and 6 cm. Find its area using two triangles.",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "Borderline: 'using two triangles' needs the rhombus cut along one diagonal, with the other diagonal giving the equal heights; the book draws this figure. Own diagram although a teaching image (M2.S17.T17.C64.IMG1) shows the same idea.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S17.T17.C64.IMG2",
+   "manim_scene": "c8_14_s17_rhom_triangles_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S17.T17.C64.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "mensuration_figure",
+     "to_scale": true,
+     "scale_units_per_cm": 0.85,
+     "origin": [
+      7.45,
+      4.5
+     ],
+     "rhombus": [
+      [
+       -5,
+       0
+      ],
+      [
+       0,
+       3
+      ],
+      [
+       5,
+       0
+      ],
+      [
+       0,
+       -3
+      ]
+     ],
+     "cut_diagonal": [
+      [
+       -5,
+       0
+      ],
+      [
+       5,
+       0
+      ]
+     ],
+     "dashed_diagonal": [
+      [
+       0,
+       -3
+      ],
+      [
+       0,
+       3
+      ]
+     ],
+     "fills": {
+      "upper": "MARK_FILL",
+      "lower": "CELL_FILL"
+     },
+     "given": {
+      "d1": 10,
+      "d2": 6
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units, plain BG, y up. Local coordinates in cm, canvas = (7.45,4.5) + 0.85 * local (local origin at the centre of the rhombus). Rhombus with corners (-5,0), (0,3), (5,0), (0,-3), INK outline 3 px. The horizontal diagonal from (-5,0) to (5,0) is an INK solid segment (the cut). The vertical diagonal from (0,-3) to (0,3) is an INK dashed segment. Fill the upper triangle (-5,0), (5,0), (0,3) with MARK_FILL and the lower triangle (-5,0), (5,0), (0,-3) with CELL_FILL. INK right-angle square at the centre with corners (0,0), (0.35,0), (0.35,0.35), (0,0.35). Labels in INK: '3 cm' centred at (0.75,1.5) (right of the upper half of the vertical diagonal) and '3 cm' centred at (0.75,-1.5) (right of the lower half). GUIDE double-headed arrow from (-5,-3.6) to (5,-3.6) labelled '10 cm' centred on it; GUIDE double-headed arrow from (5.9,-3) to (5.9,3) labelled '6 cm' (rotated 90 degrees) centred on it.",
+    "visible_text": [
+     "3 cm",
+     "3 cm",
+     "10 cm",
+     "6 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "the areas 15 cm2, 30 cm2",
+     "vertex letters"
+    ],
+    "accuracy_checks": [
+     "diagonals 10 (horizontal) and 6 (vertical) are perpendicular and bisect each other",
+     "each triangle has base 10 and height 3 (half of 6): 1/2 x 10 x 3 = 15; 15 + 15 = 30 = 1/2 x 10 x 6",
+     "areas 15 and 30 are not printed"
+    ],
+    "alt_text": "A rhombus with diagonals 10 cm and 6 cm cut along the 10 cm diagonal into two triangles, each with the base 10 cm and a height of 3 cm.",
+    "render_note": "Redraws the book's rhombus with its two diagonals (page 165) using this example's 10 and 6. Same idea as the kept teaching image M2.S17.T17.C64.IMG1, which is not linked."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S18.T18.C66",
+   "role": "question",
+   "lp_book_number": "Rhombus and Trapezium, Q1",
+   "ncert_ref": "FiO5.q1 - Figure it Out after Trapezium, Q1 (pdf p.22)",
+   "question_text": "Find the area of a rhombus whose diagonals are 20 cm and 15 cm.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure; the two diagonals are in the words.",
+   "text_alternative": "Keep as text: rhombus with diagonals 20 cm and 15 cm.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S18.T18.C67",
+   "role": "solution",
+   "lp_book_number": "Rhombus and Trapezium, Q1",
+   "ncert_ref": "FiO5.q1",
+   "question_text": "Find the area of a rhombus whose diagonals are 20 cm and 15 cm.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the arithmetic 1/2 x 20 x 15 = 150 cm2; no drawing is asked for or needed.",
+   "text_alternative": "LaTeX: area = 1/2 x 20 x 15 = 150 cm2.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C68",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO5.q2 - Figure it Out after Trapezium, Q2 (pdf p.22)",
+   "question_text": "Give a method to convert a rectangle into a rhombus of equal area using dissection.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure for this question (a rectangle to convert into a rhombus); nothing is given to draw on the question side.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C68",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO5.q2",
+   "question_text": "Give a method to convert a rectangle into a rhombus of equal area using dissection.",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The answer is a dissection: the rectangle cut into two halves and four right triangles that are arranged at one centre as a rhombus; the steps describe it only in words.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S19.T19.C68.IMG1",
+   "manim_scene": "c8_14_s19_fio5q2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S19.T19.C68.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "description": "rectangle L by W cut into two halves, each half cut along a diagonal into four right triangles (legs L/2 and W), arranged with the right angles at one centre to make a rhombus with diagonals L and 2W",
+     "to_scale": true,
+     "L": 8,
+     "W": 3,
+     "left": {
+      "origin": [
+       0.9,
+       3.4
+      ],
+      "scale": 0.7,
+      "rectangle": [
+       [
+        0,
+        0
+       ],
+       [
+        8,
+        0
+       ],
+       [
+        8,
+        3
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "cuts": [
+       [
+        [
+         4,
+         0
+        ],
+        [
+         4,
+         3
+        ]
+       ],
+       [
+        [
+         0,
+         0
+        ],
+        [
+         4,
+         3
+        ]
+       ],
+       [
+        [
+         4,
+         0
+        ],
+        [
+         8,
+         3
+        ]
+       ]
+      ]
+     },
+     "right": {
+      "origin": [
+       11.4,
+       4.45
+      ],
+      "scale": 0.7,
+      "rhombus": [
+       [
+        -4,
+        0
+       ],
+       [
+        0,
+        3
+       ],
+       [
+        4,
+        0
+       ],
+       [
+        0,
+        -3
+       ]
+      ]
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units, plain BG, y up. Local coordinates are drawing units (L = 8, W = 3); only the letters L, W, L/2, 2W are printed. LEFT FIGURE, canvas = (0.9,3.4) + 0.7 * local. Rectangle (0,0), (8,0), (8,3), (0,3), INK outline 3 px, cut by an INK vertical segment from (4,0) to (4,3) into two halves, and each half cut by an INK diagonal: from (0,0) to (4,3) and from (4,0) to (8,3). Four triangles: (0,0), (4,0), (4,3) filled MARK_FILL; (0,0), (4,3), (0,3) filled CELL_FILL; (4,0), (8,0), (8,3) filled MARK_FILL; (4,0), (8,3), (4,3) filled CELL_FILL. Labels in INK: GUIDE double-headed arrow from (0,3.7) to (8,3.7) labelled 'L' centred on it; GUIDE double-headed arrow from (-0.7,0) to (-0.7,3) labelled 'W' centred on it; GUIDE double-headed arrows from (0,-0.7) to (4,-0.7) and from (4,-0.7) to (8,-0.7), each labelled 'L/2' centred on it. One ANSWER right-pointing arrow from canvas (6.9,4.45) to (8.1,4.45). RIGHT FIGURE, canvas = (11.4,4.45) + 0.7 * local (local origin at the centre). Rhombus with corners (-4,0), (0,3), (4,0), (0,-3), ANSWER outline 3 px, made of four INK-outlined right triangles whose right angles meet at (0,0): (0,0), (4,0), (0,3) filled MARK_FILL; (0,0), (-4,0), (0,3) filled CELL_FILL; (0,0), (-4,0), (0,-3) filled MARK_FILL; (0,0), (4,0), (0,-3) filled CELL_FILL. INK right-angle squares of side 0.3 in the four angles at the centre. Labels in INK: GUIDE double-headed arrow from (-4,-3.7) to (4,-3.7) labelled 'L' centred on it; GUIDE double-headed arrow from (4.9,-3) to (4.9,3) labelled '2W' (rotated 90 degrees) centred on it.",
+    "visible_text": [
+     "L",
+     "W",
+     "L/2",
+     "L/2",
+     "L",
+     "2W"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "numeric values of L or W",
+     "areas"
+    ],
+    "accuracy_checks": [
+     "each of the four triangles has legs L/2 = 4 and W = 3 (right angle at the centre of the rhombus)",
+     "rhombus diagonals: horizontal 2 x 4 = 8 = L and vertical 2 x 3 = 6 = 2W",
+     "area of rectangle 8 x 3 = 24 = 1/2 x 8 x 6 = area of rhombus",
+     "rhombus sides sqrt(4^2+3^2) = 5, all four equal"
+    ],
+    "alt_text": "A rectangle of length L and width W cut into two halves and four right triangles, and beside it the rhombus with diagonals L and 2W made from those four triangles.",
+    "render_note": "The book prints no figure for this question. The video's check values L = 8, W = 3 give the drawing coordinates; only the letters are printed."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C71",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "trap.obtuse, trap.approach1, trap.approach2, trap.mt_any - Section Trapezium (pdf p.20)",
+   "question_text": "A slanting trapezium has parallel sides AB = 6 cm and DC = 10 cm and height 5 cm. Use Approach 2 to find its area.",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "'Approach 2' needs the slanting trapezium with BG drawn parallel to AD so that the parallelogram ABGD and the triangle BGC (with the obtuse corner at G) can be seen; the book draws this figure. Own diagram although a teaching image (M2.S20.T20.C71.IMG1) shows the same idea.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S20.T20.C71.IMG2",
+   "manim_scene": "c8_14_s20_approach2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S20.T20.C71.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "mensuration_figure",
+     "to_scale": true,
+     "scale_units_per_cm": 0.75,
+     "origin": [
+      3.6,
+      2.6
+     ],
+     "points": {
+      "A": [
+       -2,
+       5
+      ],
+      "B": [
+       4,
+       5
+      ],
+      "C": [
+       10,
+       0
+      ],
+      "D": [
+       0,
+       0
+      ],
+      "G": [
+       6,
+       0
+      ]
+     },
+     "given": {
+      "AB_cm": 6,
+      "DC_cm": 10,
+      "height_cm": 5
+     },
+     "derived_label": {
+      "GC_cm": 4
+     },
+     "fills": {
+      "parallelogram ABGD": "MARK_FILL",
+      "triangle BGC": "CELL_FILL"
+     },
+     "construction": "BG parallel to AD"
+    },
+    "manim_description": "Canvas 16 by 9 units, plain BG, y up. Local coordinates in cm, canvas = (3.6,2.6) + 0.75 * local. Trapezium ABCD with INK outline 3 px: A(-2,5), B(4,5), C(10,0), D(0,0); AB is parallel to DC and both slanted sides lean down to the right. Point G(6,0) on DC. Fill parallelogram A, B, G, D (corners (-2,5), (4,5), (6,0), (0,0)) with MARK_FILL and triangle B, G, C (corners (4,5), (6,0), (10,0)) with CELL_FILL. ANSWER dashed segment BG from (4,5) to (6,0) (BG is parallel to AD). INK dashed height from B(4,5) down to (4,0) with an INK right-angle square with corners (4,0), (4.4,0), (4.4,0.4), (4,0.4). Letters in INK: 'A' centred at (-2.4,5.45); 'B' centred at (4,5.5); 'D' centred at (-0.4,-0.45); 'G' centred at (6,-0.45); 'C' centred at (10.4,-0.45). Labels: GUIDE double-headed arrow from (-2,5.9) to (4,5.9) labelled '6 cm' (INK) centred on it; GUIDE double-headed arrow from (6,-1.1) to (10,-1.1) labelled '4 cm' (ANSWER) centred on it; GUIDE double-headed arrow from (0,-1.9) to (10,-1.9) labelled '10 cm' (INK) centred on it; label '5 cm' (INK) centred at (3.25,2.5), left of the dashed height.",
+    "visible_text": [
+     "A",
+     "B",
+     "D",
+     "G",
+     "C",
+     "6 cm",
+     "4 cm",
+     "10 cm",
+     "5 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "the areas 30, 10, 40",
+     "the first approach (rectangle ABED)"
+    ],
+    "accuracy_checks": [
+     "AB = 6 (from x = -2 to 4), DC = 10, height 5 (y = 5 over the base y = 0)",
+     "BG is parallel to AD: both have direction (2,-5)",
+     "DG = 6 = AB, so ABGD is a parallelogram; GC = 10 - 6 = 4",
+     "areas 6 x 5 = 30 and 1/2 x 4 x 5 = 10 add to 40 (not printed)"
+    ],
+    "alt_text": "Slanting trapezium ABCD with AB = 6 cm on top, DC = 10 cm at the bottom and height 5 cm, split by BG parallel to AD into the parallelogram ABGD and the triangle BGC with base 4 cm.",
+    "render_note": "Redraws the book's Approach 2 picture (page 167) for these numbers; the sideways lean of 2 cm is a drawing choice, not printed. The height is drawn from B so that its foot lies on DC. Same idea as the kept teaching image M2.S20.T20.C71.IMG1, which is not linked."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C72",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "trap.two_copies, trap.quad_type - Section Trapezium, Two Copies (pdf p.21)",
+   "question_text": "A trapezium has parallel sides 7 cm and 11 cm and height 6 cm. Use two copies to find its area.",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "'Use two copies' is answered by the parallelogram the two copies make, with base 7 + 11 and height 6; the book draws this figure. Own diagram although teaching images (M2.S20.T20.C72.IMG1, C73.IMG1) show the same idea.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S20.T20.C72.IMG2",
+   "manim_scene": "c8_14_s20_two_copies_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S20.T20.C72.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "description": "trapezium (parallel sides 7 and 11, height 6) and its half-turned copy joined along a slanted side to form a parallelogram of base 18 and height 6",
+     "to_scale": true,
+     "scale_units_per_cm": 0.7,
+     "origin": [
+      1.0,
+      2.9
+     ],
+     "trapezium": [
+      [
+       0,
+       0
+      ],
+      [
+       11,
+       0
+      ],
+      [
+       9,
+       6
+      ],
+      [
+       2,
+       6
+      ]
+     ],
+     "copy": [
+      [
+       11,
+       0
+      ],
+      [
+       18,
+       0
+      ],
+      [
+       20,
+       6
+      ],
+      [
+       9,
+       6
+      ]
+     ],
+     "parallelogram": [
+      [
+       0,
+       0
+      ],
+      [
+       18,
+       0
+      ],
+      [
+       20,
+       6
+      ],
+      [
+       2,
+       6
+      ]
+     ],
+     "given": {
+      "a_cm": 7,
+      "b_cm": 11,
+      "h_cm": 6
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units, plain BG, y up. Local coordinates in cm, canvas = (1.0,2.9) + 0.7 * local. Two trapeziums joined along their common slanted side into a parallelogram. Trapezium ABCD (the given one) with corners (0,0), (11,0), (9,6), (2,6): bottom side 11, top side 7, filled MARK_FILL. Its copy, turned by a half turn about the midpoint (10,3) of the common side, with corners (11,0), (18,0), (20,6), (9,6): bottom side 7, top side 11, filled CELL_FILL. INK outline 3 px of the whole parallelogram (0,0), (18,0), (20,6), (2,6) and INK solid common side from (11,0) to (9,6). INK dashed height from (2,6) down to (2,0) with an INK right-angle square with corners (2,0), (2.5,0), (2.5,0.5), (2,0.5). Labels: GUIDE double-headed arrow from (2,6.7) to (9,6.7) labelled '7 cm' centred on it; GUIDE double-headed arrow from (9,6.7) to (20,6.7) labelled '11 cm' centred on it; GUIDE double-headed arrow from (0,-0.7) to (11,-0.7) labelled '11 cm' centred on it; GUIDE double-headed arrow from (11,-0.7) to (18,-0.7) labelled '7 cm' centred on it; GUIDE double-headed arrow from (0,-1.7) to (18,-1.7) labelled '18 cm' centred on it; label '6 cm' centred at (3.1,3), right of the dashed height. All labels INK. No vertex letters.",
+    "visible_text": [
+     "7 cm",
+     "11 cm",
+     "11 cm",
+     "7 cm",
+     "18 cm",
+     "6 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "the areas 108 and 54",
+     "angle labels x, y, u, v",
+     "vertex letters"
+    ],
+    "accuracy_checks": [
+     "half turn about (10,3) maps (2,6) to (18,0), (0,0) to (20,6), (11,0) to (9,6): the copy has bottom side 7 and top side 11",
+     "parallelogram base 11 + 7 = 18 on the bottom and 7 + 11 = 18 on the top; height 6; opposite sides parallel ((0,0)-(2,6) and (18,0)-(20,6))",
+     "area of parallelogram 18 x 6 = 108 = 2 x 54 (not printed)"
+    ],
+    "alt_text": "A trapezium with parallel sides 7 cm and 11 cm and height 6 cm joined to a turned copy of itself to make a parallelogram with a base of 18 cm and the same height.",
+    "render_note": "Redraws the book's picture of two copies making a parallelogram (page 168) for these numbers; the lean of 2 cm is a drawing choice. Same idea as the kept teaching images M2.S20.T20.C72.IMG1 and C73.IMG1, which are not linked."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S21.T21.C74",
+   "role": "question",
+   "lp_book_number": "Trapezium Area: ABCD and WXYZ on a grid",
+   "ncert_ref": "trap.grid - Section Trapezium, grid question (pdf p.19)",
+   "question_text": "Trapezium ABCD on a grid has AB = 4 units, DC = 6 units and height AD = 4 units, with a right angle at D. Find its area. Trapezium WXYZ has WX = 5 units, ZY = 9 units and height 4 units, with ZM = 2 and NY = 2. Find its area.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The book question 'Find the areas of the following trapeziums by breaking them into figures' gives only a squared-grid picture; the side lengths are read from the grid and the breaking lines are printed on it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S21.T21.C74.IMG1",
+   "manim_scene": "c8_14_s21_grid_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S21.T21.C74.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "mensuration_figure",
+     "to_scale": true,
+     "grid": {
+      "cols": 20,
+      "rows": 6,
+      "origin": [
+       0.8,
+       2.3
+      ],
+      "cell": 0.72
+     },
+     "ABCD": {
+      "A": [
+       1,
+       5
+      ],
+      "B": [
+       5,
+       5
+      ],
+      "C": [
+       7,
+       1
+      ],
+      "D": [
+       1,
+       1
+      ],
+      "M": [
+       5,
+       1
+      ],
+      "BM": "solid",
+      "right_angle_at": "D"
+     },
+     "WXYZ": {
+      "W": [
+       12,
+       5
+      ],
+      "X": [
+       17,
+       5
+      ],
+      "Y": [
+       19,
+       1
+      ],
+      "Z": [
+       10,
+       1
+      ],
+      "M": [
+       12,
+       1
+      ],
+      "N": [
+       17,
+       1
+      ],
+      "WM": "dashed",
+      "XN": "dashed"
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units, plain BG, y up. Squared grid: 20 columns by 6 rows of unit squares, spanning local (0,0) to (20,6); canvas = (0.8,2.3) + 0.72 * local, so one grid square is 0.72 canvas units; grid lines GUIDE, 1 px, 50 percent opacity. Trapezium ABCD, INK outline 3 px: A(1,5), B(5,5), C(7,1), D(1,1) (AB = 4, DC = 6, AD = 4, AD vertical). INK solid segment BM from B(5,5) down to M(5,1). INK right-angle square at D with corners (1,1), (1.4,1), (1.4,1.4), (1,1.4). Trapezium WXYZ, INK outline 3 px: W(12,5), X(17,5), Y(19,1), Z(10,1) (WX = 5, ZY = 9). Points M(12,1) and N(17,1) on ZY (ZM = 2, MN = 5, NY = 2). INK dashed segments WM from (12,5) to (12,1) and XN from (17,5) to (17,1). Letters in INK, 0.3 canvas units tall: 'A' centred at (0.7,5.5); 'B' at (5,5.5); 'D' at (0.7,0.5); 'M' at (5,0.5); 'C' at (7.3,0.5); 'W' at (12,5.5); 'X' at (17,5.5); 'Z' at (9.7,0.5); 'M' at (12,0.5); 'N' at (17,0.5); 'Y' at (19.3,0.5). No measurements are printed; the lengths are read from the grid. Nothing is shaded.",
+    "visible_text": [
+     "A",
+     "B",
+     "D",
+     "M",
+     "C",
+     "W",
+     "X",
+     "Z",
+     "M",
+     "N",
+     "Y"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "the areas 16, 4, 20, 28",
+     "shading",
+     "the third trapezium of the book (SPQR)"
+    ],
+    "accuracy_checks": [
+     "ABCD: AB = 5-1 = 4, DC = 7-1 = 6, AD = 5-1 = 4, BM = 4 and DM = 4 (ABMD is a 4 by 4 square, MC = 2)",
+     "WXYZ: WX = 17-12 = 5, ZY = 19-10 = 9, ZM = 12-10 = 2, NY = 19-17 = 2, height 5-1 = 4",
+     "no shading, no areas, no side lengths printed"
+    ],
+    "alt_text": "Two trapeziums on a squared grid: ABCD with AB = 4, DC = 6 and height 4 squares, and WXYZ with WX = 5, ZY = 9 and height 4 squares, cut by vertical lines into a square or rectangle and right triangles.",
+    "render_note": "The book's grid strip (page 166) holds three trapeziums; the LP question asks about ABCD and WXYZ only, so the isosceles trapezium SPQR is left out (see notes_C.md). The vertical cut lines and the letters M and N are drawn as the book prints them."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S21.T21.C75",
+   "role": "solution",
+   "lp_book_number": "Trapezium Area: ABCD and WXYZ on a grid",
+   "ncert_ref": "trap.grid",
+   "question_text": "Trapezium ABCD on a grid has AB = 4 units, DC = 6 units and height AD = 4 units, with a right angle at D. Find its area. Trapezium WXYZ has WX = 5 units, ZY = 9 units and height 4 units, with ZM = 2 and NY = 2. Find its area.",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The solution cuts each trapezium into a square or rectangle and right triangles; showing the pieces shaded with their areas (16 and 4; 4, 20 and 4) is the visual part of the answer.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S21.T21.C75.IMG1",
+   "manim_scene": "c8_14_s21_grid_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S21.T21.C75.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S21.T21.C74.IMG1",
+    "content": {
+     "type": "mensuration_figure",
+     "to_scale": true,
+     "grid": {
+      "cols": 20,
+      "rows": 6,
+      "origin": [
+       0.8,
+       2.3
+      ],
+      "cell": 0.72
+     },
+     "pieces": [
+      {
+       "name": "square ABMD",
+       "corners": [
+        [
+         1,
+         5
+        ],
+        [
+         5,
+         5
+        ],
+        [
+         5,
+         1
+        ],
+        [
+         1,
+         1
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "area": 16,
+       "label_at": [
+        3,
+        3
+       ]
+      },
+      {
+       "name": "triangle BMC",
+       "corners": [
+        [
+         5,
+         5
+        ],
+        [
+         5,
+         1
+        ],
+        [
+         7,
+         1
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "area": 4,
+       "label_at": [
+        5.6,
+        2.3
+       ]
+      },
+      {
+       "name": "triangle ZMW",
+       "corners": [
+        [
+         10,
+         1
+        ],
+        [
+         12,
+         1
+        ],
+        [
+         12,
+         5
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "area": 4,
+       "label_at": [
+        11.45,
+        2.3
+       ]
+      },
+      {
+       "name": "rectangle WXNM",
+       "corners": [
+        [
+         12,
+         5
+        ],
+        [
+         17,
+         5
+        ],
+        [
+         17,
+         1
+        ],
+        [
+         12,
+         1
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "area": 20,
+       "label_at": [
+        14.5,
+        3
+       ]
+      },
+      {
+       "name": "triangle NYX",
+       "corners": [
+        [
+         17,
+         1
+        ],
+        [
+         19,
+         1
+        ],
+        [
+         17,
+         5
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "area": 4,
+       "label_at": [
+        17.55,
+        2.3
+       ]
+      }
+     ]
+    },
+    "manim_description": "Same grid, shapes, letters, line styles and canvas positions as the question diagram M2.S21.T21.C74.IMG1 (canvas = (0.8,2.3) + 0.72 * local, 20 by 6 unit squares). Added by the solution, drawn under the INK lines: fill square A, B, M, D (corners (1,5), (5,5), (5,1), (1,1)) with MARK_FILL; fill triangle B, M, C (corners (5,5), (5,1), (7,1)) with CELL_FILL; fill triangle Z, M, W (corners (10,1), (12,1), (12,5)) with CELL_FILL; fill rectangle W, X, N, M (corners (12,5), (17,5), (17,1), (12,1)) with MARK_FILL; fill triangle N, Y, X (corners (17,1), (19,1), (17,5)) with CELL_FILL. Numbers in ANSWER, 0.4 canvas units tall, centred at: '16' at (3,3); '4' at (5.6,2.3); '4' at (11.45,2.3); '20' at (14.5,3); '4' at (17.55,2.3).",
+    "visible_text": [
+     "A",
+     "B",
+     "D",
+     "M",
+     "C",
+     "W",
+     "X",
+     "Z",
+     "M",
+     "N",
+     "Y",
+     "16",
+     "4",
+     "4",
+     "20",
+     "4"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "the totals 20 and 28",
+     "the third trapezium of the book (SPQR)"
+    ],
+    "accuracy_checks": [
+     "square ABMD: 4 x 4 = 16; triangle BMC: 1/2 x 2 x 4 = 4; 16 + 4 = 20 = 1/2 x 4 x (4 + 6)",
+     "triangle ZMW: 1/2 x 2 x 4 = 4; rectangle WXNM: 5 x 4 = 20; triangle NYX: 1/2 x 2 x 4 = 4; 4 + 20 + 4 = 28 = 1/2 x 4 x (5 + 9)",
+     "the pieces tile each trapezium without overlap"
+    ],
+    "alt_text": "The same two trapeziums on the grid, cut into a 4 by 4 square (16) and a right triangle (4), and into a right triangle (4), a 5 by 4 rectangle (20) and a second right triangle (4).",
+    "render_note": "Same layout as the question diagram; only fills and the five piece areas are added. The totals 20 and 28 stay in the LP text."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S21.T21.C76",
+   "role": "question",
+   "lp_book_number": "Rhombus and Trapezium, Q3",
+   "ncert_ref": "FiO5.q3 - Figure it Out after Trapezium, Q3 (pdf p.22)",
+   "question_text": "Find the areas of the following figures: (i) a trapezium with parallel sides 10 ft and 7 ft and height 16 ft between them, (ii) parallel sides 24 m and 36 m, height 14 m, (iii) parallel sides 14 in and 6 in, height 10 in, (iv) parallel sides 12 ft and 18 ft, height 8 ft.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "FIG_REFERENCED"
+   ],
+   "reason": "'Find the areas of the following figures' refers to four printed trapeziums; which sides are parallel, where the height is drawn (tilted in (i), between vertical sides in (iii)) lives in the pictures.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S21.T21.C76.IMG1",
+   "manim_scene": "c8_14_s21_fio5q3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S21.T21.C76.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "mensuration_figure",
+     "to_scale": false,
+     "panels": [
+      {
+       "tag": "(i)",
+       "origin": [
+        2.05,
+        7.01
+       ],
+       "scale": 0.215,
+       "corners": [
+        [
+         0,
+         0
+        ],
+        [
+         5.592,
+         8.29
+        ],
+        [
+         17.179,
+         -3.144
+        ],
+        [
+         13.265,
+         -8.947
+        ]
+       ],
+       "parallel_sides": [
+        10,
+        7
+       ],
+       "height": 16,
+       "unit": "ft"
+      },
+      {
+       "tag": "(ii)",
+       "origin": [
+        8.58,
+        5.66
+       ],
+       "scale": 0.19,
+       "corners": [
+        [
+         0,
+         0
+        ],
+        [
+         36,
+         0
+        ],
+        [
+         26,
+         14
+        ],
+        [
+         2,
+         14
+        ]
+       ],
+       "parallel_sides": [
+        24,
+        36
+       ],
+       "height": 14,
+       "unit": "m"
+      },
+      {
+       "tag": "(iii)",
+       "origin": [
+        2.84,
+        0.99
+       ],
+       "scale": 0.22,
+       "corners": [
+        [
+         0,
+         0
+        ],
+        [
+         0,
+         14
+        ],
+        [
+         10,
+         9
+        ],
+        [
+         10,
+         3
+        ]
+       ],
+       "parallel_sides": [
+        14,
+        6
+       ],
+       "height": 10,
+       "unit": "in"
+      },
+      {
+       "tag": "(iv)",
+       "origin": [
+        9.48,
+        1.41
+       ],
+       "scale": 0.28,
+       "corners": [
+        [
+         0,
+         0
+        ],
+        [
+         18,
+         0
+        ],
+        [
+         13.5,
+         8
+        ],
+        [
+         1.5,
+         8
+        ]
+       ],
+       "parallel_sides": [
+        12,
+        18
+       ],
+       "height": 8,
+       "unit": "ft"
+      }
+     ]
+    },
+    "manim_description": "Canvas 16 by 9 units, plain BG, y up. Four trapeziums in a 2 by 2 arrangement: (i) top-left, (ii) top-right, (iii) bottom-left, (iv) bottom-right. Every outline is INK, 3 px, no fill. Each panel has local coordinates in the printed units (ft, m, in, ft) with its own scale, canvas = panel origin + scale * local: (i) origin (2.05,7.01) scale 0.215; (ii) origin (8.58,5.66) scale 0.19; (iii) origin (2.84,0.99) scale 0.22; (iv) origin (9.48,1.41) scale 0.28. All text is INK and 0.3 canvas units tall whatever the panel scale. Dimension arrows are double-headed GUIDE arrows. Right-angle marks are INK squares inside the figure. Dashed segments are INK, 2 px. Panel (i), a trapezium turned on its side (its parallel sides slope up to the right at 56 degrees): corners L(0,0), T(5.592,8.29), R(17.179,-3.144), Bv(13.265,-8.947); the sides L-T and Bv-R are parallel with lengths 10 and 7, and the bottom side L-Bv has length 16 and is perpendicular to both. GUIDE arrow from (-0.995,0.671) to (4.597,8.961) (parallel to L-T, outside on its left) labelled '10 ft' (rotated to the arrow direction, 56 degrees) centred on it. INK dashed segment from (0.336,0.497) to (13.6,-8.45) (0.6 ft inside the bottom side) with an INK right-angle square with corners (0.336,0.497), (1.082,-0.006), (1.585,0.74), (0.839,1.244) at its start, labelled '16 ft' centred at (7.918,-2.567), rotated to the dashed direction (-34 degrees). Label '7 ft' centred at (17.211,-7.388). Tag '(i)' centred at local (8.6,-10.0). Panel (ii): corners (0,0), (36,0), (26,14), (2,14). INK dashed segment from (26,14) to (26,0) with an INK right-angle square with corners (26,0), (24.4,0), (24.4,1.6), (26,1.6) (to the left of the dashed segment). Labels: '24 m' centred at (14,15.4); '14 m' centred at (22.8,7); GUIDE arrow from (0,-1.8) to (36,-1.8) labelled '36 m' centred on it; tag '(ii)' centred at (18,-4.4). Panel (iii), parallel sides vertical: corners (0,0), (0,14), (10,9), (10,3); left side 14 long, right side 6 long. INK dashed horizontal segment from (0,9) to (10,9) with an INK right-angle square with corners (0,9), (0.9,9), (0.9,8.1), (0,8.1). Labels: '10 in' centred at (5,7.6); '6 in' centred at (11.9,6); GUIDE arrow from (-1.6,0) to (-1.6,14) labelled '14 in' (rotated 90 degrees) centred on it; tag '(iii)' centred at (5,-2.4). Panel (iv): corners (0,0), (18,0), (13.5,8), (1.5,8). INK dashed segment from (1.5,8) to (1.5,0) with an INK right-angle square with corners (1.5,0), (2.4,0), (2.4,0.9), (1.5,0.9). Labels: '12 ft' centred at (7.5,9.3); '8 ft' centred at (3.4,4) (right of the dashed segment); GUIDE arrow from (0,-1.3) to (18,-1.3) labelled '18 ft' centred on it; tag '(iv)' centred at (9,-3.4).",
+    "visible_text": [
+     "(i)",
+     "10 ft",
+     "7 ft",
+     "16 ft",
+     "(ii)",
+     "24 m",
+     "14 m",
+     "36 m",
+     "(iii)",
+     "14 in",
+     "10 in",
+     "6 in",
+     "(iv)",
+     "12 ft",
+     "8 ft",
+     "18 ft"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, titles, captions, Q-numbers",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, faces, scenery",
+     "the areas 136, 420, 100, 120",
+     "figure letters other than (i), (ii), (iii), (iv)",
+     "vertex letters"
+    ],
+    "accuracy_checks": [
+     "(i): L-T length 10, Bv-R length 7, both along direction (0.559,0.829); L-Bv length 16 along (0.829,-0.559), perpendicular to them",
+     "(ii): top 26-2 = 24, bottom 36, vertical dashed height 14",
+     "(iii): left side 14 (y from 0 to 14), right side 9-3 = 6, horizontal distance between them 10; the dashed segment at y = 9 ends at the top of the right side",
+     "(iv): top 13.5-1.5 = 12, bottom 18, vertical dashed height 8",
+     "in every panel the two printed parallel sides are the ones that are parallel"
+    ],
+    "alt_text": "Four trapeziums: (i) tilted, parallel sides 10 ft and 7 ft with 16 ft between them; (ii) parallel sides 24 m and 36 m with a dotted height of 14 m; (iii) vertical parallel sides 14 in and 6 in with 10 in between them; (iv) parallel sides 12 ft and 18 ft with a dotted height of 8 ft.",
+    "render_note": "Panel (i) is a right trapezium: in the book the dashed 16 ft line lies along the bottom side, so it is drawn here as a dashed line 0.6 ft inside that side. Each panel has its own scale so the four fit one card; proportions inside a panel follow the printed numbers."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S21.T21.C77",
+   "role": "solution",
+   "lp_book_number": "Rhombus and Trapezium, Q3",
+   "ncert_ref": "FiO5.q3",
+   "question_text": "Find the areas of the following figures: (i) a trapezium with parallel sides 10 ft and 7 ft and height 16 ft between them, (ii) parallel sides 24 m and 36 m, height 14 m, (iii) parallel sides 14 in and 6 in, height 10 in, (iv) parallel sides 12 ft and 18 ft, height 8 ft.",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answers 136, 420, 100 and 120 are the formula 1/2 x height x (sum of parallel sides) applied to printed numbers; a solution figure would only repeat the question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

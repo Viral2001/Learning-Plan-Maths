@@ -1,0 +1,653 @@
+{
+ "meta": {
+  "chapter": "A Square and A Cube",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 1",
+  "lp_plan_id": "cbse_eng_maths8_ch1_v45",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "required": 0,
+    "optional": 0,
+    "none": 4
+   },
+   "question": {
+    "required": 1,
+    "optional": 0,
+    "none": 12
+   },
+   "solution": {
+    "required": 0,
+    "optional": 2,
+    "none": 11
+   }
+  },
+  "notes": [
+   "Chunk B: topics M2.S11.T11, S12.T12, S14.T14, S15.T15, S16.T16, S17.T17, M3.S18.T18, S19.T19 (units 19 to 35, 30 items).",
+   "Only one diagram is required: the Figure it Out Q9 tile picture (question side of M2.S15.T15.C64). Everything else is text and LaTeX because the book prints no figure for these questions.",
+   "Q9 tile picture: the page raster loses lattice lines inside the upright tiles; the spec draws every tile as a 5 x 5 lattice as the LP states (2025 tiny squares, 45^2).",
+   "Optional (not added): Q9 solution marks; solution of the cubes of edge 2, 3 and 4."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P08-number_chain-1",
+   "source": "chapter p.08",
+   "description": "Checked against the page: light-yellow band with two lines of subtractions 81-1=80, 80-3=77, 77-5=72, 72-7=65, 65-9=56 / 56-11=45, 45-13=32, 32-15=17, 17-17=0; no arrows or marks. Plain arithmetic chain.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P11-tile_pattern-2",
+   "source": "chapter p.11",
+   "description": "CORRECTED: the 9 x 9 tile picture is 41 diamonds and 40 upright squares in a chessboard alternation (rows 1,3,5,7,9 start with a diamond); the diamonds show a full 5 x 5 lattice (25 tiny squares), and the upright tiles are meant to be 5 x 5 too: the page raster drops most of their lattice lines (they look like 4, 6 or 9 unequal cells, lines left at the 20/40/80 percent positions), so the base count 1241 is a rendering artefact, and the LP count is 81 x 25 = 2025 = 45^2. The book prints no answer to Q9.",
+   "mapped_to": "item:M2.S15.T15.C64 (question)"
+  },
+  {
+   "fig_id": "P11-solid-3",
+   "source": "chapter p.11",
+   "description": "Checked against the page: one unit cube, black oblique line drawing, no labels (illustrates the word 'cube').",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P11-solid-4",
+   "source": "chapter p.11",
+   "description": "Checked against the page: cube of side 2 units, front 2 x 2, top 2 x 2, right 2 x 2 faces drawn, no labels; beside the book's own question 'how many cubes of side 1 cm make a cube of side 2 cm'. The LP question C80 gives the edges 2, 3 and 4 in words, so the picture only illustrates it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P12-solid-1",
+   "source": "chapter p.12",
+   "description": "Checked against the page: cube of side 3 units drawn beside '27 = 3 x 3 x 3' (front 3 x 3, top 3 x 3, right 3 x 3 faces, no layers coloured). Teaching figure of edge 3.",
+   "mapped_to": "concept_image:M3.S18.T18.C79.IMG1"
+  },
+  {
+   "fig_id": "P12-solid-2",
+   "source": "chapter p.12",
+   "description": "Checked against the page: cube of side 4 units drawn beside the estimate of unit cubes (front 4 x 4, top 4 x 4, right 4 x 4 faces, no layers coloured). Teaching figure of edge 4.",
+   "mapped_to": "concept_image:M3.S18.T18.C76.IMG1"
+  },
+  {
+   "fig_id": "P12-table-3",
+   "source": "chapter p.12",
+   "description": "Checked against the page: 2 x 10 table of cubes 1^3 to 20^3, 11 given values and 9 blanks (6^3, 7^3, 8^3, 9^3, 10^3, 12^3, 15^3, 16^3, 20^3); the peach and pink row bands are decoration. A 'Complete the table' teaching prompt that no LP question of chunk B asks.",
+   "mapped_to": "none:LATEX_TABLE"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 7,
+  "mapped_to_items": 1,
+  "mapped_to_concept_images": 2,
+  "mapped_none": 4,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M2.S15.T15.C64.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M2.S11.T11.C45",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 1.1 - Square Roots (p.7-8)",
+   "question_text": "A square has area 64 square cm. Find its side, and give both square roots of 64.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The area 64 square cm is given in words and the steps are LaTeX lines (s x s = 64, (-8)^2 = 64); the book prints no picture for this example. A square of area 64 is the teaching image M2.S11.T11.C45.IMG1, which is never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C47",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 1.1 - Square Roots, method 2 (p.8)",
+   "question_text": "Find √81 by successive subtraction of odd numbers.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Nine subtractions from 81 down to 0 are plain arithmetic: the book's light-yellow band (P08-number_chain-1) holds the same nine lines with no arrows, colours or marks, and the LP steps already write them as LaTeX. The chain is also the teaching image M2.S11.T11.C47.IMG1.",
+   "text_alternative": "Three LaTeX lines of three subtractions each, exactly as in steps 1 to 3.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C49",
+   "role": "question",
+   "lp_book_number": "Square Roots: is 576 a perfect square",
+   "ncert_ref": "Section 1.1 - Square Roots, 'is 576 a perfect square' (p.8)",
+   "question_text": "Decide whether 576 and 327 are perfect squares, and find the square root of the one that is.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Only the two numbers 576 and 327 are given in words; the book prints no figure for this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C50",
+   "role": "solution",
+   "lp_book_number": "Square Roots: is 576 a perfect square",
+   "ncert_ref": "Section 1.1 - Square Roots, 'is 576 a perfect square' (p.8)",
+   "question_text": "Decide whether 576 and 327 are perfect squares, and find the square root of the one that is.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The listed squares 21^2 = 441 to 24^2 = 576 are an arithmetic list, written as LaTeX; no figure in the book (the list is the teaching image M2.S11.T11.C46.IMG1).",
+   "text_alternative": "One LaTeX line: 20^2 = 400, 21^2 = 441, 22^2 = 484, 23^2 = 529, 24^2 = 576.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C51",
+   "role": "question",
+   "lp_book_number": "Square Numbers, Q4",
+   "ncert_ref": "Figure it Out (1.1), Q4 (p.10)",
+   "question_text": "What is the length of the side of a square whose area is 441 m²?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives only the area 441 m^2 in words and prints no picture of the square.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C52",
+   "role": "solution",
+   "lp_book_number": "Square Numbers, Q4",
+   "ncert_ref": "Figure it Out (1.1), Q4 (p.10)",
+   "question_text": "What is the length of the side of a square whose area is 441 m²?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Answer 21 m comes from sqrt(441) by last-digit reasoning and 21^2 = 441, all LaTeX; a drawn square would repeat the words. Same decision as the other plain 'find the root' answers (Q1 here, T17 Q3).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C56",
+   "role": "question",
+   "lp_book_number": "Prime Factors: are 324 and 156 squares",
+   "ncert_ref": "Section 1.1 - Prime factorisation, 324 and 156 (p.9)",
+   "question_text": "Use prime factorisation to decide whether 324 and 156 are perfect squares.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two numbers are given in words; the book prints no figure for this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C57",
+   "role": "solution",
+   "lp_book_number": "Prime Factors: are 324 and 156 squares",
+   "ncert_ref": "Section 1.1 - Prime factorisation, 324 and 156 (p.9)",
+   "question_text": "Use prime factorisation to decide whether 324 and 156 are perfect squares.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Prime factorisations and the grouping (2 x 3 x 3) x (2 x 3 x 3) are LaTeX products with brackets; the book prints them as text lines too. Grouping picture of 324 is the teaching image M2.S13.T13.C53.IMG1.",
+   "text_alternative": "LaTeX lines of the two factorisations with the grouping brackets, as in steps 1 to 3.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C58",
+   "role": "question",
+   "lp_book_number": "Prime Factors: are 1156 and 2800 squares",
+   "ncert_ref": "Section 1.1 - Prime factorisation, 1156 and 2800 (p.9)",
+   "question_text": "Using prime factorisation, find whether 1156 and 2800 are perfect squares.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two numbers are given in words; the book prints no figure for this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C59",
+   "role": "solution",
+   "lp_book_number": "Prime Factors: are 1156 and 2800 squares",
+   "ncert_ref": "Section 1.1 - Prime factorisation, 1156 and 2800 (p.9)",
+   "question_text": "Using prime factorisation, find whether 1156 and 2800 are perfect squares.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Same kind of answer as the 324 and 156 pair: factorisations written in LaTeX (sibling consistency). Teaching image M2.S13.T13.C54.IMG1 shows the pairing.",
+   "text_alternative": "LaTeX lines of the two factorisations with the pairs bracketed, as in steps 1 and 3.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C60",
+   "role": "question",
+   "lp_book_number": "Square Numbers, Q5",
+   "ncert_ref": "Figure it Out (1.1), Q5 (p.10)",
+   "question_text": "Find the smallest square number that is divisible by each of the following numbers: 4, 9 and 10.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Only the three numbers 4, 9 and 10 are given in words; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C61",
+   "role": "solution",
+   "lp_book_number": "Square Numbers, Q5",
+   "ncert_ref": "Figure it Out (1.1), Q5 (p.10)",
+   "question_text": "Find the smallest square number that is divisible by each of the following numbers: 4, 9 and 10.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Factorisations of 4, 9, 10 and 180, 900 are written as LaTeX products; same kind of answer as the other prime-factor pairs.",
+   "text_alternative": "LaTeX lines of the factorisations of 4, 9, 10, 180 and 900, as in steps 1 to 4.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C62",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out (1.1), Q6 (p.10)",
+   "question_text": "Find the smallest number by which 9408 must be multiplied so that the product is a perfect square. Find the square root of the product.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Only the number 9408 is given in words; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C63",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out (1.1), Q6 (p.10)",
+   "question_text": "Find the smallest number by which 9408 must be multiplied so that the product is a perfect square. Find the square root of the product.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Factorisation of 9408, pairing and 28224 = 168^2 are LaTeX arithmetic; the book answer is the two numbers 3 and 168 (no picture).",
+   "text_alternative": "LaTeX lines of the factorisation of 9408 and of 28224 = 168^2, as in steps 1 to 4.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C64",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Figure it Out (1.1), Q9 (p.11)",
+   "question_text": "How many tiny squares are there in the picture of 9 rows of 9 tiles, where every tile, upright or turned, is a grid of 5 by 5 tiny squares? Write the prime factorisation of the number of tiny squares.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book question asks to count the tiny squares in the printed tile picture (9 rows of 9 tiles, diamond and upright tiles alternating); the student needs the picture to attempt it. Required even though the LP text states the 9 by 9 and 5 by 5 data (v3 rules, user decision 4). The picture shows only what is given: no counts, no brackets, no totals. The printed page draws the upright tiles with only some of their lattice lines (rendering loss; the book prints no answer for Q9); the spec draws every tile as the 5 by 5 lattice that the LP question and solution state and that the diamonds show clearly (user decision 1).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S15.T15.C64.IMG1",
+   "manim_scene": "c8_1_fio9_tiles_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S15.T15.C64.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "tiling",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "tiling",
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "px_per_unit": 120
+     },
+     "panel": {
+      "fill": "MARK_FILL",
+      "x_from": 3.84,
+      "x_to": 12.16,
+      "y_from": 0.34,
+      "y_to": 8.66,
+      "side": 8.32
+     },
+     "grid": {
+      "rows": 9,
+      "columns": 9,
+      "pitch": 0.88,
+      "inner_margin": 0.2
+     },
+     "tile_centre_x_by_column_1_to_9": [
+      4.48,
+      5.36,
+      6.24,
+      7.12,
+      8.0,
+      8.88,
+      9.76,
+      10.64,
+      11.52
+     ],
+     "tile_centre_y_by_row_1_to_9_from_top": [
+      8.02,
+      7.14,
+      6.26,
+      5.38,
+      4.5,
+      3.62,
+      2.74,
+      1.86,
+      0.98
+     ],
+     "tile_rule": "tile in row r and column c is D (diamond) when r + c is even and S (upright square) when r + c is odd",
+     "tile_types": {
+      "D": {
+       "shape": "square of side 0.62 rotated 45 degrees about the tile centre",
+       "half_diagonal": 0.4384,
+       "lattice": "5 x 5",
+       "cell_side": 0.124
+      },
+      "S": {
+       "shape": "axis-aligned square of side 0.66 about the tile centre",
+       "lattice": "5 x 5",
+       "cell_side": 0.132
+      }
+     },
+     "rows_left_to_right_top_to_bottom": [
+      "DSDSDSDSD",
+      "SDSDSDSDS",
+      "DSDSDSDSD",
+      "SDSDSDSDS",
+      "DSDSDSDSD",
+      "SDSDSDSDS",
+      "DSDSDSDSD",
+      "SDSDSDSDS",
+      "DSDSDSDSD"
+     ],
+     "tile_counts": {
+      "D": 41,
+      "S": 40,
+      "total": 81
+     },
+     "tiny_squares_per_tile": 25,
+     "colours": {
+      "panel": "MARK_FILL",
+      "tile_fill": "BG",
+      "outline_and_lattice_lines": "INK",
+      "stroke_px": 2
+     },
+     "text_on_figure": []
+    },
+    "manim_description": "On a plain white (BG) 16:9 canvas of 16 by 9 units (1920 by 1080 px, 120 px per unit, y up), draw one square panel filled MARK_FILL with no outline, side 8.32 units, centred on the canvas: x from 3.84 to 12.16 and y from 0.34 to 8.66. Inside the panel draw 9 rows by 9 columns of white (BG) tiles on a pitch of 0.88 units. The centre of the tile in column c (1 to 9, left to right) has x = 4.48 + 0.88 (c - 1), that is 4.48, 5.36, 6.24, 7.12, 8.00, 8.88, 9.76, 10.64, 11.52. The centre of the tile in row r (1 to 9, top to bottom) has y = 8.02 - 0.88 (r - 1), that is 8.02, 7.14, 6.26, 5.38, 4.50, 3.62, 2.74, 1.86, 0.98. The tile in row r and column c is a diamond (type D) when r + c is even and an upright square (type S) when r + c is odd, so rows 1, 3, 5, 7 and 9 read D S D S D S D S D from left to right and rows 2, 4, 6 and 8 read S D S D S D S D S. Type S is an axis-aligned square of side 0.66 centred on the tile centre. Type D is a square of side 0.62 turned through 45 degrees about the tile centre, a diamond whose four corners lie 0.438 units to the left, right, above and below the centre. Cut every tile, D and S alike, into a lattice of 5 by 5 equal tiny squares by 4 equally spaced lines in each of its two side directions (the lattice of a D tile is turned with the diamond); an S cell has side 0.132 units and a D cell has side 0.124 units. Draw the outline of every tile and all its lattice lines in INK with a 2 px stroke, so every tiny square is a separate white cell and can be counted. Draw no text, no numbers, no brackets, no counts, no totals and no letters anywhere. The picture holds 41 D tiles and 40 S tiles, 81 tiles in all.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any count or total: no 81, no 25, no 2025, no 9 x 9, no 5 x 5, no braces or brackets marking rows or columns",
+     "unequal or partial lattices on the upright tiles as printed on the book page: every tile is a full 5 by 5 lattice"
+    ],
+    "accuracy_checks": [
+     "9 rows x 9 columns = 81 tiles; D tiles are the cells with row + column even: 5 x 5 (odd rows) + 4 x 4 (even rows) = 25 + 16 = 41 D tiles; 81 - 41 = 40 S tiles",
+     "Every tile (D and S) has exactly 25 tiny squares: 4 internal lines per direction, equally spaced, 5 cells per side",
+     "Total tiny squares in the picture = 81 x 25 = 2025 = 3^4 x 5^2 = 45^2 (this total is NOT drawn)",
+     "No tile overlaps another tile or leaves the panel: D half-diagonal 0.438 < pitch/2 = 0.44; the diamond corners keep 0.2 units from the panel edge"
+    ],
+    "alt_text": "A light green square panel holds nine rows of nine white tiles, diamond-shaped and upright tiles alternating like a chessboard, and each tile is cut into a five by five grid of tiny squares.",
+    "render_note": "Printed picture is nearly square (about 597 by 595 px, dark green panel); it is drawn centred in the 16:9 card with the panel in MARK_FILL (the style tokens have no dark green) and INK lattice lines so each of the 25 cells per tile can be counted. The page raster loses most lattice lines inside the upright tiles (they show only 2 x 2, 2 x 3 or 3 x 3 cells with lines at about 20, 40 and 80 percent); the lines that survive sit at the 5 by 5 positions, the diamonds show the full 5 by 5 lattice, and the LP question and solution state 5 by 5 for every tile."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C65",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Figure it Out (1.1), Q9 (p.11)",
+   "question_text": "How many tiny squares are there in the picture of 9 rows of 9 tiles, where every tile, upright or turned, is a grid of 5 by 5 tiny squares? Write the prime factorisation of the number of tiny squares.",
+   "decision": "optional",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Numeric answer (2025 tiny squares, 2025 = 3^4 x 5^2 = 45^2). A figure that repeats the tile picture and marks the 9 by 9 tiles and one tile as 25 tiny squares would be nice (Step D) but the steps give every count, so it is not added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C66",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 1.1 - Estimating square roots, 1936 (p.9)",
+   "question_text": "Find √1936 without long multiplication.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The trapping of the root of 1936 between 40 and 50, the last-digit step and 45^2 = 2025 are inequalities and products in text; the book prints no figure. The number-line picture is the teaching image M2.S16.T16.C66.IMG1, never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C70",
+   "role": "question",
+   "lp_book_number": "Estimating Roots: Bijou guesses the root of 250",
+   "ncert_ref": "Section 1.1 - Estimating, Bijou and the root of 250 (p.10)",
+   "question_text": "Between which two consecutive whole numbers does √250 lie, and which is it closer to?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "One number (250) is given in words; the book prints no figure for the game.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C71",
+   "role": "solution",
+   "lp_book_number": "Estimating Roots: Bijou guesses the root of 250",
+   "ncert_ref": "Section 1.1 - Estimating, Bijou and the root of 250 (p.10)",
+   "question_text": "Between which two consecutive whole numbers does √250 lie, and which is it closer to?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "225 < 250 < 256 and the gaps 6 and 25 are written in the steps; a number line would only repeat them and the book prints none (teaching image M2.S16.T16.C67.IMG1 shows it). Same decision as the other estimating answers.",
+   "text_alternative": "LaTeX lines: 15^2 = 225, 16^2 = 256, 225 < 250 < 256, 256 - 250 = 6, 250 - 225 = 25.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C72",
+   "role": "question",
+   "lp_book_number": "Estimating Roots: Akhil's square cloth",
+   "ncert_ref": "Section 1.1 - Estimating, Akhil's square cloth (p.10)",
+   "question_text": "Akhil's square cloth has area 125 cm². Can he cut a square handkerchief of side 15 cm? What is the largest whole number side he can cut?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Area 125 cm^2 and side 15 cm are given in words; the book prints no picture of the cloth.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C73",
+   "role": "solution",
+   "lp_book_number": "Estimating Roots: Akhil's square cloth",
+   "ncert_ref": "Section 1.1 - Estimating, Akhil's square cloth (p.10)",
+   "question_text": "Akhil's square cloth has area 125 cm². Can he cut a square handkerchief of side 15 cm? What is the largest whole number side he can cut?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Areas 225 cm^2 against 125 cm^2 and the bounds 11^2 = 121, 12^2 = 144 are arithmetic in the steps; the book prints no figure (cloth picture is teaching image M2.S16.T16.C68.IMG1).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C74",
+   "role": "question",
+   "lp_book_number": "Square Numbers, Q1",
+   "ncert_ref": "Figure it Out (1.1), Q1 (p.10)",
+   "question_text": "Which of the following numbers are not perfect squares? (i) 2032 (ii) 2048 (iii) 1027 (iv) 1089",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four numbers are given in words; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S17.T17.C75",
+   "role": "solution",
+   "lp_book_number": "Square Numbers, Q1",
+   "ncert_ref": "Figure it Out (1.1), Q1 (p.10)",
+   "question_text": "Which of the following numbers are not perfect squares? (i) 2032 (ii) 2048 (iii) 1027 (iv) 1089",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Last-digit checks and the neighbouring squares 45^2 = 2025, 46^2 = 2116, 32^2 = 1024, 33^2 = 1089 are LaTeX arithmetic; the book answer is (i), (ii) and (iii) only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C78",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 1.2 - Cubes of fractions, decimals and negative numbers (p.13)",
+   "question_text": "Find (−6)³, (−6)² and (4/6)³.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Products (-6) x (-6) x (-6) = -216 and (4/6)^3 = 64/216 are printed on the book page as plain equations (no figure); the steps carry them in LaTeX. Comparison picture is teaching image M3.S18.T18.C78.IMG1.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C80",
+   "role": "question",
+   "lp_book_number": "Unit Cubes: cubes of edge 2, 3 and 4",
+   "ncert_ref": "Section 1.2 - Cubic Numbers, how many unit cubes make a cube (p.11-12)",
+   "question_text": "How many unit cubes make cubes of edge 2, 3 and 4 units?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives only the three edge lengths 2, 3 and 4 in words; a student gets 2 x 2 x 2, 3 x 3 x 3 and 4 x 4 x 4 from the text alone. The book's drawn 2 x 2 x 2 cube sits beside its own version of the question and only illustrates it (it is not data), so no question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C81",
+   "role": "solution",
+   "lp_book_number": "Unit Cubes: cubes of edge 2, 3 and 4",
+   "ncert_ref": "Section 1.2 - Cubic Numbers, how many unit cubes make a cube (p.11-12)",
+   "question_text": "How many unit cubes make cubes of edge 2, 3 and 4 units?",
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answers 8, 27 and 64 are numbers; the steps already give the layers (2 x 2, 3 x 3, 4 x 4 per layer). A picture of three cubes of edge 2, 3 and 4 cut into layers of unit cubes would help but is not needed (the edge 3 and edge 4 cubes are teaching images M3.S18.T18.C79.IMG1 and M3.S18.T18.C76.IMG1, never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C82",
+   "role": "question",
+   "lp_book_number": "Cube Digits: three digit cubes and two end zeros",
+   "ncert_ref": "Section 1.2 - Cubic Numbers, digits of cubes and two end zeros (p.12-13)",
+   "question_text": "How many cubes have exactly 3 digits, and can a cube end in exactly two zeros?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question is words only; the book's 'Complete the table' picture (P12-table-3) is a separate teaching prompt, not part of this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C83",
+   "role": "solution",
+   "lp_book_number": "Cube Digits: three digit cubes and two end zeros",
+   "ncert_ref": "Section 1.2 - Cubic Numbers, digits of cubes and two end zeros (p.12-13)",
+   "question_text": "How many cubes have exactly 3 digits, and can a cube end in exactly two zeros?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The cubes 5^3 = 125 to 9^3 = 729 and 10^3 = 1000 are a plain list of numbers, written as LaTeX (the five 3-digit cubes row is teaching image M3.S18.T18.C77.IMG1).",
+   "text_alternative": "LaTeX line: 5^3 = 125, 6^3 = 216, 7^3 = 343, 8^3 = 512, 9^3 = 729.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C84",
+   "role": "question",
+   "lp_book_number": "Cubic Numbers, Q3",
+   "ncert_ref": "Figure it Out (1.2), Q3 (p.16)",
+   "question_text": "State true or false. Explain your reasoning. (i) The cube of any odd number is even. (ii) There is no perfect cube that ends with 8. (iii) The cube of a 2 digit number may be a 3 digit number. (iv) The cube of a 2 digit number may have seven or more digits. (v) Cube numbers have an odd number of factors.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Five true or false statements in words; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C85",
+   "role": "solution",
+   "lp_book_number": "Cubic Numbers, Q3",
+   "ncert_ref": "Figure it Out (1.2), Q3 (p.16)",
+   "question_text": "State true or false. Explain your reasoning. (i) The cube of any odd number is even. (ii) There is no perfect cube that ends with 8. (iii) The cube of a 2 digit number may be a 3 digit number. (iv) The cube of a 2 digit number may have seven or more digits. (v) Cube numbers have an odd number of factors.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Five 'False' verdicts with numeric counterexamples (3^3 = 27, 2^3 = 8, 10^3 = 1000, 99^3 = 970299, the four factors of 8); the book answer is five times False, no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

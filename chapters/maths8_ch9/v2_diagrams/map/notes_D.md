@@ -1,0 +1,43 @@
+# Chunk D notes (Class 8 Ch 9, units 69-78, topics M4.S12.T12 to M4.S16.T16)
+
+Result: 14 items, required 6 / optional 0 / none 8. Validator: errors 0 (3 warnings, all on solution figures that no printed book figure maps to: C96, C98, C100; expected, the book prints no solutions).
+
+Required: lotus Example 1 question (C93) and solution (C94); rhombus Q3 solution (C96); Q8 (i) question (C97) and solution (C98); Q9 solution (C100).
+None: three Fermat/Wiles worked blocks (C89 blocks 0, 1, 2), Q8 (ii) worked block (C92), rhombus Q3 question (C95), Q9 question (C99), summary matching (C101), Find the Colours (C103).
+
+## 1. Judgement calls
+
+- **Lotus question (C93), required.** The book prints the lake picture with the problem and says "Try to visualise what you read"; the picture is what makes the hidden right triangle findable (tie-breaker: it changes how easily the student solves it). The question figure shows only what the question gives: the upright stem with its tip 1 above the water, the bent stem with its tip on the surface, 1 and 3 (3 comes from the question text; the book picture does not print it) and a `?` for the depth. The book prints `x` on the depth; `x` is the solution's variable, so the question figure uses `?`. No right-angle mark in the question figure (the book itself calls it an assumption).
+- **Lotus solution (C94), required.** Not just a repeat: it adds the right angle at the surface, the shaded triangle with sides 3, x and x + 1, and the final depth `x = 4`. I did not draw the number 5 because the LP never writes it. The picture is drawn with the 3 : 4 : 5 positions in both figures so that no given part moves between question and solution; the question prints no value, so it does not give the answer away in words.
+- **Q3 rhombus and Q9 equilateral triangle: question none, solution required.** The book gives neither question a figure, so no question diagram. Both LP solutions are built on a figure the student has to imagine (diagonals cutting four right triangles; the altitude splitting the base 3 + 3), so each solution draws the whole picture (`derived_from` null). Same decision for both (sibling rule). Rhombus: long diagonal horizontal to fit the 16:9 card; labels are the four half-diagonals (35, 35, 12, 12) and one side 37, the full diagonals 24 and 70 are not labelled to avoid clutter. Equilateral: sides 6, base halves 3 and 3, altitude `h = √27`; the area is the question's answer and is not drawn.
+- **Q8 (i) question (C97), required** (`ACTION_ON_FIGURE`): the book gives the 5 by 5 dot grid and the student draws squares on it. **Solution (C98), required** (`ANSWER_IS_FIGURE`): the answer is the drawing of the squares of area 2, 4 and 5; there is none for 3.
+- **Q8 (i) solution layout: three panels.** I searched all placements (diamond of area 2, upright 2 by 2, tilted square of area 5 in either orientation, vertices on the dots 0..4): none puts the three squares on one 5 by 5 grid without overlapping. So the figure is three copies of the question grid side by side, one square each. This is still ONE solution diagram. Letters (a), (c), (d) are shown under the panels because the LP answer refers to the parts by those letters (user decision 3); there is no panel and no letter for (b). The LP gives only p and q, so the positions of the squares are chosen by me (area 2: corners (2,1), (3,2), (2,3), (1,2); area 4: (1,1), (3,1), (3,3), (1,3); area 5: (1,0), (3,1), (2,3), (0,2); all corners on dots, all areas checked with the shoelace formula).
+- **Q8 (ii) worked block (C92), none.** The answer is a list of sums of two squares; nothing has to be seen to attempt it. The printed grid belongs to Q8 as a whole, but I draw it once, for (i). See Borderline and LP text issues.
+- **Figure inventory.** P20-shape-1 (printed lotus picture) is the book source of the teaching image C91.IMG1, which comes first in the LP, so the base id maps to `concept_image:M4.S13.T13.C91.IMG1`; the two further uses are `NEW-P20-shape-1-q` (question C93) and `NEW-P20-shape-1-sol` (solution C94). P21-grid-1 maps to the C97 question. Both base descriptions were checked against the page pictures and are correct.
+- **Not inventoried (decoration, skipped by Step 0):** the Fermat and Wiles portraits on p.19, the owl, the "Puzzle Time" banner and the row of children on p.22. The six triangles of Figure it Out Q2 on p.21 belong to chunk C (Chapter Exercises Q2).
+- **Vertex letters.** None drawn in the lotus, rhombus or equilateral figures, because the LP texts name no points (the concept image uses P, R, T; the LP text does not).
+
+## 2. LP text issues
+
+- **M4.S13.T13.C92 (Q8 (ii) worked block).** The question reads "Suppose the grid extends indefinitely. What are the possible integer-valued areas of squares you can create in this manner?" with no setup: "the grid" and "this manner" refer to Q8 (i), which sits later (T15) and is not repeated. Suggested sentence: "Using the dots of a grid as the vertices, suppose the grid extends indefinitely. What are the possible integer-valued areas of squares you can create?" (No figure decision was changed because of this.)
+- **M4.S15.T15.C97 (Q8 (i) question_tex).** Part labels are written inconsistently: `$(a) 2\text{ sq. units}$, $(b)$: $3\text{ sq. units}$, $(c)$: $4\text{ sq. units}$, and $(d) 5\text{ sq. units}$`. Suggested: "can you create a square that has an area of (a) 2 sq. units, (b) 3 sq. units, (c) 4 sq. units, and (d) 5 sq. units?" with the same form for every part.
+- **M4.S15.T15.C98 (Q8 (i) solution).** The steps give only p and q for each square, not where to put it on the dots. Suggested extra sentence: "The figure shows one such square for each of (a), (c) and (d), with its corners on the dots." The diagram now shows one concrete square per part.
+- **M4.S16.T16.C101 (summary matching).** The question says "Match each summary statement to an example from the chapter" but the six statements and the six examples appear only inside the steps; the question text does not list them. Suggested: list the six summary points in the question and let the steps give the matches.
+- **M4.S16.T16.C103 (Find the Colours), step 3.** "Say it is blue: that box is BLUE." mixes the label and the contents. Suggested: "Say the ball is blue: the box labelled RED holds blue balls."
+- Checked and correct: all arithmetic of C89 E0, E1, E2 (216 + 512 = 728, 729 + 1000 = 1729, 12^3 = 1728, 13^3 = 2197, 1994 - 1963 = 31), C96 (144 + 1225 = 1369 = 37^2), C98 ((a) 1 + 1 = 2, (c) 4, (d) 1 + 4 = 5, 3 not a sum of two squares), C100 (36 - 9 = 27, 5.1^2 = 26.01, 5.2^2 = 27.04, 3 sqrt(27) = 9 sqrt(3) ≈ 15.59), C94 (9 = 2x + 1, x = 4) and the two cases of C103.
+
+## 3. Book unclear or wrong
+
+- The lotus picture (p.20) is not to scale and prints only 1 and x; the 3 is in the text only. Unclear whether a tiny right-angle mark sits at the foot of the upright stem (too small to tell); the book text calls the perpendicular stem "a very reasonable assumption". My question figure leaves the mark out, the solution figure draws it.
+- Summary bullet 3 (p.22) says "isosceles triangle with sidelengths a, a, c"; it must be an isosceles right triangle (the LP already flags this). No figure depends on it.
+- Q8 (d) prints "5 sq. unit" (singular); harmless.
+- The book has no printed-solutions section; every solution figure comes from the LP solution text.
+
+## 4. Borderline
+
+- **C93 lotus question, required.** All numbers are in the text, so a "text sufficient" reading is possible. Kept required because the book prints the picture with the problem and the figure decides how easily the right triangle is found.
+- **C92 Q8 (ii), none.** The book prints the grid beside both (i) and (ii). I treat (ii) as needing no picture (the answer is a list of numbers) and draw the grid once, for (i). If the user wants one grid per part ("same book picture, one diagram per item"), C92 would become a required worked example with the same spec as C97 (a 5 by 5 dot grid, "same as M4.S15.T15.C97.IMG1").
+- **C96 rhombus and C100 equilateral solutions, required** although their answers are numbers: required on the strength of the spatial structure the solution describes (SPATIAL_GEOMETRY). A text-only reading would be defensible.
+- **C94 lotus solution, required** although it also repeats the question picture: kept because it adds the right angle, the triangle, x + 1 and x = 4 (the complete final state).
+- **C103 Find the Colours, none.** A picture of three labelled boxes could help, but the puzzle is word reasoning and the book prints no figure. `text_alternative` gives a LaTeX table of the two cases.
+- **C101 summary matching, none.**

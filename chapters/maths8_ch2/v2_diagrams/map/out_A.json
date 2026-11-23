@@ -1,0 +1,1055 @@
+{
+ "meta": {
+  "chapter": "Power Play",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 2",
+  "lp_plan_id": "cbse_eng_maths8_ch2_v35",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "required": 0,
+    "optional": 0,
+    "none": 3
+   },
+   "question": {
+    "required": 1,
+    "optional": 0,
+    "none": 13
+   },
+   "solution": {
+    "required": 1,
+    "optional": 0,
+    "none": 13
+   }
+  },
+  "notes": [
+   "Chunk A (17 units, 31 items: M1.S2.T2, M1.S3.T3, M2.S4.T4, M2.S5.T5, M2.S6.T6, M3.S8.T8, M3.S9.T9).",
+   "Only the Stones that Shine tree (C32 question, C33 solution) needs a diagram; the other 29 items are text/LaTeX (plain tables, power arithmetic, word reasoning).",
+   "The book pdf does have printed answers (pdf pages 30 to 38); all answers of this chunk are text, no answer picture.",
+   "Full list of LP text issues, borderline calls and book doubts in map/notes_A.md."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P02-table-1",
+   "source": "chapter p.02 (book p.20)",
+   "description": "Plain Fold/Thickness table, folds 1 to 17 in three column pairs (17 = about 131 cm); no colour meaning. Verified against the page picture.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P02-table-2",
+   "source": "chapter p.02 (book p.20)",
+   "description": "Plain table to fill, folds 18 to 26: 18 about 262 cm, 19 about 524 cm, 20 about 10.4 m given, folds 21 to 26 blank. Verified against the page picture.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P02-table-3",
+   "source": "chapter p.02 (book p.20)",
+   "description": "Plain table to fill, folds 27 to 30: 27 about 1.3 km given, folds 28, 29, 30 blank. Verified against the page picture.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P02-table-4",
+   "source": "chapter p.02 (book p.20)",
+   "description": "Plain table to fill, folds 31 to 45, all 15 thickness cells blank. Verified against the page picture.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P03-table-1",
+   "source": "chapter p.03 (book p.21)",
+   "description": "Small 2 x 2 table: Fold 4 = 0.016 cm, Fold 5 = 0.032 cm (teaching; used by the 'check the thickness table' question).",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P03-table-2",
+   "source": "chapter p.03 (book p.21)",
+   "description": "Small 2 x 2 table: Fold 9 = 0.512 cm, Fold 10 = 1.024 cm (teaching).",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P03-table-3",
+   "source": "chapter p.03 (book p.21)",
+   "description": "Small 2 x 2 table: Fold 4 = 0.016 cm, Fold 6 = 0.064 cm (teaching).",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P03-table-4",
+   "source": "chapter p.03 (book p.21)",
+   "description": "Table with coloured header (Fold | Thickness | Times increased by), four rows 0 to 10, 10 to 20, 20 to 30, 30 to 40, each ratio 1024; the colour is decoration only. Teaching figure, the plan's concept image C4 shows the same x 1024 idea.",
+   "mapped_to": "concept_image:M1.S2.T2.C4.IMG1"
+  },
+  {
+   "fig_id": "P04-division_ladder-1",
+   "source": "chapter p.04 (book p.22)",
+   "description": "Prime-factorisation ladder of 32400: 2 | 32400, 2 | 16200, 2 | 8100, 2 | 4050, 5 | 2025, 5 | 405, 3 | 81, 3 | 27, 3 | 9, 3 | 3, then 1 (four 2s, two 5s, four 3s). Worked-example teaching picture; the LP carries the same divisions as a number chain in the steps of C18, so it stays text/LaTeX. Verified against the page picture.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P05-tree_diagram-1",
+   "source": "chapter p.05 (book p.23)",
+   "description": "Tree of the Stones that Shine story: King, 3 daughters, 9 baskets (3 each), 27 keys (3 per basket), 81 rooms (each key has 3 prongs; 27 fork icons x 3 prongs), level labels daughters, baskets, keys, rooms on the right. Verified against the page picture (crop): 3 keys under every basket, 3 prongs under every key. Question figure of the rooms-and-diamonds question.",
+   "mapped_to": "item:M3.S8.T8.C32 (question)"
+  },
+  {
+   "fig_id": "NEW-P05-tree_diagram-1-sol",
+   "source": "chapter p.05 (book p.23)",
+   "description": "Second use of the same tree: the solution figure of the rooms-and-diamonds question, the tree plus the counts 3, 9, 27, 81 beside the four levels.",
+   "mapped_to": "item:M3.S8.T8.C33 (solution)"
+  },
+  {
+   "fig_id": "P06-brace_diagram-1",
+   "source": "chapter p.06 (book p.24)",
+   "description": "Row 3 x 3 x 3 x 3 x 3 x 3 x 3 with under-braces 3^4 (first four) and 3^3 (last three): 3^7 = 3^4 x 3^3. Teaching figure; the plan's concept image C27 shows the same split.",
+   "mapped_to": "concept_image:M3.S7.T7.C27.IMG1"
+  },
+  {
+   "fig_id": "P06-table-2",
+   "source": "chapter p.06 (book p.24)",
+   "description": "Boxed Math Talk comparison of 4^6 in two ways: (4 x 4 x 4) x (4 x 4 x 4) = 4^3 x 4^3 = 64 x 64 = 4096 = (4^3)^2 and (4 x 4) x (4 x 4) x (4 x 4) = 4^2 x 4^2 x 4^2 = 16 x 16 x 16 = 4096 = (4^2)^3. Teaching working; the plan's concept image C29 shows (4^3)^2.",
+   "mapped_to": "concept_image:M3.S7.T7.C29.IMG1"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 13,
+  "mapped_to_items": 2,
+  "mapped_to_concept_images": 3,
+  "mapped_none": 8,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M3.S8.T8.C32.IMG1",
+   "M3.S8.T8.C33.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S2.T2.C2",
+   "role": "worked_example",
+   "lp_book_number": "The thickness doubles with each fold",
+   "ncert_ref": "2.1.table17",
+   "question_text": "A sheet is 0.001 cm thick. Find its thickness after 1, 2, 3, 10 and 17 folds.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_TABLE"
+   ],
+   "reason": "Pure doubling arithmetic: every thickness (0.002, 0.004, 0.008, 1.024 cm and about 131 cm) is in the steps; the book's fold table is a plain table of numbers and teaching image C2.IMG1 already shows the first doublings.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C3",
+   "role": "worked_example",
+   "lp_book_number": "Taller than a tower, deeper than the ocean",
+   "ncert_ref": "2.1.mt_guess, 2.1.burj_mariana",
+   "question_text": "After 20 folds the stack is about 10.4 m. Find the thickness after 26, 27 and 30 folds and compare it with the Burj Khalifa (830 m) and the Mariana Trench (11 km).",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Doubling from about 10.4 m to about 670 m, 1.3 km and 10.7 km and comparing with 830 m and 11 km is all in the steps; the height comparison is already teaching image C3.IMG1 (never linked), a second height scale would only be nicer.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C6",
+   "role": "question",
+   "lp_book_number": "Folding Paper: fill the thickness table",
+   "ncert_ref": "2.1.fill_table",
+   "question_text": "Fill the table of thickness for folds 21 to 45, starting from about 10.4 m after 20 folds. After how many folds is the stack more than the 3,84,400 km distance to the Moon?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The book gives a plain Fold/Thickness table (folds 18 to 20 filled, the rest blank, no colour meaning) and the question text already states the start value (about 10.4 m at fold 20); the blank rows are the answer space, so a LaTeX array does the job.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optional LaTeX array Fold | Thickness: rows 18 (about 262 cm), 19 (about 524 cm), 20 (about 10.4 m) given, rows 21 to 45 left blank."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "solution",
+   "lp_book_number": "Folding Paper: fill the thickness table",
+   "ncert_ref": "2.1.fill_table",
+   "question_text": "Fill the table of thickness for folds 21 to 45, starting from about 10.4 m after 20 folds. After how many folds is the stack more than the 3,84,400 km distance to the Moon?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The answer is a filled plain Fold/Thickness table (folds 21 to 45, numbers only, no colour meaning): write it as a LaTeX array; the steps already list all 25 values in five lines.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array Fold | Thickness for folds 21 to 45 with the LP values: 21 about 21 m, 22 about 42 m, 23 about 84 m, 24 about 168 m, 25 about 336 m, 26 about 670 m, 27 about 1.3 km, 28 about 2.7 km, 29 about 5.4 km, 30 about 10.7 km, 31 about 21 km, 32 about 43 km, 33 about 86 km, 34 about 172 km, 35 about 344 km, 36 about 687 km, 37 about 1374 km, 38 about 2749 km, 39 about 5498 km, 40 about 10995 km, 41 about 21990 km, 42 about 43980 km, 43 about 87961 km, 44 about 175922 km, 45 about 351844 km."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "question",
+   "lp_book_number": "Folding Paper: thickness after 2, 3 and 10 folds",
+   "ncert_ref": "2.1.two_folds",
+   "question_text": "Check that two folds multiply the thickness by 4, three folds by 8, and ten folds by 1024, using the thickness table.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "'The thickness table' of the book is a plain Fold/Thickness table of numbers with no colour meaning: it is delivered as a LaTeX array in the text, not as an image (the LP question text does not carry it yet, see notes).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array Fold | Thickness with the book's rows: 1 = 0.002 cm, 2 = 0.004 cm, 3 = 0.008 cm, 4 = 0.016 cm, 5 = 0.032 cm, 6 = 0.064 cm, 7 = 0.128 cm, 8 = 0.256 cm, 9 = 0.512 cm, 10 = 1.024 cm, 11 = 2.048 cm, 12 = 4.096 cm, 13 = 8.192 cm, 14 = 16.384 cm, 15 = 32.768 cm, 16 = 65.536 cm, 17 = about 131 cm, plus fold 0 = 0.001 cm and fold 20 = about 1048.5 cm used by the solution."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C9",
+   "role": "solution",
+   "lp_book_number": "Folding Paper: thickness after 2, 3 and 10 folds",
+   "ncert_ref": "2.1.two_folds",
+   "question_text": "Check that two folds multiply the thickness by 4, three folds by 8, and ten folds by 1024, using the thickness table.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four ratio checks (0.032 / 0.008 = 4, 0.128 / 0.016 = 8, 1.024 / 0.001 = 1024, 1048.5 / 1.024 = about 1024) are plain arithmetic written in the steps; nothing to draw.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S4.T4.C10",
+   "role": "worked_example",
+   "lp_book_number": "A power has a base and an exponent",
+   "ncert_ref": "2.2.fold_power, 2.2.read_powers, 2.2.base_exponent",
+   "question_text": "Write the thickness after 4 folds as a power of 2, and find the value of 5⁴. Name the base and the exponent of 5⁴.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Writing 0.001 x 2^4, multiplying 5 x 5 x 5 x 5 = 625 and naming base 5 and exponent 4 is arithmetic and wording; teaching image C10.IMG1 already shows base and exponent.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C15",
+   "role": "question",
+   "lp_book_number": "Exponential Notation: thickness after 10 folds",
+   "ncert_ref": "2.2.ten_folds_v",
+   "question_text": "A sheet has thickness v. Which expression gives its thickness after 10 folds: 10v, 10 + v, 2 × 10 × v, 2¹⁰, 2¹⁰v or 10²v? Then compare 4 + 4 + 4 with 4 × 4 × 4.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six printed expressions to choose from and the comparison 4 + 4 + 4 with 4 x 4 x 4: everything is in the text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C16",
+   "role": "solution",
+   "lp_book_number": "Exponential Notation: thickness after 10 folds",
+   "ncert_ref": "2.2.ten_folds_v",
+   "question_text": "A sheet has thickness v. Which expression gives its thickness after 10 folds: 10v, 10 + v, 2 × 10 × v, 2¹⁰, 2¹⁰v or 10²v? Then compare 4 + 4 + 4 with 4 × 4 × 4.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Choosing 2^10 v by reasoning on one and two folds, then 12 against 64, is reasoning plus arithmetic; the book's printed answer is a text option, not a figure (teaching image C11.IMG1 covers 4 + 4 + 4 against 4 x 4 x 4).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C17",
+   "role": "question",
+   "lp_book_number": "Exponential Notation: 32400 as powers of primes",
+   "ncert_ref": "2.2.prime_32400",
+   "question_text": "Write a × a × b × b × b × b in exponential form, and express 32400 as a product of powers of primes.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "a x a x b x b x b x b and 32400 are given in the words and digits of the question; the book's division ladder belongs to its worked example, not to this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C18",
+   "role": "solution",
+   "lp_book_number": "Exponential Notation: 32400 as powers of primes",
+   "ncert_ref": "2.2.prime_32400",
+   "question_text": "Write a × a × b × b × b × b in exponential form, and express 32400 as a product of powers of primes.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answers a^2 b^4 and 2^4 x 5^2 x 3^4 are expressions, and the repeated divisions of 32400 are a number chain already written in the steps; the book's division ladder (P04) is a worked-example teaching figure, a ladder would only be nicer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optional LaTeX array ladder: 2 | 32400, 2 | 16200, 2 | 8100, 2 | 4050, 5 | 2025, 5 | 405, 3 | 81, 3 | 27, 3 | 9, 3 | 3, then 1."
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C19",
+   "role": "question",
+   "lp_book_number": "Exponential Notation: (−1)⁵, (−2)⁴ and 0²",
+   "ncert_ref": "2.2.neg1_powers",
+   "question_text": "Find (−4)³, (−1)⁵, (−1)⁵⁶, (−2)⁴, 0² and 0⁵.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six powers to evaluate, all given in the question text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C20",
+   "role": "solution",
+   "lp_book_number": "Exponential Notation: (−1)⁵, (−2)⁴ and 0²",
+   "ncert_ref": "2.2.neg1_powers",
+   "question_text": "Find (−4)³, (−1)⁵, (−1)⁵⁶, (−2)⁴, 0² and 0⁵.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Sign rule for even and odd exponents and the products 16, -64, 16, 0 and 0 are arithmetic in the steps; the book's printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C21",
+   "role": "question",
+   "lp_book_number": "Exponential Notation, Q1",
+   "ncert_ref": "FiO1.q1",
+   "question_text": "Express the following in exponential form: (i) 6 × 6 × 6 × 6 (ii) y × y (iii) b × b × b × b (iv) 5 × 5 × 7 × 7 × 7 (v) 2 × 2 × a × a (vi) a × a × a × c × c × c × c × d",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six products of repeated factors to rewrite as powers, all given in the question text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C22",
+   "role": "solution",
+   "lp_book_number": "Exponential Notation, Q1",
+   "ncert_ref": "FiO1.q1",
+   "question_text": "Express the following in exponential form: (i) 6 × 6 × 6 × 6 (ii) y × y (iii) b × b × b × b (iv) 5 × 5 × 7 × 7 × 7 (v) 2 × 2 × a × a (vi) a × a × a × c × c × c × c × d",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Counting repeated factors and writing the exponents (6^4, y^2, b^4, 5^2 x 7^3, 2^2 x a^2, a^3 c^4 d) is answered in text; the book's printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C23",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO1.q2",
+   "question_text": "Express each of the following as a product of powers of their prime factors in exponential form. (i) 648 (ii) 405 (iii) 540 (iv) 3600",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four numbers to factorise (648, 405, 540, 3600), given in the question text; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C24",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO1.q2",
+   "question_text": "Express each of the following as a product of powers of their prime factors in exponential form. (i) 648 (ii) 405 (iii) 540 (iv) 3600",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Prime factorisations with product checks are arithmetic in the steps; same kind of answer as the 32400 item C18 (sibling, also none) and the book's printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C25",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "FiO1.q3",
+   "question_text": "Write the numerical value of each of the following: (i) 2 × 10³ (ii) 7² × 2³ (iii) 3 × 4⁴ (iv) (−3)² × (−5)² (v) 3² × 10⁴ (vi) (−2)⁵ × (−10)⁶",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six products of powers to evaluate, all given in the question text; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C26",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "FiO1.q3",
+   "question_text": "Write the numerical value of each of the following: (i) 2 × 10³ (ii) 7² × 2³ (iii) 3 × 4⁴ (iv) (−3)² × (−5)² (v) 3² × 10⁴ (vi) (−2)⁵ × (−10)⁶",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Numerical values 2000, 392, 768, 225, 90000 and -32000000 are plain arithmetic in the steps; the book's printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C32",
+   "role": "question",
+   "lp_book_number": "Stones that Shine: rooms and diamonds",
+   "ncert_ref": "Section 2.2 - Stones that Shine (book p.23); 2.2.stones_rooms",
+   "question_text": "In the story, find the number of rooms and the number of diamonds.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question says only 'in the story'; the story's branching (1 king, 3 daughters, 3 baskets each, 3 keys each, 3 rooms each) is what the book's tree shows, and the learner counts the rooms from it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S8.T8.C32.IMG1",
+   "manim_scene": "c8_2_stones_rooms_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S8.T8.C32.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "subtype": "branching_tree",
+     "canvas_px": [
+      1456,
+      816
+     ],
+     "unit_px": 13,
+     "origin_x_px": 52,
+     "pixel_x_rule": "pixel x = 52 + 13 * x",
+     "levels": [
+      {
+       "name": "King",
+       "kind": "label_only",
+       "count": 1,
+       "x": [
+        41
+       ],
+       "y_px": 90
+      },
+      {
+       "name": "daughters",
+       "kind": "circle",
+       "radius_px": 22,
+       "count": 3,
+       "x": [
+        14,
+        41,
+        68
+       ],
+       "y_px": 230
+      },
+      {
+       "name": "baskets",
+       "kind": "circle",
+       "radius_px": 15,
+       "count": 9,
+       "x": [
+        5,
+        14,
+        23,
+        32,
+        41,
+        50,
+        59,
+        68,
+        77
+       ],
+       "y_px": 370
+      },
+      {
+       "name": "keys",
+       "kind": "circle",
+       "radius_px": 9,
+       "count": 27,
+       "x": [
+        2,
+        5,
+        8,
+        11,
+        14,
+        17,
+        20,
+        23,
+        26,
+        29,
+        32,
+        35,
+        38,
+        41,
+        44,
+        47,
+        50,
+        53,
+        56,
+        59,
+        62,
+        65,
+        68,
+        71,
+        74,
+        77,
+        80
+       ],
+       "y_px": 510
+      },
+      {
+       "name": "rooms",
+       "kind": "square",
+       "side_px": 9,
+       "count": 81,
+       "x": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+       ],
+       "y_px": 650
+      }
+     ],
+     "children_per_parent": 3,
+     "connector": "elbow: vertical drop from the parent, horizontal bar at the middle height between parent bottom and children top spanning the three children, vertical drop onto each child; INK 2.5 px",
+     "level_labels": {
+      "x_left_aligned": 92,
+      "texts": [
+       "daughters",
+       "baskets",
+       "keys",
+       "rooms"
+      ],
+      "colour": "INK"
+     }
+    },
+    "manim_description": "Plain white (BG) 16:9 canvas, 1456 x 816 px. Horizontal unit u = 13 px; a point at unit x sits at pixel 52 + 13 * x. Five rows, top to bottom, at pixel heights y = 90 (King), 230 (daughters), 370 (baskets), 510 (keys) and 650 (rooms). Row 1: the word King in INK, centred at x = 41. Row 2: 3 circles, radius 22 px, fill BG, outline INK 2.5 px, centred at x = 14, 41 and 68. Row 3: 9 circles, radius 15 px, same style, centred at x = 5, 14, 23, 32, 41, 50, 59, 68 and 77. Row 4: 27 circles, radius 9 px, same style, centred at x = 3j - 1 for j = 1 to 27, that is x = 2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35, 38, 41, 44, 47, 50, 53, 56, 59, 62, 65, 68, 71, 74, 77 and 80. Row 5: 81 squares, side 9 px, fill BG, outline INK 2.5 px, centred at every integer x from 1 to 81 inclusive (one square per integer, 81 squares in all). Connectors in INK, 2.5 px, elbow style: King sends a vertical line down from under the word to a horizontal bar halfway down to row 2, and the bar runs from x = 14 to x = 68 with a vertical drop onto each daughter circle; every circle of rows 2, 3 and 4 drops a vertical line to a horizontal bar halfway to the next row, the bar spans exactly its 3 children, and a vertical drop reaches the top of each child; each daughter has 3 baskets, each basket 3 keys, each key 3 rooms. Level labels in INK, left-aligned at x = 92 (pixel 1248), vertically centred on their rows: daughters at row 2, baskets at row 3, keys at row 4, rooms at row 5. No numbers appear anywhere in the picture.",
+    "visible_text": [
+     "King",
+     "daughters",
+     "baskets",
+     "keys",
+     "rooms"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any number (the counts 3, 9, 27 and 81 are the answer)",
+     "faces, cartoon king or daughters, baskets or keys as pictures",
+     "tables, necklaces or diamonds (not part of the book's tree)",
+     "the exponent form 3^4 or the total 2187"
+    ],
+    "accuracy_checks": [
+     "row counts are 1 (King), 3, 9, 27 and 81 and every parent has exactly 3 children: 3 x 3 = 9, 9 x 3 = 27, 27 x 3 = 81",
+     "each parent's x equals the mean x of its 3 children (14, 41, 68 for the daughters; 41 for King)",
+     "81 squares at x = 1 to 81, 27 keys at x = 3j - 1, 9 baskets at x = 9i - 4, 3 daughters at x = 27d - 13",
+     "no digit is drawn anywhere"
+    ],
+    "alt_text": "A tree with King at the top, 3 daughters below, then 9 baskets, 27 keys and 81 rooms, three branches from every point.",
+    "render_note": "Book picture P05 (page 23) uses coloured panels, daughter faces, baskets, keys and fork icons of 3 prongs; here plain nodes, 3 rooms under every key (27 forks x 3 prongs = 81 rooms, 3^4). The story's tables, necklaces and diamonds are not in the book's tree and are not drawn."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C33",
+   "role": "solution",
+   "lp_book_number": "Stones that Shine: rooms and diamonds",
+   "ncert_ref": "Section 2.2 - Stones that Shine (book p.23); 2.2.stones_rooms",
+   "question_text": "In the story, find the number of rooms and the number of diamonds.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The solution counts level by level on the tree (3 daughters, 9 baskets, 27 keys, 81 rooms); the complete final state is the same tree with those four counts written in ANSWER green, shown before step 1.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S8.T8.C33.IMG1",
+   "manim_scene": "c8_2_stones_rooms_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S8.T8.C33.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S8.T8.C32.IMG1",
+    "content": {
+     "type": "other",
+     "subtype": "branching_tree",
+     "canvas_px": [
+      1456,
+      816
+     ],
+     "unit_px": 13,
+     "origin_x_px": 52,
+     "pixel_x_rule": "pixel x = 52 + 13 * x",
+     "levels": [
+      {
+       "name": "King",
+       "kind": "label_only",
+       "count": 1,
+       "x": [
+        41
+       ],
+       "y_px": 90
+      },
+      {
+       "name": "daughters",
+       "kind": "circle",
+       "radius_px": 22,
+       "count": 3,
+       "x": [
+        14,
+        41,
+        68
+       ],
+       "y_px": 230
+      },
+      {
+       "name": "baskets",
+       "kind": "circle",
+       "radius_px": 15,
+       "count": 9,
+       "x": [
+        5,
+        14,
+        23,
+        32,
+        41,
+        50,
+        59,
+        68,
+        77
+       ],
+       "y_px": 370
+      },
+      {
+       "name": "keys",
+       "kind": "circle",
+       "radius_px": 9,
+       "count": 27,
+       "x": [
+        2,
+        5,
+        8,
+        11,
+        14,
+        17,
+        20,
+        23,
+        26,
+        29,
+        32,
+        35,
+        38,
+        41,
+        44,
+        47,
+        50,
+        53,
+        56,
+        59,
+        62,
+        65,
+        68,
+        71,
+        74,
+        77,
+        80
+       ],
+       "y_px": 510
+      },
+      {
+       "name": "rooms",
+       "kind": "square",
+       "side_px": 9,
+       "count": 81,
+       "x": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+       ],
+       "y_px": 650
+      }
+     ],
+     "children_per_parent": 3,
+     "connector": "elbow: vertical drop from the parent, horizontal bar at the middle height between parent bottom and children top spanning the three children, vertical drop onto each child; INK 2.5 px",
+     "level_labels": {
+      "x_left_aligned": 92,
+      "texts": [
+       "daughters",
+       "baskets",
+       "keys",
+       "rooms"
+      ],
+      "colour": "INK"
+     },
+     "counts_in_ANSWER": {
+      "x_right_aligned": 90,
+      "colour": "ANSWER",
+      "weight": "bold",
+      "values": {
+       "daughters": "3",
+       "baskets": "9",
+       "keys": "27",
+       "rooms": "81"
+      }
+     }
+    },
+    "manim_description": "Plain white (BG) 16:9 canvas, 1456 x 816 px. Horizontal unit u = 13 px; a point at unit x sits at pixel 52 + 13 * x. Five rows, top to bottom, at pixel heights y = 90 (King), 230 (daughters), 370 (baskets), 510 (keys) and 650 (rooms). Row 1: the word King in INK, centred at x = 41. Row 2: 3 circles, radius 22 px, fill BG, outline INK 2.5 px, centred at x = 14, 41 and 68. Row 3: 9 circles, radius 15 px, same style, centred at x = 5, 14, 23, 32, 41, 50, 59, 68 and 77. Row 4: 27 circles, radius 9 px, same style, centred at x = 3j - 1 for j = 1 to 27, that is x = 2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35, 38, 41, 44, 47, 50, 53, 56, 59, 62, 65, 68, 71, 74, 77 and 80. Row 5: 81 squares, side 9 px, fill BG, outline INK 2.5 px, centred at every integer x from 1 to 81 inclusive (one square per integer, 81 squares in all). Connectors in INK, 2.5 px, elbow style: King sends a vertical line down from under the word to a horizontal bar halfway down to row 2, and the bar runs from x = 14 to x = 68 with a vertical drop onto each daughter circle; every circle of rows 2, 3 and 4 drops a vertical line to a horizontal bar halfway to the next row, the bar spans exactly its 3 children, and a vertical drop reaches the top of each child; each daughter has 3 baskets, each basket 3 keys, each key 3 rooms. Level labels in INK, left-aligned at x = 92 (pixel 1248), vertically centred on their rows: daughters at row 2, baskets at row 3, keys at row 4, rooms at row 5. Add the counts in ANSWER (#009E73), bold, right-aligned at x = 90 (pixel 1222) on the row of each label: 3 on the daughters row, 9 on the baskets row, 27 on the keys row and 81 on the rooms row. Everything else stays exactly as in the question figure: same positions, same sizes, same INK.",
+    "visible_text": [
+     "King",
+     "daughters",
+     "baskets",
+     "keys",
+     "rooms",
+     "3",
+     "9",
+     "27",
+     "81"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "faces, cartoon king or daughters, baskets or keys as pictures",
+     "tables, necklaces or diamonds (not part of the book's tree)",
+     "the exponent form 3^4 or the diamond total 2187",
+     "counts beyond the four levels (no count for King)"
+    ],
+    "accuracy_checks": [
+     "counts 3, 9, 27, 81 equal the LP steps: daughters 3, baskets 3 x 3 = 9, keys 9 x 3 = 27, rooms 27 x 3 = 81 (= 3^4)",
+     "the count written on a row equals the number of nodes drawn on that row (3, 9, 27, 81)",
+     "tree geometry identical to the question figure M3.S8.T8.C32.IMG1"
+    ],
+    "alt_text": "The same tree with 3 daughters, 9 baskets, 27 keys and 81 rooms written beside the four levels.",
+    "render_note": "Same layout as M3.S8.T8.C32.IMG1 (derived_from); the 2187 diamonds come from the text steps (81 x 27), not from the picture."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C34",
+   "role": "question",
+   "lp_book_number": "Multiplying Powers: p⁴ × p⁶, 2⁹ and 5⁷",
+   "ncert_ref": "2.2.p4p6",
+   "question_text": "Write p⁴ × p to the power 6 as one power, and compute 2 to the power 9 and 5 to the power 7 by splitting the exponents.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "p^4 x p^6 and the powers 2^9 and 5^7 are given in the question text; the book's brace picture is a teaching figure (concept image C27.IMG1 shows the same split).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C35",
+   "role": "solution",
+   "lp_book_number": "Multiplying Powers: p⁴ × p⁶, 2⁹ and 5⁷",
+   "ncert_ref": "2.2.p4p6",
+   "question_text": "Write p⁴ × p to the power 6 as one power, and compute 2 to the power 9 and 5 to the power 7 by splitting the exponents.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "p^10, 16 x 32 = 512 and 125 x 625 = 78125 are arithmetic written in the steps; the book's printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C36",
+   "role": "question",
+   "lp_book_number": "Power of a Power: 4⁶ two ways and 2¹⁰",
+   "ncert_ref": "2.2.seven4_two10",
+   "question_text": "Evaluate 4 to the power 6 in two ways, and check whether 2 to the power 10 equals (2 to the power 5)².",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "4^6 in two ways and 2^10 against (2^5)^2 are given in the question text; the book's Math Talk box is working shown in words and numbers.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C37",
+   "role": "solution",
+   "lp_book_number": "Power of a Power: 4⁶ two ways and 2¹⁰",
+   "ncert_ref": "2.2.seven4_two10",
+   "question_text": "Evaluate 4 to the power 6 in two ways, and check whether 2 to the power 10 equals (2 to the power 5)².",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "(4^3)^2 and (4^2)^3 both giving 4096 and 32 x 32 = 1024 are arithmetic in the steps; the Math Talk working is also teaching image C29.IMG1 (never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C38",
+   "role": "question",
+   "lp_book_number": "Power of a Power: 8⁶, 7¹⁵, 9¹⁴ and 5⁸",
+   "ncert_ref": "2.2.mt_two_ways",
+   "question_text": "Write 8 to the power 6, 7 to the power 15, 9 to the power 14 and 5 to the power 8 as a power of a power in two ways.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four powers (8^6, 7^15, 9^14, 5^8) to rewrite as a power of a power, all given in the question text; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C39",
+   "role": "solution",
+   "lp_book_number": "Power of a Power: 8⁶, 7¹⁵, 9¹⁴ and 5⁸",
+   "ncert_ref": "2.2.mt_two_ways",
+   "question_text": "Write 8 to the power 6, 7 to the power 15, 9 to the power 14 and 5 to the power 8 as a power of a power in two ways.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Answers such as (8^2)^3 and (2^3)^6 are expressions written in the steps; the book's printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C40",
+   "role": "question",
+   "lp_book_number": "Power Play, Q4",
+   "ncert_ref": "FiO2.q4",
+   "question_text": "Examine each statement and find out if it is Always True, Only Sometimes True, or Never True. (i) Cube numbers are also square numbers. (ii) Fourth powers are also square numbers. (iii) The fifth power of a number is divisible by the cube of that number. (iv) The product of two cube numbers is a cube number. (v) q to the power 46 is both a 4th power and a 6th power (q is a prime number).",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Five statements to judge, all in the question text; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C41",
+   "role": "solution",
+   "lp_book_number": "Power Play, Q4",
+   "ncert_ref": "FiO2.q4",
+   "question_text": "Examine each statement and find out if it is Always True, Only Sometimes True, or Never True. (i) Cube numbers are also square numbers. (ii) Fourth powers are also square numbers. (iii) The fifth power of a number is divisible by the cube of that number. (iv) The product of two cube numbers is a cube number. (v) q to the power 46 is both a 4th power and a 6th power (q is a prime number).",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word reasoning with a counter-example (8 is a cube but not a square, 64 is both) and algebraic identities; the book's printed answer is text, nothing to draw.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S9.T9.C42",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO2.q10",
+   "question_text": "64 is a square number (8²) and a cube number (4³). Are there other numbers that are both squares and cubes? Is there a way to describe such numbers in general?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A question about which numbers are both squares and cubes, fully stated in words and numbers; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S9.T9.C43",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO2.q10",
+   "question_text": "64 is a square number (8²) and a cube number (4³). Are there other numbers that are both squares and cubes? Is there a way to describe such numbers in general?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Sixth powers with the checks 27^2 = 729 = 9^3 and 64^2 = 4096 = 16^3 are text and arithmetic; the book's printed answer is text (1^6, 3^6, 4^6).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

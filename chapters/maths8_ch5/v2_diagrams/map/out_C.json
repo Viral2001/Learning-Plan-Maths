@@ -1,0 +1,929 @@
+{
+ "meta": {
+  "chapter": "Number Play",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 5",
+  "lp_plan_id": "cbse_eng_maths8_ch5_v36",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "required": 1,
+    "optional": 1,
+    "none": 3
+   },
+   "question": {
+    "required": 0,
+    "optional": 0,
+    "none": 13
+   },
+   "solution": {
+    "required": 0,
+    "optional": 1,
+    "none": 12
+   }
+  },
+  "notes": [
+   "Chunk C = topics M2.S18.T18 to M2.S25.T25 (book 5.2 from 'A Shortcut for Divisibility by 9' to 'More on Divisibility Shortcuts'; pdf pages 13-19, 21-22, 29).",
+   "One diagram only: the completed divisibility table of the C106 worked example (book printed answer, 128 row corrected to Yes under 4).",
+   "Two optional (not added): the tile pictures of C79 (427 and 7309) and the excess/shortfall pictures of C95 (320185).",
+   "All other items are arithmetic or word reasoning with no given figure: none."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P13-tile_model-1",
+   "source": "chapter p.13",
+   "description": "Five unlabelled tile pairs beside the text on 99 and 109: two blue 99|1 pairs and three green 9|1 pairs (checked on the page picture). No number is attached to it and the text says everything about 99 and 109, so no item needs it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P13-tile_model-2",
+   "source": "chapter p.13",
+   "description": "427 as tile columns labelled 400, 20, 7: four 99|1 bars, two 9|1 bars, seven loose 1s (checked). Teaching figure; the same model is teaching image C74.IMG1. The pair C78/C79 solution is optional, so nothing is drawn from it.",
+   "mapped_to": "concept_image:M2.S18.T18.C74.IMG1"
+  },
+  {
+   "fig_id": "P13-tile_model-3",
+   "source": "chapter p.13",
+   "description": "The same tiles with dashed rings: the four 1s of the 99|1 bars give 4 (Remainder), the two 1s of the 9|1 bars and seven loose 1s give 9 (checked). Same idea as teaching image C77.IMG1 (427 split, 13 ones, remainder 4).",
+   "mapped_to": "concept_image:M2.S18.T18.C77.IMG1"
+  },
+  {
+   "fig_id": "P14-tile_model-1",
+   "source": "chapter p.14",
+   "description": "Tile pairs 9999|1, 999|1, 99|1, 9|1 for 'each place value is nines plus one' (checked). Teaching figure; same idea as C74.IMG1.",
+   "mapped_to": "concept_image:M2.S18.T18.C74.IMG1"
+  },
+  {
+   "fig_id": "P14-tile_model-2",
+   "source": "chapter p.14",
+   "description": "Two-panel picture for 7309: left 7 x 1000 / 3 x 100 / 9 x 1 as 7 purple 999|1, 3 blue 99|1, 9 ones; right 7 x 999, 3 x 99 plus loose 7, 3, 9 ones with braces 'multiple of 9' and 7 + 3 + 9 = 19 (checked). Same idea as teaching image C75.IMG1 (7309, digit sum 19, remainder 1).",
+   "mapped_to": "concept_image:M2.S18.T18.C75.IMG1"
+  },
+  {
+   "fig_id": "P14-annotated_equation-3",
+   "source": "chapter p.14",
+   "description": "Four-line equation chain for 7309 with two underlined brackets and two caption arrows (checked). LaTeX with underbraces writes it; the LP steps of C79 already carry it.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P16-table-1",
+   "source": "chapter p.16",
+   "description": "Place-value table: units 1 = 11 x 0 + 1 (one more), tens 10 = 11 x 1 - 1 (one less), hundreds 100 = 11 x 9 + 1, thousands 1000 = 11 x 91 - 1, with circle models (checked). Teaching figure; same idea as teaching image C94.IMG1 (462: one more, one less, one more).",
+   "mapped_to": "concept_image:M2.S21.T21.C94.IMG1"
+  },
+  {
+   "fig_id": "P17-table-1",
+   "source": "chapter p.17",
+   "description": "Three-step table (Steps | Purpose | Example for 320185) holding the three pictures below (checked). Teaching figure; same content as teaching image C95.IMG1 (excess 8, shortfall 11, 8 - 11 = -3).",
+   "mapped_to": "concept_image:M2.S21.T21.C95.IMG1"
+  },
+  {
+   "fig_id": "P17-dot_model-1",
+   "source": "chapter p.17",
+   "description": "Excess tree for 320185: digits 2, 1, 5 green; 2 x 10,000 (two 11 x 909 blocks), 1 x 100 (one 11 x 9 block), 5 x 1 (five circles); 'Total excess, 2 + 1 + 5 = 8' (checked). C95 worked example is optional, so nothing is drawn; teaching image C95.IMG1 covers it.",
+   "mapped_to": "concept_image:M2.S21.T21.C95.IMG1"
+  },
+  {
+   "fig_id": "P17-dot_model-2",
+   "source": "chapter p.17",
+   "description": "Shortfall tree for 320185: digits 3, 0, 8 red; printed labels 3 x 10,000 (three 11 x 9091 blocks), 0 x 100 (nothing), 8 x 10 (eight strips of 11); 'Total short, 3 + 0 + 8 = 11'. Print slip: the 9091 blocks stand for lakhs, so 3 x 10,000 should read 3 x 1,00,000, and 0 x 100 should read 0 x 1000 (digit 0 of 320185 is in the thousands place). Not drawn (C95 optional).",
+   "mapped_to": "concept_image:M2.S21.T21.C95.IMG1"
+  },
+  {
+   "fig_id": "P17-dot_model-3",
+   "source": "chapter p.17",
+   "description": "Eight green circles over eleven red circles with '8 - 11 = -3 (3 short of a multiple of 11)' (checked). Not drawn (C95 optional); teaching image C95.IMG1 covers it.",
+   "mapped_to": "concept_image:M2.S21.T21.C95.IMG1"
+  },
+  {
+   "fig_id": "P18-table-1",
+   "source": "chapter p.18",
+   "description": "Plain two-column procedure table for 328105: signs -3 + 2 - 8 + 1 - 0 + 5, = -3, '3 less than or 8 more than a multiple of 11' (checked). Teaching figure; same content as teaching image C96.IMG1.",
+   "mapped_to": "concept_image:M2.S21.T21.C96.IMG1"
+  },
+  {
+   "fig_id": "P18-table-2",
+   "source": "chapter p.18",
+   "description": "Divisibility table to complete: 10 numbers x divisors 2, 3, 4, 5, 6, 8, 9, 10, 11; only the 128 row is pre-filled, and it prints No under 4 (print slip: 128 = 4 x 32 is Yes, as the printed answer says). Becomes the layout of the single diagram of the C106 worked example, drawn with the corrected Yes.",
+   "mapped_to": "item:M2.S24.T24.C106 (question)"
+  },
+  {
+   "fig_id": "P29-table-1",
+   "source": "solutions p.[29]",
+   "description": "Printed answer: the completed 10 x 9 Yes/No table (checked against the mathematics: all 90 cells correct). Becomes the content of the single diagram of the C106 worked example.",
+   "mapped_to": "item:M2.S24.T24.C106 (question)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 14,
+  "mapped_to_items": 2,
+  "mapped_to_concept_images": 10,
+  "mapped_none": 2,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M2.S24.T24.C106.IMG2"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M2.S18.T18.C73",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 - A Shortcut for Divisibility by 9 (pdf p.13, book p.124)",
+   "question_text": "Explain why 99009 is divisible by 9, and why 109 is not even though it ends in 9.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The question gives no figure: 99009 = 9 x 10000 + 9 x 1000 + 0 x 100 + 0 x 10 + 9 x 1 and 109 = 99 + 10 = 99 + 9 + 1 are equation chains that LaTeX writes in full. The book's tile picture beside the text (P13-tile_model-1) is an unlabelled preview that carries no number the item needs.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write the expansion of 99009 as one LaTeX equation chain, then 109 = 99 + 10 and 10 = 9 + 1.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S18.T18.C76",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 - A Shortcut for Divisibility by 3 (pdf p.15, book p.126)",
+   "question_text": "Explain why 87 is divisible by 3 but not by 9, and test 123456 for divisibility by 3.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "No figure in the book or in the question; the digit sums 8 + 7 = 15 and 1 + 2 + 3 + 4 + 5 + 6 = 21 and the remainders are plain arithmetic.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write 87 = 8 x 9 + 8 + 7 and the digit sum 1 + 2 + 3 + 4 + 5 + 6 = 21 as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C78",
+   "role": "question",
+   "lp_book_number": "Shortcut for 9: remainders of 427 and 7309",
+   "ncert_ref": "Section 5.2 - Shortcut for 9, remainder of 427 (pdf p.13, book p.124) and 7309 (pdf p.14, book p.125)",
+   "question_text": "Find the remainders of 427 and 7309 on division by 9 without dividing.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives only the numbers 427 and 7309. The book's tile pictures for them (P13-tile_model-2, P14-tile_model-2) are part of the explanation, not given with the question, so a careful student loses nothing without them.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the question as text: both numbers are in the sentence."
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C79",
+   "role": "solution",
+   "lp_book_number": "Shortcut for 9: remainders of 427 and 7309",
+   "ncert_ref": "Section 5.2 - Shortcut for 9, remainder of 427 (pdf p.13, book p.124) and 7309 (pdf p.14, book p.125)",
+   "question_text": "Find the remainders of 427 and 7309 on division by 9 without dividing.",
+   "decision": "optional",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "OPTIONAL, not added: the book prints a tile picture for each answer (427 as four 99+1 bars, two 9+1 bars and seven 1s regrouped as 9 + 4; 7309 as seven 999+1, three 99+1 and nine 1s) and it would help, but the answer is a pair of remainders and the four LP steps already write every sum (4 + 2 + 7 = 13, 7 + 3 + 0 + 9 = 19). Teaching images C74.IMG1, C75.IMG1 and C77.IMG1 stay and are not linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the four steps as LaTeX equation lines, as the LP already does."
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C80",
+   "role": "question",
+   "lp_book_number": "Shortcut for 9: which statements are correct",
+   "ncert_ref": "Section 5.2 - Shortcut for 9, the four statements (pdf p.14-15, book p.125-126)",
+   "question_text": "Test the four statements with 7309 and 4581, then decide which are correct.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The four statements (i) to (iv) are sentences printed one under the other in the book; no picture is given. The numbers 7309 and 4581 are in the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "List the four statements as a text list (i) to (iv) under the question."
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C81",
+   "role": "solution",
+   "lp_book_number": "Shortcut for 9: which statements are correct",
+   "ncert_ref": "Section 5.2 - Shortcut for 9, the four statements (pdf p.14-15, book p.125-126)",
+   "question_text": "Test the four statements with 7309 and 4581, then decide which are correct.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The solution compares digit sums with remainders in words and arithmetic (19 and 1; 18 and 0); no figure is printed for it. Teaching image C75.IMG1 shows the same idea and stays.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C82",
+   "role": "question",
+   "lp_book_number": "Multiples of Nine, Q1",
+   "ncert_ref": "Section 5.2 - Figure it Out Q1 (pdf p.15, book p.126)",
+   "question_text": "Find, without dividing, whether the following numbers are divisible by 9. (i) 123 (ii) 405 (iii) 8888 (iv) 93547 (v) 358095",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Five plain numbers (123, 405, 8888, 93547, 358095) are listed in the text; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C83",
+   "role": "solution",
+   "lp_book_number": "Multiples of Nine, Q1",
+   "ncert_ref": "Section 5.2 - Figure it Out Q1 (pdf p.15, book p.126)",
+   "question_text": "Find, without dividing, whether the following numbers are divisible by 9. (i) 123 (ii) 405 (iii) 8888 (iv) 93547 (v) 358095",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Five digit sums (6, 9, 32, 28, 30) written as LaTeX sums; the printed answer 'only (ii)' is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C84",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.2 - Figure it Out Q2 (pdf p.15, book p.126)",
+   "question_text": "Find the smallest multiple of 9 with no odd digits.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question about digits; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C85",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Section 5.2 - Figure it Out Q2 (pdf p.15, book p.126)",
+   "question_text": "Find the smallest multiple of 9 with no odd digits.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The reasoning (digit sum 18, three even digits 2, 8, 8, answer 288) is arithmetic and words; the printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C86",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 5.2 - Figure it Out Q3 (pdf p.15, book p.126)",
+   "question_text": "Find the multiple of 9 that is closest to the number 6000.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question about the number 6000; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C87",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Section 5.2 - Figure it Out Q3 (pdf p.15, book p.126)",
+   "question_text": "Find the multiple of 9 that is closest to the number 6000.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Digit sum 6, 5994, 6003 and the distances 6 and 3 are arithmetic; the printed answer is the number 6003. A three-mark number line (5994, 6000, 6003) would only make it nicer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C88",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 5.2 - Figure it Out Q4 (pdf p.15, book p.126)",
+   "question_text": "How many multiples of 9 are there between the numbers 4300 and 4400?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question about the numbers 4300 and 4400; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C89",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Section 5.2 - Figure it Out Q4 (pdf p.15, book p.126)",
+   "question_text": "How many multiples of 9 are there between the numbers 4300 and 4400?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "4302, 4392, 90 = 10 x 9 and the count 11 are arithmetic; the printed answer is the number 11.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C90",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "End-of-chapter Figure it Out Q1 (pdf p.21, book p.132)",
+   "question_text": "If 31z5 is a multiple of 9, where z is a digit, what is the value of z? Explain why there are two answers to this problem.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The number 31z5 is written in the text; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C91",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "End-of-chapter Figure it Out Q1 (pdf p.21, book p.132)",
+   "question_text": "If 31z5 is a multiple of 9, where z is a digit, what is the value of z? Explain why there are two answers to this problem.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The digit sum 3 + 1 + z + 5 = 9 + z and the two values z = 0 and z = 9 are algebra and arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C92",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "End-of-chapter Figure it Out Q4 (pdf p.21, book p.132)",
+   "question_text": "Sreelatha says, \"I have a number that is divisible by 9. If I reverse its digits, it will still be divisible by 9\". (i) Examine if her conjecture is true for any multiple of 9. (ii) Are any other digit shuffles possible such that the number formed is still a multiple of 9?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question with a claim by Sreelatha; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C93",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "End-of-chapter Figure it Out Q4 (pdf p.21, book p.132)",
+   "question_text": "Sreelatha says, \"I have a number that is divisible by 9. If I reverse its digits, it will still be divisible by 9\". (i) Examine if her conjecture is true for any multiple of 9. (ii) Are any other digit shuffles possible such that the number formed is still a multiple of 9?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Reversing or shuffling digits keeps the digit sum; the examples 468 = 9 x 52, 864 = 9 x 96, 648 = 9 x 72 are arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S21.T21.C95",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 - A Shortcut for Divisibility by 11, 3-step table (pdf p.17, book p.128)",
+   "question_text": "Use the excess and the shortfall to find the remainder of 320185 on division by 11.",
+   "decision": "optional",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "OPTIONAL, not added: the book's three pictures for 320185 (P17-dot_model-1 to -3: digits 2, 1, 5 in green as the excess places, digits 3, 0, 8 in red as the shortfall places, then 8 green circles over 11 red circles) would help, but the LP steps already name every place and write every sum (2 + 1 + 5 = 8, 3 + 0 + 8 = 11, 8 - 11 = -3), and the tie-breaker says a careful student loses nothing. Teaching image C95.IMG1 stays and is not linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write the two place lists and the three sums as LaTeX lines, as the LP steps do.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S21.T21.C96",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 - A Shortcut for Divisibility by 11, alternating signs (pdf p.18, book p.129)",
+   "question_text": "Use alternating signs to find the remainder of 328105 on division by 11.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "LATEX_TABLE"
+   ],
+   "reason": "One signed expression, -3 + 2 - 8 + 1 - 0 + 5 = -3, and a remainder; the book's table of steps (P18-table-1) is a plain two-column text table. Both are LaTeX.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write -3 + 2 - 8 + 1 - 0 + 5 = -3 as a LaTeX line.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C98",
+   "role": "question",
+   "lp_book_number": "Shortcut for 11: is 462 divisible by 11",
+   "ncert_ref": "Section 5.2 - Shortcut for 11, is 462 divisible by 11 (pdf p.16, book p.127)",
+   "question_text": "Use the remainders of the place values to decide whether 462 is divisible by 11.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The number 462 is in the sentence; the book's place-value table with circle models (P16-table-1) is the teaching figure, not given with this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C99",
+   "role": "solution",
+   "lp_book_number": "Shortcut for 11: is 462 divisible by 11",
+   "ncert_ref": "Section 5.2 - Shortcut for 11, is 462 divisible by 11 (pdf p.16, book p.127)",
+   "question_text": "Use the remainders of the place values to decide whether 462 is divisible by 11.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "400 = 396 + 4, 60 = 66 - 6, 2 = 0 + 2, 4 + 2 - 6 = 0, 462 = 11 x 42 are LaTeX arithmetic; the book prints no picture for this answer. Teaching image C94.IMG1 stays.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C100",
+   "role": "question",
+   "lp_book_number": "Shortcut for 11: test six numbers",
+   "ncert_ref": "Section 5.2 - Shortcut for 11, six numbers (pdf p.17, book p.128)",
+   "question_text": "Using this shortcut, find out whether the following numbers are divisible by 11. Further, find the remainder if the number is not divisible by 11. (i) 158 (ii) 841 (iii) 481 (iv) 5529 (v) 90904 (vi) 857076",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six plain numbers (158, 841, 481, 5529, 90904, 857076) are listed in the text; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C101",
+   "role": "solution",
+   "lp_book_number": "Shortcut for 11: test six numbers",
+   "ncert_ref": "Section 5.2 - Shortcut for 11, six numbers (pdf p.17, book p.128)",
+   "question_text": "Using this shortcut, find out whether the following numbers are divisible by 11. Further, find the remainder if the number is not divisible by 11. (i) 158 (ii) 841 (iii) 481 (iv) 5529 (v) 90904 (vi) 857076",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Six alternating-sign sums written as LaTeX; the printed answer is a text list of remainders.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S23.T23.C102",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "End-of-chapter Figure it Out Q6 (pdf p.22, book p.133)",
+   "question_text": "If 3p7q8 is divisible by 44, list all possible pairs of values for p and q.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The number 3p7q8 is written in the text; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S23.T23.C103",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "End-of-chapter Figure it Out Q6 (pdf p.22, book p.133)",
+   "question_text": "If 3p7q8 is divisible by 44, list all possible pairs of values for p and q.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The two tests (q8 a multiple of 4, 18 - (p + q) a multiple of 11) and the four pairs are algebra and arithmetic; the printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S24.T24.C106",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 - Fill in the divisibility table (pdf p.18, book p.129; printed answer pdf p.29)",
+   "question_text": "Fill in the following table: for each of 128, 990, 1586, 275, 6686, 639210, 429714, 2856, 3060 and 406839, write Yes or No for divisibility by 2, 3, 4, 5, 6, 8, 9, 10 and 11. Find a quick way to do this.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "Step B2: the book's printed answer to this question is the completed 10 x 9 Yes/No table (P29-table-1), and the question gives the table to complete (P18-table-2): the answer IS a filled table of 90 position-dependent cells, which the LP can only give as ten lines of nine Yes/No words. Borderline against LATEX_TABLE (plain table, no colour meaning): drawn because B2 says a printed answer picture overrides text-first. The book prints No under 4 for 128 in the question row, a slip: the diagram shows Yes (128 = 4 x 32, as the printed answer and the LP say).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S24.T24.C106.IMG2",
+   "manim_scene": "c8_5_S24_C106_worked",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S24.T24.C106.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "rows": 12,
+     "columns": 10,
+     "outline": "INK",
+     "stroke_px": 2,
+     "header_fill": "CELL_FILL",
+     "data_fill": "BG",
+     "text_colour": "INK",
+     "header_cells": [
+      {
+       "row": 1,
+       "col": 1,
+       "row_span": 2,
+       "col_span": 1,
+       "text": "Number"
+      },
+      {
+       "row": 1,
+       "col": 2,
+       "row_span": 1,
+       "col_span": 9,
+       "text": "Divisible by"
+      },
+      {
+       "row": 2,
+       "col": 2,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "2"
+      },
+      {
+       "row": 2,
+       "col": 3,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "3"
+      },
+      {
+       "row": 2,
+       "col": 4,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "4"
+      },
+      {
+       "row": 2,
+       "col": 5,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "5"
+      },
+      {
+       "row": 2,
+       "col": 6,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "6"
+      },
+      {
+       "row": 2,
+       "col": 7,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "8"
+      },
+      {
+       "row": 2,
+       "col": 8,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "9"
+      },
+      {
+       "row": 2,
+       "col": 9,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "10"
+      },
+      {
+       "row": 2,
+       "col": 10,
+       "row_span": 1,
+       "col_span": 1,
+       "text": "11"
+      }
+     ],
+     "divisor_columns": {
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "8": 7,
+      "9": 8,
+      "10": 9,
+      "11": 10
+     },
+     "data_rows": [
+      {
+       "row": 3,
+       "number": "128",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "No",
+        "Yes",
+        "No",
+        "No",
+        "Yes",
+        "No",
+        "No",
+        "No"
+       ]
+      },
+      {
+       "row": 4,
+       "number": "990",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "Yes",
+        "No",
+        "Yes",
+        "Yes",
+        "No",
+        "Yes",
+        "Yes",
+        "Yes"
+       ]
+      },
+      {
+       "row": 5,
+       "number": "1586",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No"
+       ]
+      },
+      {
+       "row": 6,
+       "number": "275",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "No",
+        "No",
+        "No",
+        "Yes",
+        "No",
+        "No",
+        "No",
+        "No",
+        "Yes"
+       ]
+      },
+      {
+       "row": 7,
+       "number": "6686",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No"
+       ]
+      },
+      {
+       "row": 8,
+       "number": "639210",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "Yes",
+        "No",
+        "Yes",
+        "Yes",
+        "No",
+        "No",
+        "Yes",
+        "Yes"
+       ]
+      },
+      {
+       "row": 9,
+       "number": "429714",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "Yes",
+        "No",
+        "No",
+        "Yes",
+        "No",
+        "Yes",
+        "No",
+        "No"
+       ]
+      },
+      {
+       "row": 10,
+       "number": "2856",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "Yes",
+        "Yes",
+        "No",
+        "Yes",
+        "Yes",
+        "No",
+        "No",
+        "No"
+       ]
+      },
+      {
+       "row": 11,
+       "number": "3060",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "Yes",
+        "Yes",
+        "Yes",
+        "Yes",
+        "Yes",
+        "No",
+        "Yes",
+        "Yes",
+        "No"
+       ]
+      },
+      {
+       "row": 12,
+       "number": "406839",
+       "cells_for_divisors_2_3_4_5_6_8_9_10_11": [
+        "No",
+        "Yes",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No"
+       ]
+      }
+     ],
+     "shaded_cells": [],
+     "yes_count_per_row": {
+      "128": 3,
+      "990": 7,
+      "1586": 1,
+      "275": 2,
+      "6686": 1,
+      "639210": 6,
+      "429714": 4,
+      "2856": 5,
+      "3060": 7,
+      "406839": 1
+     },
+     "yes_count_per_divisor": {
+      "2": 8,
+      "3": 6,
+      "4": 3,
+      "5": 4,
+      "6": 5,
+      "8": 2,
+      "9": 3,
+      "10": 3,
+      "11": 3
+     },
+     "total_yes": 37
+    },
+    "manim_description": "Draw one table of 12 rows and 10 columns on a plain BG canvas, cells outlined in INK with 2 px strokes, read left to right and top to bottom. Header block: the cell of column 1 that spans rows 1 and 2 holds the text Number; the cell of row 1 that spans columns 2 to 10 holds the text Divisible by; row 2, columns 2 to 10, hold 2, 3, 4, 5, 6, 8, 9, 10, 11 in that order (no column for 7). All header cells are filled CELL_FILL. Rows 3 to 12 are plain BG cells: column 1 holds the numbers 128, 990, 1586, 275, 6686, 639210, 429714, 2856, 3060, 406839 from top to bottom, and columns 2 to 10 hold Yes or No for the divisors 2, 3, 4, 5, 6, 8, 9, 10, 11 in that order. Row 3, 128: Yes, No, Yes, No, No, Yes, No, No, No. Row 4, 990: Yes, Yes, No, Yes, Yes, No, Yes, Yes, Yes. Row 5, 1586: Yes, No, No, No, No, No, No, No, No. Row 6, 275: No, No, No, Yes, No, No, No, No, Yes. Row 7, 6686: Yes, No, No, No, No, No, No, No, No. Row 8, 639210: Yes, Yes, No, Yes, Yes, No, No, Yes, Yes. Row 9, 429714: Yes, Yes, No, No, Yes, No, Yes, No, No. Row 10, 2856: Yes, Yes, Yes, No, Yes, Yes, No, No, No. Row 11, 3060: Yes, Yes, Yes, Yes, Yes, No, Yes, Yes, No. Row 12, 406839: No, Yes, No, No, No, No, No, No, No. Every string is INK, centred in its cell, with a capital first letter for Yes and No. No cell is shaded, circled or coloured.",
+    "visible_text": [
+     "Number",
+     "Divisible by",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "8",
+     "9",
+     "10",
+     "11",
+     "128",
+     "990",
+     "1586",
+     "275",
+     "6686",
+     "639210",
+     "429714",
+     "2856",
+     "3060",
+     "406839",
+     "Yes",
+     "No"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words 'Quick check' or any caption under the table",
+     "a column for the divisor 7",
+     "any shading, circling or colour that marks Yes or No cells",
+     "a No under the divisor 4 in the 128 row (the book's pre-filled row prints No by a slip)"
+    ],
+    "accuracy_checks": [
+     "every cell equals (number mod divisor == 0) computed in code for all 10 x 9 = 90 cells; the printed answer table and the LP steps give the same 90 values",
+     "128 under 4 is Yes (128 = 4 x 32); the book's question row prints No, which is a print slip",
+     "row Yes counts: 128:3, 990:7, 1586:1, 275:2, 6686:1, 639210:6, 429714:4, 2856:5, 3060:7, 406839:1; total 37 Yes and 53 No",
+     "column Yes counts: 2:8, 3:6, 4:3, 5:4, 6:5, 8:2, 9:3, 10:3, 11:3",
+     "implications hold in every row: Yes for 4 or 8 needs Yes for 2 (8 needs 4); Yes for 9 needs Yes for 3; 6 is Yes exactly when 2 and 3 are; 10 is Yes exactly when 2 and 5 are",
+     "table has 10 data rows, 9 divisor columns in the order 2, 3, 4, 5, 6, 8, 9, 10, 11"
+    ],
+    "alt_text": "A table of ten numbers against the divisors 2, 3, 4, 5, 6, 8, 9, 10 and 11 with Yes or No in every cell; for example 990 is Yes for every divisor except 4 and 8.",
+    "render_note": "Complete final table = the book's printed answer (pdf p.29). The book's question table (pdf p.18) pre-fills only the 128 row and prints No under 4 for it: a print slip, corrected to Yes here (128 = 4 x 32; the printed answer and the LP agree). A worked example carries a single diagram, so the finished table is drawn; the LP steps list the same rows in words."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S25.T25.C107",
+   "role": "question",
+   "lp_book_number": "More on Shortcuts: divisibility by 6",
+   "ncert_ref": "Section 5.2 - More on Divisibility Shortcuts, divisibility by 6 (pdf p.18, book p.129)",
+   "question_text": "Use the shortcuts for 2 and 3 to decide which of 38, 225, 186 and 64 are divisible by 6, then check by dividing.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four plain numbers (38, 225, 186, 64) are listed in the text; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S25.T25.C108",
+   "role": "solution",
+   "lp_book_number": "More on Shortcuts: divisibility by 6",
+   "ncert_ref": "Section 5.2 - More on Divisibility Shortcuts, divisibility by 6 (pdf p.18, book p.129)",
+   "question_text": "Use the shortcuts for 2 and 3 to decide which of 38, 225, 186 and 64 are divisible by 6, then check by dividing.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Digit sums and parity of four numbers and 186 = 6 x 31 are arithmetic; the book prints no answer picture. Teaching image C104.IMG1 stays.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S25.T25.C109",
+   "role": "question",
+   "lp_book_number": "More on Shortcuts: divisibility by 24",
+   "ncert_ref": "Section 5.2 - More on Divisibility Shortcuts, divisibility by 24 (pdf p.19, book p.130)",
+   "question_text": "Use prime factorisation to explain why 12 passes the tests for 4 and 6 but is not divisible by 24, and why the tests for 3 and 8 never let such a number through.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question about 12, 24 and prime factorisation; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S25.T25.C110",
+   "role": "solution",
+   "lp_book_number": "More on Shortcuts: divisibility by 24",
+   "ncert_ref": "Section 5.2 - More on Divisibility Shortcuts, divisibility by 24 (pdf p.19, book p.130)",
+   "question_text": "Use prime factorisation to explain why 12 passes the tests for 4 and 6 but is not divisible by 24, and why the tests for 3 and 8 never let such a number through.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Prime factorisations written as products (12 = 2 x 2 x 3, 24 = 2 x 2 x 2 x 3, 8 = 2 x 2 x 2) and the two LCMs are LaTeX; the book prints no picture. Teaching image C105.IMG1 stays.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

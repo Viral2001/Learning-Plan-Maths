@@ -1,0 +1,3462 @@
+{
+ "meta": {
+  "chapter": "Proportional Reasoning",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 7",
+  "lp_plan_id": "cbse_eng_maths8_ch7_v22",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "none": 7,
+    "required": 1
+   },
+   "question": {
+    "none": 40,
+    "required": 4
+   },
+   "solution": {
+    "none": 36,
+    "optional": 3,
+    "required": 5
+   }
+  },
+  "notes": [
+   "[chunk A] Chunk A: 16 units (3 worked, 13 pairs), topics M1.S2.T2 to M2.S10.T10; 29 items: 6 required, 2 optional (not added), 21 none.",
+   "[chunk A] The pdf DOES hold a printed-solutions section (pdf pages 23 to 30, 'Page No. 165' onwards); its pictures for Q4 to Q7 are copies of the question figures and are claimed here (P24-*, P25-*).",
+   "[chunk A] P25-pattern-2 base description corrected (per-row counts and totals of wall (b)).",
+   "[chunk A] FiO Q5: the rectangle is drawn 3:2 (LP example 6 cm : 4 cm); the book's picture measures about 5:3 and prints no lengths.",
+   "[chunk A] Walls (FiO Q6): wall (a) and wall (b) share one card per item (one question diagram, one solution diagram).",
+   "[chunk B] Chunk B: topics M2.S11.T11, M2.S12.T12, M3.S13.T13, M3.S14.T14, M3.S15.T15, M3.S16.T16, M3.S18.T18 (14 pairs + 1 worked example = 29 items).",
+   "[chunk B] Only three diagrams are needed: the mason's house plan (question and solution, FiO2 Q2) and the drawn rectangles of Example 5 (solution only).",
+   "[chunk B] Every other item is a word problem or arithmetic and stays text/LaTeX; teaching images of the same topics are never linked.",
+   "[chunk B] The pdf has a printed-answers section (pages 23-29); its only picture in this chunk is the reprinted house plan (P26-shape-1).",
+   "[chunk B] The book draws the small room of the house plan about 8 ft high but labels it 9 ft; the spec draws 9 ft, as labels and answer sum require.",
+   "[chunk C] Chunk C (topics M3.S19.T19 to M5.S31.T31): 38 items, 1 required (the Binairo row), 1 optional (C93 solution), 36 none.",
+   "[chunk C] Almost every item here is a word problem or proportion arithmetic with no figure in the book; the book prints no figure for any of these questions or their answers.",
+   "[chunk C] No book print slip was found in the chunk's figures; all base descriptions checked against the page pictures were right. One figure was missing from the base and is added as NEW-P18-crane-girl.",
+   "[chunk C] The Binairo worked example is the only item whose answer is an arrangement of drawn symbols; borderline calls are listed in notes_C.md."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "NEW-P18-crane-girl",
+   "source": "chapter p.18",
+   "description": "Missing from the base inventory: a joke illustration beside Figure it Out Q3 to Q5 on p.176: a crane (stork) standing on one leg next to a girl with a very long neck; no numbers, labels or measures. The crane question C108 gives its height and ratio in the sentence.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P01-photo_set-1",
+   "source": "chapter p.01",
+   "description": "Five tiger photographs A to E in two rows (sizes 60x40, 40x20, 30x20, 90x60, 60x60 mm): teaching figure of 7.1; made as concept image 'One tiger picture in five sizes'.",
+   "mapped_to": "concept_image:M1.S1.T1.C1.IMG1"
+  },
+  {
+   "fig_id": "P02-table-1",
+   "source": "chapter p.02",
+   "description": "Table Image / Width / Height for images A to E (60x40, 40x20, 30x20, 90x60, 60x60 mm): plain numbers, no colour meaning.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P06-arrow_diagram-1",
+   "source": "chapter p.06",
+   "description": "Example 7 arrow picture: 14:21 with two curved arrows labelled x 2=? and x 2 to ___ :42; shows the first blank only, the LaTeX steps give the same factor.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P07-illustration-1",
+   "source": "chapter p.07",
+   "description": "Three mugs with a decoction layer over milk (regular, lighter, stronger), no labels: teaching figure, made as concept image 'Which coffee is strongest?'.",
+   "mapped_to": "concept_image:M2.S5.T5.C16.IMG1"
+  },
+  {
+   "fig_id": "P07-table-2",
+   "source": "chapter p.07",
+   "description": "Coffee table: decoction 300/150/200/24/100 mL against milk 600/500/400/56/300 mL with an empty Regular/Strong/Light column: plain table, the LP lists the pairs in the text.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P08-pattern-3",
+   "source": "chapter p.08",
+   "description": "Wall (a): 3 rows of 17 bricks, grey and red; rows GGRRRGGRRRGGRRRGG / GGRRGGGRRGGGRRGGG (shifted 1/3 brick) / GGGRGGGGRGGGGRGGG; verified by pixel sampling.",
+   "mapped_to": "item:M2.S8.T8.C26 (question)"
+  },
+  {
+   "fig_id": "P08-pattern-4",
+   "source": "chapter p.08",
+   "description": "Wall (b): 7 rows of 17 bricks, grey and brown; rows 1 to 7 GGGOGGGOGGGOGGGOG / GGOOGGOOGGOOGGOOG / GGOGOGOGOGOGOGOGO / GOGGOOGGOOGGOOGGO / GGOGOGOGOGOGOGOGO / GGOOGGOOGGOOGGOOG / GGGOGGGOGGGOGGGOG (rows 2, 4, 6 shifted about 0.44 brick); verified by pixel sampling.",
+   "mapped_to": "item:M2.S8.T8.C26 (question)"
+  },
+  {
+   "fig_id": "P08-shape-1",
+   "source": "chapter p.08",
+   "description": "Five lettered rectangles A to E, scattered and tilted (A 1:3 upright, B 2:3, C 2:5 tilted 35 deg clockwise, D 1:3 tilted 18 deg anticlockwise, E 2:5 tilted 45 deg clockwise); verified against the page picture (sizes agree within 2 percent).",
+   "mapped_to": "item:M1.S3.T3.C7 (question)"
+  },
+  {
+   "fig_id": "P08-shape-2",
+   "source": "chapter p.08",
+   "description": "One plain unlabelled rectangle, about 163 x 97 px on the page (about 5:3); drawn 3:2 to match the LP example 6 cm x 4 cm.",
+   "mapped_to": "item:M1.S4.T4.C9 (question)"
+  },
+  {
+   "fig_id": "P09-figure_drawing-1",
+   "source": "chapter p.09",
+   "description": "Standing doll-like figure of ovals (head, 2-oval torso, 3-oval arms and legs) beside the ratio blanks: illustration, no lengths printed; the learner measures a friend.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P09-figure_drawing-2",
+   "source": "chapter p.09",
+   "description": "Running figure of ovals, top right: illustration only.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P09-figure_drawing-3",
+   "source": "chapter p.09",
+   "description": "Small child figure of ovals holding a balloon: illustration only.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P13-shape-1",
+   "source": "chapter p.13",
+   "description": "Checked against the page picture, the base description is right. House plan in thin black lines, no fill: a big upper rectangle 24 ft wide (left room 9 ft + right room 15 ft) and 12 ft high, split by one vertical inner wall; a small rectangle 6 ft wide hangs below the right room, its left side the downward continuation of the inner wall, its top the part of the bottom edge from the wall to 6 ft right of it. Five labels only: '12 ft' left of the left edge, '15 ft' inside the top of the right room, '9 ft' under the left room, '9 ft' right of the small rectangle, '6 ft' inside its bottom. The small rectangle is drawn about 8 ft high though labelled 9 ft (not to scale).",
+   "mapped_to": "item:M3.S16.T16.C60 (question)"
+  },
+  {
+   "fig_id": "P13-table-2",
+   "source": "chapter p.13",
+   "description": "Shampoo table, 3 columns x 5 rows: Container | Volume | Price; Sachet 6 mL Rs 2; Small Bottle 180 mL Rs 154; Medium Bottle 340 mL Rs 276; Large Bottle 1000 mL Rs 540. Plain banded rows, no colour meaning; checked against the page picture. The worked example M3.S21.T21.C82 already lists these four sizes and prices in its sentence.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P14-illustration-1",
+   "source": "chapter p.14",
+   "description": "Two children at a table with a heap of 12 seeds (about 12, loosely clustered); checked against the page picture. Characters and a heap with no numbers: decoration. The question C92 gives 12 counters in its sentence.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P14-pattern-2",
+   "source": "chapter p.14",
+   "description": "Three pink circles of 12 seeds split in two heaps: 3 + 9, 8 + 4, 2 + 10 (counts re-checked on a zoomed crop and confirmed). Open examples of 'share in different ways'; no question of the LP uses them and the splits are none of the ratios asked (3 : 1, 4 : 3).",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "P15-diagram-1",
+   "source": "chapter p.15",
+   "description": "Teaching flow diagram 'Sharing 12 in the ratio 3 : 1' (whole 12 in an ellipse, 3 : 1 times 3 gives 9 : 3). Teaching figure with no concept image of its own; the LP steps of C93 carry the same numbers, and C93's solution figure is optional (not added).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P16-diagram-1",
+   "source": "chapter p.16",
+   "description": "Teaching flow diagram 'Sharing 42 in the ratio 4 : 3' (whole 42, 4 : 3 times 6 gives 24 : 18). Its teaching figure in the plan is the counters picture of 42 in 7 groups of 6 (4 and 3 groups, 24 and 18).",
+   "mapped_to": "concept_image:M4.S24.T24.C88.IMG1"
+  },
+  {
+   "fig_id": "P20-binairo_grid-1",
+   "source": "chapter p.20",
+   "description": "Book's solved example, left grid 'Puzzle': 6 x 6, given cells V at (1,2), (2,5), (3,1), (3,3), (3,6), (4,2), (4,6) and H at (5,5), (6,3), (6,6); checked against the page picture. The LP replaces this 6 x 6 example by a one-row worked example, drawn as one figure whose dashed outlines mark the given cells.",
+   "mapped_to": "item:M5.S31.T31.C120 (question)"
+  },
+  {
+   "fig_id": "P20-binairo_grid-2",
+   "source": "chapter p.20",
+   "description": "Book's solved example, right grid 'Solution': 6 x 6 completed, given cells dotted; checked against the page picture. The LP's one-row worked example (H H V H V V) is the row version of this solved example and gets its own diagram.",
+   "mapped_to": "item:M5.S31.T31.C120 (question)"
+  },
+  {
+   "fig_id": "P20-binairo_grid-3",
+   "source": "chapter p.20",
+   "description": "Practice puzzle 1 of 3 (6 x 6, 9 given cells: R2 V at 3, H at 5 and 6; R3 H at 2; R4 V at 3 and 5; R5 H at 1 and 5; R6 V at 3); checked against the page picture. No LP item uses it (the LP has only the one-row worked example); noted under LP text issues.",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "P20-binairo_grid-4",
+   "source": "chapter p.20",
+   "description": "Practice puzzle 2 of 3 (6 x 6, 9 given cells: R1 H at 1; R2 H at 1 and 6; R3 V at 4; R4 V at 2 and 3; R5 H at 6; R6 V at 2 and 5); checked against the page picture. No LP item uses it.",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "P20-binairo_grid-5",
+   "source": "chapter p.20",
+   "description": "Practice puzzle 3 of 3 (6 x 6, 8 given cells: R1 H at 5; R2 H at 6; R3 H at 1, 3 and 6; R5 V at 3 and 4; R6 V at 1); checked against the page picture. No LP item uses it.",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "P21-dot_grid-1",
+   "source": "chapter p.21",
+   "description": "Blank 'Dot Grid' sheet, 14 dots across and 22 rows (checked against the page picture). A drawing aid for the learner's own work; no question of the LP refers to it.",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "P22-dot_grid-1",
+   "source": "chapter p.22",
+   "description": "Second identical blank 'Dot Grid' sheet (14 x 22 dots). Drawing aid; no question of the LP refers to it.",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "P24-shape-1",
+   "source": "chapter p.24",
+   "description": "Solutions-page copy of the five rectangles of Q4 (same picture as P08-shape-1); the printed answer is a procedure and names no pair.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "P24-shape-2",
+   "source": "chapter p.24",
+   "description": "Solutions-page copy of the Q5 rectangle (about 5:3, same as P08-shape-2); the solution figure redraws it as the given rectangle among the smaller and bigger ones.",
+   "mapped_to": "item:M1.S4.T4.C10 (solution)"
+  },
+  {
+   "fig_id": "P25-human_figures-1",
+   "source": "chapter p.25",
+   "description": "Solutions-page copy of the three oval figures of Q7; the printed answer is 'Try yourself.' with no figure.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P25-pattern-1",
+   "source": "chapter p.25",
+   "description": "Solutions-page copy of wall (a); the printed answer 2+3+4 = 9 grey and 3+2+1 = 6 coloured per block; the solution figure redraws it with the block outlined.",
+   "mapped_to": "item:M2.S8.T8.C27 (solution)"
+  },
+  {
+   "fig_id": "P25-pattern-2",
+   "source": "chapter p.25",
+   "description": "CORRECTED: solutions-page copy of wall (b), same rows as P08-pattern-4. Per-row brown counts are 4, 8, 8, 8, 8, 8, 4 (48 in all) and grey 13, 9, 9, 9, 9, 9, 13 (71 in all, 119 bricks); the base entry's rows 3 to 5 '9 O, 8 G' and totals 68 grey / 51 coloured are miscounts (row 3 = GGOGOGOGOGOGOGOGO has 8 O). Printed answer 16 grey and 12 coloured per block, which the redrawn solution figure outlines.",
+   "mapped_to": "item:M2.S8.T8.C27 (solution)"
+  },
+  {
+   "fig_id": "P26-shape-1",
+   "source": "chapter p.26",
+   "description": "Checked against the page picture, the base description is right. The same house plan reprinted beside the question in the printed-answers section (page No. 170, Figure it Out Q2); the printed answer itself is text only (12+12+12+15+9+15+9+9+9+6 = 108 ft, 15660 bricks) and does not mark which wall each number belongs to. The solution diagram of M3.S16.T16.C61 uses this layout and marks all ten walls.",
+   "mapped_to": "item:M3.S16.T16.C61 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 32,
+  "mapped_to_items": 11,
+  "mapped_to_concept_images": 3,
+  "mapped_none": 18,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S3.T3.C7.IMG1",
+   "M1.S4.T4.C10.IMG1",
+   "M1.S4.T4.C12.IMG1",
+   "M1.S4.T4.C9.IMG1",
+   "M2.S11.T11.C43.IMG1",
+   "M2.S8.T8.C26.IMG1",
+   "M2.S8.T8.C27.IMG1",
+   "M3.S16.T16.C60.IMG1",
+   "M3.S16.T16.C61.IMG1",
+   "M5.S31.T31.C120.IMG2"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S2.T2.C2",
+   "role": "worked_example",
+   "lp_book_number": "Same factor or same difference?",
+   "ncert_ref": "Section 7.1, p.160 (same factor or same difference?)",
+   "question_text": "Image A is 60 mm wide and 40 mm high. Image C is 30 mm by 20 mm and image B is 40 mm by 20 mm. Which of B and C changed both sides by the same factor?",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Every size (60 x 40, 30 x 20, 40 x 20) and both factors are in the text; the book's five tiger photographs are a teaching figure (concept image M1.S1.T1.C1.IMG1) and concept image M1.S2.T2.C2.IMG1 already shows this comparison. A picture of three rectangles would only repeat the numbers.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "No figure: the text already gives the three sizes."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C5",
+   "role": "question",
+   "lp_book_number": "Same Shape: images D and E against A",
+   "ncert_ref": "Section 7.1, p.160 (factors of D against A)",
+   "question_text": "Image A is 60 mm by 40 mm. Image D is 90 mm by 60 mm and image E is 60 mm by 60 mm. Which of them changed proportionally?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Both sizes (90 x 60 and 60 x 60) and the reference A (60 x 40) are in the text; nothing is read from a picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C6",
+   "role": "solution",
+   "lp_book_number": "Same Shape: images D and E against A",
+   "ncert_ref": "Section 7.1, p.160 (factors of D against A)",
+   "question_text": "Image A is 60 mm by 40 mm. Image D is 90 mm by 60 mm and image E is 60 mm by 60 mm. Which of them changed proportionally?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four division steps (90 / 60, 60 / 40, 60 / 60) written in LaTeX; the numbers carry the whole answer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "question",
+   "lp_book_number": "Ratios and Proportions, Q4",
+   "ncert_ref": "Figure it Out Q4, p.166",
+   "question_text": "Look at the five rectangles A, B, C, D and E. Which rectangles are similar to each other? You can verify this by measuring the width and height using a scale and comparing their ratios.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The five rectangles exist only in the picture; the learner has to measure them (shape, tilt and size) to answer.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S3.T3.C7.IMG1",
+   "manim_scene": "c8_7_FiO_q4_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S3.T3.C7.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre",
+      "x": "right",
+      "y": "up"
+     },
+     "rectangles": [
+      {
+       "label": "A",
+       "centre": [
+        -6.85,
+        -0.99
+       ],
+       "width": 0.67,
+       "height": 2.01,
+       "rotation_deg_anticlockwise": 0,
+       "corners_clockwise_from_top_left": [
+        [
+         -7.185,
+         0.015
+        ],
+        [
+         -6.515,
+         0.015
+        ],
+        [
+         -6.515,
+         -1.995
+        ],
+        [
+         -7.185,
+         -1.995
+        ]
+       ],
+       "short_to_long": "1:3"
+      },
+      {
+       "label": "B",
+       "centre": [
+        -4.57,
+        1.48
+       ],
+       "width": 2.07,
+       "height": 1.38,
+       "rotation_deg_anticlockwise": 0,
+       "corners_clockwise_from_top_left": [
+        [
+         -5.605,
+         2.17
+        ],
+        [
+         -3.535,
+         2.17
+        ],
+        [
+         -3.535,
+         0.79
+        ],
+        [
+         -5.605,
+         0.79
+        ]
+       ],
+       "short_to_long": "2:3"
+      },
+      {
+       "label": "C",
+       "centre": [
+        0.06,
+        -0.21
+       ],
+       "width": 5.85,
+       "height": 2.34,
+       "rotation_deg_anticlockwise": -35,
+       "corners_clockwise_from_top_left": [
+        [
+         -1.665,
+         2.426
+        ],
+        [
+         3.127,
+         -0.929
+        ],
+        [
+         1.785,
+         -2.846
+        ],
+        [
+         -3.007,
+         0.509
+        ]
+       ],
+       "short_to_long": "2:5"
+      },
+      {
+       "label": "D",
+       "centre": [
+        4.67,
+        1.46
+       ],
+       "width": 4.5,
+       "height": 1.5,
+       "rotation_deg_anticlockwise": 18,
+       "corners_clockwise_from_top_left": [
+        [
+         2.298,
+         1.478
+        ],
+        [
+         6.578,
+         2.869
+        ],
+        [
+         7.042,
+         1.442
+        ],
+        [
+         2.762,
+         0.051
+        ]
+       ],
+       "short_to_long": "1:3"
+      },
+      {
+       "label": "E",
+       "centre": [
+        6.22,
+        -1.15
+       ],
+       "width": 2.0,
+       "height": 0.8,
+       "rotation_deg_anticlockwise": -45,
+       "corners_clockwise_from_top_left": [
+        [
+         5.796,
+         -0.16
+        ],
+        [
+         7.21,
+         -1.574
+        ],
+        [
+         6.644,
+         -2.14
+        ],
+        [
+         5.23,
+         -0.726
+        ]
+       ],
+       "short_to_long": "2:5"
+      }
+     ],
+     "label_style": {
+      "text_height": 0.42,
+      "position": "rectangle centre",
+      "upright": true
+     },
+     "short_to_long_ratios": {
+      "A": "1:3",
+      "B": "2:3",
+      "C": "2:5",
+      "D": "1:3",
+      "E": "2:5"
+     }
+    },
+    "manim_description": "Plain white 16:9 card (BG), 16 by 9 scene units, origin at the centre, x to the right, y up. Draw five rectangles, each with INK outline 3 px and white fill, and the capital letter of the rectangle in INK sans-serif (text height 0.42 units, upright, not rotated) at the rectangle's centre. Rectangle A: centre (-6.85, -0.99), width 0.67, height 2.01, no rotation. Rectangle B: centre (-4.57, 1.48), width 2.07, height 1.38, no rotation. Rectangle C: centre (0.06, -0.21), width 5.85, height 2.34, rotated 35 degrees clockwise about its centre. Rectangle D: centre (4.67, 1.46), width 4.50, height 1.50, rotated 18 degrees anticlockwise about its centre. Rectangle E: centre (6.22, -1.15), width 2.00, height 0.80, rotated 45 degrees clockwise about its centre. Draw no lengths, no angles, no grid, no colour and no marks that group the rectangles.",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art, faces, scenery",
+     "side lengths, ratios or any measurement",
+     "colour, shading or marks that group the rectangles",
+     "any hint of which rectangles are alike"
+    ],
+    "accuracy_checks": [
+     "short : long side per rectangle: A 0.67/2.01 = 1/3, B 1.38/2.07 = 2/3, C 2.34/5.85 = 2/5, D 1.50/4.50 = 1/3, E 0.80/2.00 = 2/5",
+     "A and D share the shape 1:3, C and E share the shape 2:5, B (2:3) matches none: true in the drawing, but nothing in the figure marks it",
+     "no two rectangles overlap or touch (checked on the rotated corners)",
+     "all corners lie inside the 16 x 9 card with a margin of at least 0.75 units"
+    ],
+    "alt_text": "Five plain outlined rectangles lettered A to E: A tall and narrow, B wide and short, C large and tilted, D long and slightly tilted, E small and tilted.",
+    "render_note": "Proportions and positions follow the book's picture (page 8, repeated on solutions page 24; the book prints no lengths). Measured in px on a 2x zoom: A 54x162, B 167x111, C 190x475, D 121x363, E 64x160; the measured ratios (A 3.07, D 3.03, C 2.54, E 2.55, B 1.50) are tidied to exact 1:3, 2:5 and 2:3 so the shapes in each pair are exactly alike. Letters are upright inside each rectangle, as in the book."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "solution",
+   "lp_book_number": "Ratios and Proportions, Q4",
+   "ncert_ref": "Figure it Out Q4, p.166",
+   "question_text": "Look at the five rectangles A, B, C, D and E. Which rectangles are similar to each other? You can verify this by measuring the width and height using a scale and comparing their ratios.",
+   "decision": "optional",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "OPTIONAL, not added: the LP solution is a procedure (measure, write width : height, reduce, compare) and never names the matching rectangles, so a figure would have to show an answer the text does not state. A picture of the same five rectangles with A and D in SET_A and C and E in SET_B would help once the text names the pairs.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Text only. Suggested closing sentence (see notes, LP text issues): measured short side : long side is about 1 : 3 for A and D, about 2 : 5 for C and E and about 2 : 3 for B, so A and D match, C and E match, and B matches none."
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C9",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out Q5, p.166",
+   "question_text": "Look at the given rectangle. Can you draw a smaller rectangle and a bigger rectangle with the same width to height ratio in your notebooks? Compare your rectangles with your classmates' drawings. Are all of them the same? If they are different from yours, can you think why? Are they wrong?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The learner is told to look at the given rectangle and measure it; the rectangle exists only in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S4.T4.C9.IMG1",
+   "manim_scene": "c8_7_FiO_q5_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S4.T4.C9.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre",
+      "x": "right",
+      "y": "up"
+     },
+     "rectangles": [
+      {
+       "centre": [
+        0,
+        0
+       ],
+       "width": 3.6,
+       "height": 2.4,
+       "rotation_deg": 0,
+       "outline": "INK",
+       "fill": "BG",
+       "width_to_height": "3:2"
+      }
+     ]
+    },
+    "manim_description": "Plain white 16:9 card (BG), 16 by 9 scene units, origin at the centre, x to the right, y up. Draw one rectangle with INK outline 3 px and white fill, centred at (0, 0), width 3.6 units and height 2.4 units, sides horizontal and vertical. Draw nothing else: no letters, no numbers, no arrows, no grid.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art, faces, scenery",
+     "any length, unit, letter or number",
+     "a second rectangle",
+     "the 6 cm and 4 cm of the example solution"
+    ],
+    "accuracy_checks": [
+     "width : height = 3.6 : 2.4 = 3 : 2",
+     "the figure holds no text and no other mark"
+    ],
+    "alt_text": "One plain upright rectangle, wider than it is tall, with no marks on it.",
+    "render_note": "The book's rectangle prints no lengths and measures about 162 x 97 px on the page (about 5 : 3). The LP solution uses the example 6 cm : 4 cm (3 : 2), so the card draws 3 : 2 to stay consistent with the solution figure (LP text wins over the unmarked picture). See notes, LP text issues."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C10",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out Q5, p.166",
+   "question_text": "Look at the given rectangle. Can you draw a smaller rectangle and a bigger rectangle with the same width to height ratio in your notebooks? Compare your rectangles with your classmates' drawings. Are all of them the same? If they are different from yours, can you think why? Are they wrong?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The task is to draw a smaller and a bigger rectangle of the same shape; the answer is that drawing (the LP gives 6 x 4, 3 x 2 and 12 x 8 as the example).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S4.T4.C10.IMG1",
+   "manim_scene": "c8_7_FiO_q5_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S4.T4.C10.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S4.T4.C9.IMG1",
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "scale_units_per_cm": 0.4,
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre",
+      "x": "right",
+      "y": "up"
+     },
+     "baseline_y": -1.25,
+     "rectangles": [
+      {
+       "role": "given",
+       "colour": "INK",
+       "x": [
+        -2.8,
+        -0.4
+       ],
+       "y": [
+        -1.25,
+        0.35
+       ],
+       "width_cm": 6,
+       "height_cm": 4,
+       "width_to_height": "3:2"
+      },
+      {
+       "role": "smaller",
+       "colour": "ANSWER",
+       "x": [
+        -5.8,
+        -4.6
+       ],
+       "y": [
+        -1.25,
+        -0.45
+       ],
+       "width_cm": 3,
+       "height_cm": 2,
+       "width_to_height": "3:2"
+      },
+      {
+       "role": "bigger",
+       "colour": "ANSWER",
+       "x": [
+        1.4,
+        6.2
+       ],
+       "y": [
+        -1.25,
+        1.95
+       ],
+       "width_cm": 12,
+       "height_cm": 8,
+       "width_to_height": "3:2"
+      }
+     ],
+     "labels": [
+      {
+       "text": "3 cm",
+       "centre": [
+        -5.2,
+        -1.63
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "6 cm",
+       "centre": [
+        -1.6,
+        -1.63
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "12 cm",
+       "centre": [
+        3.8,
+        -1.63
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "2 cm",
+       "centre": [
+        -6.475,
+        -0.85
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "4 cm",
+       "centre": [
+        -3.475,
+        -0.45
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "8 cm",
+       "centre": [
+        0.725,
+        0.35
+       ],
+       "colour": "ANSWER"
+      }
+     ]
+    },
+    "manim_description": "Plain white 16:9 card (BG), 16 by 9 scene units, origin at the centre, x to the right, y up. All three rectangles have horizontal and vertical sides and stand on the baseline y = -1.25; one scale of 0.4 units per cm is used for all three. Draw the given rectangle in INK outline 3 px with white fill: x from -2.8 to -0.4, y from -1.25 to 0.35 (width 2.4, height 1.6). Draw the smaller rectangle in ANSWER outline 3 px with white fill: x from -5.8 to -4.6, y from -1.25 to -0.45 (width 1.2, height 0.8). Draw the bigger rectangle in ANSWER outline 3 px with white fill: x from 1.4 to 6.2, y from -1.25 to 1.95 (width 4.8, height 3.2). Write ANSWER sans-serif labels with text height 0.34 units. Width labels, centred at y = -1.63 under each rectangle: '3 cm' at x = -5.2, '6 cm' at x = -1.6, '12 cm' at x = 3.8. Height labels, vertically centred on each rectangle and placed to its left with the label's right edge 0.25 units left of the rectangle's left edge: '2 cm' centred at (-6.475, -0.85), '4 cm' centred at (-3.475, -0.45), '8 cm' centred at (0.725, 0.35). Draw nothing else: no arrows, no letters, no grid.",
+    "visible_text": [
+     "3 cm",
+     "2 cm",
+     "6 cm",
+     "4 cm",
+     "12 cm",
+     "8 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art, faces, scenery",
+     "arrows, factors or the words smaller / bigger",
+     "letters or a grid"
+    ],
+    "accuracy_checks": [
+     "6 : 4 = 3 : 2; smaller 3 : 2 (6 x 1/2 = 3, 4 x 1/2 = 2); bigger 12 : 8 = 3 : 2 (6 x 2 = 12, 4 x 2 = 8)",
+     "one scale 0.4 units per cm: widths 1.2, 2.4, 4.8; heights 0.8, 1.6, 3.2",
+     "the three rectangles stand on the line y = -1.25 and do not touch (gaps 1.8 units)"
+    ],
+    "alt_text": "The given rectangle marked 6 cm by 4 cm, a smaller rectangle 3 cm by 2 cm on its left and a bigger rectangle 12 cm by 8 cm on its right, all with the same shape.",
+    "render_note": "Same rectangle as the question figure (same 3:2 shape, outline and style); only the card scale changes (0.4 units per cm instead of 0.6) so that the three rectangles fit in one row. 6 cm : 4 cm, 3 cm : 2 cm and 12 cm : 8 cm are the LP solution's own example numbers."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C11",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Figure it Out Q7, p.167",
+   "question_text": "Let us draw some human figures. Measure your friend's body: the lengths of their head, torso, arms and legs. Write the ratios head : torso, torso : arms and torso : legs. Now draw a figure with head, torso, arms and legs in equivalent ratios. Does the drawing look more realistic if the ratios are proportional? Why? Why not?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "DECORATIVE_ONLY"
+   ],
+   "reason": "The learner measures a friend's body, not the printed doll figures; the book's three oval figures are illustration and carry no lengths.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "No figure: the question is open-ended."
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C12",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Figure it Out Q7, p.167",
+   "question_text": "Let us draw some human figures. Measure your friend's body: the lengths of their head, torso, arms and legs. Write the ratios head : torso, torso : arms and torso : legs. Now draw a figure with head, torso, arms and legs in equivalent ratios. Does the drawing look more realistic if the ratios are proportional? Why? Why not?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The task ends with 'draw a figure with head, torso, arms and legs in equivalent ratios'; the LP solution gives a concrete instance (20, 60, 60, 80 cm scaled by 1/10), which is a drawing the steps only describe in words. No question figure exists, so this one stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S4.T4.C12.IMG1",
+   "manim_scene": "c8_7_FiO_q7_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S4.T4.C12.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "kind": "standing figure drawn from parts with labelled lengths",
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre",
+      "x": "right",
+      "y": "up"
+     },
+     "scale_units_per_cm": 0.45,
+     "parts": {
+      "head": {
+       "shape": "circle",
+       "centre": [
+        0,
+        3.15
+       ],
+       "diameter": 0.9,
+       "length_cm": 2
+      },
+      "torso": {
+       "shape": "rectangle",
+       "x": [
+        -0.675,
+        0.675
+       ],
+       "y": [
+        0,
+        2.7
+       ],
+       "length_cm": 6
+      },
+      "left_arm": {
+       "shape": "rectangle",
+       "x": [
+        -1.2,
+        -0.75
+       ],
+       "y": [
+        0,
+        2.7
+       ],
+       "length_cm": 6
+      },
+      "right_arm": {
+       "shape": "rectangle",
+       "x": [
+        0.75,
+        1.2
+       ],
+       "y": [
+        0,
+        2.7
+       ],
+       "length_cm": 6
+      },
+      "left_leg": {
+       "shape": "rectangle",
+       "x": [
+        -0.675,
+        -0.075
+       ],
+       "y": [
+        -3.6,
+        0
+       ],
+       "length_cm": 8
+      },
+      "right_leg": {
+       "shape": "rectangle",
+       "x": [
+        0.075,
+        0.675
+       ],
+       "y": [
+        -3.6,
+        0
+       ],
+       "length_cm": 8
+      }
+     },
+     "rulers": [
+      {
+       "side": "left",
+       "x": -1.9,
+       "segments": [
+        {
+         "tag": "head 2 cm",
+         "y": [
+          2.7,
+          3.6
+         ]
+        },
+        {
+         "tag": "torso 6 cm",
+         "y": [
+          0,
+          2.7
+         ]
+        },
+        {
+         "tag": "legs 8 cm",
+         "y": [
+          -3.6,
+          0
+         ]
+        }
+       ]
+      },
+      {
+       "side": "right",
+       "x": 1.9,
+       "segments": [
+        {
+         "tag": "arms 6 cm",
+         "y": [
+          0,
+          2.7
+         ]
+        }
+       ]
+      }
+     ],
+     "tags": [
+      {
+       "text": "head 2 cm",
+       "anchor": "right-aligned at x=-2.2",
+       "y": 3.15
+      },
+      {
+       "text": "torso 6 cm",
+       "anchor": "right-aligned at x=-2.2",
+       "y": 1.35
+      },
+      {
+       "text": "legs 8 cm",
+       "anchor": "right-aligned at x=-2.2",
+       "y": -1.8
+      },
+      {
+       "text": "arms 6 cm",
+       "anchor": "left-aligned at x=2.2",
+       "y": 1.35
+      }
+     ],
+     "source_numbers": "friend measured head 20 cm, torso 60 cm, arms 60 cm, legs 80 cm; factor 1/10 gives 2, 6, 6, 8 cm"
+    },
+    "manim_description": "Plain white 16:9 card (BG), 16 by 9 scene units, origin at the centre, x to the right, y up. One standing figure in front view, built from plain shapes, each with INK outline 3 px and CELL_FILL fill, with no face and no clothes: the head is a circle of diameter 0.9 centred at (0, 3.15); the torso is a rectangle with x from -0.675 to 0.675 and y from 0 to 2.7; the left arm is a rectangle with x from -1.2 to -0.75 and y from 0 to 2.7; the right arm is a rectangle with x from 0.75 to 1.2 and y from 0 to 2.7; the left leg is a rectangle with x from -0.675 to -0.075 and y from -3.6 to 0; the right leg is a rectangle with x from 0.075 to 0.675 and y from -3.6 to 0. Left ruler in ANSWER, 3 px: a vertical line at x = -1.9 from y = -3.6 to y = 3.6, with a horizontal end tick of length 0.3 (x from -2.05 to -1.75) at y = 3.6, y = 2.7, y = 0 and y = -3.6. Dashed GUIDE extension lines, 2 px: at y = 3.6 from x = 0 to x = -1.9; at y = 2.7 from x = -1.2 to x = -1.9; at y = 0 from x = -1.2 to x = -1.9; at y = -3.6 from x = -0.675 to x = -1.9. Right ruler in ANSWER, 3 px: a vertical line at x = 1.9 from y = 0 to y = 2.7, with end ticks of length 0.3 (x from 1.75 to 2.05) at y = 0 and y = 2.7; dashed GUIDE extension lines, 2 px, at y = 2.7 and at y = 0, each from x = 1.2 to x = 1.9. Tags in ANSWER sans-serif, text height 0.36 units: right-aligned at x = -2.2: 'head 2 cm' vertically centred at y = 3.15, 'torso 6 cm' at y = 1.35, 'legs 8 cm' at y = -1.8; left-aligned at x = 2.2: 'arms 6 cm' vertically centred at y = 1.35. Draw nothing else.",
+    "visible_text": [
+     "head 2 cm",
+     "torso 6 cm",
+     "legs 8 cm",
+     "arms 6 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art, faces, scenery",
+     "a face, hair or clothes",
+     "the friend's own lengths 20, 60, 60, 80",
+     "ratios or the factor 1/10"
+    ],
+    "accuracy_checks": [
+     "lengths 20, 60, 60, 80 cm x 1/10 = 2, 6, 6, 8 cm; drawn heights 0.9, 2.7, 2.7, 3.6 units at 0.45 units per cm",
+     "head : torso = 2 : 6 = 1 : 3 and torso : legs = 6 : 8 = 3 : 4 (as in the LP steps); torso : arms = 6 : 6 = 1 : 1",
+     "arms and torso span the same y range (0 to 2.7); head, torso and legs stack from y = 3.6 down to y = -3.6 (0.9 + 2.7 + 3.6 = 7.2 = 16 cm x 0.45)"
+    ],
+    "alt_text": "A plain standing figure with head 2 cm, torso 6 cm, arms 6 cm and legs 8 cm marked by rulers on both sides.",
+    "render_note": "Sample answer taken from the LP solution (friend 20 / 60 / 60 / 80 cm, factor 1/10). Widths of the parts are not measurements, they only make the parts visible. The book's own oval-doll pictures are not copied (see notes)."
+   },
+   "needs_lp_text_sync": true
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C13",
+   "role": "worked_example",
+   "lp_book_number": "A ratio compares two quantities",
+   "ncert_ref": "Section 7.2, p.161 (a ratio compares two quantities)",
+   "question_text": "Write the width to height ratio of image A (60 mm by 40 mm) and say what it means. Then multiply both terms by 1/2 and say which image you get.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Only 60 mm by 40 mm and the factor 1/2 are used, all in the text; concept image M2.S5.T5.C13.IMG1 already shows 60 : 40.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "No figure."
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C16",
+   "role": "worked_example",
+   "lp_book_number": "Filter coffee: stronger or lighter?",
+   "ncert_ref": "Section 7.4 Filter Coffee, pp.164-165",
+   "question_text": "Regular filter coffee is 15 mL decoction to 35 mL milk, strong is 20 : 30 and light is 10 : 40. Explain why the strong one is stronger and the light one is lighter.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The three mixes (15 : 35, 20 : 30, 10 : 40) are in the text and the book's three-mug picture is the teaching figure already made as concept image M2.S5.T5.C16.IMG1; the question never refers to the picture.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "No figure."
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C18",
+   "role": "question",
+   "lp_book_number": "Simplest Form: ratios of the image sizes",
+   "ncert_ref": "Section 7.3, pp.161-162",
+   "question_text": "Reduce the width to height ratios of images A (60 : 40), D (90 : 60), B (40 : 20) and E (60 : 60) to simplest form. Which are in proportion with A?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "All four ratios are given in the text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C19",
+   "role": "solution",
+   "lp_book_number": "Simplest Form: ratios of the image sizes",
+   "ncert_ref": "Section 7.3, pp.161-162",
+   "question_text": "Reduce the width to height ratios of images A (60 : 40), D (90 : 60), B (40 : 20) and E (60 : 60) to simplest form. Which are in proportion with A?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "HCF division steps (60 / 20, 90 / 30, 40 / 20, 60 / 60) in LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C20",
+   "role": "question",
+   "lp_book_number": "Filter Coffee: regular, strong or light",
+   "ncert_ref": "Section 7.4 Filter Coffee table, p.165",
+   "question_text": "Manjunath mixes coffee decoction with milk in these amounts: 300 mL with 600 mL, 150 mL with 500 mL, 200 mL with 400 mL, 24 mL with 56 mL, and 100 mL with 300 mL. Regular coffee is 15 mL decoction with 35 mL milk. Is each one regular, strong or light?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The book's table is a plain table of numbers with an empty last column and no colour meaning; the LP already lists the five pairs in the text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array with headings 'Coffee Decoction (in mL)', 'Milk (in mL)', 'Regular/Strong/Light' and rows 300 | 600, 150 | 500, 200 | 400, 24 | 56, 100 | 300 with the last column empty."
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C21",
+   "role": "solution",
+   "lp_book_number": "Filter Coffee: regular, strong or light",
+   "ncert_ref": "Section 7.4 Filter Coffee table, p.165",
+   "question_text": "Manjunath mixes coffee decoction with milk in these amounts: 300 mL with 600 mL, 150 mL with 500 mL, 200 mL with 400 mL, 24 mL with 56 mL, and 100 mL with 300 mL. Regular coffee is 15 mL decoction with 35 mL milk. Is each one regular, strong or light?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The filled table holds words and numbers only (no colour, no arrangement), so it is a LaTeX array, not a diagram.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array: 300 | 600 | strong; 150 | 500 | light; 200 | 400 | strong; 24 | 56 | regular; 100 | 300 | light."
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C22",
+   "role": "question",
+   "lp_book_number": "Example 1: Example: Testing 3 : 4 and 72 : 96",
+   "ncert_ref": "Section 7.4 Example 1, p.162",
+   "question_text": "Are the ratios 3 : 4 and 72 : 96 proportional?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two ratios in the text; nothing to see.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C23",
+   "role": "solution",
+   "lp_book_number": "Example 1: Example: Testing 3 : 4 and 72 : 96",
+   "ncert_ref": "Section 7.4 Example 1, p.162",
+   "question_text": "Are the ratios 3 : 4 and 72 : 96 proportional?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "HCF and division steps in LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C24",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out Q1, p.165",
+   "question_text": "Circle the following statements of proportion that are true. (i) 4 : 7 :: 12 : 21 (ii) 8 : 3 :: 24 : 6 (iii) 7 : 12 :: 12 : 7 (iv) 21 : 6 :: 35 : 10 (v) 12 : 18 :: 28 : 12 (vi) 24 : 8 :: 9 : 3",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six statements of proportion in the text; 'circle' is only the way to answer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C25",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out Q1, p.165",
+   "question_text": "Circle the following statements of proportion that are true. (i) 4 : 7 :: 12 : 21 (ii) 8 : 3 :: 24 : 6 (iii) 7 : 12 :: 12 : 7 (iv) 21 : 6 :: 35 : 10 (v) 12 : 18 :: 28 : 12 (vi) 24 : 8 :: 9 : 3",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Reduced ratios for each statement in LaTeX; the answer is the list (i), (iv) and (vi).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C26",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Figure it Out Q6, p.166",
+   "question_text": "A long brick wall has patterns made using grey and coloured bricks, and each wall continues its pattern throughout. In wall (a), one block of the pattern has 2, 3 and 4 grey bricks in its rows and 3, 2 and 1 coloured bricks. In wall (b), one block has 16 grey bricks and 12 coloured bricks. What is the ratio of grey bricks to coloured bricks? Give the ratios in simplest form.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The book gives the two walls as a picture and the grey / coloured brick pattern exists only there; both walls go on one card.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S8.T8.C26.IMG1",
+   "manim_scene": "c8_7_FiO2_q6_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C26.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "kind": "two brick walls",
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre",
+      "x": "right",
+      "y": "up"
+     },
+     "brick": {
+      "width": 0.78,
+      "height": 0.275,
+      "outline": "INK 2 px",
+      "gap": 0
+     },
+     "fills": {
+      "grey": "#B9BABB",
+      "red (wall a)": "#D2232A",
+      "brown (wall b)": "#BA7B3F"
+     },
+     "wall_a": {
+      "label": "(a)",
+      "label_centre": [
+       -7.0,
+       1.5875
+      ],
+      "rows": [
+       {
+        "row": 1,
+        "colours_left_to_right": "GGRRRGGRRRGGRRRGG",
+        "y_from": 1.725,
+        "y_to": 2.0,
+        "left_edge_x": -6.2
+       },
+       {
+        "row": 2,
+        "colours_left_to_right": "GGRRGGGRRGGGRRGGG",
+        "y_from": 1.45,
+        "y_to": 1.725,
+        "left_edge_x": -5.94
+       },
+       {
+        "row": 3,
+        "colours_left_to_right": "GGGRGGGGRGGGGRGGG",
+        "y_from": 1.175,
+        "y_to": 1.45,
+        "left_edge_x": -6.2
+       }
+      ],
+      "row_shift_bricks": {
+       "row 2": 0.3333333333333333
+      },
+      "row_shift_units": {
+       "row 2": 0.26
+      }
+     },
+     "wall_b": {
+      "label": "(b)",
+      "label_centre": [
+       -7.0,
+       -0.7875
+      ],
+      "rows": [
+       {
+        "row": 1,
+        "colours_left_to_right": "GGGOGGGOGGGOGGGOG",
+        "y_from": -0.1,
+        "y_to": 0.175,
+        "left_edge_x": -6.2
+       },
+       {
+        "row": 2,
+        "colours_left_to_right": "GGOOGGOOGGOOGGOOG",
+        "y_from": -0.375,
+        "y_to": -0.1,
+        "left_edge_x": -5.86
+       },
+       {
+        "row": 3,
+        "colours_left_to_right": "GGOGOGOGOGOGOGOGO",
+        "y_from": -0.65,
+        "y_to": -0.375,
+        "left_edge_x": -6.2
+       },
+       {
+        "row": 4,
+        "colours_left_to_right": "GOGGOOGGOOGGOOGGO",
+        "y_from": -0.925,
+        "y_to": -0.65,
+        "left_edge_x": -5.86
+       },
+       {
+        "row": 5,
+        "colours_left_to_right": "GGOGOGOGOGOGOGOGO",
+        "y_from": -1.2,
+        "y_to": -0.925,
+        "left_edge_x": -6.2
+       },
+       {
+        "row": 6,
+        "colours_left_to_right": "GGOOGGOOGGOOGGOOG",
+        "y_from": -1.475,
+        "y_to": -1.2,
+        "left_edge_x": -5.86
+       },
+       {
+        "row": 7,
+        "colours_left_to_right": "GGGOGGGOGGGOGGGOG",
+        "y_from": -1.75,
+        "y_to": -1.475,
+        "left_edge_x": -6.2
+       }
+      ],
+      "row_shift_units": {
+       "rows 2, 4, 6": 0.34
+      }
+     },
+     "key": "G = grey brick, R = red brick, O = brown brick"
+    },
+    "manim_description": "Plain white 16:9 card (BG), 16 by 9 scene units, origin at the centre, x to the right, y up. Draw two brick walls, wall (a) above wall (b). Every brick is a rectangle 0.78 wide and 0.275 high with INK outline 2 px; bricks touch their neighbours and there are no mortar gaps. Brick fills: grey = #B9BABB in both walls; coloured = #D2232A (red) in wall (a) and #BA7B3F (brown) in wall (b). Wall (a): 3 rows of 17 bricks. Row 1 occupies y from 1.725 to 2.0, row 2 y from 1.45 to 1.725, row 3 y from 1.175 to 1.45. Rows 1 and 3 have their left edge at x = -6.2; row 2 is shifted right by 0.26 so its left edge is at x = -5.94. Colours left to right (G grey, R red): row 1 GGRRRGGRRRGGRRRGG; row 2 GGRRGGGRRGGGRRGGG; row 3 GGGRGGGGRGGGGRGGG. Wall (b): 7 rows of 17 bricks. Row k occupies y from 0.175 - 0.275 k to 0.175 - 0.275 (k - 1), so row 1 is y from -0.1 to 0.175 and row 7 is y from -1.75 to -1.475. Rows 1, 3, 5 and 7 have their left edge at x = -6.2; rows 2, 4 and 6 are shifted right by 0.34 so their left edge is at x = -5.86. Colours left to right (G grey, O brown): row 1 GGGOGGGOGGGOGGGOG; row 2 GGOOGGOOGGOOGGOOG; row 3 GGOGOGOGOGOGOGOGO; row 4 GOGGOOGGOOGGOOGGO; row 5 GGOGOGOGOGOGOGOGO; row 6 GGOOGGOOGGOOGGOOG; row 7 GGGOGGGOGGGOGGGOG. Labels in INK sans-serif, text height 0.42 units, centred at x = -7.0: '(a)' at y = 1.5875 and '(b)' at y = -0.7875. Draw nothing else: no block outlines, no counts, no ratios, no grid.",
+    "visible_text": [
+     "(a)",
+     "(b)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art, faces, scenery",
+     "block outlines, counts, totals or ratios",
+     "any marker for where one repeating block starts or ends"
+    ],
+    "accuracy_checks": [
+     "wall (a): 17 bricks per row; red 9, 6, 3 and grey 8, 11, 14 per row (18 red, 33 grey, 51 bricks)",
+     "wall (b): 17 bricks per row; brown 4, 8, 8, 8, 8, 8, 4 and grey 13, 9, 9, 9, 9, 9, 13 per row (48 brown, 71 grey, 119 bricks)",
+     "pattern repeats every 5 bricks in wall (a) and every 4 bricks in wall (b)",
+     "row strings checked by pixel sampling of the book's page image (every brick colour matched)"
+    ],
+    "alt_text": "Two brick walls: wall (a) has three rows of 17 bricks, grey with a pattern of red bricks; wall (b) has seven rows of 17 bricks, grey with a pattern of brown bricks.",
+    "render_note": "Row strings, shifts and colours come from the book's picture (page 8, repeated on solutions page 25). Offsets measured on the page: wall (a) row 2 is 0.32 of a brick to the right, wall (b) rows 2, 4, 6 are 0.44 of a brick to the right; drawn as 1/3 and 0.44 (0.26 and 0.34 units)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C27",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Figure it Out Q6, p.166",
+   "question_text": "A long brick wall has patterns made using grey and coloured bricks, and each wall continues its pattern throughout. In wall (a), one block of the pattern has 2, 3 and 4 grey bricks in its rows and 3, 2 and 1 coloured bricks. In wall (b), one block has 16 grey bricks and 12 coloured bricks. What is the ratio of grey bricks to coloured bricks? Give the ratios in simplest form.",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The solution counts the bricks of one repeating block; outlining the block on the walls shows which bricks are counted (the book marks no block), so it adds a highlighted part to the given figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S8.T8.C27.IMG1",
+   "manim_scene": "c8_7_FiO2_q6_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C27.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S8.T8.C26.IMG1",
+    "content": {
+     "type": "other",
+     "kind": "two brick walls",
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre",
+      "x": "right",
+      "y": "up"
+     },
+     "brick": {
+      "width": 0.78,
+      "height": 0.275,
+      "outline": "INK 2 px",
+      "gap": 0
+     },
+     "fills": {
+      "grey": "#B9BABB",
+      "red (wall a)": "#D2232A",
+      "brown (wall b)": "#BA7B3F"
+     },
+     "wall_a": {
+      "label": "(a)",
+      "label_centre": [
+       -7.0,
+       1.5875
+      ],
+      "rows": [
+       {
+        "row": 1,
+        "colours_left_to_right": "GGRRRGGRRRGGRRRGG",
+        "y_from": 1.725,
+        "y_to": 2.0,
+        "left_edge_x": -6.2
+       },
+       {
+        "row": 2,
+        "colours_left_to_right": "GGRRGGGRRGGGRRGGG",
+        "y_from": 1.45,
+        "y_to": 1.725,
+        "left_edge_x": -5.94
+       },
+       {
+        "row": 3,
+        "colours_left_to_right": "GGGRGGGGRGGGGRGGG",
+        "y_from": 1.175,
+        "y_to": 1.45,
+        "left_edge_x": -6.2
+       }
+      ],
+      "row_shift_bricks": {
+       "row 2": 0.3333333333333333
+      },
+      "row_shift_units": {
+       "row 2": 0.26
+      }
+     },
+     "wall_b": {
+      "label": "(b)",
+      "label_centre": [
+       -7.0,
+       -0.7875
+      ],
+      "rows": [
+       {
+        "row": 1,
+        "colours_left_to_right": "GGGOGGGOGGGOGGGOG",
+        "y_from": -0.1,
+        "y_to": 0.175,
+        "left_edge_x": -6.2
+       },
+       {
+        "row": 2,
+        "colours_left_to_right": "GGOOGGOOGGOOGGOOG",
+        "y_from": -0.375,
+        "y_to": -0.1,
+        "left_edge_x": -5.86
+       },
+       {
+        "row": 3,
+        "colours_left_to_right": "GGOGOGOGOGOGOGOGO",
+        "y_from": -0.65,
+        "y_to": -0.375,
+        "left_edge_x": -6.2
+       },
+       {
+        "row": 4,
+        "colours_left_to_right": "GOGGOOGGOOGGOOGGO",
+        "y_from": -0.925,
+        "y_to": -0.65,
+        "left_edge_x": -5.86
+       },
+       {
+        "row": 5,
+        "colours_left_to_right": "GGOGOGOGOGOGOGOGO",
+        "y_from": -1.2,
+        "y_to": -0.925,
+        "left_edge_x": -6.2
+       },
+       {
+        "row": 6,
+        "colours_left_to_right": "GGOOGGOOGGOOGGOOG",
+        "y_from": -1.475,
+        "y_to": -1.2,
+        "left_edge_x": -5.86
+       },
+       {
+        "row": 7,
+        "colours_left_to_right": "GGGOGGGOGGGOGGGOG",
+        "y_from": -1.75,
+        "y_to": -1.475,
+        "left_edge_x": -6.2
+       }
+      ],
+      "row_shift_units": {
+       "rows 2, 4, 6": 0.34
+      }
+     },
+     "key": "G = grey brick, R = red brick, O = brown brick",
+     "blocks": {
+      "wall_a": {
+       "bricks": "3 to 7 of each row",
+       "grey_per_row": [
+        2,
+        3,
+        4
+       ],
+       "coloured_per_row": [
+        3,
+        2,
+        1
+       ],
+       "grey": 9,
+       "coloured": 6,
+       "per_row_spans_x": [
+        [
+         -4.69,
+         -0.69
+        ],
+        [
+         -4.43,
+         -0.43
+        ],
+        [
+         -4.69,
+         -0.69
+        ]
+       ],
+       "outline_points": [
+        [
+         -0.69,
+         2.05
+        ],
+        [
+         -0.69,
+         1.725
+        ],
+        [
+         -0.43,
+         1.725
+        ],
+        [
+         -0.43,
+         1.45
+        ],
+        [
+         -0.69,
+         1.45
+        ],
+        [
+         -0.69,
+         1.125
+        ],
+        [
+         -4.69,
+         1.125
+        ],
+        [
+         -4.69,
+         1.45
+        ],
+        [
+         -4.43,
+         1.45
+        ],
+        [
+         -4.43,
+         1.725
+        ],
+        [
+         -4.69,
+         1.725
+        ],
+        [
+         -4.69,
+         2.05
+        ]
+       ],
+       "outline": "FOCUS dashed 4 px"
+      },
+      "wall_b": {
+       "bricks": "3 to 6 of each row",
+       "grey_per_row": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3
+       ],
+       "coloured_per_row": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+       ],
+       "grey": 16,
+       "coloured": 12,
+       "per_row_spans_x": [
+        [
+         -4.69,
+         -1.47
+        ],
+        [
+         -4.35,
+         -1.13
+        ],
+        [
+         -4.69,
+         -1.47
+        ],
+        [
+         -4.35,
+         -1.13
+        ],
+        [
+         -4.69,
+         -1.47
+        ],
+        [
+         -4.35,
+         -1.13
+        ],
+        [
+         -4.69,
+         -1.47
+        ]
+       ],
+       "outline_points": [
+        [
+         -1.47,
+         0.225
+        ],
+        [
+         -1.47,
+         -0.1
+        ],
+        [
+         -1.13,
+         -0.1
+        ],
+        [
+         -1.13,
+         -0.375
+        ],
+        [
+         -1.47,
+         -0.375
+        ],
+        [
+         -1.47,
+         -0.65
+        ],
+        [
+         -1.13,
+         -0.65
+        ],
+        [
+         -1.13,
+         -0.925
+        ],
+        [
+         -1.47,
+         -0.925
+        ],
+        [
+         -1.47,
+         -1.2
+        ],
+        [
+         -1.13,
+         -1.2
+        ],
+        [
+         -1.13,
+         -1.475
+        ],
+        [
+         -1.47,
+         -1.475
+        ],
+        [
+         -1.47,
+         -1.8
+        ],
+        [
+         -4.69,
+         -1.8
+        ],
+        [
+         -4.69,
+         -1.475
+        ],
+        [
+         -4.35,
+         -1.475
+        ],
+        [
+         -4.35,
+         -1.2
+        ],
+        [
+         -4.69,
+         -1.2
+        ],
+        [
+         -4.69,
+         -0.925
+        ],
+        [
+         -4.35,
+         -0.925
+        ],
+        [
+         -4.35,
+         -0.65
+        ],
+        [
+         -4.69,
+         -0.65
+        ],
+        [
+         -4.69,
+         -0.375
+        ],
+        [
+         -4.35,
+         -0.375
+        ],
+        [
+         -4.35,
+         -0.1
+        ],
+        [
+         -4.69,
+         -0.1
+        ],
+        [
+         -4.69,
+         0.225
+        ]
+       ],
+       "outline": "FOCUS dashed 4 px"
+      }
+     },
+     "tags": [
+      {
+       "text": "9 grey",
+       "centre": [
+        -3.5,
+        2.55
+       ]
+      },
+      {
+       "text": "6 coloured",
+       "centre": [
+        -1.4,
+        2.55
+       ]
+      },
+      {
+       "text": "16 grey",
+       "centre": [
+        -3.9,
+        -2.3
+       ]
+      },
+      {
+       "text": "12 coloured",
+       "centre": [
+        -1.5,
+        -2.3
+       ]
+      }
+     ]
+    },
+    "manim_description": "Draw exactly the same two walls and the same labels '(a)' and '(b)' as the question figure (same positions, colours and brick pattern): Draw two brick walls, wall (a) above wall (b). Every brick is a rectangle 0.78 wide and 0.275 high with INK outline 2 px; bricks touch their neighbours and there are no mortar gaps. Brick fills: grey = #B9BABB in both walls; coloured = #D2232A (red) in wall (a) and #BA7B3F (brown) in wall (b). Wall (a): 3 rows of 17 bricks. Row 1 occupies y from 1.725 to 2.0, row 2 y from 1.45 to 1.725, row 3 y from 1.175 to 1.45. Rows 1 and 3 have their left edge at x = -6.2; row 2 is shifted right by 0.26 so its left edge is at x = -5.94. Colours left to right (G grey, R red): row 1 GGRRRGGRRRGGRRRGG; row 2 GGRRGGGRRGGGRRGGG; row 3 GGGRGGGGRGGGGRGGG. Wall (b): 7 rows of 17 bricks. Row k occupies y from 0.175 - 0.275 k to 0.175 - 0.275 (k - 1), so row 1 is y from -0.1 to 0.175 and row 7 is y from -1.75 to -1.475. Rows 1, 3, 5 and 7 have their left edge at x = -6.2; rows 2, 4 and 6 are shifted right by 0.34 so their left edge is at x = -5.86. Colours left to right (G grey, O brown): row 1 GGGOGGGOGGGOGGGOG; row 2 GGOOGGOOGGOOGGOOG; row 3 GGOGOGOGOGOGOGOGO; row 4 GOGGOOGGOOGGOOGGO; row 5 GGOGOGOGOGOGOGOGO; row 6 GGOOGGOOGGOOGGOOG; row 7 GGGOGGGOGGGOGGGOG. Labels in INK sans-serif, text height 0.42 units, centred at x = -7.0: '(a)' at y = 1.5875 and '(b)' at y = -0.7875. Then add, on top: (1) one closed dashed FOCUS outline, 4 px, around bricks 3 to 7 of each row of wall (a), with corner points in order (-0.69, 2.05), (-0.69, 1.725), (-0.43, 1.725), (-0.43, 1.45), (-0.69, 1.45), (-0.69, 1.125), (-4.69, 1.125), (-4.69, 1.45), (-4.43, 1.45), (-4.43, 1.725), (-4.69, 1.725), (-4.69, 2.05); (2) one closed dashed FOCUS outline, 4 px, around bricks 3 to 6 of each row of wall (b), with corner points in order (-1.47, 0.225), (-1.47, -0.1), (-1.13, -0.1), (-1.13, -0.375), (-1.47, -0.375), (-1.47, -0.65), (-1.13, -0.65), (-1.13, -0.925), (-1.47, -0.925), (-1.47, -1.2), (-1.13, -1.2), (-1.13, -1.475), (-1.47, -1.475), (-1.47, -1.8), (-4.69, -1.8), (-4.69, -1.475), (-4.35, -1.475), (-4.35, -1.2), (-4.69, -1.2), (-4.69, -0.925), (-4.35, -0.925), (-4.35, -0.65), (-4.69, -0.65), (-4.69, -0.375), (-4.35, -0.375), (-4.35, -0.1), (-4.69, -0.1), (-4.69, 0.225); (3) ANSWER sans-serif tags with text height 0.36 units, each centred on its point: '9 grey' at (-3.5, 2.55), '6 coloured' at (-1.4, 2.55), '16 grey' at (-3.9, -2.3), '12 coloured' at (-1.5, -2.3). Draw nothing else.",
+    "visible_text": [
+     "(a)",
+     "(b)",
+     "9 grey",
+     "6 coloured",
+     "16 grey",
+     "12 coloured"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art, faces, scenery",
+     "the ratios 9 : 6, 3 : 2, 16 : 12 or 4 : 3",
+     "per-row counts",
+     "any change to the brick pattern"
+    ],
+    "accuracy_checks": [
+     "wall (a) block (bricks 3 to 7 of each row read RRRGG, RRGGG, GRGGG): grey 2 + 3 + 4 = 9, red 3 + 2 + 1 = 6",
+     "wall (b) block (bricks 3 to 6 of each row read GOGG, OOGG, OGOG, GGOO, OGOG, OOGG, GOGG): grey 3 + 2 + 2 + 2 + 2 + 2 + 3 = 16, brown 1 + 2 + 2 + 2 + 2 + 2 + 1 = 12",
+     "the block outlines follow the brick edges row by row (steps of 0.26 and 0.34 units where rows are shifted) with a 0.05 unit margin",
+     "the walls and labels are identical to the question figure"
+    ],
+    "alt_text": "The same two walls with one repeating block outlined in each: 9 grey and 6 coloured bricks in wall (a), 16 grey and 12 coloured bricks in wall (b).",
+    "render_note": "Same as M2.S8.T8.C26.IMG1 plus the block outlines and four count tags. The book does not mark a block; the windows (bricks 3 to 7 in (a), 3 to 6 in (b)) are one valid choice that gives the printed counts 9 / 6 and 16 / 12 (any 4 consecutive bricks of wall (b) from brick 2 on, or any 5 of wall (a), give the same totals)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C28",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Figure it Out, 7.6 set, p.176 Q1",
+   "question_text": "Anagh mixes 600 mL of orange juice with 900 mL of apple juice to make a fruit drink. Write the ratio of orange juice to apple juice in its simplest form.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two volumes in the text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C29",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "Figure it Out, 7.6 set, p.176 Q1",
+   "question_text": "Anagh mixes 600 mL of orange juice with 900 mL of apple juice to make a fruit drink. Write the ratio of orange juice to apple juice in its simplest form.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "HCF 300, 600 / 300 = 2, 900 / 300 = 3 in LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C34",
+   "role": "question",
+   "lp_book_number": "Example 2: Example: Lemonade and Sugar Spoons",
+   "ncert_ref": "Section 7.4 Example 2, pp.162-163",
+   "question_text": "Kesang uses 10 spoons of sugar for 6 glasses of lemonade. How many spoons does she need for 18 glasses in all with the same sweetness?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "6 glasses, 10 spoons and 18 glasses are in the text; the book's lemonade has no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C35",
+   "role": "solution",
+   "lp_book_number": "Example 2: Example: Lemonade and Sugar Spoons",
+   "ncert_ref": "Section 7.4 Example 2, pp.162-163",
+   "question_text": "Kesang uses 10 spoons of sugar for 6 glasses of lemonade. How many spoons does she need for 18 glasses in all with the same sweetness?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Factor 18 / 6 = 3 and 10 x 3 = 30 in LaTeX; the proportion 6 : 10 :: 18 : 30 is a line of text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C36",
+   "role": "question",
+   "lp_book_number": "Example 3: Example: Nitin and Hari's Walls",
+   "ncert_ref": "Section 7.4 Example 3, p.163",
+   "question_text": "Nitin builds a 60 ft wall with 3 bags of cement and Hari builds a 40 ft wall with 2 bags. Are the walls equally strong?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two walls with their lengths and bags are in the text; the book has no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C37",
+   "role": "solution",
+   "lp_book_number": "Example 3: Example: Nitin and Hari's Walls",
+   "ncert_ref": "Section 7.4 Example 3, p.163",
+   "question_text": "Nitin builds a 60 ft wall with 3 bags of cement and Hari builds a 40 ft wall with 2 bags. Are the walls equally strong?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "60 / 3 = 20 and 40 / 2 = 20 in LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C38",
+   "role": "question",
+   "lp_book_number": "Example 7: Example: Missing Terms of 14 : 21",
+   "ncert_ref": "Section 7.4 Example 7, p.164",
+   "question_text": "Fill in the missing terms so that each ratio is proportional to 14 : 21: ___ : 42, 6 : ___, 2 : ___.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Three ratios with blanks in the text; the blanks are written as underlines in LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C39",
+   "role": "solution",
+   "lp_book_number": "Example 7: Example: Missing Terms of 14 : 21",
+   "ncert_ref": "Section 7.4 Example 7, p.164",
+   "question_text": "Fill in the missing terms so that each ratio is proportional to 14 : 21: ___ : 42, 6 : ___, 2 : ___.",
+   "decision": "optional",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "OPTIONAL, not added: the book draws one small arrow picture (14 : 21 to ___ : 42 with x 2 on both terms) for the first blank only; the LaTeX steps already give every factor and result, so the picture only makes it nicer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Text only: factors x 2, x 3/7 and / 7 are in the steps; results 28 : 42, 6 : 9 and 2 : 3."
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C40",
+   "role": "question",
+   "lp_book_number": "Finding a Missing Term, Q1",
+   "ncert_ref": "7.4.ex4",
+   "question_text": "In my school, there are 5 teachers and 170 students. The ratio of teachers to students in my school is 5 : 170. Count the number of teachers and students in your school. What is the ratio of teachers to students in your school? Is it proportional to the one in my school?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The learner counts the teachers and students of their own school; the book gives no figure, so none is invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C41",
+   "role": "solution",
+   "lp_book_number": "Finding a Missing Term, Q1",
+   "ncert_ref": "7.4.ex4",
+   "question_text": "In my school, there are 5 teachers and 170 students. The ratio of teachers to students in my school is 5 : 170. Count the number of teachers and students in your school. What is the ratio of teachers to students in your school? Is it proportional to the one in my school?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Simplest-form arithmetic (5 : 170 to 1 : 34, 12 : 360 to 1 : 30) is written as LaTeX; the book prints no answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C42",
+   "role": "question",
+   "lp_book_number": "Finding a Missing Term, Q2",
+   "ncert_ref": "7.4.ex5",
+   "question_text": "Measure the width and height (to the nearest cm) of the blackboard in your classroom. What is the ratio of width to height of the blackboard? Can you draw a rectangle in your notebook whose width and height are proportional to the ratio of the blackboard? Compare the rectangle you have drawn to those drawn by your classmates. Do they all look the same?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The learner measures their own blackboard; the book gives no figure, so no question figure is invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C43",
+   "role": "solution",
+   "lp_book_number": "Finding a Missing Term, Q2",
+   "ncert_ref": "7.4.ex5",
+   "question_text": "Measure the width and height (to the nearest cm) of the blackboard in your classroom. What is the ratio of width to height of the blackboard? Can you draw a rectangle in your notebook whose width and height are proportional to the ratio of the blackboard? Compare the rectangle you have drawn to those drawn by your classmates. Do they all look the same?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The question asks the learner to draw a rectangle in the ratio of the blackboard; the LP answer is a drawing (3 cm by 1 cm or 9 cm by 3 cm), a word-question with a figure answer, so the rectangles are drawn; the steps describe them only in words.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S11.T11.C43.IMG1",
+   "manim_scene": "c8_7_ex5_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C43.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "mensuration_figure",
+     "unit": "cm",
+     "to_scale": true,
+     "rectangles": [
+      {
+       "name": "rectangle_1",
+       "lower_left": [
+        0,
+        0
+       ],
+       "width": 3,
+       "height": 1,
+       "outline": "ANSWER",
+       "fill": "MARK_FILL",
+       "width_label": "3 cm",
+       "height_label": "1 cm"
+      },
+      {
+       "name": "rectangle_2",
+       "lower_left": [
+        5,
+        0
+       ],
+       "width": 9,
+       "height": 3,
+       "outline": "ANSWER",
+       "fill": "MARK_FILL",
+       "width_label": "9 cm",
+       "height_label": "3 cm"
+      }
+     ],
+     "labels": [
+      {
+       "text": "3 cm",
+       "place": "centred below rectangle 1, x=1.5",
+       "colour": "ANSWER"
+      },
+      {
+       "text": "1 cm",
+       "place": "immediately right of rectangle 1, y=0.5",
+       "colour": "ANSWER"
+      },
+      {
+       "text": "9 cm",
+       "place": "centred below rectangle 2, x=9.5",
+       "colour": "ANSWER"
+      },
+      {
+       "text": "3 cm",
+       "place": "immediately right of rectangle 2, y=1.5",
+       "colour": "ANSWER"
+      }
+     ]
+    },
+    "manim_description": "Two rectangles side by side on one common baseline, on a plain BG (#FFFFFF) canvas, 16:9, drawn to scale with 1 cm the same length on both axes. Use cm coordinates with y upward and the baseline at y=0. Rectangle 1 (left): lower-left corner (0,0), 3 cm wide and 1 cm high. Rectangle 2 (right): lower-left corner (5,0), 9 cm wide and 3 cm high, so a gap of 2 cm separates the two rectangles. Both rectangles have ANSWER (#009E73) outlines of 3 px and MARK_FILL (#CDEBD9) fill. Write four labels in ANSWER colour, plain upright text: '3 cm' centred below rectangle 1 (x=1.5); '1 cm' immediately right of rectangle 1, vertically centred at y=0.5; '9 cm' centred below rectangle 2 (x=9.5); '3 cm' immediately right of rectangle 2, vertically centred at y=1.5. No arrows, no dimension lines, no grid, no diagonal, no other text. Fit the two rectangles and the labels inside the canvas with an even margin, the whole group centred.",
+    "visible_text": [
+     "3 cm",
+     "1 cm",
+     "9 cm",
+     "3 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the blackboard, a classroom or a ruler",
+     "the 360 : 120 measurement or the words 'ratio' and 'same shape'",
+     "a grid, a diagonal or arrows"
+    ],
+    "accuracy_checks": [
+     "rectangle 1 is 3 cm by 1 cm, ratio 3 : 1",
+     "rectangle 2 is 9 cm by 3 cm, ratio 9 : 3 = 3 : 1",
+     "both rectangles have the same width : height ratio 3 : 1, so they are the same shape; drawn to one common scale rectangle 2 is exactly 3 times rectangle 1 in each side",
+     "labels equal the sizes in the LP solution: 3 cm wide and 1 cm high, or 9 cm by 3 cm"
+    ],
+    "alt_text": "A 3 cm by 1 cm rectangle and a 9 cm by 3 cm rectangle on one base line, both in the ratio 3 : 1.",
+    "render_note": "The LP solution gives the sample answer (a blackboard of 360 cm by 120 cm reduces to 3 : 1; draw 3 cm by 1 cm or 9 cm by 3 cm); the learner's own blackboard is open, so the figure draws the sample rectangles only."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C44",
+   "role": "question",
+   "lp_book_number": "Ratios and Proportions, Q2",
+   "ncert_ref": "FiO1.q2",
+   "question_text": "Give 3 ratios that are proportional to 4 : 9.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Words and numbers only: give three ratios proportional to 4 : 9; the book blanks are fill-in lines, not a figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C45",
+   "role": "solution",
+   "lp_book_number": "Ratios and Proportions, Q2",
+   "ncert_ref": "FiO1.q2",
+   "question_text": "Give 3 ratios that are proportional to 4 : 9.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Multiplying both terms by 2, 3 and 4 is plain arithmetic in LaTeX; the book's printed answer is a line of fractions, not a picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C46",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO1.q3",
+   "question_text": "Fill in the missing numbers for these ratios that are proportional to 18 : 24. 3 : ___, 12 : ___, 20 : ___, 27 : ___",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Fill-in ratios 3 : __, 12 : __, 20 : __, 27 : __ are fully stated in the text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C47",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO1.q3",
+   "question_text": "Fill in the missing numbers for these ratios that are proportional to 18 : 24. 3 : ___, 12 : ___, 20 : ___, 27 : ___",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The four completed ratios (3 : 4, 12 : 16, 20 : 80/3, 27 : 36) are LaTeX arithmetic; the book's printed answer is a list.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S13.T13.C49",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "7.4.cross_mult, 7.4.aryabhata",
+   "question_text": "Check by cross multiplication that 120 : 15 :: 80 : 10, then use Aryabhata's rule to find the fourth term of 120 : 15 :: 80 : ?",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Cross multiplication (120 x 10 = 15 x 80 = 1200) and Aryabhata's rule (15 x 80 / 120 = 10) are LaTeX arithmetic; the book prints no figure here, and the existing teaching image of this concept is never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write the two products and the division as LaTeX lines; no picture."
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C52",
+   "role": "question",
+   "lp_book_number": "Example 8: Example: Rice for the Mid-day Meal",
+   "ncert_ref": "7.4.ex8",
+   "question_text": "A cook makes 15 kg of rice for 120 students. On a rainy day only 80 students come. How much rice should the cook make?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem with all numbers (15 kg, 120 students, 80 students) in the text; the book prints no figure for Example 8.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C53",
+   "role": "solution",
+   "lp_book_number": "Example 8: Example: Rice for the Mid-day Meal",
+   "ncert_ref": "7.4.ex8",
+   "question_text": "A cook makes 15 kg of rice for 120 students. On a rainy day only 80 students come. How much rice should the cook make?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Factor of change 2/3 and 15 x 2/3 = 10 are LaTeX arithmetic; the same idea is already a teaching image (never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C54",
+   "role": "question",
+   "lp_book_number": "Example 9: Example: A Car's Distance in 4 Hours",
+   "ncert_ref": "7.4.ex9",
+   "question_text": "A car travels 90 km in 150 minutes. At the same speed, how far does it go in 4 hours?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem with all numbers (90 km, 150 minutes, 4 hours) in the text; the book prints no figure for Example 9.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C55",
+   "role": "solution",
+   "lp_book_number": "Example 9: Example: A Car's Distance in 4 Hours",
+   "ncert_ref": "7.4.ex9",
+   "question_text": "A car travels 90 km in 150 minutes. At the same speed, how far does it go in 4 hours?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Unit change to 240 minutes and 240 x 90 / 150 = 144 are LaTeX arithmetic; the double number line is already a teaching image (never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S15.T15.C56",
+   "role": "question",
+   "lp_book_number": "The Rule of Three, Q1",
+   "ncert_ref": "7.4.act1",
+   "question_text": "Take your favourite dish. Find out all the ingredients and their respective quantities needed to make the dish for your family. Suppose you are celebrating a festival and you want to invite 15 guests. Find out the quantities of the ingredients required to cook the same dish for them.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Activity on the learner's own favourite dish and 15 guests; no figure is given in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S15.T15.C57",
+   "role": "solution",
+   "lp_book_number": "The Rule of Three, Q1",
+   "ncert_ref": "7.4.act1",
+   "question_text": "Take your favourite dish. Find out all the ingredients and their respective quantities needed to make the dish for your family. Suppose you are celebrating a festival and you want to invite 15 guests. Find out the quantities of the ingredients required to cook the same dish for them.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "OPEN_ENDED"
+   ],
+   "reason": "The sample (5 people to 15 guests, factor 3) is LaTeX arithmetic; the answer is open and the book prints no picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S15.T15.C58",
+   "role": "question",
+   "lp_book_number": "Rule of Three, Q1",
+   "ncert_ref": "FiO2.q1",
+   "question_text": "The Earth travels approximately 940 million kilometres around the Sun in a year. How many kilometres will it travel in a week?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem with all numbers (940 million km, 52 weeks) in the text; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S15.T15.C59",
+   "role": "solution",
+   "lp_book_number": "Rule of Three, Q1",
+   "ncert_ref": "FiO2.q1",
+   "question_text": "The Earth travels approximately 940 million kilometres around the Sun in a year. How many kilometres will it travel in a week?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "940000000 / 52 = 18076923 (about) is LaTeX arithmetic; the book's printed answer is text only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C60",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO2.q2",
+   "question_text": "A mason is building a house in the shape shown in the diagram, with walls of 12 ft, 15 ft, 9 ft, 9 ft and 6 ft and an inner wall that separates two rooms. To build a wall of 10 feet, he requires approximately 1450 bricks. How many bricks would he need to build the house? Assume all walls are of the same height and thickness.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question says 'the shape shown in the diagram': which walls exist, which are shared and the five printed lengths (12, 15, 9, 9, 6 ft) live only in the plan; the learner cannot find the total wall length without it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C60.IMG1",
+   "manim_scene": "c8_7_fio2_q2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C60.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "mensuration_figure",
+     "unit": "ft",
+     "to_scale": true,
+     "scale": "1 ft = same length on both axes; origin at bottom-left corner of the big upper rectangle, y upward",
+     "segments": [
+      {
+       "from": [
+        0,
+        12
+       ],
+       "to": [
+        24,
+        12
+       ],
+       "role": "top edge, 9 ft + 15 ft"
+      },
+      {
+       "from": [
+        0,
+        12
+       ],
+       "to": [
+        0,
+        0
+       ],
+       "role": "left edge, 12 ft"
+      },
+      {
+       "from": [
+        24,
+        12
+       ],
+       "to": [
+        24,
+        0
+       ],
+       "role": "right edge, 12 ft"
+      },
+      {
+       "from": [
+        0,
+        0
+       ],
+       "to": [
+        24,
+        0
+       ],
+       "role": "bottom edge, 9 ft + 15 ft"
+      },
+      {
+       "from": [
+        9,
+        12
+       ],
+       "to": [
+        9,
+        -9
+       ],
+       "role": "inner wall 12 ft, continued as the left side of the small rectangle 9 ft"
+      },
+      {
+       "from": [
+        15,
+        0
+       ],
+       "to": [
+        15,
+        -9
+       ],
+       "role": "right side of the small rectangle, 9 ft"
+      },
+      {
+       "from": [
+        9,
+        -9
+       ],
+       "to": [
+        15,
+        -9
+       ],
+       "role": "bottom of the small rectangle, 6 ft"
+      }
+     ],
+     "rooms": {
+      "left_room": {
+       "x": [
+        0,
+        9
+       ],
+       "y": [
+        0,
+        12
+       ]
+      },
+      "right_room": {
+       "x": [
+        9,
+        24
+       ],
+       "y": [
+        0,
+        12
+       ]
+      },
+      "small_rectangle": {
+       "x": [
+        9,
+        15
+       ],
+       "y": [
+        -9,
+        0
+       ],
+       "width_ft": 6,
+       "height_ft": 9
+      }
+     },
+     "labels": [
+      {
+       "text": "12 ft",
+       "wall": "left edge (0,12)-(0,0)",
+       "place": "outside, immediately left of the left edge, vertically centred at y=6",
+       "colour": "INK"
+      },
+      {
+       "text": "15 ft",
+       "wall": "top edge of the right room, (9,12)-(24,12)",
+       "place": "inside the right room just below the top edge, horizontally centred on x=16.5",
+       "colour": "INK"
+      },
+      {
+       "text": "9 ft",
+       "wall": "bottom edge of the left room, (0,0)-(9,0)",
+       "place": "just below the bottom edge of the left room, horizontally centred on x=4.5",
+       "colour": "INK"
+      },
+      {
+       "text": "9 ft",
+       "wall": "right side of the small rectangle, (15,0)-(15,-9)",
+       "place": "immediately right of the small rectangle's right side, vertically centred at y=-4.5",
+       "colour": "INK"
+      },
+      {
+       "text": "6 ft",
+       "wall": "bottom of the small rectangle, (9,-9)-(15,-9)",
+       "place": "inside the small rectangle just above its bottom edge, horizontally centred on x=12",
+       "colour": "INK"
+      }
+     ],
+     "vertex_letters_drawn": false
+    },
+    "manim_description": "Flat 2D house plan on a plain BG (#FFFFFF) canvas, 16:9, drawn to scale with the same pixel length for 1 ft on both axes. All lines are INK, 3 px stroke, no fill, no door, window or furniture symbols. Use ft coordinates with the origin at the bottom-left corner of the big upper rectangle, x to the right, y upward. Draw seven straight segments: (1) the top edge from (0,12) to (24,12); (2) the left edge from (0,12) to (0,0); (3) the right edge from (24,12) to (24,0); (4) the bottom edge from (0,0) to (24,0); (5) the inner wall from (9,12) straight down to (9,-9), so it crosses the bottom edge at (9,0) and continues as the left side of the small rectangle; (6) the right side of the small rectangle from (15,0) to (15,-9); (7) the bottom of the small rectangle from (9,-9) to (15,-9). The result is a 24 ft by 12 ft rectangle split by the inner wall into a left room 9 ft wide and a right room 15 ft wide, with a small rectangle 6 ft wide and 9 ft high hanging below the right room: its left side is the downward continuation of the inner wall and its top is the stretch of the bottom edge from x=9 to x=15. Write exactly five labels in INK, plain upright text, no arrows and no dimension lines: '12 ft' outside the figure immediately left of the left edge, vertically centred at y=6; '15 ft' inside the right room just below the top edge, horizontally centred on x=16.5; '9 ft' just below the bottom edge of the left room, horizontally centred on x=4.5; '9 ft' immediately right of the small rectangle's right side, vertically centred at y=-4.5; '6 ft' inside the small rectangle just above its bottom edge, horizontally centred on x=12. Draw no other number, letter or symbol (no vertex letters, no total). Fit the figure and its labels inside the canvas with an even margin, the whole group centred.",
+    "visible_text": [
+     "12 ft",
+     "15 ft",
+     "9 ft",
+     "9 ft",
+     "6 ft"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the five wall lengths the book does not print in the figure (right edge, inner wall, top of left room, bottom of right room, left side of the small rectangle)",
+     "vertex letters, dimension arrows or dimension lines",
+     "the total length of the walls, bricks, door, window or furniture symbols"
+    ],
+    "accuracy_checks": [
+     "exactly five labels: 12 ft (left edge), 15 ft (top of right room), 9 ft (under left room), 9 ft (right of small rectangle), 6 ft (inside small rectangle)",
+     "left room 9 wide + right room 15 wide = 24 ft total width; both rooms 12 ft high",
+     "small rectangle is 6 ft wide and 9 ft high, hangs below the right room, and its left side lies on the line x=9 of the inner wall",
+     "scale is the same on both axes, so the small rectangle is drawn 9/12 of the height of the big rectangle (the book's picture draws it about 8 ft high)",
+     "no segment length other than the five printed labels is written"
+    ],
+    "alt_text": "House plan: a 24 ft wide, 12 ft high rectangle split into a 9 ft room and a 15 ft room, with a 6 ft wide, 9 ft high room below the right room.",
+    "render_note": "The book draws the small rectangle about 8 ft high but labels it 9 ft (not to scale); this spec draws it 9 ft high so the picture agrees with its label and with the answer 12+12+12+15+9+15+9+9+9+6 = 108. Same book picture is printed again beside the printed answer (page 26): same layout."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C61",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO2.q2",
+   "question_text": "A mason is building a house in the shape shown in the diagram, with walls of 12 ft, 15 ft, 9 ft, 9 ft and 6 ft and an inner wall that separates two rooms. To build a wall of 10 feet, he requires approximately 1450 bricks. How many bricks would he need to build the house? Assume all walls are of the same height and thickness.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The solution adds what the plan never shows: the other five wall lengths (inner wall 12, right edge 12, top-left 9, bottom-right 15, left side of the small room 9) that the printed sum 12+12+12+15+9+15+9+9+9+6 = 108 uses; the figure marks the ten walls it adds up.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C61.IMG1",
+   "manim_scene": "c8_7_fio2_q2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C61.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S16.T16.C60.IMG1",
+    "content": {
+     "type": "mensuration_figure",
+     "unit": "ft",
+     "to_scale": true,
+     "scale": "same as M3.S16.T16.C60.IMG1",
+     "segments": [
+      {
+       "from": [
+        0,
+        12
+       ],
+       "to": [
+        24,
+        12
+       ],
+       "role": "top edge, 9 ft + 15 ft"
+      },
+      {
+       "from": [
+        0,
+        12
+       ],
+       "to": [
+        0,
+        0
+       ],
+       "role": "left edge, 12 ft"
+      },
+      {
+       "from": [
+        24,
+        12
+       ],
+       "to": [
+        24,
+        0
+       ],
+       "role": "right edge, 12 ft"
+      },
+      {
+       "from": [
+        0,
+        0
+       ],
+       "to": [
+        24,
+        0
+       ],
+       "role": "bottom edge, 9 ft + 15 ft"
+      },
+      {
+       "from": [
+        9,
+        12
+       ],
+       "to": [
+        9,
+        -9
+       ],
+       "role": "inner wall 12 ft, continued as the left side of the small rectangle 9 ft"
+      },
+      {
+       "from": [
+        15,
+        0
+       ],
+       "to": [
+        15,
+        -9
+       ],
+       "role": "right side of the small rectangle, 9 ft"
+      },
+      {
+       "from": [
+        9,
+        -9
+       ],
+       "to": [
+        15,
+        -9
+       ],
+       "role": "bottom of the small rectangle, 6 ft"
+      }
+     ],
+     "rooms": {
+      "left_room": {
+       "x": [
+        0,
+        9
+       ],
+       "y": [
+        0,
+        12
+       ]
+      },
+      "right_room": {
+       "x": [
+        9,
+        24
+       ],
+       "y": [
+        0,
+        12
+       ]
+      },
+      "small_rectangle": {
+       "x": [
+        9,
+        15
+       ],
+       "y": [
+        -9,
+        0
+       ],
+       "width_ft": 6,
+       "height_ft": 9
+      }
+     },
+     "labels": [
+      {
+       "text": "12 ft",
+       "wall": "left edge (0,12)-(0,0)",
+       "place": "outside, immediately left of the left edge, vertically centred at y=6",
+       "colour": "INK"
+      },
+      {
+       "text": "15 ft",
+       "wall": "top edge of the right room, (9,12)-(24,12)",
+       "place": "inside the right room just below the top edge, horizontally centred on x=16.5",
+       "colour": "INK"
+      },
+      {
+       "text": "9 ft",
+       "wall": "bottom edge of the left room, (0,0)-(9,0)",
+       "place": "just below the bottom edge of the left room, horizontally centred on x=4.5",
+       "colour": "INK"
+      },
+      {
+       "text": "9 ft",
+       "wall": "right side of the small rectangle, (15,0)-(15,-9)",
+       "place": "immediately right of the small rectangle's right side, vertically centred at y=-4.5",
+       "colour": "INK"
+      },
+      {
+       "text": "6 ft",
+       "wall": "bottom of the small rectangle, (9,-9)-(15,-9)",
+       "place": "inside the small rectangle just above its bottom edge, horizontally centred on x=12",
+       "colour": "INK"
+      },
+      {
+       "text": "9 ft",
+       "wall": "top edge of the left room, (0,12)-(9,12)",
+       "place": "inside the left room just below the top edge, horizontally centred on x=4.5",
+       "colour": "ANSWER"
+      },
+      {
+       "text": "12 ft",
+       "wall": "right edge (24,12)-(24,0)",
+       "place": "outside, immediately right of the right edge, vertically centred at y=6",
+       "colour": "ANSWER"
+      },
+      {
+       "text": "12 ft",
+       "wall": "inner wall between the rooms, (9,12)-(9,0)",
+       "place": "inside the right room, immediately right of the inner wall, vertically centred at y=6",
+       "colour": "ANSWER"
+      },
+      {
+       "text": "15 ft",
+       "wall": "bottom edge of the right room, (9,0)-(24,0)",
+       "place": "inside the right room just above the bottom edge, horizontally centred on x=16.5",
+       "colour": "ANSWER"
+      },
+      {
+       "text": "9 ft",
+       "wall": "left side of the small rectangle, (9,0)-(9,-9)",
+       "place": "immediately left of the small rectangle's left side (the lower part of the inner wall), below the left room, vertically centred at y=-4.5",
+       "colour": "ANSWER"
+      }
+     ],
+     "wall_lengths_ft_in_lp_order": [
+      12,
+      12,
+      12,
+      15,
+      9,
+      15,
+      9,
+      9,
+      9,
+      6
+     ],
+     "sum_of_wall_lengths_ft_not_drawn": 108,
+     "vertex_letters_drawn": false
+    },
+    "manim_description": "Same picture as the question figure M3.S16.T16.C60.IMG1: same canvas, same coordinates, same scale, same stroke, same seven INK segments, and the same five INK labels in the same positions: '12 ft' outside, immediately left of the left edge, vertically centred at y=6; '15 ft' inside the right room just below the top edge, horizontally centred on x=16.5; '9 ft' just below the bottom edge of the left room, horizontally centred on x=4.5; '9 ft' immediately right of the small rectangle's right side, vertically centred at y=-4.5; '6 ft' inside the small rectangle just above its bottom edge, horizontally centred on x=12. Add five labels in ANSWER (#009E73), same font and size as the given labels: '9 ft' inside the left room just below the top edge, horizontally centred on x=4.5; '12 ft' outside, immediately right of the right edge, vertically centred at y=6; '12 ft' inside the right room, immediately right of the inner wall, vertically centred at y=6; '15 ft' inside the right room just above the bottom edge, horizontally centred on x=16.5; '9 ft' immediately left of the small rectangle's left side (the lower part of the inner wall), below the left room, vertically centred at y=-4.5. Nothing moves, no line changes colour, nothing else is added (no total, no brick count, no arrows). Read as wall lengths the ten labels are: left edge 12, inner wall 12, right edge 12, top edge 9 and 15, bottom edge 9 and 15, small rectangle left side 9, right side 9, bottom 6 (all in ft).",
+    "visible_text": [
+     "12 ft",
+     "15 ft",
+     "9 ft",
+     "9 ft",
+     "6 ft",
+     "9 ft",
+     "12 ft",
+     "12 ft",
+     "15 ft",
+     "9 ft"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the total 108 ft, a brick count or bricks",
+     "vertex letters, dimension arrows or dimension lines",
+     "any change to the given figure's lines or labels"
+    ],
+    "accuracy_checks": [
+     "ten labels in total: five given (INK) plus five added (ANSWER green)",
+     "each label equals the coordinate length of its wall: left 12, inner 12, right 12, top-left 9, top-right 15, bottom-left 9, bottom-right 15, small-left 9, small-right 9, small-bottom 6",
+     "the ten labels add up to 12+12+12+15+9+15+9+9+9+6 = 108 (the figure itself does not show the total)",
+     "given part identical to the question figure: same lines, same positions, same INK labels"
+    ],
+    "alt_text": "The same house plan with every wall labelled: 12, 12 and 12 ft on the left, inner and right walls; 9 and 15 ft on top and bottom; 9, 9 and 6 ft on the small room.",
+    "render_note": "Same layout as the question figure M3.S16.T16.C60.IMG1; the book's printed answer only lists the ten numbers, this figure marks which wall each belongs to."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C62",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "FiO4.q2",
+   "question_text": "Last year, we hired 3 buses for the school trip. We had a total of 162 students and teachers who went on that trip and all the buses were full. This year we have 204 students. How many buses will we need? Will all the buses be full?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem with all numbers (3 buses, 162 people, 204 students) in the text; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C63",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "FiO4.q2",
+   "question_text": "Last year, we hired 3 buses for the school trip. We had a total of 162 students and teachers who went on that trip and all the buses were full. This year we have 204 students. How many buses will we need? Will all the buses be full?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "54 per bus, 4 buses, 216 seats and 12 empty seats are LaTeX arithmetic; the book's printed answer is text only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C64",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "FiO4.q5",
+   "question_text": "Let us try an ancient problem from Lilavati. At that time weights were measured in a unit named palas and niskas was a unit of money. \"If 2.5 palas of saffron costs 3/7 niskas, O expert businessman! tell me quickly what quantity of saffron can be bought for 9 niskas?\"",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The Lilavati verse gives every number (2.5 palas, 3/7 niska, 9 niskas) in words; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C65",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "FiO4.q5",
+   "question_text": "Let us try an ancient problem from Lilavati. At that time weights were measured in a unit named palas and niskas was a unit of money. \"If 2.5 palas of saffron costs 3/7 niskas, O expert businessman! tell me quickly what quantity of saffron can be bought for 9 niskas?\"",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Cross multiplication giving 52.5 palas is LaTeX arithmetic; the book's printed answer is text only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C66",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "FiO4.q7",
+   "question_text": "The mass of equal volumes of gold and water are in the ratio 37 : 2. If 1 litre of water is 1 kg in mass, what is the mass of 1 litre of gold?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem with the ratio 37 : 2 and 1 litre of water = 1 kg in the text; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C67",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "FiO4.q7",
+   "question_text": "The mass of equal volumes of gold and water are in the ratio 37 : 2. If 1 litre of water is 1 kg in mass, what is the mass of 1 litre of gold?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "37 : 2 :: x : 1 giving 18.5 kg is LaTeX arithmetic; the book's printed answer is text only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C68",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "FiO4.q9",
+   "question_text": "A tap takes 15 seconds to fill a mug of water. The volume of the mug is 500 mL. How much time does the same tap take to fill a bucket of water if the bucket has a 10 litre capacity?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem with all numbers (15 seconds, 500 mL, 10 litres) in the text; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C69",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "FiO4.q9",
+   "question_text": "A tap takes 15 seconds to fill a mug of water. The volume of the mug is 500 mL. How much time does the same tap take to fill a bucket of water if the bucket has a 10 litre capacity?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "10 L = 10000 mL, factor 20 and 300 seconds = 5 minutes are LaTeX arithmetic; the book's printed answer is text only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C73",
+   "role": "question",
+   "lp_book_number": "Example 6: Example: Neelima and Her Mother's Ages",
+   "ncert_ref": "7.4.ex6",
+   "question_text": "Neelima is 3 and her mother is 10 times as old. What is the ratio of their ages now, and when Neelima is 12?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem with ages 3 and 30 and 12 in the text; the book prints no figure for Example 6.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C74",
+   "role": "solution",
+   "lp_book_number": "Example 6: Example: Neelima and Her Mother's Ages",
+   "ncert_ref": "7.4.ex6",
+   "question_text": "Neelima is 3 and her mother is 10 times as old. What is the ratio of their ages now, and when Neelima is 12?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "3 : 30 = 1 : 10 and 12 : 39 = 4 : 13 are LaTeX arithmetic; the comparison is already a teaching image (never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C75",
+   "role": "question",
+   "lp_book_number": "Speed and Time: Lucknow to Kanpur",
+   "ncert_ref": "7.4.puneeth",
+   "question_text": "Puneeth's father rides from Lucknow to Kanpur in 2 hours at 50 km/h. How long does the trip take at 75 km/h?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Speed-and-time word problem: every number is in the sentence and the book prints no figure for it (only a thinking-face emoji). The teaching image of T17 is not linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C76",
+   "role": "solution",
+   "lp_book_number": "Speed and Time: Lucknow to Kanpur",
+   "ncert_ref": "7.4.puneeth",
+   "question_text": "Puneeth's father rides from Lucknow to Kanpur in 2 hours at 50 km/h. How long does the trip take at 75 km/h?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Steps are arithmetic (2 x 75 / 50 = 3 wrong, 50 x 2 = 100 km, 100 / 75 = 4/3 h = 1 h 20 min); the answer is a time, not a drawing.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C77",
+   "role": "question",
+   "lp_book_number": "Unit Conversions, Q6",
+   "ncert_ref": "FiO4.q6",
+   "question_text": "Harmain is a 1 year old girl. Her elder brother is 5 years old. What will be Harmain's age when the ratio of her age to her brother's age is 1 : 2?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Age word problem: all data in the sentence; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C78",
+   "role": "solution",
+   "lp_book_number": "Unit Conversions, Q6",
+   "ncert_ref": "FiO4.q6",
+   "question_text": "Harmain is a 1 year old girl. Her elder brother is 5 years old. What will be Harmain's age when the ratio of her age to her brother's age is 1 : 2?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Algebra and a check (x : (x + 4) = 1 : 2, x = 4); the answer is a number. The book's own answer (x = 3 years later, age 4) reaches the same age.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C79",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q11",
+   "question_text": "A tractor can plough the same area of a field 4 times faster than a pair of oxen. A farmer wants to plough his 20 acre field. A pair of oxen takes 6 hours to plough an acre of land. How much time would it take if the farmer used a pair of oxen to plough the field? How much time would it take him if he decides to use a tractor instead?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Tractor and oxen word problem: area, speed factor and hours per acre are all in the text; no book figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C80",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q11",
+   "question_text": "A tractor can plough the same area of a field 4 times faster than a pair of oxen. A farmer wants to plough his 20 acre field. A pair of oxen takes 6 hours to plough an acre of land. How much time would it take if the farmer used a pair of oxen to plough the field? How much time would it take him if he decides to use a tractor instead?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic chain (20 x 6 = 120 h, 6 / 4 = 1.5 h per acre, 20 x 1.5 = 30 h); the answer is two numbers.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S21.T21.C82",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example: Shampoo sizes: is price proportional to volume?",
+   "ncert_ref": "7.4.note_project, 7.4.act2, 7.4.act2_eco",
+   "question_text": "A sachet of 6 mL costs ₹2, a 180 mL bottle ₹154, a 340 mL bottle ₹276 and a 1000 mL bottle ₹540. Which size gives the cheapest shampoo per mL?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The book's Activity 2 table (Container, Volume, Price for sachet 6 mL Rs 2, small 180 mL Rs 154, medium 340 mL Rs 276, large 1000 mL Rs 540) is a plain table with banded rows and no colour meaning; the question sentence already lists all four sizes and prices and the answer is per-mL arithmetic. The teaching image C82.IMG1 is kept and never linked.",
+   "text_alternative": "LaTeX array with columns Container, Volume, Price and rows Sachet 6 mL Rs 2; Small Bottle 180 mL Rs 154; Medium Bottle 340 mL Rs 276; Large Bottle 1000 mL Rs 540",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C84",
+   "role": "question",
+   "lp_book_number": "Example 10: Example: Himachal and Meghalaya Tea",
+   "ncert_ref": "7.4.ex10",
+   "question_text": "Himachal tea costs ₹200 for 200 g. Meghalaya tea costs ₹800 for 1 kg. Which tea is more expensive?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Example 10 as a question: prices and weights are in the sentence; the book prints no figure (the teaching image of T21 shows the five 200 g packets but is never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C85",
+   "role": "solution",
+   "lp_book_number": "Example 10: Example: Himachal and Meghalaya Tea",
+   "ncert_ref": "7.4.ex10",
+   "question_text": "Himachal tea costs ₹200 for 200 g. Meghalaya tea costs ₹800 for 1 kg. Which tea is more expensive?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Unit conversion and ratio arithmetic (200 : 200 and 1000 : 800, 1 : 1 and 5 : 4, 200 x 5 = 1000); the answer is a comparison of two prices.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S23.T23.C86",
+   "role": "question",
+   "lp_book_number": "Unit Conversions, Q3",
+   "ncert_ref": "FiO4.q3",
+   "question_text": "The area of Delhi is 1484 sq. km and the area of Mumbai is 550 sq. km. The population of Delhi is approximately 30 million and that of Mumbai is 20 million people. Which city is more crowded? Why do you say so?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Delhi and Mumbai data (areas and populations) are all in the sentence; the book prints no figure for it (the crane picture on the same page belongs to Q4).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S23.T23.C87",
+   "role": "solution",
+   "lp_book_number": "Unit Conversions, Q3",
+   "ncert_ref": "FiO4.q3",
+   "question_text": "The area of Delhi is 1484 sq. km and the area of Mumbai is 550 sq. km. The population of Delhi is approximately 30 million and that of Mumbai is 20 million people. Which city is more crowded? Why do you say so?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two divisions (30000000 / 1484, 20000000 / 550) and a comparison; the answer is a city name with two numbers.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S25.T25.C92",
+   "role": "question",
+   "lp_book_number": "Activity: Sharing 12 and 42 Counters",
+   "ncert_ref": "7.5.act3",
+   "question_text": "Share 12 counters in the ratio 3 : 1, and then 42 counters in the ratio 4 : 3.",
+   "decision": "none",
+   "reason_codes": [
+    "DECORATIVE_ONLY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure: 12 counters and the ratios 3 : 1 and 4 : 3 are in the sentence. The book's picture of two children with a heap of 12 seeds is an illustration, and its three pink circles (3 + 9, 8 + 4, 2 + 10 seeds) are open examples of 'different ways', not data of this question. A question with no given figure gets no question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S25.T25.C93",
+   "role": "solution",
+   "lp_book_number": "Activity: Sharing 12 and 42 Counters",
+   "ncert_ref": "7.5.act3",
+   "question_text": "Share 12 counters in the ratio 3 : 1, and then 42 counters in the ratio 4 : 3.",
+   "decision": "optional",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A figure would help but is not needed: the book's flow diagrams (whole 12 -> 3 : 1 x 3 -> 9 : 3 and whole 42 -> 4 : 3 x 6 -> 24 : 18) would show the method, but the four LP steps carry every number and the answer is two pairs of numbers, not an arrangement. The 42 half also has a teaching image (M4.S24.T24.C88.IMG1) that is never linked. Not added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S25.T25.C94",
+   "role": "question",
+   "lp_book_number": "Ratio Sharing, Q1",
+   "ncert_ref": "FiO3.q1",
+   "question_text": "Divide ₹4500 into two parts in the ratio 2 : 3.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Plain division of an amount in a ratio; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S25.T25.C95",
+   "role": "solution",
+   "lp_book_number": "Ratio Sharing, Q1",
+   "ncert_ref": "FiO3.q1",
+   "question_text": "Divide ₹4500 into two parts in the ratio 2 : 3.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three arithmetic lines (2 + 3 = 5, 4500 / 5 = 900, 1800 and 2700); the answer is two amounts. The teaching image of T24 (bar of 5 groups of 900) is not linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C96",
+   "role": "question",
+   "lp_book_number": "Example 11: Example: Sharing a Food Cart Profit",
+   "ncert_ref": "7.5.ex11",
+   "question_text": "Prashanti invests ₹75000 and Bhuvan ₹25000. They share a profit of ₹4000 in the ratio of their investments. What does each get?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Example 11 as a question: both investments and the profit are in the sentence; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C97",
+   "role": "solution",
+   "lp_book_number": "Example 11: Example: Sharing a Food Cart Profit",
+   "ncert_ref": "7.5.ex11",
+   "question_text": "Prashanti invests ₹75000 and Bhuvan ₹25000. They share a profit of ₹4000 in the ratio of their investments. What does each get?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Ratio reduction and sharing arithmetic (75000 : 25000 = 3 : 1, 4000 / 4 = 1000); the answer is two amounts.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C98",
+   "role": "question",
+   "lp_book_number": "Example 12: Example: Cement to Add to a Mixture",
+   "ncert_ref": "7.5.ex12",
+   "question_text": "A 40 kg mixture has sand and cement in the ratio 3 : 1. How much cement must be added to make the ratio 5 : 2?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Example 12 as a question: the mixture and both ratios are in the sentence; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C99",
+   "role": "solution",
+   "lp_book_number": "Example 12: Example: Cement to Add to a Mixture",
+   "ncert_ref": "7.5.ex12",
+   "question_text": "A 40 kg mixture has sand and cement in the ratio 3 : 1. How much cement must be added to make the ratio 5 : 2?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic chain (30 kg sand and 10 kg cement, 5 : 2 :: 30 : 12, 12 - 10 = 2 kg); the answer is one number. The teaching image of T24 is not linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C100",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO3.q2",
+   "question_text": "In a science lab, acid and water are mixed in the ratio of 1 : 5 to make a solution. In a bottle that has 240 mL of the solution, how much acid and water does the solution contain?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Acid and water mixture: ratio and volume in the sentence; no book figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C101",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO3.q2",
+   "question_text": "In a science lab, acid and water are mixed in the ratio of 1 : 5 to make a solution. In a bottle that has 240 mL of the solution, how much acid and water does the solution contain?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic (1 + 5 = 6, 240 / 6 = 40, 40 mL and 200 mL); the answer is two volumes.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C102",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "FiO3.q3",
+   "question_text": "Blue and yellow paints are mixed in the ratio of 3 : 5 to produce green paint. To produce 40 mL of green paint, how much of these two colours are needed? To make the paint a lighter shade of green, I added 20 mL of yellow to the mixture. What is the new ratio of blue and yellow in the paint?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Paint mixing in two stages: ratio, volume and the added yellow are in the sentence; no book figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C103",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "FiO3.q3",
+   "question_text": "Blue and yellow paints are mixed in the ratio of 3 : 5 to produce green paint. To produce 40 mL of green paint, how much of these two colours are needed? To make the paint a lighter shade of green, I added 20 mL of yellow to the mixture. What is the new ratio of blue and yellow in the paint?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic (3 + 5 = 8, 40 / 8 = 5, 15 mL and 25 mL, 15 : 45 = 1 : 3); the answer is two volumes and a ratio.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C104",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "FiO3.q4",
+   "question_text": "To make soft idlis, you need to mix rice and urad dal in the ratio of 2 : 1. If you need 6 cups of this mixture to make idlis tomorrow morning, how many cups of rice and urad dal will you need?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Idli mixture: ratio and cups are in the sentence; no book figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C105",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q3",
+   "ncert_ref": "FiO3.q4",
+   "question_text": "To make soft idlis, you need to mix rice and urad dal in the ratio of 2 : 1. If you need 6 cups of this mixture to make idlis tomorrow morning, how many cups of rice and urad dal will you need?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic (2 + 1 = 3, 6 / 3 = 2, 4 cups and 2 cups); the answer is two numbers.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C106",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "FiO3.q5",
+   "question_text": "I have one bucket of orange paint that I made by mixing red and yellow paints in the ratio of 3 : 5. I added another bucket of yellow paint to this mixture. What is the ratio of red paint to yellow paint in the new mixture?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Bucket of orange paint then one more bucket of yellow: everything is in the sentence; no book figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C107",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q4",
+   "ncert_ref": "FiO3.q5",
+   "question_text": "I have one bucket of orange paint that I made by mixing red and yellow paints in the ratio of 3 : 5. I added another bucket of yellow paint to this mixture. What is the ratio of red paint to yellow paint in the new mixture?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Fraction-of-a-bucket reasoning (3/8 red, 5/8 + 1 = 13/8 yellow, ratio 3 : 13); the answer is a ratio, not a drawing.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C108",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "FiO4.q4",
+   "question_text": "A crane of height 155 cm has its neck and the rest of its body in the ratio 4 : 6. For your height, if your neck and the rest of the body also had this ratio, how tall would your neck be?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Crane of height 155 cm with neck : body = 4 : 6 is fully stated in the sentence. The book's crane-and-girl picture is a joke illustration (the girl has a very long neck) with no measures on it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C109",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q5",
+   "ncert_ref": "FiO4.q4",
+   "question_text": "A crane of height 155 cm has its neck and the rest of its body in the ratio 4 : 6. For your height, if your neck and the rest of the body also had this ratio, how tall would your neck be?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "4/10 of the height (62 cm for the crane, 60 cm for a 150 cm learner); the answer is a fraction of the learner's own height.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C110",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q6",
+   "ncert_ref": "FiO4.q12",
+   "question_text": "The ₹10 coin is an alloy of copper and nickel called cupro-nickel. Copper and nickel are mixed in a 3 : 1 ratio to get this alloy. The mass of the coin is 7.74 grams. If the cost of copper is ₹906 per kg and the cost of nickel is ₹1341 per kg, what is the cost of these metals in a ₹10 coin?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Cupro-nickel coin: ratio, mass and prices per kg are all in the sentence; the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C111",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q6",
+   "ncert_ref": "FiO4.q12",
+   "question_text": "The ₹10 coin is an alloy of copper and nickel called cupro-nickel. Copper and nickel are mixed in a 3 : 1 ratio to get this alloy. The mass of the coin is 7.74 grams. If the cost of copper is ₹906 per kg and the cost of nickel is ₹1341 per kg, what is the cost of these metals in a ₹10 coin?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Arithmetic with unit conversion (7.74 x 3/4 = 5.805 g, 906 x 5.805 / 1000 = 5.26, 1341 x 1.935 / 1000 = 2.59, total 7.85); the answer is money amounts.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S28.T28.C112",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example: Unit conversions are proportions",
+   "ncert_ref": "7.6.units",
+   "question_text": "A field is 2 hectares. How many acres is it? How many square metres?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Unit conversion by proportion (1 : 2.471 :: 2 : x, 2 x 2.471 = 4.942, 2 x 10000 = 20000); the book prints no figure and the answer is two numbers. The teaching image C112.IMG1 is kept and never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S28.T28.C113",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example: Temperature: not a simple ratio",
+   "ncert_ref": "7.6.temperature",
+   "question_text": "Convert 25 °C to Fahrenheit, and convert the answer back to Celsius.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Temperature conversion is a formula chain (9/5 x 25 = 45, 45 + 32 = 77, 77 - 32 = 45, 5/9 x 45 = 25); no instrument reading is asked and the book prints no figure. The teaching image C113.IMG1 is kept and never linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S29.T29.C115",
+   "role": "question",
+   "lp_book_number": "Unit Conversions, Q8",
+   "ncert_ref": "FiO4.q8",
+   "question_text": "It is good farming practice to apply 10 tonnes of cow manure for 1 acre of land. A farmer is planning to grow tomatoes in a plot of size 200 ft by 500 ft. How much manure should he buy?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Plot of 200 ft by 500 ft and 10 tonnes per acre are in the sentence; a rectangle with two side lengths would add nothing the numbers do not say (the teaching image of T28 shows this plot and is never linked).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S29.T29.C116",
+   "role": "solution",
+   "lp_book_number": "Unit Conversions, Q8",
+   "ncert_ref": "FiO4.q8",
+   "question_text": "It is good farming practice to apply 10 tonnes of cow manure for 1 acre of land. A farmer is planning to grow tomatoes in a plot of size 200 ft by 500 ft. How much manure should he buy?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Area and proportion arithmetic (200 x 500 = 100000 sq ft, 43560 : 10000 :: 100000 : x, about 22956.8 kg); the answer is a mass.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S30.T30.C117",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q10",
+   "question_text": "One acre of land costs ₹1500000. What is the cost of 2400 square feet of the same land?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Cost of land: price per acre and the plot area are in the sentence; no book figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S30.T30.C118",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "FiO4.q10",
+   "question_text": "One acre of land costs ₹1500000. What is the cost of 2400 square feet of the same land?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Proportion arithmetic (43560 : 1500000 :: 2400 : x, about 82645); the answer is an amount of money.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M5.S31.T31.C120",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example: Binairo",
+   "ncert_ref": "puzzle",
+   "question_text": "In a Binairo row of 6 cells, the first two cells hold horizontal lines and the fifth holds a vertical line. Fill the row.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The example asks to fill a row of line symbols and the answer is an arrangement of drawn horizontal and vertical bars (H H V H V V in the LP): the letters only abbreviate bars, and the steps point at cells by number, so the row is drawn once, with the three given cells (1, 2, 5) outlined and the three found cells (3, 4, 6) in ANSWER green, as the book's solved example outlines its given cells. Rule B2: an arrangement answer is drawn even when the steps describe it in words. The book's own example is a 6 by 6 grid (Puzzle / Solution); the LP uses a one-row version, so this row stands for it. Borderline: the text alone could carry it (see notes).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M5.S31.T31.C120.IMG2",
+   "manim_scene": "c8_7_puzzle_binairo_row_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M5.S31.T31.C120.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_row",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_row",
+     "cells": 6,
+     "cell_fill": "CELL_FILL",
+     "cell_outline": "INK",
+     "cells_left_to_right": [
+      {
+       "pos": 1,
+       "symbol": "horizontal_bar",
+       "colour": "INK",
+       "given": true
+      },
+      {
+       "pos": 2,
+       "symbol": "horizontal_bar",
+       "colour": "INK",
+       "given": true
+      },
+      {
+       "pos": 3,
+       "symbol": "vertical_bar",
+       "colour": "ANSWER",
+       "given": false
+      },
+      {
+       "pos": 4,
+       "symbol": "horizontal_bar",
+       "colour": "ANSWER",
+       "given": false
+      },
+      {
+       "pos": 5,
+       "symbol": "vertical_bar",
+       "colour": "INK",
+       "given": true
+      },
+      {
+       "pos": 6,
+       "symbol": "vertical_bar",
+       "colour": "ANSWER",
+       "given": false
+      }
+     ],
+     "given_cells_outline": {
+      "cells": [
+       1,
+       2,
+       5
+      ],
+      "style": "dashed",
+      "colour": "FOCUS"
+     },
+     "position_numbers": {
+      "values": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6
+      ],
+      "placement": "below each cell, centred",
+      "colour": "GUIDE"
+     },
+     "reading_order": "left to right",
+     "totals": {
+      "horizontal_bars": 3,
+      "vertical_bars": 3
+     },
+     "to_scale": true
+    },
+    "manim_description": "On a 16:9 canvas with a plain white BG, draw one horizontal row of 6 equal squares, touching side by side and centred on the canvas; the row is about 80 percent of the canvas width. Each square is filled CELL_FILL and has a 3 px INK outline. Under each square, centred, write its position number in GUIDE, left to right: 1, 2, 3, 4, 5, 6. Inside every square draw one short thick bar centred in the square, 60 percent of the square's width long and 12 px thick, with rounded ends; horizontal bars lie along the square's horizontal midline and vertical bars along its vertical midline. Square 1: horizontal bar in INK. Square 2: horizontal bar in INK. Square 3: vertical bar in ANSWER. Square 4: horizontal bar in ANSWER. Square 5: vertical bar in INK. Square 6: vertical bar in ANSWER. Around squares 1, 2 and 5 only draw a dashed square outline in FOCUS, 6 px inside the square's own border (the three given cells). Squares 3, 4 and 6 get no dashed outline. The row therefore shows horizontal, horizontal, vertical, horizontal, vertical, vertical. Draw no letters H or V, no words and no legend.",
+    "visible_text": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the letters H or V inside the cells",
+     "words such as given or found, or a legend",
+     "the book's 6 by 6 Binairo grids",
+     "red bars (the colours are INK and ANSWER only)"
+    ],
+    "accuracy_checks": [
+     "exactly 6 cells in one row",
+     "given cells: 1 and 2 horizontal, 5 vertical (INK, dashed FOCUS outline)",
+     "found cells: 3 vertical, 4 horizontal, 6 vertical (ANSWER, no dashed outline)",
+     "3 horizontal bars and 3 vertical bars in total (the row needs 3 of each symbol)",
+     "no three equal bars side by side: the order H H V H V V has at most two equal neighbours (cells 5 and 6 are V V, cells 1 and 2 are H H)",
+     "the only other way to fill cells 4 and 6 (V then H) would put three verticals in cells 3, 4 and 5, so the filled row is unique"
+    ],
+    "alt_text": "A row of six cells holding a horizontal bar, a horizontal bar, a vertical bar, a horizontal bar, a vertical bar and a vertical bar, with the first, second and fifth cells outlined as the given ones.",
+    "render_note": "Book print and LP agree on the answer H H V H V V. The picture is a one-row version of the book's solved Binairo example (the book draws a 6 by 6 grid with dotted outlines on the given cells); the LP's row is not printed in the book. Position numbers 1 to 6 are drawn because the LP steps refer to cells by number (third, fourth, cell 4, cell 6)."
+   }
+  }
+ ]
+}

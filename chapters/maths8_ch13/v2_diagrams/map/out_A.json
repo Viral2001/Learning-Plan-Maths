@@ -1,0 +1,2616 @@
+{
+ "meta": {
+  "chapter": "Algebra Play",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 13",
+  "lp_plan_id": "cbse_eng_maths8_ch13_v28",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "none": 1,
+    "required": 0,
+    "optional": 0
+   },
+   "question": {
+    "none": 7,
+    "required": 4,
+    "optional": 0
+   },
+   "solution": {
+    "none": 6,
+    "required": 5,
+    "optional": 0
+   }
+  },
+  "notes": [
+   "Chunk A: topics M1.S2.T2, M1.S3.T3, M2.S5.T5 (12 units, 23 items).",
+   "One question diagram and one solution diagram at most per pair: Q1 and Q4 hold three pyramids in one picture, as the book prints them.",
+   "Q5 (Number Pyramids: the top from the bottom row): question none (book gives no empty pyramid), solution required (two filled pyramids).",
+   "No book figure in sections 6.2 asks for a picture; the date-trick comic strip is a procedure with a number chain (none, LATEX_ARITHMETIC).",
+   "Book figures are accounted with the base fig_id; a second use of a teaching figure as an item's own diagram has a NEW- id."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P02-dialogue_strip-1",
+   "source": "chapter p.02",
+   "description": "Comic strip of Shubham and Mukta: the date-trick steps in speech bubbles and Mukta's number chain 26/01, 1 x 5 = 5, 5 + 6 = 11, 11 x 4 = 44, 44 + 9 = 53, 53 x 5 = 265, 265 + 26 = 291. Checked against page 2: the base description is correct. A procedure with a number chain, characters are decoration: arithmetic in LaTeX.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "P03-number_pyramid-1",
+   "source": "chapter p.03",
+   "description": "Teaching pyramid 23 / 10 13 / 1 9 4 (page 3). It is the concept image M2.S4.T4.C18.IMG1.",
+   "mapped_to": "concept_image:M2.S4.T4.C18.IMG1"
+  },
+  {
+   "fig_id": "NEW-P03-number_pyramid-1-q5sol",
+   "source": "chapter p.03",
+   "description": "Second use of the page-3 pyramid 23 / 10 13 / 1 9 4: the numeric half of the Q5 solution figure (drawn as its own diagram, nothing linked to the teaching image).",
+   "mapped_to": "item:M2.S5.T5.C34 (solution)"
+  },
+  {
+   "fig_id": "P04-number_pyramid-1",
+   "source": "chapter p.04",
+   "description": "Given pyramid, 2 rows: top ?, bottom 6 2 (page 4, 'Use the same rule to fill these pyramids'). Checked: correct.",
+   "mapped_to": "item:M2.S5.T5.C25 (question)"
+  },
+  {
+   "fig_id": "P04-number_pyramid-2",
+   "source": "chapter p.04",
+   "description": "Given pyramid, 3 rows: ? / ? ? / 3 4 3 (page 4). Checked: correct.",
+   "mapped_to": "item:M2.S5.T5.C25 (question)"
+  },
+  {
+   "fig_id": "P04-number_pyramid-3",
+   "source": "chapter p.04",
+   "description": "Given pyramid, 4 rows: ? / ? ? / ? ? ? / 5 4 5 0 (page 4). Checked: correct.",
+   "mapped_to": "item:M2.S5.T5.C25 (question)"
+  },
+  {
+   "fig_id": "P04-number_pyramid-4",
+   "source": "chapter p.04",
+   "description": "Pyramid 10 / 4 ? / 1 ? ? (page 4, 'How do we fill this pyramid?'). It is the given state of question Q2, so the item draws its own picture. Checked: correct.",
+   "mapped_to": "item:M2.S5.T5.C27 (question)"
+  },
+  {
+   "fig_id": "P04-number_pyramid_steps-5",
+   "source": "chapter p.04",
+   "description": "Step-by-step sequence for the 10 / 4 ? / 1 ? ? pyramid (arrows 'What will go here?', 10 - 4 = 6, 4 - 1 = 3, 6 - 3 = 3, finished pyramid 10 / 4 6 / 1 3 3 with blue and red numbers). As a sequence it is the teaching figure of concept M2.S4.T4.C19.IMG1 (Going down: subtract). Checked: base description correct.",
+   "mapped_to": "concept_image:M2.S4.T4.C19.IMG1"
+  },
+  {
+   "fig_id": "NEW-P04-number_pyramid_steps-5-final",
+   "source": "chapter p.04",
+   "description": "Last picture of the sequence, the finished pyramid 10 / 4 6 / 1 3 3: the printed answer picture of Q2, drawn as the Q2 solution figure without the blue and red step colours.",
+   "mapped_to": "item:M2.S5.T5.C28 (solution)"
+  },
+  {
+   "fig_id": "P04-number_pyramid-6",
+   "source": "chapter p.04",
+   "description": "Pyramid 60 / ? ? / 12 ? 8 (page 4, 'Where do we start?'). It is the given state of question Q3. Checked: correct.",
+   "mapped_to": "item:M2.S5.T5.C29 (question)"
+  },
+  {
+   "fig_id": "P05-number_pyramid-1",
+   "source": "chapter p.05",
+   "description": "Pyramid 60 / a b / 12 c 8 with letters (page 5). It is the teaching figure of concept M2.S4.T4.C20.IMG1.",
+   "mapped_to": "concept_image:M2.S4.T4.C20.IMG1"
+  },
+  {
+   "fig_id": "P05-number_pyramid-2",
+   "source": "chapter p.05",
+   "description": "Finished pyramid 60 / 32 28 / 12 20 8 (page 5): the answer picture of Q3, drawn as the Q3 solution figure.",
+   "mapped_to": "item:M2.S5.T5.C30 (solution)"
+  },
+  {
+   "fig_id": "P05-number_pyramid-3",
+   "source": "chapter p.05",
+   "description": "Given pyramid, 4 rows: 50 / empty 22 / three empty / 4 empty 6 empty (page 5, 'Fill the following pyramids'). Checked: correct.",
+   "mapped_to": "item:M2.S5.T5.C31 (question)"
+  },
+  {
+   "fig_id": "P05-number_pyramid-4",
+   "source": "chapter p.05",
+   "description": "Given pyramid, 4 rows: empty / 40 empty / empty empty 9 / 5 empty 7 empty (page 5). Checked: correct.",
+   "mapped_to": "item:M2.S5.T5.C31 (question)"
+  },
+  {
+   "fig_id": "P05-number_pyramid-5",
+   "source": "chapter p.05",
+   "description": "Given pyramid, 4 rows: 35 / empty empty / empty empty 7 / 3 5 empty empty (page 5). Checked: correct.",
+   "mapped_to": "item:M2.S5.T5.C31 (question)"
+  },
+  {
+   "fig_id": "P05-number_pyramid-6",
+   "source": "chapter p.05",
+   "description": "Two-row lead-in pyramid a + b / a b (page 5, 'Let us start with the simplest pyramid'). No item of the plan asks about it and its rule is the one in the text.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P06-number_pyramid-1",
+   "source": "chapter p.06",
+   "description": "Three-row letter pyramid a + 2b + c / a + b, b + c / a, b, c (page 6). It is the teaching figure of concept M2.S4.T4.C23.IMG1.",
+   "mapped_to": "concept_image:M2.S4.T4.C23.IMG1"
+  },
+  {
+   "fig_id": "NEW-P06-number_pyramid-1-q5sol",
+   "source": "chapter p.06",
+   "description": "Second use of the page-6 letter pyramid: it is the book's printed answer picture for Q5 and the letter half of the Q5 solution figure (drawn as its own diagram, nothing linked to the teaching image).",
+   "mapped_to": "item:M2.S5.T5.C34 (solution)"
+  },
+  {
+   "fig_id": "P06-box_row-2",
+   "source": "chapter p.06",
+   "description": "Figure it Out Q1, case 1: a row of three boxes 4 13 8. Checked: correct.",
+   "mapped_to": "none:NUMBER_LIST_IN_BOXES"
+  },
+  {
+   "fig_id": "P06-box_row-3",
+   "source": "chapter p.06",
+   "description": "Figure it Out Q1, case 2: a row of three boxes 7 11 3. Checked: correct.",
+   "mapped_to": "none:NUMBER_LIST_IN_BOXES"
+  },
+  {
+   "fig_id": "P06-box_row-4",
+   "source": "chapter p.06",
+   "description": "Figure it Out Q1, case 3: a row of three boxes 10 14 25. Checked: correct.",
+   "mapped_to": "none:NUMBER_LIST_IN_BOXES"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 21,
+  "mapped_to_items": 12,
+  "mapped_to_concept_images": 4,
+  "mapped_none": 5,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M2.S5.T5.C25.IMG1",
+   "M2.S5.T5.C26.IMG1",
+   "M2.S5.T5.C27.IMG1",
+   "M2.S5.T5.C28.IMG1",
+   "M2.S5.T5.C29.IMG1",
+   "M2.S5.T5.C30.IMG1",
+   "M2.S5.T5.C31.IMG1",
+   "M2.S5.T5.C32.IMG1",
+   "M2.S5.T5.C34.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S2.T2.C6",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 6.2 - Thinking about 'Think of a Number' Tricks - Math Talk (change the steps), ref 6.2.mt_change_steps",
+   "question_text": "New steps: multiply the month by 10, add 7, multiply by 10, add the day. What do you subtract to read the date? A friend reports 1295.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The book has no figure here (Math Talk, text only). The new steps, the letter-number chain 10M, 10M + 7, 100M + 70, 100M + 70 + D and the check with 1295 are plain text and LaTeX.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX chain: 10M, then 10M + 7, then 100M + 70, then 100M + 70 + D; then 1295 - 70 = 1225.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "question",
+   "lp_book_number": "Think of a Number: why the trick ends on 2",
+   "ncert_ref": "Section 6.2 - Thinking about 'Think of a Number' Tricks, ref 6.2.trick2",
+   "question_text": "Try the trick (double, add four, divide by two, subtract the start) with 5 and with 11, then explain with a letter-number why it always ends on 2.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure for this question (the trick is the numbered list of steps on page 1, plain text). Everything the student needs is in the question text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C9",
+   "role": "solution",
+   "lp_book_number": "Think of a Number: why the trick ends on 2",
+   "ncert_ref": "Section 6.2 - Thinking about 'Think of a Number' Tricks, ref 6.2.trick2",
+   "question_text": "Try the trick (double, add four, divide by two, subtract the start) with 5 and with 11, then explain with a letter-number why it always ends on 2.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Both runs of the trick and the algebra are number chains and equations: LaTeX. No printed picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Two number chains (start 5 and start 11) and the lines 2x, 2x + 4, x + 2, x + 2 - x = 2 in LaTeX."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C10",
+   "role": "question",
+   "lp_book_number": "Think of a Number: make the answer 3 or 5",
+   "ncert_ref": "Section 6.2 - Thinking about 'Think of a Number' Tricks, ref 6.2.make3_5",
+   "question_text": "Change the trick so it always ends on 3, then on 5. Then check this longer trick: think of a number, multiply by 3, add 12, divide by 3, subtract the number.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure for this question. Changing the added number and checking the longer trick need only the question text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C11",
+   "role": "solution",
+   "lp_book_number": "Think of a Number: make the answer 3 or 5",
+   "ncert_ref": "Section 6.2 - Thinking about 'Think of a Number' Tricks, ref 6.2.make3_5",
+   "question_text": "Change the trick so it always ends on 3, then on 5. Then check this longer trick: think of a number, multiply by 3, add 12, divide by 3, subtract the number.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The changed tricks are expressions in x and one number chain: LaTeX. No printed picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines 2x + 6, x + 3, 3 and 2x + 10, x + 5, 5; then 3x, 3x + 12, x + 4, 4."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C12",
+   "role": "question",
+   "lp_book_number": "Think of a Number: reading a date from 291",
+   "ncert_ref": "Section 6.2 - Thinking about 'Think of a Number' Tricks, ref 6.2.date_trick",
+   "question_text": "Mukta thinks of 26 January and follows the steps. Show that she gets 291, and how Shubham reads the date back from 291.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The date trick is shown in the book only as the Shubham and Mukta comic strip (base figure P02-dialogue_strip-1). The strip carries a procedure and a number chain; the characters are decoration and the chain 1 x 5 = 5 ... 265 + 26 = 291 is arithmetic. The question asks for no marking or drawing on it, so no given figure is needed to attempt it (see the notes: the question text should list the steps).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C13",
+   "role": "solution",
+   "lp_book_number": "Think of a Number: reading a date from 291",
+   "ncert_ref": "Section 6.2 - Thinking about 'Think of a Number' Tricks, ref 6.2.date_trick",
+   "question_text": "Mukta thinks of 26 January and follows the steps. Show that she gets 291, and how Shubham reads the date back from 291.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The forward calculation for 26/01, the letter version 100M + 165 + D and the reading of 126 are arithmetic and equations: LaTeX. The book's picture of this calculation is a number chain with characters, not a printed answer picture; it is accounted in P02-dialogue_strip-1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX number chain for 26 January ending in 291, then 291 - 165 = 126."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C14",
+   "role": "question",
+   "lp_book_number": "Think of a Number: the date behind 1390",
+   "ncert_ref": "Section 6.2 - Thinking about 'Think of a Number' Tricks, ref 6.2.date_1390",
+   "question_text": "Mukta reports 1390. Which date did she think of? Check by running the trick forward.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Same date-trick strip as the previous question: a procedure with a number chain, no figure to act on. Sibling question of the other date-trick questions, so the same decision.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C15",
+   "role": "solution",
+   "lp_book_number": "Think of a Number: the date behind 1390",
+   "ncert_ref": "Section 6.2 - Thinking about 'Think of a Number' Tricks, ref 6.2.date_1390",
+   "question_text": "Mukta reports 1390. Which date did she think of? Check by running the trick forward.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Subtract 165, read the digits, then a forward number-chain check: LaTeX arithmetic. Nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX: 1390 - 165 = 1225, then the forward check chain 12 x 5 = 60 ... 1365 + 25 = 1390."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C16",
+   "role": "question",
+   "lp_book_number": "Think of a Number: decode three dates",
+   "ncert_ref": "Section 6.2 - Thinking about 'Think of a Number' Tricks, ref 6.2.find_dates",
+   "question_text": "Find the dates if the final answers of the date trick are the following: (i) 1269 (ii) 394 (iii) 296.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three final answers to decode with a subtraction of 165; the numbers are in the text. No book figure to act on. Sibling of the other date-trick questions, so the same decision.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C17",
+   "role": "solution",
+   "lp_book_number": "Think of a Number: decode three dates",
+   "ncert_ref": "Section 6.2 - Thinking about 'Think of a Number' Tricks, ref 6.2.find_dates",
+   "question_text": "Find the dates if the final answers of the date trick are the following: (i) 1269 (ii) 394 (iii) 296.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three short subtractions and the dates they give: LaTeX arithmetic. Nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines 1269 - 165 = 1104, 394 - 165 = 229, 296 - 165 = 131."
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C25",
+   "role": "question",
+   "lp_book_number": "Number Pyramids: fill with the same rule",
+   "ncert_ref": "Section 6.3 - Number Pyramids, ref 6.3.fill_up",
+   "question_text": "Fill the pyramids with bottom rows 6, 2 and 3, 4, 3 and 5, 4, 5, 0.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book gives only the three pyramid pictures (bottom row numbers, '?' above) and the student fills them in: the given structure lives in the figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S5.T5.C25.IMG1",
+   "manim_scene": "c8_13_6_3_q1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C25.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "layout": "number_pyramid",
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre",
+      "px_per_unit": 120
+     },
+     "box": {
+      "width": 1.5,
+      "height": 1.5,
+      "outline": "INK",
+      "outline_px": 3,
+      "fill": "BG"
+     },
+     "font_px": 64,
+     "pyramids": [
+      {
+       "name": "1",
+       "rows": 2,
+       "left_edge_x": -7.55,
+       "right_edge_x": -4.55,
+       "bottom_row_centre_y": -2.25,
+       "rows_top_to_bottom": [
+        [
+         "?"
+        ],
+        [
+         "6",
+         "2"
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": -6.05,
+         "centre_y": -0.75,
+         "text": "?",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": -6.8,
+         "centre_y": -2.25,
+         "text": "6",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": -5.3,
+         "centre_y": -2.25,
+         "text": "2",
+         "text_colour": "INK"
+        }
+       ]
+      },
+      {
+       "name": "2",
+       "rows": 3,
+       "left_edge_x": -3.75,
+       "right_edge_x": 0.75,
+       "bottom_row_centre_y": -2.25,
+       "rows_top_to_bottom": [
+        [
+         "?"
+        ],
+        [
+         "?",
+         "?"
+        ],
+        [
+         "3",
+         "4",
+         "3"
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": -1.5,
+         "centre_y": 0.75,
+         "text": "?",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": -2.25,
+         "centre_y": -0.75,
+         "text": "?",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": -0.75,
+         "centre_y": -0.75,
+         "text": "?",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": -3.0,
+         "centre_y": -2.25,
+         "text": "3",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": -1.5,
+         "centre_y": -2.25,
+         "text": "4",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": 0.0,
+         "centre_y": -2.25,
+         "text": "3",
+         "text_colour": "INK"
+        }
+       ]
+      },
+      {
+       "name": "3",
+       "rows": 4,
+       "left_edge_x": 1.55,
+       "right_edge_x": 7.55,
+       "bottom_row_centre_y": -2.25,
+       "rows_top_to_bottom": [
+        [
+         "?"
+        ],
+        [
+         "?",
+         "?"
+        ],
+        [
+         "?",
+         "?",
+         "?"
+        ],
+        [
+         "5",
+         "4",
+         "5",
+         "0"
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": 4.55,
+         "centre_y": 2.25,
+         "text": "?",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": 3.8,
+         "centre_y": 0.75,
+         "text": "?",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": 5.3,
+         "centre_y": 0.75,
+         "text": "?",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": 3.05,
+         "centre_y": -0.75,
+         "text": "?",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": 4.55,
+         "centre_y": -0.75,
+         "text": "?",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": 6.05,
+         "centre_y": -0.75,
+         "text": "?",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 1,
+         "centre_x": 2.3,
+         "centre_y": -2.25,
+         "text": "5",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 2,
+         "centre_x": 3.8,
+         "centre_y": -2.25,
+         "text": "4",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 3,
+         "centre_x": 5.3,
+         "centre_y": -2.25,
+         "text": "5",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 4,
+         "centre_x": 6.8,
+         "centre_y": -2.25,
+         "text": "0",
+         "text_colour": "INK"
+        }
+       ]
+      }
+     ]
+    },
+    "manim_description": "Draw on a 16 x 9 unit canvas (1 unit = 120 px, origin at the centre, x to the right, y upward) with a plain BG background. Draw three number pyramids of different heights side by side as stacked square-cornered boxes. Every box is 1.5 units wide and 1.5 units high with a 3 px INK outline and BG fill, and boxes in one row touch each other. Each box above the bottom row is centred over the join of the two boxes below it. All text is sans-serif, 64 px, centred in its box, upright digits and italic letters. Pyramid 1 is on the left, pyramid 2 in the middle and pyramid 3 on the right; their bottom rows lie on one baseline; the gap between neighbouring pyramids is 0.8 units. Pyramid 1 has 2 rows, left edge x = -7.55, right edge x = -4.55, bottom row centre y = -2.25. Row 1 (top row, centre y = -0.75) has 1 box: box 1 (centre x = -6.05) shows '?' in INK. Row 2 (bottom row, centre y = -2.25) has 2 boxes: box 1 (centre x = -6.8) shows '6' in INK; box 2 (centre x = -5.3) shows '2' in INK. Pyramid 2 has 3 rows, left edge x = -3.75, right edge x = 0.75, bottom row centre y = -2.25. Row 1 (top row, centre y = 0.75) has 1 box: box 1 (centre x = -1.5) shows '?' in INK. Row 2 (row 2 from the top, centre y = -0.75) has 2 boxes: box 1 (centre x = -2.25) shows '?' in INK; box 2 (centre x = -0.75) shows '?' in INK. Row 3 (bottom row, centre y = -2.25) has 3 boxes: box 1 (centre x = -3.0) shows '3' in INK; box 2 (centre x = -1.5) shows '4' in INK; box 3 (centre x = 0.0) shows '3' in INK. Pyramid 3 has 4 rows, left edge x = 1.55, right edge x = 7.55, bottom row centre y = -2.25. Row 1 (top row, centre y = 2.25) has 1 box: box 1 (centre x = 4.55) shows '?' in INK. Row 2 (row 2 from the top, centre y = 0.75) has 2 boxes: box 1 (centre x = 3.8) shows '?' in INK; box 2 (centre x = 5.3) shows '?' in INK. Row 3 (row 3 from the top, centre y = -0.75) has 3 boxes: box 1 (centre x = 3.05) shows '?' in INK; box 2 (centre x = 4.55) shows '?' in INK; box 3 (centre x = 6.05) shows '?' in INK. Row 4 (bottom row, centre y = -2.25) has 4 boxes: box 1 (centre x = 2.3) shows '5' in INK; box 2 (centre x = 3.8) shows '4' in INK; box 3 (centre x = 5.3) shows '5' in INK; box 4 (centre x = 6.8) shows '0' in INK. Nothing else is drawn: no arrows, no sums, no captions.",
+    "visible_text": [
+     "?",
+     "6",
+     "2",
+     "3",
+     "4",
+     "5",
+     "0"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any sum or equation such as 6 + 2 = 8",
+     "any computed value inside a '?' box",
+     "arrows or step captions"
+    ],
+    "accuracy_checks": [
+     "pyramid 1 has 2 rows with bottom row 6, 2; pyramid 2 has 3 rows with bottom row 3, 4, 3; pyramid 3 has 4 rows with bottom row 5, 4, 5, 0",
+     "every box above a bottom row holds '?': 1 + 3 + 6 = 10 question marks in total (pyramid 1 has 1, pyramid 2 has 3, pyramid 3 has 6)",
+     "all three bottom rows lie on the same baseline y = -2.25 and the pyramids are separated by a gap of 0.8 units",
+     "the three pyramids match the book figure: bottom rows 6, 2 / 3, 4, 3 / 5, 4, 5, 0"
+    ],
+    "alt_text": "Three number pyramids with bottom rows 6 2, then 3 4 3, then 5 4 5 0, every box above the bottom row marked with a question mark.",
+    "render_note": "The book prints a '?' in every unknown box of these three pyramids (page 4), so '?' is drawn. One picture holds all three pyramids, as in the book."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C26",
+   "role": "solution",
+   "lp_book_number": "Number Pyramids: fill with the same rule",
+   "ncert_ref": "Section 6.3 - Number Pyramids, ref 6.3.fill_up",
+   "question_text": "Fill the pyramids with bottom rows 6, 2 and 3, 4, 3 and 5, 4, 5, 0.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The answer is the three filled pyramids (a filled figure); the LP steps describe it in words but the figure is the answer. Derived from the question figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S5.T5.C26.IMG1",
+   "manim_scene": "c8_13_6_3_q1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C26.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S5.T5.C25.IMG1",
+    "content": {
+     "type": "other",
+     "layout": "number_pyramid",
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre",
+      "px_per_unit": 120
+     },
+     "box": {
+      "width": 1.5,
+      "height": 1.5,
+      "outline": "INK",
+      "outline_px": 3,
+      "fill": "BG"
+     },
+     "font_px": 64,
+     "pyramids": [
+      {
+       "name": "1",
+       "rows": 2,
+       "left_edge_x": -7.55,
+       "right_edge_x": -4.55,
+       "bottom_row_centre_y": -2.25,
+       "rows_top_to_bottom": [
+        [
+         "8"
+        ],
+        [
+         "6",
+         "2"
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": -6.05,
+         "centre_y": -0.75,
+         "text": "8",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": -6.8,
+         "centre_y": -2.25,
+         "text": "6",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": -5.3,
+         "centre_y": -2.25,
+         "text": "2",
+         "text_colour": "INK"
+        }
+       ]
+      },
+      {
+       "name": "2",
+       "rows": 3,
+       "left_edge_x": -3.75,
+       "right_edge_x": 0.75,
+       "bottom_row_centre_y": -2.25,
+       "rows_top_to_bottom": [
+        [
+         "14"
+        ],
+        [
+         "7",
+         "7"
+        ],
+        [
+         "3",
+         "4",
+         "3"
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": -1.5,
+         "centre_y": 0.75,
+         "text": "14",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": -2.25,
+         "centre_y": -0.75,
+         "text": "7",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": -0.75,
+         "centre_y": -0.75,
+         "text": "7",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": -3.0,
+         "centre_y": -2.25,
+         "text": "3",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": -1.5,
+         "centre_y": -2.25,
+         "text": "4",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": 0.0,
+         "centre_y": -2.25,
+         "text": "3",
+         "text_colour": "INK"
+        }
+       ]
+      },
+      {
+       "name": "3",
+       "rows": 4,
+       "left_edge_x": 1.55,
+       "right_edge_x": 7.55,
+       "bottom_row_centre_y": -2.25,
+       "rows_top_to_bottom": [
+        [
+         "32"
+        ],
+        [
+         "18",
+         "14"
+        ],
+        [
+         "9",
+         "9",
+         "5"
+        ],
+        [
+         "5",
+         "4",
+         "5",
+         "0"
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": 4.55,
+         "centre_y": 2.25,
+         "text": "32",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": 3.8,
+         "centre_y": 0.75,
+         "text": "18",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": 5.3,
+         "centre_y": 0.75,
+         "text": "14",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": 3.05,
+         "centre_y": -0.75,
+         "text": "9",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": 4.55,
+         "centre_y": -0.75,
+         "text": "9",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": 6.05,
+         "centre_y": -0.75,
+         "text": "5",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 1,
+         "centre_x": 2.3,
+         "centre_y": -2.25,
+         "text": "5",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 2,
+         "centre_x": 3.8,
+         "centre_y": -2.25,
+         "text": "4",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 3,
+         "centre_x": 5.3,
+         "centre_y": -2.25,
+         "text": "5",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 4,
+         "centre_x": 6.8,
+         "centre_y": -2.25,
+         "text": "0",
+         "text_colour": "INK"
+        }
+       ]
+      }
+     ]
+    },
+    "manim_description": "Draw on a 16 x 9 unit canvas (1 unit = 120 px, origin at the centre, x to the right, y upward) with a plain BG background. Draw the same three number pyramids, now completely filled as stacked square-cornered boxes. Every box is 1.5 units wide and 1.5 units high with a 3 px INK outline and BG fill, and boxes in one row touch each other. Each box above the bottom row is centred over the join of the two boxes below it. All text is sans-serif, 64 px, centred in its box, upright digits and italic letters. Layout, box size and positions are exactly those of the question figure; the numbers that were '?' are now written in ANSWER green, the given bottom-row numbers stay INK. Pyramid 1 has 2 rows, left edge x = -7.55, right edge x = -4.55, bottom row centre y = -2.25. Row 1 (top row, centre y = -0.75) has 1 box: box 1 (centre x = -6.05) shows '8' in ANSWER. Row 2 (bottom row, centre y = -2.25) has 2 boxes: box 1 (centre x = -6.8) shows '6' in INK; box 2 (centre x = -5.3) shows '2' in INK. Pyramid 2 has 3 rows, left edge x = -3.75, right edge x = 0.75, bottom row centre y = -2.25. Row 1 (top row, centre y = 0.75) has 1 box: box 1 (centre x = -1.5) shows '14' in ANSWER. Row 2 (row 2 from the top, centre y = -0.75) has 2 boxes: box 1 (centre x = -2.25) shows '7' in ANSWER; box 2 (centre x = -0.75) shows '7' in ANSWER. Row 3 (bottom row, centre y = -2.25) has 3 boxes: box 1 (centre x = -3.0) shows '3' in INK; box 2 (centre x = -1.5) shows '4' in INK; box 3 (centre x = 0.0) shows '3' in INK. Pyramid 3 has 4 rows, left edge x = 1.55, right edge x = 7.55, bottom row centre y = -2.25. Row 1 (top row, centre y = 2.25) has 1 box: box 1 (centre x = 4.55) shows '32' in ANSWER. Row 2 (row 2 from the top, centre y = 0.75) has 2 boxes: box 1 (centre x = 3.8) shows '18' in ANSWER; box 2 (centre x = 5.3) shows '14' in ANSWER. Row 3 (row 3 from the top, centre y = -0.75) has 3 boxes: box 1 (centre x = 3.05) shows '9' in ANSWER; box 2 (centre x = 4.55) shows '9' in ANSWER; box 3 (centre x = 6.05) shows '5' in ANSWER. Row 4 (bottom row, centre y = -2.25) has 4 boxes: box 1 (centre x = 2.3) shows '5' in INK; box 2 (centre x = 3.8) shows '4' in INK; box 3 (centre x = 5.3) shows '5' in INK; box 4 (centre x = 6.8) shows '0' in INK. Nothing else is drawn: no arrows, no sums, no captions.",
+    "visible_text": [
+     "8",
+     "6",
+     "2",
+     "14",
+     "7",
+     "3",
+     "4",
+     "32",
+     "18",
+     "9",
+     "5",
+     "0"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any sum or equation such as 6 + 2 = 8",
+     "any '?' mark",
+     "arrows or step captions"
+    ],
+    "accuracy_checks": [
+     "pyramid 1: 6 + 2 = 8",
+     "pyramid 2: 3 + 4 = 7, 4 + 3 = 7, 7 + 7 = 14",
+     "pyramid 3: 5 + 4 = 9, 4 + 5 = 9, 5 + 0 = 5, 9 + 9 = 18, 9 + 5 = 14, 18 + 14 = 32",
+     "same boxes, same positions and same bottom rows as the question figure; only the 10 boxes that held '?' now hold numbers"
+    ],
+    "alt_text": "The three pyramids filled in: tops 8, 14 and 32, with rows 7 7 and 18 14 and 9 9 5 below them.",
+    "render_note": "Complete final state of the three pyramids. The book has no printed solutions; the values are the LP solution values."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C27",
+   "role": "question",
+   "lp_book_number": "Number Pyramids: working down from 10",
+   "ncert_ref": "Section 6.3 - Number Pyramids, ref 6.3.fill_down",
+   "question_text": "A pyramid has top 10, middle row 4 and a blank, and bottom row 1 and two blanks. Fill it.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book question is the pyramid picture itself (10 / 4 ? / 1 ? ?); the student completes it. Same kind of question as Q1, Q3 and Q4, so same decision.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S5.T5.C27.IMG1",
+   "manim_scene": "c8_13_6_3_q2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C27.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "layout": "number_pyramid",
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre",
+      "px_per_unit": 120
+     },
+     "box": {
+      "width": 2.0,
+      "height": 2.0,
+      "outline": "INK",
+      "outline_px": 3,
+      "fill": "BG"
+     },
+     "font_px": 80,
+     "pyramids": [
+      {
+       "name": "1",
+       "rows": 3,
+       "left_edge_x": -3.0,
+       "right_edge_x": 3.0,
+       "bottom_row_centre_y": -2.0,
+       "rows_top_to_bottom": [
+        [
+         "10"
+        ],
+        [
+         "4",
+         "?"
+        ],
+        [
+         "1",
+         "?",
+         "?"
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": 0.0,
+         "centre_y": 2.0,
+         "text": "10",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": -1.0,
+         "centre_y": 0.0,
+         "text": "4",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": 1.0,
+         "centre_y": 0.0,
+         "text": "?",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": -2.0,
+         "centre_y": -2.0,
+         "text": "1",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": 0.0,
+         "centre_y": -2.0,
+         "text": "?",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": 2.0,
+         "centre_y": -2.0,
+         "text": "?",
+         "text_colour": "INK"
+        }
+       ]
+      }
+     ]
+    },
+    "manim_description": "Draw on a 16 x 9 unit canvas (1 unit = 120 px, origin at the centre, x to the right, y upward) with a plain BG background. Draw one three-row number pyramid as stacked square-cornered boxes. Every box is 2.0 units wide and 2.0 units high with a 3 px INK outline and BG fill, and boxes in one row touch each other. Each box above the bottom row is centred over the join of the two boxes below it. All text is sans-serif, 80 px, centred in its box, upright digits and italic letters.  Pyramid 1 has 3 rows, left edge x = -3.0, right edge x = 3.0, bottom row centre y = -2.0. Row 1 (top row, centre y = 2.0) has 1 box: box 1 (centre x = 0.0) shows '10' in INK. Row 2 (row 2 from the top, centre y = 0.0) has 2 boxes: box 1 (centre x = -1.0) shows '4' in INK; box 2 (centre x = 1.0) shows '?' in INK. Row 3 (bottom row, centre y = -2.0) has 3 boxes: box 1 (centre x = -2.0) shows '1' in INK; box 2 (centre x = 0.0) shows '?' in INK; box 3 (centre x = 2.0) shows '?' in INK. Nothing else is drawn: no arrows, no sums, no captions.",
+    "visible_text": [
+     "10",
+     "4",
+     "?",
+     "1"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the values 6, 3 and 3",
+     "arrows, 'What will go here?' captions, or the equations 10 - 4 = 6 and 4 - 1 = 3",
+     "the blue and red step colours of the book"
+    ],
+    "accuracy_checks": [
+     "3 rows: top 10; row 2: 4 on the left and '?' on the right; bottom row: 1 on the left and two '?'",
+     "known numbers are exactly 10, 4 and 1; exactly three '?' boxes",
+     "matches the book figure 10 / 4 ? / 1 ? ? on page 4"
+    ],
+    "alt_text": "A three-row number pyramid with 10 at the top, 4 and a question mark in the middle row, and 1 and two question marks in the bottom row.",
+    "render_note": "The book prints '?' in the unknown boxes (page 4). The same pyramid is also a step-by-step teaching figure; this item draws its own picture of the given state only."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C28",
+   "role": "solution",
+   "lp_book_number": "Number Pyramids: working down from 10",
+   "ncert_ref": "Section 6.3 - Number Pyramids, ref 6.3.fill_down",
+   "question_text": "A pyramid has top 10, middle row 4 and a blank, and bottom row 1 and two blanks. Fill it.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The answer is the filled pyramid (the book shows it as the last picture of its step sequence). Derived from the question figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S5.T5.C28.IMG1",
+   "manim_scene": "c8_13_6_3_q2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C28.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S5.T5.C27.IMG1",
+    "content": {
+     "type": "other",
+     "layout": "number_pyramid",
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre",
+      "px_per_unit": 120
+     },
+     "box": {
+      "width": 2.0,
+      "height": 2.0,
+      "outline": "INK",
+      "outline_px": 3,
+      "fill": "BG"
+     },
+     "font_px": 80,
+     "pyramids": [
+      {
+       "name": "1",
+       "rows": 3,
+       "left_edge_x": -3.0,
+       "right_edge_x": 3.0,
+       "bottom_row_centre_y": -2.0,
+       "rows_top_to_bottom": [
+        [
+         "10"
+        ],
+        [
+         "4",
+         "6"
+        ],
+        [
+         "1",
+         "3",
+         "3"
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": 0.0,
+         "centre_y": 2.0,
+         "text": "10",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": -1.0,
+         "centre_y": 0.0,
+         "text": "4",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": 1.0,
+         "centre_y": 0.0,
+         "text": "6",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": -2.0,
+         "centre_y": -2.0,
+         "text": "1",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": 0.0,
+         "centre_y": -2.0,
+         "text": "3",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": 2.0,
+         "centre_y": -2.0,
+         "text": "3",
+         "text_colour": "ANSWER"
+        }
+       ]
+      }
+     ]
+    },
+    "manim_description": "Draw on a 16 x 9 unit canvas (1 unit = 120 px, origin at the centre, x to the right, y upward) with a plain BG background. Draw the same three-row number pyramid, now filled as stacked square-cornered boxes. Every box is 2.0 units wide and 2.0 units high with a 3 px INK outline and BG fill, and boxes in one row touch each other. Each box above the bottom row is centred over the join of the two boxes below it. All text is sans-serif, 80 px, centred in its box, upright digits and italic letters. Layout and positions are exactly those of the question figure; the three numbers that were '?' (6, 3, 3) are written in ANSWER green. Pyramid 1 has 3 rows, left edge x = -3.0, right edge x = 3.0, bottom row centre y = -2.0. Row 1 (top row, centre y = 2.0) has 1 box: box 1 (centre x = 0.0) shows '10' in INK. Row 2 (row 2 from the top, centre y = 0.0) has 2 boxes: box 1 (centre x = -1.0) shows '4' in INK; box 2 (centre x = 1.0) shows '6' in ANSWER. Row 3 (bottom row, centre y = -2.0) has 3 boxes: box 1 (centre x = -2.0) shows '1' in INK; box 2 (centre x = 0.0) shows '3' in ANSWER; box 3 (centre x = 2.0) shows '3' in ANSWER. Nothing else is drawn: no arrows, no sums, no captions.",
+    "visible_text": [
+     "10",
+     "4",
+     "6",
+     "1",
+     "3"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "arrows, 'What will go here?' captions, or the equations 10 - 4 = 6 and 4 - 1 = 3",
+     "any '?' mark"
+    ],
+    "accuracy_checks": [
+     "10 - 4 = 6",
+     "4 - 1 = 3",
+     "6 - 3 = 3",
+     "going up: 1 + 3 = 4, 3 + 3 = 6, 4 + 6 = 10",
+     "given numbers 10, 4, 1 unchanged and in the same boxes as the question figure"
+    ],
+    "alt_text": "The three-row pyramid filled in: top 10, middle row 4 and 6, bottom row 1, 3 and 3.",
+    "render_note": "Complete final state: the last picture of the book's step sequence (10 / 4 6 / 1 3 3) without the step colours."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C29",
+   "role": "question",
+   "lp_book_number": "Number Pyramids: top 60 with letters",
+   "ncert_ref": "Section 6.3 - Number Pyramids, ref 6.3.fill60",
+   "question_text": "Fill the pyramid with top 60 and bottom row 12, a blank, 8.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book question is the pyramid picture itself (60 / ? ? / 12 ? 8); the student completes it. Same kind of question as Q1, Q2 and Q4, so same decision.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S5.T5.C29.IMG1",
+   "manim_scene": "c8_13_6_3_q3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C29.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "layout": "number_pyramid",
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre",
+      "px_per_unit": 120
+     },
+     "box": {
+      "width": 2.0,
+      "height": 2.0,
+      "outline": "INK",
+      "outline_px": 3,
+      "fill": "BG"
+     },
+     "font_px": 80,
+     "pyramids": [
+      {
+       "name": "1",
+       "rows": 3,
+       "left_edge_x": -3.0,
+       "right_edge_x": 3.0,
+       "bottom_row_centre_y": -2.0,
+       "rows_top_to_bottom": [
+        [
+         "60"
+        ],
+        [
+         "?",
+         "?"
+        ],
+        [
+         "12",
+         "?",
+         "8"
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": 0.0,
+         "centre_y": 2.0,
+         "text": "60",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": -1.0,
+         "centre_y": 0.0,
+         "text": "?",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": 1.0,
+         "centre_y": 0.0,
+         "text": "?",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": -2.0,
+         "centre_y": -2.0,
+         "text": "12",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": 0.0,
+         "centre_y": -2.0,
+         "text": "?",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": 2.0,
+         "centre_y": -2.0,
+         "text": "8",
+         "text_colour": "INK"
+        }
+       ]
+      }
+     ]
+    },
+    "manim_description": "Draw on a 16 x 9 unit canvas (1 unit = 120 px, origin at the centre, x to the right, y upward) with a plain BG background. Draw one three-row number pyramid as stacked square-cornered boxes. Every box is 2.0 units wide and 2.0 units high with a 3 px INK outline and BG fill, and boxes in one row touch each other. Each box above the bottom row is centred over the join of the two boxes below it. All text is sans-serif, 80 px, centred in its box, upright digits and italic letters.  Pyramid 1 has 3 rows, left edge x = -3.0, right edge x = 3.0, bottom row centre y = -2.0. Row 1 (top row, centre y = 2.0) has 1 box: box 1 (centre x = 0.0) shows '60' in INK. Row 2 (row 2 from the top, centre y = 0.0) has 2 boxes: box 1 (centre x = -1.0) shows '?' in INK; box 2 (centre x = 1.0) shows '?' in INK. Row 3 (bottom row, centre y = -2.0) has 3 boxes: box 1 (centre x = -2.0) shows '12' in INK; box 2 (centre x = 0.0) shows '?' in INK; box 3 (centre x = 2.0) shows '8' in INK. Nothing else is drawn: no letters, no equations, no captions.",
+    "visible_text": [
+     "60",
+     "?",
+     "12",
+     "8"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the values 32, 28 and 20",
+     "the letters a, b, c or any equation",
+     "arrows or captions"
+    ],
+    "accuracy_checks": [
+     "3 rows: top 60; row 2: two '?'; bottom row: 12, '?', 8",
+     "known numbers are exactly 60, 12 and 8; exactly three '?' boxes",
+     "matches the book figure 60 / ? ? / 12 ? 8 on page 4"
+    ],
+    "alt_text": "A three-row number pyramid with 60 at the top, two question marks in the middle row, and 12, a question mark and 8 in the bottom row.",
+    "render_note": "The book prints '?' in the unknown boxes (page 4). The version with the letters a, b, c is a teaching figure and is not drawn here: the question gives no letters."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C30",
+   "role": "solution",
+   "lp_book_number": "Number Pyramids: top 60 with letters",
+   "ncert_ref": "Section 6.3 - Number Pyramids, ref 6.3.fill60",
+   "question_text": "Fill the pyramid with top 60 and bottom row 12, a blank, 8.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The answer is the filled pyramid (printed in the book on page 5). Derived from the question figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S5.T5.C30.IMG1",
+   "manim_scene": "c8_13_6_3_q3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C30.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S5.T5.C29.IMG1",
+    "content": {
+     "type": "other",
+     "layout": "number_pyramid",
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre",
+      "px_per_unit": 120
+     },
+     "box": {
+      "width": 2.0,
+      "height": 2.0,
+      "outline": "INK",
+      "outline_px": 3,
+      "fill": "BG"
+     },
+     "font_px": 80,
+     "pyramids": [
+      {
+       "name": "1",
+       "rows": 3,
+       "left_edge_x": -3.0,
+       "right_edge_x": 3.0,
+       "bottom_row_centre_y": -2.0,
+       "rows_top_to_bottom": [
+        [
+         "60"
+        ],
+        [
+         "32",
+         "28"
+        ],
+        [
+         "12",
+         "20",
+         "8"
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": 0.0,
+         "centre_y": 2.0,
+         "text": "60",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": -1.0,
+         "centre_y": 0.0,
+         "text": "32",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": 1.0,
+         "centre_y": 0.0,
+         "text": "28",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": -2.0,
+         "centre_y": -2.0,
+         "text": "12",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": 0.0,
+         "centre_y": -2.0,
+         "text": "20",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": 2.0,
+         "centre_y": -2.0,
+         "text": "8",
+         "text_colour": "INK"
+        }
+       ]
+      }
+     ]
+    },
+    "manim_description": "Draw on a 16 x 9 unit canvas (1 unit = 120 px, origin at the centre, x to the right, y upward) with a plain BG background. Draw the same three-row number pyramid, now filled as stacked square-cornered boxes. Every box is 2.0 units wide and 2.0 units high with a 3 px INK outline and BG fill, and boxes in one row touch each other. Each box above the bottom row is centred over the join of the two boxes below it. All text is sans-serif, 80 px, centred in its box, upright digits and italic letters. Layout and positions are exactly those of the question figure; the three numbers that were '?' (32, 28, 20) are written in ANSWER green. Pyramid 1 has 3 rows, left edge x = -3.0, right edge x = 3.0, bottom row centre y = -2.0. Row 1 (top row, centre y = 2.0) has 1 box: box 1 (centre x = 0.0) shows '60' in INK. Row 2 (row 2 from the top, centre y = 0.0) has 2 boxes: box 1 (centre x = -1.0) shows '32' in ANSWER; box 2 (centre x = 1.0) shows '28' in ANSWER. Row 3 (bottom row, centre y = -2.0) has 3 boxes: box 1 (centre x = -2.0) shows '12' in INK; box 2 (centre x = 0.0) shows '20' in ANSWER; box 3 (centre x = 2.0) shows '8' in INK. Nothing else is drawn: no letters, no equations, no captions.",
+    "visible_text": [
+     "60",
+     "32",
+     "28",
+     "12",
+     "20",
+     "8"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the letters a, b, c or any equation",
+     "any '?' mark",
+     "arrows or captions"
+    ],
+    "accuracy_checks": [
+     "12 + 20 = 32",
+     "20 + 8 = 28",
+     "32 + 28 = 60",
+     "20 + 2c = 60 gives c = 20 for the middle bottom box",
+     "given numbers 60, 12, 8 unchanged and in the same boxes as the question figure"
+    ],
+    "alt_text": "The three-row pyramid filled in: top 60, middle row 32 and 28, bottom row 12, 20 and 8.",
+    "render_note": "Complete final state; same as the book's filled pyramid 60 / 32 28 / 12 20 8 (page 5). The LP steps name the unknown boxes a, b, c in the text; the figure shows numbers only, as the book does."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C31",
+   "role": "question",
+   "lp_book_number": "Number Pyramids: three four row pyramids",
+   "ncert_ref": "Section 6.3 - Number Pyramids, ref 6.3.fill_three_a",
+   "question_text": "Fill the four row pyramid with top 50, second row a blank and 22, and bottom row 4, a blank, 6, a blank.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book question is the three pyramid pictures with the given numbers placed in particular boxes; the student completes them. Same kind of question as Q1 to Q3, so same decision. One picture holds all three pyramids (both LP blocks).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S5.T5.C31.IMG1",
+   "manim_scene": "c8_13_6_3_q4_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C31.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "layout": "number_pyramid",
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre",
+      "px_per_unit": 120
+     },
+     "box": {
+      "width": 1.15,
+      "height": 1.15,
+      "outline": "INK",
+      "outline_px": 3,
+      "fill": "BG"
+     },
+     "font_px": 52,
+     "pyramids": [
+      {
+       "name": "1",
+       "rows": 4,
+       "left_edge_x": -7.5,
+       "right_edge_x": -2.9,
+       "bottom_row_centre_y": -1.725,
+       "rows_top_to_bottom": [
+        [
+         "50"
+        ],
+        [
+         "",
+         "22"
+        ],
+        [
+         "",
+         "",
+         ""
+        ],
+        [
+         "4",
+         "",
+         "6",
+         ""
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": -5.2,
+         "centre_y": 1.725,
+         "text": "50",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": -5.775,
+         "centre_y": 0.575,
+         "text": "",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": -4.625,
+         "centre_y": 0.575,
+         "text": "22",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": -6.35,
+         "centre_y": -0.575,
+         "text": "",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": -5.2,
+         "centre_y": -0.575,
+         "text": "",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": -4.05,
+         "centre_y": -0.575,
+         "text": "",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 1,
+         "centre_x": -6.925,
+         "centre_y": -1.725,
+         "text": "4",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 2,
+         "centre_x": -5.775,
+         "centre_y": -1.725,
+         "text": "",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 3,
+         "centre_x": -4.625,
+         "centre_y": -1.725,
+         "text": "6",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 4,
+         "centre_x": -3.475,
+         "centre_y": -1.725,
+         "text": "",
+         "text_colour": "INK"
+        }
+       ]
+      },
+      {
+       "name": "2",
+       "rows": 4,
+       "left_edge_x": -2.3,
+       "right_edge_x": 2.3,
+       "bottom_row_centre_y": -1.725,
+       "rows_top_to_bottom": [
+        [
+         ""
+        ],
+        [
+         "40",
+         ""
+        ],
+        [
+         "",
+         "",
+         "9"
+        ],
+        [
+         "5",
+         "",
+         "7",
+         ""
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": 0.0,
+         "centre_y": 1.725,
+         "text": "",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": -0.575,
+         "centre_y": 0.575,
+         "text": "40",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": 0.575,
+         "centre_y": 0.575,
+         "text": "",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": -1.15,
+         "centre_y": -0.575,
+         "text": "",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": 0.0,
+         "centre_y": -0.575,
+         "text": "",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": 1.15,
+         "centre_y": -0.575,
+         "text": "9",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 1,
+         "centre_x": -1.725,
+         "centre_y": -1.725,
+         "text": "5",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 2,
+         "centre_x": -0.575,
+         "centre_y": -1.725,
+         "text": "",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 3,
+         "centre_x": 0.575,
+         "centre_y": -1.725,
+         "text": "7",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 4,
+         "centre_x": 1.725,
+         "centre_y": -1.725,
+         "text": "",
+         "text_colour": "INK"
+        }
+       ]
+      },
+      {
+       "name": "3",
+       "rows": 4,
+       "left_edge_x": 2.9,
+       "right_edge_x": 7.5,
+       "bottom_row_centre_y": -1.725,
+       "rows_top_to_bottom": [
+        [
+         "35"
+        ],
+        [
+         "",
+         ""
+        ],
+        [
+         "",
+         "",
+         "7"
+        ],
+        [
+         "3",
+         "5",
+         "",
+         ""
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": 5.2,
+         "centre_y": 1.725,
+         "text": "35",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": 4.625,
+         "centre_y": 0.575,
+         "text": "",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": 5.775,
+         "centre_y": 0.575,
+         "text": "",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": 4.05,
+         "centre_y": -0.575,
+         "text": "",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": 5.2,
+         "centre_y": -0.575,
+         "text": "",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": 6.35,
+         "centre_y": -0.575,
+         "text": "7",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 1,
+         "centre_x": 3.475,
+         "centre_y": -1.725,
+         "text": "3",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 2,
+         "centre_x": 4.625,
+         "centre_y": -1.725,
+         "text": "5",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 3,
+         "centre_x": 5.775,
+         "centre_y": -1.725,
+         "text": "",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 4,
+         "centre_x": 6.925,
+         "centre_y": -1.725,
+         "text": "",
+         "text_colour": "INK"
+        }
+       ]
+      }
+     ]
+    },
+    "manim_description": "Draw on a 16 x 9 unit canvas (1 unit = 120 px, origin at the centre, x to the right, y upward) with a plain BG background. Draw three four-row number pyramids side by side as stacked square-cornered boxes. Every box is 1.15 units wide and 1.15 units high with a 3 px INK outline and BG fill, and boxes in one row touch each other. Each box above the bottom row is centred over the join of the two boxes below it. All text is sans-serif, 52 px, centred in its box, upright digits and italic letters. Pyramid 1 is on the left, pyramid 2 in the middle and pyramid 3 on the right; bottom rows share one baseline; the gap between neighbouring pyramids is 0.6 units. Pyramid 1 has 4 rows, left edge x = -7.5, right edge x = -2.9, bottom row centre y = -1.725. Row 1 (top row, centre y = 1.725) has 1 box: box 1 (centre x = -5.2) shows '50' in INK. Row 2 (row 2 from the top, centre y = 0.575) has 2 boxes: box 1 (centre x = -5.775) is empty; box 2 (centre x = -4.625) shows '22' in INK. Row 3 (row 3 from the top, centre y = -0.575) has 3 boxes: box 1 (centre x = -6.35) is empty; box 2 (centre x = -5.2) is empty; box 3 (centre x = -4.05) is empty. Row 4 (bottom row, centre y = -1.725) has 4 boxes: box 1 (centre x = -6.925) shows '4' in INK; box 2 (centre x = -5.775) is empty; box 3 (centre x = -4.625) shows '6' in INK; box 4 (centre x = -3.475) is empty. Pyramid 2 has 4 rows, left edge x = -2.3, right edge x = 2.3, bottom row centre y = -1.725. Row 1 (top row, centre y = 1.725) has 1 box: box 1 (centre x = 0.0) is empty. Row 2 (row 2 from the top, centre y = 0.575) has 2 boxes: box 1 (centre x = -0.575) shows '40' in INK; box 2 (centre x = 0.575) is empty. Row 3 (row 3 from the top, centre y = -0.575) has 3 boxes: box 1 (centre x = -1.15) is empty; box 2 (centre x = 0.0) is empty; box 3 (centre x = 1.15) shows '9' in INK. Row 4 (bottom row, centre y = -1.725) has 4 boxes: box 1 (centre x = -1.725) shows '5' in INK; box 2 (centre x = -0.575) is empty; box 3 (centre x = 0.575) shows '7' in INK; box 4 (centre x = 1.725) is empty. Pyramid 3 has 4 rows, left edge x = 2.9, right edge x = 7.5, bottom row centre y = -1.725. Row 1 (top row, centre y = 1.725) has 1 box: box 1 (centre x = 5.2) shows '35' in INK. Row 2 (row 2 from the top, centre y = 0.575) has 2 boxes: box 1 (centre x = 4.625) is empty; box 2 (centre x = 5.775) is empty. Row 3 (row 3 from the top, centre y = -0.575) has 3 boxes: box 1 (centre x = 4.05) is empty; box 2 (centre x = 5.2) is empty; box 3 (centre x = 6.35) shows '7' in INK. Row 4 (bottom row, centre y = -1.725) has 4 boxes: box 1 (centre x = 3.475) shows '3' in INK; box 2 (centre x = 4.625) shows '5' in INK; box 3 (centre x = 5.775) is empty; box 4 (centre x = 6.925) is empty. Nothing else is drawn: no letters, no sums, no captions. Empty boxes stay completely empty.",
+    "visible_text": [
+     "50",
+     "22",
+     "4",
+     "6",
+     "40",
+     "9",
+     "5",
+     "7",
+     "35",
+     "3"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any value in an empty box",
+     "the letters p, q, r, s or any equation",
+     "arrows or captions"
+    ],
+    "accuracy_checks": [
+     "each pyramid has 4 rows (1, 2, 3 and 4 boxes), 10 boxes each, 30 boxes in all",
+     "pyramid 1 given numbers: top 50, row 2 right 22, bottom 4 (box 1) and 6 (box 3): four numbers",
+     "pyramid 2 given numbers: row 2 left 40, row 3 right 9, bottom 5 (box 1) and 7 (box 3); the top box is empty: four numbers",
+     "pyramid 3 given numbers: top 35, row 3 right 7, bottom 3 (box 1) and 5 (box 2): four numbers",
+     "matches the book figure 'Fill the following pyramids' on page 5"
+    ],
+    "alt_text": "Three four-row number pyramids side by side: the first has 50 at the top, 22 in the second row and 4 and 6 in the bottom row; the second has 40, 9, 5 and 7; the third has 35, 7, 3 and 5; all other boxes are empty.",
+    "render_note": "The book prints these pyramids with empty boxes (page 5), so unknown boxes are left empty here, not '?'. One picture holds all three pyramids (the LP concept holds both blocks of this question on one card)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C32",
+   "role": "solution",
+   "lp_book_number": "Number Pyramids: three four row pyramids",
+   "ncert_ref": "Section 6.3 - Number Pyramids, ref 6.3.fill_three_a",
+   "question_text": "Fill the four row pyramid with top 50, second row a blank and 22, and bottom row 4, a blank, 6, a blank.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The answer is the three filled pyramids (filled figures). Derived from the question figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S5.T5.C32.IMG1",
+   "manim_scene": "c8_13_6_3_q4_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C32.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S5.T5.C31.IMG1",
+    "content": {
+     "type": "other",
+     "layout": "number_pyramid",
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre",
+      "px_per_unit": 120
+     },
+     "box": {
+      "width": 1.15,
+      "height": 1.15,
+      "outline": "INK",
+      "outline_px": 3,
+      "fill": "BG"
+     },
+     "font_px": 52,
+     "pyramids": [
+      {
+       "name": "1",
+       "rows": 4,
+       "left_edge_x": -7.5,
+       "right_edge_x": -2.9,
+       "bottom_row_centre_y": -1.725,
+       "rows_top_to_bottom": [
+        [
+         "50"
+        ],
+        [
+         "28",
+         "22"
+        ],
+        [
+         "13",
+         "15",
+         "7"
+        ],
+        [
+         "4",
+         "9",
+         "6",
+         "1"
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": -5.2,
+         "centre_y": 1.725,
+         "text": "50",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": -5.775,
+         "centre_y": 0.575,
+         "text": "28",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": -4.625,
+         "centre_y": 0.575,
+         "text": "22",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": -6.35,
+         "centre_y": -0.575,
+         "text": "13",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": -5.2,
+         "centre_y": -0.575,
+         "text": "15",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": -4.05,
+         "centre_y": -0.575,
+         "text": "7",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 1,
+         "centre_x": -6.925,
+         "centre_y": -1.725,
+         "text": "4",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 2,
+         "centre_x": -5.775,
+         "centre_y": -1.725,
+         "text": "9",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 3,
+         "centre_x": -4.625,
+         "centre_y": -1.725,
+         "text": "6",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 4,
+         "centre_x": -3.475,
+         "centre_y": -1.725,
+         "text": "1",
+         "text_colour": "ANSWER"
+        }
+       ]
+      },
+      {
+       "name": "2",
+       "rows": 4,
+       "left_edge_x": -2.3,
+       "right_edge_x": 2.3,
+       "bottom_row_centre_y": -1.725,
+       "rows_top_to_bottom": [
+        [
+         "70"
+        ],
+        [
+         "40",
+         "30"
+        ],
+        [
+         "19",
+         "21",
+         "9"
+        ],
+        [
+         "5",
+         "14",
+         "7",
+         "2"
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": 0.0,
+         "centre_y": 1.725,
+         "text": "70",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": -0.575,
+         "centre_y": 0.575,
+         "text": "40",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": 0.575,
+         "centre_y": 0.575,
+         "text": "30",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": -1.15,
+         "centre_y": -0.575,
+         "text": "19",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": 0.0,
+         "centre_y": -0.575,
+         "text": "21",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": 1.15,
+         "centre_y": -0.575,
+         "text": "9",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 1,
+         "centre_x": -1.725,
+         "centre_y": -1.725,
+         "text": "5",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 2,
+         "centre_x": -0.575,
+         "centre_y": -1.725,
+         "text": "14",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 3,
+         "centre_x": 0.575,
+         "centre_y": -1.725,
+         "text": "7",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 4,
+         "centre_x": 1.725,
+         "centre_y": -1.725,
+         "text": "2",
+         "text_colour": "ANSWER"
+        }
+       ]
+      },
+      {
+       "name": "3",
+       "rows": 4,
+       "left_edge_x": 2.9,
+       "right_edge_x": 7.5,
+       "bottom_row_centre_y": -1.725,
+       "rows_top_to_bottom": [
+        [
+         "35"
+        ],
+        [
+         "18",
+         "17"
+        ],
+        [
+         "8",
+         "10",
+         "7"
+        ],
+        [
+         "3",
+         "5",
+         "5",
+         "2"
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": 5.2,
+         "centre_y": 1.725,
+         "text": "35",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": 4.625,
+         "centre_y": 0.575,
+         "text": "18",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": 5.775,
+         "centre_y": 0.575,
+         "text": "17",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": 4.05,
+         "centre_y": -0.575,
+         "text": "8",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": 5.2,
+         "centre_y": -0.575,
+         "text": "10",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": 6.35,
+         "centre_y": -0.575,
+         "text": "7",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 1,
+         "centre_x": 3.475,
+         "centre_y": -1.725,
+         "text": "3",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 2,
+         "centre_x": 4.625,
+         "centre_y": -1.725,
+         "text": "5",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 3,
+         "centre_x": 5.775,
+         "centre_y": -1.725,
+         "text": "5",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 4,
+         "col_from_left": 4,
+         "centre_x": 6.925,
+         "centre_y": -1.725,
+         "text": "2",
+         "text_colour": "ANSWER"
+        }
+       ]
+      }
+     ]
+    },
+    "manim_description": "Draw on a 16 x 9 unit canvas (1 unit = 120 px, origin at the centre, x to the right, y upward) with a plain BG background. Draw the same three four-row number pyramids, now completely filled as stacked square-cornered boxes. Every box is 1.15 units wide and 1.15 units high with a 3 px INK outline and BG fill, and boxes in one row touch each other. Each box above the bottom row is centred over the join of the two boxes below it. All text is sans-serif, 52 px, centred in its box, upright digits and italic letters. Layout and positions are exactly those of the question figure; every number that was an empty box is written in ANSWER green (including the top 70 of pyramid 2), the given numbers stay INK. Pyramid 1 has 4 rows, left edge x = -7.5, right edge x = -2.9, bottom row centre y = -1.725. Row 1 (top row, centre y = 1.725) has 1 box: box 1 (centre x = -5.2) shows '50' in INK. Row 2 (row 2 from the top, centre y = 0.575) has 2 boxes: box 1 (centre x = -5.775) shows '28' in ANSWER; box 2 (centre x = -4.625) shows '22' in INK. Row 3 (row 3 from the top, centre y = -0.575) has 3 boxes: box 1 (centre x = -6.35) shows '13' in ANSWER; box 2 (centre x = -5.2) shows '15' in ANSWER; box 3 (centre x = -4.05) shows '7' in ANSWER. Row 4 (bottom row, centre y = -1.725) has 4 boxes: box 1 (centre x = -6.925) shows '4' in INK; box 2 (centre x = -5.775) shows '9' in ANSWER; box 3 (centre x = -4.625) shows '6' in INK; box 4 (centre x = -3.475) shows '1' in ANSWER. Pyramid 2 has 4 rows, left edge x = -2.3, right edge x = 2.3, bottom row centre y = -1.725. Row 1 (top row, centre y = 1.725) has 1 box: box 1 (centre x = 0.0) shows '70' in ANSWER. Row 2 (row 2 from the top, centre y = 0.575) has 2 boxes: box 1 (centre x = -0.575) shows '40' in INK; box 2 (centre x = 0.575) shows '30' in ANSWER. Row 3 (row 3 from the top, centre y = -0.575) has 3 boxes: box 1 (centre x = -1.15) shows '19' in ANSWER; box 2 (centre x = 0.0) shows '21' in ANSWER; box 3 (centre x = 1.15) shows '9' in INK. Row 4 (bottom row, centre y = -1.725) has 4 boxes: box 1 (centre x = -1.725) shows '5' in INK; box 2 (centre x = -0.575) shows '14' in ANSWER; box 3 (centre x = 0.575) shows '7' in INK; box 4 (centre x = 1.725) shows '2' in ANSWER. Pyramid 3 has 4 rows, left edge x = 2.9, right edge x = 7.5, bottom row centre y = -1.725. Row 1 (top row, centre y = 1.725) has 1 box: box 1 (centre x = 5.2) shows '35' in INK. Row 2 (row 2 from the top, centre y = 0.575) has 2 boxes: box 1 (centre x = 4.625) shows '18' in ANSWER; box 2 (centre x = 5.775) shows '17' in ANSWER. Row 3 (row 3 from the top, centre y = -0.575) has 3 boxes: box 1 (centre x = 4.05) shows '8' in ANSWER; box 2 (centre x = 5.2) shows '10' in ANSWER; box 3 (centre x = 6.35) shows '7' in INK. Row 4 (bottom row, centre y = -1.725) has 4 boxes: box 1 (centre x = 3.475) shows '3' in INK; box 2 (centre x = 4.625) shows '5' in INK; box 3 (centre x = 5.775) shows '5' in ANSWER; box 4 (centre x = 6.925) shows '2' in ANSWER. Nothing else is drawn: no letters, no sums, no captions.",
+    "visible_text": [
+     "50",
+     "28",
+     "22",
+     "13",
+     "15",
+     "7",
+     "4",
+     "9",
+     "6",
+     "1",
+     "70",
+     "40",
+     "30",
+     "19",
+     "21",
+     "5",
+     "14",
+     "2",
+     "35",
+     "18",
+     "17",
+     "8",
+     "10",
+     "3"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the letters p, q, r, s or any equation",
+     "any empty box"
+    ],
+    "accuracy_checks": [
+     "pyramid 1: 4 + 9 = 13, 9 + 6 = 15, 6 + 1 = 7, 13 + 15 = 28, 15 + 7 = 22, 28 + 22 = 50",
+     "pyramid 2: 5 + 14 = 19, 14 + 7 = 21, 7 + 2 = 9, 19 + 21 = 40, 21 + 9 = 30, 40 + 30 = 70",
+     "pyramid 3: 3 + 5 = 8, 5 + 5 = 10, 5 + 2 = 7, 8 + 10 = 18, 10 + 7 = 17, 18 + 17 = 35",
+     "every given number of the question figure is unchanged and in the same box"
+    ],
+    "alt_text": "The three four-row pyramids filled in: tops 50, 70 and 35; second rows 28 22, 40 30 and 18 17; third rows 13 15 7, 19 21 9 and 8 10 7; bottom rows 4 9 6 1, 5 14 7 2 and 3 5 5 2.",
+    "render_note": "Complete final state of all three pyramids, from the LP solution values. The old plan held two solution cards for this concept (C32.IMG1 and C32.IMG2); the brief allows one solution diagram per side, so one picture shows all three."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C33",
+   "role": "question",
+   "lp_book_number": "Number Pyramids: the top from the bottom row",
+   "ncert_ref": "Section 6.3 - Number Pyramids, ref 6.3.relation",
+   "question_text": "Write the top of a three row pyramid with bottom row a, b, c. Use it for the bottom row 1, 9, 4.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no empty pyramid for this question: the picture it prints (page 6) is the finished pyramid a + 2b + c, i.e. the answer. The question names the bottom row a, b, c in words, so no given figure is needed, and none is invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "State in words: bottom row a, b, c of a three-row pyramid (no picture)."
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C34",
+   "role": "solution",
+   "lp_book_number": "Number Pyramids: the top from the bottom row",
+   "ncert_ref": "Section 6.3 - Number Pyramids, ref 6.3.relation",
+   "question_text": "Write the top of a three row pyramid with bottom row a, b, c. Use it for the bottom row 1, 9, 4.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The book's printed answer to this question is a pyramid picture (a + 2b + c at the top), and the LP answer adds the numeric pyramid 1, 9, 4 -> 10, 13 -> 23: the answer is a pair of filled pyramids, not only a line of text. The question side has no figure, so this one stands alone (derived_from null).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S5.T5.C34.IMG1",
+   "manim_scene": "c8_13_6_3_q5_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C34.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "layout": "number_pyramid",
+     "canvas_units": {
+      "width": 16,
+      "height": 9,
+      "origin": "centre",
+      "px_per_unit": 120
+     },
+     "box": {
+      "width": 2.4,
+      "height": 1.3,
+      "outline": "INK",
+      "outline_px": 3,
+      "fill": "BG"
+     },
+     "font_px": 46,
+     "pyramids": [
+      {
+       "name": "1",
+       "rows": 3,
+       "left_edge_x": -7.7,
+       "right_edge_x": -0.5,
+       "bottom_row_centre_y": -1.3,
+       "rows_top_to_bottom": [
+        [
+         "a + 2b + c"
+        ],
+        [
+         "a + b",
+         "b + c"
+        ],
+        [
+         "a",
+         "b",
+         "c"
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": -4.1,
+         "centre_y": 1.3,
+         "text": "a + 2b + c",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": -5.3,
+         "centre_y": 0.0,
+         "text": "a + b",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": -2.9,
+         "centre_y": 0.0,
+         "text": "b + c",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": -6.5,
+         "centre_y": -1.3,
+         "text": "a",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": -4.1,
+         "centre_y": -1.3,
+         "text": "b",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": -1.7,
+         "centre_y": -1.3,
+         "text": "c",
+         "text_colour": "INK"
+        }
+       ]
+      },
+      {
+       "name": "2",
+       "rows": 3,
+       "left_edge_x": 0.5,
+       "right_edge_x": 7.7,
+       "bottom_row_centre_y": -1.3,
+       "rows_top_to_bottom": [
+        [
+         "23"
+        ],
+        [
+         "10",
+         "13"
+        ],
+        [
+         "1",
+         "9",
+         "4"
+        ]
+       ],
+       "boxes": [
+        {
+         "row_from_top": 1,
+         "col_from_left": 1,
+         "centre_x": 4.1,
+         "centre_y": 1.3,
+         "text": "23",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 1,
+         "centre_x": 2.9,
+         "centre_y": 0.0,
+         "text": "10",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 2,
+         "col_from_left": 2,
+         "centre_x": 5.3,
+         "centre_y": 0.0,
+         "text": "13",
+         "text_colour": "ANSWER"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 1,
+         "centre_x": 1.7,
+         "centre_y": -1.3,
+         "text": "1",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 2,
+         "centre_x": 4.1,
+         "centre_y": -1.3,
+         "text": "9",
+         "text_colour": "INK"
+        },
+        {
+         "row_from_top": 3,
+         "col_from_left": 3,
+         "centre_x": 6.5,
+         "centre_y": -1.3,
+         "text": "4",
+         "text_colour": "INK"
+        }
+       ]
+      }
+     ]
+    },
+    "manim_description": "Draw on a 16 x 9 unit canvas (1 unit = 120 px, origin at the centre, x to the right, y upward) with a plain BG background. Draw two three-row number pyramids side by side as stacked square-cornered boxes. Every box is 2.4 units wide and 1.3 units high with a 3 px INK outline and BG fill, and boxes in one row touch each other. Each box above the bottom row is centred over the join of the two boxes below it. All text is sans-serif, 46 px, centred in its box, upright digits and italic letters. The left pyramid (letters) is on the left and the right pyramid (numbers) on the right; both bottom rows lie on one baseline; the gap between the two pyramids is 1.0 unit. The letters a, b, c are italic; the bottom rows are the given data (INK), every other box is added by the solution (ANSWER). Pyramid 1 has 3 rows, left edge x = -7.7, right edge x = -0.5, bottom row centre y = -1.3. Row 1 (top row, centre y = 1.3) has 1 box: box 1 (centre x = -4.1) shows 'a + 2b + c' in ANSWER. Row 2 (row 2 from the top, centre y = 0.0) has 2 boxes: box 1 (centre x = -5.3) shows 'a + b' in ANSWER; box 2 (centre x = -2.9) shows 'b + c' in ANSWER. Row 3 (bottom row, centre y = -1.3) has 3 boxes: box 1 (centre x = -6.5) shows 'a' in INK; box 2 (centre x = -4.1) shows 'b' in INK; box 3 (centre x = -1.7) shows 'c' in INK. Pyramid 2 has 3 rows, left edge x = 0.5, right edge x = 7.7, bottom row centre y = -1.3. Row 1 (top row, centre y = 1.3) has 1 box: box 1 (centre x = 4.1) shows '23' in ANSWER. Row 2 (row 2 from the top, centre y = 0.0) has 2 boxes: box 1 (centre x = 2.9) shows '10' in ANSWER; box 2 (centre x = 5.3) shows '13' in ANSWER. Row 3 (bottom row, centre y = -1.3) has 3 boxes: box 1 (centre x = 1.7) shows '1' in INK; box 2 (centre x = 4.1) shows '9' in INK; box 3 (centre x = 6.5) shows '4' in INK. Nothing else is drawn: no arrows, no equals signs, no captions.",
+    "visible_text": [
+     "a + 2b + c",
+     "a + b",
+     "b + c",
+     "a",
+     "b",
+     "c",
+     "23",
+     "10",
+     "13",
+     "1",
+     "9",
+     "4"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the sum lines such as 1 + 2 x 9 + 4 = 23",
+     "arrows or captions",
+     "figure letters (a) or (b) outside the boxes"
+    ],
+    "accuracy_checks": [
+     "left pyramid: bottom a, b, c; row 2: a + b and b + c; top (a + b) + (b + c) = a + 2b + c",
+     "right pyramid: 1 + 9 = 10, 9 + 4 = 13, 10 + 13 = 23",
+     "a + 2b + c with a = 1, b = 9, c = 4 is 1 + 18 + 4 = 23, equal to the top of the right pyramid",
+     "both pyramids use the same box size and the same row positions (the right pyramid is the left one shifted right by 8.2 units: 3 box widths of 2.4 plus the gap of 1.0)",
+     "the text 'a + 2b + c' fits inside its box with at least 12 px of padding on each side; otherwise lower the font of all boxes together"
+    ],
+    "alt_text": "Two three-row pyramids: the first with bottom row a, b, c, middle row a plus b and b plus c, top a plus 2b plus c; the second with bottom row 1, 9, 4, middle row 10, 13 and top 23.",
+    "render_note": "The question has no figure, so this solution figure stands alone and draws the whole final state. The left pyramid is the book's page-6 picture (a + 2b + c / a + b, b + c / a, b, c); the right pyramid is the numeric example 1, 9, 4 of the LP solution (10, 13, 23), which the book draws on page 3."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C35",
+   "role": "question",
+   "lp_book_number": "Number Pyramids, Q1",
+   "ncert_ref": "Section 6.3 - Number Pyramids - Figure it Out Q1, ref FiOA.q1",
+   "question_text": "Without building the entire pyramid, find the number in the topmost row given the bottom row in each of these cases: 4, 13, 8 and 7, 11, 3 and 10, 14, 25.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "NUMBER_LIST_IN_BOXES"
+   ],
+   "reason": "The book draws each case as a plain row of three boxes holding the bottom-row numbers (4 13 8, 7 11 3, 10 14 25). The question asks for one number per case and the numbers are in the text in order; the boxes add nothing (no pyramid to complete).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "List the three bottom rows in order: (i) 4, 13, 8 (ii) 7, 11, 3 (iii) 10, 14, 25."
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C36",
+   "role": "solution",
+   "lp_book_number": "Number Pyramids, Q1",
+   "ncert_ref": "Section 6.3 - Number Pyramids - Figure it Out Q1, ref FiOA.q1",
+   "question_text": "Without building the entire pyramid, find the number in the topmost row given the bottom row in each of these cases: 4, 13, 8 and 7, 11, 3 and 10, 14, 25.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is three numbers (38, 32, 63) from a + 2b + c: arithmetic in LaTeX; no pyramid is built and none is printed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines 4 + 2 x 13 + 8 = 38, 7 + 2 x 11 + 3 = 32, 10 + 2 x 14 + 25 = 63."
+  }
+ ]
+}

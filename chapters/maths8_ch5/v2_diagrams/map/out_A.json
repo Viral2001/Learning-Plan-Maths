@@ -1,0 +1,1036 @@
+{
+ "meta": {
+  "chapter": "Number Play",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 5",
+  "lp_plan_id": "cbse_eng_maths8_ch5_v36",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "required": 0,
+    "optional": 0,
+    "none": 9
+   },
+   "question": {
+    "required": 1,
+    "optional": 0,
+    "none": 9
+   },
+   "solution": {
+    "required": 0,
+    "optional": 0,
+    "none": 10
+   }
+  },
+  "notes": [
+   "Chunk A = topics M1.S2.T2 to M1.S11.T11 (book pp.1-10 and the Figure it Out items Q1-Q3, Q9 with printed answers on pp.25-26, 32, 34).",
+   "One required diagram: the question figure of M1.S8.T8.C25 (the book's dot picture of 4p + (4q + 2)). Everything else is text/LaTeX; the book's other dot pictures are teaching figures already in the plan as teaching images, never linked.",
+   "The pdf does hold printed answers (pp.25-37); the figure-bearing answer pages for this chunk (25, 26, 32, 34) were looked at and carry no figure."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P01-boxed_expressions-1",
+   "source": "chapter p.1",
+   "description": "Yellow box of six sums: 7 = 3 + 4, 10 = 1 + 2 + 3 + 4, 12 = 3 + 4 + 5, 15 = 7 + 8 = 4 + 5 + 6 = 1 + 2 + 3 + 4 + 5. Teaching figure; checked against the page picture, base description correct.",
+   "mapped_to": "concept_image:M1.S2.T2.C2.IMG1"
+  },
+  {
+   "fig_id": "P01-boxed_expressions-2",
+   "source": "chapter p.1",
+   "description": "Pink box with the first two of the eight sign patterns, 3 + 4 - 5 + 6 and 3 - 4 - 5 - 6 (a format example in the Math Talk question). Not needed to attempt 'list all eight'; base description correct.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P02-tree_diagram-1",
+   "source": "chapter p.2",
+   "description": "Binary tree of + / - choices for 3, 4, 5, 6 with eight leaves, only the top two completed in red (3 + 4 + 5 + 6, 3 + 4 + 5 - 6). Edge labels re-checked on the page picture: upper edge +, lower edge - everywhere; base description correct.",
+   "mapped_to": "concept_image:M1.S2.T2.C3.IMG1"
+  },
+  {
+   "fig_id": "P02-boxed_expressions-2",
+   "source": "chapter p.2",
+   "description": "Three dashed boxes: 3 + 4 - 5 + 6 = 8 / 3 - 4 - 5 - 6 = -12; 5 + 6 - 7 + 8 = 12 / 5 - 6 - 7 - 8 = -16; one blank template. Values re-added (8, -12, 12, -16 are right); base description correct.",
+   "mapped_to": "concept_image:M1.S1.T1.C1.IMG1"
+  },
+  {
+   "fig_id": "P04-tree_diagram-1",
+   "source": "chapter p.4",
+   "description": "The same tree with letters a, b, c, d (Explanation 3, token model): 1 a, 2 b, 4 c, 8 d. Teaching figure, no concept image shows the lettered version; the plan's tree image M1.S2.T2.C3.IMG1 is the numeric version of the same shape.",
+   "mapped_to": "concept_image:M1.S2.T2.C3.IMG1"
+  },
+  {
+   "fig_id": "P04-expression_cards-2",
+   "source": "chapter p.4",
+   "description": "Eight plain cards 43 + 37, 672 - 348, 4 x 347 x 3, 708 - 477, 809 + 214, 119 x 303, 543 - 479, 513^3 in two rows of four (item M1.S6.T6.C18); nothing but the expressions, the LP question lists all eight.",
+   "mapped_to": "none:NUMBER_LIST_IN_BOXES"
+  },
+  {
+   "fig_id": "P04-expression_cards-3",
+   "source": "chapter p.4",
+   "description": "Nine plain cards 2a + 2b, 3g + 5h, 4m + 2n, 2u - 4v / 13k - 5k, 6m - 3n, x^2 + 2, b^2 + 1, 4k x 3j (item M1.S6.T6.C20, which leaves x^2 + 2 to the worked example); expressions in boxes only.",
+   "mapped_to": "none:NUMBER_LIST_IN_BOXES"
+  },
+  {
+   "fig_id": "P05-dot_array-1",
+   "source": "chapter p.5",
+   "description": "Rectangle of blue dots, 4 per row, top row, ellipsis, bottom row: multiples of 4 leave remainder 0. Teaching figure; ellipsis dot count is not significant.",
+   "mapped_to": "concept_image:M1.S7.T7.C22.IMG1"
+  },
+  {
+   "fig_id": "P05-dot_array-2",
+   "source": "chapter p.5",
+   "description": "L-shaped array of blue dots, 4 per row, last row of 2 at the bottom left: even numbers that are not multiples of 4 leave remainder 2. Teaching figure.",
+   "mapped_to": "concept_image:M1.S7.T7.C22.IMG1"
+  },
+  {
+   "fig_id": "P06-table-1",
+   "source": "chapter p.6",
+   "description": "Explanation / algebra / visualisation / examples table, rows 1 and 2 (4p + 4q = 4(p + q); (4p + 2) + (4q + 2) = 4(p + q + 1)); its words and algebra are text.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P06-dot_array-2",
+   "source": "chapter p.6",
+   "description": "Row 1 visualisation: blue p-row block + yellow q-row block, all rows of 4, = stack of (p + q) rows. Teaching figure, no concept image shows it; the algebra is in the worked example M1.S7.T7.C23 text (12 + 16 = 4 x (3 + 4)). Rotated label reads '(p + q) rows'.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P06-dot_array-3",
+   "source": "chapter p.6",
+   "description": "Row 2 visualisation: two L-shaped blocks (rows of 4 plus a row of 2) whose rows of 2 join into one mixed row, '1 row', total (p + q + 1) rows. Teaching figure; checked against the page picture, base description correct.",
+   "mapped_to": "concept_image:M1.S7.T7.C23.IMG1"
+  },
+  {
+   "fig_id": "P07-table-1",
+   "source": "chapter p.7",
+   "description": "Third row of the table (4p and (4q + 2)): explanation and examples columns left blank for the learner, algebra and the picture given. The table frame and algebra are text; the picture is P07-dot_array-2.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P07-dot_array-2",
+   "source": "chapter p.7",
+   "description": "Given picture of the task: blue rectangle (p rows of 4) + yellow L-block (q rows of 4 and 2 over) = stack, long arrow '(p + q) rows with a remainder 2'. Checked on a zoom of the page: blue rectangle top row 4, ellipsis, bottom row 4; yellow L: row 4, ellipsis, row 4, row of 2 flush left; q arrow spans the two rows of 4 only. Base description correct.",
+   "mapped_to": "item:M1.S8.T8.C25 (question)"
+  },
+  {
+   "fig_id": "P07-table-3",
+   "source": "chapter p.7",
+   "description": "Statement 1 table (8a and 8b, 8a + 8b = 8(a + b)); text and the picture P07-dot_array-4.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P07-dot_array-4",
+   "source": "chapter p.7",
+   "description": "Blue block of a rows and yellow block of b rows, 8 dots per row, long arrow (a + b) rows. Teaching figure; same idea as the plan's teaching image of 16 + 56 = 72 in rows of 8.",
+   "mapped_to": "concept_image:M1.S10.T10.C29.IMG1"
+  },
+  {
+   "fig_id": "P08-table-1",
+   "source": "chapter p.8",
+   "description": "Statement 2 table (8m = 8a + 8b, 8m = p + q); text and the picture P08-dot_array-2.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P08-dot_array-2",
+   "source": "chapter p.8",
+   "description": "8m as a + b rows of 8 and, beside it, the same rectangle cut by a staircase line into regions p and q (not along a row). Teaching figure, no concept image shows it; the numbers 72 = 48 + 24 and 72 = 50 + 22 are in the worked example M1.S10.T10.C29 text. Staircase shape unclear in print (as the base notes).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P08-table-3",
+   "source": "chapter p.8",
+   "description": "Statement 3 table (7j, (7j) x m); text and the picture P08-dot_array-4.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P08-dot_array-4",
+   "source": "chapter p.8",
+   "description": "Blocks of j rows of 7 dots, 'm times'. Teaching figure, no concept image shows it; the statement is argued in the worked example M1.S10.T10.C30 text (108 = 36 x 3).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P09-table-1",
+   "source": "chapter p.9",
+   "description": "Statement 4 table (12m = 2 x 6 x m = 3 x 4 x m); text and the picture P09-dot_array-2.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P09-dot_array-2",
+   "source": "chapter p.9",
+   "description": "A row of 12 dots drawn as 3 + ellipsis + 3, m rows. Teaching figure, no concept image shows it; the statement is argued in the worked example M1.S10.T10.C30 text (factors of 12 and 36).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P09-table-3",
+   "source": "chapter p.9",
+   "description": "Statement 5 table (7k, 7m, 7k / 7m = y; 42 not divisible by 28, divisible by 14); text and the pictures P09-dot_array-4 and -5.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P09-dot_array-4",
+   "source": "chapter p.9",
+   "description": "Rectangle of 7 dots per row, k rows (7k). Teaching figure; the plan's teaching image shows 42 = 7 x 6 in rows of 7.",
+   "mapped_to": "concept_image:M1.S10.T10.C30.IMG1"
+  },
+  {
+   "fig_id": "P09-dot_array-5",
+   "source": "chapter p.9",
+   "description": "Blocks of m rows of 7 dots, k rows in all (k = ym). Teaching figure; the plan's teaching image shows 42 in groups of 14 and 28.",
+   "mapped_to": "concept_image:M1.S10.T10.C30.IMG1"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 25,
+  "mapped_to_items": 1,
+  "mapped_to_concept_images": 10,
+  "mapped_none": 14,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S8.T8.C25.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S2.T2.C2",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Sum of Consecutive Numbers (book p.1; refs 5.1.anshu, 5.1.anshu_questions)",
+   "question_text": "Find every way to write 15 and 9 as a sum of consecutive natural numbers. Can 8 be written this way?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Every step is a sum of consecutive numbers written as arithmetic (7 + 8 = 15, 4 + 5 + 6 = 15, 1 + 2 + 3 + 4 + 5 = 15, 4 + 5 = 9, 2 + 3 + 4 = 9); the question gives no figure and the book's yellow box of sums is a teaching figure (the plan's teaching image M1.S2.T2.C2.IMG1 stays, never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write the sums as lines of LaTeX arithmetic.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C4",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Explanation 1 (book p.3; refs 5.1.any4, 5.1.expl1, 5.1.expl1_task)",
+   "question_text": "Take 3 + 4 − 5 − 6. Switch +4 to −4, then switch −5 to +5 in the original. How much does the value change each time, and what happens to its parity?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Pure signed arithmetic (3 + 4 - 5 - 6 = -4, 3 - 4 - 5 - 6 = -12, change 8 = 2 x 4, change 10 = 2 x 5); the question gives no figure and the working is equations.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the four equations as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C5",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Explanations 2 and 3 (book p.3-4; refs 5.1.expl2, 5.1.expl3, 5.1.limit4)",
+   "question_text": "Place signs between 2, 7, 4, 9 and 6 in three different ways and evaluate. Do all results have the same parity, and why?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Three signed sums of 2, 7, 4, 9, 6 (28, -4, -24) and a parity argument; all in equations and words, no figure given.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the three sums as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "question",
+   "lp_book_number": "Consecutive Numbers and Signs: the eight expressions",
+   "ncert_ref": "Section 5.1, Math Talk: the eight sign patterns (book p.1-2; ref 5.1.signs_list)",
+   "question_text": "List all eight signed expressions for 3, 4, 5 and 6 and evaluate each. What do you notice?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives only the numbers 3, 4, 5, 6 and asks for all eight sign patterns; the book's pink box shows two of the eight patterns as a format example, which the learner does not need to attempt it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "solution",
+   "lp_book_number": "Consecutive Numbers and Signs: the eight expressions",
+   "ncert_ref": "Section 5.1, Math Talk: the eight sign patterns (book p.1-2; ref 5.1.signs_list)",
+   "question_text": "List all eight signed expressions for 3, 4, 5 and 6 and evaluate each. What do you notice?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is eight signed expressions with their values, an arithmetic list the LP already writes as two LaTeX lines (the book's sign tree is the plan's teaching image M1.S2.T2.C3.IMG1). Borderline: a completed tree with all eight results next to its leaves would also be a faithful answer picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Two LaTeX lines of four expressions each, then the sentence that all eight results are even."
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C9",
+   "role": "question",
+   "lp_book_number": "Multiples and Remainders, Q1",
+   "ncert_ref": "Figure it Out Q1 (book p.11, printed answer p.25; ref FiO1.q1)",
+   "question_text": "The sum of four consecutive numbers is 34. What are these numbers?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem about four consecutive numbers with sum 34; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C10",
+   "role": "solution",
+   "lp_book_number": "Multiples and Remainders, Q1",
+   "ncert_ref": "Figure it Out Q1 (book p.11, printed answer p.25; ref FiO1.q1)",
+   "question_text": "The sum of four consecutive numbers is 34. What are these numbers?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Algebra n, n + 1, n + 2, n + 3 and a check sum; the printed answer is the four numbers 7, 8, 9, 10 as text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C11",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out Q2 (book p.11, printed answer p.25; ref FiO1.q2)",
+   "question_text": "Suppose p is the greatest of five consecutive numbers. Describe the other four numbers in terms of p.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem about the greatest of five consecutive numbers; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C12",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out Q2 (book p.11, printed answer p.25; ref FiO1.q2)",
+   "question_text": "Suppose p is the greatest of five consecutive numbers. Describe the other four numbers in terms of p.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the expression sequence p - 4, p - 3, p - 2, p - 1, which LaTeX writes exactly; the book's printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C13",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Figure it Out Q9 (end of chapter, book p.22, printed answer p.34; ref FiO4.q9)",
+   "question_text": "The middle number in the sequence of 5 consecutive even numbers is 5p. Express the other four numbers in sequence in terms of p.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem about five consecutive even numbers with middle number 5p; no figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C14",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q2",
+   "ncert_ref": "Figure it Out Q9 (end of chapter, book p.22, printed answer p.34; ref FiO4.q9)",
+   "question_text": "The middle number in the sequence of 5 consecutive even numbers is 5p. Express the other four numbers in sequence in terms of p.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the expression sequence 5p - 4, 5p - 2, 5p, 5p + 2, 5p + 4; the book's printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C16",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Breaking Even: 4m + 2q (book p.5; refs 5.1.breaking_algebra, 5.1.breaking_4m2q)",
+   "question_text": "Show that 4m + 2q is always even and try it with m = 4, q = −9. Then decide whether x² + 2 is always even by trying x = 6 and x = 3.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Factorising 4m + 2q = 2(2m + q) and three numeric trials (-2, 38, 11); all algebra and arithmetic, no figure given (teaching image M1.S5.T5.C16.IMG1 stays, never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the factorisation and the three trials as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C18",
+   "role": "question",
+   "lp_book_number": "Breaking Even: which are even without computing",
+   "ncert_ref": "Section 5.1, Breaking Even: arithmetic expressions (book p.4; ref 5.1.breaking_numeric)",
+   "question_text": "Without computing, which of these are even: 43 + 37, 672 − 348, 4 × 347 × 3, 708 − 477, 809 + 214, 119 × 303, 543 − 479, 513³?",
+   "decision": "none",
+   "reason_codes": [
+    "NUMBER_LIST_IN_BOXES",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's eight cards (43 + 37, 672 - 348, 4 x 347 x 3, 708 - 477, 809 + 214, 119 x 303, 543 - 479, 513^3) are plain expressions in boxes where neither position nor colour carries meaning; the LP question already lists all eight.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "List the eight expressions in the question text."
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C19",
+   "role": "solution",
+   "lp_book_number": "Breaking Even: which are even without computing",
+   "ncert_ref": "Section 5.1, Breaking Even: arithmetic expressions (book p.4; ref 5.1.breaking_numeric)",
+   "question_text": "Without computing, which of these are even: 43 + 37, 672 − 348, 4 × 347 × 3, 708 − 477, 809 + 214, 119 × 303, 543 − 479, 513³?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer sorts eight expressions into even and odd with a parity rule for each; the printed/LP answer is a text sort, not a drawing. Sibling of C21 (same kind of answer, same decision). Borderline: the eight cards could be redrawn with the four even ones in ANSWER green.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the four steps of parity reasoning as LaTeX lines."
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C20",
+   "role": "question",
+   "lp_book_number": "Breaking Even: which expressions are always even",
+   "ncert_ref": "Section 5.1, Breaking Even: algebraic expressions (book p.4-5; ref 5.1.breaking_task)",
+   "question_text": "Determine and explain which of these expressions always give even numbers: 2a + 2b, 3g + 5h, 4m + 2n, 2u − 4v, 13k − 5k, 6m − 3n, b² + 1, 4k × 3j. Write examples and non-examples, as appropriate, for each. Then write a few algebraic expressions which always give an even number.",
+   "decision": "none",
+   "reason_codes": [
+    "NUMBER_LIST_IN_BOXES",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's nine algebraic cards are plain expressions in boxes (the LP lists eight, leaving x^2 + 2 to the worked example); no position or colour carries meaning.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "List the expressions in the question text."
+  },
+  {
+   "lp_concept_id": "M1.S6.T6.C21",
+   "role": "solution",
+   "lp_book_number": "Breaking Even: which expressions are always even",
+   "ncert_ref": "Section 5.1, Breaking Even: algebraic expressions (book p.4-5; ref 5.1.breaking_task)",
+   "question_text": "Determine and explain which of these expressions always give even numbers: 2a + 2b, 3g + 5h, 4m + 2n, 2u − 4v, 13k − 5k, 6m − 3n, b² + 1, 4k × 3j. Write examples and non-examples, as appropriate, for each. Then write a few algebraic expressions which always give an even number.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Factorisations such as 2(a + b), 8k, 12kj and one numeric counter-example per expression; all equations. Same decision as C19.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the five steps as LaTeX lines."
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C22",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Pairs to Make Fours: two kinds of even numbers (book p.5-6; refs 5.1.pairs_question, 5.1.pairs_types)",
+   "question_text": "Sort 4, 12, 18, 22, 36 and 42 into numbers of the form 4p and numbers of the form 4p + 2.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Sorting six numbers by remainder on division by 4 (4 = 4 x 1 ... 42 = 4 x 10 + 2); the question gives no figure. The book's dot rectangles are teaching figures and the plan already carries them as teaching image M1.S7.T7.C22.IMG1 (stays, never linked). Borderline: six dot arrays in rows of four would help but are not needed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the six equations as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C23",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Pairs to Make Fours: the three cases (book p.6; ref 5.1.pairs_cases)",
+   "question_text": "Show that 12 + 16 and 22 + 6 are multiples of 4, using the forms 4p + 4q and (4p + 2) + (4q + 2).",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "12 + 16 and 22 + 6 written in the forms 4p + 4q and (4p + 2) + (4q + 2); equations only, no figure given. The book's visualisation is the plan's teaching image M1.S7.T7.C23.IMG1 (stays, never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the two derivations as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C25",
+   "role": "question",
+   "lp_book_number": "Pairs to Make Fours: a multiple of 4 plus 4q + 2",
+   "ncert_ref": "Section 5.1, Pairs to Make Fours: third row of the table (book p.6-7; ref 5.1.pairs_task)",
+   "question_text": "What happens when we add a multiple of 4 to an even number that is not a multiple of 4? Is it similar to the case of the parity of the sum of an even and an odd number? For 4p and (4q + 2), write the explanation and examples.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book's task says 'Look at the following expressions and the visualisation' and GIVES the dot picture (p rows of 4 plus q rows of 4 with 2 over make (p + q) rows with a remainder 2) as the third row of its table; the learner writes the explanation and examples from it. The LP question text carries the algebra but not the picture (see notes, LP text issues). Not a concept image: the teaching image M1.S7.T7.C24.IMG1 uses the numbers 4 + 6 = 10 and is never linked.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S8.T8.C25.IMG1",
+   "manim_scene": "c8_5_pairs_task_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S8.T8.C25.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "dot_array",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "dot_array",
+     "canvas": {
+      "aspect_ratio": "16:9",
+      "content_width_units": 22.9,
+      "content_height_units": 9.0,
+      "unit": "1 unit = distance between neighbouring dot centres; dot diameter 0.78 units; y grows downward; content centred with an even margin"
+     },
+     "layout": "one line, left to right: blue block + yellow L-block = stacked figure (the book prints the three pictures in two lines; the content is identical)",
+     "to_scale": false,
+     "dots_per_full_row": 4,
+     "blocks": [
+      {
+       "name": "p_block",
+       "shape": "rectangle",
+       "outline_corners": [
+        [
+         0,
+         2.5
+        ],
+        [
+         4.4,
+         2.5
+        ],
+        [
+         4.4,
+         6.5
+        ],
+        [
+         0,
+         6.5
+        ]
+       ],
+       "dot_fill": "SET_A",
+       "dot_outline": "INK",
+       "dots": [
+        {
+         "row": 1,
+         "y": 3.2,
+         "x": [
+          0.7,
+          1.7,
+          2.7,
+          3.7
+         ]
+        },
+        {
+         "row": 2,
+         "y": 5.8,
+         "x": [
+          0.7,
+          1.7,
+          2.7,
+          3.7
+         ]
+        }
+       ],
+       "ellipsis_dots": {
+        "count": 3,
+        "x": 2.2,
+        "y": [
+         4.1,
+         4.5,
+         4.9
+        ],
+        "diameter": 0.12,
+        "fill": "INK"
+       },
+       "row_arrow": {
+        "x": 4.8,
+        "y_from": 2.5,
+        "y_to": 6.5,
+        "heads": "both",
+        "label": "p rows",
+        "label_centre": [
+         5.4,
+         4.5
+        ],
+        "label_rotation": "90 degrees clockwise, reads top to bottom"
+       }
+      },
+      {
+       "name": "q_block",
+       "shape": "L",
+       "outline_corners": [
+        [
+         8.1,
+         2.0
+        ],
+        [
+         12.5,
+         2.0
+        ],
+        [
+         12.5,
+         6.0
+        ],
+        [
+         10.5,
+         6.0
+        ],
+        [
+         10.5,
+         7.0
+        ],
+        [
+         8.1,
+         7.0
+        ]
+       ],
+       "dot_fill": "SET_B",
+       "dot_outline": "INK",
+       "dots": [
+        {
+         "row": 1,
+         "y": 2.7,
+         "x": [
+          8.8,
+          9.8,
+          10.8,
+          11.8
+         ]
+        },
+        {
+         "row": 2,
+         "y": 5.3,
+         "x": [
+          8.8,
+          9.8,
+          10.8,
+          11.8
+         ]
+        },
+        {
+         "row": 3,
+         "y": 6.3,
+         "x": [
+          8.8,
+          9.8
+         ]
+        }
+       ],
+       "ellipsis_dots": {
+        "count": 3,
+        "x": 10.3,
+        "y": [
+         3.6,
+         4.0,
+         4.4
+        ],
+        "diameter": 0.12,
+        "fill": "INK"
+       },
+       "row_arrow": {
+        "x": 12.9,
+        "y_from": 2.0,
+        "y_to": 6.0,
+        "heads": "both",
+        "label": "q rows",
+        "label_centre": [
+         13.5,
+         4.0
+        ],
+        "label_rotation": "90 degrees clockwise, reads top to bottom",
+        "note": "spans rows 1 and 2 (the rows of 4) only, not the row of 2"
+       }
+      },
+      {
+       "name": "stack_top_p_block",
+       "shape": "rectangle",
+       "outline_corners": [
+        [
+         16.2,
+         0
+        ],
+        [
+         20.6,
+         0
+        ],
+        [
+         20.6,
+         4.0
+        ],
+        [
+         16.2,
+         4.0
+        ]
+       ],
+       "dot_fill": "SET_A",
+       "dot_outline": "INK",
+       "dots": [
+        {
+         "row": 1,
+         "y": 0.7,
+         "x": [
+          16.9,
+          17.9,
+          18.9,
+          19.9
+         ]
+        },
+        {
+         "row": 2,
+         "y": 3.3,
+         "x": [
+          16.9,
+          17.9,
+          18.9,
+          19.9
+         ]
+        }
+       ],
+       "ellipsis_dots": {
+        "count": 3,
+        "x": 18.4,
+        "y": [
+         1.6,
+         2.0,
+         2.4
+        ],
+        "diameter": 0.12,
+        "fill": "INK"
+       }
+      },
+      {
+       "name": "stack_bottom_q_block",
+       "shape": "L",
+       "outline_corners": [
+        [
+         16.2,
+         4.0
+        ],
+        [
+         20.6,
+         4.0
+        ],
+        [
+         20.6,
+         8.0
+        ],
+        [
+         18.6,
+         8.0
+        ],
+        [
+         18.6,
+         9.0
+        ],
+        [
+         16.2,
+         9.0
+        ]
+       ],
+       "dot_fill": "SET_B",
+       "dot_outline": "INK",
+       "note": "shares the border y = 4.0 with the blue rectangle above it",
+       "dots": [
+        {
+         "row": 1,
+         "y": 4.7,
+         "x": [
+          16.9,
+          17.9,
+          18.9,
+          19.9
+         ]
+        },
+        {
+         "row": 2,
+         "y": 7.3,
+         "x": [
+          16.9,
+          17.9,
+          18.9,
+          19.9
+         ]
+        },
+        {
+         "row": 3,
+         "y": 8.3,
+         "x": [
+          16.9,
+          17.9
+         ]
+        }
+       ],
+       "ellipsis_dots": {
+        "count": 3,
+        "x": 18.4,
+        "y": [
+         5.6,
+         6.0,
+         6.4
+        ],
+        "diameter": 0.12,
+        "fill": "INK"
+       }
+      }
+     ],
+     "operators": [
+      {
+       "symbol": "+",
+       "centre": [
+        7.0,
+        4.5
+       ]
+      },
+      {
+       "symbol": "=",
+       "centre": [
+        15.1,
+        4.5
+       ]
+      }
+     ],
+     "stack_arrow": {
+      "x": 21.0,
+      "y_from": 0,
+      "y_to": 9.0,
+      "heads": "both",
+      "labels": [
+       {
+        "text": "(p + q) rows",
+        "centre": [
+         21.6,
+         4.5
+        ]
+       },
+       {
+        "text": "with a remainder 2",
+        "centre": [
+         22.3,
+         4.5
+        ]
+       }
+      ],
+      "label_rotation": "90 degrees clockwise, reads top to bottom"
+     },
+     "visible_dot_totals": {
+      "p_block": 8,
+      "q_block": 10,
+      "stack": 18
+     }
+    },
+    "manim_description": "Draw one single line, left to right, on a plain BG canvas of aspect 16:9; the content is 22.9 units wide and 9.0 units tall and is centred with an even margin. One unit is the distance between neighbouring dot centres, a dot has diameter 0.78 units, every outline, arrow and sign is INK with 2 to 3 px strokes, y grows downward. (1) Blue block: an unfilled rectangle with corners (0, 2.5), (4.4, 2.5), (4.4, 6.5), (0, 6.5). Inside it exactly 2 rows of exactly 4 dots, each dot filled SET_A with an INK outline: row 1 centred at y = 3.2 and row 2 centred at y = 5.8, dot centres at x = 0.7, 1.7, 2.7 and 3.7. Between the rows a vertical column of exactly 3 small INK dots (diameter 0.12) at x = 2.2 and y = 4.1, 4.5, 4.9. At x = 4.8 a vertical double-headed INK arrow from y = 2.5 to y = 6.5; to its right the INK label 'p rows', rotated 90 degrees clockwise so that it reads top to bottom, centred at (5.4, 4.5), the letter p in italics. (2) A '+' sign centred at (7.0, 4.5). (3) Yellow block: an unfilled L-shaped outline through the corners (8.1, 2.0), (12.5, 2.0), (12.5, 6.0), (10.5, 6.0), (10.5, 7.0), (8.1, 7.0): a rectangle 4.4 wide and 4.0 tall (y = 2.0 to 6.0) with a strip 2.4 wide and 1.0 tall added under its left end (y = 6.0 to 7.0). Dots filled SET_B with an INK outline: row 1 centred at y = 2.7 and row 2 centred at y = 5.3, each with exactly 4 dots at x = 8.8, 9.8, 10.8 and 11.8; row 3 centred at y = 6.3 with exactly 2 dots at x = 8.8 and 9.8; the notch to the right of the strip (x = 10.5 to 12.5, y = 6.0 to 7.0) lies outside the outline and holds no dots. Between row 1 and row 2 a column of exactly 3 small INK dots at x = 10.3 and y = 3.6, 4.0, 4.4. At x = 12.9 a vertical double-headed INK arrow from y = 2.0 to y = 6.0, covering rows 1 and 2 only and not the row of 2; to its right the INK label 'q rows' (q in italics), rotated 90 degrees clockwise, centred at (13.5, 4.0). (4) An '=' sign centred at (15.1, 4.5). (5) Stacked figure: first the blue rectangle exactly as in (1) but with corners (16.2, 0), (20.6, 0), (20.6, 4.0), (16.2, 4.0), dots at y = 0.7 and y = 3.3 with x = 16.9, 17.9, 18.9, 19.9, and its 3 small ellipsis dots at x = 18.4 and y = 1.6, 2.0, 2.4. Directly beneath it, sharing the border y = 4.0, the yellow L-shape exactly as in (3) but with corners (16.2, 4.0), (20.6, 4.0), (20.6, 8.0), (18.6, 8.0), (18.6, 9.0), (16.2, 9.0); SET_B dots at y = 4.7 and y = 7.3 with 4 dots each at x = 16.9, 17.9, 18.9, 19.9, and at y = 8.3 with exactly 2 dots at x = 16.9 and 17.9; its 3 small ellipsis dots at x = 18.4 and y = 5.6, 6.0, 6.4. At x = 21.0 one vertical double-headed INK arrow from y = 0 to y = 9.0 over the whole stack; to its right two INK label lines rotated 90 degrees clockwise, reading top to bottom: '(p + q) rows' centred at (21.6, 4.5) and 'with a remainder 2' centred at (22.3, 4.5). Draw nothing else: no table border, no heading, no numbers, no answer text.",
+    "visible_text": [
+     "p rows",
+     "q rows",
+     "(p + q) rows",
+     "with a remainder 2",
+     "+",
+     "="
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the algebra 4p + (4q + 2) = 4(p + q) + 2 (it is written in the text, not drawn)",
+     "the table frame, the table header 'Explanation with Algebra and Visualisation' or the empty explanation and examples columns",
+     "any number for p or q, or any example sum such as 4 + 6 = 10"
+    ],
+    "accuracy_checks": [
+     "every full row in all three pictures has exactly 4 dots",
+     "blue block shows 2 rows of 4 = 8 dots; yellow L-block shows 2 rows of 4 and 1 row of 2 = 10 dots; the stacked figure shows exactly the same 8 blue and 10 yellow dots, 18 in all, at the same relative positions",
+     "the 2 dots of the last yellow row are flush left and the 2 places to their right are empty (the notch)",
+     "the q-rows arrow covers the 2 yellow rows of 4 only; the long arrow covers the blue block and the whole yellow L-block",
+     "meaning check: p rows of 4 + (q rows of 4 and 2 more) = (p + q) rows of 4 and 2 more, i.e. 4p + (4q + 2) = 4(p + q) + 2, remainder 2 on division by 4"
+    ],
+    "alt_text": "A blue block of p rows of 4 dots plus a yellow block of q rows of 4 dots and 2 extra dots equals both stacked, (p + q) rows with a remainder 2.",
+    "render_note": "Content copied from book p.7, third row of the Pairs to Make Fours table, 'visualisation' column (base figure P07-dot_array-2); the book prints it in two lines (top: blue + yellow L; below: = stack), here re-flowed into one line for the 16:9 card, nothing added or removed. The label '(p + q) rows with a remainder 2' is printed in the book's own figure, so it is part of what the question gives. Ellipsis = 3 small dots standing for 'more rows'. Not the same as teaching image M1.S7.T7.C24.IMG1 (numbers 4 + 6 = 10), which is never linked."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C26",
+   "role": "solution",
+   "lp_book_number": "Pairs to Make Fours: a multiple of 4 plus 4q + 2",
+   "ncert_ref": "Section 5.1, Pairs to Make Fours: third row of the table (book p.6-7; ref 5.1.pairs_task)",
+   "question_text": "What happens when we add a multiple of 4 to an even number that is not a multiple of 4? Is it similar to the case of the parity of the sum of an even and an odd number? For 4p and (4q + 2), write the explanation and examples.",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM"
+   ],
+   "reason": "The book's table already gives the complete dot picture (p rows + q rows with 2 over = (p + q) rows with a remainder 2); the solution adds algebra and number examples (4 + 6 = 10, 12 + 18 = 30, 8 + 22 = 30) in text, nothing new to draw, so it would only repeat the question diagram M1.S8.T8.C25.IMG1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the algebra and the three examples as LaTeX lines."
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C27",
+   "role": "question",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out Q3 (end of chapter, book p.21, printed answer p.32; ref FiO4.q3)",
+   "question_text": "When is the sum of two multiples of 3, a multiple of 6 and when is it not? Explain the different possible cases, and generalise the pattern.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question about sums of two multiples of 3; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C28",
+   "role": "solution",
+   "lp_book_number": "Figure it Out, Q1",
+   "ncert_ref": "Figure it Out Q3 (end of chapter, book p.21, printed answer p.32; ref FiO4.q3)",
+   "question_text": "When is the sum of two multiples of 3, a multiple of 6 and when is it not? Explain the different possible cases, and generalise the pattern.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Algebra 3m + 3n = 3(m + n) and three number examples (12, 18, 9); the printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C29",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Always, Sometimes or Never: statements 1 and 2 (book p.7-8; refs 5.1.asn_s1, 5.1.asn_s2)",
+   "question_text": "Check that 8 divides 16 + 56 and 80 − 24. Then decide whether 8 must divide two numbers that add up to 72.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Checks 16 + 56 = 72, 80 - 24 = 56, 72 = 48 + 24 and 72 = 50 + 22; all arithmetic with no figure given. The book's rectangles of 8 dots per row are teaching figures (teaching image M1.S10.T10.C29.IMG1 stays, never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the four checks as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C30",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Always, Sometimes or Never: statements 3, 4 and 5 (book p.8-9; refs 5.1.asn_s3, 5.1.asn_s4, 5.1.asn_s5)",
+   "question_text": "36 is divisible by 12. Check that 36 is divisible by every factor of 12 and that its multiple 108 is divisible by 12. Then decide whether 42, a multiple of 7, is divisible by 28 and by 14.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Factor and multiple checks for 36, 108 and 42 (42 = 7 x 6, 42 / 14 = 3, 42 = 28 + 14); arithmetic only, no figure given. The book's 7-dot rows are teaching figures (teaching image M1.S10.T10.C30.IMG1 stays, never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the four checks as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C32",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.1, Always, Sometimes or Never: statement 8 (book p.10; ref 5.1.asn_s8)",
+   "question_text": "Try 7 + 8 and 9 + 12, then explain with algebra why an odd number plus an even number is never a multiple of 6.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two trials (7 + 8 = 15, 9 + 12 = 21) and the algebra 2n + (2m + 1) = 2(n + m) + 1 against 6j; no figure is given in the book for this statement (teaching image M1.S10.T10.C32.IMG1 stays, never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Keep the four steps as LaTeX lines.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C34",
+   "role": "question",
+   "lp_book_number": "Always, Sometimes or Never: divisible by two numbers",
+   "ncert_ref": "Section 5.1, Always, Sometimes or Never: statements 6 and 7 (book p.10; ref 5.1.asn_mt67)",
+   "question_text": "Decide whether each claim is always, sometimes or never true: a number divisible by both 9 and 4 is divisible by 36; a number divisible by both 6 and 4 is divisible by 24.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two always/sometimes/never claims about divisibility by 9 and 4, and by 6 and 4; the book gives no figure for statements 6 and 7.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C35",
+   "role": "solution",
+   "lp_book_number": "Always, Sometimes or Never: divisible by two numbers",
+   "ncert_ref": "Section 5.1, Always, Sometimes or Never: statements 6 and 7 (book p.10; ref 5.1.asn_mt67)",
+   "question_text": "Decide whether each claim is always, sometimes or never true: a number divisible by both 9 and 4 is divisible by 36; a number divisible by both 6 and 4 is divisible by 24.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "LCM reasoning (36, and 12 not 24) with 72, 12 and 48 as checks; the answer is text. The number line of multiples of 6 and 4 is the plan's teaching image M1.S10.T10.C31.IMG1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C36",
+   "role": "question",
+   "lp_book_number": "Multiples and Remainders, Q3",
+   "ncert_ref": "Figure it Out Q3 (book p.11, printed answer p.25-26; ref FiO1.q3)",
+   "question_text": "For each statement below, determine whether it is always true, sometimes true, or never true. Explain your answer, with examples and non-examples, and justify your claim using algebra. (i) The sum of two even numbers is a multiple of 3. (ii) If a number is not divisible by 18, then it is also not divisible by 9. (iii) If two numbers are not divisible by 6, then their sum is not divisible by 6. (iv) The sum of a multiple of 6 and a multiple of 9 is a multiple of 3. (v) The sum of a multiple of 6 and a multiple of 3 is a multiple of 9.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Five statements to classify as always/sometimes/never; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C37",
+   "role": "solution",
+   "lp_book_number": "Multiples and Remainders, Q3",
+   "ncert_ref": "Figure it Out Q3 (book p.11, printed answer p.25-26; ref FiO1.q3)",
+   "question_text": "For each statement below, determine whether it is always true, sometimes true, or never true. Explain your answer, with examples and non-examples, and justify your claim using algebra. (i) The sum of two even numbers is a multiple of 3. (ii) If a number is not divisible by 18, then it is also not divisible by 9. (iii) If two numbers are not divisible by 6, then their sum is not divisible by 6. (iv) The sum of a multiple of 6 and a multiple of 9 is a multiple of 3. (v) The sum of a multiple of 6 and a multiple of 3 is a multiple of 9.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Per statement a counter-example or an algebraic line (6a + 9b = 3(2a + 3b), 6a + 3b = 3(2a + b)) and a verdict; all text, and the printed answer (book p.25-26) is text too.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

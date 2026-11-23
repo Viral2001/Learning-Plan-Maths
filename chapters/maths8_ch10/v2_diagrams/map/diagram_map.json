@@ -1,0 +1,4152 @@
+{
+ "meta": {
+  "chapter": "Proportional Reasoning-2",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 10",
+  "lp_plan_id": "cbse_eng_maths8_ch10_v35",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "none": 24,
+    "required": 4
+   },
+   "question": {
+    "none": 26,
+    "required": 2
+   },
+   "solution": {
+    "none": 20,
+    "required": 6,
+    "optional": 2
+   }
+  },
+  "notes": [
+   "[chunk A] Chunk A: sections 3.1 to 3.4 (units 1-23 of in_A.json).",
+   "[chunk A] Three required diagrams: the map for the distance question (schematic, no terrain; needs the user's OK), the triangle ABC of Example 5, and the 3-4-5 and 6-8-10 triangles of Figure it Out Q4's solution.",
+   "[chunk A] All other items are text/LaTeX; one optional (Figure it Out Q5 solution).",
+   "[chunk A] No book print slips found in this chunk's figures.",
+   "[chunk B] Chunk B: topics M2.S9.T9, M2.S10.T10, M2.S11.T11, M3.S12.T12, M3.S13.T13, M3.S14.T14, M3.S15.T15, M3.S16.T16, M3.S17.T17 (32 items: 8 worked-example blocks and 12 question/answer pairs).",
+   "[chunk B] Required: 2 worked examples (C33 the grade pie chart with its counts, added in the 23 Nov teaching-image audit; C36 pie-chart construction), 5 solutions (the pie charts of FiO 3.5 Q1-Q3, the labelled sleep rings, the transport pie with the Car angle) and 2 questions (sleep rings, transport pie). No optional.",
+   "[chunk B] All pie and ring diagrams are drawn to exact proportions from the LP numbers; the book's sleep rings are only approximate, so exact hours x 15 degrees are drawn.",
+   "[chunk B] All tables of numbers (grade table, speed-time table, the x-y tables of FiO 3.6 Q1-Q2, the empty subject table) are left to LaTeX; the teaching images C35.IMG1 and C49.IMG1 are accounted for but never linked.",
+   "[chunk B] Text coordinates in content are on a 16 x 9 unit canvas centred at (0, 0); every label box was checked in code to lie inside its slice or outside the circle without overlaps.",
+   "[chunk B] Teaching-image audit (23 Nov 2026): worked example M2.S9.T9.C33 ('the pie chart') is now required with its own diagram M2.S9.T9.C33.IMG2 (the book's grade pie chart with the counts, no angles); base figure P06-pie_chart-1 moved from concept image C35.IMG1 to this item. Backup: out_B.json.before_teaching_image_rule.",
+   "[chunk C] Chunk C: topics M3.S18.T18 (Figure it Out 3.6, second set, book Q2, Q3, Q6-Q12) and M3.S19.T19 (Summary).",
+   "[chunk C] No question in this chunk gives a figure that the learner needs; the only two book pictures (Q10 tank with two pumps, Q11 toys on a conveyor) are scene illustrations, so every item is none except one optional (C85 solution, tank bar in 6 parts, not added).",
+   "[chunk C] The book's donut charts (Q4) and pie chart (Q5) of the same page belong to chunk B (concept ids M2.S11.T11.C44 and C46), not to this chunk.",
+   "[chunk C] The LP book numbers 'Figure it Out 3.6, Q1..Q9' of this topic repeat labels used in other topics; ncert_refs FiOb2..FiOb12 give the real book numbers (see notes_C.md)."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "NEW-P13-donut_chart-1-sol",
+   "source": "chapter p.13",
+   "description": "Second use of P13-donut_chart-1: the same eight rings with the hours of sleep written in (solution figure).",
+   "mapped_to": "item:M2.S11.T11.C45 (solution)"
+  },
+  {
+   "fig_id": "NEW-P14-pie_chart-1-sol",
+   "source": "chapter p.14",
+   "description": "Second use of P14-pie_chart-1: the same pie chart with the Car slice marked 30° (solution figure).",
+   "mapped_to": "item:M2.S11.T11.C47 (solution)"
+  },
+  {
+   "fig_id": "NEW-P14-pumps-tank-Q10",
+   "source": "chapter p.14 (pdf page 14)",
+   "description": "Illustration beside the book's Figure it Out 3.6 (second set) Q10: a rectangular water tank, water level about two thirds up, filled from above by two pumps drawn side by side (a bare pipe on the left, a pipe with a motor casing on the right), each pouring one blue stream; pale yellow glow behind. No numbers, no labels, no scale. Pure scene illustration, the data (3 hours, 2 hours) are in the question text.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "NEW-P14-toy-conveyor-Q11",
+   "source": "chapter p.14 (pdf page 14)",
+   "description": "Illustration beside the book's Figure it Out 3.6 (second set) Q11: a grey machine chute at the upper left drops one teddy-like toy onto a conveyor belt that runs to the lower right with 7 more identical toys sitting on it (8 toys in all, counting the one leaving the chute). No numbers, no labels. Pure scene illustration; the toy count has no connection to 42 machines, 63 days or 54 days in the question text.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P01-cross_multiplication-1",
+   "source": "chapter p.01",
+   "mapped_to": "none:TEXT_SUFFICIENT",
+   "description": "Teaching figure of 3.1: '6 : 3' and '4 : 2' on one line with a blue arc above joining 6 and 2 (red x) and a blue arc below joining 3 and 4 (red x). It only restates the two products 6 x 2 = 12 and 3 x 4 = 12 that the LP steps write out; not a concept image of the plan, not drawn for the idli worked example (borderline, see notes)."
+  },
+  {
+   "fig_id": "P02-map-1",
+   "source": "chapter p.02",
+   "mapped_to": "item:M1.S2.T2.C6 (question)",
+   "description": "CORRECTED (details only): coloured physical map of South India with 13 city markers; every name is centred just below its marker (Vishakapatnam's label is centred just below its marker, not below-left; Thiruvananthapuram's label sits inside the frame just above the bottom edge, shifted slightly left). Printed in Web-Mercator with ticks at 72E..86E and 18N..8N, compass rose top right, LEGEND with a CITY marker, 'RF = 1 : 60,00,000' bottom right and 'Map not to scale' bottom left. Marker positions measured from the page picture (lon E, lat N): Vishakapatnam 83.28, 17.69; Hyderabad 78.50, 17.35; Tirupati 79.43, 13.63; Chennai 80.28, 13.08; Bengaluru 77.60, 12.98; Mangaluru 74.85, 12.87; Mysuru 76.66, 12.30; Puducherry 79.84, 11.93; Kannur 75.39, 11.88; Coimbatore 76.98, 11.00; Kochi 76.25, 9.97; Madurai 78.13, 9.92; Thiruvananthapuram 76.96, 8.49. Drawn as a schematic: terrain and coastline are not drawn."
+  },
+  {
+   "fig_id": "P05-split_diagram-1",
+   "source": "chapter p.05",
+   "mapped_to": "concept_image:M2.S6.T6.C20.IMG1",
+   "description": "Heap labelled '110 units of concrete' with three arrows marked 1, 1.5 and 3 leading to heaps '20 units of cement', '30 units of sand', '60 units of gravel'. The plan already holds this picture as concept image M2.S6.T6.C20.IMG1 (accounting only, not linked); Example 3 (M2.S6.T6.C21) stays text."
+  },
+  {
+   "fig_id": "P06-pie_chart-1",
+   "source": "chapter p.06",
+   "description": "Grade Distribution (40 students): coloured pie chart, slices A 12, B 10, C 8, D 6, E 4, anticlockwise from 12 o'clock, counts inside, angles not printed (checked against the page picture: correct).",
+   "mapped_to": "item:M2.S9.T9.C33 (question)"
+  },
+  {
+   "fig_id": "P06-shape-1",
+   "source": "chapter p.06",
+   "mapped_to": "item:M2.S6.T6.C23 (question)",
+   "description": "Triangle ABC, A bottom-left, B bottom-right, AB horizontal, C above and left of B, angles 20° at A, 60° at B and 100° at C marked with small sectors; no side lengths. Checked against the page picture: the base description is right, and the proportions agree with the angles."
+  },
+  {
+   "fig_id": "P06-table-1",
+   "source": "chapter p.06",
+   "description": "Plain 2 x 6 table Grade A to E with Students 12, 10, 8, 6, 4 (checked: correct); LaTeX table.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P07-construction-1",
+   "source": "chapter p.07",
+   "description": "Construction steps 1 and 2: circle with radius AB; then radius AC at 108° (checked: correct). Earlier stage of the final C36 picture.",
+   "mapped_to": "item:M2.S9.T9.C36 (question)"
+  },
+  {
+   "fig_id": "P08-construction-1",
+   "source": "chapter p.08",
+   "description": "Construction steps 3 and 4: AD at 90° from AC, AE at 72° from AD (checked: correct). Earlier stage of the final C36 picture.",
+   "mapped_to": "item:M2.S9.T9.C36 (question)"
+  },
+  {
+   "fig_id": "P08-construction-2",
+   "source": "chapter p.08",
+   "description": "Construction steps 5-6 (AF, angles 108°, 90°, 72°, 54°, 36°) and step 7 (only grades A green and B yellow filled, C, D, E left blank) (checked: correct). Basis of the final C36 picture.",
+   "mapped_to": "item:M2.S9.T9.C36 (question)"
+  },
+  {
+   "fig_id": "P09-table-1",
+   "source": "chapter p.09",
+   "description": "Empty data-collection table for FiO 3.5 Q3: seven subject headings and an empty Number of Students row (checked: correct); LaTeX table.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P09-table-2",
+   "source": "chapter p.09",
+   "description": "Plain speed-time table Walk, Bicycle, Motorcycle, Car: 5, 15, 30, 60 km/h and 18, 6, 3, 1.5 hours (checked: correct); drawn inside the teaching image C49.IMG1.",
+   "mapped_to": "concept_image:M3.S12.T12.C49.IMG1"
+  },
+  {
+   "fig_id": "P10-annotated_table-1",
+   "source": "chapter p.10",
+   "description": "Speed-time table with bracket factors x3, x2, x4 above and x1/3, x1/2, x1/4 below (checked: correct); same idea as the teaching image C49.IMG1, never linked.",
+   "mapped_to": "concept_image:M3.S12.T12.C49.IMG1"
+  },
+  {
+   "fig_id": "P11-table-1",
+   "source": "chapter p.11",
+   "description": "FiO 3.6 Q1 (i): x 40, 80, 25, 16 / y 20, 10, 32, 50 (checked: correct); plain table.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P11-table-2",
+   "source": "chapter p.11",
+   "description": "FiO 3.6 Q1 (ii): x 40, 80, 25, 16 / y 20, 10, 12.5, 8 (checked: correct); plain table.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P11-table-3",
+   "source": "chapter p.11",
+   "description": "FiO 3.6 Q1 (iii): x 30, 90, 150, 10 / y 15, 5, 3, 45 (checked: correct); plain table.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P11-table-4",
+   "source": "chapter p.11",
+   "description": "FiO 3.6 Q2: x 16, 12, empty, 36 / y 9, empty, 48, empty (checked: correct); plain table with blanks.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P13-donut_chart-1",
+   "source": "chapter p.13",
+   "description": "Eight 24-hour ring charts (giraffe, elephant, human, dog / cat, squirrel, python, bat), dark part from 12 o'clock anticlockwise growing from about 12% to 84% (checked: correct); book approximates the shares, spec uses exact hours x 15 degrees. Question figure.",
+   "mapped_to": "item:M2.S11.T11.C44 (question)"
+  },
+  {
+   "fig_id": "P14-pie_chart-1",
+   "source": "chapter p.14",
+   "description": "Q5 transport pie chart, uncoloured: Walk 90°, Bus 120°, Two-wheeler 60°, Cycle 60°, Car slice unmarked (30°); radii up, left, down-left, down, down-right (checked: correct). Question figure.",
+   "mapped_to": "item:M2.S11.T11.C46 (question)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 22,
+  "mapped_to_items": 10,
+  "mapped_to_concept_images": 3,
+  "mapped_none": 9,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S2.T2.C6.IMG1",
+   "M1.S5.T5.C19.IMG1",
+   "M2.S10.T10.C39.IMG1",
+   "M2.S10.T10.C41.IMG1",
+   "M2.S10.T10.C43.IMG1",
+   "M2.S11.T11.C44.IMG1",
+   "M2.S11.T11.C45.IMG1",
+   "M2.S11.T11.C46.IMG1",
+   "M2.S11.T11.C47.IMG1",
+   "M2.S6.T6.C23.IMG1",
+   "M2.S9.T9.C33.IMG2",
+   "M2.S9.T9.C36.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S1.T1.C1",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Ready check 1",
+   "ncert_ref": "",
+   "question_text": "Ready check 1: write 6 : 3 in its simplest form.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Simplifying 6 : 3 (HCF 3, 6 ÷ 3 = 2, 3 ÷ 3 = 1) is arithmetic; the book prints no figure here.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write the two divisions as LaTeX."
+  },
+  {
+   "lp_concept_id": "M1.S1.T1.C1",
+   "role": "worked_example",
+   "block_index": 1,
+   "lp_book_number": "Ready check 2",
+   "ncert_ref": "",
+   "question_text": "Ready check 2: write 1 ÷ 1.5 as a fraction in lowest terms.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Turning 1 ÷ 1.5 into 10 ÷ 15 = 2/3 is arithmetic; no figure is printed or needed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S1.T1.C1",
+   "role": "worked_example",
+   "block_index": 2,
+   "lp_book_number": "Ready check 3",
+   "ncert_ref": "",
+   "question_text": "Ready check 3: find 0.5 × 8 and 1.5 × 20. Does multiplying always make a number bigger?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two products (0.5 × 8 = 4, 1.5 × 20 = 30) and a yes/no remark; no figure is printed or needed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C2",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Idli question (3.1)",
+   "ncert_ref": "3.1.Q_idli, 3.1.general",
+   "question_text": "Viswanath mixes 6 cups of rice with 3 cups of urad dal; Puneet mixes 4 cups of rice with 2 cups. Would their idlis taste the same?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Both ratios and the cross products 6 × 2 = 12 and 3 × 4 = 12 are fully in the words and the LaTeX steps. The book's cross-multiplication arcs (P01) only restate those two products, and the plan's concept image M1.S2.T2.C2.IMG1 already sets the two batters side by side.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write the cross-multiplication in LaTeX: $6 \\times 2 = 12$ and $3 \\times 4 = 12$."
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C2",
+   "role": "worked_example",
+   "block_index": 1,
+   "lp_book_number": "Riya's batter (3.1, authored)",
+   "ncert_ref": "",
+   "question_text": "Riya starts from 2 cups of rice and 1 cup of dal and adds 2 more cups of each. Is her batter in the same proportion?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Riya's batter is 4 cups : 3 cups; the check 2 × 3 = 6 against 1 × 4 = 4 is arithmetic; the book prints no figure for it.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C3",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "RF meaning (3.2)",
+   "ncert_ref": "3.2.map, 3.2.Q_RF, 3.2.RF_def",
+   "question_text": "What does RF 1 : 60,00,000 on a map mean?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A definition question (RF 1 : 60,00,000 means 1 cm on the map is 60,00,000 cm on the ground); the answer is words and one factor. The concept image M1.S2.T2.C3.IMG1 already shows map distance, road and scale bar. The book's printed map is needed by the distance question (M1.S2.T2.C6), not here.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C4",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Map Making Activity (3.2)",
+   "ncert_ref": "3.2.map_activity",
+   "question_text": "Map Making Activity: sketch your classroom at a scale of 1 : 50. If the room is 8 m long and 6 m wide, how big is the sketch?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The activity asks students to make their own sketch with their own objects; the LP answer is only the sketch size (800 ÷ 50 = 16 cm, 600 ÷ 50 = 12 cm, 150 ÷ 50 = 3 cm). Borderline: a 16 cm by 12 cm rectangle would only make it nicer, and the object positions are not given.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C5",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Different maps (3.2)",
+   "ncert_ref": "3.2.Q_other_maps, 3.2.teacher_note",
+   "question_text": "Measure the same two pairs of cities on maps with different scales. Do they give the same geographical distance?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Students measure with their own maps and atlases; the LP steps are two divisions (290 ÷ 100 and 290 ÷ 30) in words.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C6",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Distances on the map (3.2)",
+   "ncert_ref": "3.2.Q_distances",
+   "question_text": "Using the map, find the geographical distance between Bengaluru and Chennai, and between Mangaluru and Chennai.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question says 'Using the map' and the learner must measure between city markers, but the LP has no picture of the map; the positions of Bengaluru, Chennai and Mangaluru live only in the figure (base figure P02-map-1). Only the positions, frame ticks, compass, legend and scale texts are drawn; terrain is not (see render_note).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S2.T2.C6.IMG1",
+   "manim_scene": "c8_10_3_2_map_distances_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S2.T2.C6.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "subtype": "schematic_city_map",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "frame_px": {
+      "left": 262,
+      "top": 56,
+      "width": 1395,
+      "height": 968
+     },
+     "frame_units": {
+      "width": 637,
+      "height": 442,
+      "px_per_unit": 2.19,
+      "origin": "top-left of frame, y downward",
+      "source": "pixel centroids measured on the book page picture (page_02.png), frame x 172..809, y 175..617"
+     },
+     "projection": "Web-Mercator as printed: 2 degrees of longitude = 84 units; latitude ticks at the y values below",
+     "longitude_ticks_top_and_bottom": [
+      {
+       "label": "72°E",
+       "x_unit": 23.5,
+       "x_px": 313
+      },
+      {
+       "label": "74°E",
+       "x_unit": 107.5,
+       "x_px": 497
+      },
+      {
+       "label": "76°E",
+       "x_unit": 193.0,
+       "x_px": 685
+      },
+      {
+       "label": "78°E",
+       "x_unit": 276.5,
+       "x_px": 868
+      },
+      {
+       "label": "80°E",
+       "x_unit": 360.5,
+       "x_px": 1051
+      },
+      {
+       "label": "82°E",
+       "x_unit": 444.5,
+       "x_px": 1235
+      },
+      {
+       "label": "84°E",
+       "x_unit": 528.5,
+       "x_px": 1419
+      },
+      {
+       "label": "86°E",
+       "x_unit": 612.5,
+       "x_px": 1603
+      }
+     ],
+     "latitude_ticks_left_and_right": [
+      {
+       "label": "18°N",
+       "y_unit": 7.0,
+       "y_px": 71
+      },
+      {
+       "label": "16°N",
+       "y_unit": 95.0,
+       "y_px": 264
+      },
+      {
+       "label": "14°N",
+       "y_unit": 182.0,
+       "y_px": 455
+      },
+      {
+       "label": "12°N",
+       "y_unit": 268.0,
+       "y_px": 643
+      },
+      {
+       "label": "10°N",
+       "y_unit": 354.0,
+       "y_px": 831
+      },
+      {
+       "label": "8°N",
+       "y_unit": 439.5,
+       "y_px": 1019
+      }
+     ],
+     "cities": [
+      {
+       "name": "Vishakapatnam",
+       "x_unit": 498.0,
+       "y_unit": 21.0,
+       "x_px": 1353,
+       "y_px": 102,
+       "lon_E": 83.28,
+       "lat_N": 17.69,
+       "label_position": "left",
+       "label_align": "right edge",
+       "label_right_edge_px": 1337,
+       "label_centre_y_px": 102
+      },
+      {
+       "name": "Hyderabad",
+       "x_unit": 297.0,
+       "y_unit": 36.0,
+       "x_px": 912,
+       "y_px": 135,
+       "lon_E": 78.5,
+       "lat_N": 17.35,
+       "label_position": "below",
+       "label_align": "centre",
+       "label_centre_x_px": 912,
+       "label_centre_y_px": 166
+      },
+      {
+       "name": "Tirupati",
+       "x_unit": 336.0,
+       "y_unit": 198.0,
+       "x_px": 998,
+       "y_px": 490,
+       "lon_E": 79.43,
+       "lat_N": 13.63,
+       "label_position": "above",
+       "label_align": "centre",
+       "label_centre_x_px": 998,
+       "label_centre_y_px": 459
+      },
+      {
+       "name": "Chennai",
+       "x_unit": 372.0,
+       "y_unit": 222.0,
+       "x_px": 1077,
+       "y_px": 542,
+       "lon_E": 80.28,
+       "lat_N": 13.08,
+       "label_position": "below",
+       "label_align": "centre",
+       "label_centre_x_px": 1077,
+       "label_centre_y_px": 573
+      },
+      {
+       "name": "Bengaluru",
+       "x_unit": 259.0,
+       "y_unit": 226.5,
+       "x_px": 829,
+       "y_px": 552,
+       "lon_E": 77.6,
+       "lat_N": 12.98,
+       "label_position": "below",
+       "label_align": "centre",
+       "label_centre_x_px": 829,
+       "label_centre_y_px": 583
+      },
+      {
+       "name": "Mangaluru",
+       "x_unit": 143.5,
+       "y_unit": 231.0,
+       "x_px": 576,
+       "y_px": 562,
+       "lon_E": 74.85,
+       "lat_N": 12.87,
+       "label_position": "below",
+       "label_align": "centre",
+       "label_centre_x_px": 576,
+       "label_centre_y_px": 593
+      },
+      {
+       "name": "Mysuru",
+       "x_unit": 219.5,
+       "y_unit": 256.0,
+       "x_px": 743,
+       "y_px": 617,
+       "lon_E": 76.66,
+       "lat_N": 12.3,
+       "label_position": "below",
+       "label_align": "centre",
+       "label_centre_x_px": 743,
+       "label_centre_y_px": 648
+      },
+      {
+       "name": "Puducherry",
+       "x_unit": 353.0,
+       "y_unit": 271.5,
+       "x_px": 1035,
+       "y_px": 651,
+       "lon_E": 79.84,
+       "lat_N": 11.93,
+       "label_position": "below",
+       "label_align": "centre",
+       "label_centre_x_px": 1035,
+       "label_centre_y_px": 682
+      },
+      {
+       "name": "Kannur",
+       "x_unit": 166.0,
+       "y_unit": 274.0,
+       "x_px": 626,
+       "y_px": 656,
+       "lon_E": 75.39,
+       "lat_N": 11.88,
+       "label_position": "below",
+       "label_align": "centre",
+       "label_centre_x_px": 626,
+       "label_centre_y_px": 687
+      },
+      {
+       "name": "Coimbatore",
+       "x_unit": 233.0,
+       "y_unit": 312.0,
+       "x_px": 772,
+       "y_px": 739,
+       "lon_E": 76.98,
+       "lat_N": 11.0,
+       "label_position": "below",
+       "label_align": "centre",
+       "label_centre_x_px": 772,
+       "label_centre_y_px": 770
+      },
+      {
+       "name": "Kochi",
+       "x_unit": 202.0,
+       "y_unit": 356.0,
+       "x_px": 704,
+       "y_px": 836,
+       "lon_E": 76.25,
+       "lat_N": 9.97,
+       "label_position": "below",
+       "label_align": "centre",
+       "label_centre_x_px": 704,
+       "label_centre_y_px": 867
+      },
+      {
+       "name": "Madurai",
+       "x_unit": 281.0,
+       "y_unit": 358.0,
+       "x_px": 877,
+       "y_px": 840,
+       "lon_E": 78.13,
+       "lat_N": 9.92,
+       "label_position": "below",
+       "label_align": "centre",
+       "label_centre_x_px": 877,
+       "label_centre_y_px": 871
+      },
+      {
+       "name": "Thiruvananthapuram",
+       "x_unit": 232.0,
+       "y_unit": 419.0,
+       "x_px": 770,
+       "y_px": 974,
+       "lon_E": 76.96,
+       "lat_N": 8.49,
+       "label_position": "below",
+       "label_align": "centre",
+       "label_centre_x_px": 770,
+       "label_centre_y_px": 1005
+      }
+     ],
+     "city_marker": {
+      "fill": "FOCUS",
+      "radius_px": 9,
+      "ring": "INK 3 px"
+     },
+     "sea_names": [
+      {
+       "text": "ARABIAN",
+       "centre_px": [
+        398,
+        472
+       ]
+      },
+      {
+       "text": "SEA",
+       "centre_px": [
+        396,
+        538
+       ]
+      },
+      {
+       "text": "BAY OF",
+       "centre_px": [
+        1405,
+        470
+       ]
+      },
+      {
+       "text": "BENGAL",
+       "centre_px": [
+        1405,
+        536
+       ]
+      }
+     ],
+     "compass_rose": {
+      "centre_px": [
+       1566,
+       149
+      ],
+      "ring_radius_px": 46,
+      "letters": {
+       "N": [
+        1566,
+        83
+       ],
+       "S": [
+        1566,
+        215
+       ],
+       "W": [
+        1500,
+        149
+       ],
+       "E": [
+        1632,
+        149
+       ]
+      }
+     },
+     "legend": {
+      "title": "LEGEND",
+      "title_centre_px": [
+       1398,
+       646
+      ],
+      "marker_centre_px": [
+       1336,
+       686
+      ],
+      "text": "CITY",
+      "text_left_px": 1366,
+      "text_centre_y_px": 686
+     },
+     "scale_text": {
+      "text": "RF = 1 : 60,00,000",
+      "right_edge_px": 1620,
+      "centre_y_px": 972
+     },
+     "note_text": {
+      "text": "Map not to scale",
+      "left_edge_px": 274,
+      "centre_y_px": 958
+     },
+     "not_drawn": [
+      "coastline",
+      "land and sea colour",
+      "roads",
+      "hills",
+      "Sri Lanka",
+      "gridlines",
+      "scale bar",
+      "watermark"
+     ]
+    },
+    "manim_description": "Canvas 1920 x 1080 px, BG white. Draw one rectangular map frame: left edge x = 262 px, top edge y = 56 px, width 1395 px, height 968 px, stroke INK 3 px, no fill. The frame is 637 units wide and 442 units tall; positions below are in frame units (origin = top-left corner of the frame, x to the right, y downward) and convert with x_px = 262 + 2.19 * x and y_px = 56 + 2.19 * y. Draw nothing inside the frame except the items listed here: no coastline, no land or sea colour, no roads, no hills, no Sri Lanka, no gridlines. EDGE TICKS: on the top edge and on the bottom edge draw a 12 px inward tick (INK 2 px) at x = 23.5, 107.5, 193, 276.5, 360.5, 444.5, 528.5 and 612.5 and write, centred on the ticks, 72°E, 74°E, 76°E, 78°E, 80°E, 82°E, 84°E, 86°E (left to right; INK 34 px): the top row has centre y = 28 px, the bottom row has centre y = 1052 px. On the left edge and on the right edge draw a 12 px inward tick at y = 7, 95, 182, 268, 354 and 439.5 and write, centred on the ticks, 18°N, 16°N, 14°N, 12°N, 10°N, 8°N (top to bottom; INK 34 px), rotated 90 degrees: the left column has centre x = 234 px and reads bottom to top, the right column has centre x = 1685 px and reads top to bottom. CITIES: draw 13 city markers, each a filled FOCUS circle of radius 9 px with an INK ring of 3 px, at these (x, y) frame units: Vishakapatnam (498.0, 21.0); Hyderabad (297.0, 36.0); Tirupati (336.0, 198.0); Chennai (372.0, 222.0); Bengaluru (259.0, 226.5); Mangaluru (143.5, 231.0); Mysuru (219.5, 256.0); Puducherry (353.0, 271.5); Kannur (166.0, 274.0); Coimbatore (233.0, 312.0); Kochi (202.0, 356.0); Madurai (281.0, 358.0); Thiruvananthapuram (232.0, 419.0). Write each city name in INK, sans-serif bold, 34 px, centred horizontally on its marker and directly below it (label centre 31 px below the marker centre); there are two exceptions: Tirupati, whose label goes directly above its marker (label centre 31 px above the marker centre), and Vishakapatnam, whose label goes to the left of its marker, right-aligned with its right edge 16 px left of the marker centre and vertically centred on the marker. Keep the names exactly as spelled here. SEA NAMES: in GUIDE, italic bold, 34 px, letter-spacing 10 px, centred: ARABIAN at (398, 472) px and SEA at (396, 538) px (two lines); BAY OF at (1405, 470) px and BENGAL at (1405, 536) px (two lines). COMPASS ROSE: centre (1566, 149) px; an INK circle of radius 46 px (2 px stroke); an INK filled four-pointed star whose points lie on the vertical and horizontal axes (point length 40 px, waist 9 px); behind it a GUIDE four-pointed star turned 45 degrees (point length 24 px); the letters N, S, W, E in INK 34 px centred at (1566, 83), (1566, 215), (1500, 149) and (1632, 149) px. LEGEND: the word LEGEND (INK bold 34 px, letter-spacing 6 px) centred at (1398, 646) px; below it one marker (same as the city markers) centred at (1336, 686) px and the word CITY (INK bold 34 px, letter-spacing 6 px) with its left edge at x = 1366 px and centre y = 686 px. SCALE TEXT: RF = 1 : 60,00,000 in INK bold 34 px, letter-spacing 4 px, right edge at x = 1620 px, centre y = 972 px. NOTE: Map not to scale in INK italic 34 px, left edge at x = 274 px, centre y = 958 px.",
+    "visible_text": [
+     "Vishakapatnam",
+     "Hyderabad",
+     "Tirupati",
+     "Chennai",
+     "Bengaluru",
+     "Mangaluru",
+     "Mysuru",
+     "Puducherry",
+     "Kannur",
+     "Coimbatore",
+     "Kochi",
+     "Madurai",
+     "Thiruvananthapuram",
+     "ARABIAN",
+     "SEA",
+     "BAY OF",
+     "BENGAL",
+     "72°E",
+     "74°E",
+     "76°E",
+     "78°E",
+     "80°E",
+     "82°E",
+     "84°E",
+     "86°E",
+     "18°N",
+     "16°N",
+     "14°N",
+     "12°N",
+     "10°N",
+     "8°N",
+     "N",
+     "S",
+     "E",
+     "W",
+     "LEGEND",
+     "CITY",
+     "RF = 1 : 60,00,000",
+     "Map not to scale"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "coastline, land or sea colour, roads, hills, rivers, Sri Lanka or any other terrain",
+     "any line, ruler or number measuring a distance between cities (no 2.4 cm, 4.9 cm, 144 km, 294 km, 290 km, 587 km)",
+     "gridlines across the map (the book prints ticks on the frame only)",
+     "a scale bar (the book map has none)"
+    ],
+    "accuracy_checks": [
+     "13 city markers, one per city, spelled as printed in the book (Vishakapatnam)",
+     "longitude ticks are 84 units apart (72°E at 23.5 ... 86°E at 612.5); latitude ticks at y = 7, 95, 182, 268, 354, 439.5",
+     "Bengaluru-Chennai on the drawing = sqrt((372-259)^2 + (222-226.5)^2) = 113.1 units; Mangaluru-Chennai = sqrt((372-143.5)^2 + (222-231)^2) = 228.7 units; ratio 2.02, as the LP's 2.4 cm and 4.9 cm (ratio 2.04)",
+     "great-circle distances from the lon/lat values: Bengaluru-Chennai about 290 km, Mangaluru-Chennai about 589 km (LP: about 290 km and 587 km)",
+     "Mangaluru is west of Bengaluru, Bengaluru west of Chennai, Chennai on the east coast; Puducherry south of Chennai",
+     "no label box overlaps another label, a marker or the compass rose (checked for 34 px bold text at 0.65 em per character)"
+    ],
+    "alt_text": "A map frame of South India with 13 named city markers, a compass rose, a legend, and the scale RF = 1 : 60,00,000.",
+    "render_note": "Schematic redraw of the book's map (P02-map-1): only the city positions, the frame ticks, compass, legend, sea names and the RF and 'Map not to scale' texts are drawn. The printed map is an OpenStreetMap-style physical map; its terrain and coastline cannot be drawn faithfully in code and are NOT drawn (rule NOT_RENDERABLE for the base map). Positions are measured from the page picture and agree with the real coordinates to about 0.1 degrees. The book prints this map at about half the stated scale (LP step 4), so a ruler reading on any rendering is not the answer; the LP solution carries the numbers. If the team prefers the original map, supply the page scan and set this item to none."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C7",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Convert 60,00,000 cm (3.2)",
+   "ncert_ref": "3.2.Q_convert",
+   "question_text": "Convert 60,00,000 cm to kilometres.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Unit conversion 60,00,000 cm to 60,000 m to 60 km is arithmetic.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C10",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Example 1 (3.3)",
+   "ncert_ref": "3.3.Ex1",
+   "question_text": "Purple paint is mixed as Red : Blue : White :: 2 : 3 : 5. Yasmin has 10 litres of white paint. How much red and blue paint should she add?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The ratio 2 : 3 : 5 and 10 litres of white are in the words; the steps are divisions and products. The bar model of this example already exists as concept image M1.S3.T3.C10.IMG1 (never linked); the book prints no figure for Example 1.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C11",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Example 2 (3.3)",
+   "ncert_ref": "3.3.Ex2",
+   "question_text": "Strong concrete is mixed as cement : sand : gravel :: 1 : 1.5 : 3. With 3 bags of cement, how many bags of concrete mixture can we make?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Ratio 1 : 1.5 : 3 and 3 bags of cement are in the words; the steps are products and a sum; the book prints no figure for Example 2.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C12",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Total volume of the purple paint (3.3)",
+   "ncert_ref": "3.3.Ex1",
+   "question_text": "What is the total volume of this purple paint?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A single addition 4 + 6 + 10 = 20.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write 4 + 6 + 10 = 20 in LaTeX."
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C14",
+   "role": "question",
+   "lp_book_number": "Ratios with Many Terms: Puneet's spice mix",
+   "ncert_ref": "3.3.Q_puneet",
+   "question_text": "Puneet has only 2 red chillies. How much of the other ingredients should he use for a spice mix that tastes the same as Viswanath's 8 : 4 : 2 : 1?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "DECORATIVE_ONLY"
+   ],
+   "reason": "The question is in words (2 chillies, ratio 8 : 4 : 2 : 1); the only picture on the book page is a decorative drawing of two children grinding spices.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C15",
+   "role": "solution",
+   "lp_book_number": "Ratios with Many Terms: Puneet's spice mix",
+   "ncert_ref": "3.3.Q_puneet",
+   "question_text": "Puneet has only 2 red chillies. How much of the other ingredients should he use for a spice mix that tastes the same as Viswanath's 8 : 4 : 2 : 1?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the four-term ratio 4 : 2 : 1 : 0.5 reached by multiplying by 0.5; LaTeX is enough, and the concept image M1.S3.T3.C9.IMG1 already shows the two mixes in a table.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C16",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.4, Q1",
+   "ncert_ref": "3.4.FiO2",
+   "question_text": "A school library has books in different languages in the following ratio: no. of Odiya books : no. of Hindi books : no. of English books :: 3 : 2 : 1. If the library has 288 Odiya books, how many Hindi and English books does it have?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "All data (3 : 2 : 1, 288 Odiya books) are in the words; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C17",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.4, Q1",
+   "ncert_ref": "3.4.FiO2",
+   "question_text": "A school library has books in different languages in the following ratio: no. of Odiya books : no. of Hindi books : no. of English books :: 3 : 2 : 1. If the library has 288 Odiya books, how many Hindi and English books does it have?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Answer is two numbers from 288 ÷ 3 = 96; no picture is printed or needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C18",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.4, Q2",
+   "ncert_ref": "3.4.FiO4",
+   "question_text": "Construct a triangle with sidelengths in the ratio 3 : 4 : 5. Will all the triangles drawn with this ratio of sidelengths be congruent to each other? Why or why not?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure: the student constructs the triangle, so a question figure would imply something was given (companion note).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S5.T5.C19",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.4, Q2",
+   "ncert_ref": "3.4.FiO4",
+   "question_text": "Construct a triangle with sidelengths in the ratio 3 : 4 : 5. Will all the triangles drawn with this ratio of sidelengths be congruent to each other? Why or why not?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The question asks to construct a triangle with sides in the ratio 3 : 4 : 5, so the answer is itself a drawing (B2), and the LP solution names two triangles (3, 4, 5 cm and 6, 8, 10 cm) whose 'same shape, different size' is what answers the 'congruent?' part. The question gives no figure, so there is no question diagram and derived_from is null.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S5.T5.C19.IMG1",
+   "manim_scene": "c8_10_3_4_FiO4_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S5.T5.C19.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "px_per_cm": 110,
+     "origin_px": [
+      190,
+      860
+     ],
+     "triangles": [
+      {
+       "name": "small",
+       "vertices_cm": {
+        "P": [
+         0,
+         0
+        ],
+        "Q": [
+         4,
+         0
+        ],
+        "R": [
+         0,
+         3
+        ]
+       },
+       "vertices_px": {
+        "P": [
+         190,
+         860
+        ],
+        "Q": [
+         630,
+         860
+        ],
+        "R": [
+         190,
+         530
+        ]
+       },
+       "sides": [
+        {
+         "from": "P",
+         "to": "Q",
+         "length_cm": 4,
+         "label": "4 cm",
+         "label_centre_px": [
+          410,
+          905
+         ]
+        },
+        {
+         "from": "P",
+         "to": "R",
+         "length_cm": 3,
+         "label": "3 cm",
+         "label_centre_px": [
+          132,
+          695
+         ]
+        },
+        {
+         "from": "R",
+         "to": "Q",
+         "length_cm": 5,
+         "label": "5 cm",
+         "label_centre_px": [
+          443,
+          651
+         ]
+        }
+       ]
+      },
+      {
+       "name": "large",
+       "vertices_cm": {
+        "P": [
+         6,
+         0
+        ],
+        "Q": [
+         14,
+         0
+        ],
+        "R": [
+         6,
+         6
+        ]
+       },
+       "vertices_px": {
+        "P": [
+         850,
+         860
+        ],
+        "Q": [
+         1730,
+         860
+        ],
+        "R": [
+         850,
+         200
+        ]
+       },
+       "sides": [
+        {
+         "from": "P",
+         "to": "Q",
+         "length_cm": 8,
+         "label": "8 cm",
+         "label_centre_px": [
+          1290,
+          905
+         ]
+        },
+        {
+         "from": "P",
+         "to": "R",
+         "length_cm": 6,
+         "label": "6 cm",
+         "label_centre_px": [
+          792,
+          530
+         ]
+        },
+        {
+         "from": "R",
+         "to": "Q",
+         "length_cm": 10,
+         "label": "10 cm",
+         "label_centre_px": [
+          1323,
+          486
+         ]
+        }
+       ]
+      }
+     ],
+     "outline": "ANSWER 3 px",
+     "fill": "MARK_FILL",
+     "vertex_letters": false,
+     "right_angle_mark": false
+    },
+    "manim_description": "Canvas 1920 x 1080 px, BG white. Draw two triangles side by side on the same horizontal baseline y = 860 px, both to scale at 110 px per cm, outline ANSWER 3 px, fill MARK_FILL, no vertex letters, no angle marks. Small triangle: vertices (190, 860), (630, 860) and (190, 530) px, so the base is 4 cm, the vertical side on the left is 3 cm and the slanted side is 5 cm. Large triangle: vertices (850, 860), (1730, 860) and (850, 200) px, so the base is 8 cm, the vertical side on the left is 6 cm and the slanted side is 10 cm; it is the small triangle with every side doubled, same orientation. Write the side lengths in INK 34 px, each centred at the given point: small triangle 4 cm at (410, 905), 3 cm at (132, 695), 5 cm at (443, 651) (outside, up and right of the slanted side); large triangle 8 cm at (1290, 905), 6 cm at (792, 530), 10 cm at (1323, 486) (outside, up and right of the slanted side).",
+    "visible_text": [
+     "3 cm",
+     "4 cm",
+     "5 cm",
+     "6 cm",
+     "8 cm",
+     "10 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "vertex letters",
+     "the words congruent, similar or not congruent",
+     "the ratio 3 : 4 : 5 written out",
+     "construction arcs"
+    ],
+    "accuracy_checks": [
+     "3^2 + 4^2 = 25 = 5^2 and 6^2 + 8^2 = 100 = 10^2, so both drawn triangles are right-angled at the lower left",
+     "side lengths 3 : 4 : 5 and 6 : 8 : 10 = 3 : 4 : 5 after dividing by 2",
+     "every side of the large triangle is exactly 2 times the matching side of the small one (880 px = 2 x 440 px; 660 px = 2 x 330 px)",
+     "triangle inequality holds: 3 + 4 > 5 and 6 + 8 > 10"
+    ],
+    "alt_text": "A triangle with sides 3 cm, 4 cm and 5 cm next to a larger triangle with sides 6 cm, 8 cm and 10 cm.",
+    "render_note": "The book's question gives no figure and the LP solution only describes two triangles in words; this figure draws exactly the two triangles the LP names (one part = 1 cm and one part = 2 cm). The 3-4-5 triangle is right-angled by geometry; the right angle is not marked because the LP text does not mention it."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C20",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Divide 12 in the ratio 2 : 1 (3.4)",
+   "ncert_ref": "3.4.recap",
+   "question_text": "Divide 12 in the ratio 2 : 1.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Dividing 12 in the ratio 2 : 1 (2 + 1 = 3, 12 ÷ 3 = 4, 8 and 4) is arithmetic. The picture on this concept (M2.S6.T6.C20.IMG1) is the 110-units split of Example 3 and is not this example's figure.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C21",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Example 3 (3.4)",
+   "ncert_ref": "3.4.Ex3",
+   "question_text": "110 units of concrete are needed, mixed as cement : sand : gravel in the ratio 1 : 1.5 : 3. How many units of each are needed?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "Ratio 1 : 1.5 : 3 and 110 units are in the words and the six steps are arithmetic. The book's picture (heaps with three arrows 1, 1.5, 3) only repeats the numbers 110, 20, 30, 60 and is already the concept image M2.S6.T6.C20.IMG1; a careful student loses nothing without it.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C23",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Example 5 (3.4)",
+   "ncert_ref": "3.4.Ex5",
+   "question_text": "Construct a triangle with angles in the ratio 1 : 3 : 5.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY",
+    "FIG_REFERENCED"
+   ],
+   "reason": "The example constructs a triangle, so its answer is the lettered triangle ABC (20°, 60°, 100°) printed in the book (base figure P06-shape-1), and the steps refer to A, B, C. Drawn even though the teaching image M2.S6.T6.C22.IMG1 shows the same triangle (v3: never linked).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S6.T6.C23.IMG1",
+   "manim_scene": "c8_10_3_4_Ex5_triangle_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S6.T6.C23.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "px_per_unit": 15,
+     "points_units": {
+      "A": [
+       0,
+       0
+      ],
+      "B": [
+       100,
+       0
+      ],
+      "C": [
+       82.635,
+       30.077
+      ]
+     },
+     "points_px": {
+      "A": [
+       210,
+       650
+      ],
+      "B": [
+       1710,
+       650
+      ],
+      "C": [
+       1450,
+       199
+      ]
+     },
+     "segments": [
+      "AB",
+      "BC",
+      "CA"
+     ],
+     "angles": [
+      {
+       "at": "A",
+       "between": [
+        "B",
+        "C"
+       ],
+       "value_deg": 20,
+       "sector_radius_px": 70,
+       "from_deg": 0,
+       "to_deg": 20,
+       "label": "20°",
+       "label_centre_px": [
+        322,
+        575
+       ]
+      },
+      {
+       "at": "B",
+       "between": [
+        "A",
+        "C"
+       ],
+       "value_deg": 60,
+       "sector_radius_px": 60,
+       "from_deg": 120,
+       "to_deg": 180,
+       "label": "60°",
+       "label_centre_px": [
+        1648,
+        698
+       ]
+      },
+      {
+       "at": "C",
+       "between": [
+        "A",
+        "B"
+       ],
+       "value_deg": 100,
+       "sector_radius_px": 55,
+       "from_deg": 200,
+       "to_deg": 300,
+       "label": "100°",
+       "label_centre_px": [
+        1548,
+        218
+       ]
+      }
+     ],
+     "vertex_labels": {
+      "A": [
+       166,
+       650
+      ],
+      "B": [
+       1754,
+       650
+      ],
+      "C": [
+       1450,
+       150
+      ]
+     },
+     "side_lengths_marked": false
+    },
+    "manim_description": "Canvas 1920 x 1080 px, BG white. Draw triangle ABC to scale with straight sides in INK 3 px and no fill. Vertices in px (y downward): A at (210, 650), B at (1710, 650), C at (1450, 199); AB is exactly horizontal and is the longest side, C is above AB and to the left of B (in units with AB = 100: A (0, 0), B (100, 0), C (82.64, 30.08)). Put an INK dot of radius 5 px on each vertex. Mark the three angles inside the triangle with filled circular sectors (fill MARK_FILL, outline INK 2 px): at A radius 70 px between AB and AC (0 to 20 degrees); at B radius 60 px between BA and BC (120 to 180 degrees measured from the positive x axis, y up); at C radius 55 px between CA and CB (200 to 300 degrees). Write the vertex letters in INK 34 px: A centred at (166, 650) px, B at (1754, 650) px, C at (1450, 150) px. Write the angle values in INK 34 px: 20° centred at (322, 575) px (outside the triangle, just above AC near A), 60° at (1648, 698) px (outside, just below AB near B), 100° at (1548, 218) px (outside, right of C). Do not mark any side length.",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "20°",
+     "60°",
+     "100°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "side lengths or the ratio 1 : 3 : 5",
+     "the 180° sum or a bar of 9 equal parts (that is the teaching image)",
+     "construction arcs or a protractor"
+    ],
+    "accuracy_checks": [
+     "20 + 60 + 100 = 180",
+     "20 : 60 : 100 = 1 : 3 : 5",
+     "angle at A from the coordinates = atan2(30.08, 82.64) = 20.0 degrees; angle at B = atan2(30.08, 100 - 82.64) = 60.0 degrees; angle at C = 100 degrees",
+     "C is above AB and left of B (x = 82.64 < 100), so the angle at C is obtuse",
+     "side lengths on the drawing: AB 100, AC 87.94, BC 34.73 units (sine rule), none of them written"
+    ],
+    "alt_text": "Triangle ABC with angle 20° at A, 60° at B and 100° at C.",
+    "render_note": "Redraw of the book's Example 5 figure (P06-shape-1) as a worked-example figure: it shows the finished triangle that the example's steps construct. A teaching image of the same triangle exists (M2.S6.T6.C22.IMG1) and is not linked."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C25",
+   "role": "question",
+   "lp_book_number": "Example 4: 50 ml of purple paint",
+   "ncert_ref": "3.4.Ex4",
+   "question_text": "Purple paint is mixed as red : blue : white in the ratio 2 : 3 : 5. How many ml of each make 50 ml?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Ratio 2 : 3 : 5 and 50 ml are in the words; the book prints no figure for Example 4.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C26",
+   "role": "solution",
+   "lp_book_number": "Example 4: 50 ml of purple paint",
+   "ncert_ref": "3.4.Ex4",
+   "question_text": "Purple paint is mixed as red : blue : white in the ratio 2 : 3 : 5. How many ml of each make 50 ml?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three products 50 × 2/10, 50 × 3/10, 50 × 5/10 and a check sum; plain arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C27",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.4, Q1",
+   "ncert_ref": "3.4.FiO1",
+   "question_text": "A cricket coach schedules practice sessions that include different activities in a specific ratio: time for warm-up/cool-down : time for batting : time for bowling : time for fielding :: 3 : 4 : 3 : 5. If each session is 150 minutes long, how much time is spent on each activity?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "All data (3 : 4 : 3 : 5, 150 minutes) are in the words; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C28",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.4, Q1",
+   "ncert_ref": "3.4.FiO1",
+   "question_text": "A cricket coach schedules practice sessions that include different activities in a specific ratio: time for warm-up/cool-down : time for batting : time for bowling : time for fielding :: 3 : 4 : 3 : 5. If each session is 150 minutes long, how much time is spent on each activity?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four numbers from 150 ÷ 15 = 10 and a check sum; no picture is printed or needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C29",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.4, Q2",
+   "ncert_ref": "3.4.FiO3",
+   "question_text": "I have 100 coins in the ratio: no. of ₹10 coins : no. of ₹5 coins : no. of ₹2 coins : no. of ₹1 coins :: 4 : 3 : 2 : 1. How much money do I have in coins?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "All data (100 coins, 4 : 3 : 2 : 1, values 10, 5, 2, 1 rupees) are in the words; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C30",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.4, Q2",
+   "ncert_ref": "3.4.FiO3",
+   "question_text": "I have 100 coins in the ratio: no. of ₹10 coins : no. of ₹5 coins : no. of ₹2 coins : no. of ₹1 coins :: 4 : 3 : 2 : 1. How much money do I have in coins?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Counts 40, 30, 20, 10 and rupee values 400 + 150 + 40 + 10 = 600 are arithmetic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C31",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.4, Q3",
+   "ncert_ref": "3.4.FiO5",
+   "question_text": "Can you construct a triangle with sidelengths in the ratio 1 : 3 : 5? Why or why not?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question is words only (can a triangle have sides 1 : 3 : 5?); the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C32",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.4, Q3",
+   "ncert_ref": "3.4.FiO5",
+   "question_text": "Can you construct a triangle with sidelengths in the ratio 1 : 3 : 5? Why or why not?",
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Optional: the answer is a reason (1 + 3 = 4 is shorter than 5), not a drawing, and the three numbers carry it. A figure that would clearly help but is not needed: one 5-unit segment with a 1-unit and a 3-unit segment laid end to end beside it, leaving a gap of 1 unit, to show the two shorter sides cannot reach across the longest. Sibling note: Q4's answer is a drawn construction (required); this answer is a reason, so it is not the same kind of answer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C33",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "3.5.intro, 3.5.table, 3.5.Q_mark",
+   "question_text": "How do we mark the different slices of the pie chart?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The question points at 'the pie chart' but gives no counts: the five slices and their counts 12, 10, 8, 6 and 4 live only in the book's grade pie chart (p.60), and the steps about slice angles rely on it (the topic's finished chart, teaching image C35.IMG1, is the same chart with the angles added). Own diagram although the concept's teaching image shows the same figure (user decision 23 Nov).",
+   "lp_placeholder_action": "add_new_image",
+   "block_index": 0,
+   "media_id": "M2.S9.T9.C33.IMG2",
+   "manim_scene": "c8_10_3_5_slices_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S9.T9.C33.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "chart_kind": "pie",
+     "canvas_units": {
+      "width": 16,
+      "height": 9
+     },
+     "angle_convention": "degrees anticlockwise from the +x axis (3 o'clock); the first slice starts at 90 degrees (12 o'clock) as in the book",
+     "centre": [
+      0,
+      0
+     ],
+     "radius": 3.4,
+     "outline": "INK",
+     "outline_px": 3,
+     "radii_deg": [
+      90,
+      198,
+      288,
+      0,
+      54
+     ],
+     "rim_points": [
+      [
+       0.0,
+       3.4
+      ],
+      [
+       -3.23,
+       -1.05
+      ],
+      [
+       1.05,
+       -3.23
+      ],
+      [
+       3.4,
+       0.0
+      ],
+      [
+       2.0,
+       2.75
+      ]
+     ],
+     "slices": [
+      {
+       "grade": "A",
+       "start_deg": 90,
+       "end_deg": 198,
+       "angle_deg": 108,
+       "fill": "#CDEBD9",
+       "count_label": {
+        "text": "12",
+        "centre": [
+         -1.86,
+         1.35
+        ]
+       },
+       "grade_label": {
+        "text": "A",
+        "centre": [
+         -3.16,
+         2.29
+        ]
+       }
+      },
+      {
+       "grade": "B",
+       "start_deg": 198,
+       "end_deg": 288,
+       "angle_deg": 90,
+       "fill": "#FBE9A6",
+       "count_label": {
+        "text": "10",
+        "centre": [
+         -1.04,
+         -2.05
+        ]
+       },
+       "grade_label": {
+        "text": "B",
+        "centre": [
+         -1.77,
+         -3.47
+        ]
+       }
+      },
+      {
+       "grade": "C",
+       "start_deg": 288,
+       "end_deg": 360,
+       "angle_deg": 72,
+       "fill": "#C6DCEE",
+       "count_label": {
+        "text": "8",
+        "centre": [
+         1.86,
+         -1.35
+        ]
+       },
+       "grade_label": {
+        "text": "C",
+        "centre": [
+         3.16,
+         -2.29
+        ]
+       }
+      },
+      {
+       "grade": "D",
+       "start_deg": 0,
+       "end_deg": 54,
+       "angle_deg": 54,
+       "fill": "#F2CBE0",
+       "count_label": {
+        "text": "6",
+        "centre": [
+         2.05,
+         1.04
+        ]
+       },
+       "grade_label": {
+        "text": "D",
+        "centre": [
+         3.47,
+         1.77
+        ]
+       }
+      },
+      {
+       "grade": "E",
+       "start_deg": 54,
+       "end_deg": 90,
+       "angle_deg": 36,
+       "fill": "#F9D9A8",
+       "count_label": {
+        "text": "4",
+        "centre": [
+         0.71,
+         2.19
+        ]
+       },
+       "grade_label": {
+        "text": "E",
+        "centre": [
+         1.21,
+         3.71
+        ]
+       }
+      }
+     ],
+     "font_px_on_1920": 41
+    },
+    "manim_description": "On a plain BG canvas (16:9, 16 by 9 units, centre (0, 0)) draw a flat pie chart of the grades of 40 students. Draw a circle with centre (0, 0) and radius 3.4, outline INK 3 px. Draw five radii from the centre to the rim, INK 3 px, at 90, 198, 288, 0 and 54 degrees (anticlockwise from 3 o'clock): straight up, then 18 degrees below the leftward horizontal, then 18 degrees right of straight down, then the rightward horizontal, then 54 degrees above it. The five slices, anticlockwise from the radius that points straight up, are: A (90 to 198 degrees, upper left, filled #CDEBD9), B (198 to 288, lower left, filled #FBE9A6), C (288 to 360, lower right, filled #C6DCEE), D (0 to 54, right, filled #F2CBE0) and E (54 to 90, upper right, filled #F9D9A8). Write the number of students in INK inside each slice, centred on the given point: 12 at (-1.86, 1.35), 10 at (-1.04, -2.05), 8 at (1.86, -1.35), 6 at (2.05, 1.04), 4 at (0.71, 2.19). Write the grade letter in INK just outside the rim, centred on the given point: A at (-3.16, 2.29), B at (-1.77, -3.47), C at (3.16, -2.29), D at (3.47, 1.77), E at (1.21, 3.71). Print no angle, no arc and no percentage anywhere. All text is a clean sans-serif, 41 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "12",
+     "10",
+     "8",
+     "6",
+     "4"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the chart title 'Grade Distribution (40 students)'",
+     "the grade table or the word Students",
+     "any angle in degrees, angle arc or percentage",
+     "protractor drawings",
+     "a legend"
+    ],
+    "accuracy_checks": [
+     "12 + 10 + 8 + 6 + 4 = 40 students, so the counts fill the whole chart",
+     "each slice is 9 degrees per student: A 108, B 90, C 72, D 54, E 36, and 108 + 90 + 72 + 54 + 36 = 360 (the slice widths are drawn but never printed)",
+     "radii at 90, 198, 288, 0 and 54 degrees give the slice order A, B, C, D, E anticlockwise from 12 o'clock, as printed in the book",
+     "each count label lies inside its own slice and each grade letter just outside the rim next to it"
+    ],
+    "alt_text": "A pie chart of 40 students in five slices: grade A 12, grade B 10, grade C 8, grade D 6 and grade E 4, with no angles marked.",
+    "render_note": "Redrawn from the book's grade pie chart on p.60 (slice order A, B, C, D, E anticlockwise from 12 o'clock, counts inside, letters outside); the book's title and the neighbouring table are left out and the colours follow the C36 construction diagram (same hues as the book). The angles are not drawn: they are what C35 and C36 find. Same chart as the base figure P06-pie_chart-1, whose teaching copy C35.IMG1 adds the angles."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C34",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": "3.5.Q_simplest",
+   "question_text": "Can we reduce 12 : 10 : 8 : 6 : 4 to its simplest form?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Dividing 12, 10, 8, 6, 4 by their HCF 2 is arithmetic that the steps already show; no figure is given or needed.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 0,
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C35",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E0",
+   "ncert_ref": "3.5.angles",
+   "question_text": "Find the angle of each grade's slice.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Angles 6 x 18 = 108 and so on are arithmetic in the steps; the answer is a list of numbers, not a drawing. The finished chart is the teaching image C35.IMG1 (never linked).",
+   "lp_placeholder_action": "no_image",
+   "block_index": 0,
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C36",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": "3.5.construct",
+   "question_text": "Construct the pie chart for the grades.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY",
+    "GRAPH_CHART"
+   ],
+   "reason": "The answer is a drawing: the finished pie chart built by the steps (circle, radii AB, AC, AD, AE, AF, angles 108°, 90°, 72°, 54°, 36°, slices coloured and labelled A to E). The steps name points A to F that only a figure can show. One picture of the final state serves the book's construction panels on p.61-62 (steps 1-4 are stages of it). The book's step-7 panel leaves slices C, D, E blank; all five are coloured here because step 7 says colour and label each slice.",
+   "lp_placeholder_action": "add_new_image",
+   "block_index": 0,
+   "media_id": "M2.S9.T9.C36.IMG1",
+   "manim_scene": "c8_10_3_5_construct_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S9.T9.C36.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "construction",
+     "canvas_units": {
+      "width": 16,
+      "height": 9
+     },
+     "angle_convention": "degrees anticlockwise from the +x axis (3 o'clock)",
+     "centre_A": [
+      0,
+      0
+     ],
+     "radius": 3.4,
+     "outline": "INK",
+     "outline_px": 3,
+     "rays": [
+      {
+       "name": "AB",
+       "to_point": "B",
+       "angle_deg": 0,
+       "rim_point": [
+        3.4,
+        0.0
+       ]
+      },
+      {
+       "name": "AC",
+       "to_point": "C",
+       "angle_deg": 108,
+       "rim_point": [
+        -1.05,
+        3.23
+       ]
+      },
+      {
+       "name": "AD",
+       "to_point": "D",
+       "angle_deg": 198,
+       "rim_point": [
+        -3.23,
+        -1.05
+       ]
+      },
+      {
+       "name": "AE",
+       "to_point": "E",
+       "angle_deg": 270,
+       "rim_point": [
+        -0.0,
+        -3.4
+       ]
+      },
+      {
+       "name": "AF",
+       "to_point": "F",
+       "angle_deg": 324,
+       "rim_point": [
+        2.75,
+        -2.0
+       ]
+      }
+     ],
+     "point_labels": {
+      "A": [
+       -0.34,
+       -0.3
+      ],
+      "B": [
+       3.78,
+       0.0
+      ],
+      "C": [
+       -1.17,
+       3.59
+      ],
+      "D": [
+       -3.59,
+       -1.17
+      ],
+      "E": [
+       -0.0,
+       -3.78
+      ],
+      "F": [
+       3.06,
+       -2.22
+      ]
+     },
+     "slices": [
+      {
+       "grade": "A",
+       "from_point": "B",
+       "to_point": "C",
+       "start_deg": 0,
+       "end_deg": 108,
+       "angle_deg": 108,
+       "fill": "#CDEBD9",
+       "name_label": {
+        "text": "Grade A",
+        "centre": [
+         1.44,
+         1.98
+        ]
+       },
+       "angle_label": {
+        "text": "108°",
+        "centre": [
+         0.85,
+         1.17
+        ]
+       },
+       "arc_radius": 0.8
+      },
+      {
+       "grade": "B",
+       "from_point": "C",
+       "to_point": "D",
+       "start_deg": 108,
+       "end_deg": 198,
+       "angle_deg": 90,
+       "fill": "#FBE9A6",
+       "name_label": {
+        "text": "Grade B",
+        "centre": [
+         -2.18,
+         1.11
+        ]
+       },
+       "angle_label": {
+        "text": "90°",
+        "centre": [
+         -1.29,
+         0.66
+        ]
+       },
+       "arc_radius": 0.8
+      },
+      {
+       "grade": "C",
+       "from_point": "D",
+       "to_point": "E",
+       "start_deg": 198,
+       "end_deg": 270,
+       "angle_deg": 72,
+       "fill": "#C6DCEE",
+       "name_label": {
+        "text": "Grade C",
+        "centre": [
+         -1.44,
+         -1.98
+        ]
+       },
+       "angle_label": {
+        "text": "72°",
+        "centre": [
+         -0.85,
+         -1.17
+        ]
+       },
+       "arc_radius": 0.8
+      },
+      {
+       "grade": "D",
+       "from_point": "E",
+       "to_point": "F",
+       "start_deg": 270,
+       "end_deg": 324,
+       "angle_deg": 54,
+       "fill": "#F2CBE0",
+       "name_label": {
+        "text": "Grade D",
+        "centre": [
+         1.11,
+         -2.18
+        ]
+       },
+       "angle_label": {
+        "text": "54°",
+        "centre": [
+         0.66,
+         -1.29
+        ]
+       },
+       "arc_radius": 0.8
+      },
+      {
+       "grade": "E",
+       "from_point": "F",
+       "to_point": "B",
+       "start_deg": 324,
+       "end_deg": 360,
+       "angle_deg": 36,
+       "fill": "#F9D9A8",
+       "name_label": {
+        "text": "Grade E",
+        "centre": [
+         2.33,
+         -0.76
+        ]
+       },
+       "angle_label": {
+        "text": "36°",
+        "centre": [
+         1.24,
+         -0.4
+        ]
+       },
+       "arc_radius": 0.8
+      }
+     ],
+     "font_px_on_1920": 41
+    },
+    "manim_description": "On a plain BG canvas (16:9, 16 by 9 units, centre (0, 0)) draw the finished pie chart of a compass-and-protractor construction. Draw a circle with centre A at (0, 0) and radius 3.4, outline INK 3 px. Draw five radii from A to the rim, INK 3 px, anticlockwise from the radius AB that points right: AB at 0 degrees, AC at 108 degrees, AD at 198 degrees, AE at 270 degrees (straight down) and AF at 324 degrees. Fill the five slices: grade A (AB to AC, 108 degrees) MARK_FILL #CDEBD9; grade B (AC to AD, 90 degrees) #FBE9A6; grade C (AD to AE, 72 degrees) #C6DCEE; grade D (AE to AF, 54 degrees) #F2CBE0; grade E (AF to AB, 36 degrees) #F9D9A8. Draw an INK dot of radius 0.07 at A and on the rim at B (3.4, 0), C (-1.05, 3.23), D (-3.23, -1.05), E (0, -3.4) and F (2.75, -2). Write the point letters in INK, centred on the given points: A at (-0.34, -0.3) beside the centre, and B (3.78, 0), C (-1.17, 3.59), D (-3.59, -1.17), E (0, -3.78), F (3.06, -2.22) outside the rim on their radii. At A draw one thin GUIDE arc of radius 0.8 (2 px) inside each slice, from the first radius of the slice to the second, and write the slice angle in INK centred just outside each arc: 108° at (0.85, 1.17), 90° at (-1.29, 0.66), 72° at (-0.85, -1.17), 54° at (0.66, -1.29), 36° at (1.24, -0.4). Write the grade label in INK inside each slice, centred on the given point: Grade A at (1.44, 1.98), Grade B at (-2.18, 1.11), Grade C at (-1.44, -1.98), Grade D at (1.11, -2.18), Grade E at (2.33, -0.76). All text is a clean sans-serif, 41 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "108°",
+     "90°",
+     "72°",
+     "54°",
+     "36°",
+     "Grade A",
+     "Grade B",
+     "Grade C",
+     "Grade D",
+     "Grade E"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters (a), (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, animal or people sketches",
+     "step numbers or step captions",
+     "the words Step 1 to Step 7",
+     "protractor drawings"
+    ],
+    "accuracy_checks": [
+     "108 + 90 + 72 + 54 + 36 = 360, so the five slices close the circle",
+     "AC at 108 degrees, AD at 108 + 90 = 198, AE at 198 + 72 = 270, AF at 270 + 54 = 324, and AF to AB is 360 - 324 = 36 degrees",
+     "each angle label sits inside its own slice and matches the slice width (108, 90, 72, 54, 36)",
+     "the five slice fills are all different and every label box lies fully inside its slice and inside the circle"
+    ],
+    "alt_text": "A circle with centre A and radii AB to AF cutting it into five coloured slices of 108, 90, 72, 54 and 36 degrees labelled Grade A to Grade E.",
+    "render_note": "Book p.61-62 shows this construction as separate panels (steps 1-2, 3-4, 5-6, 7); this one picture is the finished state of all of them. The book's step-7 panel colours only grades A (green) and B (yellow) and leaves C, D, E blank: all five are coloured here because the LP step 7 says to colour and label each slice with its grade."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C38",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.5, Q1",
+   "ncert_ref": "3.5.FiO1",
+   "question_text": "A group of 360 people were asked to vote for their favourite season from the three seasons: rainy, winter and summer. 90 liked the summer season, 120 liked the rainy season, and the rest liked the winter. Draw a pie chart to show this information.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives only numbers in words (360 people: 90 summer, 120 rainy, the rest winter) and no figure; the figure is the answer, so it belongs to the solution side only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C39",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.5, Q1",
+   "ncert_ref": "3.5.FiO1",
+   "question_text": "A group of 360 people were asked to vote for their favourite season from the three seasons: rainy, winter and summer. 90 liked the summer season, 120 liked the rainy season, and the rest liked the winter. Draw a pie chart to show this information.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The answer is a drawn pie chart: summer 90°, rainy 120°, winter 150° (360 - 90 - 120 = 150 people, 1° per person). No question diagram exists, so it stands alone (derived_from null). Same decision as Q2 and Q3 of this set.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C39.IMG1",
+   "manim_scene": "c8_10_3_5_FiO1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C39.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "chart_kind": "pie",
+     "canvas_units": {
+      "width": 16,
+      "height": 9
+     },
+     "angle_convention": "degrees anticlockwise from the +x axis (3 o'clock)",
+     "centre": [
+      0,
+      0
+     ],
+     "radius": 3.2,
+     "outline": "INK",
+     "outline_px": 3,
+     "slices": [
+      {
+       "name": "Summer",
+       "start_deg": 0,
+       "end_deg": 90,
+       "angle_deg": 90,
+       "fill": "#F9D9A8",
+       "name_label": {
+        "text": "Summer",
+        "anchor": [
+         2.46,
+         2.46
+        ],
+        "anchor_is": "left edge of the text box, vertically centred"
+       },
+       "angle_label": {
+        "text": "90°",
+        "centre": [
+         1.4,
+         1.4
+        ]
+       }
+      },
+      {
+       "name": "Rainy",
+       "start_deg": 90,
+       "end_deg": 210,
+       "angle_deg": 120,
+       "fill": "#C6DCEE",
+       "name_label": {
+        "text": "Rainy",
+        "anchor": [
+         -3.01,
+         1.74
+        ],
+        "anchor_is": "right edge of the text box, vertically centred"
+       },
+       "angle_label": {
+        "text": "120°",
+        "centre": [
+         -1.72,
+         0.99
+        ]
+       }
+      },
+      {
+       "name": "Winter",
+       "start_deg": 210,
+       "end_deg": 360,
+       "angle_deg": 150,
+       "fill": "#D8CCEB",
+       "name_label": {
+        "text": "Winter",
+        "anchor": [
+         0.9,
+         -3.55
+        ],
+        "anchor_is": "centre of the text box, vertically centred"
+       },
+       "angle_label": {
+        "text": "150°",
+        "centre": [
+         0.51,
+         -1.92
+        ]
+       }
+      }
+     ],
+     "font_px_on_1920": 41
+    },
+    "manim_description": "On a plain BG canvas (16:9, 16 by 9 units, centre (0, 0)) draw a flat pie chart. Draw a circle with centre (0, 0) and radius 3.2, outline INK 3 px. Cut it with 3 radii from the centre to the rim, INK 3 px, starting with a radius that points right (0 degrees) and going anticlockwise, so the slice boundaries are at 0, 90, 210 and 360 degrees. Fill the slices: Summer (0 to 90 degrees, 90 degrees wide) #F9D9A8; Rainy (90 to 210 degrees, 120 degrees wide) #C6DCEE; Winter (210 to 360 degrees, 150 degrees wide) #D8CCEB. Write each angle in INK bold inside its own slice, centred on the given point: 90° at (1.4, 1.4), 120° at (-1.72, 0.99), 150° at (0.51, -1.92). Write each slice name in INK outside the rim, with the text box anchored as given: Summer at (2.46, 2.46) (left edge of the text box, vertically centred); Rainy at (-3.01, 1.74) (right edge of the text box, vertically centred); Winter at (0.9, -3.55) (centre of the text box, vertically centred). All text is a clean sans-serif, 41 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "Summer",
+     "Rainy",
+     "Winter",
+     "90°",
+     "120°",
+     "150°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters (a), (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, animal or people sketches",
+     "people counts or percentages",
+     "protractor drawings"
+    ],
+    "accuracy_checks": [
+     "360 - 90 - 120 = 150 people, one degree per person, so the slices are 90, 120 and 150 degrees",
+     "90 + 120 + 150 = 360",
+     "slice boundaries at 0, 90, 210 and 360 degrees; the order anticlockwise is summer, rainy, winter",
+     "every angle label lies fully inside its own slice and every name lies fully outside the circle"
+    ],
+    "alt_text": "A pie chart with three slices: summer 90 degrees, rainy 120 degrees and winter 150 degrees.",
+    "render_note": "The question gives no figure, so this solution picture stands alone. Order and direction follow the LP steps (summer, then rainy, then the rest) and the chapter's construction (anticlockwise from a radius pointing right)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C40",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.5, Q2",
+   "ncert_ref": "3.5.FiO2",
+   "question_text": "Draw a pie chart based on the following information about viewers' favourite type of TV channel: Entertainment 50%, Sports 25%, News 15%, Information 10%.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives percentages in words and no figure; the figure is the answer, so it belongs to the solution side only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C41",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.5, Q2",
+   "ncert_ref": "3.5.FiO2",
+   "question_text": "Draw a pie chart based on the following information about viewers' favourite type of TV channel: Entertainment 50%, Sports 25%, News 15%, Information 10%.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The answer is a drawn pie chart: Entertainment 180°, Sports 90°, News 54°, Information 36° (1% = 3.6°). No question diagram, so it stands alone. Same decision as Q1 and Q3.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C41.IMG1",
+   "manim_scene": "c8_10_3_5_FiO2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C41.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "chart_kind": "pie",
+     "canvas_units": {
+      "width": 16,
+      "height": 9
+     },
+     "angle_convention": "degrees anticlockwise from the +x axis (3 o'clock)",
+     "centre": [
+      0,
+      0
+     ],
+     "radius": 3.2,
+     "outline": "INK",
+     "outline_px": 3,
+     "slices": [
+      {
+       "name": "Entertainment",
+       "start_deg": 0,
+       "end_deg": 180,
+       "angle_deg": 180,
+       "fill": "#F2CBE0",
+       "name_label": {
+        "text": "Entertainment",
+        "anchor": [
+         0.0,
+         3.67
+        ],
+        "anchor_is": "centre of the text box, vertically centred"
+       },
+       "angle_label": {
+        "text": "180°",
+        "centre": [
+         0.0,
+         1.98
+        ]
+       }
+      },
+      {
+       "name": "Sports",
+       "start_deg": 180,
+       "end_deg": 270,
+       "angle_deg": 90,
+       "fill": "#C6DCEE",
+       "name_label": {
+        "text": "Sports",
+        "anchor": [
+         -2.46,
+         -2.46
+        ],
+        "anchor_is": "right edge of the text box, vertically centred"
+       },
+       "angle_label": {
+        "text": "90°",
+        "centre": [
+         -1.4,
+         -1.4
+        ]
+       }
+      },
+      {
+       "name": "News",
+       "start_deg": 270,
+       "end_deg": 324,
+       "angle_deg": 54,
+       "fill": "#CDEBD9",
+       "name_label": {
+        "text": "News",
+        "anchor": [
+         1.58,
+         -3.1
+        ],
+        "anchor_is": "left edge of the text box, vertically centred"
+       },
+       "angle_label": {
+        "text": "54°",
+        "centre": [
+         0.9,
+         -1.77
+        ]
+       }
+      },
+      {
+       "name": "Information",
+       "start_deg": 324,
+       "end_deg": 360,
+       "angle_deg": 36,
+       "fill": "#FBE9A6",
+       "name_label": {
+        "text": "Information",
+        "anchor": [
+         3.31,
+         -1.08
+        ],
+        "anchor_is": "left edge of the text box, vertically centred"
+       },
+       "angle_label": {
+        "text": "36°",
+        "centre": [
+         1.89,
+         -0.61
+        ]
+       }
+      }
+     ],
+     "font_px_on_1920": 41
+    },
+    "manim_description": "On a plain BG canvas (16:9, 16 by 9 units, centre (0, 0)) draw a flat pie chart. Draw a circle with centre (0, 0) and radius 3.2, outline INK 3 px. Cut it with 4 radii from the centre to the rim, INK 3 px, starting with a radius that points right (0 degrees) and going anticlockwise, so the slice boundaries are at 0, 180, 270, 324 and 360 degrees. Fill the slices: Entertainment (0 to 180 degrees, 180 degrees wide) #F2CBE0; Sports (180 to 270 degrees, 90 degrees wide) #C6DCEE; News (270 to 324 degrees, 54 degrees wide) #CDEBD9; Information (324 to 360 degrees, 36 degrees wide) #FBE9A6. Write each angle in INK bold inside its own slice, centred on the given point: 180° at (0, 1.98), 90° at (-1.4, -1.4), 54° at (0.9, -1.77), 36° at (1.89, -0.61). Write each slice name in INK outside the rim, with the text box anchored as given: Entertainment at (0, 3.67) (centre of the text box, vertically centred); Sports at (-2.46, -2.46) (right edge of the text box, vertically centred); News at (1.58, -3.1) (left edge of the text box, vertically centred); Information at (3.31, -1.08) (left edge of the text box, vertically centred). All text is a clean sans-serif, 41 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "Entertainment",
+     "Sports",
+     "News",
+     "Information",
+     "180°",
+     "90°",
+     "54°",
+     "36°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters (a), (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, animal or people sketches",
+     "percentages",
+     "protractor drawings"
+    ],
+    "accuracy_checks": [
+     "1% of 360 degrees is 3.6 degrees: 50 x 3.6 = 180, 25 x 3.6 = 90, 15 x 3.6 = 54, 10 x 3.6 = 36",
+     "180 + 90 + 54 + 36 = 360",
+     "slice boundaries at 0, 180, 270, 324 and 360 degrees; the order anticlockwise is Entertainment, Sports, News, Information",
+     "every angle label lies fully inside its own slice and every name lies fully outside the circle"
+    ],
+    "alt_text": "A pie chart with four slices: Entertainment 180 degrees, Sports 90 degrees, News 54 degrees and Information 36 degrees.",
+    "render_note": "The question gives no figure, so this solution picture stands alone. Order follows the question (Entertainment, Sports, News, Information) and the chapter's construction direction (anticlockwise from a radius pointing right)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C42",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.5, Q3",
+   "ncert_ref": "3.5.FiO3",
+   "question_text": "Prepare a pie chart that shows the favourite subjects of the students in your class. You can collect the data of the number of students for each subject shown in the table (each student should choose only one subject). Then write these numbers in the table and construct a pie chart: Language, Arts Education, Vocational Education, Social Science, Physical Education, Maths, Science.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The book's given table is plain: seven subject headings and an empty 'Number of Students' row for the student to fill; it is a LaTeX array, not a picture. The subjects are also listed in the question text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array: header row Subject, Language, Arts Education, Vocational Education, Social Science, Physical Education, Maths, Science; second row Number of Students with seven empty cells."
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C43",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.5, Q3",
+   "ncert_ref": "3.5.FiO3",
+   "question_text": "Prepare a pie chart that shows the favourite subjects of the students in your class. You can collect the data of the number of students for each subject shown in the table (each student should choose only one subject). Then write these numbers in the table and construct a pie chart: Language, Arts Education, Vocational Education, Social Science, Physical Education, Maths, Science.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The answer is a drawn pie chart; the LP gives a sample class of 40 (counts 6, 4, 2, 6, 8, 8, 6), so the angles are 54°, 36°, 18°, 54°, 72°, 72°, 54° (sum 360). The filled counts row is plain text/LaTeX; only the chart needs a picture. No question diagram, so it stands alone. Same decision as Q1 and Q2.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C43.IMG1",
+   "manim_scene": "c8_10_3_5_FiO3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C43.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "chart_kind": "pie",
+     "canvas_units": {
+      "width": 16,
+      "height": 9
+     },
+     "angle_convention": "degrees anticlockwise from the +x axis (3 o'clock)",
+     "centre": [
+      0,
+      0
+     ],
+     "radius": 3.2,
+     "outline": "INK",
+     "outline_px": 3,
+     "slices": [
+      {
+       "name": "Language",
+       "start_deg": 0,
+       "end_deg": 54,
+       "angle_deg": 54,
+       "fill": "#CDEBD9",
+       "name_label": {
+        "text": "Language",
+        "anchor": [
+         3.1,
+         1.58
+        ],
+        "anchor_is": "left edge of the text box, vertically centred"
+       },
+       "angle_label": {
+        "text": "54°",
+        "centre": [
+         2.28,
+         1.16
+        ]
+       }
+      },
+      {
+       "name": "Arts Education",
+       "start_deg": 54,
+       "end_deg": 90,
+       "angle_deg": 36,
+       "fill": "#FBE9A6",
+       "name_label": {
+        "text": "Arts Education",
+        "anchor": [
+         0.85,
+         3.55
+        ],
+        "anchor_is": "left edge of the text box, vertically centred"
+       },
+       "angle_label": {
+        "text": "36°",
+        "centre": [
+         0.79,
+         2.43
+        ]
+       }
+      },
+      {
+       "name": "Vocational Education",
+       "start_deg": 90,
+       "end_deg": 108,
+       "angle_deg": 18,
+       "fill": "#F2CBE0",
+       "name_label": {
+        "text": "Vocational Education",
+        "anchor": [
+         -0.15,
+         3.75
+        ],
+        "anchor_is": "right edge of the text box, vertically centred"
+       },
+       "angle_label": {
+        "text": "18°",
+        "centre": [
+         -0.4,
+         2.53
+        ]
+       }
+      },
+      {
+       "name": "Social Science",
+       "start_deg": 108,
+       "end_deg": 162,
+       "angle_deg": 54,
+       "fill": "#C6DCEE",
+       "name_label": {
+        "text": "Social Science",
+        "anchor": [
+         -2.46,
+         2.46
+        ],
+        "anchor_is": "right edge of the text box, vertically centred"
+       },
+       "angle_label": {
+        "text": "54°",
+        "centre": [
+         -1.81,
+         1.81
+        ]
+       }
+      },
+      {
+       "name": "Physical Education",
+       "start_deg": 162,
+       "end_deg": 234,
+       "angle_deg": 72,
+       "fill": "#F9D9A8",
+       "name_label": {
+        "text": "Physical Education",
+        "anchor": [
+         -3.31,
+         -1.08
+        ],
+        "anchor_is": "right edge of the text box, vertically centred"
+       },
+       "angle_label": {
+        "text": "72°",
+        "centre": [
+         -2.43,
+         -0.79
+        ]
+       }
+      },
+      {
+       "name": "Maths",
+       "start_deg": 234,
+       "end_deg": 306,
+       "angle_deg": 72,
+       "fill": "#D8CCEB",
+       "name_label": {
+        "text": "Maths",
+        "anchor": [
+         -0.0,
+         -3.67
+        ],
+        "anchor_is": "centre of the text box, vertically centred"
+       },
+       "angle_label": {
+        "text": "72°",
+        "centre": [
+         -0.0,
+         -2.56
+        ]
+       }
+      },
+      {
+       "name": "Science",
+       "start_deg": 306,
+       "end_deg": 360,
+       "angle_deg": 54,
+       "fill": "#E3E5E8",
+       "name_label": {
+        "text": "Science",
+        "anchor": [
+         3.1,
+         -1.58
+        ],
+        "anchor_is": "left edge of the text box, vertically centred"
+       },
+       "angle_label": {
+        "text": "54°",
+        "centre": [
+         2.28,
+         -1.16
+        ]
+       }
+      }
+     ],
+     "leader_lines": [
+      {
+       "slice": "Arts Education",
+       "from_point": [
+        0.99,
+        3.04
+       ],
+       "to_point": [
+        0.7999999999999999,
+        3.38
+       ],
+       "colour": "GUIDE",
+       "px": 2
+      },
+      {
+       "slice": "Vocational Education",
+       "from_point": [
+        -0.5,
+        3.16
+       ],
+       "to_point": [
+        -0.09999999999999999,
+        3.58
+       ],
+       "colour": "GUIDE",
+       "px": 2
+      }
+     ],
+     "font_px_on_1920": 41
+    },
+    "manim_description": "On a plain BG canvas (16:9, 16 by 9 units, centre (0, 0)) draw a flat pie chart. Draw a circle with centre (0, 0) and radius 3.2, outline INK 3 px. Cut it with 7 radii from the centre to the rim, INK 3 px, starting with a radius that points right (0 degrees) and going anticlockwise, so the slice boundaries are at 0, 54, 90, 108, 162, 234, 306 and 360 degrees. Fill the slices: Language (0 to 54 degrees, 54 degrees wide) #CDEBD9; Arts Education (54 to 90 degrees, 36 degrees wide) #FBE9A6; Vocational Education (90 to 108 degrees, 18 degrees wide) #F2CBE0; Social Science (108 to 162 degrees, 54 degrees wide) #C6DCEE; Physical Education (162 to 234 degrees, 72 degrees wide) #F9D9A8; Maths (234 to 306 degrees, 72 degrees wide) #D8CCEB; Science (306 to 360 degrees, 54 degrees wide) #E3E5E8. Write each angle in INK bold inside its own slice, centred on the given point: 54° at (2.28, 1.16), 36° at (0.79, 2.43), 18° at (-0.4, 2.53), 54° at (-1.81, 1.81), 72° at (-2.43, -0.79), 72° at (0, -2.56), 54° at (2.28, -1.16). Write each slice name in INK outside the rim, with the text box anchored as given: Language at (3.1, 1.58) (left edge of the text box, vertically centred); Arts Education at (0.85, 3.55) (left edge of the text box, vertically centred); Vocational Education at (-0.15, 3.75) (right edge of the text box, vertically centred); Social Science at (-2.46, 2.46) (right edge of the text box, vertically centred); Physical Education at (-3.31, -1.08) (right edge of the text box, vertically centred); Maths at (0, -3.67) (centre of the text box, vertically centred); Science at (3.1, -1.58) (left edge of the text box, vertically centred). Draw two short GUIDE leader lines (2 px) from the rim to the name: Arts Education from (0.99, 3.04) to (0.8, 3.38); Vocational Education from (-0.5, 3.16) to (-0.1, 3.58). All text is a clean sans-serif, 41 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "Language",
+     "Arts Education",
+     "Vocational Education",
+     "Social Science",
+     "Physical Education",
+     "Maths",
+     "Science",
+     "54°",
+     "36°",
+     "18°",
+     "72°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters (a), (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, animal or people sketches",
+     "student counts",
+     "percentages",
+     "the data table",
+     "protractor drawings"
+    ],
+    "accuracy_checks": [
+     "sample class of 40: 6 + 4 + 2 + 6 + 8 + 8 + 6 = 40",
+     "360 / 40 = 9 degrees per student: 54, 36, 18, 54, 72, 72, 54",
+     "54 + 36 + 18 + 54 + 72 + 72 + 54 = 360",
+     "slice boundaries at 0, 54, 90, 108, 162, 234, 306 and 360 degrees in the LP order of the subjects",
+     "every angle label lies fully inside its own slice and every name lies fully outside the circle"
+    ],
+    "alt_text": "A pie chart of a sample class: Language 54 degrees, Arts Education 36, Vocational Education 18, Social Science 54, Physical Education 72, Maths 72 and Science 54.",
+    "render_note": "Open-ended question: this draws the LP's own sample class of 40 (counts 6, 4, 2, 6, 8, 8, 6), not the student's class. The book gives only an empty table (plain, written in LaTeX), so there is no question figure."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C44",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.6, Q1",
+   "ncert_ref": "3.6.FiOb4",
+   "question_text": "Fill in the average number of hours each living being sleeps in a day by looking at the charts. Select the appropriate hours from this list: 15, 2.5, 20, 8, 3.5, 13, 10.5, 18. (Charts: giraffe, elephant, human, dog; cat, squirrel, python, bat.)",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The question says 'by looking at the charts': the data are the dark and light shares of eight 24-hour rings that exist only in the picture (the book prints no numbers). The student reads each share to match it with the hours list.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S11.T11.C44.IMG1",
+   "manim_scene": "c8_10_3_6_FiOb4_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C44.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "chart_kind": "ring",
+     "canvas_units": {
+      "width": 16,
+      "height": 9
+     },
+     "outer_radius": 1.25,
+     "inner_radius": 0.8,
+     "ring_total_hours": 24,
+     "degrees_per_hour": 15,
+     "rings": [
+      {
+       "name": "Giraffe",
+       "centre": [
+        -5.4,
+        1.95
+       ],
+       "dark_deg": 37.5,
+       "dark_from_deg": 90,
+       "dark_to_deg": 127.5,
+       "light_from_deg": 127.5,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Giraffe",
+        "centre": [
+         -5.4,
+         0.42
+        ]
+       }
+      },
+      {
+       "name": "Elephant",
+       "centre": [
+        -1.8,
+        1.95
+       ],
+       "dark_deg": 52.5,
+       "dark_from_deg": 90,
+       "dark_to_deg": 142.5,
+       "light_from_deg": 142.5,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Elephant",
+        "centre": [
+         -1.8,
+         0.42
+        ]
+       }
+      },
+      {
+       "name": "Human",
+       "centre": [
+        1.8,
+        1.95
+       ],
+       "dark_deg": 120,
+       "dark_from_deg": 90,
+       "dark_to_deg": 210,
+       "light_from_deg": 210,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Human",
+        "centre": [
+         1.8,
+         0.42
+        ]
+       }
+      },
+      {
+       "name": "Dog",
+       "centre": [
+        5.4,
+        1.95
+       ],
+       "dark_deg": 157.5,
+       "dark_from_deg": 90,
+       "dark_to_deg": 247.5,
+       "light_from_deg": 247.5,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Dog",
+        "centre": [
+         5.4,
+         0.42
+        ]
+       }
+      },
+      {
+       "name": "Cat",
+       "centre": [
+        -5.4,
+        -2.25
+       ],
+       "dark_deg": 195,
+       "dark_from_deg": 90,
+       "dark_to_deg": 285,
+       "light_from_deg": 285,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Cat",
+        "centre": [
+         -5.4,
+         -3.78
+        ]
+       }
+      },
+      {
+       "name": "Squirrel",
+       "centre": [
+        -1.8,
+        -2.25
+       ],
+       "dark_deg": 225,
+       "dark_from_deg": 90,
+       "dark_to_deg": 315,
+       "light_from_deg": 315,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Squirrel",
+        "centre": [
+         -1.8,
+         -3.78
+        ]
+       }
+      },
+      {
+       "name": "Python",
+       "centre": [
+        1.8,
+        -2.25
+       ],
+       "dark_deg": 270,
+       "dark_from_deg": 90,
+       "dark_to_deg": 360,
+       "light_from_deg": 0,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Python",
+        "centre": [
+         1.8,
+         -3.78
+        ]
+       }
+      },
+      {
+       "name": "Bat",
+       "centre": [
+        5.4,
+        -2.25
+       ],
+       "dark_deg": 300,
+       "dark_from_deg": 90,
+       "dark_to_deg": 390,
+       "light_from_deg": 30,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Bat",
+        "centre": [
+         5.4,
+         -3.78
+        ]
+       }
+      }
+     ],
+     "dark_colour": "SET_A",
+     "light_colour": "SET_B",
+     "font_px_on_1920": 41
+    },
+    "manim_description": "On a plain BG canvas (16:9, 16 by 9 units, centre (0, 0)) draw eight ring charts (donuts) in two rows of four, each with outer radius 1.25 and inner radius 0.8 (the hole is BG), no outline strokes. Ring centres, left to right: top row (-5.4, 1.95), (-1.8, 1.95), (1.8, 1.95), (5.4, 1.95); bottom row (-5.4, -2.25), (-1.8, -2.25), (1.8, -2.25), (5.4, -2.25). Each ring is split into two arcs. The dark arc is SET_A #0072B2: it starts at the 12 o'clock radius (90 degrees) and runs anticlockwise by the dark angle given below. The rest of the ring, continuing anticlockwise to 12 o'clock again, is SET_B #E69F00. Dark angles (each is the dark share of its 24-hour ring): Giraffe 37.5 degrees, Elephant 52.5 degrees, Human 120 degrees, Dog 157.5 degrees, Cat 195 degrees, Squirrel 225 degrees, Python 270 degrees, Bat 300 degrees. Write each name in INK, centred under its ring, at the given point: Giraffe at (-5.4, 0.42), Elephant at (-1.8, 0.42), Human at (1.8, 0.42), Dog at (5.4, 0.42), Cat at (-5.4, -3.78), Squirrel at (-1.8, -3.78), Python at (1.8, -3.78), Bat at (5.4, -3.78). Leave every hole empty. All text is a clean sans-serif, 41 px high on a 1920 px wide canvas unless stated.",
+    "visible_text": [
+     "Giraffe",
+     "Elephant",
+     "Human",
+     "Dog",
+     "Cat",
+     "Squirrel",
+     "Python",
+     "Bat"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters (a), (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, animal or people sketches",
+     "hour values or the list of hours",
+     "a legend or key",
+     "animal sketches inside the holes"
+    ],
+    "accuracy_checks": [
+     "dark angle = hours x 15 degrees (24 hours = 360 degrees): 37.5, 52.5, 120, 157.5, 195, 225, 270, 300",
+     "the dark share grows in the order giraffe, elephant, human, dog, cat, squirrel, python, bat",
+     "in every ring the dark arc starts at 12 o'clock and runs anticlockwise, the light arc takes the rest"
+    ],
+    "alt_text": "Eight ring charts of a 24-hour day, in two rows of four, labelled giraffe, elephant, human, dog, cat, squirrel, python and bat, each ring part dark blue and part orange with the dark part growing from the giraffe to the bat.",
+    "render_note": "Book p.67 draws the same eight rings with a sleeping-animal sketch in each hole (decorative, not drawn here: the name label under the ring replaces it, in the LP question's order). The book prints no numbers and no key; dark = asleep is given by the LP solution. The dark angles use the exact values hours x 15 degrees from the LP answer; the book's picture measures within about 6 degrees of these (giraffe 43 vs 37.5, elephant 56 vs 52.5, dog 152 vs 157.5), which is print approximation, so the exact values are drawn."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C45",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.6, Q1",
+   "ncert_ref": "3.6.FiOb4",
+   "question_text": "Fill in the average number of hours each living being sleeps in a day by looking at the charts. Select the appropriate hours from this list: 15, 2.5, 20, 8, 3.5, 13, 10.5, 18. (Charts: giraffe, elephant, human, dog; cat, squirrel, python, bat.)",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The answer is the same eight rings with the hours written in (new marks: 2.5, 3.5, 8, 10.5, 13, 15, 18, 20); the solution text describes this as a matching, so the picture shows the final state. derived_from the question rings.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S11.T11.C45.IMG1",
+   "manim_scene": "c8_10_3_6_FiOb4_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C45.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S11.T11.C44.IMG1",
+    "content": {
+     "type": "data_graph",
+     "chart_kind": "ring",
+     "canvas_units": {
+      "width": 16,
+      "height": 9
+     },
+     "outer_radius": 1.25,
+     "inner_radius": 0.8,
+     "ring_total_hours": 24,
+     "degrees_per_hour": 15,
+     "rings": [
+      {
+       "name": "Giraffe",
+       "centre": [
+        -5.4,
+        1.95
+       ],
+       "dark_deg": 37.5,
+       "dark_from_deg": 90,
+       "dark_to_deg": 127.5,
+       "light_from_deg": 127.5,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Giraffe",
+        "centre": [
+         -5.4,
+         0.42
+        ]
+       },
+       "hours_label": {
+        "number": "2.5",
+        "number_centre": [
+         -5.4,
+         2.09
+        ],
+        "unit": "hours",
+        "unit_centre": [
+         -5.4,
+         1.73
+        ]
+       }
+      },
+      {
+       "name": "Elephant",
+       "centre": [
+        -1.8,
+        1.95
+       ],
+       "dark_deg": 52.5,
+       "dark_from_deg": 90,
+       "dark_to_deg": 142.5,
+       "light_from_deg": 142.5,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Elephant",
+        "centre": [
+         -1.8,
+         0.42
+        ]
+       },
+       "hours_label": {
+        "number": "3.5",
+        "number_centre": [
+         -1.8,
+         2.09
+        ],
+        "unit": "hours",
+        "unit_centre": [
+         -1.8,
+         1.73
+        ]
+       }
+      },
+      {
+       "name": "Human",
+       "centre": [
+        1.8,
+        1.95
+       ],
+       "dark_deg": 120,
+       "dark_from_deg": 90,
+       "dark_to_deg": 210,
+       "light_from_deg": 210,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Human",
+        "centre": [
+         1.8,
+         0.42
+        ]
+       },
+       "hours_label": {
+        "number": "8",
+        "number_centre": [
+         1.8,
+         2.09
+        ],
+        "unit": "hours",
+        "unit_centre": [
+         1.8,
+         1.73
+        ]
+       }
+      },
+      {
+       "name": "Dog",
+       "centre": [
+        5.4,
+        1.95
+       ],
+       "dark_deg": 157.5,
+       "dark_from_deg": 90,
+       "dark_to_deg": 247.5,
+       "light_from_deg": 247.5,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Dog",
+        "centre": [
+         5.4,
+         0.42
+        ]
+       },
+       "hours_label": {
+        "number": "10.5",
+        "number_centre": [
+         5.4,
+         2.09
+        ],
+        "unit": "hours",
+        "unit_centre": [
+         5.4,
+         1.73
+        ]
+       }
+      },
+      {
+       "name": "Cat",
+       "centre": [
+        -5.4,
+        -2.25
+       ],
+       "dark_deg": 195,
+       "dark_from_deg": 90,
+       "dark_to_deg": 285,
+       "light_from_deg": 285,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Cat",
+        "centre": [
+         -5.4,
+         -3.78
+        ]
+       },
+       "hours_label": {
+        "number": "13",
+        "number_centre": [
+         -5.4,
+         -2.11
+        ],
+        "unit": "hours",
+        "unit_centre": [
+         -5.4,
+         -2.47
+        ]
+       }
+      },
+      {
+       "name": "Squirrel",
+       "centre": [
+        -1.8,
+        -2.25
+       ],
+       "dark_deg": 225,
+       "dark_from_deg": 90,
+       "dark_to_deg": 315,
+       "light_from_deg": 315,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Squirrel",
+        "centre": [
+         -1.8,
+         -3.78
+        ]
+       },
+       "hours_label": {
+        "number": "15",
+        "number_centre": [
+         -1.8,
+         -2.11
+        ],
+        "unit": "hours",
+        "unit_centre": [
+         -1.8,
+         -2.47
+        ]
+       }
+      },
+      {
+       "name": "Python",
+       "centre": [
+        1.8,
+        -2.25
+       ],
+       "dark_deg": 270,
+       "dark_from_deg": 90,
+       "dark_to_deg": 360,
+       "light_from_deg": 0,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Python",
+        "centre": [
+         1.8,
+         -3.78
+        ]
+       },
+       "hours_label": {
+        "number": "18",
+        "number_centre": [
+         1.8,
+         -2.11
+        ],
+        "unit": "hours",
+        "unit_centre": [
+         1.8,
+         -2.47
+        ]
+       }
+      },
+      {
+       "name": "Bat",
+       "centre": [
+        5.4,
+        -2.25
+       ],
+       "dark_deg": 300,
+       "dark_from_deg": 90,
+       "dark_to_deg": 390,
+       "light_from_deg": 30,
+       "light_to_deg": 450,
+       "name_label": {
+        "text": "Bat",
+        "centre": [
+         5.4,
+         -3.78
+        ]
+       },
+       "hours_label": {
+        "number": "20",
+        "number_centre": [
+         5.4,
+         -2.11
+        ],
+        "unit": "hours",
+        "unit_centre": [
+         5.4,
+         -2.47
+        ]
+       }
+      }
+     ],
+     "dark_colour": "SET_A",
+     "light_colour": "SET_B",
+     "font_px_on_1920": 41
+    },
+    "manim_description": "On a plain BG canvas (16:9, 16 by 9 units, centre (0, 0)) draw eight ring charts (donuts) in two rows of four, each with outer radius 1.25 and inner radius 0.8 (the hole is BG), no outline strokes. Ring centres, left to right: top row (-5.4, 1.95), (-1.8, 1.95), (1.8, 1.95), (5.4, 1.95); bottom row (-5.4, -2.25), (-1.8, -2.25), (1.8, -2.25), (5.4, -2.25). Each ring is split into two arcs. The dark arc is SET_A #0072B2: it starts at the 12 o'clock radius (90 degrees) and runs anticlockwise by the dark angle given below. The rest of the ring, continuing anticlockwise to 12 o'clock again, is SET_B #E69F00. Dark angles (each is the dark share of its 24-hour ring): Giraffe 37.5 degrees, Elephant 52.5 degrees, Human 120 degrees, Dog 157.5 degrees, Cat 195 degrees, Squirrel 225 degrees, Python 270 degrees, Bat 300 degrees. Write each name in INK, centred under its ring, at the given point: Giraffe at (-5.4, 0.42), Elephant at (-1.8, 0.42), Human at (1.8, 0.42), Dog at (5.4, 0.42), Cat at (-5.4, -3.78), Squirrel at (-1.8, -3.78), Python at (1.8, -3.78), Bat at (5.4, -3.78). In every hole write the hours of sleep in ANSWER #009E73, bold: the number centred at the given point and the word hours under it in ANSWER at 36 px high: Giraffe: 2.5 at (-5.4, 2.09) and hours at (-5.4, 1.73); Elephant: 3.5 at (-1.8, 2.09) and hours at (-1.8, 1.73); Human: 8 at (1.8, 2.09) and hours at (1.8, 1.73); Dog: 10.5 at (5.4, 2.09) and hours at (5.4, 1.73); Cat: 13 at (-5.4, -2.11) and hours at (-5.4, -2.47); Squirrel: 15 at (-1.8, -2.11) and hours at (-1.8, -2.47); Python: 18 at (1.8, -2.11) and hours at (1.8, -2.47); Bat: 20 at (5.4, -2.11) and hours at (5.4, -2.47). All text is a clean sans-serif, 41 px high on a 1920 px wide canvas unless stated.",
+    "visible_text": [
+     "Giraffe",
+     "Elephant",
+     "Human",
+     "Dog",
+     "Cat",
+     "Squirrel",
+     "Python",
+     "Bat",
+     "2.5",
+     "3.5",
+     "8",
+     "10.5",
+     "13",
+     "15",
+     "18",
+     "20",
+     "hours"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters (a), (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, animal or people sketches",
+     "a legend or key",
+     "animal sketches inside the holes",
+     "the unused hours list"
+    ],
+    "accuracy_checks": [
+     "dark angle = hours x 15 degrees: 2.5 -> 37.5, 3.5 -> 52.5, 8 -> 120, 10.5 -> 157.5, 13 -> 195, 15 -> 225, 18 -> 270, 20 -> 300",
+     "the eight hours are the whole list 2.5, 3.5, 8, 10.5, 13, 15, 18, 20, each used once, in increasing order from giraffe to bat",
+     "layout, ring positions and ring angles are identical to the question diagram; only the hour labels are new"
+    ],
+    "alt_text": "The same eight rings with the hours of sleep written in the holes: giraffe 2.5, elephant 3.5, human 8, dog 10.5, cat 13, squirrel 15, python 18, bat 20.",
+    "render_note": "Same as M2.S11.T11.C44.IMG1 plus the hours in ANSWER green. The human ring is exactly one third dark (120 degrees = 8 hours), as the LP check says."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C46",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.6, Q2",
+   "ncert_ref": "3.6.FiOb5i",
+   "question_text": "The pie chart shows the result of a survey carried out to find the modes of transport used by children to go to school (Walk 90°, Bus 120°, Two-wheeler 60°, Cycle 60°, Car the rest). (i) What is the most common mode of transport? (ii) What fraction of children travel by car? (iii) If 18 children travel by car, how many children took part in the survey? How many children use taxis to travel to school? (iv) By which two modes of transport are equal numbers of children travelling?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The book says 'Study the pie chart' and all four sub-questions are read from it (slice order, names and four angle marks; the Car slice has no angle). The LP text repeats the angles, but the picture is the given figure of the question.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S11.T11.C46.IMG1",
+   "manim_scene": "c8_10_3_6_FiOb5_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C46.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "chart_kind": "pie",
+     "canvas_units": {
+      "width": 16,
+      "height": 9
+     },
+     "angle_convention": "degrees anticlockwise from the +x axis (3 o'clock)",
+     "centre": [
+      0,
+      0
+     ],
+     "radius": 3.3,
+     "outline": "INK",
+     "outline_px": 3,
+     "slices": [
+      {
+       "name": "Walk",
+       "start_deg": 90,
+       "end_deg": 180,
+       "angle_deg": 90,
+       "fill": "BG",
+       "name_label": {
+        "text": "Walk",
+        "centre": [
+         -1.59,
+         1.59
+        ]
+       },
+       "angle_label": {
+        "text": "90°",
+        "centre": [
+         -0.8,
+         0.66
+        ],
+        "colour": "INK"
+       }
+      },
+      {
+       "name": "Cycle",
+       "start_deg": 180,
+       "end_deg": 240,
+       "angle_deg": 60,
+       "fill": "BG",
+       "name_label": {
+        "text": "Cycle",
+        "centre": [
+         -1.94,
+         -1.12
+        ]
+       },
+       "angle_label": {
+        "text": "60°",
+        "centre": [
+         -0.82,
+         -0.48
+        ],
+        "colour": "INK"
+       }
+      },
+      {
+       "name": "Car",
+       "start_deg": 240,
+       "end_deg": 270,
+       "angle_deg": 30,
+       "fill": "BG",
+       "name_label": {
+        "text": "Car",
+        "centre": [
+         -0.68,
+         -2.55
+        ]
+       }
+      },
+      {
+       "name": "Two-wheeler",
+       "start_deg": 270,
+       "end_deg": 330,
+       "angle_deg": 60,
+       "fill": "BG",
+       "name_label": {
+        "text": "Two-wheeler",
+        "centre": [
+         1.15,
+         -2.0
+        ]
+       },
+       "angle_label": {
+        "text": "60°",
+        "centre": [
+         0.48,
+         -0.82
+        ],
+        "colour": "INK"
+       }
+      },
+      {
+       "name": "Bus",
+       "start_deg": 330,
+       "end_deg": 90,
+       "angle_deg": 120,
+       "fill": "BG",
+       "name_label": {
+        "text": "Bus",
+        "centre": [
+         1.94,
+         1.12
+        ]
+       },
+       "angle_label": {
+        "text": "120°",
+        "centre": [
+         0.95,
+         0.52
+        ],
+        "colour": "INK"
+       }
+      }
+     ],
+     "angle_marks": [
+      {
+       "slice": "Walk",
+       "kind": "right_angle_square",
+       "side": 0.3,
+       "corner_at": [
+        0,
+        0
+       ],
+       "toward": [
+        [
+         -0.3,
+         0
+        ],
+        [
+         0,
+         0.3
+        ]
+       ]
+      },
+      {
+       "slice": "Bus",
+       "kind": "arc",
+       "radius": 0.5,
+       "from_deg": 330,
+       "to_deg": 90
+      },
+      {
+       "slice": "Cycle",
+       "kind": "arc",
+       "radius": 0.5,
+       "from_deg": 180,
+       "to_deg": 240
+      },
+      {
+       "slice": "Two-wheeler",
+       "kind": "arc",
+       "radius": 0.5,
+       "from_deg": 270,
+       "to_deg": 330
+      }
+     ],
+     "font_px_on_1920": 41
+    },
+    "manim_description": "On a plain BG canvas (16:9, 16 by 9 units, centre (0, 0)) draw a flat pie chart with no fill colours (every slice stays BG). Draw a circle with centre (0, 0) and radius 3.3, outline INK 3 px. Draw five radii from the centre to the rim, INK 3 px, at 90, 180, 240, 270 and 330 degrees (anticlockwise from 3 o'clock): straight up, straight left, down-left (30 degrees left of straight down), straight down and down-right (30 degrees below the rightward horizontal). The five slices, anticlockwise from the radius that points up: Walk (90 to 180 degrees, upper left, 90 degrees wide), Cycle (180 to 240, 60 degrees wide), Car (240 to 270, 30 degrees wide), Two-wheeler (270 to 330, 60 degrees wide) and Bus (330 round to 90, 120 degrees wide). Write each slice name in INK inside its slice, centred on the given point: Walk at (-1.59, 1.59), Bus at (1.94, 1.12), Cycle at (-1.94, -1.12), Car at (-0.68, -2.55), and Two-wheeler at (1.15, -2.00) on two lines, Two- above wheeler. Draw the given angle marks in INK 2 px at the centre: a right-angle square of side 0.3 in the Walk slice with corners (0, 0), (-0.3, 0), (-0.3, 0.3), (0, 0.3) and the label 90° at (-0.80, 0.66); an arc of radius 0.5 from 330 to 90 degrees in the Bus slice with the label 120° at (0.95, 0.52); an arc of radius 0.5 from 180 to 240 degrees in the Cycle slice with the label 60° at (-0.82, -0.48); an arc of radius 0.5 from 270 to 330 degrees in the Two-wheeler slice with the label 60° at (0.48, -0.82). The Car slice carries no arc and no angle label. All text is a clean sans-serif, 41 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "Walk",
+     "Bus",
+     "Two-wheeler",
+     "Cycle",
+     "Car",
+     "90°",
+     "120°",
+     "60°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters (a), (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, animal or people sketches",
+     "the Car angle 30°",
+     "slice fills or colours",
+     "a legend",
+     "counts of children",
+     "protractor drawings"
+    ],
+    "accuracy_checks": [
+     "90 + 120 + 60 + 60 = 330, so the unmarked Car slice is 360 - 330 = 30 degrees wide and is drawn 30 degrees wide",
+     "radii at 90, 180, 240, 270, 330 degrees give slice widths Walk 90, Cycle 60, Car 30, Two-wheeler 60, Bus 120",
+     "the Car slice has no angle label (the question leaves it to be found)",
+     "the two 60° labels sit in the Cycle and Two-wheeler slices, not in the Car slice"
+    ],
+    "alt_text": "A pie chart with five slices: Walk 90 degrees, Bus 120 degrees, Two-wheeler 60 degrees and Cycle 60 degrees; the narrow Car slice has no angle marked.",
+    "render_note": "Redrawn from book p.68 (Q5): same slice order (Walk, Bus, Two-wheeler, Car, Cycle going clockwise from 12 o'clock) and the same four printed angle marks; the Car angle is not printed in the book and stays unmarked. The book writes Two-/wheeler on two lines."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C47",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.6, Q2",
+   "ncert_ref": "3.6.FiOb5i",
+   "question_text": "The pie chart shows the result of a survey carried out to find the modes of transport used by children to go to school (Walk 90°, Bus 120°, Two-wheeler 60°, Cycle 60°, Car the rest). (i) What is the most common mode of transport? (ii) What fraction of children travel by car? (iii) If 18 children travel by car, how many children took part in the survey? How many children use taxis to travel to school? (iv) By which two modes of transport are equal numbers of children travelling?",
+   "decision": "required",
+   "reason_codes": [
+    "GRAPH_CHART",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The solution adds a new mark to the given chart: the Car slice angle 30° (360 - 90 - 120 - 60 - 60), which sub-questions (ii) and (iii) use. Same layout as the question diagram (derived_from). Borderline: only one added label; see notes.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S11.T11.C47.IMG1",
+   "manim_scene": "c8_10_3_6_FiOb5_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C47.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S11.T11.C46.IMG1",
+    "content": {
+     "type": "data_graph",
+     "chart_kind": "pie",
+     "canvas_units": {
+      "width": 16,
+      "height": 9
+     },
+     "angle_convention": "degrees anticlockwise from the +x axis (3 o'clock)",
+     "centre": [
+      0,
+      0
+     ],
+     "radius": 3.3,
+     "outline": "INK",
+     "outline_px": 3,
+     "slices": [
+      {
+       "name": "Walk",
+       "start_deg": 90,
+       "end_deg": 180,
+       "angle_deg": 90,
+       "fill": "BG",
+       "name_label": {
+        "text": "Walk",
+        "centre": [
+         -1.59,
+         1.59
+        ]
+       },
+       "angle_label": {
+        "text": "90°",
+        "centre": [
+         -0.8,
+         0.66
+        ],
+        "colour": "INK"
+       }
+      },
+      {
+       "name": "Cycle",
+       "start_deg": 180,
+       "end_deg": 240,
+       "angle_deg": 60,
+       "fill": "BG",
+       "name_label": {
+        "text": "Cycle",
+        "centre": [
+         -1.94,
+         -1.12
+        ]
+       },
+       "angle_label": {
+        "text": "60°",
+        "centre": [
+         -0.82,
+         -0.48
+        ],
+        "colour": "INK"
+       }
+      },
+      {
+       "name": "Car",
+       "start_deg": 240,
+       "end_deg": 270,
+       "angle_deg": 30,
+       "fill": "BG",
+       "name_label": {
+        "text": "Car",
+        "centre": [
+         -0.68,
+         -2.55
+        ]
+       },
+       "angle_label": {
+        "text": "30°",
+        "centre": [
+         -0.38,
+         -1.4
+        ],
+        "colour": "ANSWER"
+       }
+      },
+      {
+       "name": "Two-wheeler",
+       "start_deg": 270,
+       "end_deg": 330,
+       "angle_deg": 60,
+       "fill": "BG",
+       "name_label": {
+        "text": "Two-wheeler",
+        "centre": [
+         1.15,
+         -2.0
+        ]
+       },
+       "angle_label": {
+        "text": "60°",
+        "centre": [
+         0.48,
+         -0.82
+        ],
+        "colour": "INK"
+       }
+      },
+      {
+       "name": "Bus",
+       "start_deg": 330,
+       "end_deg": 90,
+       "angle_deg": 120,
+       "fill": "BG",
+       "name_label": {
+        "text": "Bus",
+        "centre": [
+         1.94,
+         1.12
+        ]
+       },
+       "angle_label": {
+        "text": "120°",
+        "centre": [
+         0.95,
+         0.52
+        ],
+        "colour": "INK"
+       }
+      }
+     ],
+     "angle_marks": [
+      {
+       "slice": "Walk",
+       "kind": "right_angle_square",
+       "side": 0.3,
+       "corner_at": [
+        0,
+        0
+       ],
+       "toward": [
+        [
+         -0.3,
+         0
+        ],
+        [
+         0,
+         0.3
+        ]
+       ]
+      },
+      {
+       "slice": "Bus",
+       "kind": "arc",
+       "radius": 0.5,
+       "from_deg": 330,
+       "to_deg": 90
+      },
+      {
+       "slice": "Cycle",
+       "kind": "arc",
+       "radius": 0.5,
+       "from_deg": 180,
+       "to_deg": 240
+      },
+      {
+       "slice": "Two-wheeler",
+       "kind": "arc",
+       "radius": 0.5,
+       "from_deg": 270,
+       "to_deg": 330
+      },
+      {
+       "slice": "Car",
+       "kind": "arc",
+       "radius": 0.5,
+       "from_deg": 240,
+       "to_deg": 270,
+       "colour": "ANSWER"
+      }
+     ],
+     "font_px_on_1920": 41
+    },
+    "manim_description": "On a plain BG canvas (16:9, 16 by 9 units, centre (0, 0)) draw a flat pie chart with no fill colours (every slice stays BG). Draw a circle with centre (0, 0) and radius 3.3, outline INK 3 px. Draw five radii from the centre to the rim, INK 3 px, at 90, 180, 240, 270 and 330 degrees (anticlockwise from 3 o'clock): straight up, straight left, down-left (30 degrees left of straight down), straight down and down-right (30 degrees below the rightward horizontal). The five slices, anticlockwise from the radius that points up: Walk (90 to 180 degrees, upper left, 90 degrees wide), Cycle (180 to 240, 60 degrees wide), Car (240 to 270, 30 degrees wide), Two-wheeler (270 to 330, 60 degrees wide) and Bus (330 round to 90, 120 degrees wide). Write each slice name in INK inside its slice, centred on the given point: Walk at (-1.59, 1.59), Bus at (1.94, 1.12), Cycle at (-1.94, -1.12), Car at (-0.68, -2.55), and Two-wheeler at (1.15, -2.00) on two lines, Two- above wheeler. Draw the given angle marks in INK 2 px at the centre: a right-angle square of side 0.3 in the Walk slice with corners (0, 0), (-0.3, 0), (-0.3, 0.3), (0, 0.3) and the label 90° at (-0.80, 0.66); an arc of radius 0.5 from 330 to 90 degrees in the Bus slice with the label 120° at (0.95, 0.52); an arc of radius 0.5 from 180 to 240 degrees in the Cycle slice with the label 60° at (-0.82, -0.48); an arc of radius 0.5 from 270 to 330 degrees in the Two-wheeler slice with the label 60° at (0.48, -0.82). Same circle, radii, names and marks at the same positions as the question diagram. In addition, in ANSWER #009E73, draw an arc of radius 0.5 (2 px) from 240 to 270 degrees in the Car slice and write the bold label 30° centred at (-0.38, -1.40). All text is a clean sans-serif, 41 px high on a 1920 px wide canvas.",
+    "visible_text": [
+     "Walk",
+     "Bus",
+     "Two-wheeler",
+     "Cycle",
+     "Car",
+     "90°",
+     "120°",
+     "60°",
+     "30°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters (a), (b)",
+     "branding, page numbers, watermarks, logos",
+     "decorative clip-art, animal or people sketches",
+     "slice fills or colours",
+     "a legend",
+     "counts of children",
+     "the fraction 1/12 or any answer sentence",
+     "protractor drawings"
+    ],
+    "accuracy_checks": [
+     "360 - 90 - 120 - 60 - 60 = 30, so the Car slice is labelled 30°",
+     "90 + 120 + 60 + 60 + 30 = 360",
+     "layout, radii, names and the four given marks are identical to the question diagram; only the Car arc and its 30° label are new, in ANSWER green"
+    ],
+    "alt_text": "The same pie chart with the Car slice now marked 30 degrees.",
+    "render_note": "Same as M2.S11.T11.C46.IMG1 plus the Car angle (30°) in ANSWER green, the value the LP solution finds first and uses for sub-questions (ii) and (iii)."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S12.T12.C50",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E2",
+   "ncert_ref": "3.6.ratio_check",
+   "question_text": "Check that x1/x2 = y2/y1 for walking and the car.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Checking 5 / 60 = 1.5 / 18 = 1/12 is arithmetic in the steps; the speed-time table is plain and the teaching image C49.IMG1 already shows the factors (never linked).",
+   "lp_placeholder_action": "no_image",
+   "block_index": 0,
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S12.T12.C51",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": "3.6.table, 3.6.Q_check_others, 3.6.inverse_def",
+   "question_text": "Does the time decrease by the same factor as the speed increases? Check every mode of transport.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The speed-time table is plain numbers (no colour meaning); the factors 3, 2, 2 and the product 90 are written in the steps. The book's bracket picture (p.64) is the teaching image C49.IMG1, never linked.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 0,
+   "media_id": null,
+   "text_alternative": "LaTeX array: Walk, Bicycle, Motorcycle, Car; Speed (km/h) 5, 15, 30, 60; Time (in hours) 18, 6, 3, 1.5."
+  },
+  {
+   "lp_concept_id": "M3.S13.T13.C53",
+   "role": "question",
+   "lp_book_number": "Example 1: Workers and bricks",
+   "ncert_ref": "3.6.Ex1",
+   "question_text": "If 5 workers can move 4500 bricks in a day, how many workers are needed to move 18000 bricks in a day?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem (5 workers, 4500 bricks, 18000 bricks); the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S13.T13.C54",
+   "role": "solution",
+   "lp_book_number": "Example 1: Workers and bricks",
+   "ncert_ref": "3.6.Ex1",
+   "question_text": "If 5 workers can move 4500 bricks in a day, how many workers are needed to move 18000 bricks in a day?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Proportion 4500 : 18000 :: 5 : x and 5 x 4 = 20 are arithmetic in the steps; the answer is a number.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C55",
+   "role": "question",
+   "lp_book_number": "Speed and Time: testing 30 : 60 :: 3 : x",
+   "ncert_ref": "3.6.Q_30_60",
+   "question_text": "Can we represent the car problem as 30 : 60 :: 3 : x? Will the travel time increase or decrease as the speed increases?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Discussion question about 30 : 60 :: 3 : x; all data are in the words, no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S14.T14.C56",
+   "role": "solution",
+   "lp_book_number": "Speed and Time: testing 30 : 60 :: 3 : x",
+   "ncert_ref": "3.6.Q_30_60",
+   "question_text": "Can we represent the car problem as 30 : 60 :: 3 : x? Will the travel time increase or decrease as the speed increases?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The reasoning is in words and one product (60 x 3 / 30 = 6); the answer is a sentence.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S15.T15.C57",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.6, Q1",
+   "ncert_ref": "3.6.FiOa1i",
+   "question_text": "Which of these are in inverse proportion? (i) x: 40, 80, 25, 16; y: 20, 10, 32, 50. Which of these are in inverse proportion? (ii) x: 40, 80, 25, 16; y: 20, 10, 12.5, 8. Which of these are in inverse proportion? (iii) x: 30, 90, 150, 10; y: 15, 5, 3, 45.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The three x-y tables (i), (ii), (iii) are plain two-row tables of numbers with no colour meaning, and every number is also in the question text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Three LaTeX arrays, each with row x and row y: (i) x 40, 80, 25, 16 / y 20, 10, 32, 50; (ii) x 40, 80, 25, 16 / y 20, 10, 12.5, 8; (iii) x 30, 90, 150, 10 / y 15, 5, 3, 45."
+  },
+  {
+   "lp_concept_id": "M3.S15.T15.C58",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.6, Q1",
+   "ncert_ref": "3.6.FiOa1i",
+   "question_text": "Which of these are in inverse proportion? (i) x: 40, 80, 25, 16; y: 20, 10, 32, 50. Which of these are in inverse proportion? (ii) x: 40, 80, 25, 16; y: 20, 10, 12.5, 8. Which of these are in inverse proportion? (iii) x: 30, 90, 150, 10; y: 15, 5, 3, 45.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the products x times y per column (800 in every column of (i); 800, 800, 312.5, 128 for (ii); 450 in every column of (iii)): arithmetic or a plain extra table row, not a drawing.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "The same three LaTeX arrays with a third row x y: (i) 800, 800, 800, 800; (ii) 800, 800, 312.5, 128; (iii) 450, 450, 450, 450."
+  },
+  {
+   "lp_concept_id": "M3.S15.T15.C59",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.6, Q2",
+   "ncert_ref": "3.6.FiOa2",
+   "question_text": "Fill in the empty cells if x and y are in inverse proportion. x: 16, 12, ?, 36; y: 9, ?, 48, ?.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "A plain two-row table with three empty cells to complete; the numbers and the blanks are also written in the question text. Same kind of table as Q1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array: x 16, 12, ?, 36 / y 9, ?, 48, ?."
+  },
+  {
+   "lp_concept_id": "M3.S15.T15.C60",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.6, Q2",
+   "ncert_ref": "3.6.FiOa2",
+   "question_text": "Fill in the empty cells if x and y are in inverse proportion. x: 16, 12, ?, 36; y: 9, ?, 48, ?.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The answer is the same plain table with its blanks filled (12, 3, 4): a LaTeX array (the prompt's own example of a completed plain table), not a drawing.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array: x 16, 12, 3, 36 / y 9, 12, 48, 4."
+  },
+  {
+   "lp_concept_id": "M3.S15.T15.C61",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.6, Q3",
+   "ncert_ref": "3.6.FiOb1i",
+   "question_text": "Which of the following pairs of quantities are in inverse proportion? (i) The number of taps filling a water tank and the time taken to fill it. Which of the following pairs of quantities are in inverse proportion? (ii) The number of painters hired and the days needed to paint a wall of fixed size. Which of the following pairs of quantities are in inverse proportion? (iii) The distance a car can travel and the amount of petrol in the tank. Which of the following pairs of quantities are in inverse proportion? (iv) The speed of a cyclist and the time taken to cover a fixed route. Which of the following pairs of quantities are in inverse proportion? (v) The length of cloth bought and the price paid at a fixed rate per metre. Which of the following pairs of quantities are in inverse proportion? (vi) The number of pages in a book and the time required to read it at a fixed reading speed.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Six word statements about pairs of quantities; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S15.T15.C62",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.6, Q3",
+   "ncert_ref": "3.6.FiOb1i",
+   "question_text": "Which of the following pairs of quantities are in inverse proportion? (i) The number of taps filling a water tank and the time taken to fill it. Which of the following pairs of quantities are in inverse proportion? (ii) The number of painters hired and the days needed to paint a wall of fixed size. Which of the following pairs of quantities are in inverse proportion? (iii) The distance a car can travel and the amount of petrol in the tank. Which of the following pairs of quantities are in inverse proportion? (iv) The speed of a cyclist and the time taken to cover a fixed route. Which of the following pairs of quantities are in inverse proportion? (v) The length of cloth bought and the price paid at a fixed rate per metre. Which of the following pairs of quantities are in inverse proportion? (vi) The number of pages in a book and the time required to read it at a fixed reading speed.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word reasoning (more taps, less time; and so on); each answer is 'inverse' or 'direct'.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C64",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": "3.6.Ex4",
+   "question_text": "2 pumps can fill a tank in 18 hours. How long will it take if 2 more pumps of the same kind are added?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "2 x 18 = 36 pump-hours and 36 / 4 = 9 are arithmetic in the steps; the book gives no figure. The teaching image C63.IMG1 (worker-days grids) is never linked.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 0,
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C66",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E1",
+   "ncert_ref": "3.6.Ex6",
+   "question_text": "Ram cuts the vegetables in 1 hour and Shyam in 1.5 hours. How long will they take together?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Fractions of work (1, 2/3, 5/3 and x = 3/5 hour) are arithmetic in the steps; the book gives no figure. The teaching image C65.IMG1 (work in one hour) is never linked.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 0,
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C68",
+   "role": "question",
+   "lp_book_number": "Example 3: Workers laying a road",
+   "ncert_ref": "3.6.Ex3",
+   "question_text": "20 workers take 4 days to lay a road. How many days will 10 workers take for the same road?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem (20 workers, 4 days, 10 workers); the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C69",
+   "role": "solution",
+   "lp_book_number": "Example 3: Workers laying a road",
+   "ncert_ref": "3.6.Ex3",
+   "question_text": "20 workers take 4 days to lay a road. How many days will 10 workers take for the same road?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "20 x 4 = 80 and 80 / 10 = 8 are arithmetic in the steps; the answer is a number. The teaching image C63.IMG1 (grids of 80 squares) is never linked.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C70",
+   "role": "question",
+   "lp_book_number": "Example 5: Food for more students",
+   "ncert_ref": "3.6.Ex5",
+   "question_text": "A school has food for 80 students for 15 days. If 20 more students join, for how many days will the food last?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem (80 students, 15 days, 20 more students); the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C71",
+   "role": "solution",
+   "lp_book_number": "Example 5: Food for more students",
+   "ncert_ref": "3.6.Ex5",
+   "question_text": "A school has food for 80 students for 15 days. If 20 more students join, for how many days will the food last?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "80 x 15 = 1200 and 1200 / 100 = 12 are arithmetic in the steps; the answer is a number.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C72",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.6, Q1",
+   "ncert_ref": "3.6.FiOb2",
+   "question_text": "If 24 pencils cost ₹120, how much will 20 such pencils cost?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Plain word problem: 24 pencils, Rs 120 and 20 pencils are all in the text; the book prints no figure for this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C73",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.6, Q1",
+   "ncert_ref": "3.6.FiOb2",
+   "question_text": "If 24 pencils cost ₹120, how much will 20 such pencils cost?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The solution is two arithmetic lines (120 / 24 = 5 and 5 x 20 = 100) and a rupee answer; there is nothing visual to add.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the LP steps as LaTeX lines: 120 / 24 = 5, then 5 x 20 = 100."
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C74",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.6, Q2",
+   "ncert_ref": "3.6.FiOb3",
+   "question_text": "A tank on a building has enough water to supply 20 families living there for 6 days. If 10 more families move in there, how long will the water last? What assumptions do you need to make to work out this problem?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem about a water tank and families; every number (20 families, 6 days, 10 more families) is in the text and the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C75",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.6, Q2",
+   "ncert_ref": "3.6.FiOb3",
+   "question_text": "A tank on a building has enough water to supply 20 families living there for 6 days. If 10 more families move in there, how long will the water last? What assumptions do you need to make to work out this problem?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Solution is arithmetic (20 x 6 = 120 family-days, 20 + 10 = 30, 120 / 30 = 4) plus an answer in words (the assumptions); the answer is not a picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the LP steps as LaTeX lines; the assumptions stay a sentence."
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C76",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.6, Q3",
+   "ncert_ref": "3.6.FiOb6",
+   "question_text": "Three workers can paint a fence in 4 days. If one more worker joins the team, how many days will it take them to finish the work? What are the assumptions you need to make?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem about three painters and a fence; numbers are in the text and the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C77",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.6, Q3",
+   "ncert_ref": "3.6.FiOb6",
+   "question_text": "Three workers can paint a fence in 4 days. If one more worker joins the team, how many days will it take them to finish the work? What are the assumptions you need to make?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Solution is arithmetic (3 x 4 = 12 worker-days, 3 + 1 = 4, 12 / 4 = 3) plus assumptions in words; no picture is the answer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the LP steps as LaTeX lines; the assumptions stay a sentence."
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C78",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.6, Q4",
+   "ncert_ref": "3.6.FiOb7",
+   "question_text": "It takes 6 hours to fill 2 tanks of the same size with a pump. How long will it take to fill 5 such tanks with the same pump?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem about a pump filling tanks; numbers (6 hours, 2 tanks, 5 tanks) are in the text and the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C79",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.6, Q4",
+   "ncert_ref": "3.6.FiOb7",
+   "question_text": "It takes 6 hours to fill 2 tanks of the same size with a pump. How long will it take to fill 5 such tanks with the same pump?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Solution is arithmetic (6 / 2 = 3 hours per tank, 3 x 5 = 15); nothing visual to add.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the LP steps as LaTeX lines: 6 / 2 = 3, then 3 x 5 = 15."
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C80",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.6, Q5",
+   "ncert_ref": "3.6.FiOb8",
+   "question_text": "A given set of chairs are arranged in 25 rows, with 12 chairs in each row. If the chairs are rearranged with 20 chairs in each row, how many rows does this new arrangement have?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The chair rows are described in words (25 rows of 12, then 20 in a row) and the book prints no figure; the learner is not asked to draw or complete an arrangement.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C81",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.6, Q5",
+   "ncert_ref": "3.6.FiOb8",
+   "question_text": "A given set of chairs are arranged in 25 rows, with 12 chairs in each row. If the chairs are rearranged with 20 chairs in each row, how many rows does this new arrangement have?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a count (15 rows), not an arrangement to be drawn: 25 x 12 = 300 chairs, 300 / 20 = 15. A 25 x 12 versus 15 x 20 chair grid would be 300 dots and adds no understanding. Borderline, see notes.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the LP steps as LaTeX lines: 25 x 12 = 300, then 300 / 20 = 15."
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C82",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.6, Q6",
+   "ncert_ref": "3.6.FiOb9",
+   "question_text": "A school has 8 periods a day, each of 45 minutes duration. How long is each period, if the school has 9 periods a day, assuming that the number of school hours per day stays the same?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem about school periods; numbers (8 periods, 45 minutes, 9 periods) are in the text and the book prints no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C83",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.6, Q6",
+   "ncert_ref": "3.6.FiOb9",
+   "question_text": "A school has 8 periods a day, each of 45 minutes duration. How long is each period, if the school has 9 periods a day, assuming that the number of school hours per day stays the same?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Solution is arithmetic (8 x 45 = 360 minutes, 360 / 9 = 40); nothing visual to add.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the LP steps as LaTeX lines: 8 x 45 = 360, then 360 / 9 = 40."
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C84",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.6, Q7",
+   "ncert_ref": "3.6.FiOb10",
+   "question_text": "A small pump can fill a tank in 3 hours, while a large pump can fill the same tank in 2 hours. If both pumps are used together, how long will the tank take to fill?",
+   "decision": "none",
+   "reason_codes": [
+    "DECORATIVE_ONLY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book shows a tank filled by two pumps (NEW-P14-pumps-tank-Q10), a scene illustration with no marked numbers; the data (3 hours, 2 hours) are in the text and the question never refers to the picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C85",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.6, Q7",
+   "ncert_ref": "3.6.FiOb10",
+   "question_text": "A small pump can fill a tank in 3 hours, while a large pump can fill the same tank in 2 hours. If both pumps are used together, how long will the tank take to fill?",
+   "decision": "optional",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A bar of the tank cut into 6 equal parts (small pump 2 parts an hour, large pump 3 parts an hour, together 5 of the 6 parts) would clearly help show 1/3 + 1/2 = 5/6, but the LP already gives the fractions in LaTeX and the answer is a number, so it is not added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the LP steps as LaTeX lines with the fractions 1/3, 1/2, 5/6 and 6/5."
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C86",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.6, Q8",
+   "ncert_ref": "3.6.FiOb11",
+   "question_text": "A factory requires 42 machines to produce a given number of toys in 63 days. How many machines are required to produce the same number of toys in 54 days?",
+   "decision": "none",
+   "reason_codes": [
+    "DECORATIVE_ONLY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book shows toys coming off a conveyor belt under a machine chute (NEW-P14-toy-conveyor-Q11), a scene illustration whose toy count has no link to the numbers in the question (42 machines, 63 days, 54 days); all data are in the text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C87",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.6, Q8",
+   "ncert_ref": "3.6.FiOb11",
+   "question_text": "A factory requires 42 machines to produce a given number of toys in 63 days. How many machines are required to produce the same number of toys in 54 days?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Solution is arithmetic (42 x 63 = 2646 machine-days, 2646 / 54 = 49); nothing visual to add.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the LP steps as LaTeX lines: 42 x 63 = 2646, then 2646 / 54 = 49."
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C88",
+   "role": "question",
+   "lp_book_number": "Figure it Out 3.6, Q9",
+   "ncert_ref": "3.6.FiOb12",
+   "question_text": "A car takes 2 hours to reach a destination, travelling at a speed of 60 km/h. How long will the car take if it travels at a speed of 80 km/h?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word problem about a car's speed and time; numbers (2 hours, 60 km/h, 80 km/h) are in the text and the book prints no figure for this question (the toy picture above it belongs to Q11).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C89",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 3.6, Q9",
+   "ncert_ref": "3.6.FiOb12",
+   "question_text": "A car takes 2 hours to reach a destination, travelling at a speed of 60 km/h. How long will the car take if it travels at a speed of 80 km/h?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Solution is arithmetic (60 x 2 = 120 km, 120 / 80 = 1.5); nothing visual to add.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the LP steps as LaTeX lines: 60 x 2 = 120, then 120 / 80 = 1.5."
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C90",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Summary, example E0",
+   "ncert_ref": "summary.1, summary.2, summary.3, summary.4",
+   "question_text": "Match each summary statement to an example from the chapter.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Matching four summary statements with four chapter examples: the LP steps already list each match in words and numbers, and the Summary page of the book is text only (no figure).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write the four matches as a numbered list, statement then example, as in the LP steps."
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C90",
+   "role": "worked_example",
+   "block_index": 1,
+   "lp_book_number": "Summary, example E1",
+   "ncert_ref": "summary.1, summary.2, summary.3, summary.4",
+   "question_text": "Direct, inverse or neither? 3 notebooks cost ₹60. How much do 7 notebooks cost?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Word problem (3 notebooks Rs 60, 7 notebooks) with arithmetic solution (60 / 3 = 20, 20 x 7 = 140); no figure is given and none is needed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C90",
+   "role": "worked_example",
+   "block_index": 2,
+   "lp_book_number": "Summary, example E2",
+   "ncert_ref": "summary.1, summary.2, summary.3, summary.4",
+   "question_text": "Direct, inverse or neither? 6 taps fill a tank in 10 hours. How long do 4 such taps take?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Word problem (6 taps, 10 hours, 4 taps) with arithmetic solution (6 x 10 = 60, 60 / 4 = 15); no figure is given and none is needed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C90",
+   "role": "worked_example",
+   "block_index": 3,
+   "lp_book_number": "Summary, example E3",
+   "ncert_ref": "summary.1, summary.2, summary.3, summary.4",
+   "question_text": "Direct, inverse or neither? A girl is 150 cm tall at 12 years old. How tall will she be at 24?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Reasoning in words (age and height are neither directly nor inversely proportional); no figure is given and none is needed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  }
+ ]
+}

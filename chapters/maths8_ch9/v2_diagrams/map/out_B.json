@@ -1,0 +1,2800 @@
+{
+ "meta": {
+  "chapter": "The Baudhāyana-Pythagoras Theorem",
+  "class": 8,
+  "textbook": "Ganita Prakash, Grade 8, Chapter 9",
+  "lp_plan_id": "cbse_eng_maths8_ch9_v54",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "required": 9,
+    "optional": 1,
+    "none": 11
+   },
+   "question": {
+    "required": 0,
+    "optional": 0,
+    "none": 3
+   },
+   "solution": {
+    "required": 3,
+    "optional": 0,
+    "none": 0
+   }
+  },
+  "notes": [
+   "Chunk B: topics M3.S6.T6, M3.S7.T7, M3.S8.T8 (units 24 to 47); full list of calls and LP text issues in map/notes_B.md.",
+   "Worked-example units carry one diagram only (question_tex / after_question_text); the pair solutions carry the figure before the first step.",
+   "Figure geometry of the Baudhayana dissection is a = 2, b = 3 (the book draws a about two thirds of b); every coordinate was recomputed and checked in code.",
+   "P21-shape-1 (triangle a of Chapter Exercise Q2, 7 and 9) belongs to unit 50 of chunk C and is not claimed here."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "NEW-P08-construction-1-C48",
+   "source": "chapter p.08 (section 2.3), second use",
+   "description": "Second use of the picture of base figure P08-construction-1 (square, its diagonal, the square on the diagonal): the solution figure of the equal-squares question M3.S7.T7.C48.",
+   "mapped_to": "item:M3.S7.T7.C48 (solution)"
+  },
+  {
+   "fig_id": "P09-shape-1",
+   "source": "chapter p.09",
+   "description": "Two equal squares, a plus sign, an arrow and a dashed larger square (recap: two equal squares make the square on the diagonal). Teaching figure of the recap; no LP item needs it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P09-shape-2",
+   "source": "chapter p.09",
+   "description": "Two different plain squares, a plus sign, an arrow and a '?': the book's opening question of 2.4. The LP turns it into the numeric example M3.S6.T6.C39 (areas 9 and 16), which carries its numbers in the text.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P10-construction-1",
+   "source": "chapter p.10",
+   "description": "Two different squares, an arrow, and a right triangle with a square on each side labelled Area A, Area B, Area A + Area B.",
+   "mapped_to": "concept_image:M3.S6.T6.C39.IMG1"
+  },
+  {
+   "fig_id": "P10-construction-2",
+   "source": "chapter p.10",
+   "description": "'Join the two squares': two separate squares (a, b) and the same two squares joined. A teaching step; the LP gives no item that needs it (the joined squares appear inside the figure of M3.S6.T6.C43).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P11-construction-1",
+   "source": "chapter p.11",
+   "description": "Step 1 of Baudhayana's instructions: the joined squares with the right triangle (legs a and b) marked, shown unfilled and filled. A teaching step covered by the pieces figure of M3.S6.T6.C40.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P11-construction-2",
+   "source": "chapter p.11",
+   "description": "Step 2: the second right triangle drawn on the joined squares. A teaching step covered by the pieces figure of M3.S6.T6.C40.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P11-construction-3",
+   "source": "chapter p.11",
+   "description": "Step 3: the third right triangle drawn, before and after filling. A teaching step covered by the pieces figure of M3.S6.T6.C40.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P12-construction-1",
+   "source": "chapter p.12",
+   "description": "Step 4 of Baudhayana's instructions: left panel the construction step, right panel the pieces T, U, V, W, X with labels a, b, b - a. The right panel is drawn by the worked example M3.S6.T6.C40 (also shown in concept image M3.S6.T6.C40.IMG1, never linked).",
+   "mapped_to": "item:M3.S6.T6.C40 (question)"
+  },
+  {
+   "fig_id": "P12-construction-2",
+   "source": "chapter p.12",
+   "description": "The 4-sided figure on the hypotenuse with 4 x arcs and 4 (90 - x) arcs, lengths a, b, b - a and two right-angle marks. CORRECTED: no 'a' is printed on the horizontal segment of length a (checked on the page picture); all else as described. Drawn by M3.S6.T6.C42 (also in concept image M3.S6.T6.C40.IMG1, never linked).",
+   "mapped_to": "item:M3.S6.T6.C42 (question)"
+  },
+  {
+   "fig_id": "P13-construction-1",
+   "source": "chapter p.13",
+   "description": "Two figures with an arrow: the tilted square T + U + V and the stepped shape W + V + X (also shown in concept image M3.S6.T6.C40.IMG2, never linked).",
+   "mapped_to": "item:M3.S6.T6.C41 (question)"
+  },
+  {
+   "fig_id": "P13-paper_cutout-2",
+   "source": "chapter p.13",
+   "description": "The red square (side a) and the golden-yellow square (side b) joined along their bottoms, labels a, b, a, b. Drawn as the base of the left figure of M3.S6.T6.C43 (also in concept image M3.S6.T6.C43.IMG1, never linked).",
+   "mapped_to": "item:M3.S6.T6.C43 (question)"
+  },
+  {
+   "fig_id": "P13-paper_cutout-3",
+   "source": "chapter p.13",
+   "description": "The joined squares with two cut lines labelled c and the base split a, b - a, a. Drawn as the left figure of M3.S6.T6.C43.",
+   "mapped_to": "item:M3.S6.T6.C43 (question)"
+  },
+  {
+   "fig_id": "P13-paper_cutout-4",
+   "source": "chapter p.13",
+   "description": "The three pieces rearranged into a tilted square with two sides labelled c. Drawn as the right figure of M3.S6.T6.C43.",
+   "mapped_to": "item:M3.S6.T6.C43 (question)"
+  },
+  {
+   "fig_id": "P14-construction-1",
+   "source": "chapter p.14",
+   "description": "A right triangle with a red square (a) on the vertical leg, a yellow square (b) on the horizontal leg and an empty tilted square on the hypotenuse c, with the cut lines. Teaching figure leading to the theorem; the theorem question M3.S6.T6.C45 needs no figure.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P14-construction-2",
+   "source": "chapter p.14",
+   "description": "The same figure with the pieces moved to cover the square on the hypotenuse (a squared plus b squared equals c squared). Teaching figure; the rearrangement itself is drawn in M3.S6.T6.C43.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P15-shape-1",
+   "source": "chapter p.15",
+   "description": "Right triangle with legs '3 cm' (vertical) and '4 cm' (horizontal) and the hypotenuse marked '?', no right-angle mark. The data is also in the book text, so no diagram is made for M3.S8.T8.C53.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P21-shape-2",
+   "source": "chapter p.21",
+   "description": "Right triangle (b) of Chapter Exercise Q2: thin tilted triangle, right angle at the left vertex. Drawn by M3.S8.T8.C55 block 5.",
+   "mapped_to": "item:M3.S8.T8.C55#5 (question)"
+  },
+  {
+   "fig_id": "P21-shape-3",
+   "source": "chapter p.21",
+   "description": "Right triangle (c) of Chapter Exercise Q2: long thin sliver, right angle at the far-left corner. Drawn by M3.S8.T8.C55 block 6.",
+   "mapped_to": "item:M3.S8.T8.C55#6 (question)"
+  },
+  {
+   "fig_id": "P21-shape-4",
+   "source": "chapter p.21",
+   "description": "Right triangle (d) of Chapter Exercise Q2: right angle at the top, hypotenuse at the bottom. Drawn by M3.S8.T8.C55 block 7.",
+   "mapped_to": "item:M3.S8.T8.C55#7 (question)"
+  },
+  {
+   "fig_id": "P21-shape-5",
+   "source": "chapter p.21",
+   "description": "Right triangle (e) of Chapter Exercise Q2: tilted triangle, right angle at the bottom. Drawn by M3.S8.T8.C55 block 8.",
+   "mapped_to": "item:M3.S8.T8.C55#8 (question)"
+  },
+  {
+   "fig_id": "P21-shape-6",
+   "source": "chapter p.21",
+   "description": "Right triangle (f) of Chapter Exercise Q2: upright triangle, right angle at the bottom left. Drawn by M3.S8.T8.C55 block 9.",
+   "mapped_to": "item:M3.S8.T8.C55#9 (question)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 22,
+  "mapped_to_items": 12,
+  "mapped_to_concept_images": 1,
+  "mapped_none": 9,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M3.S6.T6.C40.IMG3",
+   "M3.S6.T6.C41.IMG1",
+   "M3.S6.T6.C42.IMG1",
+   "M3.S6.T6.C43.IMG2",
+   "M3.S7.T7.C48.IMG1",
+   "M3.S7.T7.C50.IMG1",
+   "M3.S7.T7.C52.IMG1",
+   "M3.S8.T8.C55.IMG1",
+   "M3.S8.T8.C55.IMG2",
+   "M3.S8.T8.C55.IMG3",
+   "M3.S8.T8.C55.IMG4",
+   "M3.S8.T8.C55.IMG5"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M3.S6.T6.C39",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.4.equal_recap, 2.4.Q_different, 2.4.verse_1_12, 2.4.method",
+   "question_text": "Squares of areas 9 and 16 are to be combined into one square. What is its side?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Authored numeric example (areas 9 and 16): every number is in the text and the steps are arithmetic; the book gives no figure for it. The general arrangement (squares on a right triangle) is already the teaching image C39.IMG1. A drawing of the 3-4-5 triangle with squares 9, 16 and 25 would help but is not needed.",
+   "text_alternative": "Write the steps in LaTeX: $3^2 = 9$, $4^2 = 16$, $9 + 16 = 25$, $5^2 = 25$.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S6.T6.C40",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.4.Q_why_works, 2.4.verse_2_1, 2.4.steps, 2.4.Q_why_square",
+   "question_text": "Why are all four sides of the 4-sided figure T + U + V equal?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question and its steps name the pieces T, U, V, W and X and the 4-sided figure T + U + V; these exist only in the figure, so the example cannot be followed without it. Drawn although concept images C40.IMG1 and C40.IMG2 show the same pieces (v3: a referred, lettered figure is drawn; teaching images are never linked).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S6.T6.C40.IMG3",
+   "manim_scene": "c8_9_2_4_whyworks_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S6.T6.C40.IMG3}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "to_scale": false,
+    "content": {
+     "type": "geometry_figure",
+     "units": {
+      "a": 2,
+      "b": 3
+     },
+     "to_scale": false,
+     "pieces": [
+      {
+       "name": "T",
+       "vertices": [
+        [
+         0,
+         2
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         2,
+         5
+        ]
+       ],
+       "fill": "SET_A",
+       "letter": "T",
+       "letter_colour": "BG",
+       "letter_at": [
+        1.25,
+        2.85
+       ],
+       "outline": "INK"
+      },
+      {
+       "name": "U",
+       "vertices": [
+        [
+         2,
+         5
+        ],
+        [
+         2,
+         3
+        ],
+        [
+         5,
+         3
+        ]
+       ],
+       "fill": "SET_A",
+       "letter": "U",
+       "letter_colour": "BG",
+       "letter_at": [
+        2.7,
+        3.55
+       ],
+       "outline": "INK"
+      },
+      {
+       "name": "V",
+       "vertices": [
+        [
+         0,
+         2
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         2,
+         3
+        ],
+        [
+         5,
+         3
+        ],
+        [
+         3,
+         0
+        ]
+       ],
+       "fill": "SET_B",
+       "letter": "V",
+       "letter_colour": "INK",
+       "letter_at": [
+        2.55,
+        1.3
+       ],
+       "outline": "INK"
+      },
+      {
+       "name": "W",
+       "vertices": [
+        [
+         0,
+         2
+        ],
+        [
+         0,
+         0
+        ],
+        [
+         3,
+         0
+        ]
+       ],
+       "fill": "SET_A",
+       "letter": "W",
+       "letter_colour": "BG",
+       "letter_at": [
+        0.8,
+        0.6
+       ],
+       "outline": "INK"
+      },
+      {
+       "name": "X",
+       "vertices": [
+        [
+         3,
+         0
+        ],
+        [
+         5,
+         0
+        ],
+        [
+         5,
+         3
+        ]
+       ],
+       "fill": "SET_A",
+       "letter": "X",
+       "letter_colour": "BG",
+       "letter_at": [
+        4.4,
+        0.5
+       ],
+       "outline": "INK"
+      }
+     ],
+     "guide_lines": [
+      [
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        3
+       ]
+      ]
+     ],
+     "labels": [
+      {
+       "text": "a",
+       "at": [
+        -0.3,
+        0.9
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "b",
+       "at": [
+        5.3,
+        1.3
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "a",
+       "at": [
+        1,
+        -0.35
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "b − a",
+       "at": [
+        2.5,
+        -0.35
+       ],
+       "colour": "INK"
+      },
+      {
+       "text": "a",
+       "at": [
+        4,
+        -0.35
+       ],
+       "colour": "INK"
+      }
+     ],
+     "outline_of_T_U_V": [
+      [
+       0,
+       2
+      ],
+      [
+       2,
+       5
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       3,
+       0
+      ]
+     ],
+     "stepped_outline_of_V_W_X": [
+      [
+       0,
+       0
+      ],
+      [
+       5,
+       0
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       0,
+       2
+      ]
+     ]
+    },
+    "manim_description": "Frame: 16:9 canvas, background BG. Work in figure units (x to the right, y up). Scale the whole figure uniformly so that its box, labels included, fills about 85 percent of the canvas height (or 90 percent of the width when that is smaller), and centre it. Draw the dissection of the new 4-sided figure on the hypotenuse, with a = 2 and b = 3 (a is two thirds of b, as printed; the figure is not to scale otherwise). Draw five filled pieces, each outlined INK 3 px. T: right triangle with vertices (0, 2), (2, 2), (2, 5), fill SET_A, letter T in BG centred at (1.25, 2.85). U: right triangle with vertices (2, 5), (2, 3), (5, 3), fill SET_A, letter U in BG at (2.7, 3.55). V: five-sided piece with vertices (0, 2), (2, 2), (2, 3), (5, 3), (3, 0), fill SET_B, letter V in INK at (2.55, 1.3). W: right triangle with vertices (0, 2), (0, 0), (3, 0), fill SET_A, letter W in BG at (0.8, 0.6). X: right triangle with vertices (3, 0), (5, 0), (5, 3), fill SET_A, letter X in BG at (4.4, 0.5). Then draw two thin GUIDE lines, 2 px, on top of the pieces: from (2, 0) to (2, 2) and from (3, 0) to (3, 3). Add INK labels, regular weight: 'a' centred at (-0.3, 0.9) (left of the left edge); 'b' at (5.3, 1.3) (right of the right edge); under the base 'a' at (1, -0.35), 'b − a' at (2.5, -0.35), 'a' at (4, -0.35). The slanted edges (0, 2)-(2, 5), (2, 5)-(5, 3), (5, 3)-(3, 0) and (3, 0)-(0, 2) carry no label. Draw no angle arcs, no right-angle marks and no c.",
+    "visible_text": [
+     "T",
+     "U",
+     "V",
+     "W",
+     "X",
+     "a",
+     "b",
+     "b − a"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the letter c or any length on the slanted edges",
+     "angle arcs or x labels",
+     "the construction steps 1 to 3",
+     "a title banner or logo"
+    ],
+    "accuracy_checks": [
+     "a = 2 and b = 3; the base is split 2, 1, 2 (a, b − a, a) at x = 0, 2, 3, 5.",
+     "T, U, W and X are congruent right triangles with perpendicular sides 2 and 3 (area 3 each).",
+     "The four slanted edges (0,2)-(2,5), (2,5)-(5,3), (5,3)-(3,0), (3,0)-(0,2) all have length sqrt(13): T + U + V is a square.",
+     "Area T + U + V = 3 + 3 + 7 = 13 = 2^2 + 3^2 and area V + W + X = 7 + 3 + 3 = 13.",
+     "The five pieces tile the pentagon (0,0), (5,0), (5,3), (2,5), (0,2) (area 19 = 3 + 3 + 7 + 3 + 3) with no gap or overlap; V has exactly five vertices."
+    ],
+    "alt_text": "Two joined squares of sides a and b with a tilted square on the hypotenuse, cut into four congruent right triangles T, U, W, X and a five-sided middle piece V.",
+    "render_note": "Same layout as the right panel of the book figure on page 44 (base figure P12-construction-1); the book's left panel (a construction step) is not drawn. Coordinates were checked against the page picture.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S6.T6.C41",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.4.assertion",
+   "question_text": "Explain Baudhāyana's assertion: the square on the hypotenuse has the same area as the two given squares.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The explanation of the assertion uses the pieces T, U, V, W and X (T + U + V against V + W + X); the question text does not define them, so the figure is needed to follow it. Drawn although concept image C40.IMG2 shows the same pieces (v3: teaching images are never linked).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S6.T6.C41.IMG1",
+   "manim_scene": "c8_9_2_4_assertion_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S6.T6.C41.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "to_scale": false,
+    "content": {
+     "type": "geometry_figure",
+     "units": {
+      "a": 2,
+      "b": 3
+     },
+     "to_scale": false,
+     "left_figure": {
+      "shape": "tilted square",
+      "pieces": [
+       {
+        "name": "T",
+        "vertices": [
+         [
+          0,
+          2
+         ],
+         [
+          2,
+          2
+         ],
+         [
+          2,
+          5
+         ]
+        ],
+        "fill": "SET_A",
+        "letter_at": [
+         1.25,
+         2.85
+        ],
+        "letter_colour": "BG"
+       },
+       {
+        "name": "U",
+        "vertices": [
+         [
+          2,
+          5
+         ],
+         [
+          2,
+          3
+         ],
+         [
+          5,
+          3
+         ]
+        ],
+        "fill": "SET_A",
+        "letter_at": [
+         2.7,
+         3.55
+        ],
+        "letter_colour": "BG"
+       },
+       {
+        "name": "V",
+        "vertices": [
+         [
+          0,
+          2
+         ],
+         [
+          2,
+          2
+         ],
+         [
+          2,
+          3
+         ],
+         [
+          5,
+          3
+         ],
+         [
+          3,
+          0
+         ]
+        ],
+        "fill": "SET_B",
+        "letter_at": [
+         2.55,
+         1.3
+        ],
+        "letter_colour": "INK"
+       }
+      ]
+     },
+     "right_figure": {
+      "shape": "stepped shape of two joined squares",
+      "pieces": [
+       {
+        "name": "W",
+        "vertices": [
+         [
+          7.5,
+          2
+         ],
+         [
+          7.5,
+          0
+         ],
+         [
+          10.5,
+          0
+         ]
+        ],
+        "fill": "SET_A",
+        "letter_at": [
+         8.3,
+         0.6
+        ],
+        "letter_colour": "BG"
+       },
+       {
+        "name": "V",
+        "vertices": [
+         [
+          7.5,
+          2
+         ],
+         [
+          9.5,
+          2
+         ],
+         [
+          9.5,
+          3
+         ],
+         [
+          12.5,
+          3
+         ],
+         [
+          10.5,
+          0
+         ]
+        ],
+        "fill": "SET_B",
+        "letter_at": [
+         10.05,
+         1.3
+        ],
+        "letter_colour": "INK"
+       },
+       {
+        "name": "X",
+        "vertices": [
+         [
+          10.5,
+          0
+         ],
+         [
+          12.5,
+          0
+         ],
+         [
+          12.5,
+          3
+         ]
+        ],
+        "fill": "SET_A",
+        "letter_at": [
+         11.9,
+         0.5
+        ],
+        "letter_colour": "BG"
+       }
+      ]
+     },
+     "guide_lines": [
+      [
+       [
+        9.5,
+        0
+       ],
+       [
+        9.5,
+        2
+       ]
+      ]
+     ],
+     "arrow": {
+      "from": [
+       5.7,
+       1.5
+      ],
+      "to": [
+       6.9,
+       1.5
+      ]
+     }
+    },
+    "manim_description": "Frame: 16:9 canvas, background BG. Work in figure units (x to the right, y up). Scale the whole figure uniformly so that its box, labels included, fills about 85 percent of the canvas height (or 90 percent of the width when that is smaller), and centre it. Draw two figures of the same size side by side with a right-pointing arrow between them. All pieces are outlined INK 3 px. LEFT figure, a tilted square split into three pieces: T = right triangle with vertices (0, 2), (2, 2), (2, 5), fill SET_A, letter T in BG at (1.25, 2.85); U = right triangle with vertices (2, 5), (2, 3), (5, 3), fill SET_A, letter U in BG at (2.7, 3.55); V = five-sided piece with vertices (0, 2), (2, 2), (2, 3), (5, 3), (3, 0), fill SET_B, letter V in INK at (2.55, 1.3). RIGHT figure, two joined squares as a stepped shape, split into three pieces: W = right triangle with vertices (7.5, 2), (7.5, 0), (10.5, 0), fill SET_A, letter W in BG at (8.3, 0.6); V = the same five-sided piece, vertices (7.5, 2), (9.5, 2), (9.5, 3), (12.5, 3), (10.5, 0), fill SET_B, letter V in INK at (10.05, 1.3); X = right triangle with vertices (10.5, 0), (12.5, 0), (12.5, 3), fill SET_A, letter X in BG at (11.9, 0.5). Draw one thin GUIDE line, 2 px, from (9.5, 0) to (9.5, 2) inside the right figure. Draw an INK arrow, 3 px, from (5.7, 1.5) to (6.9, 1.5), pointing right. No other labels: no a, no b, no c, no angle marks.",
+    "visible_text": [
+     "T",
+     "U",
+     "V",
+     "W",
+     "X"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a, b or c labels",
+     "angle arcs",
+     "the sentence 'area of the square on the hypotenuse = ...'",
+     "a title banner or logo"
+    ],
+    "accuracy_checks": [
+     "Both figures use a = 2, b = 3; the left figure is the square with side sqrt(13) and area 13.",
+     "T, U, W and X are congruent right triangles (legs 2 and 3, area 3); V has area 7 and is the identical five-sided piece in both figures.",
+     "Area T + U + V = 13 = area V + W + X; the right figure is the outline (7.5,0), (12.5,0), (12.5,3), (9.5,3), (9.5,2), (7.5,2).",
+     "Both figures stand on the same level at y = 0."
+    ],
+    "alt_text": "A tilted square made of triangles T, U and piece V, and an arrow to a stepped shape made of triangle W, the same piece V, and triangle X.",
+    "render_note": "Layout of the book figure at the top of page 45 (base figure P13-construction-1); the book prints no a, b or c here.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S6.T6.C42",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.4.Q_right_angles",
+   "question_text": "Explain why all the angles of this new 4-sided figure are right angles and so it is a square.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question asks about 'this new 4-sided figure' and its angles x and 90 − x; the angles, the pieces W and X and the square on the hypotenuse exist only in the figure. Drawn although concept image C40.IMG1 shows the same figure (v3: teaching images are never linked).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S6.T6.C42.IMG1",
+   "manim_scene": "c8_9_2_4_rightangles_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S6.T6.C42.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "to_scale": false,
+    "content": {
+     "type": "geometry_figure",
+     "units": {
+      "a": 2,
+      "b": 3
+     },
+     "to_scale": false,
+     "heavy_lines": [
+      [
+       [
+        0,
+        2
+       ],
+       [
+        2,
+        5
+       ]
+      ],
+      [
+       [
+        2,
+        5
+       ],
+       [
+        5,
+        3
+       ]
+      ],
+      [
+       [
+        5,
+        3
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      [
+       [
+        3,
+        0
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      [
+       [
+        0,
+        2
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      [
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        5
+       ]
+      ],
+      [
+       [
+        2,
+        3
+       ],
+       [
+        5,
+        3
+       ]
+      ]
+     ],
+     "thin_lines": [
+      [
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        0
+       ]
+      ],
+      [
+       [
+        0,
+        0
+       ],
+       [
+        5,
+        0
+       ]
+      ],
+      [
+       [
+        5,
+        0
+       ],
+       [
+        5,
+        3
+       ]
+      ],
+      [
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        3
+       ]
+      ]
+     ],
+     "right_angle_marks": [
+      {
+       "at": [
+        0,
+        0
+       ],
+       "side": 0.25,
+       "quadrant": "upper-right"
+      },
+      {
+       "at": [
+        2,
+        2
+       ],
+       "side": 0.25,
+       "quadrant": "upper-left"
+      }
+     ],
+     "angle_arcs": [
+      {
+       "vertex": [
+        2,
+        5
+       ],
+       "from_deg": 236.31,
+       "to_deg": 270.0,
+       "radius": 0.3,
+       "label": "x",
+       "label_at": [
+        1.84,
+        4.47
+       ]
+      },
+      {
+       "vertex": [
+        2,
+        5
+       ],
+       "from_deg": 270.0,
+       "to_deg": 326.31,
+       "radius": 0.3,
+       "label": "90 − x",
+       "label_at": [
+        2.45,
+        4.25
+       ]
+      },
+      {
+       "vertex": [
+        5,
+        3
+       ],
+       "from_deg": 180.0,
+       "to_deg": 146.31,
+       "radius": 0.3,
+       "label": "x",
+       "label_at": [
+        4.39,
+        3.17
+       ]
+      },
+      {
+       "vertex": [
+        5,
+        3
+       ],
+       "from_deg": 236.31,
+       "to_deg": 270.0,
+       "radius": 0.3,
+       "label": "x",
+       "label_at": [
+        4.84,
+        2.42
+       ]
+      },
+      {
+       "vertex": [
+        0,
+        2
+       ],
+       "from_deg": 0.0,
+       "to_deg": 56.31,
+       "radius": 0.3,
+       "label": "90 − x",
+       "label_at": [
+        0.75,
+        2.16
+       ]
+      },
+      {
+       "vertex": [
+        0,
+        2
+       ],
+       "from_deg": 270.0,
+       "to_deg": 326.31,
+       "radius": 0.3,
+       "label": "90 − x",
+       "label_at": [
+        0.45,
+        1.32
+       ]
+      },
+      {
+       "vertex": [
+        3,
+        0
+       ],
+       "from_deg": 146.31,
+       "to_deg": 180.0,
+       "radius": 0.3,
+       "label": "x",
+       "label_at": [
+        2.48,
+        0.12
+       ]
+      },
+      {
+       "vertex": [
+        3,
+        0
+       ],
+       "from_deg": 0.0,
+       "to_deg": 56.31,
+       "radius": 0.3,
+       "label": "90 − x",
+       "label_at": [
+        3.83,
+        0.23
+       ]
+      }
+     ],
+     "edge_labels": [
+      {
+       "text": "a",
+       "at": [
+        -0.27,
+        1.12
+       ]
+      },
+      {
+       "text": "a",
+       "at": [
+        2.12,
+        3.65
+       ]
+      },
+      {
+       "text": "b",
+       "at": [
+        3.28,
+        3.2
+       ]
+      },
+      {
+       "text": "b − a",
+       "at": [
+        2.52,
+        2.48
+       ]
+      },
+      {
+       "text": "b",
+       "at": [
+        5.17,
+        1.13
+       ]
+      },
+      {
+       "text": "a",
+       "at": [
+        1.0,
+        -0.33
+       ]
+      },
+      {
+       "text": "b − a",
+       "at": [
+        2.56,
+        -0.33
+       ]
+      },
+      {
+       "text": "a",
+       "at": [
+        4.07,
+        -0.33
+       ]
+      }
+     ],
+     "piece_letters": [
+      {
+       "text": "W",
+       "at": [
+        1.0,
+        0.6
+       ]
+      },
+      {
+       "text": "X",
+       "at": [
+        4.45,
+        1.6
+       ]
+      }
+     ],
+     "angle_values_deg": {
+      "x": 33.69,
+      "90 - x": 56.31
+     }
+    },
+    "manim_description": "Frame: 16:9 canvas, background BG. Work in figure units (x to the right, y up). Scale the whole figure uniformly so that its box, labels included, fills about 85 percent of the canvas height (or 90 percent of the width when that is smaller), and centre it. Draw the tilted 4-sided figure on the hypotenuse with its angles marked; a = 2 and b = 3 (a is two thirds of b, as printed). Heavy INK lines, 3 px: the four slanted sides (0, 2)-(2, 5), (2, 5)-(5, 3), (5, 3)-(3, 0), (3, 0)-(0, 2); the horizontal segment (0, 2)-(2, 2); the vertical segment (2, 2)-(2, 5); the horizontal segment (2, 3)-(5, 3). Thin GUIDE lines, 2 px: (0, 2)-(0, 0), (0, 0)-(5, 0), (5, 0)-(5, 3), (2, 2)-(2, 0), (3, 0)-(3, 3). Right-angle marks, INK 2 px squares of side 0.25: one in the corner at (0, 0) inside the lower-left square (x from 0 to 0.25, y from 0 to 0.25) and one at (2, 2) in the upper-left quadrant (x from 1.75 to 2, y from 2 to 2.25). Eight angle arcs, INK 2 px, each with its label in INK: at vertex (2, 5) an arc of radius 0.3 between the rays at 236.31 and 270 degrees, label 'x' centred at (1.84, 4.47); at vertex (2, 5) an arc of radius 0.3 between the rays at 270 and 326.31 degrees, label '90 − x' centred at (2.45, 4.25); at vertex (5, 3) an arc of radius 0.3 between the rays at 180 and 146.31 degrees, label 'x' centred at (4.39, 3.17); at vertex (5, 3) an arc of radius 0.3 between the rays at 236.31 and 270 degrees, label 'x' centred at (4.84, 2.42); at vertex (0, 2) an arc of radius 0.3 between the rays at 0 and 56.31 degrees, label '90 − x' centred at (0.75, 2.16); at vertex (0, 2) an arc of radius 0.3 between the rays at 270 and 326.31 degrees, label '90 − x' centred at (0.45, 1.32); at vertex (3, 0) an arc of radius 0.3 between the rays at 146.31 and 180 degrees, label 'x' centred at (2.48, 0.12); at vertex (3, 0) an arc of radius 0.3 between the rays at 0 and 56.31 degrees, label '90 − x' centred at (3.83, 0.23). Edge labels in INK: 'a' at (-0.27, 1.12), 'a' at (2.12, 3.65), 'b' at (3.28, 3.2), 'b − a' at (2.52, 2.48), 'b' at (5.17, 1.13); under the base 'a' at (1, -0.33), 'b − a' at (2.56, -0.33), 'a' at (4.07, -0.33). Piece letters in INK: W at (1, 0.6) inside the lower-left triangle and X at (4.45, 1.6) inside the lower-right triangle. Fill nothing (all pieces stay BG).",
+    "visible_text": [
+     "a",
+     "b",
+     "b − a",
+     "x",
+     "90 − x",
+     "W",
+     "X"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numerical angle values such as 33.7 or 56.3",
+     "the sentence that the corners are right angles",
+     "T, U or V letters",
+     "a title banner or logo"
+    ],
+    "accuracy_checks": [
+     "Four x arcs are at (2,5) left of the vertical, (5,3) above the horizontal, (5,3) beside the right edge, and (3,0) left of the vertex; each spans 33.69 degrees (atan 2/3).",
+     "Four 90 − x arcs are at (2,5) right of the vertical, (0,2) above the horizontal, (0,2) beside the left edge, and (3,0) right of the vertex; each spans 56.31 degrees.",
+     "x + (90 − x) = 90 at every corner of the tilted figure; the corner on the bottom edge has x and 90 − x on the straight edge on either side (33.69 + 90 + 56.31 = 180).",
+     "Slanted sides have length sqrt(13) each (equal), the right-angle marks sit at (0,0) and (2,2).",
+     "Edge labels agree with the lengths: vertical (2,3)-(2,5) = a = 2, (2,2)-(2,3) = b − a = 1, horizontal (2,3)-(5,3) = b = 3, right edge = b = 3, base split 2, 1, 2."
+    ],
+    "alt_text": "A tilted square on the hypotenuse inside two joined squares, with angles x and 90 minus x marked at its four corners and the lengths a, b and b minus a on the sides.",
+    "render_note": "Matches the book figure at the middle of page 44 (base figure P12-construction-2); label positions were read from the page picture. CORRECTED vs the base description: the book prints no 'a' on the horizontal segment (0,2)-(2,2); none is drawn. W and X are added because the LP solution names them (they are the triangles of the earlier figure). Crowded figure: if two labels touch, move the angle label outward along its bisector; never drop a label.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S6.T6.C43",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.4.paper",
+   "question_text": "Combine two squares of sides a and b using paper: make two cuts, get three pieces, and rearrange them into one square.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The activity asks the learner to cut and rearrange; the result is an arrangement of pieces (B2: answer is an arrangement, even if the steps describe it in words). Drawn although concept image C43.IMG1 shows the same cut and rearrangement (v3: teaching images are never linked).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S6.T6.C43.IMG2",
+   "manim_scene": "c8_9_2_4_paper_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S6.T6.C43.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "to_scale": false,
+    "content": {
+     "type": "geometry_figure",
+     "units": {
+      "a": 2,
+      "b": 3,
+      "c": "sqrt(13)"
+     },
+     "to_scale": false,
+     "left_figure": {
+      "small_square": {
+       "vertices": [
+        [
+         0,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         0,
+         2
+        ]
+       ],
+       "fill": "MARK_FILL"
+      },
+      "large_square": {
+       "vertices": [
+        [
+         2,
+         0
+        ],
+        [
+         5,
+         0
+        ],
+        [
+         5,
+         3
+        ],
+        [
+         2,
+         3
+        ]
+       ],
+       "fill": "SET_B"
+      },
+      "cuts": [
+       [
+        [
+         3,
+         0
+        ],
+        [
+         0,
+         2
+        ]
+       ],
+       [
+        [
+         3,
+         0
+        ],
+        [
+         5,
+         3
+        ]
+       ]
+      ],
+      "labels": [
+       {
+        "text": "a",
+        "at": [
+         -0.3,
+         1.0
+        ]
+       },
+       {
+        "text": "b",
+        "at": [
+         5.3,
+         1.5
+        ]
+       },
+       {
+        "text": "a",
+        "at": [
+         1,
+         -0.35
+        ]
+       },
+       {
+        "text": "b − a",
+        "at": [
+         2.5,
+         -0.35
+        ]
+       },
+       {
+        "text": "a",
+        "at": [
+         4,
+         -0.35
+        ]
+       },
+       {
+        "text": "c",
+        "at": [
+         1.4,
+         1.5
+        ]
+       },
+       {
+        "text": "c",
+        "at": [
+         3.65,
+         1.7
+        ]
+       }
+      ]
+     },
+     "arrow": {
+      "from": [
+       5.8,
+       2.0
+      ],
+      "to": [
+       7.2,
+       2.0
+      ]
+     },
+     "right_figure": {
+      "tilted_square": [
+       [
+        8.0,
+        2
+       ],
+       [
+        10.0,
+        5
+       ],
+       [
+        13.0,
+        3
+       ],
+       [
+        11.0,
+        0
+       ]
+      ],
+      "regions": [
+       {
+        "name": "small-square part, 4-sided",
+        "vertices": [
+         [
+          10.0,
+          2
+         ],
+         [
+          10.0,
+          4
+         ],
+         [
+          9.333,
+          4
+         ],
+         [
+          8.0,
+          2
+         ]
+        ],
+        "fill": "MARK_FILL"
+       },
+       {
+        "name": "large-square part, small triangle",
+        "vertices": [
+         [
+          10.0,
+          4
+         ],
+         [
+          10.0,
+          5
+         ],
+         [
+          9.333,
+          4
+         ]
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "name": "small-square part, triangle",
+        "vertices": [
+         [
+          8.0,
+          2
+         ],
+         [
+          10.0,
+          2
+         ],
+         [
+          10.0,
+          0.667
+         ]
+        ],
+        "fill": "MARK_FILL"
+       },
+       {
+        "name": "large-square part, 4-sided",
+        "vertices": [
+         [
+          10.0,
+          0.667
+         ],
+         [
+          10.0,
+          3
+         ],
+         [
+          13.0,
+          3
+         ],
+         [
+          11.0,
+          0
+         ]
+        ],
+        "fill": "SET_B"
+       },
+       {
+        "name": "large-square part, triangle",
+        "vertices": [
+         [
+          10.0,
+          5
+         ],
+         [
+          10.0,
+          3
+         ],
+         [
+          13.0,
+          3
+         ]
+        ],
+        "fill": "SET_B"
+       }
+      ],
+      "piece_lines": [
+       [
+        [
+         10,
+         5
+        ],
+        [
+         10,
+         0.667
+        ]
+       ],
+       [
+        [
+         8,
+         2
+        ],
+        [
+         10,
+         2
+        ]
+       ],
+       [
+        [
+         10,
+         3
+        ],
+        [
+         13,
+         3
+        ]
+       ],
+       [
+        [
+         9.333,
+         4
+        ],
+        [
+         10,
+         4
+        ]
+       ]
+      ],
+      "labels": [
+       {
+        "text": "c",
+        "at": [
+         9.1,
+         0.6
+        ]
+       },
+       {
+        "text": "c",
+        "at": [
+         12.45,
+         1.2
+        ]
+       }
+      ]
+     }
+    },
+    "manim_description": "Frame: 16:9 canvas, background BG. Work in figure units (x to the right, y up). Scale the whole figure uniformly so that its box, labels included, fills about 85 percent of the canvas height (or 90 percent of the width when that is smaller), and centre it. Draw two figures with a right-pointing arrow between them. All lines are INK 3 px. LEFT figure, two squares joined along their bottoms: the small square with vertices (0, 0), (2, 0), (2, 2), (0, 2), fill MARK_FILL; the large square with vertices (2, 0), (5, 0), (5, 3), (2, 3), fill SET_B. Draw two heavy cut lines, INK 4 px: from (3, 0) to (0, 2) and from (3, 0) to (5, 3). Labels in INK: 'a' at (-0.3, 1) (left of the left edge); 'b' at (5.3, 1.5) (right of the right edge); under the base 'a' at (1, -0.35), 'b − a' at (2.5, -0.35), 'a' at (4, -0.35); 'c' at (1.4, 1.5) beside the first cut and 'c' at (3.65, 1.7) beside the second cut. ARROW: INK 3 px from (5.8, 2) to (7.2, 2). RIGHT figure, the three pieces rearranged into a tilted square with vertices (8, 2), (10, 5), (13, 3), (11, 0); its lower-left side and lower-right side are the two cut lines. Fill and outline the five regions: 4-sided region from the small square (10, 2), (10, 4), (9.33, 4), (8, 2) fill MARK_FILL; small triangle from the large square (10, 4), (10, 5), (9.33, 4) fill SET_B; triangle from the small square (8, 2), (10, 2), (10, 0.67) fill MARK_FILL; 4-sided region from the large square (10, 0.67), (10, 3), (13, 3), (11, 0) fill SET_B; triangle from the large square (10, 5), (10, 3), (13, 3) fill SET_B. Inside it draw INK 2 px piece lines: (10, 5) to (10, 0.67) (the long vertical), (8, 2) to (10, 2), (10, 3) to (13, 3), (9.33, 4) to (10, 4). Labels in INK: 'c' at (9.1, 0.6) outside the lower-left side and 'c' at (12.45, 1.2) outside the lower-right side. No letters on the pieces, no other labels.",
+    "visible_text": [
+     "a",
+     "b",
+     "b − a",
+     "c"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "scissors or hands",
+     "curved rotation arrows",
+     "piece letters",
+     "a title banner or logo"
+    ],
+    "accuracy_checks": [
+     "a = 2, b = 3; the cut point (3, 0) is a = 2 from the right end (5, 0) and b − a = 1 from the join (2, 0).",
+     "Both cuts have length sqrt(13) = c: (3,0)-(0,2) and (3,0)-(5,3).",
+     "The three pieces are the triangle (0,0),(3,0),(0,2), the triangle (3,0),(5,0),(5,3) and the five-sided middle piece (0,2),(2,2),(2,3),(5,3),(3,0); areas 3, 3, 7, total 13 = 4 + 9.",
+     "The right figure is the square with vertices (8,2), (10,5), (13,3), (11,0): side sqrt(13), area 13 = 2^2 + 3^2. The regions from the small square total area 4 = a^2; the regions from the large square total area 9 = b^2.",
+     "Quarter turns: the left triangle turns anticlockwise about (0,2) and the right triangle turns clockwise about (5,3); the regions listed for the right figure are the turned pieces."
+    ],
+    "alt_text": "Two joined squares of sides a and b cut by two lines of length c into three pieces, and an arrow to the three pieces rearranged into one tilted square of side c.",
+    "render_note": "The single diagram of this worked example shows the cuts and the finished square because the answer of the activity is the arrangement. Content of book page 45 (base figures P13-paper_cutout-2, -3, -4); the same idea is the teaching image C43.IMG1, which stays and is not linked.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S6.T6.C45",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.4.theorem, 2.4.history",
+   "question_text": "State Baudhāyana's theorem on right-angled triangles, and say why it has two names.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question asks for a statement of the theorem and its history; the answer is the sentence a² + b² = c² and two names. Nothing visual is needed to attempt it and the book gives no figure with it.",
+   "text_alternative": "No figure: write the theorem in LaTeX, $a^2 + b^2 = c^2$.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S7.T7.C47",
+   "role": "question",
+   "lp_book_number": "Two Squares: the method on equal squares",
+   "ncert_ref": "2.4.Q_same_size",
+   "question_text": "Can you see why the method works when the two squares are the same size? Does it agree with the earlier method?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure of its own (it refers back to the method on page 42, which is a teaching figure); a word question with a figure answer.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S7.T7.C48",
+   "role": "solution",
+   "lp_book_number": "Two Squares: the method on equal squares",
+   "ncert_ref": "2.4.Q_same_size",
+   "question_text": "Can you see why the method works when the two squares are the same size? Does it agree with the earlier method?",
+   "decision": "required",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The question asks the learner to 'see' why the method works for equal squares; the answer is a geometric argument about the diagonal and the square on it, shown by one figure (the right triangle with both sides a is half of a square; the square on the diagonal has twice the area). No question figure is given, so this figure stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S7.T7.C48.IMG1",
+   "manim_scene": "c8_9_2_4_Q1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S7.T7.C48.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "to_scale": true,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "units": {
+      "a": 2
+     },
+     "square": {
+      "vertices": [
+       [
+        0,
+        0
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "outline": "INK"
+     },
+     "shaded_triangle": {
+      "vertices": [
+       [
+        0,
+        0
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "fill": "MARK_FILL"
+     },
+     "diagonal": [
+      [
+       0,
+       2
+      ],
+      [
+       2,
+       0
+      ]
+     ],
+     "right_angle_mark": {
+      "at": [
+       0,
+       0
+      ],
+      "side": 0.25
+     },
+     "square_on_diagonal": {
+      "vertices": [
+       [
+        0,
+        2
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        4,
+        2
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "outline": "ANSWER"
+     },
+     "dashed_lines": [
+      [
+       [
+        2,
+        2
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      [
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        4
+       ]
+      ]
+     ],
+     "labels": [
+      {
+       "text": "a",
+       "at": [
+        -0.3,
+        1.0
+       ]
+      },
+      {
+       "text": "a",
+       "at": [
+        1.0,
+        -0.35
+       ]
+      }
+     ]
+    },
+    "manim_description": "Frame: 16:9 canvas, background BG. Work in figure units (x to the right, y up). Scale the whole figure uniformly so that its box, labels included, fills about 85 percent of the canvas height (or 90 percent of the width when that is smaller), and centre it. Draw a square with its diagonal and the square standing on that diagonal; the side of the first square is a = 2 units. The square: INK 3 px outline, vertices (0, 0), (2, 0), (2, 2), (0, 2). Fill the lower-left triangle (0, 0), (2, 0), (0, 2) with MARK_FILL. Draw the diagonal from (0, 2) to (2, 0) in INK 3 px. Draw the right-angle mark at (0, 0): INK 2 px square of side 0.25 inside the corner. Draw the tilted square on the diagonal with vertices (0, 2), (2, 0), (4, 2), (2, 4): outline ANSWER 3 px, no fill. Inside the tilted square draw two dashed GUIDE lines, 2 px: from (2, 2) to (4, 2) and from (2, 2) to (2, 4) (they continue the top side and the right side of the first square and meet it at (2, 2)). Labels in INK: 'a' at (-0.3, 1) left of the left side and 'a' at (1, -0.35) under the bottom side. No other labels.",
+    "visible_text": [
+     "a"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "area labels or the equation a² + a² = 2a²",
+     "vertex letters",
+     "a title banner or logo"
+    ],
+    "accuracy_checks": [
+     "The shaded triangle (0,0),(2,0),(0,2) has both perpendicular sides a = 2: it is half of the square.",
+     "The diagonal (0,2)-(2,0) has length 2*sqrt(2); the tilted square has that side and area 8 = 2 x 4 = 2a².",
+     "The tilted square (0,2),(2,0),(4,2),(2,4) is cut by its two diagonals into four congruent right triangles, each equal to the shaded one."
+    ],
+    "alt_text": "A square of side a with its diagonal drawn and a larger tilted square standing on that diagonal; the square on the diagonal is made of four triangles, the first square of two.",
+    "render_note": "Same figure as the book's page 8 picture of the doubling (base figure P08-construction-1, section 2.3, drawn without vertex letters because the LP solution uses none). Matches the LP s_figure hint.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S7.T7.C49",
+   "role": "question",
+   "lp_book_number": "Missing Sides and New Squares, Q3",
+   "ncert_ref": "2.4.FiO3",
+   "question_text": "Using the constructions you have now seen, how would you construct a square whose area is triple the area of a given square? Five times the area of a given square? (Baudhāyana's Śulba-Sūtra, Verse 1.10)",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book question (Figure it Out Q3) gives no figure: a word question whose answer is a construction.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S7.T7.C50",
+   "role": "solution",
+   "lp_book_number": "Missing Sides and New Squares, Q3",
+   "ncert_ref": "2.4.FiO3",
+   "question_text": "Using the constructions you have now seen, how would you construct a square whose area is triple the area of a given square? Five times the area of a given square? (Baudhāyana's Śulba-Sūtra, Verse 1.10)",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer to 'how would you construct' is a construction: a square on the hypotenuse of a right triangle with sides a and d (triple) and a and 2a (five times). Both parts are shown in one picture; the question has no given figure, so this figure stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S7.T7.C50.IMG1",
+   "manim_scene": "c8_9_2_4_FiO3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S7.T7.C50.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "to_scale": true,
+    "content": {
+     "type": "construction",
+     "to_scale": true,
+     "units": {
+      "a": 2
+     },
+     "triple": {
+      "given_square": {
+       "vertices": [
+        [
+         0,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         0,
+         2
+        ]
+       ]
+      },
+      "diagonal": [
+       [
+        0,
+        0
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "diagonal_label": {
+       "text": "d",
+       "at": [
+        0.6,
+        1.25
+       ]
+      },
+      "triangle": {
+       "vertices": [
+        [
+         3.5,
+         0.0
+        ],
+        [
+         6.328,
+         0.0
+        ],
+        [
+         3.5,
+         2.0
+        ]
+       ],
+       "right_angle_at": [
+        3.5,
+        0.0
+       ],
+       "leg_labels": [
+        {
+         "text": "a",
+         "at": [
+          3.2,
+          1.0
+         ]
+        },
+        {
+         "text": "d",
+         "at": [
+          4.914,
+          -0.35
+         ]
+        }
+       ]
+      },
+      "square_on_hypotenuse": {
+       "vertices": [
+        [
+         3.5,
+         2.0
+        ],
+        [
+         6.328,
+         0.0
+        ],
+        [
+         8.328,
+         2.828
+        ],
+        [
+         5.5,
+         4.828
+        ]
+       ],
+       "outline": "ANSWER",
+       "fill": "MARK_FILL",
+       "label": {
+        "text": "3a²",
+        "at": [
+         5.914,
+         2.414
+        ]
+       }
+      }
+     },
+     "five_times": {
+      "triangle": {
+       "vertices": [
+        [
+         10.3,
+         0.0
+        ],
+        [
+         14.3,
+         0.0
+        ],
+        [
+         10.3,
+         2.0
+        ]
+       ],
+       "right_angle_at": [
+        10.3,
+        0.0
+       ],
+       "leg_labels": [
+        {
+         "text": "a",
+         "at": [
+          10.0,
+          1.0
+         ]
+        },
+        {
+         "text": "2a",
+         "at": [
+          12.3,
+          -0.35
+         ]
+        }
+       ]
+      },
+      "square_on_hypotenuse": {
+       "vertices": [
+        [
+         10.3,
+         2.0
+        ],
+        [
+         14.3,
+         0.0
+        ],
+        [
+         16.3,
+         4.0
+        ],
+        [
+         12.3,
+         6.0
+        ]
+       ],
+       "outline": "ANSWER",
+       "fill": "MARK_FILL",
+       "label": {
+        "text": "5a²",
+        "at": [
+         13.3,
+         3.0
+        ]
+       }
+      }
+     },
+     "divider": [
+      [
+       9.3,
+       -0.7
+      ],
+      [
+       9.3,
+       6.3
+      ]
+     ]
+    },
+    "manim_description": "Frame: 16:9 canvas, background BG. Work in figure units (x to the right, y up). Scale the whole figure uniformly so that its box, labels included, fills about 85 percent of the canvas height (or 90 percent of the width when that is smaller), and centre it. Draw two constructions side by side, a = 2 units. All lines INK 3 px unless stated. LEFT construction (triple). The given square: vertices (0, 0), (2, 0), (2, 2), (0, 2), INK outline, no fill; its diagonal from (0, 0) to (2, 2) in INK, labelled 'd' in INK at (0.6, 1.25); label 'a' under its bottom side at (1, -0.35). The right triangle with perpendicular sides a and d: vertices (3.5, 0) (right angle), (6.33, 0) and (3.5, 2), no fill, with the right-angle mark at (3.5, 0) (INK 2 px square of side 0.25 inside the corner). Label 'a' at (3.2, 1) left of the vertical side and 'd' at (4.91, -0.35) under the horizontal side. The square on the hypotenuse (3.5, 2)-(6.33, 0): vertices (3.5, 2), (6.33, 0), (8.33, 2.83), (5.5, 4.83), outline ANSWER 3 px, fill MARK_FILL, with the label '3a²' in ANSWER at its centre (5.91, 2.41). RIGHT construction (five times). The right triangle with perpendicular sides a and 2a: vertices (10.3, 0) (right angle), (14.3, 0) and (10.3, 2), no fill, with the right-angle mark at (10.3, 0) (INK 2 px square of side 0.25 inside the corner). Label 'a' at (10.0, 1) left of the vertical side and '2a' at (12.3, -0.35) under the horizontal side. The square on the hypotenuse (10.3, 2)-(14.3, 0): vertices (10.3, 2), (14.3, 0), (16.3, 4), (12.3, 6), outline ANSWER 3 px, fill MARK_FILL, with the label '5a²' in ANSWER at its centre (13.3, 3). Between the constructions draw one dashed GUIDE line, 2 px, from (9.3, -0.7) to (9.3, 6.3). No other labels.",
+    "visible_text": [
+     "a",
+     "d",
+     "2a",
+     "3a²",
+     "5a²"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words triple or five times",
+     "the equations d² = 2a² or a² + 2a² = 3a²",
+     "vertex letters",
+     "a title banner or logo"
+    ],
+    "accuracy_checks": [
+     "a = 2, a² = 4; the diagonal d = 2*sqrt(2), d² = 8 = 2a² and the horizontal leg of the left triangle is 2.83 long.",
+     "Left hypotenuse^2 = 4 + 8 = 12 = 3a²; the square on it has area 12 (side sqrt(12) = 3.46).",
+     "Right triangle legs 2 and 4; hypotenuse^2 = 4 + 16 = 20 = 5a²; the square on it has area 20 (side sqrt(20) = 4.47).",
+     "Each square on a hypotenuse lies outside its triangle, on the side away from the right angle.",
+     "Both right angles are at y = 0 (the triangles share the baseline)."
+    ],
+    "alt_text": "Left: a square with its diagonal d and a right triangle with sides a and d with a square of area three a squared on its hypotenuse. Right: a right triangle with sides a and 2a with a square of area five a squared on its hypotenuse.",
+    "render_note": "One picture with two panels for both parts of the answer (one solution diagram per answer concept). The book prints no figure for this question; the picture follows the LP solution steps and the LP s_figure hint.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S7.T7.C51",
+   "role": "question",
+   "lp_book_number": "Chapter Exercises, Q7",
+   "ncert_ref": "end.FiO7",
+   "question_text": "Construct a square whose area is equal to the difference of the areas of squares of sidelengths 5 units and 7 units.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure (the book prints none for Chapter Exercise 7); the sidelengths 5 and 7 are in the text and the answer is a construction.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S7.T7.C52",
+   "role": "solution",
+   "lp_book_number": "Chapter Exercises, Q7",
+   "ncert_ref": "end.FiO7",
+   "question_text": "Construct a square whose area is equal to the difference of the areas of squares of sidelengths 5 units and 7 units.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The exercise asks for a construction; the printed answer is a drawing (right triangle with hypotenuse 7 and side 5, square on the third side). The question has no given figure, so this figure stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S7.T7.C52.IMG1",
+   "manim_scene": "c8_9_end_FiO7_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S7.T7.C52.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "construction",
+    "aspect_ratio": "16:9",
+    "to_scale": true,
+    "content": {
+     "type": "construction",
+     "to_scale": true,
+     "triangle": {
+      "A": [
+       0.0,
+       0.0
+      ],
+      "B": [
+       5.0,
+       0.0
+      ],
+      "C": [
+       0.0,
+       4.899
+      ],
+      "right_angle_at": "A",
+      "sides": {
+       "AB": 5,
+       "BC": 7,
+       "AC": "b = sqrt(24)"
+      }
+     },
+     "labels": [
+      {
+       "text": "5",
+       "at": [
+        2.5,
+        -0.35
+       ]
+      },
+      {
+       "text": "7",
+       "at": [
+        2.95,
+        2.85
+       ]
+      },
+      {
+       "text": "b",
+       "at": [
+        0.3,
+        2.45
+       ]
+      }
+     ],
+     "arc": {
+      "centre": [
+       5.0,
+       0.0
+      ],
+      "radius": 7,
+      "from_deg": 128.0,
+      "to_deg": 140.0,
+      "colour": "GUIDE"
+     },
+     "perpendicular_extension": [
+      [
+       0.0,
+       4.898979485566356
+      ],
+      [
+       0.0,
+       5.6
+      ]
+     ],
+     "square_on_third_side": {
+      "vertices": [
+       [
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        4.899
+       ],
+       [
+        -4.899,
+        4.899
+       ],
+       [
+        -4.899,
+        0.0
+       ]
+      ],
+      "outline": "ANSWER",
+      "fill": "MARK_FILL",
+      "label": {
+       "text": "24 square units",
+       "at": [
+        -2.449,
+        2.449
+       ]
+      }
+     }
+    },
+    "manim_description": "Frame: 16:9 canvas, background BG. Work in figure units (x to the right, y up). Scale the whole figure uniformly so that its box, labels included, fills about 85 percent of the canvas height (or 90 percent of the width when that is smaller), and centre it. Draw the construction of the square on the third side; the triangle has sides 5, 7 and b = sqrt(24) = 4.9. The right triangle: vertices A = (0, 0) (right angle), B = (5, 0), C = (0, 4.9), no fill, INK 3 px; the right-angle mark at A is an INK 2 px square of side 0.35 in the first quadrant (inside the triangle). Labels in INK: '5' at (2.5, -0.35) under side A-B; '7' at (2.95, 2.85) beside the hypotenuse B-C, outside the triangle; 'b' at (0.3, 2.45) just inside the triangle beside side A-C. The construction arc: a GUIDE arc 2 px of radius 7 centred at B = (5, 0) from 128 to 140 degrees, from the point (0.69, 5.52) to the point (-0.36, 4.5); it crosses side A-C at C. Extend the perpendicular above C with a GUIDE line 2 px from (0, 4.9) to (0, 5.6). The square on the third side A-C: vertices (0, 0), (0, 4.9), (-4.9, 4.9), (-4.9, 0), outline ANSWER 3 px, fill MARK_FILL, lying to the left of A-C, with the label '24 square units' in ANSWER centred at (-2.45, 2.45). No other labels.",
+    "visible_text": [
+     "5",
+     "7",
+     "b",
+     "24 square units"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the two given squares of sides 5 and 7",
+     "the equation b² = 7² − 5²",
+     "vertex letters A, B, C",
+     "a title banner or logo"
+    ],
+    "accuracy_checks": [
+     "AB = 5, BC = 7 (distance from (5,0) to (0, 4.899) is 7.00), the right angle is at A.",
+     "AC = b with b² = 49 − 25 = 24, so b = 4.899 and the square on AC has area 24.",
+     "The arc has radius 7 about B and meets the perpendicular x = 0 at C (direction 135.6 degrees from B, inside the drawn arc 128 to 140 degrees).",
+     "The square (0,0),(0,4.899),(-4.899,4.899),(-4.899,0) lies on the side of AC away from the triangle."
+    ],
+    "alt_text": "A right triangle with sides 5 and 7 and the third side b, an arc of radius 7 meeting the perpendicular, and a square of area 24 square units drawn on the third side.",
+    "render_note": "The book prints no picture for this exercise; the figure follows the LP solution (draw 5, right angle, arc of radius 7, square on the third side). Vertex letters are not drawn because the LP solution does not use them.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C53",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "2.4.using_345",
+   "question_text": "A right-angled triangle has shorter sides 3 cm and 4 cm. Find the hypotenuse.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book text gives the data in words (shorter sides 3 cm and 4 cm) and tells the learner to draw the triangle; its small picture only restates 3 cm, 4 cm and '?'. Text and LaTeX carry everything; the teaching image C53.IMG1 shows the 3-4-5 triangle.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C54",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "authored example (no book reference)",
+   "question_text": "A right triangle has hypotenuse 13 and one side 5. Find the third side h.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Authored example, no book figure: hypotenuse 13 and side 5 are in the text, the steps are arithmetic; the kept image C54.IMG1 (the 13 m ladder) already pictures it.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C54",
+   "role": "worked_example",
+   "block_index": 1,
+   "lp_book_number": null,
+   "ncert_ref": "authored example (no book reference)",
+   "question_text": "A triangle is turned on its corner: the right angle is at the top, and the two sides at it are 7 and 24. Find the third side.",
+   "decision": "optional",
+   "reason_codes": [
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "Optional figure, not added: a right triangle turned on its corner (right angle at the top, sides 7 and 24 at it, the side facing the angle marked '?') would show why the bottom side is the hypotenuse; the text already states the position and the numbers.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C54",
+   "role": "worked_example",
+   "block_index": 2,
+   "lp_book_number": null,
+   "ncert_ref": "authored example (no book reference)",
+   "question_text": "A common slip: the sides at the right angle are 6 and 8, so the hypotenuse is 6 + 8 = 14. Check.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A common slip checked by arithmetic (6² + 8² = 100, 14² = 196); no figure is given or needed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C54",
+   "role": "worked_example",
+   "block_index": 3,
+   "lp_book_number": null,
+   "ncert_ref": "authored example (no book reference)",
+   "question_text": "A triangle has sides 5, 6 and 7. Is it a right triangle?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Test of 5, 6, 7 by arithmetic (25 + 36 ≠ 49); sides are in the text, no figure is given or needed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C55",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Missing Sides and New Squares, Q1",
+   "ncert_ref": "2.4.FiO1",
+   "question_text": "If a right-angled triangle has shorter sides of lengths 5 cm and 12 cm, then what is the length of its hypotenuse? First draw the right-angled triangle with these sidelengths and measure the hypotenuse, then check your answer using Baudhāyana's Theorem.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Book Q1 gives no figure: the learner is told to draw the 5 cm, 12 cm triangle and measure; the data is in the text and giving a drawing would remove the activity.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C55",
+   "role": "worked_example",
+   "block_index": 1,
+   "lp_book_number": "Missing Sides and New Squares, Q4 (ii)",
+   "ncert_ref": "2.4.FiO4ii",
+   "question_text": "Let a, b and c denote the length of the sides of a right triangle, with c being the length of the hypotenuse. Find the missing sidelength in each of the following cases: (ii) a = 8, b = 12",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Book Q4 (ii) gives only a = 8, b = 12; no figure, arithmetic on a pair of numbers.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C55",
+   "role": "worked_example",
+   "block_index": 2,
+   "lp_book_number": "Missing Sides and New Squares, Q4 (iii)",
+   "ncert_ref": "2.4.FiO4iii",
+   "question_text": "Let a, b and c denote the length of the sides of a right triangle, with c being the length of the hypotenuse. Find the missing sidelength in each of the following cases: (iii) a = 9, c = 15",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Book Q4 (iii) gives only a = 9, c = 15; no figure, arithmetic on a pair of numbers.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C55",
+   "role": "worked_example",
+   "block_index": 3,
+   "lp_book_number": "Missing Sides and New Squares, Q4 (iv)",
+   "ncert_ref": "2.4.FiO4iv",
+   "question_text": "Let a, b and c denote the length of the sides of a right triangle, with c being the length of the hypotenuse. Find the missing sidelength in each of the following cases: (iv) a = 7, b = 12",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Book Q4 (iv) gives only a = 7, b = 12; no figure, arithmetic on a pair of numbers.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C55",
+   "role": "worked_example",
+   "block_index": 4,
+   "lp_book_number": "Missing Sides and New Squares, Q4 (v)",
+   "ncert_ref": "2.4.FiO4v",
+   "question_text": "Let a, b and c denote the length of the sides of a right triangle, with c being the length of the hypotenuse. Find the missing sidelength in each of the following cases: (v) a = 1.5, b = 3.5",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Book Q4 (v) gives only a = 1.5, b = 3.5; no figure, arithmetic on a pair of numbers.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C55",
+   "role": "worked_example",
+   "block_index": 5,
+   "lp_book_number": "Chapter Exercises, Q2 (b)",
+   "ncert_ref": "end.FiO2b",
+   "question_text": "Find the missing sidelengths in the following right triangles: (b) a thin tilted right triangle with sides 4 and 10 at the right angle.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book question 'Find the missing sidelengths in the following right triangles' has its data only in the pictures (labelled sides, which angle is the right angle); picture (b) of Q2 is this block. The LP text describes it in words but the figure is what the book gives.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S8.T8.C55.IMG1",
+   "manim_scene": "c8_9_end_FiO2b_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S8.T8.C55.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "to_scale": true,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "triangle": {
+      "vertices": {
+       "R": [
+        0.0,
+        0.0
+       ],
+       "P": [
+        2.571,
+        3.064
+       ],
+       "Q": [
+        7.66,
+        -6.428
+       ]
+      },
+      "right_angle_vertex": "R",
+      "right_angle_mark_side": 0.539,
+      "fill": "BG",
+      "outline": "INK"
+     },
+     "side_labels": [
+      {
+       "side": "R-P",
+       "text": "4",
+       "position": "outside, centred on the midpoint, 40 px gap"
+      },
+      {
+       "side": "R-Q",
+       "text": "10",
+       "position": "outside, centred on the midpoint, 40 px gap"
+      },
+      {
+       "side": "P-Q",
+       "text": "?",
+       "position": "outside, centred on the midpoint, 40 px gap"
+      }
+     ]
+    },
+    "manim_description": "Frame: 16:9 canvas, background BG. Work in figure units (x to the right, y up). Scale the whole figure uniformly so that its box, labels included, fills about 70 percent of the canvas height (or 80 percent of the width when that is smaller), and centre it. Draw one right triangle, no fill (BG), outline INK 3 px, with vertices R, P, Q: R = (0, 0), P = (2.57, 3.06), Q = (7.66, -6.43); legs R-P = 4 along the direction 50 degrees and R-Q = 10 along the direction -40 degrees from R; hypotenuse P-Q = sqrt(116) = 10.77. Its right angle is at R: draw an INK 2 px square mark of side 0.54 in that corner, inside the triangle. Labels in INK, each centred on the midpoint of its side, outside the triangle, 40 px from the line: '4' on side R-P; '10' on side R-Q; '?' on side P-Q. The '?' marks the side to be found. Draw nothing else: no vertex letters, no angle arcs, no other numbers.",
+    "visible_text": [
+     "4",
+     "10",
+     "?"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the value of the missing side",
+     "vertex letters",
+     "angle arcs",
+     "a title banner or logo"
+    ],
+    "accuracy_checks": [
+     "The two sides at the right angle are perpendicular (dot product 0) and have the printed lengths.",
+     "4² + 10² = 116 = hypotenuse²",
+     "The side labelled '?' is the only unlabelled side of the book picture; it is not given a value.",
+     "The drawing is to true scale, so no given measure is contradicted."
+    ],
+    "alt_text": "A right triangle (thin tilted triangle, right angle at the left vertex) with the sides labelled 4, 10; the missing side is marked with a question mark.",
+    "render_note": "Book picture on page 21 (base figure P21-shape-2, triangle b of Q2); the book leaves the missing side unlabelled, a '?' is added on it. The book is not to scale; this drawing is. Orientation follows the book.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C55",
+   "role": "worked_example",
+   "block_index": 6,
+   "lp_book_number": "Chapter Exercises, Q2 (c)",
+   "ncert_ref": "end.FiO2c",
+   "question_text": "Find the missing sidelengths in the following right triangles: (c) a long thin right triangle with the right angle at its far-left corner: one side at the right angle is 40 and the side opposite the right angle is 41.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book question 'Find the missing sidelengths in the following right triangles' has its data only in the pictures (labelled sides, which angle is the right angle); picture (c) of Q2 is this block. The LP text describes it in words but the figure is what the book gives.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S8.T8.C55.IMG2",
+   "manim_scene": "c8_9_end_FiO2c_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S8.T8.C55.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "to_scale": true,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "triangle": {
+      "vertices": {
+       "R": [
+        0.0,
+        0.0
+       ],
+       "S": [
+        3.078,
+        8.457
+       ],
+       "F": [
+        37.588,
+        -13.681
+       ]
+      },
+      "right_angle_vertex": "R",
+      "right_angle_mark_side": 2.05,
+      "fill": "BG",
+      "outline": "INK"
+     },
+     "side_labels": [
+      {
+       "side": "R-S",
+       "text": "?",
+       "position": "outside, centred on the midpoint, 40 px gap"
+      },
+      {
+       "side": "R-F",
+       "text": "40",
+       "position": "outside, centred on the midpoint, 40 px gap"
+      },
+      {
+       "side": "S-F",
+       "text": "41",
+       "position": "outside, centred on the midpoint, 40 px gap"
+      }
+     ]
+    },
+    "manim_description": "Frame: 16:9 canvas, background BG. Work in figure units (x to the right, y up). Scale the whole figure uniformly so that its box, labels included, fills about 70 percent of the canvas height (or 80 percent of the width when that is smaller), and centre it. Draw one right triangle, no fill (BG), outline INK 3 px, with vertices R, S, F: R = (0, 0), S = (3.08, 8.46), F = (37.59, -13.68); leg R-F = 40 along the direction -20 degrees from R (far to the right and slightly down), leg R-S = 9 along the direction 70 degrees from R, hypotenuse S-F = 41. Its right angle is at R: draw an INK 2 px square mark of side 2.05 in that corner, inside the triangle. Labels in INK, each centred on the midpoint of its side, outside the triangle, 40 px from the line: '?' on side R-S; '40' on side R-F; '41' on side S-F. The '?' marks the side to be found. Draw nothing else: no vertex letters, no angle arcs, no other numbers.",
+    "visible_text": [
+     "?",
+     "40",
+     "41"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the value of the missing side",
+     "vertex letters",
+     "angle arcs",
+     "a title banner or logo"
+    ],
+    "accuracy_checks": [
+     "The two sides at the right angle are perpendicular (dot product 0) and have the printed lengths.",
+     "9² + 40² = 81 + 1600 = 1681 = 41²",
+     "The side labelled '?' is the only unlabelled side of the book picture; it is not given a value.",
+     "The drawing is to true scale, so no given measure is contradicted."
+    ],
+    "alt_text": "A right triangle (long thin sliver, right angle at the far-left corner) with the sides labelled 40, 41; the missing side is marked with a question mark.",
+    "render_note": "Book picture on page 21 (base figure P21-shape-3, triangle c of Q2); the book leaves the missing side unlabelled, a '?' is added on it. The book is not to scale; this drawing is. Orientation follows the book.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C55",
+   "role": "worked_example",
+   "block_index": 7,
+   "lp_book_number": "Chapter Exercises, Q2 (d)",
+   "ncert_ref": "end.FiO2d",
+   "question_text": "Find the missing sidelengths in the following right triangles: (d) a right triangle with the right angle at the top: one side at the right angle is 10 and the side opposite the right angle is √200.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book question 'Find the missing sidelengths in the following right triangles' has its data only in the pictures (labelled sides, which angle is the right angle); picture (d) of Q2 is this block. The LP text describes it in words but the figure is what the book gives.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S8.T8.C55.IMG3",
+   "manim_scene": "c8_9_end_FiO2d_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S8.T8.C55.IMG3}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "to_scale": true,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "triangle": {
+      "vertices": {
+       "L": [
+        0.0,
+        0.0
+       ],
+       "T": [
+        7.071,
+        7.071
+       ],
+       "M": [
+        14.142,
+        0.0
+       ]
+      },
+      "right_angle_vertex": "T",
+      "right_angle_mark_side": 0.707,
+      "fill": "BG",
+      "outline": "INK"
+     },
+     "side_labels": [
+      {
+       "side": "L-T",
+       "text": "10",
+       "position": "outside, centred on the midpoint, 40 px gap"
+      },
+      {
+       "side": "L-M",
+       "text": "√200",
+       "position": "outside, centred on the midpoint, 40 px gap"
+      },
+      {
+       "side": "T-M",
+       "text": "?",
+       "position": "outside, centred on the midpoint, 40 px gap"
+      }
+     ]
+    },
+    "manim_description": "Frame: 16:9 canvas, background BG. Work in figure units (x to the right, y up). Scale the whole figure uniformly so that its box, labels included, fills about 70 percent of the canvas height (or 80 percent of the width when that is smaller), and centre it. Draw one right triangle, no fill (BG), outline INK 3 px, with vertices L, T, M: L = (0, 0), T = (7.07, 7.07), M = (14.14, 0); hypotenuse L-M = sqrt(200) = 14.14 lies level along the bottom, the right-angle vertex T is at the top above its middle, leg L-T = 10 (left), leg T-M = 10 (right). Its right angle is at T: draw an INK 2 px square mark of side 0.71 in that corner, inside the triangle. Labels in INK, each centred on the midpoint of its side, outside the triangle, 40 px from the line: '10' on side L-T; '√200' on side L-M; '?' on side T-M. The '?' marks the side to be found. Draw nothing else: no vertex letters, no angle arcs, no other numbers.",
+    "visible_text": [
+     "10",
+     "√200",
+     "?"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the value of the missing side",
+     "vertex letters",
+     "angle arcs",
+     "a title banner or logo"
+    ],
+    "accuracy_checks": [
+     "The two sides at the right angle are perpendicular (dot product 0) and have the printed lengths.",
+     "10² + 10² = 200 = (sqrt(200))², so the triangle is isosceles",
+     "The side labelled '?' is the only unlabelled side of the book picture; it is not given a value.",
+     "The drawing is to true scale, so no given measure is contradicted."
+    ],
+    "alt_text": "A right triangle (right angle at the top, hypotenuse at the bottom) with the sides labelled 10, √200; the missing side is marked with a question mark.",
+    "render_note": "Book picture on page 21 (base figure P21-shape-4, triangle d of Q2); the book leaves the missing side unlabelled, a '?' is added on it. The book is not to scale; this drawing is. Orientation follows the book.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C55",
+   "role": "worked_example",
+   "block_index": 8,
+   "lp_book_number": "Chapter Exercises, Q2 (e)",
+   "ncert_ref": "end.FiO2e",
+   "question_text": "Find the missing sidelengths in the following right triangles: (e) a tilted right triangle with sides 10 and √150 at the right angle.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book question 'Find the missing sidelengths in the following right triangles' has its data only in the pictures (labelled sides, which angle is the right angle); picture (e) of Q2 is this block. The LP text describes it in words but the figure is what the book gives.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S8.T8.C55.IMG4",
+   "manim_scene": "c8_9_end_FiO2e_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S8.T8.C55.IMG4}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "to_scale": true,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "triangle": {
+      "vertices": {
+       "R": [
+        0.0,
+        0.0
+       ],
+       "A": [
+        -4.226,
+        9.063
+       ],
+       "B": [
+        11.1,
+        5.176
+       ]
+      },
+      "right_angle_vertex": "R",
+      "right_angle_mark_side": 0.791,
+      "fill": "BG",
+      "outline": "INK"
+     },
+     "side_labels": [
+      {
+       "side": "R-A",
+       "text": "10",
+       "position": "outside, centred on the midpoint, 40 px gap"
+      },
+      {
+       "side": "R-B",
+       "text": "√150",
+       "position": "outside, centred on the midpoint, 40 px gap"
+      },
+      {
+       "side": "A-B",
+       "text": "?",
+       "position": "outside, centred on the midpoint, 40 px gap"
+      }
+     ]
+    },
+    "manim_description": "Frame: 16:9 canvas, background BG. Work in figure units (x to the right, y up). Scale the whole figure uniformly so that its box, labels included, fills about 70 percent of the canvas height (or 80 percent of the width when that is smaller), and centre it. Draw one right triangle, no fill (BG), outline INK 3 px, with vertices R, A, B: R = (0, 0), A = (-4.23, 9.06), B = (11.1, 5.18); right-angle vertex R at the bottom, leg R-A = 10 along the direction 115 degrees (up and to the left), leg R-B = sqrt(150) = 12.25 along the direction 25 degrees (up and to the right), hypotenuse A-B = sqrt(250) = 15.81 along the top. Its right angle is at R: draw an INK 2 px square mark of side 0.79 in that corner, inside the triangle. Labels in INK, each centred on the midpoint of its side, outside the triangle, 40 px from the line: '10' on side R-A; '√150' on side R-B; '?' on side A-B. The '?' marks the side to be found. Draw nothing else: no vertex letters, no angle arcs, no other numbers.",
+    "visible_text": [
+     "10",
+     "√150",
+     "?"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the value of the missing side",
+     "vertex letters",
+     "angle arcs",
+     "a title banner or logo"
+    ],
+    "accuracy_checks": [
+     "The two sides at the right angle are perpendicular (dot product 0) and have the printed lengths.",
+     "10² + (sqrt(150))² = 100 + 150 = 250 = hypotenuse²",
+     "The side labelled '?' is the only unlabelled side of the book picture; it is not given a value.",
+     "The drawing is to true scale, so no given measure is contradicted."
+    ],
+    "alt_text": "A right triangle (tilted triangle, right angle at the bottom) with the sides labelled 10, √150; the missing side is marked with a question mark.",
+    "render_note": "Book picture on page 21 (base figure P21-shape-5, triangle e of Q2); the book leaves the missing side unlabelled, a '?' is added on it. The book is not to scale; this drawing is. Orientation follows the book.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S8.T8.C55",
+   "role": "worked_example",
+   "block_index": 9,
+   "lp_book_number": "Chapter Exercises, Q2 (f)",
+   "ncert_ref": "end.FiO2f",
+   "question_text": "Find the missing sidelengths in the following right triangles: (f) a right triangle with the right angle at the bottom left: the upright side is 27 and the side opposite the right angle is 45.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book question 'Find the missing sidelengths in the following right triangles' has its data only in the pictures (labelled sides, which angle is the right angle); picture (f) of Q2 is this block. The LP text describes it in words but the figure is what the book gives.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S8.T8.C55.IMG5",
+   "manim_scene": "c8_9_end_FiO2f_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S8.T8.C55.IMG5}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "to_scale": true,
+    "content": {
+     "type": "geometry_figure",
+     "to_scale": true,
+     "triangle": {
+      "vertices": {
+       "R": [
+        0.0,
+        0.0
+       ],
+       "T": [
+        0.0,
+        27.0
+       ],
+       "S": [
+        36.0,
+        0.0
+       ]
+      },
+      "right_angle_vertex": "R",
+      "right_angle_mark_side": 2.25,
+      "fill": "BG",
+      "outline": "INK"
+     },
+     "side_labels": [
+      {
+       "side": "R-T",
+       "text": "27",
+       "position": "outside, centred on the midpoint, 40 px gap"
+      },
+      {
+       "side": "T-S",
+       "text": "45",
+       "position": "outside, centred on the midpoint, 40 px gap"
+      },
+      {
+       "side": "R-S",
+       "text": "?",
+       "position": "outside, centred on the midpoint, 40 px gap"
+      }
+     ]
+    },
+    "manim_description": "Frame: 16:9 canvas, background BG. Work in figure units (x to the right, y up). Scale the whole figure uniformly so that its box, labels included, fills about 70 percent of the canvas height (or 80 percent of the width when that is smaller), and centre it. Draw one right triangle, no fill (BG), outline INK 3 px, with vertices R, T, S: R = (0, 0), T = (0, 27), S = (36, 0); upright leg R-T = 27 along the y axis, level base R-S = 36 along the x axis, hypotenuse T-S = 45. Its right angle is at R: draw an INK 2 px square mark of side 2.25 in that corner, inside the triangle. Labels in INK, each centred on the midpoint of its side, outside the triangle, 40 px from the line: '27' on side R-T; '45' on side T-S; '?' on side R-S. The '?' marks the side to be found. Draw nothing else: no vertex letters, no angle arcs, no other numbers.",
+    "visible_text": [
+     "27",
+     "45",
+     "?"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the value of the missing side",
+     "vertex letters",
+     "angle arcs",
+     "a title banner or logo"
+    ],
+    "accuracy_checks": [
+     "The two sides at the right angle are perpendicular (dot product 0) and have the printed lengths.",
+     "27² + 36² = 729 + 1296 = 2025 = 45²",
+     "The side labelled '?' is the only unlabelled side of the book picture; it is not given a value.",
+     "The drawing is to true scale, so no given measure is contradicted."
+    ],
+    "alt_text": "A right triangle (upright triangle, right angle at the bottom left) with the sides labelled 27, 45; the missing side is marked with a question mark.",
+    "render_note": "Book picture on page 21 (base figure P21-shape-6, triangle f of Q2); the book leaves the missing side unlabelled, a '?' is added on it. The book is not to scale; this drawing is. Orientation follows the book.",
+    "derived_from": null
+   }
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+# Chunk D notes (Class 8 Ch 2 "Power Play", topics M6.S28.T28, M6.S29.T29, M6.S30.T30, M6.S31.T31)
+
+Result: 16 items (7 question, 7 solution, 2 worked example), required 0 / optional 0 / none 16. Validator: errors 0, warnings 0.
+Figures claimed: 11 base figures, all `none` (4 LATEX_TABLE for the time table, 2 LATEX_TABLE for the names tables, 3 TEXT_SUFFICIENT for the facts lists, 2 DECORATIVE_ONLY). No concept image claimed.
+
+Why nothing is drawn: I looked at pdf pages 18-25, 27 and the answers appendix pages 34, 35, 38. The book prints no drawing that a question of this chunk gives or that a printed answer is. What it prints is (a) a margin-label list of facts with blanks (pp.18-20), (b) a plain time table in four parts (pp.21-24), (c) two plain names tables (p.25), (d) a comic panel with the number 69,70,710 and a noodle comic, (e) illustrations (stamps, murmuration photo, krill, balance of ants and animals, sand castles, mayfly, Mangalyaan, mammoth, terror bird). The printed answers (pp.34-38) are text only. Every solution here is arithmetic with powers of 10 or one line of word reasoning, so each solution is `none` (LATEX_ARITHMETIC) and each question is `none` (TEXT_SUFFICIENT / DECORATIVE_ONLY).
+
+## 1. Judgement calls
+- **M6.S28.T28.C132 (Q1) and C134 (Q2), question side: none, although the LP question text does not carry the data.** The numbers (starlings 1.3 billion, mosquitoes 110 trillion, people 8e9, elephants 4e5; ants 2e16, trees 3e12, leaves per tree 1e4) live in the book's facts list. That list is a hanging-indent list of sentences, with no rules, colour or drawing; it is text, so no v3 trigger (FIG_REFERENCED / DATA_IN_FIGURE need a picture) applies. The earlier author's hint `q_figure` ("a short list of the numbers used") describes exactly that list. Per your decision 2 I did not turn the item into `required` to compensate; the missing sentences are in section 2. I put the sentence in `text_alternative` of the item so the text side can use it.
+- **M6.S28.T28.C136 (Q3): none.** The only picture is the comic panel whose bubble reads "I am 69,70,710 ... old". The number is already in the question text, so DECORATIVE_ONLY + TEXT_SUFFICIENT. I read the digits in the page picture: plain digits, one size, no raised exponents (the base inventory was unsure).
+- **M6.S28.T28.C138 (Q4): none.** The Kelenken blank (15 million years to seconds) and the Try This (stars, water) both give all numbers in the question text. The time table is plain.
+- **Worked examples M6.S30.T30.C144 and C145: none.** The book's picture for them is the plain names table on p.25 (words | numerals | powers of 10, no colour). The concept images C144.IMG1 and C145.IMG1 are staircase drawings of the same names, not that table, so I did not claim the table as `concept_image` (accounting would be untrue); it is `none:LATEX_TABLE`. A LaTeX array for each is suggested in `text_alternative`, optional.
+- **M6.S31.T31.C147/C148 (first part of each name): none/none.** The book bolds mi, bi, tr, quad, quin to point at the "first part"; bold is text. The answer is a sentence plus 10^(3+3n). The concept image C146.IMG1 already shows the picture of 1000 multiplied on.
+- **Figures left to other chunks:** P18-schematic-1 (ladder Earth to Moon) and P18-expression_braces-1 belong to the "Linear Growth vs. Exponential Growth" part of p.18 (topics M6.S25/S26, chunk C), not to "Getting a Sense for Large Numbers". P27-number_row-1 is Figure it Out Q7 (another chunk), and the Puzzle Time figures P29-* sit in chunk C's units. I claimed none of these.
+
+## Borderline
+- C147 question: bold first parts (HIGHLIGHT_MEANING could be argued; bold is plain text, so none).
+- C147 solution and worked examples C144, C145: a picture (strips of 1000s, staircase of names) would help understanding, but the concept images already teach it and the text is complete. Kept `none`, not `optional`.
+- C132 and C134 questions: the data is outside the LP text (see section 2). Kept `none` as the book gives no figure.
+- C136 question: comic panel with the number in a bubble (decorative, number in text).
+
+## 2. LP text issues
+- **M6.S28.T28.C132 (Q1 question):** the question asks for "the starling and mosquito populations" but never gives them, nor the numbers of people and elephants. Suggested sentence to add: "The starling population is about 1.3 billion (1.3 arab) and the mosquito population is about 110 trillion (11 neel); there are about 8 × 10^9 people and about 4 × 10^5 African elephants."
+- **M6.S28.T28.C134 (Q2 question):** the ants, people, starlings and trees numbers and the leaves per tree are missing (only 10000 birds, 0.001 cm and 384400 km are given). Suggested sentence: "There are about 2 × 10^16 ants (20 quadrillion), 8 × 10^9 people, 1.3 × 10^9 starlings and 3 × 10^12 trees, and about 10^4 leaves on each tree."
+- **M6.S28.T28.C135 (Ans2):** step 1 uses "2 ÷ 8" and "16 − 9" without saying the ants are 2 × 10^16 and the people 8 × 10^9. Suggested first step: "Ants per human: (2 × 10^16) ÷ (8 × 10^9), so 2 ÷ 8 = 0.25 and 16 − 9 = 7, giving 0.25 × 10^7, which is 2.5 × 10^6."
+- **M6.S28.T28.C136 (Q3 question):** "decide what unit 6970710 is in" does not say who says it. The book's bubble reads Roxie: "I am 69,70,710 ... old." Suggested: "Roxie also says, 'I am 6970710 ... old.' Decide what unit 6970710 is in." Also the book asks for Estu's date of birth (4070 days) and for how old one is after a million seconds; the LP rewrites these as "age in years" and "how many days a million seconds is". The LP answers are right for what they ask (and match the book's 'about 12 days'), but the question no longer asks the book's question; consider "find Estu's date of birth" as in the book.
+- **M6.S28.T28.C140 (Q5 question):** part (i) needs the world population, 8.2 × 10^9, which the book gives only in the facts list; the question text does not. The LP solution states it, the question does not. Suggested: add "The world population is about 8.2 × 10^9." Parts (iv) needs assumptions (the solution states 1 hour a day for 70 years); fine as the book's answer does the same.
+- **M6.S29.T29.C142 (book number):** `book_number` is "Figure it Out, Q1" but this is end-of-chapter Q14 of the book (Try This, p.27); C140 is labelled "Power Play, Q13". Suggested labels "Figure it Out, Q13" and "Figure it Out, Q14" (or the same style for both).
+- **M6.S30.T30.C145 (worked example, step 4):** "the atoms are at most 10^82, so a googol is 10^18 times as many" should read "at least 10^18 times as many" (the book gives 10^78 to 10^82 atoms, so the ratio is between 10^18 and 10^22). The question also never states the atoms figure, only the steps do.
+- **M6.S31.T31.C148 (Ans1):** the question lists million first, but the answer starts at billion. Suggested extra step: "mi means 1: a million is 1000 with 1 more 1000 multiplied on, 10^(3+3×1) = 10^6."
+- **M6.S31.T31.C147 (question):** the book prints the first part in bold (**mi**llion, **bi**llion, **tr**illion, **quad**rillion, **quin**tillion); the LP text does not, so the student is not told which part is meant. Suggest bolding them.
+
+Arithmetic of all nine LP solutions was recomputed and holds (116160 hours; 6970710 / 1440 = 4840.77; 4070 = 11 × 365 + 55; 10^6 / 86400 = 11.57; 8.2 × 3 = 24.6 so 2.46e11; 3.8 × 8.2 = 31.16; 3600 × 365 × 70 = 91,980,000; 1.5 × 3.15 = 4.725; 2e25 / 16 = 1.25e24 ml, / 200 = 6.25e21 glasses, × 10 s = 6.25e22 s; 1e9 / 86400 = 11574; 10^100 / 10^82 = 10^18). The LP answers agree with the book's printed answers (pp.34-38), including 'about 12 days' (LP 11.57 / 11.6).
+
+## 3. Where the book itself is unclear or slips (nothing is drawn from any of these)
+- p.21 bubble "69,70,710": digits look plain; read as 6970710 (matches the LP: about 4840.8 days in minutes).
+- p.25 International table, trillion row: "= 1,00,000,000,000" uses Indian-style commas; the international form is 1,000,000,000,000.
+- p.22 Mangalyaan row: 298 days is printed as about 2.65 × 10^7 seconds, but 298 × 86400 = 2.57 × 10^7.
+- p.21 first row of the time table: 10^2 s printed "≈ 1.6 minutes" (100 / 60 = 1.67, so about 1.7).
+- p.24: the dash bullet before "The oldest fossil evidence ..." is missing in print.
+- p.26-27 printing: Q12's sub-parts are labelled (ii), (ii), (iii), (iv), (v), (vi) (first should be (i)); not in this chunk.
