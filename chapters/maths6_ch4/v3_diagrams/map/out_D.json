@@ -1,0 +1,1771 @@
+{
+ "meta": {
+  "chapter": "Data Handling and Presentation",
+  "class": 6,
+  "textbook": "Ganita Prakash Grade 6, Chapter 4",
+  "lp_plan_id": "cbse_eng_maths6_ch4_v85",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 6,
+    "optional": 0,
+    "none": 5
+   },
+   "solution": {
+    "required": 5,
+    "optional": 0,
+    "none": 6
+   }
+  },
+  "notes": [
+   "Chunk D: Figure it Out 4.4 of Module 3 (book Q1, Q2, Q9, Q10, Q11) and of Module 4 (book Q3 to Q8); 11 pair units, 22 items.",
+   "Question side is required only where the book GIVES a picture the learner must read or act on (erased graph, saplings graph, flawed tiger graph, Chinu's raw list, tractor and girl pictographs). Where the book gives a plain table whose numbers are in the LP text (Q1, Q3 survey, Bumrah, Mudhol) or nothing (die), the question is none.",
+   "Solution side is required where the printed or LP answer IS a drawn graph (insects, Pooja's finished graph, survey graph, corrected tiger graph, Mudhol pictograph). Plain tables as answers (Chinu's frequency table, Bumrah's product column) are LaTeX (none). Answers that are only numbers/words (saplings, tractors, girls) are none (SAME_AS_QUESTION_DIAGRAM).",
+   "Chinu's 50-entry list (M4.S24.T24.C97) is the one table of words made a required card, because the LP question text says 'see figure' and does not carry the entries (a none decision would leave the question without its data).",
+   "Bar and pictograph geometry is given in pixels (canvas 1920 wide) so the renderer needs no guesses; the book's printed bars that are only readable by eye are noted in render_note (Pooja's Indore 4.4 units, tiger bar lengths, saplings Monday 52 vs 50).",
+   "In the LP, the question text of C97, C99, C103, C105 and C107 lists the parts (a), (b), (c)... twice (once compact, once in the book's wording); nothing here changes the text."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P20-data_table-1",
+   "source": "chapter p.20",
+   "description": "Samantha's table: line drawings of Mites, Caterpillars, Beetles, Butterflies, Grasshoppers (labels only) over their names and counts 6, 10, 5, 3, 2 (total 26). The counts are in the question text, the pictures are decoration.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P20-data_table-2",
+   "source": "chapter p.20",
+   "description": "Pooja's table: City Vidisha, Jabalpur, Seoni, Indore, Sagar with Number of tickets 24, 20, 16, 28, 16 (total 104); the numbers are in the question text.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P21-bar_graph-1",
+   "source": "chapter p.21",
+   "description": "Pooja's graph with the scale erased: 7 gridlines above the baseline, no numbers, axis titles 'No. of Tickets' and 'City'; bars Vidisha 6.0, Jabalpur 5.0, Seoni about 4.0 (measured 3.9), Indore about 4.4 unit lengths, Sagar missing (pixel measure against the gridlines).",
+   "mapped_to": "item:M3.S22.T22.C87 (question)"
+  },
+  {
+   "fig_id": "P21-data_table-2",
+   "source": "chapter p.21",
+   "description": "Chinu's raw list of 50 transport entries in a 6-column grid, 8 full rows and a last row of 2 (entries re-read and counted: bike 13, scooter 9, auto rickshaw 8, bicycle 8, car 6, bus 4, bullock cart 2); the LP text does not carry the entries.",
+   "mapped_to": "item:M4.S24.T24.C97 (question)"
+  },
+  {
+   "fig_id": "P22-frequency_table-1",
+   "source": "chapter p.22",
+   "description": "Bumrah's table: Wickets Taken 0..7 against Number of Matches 2, 4, 6, 8, 3, 5, 1, 1 (total 30 matches, 90 wickets); every pair is in the question text.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P23-pictograph-1",
+   "source": "chapter p.23",
+   "description": "Tractor pictograph, key one tractor symbol = 1 Tractor: Village A 6, B 5, C 8, D 3, E 6 symbols (counted on the picture); the Village E symbols are spaced wider than the others (layout quirk, still 6).",
+   "mapped_to": "item:M4.S24.T24.C103 (question)"
+  },
+  {
+   "fig_id": "P24-pictograph-1",
+   "source": "chapter p.24",
+   "description": "Girl-student pictograph, key one girl symbol = 4 Girls (half symbol = left half of the face): Classes 1 to 8 = 6, 4.5, 5, 3.5, 2.5, 4, 3, 1.5 symbols (24, 18, 20, 14, 10, 16, 12, 6 girls).",
+   "mapped_to": "item:M4.S24.T24.C105 (question)"
+  },
+  {
+   "fig_id": "P25-data_table-1",
+   "source": "chapter p.25",
+   "description": "Survey table: Playing 45, Reading story books 30, Watching TV 20, Listening to music 10, Painting 15 (total 120); the counts are in the question text.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P26-bar_graph-1",
+   "source": "chapter p.26",
+   "description": "Saplings bar graph: axis 0 to 70 in tens, Monday to Sunday; bars Mon about 52 (printed solutions use 50), Tue about 40, Wed 30, Thu 40, Fri 50, Sat 60, Sun 40 (pixel measure against the gridlines; week total 310 uses Mon 50).",
+   "mapped_to": "item:M3.S22.T22.C91 (question)"
+  },
+  {
+   "fig_id": "P27-frequency_table-1",
+   "source": "chapter p.27",
+   "description": "Tiger table: 2006 1400, 2010 1700, 2014 2200, 2018 3000, 2022 3700; the values are in the question text.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P27-bar_graph-2",
+   "source": "chapter p.27",
+   "description": "Horizontal tiger bar graph with mistakes: years 2022 (top) to 2006, axis 0 to 4000 in thousands; bar lengths measured against the gridlines: 2022 about 3750, 2018 about 2230, 2014 about 2920, 2010 about 1510, 2006 about 800. Only 2022 agrees with the table (printed answer: mistakes in 2006, 2010, 2014, 2018).",
+   "mapped_to": "item:M3.S22.T22.C93 (question)"
+  },
+  {
+   "fig_id": "SOL38-bar_graph-1",
+   "source": "solutions p.38",
+   "description": "Printed answer to FiO Q1: bar graph of insects, axis 0 to 10 in twos, bars Mites 6, Caterpillars 10, Beetles 5, Butterflies 3, Grasshoppers 2; titles 'NUMBER OF INSECTS' and 'NAME OF INSECTS'.",
+   "mapped_to": "item:M3.S22.T22.C86 (solution)"
+  },
+  {
+   "fig_id": "SOL39-bar_graph-1",
+   "source": "solutions p.39",
+   "description": "Printed answer to FiO Q2 part d: tickets graph with Sagar added and Indore corrected but no scale: bars 6, 5, 4, 7, 4 unit lengths (pixel ratio 100:83:67:116:67). An intermediate state of the one solution figure, whose final state is the e/f picture.",
+   "mapped_to": "item:M3.S22.T22.C88 (solution)"
+  },
+  {
+   "fig_id": "SOL39-bar_graph-2",
+   "source": "solutions p.39",
+   "description": "Printed answer to FiO Q2 part e: the same graph with the scale 0, 4, ..., 28 and the note 'One unit length =4 Tickets': 24, 20, 16, 28, 16. The final state drawn by the solution card.",
+   "mapped_to": "item:M3.S22.T22.C88 (solution)"
+  },
+  {
+   "fig_id": "SOL40-bar_graph-1",
+   "source": "solutions p.40",
+   "description": "Printed answer to FiO Q2 part f: the same picture as e again (final corrected tickets graph, Indore 28).",
+   "mapped_to": "item:M3.S22.T22.C88 (solution)"
+  },
+  {
+   "fig_id": "SOL40-frequency_table-1",
+   "source": "solutions p.40",
+   "description": "Printed answer to FiO Q3 part a: plain table Means of Transport | Number: Bike 13, Car 6, Bicycle 8, Auto Rickshaw 8, Scooter 9, Bus 4, Bullock Cart 2 (total 50).",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "SOL42-pictograph-1",
+   "source": "solutions p.42",
+   "description": "Printed answer to FiO Q8: Mudhol pictograph, key one dog = 6 dogs: Village A 3, B 6, C 2, D 8, E 3, F 4 symbols (26 symbols = 156 dogs).",
+   "mapped_to": "item:M4.S24.T24.C108 (solution)"
+  },
+  {
+   "fig_id": "SOL43-bar_graph-1",
+   "source": "solutions p.43",
+   "description": "Printed answer to FiO Q9: bar graph, axis 0 to 50 in fives, Playing 45, Reading Story Books 30, Watching TV 20, Listening to music 10, Painting 15; titles 'Number of Students' and 'Preferred Activity'.",
+   "mapped_to": "item:M3.S22.T22.C90 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 18,
+  "mapped_to_items": 12,
+  "mapped_to_concept_images": 0,
+  "mapped_none": 6,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M3.S22.T22.C86.IMG1",
+   "M3.S22.T22.C87.IMG1",
+   "M3.S22.T22.C88.IMG1",
+   "M3.S22.T22.C90.IMG1",
+   "M3.S22.T22.C91.IMG1",
+   "M3.S22.T22.C93.IMG1",
+   "M3.S22.T22.C94.IMG1",
+   "M4.S24.T24.C97.IMG1",
+   "M4.S24.T24.C103.IMG1",
+   "M4.S24.T24.C105.IMG1",
+   "M4.S24.T24.C108.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M3.S22.T22.C85",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.4, Q1",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q1",
+   "question_text": "Samantha visited a tea garden and collected data of insects and critters: Mites 6, Caterpillars 10, Beetles 5, Butterflies 3, Grasshoppers 2. Help her prepare a bar graph representing this data.",
+   "decision": "none",
+   "reason_codes": [
+    "DECORATIVE_ONLY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's table only adds line drawings of the five creatures as labels; all five counts are in the question text, and nothing is drawn for the learner to read.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "No figure: the counts (Mites 6, Caterpillars 10, Beetles 5, Butterflies 3, Grasshoppers 2) are already in the question text."
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C86",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.4, Q1",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q1",
+   "question_text": "Samantha visited a tea garden and collected data of insects and critters: Mites 6, Caterpillars 10, Beetles 5, Butterflies 3, Grasshoppers 2. Help her prepare a bar graph representing this data.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The task is to prepare a bar graph and the book's printed answer is that bar graph (solutions p.38); the question gives no graph, so the card draws it whole.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S22.T22.C86.IMG1",
+   "manim_scene": "c4_4_FiO1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S22.T22.C86.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "4:3",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "bar_graph",
+     "orientation": "vertical",
+     "categories": [
+      "Mites",
+      "Caterpillars",
+      "Beetles",
+      "Butterflies",
+      "Grasshoppers"
+     ],
+     "values": [
+      6,
+      10,
+      5,
+      3,
+      2
+     ],
+     "scale": "1 unit length = 1 insect",
+     "y_axis": {
+      "min": 0,
+      "max": 10,
+      "labelled_ticks": [
+       0,
+       2,
+       4,
+       6,
+       8,
+       10
+      ],
+      "title": "Number of insects"
+     },
+     "x_axis": {
+      "title": "Name of insects"
+     },
+     "bar_fill": "ANSWER",
+     "bar_outline": "INK",
+     "layout_px": {
+      "canvas": [
+       1920,
+       1440
+      ],
+      "axis_x": 300,
+      "baseline_y": 1160,
+      "px_per_unit_length": 90,
+      "bar_width": 180,
+      "bar_centres_x": [
+       450,
+       750,
+       1050,
+       1350,
+       1650
+      ]
+     }
+    },
+    "manim_description": "Canvas 1920 x 1440 px, plain white BG. Vertical bar graph with 5 bars. Draw the y-axis as an INK line 3 px thick at x=300 from y=1160 up to y=260, and the x-axis as an INK line 3 px thick at y=1160 from x=300 to x=1830. Scale: 1 unit length = 1 insect = 90 px. Draw GUIDE gridlines 2 px thick across the plot from x=300 to x=1800 at y=980, 800, 620, 440 and 260 (values 2, 4, 6, 8, 10). Draw INK ticks 14 px long and 3 px thick on the y-axis, ending at x=300, at y=1160, 980, 800, 620, 440 and 260, and write the labels 0, 2, 4, 6, 8, 10 in INK, 36 px, right-aligned at x=270 and centred vertically on each tick. Draw 5 bars of equal width 180 px with equal gaps of 120 px, filled ANSWER with a 3 px INK outline, standing on y=1160, centres at x=450, 750, 1050, 1350, 1650 from left to right: Mites 6 unit lengths (top y=620), Caterpillars 10 (top y=260), Beetles 5 (top y=710), Butterflies 3 (top y=890), Grasshoppers 2 (top y=980). Write each category name in INK, 36 px, horizontal, centred under its bar with its centre line at y=1215. Write the x-axis title Name of insects in INK, 38 px, centred at x=1050, y=1320, and the y-axis title Number of insects in INK, 38 px, rotated 90 degrees (reading bottom to top), centred at x=100, y=710. No numbers above the bars, no legend, no frame, no insect pictures.",
+    "visible_text": [
+     "Mites",
+     "Caterpillars",
+     "Beetles",
+     "Butterflies",
+     "Grasshoppers",
+     "0",
+     "2",
+     "4",
+     "6",
+     "8",
+     "10",
+     "Name of insects",
+     "Number of insects"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "pictures of the insects",
+     "numbers written above or inside the bars",
+     "a title above the graph"
+    ],
+    "accuracy_checks": [
+     "bar heights 6, 10, 5, 3, 2 unit lengths equal the counts (1 unit length = 1 insect, 90 px per unit length)",
+     "bar tops at y = 1160 - 90 x height = 620, 260, 710, 890, 980",
+     "bars add up to 6 + 10 + 5 + 3 + 2 = 26, the total of the book's table",
+     "all five bars have the same width (180 px) and equal gaps (120 px)",
+     "the y-axis starts at 0 on the baseline and is labelled in steps of 2 up to 10"
+    ],
+    "alt_text": "A bar graph of insects seen in a tea garden: Mites 6, Caterpillars 10, Beetles 5, Butterflies 3, Grasshoppers 2, with the scale 0 to 10 up the side.",
+    "render_note": "The book's printed answer draws the category names turned sideways, flat blue bars and no gridlines; this card writes the names horizontally, uses ANSWER green bars and faint gridlines at the labelled values so the heights can be read exactly. Values are the question's own (6, 10, 5, 3, 2); the printed graph agrees.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C87",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.4, Q2",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q2",
+   "question_text": "Pooja collected data on tickets sold at Bhopal railway station for a few cities of Madhya Pradesh in two hours: Vidisha 24, Jabalpur 20, Seoni 16, Indore 28, Sagar 16. Her bar graph has a portion erased: no scale numbers on the vertical axis, Sagar bar missing; Vidisha bar is 6 units, Jabalpur 5 units, Seoni about 4 units, Indore about 4.5 units. a) Write the number of tickets sold for Vidisha above the bar. b) Write the number of tickets sold for Jabalpur above the bar. c) The bar for Vidisha is 6 unit lengths and the bar for Jabalpur is 5 unit lengths. What is the scale for this graph? d) Draw the correct bar for Sagar. e) Add the scale of the bar graph by placing the correct numbers on the vertical axis. f) Are the bars for Seoni and Indore correct in this graph? If not, draw the correct bar(s).",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The graph with its erased scale and missing Sagar bar is the thing parts a-f work on; the bar heights exist only in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S22.T22.C87.IMG1",
+   "manim_scene": "c4_4_FiO2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S22.T22.C87.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "4:3",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "bar_graph",
+     "orientation": "vertical",
+     "categories": [
+      "Vidisha",
+      "Jabalpur",
+      "Seoni",
+      "Indore",
+      "Sagar"
+     ],
+     "bar_heights_in_unit_lengths": {
+      "Vidisha": 6.0,
+      "Jabalpur": 5.0,
+      "Seoni": 4.0,
+      "Indore": 4.4,
+      "Sagar": null
+     },
+     "y_axis": {
+      "numbers": "none (erased)",
+      "title": "No. of Tickets",
+      "gridlines_above_baseline": 7
+     },
+     "x_axis": {
+      "title": "City"
+     },
+     "bar_fill": "MARK_FILL",
+     "bar_outline": "INK",
+     "layout_px": {
+      "canvas": [
+       1920,
+       1440
+      ],
+      "axis_x": 300,
+      "baseline_y": 1160,
+      "px_per_unit_length": 130,
+      "bar_width": 180,
+      "slot_centres_x": [
+       450,
+       750,
+       1050,
+       1350,
+       1650
+      ]
+     }
+    },
+    "manim_description": "Canvas 1920 x 1440 px, plain white BG. Vertical bar graph with 5 category slots (Vidisha, Jabalpur, Seoni, Indore, Sagar). Draw the y-axis as an INK line 3 px thick at x=300 from y=1160 up to y=250 and the x-axis as an INK line 3 px thick at y=1160 from x=300 to x=1830. 1 unit length = 130 px. Draw 7 GUIDE gridlines 2 px thick across the plot from x=300 to x=1800 at y=1030, 900, 770, 640, 510, 380 and 250 (the 1st to the 7th unit length above the baseline). Draw no tick marks and no numbers on the y-axis. Draw 4 bars of equal width 180 px, filled MARK_FILL with a 3 px INK outline, standing on y=1160: Vidisha, centre x=450, height 6.0 unit lengths = 780 px (top y=380, exactly on the 6th gridline); Jabalpur, centre x=750, height 5.0 = 650 px (top y=510, on the 5th gridline); Seoni, centre x=1050, height 4.0 = 520 px (top y=640, on the 4th gridline); Indore, centre x=1350, height 4.4 = 572 px (top y=588, between the 4th and the 5th gridline). The Sagar slot (centre x=1650) has no bar. Write the five city names in INK, 36 px, horizontal, centred under their slots (centres x=450, 750, 1050, 1350, 1650) with the centre line at y=1215. Write the x-axis title City in INK, 38 px, centred at x=1050, y=1320, and the y-axis title No. of Tickets in INK, 38 px, rotated 90 degrees (reading bottom to top), centred at x=100, y=705. No numbers above the bars, no bar for Sagar, no scale note.",
+    "visible_text": [
+     "Vidisha",
+     "Jabalpur",
+     "Seoni",
+     "Indore",
+     "Sagar",
+     "City",
+     "No. of Tickets"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any number on the vertical axis",
+     "numbers above the bars",
+     "a bar for Sagar",
+     "the scale 1 unit length = 4 tickets",
+     "the corrected 7-unit Indore bar",
+     "the ticket table"
+    ],
+    "accuracy_checks": [
+     "bar heights 6.0, 5.0, 4.0 and 4.4 unit lengths = 780, 650, 520 and 572 px above y=1160 (130 px per unit length)",
+     "Seoni is 16 tickets at 4 tickets per unit length = 4 unit lengths, so its drawn bar (4.0) is correct",
+     "Indore is 28 / 4 = 7 unit lengths, so the drawn 4.4-unit Indore bar is visibly too short",
+     "7 gridlines 130 px apart and no numbers on the axis",
+     "no bar and no number for Sagar"
+    ],
+    "alt_text": "A bar graph with no numbers on the side: Vidisha is 6 squares tall, Jabalpur 5, Seoni 4, Indore a little over 4, and Sagar has no bar.",
+    "render_note": "Bar heights are read by eye from the book picture against its 7 gridlines (measured: Vidisha 6.0, Jabalpur 5.0, Seoni 3.9, Indore 4.4). The LP text says Seoni 'about 4 units' and Indore 'about 4.5 units'; 4.4 is drawn for Indore. Only the relation matters: Seoni sits exactly on its gridline and Indore is clearly shorter than the 7 unit lengths it needs. The book uses a different hatched colour for each bar; here all given bars are MARK_FILL because the colour carries no meaning.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C88",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.4, Q2",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q2",
+   "question_text": "Pooja collected data on tickets sold at Bhopal railway station for a few cities of Madhya Pradesh in two hours: Vidisha 24, Jabalpur 20, Seoni 16, Indore 28, Sagar 16. Her bar graph has a portion erased: no scale numbers on the vertical axis, Sagar bar missing; Vidisha bar is 6 units, Jabalpur 5 units, Seoni about 4 units, Indore about 4.5 units. a) Write the number of tickets sold for Vidisha above the bar. b) Write the number of tickets sold for Jabalpur above the bar. c) The bar for Vidisha is 6 unit lengths and the bar for Jabalpur is 5 unit lengths. What is the scale for this graph? d) Draw the correct bar for Sagar. e) Add the scale of the bar graph by placing the correct numbers on the vertical axis. f) Are the bars for Seoni and Indore correct in this graph? If not, draw the correct bar(s).",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The printed answers d, e and f are pictures of the finished graph (Sagar bar, Indore corrected, scale 0 to 28); the card draws the whole final state on the question's layout.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S22.T22.C88.IMG1",
+   "manim_scene": "c4_4_FiO2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S22.T22.C88.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "4:3",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "bar_graph",
+     "orientation": "vertical",
+     "categories": [
+      "Vidisha",
+      "Jabalpur",
+      "Seoni",
+      "Indore",
+      "Sagar"
+     ],
+     "bar_heights_in_unit_lengths": {
+      "Vidisha": 6,
+      "Jabalpur": 5,
+      "Seoni": 4,
+      "Indore": 7,
+      "Sagar": 4
+     },
+     "values_in_tickets": {
+      "Vidisha": 24,
+      "Jabalpur": 20,
+      "Seoni": 16,
+      "Indore": 28,
+      "Sagar": 16
+     },
+     "scale": "1 unit length = 4 tickets",
+     "y_axis": {
+      "labelled_ticks": [
+       0,
+       4,
+       8,
+       12,
+       16,
+       20,
+       24,
+       28
+      ],
+      "title": "No. of Tickets",
+      "colour": "ANSWER"
+     },
+     "x_axis": {
+      "title": "City"
+     },
+     "given_bars": [
+      "Vidisha",
+      "Jabalpur",
+      "Seoni"
+     ],
+     "added_bars": {
+      "Indore": "corrected to 7 unit lengths, replaces the old 4.4-unit bar",
+      "Sagar": "new, 4 unit lengths"
+     },
+     "value_labels_above_bars": {
+      "Vidisha": "24",
+      "Jabalpur": "20"
+     },
+     "layout_px": {
+      "canvas": [
+       1920,
+       1440
+      ],
+      "axis_x": 300,
+      "baseline_y": 1160,
+      "px_per_unit_length": 130,
+      "bar_width": 180,
+      "slot_centres_x": [
+       450,
+       750,
+       1050,
+       1350,
+       1650
+      ]
+     }
+    },
+    "manim_description": "Canvas 1920 x 1440 px, plain white BG. Vertical bar graph with 5 category slots (Vidisha, Jabalpur, Seoni, Indore, Sagar). Draw the y-axis as an INK line 3 px thick at x=300 from y=1160 up to y=250 and the x-axis as an INK line 3 px thick at y=1160 from x=300 to x=1830. 1 unit length = 130 px. Draw 7 GUIDE gridlines 2 px thick across the plot from x=300 to x=1800 at y=1030, 900, 770, 640, 510, 380 and 250 (the 1st to the 7th unit length above the baseline). Draw the Vidisha, Jabalpur and Seoni bars exactly as in the question figure (width 180 px, filled MARK_FILL, 3 px INK outline, centres x=450, 750, 1050): Vidisha height 6 unit lengths (top y=380), Jabalpur 5 (top y=510), Seoni 4 (top y=640). Do not draw the old Indore bar of 4.4 unit lengths. Draw the corrected Indore bar, centre x=1350, width 180 px, height 7.0 unit lengths = 910 px (top y=250, on the 7th gridline), filled ANSWER with a 3 px INK outline, and the Sagar bar, centre x=1650, width 180 px, height 4.0 unit lengths = 520 px (top y=640, on the 4th gridline), filled ANSWER with a 3 px INK outline. Draw ANSWER ticks 14 px long and 3 px thick on the y-axis, ending at x=300, at y=1160, 1030, 900, 770, 640, 510, 380 and 250, and write the scale labels in ANSWER, 36 px, right-aligned at x=270 and centred on each tick: 0 at y=1160, 4 at y=1030, 8 at y=900, 12 at y=770, 16 at y=640, 20 at y=510, 24 at y=380, 28 at y=250. Write 24 in ANSWER, 40 px, bold, centred above the Vidisha bar at x=450, y=345, and 20 in ANSWER, 40 px, bold, centred above the Jabalpur bar at x=750, y=475. Write the five city names in INK, 36 px, horizontal, centred under their slots with the centre line at y=1215, the x-axis title City in INK, 38 px, centred at x=1050, y=1320 and the y-axis title No. of Tickets in INK, 38 px, rotated 90 degrees, centred at x=100, y=705. No other numbers.",
+    "visible_text": [
+     "Vidisha",
+     "Jabalpur",
+     "Seoni",
+     "Indore",
+     "Sagar",
+     "City",
+     "No. of Tickets",
+     "0",
+     "4",
+     "8",
+     "12",
+     "16",
+     "20",
+     "24",
+     "28"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the old 4.4-unit Indore bar",
+     "the text 'One unit length = 4 Tickets'",
+     "numbers above bars other than 24 and 20",
+     "gridlines in any colour other than GUIDE"
+    ],
+    "accuracy_checks": [
+     "scale: Vidisha 24 / 6 = 4 tickets per unit length and Jabalpur 20 / 5 = 4, the same scale",
+     "Sagar 16 / 4 = 4 unit lengths = 520 px (top y=640, level with Seoni)",
+     "Indore 28 / 4 = 7 unit lengths = 910 px (top y=250, on the 7th gridline)",
+     "scale labels 0, 4, 8, 12, 16, 20, 24, 28 sit on gridlines 0 to 7; bar tops read Vidisha 24, Jabalpur 20, Seoni 16, Indore 28, Sagar 16",
+     "Vidisha, Jabalpur and Seoni are unchanged from the question figure"
+    ],
+    "alt_text": "The completed ticket graph with the scale 0 to 28 in fours: Vidisha 24 (marked 24), Jabalpur 20 (marked 20), Seoni 16, Indore 28 and Sagar 16.",
+    "render_note": "The book prints three pictures for this answer (d: Sagar bar added and Indore corrected, no scale; e: with the scale 0 to 28; f: the same as e again). This card is the complete final state (the e/f picture). The numbers 24 and 20 above the Vidisha and Jabalpur bars are parts a and b of the question; the printed pictures leave them out but the LP answer gives them. The printed italic note 'One unit length =4 Tickets' is left out (the rule allows at most 3 words per tag); the scale is stated in the LP text.",
+    "derived_from": "M3.S22.T22.C87.IMG1"
+   }
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C89",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.4, Q3",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q9",
+   "question_text": "A survey of 120 students on preferred free-time activity: Playing 45, Reading story books 30, Watching TV 20, Listening to music 10, Painting 15. Draw a bar graph taking 1 unit length = 5 students. Which activity is preferred by most students other than playing?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives a plain two-column table of numbers and the same five counts are in the question text; the learner has to draw the graph, so there is no given picture to show.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "No figure: the counts (Playing 45, Reading story books 30, Watching television 20, Listening to music 10, Painting 15) are in the question text; if a table is wanted write a LaTeX array 'Preferred activity | Number of students'.",
+   "needs_lp_text_sync": false
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C90",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.4, Q3",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q9",
+   "question_text": "A survey of 120 students on preferred free-time activity: Playing 45, Reading story books 30, Watching TV 20, Listening to music 10, Painting 15. Draw a bar graph taking 1 unit length = 5 students. Which activity is preferred by most students other than playing?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The task is to draw a bar graph with 1 unit length = 5 students and the book's printed answer (solutions p.43) is that graph; the question gives no graph, so the card draws it whole.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S22.T22.C90.IMG1",
+   "manim_scene": "c4_4_FiO9_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S22.T22.C90.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "4:3",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "bar_graph",
+     "orientation": "vertical",
+     "categories": [
+      "Playing",
+      "Reading story books",
+      "Watching TV",
+      "Listening to music",
+      "Painting"
+     ],
+     "values": [
+      45,
+      30,
+      20,
+      10,
+      15
+     ],
+     "scale": "1 unit length = 5 students",
+     "bar_heights_in_unit_lengths": [
+      9,
+      6,
+      4,
+      2,
+      3
+     ],
+     "y_axis": {
+      "min": 0,
+      "max": 50,
+      "labelled_ticks": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       25,
+       30,
+       35,
+       40,
+       45,
+       50
+      ],
+      "title": "Number of Students"
+     },
+     "x_axis": {
+      "title": "Preferred Activity"
+     },
+     "bar_fill": "ANSWER",
+     "bar_outline": "INK",
+     "layout_px": {
+      "canvas": [
+       1920,
+       1440
+      ],
+      "axis_x": 300,
+      "baseline_y": 1160,
+      "px_per_unit_length": 90,
+      "bar_width": 180,
+      "bar_centres_x": [
+       450,
+       750,
+       1050,
+       1350,
+       1650
+      ]
+     }
+    },
+    "manim_description": "Canvas 1920 x 1440 px, plain white BG. Vertical bar graph with 5 bars. Draw the y-axis as an INK line 3 px thick at x=300 from y=1160 up to y=260 and the x-axis as an INK line 3 px thick at y=1160 from x=300 to x=1830. Scale: 1 unit length = 5 students = 90 px (18 px per student). Draw GUIDE gridlines 2 px thick across the plot from x=300 to x=1800 at y=1070, 980, 890, 800, 710, 620, 530, 440, 350 and 260 (values 5, 10, 15, 20, 25, 30, 35, 40, 45, 50). Draw INK ticks 14 px long and 3 px thick on the y-axis, ending at x=300, at y=1160 and at each of those 10 gridline heights, and write the labels 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 in INK, 36 px, right-aligned at x=270 and centred vertically on each tick. Draw 5 bars of equal width 180 px with equal gaps of 120 px, filled ANSWER with a 3 px INK outline, standing on y=1160, centres at x=450, 750, 1050, 1350, 1650 from left to right: Playing 45 students = 9 unit lengths (top y=350), Reading story books 30 = 6 unit lengths (top y=620), Watching TV 20 = 4 unit lengths (top y=800), Listening to music 10 = 2 unit lengths (top y=980), Painting 15 = 3 unit lengths (top y=890). Write the category names in INK, 36 px, centred under their bars, on two lines where long: Playing; Reading / story books; Watching / TV; Listening / to music; Painting (first line centre y=1210, second line centre y=1255). Write the x-axis title Preferred Activity in INK, 38 px, centred at x=1050, y=1345, and the y-axis title Number of Students in INK, 38 px, rotated 90 degrees (reading bottom to top), centred at x=100, y=710. No numbers above the bars, no legend, no frame.",
+    "visible_text": [
+     "Playing",
+     "Reading",
+     "story books",
+     "Watching",
+     "TV",
+     "Listening",
+     "to music",
+     "Painting",
+     "0",
+     "5",
+     "10",
+     "15",
+     "20",
+     "25",
+     "30",
+     "35",
+     "40",
+     "45",
+     "50",
+     "Preferred Activity",
+     "Number of Students"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers above or inside the bars",
+     "a title above the graph",
+     "the sentence about which activity is preferred"
+    ],
+    "accuracy_checks": [
+     "1 unit length = 5 students: 45 / 5 = 9, 30 / 5 = 6, 20 / 5 = 4, 10 / 5 = 2, 15 / 5 = 3 unit lengths (810, 540, 360, 180, 270 px)",
+     "bar tops at y = 1160 - 90 x height = 350, 620, 800, 980, 890",
+     "students add up to 45 + 30 + 20 + 10 + 15 = 120, the survey total",
+     "after Playing (45) the tallest bar is Reading story books (30)",
+     "y-axis labels 0 to 50 in steps of 5 (11 labels), starting at zero"
+    ],
+    "alt_text": "A bar graph of free-time activities of 120 students: Playing 45, Reading story books 30, Watching TV 20, Listening to music 10, Painting 15, with the scale 0 to 50 in fives.",
+    "render_note": "Category names follow the book's table and its printed answer graph ('Watching TV'); the LP question_tex spells it 'Watching television'. Values are the question's own and the printed graph agrees.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C91",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.4, Q4",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q10",
+   "question_text": "Saplings planted in the first week of July (bar graph): Monday 50, Tuesday 40, Wednesday 30, Thursday 40, Friday 50, Saturday 60, Sunday 40. a. The total number of saplings planted on Wednesday and Thursday is ___. b. The total number planted during the whole week is ___. c. The greatest number were planted on ___ and the least on ___. Why do you think that is the case? Why were more saplings planted on certain days and fewer on others? What are the possible explanations? How could you check them?",
+   "decision": "required",
+   "reason_codes": [
+    "GRAPH_CHART",
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "Parts a-c read totals, the greatest and the least from the bar graph, which is the picture the question is built on (the LP text restates the seven values but names the graph).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S22.T22.C91.IMG1",
+   "manim_scene": "c4_4_FiO10_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S22.T22.C91.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "4:3",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "bar_graph",
+     "orientation": "vertical",
+     "categories": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+     ],
+     "values": [
+      50,
+      40,
+      30,
+      40,
+      50,
+      60,
+      40
+     ],
+     "y_axis": {
+      "min": 0,
+      "max": 70,
+      "labelled_ticks": [
+       0,
+       10,
+       20,
+       30,
+       40,
+       50,
+       60,
+       70
+      ],
+      "title": "Number of saplings planted"
+     },
+     "x_axis": {
+      "title": "Day"
+     },
+     "bar_fill": "MARK_FILL",
+     "bar_outline": "INK",
+     "layout_px": {
+      "canvas": [
+       1920,
+       1440
+      ],
+      "axis_x": 300,
+      "baseline_y": 1160,
+      "px_per_sapling": 13,
+      "bar_width": 120,
+      "bar_centres_x": [
+       405,
+       615,
+       825,
+       1035,
+       1245,
+       1455,
+       1665
+      ]
+     }
+    },
+    "manim_description": "Canvas 1920 x 1440 px, plain white BG. Vertical bar graph with 7 bars. Draw the y-axis as an INK line 3 px thick at x=300 from y=1160 up to y=250 and the x-axis as an INK line 3 px thick at y=1160 from x=300 to x=1800. Scale: 13 px per sapling, so 10 saplings = 130 px. Draw GUIDE gridlines 2 px thick across the plot from x=300 to x=1770 at y=1030, 900, 770, 640, 510, 380 and 250 (values 10, 20, 30, 40, 50, 60, 70). Draw INK ticks 14 px long and 3 px thick on the y-axis, ending at x=300, at y=1160 and at those 7 gridline heights, and write the labels 0, 10, 20, 30, 40, 50, 60, 70 in INK, 36 px, right-aligned at x=270 and centred vertically on each tick. Draw 7 bars of equal width 120 px with equal gaps of 90 px, filled MARK_FILL with a 3 px INK outline, standing on y=1160, centres at x=405, 615, 825, 1035, 1245, 1455, 1665 from left to right: Monday 50 (height 650 px, top y=510), Tuesday 40 (520 px, top y=640), Wednesday 30 (390 px, top y=770), Thursday 40 (520 px, top y=640), Friday 50 (650 px, top y=510), Saturday 60 (780 px, top y=380), Sunday 40 (520 px, top y=640). Write the day names in INK, 36 px, horizontal, centred under their bars with the centre line at y=1215. Write the x-axis title Day in INK, 38 px, centred at x=1035, y=1320, and the y-axis title Number of saplings planted in INK, 38 px, rotated 90 degrees (reading bottom to top), centred at x=100, y=705. No numbers above or inside the bars, no frame, no title.",
+    "visible_text": [
+     "Monday",
+     "Tuesday",
+     "Wednesday",
+     "Thursday",
+     "Friday",
+     "Saturday",
+     "Sunday",
+     "0",
+     "10",
+     "20",
+     "30",
+     "40",
+     "50",
+     "60",
+     "70",
+     "Day",
+     "Number of saplings planted"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers above or inside the bars",
+     "the totals 70 or 310",
+     "a title above the graph"
+    ],
+    "accuracy_checks": [
+     "bar values 50, 40, 30, 40, 50, 60, 40 = 650, 520, 390, 520, 650, 780, 520 px at 13 px per sapling",
+     "bar tops at y = 1160 - height = 510, 640, 770, 640, 510, 380, 640",
+     "Wednesday + Thursday = 30 + 40 = 70 (read from the bars)",
+     "whole week 50 + 40 + 30 + 40 + 50 + 60 + 40 = 310",
+     "tallest bar Saturday (60), shortest Wednesday (30)",
+     "gridlines and labels every 10 from 0 to 70"
+    ],
+    "alt_text": "A bar graph of saplings planted from Monday to Sunday: 50, 40, 30, 40, 50, 60 and 40, with the scale 0 to 70 in tens.",
+    "render_note": "The book's Monday bar is printed a little above the 50 line (about 52) and Tuesday a hair above 40; the LP text and the printed solutions use Monday 50 and Tuesday 40 (week total 310), so both are drawn exactly on their gridlines.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C92",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.4, Q4",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q10",
+   "question_text": "Saplings planted in the first week of July (bar graph): Monday 50, Tuesday 40, Wednesday 30, Thursday 40, Friday 50, Saturday 60, Sunday 40. a. The total number of saplings planted on Wednesday and Thursday is ___. b. The total number planted during the whole week is ___. c. The greatest number were planted on ___ and the least on ___. Why do you think that is the case? Why were more saplings planted on certain days and fewer on others? What are the possible explanations? How could you check them?",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answers are 70, 310 and Saturday / Wednesday; nothing visual is added to the question's bar graph, and part c's reasons are open.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C93",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.4, Q5",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q11",
+   "question_text": "Tigers in India (approx.) 2006 1400, 2010 1700, 2014 2200, 2018 3000, 2022 3700. Shagufta and Divya made a frequency table and a bar graph, but the graph has a few mistakes. Find the mistakes and fix them.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The learner has to compare the bars of the flawed graph with the table and fix them; the bar lengths exist only in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S22.T22.C93.IMG1",
+   "manim_scene": "c4_4_FiO11_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S22.T22.C93.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "4:3",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "bar_graph",
+     "orientation": "horizontal",
+     "categories_top_to_bottom": [
+      "2022",
+      "2018",
+      "2014",
+      "2010",
+      "2006"
+     ],
+     "bar_lengths_as_printed": {
+      "2022": 3700,
+      "2018": 2200,
+      "2014": 2900,
+      "2010": 1500,
+      "2006": 800
+     },
+     "x_axis": {
+      "min": 0,
+      "max": 4000,
+      "labelled_ticks": [
+       0,
+       1000,
+       2000,
+       3000,
+       4000
+      ],
+      "title": "Number of Tigers"
+     },
+     "y_axis": {
+      "title": "Year"
+     },
+     "bar_fill": "MARK_FILL",
+     "bar_outline": "INK",
+     "layout_px": {
+      "canvas": [
+       1920,
+       1440
+      ],
+      "axis_x": 330,
+      "px_per_tiger": 0.36,
+      "bar_thickness": 110,
+      "bar_centres_y": [
+       254,
+       442,
+       630,
+       818,
+       1006
+      ]
+     }
+    },
+    "manim_description": "Canvas 1920 x 1440 px, plain white BG. Horizontal bar graph with 5 bars, the latest year at the top. Draw the y-axis as an INK line 3 px thick at x=330 from y=160 down to y=1100 and the x-axis as an INK line 3 px thick at y=1100 from x=330 to x=1800. Scale: 0.36 px per tiger, so 1000 tigers = 360 px. Draw GUIDE vertical gridlines 2 px thick from y=160 to y=1100 at x=690, 1050, 1410 and 1770 (values 1000, 2000, 3000, 4000). Draw INK ticks 14 px long and 3 px thick below the x-axis, starting at y=1100, at x=330, 690, 1050, 1410 and 1770, and write the labels 0, 1000, 2000, 3000, 4000 in INK, 36 px, centred under each tick with the centre line at y=1155. The bars are 110 px thick, start at x=330, and have their centre lines at y=254 (2022), y=442 (2018), y=630 (2014), y=818 (2010), y=1006 (2006). Write the year labels 2022, 2018, 2014, 2010, 2006 in INK, 36 px, right-aligned at x=300 and centred on those lines. Write the x-axis title Number of Tigers in INK, 38 px, centred at x=1050, y=1260, and the y-axis title Year in INK, 38 px, rotated 90 degrees (reading bottom to top), centred at x=100, y=630. Bars filled MARK_FILL with a 3 px INK outline, right ends at: 2022 x=1662 (3700 tigers = 1332 px), 2018 x=1122 (2200 = 792 px), 2014 x=1374 (2900 = 1044 px), 2010 x=870 (1500 = 540 px), 2006 x=618 (800 = 288 px). No numbers at the ends of the bars, no title, no frame, no table.",
+    "visible_text": [
+     "2022",
+     "2018",
+     "2014",
+     "2010",
+     "2006",
+     "0",
+     "1000",
+     "2000",
+     "3000",
+     "4000",
+     "Number of Tigers",
+     "Year"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers at the ends of the bars",
+     "the correct bar lengths 1400, 1700, 2200, 3000",
+     "the frequency table",
+     "the printed graph title"
+    ],
+    "accuracy_checks": [
+     "bar lengths as printed: 2022 3700, 2018 2200, 2014 2900, 2010 1500, 2006 800 tigers = 1332, 792, 1044, 540, 288 px at 0.36 px per tiger",
+     "against the table 1400, 1700, 2200, 3000, 3700 only the 2022 bar agrees; the 2018 bar shows the 2014 value and the 2014 bar is close to the 2018 value, and the 2010 and 2006 bars are too short",
+     "gridlines at 1000, 2000, 3000, 4000, 360 px apart, axis starts at 0"
+    ],
+    "alt_text": "A horizontal bar graph of tigers in India by year, from 2022 at the top to 2006 at the bottom, with bars of uneven lengths that do not all match the table.",
+    "render_note": "The book prints no values for these bars; the lengths are read by eye against the 1000-step gridlines of the book picture (measured: 2022 about 3750, 2018 about 2230, 2014 about 2920, 2010 about 1510, 2006 about 800). The 2022 bar is drawn at 3700, the table value, because the printed answer calls it correct. Only the pattern of which bars are wrong is certain from the book (printed answer: mistakes in 2006, 2010, 2014 and 2018): copy the printed lengths, do not 'repair' them. The book's graph carries a title 'Number of Tigers in India', left out here (no titles on the card).",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M3.S22.T22.C94",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.4, Q5",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q11",
+   "question_text": "Tigers in India (approx.) 2006 1400, 2010 1700, 2014 2200, 2018 3000, 2022 3700. Shagufta and Divya made a frequency table and a bar graph, but the graph has a few mistakes. Find the mistakes and fix them.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "'Fix them' means drawing the corrected graph: the four wrong bars redrawn at the table values on the question's layout (the book itself prints no picture, only the list of wrong bars).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S22.T22.C94.IMG1",
+   "manim_scene": "c4_4_FiO11_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S22.T22.C94.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "4:3",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "bar_graph",
+     "orientation": "horizontal",
+     "categories_top_to_bottom": [
+      "2022",
+      "2018",
+      "2014",
+      "2010",
+      "2006"
+     ],
+     "bar_lengths": {
+      "2022": 3700,
+      "2018": 3000,
+      "2014": 2200,
+      "2010": 1700,
+      "2006": 1400
+     },
+     "unchanged_bars": [
+      "2022"
+     ],
+     "redrawn_bars": [
+      "2018",
+      "2014",
+      "2010",
+      "2006"
+     ],
+     "value_labels_at_bar_ends": {
+      "2022": "3700",
+      "2018": "3000",
+      "2014": "2200",
+      "2010": "1700",
+      "2006": "1400"
+     },
+     "x_axis": {
+      "min": 0,
+      "max": 4000,
+      "labelled_ticks": [
+       0,
+       1000,
+       2000,
+       3000,
+       4000
+      ],
+      "title": "Number of Tigers"
+     },
+     "y_axis": {
+      "title": "Year"
+     },
+     "layout_px": {
+      "canvas": [
+       1920,
+       1440
+      ],
+      "axis_x": 330,
+      "px_per_tiger": 0.36,
+      "bar_thickness": 110,
+      "bar_centres_y": [
+       254,
+       442,
+       630,
+       818,
+       1006
+      ]
+     }
+    },
+    "manim_description": "Canvas 1920 x 1440 px, plain white BG. Horizontal bar graph with 5 bars, the latest year at the top. Draw the y-axis as an INK line 3 px thick at x=330 from y=160 down to y=1100 and the x-axis as an INK line 3 px thick at y=1100 from x=330 to x=1800. Scale: 0.36 px per tiger, so 1000 tigers = 360 px. Draw GUIDE vertical gridlines 2 px thick from y=160 to y=1100 at x=690, 1050, 1410 and 1770 (values 1000, 2000, 3000, 4000). Draw INK ticks 14 px long and 3 px thick below the x-axis, starting at y=1100, at x=330, 690, 1050, 1410 and 1770, and write the labels 0, 1000, 2000, 3000, 4000 in INK, 36 px, centred under each tick with the centre line at y=1155. The bars are 110 px thick, start at x=330, and have their centre lines at y=254 (2022), y=442 (2018), y=630 (2014), y=818 (2010), y=1006 (2006). Write the year labels 2022, 2018, 2014, 2010, 2006 in INK, 36 px, right-aligned at x=300 and centred on those lines. Write the x-axis title Number of Tigers in INK, 38 px, centred at x=1050, y=1260, and the y-axis title Year in INK, 38 px, rotated 90 degrees (reading bottom to top), centred at x=100, y=630. Draw the 2022 bar exactly as in the question figure: MARK_FILL, 3 px INK outline, right end x=1662 (3700). Draw the four corrected bars filled ANSWER with a 3 px INK outline, right ends at: 2018 x=1410 (3000 tigers = 1080 px), 2014 x=1122 (2200 = 792 px), 2010 x=942 (1700 = 612 px), 2006 x=834 (1400 = 504 px). Do not draw the old, wrong bars. Write the bar values in ANSWER, 36 px, bold, left-aligned, centred on each bar's centre line, starting 24 px right of the bar end: 3700 at x=1686, 3000 at x=1434, 2200 at x=1146, 1700 at x=966, 1400 at x=858. No title, no frame, no table.",
+    "visible_text": [
+     "2022",
+     "2018",
+     "2014",
+     "2010",
+     "2006",
+     "0",
+     "1000",
+     "2000",
+     "3000",
+     "4000",
+     "Number of Tigers",
+     "Year",
+     "3700",
+     "3000",
+     "2200",
+     "1700",
+     "1400"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the old wrong bars",
+     "a table next to the graph",
+     "the printed graph title"
+    ],
+    "accuracy_checks": [
+     "corrected bars equal the table: 2006 1400, 2010 1700, 2014 2200, 2018 3000, 2022 3700 = 504, 612, 792, 1080, 1332 px at 0.36 px per tiger",
+     "the 2022 bar is unchanged from the question figure; only 2006, 2010, 2014 and 2018 are redrawn (ANSWER)",
+     "bars get longer going up the graph: 1400 < 1700 < 2200 < 3000 < 3700",
+     "bar order, thickness, axis and gridlines are unchanged from the question figure"
+    ],
+    "alt_text": "The corrected horizontal bar graph of tigers: 2022 3700, 2018 3000, 2014 2200, 2010 1700, 2006 1400, each bar matching the table.",
+    "render_note": "The book's printed answer is text only (mistakes in the bars of 2006, 2010, 2014, 2018); this figure is the corrected graph the LP solution describes ('redrawn with the bars for 2006, 2010, 2014 and 2018 corrected to 1400, 1700, 2200 and 3000'). The end-of-bar numbers are the table values, added so the exact lengths can be checked.",
+    "derived_from": "M3.S22.T22.C93.IMG1"
+   }
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C97",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.4, Q1",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q3",
+   "question_text": "Chinu listed the means of transport that passed in front of his house from 9 a.m. to 10 a.m. (50 entries, see figure). a. Prepare a frequency distribution table. b. Which means of transport was used the most? c. If you were there to collect this data, how could you do it? Write the steps or process. a) Prepare a frequency distribution table for the data. b) Which means of transport was used the most? c) If you were there to collect this data, how could you do it? Write the steps or process.",
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "FIG_REFERENCED"
+   ],
+   "reason": "The 50 raw entries are given only in the book's picture and the LP text just says 'see figure'; without the list nothing can be counted.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S24.T24.C97.IMG1",
+   "manim_scene": "c4_4_FiO3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S24.T24.C97.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "5:2",
+    "content": {
+     "type": "cell_grid",
+     "columns": 6,
+     "rows": 9,
+     "cells_row_by_row": [
+      [
+       "bike",
+       "car",
+       "bike",
+       "bus",
+       "bike",
+       "bike"
+      ],
+      [
+       "bike",
+       "auto rickshaw",
+       "bicycle",
+       "bullock cart",
+       "bicycle",
+       "auto rickshaw"
+      ],
+      [
+       "car",
+       "scooter",
+       "car",
+       "auto rickshaw",
+       "bicycle",
+       "bike"
+      ],
+      [
+       "car",
+       "auto rickshaw",
+       "bike",
+       "scooter",
+       "bike",
+       "car"
+      ],
+      [
+       "bicycle",
+       "scooter",
+       "bicycle",
+       "scooter",
+       "bike",
+       "bus"
+      ],
+      [
+       "auto rickshaw",
+       "auto rickshaw",
+       "bike",
+       "bicycle",
+       "bus",
+       "bike"
+      ],
+      [
+       "bicycle",
+       "scooter",
+       "bus",
+       "scooter",
+       "auto rickshaw",
+       "bike"
+      ],
+      [
+       "scooter",
+       "bicycle",
+       "bike",
+       "bullock cart",
+       "auto rickshaw",
+       "scooter"
+      ],
+      [
+       "car",
+       "scooter"
+      ]
+     ],
+     "cell_fill": "CELL_FILL",
+     "text_colour": "INK",
+     "last_row_cells": 2,
+     "layout_px": {
+      "canvas": [
+       1920,
+       768
+      ],
+      "left": 60,
+      "top": 24,
+      "cell_width": 300,
+      "cell_height": 80
+     }
+    },
+    "manim_description": "Canvas 1920 x 768 px, plain white BG. A grid of equal cells, each 300 px wide and 80 px tall, with its left edge at x=60 and its top edge at y=24: 6 columns and 9 rows, where rows 1 to 8 have 6 cells and row 9 has only 2 cells (the 4 cells to the right of them are not drawn); 50 cells in all. Every cell is filled CELL_FILL with a 2 px GUIDE border. Write one entry in each cell in INK, 36 px, one line, centred in the cell, in lower case exactly as listed. Row 1: bike, car, bike, bus, bike, bike. Row 2: bike, auto rickshaw, bicycle, bullock cart, bicycle, auto rickshaw. Row 3: car, scooter, car, auto rickshaw, bicycle, bike. Row 4: car, auto rickshaw, bike, scooter, bike, car. Row 5: bicycle, scooter, bicycle, scooter, bike, bus. Row 6: auto rickshaw, auto rickshaw, bike, bicycle, bus, bike. Row 7: bicycle, scooter, bus, scooter, auto rickshaw, bike. Row 8: scooter, bicycle, bike, bullock cart, auto rickshaw, scooter. Row 9: car, scooter. No headings, no row or column numbers, no counts, no tally marks.",
+    "visible_text": [
+     "bike",
+     "car",
+     "bicycle",
+     "bus",
+     "scooter",
+     "auto rickshaw",
+     "bullock cart"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "counts or tally marks",
+     "the frequency table",
+     "column or row headings",
+     "colour that groups the entries"
+    ],
+    "accuracy_checks": [
+     "50 entries: 8 rows of 6 plus a last row of 2",
+     "counts of the entries (not drawn): bike 13, scooter 9, auto rickshaw 8, bicycle 8, car 6, bus 4, bullock cart 2, total 13 + 9 + 8 + 8 + 6 + 4 + 2 = 50",
+     "entries in the same row-by-row order as the book's list"
+    ],
+    "alt_text": "A grid of 50 cells listing the vehicles that passed Chinu's house, 6 per row, such as bike, car, bike, bus, bike, bike in the first row.",
+    "render_note": "Entries re-read from the book picture (chapter p.21) and counted against the printed answer table (bike 13, car 6, bicycle 8, auto rickshaw 8, scooter 9, bus 4, bullock cart 2: total 50). The book's cells have unequal widths and wrap 'auto rickshaw' and 'bullock cart' onto two lines; this card uses equal cells and one line.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C98",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.4, Q1",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q3",
+   "question_text": "Chinu listed the means of transport that passed in front of his house from 9 a.m. to 10 a.m. (50 entries, see figure). a. Prepare a frequency distribution table. b. Which means of transport was used the most? c. If you were there to collect this data, how could you do it? Write the steps or process. a) Prepare a frequency distribution table for the data. b) Which means of transport was used the most? c) If you were there to collect this data, how could you do it? Write the steps or process.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The printed answer is a plain two-column table of counts (no colour, no marks): a LaTeX table; parts b and c are text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array 'Means of transport | Number': Bike 13, Car 6, Bicycle 8, Auto rickshaw 8, Scooter 9, Bus 4, Bullock cart 2 (total 50)."
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C99",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.4, Q2",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q4",
+   "question_text": "Roll a die 30 times and record the number you obtain each time. Prepare a frequency distribution table using tally marks. Find the number that appeared: a. The minimum number of times. b. The maximum number of times. c. Find numbers that appeared an equal number of times. a) The minimum number of times. b) The maximum number of times. c) Find numbers that appeared an equal number of times.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The learner rolls their own die and tallies their own results; the book gives no figure here.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C100",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.4, Q2",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q4",
+   "question_text": "Roll a die 30 times and record the number you obtain each time. Prepare a frequency distribution table using tally marks. Find the number that appeared: a. The minimum number of times. b. The maximum number of times. c. Find numbers that appeared an equal number of times. a) The minimum number of times. b) The maximum number of times. c) Find numbers that appeared an equal number of times.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "The answer depends on each child's rolls (the book prints no answer for this question), so there is no fixed picture to draw.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C101",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.4, Q3",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q5",
+   "question_text": "Faiz prepared a frequency distribution table of wickets taken by Jaspreet Bumrah in his last 30 matches: wickets 0:2 matches, 1:4, 2:6, 3:8, 4:3, 5:5, 6:1, 7:1. a) What information is this table giving? b) What may be the title of this table? c) What caught your attention in this table? d) In how many matches has Bumrah taken 4 wickets? e) Mayank says, if we want the total wickets we add 0, 1, 2, 3 ..., up to 7. Can Mayank get the total number of wickets this way? Why? f) How would you correctly figure out the total number of wickets using this table?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A plain two-column table of numbers (wickets, matches) with no colour meaning, and the LP text already carries every pair.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array, columns 'Wickets taken' and 'Number of matches': 0|2, 1|4, 2|6, 3|8, 4|3, 5|5, 6|1, 7|1 (matches add up to 30).",
+   "needs_lp_text_sync": false
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C102",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.4, Q3",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q5",
+   "question_text": "Faiz prepared a frequency distribution table of wickets taken by Jaspreet Bumrah in his last 30 matches: wickets 0:2 matches, 1:4, 2:6, 3:8, 4:3, 5:5, 6:1, 7:1. a) What information is this table giving? b) What may be the title of this table? c) What caught your attention in this table? d) In how many matches has Bumrah taken 4 wickets? e) Mayank says, if we want the total wickets we add 0, 1, 2, 3 ..., up to 7. Can Mayank get the total number of wickets this way? Why? f) How would you correctly figure out the total number of wickets using this table?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The solution is the same plain table with a third column of products and a total: LaTeX array and arithmetic; no picture adds anything.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array with columns Wickets taken | Number of matches | Wickets x matches: 0|2|0, 1|4|4, 2|6|12, 3|8|24, 4|3|12, 5|5|25, 6|1|6, 7|1|7; total row 30 | 90."
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C103",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.4, Q4",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q6",
+   "question_text": "Pictograph of tractors in five villages (1 symbol = 1 tractor): Village A 6, Village B 5, Village C 8, Village D 3, Village E 6. a. Which village has the smallest number of tractors? b. Which has the most? c. How many more tractors does Village C have than Village B? d. Komal says Village D has half the number of tractors as Village E. Is she right? a) Which village has the smallest number of tractors? b) Which village has the most tractors? c) How many more tractors does Village C have than Village B? d) Komal says, Village D has half the number of tractors as Village E. Is she right?",
+   "decision": "required",
+   "reason_codes": [
+    "GRAPH_CHART",
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "Parts a-d read symbol counts from the pictograph with its 'one tractor symbol = 1 tractor' key; the picture is the question's data (the LP text restates the counts but names the pictograph).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S24.T24.C103.IMG1",
+   "manim_scene": "c4_4_FiO6_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S24.T24.C103.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "pictograph",
+     "key": {
+      "symbol": "tractor",
+      "value": 1,
+      "unit": "tractor",
+      "text": "= 1 Tractor"
+     },
+     "header": {
+      "left": "Villages",
+      "right": "Number of Tractors"
+     },
+     "rows": [
+      {
+       "label": "Village A",
+       "full_symbols": 6,
+       "half_symbols": 0
+      },
+      {
+       "label": "Village B",
+       "full_symbols": 5,
+       "half_symbols": 0
+      },
+      {
+       "label": "Village C",
+       "full_symbols": 8,
+       "half_symbols": 0
+      },
+      {
+       "label": "Village D",
+       "full_symbols": 3,
+       "half_symbols": 0
+      },
+      {
+       "label": "Village E",
+       "full_symbols": 6,
+       "half_symbols": 0
+      }
+     ],
+     "layout_px": {
+      "canvas": [
+       1920,
+       1080
+      ],
+      "table": [
+       60,
+       60,
+       1860,
+       1020
+      ],
+      "row_height": 160,
+      "label_column_right_edge": 480,
+      "slot_centres_x": [
+       570,
+       720,
+       870,
+       1020,
+       1170,
+       1320,
+       1470,
+       1620
+      ],
+      "row_centres_y": [
+       300,
+       460,
+       620,
+       780,
+       940
+      ]
+     },
+     "equal_spacing": true
+    },
+    "manim_description": "Canvas 1920 x 1080 px, plain white BG. A pictograph drawn as a table with a 3 px INK outer border from x=60 to x=1860 and y=60 to y=1020: 6 rows of 160 px (the header row y=60 to 220, then Village A y=220 to 380, B 380 to 540, C 540 to 700, D 700 to 860, E 860 to 1020), separated by 2 px GUIDE lines, and a 2 px GUIDE vertical line at x=480 between the label column (x=60 to 480) and the symbol column. The header row is filled MARK_FILL. In the header write Villages in INK, 38 px, bold, centred at x=270, y=140; write Number of Tractors in INK, 38 px, bold, left-aligned from x=520, y=140; at the right end of the header draw one tractor symbol centred at x=1400, y=140 and, left-aligned from x=1470, write = 1 Tractor in INK, 38 px. Write the row labels Village A, Village B, Village C, Village D, Village E in INK, 38 px, centred at x=270 on the row centre lines y=300, 460, 620, 780, 940. Draw the tractor symbols left to right in each row from the first slot, centred on the row centre line, with the same 150 px pitch in every row (slot centres x=570, 720, 870, 1020, 1170, 1320, 1470, 1620): Village A: 6 symbols at x=570, 720, 870, 1020, 1170, 1320; Village B: 5 symbols at x=570, 720, 870, 1020, 1170; Village C: 8 symbols at x=570, 720, 870, 1020, 1170, 1320, 1470, 1620; Village D: 3 symbols at x=570, 720, 870; Village E: 6 symbols at x=570, 720, 870, 1020, 1170, 1320. Tractor symbol (side view, facing right, fits a 110 x 84 px box): rear wheel = circle of radius 26 px at box point (30, 26) filled GUIDE with a 3 px INK outline; front wheel = circle of radius 16 px at (88, 16), same style; engine block = rectangle from (48, 28) to (104, 52) filled SET_A with a 3 px INK outline; cabin = rectangle from (14, 40) to (52, 80) filled SET_A with a 3 px INK outline and a window rectangle from (20, 50) to (46, 72) filled BG; exhaust pipe = INK line 3 px from (92, 52) to (92, 70) (box origin bottom-left, y upward). Every symbol is a whole tractor (no half symbols). No numbers beside the rows, no totals.",
+    "visible_text": [
+     "Villages",
+     "Number of Tractors",
+     "= 1 Tractor",
+     "Village A",
+     "Village B",
+     "Village C",
+     "Village D",
+     "Village E"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers or totals beside the rows",
+     "half symbols",
+     "uneven symbol spacing in any row"
+    ],
+    "accuracy_checks": [
+     "symbols per row 6, 5, 8, 3, 6 = 28 symbols in all, and 1 symbol = 1 tractor, so the tractors are 6, 5, 8, 3, 6",
+     "Village C has 8 - 5 = 3 symbols more than Village B; Village E has 6 = 2 x 3 symbols, twice Village D",
+     "all rows use the same 150 px pitch, so Village A and Village E (6 symbols each) end at the same place (x=1320)"
+    ],
+    "alt_text": "A pictograph of tractors in five villages, one tractor symbol per tractor: Village A 6, B 5, C 8, D 3, E 6.",
+    "render_note": "The book prints the six symbols of Village E further apart than those of Village A, so its row looks longer although both have 6 (a layout quirk in the print). This card uses the same spacing in every row, so the symbol count is the only thing that varies; no answer changes (E still has 6 symbols).",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C104",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.4, Q4",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q6",
+   "question_text": "Pictograph of tractors in five villages (1 symbol = 1 tractor): Village A 6, Village B 5, Village C 8, Village D 3, Village E 6. a. Which village has the smallest number of tractors? b. Which has the most? c. How many more tractors does Village C have than Village B? d. Komal says Village D has half the number of tractors as Village E. Is she right? a) Which village has the smallest number of tractors? b) Which village has the most tractors? c) How many more tractors does Village C have than Village B? d) Komal says, Village D has half the number of tractors as Village E. Is she right?",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answers are Village D, Village C, 3 and Yes; nothing visual is added to the question's pictograph.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C105",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.4, Q5",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q7",
+   "question_text": "Pictograph of girl students in classes 1 to 8 (1 symbol = 4 girls; half symbol = 2 girls): Class 1 six symbols = 24, Class 2 four and a half = 18, Class 3 five = 20, Class 4 three and a half = 14, Class 5 two and a half = 10, Class 6 four = 16, Class 7 three = 12, Class 8 one and a half = 6. a. Which class has the least number of girls? b. Difference between the number of girls in Classes 5 and 6? c. If two more girls were admitted in Class 2, how would the graph change? d. How many girls are in Class 7? a) Which class has the least number of girl students? b) What is the difference between the number of girls in Classes 5 and 6? c) If two more girls were admitted in Class 2, how would the graph change? d) How many girls are there in Class 7?",
+   "decision": "required",
+   "reason_codes": [
+    "GRAPH_CHART",
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "Parts a-d read full and half symbols against the key 'one girl symbol = 4 girls'; the half symbols exist only in the picture (the LP text restates the counts but names the pictograph).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S24.T24.C105.IMG1",
+   "manim_scene": "c4_4_FiO7_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S24.T24.C105.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "4:3",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "pictograph",
+     "key": {
+      "symbol": "girl",
+      "value": 4,
+      "unit": "girls",
+      "text": "= 4 Girls",
+      "half_symbol_value": 2
+     },
+     "header": {
+      "left": "Classes",
+      "right": "Number of Girl Students"
+     },
+     "rows": [
+      {
+       "label": "1",
+       "full_symbols": 6,
+       "half_symbols": 0
+      },
+      {
+       "label": "2",
+       "full_symbols": 4,
+       "half_symbols": 1
+      },
+      {
+       "label": "3",
+       "full_symbols": 5,
+       "half_symbols": 0
+      },
+      {
+       "label": "4",
+       "full_symbols": 3,
+       "half_symbols": 1
+      },
+      {
+       "label": "5",
+       "full_symbols": 2,
+       "half_symbols": 1
+      },
+      {
+       "label": "6",
+       "full_symbols": 4,
+       "half_symbols": 0
+      },
+      {
+       "label": "7",
+       "full_symbols": 3,
+       "half_symbols": 0
+      },
+      {
+       "label": "8",
+       "full_symbols": 1,
+       "half_symbols": 1
+      }
+     ],
+     "layout_px": {
+      "canvas": [
+       1920,
+       1440
+      ],
+      "table": [
+       60,
+       45,
+       1860,
+       1395
+      ],
+      "row_height": 150,
+      "class_column_right_edge": 360,
+      "slot_centres_x": [
+       450,
+       590,
+       730,
+       870,
+       1010,
+       1150
+      ],
+      "row_centres_y": [
+       270,
+       420,
+       570,
+       720,
+       870,
+       1020,
+       1170,
+       1320
+      ]
+     },
+     "equal_spacing": true
+    },
+    "manim_description": "Canvas 1920 x 1440 px, plain white BG. A pictograph drawn as a table with a 3 px INK outer border from x=60 to x=1860 and y=45 to y=1395: 9 rows of 150 px (the header row y=45 to 195, then Class 1 y=195 to 345, Class 2 345 to 495, Class 3 495 to 645, Class 4 645 to 795, Class 5 795 to 945, Class 6 945 to 1095, Class 7 1095 to 1245, Class 8 1245 to 1395), separated by 2 px GUIDE lines, and a 2 px GUIDE vertical line at x=360 between the class column (x=60 to 360) and the symbol column. The header row is filled MARK_FILL. In the header write Classes in INK, 38 px, bold, centred at x=210, y=120; write Number of Girl Students in INK, 38 px, bold, left-aligned from x=400, y=120; at the right end of the header draw one full girl symbol centred at x=1330, y=120 and, left-aligned from x=1400, write = 4 Girls in INK, 38 px. Write the class numbers 1, 2, 3, 4, 5, 6, 7, 8 in INK, 38 px, centred at x=210 on the row centre lines y=270, 420, 570, 720, 870, 1020, 1170, 1320. Draw the symbols left to right in each row from the first slot, centred on the row centre line, with the same 140 px pitch in every row (slot centres x=450, 590, 730, 870, 1010, 1150): Class 1: 6 full symbols at x=450, 590, 730, 870, 1010, 1150; Class 2: 4 full symbols at x=450, 590, 730, 870 and 1 half symbol at x=1010; Class 3: 5 full symbols at x=450, 590, 730, 870, 1010; Class 4: 3 full symbols at x=450, 590, 730 and 1 half symbol at x=870; Class 5: 2 full symbols at x=450, 590 and 1 half symbol at x=730; Class 6: 4 full symbols at x=450, 590, 730, 870; Class 7: 3 full symbols at x=450, 590, 730; Class 8: 1 full symbols at x=450 and 1 half symbol at x=590. Girl symbol (head and two plaits, fits a 110 x 110 px box, no eyes and no mouth): head = circle of radius 34 px at box point (55, 62) filled MARK_FILL with a 3 px INK outline; hair = the part of that circle above the horizontal line y = 66, filled INK; plaits = two vertical ellipses 16 px wide and 36 px tall filled INK, centred at (16, 34) and (94, 34), joined to the hair (box origin bottom-left, y upward). The half symbol is this same glyph cut at the vertical line x = 55: only the LEFT half is drawn, in the same place the full glyph would take. No numbers beside the rows, no totals.",
+    "visible_text": [
+     "Classes",
+     "Number of Girl Students",
+     "= 4 Girls",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers or totals beside the rows",
+     "the girl counts 24, 18, 20, 14, 10, 16, 12, 6",
+     "the words half symbol = 2 girls"
+    ],
+    "accuracy_checks": [
+     "symbols per class (full + half): 6, 4 + 1/2, 5, 3 + 1/2, 2 + 1/2, 4, 3, 1 + 1/2 = 30 symbols in all",
+     "girls per class at 4 per full symbol and 2 per half symbol: 24, 18, 20, 14, 10, 16, 12, 6; total 24 + 18 + 20 + 14 + 10 + 16 + 12 + 6 = 120 = 30 x 4",
+     "Class 8 has the least (6); Class 6 - Class 5 = 16 - 10 = 6; Class 7 has 3 x 4 = 12",
+     "Class 2 (18) plus 2 girls = 20 = 5 full symbols, so only its half symbol would become full",
+     "the half symbol is exactly the left half of a full symbol; all rows use the same 140 px pitch"
+    ],
+    "alt_text": "A pictograph of girl students in Classes 1 to 8, one girl symbol for 4 girls and a half symbol for 2: Class 1 six symbols down to Class 8 one and a half.",
+    "render_note": "The book's key only says the symbol is 4 girls; the half symbol (a face cut down the middle) = 2 girls is read from the cut symbols and from part c of the question, and the LP text states it. The book's half symbol is about 45 percent of the full width; drawn as an exact half here.",
+    "derived_from": null
+   }
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C106",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.4, Q5",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q7",
+   "question_text": "Pictograph of girl students in classes 1 to 8 (1 symbol = 4 girls; half symbol = 2 girls): Class 1 six symbols = 24, Class 2 four and a half = 18, Class 3 five = 20, Class 4 three and a half = 14, Class 5 two and a half = 10, Class 6 four = 16, Class 7 three = 12, Class 8 one and a half = 6. a. Which class has the least number of girls? b. Difference between the number of girls in Classes 5 and 6? c. If two more girls were admitted in Class 2, how would the graph change? d. How many girls are in Class 7? a) Which class has the least number of girl students? b) What is the difference between the number of girls in Classes 5 and 6? c) If two more girls were admitted in Class 2, how would the graph change? d) How many girls are there in Class 7?",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answers are Class 8, 6, 'the last half symbol becomes a full symbol' and 12, all clear in words; a picture of Class 2 with 5 full symbols would only be a nice extra, not needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C107",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.4, Q6",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q8",
+   "question_text": "Mudhol dogs in six villages: A 18, B 36, C 12, D 48, E 18, F 24. Prepare a pictograph and answer: a. What will be a useful scale or key? b. How many symbols represent the dogs in Village B? c. Kamini said that the dogs in Village B and Village D together will be more than the dogs in the other 4 villages. Is she right? Give reasons. a) What will be a useful scale or key to draw this pictograph? b) How many symbols will you use to represent the dogs in Village B? c) Kamini said B and D together have more dogs than the other 4 villages. Is she right? Give reasons.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives the six counts only as a line of text (Village A: 18, ...), which the LP text carries; the learner draws the pictograph, so there is no given figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "No figure: the six village counts are in the question text."
+  },
+  {
+   "lp_concept_id": "M4.S24.T24.C108",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.4, Q6",
+   "ncert_ref": "Section 4.4 - Figure it Out, book Q8",
+   "question_text": "Mudhol dogs in six villages: A 18, B 36, C 12, D 48, E 18, F 24. Prepare a pictograph and answer: a. What will be a useful scale or key? b. How many symbols represent the dogs in Village B? c. Kamini said that the dogs in Village B and Village D together will be more than the dogs in the other 4 villages. Is she right? Give reasons. a) What will be a useful scale or key to draw this pictograph? b) How many symbols will you use to represent the dogs in Village B? c) Kamini said B and D together have more dogs than the other 4 villages. Is she right? Give reasons.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The task is to prepare a pictograph and the book's printed answer (solutions p.42) is that pictograph with key and symbols; the question gives none, so the card draws it whole.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S24.T24.C108.IMG1",
+   "manim_scene": "c4_4_FiO8_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S24.T24.C108.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "pictograph",
+     "key": {
+      "symbol": "dog",
+      "value": 6,
+      "unit": "dogs",
+      "text": "= 6 dogs"
+     },
+     "header": {
+      "left": "Village",
+      "right": "Number of Mudhol Hounds"
+     },
+     "rows": [
+      {
+       "label": "Village A",
+       "full_symbols": 3,
+       "half_symbols": 0
+      },
+      {
+       "label": "Village B",
+       "full_symbols": 6,
+       "half_symbols": 0
+      },
+      {
+       "label": "Village C",
+       "full_symbols": 2,
+       "half_symbols": 0
+      },
+      {
+       "label": "Village D",
+       "full_symbols": 8,
+       "half_symbols": 0
+      },
+      {
+       "label": "Village E",
+       "full_symbols": 3,
+       "half_symbols": 0
+      },
+      {
+       "label": "Village F",
+       "full_symbols": 4,
+       "half_symbols": 0
+      }
+     ],
+     "layout_px": {
+      "canvas": [
+       1920,
+       1080
+      ],
+      "table": [
+       60,
+       50,
+       1860,
+       1030
+      ],
+      "row_height": 140,
+      "label_column_right_edge": 500,
+      "slot_centres_x": [
+       620,
+       770,
+       920,
+       1070,
+       1220,
+       1370,
+       1520,
+       1670
+      ],
+      "row_centres_y": [
+       260,
+       400,
+       540,
+       680,
+       820,
+       960
+      ]
+     },
+     "equal_spacing": true,
+     "symbol_outline": "ANSWER"
+    },
+    "manim_description": "Canvas 1920 x 1080 px, plain white BG. A pictograph drawn as a table with a 3 px INK outer border from x=60 to x=1860 and y=50 to y=1030: 7 rows of 140 px (the header row y=50 to 190, then Village A y=190 to 330, B 330 to 470, C 470 to 610, D 610 to 750, E 750 to 890, F 890 to 1030), separated by 2 px GUIDE lines, and a 2 px GUIDE vertical line at x=500 between the label column (x=60 to 500) and the symbol column. The header row is filled MARK_FILL. In the header write Village in INK, 38 px, bold, centred at x=280, y=120; write Number of Mudhol Hounds in INK, 38 px, bold, left-aligned from x=540, y=120; at the right end of the header draw one dog symbol centred at x=1400, y=120 and, left-aligned from x=1475, write = 6 dogs in INK, 38 px. Write the row labels Village A, Village B, Village C, Village D, Village E, Village F in INK, 38 px, centred at x=280 on the row centre lines y=260, 400, 540, 680, 820, 960. Draw the dog symbols left to right in each row from the first slot, centred on the row centre line, with the same 150 px pitch in every row (slot centres x=620, 770, 920, 1070, 1220, 1370, 1520, 1670): Village A: 3 symbols at x=620, 770, 920; Village B: 6 symbols at x=620, 770, 920, 1070, 1220, 1370; Village C: 2 symbols at x=620, 770; Village D: 8 symbols at x=620, 770, 920, 1070, 1220, 1370, 1520, 1670; Village E: 3 symbols at x=620, 770, 920; Village F: 4 symbols at x=620, 770, 920, 1070. Dog symbol (front view of a dog's head, fits a 110 x 110 px box): head = circle of radius 34 px at box point (55, 58) filled CELL_FILL with a 3 px ANSWER outline; two long drooping ears = ellipses 24 px wide and 56 px tall centred at (22, 60) and (88, 60), tilted 15 degrees outwards, filled MARK_FILL with a 3 px ANSWER outline; muzzle = ellipse 30 px wide and 22 px tall at (55, 36) filled BG with a 3 px ANSWER outline; nose = INK dot of radius 6 px at (55, 42); two eyes = INK dots of radius 4 px at (42, 66) and (68, 66) (box origin bottom-left, y upward). Every symbol is a whole dog symbol (no half symbols). No numbers beside the rows, no totals.",
+    "visible_text": [
+     "Village",
+     "Number of Mudhol Hounds",
+     "= 6 dogs",
+     "Village A",
+     "Village B",
+     "Village C",
+     "Village D",
+     "Village E",
+     "Village F"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers or totals beside the rows",
+     "the dog counts 18, 36, 12, 48, 18, 24",
+     "half symbols"
+    ],
+    "accuracy_checks": [
+     "1 symbol = 6 dogs: A 18 / 6 = 3, B 36 / 6 = 6, C 12 / 6 = 2, D 48 / 6 = 8, E 18 / 6 = 3, F 24 / 6 = 4 symbols",
+     "26 symbols in all = 156 dogs = 18 + 36 + 12 + 48 + 18 + 24",
+     "Village B has 6 symbols (part b); B + D = 6 + 8 = 14 symbols = 84 dogs, the other four 3 + 2 + 3 + 4 = 12 symbols = 72 dogs",
+     "all rows use the same 150 px pitch"
+    ],
+    "alt_text": "A pictograph of Mudhol dogs in six villages, one dog symbol for 6 dogs: Village A 3 symbols, B 6, C 2, D 8, E 3, F 4.",
+    "render_note": "Matches the book's printed answer picture (solutions p.42): 3, 6, 2, 8, 3, 4 symbols with the key one dog = 6 dogs. The book draws the dog as a front-view head on a small grey square; the card draws a simple head glyph in ANSWER green.",
+    "derived_from": null
+   }
+  }
+ ]
+}

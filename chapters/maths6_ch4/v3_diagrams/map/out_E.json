@@ -1,0 +1,995 @@
+{
+ "meta": {
+  "chapter": "Data Handling and Presentation",
+  "class": 6,
+  "textbook": "Ganita Prakash Grade 6, Chapter 4",
+  "lp_plan_id": "cbse_eng_maths6_ch4_v85",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 1,
+    "optional": 0,
+    "none": 4
+   },
+   "solution": {
+    "required": 0,
+    "optional": 1,
+    "none": 4
+   },
+   "worked_example": {
+    "required": 1,
+    "optional": 0,
+    "none": 0
+   }
+  },
+  "notes": [
+   "Chunk E: topics M4.S25 (worked example of C110), M4.S26 (Q1-Q3), M4.S27 (Figure it Out 4.5 Q1-Q2); M4.S28 (summary) has no question or figure. The printed solutions page for 4.5 (pdf page 44) holds only two text answers (Figure it Out Q1, Q2) and no picture.",
+   "Required: the triangle infographic (worked example C110) and the mountain-range infographic (Q3, C117). The LP shows neither anywhere; both are drawn new, no teaching image is linked.",
+   "Book discrepancies: Kilimanjaro is 5892m on the p.32 picture but 5895m on p.28, p.29, p.31 and in the LP (spec uses 5895m); Kosciuszko (p.32 picture) vs Koscuiszko (p.28-31 and the LP; spec follows the LP).",
+   "The printed bar graphs of p.29 are a few per cent off their table (Everest bar about 8700 on the horizontal graph); the triangle infographic of p.31 sits about 500 m below its own 0 level. Not used as data by any item here.",
+   "Triangle widths of p.31 are read by eye and approximate; Aconcagua is drawn narrower than Denali and Kilimanjaro in the book, kept in the spec.",
+   "Mountain-range picture (p.32) has no scale: the spec draws Everest exactly twice as high as Elbrus above one ground line (the book's own claim); other drawing heights are not data.",
+   "C117 holds two blocks (infographic question, 5642 x 2) that both carry image_media_id C117.IMG1 in the LP; the diagram belongs with the first block, the second needs none. C118's two blocks both carry solution_image_media_id C118.IMG1: optional, so both ids are dropped.",
+   "Figure it Out Q2 asks the child to research river lengths: no data in the book or LP, so no sample graph is drawn (none, OPEN_ENDED)."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P28-data_table-1",
+   "source": "chapter p.28 (pdf page 28)",
+   "description": "Checked against the page picture, the base entry is right: table of 3 rows x 8 columns, continents Asia, South America, North America, Africa, Europe, Antarctica, Australia; mountains Everest, Aconcagua, Denali, Kilimanjaro, Elbrus, Vinson Massif, Koscuiszko; heights 8848, 6962, 6194, 5895, 5642, 4892, 2228 m. Plain table of numbers; Q1 and Q2 carry the two heights each needs in their own text.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P29-bar_graph-1",
+   "source": "chapter p.29 (pdf page 29)",
+   "description": "Horizontal bar graph of the seven heights (teaching figure of the topic's first concept). Checked on the page: gridlines at 0 to 8000 only (50 px per 1000 m), no gridline at 9000; bar ends read against the gridlines: Everest about 8700, Aconcagua 6960, Denali 6160, Kilimanjaro 5920, Elbrus 5540, Vinson Massif 4840, Koscuiszko 2120, against the table 8848, 6962, 6194, 5895, 5642, 4892, 2228: the print is a few per cent off (Everest about 150 m short, Koscuiszko about 100 m short), not an LP error. No question, solution or worked example of this chunk gives or needs it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P29-bar_graph-2",
+   "source": "chapter p.29 (pdf page 29)",
+   "description": "Column graph of the seven heights (teaching figure). Checked on the page: tops read against the printed (slightly uneven) gridlines: Everest about 8810, Aconcagua 6960, Denali 6210, Kilimanjaro 5880, Elbrus 5730, Vinson Massif 4880, Koscuiszko 2290, against the table 8848, 6962, 6194, 5895, 5642, 4892, 2228: within drawing error, only Koscuiszko (about 60 m high) and Elbrus (about 90 m high) visibly off. Q3 names 'the column graph with rectangular columns of equal width' only as the thing the infographic is compared with; the question's own figure is the infographic and the answer is about the infographic's accuracy, so this graph is not drawn again.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P31-infographic-1",
+   "source": "chapter p.31 (pdf page 31)",
+   "description": "Triangle infographic of the seven mountains (checked on the page; base entry right). Measured: base widths 97, 71, 81, 79, 55, 49, 36 px (Everest to Koscuiszko), apexes at 184, 214, 226, 235, 240, 253, 301 px with the 8000m gridline at 191.5 px and 19 px per 1000 m, triangle bases at 353 px (about 500 m below the 0 m level); Aconcagua is narrower than Denali and Kilimanjaro, so 'taller is wider' is a trend, not strict. Used by the worked example of concept C110.",
+   "mapped_to": "item:M4.S25.T25.C110 (question)"
+  },
+  {
+   "fig_id": "P32-infographic-1",
+   "source": "chapter p.32 (pdf page 32)",
+   "description": "Illustrated mountain range with seven red-square summits and labels (checked on the page; base entry right, and Kilimanjaro really is printed 5892m here against 5895m on pages 28, 29, 31 and in the LP; the page spells Kosciuszko). No scale; Everest looks about twice as tall as Elbrus (measured about 1.6 above the picture's bottom edge, 2.0 above a ground line at the foot of the peaks; true ratio 1.57). Caption 'The seven highest peaks on the seven continents.' is part of the page picture and is left out. Used by Q3 (concept C117).",
+   "mapped_to": "item:M4.S26.T26.C117 (question)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 5,
+  "mapped_to_items": 2,
+  "mapped_to_concept_images": 0,
+  "mapped_none": 3,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M4.S25.T25.C110.IMG2",
+   "M4.S26.T26.C117.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M4.S25.T25.C110",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example, 4.5.q3 (triangle infographic)",
+   "ncert_ref": "Section 4.5 - Infographics (p.31, triangle infographic) - 4.5.q3",
+   "question_text": "In the triangle infographic the taller triangles are also wider. Are taller mountains always wider?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The example points at 'the triangle infographic' and its observation (taller triangles are also wider) can only be checked on that picture; the plan shows no triangle picture anywhere (the teaching image of this topic is two equal-width bars), so the example is the first place the learner meets it.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M4.S25.T25.C110.IMG2",
+   "manim_scene": "c4_45_triangle_infographic_we",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S25.T25.C110.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "triangle_infographic (one triangle per mountain, heights to scale, widths from the book's picture)",
+     "canvas_units": {
+      "width": 100,
+      "height": 56.25
+     },
+     "baseline_y": 11.0,
+     "baseline_level_m": 0,
+     "units_per_1000m": 4.8,
+     "gridline_x_from": 7.5,
+     "gridline_x_to": 97.5,
+     "gridline_label_right_x": 6.8,
+     "gridlines": [
+      {
+       "label": "1000m",
+       "metres": 1000,
+       "y": 15.8
+      },
+      {
+       "label": "2000m",
+       "metres": 2000,
+       "y": 20.6
+      },
+      {
+       "label": "3000m",
+       "metres": 3000,
+       "y": 25.4
+      },
+      {
+       "label": "4000m",
+       "metres": 4000,
+       "y": 30.2
+      },
+      {
+       "label": "5000m",
+       "metres": 5000,
+       "y": 35.0
+      },
+      {
+       "label": "6000m",
+       "metres": 6000,
+       "y": 39.8
+      },
+      {
+       "label": "7000m",
+       "metres": 7000,
+       "y": 44.6
+      },
+      {
+       "label": "8000m",
+       "metres": 8000,
+       "y": 49.4
+      }
+     ],
+     "order_left_to_right": [
+      "Everest",
+      "Aconcagua",
+      "Denali",
+      "Kilimanjaro",
+      "Elbrus",
+      "Vinson Massif",
+      "Koscuiszko"
+     ],
+     "triangles": [
+      {
+       "pos": 1,
+       "mountain": "Everest",
+       "height_m": 8848,
+       "height_units": 42.47,
+       "base_x_from": 9.5,
+       "base_x_to": 23.1,
+       "base_width": 13.6,
+       "apex_x": 16.3,
+       "apex_y": 53.47,
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "label_lines": [
+        "Everest",
+        "8848m"
+       ],
+       "label_centre_x": 16.3,
+       "page_base_width_px": 97
+      },
+      {
+       "pos": 2,
+       "mountain": "Aconcagua",
+       "height_m": 6962,
+       "height_units": 33.42,
+       "base_x_from": 25.6,
+       "base_x_to": 35.6,
+       "base_width": 10.0,
+       "apex_x": 30.6,
+       "apex_y": 44.42,
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "label_lines": [
+        "Aconcagua",
+        "6962m"
+       ],
+       "label_centre_x": 30.6,
+       "page_base_width_px": 71
+      },
+      {
+       "pos": 3,
+       "mountain": "Denali",
+       "height_m": 6194,
+       "height_units": 29.73,
+       "base_x_from": 39.0,
+       "base_x_to": 50.4,
+       "base_width": 11.4,
+       "apex_x": 44.7,
+       "apex_y": 40.73,
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "label_lines": [
+        "Denali",
+        "6194m"
+       ],
+       "label_centre_x": 44.7,
+       "page_base_width_px": 81
+      },
+      {
+       "pos": 4,
+       "mountain": "Kilimanjaro",
+       "height_m": 5895,
+       "height_units": 28.3,
+       "base_x_from": 53.1,
+       "base_x_to": 64.2,
+       "base_width": 11.1,
+       "apex_x": 58.65,
+       "apex_y": 39.3,
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "label_lines": [
+        "Kilimanjaro",
+        "5895m"
+       ],
+       "label_centre_x": 58.65,
+       "page_base_width_px": 79
+      },
+      {
+       "pos": 5,
+       "mountain": "Elbrus",
+       "height_m": 5642,
+       "height_units": 27.08,
+       "base_x_from": 66.9,
+       "base_x_to": 74.6,
+       "base_width": 7.7,
+       "apex_x": 70.75,
+       "apex_y": 38.08,
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "label_lines": [
+        "Elbrus",
+        "5642m"
+       ],
+       "label_centre_x": 70.75,
+       "page_base_width_px": 55
+      },
+      {
+       "pos": 6,
+       "mountain": "Vinson Massif",
+       "height_m": 4892,
+       "height_units": 23.48,
+       "base_x_from": 78.3,
+       "base_x_to": 85.2,
+       "base_width": 6.9,
+       "apex_x": 81.75,
+       "apex_y": 34.48,
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "label_lines": [
+        "Vinson Massif",
+        "4892m"
+       ],
+       "label_centre_x": 81.75,
+       "page_base_width_px": 49
+      },
+      {
+       "pos": 7,
+       "mountain": "Koscuiszko",
+       "height_m": 2228,
+       "height_units": 10.69,
+       "base_x_from": 90.3,
+       "base_x_to": 95.4,
+       "base_width": 5.1,
+       "apex_x": 92.85,
+       "apex_y": 21.69,
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "label_lines": [
+        "Koscuiszko",
+        "2228m"
+       ],
+       "label_centre_x": 92.85,
+       "page_base_width_px": 36
+      }
+     ],
+     "label_name_line_y": 7.8,
+     "label_height_line_y": 4.6,
+     "label_text_px": 36,
+     "triangle_fill": "MARK_FILL",
+     "outline": "INK",
+     "stroke_px": 2.5,
+     "to_scale": {
+      "heights": true,
+      "widths": "read by eye from the book's page picture, approximate"
+     }
+    },
+    "manim_description": "Canvas 100 x 56.25 units (16:9, plain white BG, origin bottom-left, y upward; 1 unit = 19.2 px on a 1920 px canvas). Draw 8 horizontal GUIDE gridlines, 1.5 px, from x = 7.5 to x = 97.5 at y = 15.8, 20.6, 25.4, 30.2, 35.0, 39.8, 44.6 and 49.4 (4.8 units per 1000 m). Label each gridline at the left, right-aligned at x = 6.8, INK, text height 36 px: 1000m at y = 15.8, 2000m at y = 20.6, 3000m at y = 25.4, 4000m at y = 30.2, 5000m at y = 35.0, 6000m at y = 39.8, 7000m at y = 44.6, 8000m at y = 49.4. Draw the baseline (the 0 m level, no label) as an INK line, 2.5 px, from x = 7.5 to x = 97.5 at y = 11.0. Draw the 7 isosceles triangles on top of the gridlines, fill MARK_FILL, INK outline 2.5 px, base on y = 11.0, apex above the middle of the base, left to right, tallest first: 1 Everest: base from x = 9.5 to x = 23.1 on y = 11.0, apex at (16.30, 53.47); 2 Aconcagua: base from x = 25.6 to x = 35.6 on y = 11.0, apex at (30.60, 44.42); 3 Denali: base from x = 39.0 to x = 50.4 on y = 11.0, apex at (44.70, 40.73); 4 Kilimanjaro: base from x = 53.1 to x = 64.2 on y = 11.0, apex at (58.65, 39.30); 5 Elbrus: base from x = 66.9 to x = 74.6 on y = 11.0, apex at (70.75, 38.08); 6 Vinson Massif: base from x = 78.3 to x = 85.2 on y = 11.0, apex at (81.75, 34.48); 7 Koscuiszko: base from x = 90.3 to x = 95.4 on y = 11.0, apex at (92.85, 21.69). Under each triangle write two centred lines, INK, 36 px: the mountain name, then its height with the letter m and no space: Everest centred at x = 16.30 (name line at y = 7.8, height line 8848m at y = 4.6); Aconcagua centred at x = 30.60 (name line at y = 7.8, height line 6962m at y = 4.6); Denali centred at x = 44.70 (name line at y = 7.8, height line 6194m at y = 4.6); Kilimanjaro centred at x = 58.65 (name line at y = 7.8, height line 5895m at y = 4.6); Elbrus centred at x = 70.75 (name line at y = 7.8, height line 5642m at y = 4.6); Vinson Massif centred at x = 81.75 (name line at y = 7.8, height line 4892m at y = 4.6); Koscuiszko centred at x = 92.85 (name line at y = 7.8, height line 2228m at y = 4.6). Every triangle has the same fill MARK_FILL; nothing else is drawn: no title, no axis title, no arrows, no width marks, no continent names, no 0m label.",
+    "visible_text": [
+     "1000m",
+     "2000m",
+     "3000m",
+     "4000m",
+     "5000m",
+     "6000m",
+     "7000m",
+     "8000m",
+     "Everest",
+     "Aconcagua",
+     "Denali",
+     "Kilimanjaro",
+     "Elbrus",
+     "Vinson Massif",
+     "Koscuiszko",
+     "8848m",
+     "6962m",
+     "6194m",
+     "5895m",
+     "5642m",
+     "4892m",
+     "2228m"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any title, axis title or caption",
+     "continent names",
+     "a 0m label",
+     "a different colour for each triangle (colour carries no meaning here)",
+     "width numbers, a width bracket or the words taller / wider",
+     "the gap or ratio between two heights"
+    ],
+    "accuracy_checks": [
+     "apex_y - 11.0 = 4.8 x height_m / 1000 for every triangle: Everest 42.47, Aconcagua 33.42, Denali 29.73, Kilimanjaro 28.30, Elbrus 27.08, Vinson Massif 23.48, Koscuiszko 10.69",
+     "gridline y = 11.0 + 4.8 x k for k = 1..8 (15.8, 20.6, 25.4, 30.2, 35.0, 39.8, 44.6, 49.4); the Everest apex (53.47) is above the 8000m line (49.4) and the Koscuiszko apex (21.69) is below the 3000m line (25.4)",
+     "triangles are ordered by decreasing height_m and do not touch: gaps between bases are 2.5, 3.4, 2.7, 2.7, 3.7 and 5.1 units",
+     "base widths 13.6, 10.0, 11.4, 11.1, 7.7, 6.9, 5.1: Everest is the widest and Koscuiszko the narrowest; Aconcagua (10.0) is narrower than Denali (11.4) and Kilimanjaro (11.1), as printed in the book",
+     "label text equals the table of the book: 8848, 6962, 6194, 5895, 5642, 4892, 2228 (m)"
+    ],
+    "alt_text": "Seven blue-green triangles for the tallest mountain of each continent, tallest and widest Everest on the left, then Aconcagua, Denali, Kilimanjaro, Elbrus, Vinson Massif and the small narrow Koscuiszko on the right, each labelled with its height, against gridlines from 1000m to 8000m.",
+    "render_note": "Heights come from the book's table (p.28), drawn to scale on a 0 m baseline. The page picture (p.31) is only roughly to scale: its triangles stand about half a gridline step (about 500 m) below the 0 m level, and on its own gridlines its tips read about Everest 8400, Aconcagua 6800, Denali 6200, Kilimanjaro 5700, Elbrus 5450, Vinson Massif 4750, Koscuiszko 2250 m (Everest about 450 m below its table value). This spec stands every triangle on the 0 m line with its tip at the table value instead. Base widths are read by eye from the page picture (97, 71, 81, 79, 55, 49, 36 px of a 604 px wide plot, scaled to canvas units): the book gives no width numbers, so they are approximate. In the book Aconcagua (2nd, 6962 m) is drawn narrower than Denali and Kilimanjaro, so 'the taller triangles are also wider' holds as a trend (Everest widest, Koscuiszko narrowest) but not for every neighbouring pair; the spec keeps the printed widths. The book gives every triangle its own colour (decoration only); this spec uses one fill, MARK_FILL. The continent line under each name in the book is left out; name and height are kept. Spelling Koscuiszko follows the LP and p.28-31 (the p.32 picture spells Kosciuszko)."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C113",
+   "role": "question",
+   "lp_book_number": "Mountain Heights: Everest and Koscuiszko",
+   "ncert_ref": "Section 4.5 - 4.5.q1",
+   "question_text": "How much taller is Mount Everest than Mount Koscuiszko? (Everest 8848 m, Koscuiszko 2228 m.)",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question carries both heights it needs (Everest 8848 m, Koscuiszko 2228 m); the book's mountain table (p.28) is a plain table of numbers and the answer is one subtraction.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optional: the mountain table of p.28 as a LaTeX array (rows Continent, Tallest mountain, Height) if the text should show it."
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C114",
+   "role": "solution",
+   "lp_book_number": "Mountain Heights: Everest and Koscuiszko",
+   "ncert_ref": "Section 4.5 - 4.5.q1",
+   "question_text": "How much taller is Mount Everest than Mount Koscuiszko? (Everest 8848 m, Koscuiszko 2228 m.)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Steps are one subtraction, 8848 - 2228 = 6620, already LaTeX; the book prints no answer picture for it (p.44 holds only text answers for 4.5).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C115",
+   "role": "question",
+   "lp_book_number": "Mountain Heights: Denali and Kilimanjaro",
+   "ncert_ref": "Section 4.5 - 4.5.q2",
+   "question_text": "Are Mount Denali and Mount Kilimanjaro very different in height? (Denali 6194 m, Kilimanjaro 5895 m.) The book says this is not easy to see quickly from a table of numbers.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question carries both heights it needs (Denali 6194 m, Kilimanjaro 5895 m); the book's mountain table is a plain table of numbers and the answer is one subtraction.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optional: the mountain table of p.28 as a LaTeX array if the text should show it."
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C116",
+   "role": "solution",
+   "lp_book_number": "Mountain Heights: Denali and Kilimanjaro",
+   "ncert_ref": "Section 4.5 - 4.5.q2",
+   "question_text": "Are Mount Denali and Mount Kilimanjaro very different in height? (Denali 6194 m, Kilimanjaro 5895 m.) The book says this is not easy to see quickly from a table of numbers.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Steps are one subtraction, 6194 - 5895 = 299, already LaTeX; no printed answer picture in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C117",
+   "role": "question",
+   "lp_book_number": "Infographics: is Everest twice Elbrus",
+   "ncert_ref": "Section 4.5 - Infographics (p.32 mountain-range picture) - 4.5.q5",
+   "question_text": "Is the infographic below better than the column graph with rectangular columns of equal width? The mountains look more realistic, but is the picture accurate?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "GRAPH_CHART",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question asks about 'the infographic below' (the illustrated mountain range, in which Everest looks twice as tall as Elbrus); the plan shows that picture nowhere and the question cannot be judged without seeing it. The second block of this card (5642 x 2) is arithmetic and needs no picture; the single card diagram goes with the first block.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M4.S26.T26.C117.IMG1",
+   "manim_scene": "c4_45_q5_range_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M4.S26.T26.C117.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "kind": "flat illustrated mountain range infographic with seven labelled summits (apparent heights drawn, no scale)",
+     "canvas_units": {
+      "width": 100,
+      "height": 56.25
+     },
+     "ground_y": 3.5,
+     "canvas_units_per_drawing_unit": 3.4,
+     "range_polygon_fill": "CELL_FILL",
+     "outline": "INK",
+     "stroke_px": 2.5,
+     "ridge_points_x_and_drawing_height": [
+      [
+       1.0,
+       1.5
+      ],
+      [
+       6.0,
+       3.6
+      ],
+      [
+       14.0,
+       5.8
+      ],
+      [
+       24.0,
+       8.1
+      ],
+      [
+       32.2,
+       10.0
+      ],
+      [
+       38.0,
+       8.3
+      ],
+      [
+       42.5,
+       6.6
+      ],
+      [
+       45.2,
+       7.1
+      ],
+      [
+       48.5,
+       5.5
+      ],
+      [
+       51.5,
+       5.0
+      ],
+      [
+       55.0,
+       5.5
+      ],
+      [
+       58.4,
+       5.9
+      ],
+      [
+       61.0,
+       5.0
+      ],
+      [
+       63.2,
+       4.7
+      ],
+      [
+       65.6,
+       5.4
+      ],
+      [
+       68.2,
+       4.6
+      ],
+      [
+       70.4,
+       4.3
+      ],
+      [
+       73.8,
+       5.0
+      ],
+      [
+       77.0,
+       3.9
+      ],
+      [
+       79.5,
+       3.3
+      ],
+      [
+       83.5,
+       3.7
+      ],
+      [
+       88.0,
+       2.2
+      ],
+      [
+       94.0,
+       1.1
+      ],
+      [
+       99.0,
+       0.6
+      ]
+     ],
+     "ridge_points_canvas": [
+      [
+       1.0,
+       8.6
+      ],
+      [
+       6.0,
+       15.74
+      ],
+      [
+       14.0,
+       23.22
+      ],
+      [
+       24.0,
+       31.04
+      ],
+      [
+       32.2,
+       37.5
+      ],
+      [
+       38.0,
+       31.72
+      ],
+      [
+       42.5,
+       25.94
+      ],
+      [
+       45.2,
+       27.64
+      ],
+      [
+       48.5,
+       22.2
+      ],
+      [
+       51.5,
+       20.5
+      ],
+      [
+       55.0,
+       22.2
+      ],
+      [
+       58.4,
+       23.56
+      ],
+      [
+       61.0,
+       20.5
+      ],
+      [
+       63.2,
+       19.48
+      ],
+      [
+       65.6,
+       21.86
+      ],
+      [
+       68.2,
+       19.14
+      ],
+      [
+       70.4,
+       18.12
+      ],
+      [
+       73.8,
+       20.5
+      ],
+      [
+       77.0,
+       16.76
+      ],
+      [
+       79.5,
+       14.72
+      ],
+      [
+       83.5,
+       16.08
+      ],
+      [
+       88.0,
+       10.98
+      ],
+      [
+       94.0,
+       7.24
+      ],
+      [
+       99.0,
+       5.54
+      ]
+     ],
+     "front_peak": {
+      "mountain": "Koscuiszko",
+      "corners_canvas": [
+       [
+        86.0,
+        3.5
+       ],
+       [
+        92.2,
+        10.3
+       ],
+       [
+        99.0,
+        3.5
+       ]
+      ],
+      "fill": "BG",
+      "outline": "INK"
+     },
+     "summits": [
+      {
+       "mountain": "Everest",
+       "continent": "Asia",
+       "height_label": "8848m",
+       "summit_x": 32.2,
+       "drawing_height": 10.0,
+       "summit_y": 37.5,
+       "square_side": 2.4,
+       "square_top_y": 38.7,
+       "leader_from_y": 38.7,
+       "leader_to_y": 44.0,
+       "label_block_bottom_y": 44.0,
+       "label_block_top_y": 51.2,
+       "label_lines_top_to_bottom": [
+        "Everest",
+        "Asia",
+        "8848m"
+       ],
+       "label_line_centres_y": [
+        50.0,
+        47.6,
+        45.2
+       ],
+       "label_alignment": "centre"
+      },
+      {
+       "mountain": "Aconcagua",
+       "continent": "South America",
+       "height_label": "6962m",
+       "summit_x": 45.2,
+       "drawing_height": 7.1,
+       "summit_y": 27.64,
+       "square_side": 2.4,
+       "square_top_y": 28.84,
+       "leader_from_y": 28.84,
+       "leader_to_y": 38.0,
+       "label_block_bottom_y": 38.0,
+       "label_block_top_y": 45.2,
+       "label_lines_top_to_bottom": [
+        "Aconcagua",
+        "South America",
+        "6962m"
+       ],
+       "label_line_centres_y": [
+        44.0,
+        41.6,
+        39.2
+       ],
+       "label_alignment": "centre"
+      },
+      {
+       "mountain": "Denali",
+       "continent": "North America",
+       "height_label": "6194m",
+       "summit_x": 58.4,
+       "drawing_height": 5.9,
+       "summit_y": 23.56,
+       "square_side": 2.4,
+       "square_top_y": 24.76,
+       "leader_from_y": 24.76,
+       "leader_to_y": 38.5,
+       "label_block_bottom_y": 38.5,
+       "label_block_top_y": 45.7,
+       "label_lines_top_to_bottom": [
+        "Denali",
+        "North America",
+        "6194m"
+       ],
+       "label_line_centres_y": [
+        44.5,
+        42.1,
+        39.7
+       ],
+       "label_alignment": "centre"
+      },
+      {
+       "mountain": "Kilimanjaro",
+       "continent": "Africa",
+       "height_label": "5895m",
+       "summit_x": 65.6,
+       "drawing_height": 5.4,
+       "summit_y": 21.86,
+       "square_side": 2.4,
+       "square_top_y": 23.06,
+       "leader_from_y": 23.06,
+       "leader_to_y": 28.5,
+       "label_block_bottom_y": 28.5,
+       "label_block_top_y": 35.7,
+       "label_lines_top_to_bottom": [
+        "Kilimanjaro",
+        "Africa",
+        "5895m"
+       ],
+       "label_line_centres_y": [
+        34.5,
+        32.1,
+        29.7
+       ],
+       "label_alignment": "centre"
+      },
+      {
+       "mountain": "Elbrus",
+       "continent": "Europe",
+       "height_label": "5642m",
+       "summit_x": 73.8,
+       "drawing_height": 5.0,
+       "summit_y": 20.5,
+       "square_side": 2.4,
+       "square_top_y": 21.7,
+       "leader_from_y": 21.7,
+       "leader_to_y": 26.0,
+       "label_block_bottom_y": 26.0,
+       "label_block_top_y": 33.2,
+       "label_lines_top_to_bottom": [
+        "Elbrus",
+        "Europe",
+        "5642m"
+       ],
+       "label_line_centres_y": [
+        32.0,
+        29.6,
+        27.2
+       ],
+       "label_alignment": "centre"
+      },
+      {
+       "mountain": "Vinson Massif",
+       "continent": "Antarctica",
+       "height_label": "4892m",
+       "summit_x": 83.5,
+       "drawing_height": 3.7,
+       "summit_y": 16.08,
+       "square_side": 2.4,
+       "square_top_y": 17.28,
+       "leader_from_y": 17.28,
+       "leader_to_y": 21.0,
+       "label_block_bottom_y": 21.0,
+       "label_block_top_y": 28.2,
+       "label_lines_top_to_bottom": [
+        "Vinson Massif",
+        "Antarctica",
+        "4892m"
+       ],
+       "label_line_centres_y": [
+        27.0,
+        24.6,
+        22.2
+       ],
+       "label_alignment": "centre"
+      },
+      {
+       "mountain": "Koscuiszko",
+       "continent": "Australia",
+       "height_label": "2228m",
+       "summit_x": 92.2,
+       "drawing_height": 2.0,
+       "summit_y": 10.3,
+       "square_side": 2.4,
+       "square_top_y": 11.5,
+       "leader_from_y": 11.5,
+       "leader_to_y": 15.0,
+       "label_block_bottom_y": 15.0,
+       "label_block_top_y": 22.2,
+       "label_lines_top_to_bottom": [
+        "Koscuiszko",
+        "Australia",
+        "2228m"
+       ],
+       "label_line_centres_y": [
+        21.0,
+        18.6,
+        16.2
+       ],
+       "label_alignment": "left from x = 90.5"
+      }
+     ],
+     "summit_square_colour": "FOCUS",
+     "leader_colour": "GUIDE",
+     "leader_style": "dotted",
+     "label_text_px": 36,
+     "apparent_height_ratio_everest_to_elbrus": 2.0,
+     "true_height_ratio_everest_to_elbrus": 1.568
+    },
+    "manim_description": "Canvas 100 x 56.25 units (16:9, plain white BG, origin bottom-left, y upward; 1 unit = 19.2 px on a 1920 px canvas). Draw one flat mountain range as a closed polygon, fill CELL_FILL, INK outline 2.5 px: start at (1.0, 3.5), follow the ridge through these points left to right: (1.0, 8.60), (6.0, 15.74), (14.0, 23.22), (24.0, 31.04), (32.2, 37.50), (38.0, 31.72), (42.5, 25.94), (45.2, 27.64), (48.5, 22.20), (51.5, 20.50), (55.0, 22.20), (58.4, 23.56), (61.0, 20.50), (63.2, 19.48), (65.6, 21.86), (68.2, 19.14), (70.4, 18.12), (73.8, 20.50), (77.0, 16.76), (79.5, 14.72), (83.5, 16.08), (88.0, 10.98), (94.0, 7.24), (99.0, 5.54), then go down to (99.0, 3.5) and close along y = 3.5. The ridge has 6 summits (Everest, Aconcagua, Denali, Kilimanjaro, Elbrus, Vinson Massif), each higher than the dips on both sides of it. In front of the range, at the right, draw a small separate peak as a triangle with corners (86.0, 3.5), (92.2, 10.30), (99.0, 3.5), fill BG, INK outline 2.5 px; this is Koscuiszko, the lowest summit. The summit heights above the ground line y = 3.5 are 10.0, 7.1, 5.9, 5.4, 5.0, 3.7 and 2.0 drawing units (3.4 canvas units each) for Everest, Aconcagua, Denali, Kilimanjaro, Elbrus, Vinson Massif and Koscuiszko, so the Everest summit is exactly twice as high above the ground line as the Elbrus summit. Mark each of the 7 summits with a small square outline in FOCUS, 2.5 px, no fill, side 2.4, centred on the summit point, and join it with a dotted GUIDE line (2 px) going straight up from the top of the square to the bottom of its label. Labels are three centred lines in INK, 36 px, the first line (the mountain name) in bold, the second the continent, the third the height with the letter m and no space. Positions: Everest: summit (32.2, 37.50), summit square centred there, side 2.4; dotted leader at x = 32.2 from y = 38.70 up to y = 44.0; label block bottom y = 44.0, centred on x = 32.2; lines top to bottom at y = 50.0, 47.6, 45.2: Everest / Asia / 8848m; Aconcagua: summit (45.2, 27.64), summit square centred there, side 2.4; dotted leader at x = 45.2 from y = 28.84 up to y = 38.0; label block bottom y = 38.0, centred on x = 45.2; lines top to bottom at y = 44.0, 41.6, 39.2: Aconcagua / South America / 6962m; Denali: summit (58.4, 23.56), summit square centred there, side 2.4; dotted leader at x = 58.4 from y = 24.76 up to y = 38.5; label block bottom y = 38.5, centred on x = 58.4; lines top to bottom at y = 44.5, 42.1, 39.7: Denali / North America / 6194m; Kilimanjaro: summit (65.6, 21.86), summit square centred there, side 2.4; dotted leader at x = 65.6 from y = 23.06 up to y = 28.5; label block bottom y = 28.5, centred on x = 65.6; lines top to bottom at y = 34.5, 32.1, 29.7: Kilimanjaro / Africa / 5895m; Elbrus: summit (73.8, 20.50), summit square centred there, side 2.4; dotted leader at x = 73.8 from y = 21.70 up to y = 26.0; label block bottom y = 26.0, centred on x = 73.8; lines top to bottom at y = 32.0, 29.6, 27.2: Elbrus / Europe / 5642m; Vinson Massif: summit (83.5, 16.08), summit square centred there, side 2.4; dotted leader at x = 83.5 from y = 17.28 up to y = 21.0; label block bottom y = 21.0, centred on x = 83.5; lines top to bottom at y = 27.0, 24.6, 22.2: Vinson Massif / Antarctica / 4892m; Koscuiszko: summit (92.2, 10.30), summit square centred there, side 2.4; dotted leader at x = 92.2 from y = 11.50 up to y = 15.0; label block bottom y = 15.0, left-aligned at x = 90.5; lines top to bottom at y = 21.0, 18.6, 16.2: Koscuiszko / Australia / 2228m. Draw no axis, no scale, no gridlines, no snow texture, no shadows and no caption; the picture is a flat 2D drawing.",
+    "visible_text": [
+     "Everest",
+     "Asia",
+     "8848m",
+     "Aconcagua",
+     "South America",
+     "6962m",
+     "Denali",
+     "North America",
+     "6194m",
+     "Kilimanjaro",
+     "Africa",
+     "5895m",
+     "Elbrus",
+     "Europe",
+     "5642m",
+     "Vinson Massif",
+     "Antarctica",
+     "4892m",
+     "Koscuiszko",
+     "Australia",
+     "2228m"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the caption 'The seven highest peaks on the seven continents'",
+     "an orange frame",
+     "axis, scale or gridlines",
+     "snow texture, shading, gradients or photo-style detail",
+     "the number 11284 or any ratio, twice or 2 x",
+     "the pictures of other infographics (triangles, columns)"
+    ],
+    "accuracy_checks": [
+     "summit drawing heights above the ground line are 10.0, 7.1, 5.9, 5.4, 5.0, 3.7, 2.0 for Everest, Aconcagua, Denali, Kilimanjaro, Elbrus, Vinson Massif, Koscuiszko; Everest 10.0 = 2 x Elbrus 5.0 (appears twice as tall)",
+     "summit y = 3.5 + 3.4 x drawing height: Everest 37.50, Aconcagua 27.64, Denali 23.56, Kilimanjaro 21.86, Elbrus 20.50, Vinson Massif 16.08, Koscuiszko 10.30",
+     "summit x from left to right: 32.2, 45.2, 58.4, 65.6, 73.8, 83.5, 92.2 (order Everest, Aconcagua, Denali, Kilimanjaro, Elbrus, Vinson Massif, Koscuiszko as on the page)",
+     "heights in the labels match the book table: 8848, 6962, 6194, 5895, 5642, 4892, 2228 (m); the true ratio 8848 / 5642 = 1.57 is NOT shown",
+     "every label block stays inside the canvas and no two label blocks overlap; no leader line crosses a label block",
+     "each dip of the ridge between two summits is lower than both neighbouring summits"
+    ],
+    "alt_text": "A flat drawing of a mountain range with seven labelled peaks, Everest on the left looking about twice as tall as Elbrus, and the small Koscuiszko peak in front at the right.",
+    "render_note": "The page picture (p.32) is a shaded illustration with no axis, no scale and no ground line, so apparent heights cannot be read from it exactly. Measured on the page picture, summit heights above the bottom edge of the picture give Everest / Elbrus about 1.6, but above a ground line at the foot of the peaks they give 2.0, which is what the book and the LP say the picture shows ('Everest appears to be twice as tall as Elbrus'). The spec therefore draws Everest's summit exactly twice as high as Elbrus's above one ground line (10.0 and 5.0 drawing units; the true ratio 8848 / 5642 is about 1.57). The other summits keep the page order and the rough relative heights read from the page against that ground line (Aconcagua 7.1, Denali 5.9, Kilimanjaro 5.4, Vinson Massif 3.7); Koscuiszko is drawn as a small separate front peak (2.0, the lowest, as on the page). These drawing heights are not data; the figure has no scale. The ridge outline is a flat simplification of the page's shaded range. Book discrepancies: the page prints Kilimanjaro as 5892m, while the table (p.28), the graphs (p.29), the triangle infographic (p.31) and the LP print 5895m: this spec uses 5895m. The page spells Kosciuszko, while the LP and p.28-31 spell Koscuiszko: this spec follows the LP."
+   }
+  },
+  {
+   "lp_concept_id": "M4.S26.T26.C118",
+   "role": "solution",
+   "lp_book_number": "Infographics: is Everest twice Elbrus",
+   "ncert_ref": "Section 4.5 - 4.5.q5",
+   "question_text": "Is the infographic below better than the column graph with rectangular columns of equal width? The mountains look more realistic, but is the picture accurate?",
+   "decision": "optional",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "GRAPH_CHART"
+   ],
+   "reason": "Solution is two lines of arithmetic (5642 x 2 = 11284; 8848 < 11284) and a sentence; the book prints no answer picture. A figure that would help but is not needed: Elbrus 5642 m and Everest 8848 m as to-scale bars with a dotted line at 11284 m (twice Elbrus) above Everest's top, which the topic's teaching image already shows. Not added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C119",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.5, Q1",
+   "ncert_ref": "Section 4.5 - 4.5.FiO.Q1",
+   "question_text": "If you wanted to visually represent the data of the heights of the tallest persons in each class in your school, would you use a graph with vertical bars or horizontal bars? Why?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "OPEN_ENDED"
+   ],
+   "reason": "No figure is given: the learner chooses vertical or horizontal bars and says why, in words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C120",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.5, Q1",
+   "ncert_ref": "Section 4.5 - 4.5.FiO.Q1",
+   "question_text": "If you wanted to visually represent the data of the heights of the tallest persons in each class in your school, would you use a graph with vertical bars or horizontal bars? Why?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a reason in words (heights go up, so vertical bars); the book's printed answer is text only and no graph is drawn or requested.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C121",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.5, Q2",
+   "ncert_ref": "Section 4.5 - 4.5.FiO.Q2",
+   "question_text": "If you were making a table of the longest rivers on each continent and their lengths, would you prefer a bar graph with vertical bars or horizontal bars? Why? Try finding out this information, and then make the corresponding table and bar graph! Which continents have the longest rivers?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "No figure is given: the learner chooses a bar-graph direction, researches river lengths and makes their own table and graph.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M4.S27.T27.C122",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.5, Q2",
+   "ncert_ref": "Section 4.5 - 4.5.FiO.Q2",
+   "question_text": "If you were making a table of the longest rivers on each continent and their lengths, would you prefer a bar graph with vertical bars or horizontal bars? Why? Try finding out this information, and then make the corresponding table and bar graph! Which continents have the longest rivers?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "The answer is the choice (horizontal bars) with its reason; the table, the graph and the continents are left to the child's own research, and neither the book (p.44, text only) nor the LP gives any river data, so a drawn graph would need invented numbers. Not drawn.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

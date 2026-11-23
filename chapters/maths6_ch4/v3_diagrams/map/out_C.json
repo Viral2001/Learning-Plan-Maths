@@ -1,0 +1,1650 @@
+{
+  "meta": {
+    "chapter": "Data Handling and Presentation",
+    "class": 6,
+    "textbook": "Ganita Prakash Grade 6, Chapter 4",
+    "lp_plan_id": "cbse_eng_maths6_ch4_v85",
+    "prompt": "diagram_identification_prompt.md v3",
+    "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+    "counts_by_role_and_decision": {
+      "question": {
+        "required": 5,
+        "optional": 0,
+        "none": 5
+      },
+      "solution": {
+        "required": 2,
+        "optional": 0,
+        "none": 8
+      },
+      "worked_example": {
+        "required": 0,
+        "optional": 0,
+        "none": 0
+      }
+    },
+    "notes": [
+      "Chunk C (units 24-33, topics M3.S17 to M3.S21): 10 pairs = 20 items; 7 required (5 question graphs, 2 solution graphs), 13 none, 0 optional.",
+      "Questions that READ a bar graph are required (FiO 4.3 Q1, Example 2 population, Imran Q1-Q3); questions that only reason in words or give a plain table are none (FiO 4.3 Q2-Q4, Example 3 and 4 questions). The LP question texts of the reading questions repeat the graph data in brackets ('Bar graph: ...' / 'Imran's family bar graph (...)'); the figure is required because the book question has no numbers of its own and the skill is reading bar lengths against a scale. If the reviewer prefers text-only here, the five question graphs are the ones to flip.",
+      "Solutions: only the two 'draw a bar graph' answers (Example 3 Smriti, Example 4 Imran) are required (ANSWER_IS_FIGURE, derived_from null because their questions are plain tables). All other solutions are read-off or arithmetic and repeat the question graph.",
+      "The three Imran questions C79, C81 and C83 get an identical graph, one id each; render once and copy. The Example 4 solution graph (C78) has the same layout with ANSWER-green bars.",
+      "Printed solutions (pdf p.34-44) hold no picture for any item of this chunk: FiO 4.3 Q1 and Imran Q1-Q3 are text only, FiO 4.3 Q2-Q4 and the examples have no printed answer.",
+      "Bar ends read by eye in the book: traffic graph (6–7 about 150, 9–10 drawn about 820, 10–11 drawn about 695) and Imran's graph (House rent about 3050, Electricity about 420, Miscellaneous about 1220). The LP / table values are drawn exactly; see each render_note."
+    ]
+  },
+  "style_tokens": {
+    "BG": "#FFFFFF",
+    "INK": "#2B2B2B",
+    "MARK_FILL": "#CDEBD9",
+    "ANSWER": "#009E73",
+    "FOCUS": "#CC79A7",
+    "WRONG": "#D55E00",
+    "GUIDE": "#6B7280",
+    "SET_A": "#0072B2",
+    "SET_B": "#E69F00",
+    "CELL_FILL": "#F1EEF6"
+  },
+  "figure_inventory": [
+    {
+      "fig_id": "P14-bar_graph-1",
+      "source": "chapter p.14",
+      "description": "Checked against the page picture: horizontal bar graph of vehicles per hour at a Delhi crossing, axis titles 'Time intervals' and 'Number of vehicles', ticks 100 to 1200, bars 6–7 about 150, 7–8 1200, 8–9 1000, 9–10 800 (drawn about 820), 10–11 700 (drawn about 695), 11–12 600; no value labels. Base description confirmed; drawn values are the book-text / LP values.",
+      "mapped_to": "item:M3.S17.T17.C61 (question)"
+    },
+    {
+      "fig_id": "P15-bar_graph-1",
+      "source": "chapter p.15",
+      "description": "Checked against the page picture: vertical bar graph of India's population in crores, axis ticks 10 to 110, years 1951 to 2001, bold value above each bar 36, 44, 54, 68, 84, 102. Base description confirmed.",
+      "mapped_to": "item:M3.S18.T18.C69 (question)"
+    },
+    {
+      "fig_id": "P16-frequency_table-1",
+      "source": "chapter p.16",
+      "description": "Checked against the page picture: Shri Nilesh's frequency table Sweet | No. of Students: Jalebi 6, Gulab jamun 9, Gujiya 13, Barfi 3, Rasgulla 7. Teaching table of section 4.4 (data for the sweets bar graph); no question or solution of this chunk uses it. Plain table of numbers.",
+      "mapped_to": "none:LATEX_TABLE"
+    },
+    {
+      "fig_id": "P17-bar_graph-1",
+      "source": "chapter p.17",
+      "description": "Checked against the page picture: the book's sweets bar graph (step 4 of 4.4, 1 unit = 1 student: Jalebi 6, Gulab jamun 9, Gujia 13, Barfi 3, Rasgulla 7). It is a teaching figure; no question, solution or worked example of this chunk uses it. The plan's own teaching picture of the same drawing steps (axes, equal steps, equal-width bars) is the generic frame M3.S19.T19.C71.IMG1, with different data (heights 3, 5, 2), so this is accounting only and nothing is linked.",
+      "mapped_to": "concept_image:M3.S19.T19.C71.IMG1"
+    },
+    {
+      "fig_id": "P17-data_table-2",
+      "source": "chapter p.17",
+      "description": "Checked against the page picture: Smriti's table, Match 1 to Match 8, Runs 80, 50, 10, 100, 90, 0, 90, 50. It is the plain table given in the question of Example 3 (M3.S20.T20.C75); the question text already lists the values.",
+      "mapped_to": "none:LATEX_TABLE"
+    },
+    {
+      "fig_id": "P18-bar_graph-1",
+      "source": "chapter p.18",
+      "description": "Checked against the page picture: Smriti's bar graph, scale 0 to 100 in tens, bars 80, 50, 10, 100, 90, none for Match 6, 90, 50, title 'Runs scored by Smriti' in a bordered box. Base description confirmed. It is the answer of Example 3.",
+      "mapped_to": "item:M3.S20.T20.C76 (solution)"
+    },
+    {
+      "fig_id": "P18-data_table-2",
+      "source": "chapter p.18",
+      "description": "Checked against the page picture: Imran's table Items | Expenditure (in ₹): House rent 3000, Food 3400, Education 800, Electricity 400, Transport 600, Miscellaneous 1200. It is the plain table given in the question of Example 4 (M3.S20.T20.C77).",
+      "mapped_to": "none:LATEX_TABLE"
+    },
+    {
+      "fig_id": "P19-calculation_table-1",
+      "source": "chapter p.19",
+      "description": "Checked against the page picture: the height calculation 3000 ÷ 200 = 15 units, 3400 ÷ 200 = 17, 800 ÷ 200 = 4, 400 ÷ 200 = 2, 600 ÷ 200 = 3, 1200 ÷ 200 = 6. Plain arithmetic list; the LP solution of Example 4 (M3.S20.T20.C78) already carries it as a LaTeX step.",
+      "mapped_to": "none:LATEX_ARITHMETIC"
+    },
+    {
+      "fig_id": "P19-bar_graph-2",
+      "source": "chapter p.19",
+      "description": "Checked against the page picture: Imran's bar graph, unfilled bars with light outlines, no gridlines, ticks 200 to 3600, rotated category labels, axis titles 'Expenditure ( in ₹)' and 'Item'. The print is slightly off its table (House rent top about 3050, Electricity about 420, Miscellaneous about 1220, uneven tick spacing); the table values are used. This entry is the Example 4 answer graph (M3.S20.T20.C78); the same picture is used by the three questions on pdf p.20 (next three entries).",
+      "mapped_to": "item:M3.S20.T20.C78 (solution)"
+    },
+    {
+      "fig_id": "NEW-P19-bar_graph-2-use-Q1",
+      "source": "chapter p.19 graph, question on p.20",
+      "description": "Same picture as P19-bar_graph-2, used by the first question of the set 'Use the bar graph to answer the following questions' (most and second most spent): M3.S21.T21.C79. Listed as a separate use, as the brief asks for one entry per use.",
+      "mapped_to": "item:M3.S21.T21.C79 (question)"
+    },
+    {
+      "fig_id": "NEW-P19-bar_graph-2-use-Q2",
+      "source": "chapter p.19 graph, question on p.20",
+      "description": "Same picture as P19-bar_graph-2, used by the second question of the set (electricity about one-half of education): M3.S21.T21.C81.",
+      "mapped_to": "item:M3.S21.T21.C81 (question)"
+    },
+    {
+      "fig_id": "NEW-P19-bar_graph-2-use-Q3",
+      "source": "chapter p.19 graph, question on p.20",
+      "description": "Same picture as P19-bar_graph-2, used by the third question of the set (education less than one-fourth of food): M3.S21.T21.C83.",
+      "mapped_to": "item:M3.S21.T21.C83 (question)"
+    }
+  ],
+  "coverage_report": {
+    "inventory_figures": 12,
+    "mapped_to_items": 7,
+    "mapped_to_concept_images": 1,
+    "mapped_none": 4,
+    "unmapped": 0,
+    "new_media_ids_created": [
+      "M3.S17.T17.C61.IMG1",
+      "M3.S18.T18.C69.IMG1",
+      "M3.S20.T20.C76.IMG1",
+      "M3.S20.T20.C78.IMG1",
+      "M3.S21.T21.C79.IMG1",
+      "M3.S21.T21.C81.IMG1",
+      "M3.S21.T21.C83.IMG1"
+    ],
+    "lp_ids_dropped": []
+  },
+  "items": [
+    {
+      "lp_concept_id": "M3.S17.T17.C61",
+      "role": "question",
+      "lp_book_number": "Figure it Out 4.3, Q1",
+      "ncert_ref": "Section 4.3 - Figure it Out Q1 (pdf p.15; the traffic bar graph is on pdf p.14)",
+      "question_text": "How many total cars passed through the crossing between 6 a.m. and noon? (Bar graph: Horizontal bar graph, one unit of length = 100 vehicles; y-axis Time intervals, x-axis Number of vehicles (100 to 1200). 6-7: about 150; 7-8: 1200; 8-9: 1000; 9-10: about 800; 10-11: about 700; 11-12: about 600.)",
+      "decision": "required",
+      "reason_codes": [
+        "GRAPH_CHART",
+        "DATA_IN_FIGURE",
+        "FIG_REFERENCED"
+      ],
+      "reason": "The question is read off the Delhi traffic bar graph (six horizontal bars, 1 unit of length = 100 vehicles): the six bar lengths are the data and reading them against the scale is the skill. The book question has no numbers of its own; the values written in brackets in the LP text are the 'about' values read from these bars. Question figure = the graph as printed: no value labels, no total.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S17.T17.C61.IMG1",
+      "manim_scene": "c4_43_FiO1_q",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S17.T17.C61.IMG1}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "data_graph",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "data_graph",
+          "graph_kind": "bar_graph",
+          "orientation": "horizontal",
+          "to_scale": true,
+          "canvas": "1920x1080",
+          "value_axis": {
+            "position": "bottom",
+            "title": "Number of vehicles",
+            "start": 0,
+            "start_label_shown": false,
+            "ticks": [
+              100,
+              200,
+              300,
+              400,
+              500,
+              600,
+              700,
+              800,
+              900,
+              1000,
+              1100,
+              1200
+            ],
+            "tick_labels": [
+              "100",
+              "200",
+              "300",
+              "400",
+              "500",
+              "600",
+              "700",
+              "800",
+              "900",
+              "1000",
+              "1100",
+              "1200"
+            ],
+            "tick_label_orientation": "horizontal",
+            "axis_line_ends_at": 1250,
+            "one_unit_length_means": 100
+          },
+          "category_axis": {
+            "position": "left",
+            "title": "Time intervals",
+            "title_rotation": "reading upward",
+            "labels_bottom_to_top": [
+              "6–7",
+              "7–8",
+              "8–9",
+              "9–10",
+              "10–11",
+              "11–12"
+            ]
+          },
+          "bars": [
+            {
+              "category": "6–7",
+              "value": 150
+            },
+            {
+              "category": "7–8",
+              "value": 1200
+            },
+            {
+              "category": "8–9",
+              "value": 1000
+            },
+            {
+              "category": "9–10",
+              "value": 800
+            },
+            {
+              "category": "10–11",
+              "value": 700
+            },
+            {
+              "category": "11–12",
+              "value": 600
+            }
+          ],
+          "bar_style": {
+            "fill": "MARK_FILL",
+            "outline": "INK",
+            "outline_px": 3,
+            "thickness_fraction_of_slot": 0.6
+          },
+          "value_labels_on_bars": false,
+          "gridlines": false,
+          "chart_title": null,
+          "key": null
+        },
+        "manim_description": "Draw a horizontal bar graph on a plain BG canvas, 16:9. Draw a vertical axis line at the left and a horizontal axis line at the bottom, both INK, 3 px, meeting at the bottom-left corner, no arrowheads. Along the vertical axis make six equal slots; label them from the bottom to the top in INK, right-aligned against the axis, each at the centre height of its bar: 6–7, 7–8, 8–9, 9–10, 10–11, 11–12. Write the axis title 'Time intervals' in INK, rotated 90 degrees to read upward, to the left of these labels. The horizontal axis is a value scale that starts at 0 on the vertical axis (no tick and no label for 0). Draw twelve equally spaced short tick marks in INK at 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100 and 1200, and write each number in INK, horizontal, under its tick. Extend the horizontal axis line to 1250 on the scale. Write the axis title 'Number of vehicles' in INK, centred below the tick numbers. Draw one horizontal bar in each slot, standing on the vertical axis, all of equal thickness (60 percent of the slot) with equal gaps, filled MARK_FILL with a 3 px INK outline. Bar lengths on the scale, from the bottom bar to the top bar: 6–7 = 150 (its end sits exactly midway between the ticks 100 and 200), 7–8 = 1200, 8–9 = 1000, 9–10 = 800, 10–11 = 700, 11–12 = 600. Draw no value labels on the bars, no gridlines, no chart title and no key.",
+        "visible_text": [
+          "Time intervals",
+          "6–7",
+          "7–8",
+          "8–9",
+          "9–10",
+          "10–11",
+          "11–12",
+          "100",
+          "200",
+          "300",
+          "400",
+          "500",
+          "600",
+          "700",
+          "800",
+          "900",
+          "1000",
+          "1100",
+          "1200",
+          "Number of vehicles"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "value labels written on the bars",
+          "the total 4450 or any sum",
+          "the sentence 'one unit of length stands for 100 vehicles'",
+          "a chart title",
+          "gridlines"
+        ],
+        "accuracy_checks": [
+          "six bars, bottom to top: 6–7 = 150, 7–8 = 1200, 8–9 = 1000, 9–10 = 800, 10–11 = 700, 11–12 = 600 (in units of 100: 1.5, 12, 10, 8, 7, 6)",
+          "twelve ticks 100 to 1200, equal spacing; the 6–7 bar ends exactly midway between the 100 and 200 ticks; the 7–8 bar ends exactly on the 1200 tick",
+          "the six values add up to 150 + 1200 + 1000 + 800 + 700 + 600 = 4450, the total the solution states, but the total is NOT drawn",
+          "no value labels, no total, no scale sentence in the image (the question diagram shows only what the question gives)"
+        ],
+        "alt_text": "A horizontal bar graph of vehicles per hour: bars of 150, 1200, 1000, 800, 700 and 600 vehicles for 6–7, 7–8, 8–9, 9–10, 10–11 and 11–12, on a scale of 100 to 1200.",
+        "render_note": "The book's bar ends are read by eye (page picture, pdf p.14): 6–7 ends midway between the 100 and 200 ticks (150); 9–10 is drawn at about 820 but the book text and the LP use 800, so draw 800; 10–11 is drawn at about 695 and the LP says about 700, so draw 700; 7–8 (1200), 8–9 (1000) and 11–12 (600) end on their ticks. The drawn values are the LP / book-text values, not pixel readings. The book prints the tick numbers rotated; horizontal is used here for legibility."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S17.T17.C62",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 4.3, Q1",
+      "ncert_ref": "Section 4.3 - Figure it Out Q1 (printed answer: '4450 cars', text only)",
+      "question_text": "How many total cars passed through the crossing between 6 a.m. and noon? (Bar graph: Horizontal bar graph, one unit of length = 100 vehicles; y-axis Time intervals, x-axis Number of vehicles (100 to 1200). 6-7: about 150; 7-8: 1200; 8-9: 1000; 9-10: about 800; 10-11: about 700; 11-12: about 600.)",
+      "decision": "none",
+      "reason_codes": [
+        "SAME_AS_QUESTION_DIAGRAM",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "The printed and LP answer is a sum of the six values read from the question graph (150 + 1200 + 1000 + 800 + 700 + 600 = 4450); the LaTeX step gives it in full and the figure would only repeat the question graph (Step E: figure-based question, numeric answer). A copy with the six values written on the bars would be optional only.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S17.T17.C63",
+      "role": "question",
+      "lp_book_number": "Figure it Out 4.3, Q2",
+      "ncert_ref": "Section 4.3 - Figure it Out Q2",
+      "question_text": "Why do you think so little traffic occurred during the hour of 6-7 a.m., as compared to the other hours from 7 a.m.-noon?",
+      "decision": "none",
+      "reason_codes": [
+        "OPEN_ENDED",
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Open-ended 'why do you think' question with no figure given; the pattern it asks about is stated in the question itself, so a student loses nothing without the graph. Q1 of the same set reads the graph (required); Q2-Q4 ask for real-life reasons, so they are not figure questions.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S17.T17.C64",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 4.3, Q2",
+      "ncert_ref": "Section 4.3 - Figure it Out Q2 (no printed answer)",
+      "question_text": "Why do you think so little traffic occurred during the hour of 6-7 a.m., as compared to the other hours from 7 a.m.-noon?",
+      "decision": "none",
+      "reason_codes": [
+        "OPEN_ENDED",
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The answer is a sample reason in words (open-ended); nothing visual to add.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S17.T17.C65",
+      "role": "question",
+      "lp_book_number": "Figure it Out 4.3, Q3",
+      "ncert_ref": "Section 4.3 - Figure it Out Q3",
+      "question_text": "Why do you think the traffic was the heaviest between 7-8 a.m.?",
+      "decision": "none",
+      "reason_codes": [
+        "OPEN_ENDED",
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Open-ended 'why do you think' question with no figure given; the pattern it asks about is stated in the question itself, so a student loses nothing without the graph. Q1 of the same set reads the graph (required); Q2-Q4 ask for real-life reasons, so they are not figure questions.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S17.T17.C66",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 4.3, Q3",
+      "ncert_ref": "Section 4.3 - Figure it Out Q3 (no printed answer)",
+      "question_text": "Why do you think the traffic was the heaviest between 7-8 a.m.?",
+      "decision": "none",
+      "reason_codes": [
+        "OPEN_ENDED",
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The answer is a sample reason in words (open-ended); nothing visual to add.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S17.T17.C67",
+      "role": "question",
+      "lp_book_number": "Figure it Out 4.3, Q4",
+      "ncert_ref": "Section 4.3 - Figure it Out Q4",
+      "question_text": "Why do you think the traffic was lesser and lesser each hour after 8 a.m. all the way until noon?",
+      "decision": "none",
+      "reason_codes": [
+        "OPEN_ENDED",
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Open-ended 'why do you think' question with no figure given; the pattern it asks about is stated in the question itself, so a student loses nothing without the graph. Q1 of the same set reads the graph (required); Q2-Q4 ask for real-life reasons, so they are not figure questions.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S17.T17.C68",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 4.3, Q4",
+      "ncert_ref": "Section 4.3 - Figure it Out Q4 (no printed answer)",
+      "question_text": "Why do you think the traffic was lesser and lesser each hour after 8 a.m. all the way until noon?",
+      "decision": "none",
+      "reason_codes": [
+        "OPEN_ENDED",
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The answer is a sample reason in words (open-ended); nothing visual to add.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S18.T18.C69",
+      "role": "question",
+      "lp_book_number": "Example 2: Growth of India's population",
+      "ncert_ref": "Section 4.3 - Example: growth of India's population (pdf p.15-16)",
+      "question_text": "A bar graph shows the population of India in each decade over 50 years, in crores: 1951: 36, 1961: 44, 1971: 54, 1981: 68, 1991: 84, 2001: 102. The scale is 1 unit length for 10 crores, so a bar of 5 units shows 50 crores and a bar of 8 units shows 80 crores. How much did the population of India increase over 50 years? How much did it increase in each decade?",
+      "decision": "required",
+      "reason_codes": [
+        "GRAPH_CHART",
+        "DATA_IN_FIGURE",
+        "FIG_REFERENCED"
+      ],
+      "reason": "The example is built on the bar graph of India's population (six vertical bars, value printed above each bar, 1 unit = 10 crores) and its question asks for increases read from the bars. The book prints this graph with the values on the bars; the LP text repeats the six values. Question figure = the graph as printed.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S18.T18.C69.IMG1",
+      "manim_scene": "c4_43_ex2_q",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S18.T18.C69.IMG1}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "data_graph",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "data_graph",
+          "graph_kind": "bar_graph",
+          "orientation": "vertical",
+          "to_scale": true,
+          "canvas": "1920x1080",
+          "value_axis": {
+            "position": "left",
+            "title": "Population of India in crores",
+            "title_rotation": "reading upward",
+            "start": 0,
+            "start_label_shown": false,
+            "ticks": [
+              10,
+              20,
+              30,
+              40,
+              50,
+              60,
+              70,
+              80,
+              90,
+              100,
+              110
+            ],
+            "tick_labels": [
+              "10",
+              "20",
+              "30",
+              "40",
+              "50",
+              "60",
+              "70",
+              "80",
+              "90",
+              "100",
+              "110"
+            ],
+            "axis_line_ends_at": 110,
+            "one_unit_length_means": 10
+          },
+          "category_axis": {
+            "position": "bottom",
+            "title": "Years",
+            "labels_left_to_right": [
+              "1951",
+              "1961",
+              "1971",
+              "1981",
+              "1991",
+              "2001"
+            ],
+            "label_orientation": "horizontal"
+          },
+          "bars": [
+            {
+              "category": "1951",
+              "value": 36,
+              "value_label_above_bar": "36"
+            },
+            {
+              "category": "1961",
+              "value": 44,
+              "value_label_above_bar": "44"
+            },
+            {
+              "category": "1971",
+              "value": 54,
+              "value_label_above_bar": "54"
+            },
+            {
+              "category": "1981",
+              "value": 68,
+              "value_label_above_bar": "68"
+            },
+            {
+              "category": "1991",
+              "value": 84,
+              "value_label_above_bar": "84"
+            },
+            {
+              "category": "2001",
+              "value": 102,
+              "value_label_above_bar": "102"
+            }
+          ],
+          "bar_style": {
+            "fill": "MARK_FILL",
+            "outline": "INK",
+            "outline_px": 3,
+            "width_fraction_of_slot": 0.5
+          },
+          "value_labels_on_bars": true,
+          "value_label_style": "bold INK just above the bar top",
+          "gridlines": false,
+          "chart_title": null,
+          "key": null
+        },
+        "manim_description": "Draw a vertical bar graph on a plain BG canvas, 16:9. Draw a vertical axis line at the left and a horizontal baseline at the bottom, both INK, 3 px, meeting at the bottom-left corner, no arrowheads. On the vertical axis draw eleven equally spaced short tick marks in INK at 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 and 110 from bottom to top (the 10 tick is one spacing above the baseline; no tick and no label for 0), and write each number in INK to the left of its tick. Write the axis title 'Population of India in crores' in INK, rotated 90 degrees to read upward, to the left of the tick numbers. Along the baseline make six equal slots, left to right, and write under each in INK, horizontal: 1951, 1961, 1971, 1981, 1991, 2001. Write the axis title 'Years' in INK, centred below the year labels. Draw one vertical bar in each slot, standing on the baseline, all of equal width (50 percent of the slot) with equal gaps, filled MARK_FILL with a 3 px INK outline. Bar heights on the vertical scale, left to right: 1951 = 36, 1961 = 44, 1971 = 54, 1981 = 68, 1991 = 84, 2001 = 102. Write the value of each bar in bold INK just above its top, left to right: 36, 44, 54, 68, 84, 102. Draw no gridlines, no chart title and no key.",
+        "visible_text": [
+          "Population of India in crores",
+          "10",
+          "20",
+          "30",
+          "40",
+          "50",
+          "60",
+          "70",
+          "80",
+          "90",
+          "100",
+          "110",
+          "1951",
+          "1961",
+          "1971",
+          "1981",
+          "1991",
+          "2001",
+          "Years",
+          "36",
+          "44",
+          "54",
+          "68",
+          "84",
+          "102"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "the increases 66, 8, 10, 14, 16 or 18",
+          "the scale sentence 'one unit length = 10 crores'",
+          "a chart title or the caption 'Population of India in crores' under the graph",
+          "gridlines"
+        ],
+        "accuracy_checks": [
+          "six bars left to right: 1951 = 36, 1961 = 44, 1971 = 54, 1981 = 68, 1991 = 84, 2001 = 102 crores, each bar top on the scale at its value",
+          "scale ticks 10 to 110, equal spacing, 1 unit length = 10 crores (36 is 3.6 spacings, 102 is 10.2 spacings)",
+          "the printed value above each bar equals its drawn height; the increases (66 in all; 8, 10, 14, 16, 18 per decade) are NOT drawn",
+          "no gridlines, no chart title, no key"
+        ],
+        "alt_text": "A vertical bar graph of the population of India in crores: 36 in 1951, 44 in 1961, 54 in 1971, 68 in 1981, 84 in 1991 and 102 in 2001, with the value printed above each bar.",
+        "render_note": "The printed values match the bar tops in the book picture (pdf p.15); no doubt. The book prints the year labels rotated; horizontal is used here. The caption under the book graph repeats the axis title and is not drawn."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S18.T18.C70",
+      "role": "solution",
+      "lp_book_number": "Example 2: Growth of India's population",
+      "ncert_ref": "Section 4.3 - Example: growth of India's population (no printed answer)",
+      "question_text": "A bar graph shows the population of India in each decade over 50 years, in crores: 1951: 36, 1961: 44, 1971: 54, 1981: 68, 1991: 84, 2001: 102. The scale is 1 unit length for 10 crores, so a bar of 5 units shows 50 crores and a bar of 8 units shows 80 crores. How much did the population of India increase over 50 years? How much did it increase in each decade?",
+      "decision": "none",
+      "reason_codes": [
+        "SAME_AS_QUESTION_DIAGRAM",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "The answer is the subtractions 102 - 36 = 66 and 44 - 36, 54 - 44, 68 - 54, 84 - 68, 102 - 84; the LaTeX steps give them in full and the bars with their values are already in the question diagram. A copy with +8, +10, +14, +16, +18 brackets between the bar tops would be optional only.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S20.T20.C75",
+      "role": "question",
+      "lp_book_number": "Example 3: Smriti's runs in 8 matches",
+      "ncert_ref": "Section 4.4 - Example: Smriti's runs in 8 matches (table on pdf p.17)",
+      "question_text": "The number of runs scored by Smriti in each of the 8 matches: Match 1 80, Match 2 50, Match 3 10, Match 4 100, Match 5 90, Match 6 0, Match 7 90, Match 8 50. Draw a bar graph. Minimum score 0, maximum 100; choose scale.",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_TABLE"
+      ],
+      "reason": "The question gives only a plain two-row table of runs (Match 1 to Match 8) and asks the student to DRAW the bar graph; the LP text already lists the eight values. No figure is given, so no question diagram.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "Optional LaTeX array, header Match 1 .. Match 8, second row Runs: 80, 50, 10, 100, 90, 0, 90, 50 (the values are already in the question text)."
+    },
+    {
+      "lp_concept_id": "M3.S20.T20.C76",
+      "role": "solution",
+      "lp_book_number": "Example 3: Smriti's runs in 8 matches",
+      "ncert_ref": "Section 4.4 - Example: Smriti's runs (the answer bar graph is on pdf p.18)",
+      "question_text": "The number of runs scored by Smriti in each of the 8 matches: Match 1 80, Match 2 50, Match 3 10, Match 4 100, Match 5 90, Match 6 0, Match 7 90, Match 8 50. Draw a bar graph. Minimum score 0, maximum 100; choose scale.",
+      "decision": "required",
+      "reason_codes": [
+        "ANSWER_IS_FIGURE",
+        "GRAPH_CHART"
+      ],
+      "reason": "The answer to 'draw a bar graph' is the drawn bar graph (the book shows it on pdf p.18 with 1 unit length = 10 runs); the LP steps give only the scale and the heights in units. The question has no figure (a table in LaTeX), so this solution figure stands alone and draws the whole graph (derived_from null).",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S20.T20.C76.IMG1",
+      "manim_scene": "c4_44_ex3_sol",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S20.T20.C76.IMG1}}",
+        "insert_into": "steps_tex",
+        "position": "before_first_step"
+      },
+      "diagram": {
+        "diagram_type": "data_graph",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "data_graph",
+          "graph_kind": "bar_graph",
+          "orientation": "vertical",
+          "to_scale": true,
+          "canvas": "1920x1080",
+          "value_axis": {
+            "position": "left",
+            "title": "Runs",
+            "title_rotation": "reading upward",
+            "start": 0,
+            "start_label_shown": true,
+            "ticks": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50,
+              60,
+              70,
+              80,
+              90,
+              100
+            ],
+            "tick_labels": [
+              "0",
+              "10",
+              "20",
+              "30",
+              "40",
+              "50",
+              "60",
+              "70",
+              "80",
+              "90",
+              "100"
+            ],
+            "axis_line_ends_at": 105,
+            "one_unit_length_means": 10
+          },
+          "category_axis": {
+            "position": "bottom",
+            "title": "Matches",
+            "labels_left_to_right": [
+              "Match 1",
+              "Match 2",
+              "Match 3",
+              "Match 4",
+              "Match 5",
+              "Match 6",
+              "Match 7",
+              "Match 8"
+            ],
+            "label_orientation": "horizontal"
+          },
+          "bars": [
+            {
+              "category": "Match 1",
+              "value": 80,
+              "units_of_10_runs": 8,
+              "drawn": true
+            },
+            {
+              "category": "Match 2",
+              "value": 50,
+              "units_of_10_runs": 5,
+              "drawn": true
+            },
+            {
+              "category": "Match 3",
+              "value": 10,
+              "units_of_10_runs": 1,
+              "drawn": true
+            },
+            {
+              "category": "Match 4",
+              "value": 100,
+              "units_of_10_runs": 10,
+              "drawn": true
+            },
+            {
+              "category": "Match 5",
+              "value": 90,
+              "units_of_10_runs": 9,
+              "drawn": true
+            },
+            {
+              "category": "Match 6",
+              "value": 0,
+              "units_of_10_runs": 0,
+              "drawn": false
+            },
+            {
+              "category": "Match 7",
+              "value": 90,
+              "units_of_10_runs": 9,
+              "drawn": true
+            },
+            {
+              "category": "Match 8",
+              "value": 50,
+              "units_of_10_runs": 5,
+              "drawn": true
+            }
+          ],
+          "bar_style": {
+            "fill": "ANSWER",
+            "outline": null,
+            "width_fraction_of_slot": 0.5
+          },
+          "value_labels_on_bars": false,
+          "gridlines": {
+            "colour": "GUIDE",
+            "px": 1.5,
+            "at": [
+              10,
+              20,
+              30,
+              40,
+              50,
+              60,
+              70,
+              80,
+              90,
+              100
+            ]
+          },
+          "chart_title": null,
+          "key": null
+        },
+        "manim_description": "Draw a vertical bar graph on a plain BG canvas, 16:9. Draw a vertical axis line at the left, rising to 105 on the scale, and a horizontal baseline at the bottom, both INK, 3 px, meeting at the bottom-left corner, no arrowheads. On the vertical axis write the numbers 0, 10, 20, 30, 40, 50, 60, 70, 80, 90 and 100 in INK from bottom to top at equal spacing (eleven labels, 0 on the baseline), each with a short INK tick. Draw a faint horizontal gridline, GUIDE, 1.5 px, across the plot at each of 10, 20, 30, 40, 50, 60, 70, 80, 90 and 100. Write the axis title 'Runs' in INK, rotated 90 degrees to read upward, to the left of the numbers. Along the baseline make eight equal slots, left to right, and write under each in INK, horizontal: Match 1, Match 2, Match 3, Match 4, Match 5, Match 6, Match 7, Match 8. Write the axis title 'Matches' in INK, centred below the match labels. Draw one vertical bar in each slot except Match 6, standing on the baseline, all of equal width (50 percent of the slot) with equal gaps, filled ANSWER. Bar heights on the vertical scale, left to right: Match 1 = 80, Match 2 = 50, Match 3 = 10, Match 4 = 100 (its top touches the 100 gridline), Match 5 = 90, Match 6 = 0 (no bar is drawn, the slot stays empty), Match 7 = 90, Match 8 = 50. The scale is 1 unit length = 10 runs, so every gridline step is one unit length. Draw no value labels on the bars and no chart title.",
+        "visible_text": [
+          "Runs",
+          "0",
+          "10",
+          "20",
+          "30",
+          "40",
+          "50",
+          "60",
+          "70",
+          "80",
+          "90",
+          "100",
+          "Match 1",
+          "Match 2",
+          "Match 3",
+          "Match 4",
+          "Match 5",
+          "Match 6",
+          "Match 7",
+          "Match 8",
+          "Matches"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "the title 'Runs scored by Smriti'",
+          "value labels on the bars",
+          "the scale sentence '1 unit length = 10 runs'",
+          "the heights in units 8, 5, 1, 10, 9, 9, 5",
+          "a bar or a '0' mark for Match 6"
+        ],
+        "accuracy_checks": [
+          "eight categories Match 1 to Match 8 in order; heights 80, 50, 10, 100, 90, 0, 90, 50 runs = 8, 5, 1, 10, 9, 0, 9, 5 unit lengths of 10 runs",
+          "Match 6 has no bar (0 runs); Match 4 touches the 100 line; Match 5 and Match 7 are equal (90); Match 2 and Match 8 are equal (50)",
+          "tick labels 0, 10, ..., 100 at equal spacing; gridlines at 10 to 100 only (0 is the baseline)",
+          "total runs 80 + 50 + 10 + 100 + 90 + 0 + 90 + 50 = 470 (not drawn)"
+        ],
+        "alt_text": "A vertical bar graph of Smriti's runs in eight matches, scale 0 to 100 in tens: 80, 50, 10, 100, 90, nothing for Match 6, 90 and 50.",
+        "render_note": "Book picture (pdf p.18) agrees with the table: Match 6 is an empty slot, Match 4 touches the 100 line. The book draws it in a bordered box with a title 'Runs scored by Smriti'; the title and the box are not drawn (title rule). Bars are ANSWER green because the solution draws them."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S20.T20.C77",
+      "role": "question",
+      "lp_book_number": "Example 4: Imran's monthly family expenditure",
+      "ncert_ref": "Section 4.4 - Example: Imran's monthly family expenditure (table on pdf p.18)",
+      "question_text": "Monthly expenditure of Imran's family: House rent 3000, Food 3400, Education 800, Electricity 400, Transport 600, Miscellaneous 1200 (in rupees). Represent as a bar graph using 1 unit length = ₹ 200.",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_TABLE"
+      ],
+      "reason": "The question gives only a plain two-column table of expenditure (Items | Expenditure) and asks the student to DRAW the bar graph; the LP text already lists the six amounts. No figure is given, so no question diagram.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "Optional LaTeX array: header Items | Expenditure (in ₹); rows House rent 3000, Food 3400, Education 800, Electricity 400, Transport 600, Miscellaneous 1200 (the values are already in the question text)."
+    },
+    {
+      "lp_concept_id": "M3.S20.T20.C78",
+      "role": "solution",
+      "lp_book_number": "Example 4: Imran's monthly family expenditure",
+      "ncert_ref": "Section 4.4 - Example: Imran's expenditure (the answer bar graph is on pdf p.19)",
+      "question_text": "Monthly expenditure of Imran's family: House rent 3000, Food 3400, Education 800, Electricity 400, Transport 600, Miscellaneous 1200 (in rupees). Represent as a bar graph using 1 unit length = ₹ 200.",
+      "decision": "required",
+      "reason_codes": [
+        "ANSWER_IS_FIGURE",
+        "GRAPH_CHART"
+      ],
+      "reason": "The answer to 'represent as a bar graph' is the drawn bar graph (the book shows it on pdf p.19 with 1 unit length = ₹ 200); the LP steps give the construction rules and the heights in units. The question has no figure (a table in LaTeX), so this solution figure stands alone and draws the whole graph (derived_from null).",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S20.T20.C78.IMG1",
+      "manim_scene": "c4_44_ex4_sol",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S20.T20.C78.IMG1}}",
+        "insert_into": "steps_tex",
+        "position": "before_first_step"
+      },
+      "diagram": {
+        "diagram_type": "data_graph",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "data_graph",
+          "graph_kind": "bar_graph",
+          "orientation": "vertical",
+          "to_scale": true,
+          "canvas": "1920x1080",
+          "value_axis": {
+            "position": "left",
+            "title": "Expenditure (in ₹)",
+            "title_rotation": "reading upward",
+            "start": 0,
+            "start_label_shown": false,
+            "ticks": [
+              200,
+              400,
+              600,
+              800,
+              1000,
+              1200,
+              1400,
+              1600,
+              1800,
+              2000,
+              2200,
+              2400,
+              2600,
+              2800,
+              3000,
+              3200,
+              3400,
+              3600
+            ],
+            "tick_labels": [
+              "200",
+              "400",
+              "600",
+              "800",
+              "1000",
+              "1200",
+              "1400",
+              "1600",
+              "1800",
+              "2000",
+              "2200",
+              "2400",
+              "2600",
+              "2800",
+              "3000",
+              "3200",
+              "3400",
+              "3600"
+            ],
+            "first_tick_one_spacing_above_baseline": true,
+            "axis_line_ends_at": 3600,
+            "one_unit_length_means": 200
+          },
+          "category_axis": {
+            "position": "bottom",
+            "title": "Item",
+            "labels_left_to_right": [
+              "House rent",
+              "Food",
+              "Education",
+              "Electricity",
+              "Transport",
+              "Miscellaneous"
+            ],
+            "label_orientation": "rotated 90 degrees, reading upward"
+          },
+          "bars": [
+            {
+              "category": "House rent",
+              "value": 3000,
+              "units_of_200": 15,
+              "tick_number_of_top": 15
+            },
+            {
+              "category": "Food",
+              "value": 3400,
+              "units_of_200": 17,
+              "tick_number_of_top": 17
+            },
+            {
+              "category": "Education",
+              "value": 800,
+              "units_of_200": 4,
+              "tick_number_of_top": 4
+            },
+            {
+              "category": "Electricity",
+              "value": 400,
+              "units_of_200": 2,
+              "tick_number_of_top": 2
+            },
+            {
+              "category": "Transport",
+              "value": 600,
+              "units_of_200": 3,
+              "tick_number_of_top": 3
+            },
+            {
+              "category": "Miscellaneous",
+              "value": 1200,
+              "units_of_200": 6,
+              "tick_number_of_top": 6
+            }
+          ],
+          "bar_style": {
+            "fill": "ANSWER",
+            "outline": null,
+            "outline_px": 0,
+            "width_fraction_of_slot": 0.5
+          },
+          "value_labels_on_bars": false,
+          "gridlines": false,
+          "chart_title": null,
+          "key": null
+        },
+        "manim_description": "Draw a vertical bar graph on a plain BG canvas, 16:9. Draw a vertical axis line at the left, rising to 3600 on the scale, and a horizontal baseline at the bottom, both INK, 3 px, meeting at the bottom-left corner, no arrowheads. On the vertical axis draw eighteen equally spaced short tick marks in INK, the first one full spacing above the baseline (the baseline is zero and has no tick and no label), and write the numbers in INK to the left of the ticks from bottom to top: 200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3200, 3400, 3600. Each tick spacing is one unit length = ₹ 200. Write the axis title 'Expenditure (in ₹)' in INK, rotated 90 degrees to read upward, to the left of the numbers. Along the baseline make six equal slots, left to right, and write under each in INK, rotated 90 degrees to read upward: House rent, Food, Education, Electricity, Transport, Miscellaneous. Write the axis title 'Item' in INK, centred below the rotated labels. Draw one vertical bar in each slot, standing on the baseline, all of equal width (50 percent of the slot) with equal gaps, filled ANSWER. Bar tops sit exactly on tick positions, left to right: House rent = 3000 (15th tick), Food = 3400 (17th tick, the tallest bar), Education = 800 (4th tick), Electricity = 400 (2nd tick), Transport = 600 (3rd tick), Miscellaneous = 1200 (6th tick). Draw no value labels on the bars, no gridlines, no chart title and no key.",
+        "visible_text": [
+          "Expenditure (in ₹)",
+          "200",
+          "400",
+          "600",
+          "800",
+          "1000",
+          "1200",
+          "1400",
+          "1600",
+          "1800",
+          "2000",
+          "2200",
+          "2400",
+          "2600",
+          "2800",
+          "3000",
+          "3200",
+          "3400",
+          "3600",
+          "House rent",
+          "Food",
+          "Education",
+          "Electricity",
+          "Transport",
+          "Miscellaneous",
+          "Item"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "value labels on the bars",
+          "the heights in units 15, 17, 4, 2, 3, 6",
+          "the scale sentence '1 unit length = ₹ 200'",
+          "the calculation list 3000 ÷ 200 = 15 and the rest",
+          "a chart title",
+          "gridlines"
+        ],
+        "accuracy_checks": [
+          "six bars left to right: House rent 3000, Food 3400, Education 800, Electricity 400, Transport 600, Miscellaneous 1200 (15, 17, 4, 2, 3, 6 spacings of 200)",
+          "eighteen ticks 200 to 3600, equal spacing, 1 unit length = ₹ 200; heights = value divided by 200: 3000/200 = 15, 3400/200 = 17, 800/200 = 4, 400/200 = 2, 600/200 = 3, 1200/200 = 6",
+          "Food is the tallest bar, House rent second, Electricity the shortest; the electricity bar is exactly half the education bar (2 spacings against 4)",
+          "bars equal width, equal gaps, in table order; no value labels"
+        ],
+        "alt_text": "A vertical bar graph of Imran's family's monthly expenditure in rupees, scale 200 to 3600 in steps of 200: house rent 3000, food 3400, education 800, electricity 400, transport 600, miscellaneous 1200.",
+        "render_note": "Check against pdf p.19: the printed graph is slightly off its own table (House rent top about 3050, Electricity about 420, Miscellaneous about 1220, uneven tick spacing, first tick 200 about two-thirds of a spacing above the baseline). The table values (3000, 3400, 800, 400, 600, 1200) are authoritative: draw each bar exactly on its tick (15, 17, 4, 2, 3, 6 spacings of 200) with even tick spacing. The book draws these bars unfilled with light outlines and has no gridlines and no 0 label; this specification keeps no gridlines and no 0 label."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S21.T21.C79",
+      "role": "question",
+      "lp_book_number": "Imran's Bar Graph: most and second most spent",
+      "ncert_ref": "Section 4.4 - Imran's bar graph, question 1 (pdf p.20; graph on pdf p.19)",
+      "question_text": "Using Imran's family bar graph (House rent 3000, Food 3400, Education 800, Electricity 400, Transport 600, Miscellaneous 1200): On which item does Imran's family spend the most and the second most?",
+      "decision": "required",
+      "reason_codes": [
+        "GRAPH_CHART",
+        "FIG_REFERENCED",
+        "DATA_IN_FIGURE"
+      ],
+      "reason": "The book says 'Use the bar graph to answer the following questions' (Imran's graph, 1 unit = ₹ 200): the question is answered by comparing bar lengths (the tallest and the second tallest bar). The LP text repeats the amounts in brackets; the graph is the book's data. All three questions of the set get the same figure (sibling consistency). Question figure = the graph as printed: no value labels.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S21.T21.C79.IMG1",
+      "manim_scene": "c4_44_imran_q1_q",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S21.T21.C79.IMG1}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "data_graph",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "data_graph",
+          "graph_kind": "bar_graph",
+          "orientation": "vertical",
+          "to_scale": true,
+          "canvas": "1920x1080",
+          "value_axis": {
+            "position": "left",
+            "title": "Expenditure (in ₹)",
+            "title_rotation": "reading upward",
+            "start": 0,
+            "start_label_shown": false,
+            "ticks": [
+              200,
+              400,
+              600,
+              800,
+              1000,
+              1200,
+              1400,
+              1600,
+              1800,
+              2000,
+              2200,
+              2400,
+              2600,
+              2800,
+              3000,
+              3200,
+              3400,
+              3600
+            ],
+            "tick_labels": [
+              "200",
+              "400",
+              "600",
+              "800",
+              "1000",
+              "1200",
+              "1400",
+              "1600",
+              "1800",
+              "2000",
+              "2200",
+              "2400",
+              "2600",
+              "2800",
+              "3000",
+              "3200",
+              "3400",
+              "3600"
+            ],
+            "first_tick_one_spacing_above_baseline": true,
+            "axis_line_ends_at": 3600,
+            "one_unit_length_means": 200
+          },
+          "category_axis": {
+            "position": "bottom",
+            "title": "Item",
+            "labels_left_to_right": [
+              "House rent",
+              "Food",
+              "Education",
+              "Electricity",
+              "Transport",
+              "Miscellaneous"
+            ],
+            "label_orientation": "rotated 90 degrees, reading upward"
+          },
+          "bars": [
+            {
+              "category": "House rent",
+              "value": 3000,
+              "units_of_200": 15,
+              "tick_number_of_top": 15
+            },
+            {
+              "category": "Food",
+              "value": 3400,
+              "units_of_200": 17,
+              "tick_number_of_top": 17
+            },
+            {
+              "category": "Education",
+              "value": 800,
+              "units_of_200": 4,
+              "tick_number_of_top": 4
+            },
+            {
+              "category": "Electricity",
+              "value": 400,
+              "units_of_200": 2,
+              "tick_number_of_top": 2
+            },
+            {
+              "category": "Transport",
+              "value": 600,
+              "units_of_200": 3,
+              "tick_number_of_top": 3
+            },
+            {
+              "category": "Miscellaneous",
+              "value": 1200,
+              "units_of_200": 6,
+              "tick_number_of_top": 6
+            }
+          ],
+          "bar_style": {
+            "fill": "MARK_FILL",
+            "outline": "INK",
+            "outline_px": 3,
+            "width_fraction_of_slot": 0.5
+          },
+          "value_labels_on_bars": false,
+          "gridlines": false,
+          "chart_title": null,
+          "key": null
+        },
+        "manim_description": "Draw a vertical bar graph on a plain BG canvas, 16:9. Draw a vertical axis line at the left, rising to 3600 on the scale, and a horizontal baseline at the bottom, both INK, 3 px, meeting at the bottom-left corner, no arrowheads. On the vertical axis draw eighteen equally spaced short tick marks in INK, the first one full spacing above the baseline (the baseline is zero and has no tick and no label), and write the numbers in INK to the left of the ticks from bottom to top: 200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3200, 3400, 3600. Each tick spacing is one unit length = ₹ 200. Write the axis title 'Expenditure (in ₹)' in INK, rotated 90 degrees to read upward, to the left of the numbers. Along the baseline make six equal slots, left to right, and write under each in INK, rotated 90 degrees to read upward: House rent, Food, Education, Electricity, Transport, Miscellaneous. Write the axis title 'Item' in INK, centred below the rotated labels. Draw one vertical bar in each slot, standing on the baseline, all of equal width (50 percent of the slot) with equal gaps, filled MARK_FILL with a 3 px INK outline. Bar tops sit exactly on tick positions, left to right: House rent = 3000 (15th tick), Food = 3400 (17th tick, the tallest bar), Education = 800 (4th tick), Electricity = 400 (2nd tick), Transport = 600 (3rd tick), Miscellaneous = 1200 (6th tick). Draw no value labels on the bars, no gridlines, no chart title and no key.",
+        "visible_text": [
+          "Expenditure (in ₹)",
+          "200",
+          "400",
+          "600",
+          "800",
+          "1000",
+          "1200",
+          "1400",
+          "1600",
+          "1800",
+          "2000",
+          "2200",
+          "2400",
+          "2600",
+          "2800",
+          "3000",
+          "3200",
+          "3400",
+          "3600",
+          "House rent",
+          "Food",
+          "Education",
+          "Electricity",
+          "Transport",
+          "Miscellaneous",
+          "Item"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "value labels on the bars",
+          "the heights in units 15, 17, 4, 2, 3, 6",
+          "any ratio, half or one-fourth mark",
+          "the sentence '1 unit length = ₹ 200'",
+          "a chart title",
+          "gridlines"
+        ],
+        "accuracy_checks": [
+          "six bars left to right: House rent 3000, Food 3400, Education 800, Electricity 400, Transport 600, Miscellaneous 1200 (15, 17, 4, 2, 3, 6 spacings of 200)",
+          "eighteen ticks 200 to 3600, equal spacing; every bar top on its tick; Food tallest, House rent second, Electricity shortest",
+          "education 800 is exactly twice electricity 400 and 800 is below 3400 / 4 = 850, so the picture agrees with the answers, but no value label, ratio or answer mark is drawn",
+          "identical in layout and content to the graph of the other two Imran questions"
+        ],
+        "alt_text": "A vertical bar graph of Imran's family's monthly expenditure in rupees, scale 200 to 3600 in steps of 200: house rent 3000, food 3400, education 800, electricity 400, transport 600, miscellaneous 1200.",
+        "render_note": "Check against pdf p.19: the printed graph is slightly off its own table (House rent top about 3050, Electricity about 420, Miscellaneous about 1220, uneven tick spacing, first tick 200 about two-thirds of a spacing above the baseline). The table values (3000, 3400, 800, 400, 600, 1200) are authoritative: draw each bar exactly on its tick (15, 17, 4, 2, 3, 6 spacings of 200) with even tick spacing. The book draws these bars unfilled with light outlines and has no gridlines and no 0 label; this specification keeps no gridlines and no 0 label."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S21.T21.C80",
+      "role": "solution",
+      "lp_book_number": "Imran's Bar Graph: most and second most spent",
+      "ncert_ref": "Section 4.4 - Imran's bar graph, question 1 (printed answer on pdf p.38, text only)",
+      "question_text": "Using Imran's family bar graph (House rent 3000, Food 3400, Education 800, Electricity 400, Transport 600, Miscellaneous 1200): On which item does Imran's family spend the most and the second most?",
+      "decision": "none",
+      "reason_codes": [
+        "SAME_AS_QUESTION_DIAGRAM",
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The book answer is words only (Food, then House rent; printed on pdf p.38); the answer is read from the question graph and nothing visual is added. Highlighting the two tallest bars would be optional only.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S21.T21.C81",
+      "role": "question",
+      "lp_book_number": "Imran's Bar Graph: electricity as half of education",
+      "ncert_ref": "Section 4.4 - Imran's bar graph, question 2 (pdf p.20; graph on pdf p.19)",
+      "question_text": "Is the cost of electricity about one-half the cost of education? (Electricity 400, Education 800.)",
+      "decision": "required",
+      "reason_codes": [
+        "GRAPH_CHART",
+        "FIG_REFERENCED",
+        "DATA_IN_FIGURE"
+      ],
+      "reason": "The book says 'Use the bar graph to answer the following questions' (Imran's graph, 1 unit = ₹ 200): the question is answered by comparing bar lengths (the electricity bar against the education bar). The LP text repeats the amounts in brackets; the graph is the book's data. All three questions of the set get the same figure (sibling consistency). Question figure = the graph as printed: no value labels.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S21.T21.C81.IMG1",
+      "manim_scene": "c4_44_imran_q2_q",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S21.T21.C81.IMG1}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "data_graph",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "data_graph",
+          "graph_kind": "bar_graph",
+          "orientation": "vertical",
+          "to_scale": true,
+          "canvas": "1920x1080",
+          "value_axis": {
+            "position": "left",
+            "title": "Expenditure (in ₹)",
+            "title_rotation": "reading upward",
+            "start": 0,
+            "start_label_shown": false,
+            "ticks": [
+              200,
+              400,
+              600,
+              800,
+              1000,
+              1200,
+              1400,
+              1600,
+              1800,
+              2000,
+              2200,
+              2400,
+              2600,
+              2800,
+              3000,
+              3200,
+              3400,
+              3600
+            ],
+            "tick_labels": [
+              "200",
+              "400",
+              "600",
+              "800",
+              "1000",
+              "1200",
+              "1400",
+              "1600",
+              "1800",
+              "2000",
+              "2200",
+              "2400",
+              "2600",
+              "2800",
+              "3000",
+              "3200",
+              "3400",
+              "3600"
+            ],
+            "first_tick_one_spacing_above_baseline": true,
+            "axis_line_ends_at": 3600,
+            "one_unit_length_means": 200
+          },
+          "category_axis": {
+            "position": "bottom",
+            "title": "Item",
+            "labels_left_to_right": [
+              "House rent",
+              "Food",
+              "Education",
+              "Electricity",
+              "Transport",
+              "Miscellaneous"
+            ],
+            "label_orientation": "rotated 90 degrees, reading upward"
+          },
+          "bars": [
+            {
+              "category": "House rent",
+              "value": 3000,
+              "units_of_200": 15,
+              "tick_number_of_top": 15
+            },
+            {
+              "category": "Food",
+              "value": 3400,
+              "units_of_200": 17,
+              "tick_number_of_top": 17
+            },
+            {
+              "category": "Education",
+              "value": 800,
+              "units_of_200": 4,
+              "tick_number_of_top": 4
+            },
+            {
+              "category": "Electricity",
+              "value": 400,
+              "units_of_200": 2,
+              "tick_number_of_top": 2
+            },
+            {
+              "category": "Transport",
+              "value": 600,
+              "units_of_200": 3,
+              "tick_number_of_top": 3
+            },
+            {
+              "category": "Miscellaneous",
+              "value": 1200,
+              "units_of_200": 6,
+              "tick_number_of_top": 6
+            }
+          ],
+          "bar_style": {
+            "fill": "MARK_FILL",
+            "outline": "INK",
+            "outline_px": 3,
+            "width_fraction_of_slot": 0.5
+          },
+          "value_labels_on_bars": false,
+          "gridlines": false,
+          "chart_title": null,
+          "key": null
+        },
+        "manim_description": "Draw a vertical bar graph on a plain BG canvas, 16:9. Draw a vertical axis line at the left, rising to 3600 on the scale, and a horizontal baseline at the bottom, both INK, 3 px, meeting at the bottom-left corner, no arrowheads. On the vertical axis draw eighteen equally spaced short tick marks in INK, the first one full spacing above the baseline (the baseline is zero and has no tick and no label), and write the numbers in INK to the left of the ticks from bottom to top: 200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3200, 3400, 3600. Each tick spacing is one unit length = ₹ 200. Write the axis title 'Expenditure (in ₹)' in INK, rotated 90 degrees to read upward, to the left of the numbers. Along the baseline make six equal slots, left to right, and write under each in INK, rotated 90 degrees to read upward: House rent, Food, Education, Electricity, Transport, Miscellaneous. Write the axis title 'Item' in INK, centred below the rotated labels. Draw one vertical bar in each slot, standing on the baseline, all of equal width (50 percent of the slot) with equal gaps, filled MARK_FILL with a 3 px INK outline. Bar tops sit exactly on tick positions, left to right: House rent = 3000 (15th tick), Food = 3400 (17th tick, the tallest bar), Education = 800 (4th tick), Electricity = 400 (2nd tick), Transport = 600 (3rd tick), Miscellaneous = 1200 (6th tick). Draw no value labels on the bars, no gridlines, no chart title and no key.",
+        "visible_text": [
+          "Expenditure (in ₹)",
+          "200",
+          "400",
+          "600",
+          "800",
+          "1000",
+          "1200",
+          "1400",
+          "1600",
+          "1800",
+          "2000",
+          "2200",
+          "2400",
+          "2600",
+          "2800",
+          "3000",
+          "3200",
+          "3400",
+          "3600",
+          "House rent",
+          "Food",
+          "Education",
+          "Electricity",
+          "Transport",
+          "Miscellaneous",
+          "Item"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "value labels on the bars",
+          "the heights in units 15, 17, 4, 2, 3, 6",
+          "any ratio, half or one-fourth mark",
+          "the sentence '1 unit length = ₹ 200'",
+          "a chart title",
+          "gridlines"
+        ],
+        "accuracy_checks": [
+          "six bars left to right: House rent 3000, Food 3400, Education 800, Electricity 400, Transport 600, Miscellaneous 1200 (15, 17, 4, 2, 3, 6 spacings of 200)",
+          "eighteen ticks 200 to 3600, equal spacing; every bar top on its tick; Food tallest, House rent second, Electricity shortest",
+          "education 800 is exactly twice electricity 400 and 800 is below 3400 / 4 = 850, so the picture agrees with the answers, but no value label, ratio or answer mark is drawn",
+          "identical in layout and content to the graph of the other two Imran questions"
+        ],
+        "alt_text": "A vertical bar graph of Imran's family's monthly expenditure in rupees, scale 200 to 3600 in steps of 200: house rent 3000, food 3400, education 800, electricity 400, transport 600, miscellaneous 1200.",
+        "render_note": "Same graph as M3.S21.T21.C79.IMG1 (render the scene once and copy; each question keeps its own id). Check against pdf p.19: the printed graph is slightly off its own table (House rent top about 3050, Electricity about 420, Miscellaneous about 1220, uneven tick spacing, first tick 200 about two-thirds of a spacing above the baseline). The table values (3000, 3400, 800, 400, 600, 1200) are authoritative: draw each bar exactly on its tick (15, 17, 4, 2, 3, 6 spacings of 200) with even tick spacing. The book draws these bars unfilled with light outlines and has no gridlines and no 0 label; this specification keeps no gridlines and no 0 label."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S21.T21.C82",
+      "role": "solution",
+      "lp_book_number": "Imran's Bar Graph: electricity as half of education",
+      "ncert_ref": "Section 4.4 - Imran's bar graph, question 2 (printed answer on pdf p.38, text only)",
+      "question_text": "Is the cost of electricity about one-half the cost of education? (Electricity 400, Education 800.)",
+      "decision": "none",
+      "reason_codes": [
+        "SAME_AS_QUESTION_DIAGRAM",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "The answer is the check 800 / 2 = 400 (Yes), which the LaTeX step gives; the figure would only repeat the question graph.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M3.S21.T21.C83",
+      "role": "question",
+      "lp_book_number": "Imran's Bar Graph: education under one-fourth of food",
+      "ncert_ref": "Section 4.4 - Imran's bar graph, question 3 (pdf p.20; graph on pdf p.19)",
+      "question_text": "Is the cost of education less than one-fourth the cost of food? (Education 800, Food 3400.)",
+      "decision": "required",
+      "reason_codes": [
+        "GRAPH_CHART",
+        "FIG_REFERENCED",
+        "DATA_IN_FIGURE"
+      ],
+      "reason": "The book says 'Use the bar graph to answer the following questions' (Imran's graph, 1 unit = ₹ 200): the question is answered by comparing bar lengths (the education bar against the food bar). The LP text repeats the amounts in brackets; the graph is the book's data. All three questions of the set get the same figure (sibling consistency). Question figure = the graph as printed: no value labels.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M3.S21.T21.C83.IMG1",
+      "manim_scene": "c4_44_imran_q3_q",
+      "placeholder": {
+        "token": "{{DIAGRAM:M3.S21.T21.C83.IMG1}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "data_graph",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "data_graph",
+          "graph_kind": "bar_graph",
+          "orientation": "vertical",
+          "to_scale": true,
+          "canvas": "1920x1080",
+          "value_axis": {
+            "position": "left",
+            "title": "Expenditure (in ₹)",
+            "title_rotation": "reading upward",
+            "start": 0,
+            "start_label_shown": false,
+            "ticks": [
+              200,
+              400,
+              600,
+              800,
+              1000,
+              1200,
+              1400,
+              1600,
+              1800,
+              2000,
+              2200,
+              2400,
+              2600,
+              2800,
+              3000,
+              3200,
+              3400,
+              3600
+            ],
+            "tick_labels": [
+              "200",
+              "400",
+              "600",
+              "800",
+              "1000",
+              "1200",
+              "1400",
+              "1600",
+              "1800",
+              "2000",
+              "2200",
+              "2400",
+              "2600",
+              "2800",
+              "3000",
+              "3200",
+              "3400",
+              "3600"
+            ],
+            "first_tick_one_spacing_above_baseline": true,
+            "axis_line_ends_at": 3600,
+            "one_unit_length_means": 200
+          },
+          "category_axis": {
+            "position": "bottom",
+            "title": "Item",
+            "labels_left_to_right": [
+              "House rent",
+              "Food",
+              "Education",
+              "Electricity",
+              "Transport",
+              "Miscellaneous"
+            ],
+            "label_orientation": "rotated 90 degrees, reading upward"
+          },
+          "bars": [
+            {
+              "category": "House rent",
+              "value": 3000,
+              "units_of_200": 15,
+              "tick_number_of_top": 15
+            },
+            {
+              "category": "Food",
+              "value": 3400,
+              "units_of_200": 17,
+              "tick_number_of_top": 17
+            },
+            {
+              "category": "Education",
+              "value": 800,
+              "units_of_200": 4,
+              "tick_number_of_top": 4
+            },
+            {
+              "category": "Electricity",
+              "value": 400,
+              "units_of_200": 2,
+              "tick_number_of_top": 2
+            },
+            {
+              "category": "Transport",
+              "value": 600,
+              "units_of_200": 3,
+              "tick_number_of_top": 3
+            },
+            {
+              "category": "Miscellaneous",
+              "value": 1200,
+              "units_of_200": 6,
+              "tick_number_of_top": 6
+            }
+          ],
+          "bar_style": {
+            "fill": "MARK_FILL",
+            "outline": "INK",
+            "outline_px": 3,
+            "width_fraction_of_slot": 0.5
+          },
+          "value_labels_on_bars": false,
+          "gridlines": false,
+          "chart_title": null,
+          "key": null
+        },
+        "manim_description": "Draw a vertical bar graph on a plain BG canvas, 16:9. Draw a vertical axis line at the left, rising to 3600 on the scale, and a horizontal baseline at the bottom, both INK, 3 px, meeting at the bottom-left corner, no arrowheads. On the vertical axis draw eighteen equally spaced short tick marks in INK, the first one full spacing above the baseline (the baseline is zero and has no tick and no label), and write the numbers in INK to the left of the ticks from bottom to top: 200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3200, 3400, 3600. Each tick spacing is one unit length = ₹ 200. Write the axis title 'Expenditure (in ₹)' in INK, rotated 90 degrees to read upward, to the left of the numbers. Along the baseline make six equal slots, left to right, and write under each in INK, rotated 90 degrees to read upward: House rent, Food, Education, Electricity, Transport, Miscellaneous. Write the axis title 'Item' in INK, centred below the rotated labels. Draw one vertical bar in each slot, standing on the baseline, all of equal width (50 percent of the slot) with equal gaps, filled MARK_FILL with a 3 px INK outline. Bar tops sit exactly on tick positions, left to right: House rent = 3000 (15th tick), Food = 3400 (17th tick, the tallest bar), Education = 800 (4th tick), Electricity = 400 (2nd tick), Transport = 600 (3rd tick), Miscellaneous = 1200 (6th tick). Draw no value labels on the bars, no gridlines, no chart title and no key.",
+        "visible_text": [
+          "Expenditure (in ₹)",
+          "200",
+          "400",
+          "600",
+          "800",
+          "1000",
+          "1200",
+          "1400",
+          "1600",
+          "1800",
+          "2000",
+          "2200",
+          "2400",
+          "2600",
+          "2800",
+          "3000",
+          "3200",
+          "3400",
+          "3600",
+          "House rent",
+          "Food",
+          "Education",
+          "Electricity",
+          "Transport",
+          "Miscellaneous",
+          "Item"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "value labels on the bars",
+          "the heights in units 15, 17, 4, 2, 3, 6",
+          "any ratio, half or one-fourth mark",
+          "the sentence '1 unit length = ₹ 200'",
+          "a chart title",
+          "gridlines"
+        ],
+        "accuracy_checks": [
+          "six bars left to right: House rent 3000, Food 3400, Education 800, Electricity 400, Transport 600, Miscellaneous 1200 (15, 17, 4, 2, 3, 6 spacings of 200)",
+          "eighteen ticks 200 to 3600, equal spacing; every bar top on its tick; Food tallest, House rent second, Electricity shortest",
+          "education 800 is exactly twice electricity 400 and 800 is below 3400 / 4 = 850, so the picture agrees with the answers, but no value label, ratio or answer mark is drawn",
+          "identical in layout and content to the graph of the other two Imran questions"
+        ],
+        "alt_text": "A vertical bar graph of Imran's family's monthly expenditure in rupees, scale 200 to 3600 in steps of 200: house rent 3000, food 3400, education 800, electricity 400, transport 600, miscellaneous 1200.",
+        "render_note": "Same graph as M3.S21.T21.C79.IMG1 (render the scene once and copy; each question keeps its own id). Check against pdf p.19: the printed graph is slightly off its own table (House rent top about 3050, Electricity about 420, Miscellaneous about 1220, uneven tick spacing, first tick 200 about two-thirds of a spacing above the baseline). The table values (3000, 3400, 800, 400, 600, 1200) are authoritative: draw each bar exactly on its tick (15, 17, 4, 2, 3, 6 spacings of 200) with even tick spacing. The book draws these bars unfilled with light outlines and has no gridlines and no 0 label; this specification keeps no gridlines and no 0 label."
+      }
+    },
+    {
+      "lp_concept_id": "M3.S21.T21.C84",
+      "role": "solution",
+      "lp_book_number": "Imran's Bar Graph: education under one-fourth of food",
+      "ncert_ref": "Section 4.4 - Imran's bar graph, question 3 (printed answer on pdf p.38, text only)",
+      "question_text": "Is the cost of education less than one-fourth the cost of food? (Education 800, Food 3400.)",
+      "decision": "none",
+      "reason_codes": [
+        "SAME_AS_QUESTION_DIAGRAM",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "The answer is the check 3400 = 4 x 850 and 800 < 850 (Yes), which the LaTeX steps give; the figure would only repeat the question graph.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    }
+  ]
+}

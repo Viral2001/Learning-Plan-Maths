@@ -1,0 +1,1469 @@
+{
+ "meta": {
+  "chapter": "Data Handling and Presentation",
+  "class": 6,
+  "textbook": "Ganita Prakash Grade 6, Chapter 4",
+  "lp_plan_id": "cbse_eng_maths6_ch4_v85",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 8,
+    "optional": 0,
+    "none": 1
+   },
+   "solution": {
+    "required": 1,
+    "optional": 0,
+    "none": 8
+   },
+   "worked_example": {
+    "required": 0,
+    "optional": 0,
+    "none": 1
+   }
+  },
+  "notes": [
+   "Chunk B: module M2 (pictographs, units 14-20) and M3.S16 (reading bar graphs, units 21-23). M3.S15 holds no question units; its book figures (pdf p.12-13) are claimed here.",
+   "All diagrams use aspect_ratio 16:9: the image pipeline draws every diagram as a 1456 x 816 house card (user rule 21 Nov 2026), whatever aspect the spec asks for.",
+   "Sibling pairs that use the same book picture (travel pictograph C36/C38, bar graph C55/C57/C59) each get their own image; the second and third uses have inventory ids starting NEW- (one entry per use) and derived_from null, because only a solution diagram may derive from another.",
+   "The bar graph keeps the book's own chart title (No. of students absent in each class) because the questions (absent, full attendance) are read against it; the pictograph column titles and axis titles are the book's own.",
+   "C40, C42 and C55 carry a parenthetical in the LP question text that describes (and for C42, C55 gives away) the figure's data: needs_lp_text_sync is set on them; the builder does not edit text.",
+   "C49's LP book_number says 'Figure it Out 4.2, Q1' but the item is Figure it Out 4.2 Q2 (ncert_ref 4.2.FiO.Q2)."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P06-pictograph-1",
+   "source": "chapter p.06",
+   "description": "Modes of travelling pictograph, table form, one smiley = 1 student: Private car 4, Public bus 5, School bus 11, Cycle 3, Walking 7 (30 in all). Used by the two bullet questions (most / fewest students); base description checked against the page picture.",
+   "mapped_to": "item:M2.S9.T9.C36 (question)"
+  },
+  {
+   "fig_id": "NEW-P06-pictograph-1-for-C38",
+   "source": "chapter p.06",
+   "description": "The same modes of travelling pictograph (4, 5, 11, 3, 7 smileys) used a second time, by the question about the fewest students (C38); one entry per use.",
+   "mapped_to": "item:M2.S9.T9.C38 (question)"
+  },
+  {
+   "fig_id": "P07-pictograph-1",
+   "source": "chapter p.07",
+   "description": "Nand Kishor's pictograph, one triangle = 10 children: Always 5 triangles, Sometimes 2 triangles + 1 half triangle (left half), Never 4 triangles. The worked example's question reads it.",
+   "mapped_to": "item:M2.S10.T10.C40 (question)"
+  },
+  {
+   "fig_id": "P08-data_table-1",
+   "source": "chapter p.08",
+   "description": "Lakhanpal's table of students absent: Class I..VIII = 3, 5, 4, 2, 0, 1, 5, 7 (27). Plain table of numbers in a teaching passage; no question of this chunk works on it.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P08-pictograph-2",
+   "source": "chapter p.08",
+   "description": "Lakhanpal's pictograph of students absent (smiley = 1 student; I 3, II 5, III 4, IV 2, V 0, VI 1, VII 5, VIII 7), axes layout. Teaching figure: no question of this chunk reads or draws it (the worked example only says 'as Lakhanpal did').",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P08-data_table-3",
+   "source": "chapter p.08",
+   "description": "Table of students present, Class I..VIII = 30, 35, 20, 25, 30, 25, 30, 20 (215). It is the data of the worked example C44, which already carries it in its text.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P09-pictograph-1",
+   "source": "chapter p.09",
+   "description": "Jarina's pictograph of students present, smiley = 5 students (6, 7, 4, 5, 6, 5, 6, 4 smileys for classes I..VIII). Teaching figure: no question of this chunk reads or draws it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P09-pictograph-2",
+   "source": "chapter p.09",
+   "description": "Sangita's pictograph of students present, smiley = 10 students, half smiley (left half) = 5: I 3, II 3+half, III 2, IV 2+half, V 3, VI 2+half, VII 3, VIII 2. The Math Talk question ('such a pictograph') refers to it.",
+   "mapped_to": "item:M2.S13.T13.C47 (question)"
+  },
+  {
+   "fig_id": "P11-pictograph-1",
+   "source": "chapter p.11",
+   "description": "Pictograph of books borrowed at Middle School, Ginnori, open book = 1 book: Monday 5, Tuesday 4, Wednesday 2, Thursday 0 (empty), Friday 5, Saturday 8 (24). Figure it Out Q1 reads it.",
+   "mapped_to": "item:M2.S11.T11.C42 (question)"
+  },
+  {
+   "fig_id": "P11-data_table-2",
+   "source": "chapter p.11",
+   "description": "Table of kites sold: Chaman 250, Rani 300, Rukhsana 100, Jasmeet 450, Jetha Lal 250, Poonam Ben 700 (2050). Plain table of numbers given in the question; the LP text already holds it.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P12-pictograph_symbol-1",
+   "source": "chapter p.12",
+   "description": "Inline kite icon (diamond with spars and a small tail, 1 kite = 100 kites) in 'Prepare a pictograph using the symbol'. It is the symbol of the pictograph the student draws; it is redrawn as the symbol of the printed-answer pictograph (item C50, solution). The icon is printed grey here and green with a red tail in the printed answer (the book's own difference).",
+   "mapped_to": "item:M2.S14.T14.C50 (solution)"
+  },
+  {
+   "fig_id": "P12-stacked_bar_graph-2",
+   "source": "chapter p.12",
+   "description": "Reproduction of an external stacked column chart ('The Number of Endangered Species is Rising', 2007 to 2022) in the opening of 4.3, shown only as a picture box; no question works on it and its segment values are not printed.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P12-data_table-3",
+   "source": "chapter p.12",
+   "description": "Second printing of Lakhanpal's table of students absent: Class I..VIII = 3, 5, 4, 2, 0, 1, 5, 7. Plain table of numbers; the bar graph drawn from it is P13-bar_graph-1.",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P13-bar_graph-1",
+   "source": "chapter p.13",
+   "description": "Vertical bar graph 'No. of students absent in each class': note box '1 unit length = 1 student'; y-axis 'Number of students' 0 to 8 with a gridline at every integer; x-axis 'Class' 1 to 8; bars 3, 5, 4, 2, 0 (no bar), 1, 5, 7. Bar-graph question 1 reads it.",
+   "mapped_to": "item:M3.S16.T16.C55 (question)"
+  },
+  {
+   "fig_id": "NEW-P13-bar_graph-1-for-C57",
+   "source": "chapter p.13",
+   "description": "The same bar graph of students absent (3, 5, 4, 2, 0, 1, 5, 7) used a second time, by bar-graph question 2 (maximum absent); one entry per use.",
+   "mapped_to": "item:M3.S16.T16.C57 (question)"
+  },
+  {
+   "fig_id": "NEW-P13-bar_graph-1-for-C59",
+   "source": "chapter p.13",
+   "description": "The same bar graph of students absent (3, 5, 4, 2, 0, 1, 5, 7) used a third time, by bar-graph question 3 (full attendance); one entry per use.",
+   "mapped_to": "item:M3.S16.T16.C59 (question)"
+  },
+  {
+   "fig_id": "SOL36-pictograph_key-1",
+   "source": "solutions p.36",
+   "description": "CORRECTED: the half symbol in the answer sentence is the LEFT half of the green smiley (left eye dot and left part of the smile; at 5x zoom), not the right half. Inline key: full smiley = 10 students, half smiley = 5 students. It is a key, not a picture of data, and the question figure of C47 shows the same symbols.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "SOL36-pictograph-2",
+   "source": "solutions p.36",
+   "description": "Printed answer pictograph of the kites (table split over pdf p.36-37): Chaman 2 kites + half, Rani 3, Rukhsana 1, Jasmeet 4 + half, Jetha Lal 2 + half, Poonam Ben 7; key kite = 100; half kite is the right half (checked: 19 whole + 3 half kites = 2050).",
+   "mapped_to": "item:M2.S14.T14.C50 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 18,
+  "mapped_to_items": 10,
+  "mapped_to_concept_images": 0,
+  "mapped_none": 8,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M2.S9.T9.C36.IMG1",
+   "M2.S9.T9.C38.IMG1",
+   "M2.S10.T10.C40.IMG1",
+   "M2.S11.T11.C42.IMG1",
+   "M2.S13.T13.C47.IMG1",
+   "M2.S14.T14.C50.IMG1",
+   "M3.S16.T16.C55.IMG1",
+   "M3.S16.T16.C57.IMG1",
+   "M3.S16.T16.C59.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M2.S9.T9.C36",
+   "role": "question",
+   "lp_book_number": "Reading Pictographs: mode used by most students",
+   "ncert_ref": "Section 4.2 - picture of modes of travelling (chapter p.79, pdf p.6), first bullet",
+   "question_text": "Based on the picture, answer: Which mode of travel is used by the most number of students?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The question says 'Based on the picture' and the counts (private car 4, public bus 5, school bus 11, cycle 3, walking 7) live only in the pictograph; the LP text does not state them. The teaching image M2.S8.T8.C33.IMG1 shows only 2 of the 5 rows and is never linked, so the question gets its own full pictograph.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S9.T9.C36.IMG1",
+   "manim_scene": "c4_42_readpic_q1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S9.T9.C36.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "pictograph",
+     "layout": "table_rows",
+     "column_titles": [
+      "Modes of Travelling",
+      "Number of Students"
+     ],
+     "key": {
+      "symbol": "smiley",
+      "text": "= 1 Student",
+      "position": "right end of the second header cell"
+     },
+     "symbol_shape": "Smiley symbol: a circle with INK outline 2.5 px, fill MARK_FILL, two small filled INK dots as eyes and one INK curved smile arc; every smiley has the same diameter",
+     "rows": [
+      {
+       "label": "Private car",
+       "symbols_full": 4,
+       "symbols_half": 0
+      },
+      {
+       "label": "Public bus",
+       "symbols_full": 5,
+       "symbols_half": 0
+      },
+      {
+       "label": "School bus",
+       "symbols_full": 11,
+       "symbols_half": 0
+      },
+      {
+       "label": "Cycle",
+       "symbols_full": 3,
+       "symbols_half": 0
+      },
+      {
+       "label": "Walking",
+       "symbols_full": 7,
+       "symbols_half": 0
+      }
+     ],
+     "value_per_full_symbol": 1,
+     "values_for_check": [
+      4.0,
+      5.0,
+      11.0,
+      3.0,
+      7.0
+     ],
+     "alignment": "symbols left-aligned in the second column, one single line per row, equal gaps, same start x in every row"
+    },
+    "manim_description": "Draw a pictograph as a two-column table on a white background, thin INK lines 2 px: the outer rectangle, one vertical divider after the label column (the label column is one quarter of the table width), one horizontal line under the header row and one under every data row; all data rows have the same height. Header row: first cell text 'Modes of Travelling'; second cell text 'Number of Students' and, at the right end of that cell, one smiley symbol followed by the text '= 1 Student'. Below it, 5 data rows from top to bottom: row 1 label 'Private car' with 4 smileys; row 2 label 'Public bus' with 5 smileys; row 3 label 'School bus' with 11 smileys; row 4 label 'Cycle' with 3 smileys; row 5 label 'Walking' with 7 smileys. Smiley symbol: a circle with INK outline 2.5 px, fill MARK_FILL, two small filled INK dots as eyes and one INK curved smile arc; every smiley has the same diameter. No numbers are written beside any row. Nothing is highlighted: every smiley is drawn the same way. All text is INK, sans-serif, at least 34 px high on a 1920 px canvas.",
+    "visible_text": [
+     "Modes of Travelling",
+     "Number of Students",
+     "= 1 Student",
+     "Private car",
+     "Public bus",
+     "School bus",
+     "Cycle",
+     "Walking"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numerals or totals beside the rows",
+     "highlight on the longest or shortest row",
+     "the words most / least or the answer"
+    ],
+    "accuracy_checks": [
+     "symbol counts per row, top to bottom: 4, 5, 11, 3, 7",
+     "total symbols 4+5+11+3+7 = 30",
+     "longest row is School bus (11), shortest row is Cycle (3), so the figure must not pre-mark either",
+     "all smileys have the same size and equal gaps, so row length is proportional to the count"
+    ],
+    "alt_text": "Pictograph of modes of travel, one smiley for one student: private car 4, public bus 5, school bus 11, cycle 3, walking 7."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C37",
+   "role": "solution",
+   "lp_book_number": "Reading Pictographs: mode used by most students",
+   "ncert_ref": "Section 4.2 - picture of modes of travelling (chapter p.79, pdf p.6), first bullet",
+   "question_text": "Based on the picture, answer: Which mode of travel is used by the most number of students?",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a word and a number (school bus, 11); the book prints no answer picture for this bullet, and a solution figure would only repeat the pictograph of the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C38",
+   "role": "question",
+   "lp_book_number": "Reading Pictographs: mode used by fewest students",
+   "ncert_ref": "Section 4.2 - picture of modes of travelling (chapter p.79, pdf p.6), second bullet",
+   "question_text": "Which mode of travel is used by the least number of students?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "Same pictograph as the question before (units 14 and 15 are siblings): the counts needed to find the shortest row (cycle, 3) are only in the figure. Drawn again for this card; derived_from stays null because only solution diagrams may derive from another.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S9.T9.C38.IMG1",
+   "manim_scene": "c4_42_readpic_q2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S9.T9.C38.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "pictograph",
+     "layout": "table_rows",
+     "column_titles": [
+      "Modes of Travelling",
+      "Number of Students"
+     ],
+     "key": {
+      "symbol": "smiley",
+      "text": "= 1 Student",
+      "position": "right end of the second header cell"
+     },
+     "symbol_shape": "Smiley symbol: a circle with INK outline 2.5 px, fill MARK_FILL, two small filled INK dots as eyes and one INK curved smile arc; every smiley has the same diameter",
+     "rows": [
+      {
+       "label": "Private car",
+       "symbols_full": 4,
+       "symbols_half": 0
+      },
+      {
+       "label": "Public bus",
+       "symbols_full": 5,
+       "symbols_half": 0
+      },
+      {
+       "label": "School bus",
+       "symbols_full": 11,
+       "symbols_half": 0
+      },
+      {
+       "label": "Cycle",
+       "symbols_full": 3,
+       "symbols_half": 0
+      },
+      {
+       "label": "Walking",
+       "symbols_full": 7,
+       "symbols_half": 0
+      }
+     ],
+     "value_per_full_symbol": 1,
+     "values_for_check": [
+      4.0,
+      5.0,
+      11.0,
+      3.0,
+      7.0
+     ],
+     "alignment": "symbols left-aligned in the second column, one single line per row, equal gaps, same start x in every row"
+    },
+    "manim_description": "Draw a pictograph as a two-column table on a white background, thin INK lines 2 px: the outer rectangle, one vertical divider after the label column (the label column is one quarter of the table width), one horizontal line under the header row and one under every data row; all data rows have the same height. Header row: first cell text 'Modes of Travelling'; second cell text 'Number of Students' and, at the right end of that cell, one smiley symbol followed by the text '= 1 Student'. Below it, 5 data rows from top to bottom: row 1 label 'Private car' with 4 smileys; row 2 label 'Public bus' with 5 smileys; row 3 label 'School bus' with 11 smileys; row 4 label 'Cycle' with 3 smileys; row 5 label 'Walking' with 7 smileys. Smiley symbol: a circle with INK outline 2.5 px, fill MARK_FILL, two small filled INK dots as eyes and one INK curved smile arc; every smiley has the same diameter. No numbers are written beside any row. Nothing is highlighted: every smiley is drawn the same way. All text is INK, sans-serif, at least 34 px high on a 1920 px canvas.",
+    "visible_text": [
+     "Modes of Travelling",
+     "Number of Students",
+     "= 1 Student",
+     "Private car",
+     "Public bus",
+     "School bus",
+     "Cycle",
+     "Walking"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numerals or totals beside the rows",
+     "highlight on the longest or shortest row",
+     "the words most / least or the answer"
+    ],
+    "accuracy_checks": [
+     "symbol counts per row, top to bottom: 4, 5, 11, 3, 7",
+     "total symbols 4+5+11+3+7 = 30",
+     "longest row is School bus (11), shortest row is Cycle (3), so the figure must not pre-mark either",
+     "all smileys have the same size and equal gaps, so row length is proportional to the count"
+    ],
+    "alt_text": "Pictograph of modes of travel, one smiley for one student: private car 4, public bus 5, school bus 11, cycle 3, walking 7.",
+    "render_note": "Same figure as M2.S9.T9.C36.IMG1: render with the same scene code."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C39",
+   "role": "solution",
+   "lp_book_number": "Reading Pictographs: mode used by fewest students",
+   "ncert_ref": "Section 4.2 - picture of modes of travelling (chapter p.79, pdf p.6), second bullet",
+   "question_text": "Which mode of travel is used by the least number of students?",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a word and a number (cycle, 3); no answer picture is printed, and a solution figure would only repeat the pictograph of the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C40",
+   "role": "question",
+   "lp_book_number": "Example 1: Children who sleep 9 hours",
+   "ncert_ref": "Section 4.2 - Example, Nand Kishor's pictograph (chapter p.80, pdf p.7)",
+   "question_text": "Nand Kishor collected responses from the children of his middle school in Berasia regarding how often they slept at least 9 hours during the night. He prepared a pictograph (key: triangle = 10 children): Always 5 triangles; Sometimes 2 triangles and a half triangle; Never 4 triangles. Answer using the pictograph: 1. What is the number of children who always slept at least 9 hours at night? 2. How many children sometimes slept at least 9 hours at night? 3. How many children always slept less than 9 hours each night? Explain how you got your answer. 1) Children who always slept at least 9 hours 2) Children who sometimes slept at least 9 hours 3) Children who always slept less than 9 hours (Never)",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The example is answered 'using the pictograph': the rows of triangles, the key of 10 children and the half triangle are the data, and reading them is the skill. The LP text only describes the figure in a parenthetical (key and triangle counts), which duplicates the figure and should be dropped once the picture is in.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C40.IMG1",
+   "manim_scene": "c4_42_ex1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C40.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "needs_lp_text_sync": true,
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "pictograph",
+     "layout": "table_rows",
+     "column_titles": [
+      "Response",
+      "Number of Children"
+     ],
+     "key": {
+      "symbol": "triangle",
+      "text": "= 10 Children",
+      "position": "right end of the second header cell"
+     },
+     "symbol_shape": "Triangle symbol: an upright isosceles triangle, base width equal to its height, INK outline 2.5 px, fill MARK_FILL",
+     "rows": [
+      {
+       "label": "Always",
+       "symbols_full": 5,
+       "symbols_half": 0
+      },
+      {
+       "label": "Sometimes",
+       "symbols_full": 2,
+       "symbols_half": 1
+      },
+      {
+       "label": "Never",
+       "symbols_full": 4,
+       "symbols_half": 0
+      }
+     ],
+     "value_per_full_symbol": 10,
+     "values_for_check": [
+      50.0,
+      25.0,
+      40.0
+     ],
+     "alignment": "symbols left-aligned in the second column, one single line per row, equal gaps, same start x in every row",
+     "half_symbol_shape": "Half triangle: the left half of the same triangle, a right-angled triangle whose vertical edge is on the right (through the apex), same height and half the base, INK outline 2.5 px, fill MARK_FILL"
+    },
+    "manim_description": "Draw a pictograph as a two-column table on a white background, thin INK lines 2 px: the outer rectangle, one vertical divider after the label column (the label column is one quarter of the table width), one horizontal line under the header row and one under every data row; all data rows have the same height. Header row: first cell text 'Response'; second cell text 'Number of Children' and, at the right end of that cell, one triangle symbol followed by the text '= 10 Children'. Below it, 3 data rows from top to bottom: row 1 label 'Always' with 5 triangles; row 2 label 'Sometimes' with 2 triangles and then 1 half triangle; row 3 label 'Never' with 4 triangles. Triangle symbol: an upright isosceles triangle, base width equal to its height, INK outline 2.5 px, fill MARK_FILL. Half triangle: the left half of the same triangle, a right-angled triangle whose vertical edge is on the right (through the apex), same height and half the base, INK outline 2.5 px, fill MARK_FILL. No numbers are written beside any row. Nothing is highlighted and no child counts are written. All text is INK, sans-serif, at least 34 px high on a 1920 px canvas.",
+    "visible_text": [
+     "Response",
+     "Number of Children",
+     "= 10 Children",
+     "Always",
+     "Sometimes",
+     "Never"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "child counts (50, 25, 40) or any multiplication",
+     "highlight on any row"
+    ],
+    "accuracy_checks": [
+     "Always 5 whole triangles = 50 children",
+     "Sometimes 2 whole triangles + 1 half triangle = 20 + 5 = 25 children",
+     "Never 4 whole triangles = 40 children",
+     "the half triangle has the same height as a whole one and half its base"
+    ],
+    "alt_text": "Pictograph with one triangle for 10 children: Always 5 triangles, Sometimes 2 triangles and a half triangle, Never 4 triangles."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C41",
+   "role": "solution",
+   "lp_book_number": "Example 1: Children who sleep 9 hours",
+   "ncert_ref": "Section 4.2 - Example, Nand Kishor's pictograph (chapter p.80, pdf p.7)",
+   "question_text": "Nand Kishor collected responses from the children of his middle school in Berasia regarding how often they slept at least 9 hours during the night. He prepared a pictograph (key: triangle = 10 children): Always 5 triangles; Sometimes 2 triangles and a half triangle; Never 4 triangles. Answer using the pictograph: 1. What is the number of children who always slept at least 9 hours at night? 2. How many children sometimes slept at least 9 hours at night? 3. How many children always slept less than 9 hours each night? Explain how you got your answer. 1) Children who always slept at least 9 hours 2) Children who sometimes slept at least 9 hours 3) Children who always slept less than 9 hours (Never)",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The steps are multiplication and addition (5 x 10 = 50, 20 + 5 = 25, 4 x 10 = 40); the book's solution is text with inline triangle symbols, no new picture, and the pictograph of the question already shows every triangle.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C42",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.2, Q1",
+   "ncert_ref": "Section 4.2 - Figure it Out Q1, books borrowed at Ginnori (chapter p.83-84, pdf p.10-11)",
+   "question_text": "The following pictograph shows the number of books borrowed by students, in a week, from the library of Middle School, Ginnori (Pictograph, key: open-book symbol = 1 book. Monday 5, Tuesday 4, Wednesday 2, Thursday 0 (empty row), Friday 5, Saturday 8.) a. On which day were the minimum number of books borrowed? b. What was the total number of books borrowed during the week? c. On which day were the maximum number of books borrowed? What may be the possible reason? a) Day with minimum books borrowed b) Total books borrowed in the week c) Day with maximum books; possible reason",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The pictograph of books borrowed per day is given in the book and parts a to c all read it; the counts (5, 4, 2, 0, 5, 8) and the empty Thursday row are what the student must see. The LP text only describes the figure in a parenthetical, which duplicates it (and gives away the day answers).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S11.T11.C42.IMG1",
+   "manim_scene": "c4_42_fio1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C42.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "needs_lp_text_sync": true,
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "pictograph",
+     "layout": "table_rows",
+     "column_titles": [
+      "Day",
+      "Number of Books Borrowed"
+     ],
+     "key": {
+      "symbol": "open book",
+      "text": "= 1 Book",
+      "position": "right end of the second header cell"
+     },
+     "symbol_shape": "Open-book symbol: two equal rectangles side by side sharing one vertical spine line, fill BG, INK outline 2.5 px, three short horizontal INK lines inside each page; every book has the same size",
+     "rows": [
+      {
+       "label": "Monday",
+       "symbols_full": 5,
+       "symbols_half": 0
+      },
+      {
+       "label": "Tuesday",
+       "symbols_full": 4,
+       "symbols_half": 0
+      },
+      {
+       "label": "Wednesday",
+       "symbols_full": 2,
+       "symbols_half": 0
+      },
+      {
+       "label": "Thursday",
+       "symbols_full": 0,
+       "symbols_half": 0
+      },
+      {
+       "label": "Friday",
+       "symbols_full": 5,
+       "symbols_half": 0
+      },
+      {
+       "label": "Saturday",
+       "symbols_full": 8,
+       "symbols_half": 0
+      }
+     ],
+     "value_per_full_symbol": 1,
+     "values_for_check": [
+      5.0,
+      4.0,
+      2.0,
+      0.0,
+      5.0,
+      8.0
+     ],
+     "alignment": "symbols left-aligned in the second column, one single line per row, equal gaps, same start x in every row"
+    },
+    "manim_description": "Draw a pictograph as a two-column table on a white background, thin INK lines 2 px: the outer rectangle, one vertical divider after the label column (the label column is one quarter of the table width), one horizontal line under the header row and one under every data row; all data rows have the same height. Header row: first cell text 'Day'; second cell text 'Number of Books Borrowed' and, at the right end of that cell, one open-book symbol followed by the text '= 1 Book'. Below it, 6 data rows from top to bottom: row 1 label 'Monday' with 5 books; row 2 label 'Tuesday' with 4 books; row 3 label 'Wednesday' with 2 books; row 4 label 'Thursday' with no symbols (empty cell); row 5 label 'Friday' with 5 books; row 6 label 'Saturday' with 8 books. Open-book symbol: two equal rectangles side by side sharing one vertical spine line, fill BG, INK outline 2.5 px, three short horizontal INK lines inside each page; every book has the same size. No numbers are written beside any row. The Thursday row stays empty (no symbol, no zero written). Nothing is highlighted. All text is INK, sans-serif, at least 34 px high on a 1920 px canvas.",
+    "visible_text": [
+     "Day",
+     "Number of Books Borrowed",
+     "= 1 Book",
+     "Monday",
+     "Tuesday",
+     "Wednesday",
+     "Thursday",
+     "Friday",
+     "Saturday"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the total 24 or any row total",
+     "highlight on the Thursday or Saturday row",
+     "a zero written in the Thursday row"
+    ],
+    "accuracy_checks": [
+     "book counts per row, top to bottom: 5, 4, 2, 0, 5, 8",
+     "total books 5+4+2+0+5+8 = 24",
+     "Thursday row has no symbol",
+     "all books have the same size and equal gaps"
+    ],
+    "alt_text": "Pictograph of books borrowed in a week, one open book for one book: Monday 5, Tuesday 4, Wednesday 2, Thursday none, Friday 5, Saturday 8."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C43",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.2, Q1",
+   "ncert_ref": "Section 4.2 - Figure it Out Q1, books borrowed at Ginnori (chapter p.83-84, pdf p.10-11)",
+   "question_text": "The following pictograph shows the number of books borrowed by students, in a week, from the library of Middle School, Ginnori (Pictograph, key: open-book symbol = 1 book. Monday 5, Tuesday 4, Wednesday 2, Thursday 0 (empty row), Friday 5, Saturday 8.) a. On which day were the minimum number of books borrowed? b. What was the total number of books borrowed during the week? c. On which day were the maximum number of books borrowed? What may be the possible reason? a) Day with minimum books borrowed b) Total books borrowed in the week c) Day with maximum books; possible reason",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The total is 5+4+2+0+5+8 = 24 and the days are read off the question's pictograph; the printed answers (Thursday, 24, Saturday and a reason) are text, so a solution figure would only repeat the question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C44",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 4.2 - Drawing a Pictograph, Jarina's and Sangita's data (chapter p.81, pdf p.8)",
+   "question_text": "Jarina and Sangita have the table of students present (Class I 30, II 35, III 20, IV 25, V 30, VI 25, VII 30, VIII 20). If they want to show their data through a pictograph, where they also use one symbol (smiley) for each student, as Lakhanpal did, what are the challenges they might face?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_TABLE"
+   ],
+   "reason": "The question gives a plain table of eight class counts in its text and asks for the challenges of one symbol per student; the answer is a sentence. Jarina's and Sangita's pictographs printed after it are teaching figures, and the teaching images M2.S12.T12.C44.IMG1 / C45.IMG1 already carry the 'too many symbols' idea (never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array: Class I II III IV V VI VII VIII over No. of students 30 35 20 25 30 25 30 20.",
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C47",
+   "role": "question",
+   "lp_book_number": "Drawing Pictographs: 33 or 27 students",
+   "ncert_ref": "Section 4.2 - Math Talk, 33 or 27 students (chapter p.82-83, pdf p.9-10); figure = Sangita's pictograph (pdf p.9)",
+   "question_text": "What could be the problems faced in preparing such a pictograph, if the total number of students present in a class is 33 or 27?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "'Such a pictograph' points at Sangita's pictograph: its key (one smiley = 10 students) and its half smileys are not written anywhere in the LP text, and the question cannot be answered without them. Judgement call: the alternative is `none` with the key written into the question text.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S13.T13.C47.IMG1",
+   "manim_scene": "c4_42_mathtalk_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S13.T13.C47.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "pictograph",
+     "layout": "axes_rows",
+     "vertical_axis_title": "Classes",
+     "horizontal_axis_title": "No. of students present",
+     "key": {
+      "symbol": "smiley",
+      "text": "= 10 students",
+      "position": "top right of the drawing"
+     },
+     "symbol_shape": "Smiley symbol: a circle with INK outline 2.5 px, fill MARK_FILL, two small filled INK dots as eyes and one INK curved smile arc; every smiley has the same diameter",
+     "half_symbol_shape": "Half smiley: the left half of the same smiley, cut by a straight vertical edge through the centre, showing the left eye dot and the left half of the smile, INK outline along the curved side and the cut edge, fill MARK_FILL",
+     "rows_bottom_to_top": [
+      {
+       "label": "I",
+       "symbols_full": 3,
+       "symbols_half": 0
+      },
+      {
+       "label": "II",
+       "symbols_full": 3,
+       "symbols_half": 1
+      },
+      {
+       "label": "III",
+       "symbols_full": 2,
+       "symbols_half": 0
+      },
+      {
+       "label": "IV",
+       "symbols_full": 2,
+       "symbols_half": 1
+      },
+      {
+       "label": "V",
+       "symbols_full": 3,
+       "symbols_half": 0
+      },
+      {
+       "label": "VI",
+       "symbols_full": 2,
+       "symbols_half": 1
+      },
+      {
+       "label": "VII",
+       "symbols_full": 3,
+       "symbols_half": 0
+      },
+      {
+       "label": "VIII",
+       "symbols_full": 2,
+       "symbols_half": 0
+      }
+     ],
+     "value_per_full_symbol": 10,
+     "values_for_check": [
+      30.0,
+      35.0,
+      20.0,
+      25.0,
+      30.0,
+      25.0,
+      30.0,
+      20.0
+     ]
+    },
+    "manim_description": "Draw a pictograph on a white background with an L-shaped pair of axes in INK 3 px: a vertical axis with an arrowhead at its top and a horizontal axis with an arrowhead at its right end. The vertical axis has 8 equal rows. Row labels in bold INK Roman numerals stand to the left of the vertical axis, bottom to top: I, II, III, IV, V, VI, VII, VIII. The axis title 'Classes' is written vertically (rotated 90 degrees) to the left of the labels. The title 'No. of students present' is written centred below the horizontal axis. At the top right, one smiley followed by the text '= 10 students'. Smiley symbol: a circle with INK outline 2.5 px, fill MARK_FILL, two small filled INK dots as eyes and one INK curved smile arc; every smiley has the same diameter. Half smiley: the left half of the same smiley, cut by a straight vertical edge through the centre, showing the left eye dot and the left half of the smile, INK outline along the curved side and the cut edge, fill MARK_FILL. Symbols stand in one line per row, start just right of the vertical axis, are equally spaced, and have the same size. Rows from top to bottom: row 'VIII' with 2 smileys; row 'VII' with 3 smileys; row 'VI' with 2 smileys and then 1 half smiley; row 'V' with 3 smileys; row 'IV' with 2 smileys and then 1 half smiley; row 'III' with 2 smileys; row 'II' with 3 smileys and then 1 half smiley; row 'I' with 3 smileys. No numbers are written beside the rows. All text is INK, sans-serif, at least 34 px high on a 1920 px canvas.",
+    "visible_text": [
+     "Classes",
+     "I",
+     "II",
+     "III",
+     "IV",
+     "V",
+     "VI",
+     "VII",
+     "VIII",
+     "No. of students present",
+     "= 10 students"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "student counts such as 25 or 35",
+     "the value of the half smiley",
+     "the numbers 33 or 27",
+     "any sentence about what cannot be drawn"
+    ],
+    "accuracy_checks": [
+     "full smileys per class I..VIII: 3, 3, 2, 2, 3, 2, 3, 2 (20 in all)",
+     "half smileys at classes II, IV and VI (3 in all)",
+     "values with 1 smiley = 10: 30, 35, 20, 25, 30, 25, 30, 20 (II 3x10+5, IV 2x10+5, VI 2x10+5)",
+     "total 20 x 10 + 3 x 5 = 215 students",
+     "class I is the bottom row and class VIII the top row"
+    ],
+    "alt_text": "Pictograph of students present in classes I to VIII, one smiley for 10 students and a half smiley for 5: 30, 35, 20, 25, 30, 25, 30, 20."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C48",
+   "role": "solution",
+   "lp_book_number": "Drawing Pictographs: 33 or 27 students",
+   "ncert_ref": "Section 4.2 - Math Talk, 33 or 27 students (chapter p.82-83, pdf p.9-10); figure = Sangita's pictograph (pdf p.9)",
+   "question_text": "What could be the problems faced in preparing such a pictograph, if the total number of students present in a class is 33 or 27?",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The printed answer is one sentence with the full and the half symbol drawn inline (a key, not a picture of data); the question figure already shows both symbols, and the LP answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C49",
+   "role": "question",
+   "lp_book_number": "Figure it Out 4.2, Q1",
+   "ncert_ref": "Section 4.2 - Figure it Out Q2, kites sold by Magan Bhai (chapter p.84-85, pdf p.11-12; printed answer pdf p.36-37)",
+   "question_text": "Magan Bhai sells kites at Jamnagar. Six shopkeepers from nearby villages come to purchase kites from him. The number of kites he sold to these six shopkeepers are given below: Table: Chaman 250, Rani 300, Rukhsana 100, Jasmeet 450, Jetha Lal 250, Poonam Ben 700 kites. Prepare a pictograph using the symbol (kite) to represent 100 kites. Answer: a. How many symbols represent the kites that Rani purchased? b. Who purchased the maximum number of kites? c. Who purchased more kites, Jasmeet or Chaman? d. Rukhsana says Poonam Ben purchased more than double the number of kites that Rani purchased. Is she correct? Why? a) Symbols for Rani b) Maximum kites c) Jasmeet or Chaman d) Is Rukhsana correct?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "The question gives only a plain two-column table (shopkeeper, kites sold) and a kite icon as the symbol to use; no pictograph is given, so no question figure is invented (the figure is the answer). The numbers are already in the LP text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX array: Shopkeeper | Number of Kites Sold: Chaman 250, Rani 300, Rukhsana 100, Jasmeet 450, Jetha Lal 250, Poonam Ben 700."
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C50",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 4.2, Q1",
+   "ncert_ref": "Section 4.2 - Figure it Out Q2, kites sold by Magan Bhai (chapter p.84-85, pdf p.11-12; printed answer pdf p.36-37)",
+   "question_text": "Magan Bhai sells kites at Jamnagar. Six shopkeepers from nearby villages come to purchase kites from him. The number of kites he sold to these six shopkeepers are given below: Table: Chaman 250, Rani 300, Rukhsana 100, Jasmeet 450, Jetha Lal 250, Poonam Ben 700 kites. Prepare a pictograph using the symbol (kite) to represent 100 kites. Answer: a. How many symbols represent the kites that Rani purchased? b. Who purchased the maximum number of kites? c. Who purchased more kites, Jasmeet or Chaman? d. Rukhsana says Poonam Ben purchased more than double the number of kites that Rani purchased. Is she correct? Why? a) Symbols for Rani b) Maximum kites c) Jasmeet or Chaman d) Is Rukhsana correct?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The task is 'Prepare a pictograph' and the book prints the drawn pictograph as its answer (solutions pdf p.36-37); the LP words (2 and a half, 3, 1, 4 and a half, 2 and a half, 7) are data for the picture, not a replacement for it. The question has no figure, so this one draws the whole pictograph (derived_from null).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S14.T14.C50.IMG1",
+   "manim_scene": "c4_42_fio2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S14.T14.C50.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "pictograph",
+     "layout": "table_rows",
+     "column_titles": [
+      "Shopkeeper",
+      "Number of Kites Sold"
+     ],
+     "key": {
+      "symbol": "kite",
+      "text": "= 100 kites",
+      "position": "right end of the second header cell"
+     },
+     "symbol_shape": "Kite symbol: an upright diamond with a vertical spar and a horizontal cross-spar inside it, fill MARK_FILL, outline and spars ANSWER 2.5 px, and a small solid ANSWER triangle as the tail under the bottom point; every kite has the same size",
+     "rows": [
+      {
+       "label": "Chaman",
+       "symbols_full": 2,
+       "symbols_half": 1
+      },
+      {
+       "label": "Rani",
+       "symbols_full": 3,
+       "symbols_half": 0
+      },
+      {
+       "label": "Rukhsana",
+       "symbols_full": 1,
+       "symbols_half": 0
+      },
+      {
+       "label": "Jasmeet",
+       "symbols_full": 4,
+       "symbols_half": 1
+      },
+      {
+       "label": "Jetha Lal",
+       "symbols_full": 2,
+       "symbols_half": 1
+      },
+      {
+       "label": "Poonam Ben",
+       "symbols_full": 7,
+       "symbols_half": 0
+      }
+     ],
+     "value_per_full_symbol": 100,
+     "values_for_check": [
+      250.0,
+      300.0,
+      100.0,
+      450.0,
+      250.0,
+      700.0
+     ],
+     "alignment": "symbols left-aligned in the second column, one single line per row, equal gaps, same start x in every row",
+     "half_symbol_shape": "Half kite: the right half of the same kite, cut by a straight vertical line through its top and bottom points, same outline, spar and half tail"
+    },
+    "manim_description": "Draw a pictograph as a two-column table on a white background, thin INK lines 2 px: the outer rectangle, one vertical divider after the label column (the label column is one quarter of the table width), one horizontal line under the header row and one under every data row; all data rows have the same height. Header row: first cell text 'Shopkeeper'; second cell text 'Number of Kites Sold' and, at the right end of that cell, one kite symbol followed by the text '= 100 kites'. Below it, 6 data rows from top to bottom: row 1 label 'Chaman' with 2 kites and then 1 half kite; row 2 label 'Rani' with 3 kites; row 3 label 'Rukhsana' with 1 kite; row 4 label 'Jasmeet' with 4 kites and then 1 half kite; row 5 label 'Jetha Lal' with 2 kites and then 1 half kite; row 6 label 'Poonam Ben' with 7 kites. Kite symbol: an upright diamond with a vertical spar and a horizontal cross-spar inside it, fill MARK_FILL, outline and spars ANSWER 2.5 px, and a small solid ANSWER triangle as the tail under the bottom point; every kite has the same size. Half kite: the right half of the same kite, cut by a straight vertical line through its top and bottom points, same outline, spar and half tail. No numbers are written beside any row. All labels and lines are INK, all kites are ANSWER green. Nothing is highlighted and no kite counts are written. All text is INK, sans-serif, at least 34 px high on a 1920 px canvas.",
+    "visible_text": [
+     "Shopkeeper",
+     "Number of Kites Sold",
+     "= 100 kites",
+     "Chaman",
+     "Rani",
+     "Rukhsana",
+     "Jasmeet",
+     "Jetha Lal",
+     "Poonam Ben"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the kite numbers 250, 300, 100, 450, 250, 700",
+     "the answers a to d",
+     "the value of the half kite",
+     "highlight on any row"
+    ],
+    "accuracy_checks": [
+     "kites per row: Chaman 2 + half, Rani 3, Rukhsana 1, Jasmeet 4 + half, Jetha Lal 2 + half, Poonam Ben 7",
+     "values with 1 kite = 100 and half = 50: 250, 300, 100, 450, 250, 700 (match the table of the question)",
+     "total 19 full kites x 100 + 3 half kites x 50 = 2050 = 250+300+100+450+250+700",
+     "Rani's row holds exactly 3 symbols (answer a)",
+     "Poonam Ben's row is the longest (7 symbols, answer b)"
+    ],
+    "alt_text": "Pictograph of kites sold, one kite for 100 kites: Chaman 2 and a half, Rani 3, Rukhsana 1, Jasmeet 4 and a half, Jetha Lal 2 and a half, Poonam Ben 7."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C55",
+   "role": "question",
+   "lp_book_number": "Reading Bar Graphs: students absent in Class 2",
+   "ncert_ref": "Section 4.3 - bar graph of students absent in each class (chapter p.86, pdf p.13), question 1",
+   "question_text": "Answer the following questions using the bar graph: In Class 2, __ students were absent that day. (Bar graph 'No. of students absent in each class', 1 unit length = 1 student. Class 1:3, 2:5, 3:4, 4:2, 5:0, 6:1, 7:5, 8:7. y-axis Number of students 0-8; x-axis Class.)",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "The question says 'using the bar graph' and the heights of the bars are only in the figure; reading one bar against the scale is the skill. The LP text writes the whole graph in a parenthetical (including Class 2 = 5, which is the answer), which duplicates the figure and should be dropped once the picture is in.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C55.IMG1",
+   "manim_scene": "c4_43_bar_q1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C55.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "needs_lp_text_sync": true,
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "bar_graph_vertical",
+     "title": "No. of students absent in each class",
+     "scale_note": "1 unit length = 1 student",
+     "scale_note_box": "small rectangle with a thin GUIDE outline at the top centre",
+     "y_axis": {
+      "title": "Number of students",
+      "min": 0,
+      "max": 8,
+      "step": 1,
+      "tick_labels": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ],
+      "gridlines_at": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ],
+      "gridline_colour": "GUIDE (faint)"
+     },
+     "x_axis": {
+      "title": "Class",
+      "categories": [
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6",
+       "7",
+       "8"
+      ]
+     },
+     "bars": [
+      {
+       "category": "1",
+       "value": 3,
+       "drawn": true
+      },
+      {
+       "category": "2",
+       "value": 5,
+       "drawn": true
+      },
+      {
+       "category": "3",
+       "value": 4,
+       "drawn": true
+      },
+      {
+       "category": "4",
+       "value": 2,
+       "drawn": true
+      },
+      {
+       "category": "5",
+       "value": 0,
+       "drawn": false
+      },
+      {
+       "category": "6",
+       "value": 1,
+       "drawn": true
+      },
+      {
+       "category": "7",
+       "value": 5,
+       "drawn": true
+      },
+      {
+       "category": "8",
+       "value": 7,
+       "drawn": true
+      }
+     ],
+     "bar_fill": "MARK_FILL",
+     "bar_outline": "INK",
+     "value_labels_on_bars": false,
+     "equal_bar_width": true,
+     "equal_gaps": true
+    },
+    "manim_description": "Draw a vertical bar graph on a white background. At the top centre a small rectangle with a thin GUIDE outline holding the text '1 unit length = 1 student'. Below it, centred, the title text 'No. of students absent in each class'. The vertical axis is an INK line with tick marks and the labels 0, 1, 2, 3, 4, 5, 6, 7, 8 from bottom to top, equally spaced, with the axis title 'Number of students' written vertically (rotated 90 degrees) to its left. A faint GUIDE horizontal gridline runs across the full plot width at every one of the 9 labels, 0 to 8. The horizontal axis is an INK line at label 0 with the category labels 1, 2, 3, 4, 5, 6, 7, 8 centred under their bars and the axis title 'Class' centred below them. There are 8 equally spaced slots; each bar has the same width (0.6 of a slot) and equal gaps, fill MARK_FILL, INK outline 2.5 px, standing on the horizontal axis. Bar heights in units of one gridline step, class 1 to class 8: 3, 5, 4, 2, 0, 1, 5, 7. Class 5 has height 0, so no bar is drawn in slot 5 (only its label '5'). No value is written on or above any bar. All text is INK, sans-serif, at least 34 px high on a 1920 px canvas.",
+    "visible_text": [
+     "1 unit length = 1 student",
+     "No. of students absent in each class",
+     "Number of students",
+     "Class",
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers written on or above the bars",
+     "highlight on any bar",
+     "the words maximum, full attendance or any answer",
+     "a bar for class 5"
+    ],
+    "accuracy_checks": [
+     "bar heights for classes 1..8 on the gridlines: 3, 5, 4, 2, 0, 1, 5, 7",
+     "class 5 has no bar (height 0)",
+     "tallest bar is class 8 (7), the 8-gridline is drawn but no bar reaches it",
+     "total 3+5+4+2+0+1+5+7 = 27 students absent",
+     "gridlines equally spaced at every integer 0 to 8; bars have equal width and equal gaps"
+    ],
+    "alt_text": "Bar graph of students absent in each class: classes 1 to 8 have 3, 5, 4, 2, 0, 1, 5 and 7 students absent; 1 unit of length is 1 student."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C56",
+   "role": "solution",
+   "lp_book_number": "Reading Bar Graphs: students absent in Class 2",
+   "ncert_ref": "Section 4.3 - bar graph of students absent in each class (chapter p.86, pdf p.13), question 1",
+   "question_text": "Answer the following questions using the bar graph: In Class 2, __ students were absent that day. (Bar graph 'No. of students absent in each class', 1 unit length = 1 student. Class 1:3, 2:5, 3:4, 4:2, 5:0, 6:1, 7:5, 8:7. y-axis Number of students 0-8; x-axis Class.)",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is one number (5) read off the question's bar graph; the printed answer is text, so a solution figure would only repeat the question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C57",
+   "role": "question",
+   "lp_book_number": "Reading Bar Graphs: class with most absent",
+   "ncert_ref": "Section 4.3 - bar graph of students absent in each class (chapter p.86, pdf p.13), question 2",
+   "question_text": "In which class were the maximum number of students absent? __",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "Same bar graph as unit 21 (siblings): the tallest bar can only be found from the figure; the LP text of this question does not state any bar height.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C57.IMG1",
+   "manim_scene": "c4_43_bar_q2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C57.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "bar_graph_vertical",
+     "title": "No. of students absent in each class",
+     "scale_note": "1 unit length = 1 student",
+     "scale_note_box": "small rectangle with a thin GUIDE outline at the top centre",
+     "y_axis": {
+      "title": "Number of students",
+      "min": 0,
+      "max": 8,
+      "step": 1,
+      "tick_labels": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ],
+      "gridlines_at": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ],
+      "gridline_colour": "GUIDE (faint)"
+     },
+     "x_axis": {
+      "title": "Class",
+      "categories": [
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6",
+       "7",
+       "8"
+      ]
+     },
+     "bars": [
+      {
+       "category": "1",
+       "value": 3,
+       "drawn": true
+      },
+      {
+       "category": "2",
+       "value": 5,
+       "drawn": true
+      },
+      {
+       "category": "3",
+       "value": 4,
+       "drawn": true
+      },
+      {
+       "category": "4",
+       "value": 2,
+       "drawn": true
+      },
+      {
+       "category": "5",
+       "value": 0,
+       "drawn": false
+      },
+      {
+       "category": "6",
+       "value": 1,
+       "drawn": true
+      },
+      {
+       "category": "7",
+       "value": 5,
+       "drawn": true
+      },
+      {
+       "category": "8",
+       "value": 7,
+       "drawn": true
+      }
+     ],
+     "bar_fill": "MARK_FILL",
+     "bar_outline": "INK",
+     "value_labels_on_bars": false,
+     "equal_bar_width": true,
+     "equal_gaps": true
+    },
+    "manim_description": "Draw a vertical bar graph on a white background. At the top centre a small rectangle with a thin GUIDE outline holding the text '1 unit length = 1 student'. Below it, centred, the title text 'No. of students absent in each class'. The vertical axis is an INK line with tick marks and the labels 0, 1, 2, 3, 4, 5, 6, 7, 8 from bottom to top, equally spaced, with the axis title 'Number of students' written vertically (rotated 90 degrees) to its left. A faint GUIDE horizontal gridline runs across the full plot width at every one of the 9 labels, 0 to 8. The horizontal axis is an INK line at label 0 with the category labels 1, 2, 3, 4, 5, 6, 7, 8 centred under their bars and the axis title 'Class' centred below them. There are 8 equally spaced slots; each bar has the same width (0.6 of a slot) and equal gaps, fill MARK_FILL, INK outline 2.5 px, standing on the horizontal axis. Bar heights in units of one gridline step, class 1 to class 8: 3, 5, 4, 2, 0, 1, 5, 7. Class 5 has height 0, so no bar is drawn in slot 5 (only its label '5'). No value is written on or above any bar. All text is INK, sans-serif, at least 34 px high on a 1920 px canvas.",
+    "visible_text": [
+     "1 unit length = 1 student",
+     "No. of students absent in each class",
+     "Number of students",
+     "Class",
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers written on or above the bars",
+     "highlight on any bar",
+     "the words maximum, full attendance or any answer",
+     "a bar for class 5"
+    ],
+    "accuracy_checks": [
+     "bar heights for classes 1..8 on the gridlines: 3, 5, 4, 2, 0, 1, 5, 7",
+     "class 5 has no bar (height 0)",
+     "tallest bar is class 8 (7), the 8-gridline is drawn but no bar reaches it",
+     "total 3+5+4+2+0+1+5+7 = 27 students absent",
+     "gridlines equally spaced at every integer 0 to 8; bars have equal width and equal gaps"
+    ],
+    "alt_text": "Bar graph of students absent in each class: classes 1 to 8 have 3, 5, 4, 2, 0, 1, 5 and 7 students absent; 1 unit of length is 1 student.",
+    "render_note": "Same figure as M3.S16.T16.C55.IMG1: render with the same scene code."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C58",
+   "role": "solution",
+   "lp_book_number": "Reading Bar Graphs: class with most absent",
+   "ncert_ref": "Section 4.3 - bar graph of students absent in each class (chapter p.86, pdf p.13), question 2",
+   "question_text": "In which class were the maximum number of students absent? __",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is one class (Class 8) read off the question's bar graph; the printed answer is text, so a solution figure would only repeat the question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C59",
+   "role": "question",
+   "lp_book_number": "Reading Bar Graphs: class with full attendance",
+   "ncert_ref": "Section 4.3 - bar graph of students absent in each class (chapter p.86, pdf p.13), question 3",
+   "question_text": "Which class had full attendance that day? __",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "GRAPH_CHART"
+   ],
+   "reason": "Same bar graph as unit 21 (siblings): the class with no bar (full attendance) can only be found from the figure; the LP text of this question does not state any bar height.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S16.T16.C59.IMG1",
+   "manim_scene": "c4_43_bar_q3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C59.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "data_graph",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "data_graph",
+     "graph_kind": "bar_graph_vertical",
+     "title": "No. of students absent in each class",
+     "scale_note": "1 unit length = 1 student",
+     "scale_note_box": "small rectangle with a thin GUIDE outline at the top centre",
+     "y_axis": {
+      "title": "Number of students",
+      "min": 0,
+      "max": 8,
+      "step": 1,
+      "tick_labels": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ],
+      "gridlines_at": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ],
+      "gridline_colour": "GUIDE (faint)"
+     },
+     "x_axis": {
+      "title": "Class",
+      "categories": [
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6",
+       "7",
+       "8"
+      ]
+     },
+     "bars": [
+      {
+       "category": "1",
+       "value": 3,
+       "drawn": true
+      },
+      {
+       "category": "2",
+       "value": 5,
+       "drawn": true
+      },
+      {
+       "category": "3",
+       "value": 4,
+       "drawn": true
+      },
+      {
+       "category": "4",
+       "value": 2,
+       "drawn": true
+      },
+      {
+       "category": "5",
+       "value": 0,
+       "drawn": false
+      },
+      {
+       "category": "6",
+       "value": 1,
+       "drawn": true
+      },
+      {
+       "category": "7",
+       "value": 5,
+       "drawn": true
+      },
+      {
+       "category": "8",
+       "value": 7,
+       "drawn": true
+      }
+     ],
+     "bar_fill": "MARK_FILL",
+     "bar_outline": "INK",
+     "value_labels_on_bars": false,
+     "equal_bar_width": true,
+     "equal_gaps": true
+    },
+    "manim_description": "Draw a vertical bar graph on a white background. At the top centre a small rectangle with a thin GUIDE outline holding the text '1 unit length = 1 student'. Below it, centred, the title text 'No. of students absent in each class'. The vertical axis is an INK line with tick marks and the labels 0, 1, 2, 3, 4, 5, 6, 7, 8 from bottom to top, equally spaced, with the axis title 'Number of students' written vertically (rotated 90 degrees) to its left. A faint GUIDE horizontal gridline runs across the full plot width at every one of the 9 labels, 0 to 8. The horizontal axis is an INK line at label 0 with the category labels 1, 2, 3, 4, 5, 6, 7, 8 centred under their bars and the axis title 'Class' centred below them. There are 8 equally spaced slots; each bar has the same width (0.6 of a slot) and equal gaps, fill MARK_FILL, INK outline 2.5 px, standing on the horizontal axis. Bar heights in units of one gridline step, class 1 to class 8: 3, 5, 4, 2, 0, 1, 5, 7. Class 5 has height 0, so no bar is drawn in slot 5 (only its label '5'). No value is written on or above any bar. All text is INK, sans-serif, at least 34 px high on a 1920 px canvas.",
+    "visible_text": [
+     "1 unit length = 1 student",
+     "No. of students absent in each class",
+     "Number of students",
+     "Class",
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "numbers written on or above the bars",
+     "highlight on any bar",
+     "the words maximum, full attendance or any answer",
+     "a bar for class 5"
+    ],
+    "accuracy_checks": [
+     "bar heights for classes 1..8 on the gridlines: 3, 5, 4, 2, 0, 1, 5, 7",
+     "class 5 has no bar (height 0)",
+     "tallest bar is class 8 (7), the 8-gridline is drawn but no bar reaches it",
+     "total 3+5+4+2+0+1+5+7 = 27 students absent",
+     "gridlines equally spaced at every integer 0 to 8; bars have equal width and equal gaps"
+    ],
+    "alt_text": "Bar graph of students absent in each class: classes 1 to 8 have 3, 5, 4, 2, 0, 1, 5 and 7 students absent; 1 unit of length is 1 student.",
+    "render_note": "Same figure as M3.S16.T16.C55.IMG1: render with the same scene code."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C60",
+   "role": "solution",
+   "lp_book_number": "Reading Bar Graphs: class with full attendance",
+   "ncert_ref": "Section 4.3 - bar graph of students absent in each class (chapter p.86, pdf p.13), question 3",
+   "question_text": "Which class had full attendance that day? __",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is one class (Class 5) read off the question's bar graph; the printed answer is text, so a solution figure would only repeat the question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}
