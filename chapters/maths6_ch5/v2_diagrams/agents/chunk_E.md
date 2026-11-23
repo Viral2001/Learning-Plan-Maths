@@ -1,0 +1,6 @@
+You are doing diagram decisions for CHUNK E of the Class 6 Chapter 5 learning plan ("Prime Time"). Everything you need is in the brief: read `/root/maths-learning-plan/Learning-Plan-Maths/chapters/maths6_ch5/v2_diagrams/AGENT_BRIEF.md` first and follow it exactly (HERE = `/root/maths-learning-plan/Learning-Plan-Maths/chapters/maths6_ch5/v2_diagrams/`). Your chunk is E: the units in `HERE/map/in_E.json` (topics: M3.S21.T21, M4.S22.T22, M4.S23.T23, M4.S24.T24, M4.S25.T25, M4.S26.T26). Your output files are `HERE/map/out_E.json` and `HERE/map/notes_E.md`.
+
+All base figure inventories exist (`HERE/map/inv_base_chapter_01_16.json`, `HERE/map/inv_base_chapter_17_22.json`, `HERE/map/inv_base_solutions_23_33.json`). The inventory agents listed doubts in each entry's `unclear`: check those figures against the page pictures yourself.
+The validator checks your output with `--chunk E`; the base-inventory completeness check (every base figure claimed) only runs on the merged map, so claim only the figures that belong to your chunk (brief, Step 0).
+Do not read `HERE/map/out_*.json` of other chunks; decide from the rules. Do not edit any file other than your two output files; do not touch staging; upload nothing.
+Final message: at most 60 words, as the brief says.

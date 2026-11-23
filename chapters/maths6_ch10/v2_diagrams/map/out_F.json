@@ -1,0 +1,607 @@
+{
+  "meta": {
+    "chapter": "The Other Side of Zero",
+    "class": 6,
+    "textbook": "Ganita Prakash, Grade 6, Chapter 10",
+    "lp_plan_id": "cbse_eng_maths6_ch10_v91",
+    "prompt": "diagram_identification_prompt.md v3",
+    "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+    "counts_by_role_and_decision": {
+      "question": {
+        "none": 10,
+        "required": 1
+      },
+      "solution": {
+        "none": 10,
+        "optional": 1
+      },
+      "worked_example": {
+        "none": 1
+      }
+    },
+    "notes": [
+      "Chunk F: Figure it Out 10.4 Q1-Q9 (M4.S41.T41), Figure it Out 10.5 Q1-Q2 (M4.S43.T43) and the Snakes and Ladders worked example (M4.S44.T44).",
+      "Only Q9 (the token string) needs a diagram; every other item of the chunk is words, equations or a plain number table.",
+      "Chunk F also claims the Learning Material Sheets figures (pdf pages 32-40) because they follow its last topic and belong to no unit."
+    ]
+  },
+  "style_tokens": {
+    "BG": "#FFFFFF",
+    "INK": "#2B2B2B",
+    "MARK_FILL": "#CDEBD9",
+    "ANSWER": "#009E73",
+    "FOCUS": "#CC79A7",
+    "WRONG": "#D55E00",
+    "GUIDE": "#6B7280",
+    "SET_A": "#0072B2",
+    "SET_B": "#E69F00",
+    "CELL_FILL": "#F1EEF6"
+  },
+  "figure_inventory": [
+    {
+      "fig_id": "P24-table-1",
+      "source": "chapter p.24 (pdf)",
+      "description": "Figure it Out 10.4 Q4 'Solve these': plain 2 x 4 table of the eight expressions, pale green cells, no header, no colour meaning (checked on the page).",
+      "mapped_to": "none:LATEX_TABLE"
+    },
+    {
+      "fig_id": "P25-tokens-1",
+      "source": "chapter p.25 (pdf)",
+      "description": "Figure it Out 10.4 Q9: one row of 15 touching tokens, + + + - - repeated 3 times (9 positive, 6 negative), then a wavy line curling down. Checked on the page: matches the base description.",
+      "mapped_to": "item:M4.S41.T41.C214 (question)"
+    },
+    {
+      "fig_id": "P30-board-1",
+      "source": "chapter p.30 (pdf)",
+      "description": "Snakes and Ladders board: 10 x 10 numbered cells (41-50 top row, 1-10 above the START 0 tile, -1 to -10 below it, -41 to -50 bottom row), with painted snakes and ladders. Checked on the page: numbering as in the base description; snake and ladder ends overlap and hide some numbers, so they are only approximate.",
+      "mapped_to": "none:NOT_RENDERABLE"
+    },
+    {
+      "fig_id": "P30-dice-1",
+      "source": "chapter p.30 (pdf)",
+      "description": "Two cubes at the board corner: blue-numbered die (-2, -6 and a turned-away face whose sign cannot be read) and red-numbered die (1, 5, 3). Checked on the page: the third face of the blue die is still unreadable. Illustration of the +1..+6 and -1..-6 dice, whose numbers are in the rules text.",
+      "mapped_to": "none:DECORATIVE_ONLY"
+    },
+    {
+      "fig_id": "P32-dot_grid-1",
+      "source": "chapter p.32 (pdf)",
+      "description": "Learning Material Sheet: blank dot paper, 17 columns x 24 rows of dots (checked on the page). No item of the plan uses it; claimed by chunk F because the sheets follow its last topic.",
+      "mapped_to": "none:DECORATIVE_ONLY"
+    },
+    {
+      "fig_id": "P33-dot_grid-1",
+      "source": "chapter p.33 (pdf)",
+      "description": "Learning Material Sheet: blank dot paper, 17 x 24 dots as in the base inventory. No item uses it.",
+      "mapped_to": "none:DECORATIVE_ONLY"
+    },
+    {
+      "fig_id": "P34-grid-1",
+      "source": "chapter p.34 (pdf)",
+      "description": "Learning Material Sheet: blank squared paper, 16 x 24 cells. No item uses it.",
+      "mapped_to": "none:DECORATIVE_ONLY"
+    },
+    {
+      "fig_id": "P35-grid-1",
+      "source": "chapter p.35 (pdf)",
+      "description": "Learning Material Sheet: blank squared paper, 16 x 24 cells, mirrored placement. No item uses it.",
+      "mapped_to": "none:DECORATIVE_ONLY"
+    },
+    {
+      "fig_id": "P36-tangram-1",
+      "source": "chapter p.36 (pdf)",
+      "description": "Learning Material Sheet: seven-piece tangram A to G in one square (checked on the page). Cut-out material, no item uses it.",
+      "mapped_to": "none:DECORATIVE_ONLY"
+    },
+    {
+      "fig_id": "P38-fraction_wall-1",
+      "source": "chapter p.38 (pdf)",
+      "description": "Learning Material Sheet: fraction wall of 10 strips (1 unit, then halves to tenths). Cut-out material, no item uses it.",
+      "mapped_to": "none:DECORATIVE_ONLY"
+    },
+    {
+      "fig_id": "P40-tile_sheet-1",
+      "source": "chapter p.40 (pdf)",
+      "description": "Learning Material Sheet: 88 two-colour tiles, 8 columns x 11 rows (checked on the page). Cut-out material, no item uses it.",
+      "mapped_to": "none:DECORATIVE_ONLY"
+    },
+    {
+      "fig_id": "SOL55-table-1",
+      "source": "solutions p.55 (pdf)",
+      "description": "Printed reprint of the Q4 'Solve these' expression table (green, 2 x 4). Same figure as P24-table-1.",
+      "mapped_to": "none:LATEX_TABLE"
+    },
+    {
+      "fig_id": "SOL55-table-2",
+      "source": "solutions p.55 (pdf)",
+      "description": "Printed answer to Figure it Out 10.4 Q4: plain black-ruled 2 x 4 table of numbers, row 1: -5, -21, -5, -21; row 2: -5, 5, 5, 21 (checked on the page; matches the LP).",
+      "mapped_to": "none:LATEX_TABLE"
+    },
+    {
+      "fig_id": "SOL56-token_string-1",
+      "source": "solutions p.56 (pdf)",
+      "description": "Printed reprint of the Q9 token string (same 15 tokens and wavy end as P25-tokens-1); the printed answer itself is only the text '20'.",
+      "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+    }
+  ],
+  "coverage_report": {
+    "inventory_figures": 14,
+    "mapped_to_items": 1,
+    "mapped_to_concept_images": 0,
+    "mapped_none": 13,
+    "unmapped": 0,
+    "new_media_ids_created": [
+      "M4.S41.T41.C214.IMG1"
+    ],
+    "lp_ids_dropped": []
+  },
+  "items": [
+    {
+      "lp_concept_id": "M4.S41.T41.C198",
+      "role": "question",
+      "lp_book_number": "Figure it Out 10.4, Q1",
+      "ncert_ref": "10.4.FiO3.Q1",
+      "question_text": "Write all the integers between the given pairs, in increasing order. (a): 0 and −7; (b): −4 and 4; (c): −8 and −15; (d): −30 and −23",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Four pairs of integers are given in words and the book prints no figure; the learner writes four lists.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C199",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 10.4, Q1",
+      "ncert_ref": "10.4.FiO3.Q1",
+      "question_text": "Write all the integers between the given pairs, in increasing order. (a): 0 and −7; (b): −4 and 4; (c): −8 and −15; (d): −30 and −23",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "The answer is four plain lists of consecutive integers, written in LaTeX; a number line would only make it nicer and the book prints none.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "Four lines of integers in increasing order, exactly as in answer_tex."
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C200",
+      "role": "question",
+      "lp_book_number": "Figure it Out 10.4, Q2",
+      "ncert_ref": "10.4.FiO3.Q2",
+      "question_text": "Give three numbers such that their sum is −8.",
+      "decision": "none",
+      "reason_codes": [
+        "OPEN_ENDED",
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Open question with many correct answers; no figure given in the book.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C201",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 10.4, Q2",
+      "ncert_ref": "10.4.FiO3.Q2",
+      "question_text": "Give three numbers such that their sum is −8.",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "One sample sum, -5 + 7 + (-10) = -8, is a LaTeX equation.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C202",
+      "role": "question",
+      "lp_book_number": "Figure it Out 10.4, Q3",
+      "ncert_ref": "10.4.FiO3.Q3",
+      "question_text": "There are two dice whose faces have these numbers: −1, 2, −3, 4, −5, 6. The smallest possible sum upon rolling these dice is −10 = (−5) + (−5) and the largest possible sum is 12 = (6) + (6). Some numbers between (−10) and (+12) are not possible to get by adding numbers on these two dice. Find those numbers.",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The six dice faces are listed in the question text; the book prints no dice picture.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C203",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 10.4, Q3",
+      "ncert_ref": "10.4.FiO3.Q3",
+      "question_text": "There are two dice whose faces have these numbers: −1, 2, −3, 4, −5, 6. The smallest possible sum upon rolling these dice is −10 = (−5) + (−5) and the largest possible sum is 12 = (6) + (6). Some numbers between (−10) and (+12) are not possible to get by adding numbers on these two dice. Find those numbers.",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC",
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The answer is a list of the 15 possible sums and a list of the 8 missing integers, both plain number lists. A number line marking the missing ones would only make it nicer, so it is not added.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "Two lines in LaTeX: possible sums, and the integers from -10 to 12 that never appear."
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C204",
+      "role": "question",
+      "lp_book_number": "Figure it Out 10.4, Q4",
+      "ncert_ref": "10.4.FiO3.Q4",
+      "question_text": "Solve these (table of 8 expressions, row 1 then row 2). (a): 8 − 13; (b): (−8) − (13); (c): (−13) − (−8); (d): (−13) + (−8); (e): 8 + (−13); (f): (−8) − (−13); (g): (13) − 8; (h): 13 − (−8)",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_TABLE"
+      ],
+      "reason": "The eight expressions are printed in a plain 2 x 4 table with no colour meaning; the LP already lists them as (a) to (h).",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "LaTeX array of 2 rows x 4 columns with the eight expressions (row 1: 8-13, (-8)-(13), (-13)-(-8), (-13)+(-8); row 2: 8+(-13), (-8)-(-13), (13)-8, 13-(-8))."
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C205",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 10.4, Q4",
+      "ncert_ref": "10.4.FiO3.Q4",
+      "question_text": "Solve these (table of 8 expressions, row 1 then row 2). (a): 8 − 13; (b): (−8) − (13); (c): (−13) − (−8); (d): (−13) + (−8); (e): 8 + (−13); (f): (−8) − (−13); (g): (13) − 8; (h): 13 − (−8)",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_TABLE"
+      ],
+      "reason": "The printed answer is a plain black-ruled table of numbers (no colour, no figure), so a LaTeX array does it; the book's answer table is not a picture in the sense of rule B2.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null,
+      "text_alternative": "LaTeX array of 2 rows x 4 columns: row 1: -5, -21, -5, -21; row 2: -5, 5, 5, 21."
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C206",
+      "role": "question",
+      "lp_book_number": "Figure it Out 10.4, Q5",
+      "ncert_ref": "10.4.FiO3.Q5",
+      "question_text": "Find the years below. a. From the present year, which year was it 150 years ago? b. From the present year, which year was it 2200 years ago? Hint: Recall that there was no year 0. c. What will be the year 320 years after 680 BCE? a) From the present year, which year was it 150 years ago? b) From the present year, which year was it 2200 years ago? (no year 0) c) What will be the year 320 years after 680 BCE?",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Year questions in words; no figure in the book.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C207",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 10.4, Q5",
+      "ncert_ref": "10.4.FiO3.Q5",
+      "question_text": "Find the years below. a. From the present year, which year was it 150 years ago? b. From the present year, which year was it 2200 years ago? Hint: Recall that there was no year 0. c. What will be the year 320 years after 680 BCE? a) From the present year, which year was it 150 years ago? b) From the present year, which year was it 2200 years ago? (no year 0) c) What will be the year 320 years after 680 BCE?",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Three subtractions in LaTeX (2026 - 150, 2026 - 2200, 680 - 320); a timeline would only make it nicer.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C208",
+      "role": "question",
+      "lp_book_number": "Figure it Out 10.4, Q6",
+      "ncert_ref": "10.4.FiO3.Q6",
+      "question_text": "Complete the following sequences: (a): (−40), (−34), (−28), (−22), ___, ___, ___; (b): 3, 4, 2, 5, 1, 6, 0, 7, ___, ___, ___; (c): ___, ___, 12, 6, 1, (−3), (−6), ___, ___, ___",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Three number sequences with blanks, written in the text; no figure in the book.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C209",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 10.4, Q6",
+      "ncert_ref": "10.4.FiO3.Q6",
+      "question_text": "Complete the following sequences: (a): (−40), (−34), (−28), (−22), ___, ___, ___; (b): 3, 4, 2, 5, 1, 6, 0, 7, ___, ___, ___; (c): ___, ___, 12, 6, 1, (−3), (−6), ___, ___, ___",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "The answers are number sequences and their differences, plain LaTeX.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C210",
+      "role": "question",
+      "lp_book_number": "Figure it Out 10.4, Q7",
+      "ncert_ref": "10.4.FiO3.Q7",
+      "question_text": "Here are six integer cards: (+1), (+7), (+18), (−5), (−2), (−9). You can pick any of these and make an expression using additions and subtractions. Here is an expression: (+18) + (+1) − (+7) − (−2) which gives a value (+14). Now, pick cards and make an expression such that its value is closer to (−30).",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The six integer cards are listed in the question text and the book prints no card picture.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C211",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 10.4, Q7",
+      "ncert_ref": "10.4.FiO3.Q7",
+      "question_text": "Here are six integer cards: (+1), (+7), (+18), (−5), (−2), (−9). You can pick any of these and make an expression using additions and subtractions. Here is an expression: (+18) + (+1) − (+7) − (−2) which gives a value (+14). Now, pick cards and make an expression such that its value is closer to (−30).",
+      "decision": "none",
+      "reason_codes": [
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "One expression worked out in three arithmetic lines.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C212",
+      "role": "question",
+      "lp_book_number": "Figure it Out 10.4, Q8",
+      "ncert_ref": "10.4.FiO3.Q8",
+      "question_text": "The sum of two positive integers is always positive but the difference (positive integer) − (positive integer) can be positive or negative. What about (a): (positive) − (negative); (b): (positive) + (negative); (c): (negative) + (negative); (d): (negative) − (negative); (e): (negative) − (positive); (f): (negative) + (positive)",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Six sign-combination questions in words; no figure in the book.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C213",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 10.4, Q8",
+      "ncert_ref": "10.4.FiO3.Q8",
+      "question_text": "The sum of two positive integers is always positive but the difference (positive integer) − (positive integer) can be positive or negative. What about (a): (positive) − (negative); (b): (positive) + (negative); (c): (negative) + (negative); (d): (negative) − (negative); (e): (negative) − (positive); (f): (negative) + (positive)",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "The answer is reasoning in words with one number example per part; no figure needed.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C214",
+      "role": "question",
+      "lp_book_number": "Figure it Out 10.4, Q9",
+      "ncert_ref": "10.4.FiO3.Q9",
+      "question_text": "This string has a total of 100 tokens arranged in a particular pattern. What is the value of the string?",
+      "decision": "required",
+      "reason_codes": [
+        "DATA_IN_FIGURE",
+        "FIG_REFERENCED"
+      ],
+      "reason": "The pattern of the string (which tokens are positive, which negative) is printed only in the picture; the question text says only 'a particular pattern'.",
+      "lp_placeholder_action": "keep_and_replace_spec",
+      "media_id": "M4.S41.T41.C214.IMG1",
+      "manim_scene": "c6_10_s41_q9_q",
+      "placeholder": {
+        "token": "{{DIAGRAM:M4.S41.T41.C214.IMG1}}",
+        "insert_into": "question_tex",
+        "position": "after_question_text"
+      },
+      "diagram": {
+        "diagram_type": "integer_tokens",
+        "aspect_ratio": "16:9",
+        "derived_from": null,
+        "content": {
+          "type": "integer_tokens",
+          "layout": "single_row",
+          "canvas_px": [
+            1920,
+            1080
+          ],
+          "token_diameter_px": 112,
+          "token_1_centre_px": [
+            116,
+            540
+          ],
+          "token_spacing_px": 112,
+          "tokens_touch_each_other": true,
+          "tokens_left_to_right": [
+            {
+              "pos": 1,
+              "sign": "+"
+            },
+            {
+              "pos": 2,
+              "sign": "+"
+            },
+            {
+              "pos": 3,
+              "sign": "+"
+            },
+            {
+              "pos": 4,
+              "sign": "-"
+            },
+            {
+              "pos": 5,
+              "sign": "-"
+            },
+            {
+              "pos": 6,
+              "sign": "+"
+            },
+            {
+              "pos": 7,
+              "sign": "+"
+            },
+            {
+              "pos": 8,
+              "sign": "+"
+            },
+            {
+              "pos": 9,
+              "sign": "-"
+            },
+            {
+              "pos": 10,
+              "sign": "-"
+            },
+            {
+              "pos": 11,
+              "sign": "+"
+            },
+            {
+              "pos": 12,
+              "sign": "+"
+            },
+            {
+              "pos": 13,
+              "sign": "+"
+            },
+            {
+              "pos": 14,
+              "sign": "-"
+            },
+            {
+              "pos": 15,
+              "sign": "-"
+            }
+          ],
+          "tokens_drawn": 15,
+          "positive_drawn": 9,
+          "negative_drawn": 6,
+          "positive_fill": "MARK_FILL",
+          "negative_fill": "SET_B",
+          "outline": "INK",
+          "sign_colour": "INK",
+          "string_end": {
+            "after_token": 15,
+            "shape": "thin wavy line curling down at its right end",
+            "start_px": [
+              1740,
+              540
+            ],
+            "end_px": [
+              1860,
+              640
+            ]
+          },
+          "string_total_tokens_in_question": 100,
+          "to_scale": false
+        },
+        "manim_description": "On a plain BG canvas of 1920 x 1080 px draw one horizontal row of 15 round tokens that touch each other like beads on a string, all the same size (diameter 112 px), all centred on the line y = 540 px; the centre of token 1 is at x = 116 px and every next centre is 112 px further right (token 15 is centred at x = 1684 px). Every token has a 3 px INK outline. Left to right: tokens 1, 2, 3 are positive (fill MARK_FILL, sign +); tokens 4, 5 are negative (fill SET_B, sign minus); tokens 6, 7, 8 are positive; tokens 9, 10 are negative; tokens 11, 12, 13 are positive; tokens 14, 15 are negative. Each sign is drawn in INK, centred in its token, about 64 px high (plus for positive, minus for negative). From the right edge of token 15 (x = 1740 px, y = 540 px) draw a thin INK wavy line, 3 px stroke, running right to x = 1860 px and curling down at its right end to y = 640 px, to show that the string goes on beyond the picture. Draw nothing else: no numbers, no brackets, no labels, no struck-out token.",
+        "visible_text": [
+          "+",
+          "−"
+        ],
+        "must_not_show": [
+          "question text or instructions",
+          "answer sentence or solution steps",
+          "headings, Q-numbers, figure letters",
+          "branding, page numbers, watermarks",
+          "decorative clip-art",
+          "the number 100, the number 20 or any total or value of the string",
+          "brackets, circles or lines grouping the tokens into blocks of five",
+          "any struck-out or crossed token",
+          "more than 15 tokens"
+        ],
+        "accuracy_checks": [
+          "exactly 15 tokens are drawn: 9 positive and 6 negative (3 x 3 and 3 x 2)",
+          "the sign sequence is + + + - - repeated exactly 3 times, matching the book's string on pdf p.25",
+          "token 15 is negative and the wavy line starts at its right edge",
+          "no number appears anywhere in the picture"
+        ],
+        "alt_text": "A string of tokens in one row: three positive, two negative, repeated three times, then a wavy line showing that the string goes on.",
+        "render_note": "Colours: positive tokens MARK_FILL (the book's green) and negative tokens SET_B (the book's orange-red); the printed + / - sign carries the meaning, so the fill colours can be harmonised with the other token pictures of the chapter. Only the first 15 of the 100 tokens are drawn, exactly as in the book."
+      }
+    },
+    {
+      "lp_concept_id": "M4.S41.T41.C215",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 10.4, Q9",
+      "ncert_ref": "10.4.FiO3.Q9",
+      "question_text": "This string has a total of 100 tokens arranged in a particular pattern. What is the value of the string?",
+      "decision": "optional",
+      "reason_codes": [
+        "HIGHLIGHT_MEANING",
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Would help but not needed: the same 15 tokens with three brackets of 5, each marked +1, would show the 'block of 5 = +1' step; the steps say it in words and the question figure already shows the pattern.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S43.T43.C220",
+      "role": "question",
+      "lp_book_number": "Figure it Out 10.5, Q1",
+      "ncert_ref": "10.5.FiO.Q1",
+      "question_text": "Can you explain each of Brahmagupta's rules in terms of Bela's Building of Fun, or in terms of a number line?",
+      "decision": "none",
+      "reason_codes": [
+        "OPEN_ENDED",
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Open explanation question; the book gives no figure. It names two models (Bela's Building of Fun, a number line) but gives the learner nothing to look at.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S43.T43.C221",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 10.5, Q1",
+      "ncert_ref": "10.5.FiO.Q1",
+      "question_text": "Can you explain each of Brahmagupta's rules in terms of Bela's Building of Fun, or in terms of a number line?",
+      "decision": "none",
+      "reason_codes": [
+        "OPEN_ENDED",
+        "TEXT_SUFFICIENT"
+      ],
+      "reason": "Open explanation of ten rules in words and equations; one picture cannot serve ten rules. Number-line or lift arrows for 2 + (-3) and 2 - (-3) would only make it nicer, and the chapter already teaches both with its own concept images.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S43.T43.C222",
+      "role": "question",
+      "lp_book_number": "Figure it Out 10.5, Q2",
+      "ncert_ref": "10.5.FiO.Q2",
+      "question_text": "Give your own examples of each rule.",
+      "decision": "none",
+      "reason_codes": [
+        "OPEN_ENDED"
+      ],
+      "reason": "Open question: the learner makes own examples; no figure.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S43.T43.C223",
+      "role": "solution",
+      "lp_book_number": "Figure it Out 10.5, Q2",
+      "ncert_ref": "10.5.FiO.Q2",
+      "question_text": "Give your own examples of each rule.",
+      "decision": "none",
+      "reason_codes": [
+        "OPEN_ENDED",
+        "LATEX_ARITHMETIC"
+      ],
+      "reason": "Ten sample equations in LaTeX; open-ended answer.",
+      "lp_placeholder_action": "drop_image",
+      "media_id": null
+    },
+    {
+      "lp_concept_id": "M4.S44.T44.C224",
+      "role": "worked_example",
+      "block_index": 0,
+      "lp_book_number": null,
+      "ncert_ref": "10.G.ac1",
+      "question_text": "Two-player game. Each player has 1 pawn; both start at 0. Players can reach either −50 or +50 to win but need not decide this before or during play. Each player rolls two dice at a time, one with +1 to +6 and the other with −1 to −6. After each roll the player can add or subtract them in any order and then move the steps that indicate the result. A positive result means moving towards +50 and a negative result towards −50.",
+      "decision": "none",
+      "reason_codes": [
+        "TEXT_SUFFICIENT",
+        "NOT_RENDERABLE"
+      ],
+      "reason": "The game rules are complete in words and the 'answer' is only 'play the game'. The book's board is game artwork (snakes and ladders over the numbers -50 to 50) whose snake and ladder ends are only approximately readable, so it is not redrawn; the move idea already has the kept concept image.",
+      "lp_placeholder_action": "no_image",
+      "media_id": null
+    }
+  ]
+}

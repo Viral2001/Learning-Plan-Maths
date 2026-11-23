@@ -1,0 +1,4320 @@
+{
+ "meta": {
+  "chapter": "Perimeter and Area",
+  "class": 6,
+  "textbook": "Ganita Prakash, Grade 6, Chapter 6",
+  "lp_plan_id": "cbse_eng_maths6_ch6_v58",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "none": 6,
+    "required": 2
+   },
+   "question": {
+    "required": 6,
+    "none": 6
+   },
+   "solution": {
+    "none": 7,
+    "required": 5
+   }
+  },
+  "notes": [
+   "Chunk B: topics M1.S8.T8 to M2.S16.T16 (units 19 to 38).",
+   "All diagrams are 16:9 cards; wide strips (the 23 by 7 dot grid, the three arrangements) are scaled to the card width.",
+   "The book colours straight units red and slanted units blue; the house palette has no red, so SET_B (orange) and SET_A (blue) stand for them in every dot-grid diagram.",
+   "Figure letters (a, b, c, d) are never drawn; the LP text names the figures by shape or position.",
+   "P11-tangram-1 is not used by any LP item (the plan leaves the tangram out); it is claimed as none:OPEN_ENDED only so the base figure is accounted for.",
+   "See notes_B.md for judgement calls and LP problems (Q2 'two pieces' lacks its sizes; the 'about 7' circle estimate depends on placement)."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P06-dot_grid-2",
+   "source": "chapter p.06",
+   "description": "Triangle on a 7 by 6 dot grid, top and left sides straight (printed red), slanting side printed blue (Akshi and Toshi)",
+   "mapped_to": "item:M1.S9.T9.C43 (question)"
+  },
+  {
+   "fig_id": "P07-dot_grid-1",
+   "source": "chapter p.07",
+   "description": "Four closed shapes on a 23 by 7 dot grid (perimeter in straight and diagonal units); verified: corners agree with the printed answers 8s+2d, 4s+6d, 12s+6d, 18s+6d",
+   "mapped_to": "item:M1.S9.T9.C45 (question)"
+  },
+  {
+   "fig_id": "P07-shape-2",
+   "source": "chapter p.07",
+   "description": "Plain equilateral triangle ABC with no lengths or marks (teaching figure of the perimeter derivation)",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P08-shape-1",
+   "source": "chapter p.08",
+   "description": "The 6 cm by 4 cm chit with its dashed cut line; the item's diagram shows the two 6 cm by 2 cm pieces the chit is cut into",
+   "mapped_to": "item:M1.S11.T11.C53 (question)"
+  },
+  {
+   "fig_id": "P08-shape-2",
+   "source": "chapter p.08",
+   "description": "Arrangement a: two 6 cm by 2 cm pieces end to end, marks 6 cm, 6 cm, 2 cm",
+   "mapped_to": "item:M1.S10.T10.C49 (question)"
+  },
+  {
+   "fig_id": "P08-shape-3",
+   "source": "chapter p.08",
+   "description": "Arrangement b: L shape, mark 2 cm under the upright piece; verified by outline 8+6+2+4+6+2 = 28",
+   "mapped_to": "item:M1.S11.T11.C51 (question)"
+  },
+  {
+   "fig_id": "P08-shape-4",
+   "source": "chapter p.08",
+   "description": "Arrangement c: T shape, two 2 cm overhang marks; verified outline 28",
+   "mapped_to": "item:M1.S11.T11.C51 (question)"
+  },
+  {
+   "fig_id": "P08-shape-5",
+   "source": "chapter p.08",
+   "description": "Arrangement d: two upright pieces, right one 3 cm lower, mark 3 cm on the shared edge; verified outline 26",
+   "mapped_to": "item:M1.S11.T11.C51 (question)"
+  },
+  {
+   "fig_id": "P10-shape-1",
+   "source": "chapter p.10",
+   "description": "Staircase figure a with labels 3, 1, 2, 2, 4, 4, 3, 3 (area 28 by shoelace, matches printed answer)",
+   "mapped_to": "item:M2.S14.T14.C68 (question)"
+  },
+  {
+   "fig_id": "P10-shape-2",
+   "source": "chapter p.10",
+   "description": "Arch figure b: 5 by 3 outer, notch 3 by 2, labels 5, 3, 1, 1, 3, 2 (area 9, matches printed answer)",
+   "mapped_to": "item:M2.S14.T14.C68 (question)"
+  },
+  {
+   "fig_id": "P11-tangram-1",
+   "source": "chapter p.11",
+   "description": "Seven-piece tangram square, pieces A-G. No unit of the LP uses it (the plan leaves the tangram Figure it Out out), so no item claims it; claimed here only so that the figure is accounted for, as a hands-on cut-out activity",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "P12-shape-1",
+   "source": "chapter p.12",
+   "description": "Freehand smooth closed curve (figure a); traced outline of 37 points in the item's spec",
+   "mapped_to": "item:M2.S15.T15.C70#0 (question)"
+  },
+  {
+   "fig_id": "P12-shape-2",
+   "source": "chapter p.12",
+   "description": "Freehand jagged 17-corner polygon (figure b); traced corners in the item's spec",
+   "mapped_to": "item:M2.S15.T15.C70#0 (question)"
+  },
+  {
+   "fig_id": "P12-dot_grid-3",
+   "source": "chapter p.12",
+   "description": "The same four shapes on the same 23 by 7 dot grid as p.07 (area by counting squares); verified areas 4, 9, 10, 11",
+   "mapped_to": "item:M2.S16.T16.C73 (question)"
+  },
+  {
+   "fig_id": "P13-pattern-1",
+   "source": "chapter p.13",
+   "description": "Rectangle packed with 42 circles (7 rows of 6): shown by the kept teaching image of concept C71",
+   "mapped_to": "concept_image:M2.S15.T15.C71.IMG1"
+  },
+  {
+   "fig_id": "P13-pattern-2",
+   "source": "chapter p.13",
+   "description": "Same rectangle packed with 44 circles (rows of 6 and 5): shown by the kept teaching image of concept C71",
+   "mapped_to": "concept_image:M2.S15.T15.C71.IMG1"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 16,
+  "mapped_to_items": 12,
+  "mapped_to_concept_images": 2,
+  "mapped_none": 2,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S9.T9.C43.IMG1",
+   "M1.S9.T9.C45.IMG1",
+   "M1.S9.T9.C46.IMG1",
+   "M1.S10.T10.C49.IMG1",
+   "M1.S11.T11.C51.IMG1",
+   "M1.S11.T11.C52.IMG1",
+   "M1.S11.T11.C53.IMG1",
+   "M1.S11.T11.C54.IMG1",
+   "M2.S14.T14.C68.IMG1",
+   "M2.S14.T14.C69.IMG1",
+   "M2.S15.T15.C70.IMG1",
+   "M2.S16.T16.C73.IMG1",
+   "M2.S16.T16.C74.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S8.T8.C41",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Worked example: perimeter of an equilateral triangle",
+   "ncert_ref": "Section 6.1 - p.135 (Perimeter of an equilateral triangle)",
+   "question_text": "Find the perimeter of an equilateral triangle ABC in terms of the length of one side.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's triangle ABC has no lengths, ticks or marks: it only names the vertices. The question and the steps say everything in words, so a picture adds nothing the learner needs.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write in words only: an equilateral triangle ABC has AB = BC = AC. (A triangle with its three equal sides marked would be the optional picture.)"
+  },
+  {
+   "lp_concept_id": "M1.S8.T8.C41",
+   "role": "worked_example",
+   "block_index": 1,
+   "lp_book_number": "What is a similarity between a square and an equilateral triangle?",
+   "ncert_ref": "Section 6.1 - p.135",
+   "question_text": "What is a similarity between a square and an equilateral triangle?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word question about what the two shapes share (equal sides, equal angles). The book gives no figure with it and the answer is reasoning in words.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C43",
+   "role": "question",
+   "lp_book_number": "Is the perimeter of the dot grid triangle 9 units?",
+   "ncert_ref": "Section 6.1 - p.134 (dot grid triangle)",
+   "question_text": "Akshi says the perimeter of the triangle on the dot grid is $9\\text{ units}$. Toshi says it cannot be $9\\text{ units}$ and will be more than $9\\text{ units}$. Who is right?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question speaks of 'the triangle on the dot grid'; its shape and which edges are straight or slanted live only in the picture, as printed.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S9.T9.C43.IMG1",
+   "manim_scene": "c6_6_6_1_nine_units_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S9.T9.C43.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "dot_grid": {
+      "columns": 7,
+      "rows": 6,
+      "index_base": 1,
+      "origin": "column 1 = left, row 1 = top",
+      "dot_colour": "INK",
+      "total_dots": 42
+     },
+     "polygon": {
+      "vertices_col_row": [
+       [
+        3,
+        2
+       ],
+       [
+        6,
+        2
+       ],
+       [
+        3,
+        5
+       ]
+      ],
+      "edges": [
+       {
+        "from": [
+         3,
+         2
+        ],
+        "to": [
+         6,
+         2
+        ],
+        "kind": "straight",
+        "units": 3,
+        "colour": "SET_B"
+       },
+       {
+        "from": [
+         3,
+         2
+        ],
+        "to": [
+         3,
+         5
+        ],
+        "kind": "straight",
+        "units": 3,
+        "colour": "SET_B"
+       },
+       {
+        "from": [
+         6,
+         2
+        ],
+        "to": [
+         3,
+         5
+        ],
+        "kind": "diagonal",
+        "units": 3,
+        "colour": "SET_A",
+        "passes_through_dots": [
+         [
+          5,
+          3
+         ],
+         [
+          4,
+          4
+         ]
+        ]
+       }
+      ]
+     },
+     "to_scale": true,
+     "type": "mensuration_figure"
+    },
+    "manim_description": "Draw a square dot grid on a plain BG card: 7 columns by 6 rows of INK dots (42 dots) with equal spacing, columns 1 to 7 from left to right and rows 1 to 6 from top to bottom; centre the grid in the card. Draw a right-angled triangle on the dots with vertices at (column 3, row 2), (column 6, row 2) and (column 3, row 5). Draw its top side from (3,2) to (6,2) and its left side from (3,2) to (3,5) in SET_B; each is 3 straight units long. Draw its slanting side from (6,2) to (3,5) in SET_A; it passes through the dots (5,3) and (4,4) and is 3 slanted units long. Draw no text, no characters, no speech bubbles and no other marks.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the two cartoon children and their speech bubbles",
+     "the letters s and d, the words straight or diagonal, or any length or perimeter value"
+    ],
+    "accuracy_checks": [
+     "grid has 7 columns and 6 rows (42 dots)",
+     "triangle vertices exactly at (3,2), (6,2) and (3,5)",
+     "top side and left side are each 3 gaps long and drawn in SET_B",
+     "slanting side passes through dots (5,3) and (4,4) and is drawn in SET_A",
+     "in all the figure holds 6 straight units and 3 slanted units"
+    ],
+    "alt_text": "A right-angled triangle on a 7 by 6 dot grid: a top side and a left side, each 3 units long, and a slanting side joining their ends.",
+    "render_note": "The book draws the straight sides red and the slanted side blue and prints this colouring in the question. The house palette has no red, so SET_B (orange) stands for the book's red and SET_A (blue) for the book's blue. Same colour convention in the other dot-grid diagrams of this chunk."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C44",
+   "role": "solution",
+   "lp_book_number": "Is the perimeter of the dot grid triangle 9 units?",
+   "ncert_ref": "Section 6.1 - p.134 (dot grid triangle)",
+   "question_text": "Akshi says the perimeter of the triangle on the dot grid is $9\\text{ units}$. Toshi says it cannot be $9\\text{ units}$ and will be more than $9\\text{ units}$. Who is right?",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM"
+   ],
+   "reason": "The question figure already carries the straight and slanted edges as the book prints them; the solution adds only the words '6s + 3d' (LaTeX) and the lay-one-unit-on-the-other argument, which is fully worded. Unlike Q2, where the book prints each shape in one colour and the solution adds the classification.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write 6s + 3d in the LaTeX steps; no picture needed."
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C45",
+   "role": "question",
+   "lp_book_number": "Straight Units and Slanted Units, Q2",
+   "ncert_ref": "Section 6.1 - p.135 (four dot grid shapes)",
+   "question_text": "Write the perimeters of the four dot grid shapes in terms of straight and diagonal units.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The four shapes exist only in the picture; the learner cannot count units without them.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S9.T9.C45.IMG1",
+   "manim_scene": "c6_6_6_1_sd_shapes_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S9.T9.C45.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "dot_grid": {
+      "columns": 23,
+      "rows": 7,
+      "index_base": 0,
+      "origin": "column 0 = left, row 0 = top",
+      "dot_colour": "INK",
+      "total_dots": 161
+     },
+     "polygons": [
+      {
+       "id": 1,
+       "corners_col_row": [
+        [
+         1,
+         1
+        ],
+        [
+         4,
+         1
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         2,
+         3
+        ],
+        [
+         1,
+         4
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      },
+      {
+       "id": 2,
+       "corners_col_row": [
+        [
+         6,
+         1
+        ],
+        [
+         7,
+         2
+        ],
+        [
+         8,
+         1
+        ],
+        [
+         9,
+         2
+        ],
+        [
+         9,
+         3
+        ],
+        [
+         8,
+         4
+        ],
+        [
+         6,
+         4
+        ],
+        [
+         5,
+         3
+        ],
+        [
+         5,
+         2
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      },
+      {
+       "id": 3,
+       "corners_col_row": [
+        [
+         10,
+         1
+        ],
+        [
+         11,
+         1
+        ],
+        [
+         12,
+         2
+        ],
+        [
+         11,
+         3
+        ],
+        [
+         14,
+         3
+        ],
+        [
+         13,
+         2
+        ],
+        [
+         14,
+         1
+        ],
+        [
+         15,
+         1
+        ],
+        [
+         15,
+         3
+        ],
+        [
+         14,
+         4
+        ],
+        [
+         11,
+         4
+        ],
+        [
+         10,
+         3
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      },
+      {
+       "id": 4,
+       "corners_col_row": [
+        [
+         16,
+         1
+        ],
+        [
+         17,
+         1
+        ],
+        [
+         20,
+         4
+        ],
+        [
+         20,
+         1
+        ],
+        [
+         21,
+         1
+        ],
+        [
+         21,
+         5
+        ],
+        [
+         20,
+         5
+        ],
+        [
+         17,
+         2
+        ],
+        [
+         17,
+         5
+        ],
+        [
+         16,
+         5
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      }
+     ],
+     "to_scale": true,
+     "type": "mensuration_figure"
+    },
+    "manim_description": "Draw a square dot grid on a plain BG card: 23 columns by 7 rows of INK dots (161 dots) with equal spacing, columns 0 to 22 from left to right and rows 0 to 6 from top to bottom. The grid is a wide strip, so scale it to the full card width with an even margin and centre it vertically. Draw four closed polygons with INK outlines, no fill, every corner on a dot, each given as (column,row) corners in drawing order and closed back to its first corner. Polygon 1: (1,1), (4,1), (3,2), (2,2), (2,3), (1,4). Polygon 2: (6,1), (7,2), (8,1), (9,2), (9,3), (8,4), (6,4), (5,3), (5,2). Polygon 3: (10,1), (11,1), (12,2), (11,3), (14,3), (13,2), (14,1), (15,1), (15,3), (14,4), (11,4), (10,3). Polygon 4: (16,1), (17,1), (20,4), (20,1), (21,1), (21,5), (20,5), (17,2), (17,5), (16,5). Draw no labels, no numbers and no colours other than INK.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any colour other than INK",
+     "any label, number, s, d or perimeter value"
+    ],
+    "accuracy_checks": [
+     "grid is 23 columns by 7 rows (161 dots)",
+     "every polygon corner lies on a dot; corner counts are 6, 9, 12 and 10",
+     "polygon outlines are closed and do not cross themselves",
+     "same four shapes as the book, in the book's left-to-right order: bent shape, heart, cup with two spikes, letter N",
+     "straight and slanted unit counts of the four polygons (not drawn) are 8s+2d, 4s+6d, 12s+6d and 18s+6d"
+    ],
+    "alt_text": "Four closed shapes drawn on a 23 by 7 dot grid: a bent shape, a heart, a cup with two spikes and the letter N.",
+    "render_note": "Wide strip, 22 gaps by 6 gaps: scale to the card width. The book prints the four shapes in purple, pink, green and brown; they are INK here because the colour carries no meaning in the question."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C46",
+   "role": "solution",
+   "lp_book_number": "Straight Units and Slanted Units, Q2",
+   "ncert_ref": "Section 6.1 - p.135 (four dot grid shapes)",
+   "question_text": "Write the perimeters of the four dot grid shapes in terms of straight and diagonal units.",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The book prints each shape in one colour, so the split into straight and slanted units (the whole solution) is visible only if the solution colours the edges; counting 8 to 18 units by words alone is error-prone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S9.T9.C46.IMG1",
+   "manim_scene": "c6_6_6_1_sd_shapes_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S9.T9.C46.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S9.T9.C45.IMG1",
+    "content": {
+     "base": "same dot grid and the same four INK outlines as the question diagram, unchanged",
+     "dot_grid": {
+      "columns": 23,
+      "rows": 7,
+      "index_base": 0,
+      "origin": "column 0 = left, row 0 = top",
+      "dot_colour": "INK",
+      "total_dots": 161
+     },
+     "polygons": [
+      {
+       "id": 1,
+       "corners_col_row": [
+        [
+         1,
+         1
+        ],
+        [
+         4,
+         1
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         2,
+         3
+        ],
+        [
+         1,
+         4
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      },
+      {
+       "id": 2,
+       "corners_col_row": [
+        [
+         6,
+         1
+        ],
+        [
+         7,
+         2
+        ],
+        [
+         8,
+         1
+        ],
+        [
+         9,
+         2
+        ],
+        [
+         9,
+         3
+        ],
+        [
+         8,
+         4
+        ],
+        [
+         6,
+         4
+        ],
+        [
+         5,
+         3
+        ],
+        [
+         5,
+         2
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      },
+      {
+       "id": 3,
+       "corners_col_row": [
+        [
+         10,
+         1
+        ],
+        [
+         11,
+         1
+        ],
+        [
+         12,
+         2
+        ],
+        [
+         11,
+         3
+        ],
+        [
+         14,
+         3
+        ],
+        [
+         13,
+         2
+        ],
+        [
+         14,
+         1
+        ],
+        [
+         15,
+         1
+        ],
+        [
+         15,
+         3
+        ],
+        [
+         14,
+         4
+        ],
+        [
+         11,
+         4
+        ],
+        [
+         10,
+         3
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      },
+      {
+       "id": 4,
+       "corners_col_row": [
+        [
+         16,
+         1
+        ],
+        [
+         17,
+         1
+        ],
+        [
+         20,
+         4
+        ],
+        [
+         20,
+         1
+        ],
+        [
+         21,
+         1
+        ],
+        [
+         21,
+         5
+        ],
+        [
+         20,
+         5
+        ],
+        [
+         17,
+         2
+        ],
+        [
+         17,
+         5
+        ],
+        [
+         16,
+         5
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      }
+     ],
+     "colour_overlay_runs": [
+      {
+       "polygon": 1,
+       "runs": [
+        {
+         "from": [
+          1,
+          1
+         ],
+         "to": [
+          4,
+          1
+         ],
+         "kind": "straight",
+         "units": 3,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          4,
+          1
+         ],
+         "to": [
+          3,
+          2
+         ],
+         "kind": "diagonal",
+         "units": 1,
+         "colour": "SET_A"
+        },
+        {
+         "from": [
+          3,
+          2
+         ],
+         "to": [
+          2,
+          2
+         ],
+         "kind": "straight",
+         "units": 1,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          2,
+          2
+         ],
+         "to": [
+          2,
+          3
+         ],
+         "kind": "straight",
+         "units": 1,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          2,
+          3
+         ],
+         "to": [
+          1,
+          4
+         ],
+         "kind": "diagonal",
+         "units": 1,
+         "colour": "SET_A"
+        },
+        {
+         "from": [
+          1,
+          4
+         ],
+         "to": [
+          1,
+          1
+         ],
+         "kind": "straight",
+         "units": 3,
+         "colour": "SET_B"
+        }
+       ],
+       "straight_total": 8,
+       "diagonal_total": 2
+      },
+      {
+       "polygon": 2,
+       "runs": [
+        {
+         "from": [
+          6,
+          1
+         ],
+         "to": [
+          7,
+          2
+         ],
+         "kind": "diagonal",
+         "units": 1,
+         "colour": "SET_A"
+        },
+        {
+         "from": [
+          7,
+          2
+         ],
+         "to": [
+          8,
+          1
+         ],
+         "kind": "diagonal",
+         "units": 1,
+         "colour": "SET_A"
+        },
+        {
+         "from": [
+          8,
+          1
+         ],
+         "to": [
+          9,
+          2
+         ],
+         "kind": "diagonal",
+         "units": 1,
+         "colour": "SET_A"
+        },
+        {
+         "from": [
+          9,
+          2
+         ],
+         "to": [
+          9,
+          3
+         ],
+         "kind": "straight",
+         "units": 1,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          9,
+          3
+         ],
+         "to": [
+          8,
+          4
+         ],
+         "kind": "diagonal",
+         "units": 1,
+         "colour": "SET_A"
+        },
+        {
+         "from": [
+          8,
+          4
+         ],
+         "to": [
+          6,
+          4
+         ],
+         "kind": "straight",
+         "units": 2,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          6,
+          4
+         ],
+         "to": [
+          5,
+          3
+         ],
+         "kind": "diagonal",
+         "units": 1,
+         "colour": "SET_A"
+        },
+        {
+         "from": [
+          5,
+          3
+         ],
+         "to": [
+          5,
+          2
+         ],
+         "kind": "straight",
+         "units": 1,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          5,
+          2
+         ],
+         "to": [
+          6,
+          1
+         ],
+         "kind": "diagonal",
+         "units": 1,
+         "colour": "SET_A"
+        }
+       ],
+       "straight_total": 4,
+       "diagonal_total": 6
+      },
+      {
+       "polygon": 3,
+       "runs": [
+        {
+         "from": [
+          10,
+          1
+         ],
+         "to": [
+          11,
+          1
+         ],
+         "kind": "straight",
+         "units": 1,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          11,
+          1
+         ],
+         "to": [
+          12,
+          2
+         ],
+         "kind": "diagonal",
+         "units": 1,
+         "colour": "SET_A"
+        },
+        {
+         "from": [
+          12,
+          2
+         ],
+         "to": [
+          11,
+          3
+         ],
+         "kind": "diagonal",
+         "units": 1,
+         "colour": "SET_A"
+        },
+        {
+         "from": [
+          11,
+          3
+         ],
+         "to": [
+          14,
+          3
+         ],
+         "kind": "straight",
+         "units": 3,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          14,
+          3
+         ],
+         "to": [
+          13,
+          2
+         ],
+         "kind": "diagonal",
+         "units": 1,
+         "colour": "SET_A"
+        },
+        {
+         "from": [
+          13,
+          2
+         ],
+         "to": [
+          14,
+          1
+         ],
+         "kind": "diagonal",
+         "units": 1,
+         "colour": "SET_A"
+        },
+        {
+         "from": [
+          14,
+          1
+         ],
+         "to": [
+          15,
+          1
+         ],
+         "kind": "straight",
+         "units": 1,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          15,
+          1
+         ],
+         "to": [
+          15,
+          3
+         ],
+         "kind": "straight",
+         "units": 2,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          15,
+          3
+         ],
+         "to": [
+          14,
+          4
+         ],
+         "kind": "diagonal",
+         "units": 1,
+         "colour": "SET_A"
+        },
+        {
+         "from": [
+          14,
+          4
+         ],
+         "to": [
+          11,
+          4
+         ],
+         "kind": "straight",
+         "units": 3,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          11,
+          4
+         ],
+         "to": [
+          10,
+          3
+         ],
+         "kind": "diagonal",
+         "units": 1,
+         "colour": "SET_A"
+        },
+        {
+         "from": [
+          10,
+          3
+         ],
+         "to": [
+          10,
+          1
+         ],
+         "kind": "straight",
+         "units": 2,
+         "colour": "SET_B"
+        }
+       ],
+       "straight_total": 12,
+       "diagonal_total": 6
+      },
+      {
+       "polygon": 4,
+       "runs": [
+        {
+         "from": [
+          16,
+          1
+         ],
+         "to": [
+          17,
+          1
+         ],
+         "kind": "straight",
+         "units": 1,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          17,
+          1
+         ],
+         "to": [
+          20,
+          4
+         ],
+         "kind": "diagonal",
+         "units": 3,
+         "colour": "SET_A"
+        },
+        {
+         "from": [
+          20,
+          4
+         ],
+         "to": [
+          20,
+          1
+         ],
+         "kind": "straight",
+         "units": 3,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          20,
+          1
+         ],
+         "to": [
+          21,
+          1
+         ],
+         "kind": "straight",
+         "units": 1,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          21,
+          1
+         ],
+         "to": [
+          21,
+          5
+         ],
+         "kind": "straight",
+         "units": 4,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          21,
+          5
+         ],
+         "to": [
+          20,
+          5
+         ],
+         "kind": "straight",
+         "units": 1,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          20,
+          5
+         ],
+         "to": [
+          17,
+          2
+         ],
+         "kind": "diagonal",
+         "units": 3,
+         "colour": "SET_A"
+        },
+        {
+         "from": [
+          17,
+          2
+         ],
+         "to": [
+          17,
+          5
+         ],
+         "kind": "straight",
+         "units": 3,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          17,
+          5
+         ],
+         "to": [
+          16,
+          5
+         ],
+         "kind": "straight",
+         "units": 1,
+         "colour": "SET_B"
+        },
+        {
+         "from": [
+          16,
+          5
+         ],
+         "to": [
+          16,
+          1
+         ],
+         "kind": "straight",
+         "units": 4,
+         "colour": "SET_B"
+        }
+       ],
+       "straight_total": 18,
+       "diagonal_total": 6
+      }
+     ],
+     "labels": [
+      {
+       "text": "8s + 2d",
+       "col": 2.5,
+       "row": 7.4,
+       "colour": "ANSWER",
+       "height_px": 44
+      },
+      {
+       "text": "4s + 6d",
+       "col": 7,
+       "row": 7.4,
+       "colour": "ANSWER",
+       "height_px": 44
+      },
+      {
+       "text": "12s + 6d",
+       "col": 12.5,
+       "row": 7.4,
+       "colour": "ANSWER",
+       "height_px": 44
+      },
+      {
+       "text": "18s + 6d",
+       "col": 18.5,
+       "row": 7.4,
+       "colour": "ANSWER",
+       "height_px": 44
+      }
+     ],
+     "key": {
+      "row": 8.6,
+      "straight_segment": {
+       "from": [
+        8.5,
+        8.6
+       ],
+       "to": [
+        9.5,
+        8.6
+       ],
+       "colour": "SET_B",
+       "label": "s",
+       "label_at": [
+        10.0,
+        8.6
+       ]
+      },
+      "slanted_segment": {
+       "from": [
+        12.0,
+        8.1
+       ],
+       "to": [
+        13.0,
+        9.1
+       ],
+       "colour": "SET_A",
+       "label": "d",
+       "label_at": [
+        13.6,
+        8.6
+       ]
+      }
+     },
+     "to_scale": true,
+     "type": "mensuration_figure"
+    },
+    "manim_description": "Redraw the question figure exactly: same 23 by 7 INK dot grid, same four INK outlines, same positions, same card. Then draw every edge of each polygon again on top of its outline in colour, same line weight: each straight unit (one step between two neighbouring dots in a row or column) in SET_B and each slanted unit (one step between two diagonally neighbouring dots) in SET_A. Edge runs as (column,row) from-to: Polygon 1: straight (1,1)-(4,1) 3 units; diagonal (4,1)-(3,2) 1 unit; straight (3,2)-(2,2) 1 unit; straight (2,2)-(2,3) 1 unit; diagonal (2,3)-(1,4) 1 unit; straight (1,4)-(1,1) 3 units. Polygon 2: diagonal (6,1)-(7,2) 1 unit; diagonal (7,2)-(8,1) 1 unit; diagonal (8,1)-(9,2) 1 unit; straight (9,2)-(9,3) 1 unit; diagonal (9,3)-(8,4) 1 unit; straight (8,4)-(6,4) 2 units; diagonal (6,4)-(5,3) 1 unit; straight (5,3)-(5,2) 1 unit; diagonal (5,2)-(6,1) 1 unit. Polygon 3: straight (10,1)-(11,1) 1 unit; diagonal (11,1)-(12,2) 1 unit; diagonal (12,2)-(11,3) 1 unit; straight (11,3)-(14,3) 3 units; diagonal (14,3)-(13,2) 1 unit; diagonal (13,2)-(14,1) 1 unit; straight (14,1)-(15,1) 1 unit; straight (15,1)-(15,3) 2 units; diagonal (15,3)-(14,4) 1 unit; straight (14,4)-(11,4) 3 units; diagonal (11,4)-(10,3) 1 unit; straight (10,3)-(10,1) 2 units. Polygon 4: straight (16,1)-(17,1) 1 unit; diagonal (17,1)-(20,4) 3 units; straight (20,4)-(20,1) 3 units; straight (20,1)-(21,1) 1 unit; straight (21,1)-(21,5) 4 units; straight (21,5)-(20,5) 1 unit; diagonal (20,5)-(17,2) 3 units; straight (17,2)-(17,5) 3 units; straight (17,5)-(16,5) 1 unit; straight (16,5)-(16,1) 4 units. Below the grid, at row 7.4, write in ANSWER at 44 px, centred on columns 2.5, 7, 12.5 and 18.5: '8s + 2d', '4s + 6d', '12s + 6d' and '18s + 6d'. At row 8.6 draw a key: a SET_B segment from column 8.5 to 9.5 followed by the label 's' at column 10, then a SET_A segment from (12,8.1) to (13,9.1) followed by the label 'd' at column 13.6.",
+    "visible_text": [
+     "8s + 2d",
+     "4s + 6d",
+     "12s + 6d",
+     "18s + 6d",
+     "s",
+     "d"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the sums such as 3 + 1 + 1 + 3",
+     "the words straight or diagonal"
+    ],
+    "accuracy_checks": [
+     "straight and slanted unit totals per polygon: 8 and 2, 4 and 6, 12 and 6, 18 and 6",
+     "every SET_B run is horizontal or vertical, every SET_A run joins diagonal neighbour dots",
+     "the four labels read left to right 8s + 2d, 4s + 6d, 12s + 6d, 18s + 6d, as in the LP solution",
+     "outline positions are identical to M1.S9.T9.C45.IMG1"
+    ],
+    "alt_text": "The same four dot grid shapes with straight edges in orange and slanted edges in blue, and 8s + 2d, 4s + 6d, 12s + 6d and 18s + 6d written under them.",
+    "render_note": "Same layout as M1.S9.T9.C45.IMG1; the colour overlay and labels are the solution's additions."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C47",
+   "role": "question",
+   "lp_book_number": "What is the perimeter of any regular polygon?",
+   "ncert_ref": "Section 6.1 - p.136",
+   "question_text": "Find the perimeter of other regular polygons, and write a rule for the perimeter of any regular polygon.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "An open task ('find objects, generalise a rule') with no figure given in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C48",
+   "role": "solution",
+   "lp_book_number": "What is the perimeter of any regular polygon?",
+   "ncert_ref": "Section 6.1 - p.136",
+   "question_text": "Find the perimeter of other regular polygons, and write a rule for the perimeter of any regular polygon.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The printed answer is a rule in words (number of sides x length of a side) and the LP steps are arithmetic (6 x 5 = 30 cm). A labelled regular hexagon would be nice but not needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX only: 6 \\times 5 = 30 cm, rule: number of sides x length of a side."
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C49",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Split and rejoin, arrangement a",
+   "ncert_ref": "Section 6.1 - p.136 (arrangement a)",
+   "question_text": "The chit, 6 cm by 4 cm, is cut into two equal pieces. The pieces are joined end to end along their 2 cm edges. What is the perimeter of this long strip?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question asks about 'this long strip' (the book's lettered arrangement a); the join and the 6 cm, 6 cm, 2 cm marks are shown only in the picture, and arrangements b, c and d of the next questions are drawn too.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S10.T10.C49.IMG1",
+   "manim_scene": "c6_6_6_1_arr_a_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S10.T10.C49.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "units": "cm",
+     "coordinate_system": "x to the right, y downward, origin at the top-left corner of the strip, 1 unit = 1 cm",
+     "pieces": [
+      {
+       "x": 0,
+       "y": 0,
+       "w": 6,
+       "h": 2,
+       "fill": "CELL_FILL",
+       "outline": "INK"
+      },
+      {
+       "x": 6,
+       "y": 0,
+       "w": 6,
+       "h": 2,
+       "fill": "CELL_FILL",
+       "outline": "INK"
+      }
+     ],
+     "dimension_arrows": [
+      {
+       "orientation": "horizontal",
+       "from": [
+        0,
+        -0.8
+       ],
+       "to": [
+        6,
+        -0.8
+       ],
+       "label": "6 cm",
+       "label_at": [
+        3,
+        -1.5
+       ]
+      },
+      {
+       "orientation": "horizontal",
+       "from": [
+        6,
+        -0.8
+       ],
+       "to": [
+        12,
+        -0.8
+       ],
+       "label": "6 cm",
+       "label_at": [
+        9,
+        -1.5
+       ]
+      },
+      {
+       "orientation": "vertical",
+       "from": [
+        -0.8,
+        0
+       ],
+       "to": [
+        -0.8,
+        2
+       ],
+       "label": "2 cm",
+       "label_at": [
+        -2.1,
+        1
+       ]
+      }
+     ],
+     "to_scale": true,
+     "type": "mensuration_figure"
+    },
+    "manim_description": "On a plain BG card draw a long horizontal strip made of two rectangles side by side, each 6 units wide and 2 units tall (1 unit = 1 cm), both filled CELL_FILL with INK outlines. The left rectangle spans x 0 to 6 and the right rectangle spans x 6 to 12, with y from 0 at the top edge to 2 at the bottom edge, so the join at x = 6 shows as an INK outline edge between them. At y = -0.8 draw two INK double-headed arrows, one from x = 0 to x = 6 and one from x = 6 to x = 12, with the label '6 cm' centred above each at y = -1.5. At x = -0.8 draw an INK double-headed vertical arrow from y = 0 to y = 2 with the label '2 cm' centred at (-2.1, 1). Use one scale for the whole figure and centre it in the card. Draw nothing else.",
+    "visible_text": [
+     "6 cm",
+     "6 cm",
+     "2 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the 6 cm by 4 cm chit and its cut line",
+     "the perimeter value 28 cm",
+     "the other arrangements"
+    ],
+    "accuracy_checks": [
+     "two rectangles, each 6 by 2, side by side",
+     "strip is 12 by 2 (perimeter 2 x (12 + 2) = 28, not drawn)",
+     "labels are 6 cm over the left piece, 6 cm over the right piece and 2 cm for the height"
+    ],
+    "alt_text": "A long strip made of two 6 cm by 2 cm paper pieces joined end to end, with 6 cm marked on each piece and 2 cm on the height.",
+    "render_note": "This is the book's arrangement a. The book's picture of the uncut chit (4 cm by 6 cm with a dashed cut) is not drawn: the question text gives its size and the join."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C51",
+   "role": "question",
+   "lp_book_number": "Split and Rejoin, Q1",
+   "ncert_ref": "Section 6.1 - p.136 (arrangements b, c, d)",
+   "question_text": "Find the perimeter of each of the other three arrangements of the two pieces.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The three arrangements ('the other three') exist only in the picture; their shapes and the marked 2 cm and 3 cm joins are the data.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C51.IMG1",
+   "manim_scene": "c6_6_6_1_arr_bcd_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C51.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "units": "cm",
+     "coordinate_system": "x to the right, y downward, top of all three arrangements at y = 0, 1 unit = 1 cm",
+     "arrangements": [
+      {
+       "name": "L shape (left)",
+       "pieces": [
+        {
+         "x": 0,
+         "y": 0,
+         "w": 6,
+         "h": 2
+        },
+        {
+         "x": 6,
+         "y": 0,
+         "w": 2,
+         "h": 6
+        }
+       ],
+       "note": "tops level, touching along 2 units"
+      },
+      {
+       "name": "T shape (middle)",
+       "pieces": [
+        {
+         "x": 13,
+         "y": 0,
+         "w": 2,
+         "h": 6
+        },
+        {
+         "x": 11,
+         "y": 6,
+         "w": 6,
+         "h": 2
+        }
+       ],
+       "note": "upright piece centred on the base piece, overhang 2 on each side"
+      },
+      {
+       "name": "offset pieces (right)",
+       "pieces": [
+        {
+         "x": 20,
+         "y": 0,
+         "w": 2,
+         "h": 6
+        },
+        {
+         "x": 22,
+         "y": 3,
+         "w": 2,
+         "h": 6
+        }
+       ],
+       "note": "right piece 3 lower than the left piece, touching along 3 units"
+      }
+     ],
+     "piece_fill": "CELL_FILL",
+     "piece_outline": "INK",
+     "given_labels": [
+      {
+       "text": "2 cm",
+       "arrow": {
+        "from": [
+         6,
+         6.7
+        ],
+        "to": [
+         8,
+         6.7
+        ]
+       },
+       "label_at": [
+        7,
+        7.4
+       ],
+       "rotation": 0
+      },
+      {
+       "text": "2 cm",
+       "arrow": {
+        "from": [
+         11,
+         4.9
+        ],
+        "to": [
+         13,
+         4.9
+        ]
+       },
+       "label_at": [
+        12,
+        5.45
+       ],
+       "rotation": 0
+      },
+      {
+       "text": "2 cm",
+       "arrow": {
+        "from": [
+         15,
+         4.9
+        ],
+        "to": [
+         17,
+         4.9
+        ]
+       },
+       "label_at": [
+        16,
+        5.45
+       ],
+       "rotation": 0
+      },
+      {
+       "text": "3 cm",
+       "arrow": {
+        "from": [
+         22.6,
+         3
+        ],
+        "to": [
+         22.6,
+         6
+        ]
+       },
+       "label_at": [
+        23.3,
+        4.5
+       ],
+       "rotation": 90
+      }
+     ],
+     "to_scale": true,
+     "type": "mensuration_figure"
+    },
+    "manim_description": "On a plain BG card draw three arrangements of two rectangles side by side, tops level at y = 0 (x to the right, y downward, 1 unit = 1 cm), every rectangle filled CELL_FILL with an INK outline, each rectangle outline drawn in full so the joins show. Left arrangement: a rectangle x 0 to 6, y 0 to 2, and a rectangle x 6 to 8, y 0 to 6. Middle arrangement: a rectangle x 13 to 15, y 0 to 6, standing on a rectangle x 11 to 17, y 6 to 8. Right arrangement: a rectangle x 20 to 22, y 0 to 6, and a rectangle x 22 to 24, y 3 to 9. Add four INK double-headed arrows with labels: '2 cm' under the left arrangement, an arrow at y = 6.7 from x = 6 to 8 with the label centred at (7, 7.4); '2 cm' on each side of the middle arrangement, arrows at y = 4.9 from x = 11 to 13 and from x = 15 to 17 with labels centred at (12, 5.45) and (16, 5.45); '3 cm', a vertical arrow at x = 22.6 from y = 3 to y = 6 with the label rotated 90 degrees reading upward, centred at (23.3, 4.5). Scale the whole figure to the card width and centre it. Draw no letters under the three arrangements.",
+    "visible_text": [
+     "2 cm",
+     "2 cm",
+     "2 cm",
+     "3 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the letters b, c, d and the example arrangement a",
+     "any perimeter value",
+     "the 6 cm length of the pieces (the book does not print it in these arrangements)"
+    ],
+    "accuracy_checks": [
+     "each arrangement is made of two 6 by 2 rectangles (areas 12 + 12)",
+     "left: touching along 2 units; middle: touching along 2 units; right: touching along 3 units",
+     "the three outlines are not drawn with any perimeter value (they are 28, 28 and 26)",
+     "left-to-right order is L shape, T shape, offset pieces, as the book's b, c, d"
+    ],
+    "alt_text": "Three arrangements of two paper pieces: an L shape, a T shape, and two upright pieces overlapping along a 3 cm edge.",
+    "render_note": "Shows only what the book prints: three arrangements and the labels 2 cm, 2 cm, 2 cm, 3 cm. The book's letters b, c, d are left out (figure letters are never drawn); the LP solution names them 'the L shape', 'the T shape' and 'the last arrangement', matching the left-to-right order."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C52",
+   "role": "solution",
+   "lp_book_number": "Split and Rejoin, Q1",
+   "ncert_ref": "Section 6.1 - p.136 (arrangements b, c, d)",
+   "question_text": "Find the perimeter of each of the other three arrangements of the two pieces.",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The solution is 'both perimeters added, minus twice the join'; the joined edge that disappears from the boundary is shown only by highlighting it on each arrangement, and the three results are read off the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C52.IMG1",
+   "manim_scene": "c6_6_6_1_arr_bcd_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C52.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S11.T11.C51.IMG1",
+    "content": {
+     "base": "the question diagram, unchanged (same arrangements, positions, scale, given labels)",
+     "join_highlights": [
+      {
+       "arrangement": "L shape",
+       "line": {
+        "from": [
+         6,
+         0
+        ],
+        "to": [
+         6,
+         2
+        ]
+       },
+       "colour": "FOCUS",
+       "weight": "thick",
+       "tag": {
+        "text": "2 cm",
+        "colour": "ANSWER",
+        "at": [
+         4.6,
+         1.0
+        ]
+       }
+      },
+      {
+       "arrangement": "T shape",
+       "line": {
+        "from": [
+         13,
+         6
+        ],
+        "to": [
+         15,
+         6
+        ]
+       },
+       "colour": "FOCUS",
+       "weight": "thick",
+       "tag": {
+        "text": "2 cm",
+        "colour": "ANSWER",
+        "at": [
+         14,
+         7.0
+        ]
+       }
+      },
+      {
+       "arrangement": "offset pieces",
+       "line": {
+        "from": [
+         22,
+         3
+        ],
+        "to": [
+         22,
+         6
+        ]
+       },
+       "colour": "FOCUS",
+       "weight": "thick",
+       "tag": null
+      }
+     ],
+     "perimeter_tags": [
+      {
+       "text": "28 cm",
+       "at": [
+        4,
+        10.0
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "28 cm",
+       "at": [
+        14,
+        10.0
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "26 cm",
+       "at": [
+        22,
+        10.0
+       ],
+       "colour": "ANSWER"
+      }
+     ],
+     "to_scale": true,
+     "type": "mensuration_figure"
+    },
+    "manim_description": "Redraw the question diagram exactly (same three arrangements, positions, scale, CELL_FILL pieces, INK outlines and the same four INK labels). Then add the joins in FOCUS as thick lines: in the left arrangement the segment x = 6 from y = 0 to y = 2 with the tag '2 cm' in ANSWER centred at (4.6, 1.0); in the middle arrangement the segment y = 6 from x = 13 to x = 15 with the tag '2 cm' in ANSWER centred at (14, 7.0); in the right arrangement the segment x = 22 from y = 3 to y = 6 (its length is already given by the INK label '3 cm', add no tag). Below the arrangements, at y = 10.0, write in ANSWER: '28 cm' centred at x = 4, '28 cm' centred at x = 14 and '26 cm' centred at x = 22. Extend the card height so the tags fit.",
+    "visible_text": [
+     "2 cm",
+     "2 cm",
+     "2 cm",
+     "3 cm",
+     "2 cm",
+     "2 cm",
+     "28 cm",
+     "28 cm",
+     "26 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the letters b, c, d",
+     "the formula 32 - 2 x join as a sentence"
+    ],
+    "accuracy_checks": [
+     "perimeter = 32 - 2 x join: 32 - 4 = 28 (L), 32 - 4 = 28 (T), 32 - 6 = 26 (offset)",
+     "the L outline sides are 8, 6, 2, 4, 6, 2 and add to 28",
+     "the highlighted joins have lengths 2, 2 and 3",
+     "positions and given labels are identical to M1.S11.T11.C51.IMG1"
+    ],
+    "alt_text": "The same three arrangements with each joined edge highlighted and the perimeters 28 cm, 28 cm and 26 cm written under them.",
+    "render_note": "Same layout as M1.S11.T11.C51.IMG1. The hidden (joined) edge is the idea of the solution, so it is highlighted; the 3 cm label of the right arrangement is already a given label."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C53",
+   "role": "question",
+   "lp_book_number": "Can you join the two pieces to make a perimeter of 22 cm?",
+   "ncert_ref": "Section 6.1 - p.136 (the two pieces of the chit)",
+   "question_text": "Arrange the two pieces to form a figure with a perimeter of $22\\text{ cm}$.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "'The two pieces' refers to the book's cut chit; the question text never says they are each 6 cm by 2 cm, so the learner cannot attempt it without the pieces and their sizes.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C53.IMG1",
+   "manim_scene": "c6_6_6_1_make22_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C53.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "units": "cm",
+     "coordinate_system": "x to the right, y downward, 1 unit = 1 cm",
+     "pieces": [
+      {
+       "x": 0,
+       "y": 0,
+       "w": 6,
+       "h": 2,
+       "fill": "CELL_FILL",
+       "outline": "INK"
+      },
+      {
+       "x": 9,
+       "y": 0,
+       "w": 6,
+       "h": 2,
+       "fill": "CELL_FILL",
+       "outline": "INK"
+      }
+     ],
+     "dimension_arrows": [
+      {
+       "orientation": "horizontal",
+       "from": [
+        0,
+        -0.7
+       ],
+       "to": [
+        6,
+        -0.7
+       ],
+       "label": "6 cm",
+       "label_at": [
+        3,
+        -1.4
+       ]
+      },
+      {
+       "orientation": "vertical",
+       "from": [
+        -0.7,
+        0
+       ],
+       "to": [
+        -0.7,
+        2
+       ],
+       "label": "2 cm",
+       "label_at": [
+        -2.0,
+        1
+       ]
+      },
+      {
+       "orientation": "horizontal",
+       "from": [
+        9,
+        -0.7
+       ],
+       "to": [
+        15,
+        -0.7
+       ],
+       "label": "6 cm",
+       "label_at": [
+        12,
+        -1.4
+       ]
+      },
+      {
+       "orientation": "vertical",
+       "from": [
+        8.3,
+        0
+       ],
+       "to": [
+        8.3,
+        2
+       ],
+       "label": "2 cm",
+       "label_at": [
+        7.2,
+        1
+       ]
+      }
+     ],
+     "to_scale": true,
+     "type": "mensuration_figure"
+    },
+    "manim_description": "On a plain BG card draw the two paper pieces apart, side by side, each a rectangle 6 units wide and 2 units tall (1 unit = 1 cm) filled CELL_FILL with an INK outline (x to the right, y downward). Left piece: x 0 to 6, y 0 to 2. Right piece: x 9 to 15, y 0 to 2. Over each piece draw an INK double-headed horizontal arrow at y = -0.7 (x 0 to 6 and x 9 to 15) with the label '6 cm' centred at (3, -1.4) and (12, -1.4). Beside each piece draw an INK double-headed vertical arrow from y = 0 to y = 2 (at x = -0.7 and at x = 8.3) with the label '2 cm' centred at (-2.0, 1) and (7.2, 1). Scale to the card width and centre it. Draw nothing else.",
+    "visible_text": [
+     "6 cm",
+     "2 cm",
+     "6 cm",
+     "2 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any arrangement of the two pieces",
+     "the uncut chit, its cut line, the notch the book draws, or the perimeter value 22 cm"
+    ],
+    "accuracy_checks": [
+     "two identical rectangles, each 6 by 2 (area 12 each, together 24 = the 6 by 4 chit)",
+     "pieces are apart and not touching, nothing is arranged yet"
+    ],
+    "alt_text": "Two separate paper pieces, each 6 cm long and 2 cm wide.",
+    "render_note": "The book gives no figure beside this question; the pieces are the two halves of the 6 cm by 4 cm chit cut on the same page (the chit itself is not drawn). The question text does not say how big the pieces are, so the picture carries that data."
+   },
+   "needs_lp_text_sync": true,
+   "text_alternative": "Better still, add to the question text: 'the two pieces are each 6 cm by 2 cm'."
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C54",
+   "role": "solution",
+   "lp_book_number": "Can you join the two pieces to make a perimeter of 22 cm?",
+   "ncert_ref": "Section 6.1 - p.136 (22 cm puzzle)",
+   "question_text": "Arrange the two pieces to form a figure with a perimeter of $22\\text{ cm}$.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The answer is an arrangement of the two pieces (slid so that they touch along 5 cm); the LP words describe it, but the arrangement itself is a drawing.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C54.IMG1",
+   "manim_scene": "c6_6_6_1_make22_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C54.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S11.T11.C53.IMG1",
+    "content": {
+     "units": "cm",
+     "coordinate_system": "x to the right, y downward, 1 unit = 1 cm",
+     "pieces": [
+      {
+       "x": 0,
+       "y": 0,
+       "w": 6,
+       "h": 2,
+       "fill": "CELL_FILL",
+       "outline": "INK"
+      },
+      {
+       "x": 1,
+       "y": 2,
+       "w": 6,
+       "h": 2,
+       "fill": "CELL_FILL",
+       "outline": "INK"
+      }
+     ],
+     "join": {
+      "from": [
+       1,
+       2
+      ],
+      "to": [
+       6,
+       2
+      ],
+      "length": 5,
+      "colour": "FOCUS",
+      "weight": "thick",
+      "tag": {
+       "text": "5 cm",
+       "colour": "ANSWER",
+       "at": [
+        3.5,
+        1.35
+       ]
+      }
+     },
+     "dimension_arrows": [
+      {
+       "orientation": "horizontal",
+       "from": [
+        0,
+        -0.7
+       ],
+       "to": [
+        6,
+        -0.7
+       ],
+       "label": "6 cm",
+       "label_at": [
+        3,
+        -1.4
+       ]
+      },
+      {
+       "orientation": "vertical",
+       "from": [
+        -0.7,
+        0
+       ],
+       "to": [
+        -0.7,
+        2
+       ],
+       "label": "2 cm",
+       "label_at": [
+        -2.0,
+        1
+       ]
+      },
+      {
+       "orientation": "horizontal",
+       "from": [
+        1,
+        4.7
+       ],
+       "to": [
+        7,
+        4.7
+       ],
+       "label": "6 cm",
+       "label_at": [
+        4,
+        5.4
+       ]
+      },
+      {
+       "orientation": "vertical",
+       "from": [
+        7.7,
+        2
+       ],
+       "to": [
+        7.7,
+        4
+       ],
+       "label": "2 cm",
+       "label_at": [
+        8.9,
+        3
+       ]
+      }
+     ],
+     "outline_perimeter_check": 22,
+     "to_scale": true,
+     "type": "mensuration_figure"
+    },
+    "manim_description": "On a plain BG card draw the two pieces joined along 5 units of their long edges (x to the right, y downward, 1 unit = 1 cm, same scale, fill and outline as the question diagram). Top piece: rectangle x 0 to 6, y 0 to 2. Bottom piece: rectangle x 1 to 7, y 2 to 4, both CELL_FILL with INK outlines. Draw the touching edge, the segment y = 2 from x = 1 to x = 6, as a thick FOCUS line and write the tag '5 cm' in ANSWER centred at (3.5, 1.35). Keep the INK labels of the pieces: over the top piece an arrow at y = -0.7 from x = 0 to 6 with '6 cm' centred at (3, -1.4); beside the top piece an arrow at x = -0.7 from y = 0 to 2 with '2 cm' centred at (-2.0, 1); under the bottom piece an arrow at y = 4.7 from x = 1 to 7 with '6 cm' centred at (4, 5.4); beside the bottom piece an arrow at x = 7.7 from y = 2 to 4 with '2 cm' centred at (8.9, 3). Centre the figure in the card. Draw nothing else.",
+    "visible_text": [
+     "6 cm",
+     "2 cm",
+     "6 cm",
+     "2 cm",
+     "5 cm"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the perimeter value 22 cm",
+     "the sums 16 + 16 or 32 - 22"
+    ],
+    "accuracy_checks": [
+     "touching edge is 5 units (x from 1 to 6), so the pieces overlap by 5",
+     "outline of the joined figure: 6 + 2 + 1 + 2 + 6 + 2 + 1 + 2 = 22",
+     "16 + 16 - 2 x 5 = 22 agrees with the LP solution",
+     "the pieces keep the sizes and fill of M1.S11.T11.C53.IMG1"
+    ],
+    "alt_text": "Two 6 cm by 2 cm pieces placed one above the other and slid so that they touch along 5 cm, with the touching edge highlighted.",
+    "render_note": "The answer is an arrangement. Pieces are the same as in the question diagram but now joined: horizontal pieces, the lower one slid 1 cm to the right. The book prints no answer for this puzzle (the printed solutions do not cover the 'Split and rejoin' page); the LP solution wins: touch along 5 cm of the long edges."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C55",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "What area means",
+   "ncert_ref": "Section 6.2 - p.137",
+   "question_text": "What is the area of a closed figure, and what are the area of a square and the area of a rectangle?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A definition and two formulas (the book's blanks for the area of a square and of a rectangle are text boxes, not figures); the teaching image of this concept already shows the idea.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C58",
+   "role": "question",
+   "lp_book_number": "Example 3: A carpet on a floor",
+   "ncert_ref": "Section 6.2 - p.137",
+   "question_text": "A floor is $5\\text{ m}$ long and $4\\text{ m}$ wide. A square carpet of side $3\\text{ m}$ is laid on the floor. Find the area of the floor that is not carpeted.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure; the floor and the carpet are fully described by their measures in the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C59",
+   "role": "solution",
+   "lp_book_number": "Example 3: A carpet on a floor",
+   "ncert_ref": "Section 6.2 - p.137",
+   "question_text": "A floor is $5\\text{ m}$ long and $4\\text{ m}$ wide. A square carpet of side $3\\text{ m}$ is laid on the floor. Find the area of the floor that is not carpeted.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Three lines of arithmetic: 20 - 9 = 11 sq m. A floor-and-carpet picture would be nicer but is not needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C60",
+   "role": "question",
+   "lp_book_number": "Example 4: Flower beds in the corners",
+   "ncert_ref": "Section 6.2 - p.137-138",
+   "question_text": "Four square flower beds, each of side $4\\text{ m}$, are in the four corners of a piece of land $12\\text{ m}$ long and $10\\text{ m}$ wide. Find the area of the remaining part of the land.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure; the land and the four corner beds are fully described by their measures.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C61",
+   "role": "solution",
+   "lp_book_number": "Example 4: Flower beds in the corners",
+   "ncert_ref": "Section 6.2 - p.138",
+   "question_text": "Four square flower beds, each of side $4\\text{ m}$, are in the four corners of a piece of land $12\\text{ m}$ long and $10\\text{ m}$ wide. Find the area of the remaining part of the land.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four lines of arithmetic: 120 - 64 = 56 sq m.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C62",
+   "role": "question",
+   "lp_book_number": "What is the width of the garden?",
+   "ncert_ref": "Section 6.2 - p.138 (Figure it Out Q1)",
+   "question_text": "The area of a rectangular garden $25\\text{ m}$ long is $300\\text{ sq m}$. What is the width of the garden?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word problem with its numbers in the text and no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C63",
+   "role": "solution",
+   "lp_book_number": "What is the width of the garden?",
+   "ncert_ref": "Section 6.2 - p.138 (Figure it Out Q1)",
+   "question_text": "The area of a rectangular garden $25\\text{ m}$ long is $300\\text{ sq m}$. What is the width of the garden?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "300 / 25 = 12 m, with a check; arithmetic only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C64",
+   "role": "question",
+   "lp_book_number": "How many coconut trees fit in the grove?",
+   "ncert_ref": "Section 6.2 - p.138 (Figure it Out Q3)",
+   "question_text": "A rectangular coconut grove is $100\\text{ m}$ long and $50\\text{ m}$ wide. If each coconut tree needs $25\\text{ sq m}$, what is the maximum number of trees that can be planted in this grove?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word problem with its numbers in the text and no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C65",
+   "role": "solution",
+   "lp_book_number": "How many coconut trees fit in the grove?",
+   "ncert_ref": "Section 6.2 - p.138 (Figure it Out Q3)",
+   "question_text": "A rectangular coconut grove is $100\\text{ m}$ long and $50\\text{ m}$ wide. If each coconut tree needs $25\\text{ sq m}$, what is the maximum number of trees that can be planted in this grove?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "5000 / 25 = 200 trees; arithmetic only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C66",
+   "role": "question",
+   "lp_book_number": "Covering a Region, Q3",
+   "ncert_ref": "Section 6.2 - p.138 (Figure it Out Q2, tiling cost)",
+   "question_text": "What is the cost of tiling a rectangular plot of land $500\\text{ m}$ long and $200\\text{ m}$ wide at the rate of $8$ rupees per hundred square metres?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word problem with its numbers in the text and no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C67",
+   "role": "solution",
+   "lp_book_number": "Covering a Region, Q3",
+   "ncert_ref": "Section 6.2 - p.138 (Figure it Out Q2, tiling cost)",
+   "question_text": "What is the cost of tiling a rectangular plot of land $500\\text{ m}$ long and $200\\text{ m}$ wide at the rate of $8$ rupees per hundred square metres?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "100000 / 100 = 1000 blocks, 1000 x 8 = 8000 rupees; arithmetic only.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C68",
+   "role": "question",
+   "lp_book_number": "Covering a Region, Q4",
+   "ncert_ref": "Section 6.2 - p.138 (Figure it Out Q4)",
+   "question_text": "By splitting the two figures into rectangles, find their areas. All measures are in metres.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The two figures and every side length exist only in the picture ('splitting the two figures').",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S14.T14.C68.IMG1",
+   "manim_scene": "c6_6_6_2_fio4_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S14.T14.C68.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "units": "m",
+     "coordinate_system": "x to the right, y downward, origin at the top-left corner of figure a's bounding box, 1 unit = 1 m; figure b is shifted right by 9",
+     "figures": [
+      {
+       "name": "left figure (staircase)",
+       "outline_corners_xy": [
+        [
+         5,
+         0
+        ],
+        [
+         7,
+         0
+        ],
+        [
+         7,
+         4
+        ],
+        [
+         3,
+         4
+        ],
+        [
+         3,
+         7
+        ],
+        [
+         0,
+         7
+        ],
+        [
+         0,
+         3
+        ],
+        [
+         2,
+         3
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         5,
+         1
+        ]
+       ],
+       "outline": "INK",
+       "fill": null,
+       "side_labels": [
+        {
+         "text": "1",
+         "at": [
+          4.65,
+          0.5
+         ]
+        },
+        {
+         "text": "3",
+         "at": [
+          3.5,
+          0.6
+         ]
+        },
+        {
+         "text": "2",
+         "at": [
+          1.6,
+          2.0
+         ]
+        },
+        {
+         "text": "2",
+         "at": [
+          1.0,
+          2.6
+         ]
+        },
+        {
+         "text": "4",
+         "at": [
+          -0.45,
+          5.0
+         ]
+        },
+        {
+         "text": "3",
+         "at": [
+          1.5,
+          7.45
+         ]
+        },
+        {
+         "text": "3",
+         "at": [
+          3.45,
+          5.5
+         ]
+        },
+        {
+         "text": "4",
+         "at": [
+          5.0,
+          4.45
+         ]
+        }
+       ],
+       "unlabelled_sides": [
+        "top (5,0)-(7,0)",
+        "right (7,0)-(7,4)"
+       ]
+      },
+      {
+       "name": "right figure (arch)",
+       "outline_corners_xy": [
+        [
+         9,
+         0
+        ],
+        [
+         14,
+         0
+        ],
+        [
+         14,
+         3
+        ],
+        [
+         13,
+         3
+        ],
+        [
+         13,
+         1
+        ],
+        [
+         10,
+         1
+        ],
+        [
+         10,
+         3
+        ],
+        [
+         9,
+         3
+        ]
+       ],
+       "outline": "INK",
+       "fill": null,
+       "side_labels": [
+        {
+         "text": "5",
+         "at": [
+          11.5,
+          -0.45
+         ]
+        },
+        {
+         "text": "3",
+         "at": [
+          8.55,
+          1.5
+         ]
+        },
+        {
+         "text": "1",
+         "at": [
+          9.5,
+          3.45
+         ]
+        },
+        {
+         "text": "1",
+         "at": [
+          13.5,
+          3.45
+         ]
+        },
+        {
+         "text": "3",
+         "at": [
+          11.5,
+          1.45
+         ]
+        },
+        {
+         "text": "2",
+         "at": [
+          12.6,
+          2.0
+         ]
+        }
+       ]
+      }
+     ],
+     "to_scale": true,
+     "type": "mensuration_figure",
+     "part_letters": {
+      "rule": "user decision 23 Nov 2026: the LP answer refers to the figures by letter, so the letters are drawn",
+      "colour": "INK",
+      "font": "text height 0.5 unit (same scale as the side labels)",
+      "coordinate_system": "card units of this spec (1 unit = 1 m, x right, y down)",
+      "placement": "(a) sits below the staircase, (b) below the arch, both clear of every outline and side label.",
+      "items": [
+       {
+        "text": "(a)",
+        "at": [
+         5.3,
+         5.5
+        ],
+        "for": "staircase figure"
+       },
+       {
+        "text": "(b)",
+        "at": [
+         11.5,
+         4.1
+        ],
+        "for": "arch figure"
+       }
+      ]
+     }
+    },
+    "manim_description": "On a plain BG card draw two rectilinear figures side by side, both with INK outlines and no fill, drawn to one scale (x to the right, y downward, 1 unit = 1 m, tops of both at y = 0). Left figure (staircase), corners in order: (5,0), (7,0), (7,4), (3,4), (3,7), (0,7), (0,3), (2,3), (2,1), (5,1), closed back to (5,0). Right figure (arch), shifted 9 units right, corners in order: (9,0), (14,0), (14,3), (13,3), (13,1), (10,1), (10,3), (9,3), closed back to (9,0). Write these INK labels (centre positions): left figure '1' at (4.65, 0.5), '3' at (3.5, 0.6), '2' at (1.6, 2.0), '2' at (1.0, 2.6), '4' at (-0.45, 5.0), '3' at (1.5, 7.45), '3' at (3.45, 5.5), '4' at (5.0, 4.45); right figure '5' at (11.5, -0.45), '3' at (8.55, 1.5), '1' at (9.5, 3.45), '1' at (13.5, 3.45), '3' at (11.5, 1.45), '2' at (12.6, 2.0). Leave the top side (5,0)-(7,0) and the right side (7,0)-(7,4) of the left figure unlabelled. Scale to the card width, centre both figures, no units. Part letters (the LP answer names the figures by letter): write (a), (b) in INK, text height 0.5 unit (same scale as the side labels), each centred on its anchor, card units of this spec (1 unit = 1 m, x right, y down): (a) at (5.3, 5.5) (staircase figure); (b) at (11.5, 4.1) (arch figure). (a) sits below the staircase, (b) below the arch, both clear of every outline and side label.",
+    "visible_text": [
+     "1",
+     "3",
+     "2",
+     "2",
+     "4",
+     "3",
+     "3",
+     "4",
+     "5",
+     "3",
+     "1",
+     "1",
+     "3",
+     "2",
+     "(a)",
+     "(b)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the part letters (a) and (b)",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any cut lines, areas or sq m",
+     "the unlabelled sides' values 2 and 4"
+    ],
+    "accuracy_checks": [
+     "left outline area by shoelace = 28 and right outline area = 9 (the printed answers, not drawn)",
+     "left figure labels agree: bottom 3 + 4 = top 2 + 3 + 2 = 7, left 4 + 2 + 1 = right 4 + 3 = 7",
+     "right figure: outer 5 by 3, notch 3 wide by 2 tall, legs 1 wide, top bar 1 thick",
+     "the two unlabelled sides of the left figure stay unlabelled, as printed",
+     "part letters (a) and (b) are in the reading order of the LP parts and match the LP answer"
+    ],
+    "alt_text": "Two figures with their sides in metres: a staircase-shaped figure and an upside-down U shaped figure with a bar on top and two legs. The figures are labelled (a) and (b).",
+    "render_note": "One diagram holds both figures (the LP keeps Q4 as one question with a single card). Part letters (a) and (b) added (AUDIT 23 Nov 2026): the LP answer refers to the figures by letter."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C69",
+   "role": "solution",
+   "lp_book_number": "Covering a Region, Q4",
+   "ncert_ref": "Section 6.2 - p.138 (Figure it Out Q4)",
+   "question_text": "By splitting the two figures into rectangles, find their areas. All measures are in metres.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The task is to split the two figures into rectangles; the split (which rectangles, how big) is the solution and is far clearer drawn on the figures than described in words.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S14.T14.C69.IMG1",
+   "manim_scene": "c6_6_6_2_fio4_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S14.T14.C69.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S14.T14.C68.IMG1",
+    "content": {
+     "base": "the question diagram, unchanged (same two figures, positions, scale and INK labels)",
+     "cut_lines": {
+      "colour": "FOCUS",
+      "style": "dashed",
+      "left_figure": [
+       {
+        "from": [
+         2,
+         3
+        ],
+        "to": [
+         2,
+         7
+        ]
+       },
+       {
+        "from": [
+         3,
+         1
+        ],
+        "to": [
+         3,
+         4
+        ]
+       },
+       {
+        "from": [
+         5,
+         1
+        ],
+        "to": [
+         5,
+         4
+        ]
+       }
+      ],
+      "right_figure": [
+       {
+        "from": [
+         9,
+         1
+        ],
+        "to": [
+         10,
+         1
+        ]
+       },
+       {
+        "from": [
+         13,
+         1
+        ],
+        "to": [
+         14,
+         1
+        ]
+       }
+      ]
+     },
+     "rectangles": {
+      "left_figure": [
+       {
+        "x": 0,
+        "y": 3,
+        "w": 2,
+        "h": 4,
+        "area_label": "8 sq m"
+       },
+       {
+        "x": 2,
+        "y": 1,
+        "w": 1,
+        "h": 6,
+        "area_label": "6 sq m"
+       },
+       {
+        "x": 3,
+        "y": 1,
+        "w": 2,
+        "h": 3,
+        "area_label": "6 sq m"
+       },
+       {
+        "x": 5,
+        "y": 0,
+        "w": 2,
+        "h": 4,
+        "area_label": "8 sq m"
+       }
+      ],
+      "right_figure": [
+       {
+        "x": 9,
+        "y": 0,
+        "w": 5,
+        "h": 1,
+        "area_label": "5 sq m"
+       },
+       {
+        "x": 9,
+        "y": 1,
+        "w": 1,
+        "h": 2,
+        "area_label": "2 sq m"
+       },
+       {
+        "x": 13,
+        "y": 1,
+        "w": 1,
+        "h": 2,
+        "area_label": "2 sq m"
+       }
+      ]
+     },
+     "area_labels": [
+      {
+       "text": "8 sq m",
+       "at": [
+        1.0,
+        5.0
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "6 sq m",
+       "at": [
+        2.5,
+        4.0
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "6 sq m",
+       "at": [
+        4.0,
+        2.5
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "8 sq m",
+       "at": [
+        6.0,
+        2.0
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "5 sq m",
+       "at": [
+        11.5,
+        0.5
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "2 sq m",
+       "at": [
+        9.5,
+        2.0
+       ],
+       "colour": "ANSWER"
+      },
+      {
+       "text": "2 sq m",
+       "at": [
+        13.5,
+        2.0
+       ],
+       "colour": "ANSWER"
+      }
+     ],
+     "area_label_layout": "number on the first line and 'sq m' on the second line when the rectangle is 1 unit wide, otherwise one line",
+     "to_scale": true,
+     "type": "mensuration_figure",
+     "part_letters": {
+      "rule": "user decision 23 Nov 2026: the LP answer refers to the figures by letter, so the letters are drawn",
+      "colour": "INK",
+      "font": "text height 0.5 unit (same scale as the side labels)",
+      "coordinate_system": "card units of this spec (1 unit = 1 m, x right, y down)",
+      "placement": "(a) sits below the staircase, (b) below the arch, both clear of every outline and side label.",
+      "items": [
+       {
+        "text": "(a)",
+        "at": [
+         5.3,
+         5.5
+        ],
+        "for": "staircase figure"
+       },
+       {
+        "text": "(b)",
+        "at": [
+         11.5,
+         4.1
+        ],
+        "for": "arch figure"
+       }
+      ]
+     }
+    },
+    "manim_description": "Redraw the question diagram exactly (same two INK outlines and INK side labels, same positions and scale). Then add dashed FOCUS cut lines that split each figure into rectangles. Left figure, vertical cuts: x = 2 from y = 3 to y = 7; x = 3 from y = 1 to y = 4; x = 5 from y = 1 to y = 4 (four rectangles: x 0 to 2 by y 3 to 7, x 2 to 3 by y 1 to 7, x 3 to 5 by y 1 to 4, x 5 to 7 by y 0 to 4). Right figure, horizontal cuts at y = 1: from x = 9 to 10 and from x = 13 to 14 (three rectangles: the bar x 9 to 14 by y 0 to 1, the left leg x 9 to 10 by y 1 to 3, the right leg x 13 to 14 by y 1 to 3). Write each rectangle's area in ANSWER at its centre: left figure '8 sq m' at (1, 5), '6 sq m' at (2.5, 4), '6 sq m' at (4, 2.5), '8 sq m' at (6, 2); right figure '5 sq m' at (11.5, 0.5), '2 sq m' at (9.5, 2), '2 sq m' at (13.5, 2). In the 1 unit wide rectangles (left figure x 2 to 3, both legs) set the number on the first line and 'sq m' on the second line. Draw no other marks. Part letters (the LP answer names the figures by letter): write (a), (b) in INK, text height 0.5 unit (same scale as the side labels), each centred on its anchor, card units of this spec (1 unit = 1 m, x right, y down): (a) at (5.3, 5.5) (staircase figure); (b) at (11.5, 4.1) (arch figure). (a) sits below the staircase, (b) below the arch, both clear of every outline and side label.",
+    "visible_text": [
+     "8 sq m",
+     "6 sq m",
+     "6 sq m",
+     "8 sq m",
+     "5 sq m",
+     "2 sq m",
+     "2 sq m",
+     "(a)",
+     "(b)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the part letters (a) and (b)",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the products such as 2 x 4",
+     "the totals 28 and 9"
+    ],
+    "accuracy_checks": [
+     "left rectangles 2 x 4 = 8, 1 x 6 = 6, 2 x 3 = 6, 2 x 4 = 8; they add to 28 and tile the left outline exactly",
+     "right rectangles 5 x 1 = 5, 1 x 2 = 2, 1 x 2 = 2; they add to 9 and tile the right outline exactly",
+     "every cut line lies inside its figure",
+     "outlines and labels are identical to M2.S14.T14.C68.IMG1",
+     "part letters (a) and (b) are in the reading order of the LP parts and match the LP answer"
+    ],
+    "alt_text": "The same two figures cut by dashed lines into four and three rectangles, each with its area in square metres written inside. The figures are labelled (a) and (b).",
+    "render_note": "The cuts are the ones the LP solution describes (four side-by-side rectangles, then a top bar with two legs). Part letters (a) and (b) added (AUDIT 23 Nov 2026): the LP answer refers to the figures by letter."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C70",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Look at the figures below and guess which one has a larger area",
+   "ncert_ref": "Section 6.2 - p.140 (figures a and b)",
+   "question_text": "Look at the two figures, a curved one and a spiky one. Guess which of them has the larger area.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question says 'look at the two figures'; the guess is impossible without the two outlines. They are freehand shapes with no measures, so the outlines are traced from the page.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S15.T15.C70.IMG1",
+   "manim_scene": "c6_6_6_2_guess_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S15.T15.C70.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "description": "two freehand closed outlines, traced from the printed figure, to be compared by area",
+     "coordinate_system": "printed-page pixels, x to the right, y downward, origin at the top-left of each outline's own bounding box; one common scale for both",
+     "curved_outline": {
+      "colour": "SET_A",
+      "kind": "smooth closed curve",
+      "bounding_box": [
+       222,
+       164
+      ],
+      "control_points_closed_catmull_rom": [
+       [
+        210,
+        29
+       ],
+       [
+        204,
+        24
+       ],
+       [
+        174,
+        27
+       ],
+       [
+        165,
+        20
+       ],
+       [
+        158,
+        2
+       ],
+       [
+        151,
+        0
+       ],
+       [
+        101,
+        42
+       ],
+       [
+        94,
+        42
+       ],
+       [
+        87,
+        33
+       ],
+       [
+        84,
+        33
+       ],
+       [
+        68,
+        49
+       ],
+       [
+        42,
+        54
+       ],
+       [
+        39,
+        58
+       ],
+       [
+        36,
+        94
+       ],
+       [
+        23,
+        104
+       ],
+       [
+        3,
+        110
+       ],
+       [
+        0,
+        124
+       ],
+       [
+        6,
+        127
+       ],
+       [
+        29,
+        115
+       ],
+       [
+        41,
+        115
+       ],
+       [
+        60,
+        132
+       ],
+       [
+        79,
+        138
+       ],
+       [
+        85,
+        144
+       ],
+       [
+        90,
+        158
+       ],
+       [
+        98,
+        163
+       ],
+       [
+        145,
+        164
+       ],
+       [
+        166,
+        156
+       ],
+       [
+        149,
+        143
+       ],
+       [
+        153,
+        127
+       ],
+       [
+        159,
+        120
+       ],
+       [
+        202,
+        123
+       ],
+       [
+        214,
+        120
+       ],
+       [
+        222,
+        114
+       ],
+       [
+        215,
+        100
+       ],
+       [
+        215,
+        92
+       ],
+       [
+        222,
+        74
+       ],
+       [
+        207,
+        58
+       ]
+      ]
+     },
+     "spiky_outline": {
+      "colour": "SET_B",
+      "kind": "closed polygon with straight sides, 17 corners",
+      "bounding_box": [
+       230,
+       178
+      ],
+      "corners_in_order": [
+       [
+        220,
+        13
+       ],
+       [
+        154,
+        40
+       ],
+       [
+        136,
+        0
+       ],
+       [
+        110,
+        58
+       ],
+       [
+        82,
+        27
+       ],
+       [
+        61,
+        80
+       ],
+       [
+        41,
+        59
+       ],
+       [
+        36,
+        122
+       ],
+       [
+        0,
+        142
+       ],
+       [
+        34,
+        178
+       ],
+       [
+        51,
+        147
+       ],
+       [
+        146,
+        160
+       ],
+       [
+        130,
+        134
+       ],
+       [
+        196,
+        136
+       ],
+       [
+        163,
+        108
+       ],
+       [
+        230,
+        87
+       ],
+       [
+        190,
+        56
+       ]
+      ]
+     },
+     "spiky_offset_from_curved": [
+      289,
+      -4
+     ],
+     "stroke": "uniform 3 px, no fill",
+     "printed_area_ratio_curved_to_spiky": 1.1,
+     "to_scale": false,
+     "type": "other"
+    },
+    "manim_description": "On a plain BG card draw two freehand closed outlines side by side, no fill, uniform stroke, one common scale (coordinates in printed-page pixels, x to the right, y downward). Left outline, a smooth wavy closed curve in SET_A with no corners: a centripetal Catmull-Rom closed spline through these 37 points in order, origin at its bounding box top-left, box 222 by 164: (210,29), (204,24), (174,27), (165,20), (158,2), (151,0), (101,42), (94,42), (87,33), (84,33), (68,49), (42,54), (39,58), (36,94), (23,104), (3,110), (0,124), (6,127), (29,115), (41,115), (60,132), (79,138), (85,144), (90,158), (98,163), (145,164), (166,156), (149,143), (153,127), (159,120), (202,123), (214,120), (222,114), (215,100), (215,92), (222,74), (207,58). Right outline, a jagged closed polygon in SET_B with straight sides and 17 sharp corners, box 230 by 178, corners in order: (220,13), (154,40), (136,0), (110,58), (82,27), (61,80), (41,59), (36,122), (0,142), (34,178), (51,147), (146,160), (130,134), (196,136), (163,108), (230,87), (190,56). Place the right outline's box top-left at (289,-4) relative to the left outline's box top-left. Scale both together so that the pair fills about 90 percent of the card width and centre them. Draw no letters and no grid.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a grid or squared paper",
+     "the letters a and b",
+     "any numbers, areas or the words larger or smaller"
+    ],
+    "accuracy_checks": [
+     "the curved outline is smooth (no corners) and passes through all 37 points",
+     "the spiky outline has exactly 17 corners and 17 straight sides, no crossing",
+     "area of the curved outline is about 1.1 times the area of the spiky outline (printed: about 19,900 against 17,700 square pixels)",
+     "both outlines have about the same overall size (222 by 164 against 230 by 178)"
+    ],
+    "alt_text": "A smooth wavy closed curve and a jagged spiky closed shape of about the same size, side by side.",
+    "render_note": "Freehand shapes traced from the printed page (colour-segmented outline, simplified). They are not to scale and carry no measures; keep the near-equal areas (curved slightly larger) so that the 'guess' stays a real guess. The book prints them in green (curved) and red (spiky); SET_A and SET_B are the house pair for two shapes to compare."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C70",
+   "role": "worked_example",
+   "block_index": 1,
+   "lp_book_number": "The four rules for counting squares",
+   "ncert_ref": "Section 6.2 - p.140 (conventions 1-4)",
+   "question_text": "What are the four rules for counting squares to estimate an area on squared paper?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book states the four rules in words only; a recall question with no figure. (A row of four example squares would be the optional picture.)",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C71",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": "Let's Explore: a circle of diameter 3 on a graph sheet",
+   "ncert_ref": "Section 6.2 - p.141 (Let's Explore)",
+   "question_text": "Draw a circle of diameter 3 on a graph sheet. Count the squares and use them to estimate the area of the circular region.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "The learner draws the circle on a graph sheet; the book gives no figure and no printed answer. A drawn circle needs a placement and the half-square count changes with it (4 to 9), so a picture would invent an answer.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S15.T15.C71",
+   "role": "worked_example",
+   "block_index": 1,
+   "lp_book_number": "Let's Explore: why not circles instead of squares?",
+   "ncert_ref": "Section 6.2 - p.141 (circles packed 42 and 44)",
+   "question_text": "Why can we not use circles instead of squares to find the area?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "A 'why' question answered by reasoning; the counts 42 and 44 are in the text, and the two packings are already in the teaching image kept in this very concept (M2.S15.T15.C71.IMG1, never linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C73",
+   "role": "question",
+   "lp_book_number": "Counting Squares, Q1",
+   "ncert_ref": "Section 6.2 - p.140 (four shapes on the dot grid)",
+   "question_text": "Find the area of the four figures drawn on the grid of dots.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The four shapes exist only in the picture ('the four figures drawn on the grid of dots').",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S16.T16.C73.IMG1",
+   "manim_scene": "c6_6_6_2_count_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S16.T16.C73.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "dot_grid": {
+      "columns": 23,
+      "rows": 7,
+      "index_base": 0,
+      "origin": "column 0 = left, row 0 = top",
+      "dot_colour": "INK",
+      "total_dots": 161
+     },
+     "polygons": [
+      {
+       "id": 1,
+       "corners_col_row": [
+        [
+         1,
+         1
+        ],
+        [
+         4,
+         1
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         2,
+         3
+        ],
+        [
+         1,
+         4
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      },
+      {
+       "id": 2,
+       "corners_col_row": [
+        [
+         6,
+         1
+        ],
+        [
+         7,
+         2
+        ],
+        [
+         8,
+         1
+        ],
+        [
+         9,
+         2
+        ],
+        [
+         9,
+         3
+        ],
+        [
+         8,
+         4
+        ],
+        [
+         6,
+         4
+        ],
+        [
+         5,
+         3
+        ],
+        [
+         5,
+         2
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      },
+      {
+       "id": 3,
+       "corners_col_row": [
+        [
+         10,
+         1
+        ],
+        [
+         11,
+         1
+        ],
+        [
+         12,
+         2
+        ],
+        [
+         11,
+         3
+        ],
+        [
+         14,
+         3
+        ],
+        [
+         13,
+         2
+        ],
+        [
+         14,
+         1
+        ],
+        [
+         15,
+         1
+        ],
+        [
+         15,
+         3
+        ],
+        [
+         14,
+         4
+        ],
+        [
+         11,
+         4
+        ],
+        [
+         10,
+         3
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      },
+      {
+       "id": 4,
+       "corners_col_row": [
+        [
+         16,
+         1
+        ],
+        [
+         17,
+         1
+        ],
+        [
+         20,
+         4
+        ],
+        [
+         20,
+         1
+        ],
+        [
+         21,
+         1
+        ],
+        [
+         21,
+         5
+        ],
+        [
+         20,
+         5
+        ],
+        [
+         17,
+         2
+        ],
+        [
+         17,
+         5
+        ],
+        [
+         16,
+         5
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      }
+     ],
+     "to_scale": true,
+     "type": "mensuration_figure"
+    },
+    "manim_description": "Draw a square dot grid on a plain BG card: 23 columns by 7 rows of INK dots (161 dots) with equal spacing, columns 0 to 22 from left to right and rows 0 to 6 from top to bottom. The grid is a wide strip, so scale it to the full card width with an even margin and centre it vertically. Draw four closed polygons with INK outlines, no fill, every corner on a dot, each given as (column,row) corners in drawing order and closed back to its first corner. Polygon 1: (1,1), (4,1), (3,2), (2,2), (2,3), (1,4). Polygon 2: (6,1), (7,2), (8,1), (9,2), (9,3), (8,4), (6,4), (5,3), (5,2). Polygon 3: (10,1), (11,1), (12,2), (11,3), (14,3), (13,2), (14,1), (15,1), (15,3), (14,4), (11,4), (10,3). Polygon 4: (16,1), (17,1), (20,4), (20,1), (21,1), (21,5), (20,5), (17,2), (17,5), (16,5). Draw no labels, no numbers and no colours other than INK.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any colour other than INK",
+     "any label, number or area value"
+    ],
+    "accuracy_checks": [
+     "grid is 23 columns by 7 rows (161 dots)",
+     "every polygon corner lies on a dot; corner counts are 6, 9, 12 and 10",
+     "polygon outlines are closed and do not cross themselves",
+     "same four shapes as the book, in the book's left-to-right order: bent shape, heart, cup with two spikes, letter N",
+     "areas of the four polygons by the shoelace formula (not drawn): 4, 9, 10 and 11 square units, matching the printed answer"
+    ],
+    "alt_text": "Four closed shapes drawn on a 23 by 7 dot grid: a bent shape, a heart, a cup with two spikes and the letter N.",
+    "render_note": "Same as M1.S9.T9.C45.IMG1 (the book prints the same dot grid on p.135 and p.140). Wide strip, 22 gaps by 6 gaps: scale to the card width."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S16.T16.C74",
+   "role": "solution",
+   "lp_book_number": "Counting Squares, Q1",
+   "ncert_ref": "Section 6.2 - p.140 (four shapes on the dot grid)",
+   "question_text": "Find the area of the four figures drawn on the grid of dots.",
+   "decision": "required",
+   "reason_codes": [
+    "HIGHLIGHT_MEANING",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The solution counts whole squares and half squares of four irregular shapes (6 to 8 whole, up to 6 halves each); marking exactly those squares on the figure is what makes the counts checkable.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S16.T16.C74.IMG1",
+   "manim_scene": "c6_6_6_2_count_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S16.T16.C74.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "mensuration_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S16.T16.C73.IMG1",
+    "content": {
+     "base": "same dot grid and the same four INK outlines as the question diagram, unchanged",
+     "dot_grid": {
+      "columns": 23,
+      "rows": 7,
+      "index_base": 0,
+      "origin": "column 0 = left, row 0 = top",
+      "dot_colour": "INK",
+      "total_dots": 161
+     },
+     "polygons": [
+      {
+       "id": 1,
+       "corners_col_row": [
+        [
+         1,
+         1
+        ],
+        [
+         4,
+         1
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         2,
+         3
+        ],
+        [
+         1,
+         4
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      },
+      {
+       "id": 2,
+       "corners_col_row": [
+        [
+         6,
+         1
+        ],
+        [
+         7,
+         2
+        ],
+        [
+         8,
+         1
+        ],
+        [
+         9,
+         2
+        ],
+        [
+         9,
+         3
+        ],
+        [
+         8,
+         4
+        ],
+        [
+         6,
+         4
+        ],
+        [
+         5,
+         3
+        ],
+        [
+         5,
+         2
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      },
+      {
+       "id": 3,
+       "corners_col_row": [
+        [
+         10,
+         1
+        ],
+        [
+         11,
+         1
+        ],
+        [
+         12,
+         2
+        ],
+        [
+         11,
+         3
+        ],
+        [
+         14,
+         3
+        ],
+        [
+         13,
+         2
+        ],
+        [
+         14,
+         1
+        ],
+        [
+         15,
+         1
+        ],
+        [
+         15,
+         3
+        ],
+        [
+         14,
+         4
+        ],
+        [
+         11,
+         4
+        ],
+        [
+         10,
+         3
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      },
+      {
+       "id": 4,
+       "corners_col_row": [
+        [
+         16,
+         1
+        ],
+        [
+         17,
+         1
+        ],
+        [
+         20,
+         4
+        ],
+        [
+         20,
+         1
+        ],
+        [
+         21,
+         1
+        ],
+        [
+         21,
+         5
+        ],
+        [
+         20,
+         5
+        ],
+        [
+         17,
+         2
+        ],
+        [
+         17,
+         5
+        ],
+        [
+         16,
+         5
+        ]
+       ],
+       "outline": "INK",
+       "fill": null
+      }
+     ],
+     "whole_fill": "MARK_FILL",
+     "half_fill": "SET_B",
+     "half_fill_opacity": 0.5,
+     "counted_cells": [
+      {
+       "polygon": 1,
+       "whole_squares_top_left_col_row": [
+        [
+         1,
+         1
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         2,
+         1
+        ]
+       ],
+       "half_squares": [
+        {
+         "cell": [
+          1,
+          3
+         ],
+         "inside_triangle_corners": [
+          [
+           2,
+           3
+          ],
+          [
+           1,
+           3
+          ],
+          [
+           1,
+           4
+          ]
+         ]
+        },
+        {
+         "cell": [
+          3,
+          1
+         ],
+         "inside_triangle_corners": [
+          [
+           3,
+           1
+          ],
+          [
+           3,
+           2
+          ],
+          [
+           4,
+           1
+          ]
+         ]
+        }
+       ],
+       "whole_count": 3,
+       "half_count": 2,
+       "area": 4
+      },
+      {
+       "polygon": 2,
+       "whole_squares_top_left_col_row": [
+        [
+         5,
+         2
+        ],
+        [
+         6,
+         2
+        ],
+        [
+         6,
+         3
+        ],
+        [
+         7,
+         2
+        ],
+        [
+         7,
+         3
+        ],
+        [
+         8,
+         2
+        ]
+       ],
+       "half_squares": [
+        {
+         "cell": [
+          5,
+          1
+         ],
+         "inside_triangle_corners": [
+          [
+           5,
+           2
+          ],
+          [
+           6,
+           2
+          ],
+          [
+           6,
+           1
+          ]
+         ]
+        },
+        {
+         "cell": [
+          5,
+          3
+         ],
+         "inside_triangle_corners": [
+          [
+           6,
+           4
+          ],
+          [
+           6,
+           3
+          ],
+          [
+           5,
+           3
+          ]
+         ]
+        },
+        {
+         "cell": [
+          6,
+          1
+         ],
+         "inside_triangle_corners": [
+          [
+           6,
+           1
+          ],
+          [
+           6,
+           2
+          ],
+          [
+           7,
+           2
+          ]
+         ]
+        },
+        {
+         "cell": [
+          7,
+          1
+         ],
+         "inside_triangle_corners": [
+          [
+           7,
+           2
+          ],
+          [
+           8,
+           2
+          ],
+          [
+           8,
+           1
+          ]
+         ]
+        },
+        {
+         "cell": [
+          8,
+          1
+         ],
+         "inside_triangle_corners": [
+          [
+           8,
+           1
+          ],
+          [
+           8,
+           2
+          ],
+          [
+           9,
+           2
+          ]
+         ]
+        },
+        {
+         "cell": [
+          8,
+          3
+         ],
+         "inside_triangle_corners": [
+          [
+           9,
+           3
+          ],
+          [
+           8,
+           3
+          ],
+          [
+           8,
+           4
+          ]
+         ]
+        }
+       ],
+       "whole_count": 6,
+       "half_count": 6,
+       "area": 9
+      },
+      {
+       "polygon": 3,
+       "whole_squares_top_left_col_row": [
+        [
+         10,
+         1
+        ],
+        [
+         10,
+         2
+        ],
+        [
+         11,
+         3
+        ],
+        [
+         12,
+         3
+        ],
+        [
+         13,
+         3
+        ],
+        [
+         14,
+         1
+        ],
+        [
+         14,
+         2
+        ]
+       ],
+       "half_squares": [
+        {
+         "cell": [
+          10,
+          3
+         ],
+         "inside_triangle_corners": [
+          [
+           11,
+           4
+          ],
+          [
+           11,
+           3
+          ],
+          [
+           10,
+           3
+          ]
+         ]
+        },
+        {
+         "cell": [
+          11,
+          1
+         ],
+         "inside_triangle_corners": [
+          [
+           11,
+           1
+          ],
+          [
+           11,
+           2
+          ],
+          [
+           12,
+           2
+          ]
+         ]
+        },
+        {
+         "cell": [
+          11,
+          2
+         ],
+         "inside_triangle_corners": [
+          [
+           12,
+           2
+          ],
+          [
+           11,
+           2
+          ],
+          [
+           11,
+           3
+          ]
+         ]
+        },
+        {
+         "cell": [
+          13,
+          1
+         ],
+         "inside_triangle_corners": [
+          [
+           13,
+           2
+          ],
+          [
+           14,
+           2
+          ],
+          [
+           14,
+           1
+          ]
+         ]
+        },
+        {
+         "cell": [
+          13,
+          2
+         ],
+         "inside_triangle_corners": [
+          [
+           14,
+           3
+          ],
+          [
+           14,
+           2
+          ],
+          [
+           13,
+           2
+          ]
+         ]
+        },
+        {
+         "cell": [
+          14,
+          3
+         ],
+         "inside_triangle_corners": [
+          [
+           15,
+           3
+          ],
+          [
+           14,
+           3
+          ],
+          [
+           14,
+           4
+          ]
+         ]
+        }
+       ],
+       "whole_count": 7,
+       "half_count": 6,
+       "area": 10
+      },
+      {
+       "polygon": 4,
+       "whole_squares_top_left_col_row": [
+        [
+         16,
+         1
+        ],
+        [
+         16,
+         2
+        ],
+        [
+         16,
+         3
+        ],
+        [
+         16,
+         4
+        ],
+        [
+         20,
+         1
+        ],
+        [
+         20,
+         2
+        ],
+        [
+         20,
+         3
+        ],
+        [
+         20,
+         4
+        ]
+       ],
+       "half_squares": [
+        {
+         "cell": [
+          17,
+          1
+         ],
+         "inside_triangle_corners": [
+          [
+           17,
+           1
+          ],
+          [
+           17,
+           2
+          ],
+          [
+           18,
+           2
+          ]
+         ]
+        },
+        {
+         "cell": [
+          17,
+          2
+         ],
+         "inside_triangle_corners": [
+          [
+           18,
+           3
+          ],
+          [
+           18,
+           2
+          ],
+          [
+           17,
+           2
+          ]
+         ]
+        },
+        {
+         "cell": [
+          18,
+          2
+         ],
+         "inside_triangle_corners": [
+          [
+           18,
+           2
+          ],
+          [
+           18,
+           3
+          ],
+          [
+           19,
+           3
+          ]
+         ]
+        },
+        {
+         "cell": [
+          18,
+          3
+         ],
+         "inside_triangle_corners": [
+          [
+           19,
+           4
+          ],
+          [
+           19,
+           3
+          ],
+          [
+           18,
+           3
+          ]
+         ]
+        },
+        {
+         "cell": [
+          19,
+          3
+         ],
+         "inside_triangle_corners": [
+          [
+           19,
+           3
+          ],
+          [
+           19,
+           4
+          ],
+          [
+           20,
+           4
+          ]
+         ]
+        },
+        {
+         "cell": [
+          19,
+          4
+         ],
+         "inside_triangle_corners": [
+          [
+           20,
+           5
+          ],
+          [
+           20,
+           4
+          ],
+          [
+           19,
+           4
+          ]
+         ]
+        }
+       ],
+       "whole_count": 8,
+       "half_count": 6,
+       "area": 11
+      }
+     ],
+     "labels": [
+      {
+       "text": "4 sq units",
+       "col": 2.5,
+       "row": 7.4,
+       "colour": "ANSWER",
+       "height_px": 44
+      },
+      {
+       "text": "9 sq units",
+       "col": 7,
+       "row": 7.4,
+       "colour": "ANSWER",
+       "height_px": 44
+      },
+      {
+       "text": "10 sq units",
+       "col": 12.5,
+       "row": 7.4,
+       "colour": "ANSWER",
+       "height_px": 44
+      },
+      {
+       "text": "11 sq units",
+       "col": 18.5,
+       "row": 7.4,
+       "colour": "ANSWER",
+       "height_px": 44
+      }
+     ],
+     "key": {
+      "row": 8.6,
+      "whole_swatch": {
+       "square_col_row": [
+        9,
+        8.1
+       ],
+       "side": 1,
+       "fill": "MARK_FILL",
+       "outline": "INK",
+       "label": "1",
+       "label_at": [
+        10.5,
+        8.6
+       ]
+      },
+      "half_swatch": {
+       "triangle": [
+        [
+         12,
+         8.1
+        ],
+        [
+         12,
+         9.1
+        ],
+        [
+         13,
+         9.1
+        ]
+       ],
+       "fill": "SET_B",
+       "label": "½",
+       "label_at": [
+        13.6,
+        8.6
+       ]
+      }
+     },
+     "to_scale": true,
+     "type": "mensuration_figure"
+    },
+    "manim_description": "Redraw the question figure exactly: same 23 by 7 INK dot grid, same four INK outlines, same positions, same card. Behind the dots and outlines fill every whole unit square inside a polygon with MARK_FILL and fill every half square (the triangle of a unit square cut by a slanted edge) with SET_B at 50 percent opacity. Polygon 1 (3 whole, 2 half): whole squares with top-left (col,row) (1,1), (1,2), (2,1); half squares as triangles [(2,3)-(1,3)-(1,4)], [(3,1)-(3,2)-(4,1)]. Polygon 2 (6 whole, 6 half): whole squares with top-left (col,row) (5,2), (6,2), (6,3), (7,2), (7,3), (8,2); half squares as triangles [(5,2)-(6,2)-(6,1)], [(6,4)-(6,3)-(5,3)], [(6,1)-(6,2)-(7,2)], [(7,2)-(8,2)-(8,1)], [(8,1)-(8,2)-(9,2)], [(9,3)-(8,3)-(8,4)]. Polygon 3 (7 whole, 6 half): whole squares with top-left (col,row) (10,1), (10,2), (11,3), (12,3), (13,3), (14,1), (14,2); half squares as triangles [(11,4)-(11,3)-(10,3)], [(11,1)-(11,2)-(12,2)], [(12,2)-(11,2)-(11,3)], [(13,2)-(14,2)-(14,1)], [(14,3)-(14,2)-(13,2)], [(15,3)-(14,3)-(14,4)]. Polygon 4 (8 whole, 6 half): whole squares with top-left (col,row) (16,1), (16,2), (16,3), (16,4), (20,1), (20,2), (20,3), (20,4); half squares as triangles [(17,1)-(17,2)-(18,2)], [(18,3)-(18,2)-(17,2)], [(18,2)-(18,3)-(19,3)], [(19,4)-(19,3)-(18,3)], [(19,3)-(19,4)-(20,4)], [(20,5)-(20,4)-(19,4)]. Below the grid, at row 7.4, write in ANSWER at 44 px, centred on columns 2.5, 7, 12.5 and 18.5: '4 sq units', '9 sq units', '10 sq units' and '11 sq units'. At row 8.6 draw a key: a MARK_FILL unit square with INK outline, top-left at (9, 8.1), followed by the label '1' at column 10.5; then a SET_B right triangle with corners (12,8.1), (12,9.1), (13,9.1) followed by the label '½' at column 13.6.",
+    "visible_text": [
+     "4 sq units",
+     "9 sq units",
+     "10 sq units",
+     "11 sq units",
+     "1",
+     "½"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the sums such as 3 + 1/2 + 1/2",
+     "any fill outside the four polygons"
+    ],
+    "accuracy_checks": [
+     "whole + half / 2 per polygon: 3 + 2/2 = 4, 6 + 6/2 = 9, 7 + 6/2 = 10, 8 + 6/2 = 11 (matches the LP solution and the printed answer)",
+     "every counted cell is inside its polygon (whole) or is half cut by a slanted edge (half); no other cell is filled",
+     "shoelace areas of the polygons are 4, 9, 10, 11",
+     "outline positions are identical to M2.S16.T16.C73.IMG1"
+    ],
+    "alt_text": "The same four dot grid shapes with whole unit squares shaded green and half squares shaded orange, and the areas 4, 9, 10 and 11 square units written under them.",
+    "render_note": "Same layout as M2.S16.T16.C73.IMG1. If the renderer's font lacks the half sign, draw a stacked fraction 1 over 2. The marked squares are exactly the whole and half squares the LP solution counts."
+   }
+  }
+ ]
+}

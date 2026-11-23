@@ -1,0 +1,3245 @@
+{
+ "meta": {
+  "chapter": "Fractions",
+  "class": 6,
+  "textbook": "Ganita Prakash, Grade 6, Chapter 7",
+  "lp_plan_id": "cbse_eng_maths6_ch7_v35",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "optional": 1,
+    "none": 7,
+    "required": 5
+   },
+   "solution": {
+    "none": 2,
+    "required": 11
+   },
+   "worked_example": {
+    "required": 1
+   }
+  },
+  "notes": [
+   "Chunk B = topics M1.S9.T9, M1.S10.T10, M1.S11.T11, M1.S12.T12 (14 units, 27 items).",
+   "Number-line 'write the fraction in the box' items (7.4 q1, q2, FiO Q4, FiO Q5): question and solution both required, solution derived_from the question (v3 pair rule for ACTION_ON_FIGURE); no braces are added so all five stay consistent.",
+   "A pair may hold only ONE solution diagram, so FiO 7.3 Q4 (a) and (b) share one card with two rows.",
+   "Concept (teaching) images are never linked; M1.S10.T10.C39.IMG1 stays and the worked example gets its own IMG2."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P07-table-1",
+   "source": "chapter p.07",
+   "description": "Table of half rotis (5 columns, 1 to 5 half rotis, each with its equation). Used by FiO 7.3 Q1 ('continue this table') and Q2 ('like the table of half rotis'). Teaching figure of 7.3 (chunk A's section); claimed here because Q1 and Q2 use it. The LP question text carries every equation, the pictures are only illustrations.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P08-shape-1",
+   "source": "chapter p.08",
+   "description": "Four circles cut into 8, 6, 3 and 5 equal sectors, one shaded each, fractions 1/3, 1/5, 1/8, 1/6 printed above in that order (checked on a zoomed crop: counts 8, 6, 3, 5 confirmed).",
+   "mapped_to": "item:M1.S9.T9.C37 (question)"
+  },
+  {
+   "fig_id": "P09-number_line-1",
+   "source": "chapter p.09",
+   "description": "Number line 0 to 2 in halves, blue bar 0 to 1/2, empty box under the 1/2 tick; labels 0, 1, 2 (worked example of 7.4).",
+   "mapped_to": "item:M1.S10.T10.C39 (question)"
+  },
+  {
+   "fig_id": "P09-number_line-2",
+   "source": "chapter p.09",
+   "description": "Number line 0 to 2 in thirds, blue bar 0 to 2/3, empty box under 2/3; labels 0, 1/3, 1, 2; the book draws ticks at 0, 1/3, 2/3, 1, 4/3, 2 only (no 5/3 tick) - confirmed on a zoomed crop.",
+   "mapped_to": "item:M1.S11.T11.C42 (question)"
+  },
+  {
+   "fig_id": "P09-number_line-3",
+   "source": "chapter p.09",
+   "description": "Number line 0 to 2 in fifths, two blue bars 0 to 4/5 (upper) and 0 to 2/5 (lower), empty boxes under 2/5 and 4/5; labels 0, 1/5, 3/5, 1, 2 - confirmed.",
+   "mapped_to": "item:M1.S11.T11.C44 (question)"
+  },
+  {
+   "fig_id": "P10-number_line-1",
+   "source": "chapter p.10",
+   "description": "Number line 0 to 2 in halves, black bar 0 to 3/2 (upper), blue bar 0 to 1/2 (lower), box under 1/2 holding 1/2, empty box under 3/2 - confirmed.",
+   "mapped_to": "item:M1.S12.T12.C54 (question)"
+  },
+  {
+   "fig_id": "P10-number_line-2",
+   "source": "chapter p.10",
+   "description": "Number line 0 to 2 in fifths, four black bars ending at 6/5, 7/5, 8/5, 9/5 (longest on top), four empty boxes under those ticks; labels 0, 1/5, 2/5, 3/5, 4/5, 1, 2 - confirmed.",
+   "mapped_to": "item:M1.S12.T12.C56 (question)"
+  },
+  {
+   "fig_id": "SOL38-table-1",
+   "source": "solutions p.38",
+   "description": "Printed answer to FiO 7.3 Q1: two plain typeset rows (six 1/2 = 6 times 1/2; seven 1/2 = 7 times 1/2), no drawn picture.",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "SOL38-table-2",
+   "source": "solutions p.38",
+   "description": "Printed answer to FiO 7.3 Q2: table of 4 columns of quarter pieces (1, 2, 3, 4), checked on the page: column 3 lacks the bottom-right quarter.",
+   "mapped_to": "item:M1.S9.T9.C32 (solution)"
+  },
+  {
+   "fig_id": "SOL38-shape-1",
+   "source": "solutions p.38",
+   "description": "Printed answer to FiO 7.3 Q4a: one whole roti of 4 quarters plus one separate quarter (5 quarters).",
+   "mapped_to": "item:M1.S9.T9.C36 (solution)"
+  },
+  {
+   "fig_id": "SOL39-shape-1",
+   "source": "solutions p.39",
+   "description": "Printed answer to FiO 7.3 Q4b: two whole rotis of 4 quarters plus one separate quarter (9 quarters); drawn in the same card as Q4a (one solution diagram per pair).",
+   "mapped_to": "item:M1.S9.T9.C36 (solution)"
+  },
+  {
+   "fig_id": "SOL39-shape-2",
+   "source": "solutions p.39",
+   "description": "Printed answer to FiO 7.3 Q5: four rows fraction, arrow, circle with one sector shaded, order 1/3, 1/5, 1/6, 1/8 (counts 3, 5, 6, 8 confirmed).",
+   "mapped_to": "item:M1.S9.T9.C38 (solution)"
+  },
+  {
+   "fig_id": "SOL40-number_line-1",
+   "source": "solutions p.40",
+   "description": "Printed answer to FiO 7.4 Q1: number line with 11 ticks, labels 0, 1/10, 3/10, 4/5 (on the 8th tick), 1; no bars drawn in the book.",
+   "mapped_to": "item:M1.S12.T12.C49 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 13,
+  "mapped_to_items": 11,
+  "mapped_to_concept_images": 0,
+  "mapped_none": 2,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S9.T9.C32.IMG1",
+   "M1.S9.T9.C34.IMG1",
+   "M1.S9.T9.C36.IMG1",
+   "M1.S9.T9.C37.IMG1",
+   "M1.S9.T9.C38.IMG1",
+   "M1.S10.T10.C39.IMG2",
+   "M1.S11.T11.C42.IMG1",
+   "M1.S11.T11.C43.IMG1",
+   "M1.S11.T11.C44.IMG1",
+   "M1.S11.T11.C45.IMG1",
+   "M1.S11.T11.C47.IMG1",
+   "M1.S12.T12.C49.IMG1",
+   "M1.S12.T12.C51.IMG1",
+   "M1.S12.T12.C54.IMG1",
+   "M1.S12.T12.C55.IMG1",
+   "M1.S12.T12.C56.IMG1",
+   "M1.S12.T12.C57.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S9.T9.C29",
+   "role": "question",
+   "lp_book_number": "Figure it Out 7.3, Q1",
+   "ncert_ref": "7.3.FiO.Q1",
+   "question_text": "The table of 1/2 goes: 1/2 = 1 × 1/2, 1/2 + 1/2 = 2 × 1/2, and so on up to 1/2 + 1/2 + 1/2 + 1/2 + 1/2 = 5 × 1/2. Continue this table of 1/2 for 2 more steps.",
+   "decision": "optional",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "optional figure: the book's table of half-roti pictures (five columns of 1 to 5 half rotis, P07-table-1) would help the learner see the two new steps; the LP question text already carries all five equations, so the picture is not needed to attempt it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the five equations of the table of 1/2 in the question text; the learner continues with 6 x 1/2 and 7 x 1/2."
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C30",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 7.3, Q1",
+   "ncert_ref": "7.3.FiO.Q1",
+   "question_text": "The table of 1/2 goes: 1/2 = 1 × 1/2, 1/2 + 1/2 = 2 × 1/2, and so on up to 1/2 + 1/2 + 1/2 + 1/2 + 1/2 = 5 × 1/2. Continue this table of 1/2 for 2 more steps.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The printed answer (SOL38-table-1) is two plain rows of typeset equations, no drawn picture; LaTeX does it. Sibling note: Q2's printed answer IS a drawn table of quarter-roti pictures, Q1's is not.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Two LaTeX lines: 1/2 added six times = 6 x 1/2 and 1/2 added seven times = 7 x 1/2."
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C31",
+   "role": "question",
+   "lp_book_number": "Figure it Out 7.3, Q2",
+   "ncert_ref": "7.3.FiO.Q2",
+   "question_text": "Can you create a similar table for 1/4 (like the table of half rotis)?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure of its own (it only says 'like the table of half rotis'), so no question diagram is invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Plain question text."
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C32",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 7.3, Q2",
+   "ncert_ref": "7.3.FiO.Q2",
+   "question_text": "Can you create a similar table for 1/4 (like the table of half rotis)?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The printed answer is a drawn table of quarter-roti pieces (SOL38-table-2): 1, 2, 3 and 4 quarters, each with its count; the answer is the picture table, so it is drawn (no question diagram exists to repeat).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S9.T9.C32.IMG1",
+   "manim_scene": "c6_7_73_fio2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S9.T9.C32.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "fraction_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "layout": "table_4_columns_2_rows",
+     "table": {
+      "x_px": [
+       160,
+       1760
+      ],
+      "y_px": [
+       200,
+       860
+      ],
+      "column_dividers_x_px": [
+       560,
+       960,
+       1360
+      ],
+      "row_divider_y_px": 640,
+      "border": "INK",
+      "border_px": 3
+     },
+     "disc_centre_y_px": 420,
+     "disc_radius_px": 130,
+     "quarter_gap_px": 8,
+     "quarter_fill": "MARK_FILL",
+     "quarter_outline": "INK",
+     "quarter_names": "TL = top-left, BL = bottom-left, TR = top-right, BR = bottom-right; pieces are quarter-discs whose right angle sits at the disc centre",
+     "cells": [
+      {
+       "cell": 1,
+       "x_centre_px": 360,
+       "quarters_drawn": [
+        "TL"
+       ],
+       "count": 1,
+       "caption": "1 × 1/4"
+      },
+      {
+       "cell": 2,
+       "x_centre_px": 760,
+       "quarters_drawn": [
+        "TL",
+        "BL"
+       ],
+       "count": 2,
+       "caption": "2 × 1/4"
+      },
+      {
+       "cell": 3,
+       "x_centre_px": 1160,
+       "quarters_drawn": [
+        "TL",
+        "BL",
+        "TR"
+       ],
+       "count": 3,
+       "caption": "3 × 1/4"
+      },
+      {
+       "cell": 4,
+       "x_centre_px": 1560,
+       "quarters_drawn": [
+        "TL",
+        "BL",
+        "TR",
+        "BR"
+       ],
+       "count": 4,
+       "caption": "4 × 1/4"
+      }
+     ],
+     "caption_y_px": 750,
+     "caption_font_px": 44,
+     "caption_colour": "ANSWER",
+     "to_scale": false,
+     "type": "fraction_model"
+    },
+    "manim_description": "On a white 1920x1080 canvas draw a table with INK borders 3 px thick: outer rectangle from x = 160 to 1760 and y = 200 to 860, three vertical dividers at x = 560, 960 and 1360 (4 equal columns of 400 px) and one horizontal divider at y = 640 (picture row above, caption row below). In every column the picture is centred at the column centre (x = 360, 760, 1160, 1560) with the imagined whole roti disc centred at y = 420 px and radius 130 px; draw only the quarter pieces listed, never the missing ones. Each quarter piece is a quarter-disc of radius 130 px with its right angle at the disc centre, filled MARK_FILL with an INK outline 3 px, and neighbouring pieces are separated by a thin white (BG) gap of 8 px. Column 1: 1 piece, top-left (TL). Column 2: 2 pieces, TL and bottom-left (BL), together the left half of the disc. Column 3: 3 pieces, TL, BL and top-right (TR); the bottom-right place stays empty. Column 4: 4 pieces, TL, BL, TR and bottom-right (BR), together one full disc. In the caption row print, centred at y = 750 px in ANSWER at 44 px, the texts 1 × 1/4 (column 1), 2 × 1/4 (column 2), 3 × 1/4 (column 3) and 4 × 1/4 (column 4), with 1/4 written as a stacked fraction.",
+    "visible_text": [
+     "1 × 1/4",
+     "2 × 1/4",
+     "3 × 1/4",
+     "4 × 1/4"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the addition statements (they are in the LP answer text)",
+     "the words 'times quarter' or '1-time quarter'",
+     "pieces in the empty places"
+    ],
+    "accuracy_checks": [
+     "column n holds exactly n quarter pieces (1, 2, 3, 4)",
+     "4 quarter pieces make one full disc, so column 4 is a complete roti",
+     "each quarter-disc has the same radius 130 px",
+     "fill order TL, BL, TR, BR matches the book table"
+    ],
+    "alt_text": "A table of four columns showing one, two, three and four quarter pieces of a roti, captioned 1 times 1/4 up to 4 times 1/4.",
+    "render_note": "Follows the printed table SOL38-table-2 (quarter pieces, captions). The LP answer text keeps the addition statements; the picture carries only the counts."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C33",
+   "role": "question",
+   "lp_book_number": "Figure it Out 7.3, Q3",
+   "ncert_ref": "7.3.FiO.Q3",
+   "question_text": "Make 1/3 using a paper strip. Can you use this to also make 1/6?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A hands-on paper-folding task; the question gives no figure, so no question diagram.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Plain question text."
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C34",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 7.3, Q3",
+   "ncert_ref": "7.3.FiO.Q3",
+   "question_text": "Make 1/3 using a paper strip. Can you use this to also make 1/6?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The answer is a construction (a paper strip folded into 3 equal parts, then each third folded in 2, giving 6 equal parts); the folded strip is drawn even though the steps describe it in words. The book prints no answer for Q3, the LP solution is the source.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S9.T9.C34.IMG1",
+   "manim_scene": "c6_7_73_fio3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S9.T9.C34.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "fraction_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "unit_brace": {
+      "x_px": [
+       210,
+       1710
+      ],
+      "y_px": [
+       225,
+       255
+      ],
+      "label": "1 unit",
+      "label_y_px": 170,
+      "colour": "INK"
+     },
+     "strip_1": {
+      "x_px": [
+       210,
+       1710
+      ],
+      "y_px": [
+       280,
+       400
+      ],
+      "fill": "CELL_FILL",
+      "outline": "INK",
+      "parts": 3,
+      "creases_x_px": [
+       710,
+       1210
+      ],
+      "crease_colour": "INK",
+      "crease_style": "dashed",
+      "braces": [
+       {
+        "x_px": [
+         210,
+         710
+        ],
+        "label": "1/3"
+       },
+       {
+        "x_px": [
+         710,
+         1210
+        ],
+        "label": "1/3"
+       },
+       {
+        "x_px": [
+         1210,
+         1710
+        ],
+        "label": "1/3"
+       }
+      ],
+      "brace_y_px": [
+       415,
+       445
+      ],
+      "label_y_px": 500,
+      "label_colour": "INK"
+     },
+     "strip_2": {
+      "x_px": [
+       210,
+       1710
+      ],
+      "y_px": [
+       620,
+       740
+      ],
+      "fill": "CELL_FILL",
+      "outline": "INK",
+      "parts": 6,
+      "creases_from_strip_1_x_px": [
+       710,
+       1210
+      ],
+      "creases_from_strip_1_colour": "INK",
+      "new_creases_x_px": [
+       460,
+       960,
+       1460
+      ],
+      "new_creases_colour": "ANSWER",
+      "crease_style": "dashed",
+      "braces": [
+       {
+        "x_px": [
+         210,
+         460
+        ],
+        "label": "1/6"
+       },
+       {
+        "x_px": [
+         460,
+         710
+        ],
+        "label": "1/6"
+       },
+       {
+        "x_px": [
+         710,
+         960
+        ],
+        "label": "1/6"
+       },
+       {
+        "x_px": [
+         960,
+         1210
+        ],
+        "label": "1/6"
+       },
+       {
+        "x_px": [
+         1210,
+         1460
+        ],
+        "label": "1/6"
+       },
+       {
+        "x_px": [
+         1460,
+         1710
+        ],
+        "label": "1/6"
+       }
+      ],
+      "brace_y_px": [
+       755,
+       785
+      ],
+      "label_y_px": 840,
+      "label_colour": "ANSWER"
+     },
+     "type": "fraction_model"
+    },
+    "manim_description": "On a white 1920x1080 canvas draw two paper strips, one above the other, both spanning x = 210 to 1710 px (1500 px = 1 unit). Above the top strip draw an INK curly brace over the full width (y = 225 to 255 px, point upward at x = 960) with the label 1 unit in INK at 44 px centred at y = 170 px. Top strip: rectangle y = 280 to 400 px, fill CELL_FILL, INK outline 3 px, with 2 dashed INK creases at x = 710 and x = 1210 (3 equal parts of 500 px). Under it draw 3 INK curly braces (y = 415 to 445 px), one per part, spanning x = 210 to 710, 710 to 1210 and 1210 to 1710, each with the label 1/3 in INK (stacked fraction, 44 px) centred under its brace point at y = 500 px (x = 460, 960, 1460). Bottom strip: rectangle y = 620 to 740 px, fill CELL_FILL, INK outline 3 px, with 5 dashed creases at x = 460, 710, 960, 1210 and 1460 (6 equal parts of 250 px): the creases at x = 710 and 1210 are INK, the 3 new creases at x = 460, 960 and 1460 are ANSWER. Under it draw 6 curly braces (y = 755 to 785 px), one per part, spanning x = 210 to 460, 460 to 710, 710 to 960, 960 to 1210, 1210 to 1460 and 1460 to 1710, each with the label 1/6 in ANSWER (stacked fraction, 44 px) centred at y = 840 px (x = 335, 585, 835, 1085, 1335, 1585).",
+    "visible_text": [
+     "1 unit",
+     "1/3",
+     "1/3",
+     "1/3",
+     "1/6",
+     "1/6",
+     "1/6",
+     "1/6",
+     "1/6",
+     "1/6"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "fold arrows or hands",
+     "the equation 3 x 2 = 6",
+     "a ruler"
+    ],
+    "accuracy_checks": [
+     "top strip: 3 equal parts of 500 px (1500 / 3)",
+     "bottom strip: 6 equal parts of 250 px (1500 / 6)",
+     "each third contains exactly 2 sixths: 3 x 2 = 6",
+     "the 2 INK creases of the top strip are at the same x as the INK creases of the bottom strip"
+    ],
+    "alt_text": "A paper strip folded into three equal parts labelled 1/3, and below it the same strip folded again into six equal parts labelled 1/6.",
+    "render_note": "No question diagram exists (hands-on question). Colour: given first-fold content INK, second-fold content ANSWER green."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C35",
+   "role": "question",
+   "lp_book_number": "Figure it Out 7.3, Q4",
+   "ncert_ref": "7.3.FiO.Q4",
+   "question_text": "Draw a picture and write an addition statement (as in the table of half rotis) to show: a) 5 × 1/4 of a roti b) 9 × 1/4 of a roti",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The learner draws the picture; the question gives no figure, so no question diagram is invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Plain question text with (a) 5 x 1/4 of a roti and (b) 9 x 1/4 of a roti."
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C36",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 7.3, Q4",
+   "ncert_ref": "7.3.FiO.Q4",
+   "question_text": "Draw a picture and write an addition statement (as in the table of half rotis) to show: a) 5 × 1/4 of a roti b) 9 × 1/4 of a roti",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "Both printed answers are pictures (SOL38-shape-1 and SOL39-shape-1: whole rotis plus one extra quarter); the learner is asked to draw a picture, so the drawing is the answer. The pair gets ONE solution diagram, so (a) and (b) are two rows of one figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S9.T9.C36.IMG1",
+   "manim_scene": "c6_7_73_fio4_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S9.T9.C36.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "fraction_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "quarter_radius_px": 150,
+     "cut_gap_px": 8,
+     "piece_fill": "MARK_FILL",
+     "piece_outline": "INK",
+     "rows": [
+      {
+       "caption": "5 × 1/4",
+       "caption_x_centre_px": 250,
+       "centre_y_px": 330,
+       "whole_rotis": [
+        {
+         "centre_x_px": 640,
+         "quarters": [
+          "TL",
+          "TR",
+          "BL",
+          "BR"
+         ]
+        }
+       ],
+       "extra_quarter": {
+        "right_angle_corner_px": [
+         890,
+         405
+        ],
+        "vertical_edge_up_to_px": [
+         890,
+         255
+        ],
+        "flat_edge_right_to_px": [
+         1040,
+         405
+        ]
+       },
+       "quarter_count": 5
+      },
+      {
+       "caption": "9 × 1/4",
+       "caption_x_centre_px": 250,
+       "centre_y_px": 760,
+       "whole_rotis": [
+        {
+         "centre_x_px": 640,
+         "quarters": [
+          "TL",
+          "TR",
+          "BL",
+          "BR"
+         ]
+        },
+        {
+         "centre_x_px": 1000,
+         "quarters": [
+          "TL",
+          "TR",
+          "BL",
+          "BR"
+         ]
+        }
+       ],
+       "extra_quarter": {
+        "right_angle_corner_px": [
+         1250,
+         835
+        ],
+        "vertical_edge_up_to_px": [
+         1250,
+         685
+        ],
+        "flat_edge_right_to_px": [
+         1400,
+         835
+        ]
+       },
+       "quarter_count": 9
+      }
+     ],
+     "type": "fraction_model"
+    },
+    "manim_description": "On a white 1920x1080 canvas draw two rows of roti pieces. Every piece is a quarter-disc of radius 150 px filled MARK_FILL with an INK outline 3 px; a whole roti is a full disc of radius 150 px made of 4 quarter pieces (top-left, top-right, bottom-left, bottom-right) separated by a white (BG) cross-shaped gap of 8 px. Row 1 (centre line y = 330 px): the caption 5 × 1/4 in INK at 56 px centred at x = 250 px (1/4 as a stacked fraction); one whole roti centred at x = 640 px (spans x = 490 to 790); then, with a gap of 100 px, one single separate quarter piece whose right angle is at (890, 405) px, its vertical edge going up to (890, 255) and its flat edge going right to (1040, 405), the arc joining those two ends. Row 2 (centre line y = 760 px): the caption 9 × 1/4 in INK at 56 px centred at x = 250 px; two whole rotis centred at x = 640 px and x = 1000 px (gap of 60 px between them); then, with a gap of 100 px, one single separate quarter piece whose right angle is at (1250, 835) px, its vertical edge going up to (1250, 685) and its flat edge going right to (1400, 835). Row 1 holds 4 + 1 = 5 quarter pieces, row 2 holds 4 + 4 + 1 = 9 quarter pieces. Nothing else is drawn.",
+    "visible_text": [
+     "5 × 1/4",
+     "9 × 1/4"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the addition statements 1/4 + 1/4 + ... (they stay in the LP text)",
+     "the letters a and b",
+     "5/4 or 9/4 or 2 + 1/4 written in the picture"
+    ],
+    "accuracy_checks": [
+     "row 1: 1 whole roti (4 quarters) + 1 extra quarter = 5 quarters",
+     "row 2: 2 whole rotis (8 quarters) + 1 extra quarter = 9 quarters",
+     "every quarter piece has radius 150 px",
+     "caption counts equal the quarter counts (5 and 9)"
+    ],
+    "alt_text": "Two rows of roti pieces: one whole roti and one extra quarter for 5 times 1/4, and two whole rotis and one extra quarter for 9 times 1/4.",
+    "render_note": "Two panels (a) and (b) in one card because a pair may carry only ONE solution diagram in this run. Row captions use the counts 5 × 1/4 and 9 × 1/4 instead of the letters a. and b."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C37",
+   "role": "question",
+   "lp_book_number": "Figure it Out 7.3, Q5",
+   "ncert_ref": "7.3.FiO.Q5",
+   "question_text": "Match each fractional unit 1/3, 1/5, 1/8, 1/6 with the correct picture. The pictures are four circles, each with one part shaded: picture 1 is cut into 8 equal parts, picture 2 into 6 equal parts, picture 3 into 3 equal parts, picture 4 into 5 equal parts.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The learner must match each fractional unit to a given picture of a shaded circle; the shaded part and the equal parts exist only in the pictures.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S9.T9.C37.IMG1",
+   "manim_scene": "c6_7_73_fio5_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S9.T9.C37.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "fraction_model",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "column_centres_x_px": [
+      240,
+      720,
+      1200,
+      1680
+     ],
+     "to_scale": true,
+     "fractions_row": {
+      "y_centre_px": 200,
+      "font_px": 64,
+      "colour": "INK",
+      "texts_left_to_right": [
+       "1/3",
+       "1/5",
+       "1/8",
+       "1/6"
+      ]
+     },
+     "circles": [
+      {
+       "picture": 1,
+       "centre_px": [
+        240,
+        520
+       ],
+       "radius_px": 150,
+       "equal_sectors": 8,
+       "radii_at_math_degrees": [
+        90,
+        45,
+        0,
+        -45,
+        -90,
+        -135,
+        180,
+        135
+       ],
+       "shaded_sector_math_degrees": [
+        90,
+        135
+       ],
+       "shaded_count": 1,
+       "shade": "MARK_FILL",
+       "outline": "INK",
+       "outline_px": 3
+      },
+      {
+       "picture": 2,
+       "centre_px": [
+        720,
+        520
+       ],
+       "radius_px": 150,
+       "equal_sectors": 6,
+       "radii_at_math_degrees": [
+        90,
+        30,
+        -30,
+        -90,
+        -150,
+        150
+       ],
+       "shaded_sector_math_degrees": [
+        90,
+        150
+       ],
+       "shaded_count": 1,
+       "shade": "MARK_FILL",
+       "outline": "INK",
+       "outline_px": 3
+      },
+      {
+       "picture": 3,
+       "centre_px": [
+        1200,
+        520
+       ],
+       "radius_px": 150,
+       "equal_sectors": 3,
+       "radii_at_math_degrees": [
+        90,
+        -30,
+        -150
+       ],
+       "shaded_sector_math_degrees": [
+        90,
+        210
+       ],
+       "shaded_count": 1,
+       "shade": "MARK_FILL",
+       "outline": "INK",
+       "outline_px": 3
+      },
+      {
+       "picture": 4,
+       "centre_px": [
+        1680,
+        520
+       ],
+       "radius_px": 150,
+       "equal_sectors": 5,
+       "radii_at_math_degrees": [
+        90,
+        18,
+        -54,
+        -126,
+        162
+       ],
+       "shaded_sector_math_degrees": [
+        90,
+        162
+       ],
+       "shaded_count": 1,
+       "shade": "MARK_FILL",
+       "outline": "INK",
+       "outline_px": 3
+      }
+     ],
+     "picture_numbers": {
+      "y_centre_px": 740,
+      "font_px": 48,
+      "colour": "INK",
+      "texts_left_to_right": [
+       "1",
+       "2",
+       "3",
+       "4"
+      ]
+     },
+     "type": "fraction_model"
+    },
+    "manim_description": "On a white 1920x1080 canvas draw 4 circles in one row, each of radius 150 px with INK outline 3 px, centres at (240, 520), (720, 520), (1200, 520) and (1680, 520). Each circle is cut into equal sectors by INK straight radii 3 px thick, and exactly 1 sector of each circle is filled MARK_FILL. Angles are measured counter-clockwise from the +x axis, 90 degrees = 12 o'clock. Circle 1: 8 equal sectors (radii at 90, 45, 0, -45, -90, -135, 180 and 135 degrees), shaded sector from 90 to 135 degrees. Circle 2: 6 equal sectors (radii at 90, 30, -30, -90, -150 and 150 degrees), shaded sector from 90 to 150 degrees. Circle 3: 3 equal sectors (radii at 90, -30 and -150 degrees), shaded sector from 90 to 210 degrees. Circle 4: 5 equal sectors (radii at 90, 18, -54, -126 and 162 degrees), shaded sector from 90 to 162 degrees. Above the circles, in one row centred at y = 200 px, print the fractions in INK at 64 px (stacked, numerator over bar over denominator) in this left-to-right order: 1/3 at x = 240, 1/5 at x = 720, 1/8 at x = 1200, 1/6 at x = 1680 (they do not match the circle below them). Under each circle, centred at y = 740 px, print the picture number in INK at 48 px: 1, 2, 3, 4 (left to right).",
+    "visible_text": [
+     "1/3",
+     "1/5",
+     "1/8",
+     "1/6",
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "lines or arrows joining fractions to circles",
+     "the matching fraction written under any circle",
+     "the number of sectors written as text"
+    ],
+    "accuracy_checks": [
+     "circle 1 has 8 equal sectors and 1 is shaded (1/8)",
+     "circle 2 has 6 equal sectors and 1 is shaded (1/6)",
+     "circle 3 has 3 equal sectors and 1 is shaded (1/3)",
+     "circle 4 has 5 equal sectors and 1 is shaded (1/5)",
+     "sector angles: 45, 60, 120 and 72 degrees",
+     "the printed fractions stay in the book order 1/3, 1/5, 1/8, 1/6"
+    ],
+    "alt_text": "Four circles cut into 8, 6, 3 and 5 equal sectors with one sector shaded in each; the fractions 1/3, 1/5, 1/8 and 1/6 are printed above them.",
+    "render_note": "Same as book picture P08-shape-1. The picture numbers 1 to 4 are added because the LP question text refers to 'picture 1' to 'picture 4'."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S9.T9.C38",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 7.3, Q5",
+   "ncert_ref": "7.3.FiO.Q5",
+   "question_text": "Match each fractional unit 1/3, 1/5, 1/8, 1/6 with the correct picture. The pictures are four circles, each with one part shaded: picture 1 is cut into 8 equal parts, picture 2 into 6 equal parts, picture 3 into 3 equal parts, picture 4 into 5 equal parts.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The printed answer is a picture (SOL39-shape-2: each fraction joined to its circle); it adds the matching, which the question figure does not show.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S9.T9.C38.IMG1",
+   "manim_scene": "c6_7_73_fio5_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S9.T9.C38.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "fraction_model",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S9.T9.C37.IMG1",
+    "content": {
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "column_centres_x_px": [
+      240,
+      720,
+      1200,
+      1680
+     ],
+     "to_scale": true,
+     "fractions_row": {
+      "y_centre_px": 200,
+      "font_px": 64,
+      "colour": "INK",
+      "texts_left_to_right": [
+       "1/3",
+       "1/5",
+       "1/8",
+       "1/6"
+      ]
+     },
+     "circles": [
+      {
+       "picture": 1,
+       "centre_px": [
+        240,
+        520
+       ],
+       "radius_px": 150,
+       "equal_sectors": 8,
+       "radii_at_math_degrees": [
+        90,
+        45,
+        0,
+        -45,
+        -90,
+        -135,
+        180,
+        135
+       ],
+       "shaded_sector_math_degrees": [
+        90,
+        135
+       ],
+       "shaded_count": 1,
+       "shade": "MARK_FILL",
+       "outline": "INK",
+       "outline_px": 3
+      },
+      {
+       "picture": 2,
+       "centre_px": [
+        720,
+        520
+       ],
+       "radius_px": 150,
+       "equal_sectors": 6,
+       "radii_at_math_degrees": [
+        90,
+        30,
+        -30,
+        -90,
+        -150,
+        150
+       ],
+       "shaded_sector_math_degrees": [
+        90,
+        150
+       ],
+       "shaded_count": 1,
+       "shade": "MARK_FILL",
+       "outline": "INK",
+       "outline_px": 3
+      },
+      {
+       "picture": 3,
+       "centre_px": [
+        1200,
+        520
+       ],
+       "radius_px": 150,
+       "equal_sectors": 3,
+       "radii_at_math_degrees": [
+        90,
+        -30,
+        -150
+       ],
+       "shaded_sector_math_degrees": [
+        90,
+        210
+       ],
+       "shaded_count": 1,
+       "shade": "MARK_FILL",
+       "outline": "INK",
+       "outline_px": 3
+      },
+      {
+       "picture": 4,
+       "centre_px": [
+        1680,
+        520
+       ],
+       "radius_px": 150,
+       "equal_sectors": 5,
+       "radii_at_math_degrees": [
+        90,
+        18,
+        -54,
+        -126,
+        162
+       ],
+       "shaded_sector_math_degrees": [
+        90,
+        162
+       ],
+       "shaded_count": 1,
+       "shade": "MARK_FILL",
+       "outline": "INK",
+       "outline_px": 3
+      }
+     ],
+     "picture_numbers": {
+      "y_centre_px": 740,
+      "font_px": 48,
+      "colour": "INK",
+      "texts_left_to_right": [
+       "1",
+       "2",
+       "3",
+       "4"
+      ]
+     },
+     "answer_row": {
+      "arrows_y_px": [
+       780,
+       850
+      ],
+      "arrow_colour": "ANSWER",
+      "fractions_y_centre_px": 930,
+      "font_px": 64,
+      "colour": "ANSWER",
+      "texts_left_to_right": [
+       "1/8",
+       "1/6",
+       "1/3",
+       "1/5"
+      ]
+     },
+     "type": "fraction_model"
+    },
+    "manim_description": "Draw exactly the question figure (same 4 circles, same centres, same sectors, same shading, same fractions row at y = 200 px and same picture numbers at y = 740 px, all in INK) and add the answer in ANSWER green: under each picture number draw a short downward arrow in ANSWER (from y = 780 to 850 px, at the column x) and, centred at y = 930 px, the matching fraction in ANSWER at 64 px (stacked fraction): 1/8 under picture 1 (x = 240), 1/6 under picture 2 (x = 720), 1/3 under picture 3 (x = 1200), 1/5 under picture 4 (x = 1680).",
+    "visible_text": [
+     "1/3",
+     "1/5",
+     "1/8",
+     "1/6",
+     "1",
+     "2",
+     "3",
+     "4",
+     "1/8",
+     "1/6",
+     "1/3",
+     "1/5"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "lines crossing the picture",
+     "the words matches / picture"
+    ],
+    "accuracy_checks": [
+     "answer row reads 1/8, 1/6, 1/3, 1/5 for pictures 1, 2, 3, 4",
+     "each answer equals 1 over the number of equal sectors of its circle (8, 6, 3, 5)",
+     "given content identical in position to the question diagram"
+    ],
+    "alt_text": "The four shaded circles again, each with its matching fraction written below: 1/8, 1/6, 1/3 and 1/5.",
+    "render_note": "derived from the question diagram; the printed book answer (SOL39-shape-2) is four fraction-arrow-circle rows, redrawn here in the question layout so the figure stays consistent."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C39",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "7.4.ex1",
+   "question_text": "On a number line from 0 to 2, the distance from 0 to 1 is divided into two equal parts. A blue line goes from 0 to the first mark. What is the length of the blue line?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The example asks for the length of the blue line shown on a number line; the line, its ticks and the blue bar are the data, and the book gives them as a picture.",
+   "block_index": 0,
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S10.T10.C39.IMG2",
+   "manim_scene": "c6_7_74_ex1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S10.T10.C39.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "line": {
+      "from_value": "0",
+      "to_value": "2",
+      "x_start_px": 150,
+      "x_end_px": 1770,
+      "px_per_unit": 810,
+      "y_px": 600,
+      "colour": "INK",
+      "stroke_px": 4,
+      "tick_length_px": 32,
+      "ticks_hang": "below"
+     },
+     "ticks": [
+      {
+       "index": 1,
+       "value": "0",
+       "x_px": 150,
+       "label": "0"
+      },
+      {
+       "index": 2,
+       "value": "1/2",
+       "x_px": 555,
+       "label": null
+      },
+      {
+       "index": 3,
+       "value": "1",
+       "x_px": 960,
+       "label": "1"
+      },
+      {
+       "index": 4,
+       "value": "3/2",
+       "x_px": 1365,
+       "label": null
+      },
+      {
+       "index": 5,
+       "value": "2",
+       "x_px": 1770,
+       "label": "2"
+      }
+     ],
+     "bars": [
+      {
+       "from": "0",
+       "to": "1/2",
+       "colour": "SET_A",
+       "x_start_px": 150,
+       "x_end_px": 555,
+       "thickness_px": 28,
+       "y_centre_px": 566
+      }
+     ],
+     "boxes": [
+      {
+       "under_tick_value": "1/2",
+       "x_centre_px": 555,
+       "size_px": 110,
+       "top_y_px": 636,
+       "outline": "INK",
+       "fill": "none",
+       "content": null,
+       "content_colour": null
+      }
+     ],
+     "label_font_px": 44,
+     "label_centre_y_px": 692
+    },
+    "manim_description": "On a white 1920x1080 canvas draw a horizontal number line in INK, 4 px thick, from value 0 (x = 150 px) to value 2 (x = 1770 px) at y = 600 px, to scale at 810 px per unit (x = 150 + 810 x value). Draw 5 vertical INK tick marks, each 32 px long and hanging below the line, at the values 0, 1/2, 1, 3/2, 2 (x = 150, 555, 960, 1365, 1770 px). Print 3 tick labels in INK at 44 px (fractions stacked, numerator over bar over denominator) centred under their ticks at y = 692 px: 0 under the tick at 0; 1 under the tick at 1; 2 under the tick at 2. The ticks at 1/2, 3/2 carry no label. Draw a thick SET_A bar (28 px high, square ends) above the line, centred at y = 566 px, from x = 150 px (value 0) to x = 555 px (value 1/2, ending exactly over its tick). Draw a square box 110 px wide, INK outline 3 px, centred under the tick at value 1/2 (x = 555 px, top edge at y = 636 px); the box is empty (nothing inside, no fill).",
+    "visible_text": [
+     "0",
+     "1",
+     "2"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the label 1/2 or 1/2 unit anywhere",
+     "any text inside the box",
+     "brackets or arcs"
+    ],
+    "accuracy_checks": [
+     "5 ticks at 0, 1/2, 1, 3/2, 2 with equal spacing of 405 px",
+     "the blue bar ends exactly at the tick for 1/2 (x = 555 px)",
+     "labels only at 0, 1 and 2",
+     "the box under 1/2 stays empty (the question asks for the length)"
+    ],
+    "alt_text": "A number line from 0 to 2 with ticks every half unit; a blue line runs from 0 to the first mark and an empty box sits under that mark.",
+    "render_note": "Same as book picture P09-number_line-1. The concept's teaching image (A line of one half) stays untouched and is not linked."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C42",
+   "role": "question",
+   "lp_book_number": "Number Line: blue line in thirds",
+   "ncert_ref": "7.4.q1",
+   "question_text": "On a number line from 0 to 2, each unit is divided into three equal parts (the first mark is 1/3). A blue line goes from 0 to the second mark. Write the fraction that gives the length of the blue line.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The learner reads the length of a blue line on a given number line and writes the fraction in the box; the line and its end are only in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C42.IMG1",
+   "manim_scene": "c6_7_74_q1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C42.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "line": {
+      "from_value": "0",
+      "to_value": "2",
+      "x_start_px": 150,
+      "x_end_px": 1770,
+      "px_per_unit": 810,
+      "y_px": 600,
+      "colour": "INK",
+      "stroke_px": 4,
+      "tick_length_px": 32,
+      "ticks_hang": "below"
+     },
+     "ticks": [
+      {
+       "index": 1,
+       "value": "0",
+       "x_px": 150,
+       "label": "0"
+      },
+      {
+       "index": 2,
+       "value": "1/3",
+       "x_px": 420,
+       "label": "1/3"
+      },
+      {
+       "index": 3,
+       "value": "2/3",
+       "x_px": 690,
+       "label": null
+      },
+      {
+       "index": 4,
+       "value": "1",
+       "x_px": 960,
+       "label": "1"
+      },
+      {
+       "index": 5,
+       "value": "4/3",
+       "x_px": 1230,
+       "label": null
+      },
+      {
+       "index": 6,
+       "value": "5/3",
+       "x_px": 1500,
+       "label": null
+      },
+      {
+       "index": 7,
+       "value": "2",
+       "x_px": 1770,
+       "label": "2"
+      }
+     ],
+     "bars": [
+      {
+       "from": "0",
+       "to": "2/3",
+       "colour": "SET_A",
+       "x_start_px": 150,
+       "x_end_px": 690,
+       "thickness_px": 28,
+       "y_centre_px": 566
+      }
+     ],
+     "boxes": [
+      {
+       "under_tick_value": "2/3",
+       "x_centre_px": 690,
+       "size_px": 110,
+       "top_y_px": 636,
+       "outline": "INK",
+       "fill": "none",
+       "content": null,
+       "content_colour": null
+      }
+     ],
+     "label_font_px": 44,
+     "label_centre_y_px": 692
+    },
+    "manim_description": "On a white 1920x1080 canvas draw a horizontal number line in INK, 4 px thick, from value 0 (x = 150 px) to value 2 (x = 1770 px) at y = 600 px, to scale at 810 px per unit (x = 150 + 810 x value). Draw 7 vertical INK tick marks, each 32 px long and hanging below the line, at the values 0, 1/3, 2/3, 1, 4/3, 5/3, 2 (x = 150, 420, 690, 960, 1230, 1500, 1770 px). Print 4 tick labels in INK at 44 px (fractions stacked, numerator over bar over denominator) centred under their ticks at y = 692 px: 0 under the tick at 0; 1/3 under the tick at 1/3; 1 under the tick at 1; 2 under the tick at 2. The ticks at 2/3, 4/3, 5/3 carry no label. Draw a thick SET_A bar (28 px high, square ends) above the line, centred at y = 566 px, from x = 150 px (value 0) to x = 690 px (value 2/3, ending exactly over its tick). Draw a square box 110 px wide, INK outline 3 px, centred under the tick at value 2/3 (x = 690 px, top edge at y = 636 px); the box is empty (nothing inside, no fill).",
+    "visible_text": [
+     "0",
+     "1/3",
+     "1",
+     "2"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the label 2/3 anywhere",
+     "any text inside the box"
+    ],
+    "accuracy_checks": [
+     "7 ticks at 0, 1/3, 2/3, 1, 4/3, 5/3, 2 with equal spacing of 270 px",
+     "the blue bar covers 2 parts of 1/3 and ends at x = 690 px",
+     "only 0, 1/3, 1 and 2 are labelled",
+     "the box under the 2/3 tick stays empty"
+    ],
+    "alt_text": "A number line from 0 to 2 divided into thirds; 1/3 is labelled and a blue line from 0 to the second mark has an empty box under its end.",
+    "render_note": "Same as book picture P09-number_line-2 but the book prints no tick at 5/3 (it stops after 4/3); here every third is ticked because the question says each unit is divided into three equal parts."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C43",
+   "role": "solution",
+   "lp_book_number": "Number Line: blue line in thirds",
+   "ncert_ref": "7.4.q1",
+   "question_text": "On a number line from 0 to 2, each unit is divided into three equal parts (the first mark is 1/3). A blue line goes from 0 to the second mark. Write the fraction that gives the length of the blue line.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The learner writes the fraction in the figure's box; the solution figure shows the completed box (2/3) on the same line.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C43.IMG1",
+   "manim_scene": "c6_7_74_q1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C43.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S11.T11.C42.IMG1",
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "line": {
+      "from_value": "0",
+      "to_value": "2",
+      "x_start_px": 150,
+      "x_end_px": 1770,
+      "px_per_unit": 810,
+      "y_px": 600,
+      "colour": "INK",
+      "stroke_px": 4,
+      "tick_length_px": 32,
+      "ticks_hang": "below"
+     },
+     "ticks": [
+      {
+       "index": 1,
+       "value": "0",
+       "x_px": 150,
+       "label": "0"
+      },
+      {
+       "index": 2,
+       "value": "1/3",
+       "x_px": 420,
+       "label": "1/3"
+      },
+      {
+       "index": 3,
+       "value": "2/3",
+       "x_px": 690,
+       "label": null
+      },
+      {
+       "index": 4,
+       "value": "1",
+       "x_px": 960,
+       "label": "1"
+      },
+      {
+       "index": 5,
+       "value": "4/3",
+       "x_px": 1230,
+       "label": null
+      },
+      {
+       "index": 6,
+       "value": "5/3",
+       "x_px": 1500,
+       "label": null
+      },
+      {
+       "index": 7,
+       "value": "2",
+       "x_px": 1770,
+       "label": "2"
+      }
+     ],
+     "bars": [
+      {
+       "from": "0",
+       "to": "2/3",
+       "colour": "SET_A",
+       "x_start_px": 150,
+       "x_end_px": 690,
+       "thickness_px": 28,
+       "y_centre_px": 566
+      }
+     ],
+     "boxes": [
+      {
+       "under_tick_value": "2/3",
+       "x_centre_px": 690,
+       "size_px": 110,
+       "top_y_px": 636,
+       "outline": "INK",
+       "fill": "none",
+       "content": "2/3",
+       "content_colour": "ANSWER"
+      }
+     ],
+     "label_font_px": 44,
+     "label_centre_y_px": 692
+    },
+    "manim_description": "Draw exactly the question figure (same line, ticks, labels, blue bar and box positions, all in INK/SET_A as before) and fill the box under the tick at value 2/3 (x = 690 px) with the text 2/3 in ANSWER at 40 px (stacked fraction). Nothing else changes.",
+    "visible_text": [
+     "0",
+     "1/3",
+     "1",
+     "2",
+     "2/3"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a second label for the bar",
+     "braces"
+    ],
+    "accuracy_checks": [
+     "the box under the 2/3 tick reads 2/3 = 2 x 1/3",
+     "every other element is at the same position as in the question figure"
+    ],
+    "alt_text": "The same number line with the box under the end of the blue line filled with 2/3."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C44",
+   "role": "question",
+   "lp_book_number": "Number Line: blue lines in fifths",
+   "ncert_ref": "7.4.q2",
+   "question_text": "On a number line from 0 to 2, each unit is divided into 5 equal parts (marks 1/5 and 3/5 are labelled). Two blue lines start at 0: one ends at the 2nd mark and one ends at the 4th mark. Write the fractions that give the lengths of the blue lines.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The learner reads the lengths of two blue lines on a given number line in fifths and writes each fraction in its box; the lines are only in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C44.IMG1",
+   "manim_scene": "c6_7_74_q2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C44.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "line": {
+      "from_value": "0",
+      "to_value": "2",
+      "x_start_px": 150,
+      "x_end_px": 1770,
+      "px_per_unit": 810,
+      "y_px": 600,
+      "colour": "INK",
+      "stroke_px": 4,
+      "tick_length_px": 32,
+      "ticks_hang": "below"
+     },
+     "ticks": [
+      {
+       "index": 1,
+       "value": "0",
+       "x_px": 150,
+       "label": "0"
+      },
+      {
+       "index": 2,
+       "value": "1/5",
+       "x_px": 312,
+       "label": "1/5"
+      },
+      {
+       "index": 3,
+       "value": "2/5",
+       "x_px": 474,
+       "label": null
+      },
+      {
+       "index": 4,
+       "value": "3/5",
+       "x_px": 636,
+       "label": "3/5"
+      },
+      {
+       "index": 5,
+       "value": "4/5",
+       "x_px": 798,
+       "label": null
+      },
+      {
+       "index": 6,
+       "value": "1",
+       "x_px": 960,
+       "label": "1"
+      },
+      {
+       "index": 7,
+       "value": "6/5",
+       "x_px": 1122,
+       "label": null
+      },
+      {
+       "index": 8,
+       "value": "7/5",
+       "x_px": 1284,
+       "label": null
+      },
+      {
+       "index": 9,
+       "value": "8/5",
+       "x_px": 1446,
+       "label": null
+      },
+      {
+       "index": 10,
+       "value": "9/5",
+       "x_px": 1608,
+       "label": null
+      },
+      {
+       "index": 11,
+       "value": "2",
+       "x_px": 1770,
+       "label": "2"
+      }
+     ],
+     "bars": [
+      {
+       "from": "0",
+       "to": "2/5",
+       "colour": "SET_A",
+       "x_start_px": 150,
+       "x_end_px": 474,
+       "thickness_px": 28,
+       "y_centre_px": 566
+      },
+      {
+       "from": "0",
+       "to": "4/5",
+       "colour": "SET_A",
+       "x_start_px": 150,
+       "x_end_px": 798,
+       "thickness_px": 28,
+       "y_centre_px": 528
+      }
+     ],
+     "boxes": [
+      {
+       "under_tick_value": "2/5",
+       "x_centre_px": 474,
+       "size_px": 110,
+       "top_y_px": 636,
+       "outline": "INK",
+       "fill": "none",
+       "content": null,
+       "content_colour": null
+      },
+      {
+       "under_tick_value": "4/5",
+       "x_centre_px": 798,
+       "size_px": 110,
+       "top_y_px": 636,
+       "outline": "INK",
+       "fill": "none",
+       "content": null,
+       "content_colour": null
+      }
+     ],
+     "label_font_px": 44,
+     "label_centre_y_px": 692
+    },
+    "manim_description": "On a white 1920x1080 canvas draw a horizontal number line in INK, 4 px thick, from value 0 (x = 150 px) to value 2 (x = 1770 px) at y = 600 px, to scale at 810 px per unit (x = 150 + 810 x value). Draw 11 vertical INK tick marks, each 32 px long and hanging below the line, at the values 0, 1/5, 2/5, 3/5, 4/5, 1, 6/5, 7/5, 8/5, 9/5, 2 (x = 150, 312, 474, 636, 798, 960, 1122, 1284, 1446, 1608, 1770 px). Print 5 tick labels in INK at 44 px (fractions stacked, numerator over bar over denominator) centred under their ticks at y = 692 px: 0 under the tick at 0; 1/5 under the tick at 1/5; 3/5 under the tick at 3/5; 1 under the tick at 1; 2 under the tick at 2. The ticks at 2/5, 4/5, 6/5, 7/5, 8/5, 9/5 carry no label. Draw a thick SET_A bar (28 px high, square ends) above the line, centred at y = 566 px, from x = 150 px (value 0) to x = 474 px (value 2/5, ending exactly over its tick). Draw a thick SET_A bar (28 px high, square ends) above the line, centred at y = 528 px, from x = 150 px (value 0) to x = 798 px (value 4/5, ending exactly over its tick). Draw a square box 110 px wide, INK outline 3 px, centred under the tick at value 2/5 (x = 474 px, top edge at y = 636 px); the box is empty (nothing inside, no fill). Draw a square box 110 px wide, INK outline 3 px, centred under the tick at value 4/5 (x = 798 px, top edge at y = 636 px); the box is empty (nothing inside, no fill).",
+    "visible_text": [
+     "0",
+     "1/5",
+     "3/5",
+     "1",
+     "2"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the labels 2/5 and 4/5 anywhere",
+     "any text inside the boxes"
+    ],
+    "accuracy_checks": [
+     "11 ticks at 0, 1/5, ..., 9/5, 2 with equal spacing of 162 px",
+     "lower blue bar ends at the 2nd tick (x = 474 px), upper blue bar ends at the 4th tick (x = 798 px)",
+     "only 0, 1/5, 3/5, 1 and 2 are labelled",
+     "the two boxes under 2/5 and 4/5 stay empty"
+    ],
+    "alt_text": "A number line from 0 to 2 divided into fifths with 1/5 and 3/5 labelled; two blue lines from 0 end at the 2nd and 4th marks, each with an empty box under its end.",
+    "render_note": "Same as book picture P09-number_line-3 (the longer bar is on top, as printed)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C45",
+   "role": "solution",
+   "lp_book_number": "Number Line: blue lines in fifths",
+   "ncert_ref": "7.4.q2",
+   "question_text": "On a number line from 0 to 2, each unit is divided into 5 equal parts (marks 1/5 and 3/5 are labelled). Two blue lines start at 0: one ends at the 2nd mark and one ends at the 4th mark. Write the fractions that give the lengths of the blue lines.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The learner writes fractions in the figure's boxes; the solution figure shows both boxes completed on the same line.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C45.IMG1",
+   "manim_scene": "c6_7_74_q2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C45.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S11.T11.C44.IMG1",
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "line": {
+      "from_value": "0",
+      "to_value": "2",
+      "x_start_px": 150,
+      "x_end_px": 1770,
+      "px_per_unit": 810,
+      "y_px": 600,
+      "colour": "INK",
+      "stroke_px": 4,
+      "tick_length_px": 32,
+      "ticks_hang": "below"
+     },
+     "ticks": [
+      {
+       "index": 1,
+       "value": "0",
+       "x_px": 150,
+       "label": "0"
+      },
+      {
+       "index": 2,
+       "value": "1/5",
+       "x_px": 312,
+       "label": "1/5"
+      },
+      {
+       "index": 3,
+       "value": "2/5",
+       "x_px": 474,
+       "label": null
+      },
+      {
+       "index": 4,
+       "value": "3/5",
+       "x_px": 636,
+       "label": "3/5"
+      },
+      {
+       "index": 5,
+       "value": "4/5",
+       "x_px": 798,
+       "label": null
+      },
+      {
+       "index": 6,
+       "value": "1",
+       "x_px": 960,
+       "label": "1"
+      },
+      {
+       "index": 7,
+       "value": "6/5",
+       "x_px": 1122,
+       "label": null
+      },
+      {
+       "index": 8,
+       "value": "7/5",
+       "x_px": 1284,
+       "label": null
+      },
+      {
+       "index": 9,
+       "value": "8/5",
+       "x_px": 1446,
+       "label": null
+      },
+      {
+       "index": 10,
+       "value": "9/5",
+       "x_px": 1608,
+       "label": null
+      },
+      {
+       "index": 11,
+       "value": "2",
+       "x_px": 1770,
+       "label": "2"
+      }
+     ],
+     "bars": [
+      {
+       "from": "0",
+       "to": "2/5",
+       "colour": "SET_A",
+       "x_start_px": 150,
+       "x_end_px": 474,
+       "thickness_px": 28,
+       "y_centre_px": 566
+      },
+      {
+       "from": "0",
+       "to": "4/5",
+       "colour": "SET_A",
+       "x_start_px": 150,
+       "x_end_px": 798,
+       "thickness_px": 28,
+       "y_centre_px": 528
+      }
+     ],
+     "boxes": [
+      {
+       "under_tick_value": "2/5",
+       "x_centre_px": 474,
+       "size_px": 110,
+       "top_y_px": 636,
+       "outline": "INK",
+       "fill": "none",
+       "content": "2/5",
+       "content_colour": "ANSWER"
+      },
+      {
+       "under_tick_value": "4/5",
+       "x_centre_px": 798,
+       "size_px": 110,
+       "top_y_px": 636,
+       "outline": "INK",
+       "fill": "none",
+       "content": "4/5",
+       "content_colour": "ANSWER"
+      }
+     ],
+     "label_font_px": 44,
+     "label_centre_y_px": 692
+    },
+    "manim_description": "Draw exactly the question figure (same line, ticks, labels, two blue bars and two box positions) and fill the box under the tick at value 2/5 (x = 474 px) with 2/5 and the box under the tick at value 4/5 (x = 798 px) with 4/5, both in ANSWER at 40 px (stacked fractions). Nothing else changes.",
+    "visible_text": [
+     "0",
+     "1/5",
+     "3/5",
+     "1",
+     "2",
+     "2/5",
+     "4/5"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "braces",
+     "extra labels"
+    ],
+    "accuracy_checks": [
+     "box under 2/5 reads 2/5 (2 x 1/5)",
+     "box under 4/5 reads 4/5 (4 x 1/5)",
+     "every other element is at the same position as in the question figure"
+    ],
+    "alt_text": "The same number line in fifths with the boxes filled: 2/5 under the shorter blue line and 4/5 under the longer one."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C46",
+   "role": "question",
+   "lp_book_number": "Number Line: marks in eighths",
+   "ncert_ref": "7.4.q3",
+   "question_text": "Now, a unit on the number line is divided into 8 equal parts. Write the fractions for the marks from 0 to 1.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book gives no figure for this item (only the words 'a unit is divided into 8 equal parts'), so no question diagram is invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Plain question text."
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C47",
+   "role": "solution",
+   "lp_book_number": "Number Line: marks in eighths",
+   "ncert_ref": "7.4.q3",
+   "question_text": "Now, a unit on the number line is divided into 8 equal parts. Write the fractions for the marks from 0 to 1.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The answer is the set of fractions at the 8 equal marks of a unit; the labelled number line shows which mark carries which fraction. No question figure is given in the book, so none is drawn and this figure stands alone. Printed book answer is text only (1/8, 2/8, 3/8, ...).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C47.IMG1",
+   "manim_scene": "c6_7_74_q3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C47.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "line": {
+      "from_value": "0",
+      "to_value": "1",
+      "x_start_px": 210,
+      "x_end_px": 1710,
+      "px_per_unit": 1500,
+      "y_px": 540,
+      "colour": "INK",
+      "stroke_px": 4,
+      "tick_length_px": 36,
+      "ticks_hang": "below"
+     },
+     "ticks": [
+      {
+       "index": 1,
+       "value": "0",
+       "x_px": 210,
+       "label": "0",
+       "label_colour": "INK"
+      },
+      {
+       "index": 2,
+       "value": "1/8",
+       "x_px": 397.5,
+       "label": "1/8",
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 3,
+       "value": "1/4",
+       "x_px": 585,
+       "label": "2/8",
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 4,
+       "value": "3/8",
+       "x_px": 772.5,
+       "label": "3/8",
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 5,
+       "value": "1/2",
+       "x_px": 960,
+       "label": "4/8",
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 6,
+       "value": "5/8",
+       "x_px": 1147.5,
+       "label": "5/8",
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 7,
+       "value": "3/4",
+       "x_px": 1335,
+       "label": "6/8",
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 8,
+       "value": "7/8",
+       "x_px": 1522.5,
+       "label": "7/8",
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 9,
+       "value": "1",
+       "x_px": 1710,
+       "label": "8/8 = 1",
+       "label_colour": "ANSWER"
+      }
+     ],
+     "label_font_px": 44,
+     "label_centre_y_px": 640,
+     "bars": [],
+     "boxes": []
+    },
+    "manim_description": "On a white 1920x1080 canvas draw a horizontal number line in INK, 4 px thick, from value 0 (x = 210 px) to value 1 (x = 1710 px) at y = 540 px, to scale at 1500 px per unit. Draw 9 vertical INK tick marks, each 36 px long and hanging below the line, at the values 0, 1/8, 2/8, 3/8, 4/8, 5/8, 6/8, 7/8 and 8/8 (x = 210, 397.5, 585, 772.5, 960, 1147.5, 1335, 1522.5, 1710 px; 187.5 px per eighth). Centred under each tick at y = 640 px print its label at 44 px (fractions stacked): 0 in INK under the first tick; 1/8, 2/8, 3/8, 4/8, 5/8, 6/8 and 7/8 in ANSWER under ticks 2 to 8; and the text 8/8 = 1 in ANSWER under the last tick. Nothing else is drawn.",
+    "visible_text": [
+     "0",
+     "1/8",
+     "2/8",
+     "3/8",
+     "4/8",
+     "5/8",
+     "6/8",
+     "7/8",
+     "8/8 = 1"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "bars or braces",
+     "the words 'each part'"
+    ],
+    "accuracy_checks": [
+     "9 ticks give 8 equal parts of 187.5 px",
+     "mark k carries k/8 for k = 1 to 8, and the last mark 8/8 equals 1",
+     "labels follow the LP answer 1/8 ... 7/8, 8/8 = 1"
+    ],
+    "alt_text": "A number line from 0 to 1 divided into eight equal parts with the marks labelled 1/8, 2/8, up to 8/8 = 1.",
+    "render_note": "Judgement call: the printed answer is plain text; drawn because the answer is the labelling of equal marks on the number line (B2) and the section is about marking fractions on a number line."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C48",
+   "role": "question",
+   "lp_book_number": "Figure it Out 7.4, Q1",
+   "ncert_ref": "7.4.FiO.Q1",
+   "question_text": "On a number line, draw lines of lengths 1/10, 3/10, and 4/5.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The learner draws the lines; the question gives no figure, so no question diagram is invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Plain question text."
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C49",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 7.4, Q1",
+   "ncert_ref": "7.4.FiO.Q1",
+   "question_text": "On a number line, draw lines of lengths 1/10, 3/10, and 4/5.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "MEASUREMENT_READING"
+   ],
+   "reason": "The printed answer is a picture (SOL40-number_line-1: a number line with 1/10, 3/10 and 4/5 marked); the answer is the drawn lines on a number line, and no question figure is given.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S12.T12.C49.IMG1",
+   "manim_scene": "c6_7_74_fio1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S12.T12.C49.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "line": {
+      "from_value": "0",
+      "to_value": "1",
+      "x_start_px": 210,
+      "x_end_px": 1710,
+      "px_per_unit": 1500,
+      "y_px": 640,
+      "colour": "INK",
+      "stroke_px": 4,
+      "tick_length_px": 36,
+      "ticks_hang": "below"
+     },
+     "ticks": [
+      {
+       "index": 1,
+       "value": "0",
+       "x_px": 210,
+       "label": "0",
+       "label_colour": "INK"
+      },
+      {
+       "index": 2,
+       "value": "1/10",
+       "x_px": 360,
+       "label": "1/10",
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 3,
+       "value": "1/5",
+       "x_px": 510,
+       "label": null,
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 4,
+       "value": "3/10",
+       "x_px": 660,
+       "label": "3/10",
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 5,
+       "value": "2/5",
+       "x_px": 810,
+       "label": null,
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 6,
+       "value": "1/2",
+       "x_px": 960,
+       "label": null,
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 7,
+       "value": "3/5",
+       "x_px": 1110,
+       "label": null,
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 8,
+       "value": "7/10",
+       "x_px": 1260,
+       "label": null,
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 9,
+       "value": "4/5",
+       "x_px": 1410,
+       "label": "4/5",
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 10,
+       "value": "9/10",
+       "x_px": 1560,
+       "label": null,
+       "label_colour": "ANSWER"
+      },
+      {
+       "index": 11,
+       "value": "1",
+       "x_px": 1710,
+       "label": "1",
+       "label_colour": "INK"
+      }
+     ],
+     "label_font_px": 44,
+     "label_centre_y_px": 740,
+     "bars": [
+      {
+       "from": "0",
+       "to": "1/10",
+       "colour": "ANSWER",
+       "x_start_px": 210,
+       "x_end_px": 360,
+       "thickness_px": 28,
+       "y_centre_px": 606
+      },
+      {
+       "from": "0",
+       "to": "3/10",
+       "colour": "ANSWER",
+       "x_start_px": 210,
+       "x_end_px": 660,
+       "thickness_px": 28,
+       "y_centre_px": 568
+      },
+      {
+       "from": "0",
+       "to": "4/5",
+       "colour": "ANSWER",
+       "x_start_px": 210,
+       "x_end_px": 1410,
+       "thickness_px": 28,
+       "y_centre_px": 530
+      }
+     ],
+     "boxes": []
+    },
+    "manim_description": "On a white 1920x1080 canvas draw a horizontal number line in INK, 4 px thick, from value 0 (x = 210 px) to value 1 (x = 1710 px) at y = 640 px, to scale at 1500 px per unit. Draw 11 vertical INK tick marks, each 36 px long and hanging below the line, at the values 0, 1/10, 2/10, ..., 9/10 and 1 (x = 210 + 150 x k px for k = 0 to 10, so 210, 360, 510, 660, 810, 960, 1110, 1260, 1410, 1560, 1710). Print the labels at 44 px centred at y = 740 px: 0 in INK under tick k = 0; 1/10 in ANSWER under tick k = 1; 3/10 in ANSWER under tick k = 3; 4/5 in ANSWER under tick k = 8 (x = 1410, the same point as 8/10); 1 in INK under tick k = 10 (fractions stacked). The other 6 ticks carry no label. Above the line draw 3 thick ANSWER bars (28 px high, square ends), stacked with the shortest nearest the line, all starting at x = 210 (value 0): the bar at y = 606 ends at x = 360 (value 1/10), the bar at y = 568 ends at x = 660 (value 3/10), the bar at y = 530 ends at x = 1410 (value 4/5). Each bar ends exactly over its tick.",
+    "visible_text": [
+     "0",
+     "1/10",
+     "3/10",
+     "4/5",
+     "1"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words tenths / fifths",
+     "the label 8/10"
+    ],
+    "accuracy_checks": [
+     "11 ticks give 10 equal parts of 150 px",
+     "bar ends: 1 part (1/10), 3 parts (3/10), 8 parts (8/10 = 4/5)",
+     "4/5 = 8/10, so its bar ends at the 8th tick (x = 1410 px)",
+     "labels exactly at ticks k = 0, 1, 3, 8, 10"
+    ],
+    "alt_text": "A number line from 0 to 1 in tenths with three green lines from 0 ending at 1/10, 3/10 and 4/5.",
+    "render_note": "The book's printed answer shows only the labelled ticks (0, 1/10, 3/10, 4/5, 1); the three lengths are drawn as bars from 0 because the question asks to draw lines and the LP answer says each line goes from 0 to its mark."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C50",
+   "role": "question",
+   "lp_book_number": "Figure it Out 7.4, Q2",
+   "ncert_ref": "7.4.FiO.Q2",
+   "question_text": "Write five more fractions of your choice and mark them on the number line.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "Open question ('of your choice'); no figure is given, so no question diagram.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Plain question text."
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C51",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 7.4, Q2",
+   "ncert_ref": "7.4.FiO.Q2",
+   "question_text": "Write five more fractions of your choice and mark them on the number line.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "OPEN_ENDED"
+   ],
+   "reason": "The answer is open, and its form is marks on a number line; v3 section 5 rule 4: draw the sample answer given in the LP solution (1/4, 3/4, 2/3, 5/6, 7/8, each by dividing 0 to 1 into 4, 4, 3, 6 and 8 parts), nothing else. The book prints no answer for this question.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S12.T12.C51.IMG1",
+   "manim_scene": "c6_7_74_fio2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S12.T12.C51.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "x_start_px": 360,
+     "x_end_px": 1560,
+     "px_per_unit": 1200,
+     "tick_length_px": 28,
+     "label_font_px": 44,
+     "end_labels_colour": "INK",
+     "marks_colour": "ANSWER",
+     "mark_dot_radius_px": 14,
+     "rows": [
+      {
+       "y_px": 230,
+       "parts": 4,
+       "tick_values": [
+        "0",
+        "1/4",
+        "1/2",
+        "3/4",
+        "1"
+       ],
+       "tick_x_px": [
+        360,
+        660,
+        960,
+        1260,
+        1560
+       ],
+       "marked_ticks": [
+        {
+         "k": 1,
+         "value": "1/4",
+         "x_px": 660,
+         "label": "1/4"
+        },
+        {
+         "k": 3,
+         "value": "3/4",
+         "x_px": 1260,
+         "label": "3/4"
+        }
+       ],
+       "end_labels": [
+        {
+         "k": 0,
+         "label": "0"
+        },
+        {
+         "k": 4,
+         "label": "1"
+        }
+       ],
+       "label_centre_y_px": 310
+      },
+      {
+       "y_px": 430,
+       "parts": 3,
+       "tick_values": [
+        "0",
+        "1/3",
+        "2/3",
+        "1"
+       ],
+       "tick_x_px": [
+        360,
+        760,
+        1160,
+        1560
+       ],
+       "marked_ticks": [
+        {
+         "k": 2,
+         "value": "2/3",
+         "x_px": 1160,
+         "label": "2/3"
+        }
+       ],
+       "end_labels": [
+        {
+         "k": 0,
+         "label": "0"
+        },
+        {
+         "k": 3,
+         "label": "1"
+        }
+       ],
+       "label_centre_y_px": 510
+      },
+      {
+       "y_px": 630,
+       "parts": 6,
+       "tick_values": [
+        "0",
+        "1/6",
+        "1/3",
+        "1/2",
+        "2/3",
+        "5/6",
+        "1"
+       ],
+       "tick_x_px": [
+        360,
+        560,
+        760,
+        960,
+        1160,
+        1360,
+        1560
+       ],
+       "marked_ticks": [
+        {
+         "k": 5,
+         "value": "5/6",
+         "x_px": 1360,
+         "label": "5/6"
+        }
+       ],
+       "end_labels": [
+        {
+         "k": 0,
+         "label": "0"
+        },
+        {
+         "k": 6,
+         "label": "1"
+        }
+       ],
+       "label_centre_y_px": 710
+      },
+      {
+       "y_px": 830,
+       "parts": 8,
+       "tick_values": [
+        "0",
+        "1/8",
+        "1/4",
+        "3/8",
+        "1/2",
+        "5/8",
+        "3/4",
+        "7/8",
+        "1"
+       ],
+       "tick_x_px": [
+        360,
+        510,
+        660,
+        810,
+        960,
+        1110,
+        1260,
+        1410,
+        1560
+       ],
+       "marked_ticks": [
+        {
+         "k": 7,
+         "value": "7/8",
+         "x_px": 1410,
+         "label": "7/8"
+        }
+       ],
+       "end_labels": [
+        {
+         "k": 0,
+         "label": "0"
+        },
+        {
+         "k": 8,
+         "label": "1"
+        }
+       ],
+       "label_centre_y_px": 910
+      }
+     ]
+    },
+    "manim_description": "On a white 1920x1080 canvas draw 4 horizontal number lines, one under another, each in INK 4 px thick from value 0 (x = 360 px) to value 1 (x = 1560 px) at 1200 px per unit, at y = 230, 430, 630 and 830 px. Each line carries INK vertical ticks 28 px long hanging below the line at equal spacing: row 1 (y = 230) has 4 equal parts, ticks at x = 360, 660, 960, 1260, 1560; row 2 (y = 430) has 3 equal parts, ticks at x = 360, 760, 1160, 1560; row 3 (y = 630) has 6 equal parts, ticks at x = 360, 560, 760, 960, 1160, 1360, 1560; row 4 (y = 830) has 8 equal parts, ticks at x = 360, 510, 660, 810, 960, 1110, 1260, 1410, 1560. Under the first and last tick of every row print 0 and 1 in INK at 44 px (centred 80 px below the line). Mark the sample fractions with a filled ANSWER dot of radius 14 px on the line and the fraction label in ANSWER at 44 px (stacked fraction) centred 80 px below the line under that tick: row 1: 1/4 at x = 660 and 3/4 at x = 1260; row 2: 2/3 at x = 1160; row 3: 5/6 at x = 1360; row 4: 7/8 at x = 1410. No other tick is labelled.",
+    "visible_text": [
+     "0",
+     "1",
+     "0",
+     "1",
+     "0",
+     "1",
+     "0",
+     "1",
+     "1/4",
+     "3/4",
+     "2/3",
+     "5/6",
+     "7/8"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words 'answers vary' or 'example'",
+     "other fractions"
+    ],
+    "accuracy_checks": [
+     "row parts 4, 3, 6, 8 give tick spacings 300, 400, 200, 150 px",
+     "marks sit at k/n: 1/4 (k=1 of 4), 3/4 (k=3 of 4), 2/3 (k=2 of 3), 5/6 (k=5 of 6), 7/8 (k=7 of 8)",
+     "marked x positions: 660, 1260, 1160, 1360, 1410 px",
+     "five marked fractions in total, as the LP sample"
+    ],
+    "alt_text": "Four number lines from 0 to 1 divided into quarters, thirds, sixths and eighths, with 1/4 and 3/4, 2/3, 5/6 and 7/8 marked by green dots.",
+    "render_note": "Judgement call: open answer, drawn as the LP's sample (one row per denominator) rather than five marks on one crowded line (5/6 and 7/8 are only 50 px apart on one 1200 px line)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C52",
+   "role": "question",
+   "lp_book_number": "Figure it Out 7.4, Q3",
+   "ncert_ref": "7.4.FiO.Q3",
+   "question_text": "How many fractions lie between 0 and 1? Think, discuss with your classmates, and write your answer.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "A think-and-discuss question with no figure given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Plain question text."
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C53",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 7.4, Q3",
+   "ncert_ref": "7.4.FiO.Q3",
+   "question_text": "How many fractions lie between 0 and 1? Think, discuss with your classmates, and write your answer.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is the single statement 'infinitely many'; the steps list unit fractions in words, and nothing in the answer is a figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX list 1/2, 1/3, 1/4, 1/5, ... then 'infinitely many'."
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C54",
+   "role": "question",
+   "lp_book_number": "Figure it Out 7.4, Q4",
+   "ncert_ref": "7.4.FiO.Q4",
+   "question_text": "On a number line from 0 to 2, each unit is divided into two equal parts, so each part is 1/2. A blue line goes from 0 to 1/2, so the blue line is 1/2 unit long. A black line goes from 0 to the mark halfway between 1 and 2. What is the length of the black line?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The learner reads the length of the black line on a given number line and writes it in the box; both lines exist only in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S12.T12.C54.IMG1",
+   "manim_scene": "c6_7_74_fio4_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S12.T12.C54.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "line": {
+      "from_value": "0",
+      "to_value": "2",
+      "x_start_px": 150,
+      "x_end_px": 1770,
+      "px_per_unit": 810,
+      "y_px": 600,
+      "colour": "INK",
+      "stroke_px": 4,
+      "tick_length_px": 32,
+      "ticks_hang": "below"
+     },
+     "ticks": [
+      {
+       "index": 1,
+       "value": "0",
+       "x_px": 150,
+       "label": "0"
+      },
+      {
+       "index": 2,
+       "value": "1/2",
+       "x_px": 555,
+       "label": null
+      },
+      {
+       "index": 3,
+       "value": "1",
+       "x_px": 960,
+       "label": "1"
+      },
+      {
+       "index": 4,
+       "value": "3/2",
+       "x_px": 1365,
+       "label": null
+      },
+      {
+       "index": 5,
+       "value": "2",
+       "x_px": 1770,
+       "label": "2"
+      }
+     ],
+     "bars": [
+      {
+       "from": "0",
+       "to": "1/2",
+       "colour": "SET_A",
+       "x_start_px": 150,
+       "x_end_px": 555,
+       "thickness_px": 28,
+       "y_centre_px": 566
+      },
+      {
+       "from": "0",
+       "to": "3/2",
+       "colour": "INK",
+       "x_start_px": 150,
+       "x_end_px": 1365,
+       "thickness_px": 28,
+       "y_centre_px": 528
+      }
+     ],
+     "boxes": [
+      {
+       "under_tick_value": "1/2",
+       "x_centre_px": 555,
+       "size_px": 110,
+       "top_y_px": 636,
+       "outline": "INK",
+       "fill": "none",
+       "content": "1/2",
+       "content_colour": "INK"
+      },
+      {
+       "under_tick_value": "3/2",
+       "x_centre_px": 1365,
+       "size_px": 110,
+       "top_y_px": 636,
+       "outline": "INK",
+       "fill": "none",
+       "content": null,
+       "content_colour": null
+      }
+     ],
+     "label_font_px": 44,
+     "label_centre_y_px": 692
+    },
+    "manim_description": "On a white 1920x1080 canvas draw a horizontal number line in INK, 4 px thick, from value 0 (x = 150 px) to value 2 (x = 1770 px) at y = 600 px, to scale at 810 px per unit (x = 150 + 810 x value). Draw 5 vertical INK tick marks, each 32 px long and hanging below the line, at the values 0, 1/2, 1, 3/2, 2 (x = 150, 555, 960, 1365, 1770 px). Print 3 tick labels in INK at 44 px (fractions stacked, numerator over bar over denominator) centred under their ticks at y = 692 px: 0 under the tick at 0; 1 under the tick at 1; 2 under the tick at 2. The ticks at 1/2, 3/2 carry no label. Draw a thick SET_A bar (28 px high, square ends) above the line, centred at y = 566 px, from x = 150 px (value 0) to x = 555 px (value 1/2, ending exactly over its tick). Draw a thick INK bar (28 px high, square ends) above the line, centred at y = 528 px, from x = 150 px (value 0) to x = 1365 px (value 3/2, ending exactly over its tick). Draw a square box 110 px wide, INK outline 3 px, centred under the tick at value 1/2 (x = 555 px, top edge at y = 636 px); the box contains the text 1/2 in INK at 40 px (stacked fraction). Draw a square box 110 px wide, INK outline 3 px, centred under the tick at value 3/2 (x = 1365 px, top edge at y = 636 px); the box is empty (nothing inside, no fill).",
+    "visible_text": [
+     "0",
+     "1",
+     "2",
+     "1/2"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the label 3/2 anywhere",
+     "any text inside the right-hand box"
+    ],
+    "accuracy_checks": [
+     "5 ticks at 0, 1/2, 1, 3/2, 2 with equal spacing of 405 px",
+     "blue bar ends at the 1/2 tick (x = 555 px), black bar ends at the 3/2 tick (x = 1365 px)",
+     "the box under 1/2 already holds 1/2 (given), the box under 3/2 is empty",
+     "black bar is the upper one, blue bar the lower one"
+    ],
+    "alt_text": "A number line from 0 to 2 in halves; a blue line from 0 to 1/2 with 1/2 written in its box, and a longer black line from 0 with an empty box under its end.",
+    "render_note": "Same as book picture P10-number_line-1. The black line is drawn in INK, the blue line in SET_A."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C55",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 7.4, Q4",
+   "ncert_ref": "7.4.FiO.Q4",
+   "question_text": "On a number line from 0 to 2, each unit is divided into two equal parts, so each part is 1/2. A blue line goes from 0 to 1/2, so the blue line is 1/2 unit long. A black line goes from 0 to the mark halfway between 1 and 2. What is the length of the black line?",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The learner writes the fraction in the figure's box; the solution figure shows the completed box (3/2) on the same line.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S12.T12.C55.IMG1",
+   "manim_scene": "c6_7_74_fio4_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S12.T12.C55.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S12.T12.C54.IMG1",
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "line": {
+      "from_value": "0",
+      "to_value": "2",
+      "x_start_px": 150,
+      "x_end_px": 1770,
+      "px_per_unit": 810,
+      "y_px": 600,
+      "colour": "INK",
+      "stroke_px": 4,
+      "tick_length_px": 32,
+      "ticks_hang": "below"
+     },
+     "ticks": [
+      {
+       "index": 1,
+       "value": "0",
+       "x_px": 150,
+       "label": "0"
+      },
+      {
+       "index": 2,
+       "value": "1/2",
+       "x_px": 555,
+       "label": null
+      },
+      {
+       "index": 3,
+       "value": "1",
+       "x_px": 960,
+       "label": "1"
+      },
+      {
+       "index": 4,
+       "value": "3/2",
+       "x_px": 1365,
+       "label": null
+      },
+      {
+       "index": 5,
+       "value": "2",
+       "x_px": 1770,
+       "label": "2"
+      }
+     ],
+     "bars": [
+      {
+       "from": "0",
+       "to": "1/2",
+       "colour": "SET_A",
+       "x_start_px": 150,
+       "x_end_px": 555,
+       "thickness_px": 28,
+       "y_centre_px": 566
+      },
+      {
+       "from": "0",
+       "to": "3/2",
+       "colour": "INK",
+       "x_start_px": 150,
+       "x_end_px": 1365,
+       "thickness_px": 28,
+       "y_centre_px": 528
+      }
+     ],
+     "boxes": [
+      {
+       "under_tick_value": "1/2",
+       "x_centre_px": 555,
+       "size_px": 110,
+       "top_y_px": 636,
+       "outline": "INK",
+       "fill": "none",
+       "content": "1/2",
+       "content_colour": "INK"
+      },
+      {
+       "under_tick_value": "3/2",
+       "x_centre_px": 1365,
+       "size_px": 110,
+       "top_y_px": 636,
+       "outline": "INK",
+       "fill": "none",
+       "content": "3/2",
+       "content_colour": "ANSWER"
+      }
+     ],
+     "label_font_px": 44,
+     "label_centre_y_px": 692
+    },
+    "manim_description": "Draw exactly the question figure (same line, ticks, labels, blue bar, black bar, and the box under 1/2 already holding 1/2 in INK) and fill the empty box under the tick at value 3/2 (x = 1365 px) with the text 3/2 in ANSWER at 40 px (stacked fraction). Nothing else changes.",
+    "visible_text": [
+     "0",
+     "1",
+     "2",
+     "1/2",
+     "3/2"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "braces",
+     "extra labels"
+    ],
+    "accuracy_checks": [
+     "the box under 3/2 reads 3/2 = 3 x 1/2",
+     "every other element is at the same position as in the question figure"
+    ],
+    "alt_text": "The same number line with the box under the end of the black line filled with 3/2."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C56",
+   "role": "question",
+   "lp_book_number": "Figure it Out 7.4, Q5",
+   "ncert_ref": "7.4.FiO.Q5",
+   "question_text": "On a number line from 0 to 2, each unit is divided into 5 equal parts (marks 1/5, 2/5, 3/5, 4/5 are labelled before 1). Four black lines start at 0 and end at the four marks between 1 and 2. Write the fractions that give the lengths of the black lines, from the shortest to the longest.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The learner reads four black lines on a given number line and writes each length in its box; the lines exist only in the picture.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S12.T12.C56.IMG1",
+   "manim_scene": "c6_7_74_fio5_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S12.T12.C56.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "line": {
+      "from_value": "0",
+      "to_value": "2",
+      "x_start_px": 150,
+      "x_end_px": 1770,
+      "px_per_unit": 810,
+      "y_px": 620,
+      "colour": "INK",
+      "stroke_px": 4,
+      "tick_length_px": 32,
+      "ticks_hang": "below"
+     },
+     "ticks": [
+      {
+       "index": 1,
+       "value": "0",
+       "x_px": 150,
+       "label": "0"
+      },
+      {
+       "index": 2,
+       "value": "1/5",
+       "x_px": 312,
+       "label": "1/5"
+      },
+      {
+       "index": 3,
+       "value": "2/5",
+       "x_px": 474,
+       "label": "2/5"
+      },
+      {
+       "index": 4,
+       "value": "3/5",
+       "x_px": 636,
+       "label": "3/5"
+      },
+      {
+       "index": 5,
+       "value": "4/5",
+       "x_px": 798,
+       "label": "4/5"
+      },
+      {
+       "index": 6,
+       "value": "1",
+       "x_px": 960,
+       "label": "1"
+      },
+      {
+       "index": 7,
+       "value": "6/5",
+       "x_px": 1122,
+       "label": null
+      },
+      {
+       "index": 8,
+       "value": "7/5",
+       "x_px": 1284,
+       "label": null
+      },
+      {
+       "index": 9,
+       "value": "8/5",
+       "x_px": 1446,
+       "label": null
+      },
+      {
+       "index": 10,
+       "value": "9/5",
+       "x_px": 1608,
+       "label": null
+      },
+      {
+       "index": 11,
+       "value": "2",
+       "x_px": 1770,
+       "label": "2"
+      }
+     ],
+     "bars": [
+      {
+       "from": "0",
+       "to": "6/5",
+       "colour": "INK",
+       "x_start_px": 150,
+       "x_end_px": 1122,
+       "thickness_px": 26,
+       "y_centre_px": 590
+      },
+      {
+       "from": "0",
+       "to": "7/5",
+       "colour": "INK",
+       "x_start_px": 150,
+       "x_end_px": 1284,
+       "thickness_px": 26,
+       "y_centre_px": 554
+      },
+      {
+       "from": "0",
+       "to": "8/5",
+       "colour": "INK",
+       "x_start_px": 150,
+       "x_end_px": 1446,
+       "thickness_px": 26,
+       "y_centre_px": 518
+      },
+      {
+       "from": "0",
+       "to": "9/5",
+       "colour": "INK",
+       "x_start_px": 150,
+       "x_end_px": 1608,
+       "thickness_px": 26,
+       "y_centre_px": 482
+      }
+     ],
+     "boxes": [
+      {
+       "under_tick_value": "6/5",
+       "x_centre_px": 1122,
+       "size_px": 110,
+       "top_y_px": 656,
+       "outline": "INK",
+       "fill": "none",
+       "content": null,
+       "content_colour": null
+      },
+      {
+       "under_tick_value": "7/5",
+       "x_centre_px": 1284,
+       "size_px": 110,
+       "top_y_px": 656,
+       "outline": "INK",
+       "fill": "none",
+       "content": null,
+       "content_colour": null
+      },
+      {
+       "under_tick_value": "8/5",
+       "x_centre_px": 1446,
+       "size_px": 110,
+       "top_y_px": 656,
+       "outline": "INK",
+       "fill": "none",
+       "content": null,
+       "content_colour": null
+      },
+      {
+       "under_tick_value": "9/5",
+       "x_centre_px": 1608,
+       "size_px": 110,
+       "top_y_px": 656,
+       "outline": "INK",
+       "fill": "none",
+       "content": null,
+       "content_colour": null
+      }
+     ],
+     "label_font_px": 44,
+     "label_centre_y_px": 712
+    },
+    "manim_description": "On a white 1920x1080 canvas draw a horizontal number line in INK, 4 px thick, from value 0 (x = 150 px) to value 2 (x = 1770 px) at y = 620 px, to scale at 810 px per unit (x = 150 + 810 x value). Draw 11 vertical INK tick marks, each 32 px long and hanging below the line, at the values 0, 1/5, 2/5, 3/5, 4/5, 1, 6/5, 7/5, 8/5, 9/5, 2 (x = 150, 312, 474, 636, 798, 960, 1122, 1284, 1446, 1608, 1770 px). Print 7 tick labels in INK at 44 px (fractions stacked, numerator over bar over denominator) centred under their ticks at y = 712 px: 0 under the tick at 0; 1/5 under the tick at 1/5; 2/5 under the tick at 2/5; 3/5 under the tick at 3/5; 4/5 under the tick at 4/5; 1 under the tick at 1; 2 under the tick at 2. The ticks at 6/5, 7/5, 8/5, 9/5 carry no label. Draw a thick INK bar (26 px high, square ends) above the line, centred at y = 590 px, from x = 150 px (value 0) to x = 1122 px (value 6/5, ending exactly over its tick). Draw a thick INK bar (26 px high, square ends) above the line, centred at y = 554 px, from x = 150 px (value 0) to x = 1284 px (value 7/5, ending exactly over its tick). Draw a thick INK bar (26 px high, square ends) above the line, centred at y = 518 px, from x = 150 px (value 0) to x = 1446 px (value 8/5, ending exactly over its tick). Draw a thick INK bar (26 px high, square ends) above the line, centred at y = 482 px, from x = 150 px (value 0) to x = 1608 px (value 9/5, ending exactly over its tick). Draw a square box 110 px wide, INK outline 3 px, centred under the tick at value 6/5 (x = 1122 px, top edge at y = 656 px); the box is empty (nothing inside, no fill). Draw a square box 110 px wide, INK outline 3 px, centred under the tick at value 7/5 (x = 1284 px, top edge at y = 656 px); the box is empty (nothing inside, no fill). Draw a square box 110 px wide, INK outline 3 px, centred under the tick at value 8/5 (x = 1446 px, top edge at y = 656 px); the box is empty (nothing inside, no fill). Draw a square box 110 px wide, INK outline 3 px, centred under the tick at value 9/5 (x = 1608 px, top edge at y = 656 px); the box is empty (nothing inside, no fill).",
+    "visible_text": [
+     "0",
+     "1/5",
+     "2/5",
+     "3/5",
+     "4/5",
+     "1",
+     "2"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the labels 6/5, 7/5, 8/5, 9/5 anywhere",
+     "any text inside the four boxes"
+    ],
+    "accuracy_checks": [
+     "11 ticks at 0, 1/5, ..., 9/5, 2 with equal spacing of 162 px",
+     "four black bars end at the ticks for 6/5, 7/5, 8/5, 9/5 (x = 1122, 1284, 1446, 1608 px), longest on top",
+     "labels only at 0, 1/5, 2/5, 3/5, 4/5, 1 and 2",
+     "the four boxes stay empty"
+    ],
+    "alt_text": "A number line from 0 to 2 in fifths with 1/5 to 4/5, 1 and 2 labelled; four black lines from 0 end at the four marks after 1, each mark with an empty box under it.",
+    "render_note": "Same as book picture P10-number_line-2 (black bars stacked, longest at the top)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S12.T12.C57",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 7.4, Q5",
+   "ncert_ref": "7.4.FiO.Q5",
+   "question_text": "On a number line from 0 to 2, each unit is divided into 5 equal parts (marks 1/5, 2/5, 3/5, 4/5 are labelled before 1). Four black lines start at 0 and end at the four marks between 1 and 2. Write the fractions that give the lengths of the black lines, from the shortest to the longest.",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The learner writes fractions in the figure's boxes; the solution figure shows all four boxes completed on the same line.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S12.T12.C57.IMG1",
+   "manim_scene": "c6_7_74_fio5_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S12.T12.C57.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S12.T12.C56.IMG1",
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "to_scale": true,
+     "line": {
+      "from_value": "0",
+      "to_value": "2",
+      "x_start_px": 150,
+      "x_end_px": 1770,
+      "px_per_unit": 810,
+      "y_px": 620,
+      "colour": "INK",
+      "stroke_px": 4,
+      "tick_length_px": 32,
+      "ticks_hang": "below"
+     },
+     "ticks": [
+      {
+       "index": 1,
+       "value": "0",
+       "x_px": 150,
+       "label": "0"
+      },
+      {
+       "index": 2,
+       "value": "1/5",
+       "x_px": 312,
+       "label": "1/5"
+      },
+      {
+       "index": 3,
+       "value": "2/5",
+       "x_px": 474,
+       "label": "2/5"
+      },
+      {
+       "index": 4,
+       "value": "3/5",
+       "x_px": 636,
+       "label": "3/5"
+      },
+      {
+       "index": 5,
+       "value": "4/5",
+       "x_px": 798,
+       "label": "4/5"
+      },
+      {
+       "index": 6,
+       "value": "1",
+       "x_px": 960,
+       "label": "1"
+      },
+      {
+       "index": 7,
+       "value": "6/5",
+       "x_px": 1122,
+       "label": null
+      },
+      {
+       "index": 8,
+       "value": "7/5",
+       "x_px": 1284,
+       "label": null
+      },
+      {
+       "index": 9,
+       "value": "8/5",
+       "x_px": 1446,
+       "label": null
+      },
+      {
+       "index": 10,
+       "value": "9/5",
+       "x_px": 1608,
+       "label": null
+      },
+      {
+       "index": 11,
+       "value": "2",
+       "x_px": 1770,
+       "label": "2"
+      }
+     ],
+     "bars": [
+      {
+       "from": "0",
+       "to": "6/5",
+       "colour": "INK",
+       "x_start_px": 150,
+       "x_end_px": 1122,
+       "thickness_px": 26,
+       "y_centre_px": 590
+      },
+      {
+       "from": "0",
+       "to": "7/5",
+       "colour": "INK",
+       "x_start_px": 150,
+       "x_end_px": 1284,
+       "thickness_px": 26,
+       "y_centre_px": 554
+      },
+      {
+       "from": "0",
+       "to": "8/5",
+       "colour": "INK",
+       "x_start_px": 150,
+       "x_end_px": 1446,
+       "thickness_px": 26,
+       "y_centre_px": 518
+      },
+      {
+       "from": "0",
+       "to": "9/5",
+       "colour": "INK",
+       "x_start_px": 150,
+       "x_end_px": 1608,
+       "thickness_px": 26,
+       "y_centre_px": 482
+      }
+     ],
+     "boxes": [
+      {
+       "under_tick_value": "6/5",
+       "x_centre_px": 1122,
+       "size_px": 110,
+       "top_y_px": 656,
+       "outline": "INK",
+       "fill": "none",
+       "content": "6/5",
+       "content_colour": "ANSWER"
+      },
+      {
+       "under_tick_value": "7/5",
+       "x_centre_px": 1284,
+       "size_px": 110,
+       "top_y_px": 656,
+       "outline": "INK",
+       "fill": "none",
+       "content": "7/5",
+       "content_colour": "ANSWER"
+      },
+      {
+       "under_tick_value": "8/5",
+       "x_centre_px": 1446,
+       "size_px": 110,
+       "top_y_px": 656,
+       "outline": "INK",
+       "fill": "none",
+       "content": "8/5",
+       "content_colour": "ANSWER"
+      },
+      {
+       "under_tick_value": "9/5",
+       "x_centre_px": 1608,
+       "size_px": 110,
+       "top_y_px": 656,
+       "outline": "INK",
+       "fill": "none",
+       "content": "9/5",
+       "content_colour": "ANSWER"
+      }
+     ],
+     "label_font_px": 44,
+     "label_centre_y_px": 712
+    },
+    "manim_description": "Draw exactly the question figure (same line, ticks, labels and four black bars) and fill the four boxes with ANSWER text at 40 px (stacked fractions): 6/5 under the tick at x = 1122 px, 7/5 at x = 1284, 8/5 at x = 1446 and 9/5 at x = 1608. Nothing else changes.",
+    "visible_text": [
+     "0",
+     "1/5",
+     "2/5",
+     "3/5",
+     "4/5",
+     "1",
+     "2",
+     "6/5",
+     "7/5",
+     "8/5",
+     "9/5"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "braces",
+     "extra labels"
+    ],
+    "accuracy_checks": [
+     "boxes read 6/5, 7/5, 8/5, 9/5 for 6, 7, 8, 9 parts of 1/5 from 0",
+     "every other element is at the same position as in the question figure"
+    ],
+    "alt_text": "The same number line in fifths with the four boxes filled: 6/5, 7/5, 8/5 and 9/5."
+   }
+  }
+ ]
+}

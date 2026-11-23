@@ -1,0 +1,946 @@
+{
+ "meta": {
+  "chapter": "Prime Time",
+  "class": 6,
+  "textbook": "Ganita Prakash, Grade 6, Chapter 5",
+  "lp_plan_id": "cbse_eng_maths6_ch5_v75",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 0,
+    "optional": 0,
+    "none": 8
+   },
+   "solution": {
+    "required": 0,
+    "optional": 0,
+    "none": 8
+   },
+   "worked_example": {
+    "required": 3,
+    "optional": 0,
+    "none": 1
+   }
+  },
+  "notes": [
+   "Chunk B (topics M1.S7.T7, M2.S8.T8, M2.S9.T9, M2.S10.T10, M2.S11.T11): 20 items, 3 required (all worked examples), 17 none, 0 optional.",
+   "The book prints figures only for 5.2 'Packing figs' (p.112) and the sieve table (p.113); none of this chunk's printed solutions (pdf pages 24-27) contains a picture.",
+   "Base figures P01-P05, P10-P13, P20-P22 and SOL23/25/33 belong to other chunks and are not claimed here."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P06-arrangement-1",
+   "source": "chapter p.06",
+   "description": "Four rectangles of square cells printed side by side without labels: Guna's three arrangements of 12 figs in orange (1 column x 12 rows at far left; 2 columns x 6 rows; 3 columns x 4 rows; tops level) and Anshu's single purple row of 7 cells at the bottom right (bottom level with the tall column). Checked against the page picture: base description is right.",
+   "mapped_to": "item:M2.S8.T8.C45 (question)"
+  },
+  {
+   "fig_id": "NEW-P06-arrangement-1-C46",
+   "source": "chapter p.06",
+   "description": "Second use of the same book picture P06 (the four rectangles of figs): the question 'Observe the number of rows and columns in each of the arrangements' refers to it. Identical diagram, one per item.",
+   "mapped_to": "item:M2.S8.T8.C46 (question)"
+  },
+  {
+   "fig_id": "P07-number_grid-1",
+   "source": "chapter p.07",
+   "description": "10 x 10 table of the numbers 1 to 100 in its finished state: the 25 primes circled in green, the other 75 cells (1 and the 74 composites) crossed with a red X. Checked against the page picture: base description is right (rows read one by one).",
+   "mapped_to": "item:M2.S11.T11.C57 (question)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 3,
+  "mapped_to_items": 3,
+  "mapped_to_concept_images": 0,
+  "mapped_none": 0,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M2.S8.T8.C45.IMG2",
+   "M2.S8.T8.C46.IMG2",
+   "M2.S11.T11.C57.IMG2"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S7.T7.C37",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.1, Q1",
+   "ncert_ref": "Section 5.1 - Figure it Out (book page 111), book Q2",
+   "question_text": "Who am $I$? $(a)$: I am a number less than $40$. One of my factors is $7$. The sum of my digits is $8$. $(b)$: I am a number less than $100$. Two of my factors are $3$ and $5$. One of my digits is $1$ more than the other. $(a)$: Number less than $40$, a factor is $7$, digit sum $8$; $(b)$: Number less than $100$, factors $3$ and $5$, one digit is $1$ more than the other",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two 'Who am I?' riddles; every clue is in the words and the book prints no picture with them.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C38",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.1, Q1",
+   "ncert_ref": "Section 5.1 - Figure it Out (book page 111), book Q2",
+   "question_text": "Who am I? a. I am a number less than 40. One of my factors is 7. The sum of my digits is 8. b. I am a number less than 100. Two of my factors are 3 and 5. One of my digits is 1 more than the other. a) Number less than 40, a factor is 7, digit sum 8 b) Number less than 100, factors 3 and 5, one digit is 1 more than the other",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Printed answer is only 35 and 45; the LP steps (multiples of 7 below 40, multiples of 15 below 100) read fine as text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the two lists of multiples as LaTeX lines, as the LP steps already do."
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C39",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.1, Q2",
+   "ncert_ref": "Section 5.1 - Figure it Out (book page 111), book Q3",
+   "question_text": "A number for which the sum of all its factors is equal to twice the number is called a perfect number. The number $28$ is a perfect number. Its factors are $1$, $2$, $4$, $7$, $14$ and $28$. Their sum is $56$ which is twice $28$. Find a perfect number between $1$ and $10$.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Definition of a perfect number plus one example, all in words and numbers; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C40",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.1, Q2",
+   "ncert_ref": "Section 5.1 - Figure it Out (book page 111), book Q3",
+   "question_text": "A number for which the sum of all its factors is equal to twice the number is called a perfect number. The number 28 is a perfect number. Its factors are 1, 2, 4, 7, 14 and 28. Their sum is 56 which is twice 28. Find a perfect number between 1 and 10.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "One arithmetic line: factors of 6 are 1, 2, 3, 6 and their sum 12 = 2 x 6.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C41",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.1, Q3",
+   "ncert_ref": "Section 5.1 - Figure it Out (book page 111), book Q4",
+   "question_text": "Find the common factors of: $(a)$: $20$ and $28$, $(b)$: $35$ and $50$, $(c)$: $4$, $8$ and $12$, $(d)$: $5$, $15$ and $25$. $(a)$: $20$ and $28$; $(b)$: $35$ and $50$; $(c)$: $4$, $8$ and $12$; $(d)$: $5$, $15$ and $25$",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four pairs or triples of numbers to find common factors of; plain numbers, no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C42",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.1, Q3",
+   "ncert_ref": "Section 5.1 - Figure it Out (book page 111), book Q4",
+   "question_text": "Find the common factors of: a. 20 and 28, b. 35 and 50, c. 4, 8 and 12, d. 5, 15 and 25. a) 20 and 28 b) 35 and 50 c) 4, 8 and 12 d) 5, 15 and 25",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Printed answer is four lines of factors (1, 2, 4 / 1, 5 / 1, 2, 4 / 1, 5), no picture; a factor Venn diagram would be extra.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C43",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.1, Q4",
+   "ncert_ref": "Section 5.1 - Figure it Out (book page 111), book Q7",
+   "question_text": "In the treasure hunting game, Grumpy has kept treasures on $28$ and $70$. What jump sizes will land on both the numbers?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word question about treasures on 28 and 70; the book prints no picture and the jump idea is already taught by the number-line concept images of 5.1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C44",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.1, Q4",
+   "ncert_ref": "Section 5.1 - Figure it Out (book page 111), book Q7",
+   "question_text": "In the treasure hunting game, Grumpy has kept treasures on 28 and 70. What jump sizes will land on both the numbers?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Printed answer is text (1, 2, 7 or 14). The LP step only says 'Common factors of 28 and 70', so the factor lists would help as text, not as a picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write factors of 28: 1, 2, 4, 7, 14, 28 and factors of 70: 1, 2, 5, 7, 10, 14, 35, 70; common: 1, 2, 7, 14."
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C45",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 - Prime Numbers (book page 112), Guna and Anshu pack figs",
+   "question_text": "Guna wants to put 12 figs in each box and Anshu wants to put 7 figs in each box. How many arrangements are possible? Think and find out the different ways how 1. Guna can arrange 12 figs in a rectangular manner. 2. Anshu can arrange 7 figs in a rectangular manner.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The answer is a set of arrangements: the book draws the three rectangles of 12 figs (12 x 1, 6 x 2, 4 x 3) and the single row of 7 figs, and words alone do not show the rectangles; the kept teaching image shows only one arrangement of 12.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S8.T8.C45.IMG2",
+   "manim_scene": "c6_5_s52_c45_wx",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C45.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "unit": "one cell side = 1 unit; origin (0,0) at the bottom-left corner of rectangle 1; y points up",
+     "rectangles": [
+      {
+       "name": "Guna 1",
+       "rows": 12,
+       "columns": 1,
+       "cells": 12,
+       "x_from": 0,
+       "x_to": 1,
+       "y_from": 0,
+       "y_to": 12,
+       "fill": "SET_B"
+      },
+      {
+       "name": "Guna 2",
+       "rows": 6,
+       "columns": 2,
+       "cells": 12,
+       "x_from": 3,
+       "x_to": 5,
+       "y_from": 6,
+       "y_to": 12,
+       "fill": "SET_B"
+      },
+      {
+       "name": "Guna 3",
+       "rows": 4,
+       "columns": 3,
+       "cells": 12,
+       "x_from": 7,
+       "x_to": 10,
+       "y_from": 8,
+       "y_to": 12,
+       "fill": "SET_B"
+      },
+      {
+       "name": "Anshu",
+       "rows": 1,
+       "columns": 7,
+       "cells": 7,
+       "x_from": 3,
+       "x_to": 10,
+       "y_from": 0,
+       "y_to": 1,
+       "fill": "SET_A"
+      }
+     ],
+     "fill_opacity": 0.4,
+     "cell_edge": "INK",
+     "cell_edge_px": 2.5,
+     "text": "none",
+     "figure_size_units": {
+      "width": 10,
+      "height": 12
+     },
+     "to_scale": true
+    },
+    "manim_description": "On a plain BG canvas draw four rectangles built from equal square cells; one cell side is 1 unit, the origin (0,0) is the bottom-left corner of rectangle 1 and y points up. Every cell has an INK outline of 2.5 px. Rectangle 1 (Guna, 12 cells): 1 column by 12 rows, x from 0 to 1, y from 0 to 12, cells filled SET_B at 40 percent opacity. Rectangle 2 (Guna, 12 cells): 2 columns by 6 rows, x from 3 to 5, y from 6 to 12, cells filled SET_B at 40 percent opacity (its top edge is level with the top edge of rectangle 1). Rectangle 3 (Guna, 12 cells): 3 columns by 4 rows, x from 7 to 10, y from 8 to 12, cells filled SET_B at 40 percent opacity (its top edge is level with the top edge of rectangle 1). Rectangle 4 (Anshu, 7 cells): 1 row by 7 columns, x from 3 to 10, y from 0 to 1, cells filled SET_A at 40 percent opacity (its bottom edge is level with the bottom edge of rectangle 1). The whole figure is 10 units wide and 12 units tall; centre it on the 16:9 canvas with its height at about 80 percent of the canvas height. No numbers, letters, labels, brackets or arrows anywhere in the image.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "row or column counts, products such as 12 x 1 or 2 x 6",
+     "the words figs, Guna or Anshu",
+     "bracket or arrow marks"
+    ],
+    "accuracy_checks": [
+     "rectangle 1 is 12 rows x 1 column = 12 cells; rectangle 2 is 6 rows x 2 columns = 12 cells; rectangle 3 is 4 rows x 3 columns = 12 cells",
+     "rectangle 4 is 1 row x 7 columns = 7 cells (Anshu: 7 x 1 or 1 x 7, only one arrangement)",
+     "total cells drawn = 12 + 12 + 12 + 7 = 43",
+     "all cells are equal squares; tops of rectangles 1, 2 and 3 are all at y = 12; bottoms of rectangles 1 and 4 are at y = 0",
+     "gaps: 2 units between rectangles 1 and 2 (x 1 to 3) and between rectangles 2 and 3 (x 5 to 7); no two rectangles overlap"
+    ],
+    "alt_text": "Four rectangles of square cells: three of 12 cells (a column of 12, a block of 6 rows by 2 columns, a block of 4 rows by 3 columns) in orange and one single row of 7 cells in blue.",
+    "render_note": "Same picture as the book (chapter p.112, no labels). Drawn once per item: same as M2.S8.T8.C46.IMG2. The cells of the rectangles 2 and 4 line up on x = 3 (print differs by under a quarter cell). Rows x columns are 12 x 1, 6 x 2, 4 x 3 and 1 x 7."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C46",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 - Prime Numbers (book page 112), rows and columns of the arrangements",
+   "question_text": "Observe the number of rows and columns in each of the arrangements. How are they related to 12?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question says 'each of the arrangements': the rows and columns can only be counted on the book's rectangles, which are not in the text.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S8.T8.C46.IMG2",
+   "manim_scene": "c6_5_s52_c46_wx",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C46.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "unit": "one cell side = 1 unit; origin (0,0) at the bottom-left corner of rectangle 1; y points up",
+     "rectangles": [
+      {
+       "name": "Guna 1",
+       "rows": 12,
+       "columns": 1,
+       "cells": 12,
+       "x_from": 0,
+       "x_to": 1,
+       "y_from": 0,
+       "y_to": 12,
+       "fill": "SET_B"
+      },
+      {
+       "name": "Guna 2",
+       "rows": 6,
+       "columns": 2,
+       "cells": 12,
+       "x_from": 3,
+       "x_to": 5,
+       "y_from": 6,
+       "y_to": 12,
+       "fill": "SET_B"
+      },
+      {
+       "name": "Guna 3",
+       "rows": 4,
+       "columns": 3,
+       "cells": 12,
+       "x_from": 7,
+       "x_to": 10,
+       "y_from": 8,
+       "y_to": 12,
+       "fill": "SET_B"
+      },
+      {
+       "name": "Anshu",
+       "rows": 1,
+       "columns": 7,
+       "cells": 7,
+       "x_from": 3,
+       "x_to": 10,
+       "y_from": 0,
+       "y_to": 1,
+       "fill": "SET_A"
+      }
+     ],
+     "fill_opacity": 0.4,
+     "cell_edge": "INK",
+     "cell_edge_px": 2.5,
+     "text": "none",
+     "figure_size_units": {
+      "width": 10,
+      "height": 12
+     },
+     "to_scale": true
+    },
+    "manim_description": "On a plain BG canvas draw four rectangles built from equal square cells; one cell side is 1 unit, the origin (0,0) is the bottom-left corner of rectangle 1 and y points up. Every cell has an INK outline of 2.5 px. Rectangle 1 (Guna, 12 cells): 1 column by 12 rows, x from 0 to 1, y from 0 to 12, cells filled SET_B at 40 percent opacity. Rectangle 2 (Guna, 12 cells): 2 columns by 6 rows, x from 3 to 5, y from 6 to 12, cells filled SET_B at 40 percent opacity (its top edge is level with the top edge of rectangle 1). Rectangle 3 (Guna, 12 cells): 3 columns by 4 rows, x from 7 to 10, y from 8 to 12, cells filled SET_B at 40 percent opacity (its top edge is level with the top edge of rectangle 1). Rectangle 4 (Anshu, 7 cells): 1 row by 7 columns, x from 3 to 10, y from 0 to 1, cells filled SET_A at 40 percent opacity (its bottom edge is level with the bottom edge of rectangle 1). The whole figure is 10 units wide and 12 units tall; centre it on the 16:9 canvas with its height at about 80 percent of the canvas height. No numbers, letters, labels, brackets or arrows anywhere in the image.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "row or column counts, products such as 12 x 1 or 2 x 6",
+     "the words figs, Guna or Anshu",
+     "bracket or arrow marks"
+    ],
+    "accuracy_checks": [
+     "rectangle 1 is 12 rows x 1 column = 12 cells; rectangle 2 is 6 rows x 2 columns = 12 cells; rectangle 3 is 4 rows x 3 columns = 12 cells",
+     "rectangle 4 is 1 row x 7 columns = 7 cells (Anshu: 7 x 1 or 1 x 7, only one arrangement)",
+     "total cells drawn = 12 + 12 + 12 + 7 = 43",
+     "all cells are equal squares; tops of rectangles 1, 2 and 3 are all at y = 12; bottoms of rectangles 1 and 4 are at y = 0",
+     "gaps: 2 units between rectangles 1 and 2 (x 1 to 3) and between rectangles 2 and 3 (x 5 to 7); no two rectangles overlap"
+    ],
+    "alt_text": "Four rectangles of square cells: three of 12 cells (a column of 12, a block of 6 rows by 2 columns, a block of 4 rows by 3 columns) in orange and one single row of 7 cells in blue.",
+    "render_note": "Same as M2.S8.T8.C45.IMG2 (the same book picture, chapter p.112; one diagram per item). No row or column counts are written, because the learner must observe them."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C49",
+   "role": "question",
+   "lp_book_number": "Prime and Composite: primes from 21 to 30",
+   "ncert_ref": "Section 5.2 - Prime Numbers (book page 113), primes from 21 to 30",
+   "question_text": "How many prime numbers are there from $21$ to $30$? How many composite numbers are there from $21$ to $30$?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Counting question on the numbers 21 to 30; the book gives no figure with it (only a bullet icon) and the range is in the words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C50",
+   "role": "solution",
+   "lp_book_number": "Prime and Composite: primes from 21 to 30",
+   "ncert_ref": "Section 5.2 - Prime Numbers (book page 113), primes from 21 to 30",
+   "question_text": "How many prime numbers are there from 21 to 30? How many composite numbers are there from 21 to 30?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Answer is a count (2 primes: 23 and 29; 8 composite numbers), printed as text; the row of 21 to 30 is already the teaching image of the topic.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C51",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.2, Q1",
+   "ncert_ref": "Section 5.2 - Figure it Out (book page 114), Q1",
+   "question_text": "We see that $2$ is a prime and also an even number. Is there any other even prime?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Yes/no question about even primes; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C52",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.2, Q1",
+   "ncert_ref": "Section 5.2 - Figure it Out (book page 114), Q1",
+   "question_text": "We see that 2 is a prime and also an even number. Is there any other even prime?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Answer is 'No' with a one-line reason in words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C53",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.2, Q2",
+   "ncert_ref": "Section 5.2 - Figure it Out (book page 114), book Q4",
+   "question_text": "Which of the following numbers are prime: $23$, $51$, $37$, $26$?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four numbers to test for primality; they are given in the words, no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C54",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.2, Q2",
+   "ncert_ref": "Section 5.2 - Figure it Out (book page 114), book Q4",
+   "question_text": "Which of the following numbers are prime: 23, 51, 37, 26?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Answer is 23 and 37 with the factor lines 51 = 3 x 17 and 26 = 2 x 13, which read fine as LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C55",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.2, Q3",
+   "ncert_ref": "Section 5.2 - Figure it Out (book page 115), book Q9",
+   "question_text": "Identify whether each statement is true or false. Explain. $(a)$: There is no prime number whose units digit is $4$. $(b)$: A product of primes can also be prime. $(c)$: Prime numbers do not have any factors. $(d)$: All even numbers are composite numbers. $(e)$: $2$ is a prime and so is the next number, $3$. For every other prime, the next number is composite. $(a)$: There is no prime number whose units digit is $4$. $(b)$: A product of primes can also be prime. $(c)$: Prime numbers do not have any factors. $(d)$: All even numbers are composite numbers. $(e)$: $2$ is a prime and so is the next number, $3$. For every other prime, the next number is composite.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Five true/false statements in words; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C56",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.2, Q3",
+   "ncert_ref": "Section 5.2 - Figure it Out (book page 115), book Q9",
+   "question_text": "Identify whether each statement is true or false. Explain. a. There is no prime number whose units digit is 4. b. A product of primes can also be prime. c. Prime numbers do not have any factors. d. All even numbers are composite numbers. e. 2 is a prime and so is the next number, 3. For every other prime, the next number is composite. a) There is no prime number whose units digit is 4. b) A product of primes can also be prime. c) Prime numbers do not have any factors. d) All even numbers are composite numbers. e) 2 is a prime and so is the next number, 3. For every other prime, the next number is composite.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Five answers (True, False, False, False, True), each with a sentence of reasoning; the printed answer has no picture, so both old answer cards are dropped.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C57",
+   "role": "worked_example",
+   "block_index": 0,
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 - Sieve of Eratosthenes (book page 113)",
+   "question_text": "Can we list all the prime numbers from 1 to 100? Follow the steps: cross out 1; circle 2 and cross out its multiples; circle the next uncrossed number 3 and cross out its multiples; circle 5 and cross out its multiples; continue till all numbers are circled or crossed out.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The procedure works on the table of 1 to 100 (circle the primes, cross out the rest) and the answer is that finished table; circles and crosses carry the meaning, and the text list of 25 primes does not show them. The kept teaching image covers only 1 to 10.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S11.T11.C57.IMG2",
+   "manim_scene": "c6_5_s52_c57_wx",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S11.T11.C57.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "cell_grid",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "cell_grid",
+     "rows": 10,
+     "columns": 10,
+     "cells_row_by_row": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ],
+      [
+       11,
+       12,
+       13,
+       14,
+       15,
+       16,
+       17,
+       18,
+       19,
+       20
+      ],
+      [
+       21,
+       22,
+       23,
+       24,
+       25,
+       26,
+       27,
+       28,
+       29,
+       30
+      ],
+      [
+       31,
+       32,
+       33,
+       34,
+       35,
+       36,
+       37,
+       38,
+       39,
+       40
+      ],
+      [
+       41,
+       42,
+       43,
+       44,
+       45,
+       46,
+       47,
+       48,
+       49,
+       50
+      ],
+      [
+       51,
+       52,
+       53,
+       54,
+       55,
+       56,
+       57,
+       58,
+       59,
+       60
+      ],
+      [
+       61,
+       62,
+       63,
+       64,
+       65,
+       66,
+       67,
+       68,
+       69,
+       70
+      ],
+      [
+       71,
+       72,
+       73,
+       74,
+       75,
+       76,
+       77,
+       78,
+       79,
+       80
+      ],
+      [
+       81,
+       82,
+       83,
+       84,
+       85,
+       86,
+       87,
+       88,
+       89,
+       90
+      ],
+      [
+       91,
+       92,
+       93,
+       94,
+       95,
+       96,
+       97,
+       98,
+       99,
+       100
+      ]
+     ],
+     "circled_primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97
+     ],
+     "crossed_out": [
+      1,
+      4,
+      6,
+      8,
+      9,
+      10,
+      12,
+      14,
+      15,
+      16,
+      18,
+      20,
+      21,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      30,
+      32,
+      33,
+      34,
+      35,
+      36,
+      38,
+      39,
+      40,
+      42,
+      44,
+      45,
+      46,
+      48,
+      49,
+      50,
+      51,
+      52,
+      54,
+      55,
+      56,
+      57,
+      58,
+      60,
+      62,
+      63,
+      64,
+      65,
+      66,
+      68,
+      69,
+      70,
+      72,
+      74,
+      75,
+      76,
+      77,
+      78,
+      80,
+      81,
+      82,
+      84,
+      85,
+      86,
+      87,
+      88,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      98,
+      99,
+      100
+     ],
+     "circle": {
+      "colour": "ANSWER",
+      "stroke_px": 3,
+      "fill": "none"
+     },
+     "cross": {
+      "colour": "GUIDE",
+      "stroke_px": 2,
+      "style": "both diagonals corner to corner"
+     },
+     "state": "finished sieve: every cell is either circled or crossed out",
+     "counts": {
+      "circled": 25,
+      "crossed": 75,
+      "circled_per_row": [
+       4,
+       4,
+       2,
+       2,
+       3,
+       2,
+       2,
+       3,
+       2,
+       1
+      ]
+     }
+    },
+    "manim_description": "On a plain BG 16:9 canvas draw a square 10 by 10 grid of equal square cells, centred, with its height at about 88 percent of the canvas height; grid lines INK, 2 px. Write the whole numbers 1 to 100 in reading order, one number per cell, centred in the cell, in a bold sans-serif face: row 1 (top) holds 1 2 3 4 5 6 7 8 9 10, row 2 holds 11 12 13 14 15 16 17 18 19 20, row 3 holds 21 to 30, row 4 holds 31 to 40, row 5 holds 41 to 50, row 6 holds 51 to 60, row 7 holds 61 to 70, row 8 holds 71 to 80, row 9 holds 81 to 90, row 10 (bottom) holds 91 to 100. Draw a circle of stroke 3 px in ANSWER around exactly these 25 numbers (no fill) and write them in INK: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97. Cross out the other 75 cells, which are 1 and every number that is not circled, with a full X (both diagonals corner to corner, 2 px) in GUIDE, and write their numerals in GUIDE. Circled count per row from the top: 4, 4, 2, 2, 3, 2, 2, 3, 2, 1. Every cell is either circled or crossed out; no cell is shaded and nothing else is drawn.",
+    "visible_text": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20",
+     "21",
+     "22",
+     "23",
+     "24",
+     "25",
+     "26",
+     "27",
+     "28",
+     "29",
+     "30",
+     "31",
+     "32",
+     "33",
+     "34",
+     "35",
+     "36",
+     "37",
+     "38",
+     "39",
+     "40",
+     "41",
+     "42",
+     "43",
+     "44",
+     "45",
+     "46",
+     "47",
+     "48",
+     "49",
+     "50",
+     "51",
+     "52",
+     "53",
+     "54",
+     "55",
+     "56",
+     "57",
+     "58",
+     "59",
+     "60",
+     "61",
+     "62",
+     "63",
+     "64",
+     "65",
+     "66",
+     "67",
+     "68",
+     "69",
+     "70",
+     "71",
+     "72",
+     "73",
+     "74",
+     "75",
+     "76",
+     "77",
+     "78",
+     "79",
+     "80",
+     "81",
+     "82",
+     "83",
+     "84",
+     "85",
+     "86",
+     "87",
+     "88",
+     "89",
+     "90",
+     "91",
+     "92",
+     "93",
+     "94",
+     "95",
+     "96",
+     "97",
+     "98",
+     "99",
+     "100"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "step labels or the words Step, prime, composite, circled, crossed",
+     "the two children or any speech bubble",
+     "the heading Sieve of Eratosthenes",
+     "red X marks (the crossing is GUIDE grey)"
+    ],
+    "accuracy_checks": [
+     "exactly 25 circled numbers, all primes: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 (recomputed by trial division)",
+     "exactly 75 crossed cells = 100 - 25: the number 1 and the 74 composite numbers up to 100",
+     "no cell is both circled and crossed and no cell is neither; the number 1 is crossed",
+     "circled per row from the top: 4, 4, 2, 2, 3, 2, 2, 3, 2, 1 (sum 25)",
+     "cell in row r, column c holds 10 x (r - 1) + c, so row 10 ends at 100"
+    ],
+    "alt_text": "A 10 by 10 table of the numbers 1 to 100 in which the 25 primes are circled and every other number, including 1, is crossed out.",
+    "render_note": "Same finished-sieve picture as the book (chapter p.113). The book crosses with red X marks; the house palette keeps WRONG for wrong cases, so the crosses are GUIDE grey. In print a few crossed cells (30, 49, 91, 94) show a single stroke; draw a full X on all 75."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C58",
+   "role": "worked_example",
+   "lp_book_number": null,
+   "ncert_ref": "Section 5.2 - Why the sieve works (book page 114)",
+   "question_text": "Guna and Anshu started wondering how this simple method is able to find prime numbers! Think how this method works. Read the steps given above again and see what happens after each step is carried out.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question points at the written steps ('Read the steps given above again'), not at a picture, and the answer is reasoning about factors; the finished 1-to-100 grid is already drawn in the example just before.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  }
+ ]
+}

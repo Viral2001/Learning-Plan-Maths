@@ -1,0 +1,3643 @@
+{
+ "meta": {
+  "chapter": "Symmetry",
+  "class": 6,
+  "textbook": "Ganita Prakash, Grade 6, Chapter 9",
+  "lp_plan_id": "cbse_eng_maths6_ch9_v34",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "none": 5,
+    "required": 2,
+    "optional": 2
+   },
+   "question": {
+    "required": 8
+   },
+   "solution": {
+    "required": 6,
+    "none": 2
+   }
+  },
+  "notes": [
+   "Chunk B: topics M1.S10.T10, M1.S11.T11, M2.S12.T12, M2.S13.T13, M2.S14.T14 (17 units, 25 items).",
+   "All diagrams are specified on a 16 by 9 unit canvas (1 unit = 120 px at 1920 by 1080), origin at the centre, y up; every number in a spec is written out.",
+   "Part letters (a), (b), ... are never drawn (v3 rule); multi-panel figures follow the order of the question text, left to right, top to bottom.",
+   "Sheet tints PAPER_PURPLE #D9CCEF and PAPER_YELLOW #FBE9A6 are not style tokens: they match the purple and yellow sheets named in the question text of Q4(c), Q4(d) and Q5; green sheets use MARK_FILL.",
+   "FiO 9.1 Q2 printed answer: the bold ring is the new hole, the given hole is washed out (the base inventory read it the other way round); the solution diagram draws the given hole in INK and the new hole in ANSWER.",
+   "FiO 9.2 Q2: the triangle is isosceles (height about equal to its flat side), not equilateral; the base description said equilateral-looking.",
+   "Worked examples C52 (rangoli) and C53 (windmill) are optional: a picture would help but the text states what matters; the concept image of C52 shows the rangoli."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P01-pattern-3",
+   "source": "chapter p.01",
+   "description": "Chapter-opening rangoli (ring, 8 green petals, 4 pink-red petals, teardrops); used by the worked example of concept C52, whose concept image C52.IMG1 shows the same rangoli with a 90 degree arrow. Not drawn again (optional item).",
+   "mapped_to": "concept_image:M2.S12.T12.C52.IMG1"
+  },
+  {
+   "fig_id": "P07-paper_cut-1",
+   "source": "chapter p.07",
+   "description": "Two panels side by side of a green folded square sheet (a second layer of paper shows as a thin strip at the top and right edge, so the fold is the LEFT edge). Left panel: the green sheet with a black dotted cut line that starts on the left (fold) edge about 18 per cent down, runs right and slightly down to a corner at about 55 ...",
+   "mapped_to": "item:M1.S10.T10.C39 (question)"
+  },
+  {
+   "fig_id": "P07-pattern-2",
+   "source": "chapter p.07",
+   "description": "Blue (single colour) cut-out paper design in three horizontal rows. Top row: 5 small blue diamonds (rhombi wider than tall, about 37 px x 25 px each, centres about 55 px apart) in a line. Middle row: 3 larger blue eight-pointed stars (each about 84 px across = a square overlapped by a square turned 45 degrees: 8 pointed tips, 4 ...",
+   "mapped_to": "item:M1.S10.T10.C40 (question)"
+  },
+  {
+   "fig_id": "P07-paper_fold-3",
+   "source": "chapter p.07",
+   "description": "Punching Game introduction: a folded sheet, the same sheet with one hole punched, and the opened sheet with two holes; illustrates the activity sentence, no question depends on it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P08-punched_sheet-1",
+   "source": "chapter p.08",
+   "description": "Light blue-grey square sheet with black outline, label 'a.' below. Exactly 2 round white holes: one on the left, one on the right, both at the vertical middle (on the horizontal middle line), at about 12 per cent of the side in from the left edge and about 11 per cent in from the right edge (square about 120 px). So the holes ...",
+   "mapped_to": "item:M1.S11.T11.C42 (question)"
+  },
+  {
+   "fig_id": "P08-punched_sheet-2",
+   "source": "chapter p.08",
+   "description": "Light blue-grey square sheet with black outline, label 'b.' below. Exactly 2 round white holes close together in the TOP-RIGHT corner area (square about 120 px): the first at about 78 per cent across and 12 per cent down, the second at about 88 per cent across and 24 per cent down (so they are about 16 per cent of the side ...",
+   "mapped_to": "item:M1.S11.T11.C42 (question)"
+  },
+  {
+   "fig_id": "P08-punched_sheet-3",
+   "source": "chapter p.08",
+   "description": "Light blue-grey square sheet with black outline, label 'c.' below. Exactly 2 round white holes near the RIGHT edge (about 11 per cent of the side inside it, square about 120 px): one at about 24 per cent down and one at about 78 per cent down, equal distances above and below the horizontal middle line.",
+   "mapped_to": "item:M1.S11.T11.C42 (question)"
+  },
+  {
+   "fig_id": "P08-punched_sheet-4",
+   "source": "chapter p.08",
+   "description": "Light blue-grey square sheet with black outline, label 'd.' below. Exactly 4 round white holes, one near each corner of the square (each about 11 to 12 per cent of the side in from both adjacent edges, square about 120 px): top-left, top-right, bottom-left, bottom-right. Pattern is symmetric about both middle lines.",
+   "mapped_to": "item:M1.S11.T11.C42 (question)"
+  },
+  {
+   "fig_id": "P08-hole_figure-5",
+   "source": "chapter p.08",
+   "description": "White square with black outline, label 'a.' below. A thin black dashed line is the diagonal from the TOP-LEFT corner to the BOTTOM-RIGHT corner. One hole (small cyan/blue ring, not filled) on the left side near the top-left, about 9 per cent of the side in from the left edge and about 24 per cent of the way down (square about ...",
+   "mapped_to": "item:M1.S11.T11.C44 (question)"
+  },
+  {
+   "fig_id": "P08-hole_figure-6",
+   "source": "chapter p.08",
+   "description": "White square with black outline, label 'b.' below. A black dashed HORIZONTAL line through the middle (halving the height). One cyan ring hole in the lower part near the bottom-right: about 91 per cent of the way across and about 78 per cent down (near the right edge, below the dashed line).",
+   "mapped_to": "item:M1.S11.T11.C44 (question)"
+  },
+  {
+   "fig_id": "P08-hole_figure-7",
+   "source": "chapter p.08",
+   "description": "White triangle (equilateral-looking, apex at the top, horizontal base) with black outline, label 'c.' below. A black dashed vertical line from the apex to the middle of the base. One cyan ring hole in the LEFT half, about one third of the way down from the apex, close to the dashed line.",
+   "mapped_to": "item:M1.S11.T11.C44 (question)"
+  },
+  {
+   "fig_id": "P08-hole_figure-8",
+   "source": "chapter p.08",
+   "description": "White circle with black outline, label 'd.' below. A black dashed straight line passes through the centre, sloping up to the right (from the lower left of the circle at about 25 degrees above horizontal to the upper right where it meets the circle). One cyan ring hole just above the line near its upper-right end, close to the ...",
+   "mapped_to": "item:M1.S11.T11.C44 (question)"
+  },
+  {
+   "fig_id": "P08-hole_figure-9",
+   "source": "chapter p.08",
+   "description": "White circle with black outline, label 'e.' below. A black dashed straight line through the centre sloping down to the right at about 40 degrees below horizontal, extending beyond the circle at both ends (starting outside at the upper left, ending outside at the lower right). One cyan ring hole inside the circle at the upper ...",
+   "mapped_to": "item:M1.S11.T11.C44 (question)"
+  },
+  {
+   "fig_id": "P08-paper_fold-10",
+   "source": "chapter p.08",
+   "description": "Label 'Vertical Fold' above one picture: a tall narrow double-layer folded paper (pale blue-grey, back layer visible on the right edge) with a curved black arrow on the left half bending from the left towards the right (arrowhead pointing right/down), meaning the paper is folded in half vertically.",
+   "mapped_to": "item:M1.S11.T11.C46 (question)"
+  },
+  {
+   "fig_id": "P09-paper_fold-1",
+   "source": "chapter p.09",
+   "description": "Label 'Horizontal Fold' above one picture: a wide short double-layer folded paper (pale blue-grey, the upper layer peeks out at the top) with a curved black arrow at the bottom going up (arrowhead pointing up/right), meaning the paper is folded in half horizontally.",
+   "mapped_to": "item:M1.S11.T11.C46 (question)"
+  },
+  {
+   "fig_id": "P09-paper_cut-2",
+   "source": "chapter p.09",
+   "description": "Label 'a.' to the left. Two panels of a green folded sheet (folded edge on the LEFT, second layer visible at the top and right edge). Left panel: a black dashed cut line that starts on the left (fold) edge about one third down, runs right and slightly up to a corner at about 43 per cent across and 24 per cent down (the left ...",
+   "mapped_to": "item:M1.S11.T11.C48 (question)"
+  },
+  {
+   "fig_id": "P09-paper_cut-3",
+   "source": "chapter p.09",
+   "description": "Label 'b.' to the left, one panel. A green folded sheet (portrait rectangle, folded edge on the LEFT; a flap of the back layer with a sloping top edge shows above the top edge). A solid black cut outline starts on the left edge about 25 per cent down: horizontal line to the right to about 72 per cent of the width (upper tip), ...",
+   "mapped_to": "item:M1.S11.T11.C48 (question)"
+  },
+  {
+   "fig_id": "P09-paper_cut-4",
+   "source": "chapter p.09",
+   "description": "Label 'c.' to the left, row of 5 panels in purple paper with a lighter sparkle texture. Panel 1: a flat purple rectangle (portrait, about 130 x 154 px) with a slightly darker vertical crease line through the middle. Panel 2: the paper folded once down the middle (tall narrow double layer, with a curved arrow looping from left ...",
+   "mapped_to": "item:M1.S11.T11.C48 (question)"
+  },
+  {
+   "fig_id": "P09-paper_cut-5",
+   "source": "chapter p.09",
+   "description": "Label 'd.' to the left, row of 4 panels in yellow paper with a speckled texture. Panel 1: a flat yellow rectangle (portrait, about 134 x 160 px). Panel 2: the paper folded in half vertically (narrow double-layer rectangle) with a curved arrow looping from left to right. Panel 3: the narrow folded strip with two black dotted ...",
+   "mapped_to": "item:M1.S11.T11.C48 (question)"
+  },
+  {
+   "fig_id": "P10-paper_cut-1",
+   "source": "chapter p.10",
+   "description": "A pink/mauve square sheet (speckled texture, thin outline, about 121 px side) with ONE white square hole in the exact centre, sides parallel to the sheet's sides (hole about 37 x 34 px, about 0.3 of the sheet side). Nothing else.",
+   "mapped_to": "item:M1.S11.T11.C50 (question)"
+  },
+  {
+   "fig_id": "P10-paper_cut-2",
+   "source": "chapter p.10",
+   "description": "A pink/mauve square sheet (same as part a, about 121 px side) with ONE white square hole in the exact centre turned through 45 degrees (a diamond: diagonals vertical and horizontal, about 48 px tip to tip, i.e. the same size square as in part a). The Note below says 'check if the 4-sided figures in the centre satisfy both the ...",
+   "mapped_to": "item:M1.S11.T11.C50 (question)"
+  },
+  {
+   "fig_id": "P14-rotation_figure-7",
+   "source": "chapter p.14",
+   "description": "The 4-bladed paper windmill with a red centre dot (teaching figure of the section). Its facts (4 equal blades, red centre point, looks the same after 90 degrees) are stated in the worked-example text of C53, which is optional for a picture.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P15-rotation_figure-1",
+   "source": "chapter p.15",
+   "description": "Row of two panels. Left panel: a square (thin black outline, about 106 px side) with corner labels A at the top-left, B at the top-right, C at the bottom-right, D at the bottom-left; a black dashed horizontal line starts at the centre of the square and runs to the right beyond the right side; the label 'Imaginary reference ...",
+   "mapped_to": "concept_image:M2.S12.T12.C55.IMG1"
+  },
+  {
+   "fig_id": "P15-rotation_figure-2",
+   "source": "chapter p.15",
+   "description": "Row of three panels, each a square (thin black outline, about 110 px side) with corner labels, a black dashed reference line from the centre to the right, and a curved arrow around the centre. Panel 1 (label '180 degrees' written in the square): corners C top-left, D top-right, B bottom-left, A bottom-right; black dashed line ...",
+   "mapped_to": "concept_image:M2.S12.T12.C55.IMG1"
+  },
+  {
+   "fig_id": "P16-shape-1",
+   "source": "chapter p.16",
+   "description": "Black outline only: a strip shaped like an isosceles trapezium with the shorter parallel side at the TOP (about 310 px) and the longer parallel side at the BOTTOM (about 382 px), height about 62 px, the two slanting sides leaning outward going down. One black dot at the exact centre of the strip (the centre of rotation). No ...",
+   "mapped_to": "item:M2.S13.T13.C60 (question)"
+  },
+  {
+   "fig_id": "P16-shape-2",
+   "source": "chapter p.16",
+   "description": "Black outline only: the strip after the 180 degree rotation - the same isosceles trapezium turned upside down, with the longer parallel side (about 382 px) at the TOP and the shorter parallel side (about 310 px) at the BOTTOM, slanting sides leaning inward going down; one black dot at the exact centre. Same size as the given ...",
+   "mapped_to": "item:M2.S13.T13.C61 (solution)"
+  },
+  {
+   "fig_id": "P19-shape-1",
+   "source": "chapter p.19",
+   "description": "Figure (a), labelled '(a)' underneath: a plus-sign/cross made of one tall vertical rectangle and one wide horizontal rectangle of the same width and length, crossing in a central square whose four sides are drawn as lines inside the cross (so the cross is five pieces: central square plus four arm rectangles). Each arm sticks ...",
+   "mapped_to": "item:M2.S14.T14.C62 (question)"
+  },
+  {
+   "fig_id": "P19-shape-2",
+   "source": "chapter p.19",
+   "description": "Figure (b), labelled '(b)' underneath: one long vertical line segment; at its top end a small square sits on the RIGHT side of the line (the square's left side is the line itself, the square's top is level with the top of the line); at its bottom end an identical small square also sits on the RIGHT side of the line (bottom of ...",
+   "mapped_to": "item:M2.S14.T14.C62 (question)"
+  },
+  {
+   "fig_id": "P19-shape-3",
+   "source": "chapter p.19",
+   "description": "Figure (c), labelled '(c)' underneath: a capital-H shape made only of line segments: two equal vertical lines, and a horizontal line joining their exact middles. Each vertical line is about as long as the gap between the two vertical lines (so the whole figure is roughly as tall as it is wide). A bold dot marks the middle of ...",
+   "mapped_to": "item:M2.S14.T14.C62 (question)"
+  },
+  {
+   "fig_id": "P19-shape-4",
+   "source": "chapter p.19",
+   "description": "A circle (black outline) with two perpendicular diameters drawn in a thin brownish-red colour, one horizontal and one vertical, crossing at the centre, which is marked with a bold black dot. The circle is thus split into 4 equal quarters.",
+   "mapped_to": "item:M2.S14.T14.C64 (question)"
+  },
+  {
+   "fig_id": "P19-shape-5",
+   "source": "chapter p.19",
+   "description": "CORRECTED: a downward-pointing ISOSCELES triangle (not equilateral): flat side on top about 180 px and height about 181 px (equilateral would be about 156 px high), so it has no turn symmetry other than 360 degrees; the dot is on the vertical axis at about 0.35 of the height below the flat side.",
+   "mapped_to": "item:M2.S14.T14.C64 (question)"
+  },
+  {
+   "fig_id": "P19-shape-6",
+   "source": "chapter p.19",
+   "description": "A circle (black outline) with three black radii drawn from the centre: one straight down, one to the upper left and one to the upper right (they look 120 degrees apart, so the circle is split into three equal sectors, like an upside-down letter Y). A bold dot marks the centre where the three radii meet.",
+   "mapped_to": "item:M2.S14.T14.C64 (question)"
+  },
+  {
+   "fig_id": "P19-shape-7",
+   "source": "chapter p.19",
+   "description": "A four-bladed pinwheel/propeller: four curved petal-shaped blades meeting at a bold black centre dot, 90 degrees apart. Each blade has one straight edge lying along the vertical or horizontal axis through the dot (these straight edges are drawn in a thin brownish-red colour) and one curved black edge bulging outward. Up blade: ...",
+   "mapped_to": "item:M2.S14.T14.C64 (question)"
+  },
+  {
+   "fig_id": "P19-shape-8",
+   "source": "chapter p.19",
+   "description": "Two black straight line segments of equal length crossing at their midpoints at right angles, drawn diagonally (like the letter X, one line rising to the right, one falling to the right). A bold dot marks the crossing point.",
+   "mapped_to": "item:M2.S14.T14.C64 (question)"
+  },
+  {
+   "fig_id": "P19-shape-9",
+   "source": "chapter p.19",
+   "description": "A five-pointed star drawn as a pentagram: five long straight black lines (point at the top, two horizontal-ish arms, two lower legs), all five lines crossing so the inner pentagon is visible; the horizontal line runs across the star between the two side points. A bold black dot marks the centre of the star (middle of the inner ...",
+   "mapped_to": "item:M2.S14.T14.C64 (question)"
+  },
+  {
+   "fig_id": "P19-shape-10",
+   "source": "chapter p.19",
+   "description": "A 'B'-like shape: one vertical straight line on the left, and two black semicircles on its right side, one above the other, each with half of the line as its diameter (the upper semicircle's diameter is the upper half of the line, the lower one's is the lower half). The two semicircles touch at the middle of the line. A bold ...",
+   "mapped_to": "item:M2.S14.T14.C64 (question)"
+  },
+  {
+   "fig_id": "SOL27-paper_fold-1",
+   "source": "solutions p.27",
+   "description": "A square sheet with pale blue-grey fill and black outline; punched holes are small white circles with a thin dark outline, each about 1/10 of the side across. Figure a: one vertical dashed line through the middle of the square, extending a little above the top edge and below the bottom edge. Two holes, one near the left edge ...",
+   "mapped_to": "item:M1.S11.T11.C43 (solution)"
+  },
+  {
+   "fig_id": "SOL27-paper_fold-2",
+   "source": "solutions p.27",
+   "description": "A square sheet with pale blue-grey fill and black outline; punched holes are small white circles with a thin dark outline, each about 1/10 of the side across. Figure b: one diagonal dashed line from the bottom-left corner to the top-right corner, passing exactly through both corners and extending beyond the square at both ends. ...",
+   "mapped_to": "item:M1.S11.T11.C43 (solution)"
+  },
+  {
+   "fig_id": "SOL27-paper_fold-3",
+   "source": "solutions p.27",
+   "description": "A square sheet with pale blue-grey fill and black outline; punched holes are small white circles with a thin dark outline, each about 1/10 of the side across. Figure c: one horizontal dashed line at mid-height across the whole square, extending a little beyond both the left and right edges. Two holes near the right edge, one ...",
+   "mapped_to": "item:M1.S11.T11.C43 (solution)"
+  },
+  {
+   "fig_id": "SOL27-paper_fold-4",
+   "source": "solutions p.27",
+   "description": "A square sheet with pale blue-grey fill and black outline; punched holes are small white circles with a thin dark outline, each about 1/10 of the side across. Figure d: two dashed lines crossing at the centre: one vertical and one horizontal, both extending beyond the square on both ends. Four holes, one near each corner (each ...",
+   "mapped_to": "item:M1.S11.T11.C43 (solution)"
+  },
+  {
+   "fig_id": "SOL27-paper_fold-5",
+   "source": "solutions p.27",
+   "description": "CORRECTED: the BOLD ring in this printed answer is the NEW hole (the mirror image of the hole given in the question); the hole given in the question is drawn only as a washed-out pale ring on the other side of the dashed line (the base text took the bold ring as the given one). Figure a: a square (thin black outline, no fill) with one diagonal dashed line from the top-left corner to the bottom-right corner (it touches both corners, no extension). One black-outlined circle ...",
+   "mapped_to": "item:M1.S11.T11.C45 (solution)"
+  },
+  {
+   "fig_id": "SOL27-paper_fold-6",
+   "source": "solutions p.27",
+   "description": "CORRECTED: the BOLD ring in this printed answer is the NEW hole (the mirror image of the hole given in the question); the hole given in the question is drawn only as a washed-out pale ring on the other side of the dashed line (the base text took the bold ring as the given one). Figure b: a square (thin black outline, no fill) with one horizontal dashed line at mid-height spanning exactly the width of the square. One black-outlined hole near the top-right corner (about 0.1 ...",
+   "mapped_to": "item:M1.S11.T11.C45 (solution)"
+  },
+  {
+   "fig_id": "SOL27-paper_fold-7",
+   "source": "solutions p.27",
+   "description": "CORRECTED: the BOLD ring in this printed answer is the NEW hole (the mirror image of the hole given in the question); the hole given in the question is drawn only as a washed-out pale ring on the other side of the dashed line (the base text took the bold ring as the given one). Figure c: an isosceles triangle with apex up and a horizontal base (thin black outline, no fill), with a vertical dashed line from the apex straight down to the middle of the base (the axis of ...",
+   "mapped_to": "item:M1.S11.T11.C45 (solution)"
+  },
+  {
+   "fig_id": "SOL27-paper_fold-8",
+   "source": "solutions p.27",
+   "description": "CORRECTED: the BOLD ring in this printed answer is the NEW hole (the mirror image of the hole given in the question); the hole given in the question is drawn only as a washed-out pale ring on the other side of the dashed line (the base text took the bold ring as the given one). Figure d: a circle (thin black outline, no fill) with one dashed diameter drawn through the centre, rising to the right at roughly 28 degrees; the dashed line stops at the circle on both ends ...",
+   "mapped_to": "item:M1.S11.T11.C45 (solution)"
+  },
+  {
+   "fig_id": "SOL27-paper_fold-9",
+   "source": "solutions p.27",
+   "description": "CORRECTED: the BOLD ring in this printed answer is the NEW hole (the mirror image of the hole given in the question); the hole given in the question is drawn only as a washed-out pale ring on the other side of the dashed line (the base text took the bold ring as the given one). Figure e: a circle (thin black outline, no fill) with one dashed diameter falling to the right at roughly 40 degrees (from upper-left to lower-right); the dashed line extends beyond the circle at ...",
+   "mapped_to": "item:M1.S11.T11.C45 (solution)"
+  },
+  {
+   "fig_id": "SOL27-paper_fold-10",
+   "source": "solutions p.27",
+   "description": "CORRECTED: this is the printed ANSWER picture (the sheet opened out showing the hole), not a figure given in the question. Figure a: a wide light-green rectangle of paper (about twice as wide as tall; top edge very slightly sloping), with a vertical dashed fold line down its exact middle from the top edge to the bottom edge. In the middle, straddling the fold line, a white hole ...",
+   "mapped_to": "item:M1.S11.T11.C49 (solution)"
+  },
+  {
+   "fig_id": "SOL27-paper_fold-11",
+   "source": "solutions p.27",
+   "description": "CORRECTED: this is the printed ANSWER picture (the sheet opened out showing the hole), not a figure given in the question. Figure b: a light-green paper, a slightly irregular quadrilateral, wider than tall (top edge slightly peaked at the middle, left and right sides slightly slanted), with a vertical dashed fold line down the middle that extends a little beyond the paper at both ...",
+   "mapped_to": "item:M1.S11.T11.C49 (solution)"
+  },
+  {
+   "fig_id": "SOL28-paper_fold-1",
+   "source": "solutions p.28",
+   "description": "CORRECTED: this is the printed ANSWER picture (the sheet opened out showing the hole), not a figure given in the question. Figure c: a tall rectangle of purple (lavender-blue) paper, about 1.5 times as tall as wide, with 6 white rectangular cut-outs, no outline, symmetric about both the vertical and the horizontal middle line: two small squares cut out of the top edge (notches ...",
+   "mapped_to": "item:M1.S11.T11.C49 (solution)"
+  },
+  {
+   "fig_id": "SOL28-paper_fold-2",
+   "source": "solutions p.28",
+   "description": "CORRECTED: this is the printed ANSWER picture (the sheet opened out showing the hole), not a figure given in the question. Figure d: a yellow rectangle of paper (slightly taller than wide, about 1.3 to 1) with three white rectangular cut-outs in a horizontal row at mid-height, all the same height: one notch cut into the left edge (a half-square open to the edge), a full white ...",
+   "mapped_to": "item:M1.S11.T11.C49 (solution)"
+  },
+  {
+   "fig_id": "SOL28-paper_fold-3",
+   "source": "solutions p.28",
+   "description": "A row of three step pictures, left to right (ONE figure). Step 1: a square outline with a horizontal dashed fold line at mid-height extending beyond the left and right edges; a short upward arrow at the centre starting on the dashed line (the lower half folds up over the upper half). Step 2: a rectangle half as tall as the ...",
+   "mapped_to": "item:M1.S11.T11.C51 (solution)"
+  },
+  {
+   "fig_id": "SOL28-paper_fold-4",
+   "source": "solutions p.28",
+   "description": "A row of three step pictures, left to right (ONE figure). Step 1 and step 2 are identical to part a: a square with a horizontal dashed fold line (and a short upward arrow), then a half-height rectangle with a vertical dashed fold line (and a short rightward arrow). Step 3: a small square (a quarter of the original) with one ...",
+   "mapped_to": "item:M1.S11.T11.C51 (solution)"
+  },
+  {
+   "fig_id": "SOL35-figure-1",
+   "source": "solutions p.35",
+   "description": "A circle (black outline) with a black dot at the centre and two thin brown lines (one horizontal, one vertical diameter) crossing at the dot, dividing the circle into 4 equal quarters.",
+   "mapped_to": "item:M2.S14.T14.C65 (solution)"
+  },
+  {
+   "fig_id": "SOL35-figure-2",
+   "source": "solutions p.35",
+   "description": "A circle (black outline) with a black dot at the centre and three black radii at 120 degrees apart: one straight down, one to the upper-left (about 30 degrees above horizontal) and one to the upper-right (same), dividing the circle into 3 equal sectors.",
+   "mapped_to": "item:M2.S14.T14.C65 (solution)"
+  },
+  {
+   "fig_id": "SOL35-figure-3",
+   "source": "solutions p.35",
+   "description": "A pinwheel with four thin curved leaf-shaped blades around a black dot at the centre: one blade pointing up, one right, one down, one left, each starting at the dot, with one straight brown edge lying along the vertical or horizontal axis and the other edge a curve bulging outward; all four curve the same way (so it looks like ...",
+   "mapped_to": "item:M2.S14.T14.C65 (solution)"
+  },
+  {
+   "fig_id": "SOL35-figure-4",
+   "source": "solutions p.35",
+   "description": "Two equal straight black line segments crossing at their midpoints at right angles (an X, the lines at 45 degrees to the page), with a small black dot at the crossing. No other marks.",
+   "mapped_to": "item:M2.S14.T14.C65 (solution)"
+  },
+  {
+   "fig_id": "SOL35-figure-5",
+   "source": "solutions p.35",
+   "description": "A five-pointed star (pentagram) drawn as five straight black lines, one point at the top, a horizontal line across the upper part, with a small black dot at the centre of the inner pentagon.",
+   "mapped_to": "item:M2.S14.T14.C65 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 56,
+  "mapped_to_items": 51,
+  "mapped_to_concept_images": 3,
+  "mapped_none": 2,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S10.T10.C39.IMG2",
+   "M1.S10.T10.C40.IMG2",
+   "M1.S11.T11.C42.IMG1",
+   "M1.S11.T11.C43.IMG1",
+   "M1.S11.T11.C44.IMG1",
+   "M1.S11.T11.C45.IMG1",
+   "M1.S11.T11.C46.IMG1",
+   "M1.S11.T11.C48.IMG1",
+   "M1.S11.T11.C49.IMG1",
+   "M1.S11.T11.C50.IMG1",
+   "M1.S11.T11.C51.IMG1",
+   "M2.S13.T13.C60.IMG1",
+   "M2.S13.T13.C61.IMG1",
+   "M2.S14.T14.C62.IMG1",
+   "M2.S14.T14.C64.IMG1",
+   "M2.S14.T14.C65.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S10.T10.C38",
+   "role": "worked_example",
+   "lp_book_number": "Ink Blot Devils (9.1)",
+   "ncert_ref": "Section 9.1 - Ink Blot Devils",
+   "question_text": "Take a piece of paper and fold it in half. Open it and spill a few drops of ink (or paint) on one half. Press the halves together and open the paper again. What do you see?...",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Hands-on activity (fold, drop ink, press, open). The book prints no figure for it and the question gives none; the answer is described in words. Concept image M1.S10.T10.C38.IMG1 already shows the blot on a folded sheet.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C39",
+   "role": "worked_example",
+   "lp_book_number": "Paper folding and cutting (9.1)",
+   "ncert_ref": "Section 9.1 - Paper Folding and Cutting",
+   "question_text": "In two pictures, a sheet of paper is folded and a cut is made along the dotted line shown (the dotted line forms a notch shape starting at the fold). Draw a sketch of how the paper will look when unfolded...",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The learner must see the shape of the dotted cut on the folded sheet to sketch the unfolded paper; the shape is given only in the picture (the text says only 'a notch shape').",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S10.T10.C39.IMG2",
+   "manim_scene": "c6_9_s10_c39_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S10.T10.C39.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "sheet": {
+      "corners": [
+       [
+        -3,
+        -3
+       ],
+       [
+        3,
+        -3
+       ],
+       [
+        3,
+        3
+       ],
+       [
+        -3,
+        3
+       ]
+      ],
+      "fill": "MARK_FILL",
+      "outline": "INK"
+     },
+     "fold_edge": {
+      "from": [
+       -3,
+       -3
+      ],
+      "to": [
+       -3,
+       3
+      ],
+      "stroke_px": 6,
+      "label": "fold",
+      "label_at": [
+       -3.9,
+       0
+      ]
+     },
+     "cut_polyline": {
+      "style": "dashed",
+      "colour": "INK",
+      "points": [
+       [
+        -3.0,
+        2.04
+       ],
+       [
+        0.27,
+        1.2
+       ],
+       [
+        0.27,
+        -1.2
+       ],
+       [
+        -3.0,
+        -1.86
+       ]
+      ]
+     },
+     "book_fractions": "cut start 0.16 and end 0.81 of the height from the top on the fold edge; right side at 0.545 of the width, from 0.30 to 0.70 of the height",
+     "type": "other"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw one folded sheet of paper as a square with corners (-3, -3), (3, -3), (3, 3), (-3, 3), filled MARK_FILL, outline INK 3 px. Draw its left edge (x = -3, from y = -3 to y = 3) as a thicker INK line of 6 px: this edge is the fold. Write the word fold in INK, text height 0.4 unit, centred at (-3.9, 0). Draw the cut line as an INK dashed polyline (3 px, dashes 0.12 unit long, gaps 0.08 unit) through (-3, 2.04), (0.27, 1.2), (0.27, -1.2), (-3, -1.86), in this order: it starts on the fold edge at (-3, 2.04), runs down and to the right to the corner (0.27, 1.2), goes straight down to the corner (0.27, -1.2), then runs left and slightly down back to the fold edge at (-3, -1.86). Nothing else is drawn: no hands, no scissors, no second picture, no unfolded sheet.",
+    "visible_text": [
+     "fold"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "hands or scissors",
+     "the unfolded sheet or the mirror image of the cut",
+     "a line-of-symmetry label"
+    ],
+    "accuracy_checks": [
+     "fold edge is the left side x = -3 and the cut starts and ends on it (y = 2.04 and y = -1.86)",
+     "opening on the fold edge is 3.90 units long (0.16 to 0.81 of 6.0 = 0.65 x 6.0), the vertical right side is 2.40 units long (0.30 to 0.70 = 0.40 x 6.0): the opening is wider on the fold",
+     "right side is vertical at x = 0.27 (0.545 x 6.0 = 3.27 units from the fold edge)"
+    ],
+    "alt_text": "A green square sheet folded along its left edge with a dotted cut: from the fold down to the right, straight down, and back to the fold.",
+    "render_note": "One picture only: the book's second picture (hands and scissors) is decoration. The answer (unfolded sheet) is not drawn here."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S10.T10.C40",
+   "role": "worked_example",
+   "lp_book_number": "Intricate paper cut-outs (9.1)",
+   "ncert_ref": "Section 9.1 - Paper Folding and Cutting (cut-out design)",
+   "question_text": "Make different symmetric shapes by folding and cutting. Use thin rectangular coloured paper, fold it several times and cut out intricate patterns, like the blue star-shaped cut-outs shown. Identify the lines of symmetry in the repeating design.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question says 'like the blue star-shaped cut-outs shown' and asks to identify the lines of symmetry in the repeating design: the design exists only in the book picture (3 stars between two rows of 5 diamonds).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M1.S10.T10.C40.IMG2",
+   "manim_scene": "c6_9_s10_c40_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S10.T10.C40.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "symmetry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "fill": "SET_A",
+     "outline": "INK",
+     "stars": {
+      "centres": [
+       [
+        -3.1,
+        0
+       ],
+       [
+        0,
+        0
+       ],
+       [
+        3.1,
+        0
+       ]
+      ],
+      "tip_radius": 1.34,
+      "outline_vertices_relative": [
+       [
+        1.34,
+        0.0
+       ],
+       [
+        0.948,
+        0.392
+       ],
+       [
+        0.948,
+        0.948
+       ],
+       [
+        0.392,
+        0.948
+       ],
+       [
+        0.0,
+        1.34
+       ],
+       [
+        -0.392,
+        0.948
+       ],
+       [
+        -0.948,
+        0.948
+       ],
+       [
+        -0.948,
+        0.392
+       ],
+       [
+        -1.34,
+        0.0
+       ],
+       [
+        -0.948,
+        -0.392
+       ],
+       [
+        -0.948,
+        -0.948
+       ],
+       [
+        -0.392,
+        -0.948
+       ],
+       [
+        0.0,
+        -1.34
+       ],
+       [
+        0.392,
+        -0.948
+       ],
+       [
+        0.948,
+        -0.948
+       ],
+       [
+        0.948,
+        -0.392
+       ]
+      ]
+     },
+     "diamonds": {
+      "half_diagonals": [
+       0.6,
+       0.4
+      ],
+      "top_row_y": 2.4,
+      "bottom_row_y": -2.4,
+      "x": [
+       -3.5,
+       -1.75,
+       0,
+       1.75,
+       3.5
+      ]
+     },
+     "type": "symmetry_figure"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw a blue paper cut-out design in three rows, all filled SET_A with INK outline 2 px. Middle row: three eight-pointed stars with centres (-3.1, 0), (0, 0) and (3.1, 0). Each star is the outline of the union of a square (corners at plus or minus 0.948 in x and y from the star centre) and a square turned by 45 degrees (corners at (plus or minus 1.34, 0) and (0, plus or minus 1.34)); the 16 outline vertices of a star, relative to its centre and listed anticlockwise from the right tip, are (1.34, 0), (0.948, 0.392), (0.948, 0.948), (0.392, 0.948), (0, 1.34), (-0.392, 0.948), (-0.948, 0.948), (-0.948, 0.392), (-1.34, 0), (-0.948, -0.392), (-0.948, -0.948), (-0.392, -0.948), (0, -1.34), (0.392, -0.948), (0.948, -0.948), (0.948, -0.392). Top row: five diamonds (rhombi with horizontal half-diagonal 0.6 and vertical half-diagonal 0.4) with centres (-3.5, 2.4), (-1.75, 2.4), (0, 2.4), (1.75, 2.4), (3.5, 2.4). Bottom row: five identical diamonds with centres (-3.5, -2.4), (-1.75, -2.4), (0, -2.4), (1.75, -2.4), (3.5, -2.4). The whole design is symmetric about x = 0 and about y = 0. No lines of symmetry are drawn, no text.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "lines of symmetry drawn on the design",
+     "the answer count of 8 lines"
+    ],
+    "accuracy_checks": [
+     "each star has 8 tips, all at distance 1.34 from its centre (for example (0.948, 0.948): sqrt(0.899 + 0.899) = 1.341)",
+     "3 stars + 5 + 5 diamonds = 13 shapes; the design is mirror symmetric about x = 0 and y = 0",
+     "star centres are 3.1 apart; diamond centres are 1.75 apart"
+    ],
+    "alt_text": "Three blue eight-pointed stars in a row with a row of five blue diamonds above and below."
+   },
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C42",
+   "role": "question",
+   "lp_book_number": "Figure it Out 9.1, Q1",
+   "ncert_ref": "Section 9.1 - Figure it Out Q1",
+   "question_text": "In each of the following figures, a hole was punched in a folded square sheet of paper and then the paper was unfolded. Identify the line along which the paper was folded...",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The four unfolded sheets and where their holes are exist only in the picture; the fold line must be found from them.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C42.IMG1",
+   "manim_scene": "c6_9_s11_q1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C42.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "symmetry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "sheet_side": 3.0,
+     "sheet_fill": "CELL_FILL",
+     "sheets": [
+      {
+       "centre": [
+        -5.625,
+        0.0
+       ],
+       "holes_local": [
+        [
+         -1.17,
+         0.0
+        ],
+        [
+         1.17,
+         0.0
+        ]
+       ],
+       "holes_abs": [
+        [
+         -6.795,
+         0.0
+        ],
+        [
+         -4.455,
+         0.0
+        ]
+       ]
+      },
+      {
+       "centre": [
+        -1.875,
+        0.0
+       ],
+       "holes_local": [
+        [
+         0.78,
+         1.14
+        ],
+        [
+         1.14,
+         0.78
+        ]
+       ],
+       "holes_abs": [
+        [
+         -1.095,
+         1.14
+        ],
+        [
+         -0.735,
+         0.78
+        ]
+       ]
+      },
+      {
+       "centre": [
+        1.875,
+        0.0
+       ],
+       "holes_local": [
+        [
+         1.18,
+         0.75
+        ],
+        [
+         1.18,
+         -0.75
+        ]
+       ],
+       "holes_abs": [
+        [
+         3.055,
+         0.75
+        ],
+        [
+         3.055,
+         -0.75
+        ]
+       ]
+      },
+      {
+       "centre": [
+        5.625,
+        0.0
+       ],
+       "holes_local": [
+        [
+         -1.17,
+         1.17
+        ],
+        [
+         1.17,
+         1.17
+        ],
+        [
+         -1.17,
+         -1.17
+        ],
+        [
+         1.17,
+         -1.17
+        ]
+       ],
+       "holes_abs": [
+        [
+         4.455,
+         1.17
+        ],
+        [
+         6.795,
+         1.17
+        ],
+        [
+         4.455,
+         -1.17
+        ],
+        [
+         6.795,
+         -1.17
+        ]
+       ]
+      }
+     ],
+     "hole_radius": 0.18,
+     "type": "symmetry_figure",
+     "part_letters": {
+      "rule": "user decision 23 Nov 2026: the LP answer refers to the figures by letter, so the letters are drawn",
+      "colour": "INK",
+      "font": "44 px (0.37 unit)",
+      "coordinate_system": "canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px",
+      "placement": "Each letter is centred above its sheet, above the ends of the fold lines.",
+      "items": [
+       {
+        "text": "(a)",
+        "at": [
+         -5.625,
+         2.55
+        ]
+       },
+       {
+        "text": "(b)",
+        "at": [
+         -1.875,
+         2.55
+        ]
+       },
+       {
+        "text": "(c)",
+        "at": [
+         1.875,
+         2.55
+        ]
+       },
+       {
+        "text": "(d)",
+        "at": [
+         5.625,
+         2.55
+        ]
+       }
+      ]
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw four equal square sheets side by side, each of side 3.0 units, filled CELL_FILL with INK outline 3 px. Sheet centres from left to right: (-5.625, 0), (-1.875, 0), (1.875, 0), (5.625, 0). In each sheet draw round holes as circles of radius 0.18 unit, filled BG, outline INK 3 px. Hole centres: sheet 1 (centre (-5.625, 0)): holes at (-6.795, 0), (-4.455, 0); sheet 2 (centre (-1.875, 0)): holes at (-1.095, 1.14), (-0.735, 0.78); sheet 3 (centre (1.875, 0)): holes at (3.055, 0.75), (3.055, -0.75); sheet 4 (centre (5.625, 0)): holes at (4.455, 1.17), (6.795, 1.17), (4.455, -1.17), (6.795, -1.17). No fold lines and no text other than the part letters. Part letters (the LP answer names the figures by letter): write (a), (b), (c), (d) in INK, 44 px (0.37 unit), each centred on its anchor, canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px: (a) at (-5.625, 2.55); (b) at (-1.875, 2.55); (c) at (1.875, 2.55); (d) at (5.625, 2.55). Each letter is centred above its sheet, above the ends of the fold lines.",
+    "visible_text": [
+     "(a)",
+     "(b)",
+     "(c)",
+     "(d)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the part letters (a) to (d)",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "fold lines or any dashed line",
+     "arrows showing the fold"
+    ],
+    "accuracy_checks": [
+     "hole pairs are exact mirror images: sheet 1 about x = 0, sheet 2 about the diagonal y = x (local), sheet 3 about y = 0, sheet 4 about both x = 0 and y = 0",
+     "sheet 2 hole centres (0.78, 1.14) and (1.14, 0.78) are 0.509 apart (more than the hole diameter 0.36, so the two holes do not touch)",
+     "every hole circle lies fully inside its sheet (largest local coordinate 1.18 + 0.18 = 1.36 < 1.5)",
+     "part letters (a) to (d) are in the reading order of the LP parts and match the LP answer"
+    ],
+    "alt_text": "Four square sheets with holes: two holes left and right at mid-height; two holes close together at the top right; two holes on the right edge one above the other; four holes near the four corners. The figures are labelled (a) to (d).",
+    "render_note": " Book positions measured from the picture (fractions of the side): sheet 1 holes at 0.11 and 0.89 across at mid-height; sheet 2 near the top right; sheet 3 at 0.25 and 0.75 down on the right; sheet 4 at 0.11 and 0.89 both ways. Part letters (a) to (d) added (AUDIT 23 Nov 2026): the LP answer refers to the figures by letter."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C43",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 9.1, Q1",
+   "ncert_ref": "Section 9.1 - Figure it Out Q1 (printed answer)",
+   "question_text": "In each of the following figures, a hole was punched in a folded square sheet of paper and then the paper was unfolded. Identify the line along which the paper was folded...",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The printed answer is a picture: the same four sheets with their fold lines drawn.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C43.IMG1",
+   "manim_scene": "c6_9_s11_q1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C43.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "symmetry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S11.T11.C42.IMG1",
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "sheet_side": 3.0,
+     "sheet_fill": "CELL_FILL",
+     "sheets": [
+      {
+       "centre": [
+        -5.625,
+        0.0
+       ],
+       "holes_local": [
+        [
+         -1.17,
+         0.0
+        ],
+        [
+         1.17,
+         0.0
+        ]
+       ],
+       "holes_abs": [
+        [
+         -6.795,
+         0.0
+        ],
+        [
+         -4.455,
+         0.0
+        ]
+       ]
+      },
+      {
+       "centre": [
+        -1.875,
+        0.0
+       ],
+       "holes_local": [
+        [
+         0.78,
+         1.14
+        ],
+        [
+         1.14,
+         0.78
+        ]
+       ],
+       "holes_abs": [
+        [
+         -1.095,
+         1.14
+        ],
+        [
+         -0.735,
+         0.78
+        ]
+       ]
+      },
+      {
+       "centre": [
+        1.875,
+        0.0
+       ],
+       "holes_local": [
+        [
+         1.18,
+         0.75
+        ],
+        [
+         1.18,
+         -0.75
+        ]
+       ],
+       "holes_abs": [
+        [
+         3.055,
+         0.75
+        ],
+        [
+         3.055,
+         -0.75
+        ]
+       ]
+      },
+      {
+       "centre": [
+        5.625,
+        0.0
+       ],
+       "holes_local": [
+        [
+         -1.17,
+         1.17
+        ],
+        [
+         1.17,
+         1.17
+        ],
+        [
+         -1.17,
+         -1.17
+        ],
+        [
+         1.17,
+         -1.17
+        ]
+       ],
+       "holes_abs": [
+        [
+         4.455,
+         1.17
+        ],
+        [
+         6.795,
+         1.17
+        ],
+        [
+         4.455,
+         -1.17
+        ],
+        [
+         6.795,
+         -1.17
+        ]
+       ]
+      }
+     ],
+     "hole_radius": 0.18,
+     "fold_lines": {
+      "colour": "ANSWER",
+      "extension": 0.25,
+      "sheet1": [
+       [
+        0,
+        -1.75
+       ],
+       [
+        0,
+        1.75
+       ]
+      ],
+      "sheet2": [
+       [
+        -1.75,
+        -1.75
+       ],
+       [
+        1.75,
+        1.75
+       ]
+      ],
+      "sheet3": [
+       [
+        -1.75,
+        0
+       ],
+       [
+        1.75,
+        0
+       ]
+      ],
+      "sheet4": [
+       [
+        [
+         0,
+         -1.75
+        ],
+        [
+         0,
+         1.75
+        ]
+       ],
+       [
+        [
+         -1.75,
+         0
+        ],
+        [
+         1.75,
+         0
+        ]
+       ]
+      ]
+     },
+     "type": "symmetry_figure",
+     "part_letters": {
+      "rule": "user decision 23 Nov 2026: the LP answer refers to the figures by letter, so the letters are drawn",
+      "colour": "INK",
+      "font": "44 px (0.37 unit)",
+      "coordinate_system": "canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px",
+      "placement": "Each letter is centred above its sheet, above the ends of the fold lines.",
+      "items": [
+       {
+        "text": "(a)",
+        "at": [
+         -5.625,
+         2.55
+        ]
+       },
+       {
+        "text": "(b)",
+        "at": [
+         -1.875,
+         2.55
+        ]
+       },
+       {
+        "text": "(c)",
+        "at": [
+         1.875,
+         2.55
+        ]
+       },
+       {
+        "text": "(d)",
+        "at": [
+         5.625,
+         2.55
+        ]
+       }
+      ]
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw four equal square sheets side by side, each of side 3.0 units, filled CELL_FILL with INK outline 3 px. Sheet centres from left to right: (-5.625, 0), (-1.875, 0), (1.875, 0), (5.625, 0). In each sheet draw round holes as circles of radius 0.18 unit, filled BG, outline INK 3 px. Hole centres: sheet 1 (centre (-5.625, 0)): holes at (-6.795, 0), (-4.455, 0); sheet 2 (centre (-1.875, 0)): holes at (-1.095, 1.14), (-0.735, 0.78); sheet 3 (centre (1.875, 0)): holes at (3.055, 0.75), (3.055, -0.75); sheet 4 (centre (5.625, 0)): holes at (4.455, 1.17), (6.795, 1.17), (4.455, -1.17), (6.795, -1.17). Draw the fold line of each sheet as an ANSWER dashed line (4 px, dashes 0.14 unit, gaps 0.1 unit): sheet 1 vertical line x = 0 from y = -1.75 to y = 1.75 (local, through the sheet middle); sheet 2 the diagonal from the bottom-left to the top-right: local (-1.75, -1.75) to (1.75, 1.75), passing through both corners and extending 0.25 unit beyond each corner along each axis; sheet 3 the horizontal line y = 0 from x = -1.75 to x = 1.75; sheet 4 both the vertical line (x = 0, y from -1.75 to 1.75) and the horizontal line (y = 0, x from -1.75 to 1.75). Local coordinates are relative to each sheet centre. No text other than the part letters. Part letters (the LP answer names the figures by letter): write (a), (b), (c), (d) in INK, 44 px (0.37 unit), each centred on its anchor, canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px: (a) at (-5.625, 2.55); (b) at (-1.875, 2.55); (c) at (1.875, 2.55); (d) at (5.625, 2.55). Each letter is centred above its sheet, above the ends of the fold lines.",
+    "visible_text": [
+     "(a)",
+     "(b)",
+     "(c)",
+     "(d)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the part letters (a) to (d)",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "words, or letters other than the part letters",
+     "arrows"
+    ],
+    "accuracy_checks": [
+     "sheet 1 fold line x = 0 lies midway between the holes (-1.17, 0) and (1.17, 0)",
+     "sheet 2 fold line y = x lies midway between the two holes (the mirror of (0.78, 1.14) in y = x is (1.14, 0.78))",
+     "sheet 3 fold line y = 0 lies midway between (1.18, 0.75) and (1.18, -0.75)",
+     "sheet 4 needs both x = 0 and y = 0 (four holes at plus or minus 1.17 in both coordinates)",
+     "part letters (a) to (d) are in the reading order of the LP parts and match the LP answer"
+    ],
+    "alt_text": "The same four sheets with the fold lines dashed: vertical, diagonal, horizontal, and a vertical plus a horizontal line. The figures are labelled (a) to (d).",
+    "render_note": "Holes, sheet positions and sizes are identical to the question diagram; only the dashed fold lines are new. The book's printed answer is the same picture. Part letters (a) to (d) added (AUDIT 23 Nov 2026): the LP answer refers to the figures by letter."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C44",
+   "role": "question",
+   "lp_book_number": "Figure it Out 9.1, Q2",
+   "ncert_ref": "Section 9.1 - Figure it Out Q2",
+   "question_text": "Given the line(s) of symmetry, find the other hole(s). Five shapes each show one hole and a dashed line of symmetry...",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The five shapes, their lines of symmetry and the given holes exist only in the picture; the learner must place the other holes on them.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C44.IMG1",
+   "manim_scene": "c6_9_s11_q2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C44.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "symmetry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "scale_units_per_half_size": 1.2,
+     "centres": [
+      [
+       -6.0,
+       0.0
+      ],
+      [
+       -3.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       3.0,
+       0.0
+      ],
+      [
+       6.0,
+       0.0
+      ]
+     ],
+     "hole_radius_units": 0.144,
+     "shapes": [
+      {
+       "shape": "square",
+       "dashed_line": [
+        [
+         -7.2,
+         1.2
+        ],
+        [
+         -4.8,
+         -1.2
+        ]
+       ],
+       "given_hole": [
+        -6.989,
+        0.6
+       ]
+      },
+      {
+       "shape": "square",
+       "dashed_line": [
+        [
+         -4.2,
+         0.0
+        ],
+        [
+         -1.8,
+         0.0
+        ]
+       ],
+       "given_hole": [
+        -2.028,
+        -0.703
+       ]
+      },
+      {
+       "shape": "triangle",
+       "dashed_line": [
+        [
+         0.0,
+         1.062
+        ],
+        [
+         0.0,
+         -1.062
+        ]
+       ],
+       "given_hole": [
+        -0.204,
+        0.32
+       ]
+      },
+      {
+       "shape": "circle",
+       "dashed_line": [
+        [
+         1.94,
+         -0.563
+        ],
+        [
+         4.06,
+         0.563
+        ]
+       ],
+       "given_hole": [
+        3.628,
+        0.66
+       ]
+      },
+      {
+       "shape": "circle",
+       "dashed_line": [
+        [
+         4.805,
+         1.003
+        ],
+        [
+         7.195,
+         -1.003
+        ]
+       ],
+       "given_hole": [
+        5.548,
+        0.803
+       ]
+      }
+     ],
+     "type": "symmetry_figure",
+     "part_letters": {
+      "rule": "user decision 23 Nov 2026: the LP answer refers to the figures by letter, so the letters are drawn",
+      "colour": "INK",
+      "font": "44 px (0.37 unit)",
+      "coordinate_system": "canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px",
+      "placement": "Each letter is centred above its shape.",
+      "items": [
+       {
+        "text": "(a)",
+        "at": [
+         -6,
+         1.9
+        ]
+       },
+       {
+        "text": "(b)",
+        "at": [
+         -3,
+         1.9
+        ]
+       },
+       {
+        "text": "(c)",
+        "at": [
+         0,
+         1.9
+        ]
+       },
+       {
+        "text": "(d)",
+        "at": [
+         3,
+         1.9
+        ]
+       },
+       {
+        "text": "(e)",
+        "at": [
+         6,
+         1.9
+        ]
+       }
+      ]
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw five shapes in a row, left to right, centres at (-6, 0), (-3, 0), (0, 0), (3, 0), (6, 0). All shapes: fill BG, outline INK 3 px. Shape 1: a square of side 2.4 units centred (-6, 0) (corners (-7.2, -1.2), (-4.8, -1.2), (-4.8, 1.2), (-7.2, 1.2)). Shape 2: a square of side 2.4 units centred (-3, 0). Shape 3: an isosceles triangle with apex at (0, 1.062) and base corners (-1.2, -1.062) and (1.2, -1.062), centred on x = 0 (base 2.4, height 2.124). Shape 4: a circle of radius 1.2 centred (3, 0). Shape 5: a circle of radius 1.2 centred (6, 0). Dashed line of symmetry (INK, 2.5 px, dashes 0.1 unit, gaps 0.07 unit) in each shape: shape 1 the diagonal from the top-left corner (-7.2, 1.2) to the bottom-right corner (-4.8, -1.2); shape 2 the horizontal middle line from (-4.2, 0) to (-1.8, 0); shape 3 the vertical line from the apex (0, 1.062) to the middle of the base (0, -1.062); shape 4 a diameter from (1.94, -0.563) to (4.06, 0.563) (28 degrees above the horizontal); shape 5 a line through the centre from (4.805, 1.003) to (7.195, -1.003) (40 degrees below the horizontal, extending 0.36 unit beyond the circle at both ends). In each shape draw the given hole as a ring (circle of radius 0.144 unit, fill BG, outline INK 3 px) with centre: shape 1 (-6.989, 0.6); shape 2 (-2.028, -0.703); shape 3 (-0.204, 0.32); shape 4 (3.628, 0.66); shape 5 (5.548, 0.803). Nothing else is drawn: no second hole, and no text other than the part letters. Part letters (the LP answer names the figures by letter): write (a), (b), (c), (d), (e) in INK, 44 px (0.37 unit), each centred on its anchor, canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px: (a) at (-6, 1.9); (b) at (-3, 1.9); (c) at (0, 1.9); (d) at (3, 1.9); (e) at (6, 1.9). Each letter is centred above its shape.",
+    "visible_text": [
+     "(a)",
+     "(b)",
+     "(c)",
+     "(d)",
+     "(e)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the part letters (a) to (e)",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the second hole of any shape",
+     "mirror construction lines"
+    ],
+    "accuracy_checks": [
+     "each given hole lies inside its shape and does not touch the dashed line (distance from the line: a 0.23, b 0.59, c 0.17, d 0.24, e 0.27) in half-size units, hole radius 0.12",
+     "shape 3 is isosceles (base 2.4, height 2.124), its dashed line is the axis of symmetry x = 0",
+     "positions measured from the book picture (fractions of the side): shape 1 hole at (0.09, 0.25), shape 2 at (0.91, 0.79)",
+     "part letters (a) to (e) are in the reading order of the LP parts and match the LP answer"
+    ],
+    "alt_text": "Five outlines each with one ring and a dashed line of symmetry: a square with a diagonal, a square with a horizontal line, a triangle with a vertical line, and two circles with slanted diameters. The figures are labelled (a) to (e).",
+    "render_note": " Holes are drawn INK here (the book colours them cyan). Part letters (a) to (e) added (AUDIT 23 Nov 2026): the LP answer refers to the figures by letter."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C45",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 9.1, Q2",
+   "ncert_ref": "Section 9.1 - Figure it Out Q2 (printed answer)",
+   "question_text": "Given the line(s) of symmetry, find the other hole(s). Five shapes each show one hole and a dashed line of symmetry...",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The printed answer is a picture: each shape with the other hole drawn as the mirror image of the given one.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C45.IMG1",
+   "manim_scene": "c6_9_s11_q2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C45.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "symmetry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S11.T11.C44.IMG1",
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "scale_units_per_half_size": 1.2,
+     "centres": [
+      [
+       -6.0,
+       0.0
+      ],
+      [
+       -3.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       3.0,
+       0.0
+      ],
+      [
+       6.0,
+       0.0
+      ]
+     ],
+     "hole_radius_units": 0.144,
+     "shapes": [
+      {
+       "shape": "square",
+       "dashed_line": [
+        [
+         -7.2,
+         1.2
+        ],
+        [
+         -4.8,
+         -1.2
+        ]
+       ],
+       "given_hole": [
+        -6.989,
+        0.6
+       ]
+      },
+      {
+       "shape": "square",
+       "dashed_line": [
+        [
+         -4.2,
+         0.0
+        ],
+        [
+         -1.8,
+         0.0
+        ]
+       ],
+       "given_hole": [
+        -2.028,
+        -0.703
+       ]
+      },
+      {
+       "shape": "triangle",
+       "dashed_line": [
+        [
+         0.0,
+         1.062
+        ],
+        [
+         0.0,
+         -1.062
+        ]
+       ],
+       "given_hole": [
+        -0.204,
+        0.32
+       ]
+      },
+      {
+       "shape": "circle",
+       "dashed_line": [
+        [
+         1.94,
+         -0.563
+        ],
+        [
+         4.06,
+         0.563
+        ]
+       ],
+       "given_hole": [
+        3.628,
+        0.66
+       ]
+      },
+      {
+       "shape": "circle",
+       "dashed_line": [
+        [
+         4.805,
+         1.003
+        ],
+        [
+         7.195,
+         -1.003
+        ]
+       ],
+       "given_hole": [
+        5.548,
+        0.803
+       ]
+      }
+     ],
+     "answer_holes": {
+      "a": [
+       -6.6,
+       0.989
+      ],
+      "b": [
+       -2.028,
+       0.703
+      ],
+      "c": [
+       0.204,
+       0.32
+      ],
+      "d": [
+       3.898,
+       0.151
+      ],
+      "e": [
+       5.131,
+       0.306
+      ]
+     },
+     "answer_holes_local_half_size_units": {
+      "a": [
+       -0.5,
+       0.824
+      ],
+      "b": [
+       0.81,
+       0.586
+      ],
+      "c": [
+       0.17,
+       0.267
+      ],
+      "d": [
+       0.748,
+       0.126
+      ],
+      "e": [
+       -0.724,
+       0.255
+      ]
+     },
+     "type": "symmetry_figure",
+     "part_letters": {
+      "rule": "user decision 23 Nov 2026: the LP answer refers to the figures by letter, so the letters are drawn",
+      "colour": "INK",
+      "font": "44 px (0.37 unit)",
+      "coordinate_system": "canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px",
+      "placement": "Each letter is centred above its shape.",
+      "items": [
+       {
+        "text": "(a)",
+        "at": [
+         -6,
+         1.9
+        ]
+       },
+       {
+        "text": "(b)",
+        "at": [
+         -3,
+         1.9
+        ]
+       },
+       {
+        "text": "(c)",
+        "at": [
+         0,
+         1.9
+        ]
+       },
+       {
+        "text": "(d)",
+        "at": [
+         3,
+         1.9
+        ]
+       },
+       {
+        "text": "(e)",
+        "at": [
+         6,
+         1.9
+        ]
+       }
+      ]
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw five shapes in a row, left to right, centres at (-6, 0), (-3, 0), (0, 0), (3, 0), (6, 0). All shapes: fill BG, outline INK 3 px. Shape 1: a square of side 2.4 units centred (-6, 0) (corners (-7.2, -1.2), (-4.8, -1.2), (-4.8, 1.2), (-7.2, 1.2)). Shape 2: a square of side 2.4 units centred (-3, 0). Shape 3: an isosceles triangle with apex at (0, 1.062) and base corners (-1.2, -1.062) and (1.2, -1.062), centred on x = 0 (base 2.4, height 2.124). Shape 4: a circle of radius 1.2 centred (3, 0). Shape 5: a circle of radius 1.2 centred (6, 0). Dashed line of symmetry (INK, 2.5 px, dashes 0.1 unit, gaps 0.07 unit) in each shape: shape 1 the diagonal from the top-left corner (-7.2, 1.2) to the bottom-right corner (-4.8, -1.2); shape 2 the horizontal middle line from (-4.2, 0) to (-1.8, 0); shape 3 the vertical line from the apex (0, 1.062) to the middle of the base (0, -1.062); shape 4 a diameter from (1.94, -0.563) to (4.06, 0.563) (28 degrees above the horizontal); shape 5 a line through the centre from (4.805, 1.003) to (7.195, -1.003) (40 degrees below the horizontal, extending 0.36 unit beyond the circle at both ends). In each shape draw the given hole as a ring (circle of radius 0.144 unit, fill BG, outline INK 3 px) with centre: shape 1 (-6.989, 0.6); shape 2 (-2.028, -0.703); shape 3 (-0.204, 0.32); shape 4 (3.628, 0.66); shape 5 (5.548, 0.803). Add the answer holes as rings (circle of radius 0.144 unit, fill BG, outline ANSWER 4 px), each the mirror image of the given hole in the dashed line: shape 1 centre (-6.6, 0.989); shape 2 (-2.028, 0.703); shape 3 (0.204, 0.32); shape 4 (3.898, 0.151); shape 5 (5.131, 0.306). No other marks and no text other than the part letters. Part letters (the LP answer names the figures by letter): write (a), (b), (c), (d), (e) in INK, 44 px (0.37 unit), each centred on its anchor, canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px: (a) at (-6, 1.9); (b) at (-3, 1.9); (c) at (0, 1.9); (d) at (3, 1.9); (e) at (6, 1.9). Each letter is centred above its shape.",
+    "visible_text": [
+     "(a)",
+     "(b)",
+     "(c)",
+     "(d)",
+     "(e)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the part letters (a) to (e)",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "construction lines or perpendicular lines",
+     "any text other than the part letters"
+    ],
+    "accuracy_checks": [
+     "each answer hole is the exact mirror image of the given hole in the dashed line: a: given (-0.824, 0.5) -> answer (-0.5, 0.824) (same distance 0.229 from the line, opposite sides, same distance 0.964 from the centre); b: given (0.81, -0.586) -> answer (0.81, 0.586) (same distance 0.586 from the line, opposite sides, same distance 1.000 from the centre); c: given (-0.17, 0.267) -> answer (0.17, 0.267) (same distance 0.170 from the line, opposite sides, same distance 0.317 from the centre); d: given (0.523, 0.55) -> answer (0.748, 0.126) (same distance 0.240 from the line, opposite sides, same distance 0.759 from the centre); e: given (-0.377, 0.669) -> answer (-0.724, 0.255) (same distance 0.270 from the line, opposite sides, same distance 0.768 from the centre) (local half-size units)",
+     "the two holes of every shape do not touch each other or the outline (hole radius 0.12)",
+     "answers agree with the LP text: shape 2 other hole is in the upper right directly above the given one; shape 3 to the right of the vertical line at the same height",
+     "part letters (a) to (e) are in the reading order of the LP parts and match the LP answer"
+    ],
+    "alt_text": "The same five shapes with the second hole drawn in green as the mirror image of the first across the dashed line. The figures are labelled (a) to (e).",
+    "render_note": "Given holes stay INK, new holes are ANSWER green. The book's printed answer draws the new hole bold and the given hole washed out. Part letters (a) to (e) added (AUDIT 23 Nov 2026): the LP answer refers to the figures by letter."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C46",
+   "role": "question",
+   "lp_book_number": "Figure it Out 9.1, Q3",
+   "ncert_ref": "Section 9.1 - Figure it Out Q3",
+   "question_text": "Here are some questions on paper cutting. Consider a vertical fold. We represent it by a picture of a sheet folded in half vertically with an arrow. Similarly, a horizontal fold is represented by a sheet folded in half horizontally with an arrow.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The text says 'we represent it this way': the two fold symbols exist only in the picture and are what this introduction gives (there is no further question to attempt).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C46.IMG1",
+   "manim_scene": "c6_9_s11_q3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C46.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "vertical_fold": {
+      "front_rect": [
+       [
+        -4.4,
+        -2.0
+       ],
+       [
+        -2.8,
+        1.6
+       ]
+      ],
+      "back_rect": [
+       [
+        -4.1,
+        -1.85
+       ],
+       [
+        -2.5,
+        1.75
+       ]
+      ],
+      "arrow_arc": {
+       "centre": [
+        -3.65,
+        -0.2
+       ],
+       "radius": 0.6,
+       "from_deg": 150,
+       "to_deg": 20,
+       "direction": "clockwise"
+      },
+      "label": "Vertical Fold",
+      "label_at": [
+       -3.6,
+       2.6
+      ]
+     },
+     "horizontal_fold": {
+      "front_rect": [
+       [
+        1.8,
+        -1.1
+       ],
+       [
+        5.4,
+        0.5
+       ]
+      ],
+      "back_rect": [
+       [
+        1.8,
+        -0.8
+       ],
+       [
+        5.4,
+        0.8
+       ]
+      ],
+      "arrow_arc": {
+       "centre": [
+        3.8,
+        -1.3
+       ],
+       "radius": 0.6,
+       "from_deg": 180,
+       "to_deg": 90,
+       "direction": "clockwise"
+      },
+      "label": "Horizontal Fold",
+      "label_at": [
+       3.6,
+       2.6
+      ]
+     },
+     "type": "other"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw two folded-paper icons side by side with a label above each, all text INK. Left icon (vertical fold): a back layer, a rectangle with corners (-4.1, -1.85), (-2.5, -1.85), (-2.5, 1.75), (-4.1, 1.75), filled BG, outline INK 3 px; on top of it a front layer, a rectangle with corners (-4.4, -2.0), (-2.8, -2.0), (-2.8, 1.6), (-4.4, 1.6), filled CELL_FILL, outline INK 3 px (so the back layer shows as a 0.3 wide strip on the right and a 0.15 high strip on top). On the front layer draw a curved INK arrow (3 px): an arc of a circle of radius 0.6 centred (-3.65, -0.2), running clockwise from the angle 150 degrees, point (-4.17, 0.1), to the angle 20 degrees, point (-3.09, 0.0), with an arrowhead at its end. Write Vertical Fold, text height 0.4 unit, centred at (-3.6, 2.6). Right icon (horizontal fold): a back layer, a rectangle with corners (1.8, -0.8), (5.4, -0.8), (5.4, 0.8), (1.8, 0.8), filled BG, outline INK 3 px; on top of it a front layer, a rectangle with corners (1.8, -1.1), (5.4, -1.1), (5.4, 0.5), (1.8, 0.5), filled CELL_FILL, outline INK 3 px (the back layer shows as a 0.3 high strip on top). Draw a curved INK arrow (3 px): a quarter-circle arc of radius 0.6 centred (3.8, -1.3), running clockwise from the angle 180 degrees, point (3.2, -1.3), to the angle 90 degrees, point (3.8, -0.7), with an arrowhead at its end pointing right. Write Horizontal Fold, text height 0.4 unit, centred at (3.6, 2.6).",
+    "visible_text": [
+     "Vertical Fold",
+     "Horizontal Fold"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "perspective drawing, hands, scissors",
+     "any cut or hole"
+    ],
+    "accuracy_checks": [
+     "vertical-fold icon is taller than wide (3.6 by 1.6); horizontal-fold icon is wider than tall (3.6 by 1.6)",
+     "back layer peeks out 0.3 to the right and 0.15 above the vertical icon, and 0.3 above the horizontal icon",
+     "the arrow of the vertical icon ends pointing right (a left part folding over to the right); the arrow of the horizontal icon ends pointing right after rising (the lower part folding up)"
+    ],
+    "alt_text": "Two flat paper icons: a tall folded sheet with a curved arrow labelled Vertical Fold and a wide folded sheet with a curved arrow labelled Horizontal Fold.",
+    "render_note": "The two words are the legend of the two icons (printed in the book above each picture); they are not a heading. This item is an introduction, the figure is its only content; judged required (drop it if the reviewer prefers text only)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C47",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 9.1, Q3",
+   "ncert_ref": "Section 9.1 - Figure it Out Q3 (no printed answer)",
+   "question_text": "Here are some questions on paper cutting. Consider a vertical fold. We represent it by a picture of a sheet folded in half vertically with an arrow...",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Introduction with no question to answer; the solution only restates that a vertical fold makes a vertical crease and a horizontal fold a horizontal crease, which the question diagram already shows.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C48",
+   "role": "question",
+   "lp_book_number": "Figure it Out 9.1, Q4",
+   "ncert_ref": "Section 9.1 - Figure it Out Q4",
+   "question_text": "After each of the following cuts, predict the shape of the hole when the paper is opened. After you have made your prediction, make the cutouts and verify your answer...",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The folded sheets and the exact cuts (a wavy side, a notched banner, corner and edge notches, notches on both edges of a strip) exist only in the pictures; the learner must predict the opened hole from them.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C48.IMG1",
+   "manim_scene": "c6_9_s11_q4_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C48.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "grid": "2x2",
+     "sheet1": {
+      "folded_square_corners": [
+       [
+        -5.5,
+        0.75
+       ],
+       [
+        -2.5,
+        3.75
+       ]
+      ],
+      "fill": "MARK_FILL",
+      "fold_edge": "left",
+      "cut_polyline": [
+       [
+        -5.5,
+        2.73
+       ],
+       [
+        -4.225,
+        3.015
+       ],
+       [
+        -4.15,
+        2.43
+       ],
+       [
+        -4.36,
+        2.07
+       ],
+       [
+        -4.09,
+        1.5
+       ],
+       [
+        -4.225,
+        1.32
+       ],
+       [
+        -5.5,
+        1.65
+       ]
+      ]
+     },
+     "sheet2": {
+      "folded_square_corners": [
+       [
+        2.5,
+        0.75
+       ],
+       [
+        5.5,
+        3.75
+       ]
+      ],
+      "fill": "MARK_FILL",
+      "fold_edge": "left",
+      "cut_polyline": [
+       [
+        2.5,
+        3.015
+       ],
+       [
+        4.648,
+        3.015
+       ],
+       [
+        3.73,
+        2.205
+       ],
+       [
+        4.318,
+        1.716
+       ],
+       [
+        2.5,
+        1.716
+       ]
+      ]
+     },
+     "sheet3": {
+      "piece_corners": [
+       [
+        -5.5,
+        -4.05
+       ],
+       [
+        -2.5,
+        -0.45
+       ]
+      ],
+      "fill": "#D9CCEF",
+      "fold_edges": [
+       "left",
+       "top"
+      ],
+      "notch_left": [
+       [
+        -5.5,
+        -2.07
+       ],
+       [
+        -4.6,
+        -2.07
+       ],
+       [
+        -4.6,
+        -2.94
+       ],
+       [
+        -5.5,
+        -2.94
+       ]
+      ],
+      "notch_bottom": [
+       [
+        -4.42,
+        -4.05
+       ],
+       [
+        -4.42,
+        -3.18
+       ],
+       [
+        -3.52,
+        -3.18
+       ],
+       [
+        -3.52,
+        -4.05
+       ]
+      ]
+     },
+     "sheet4": {
+      "strip_corners": [
+       [
+        3.25,
+        -4.05
+       ],
+       [
+        4.75,
+        -0.45
+       ]
+      ],
+      "fill": "#FBE9A6",
+      "fold_edges": [
+       "left"
+      ],
+      "notch_left": [
+       [
+        3.25,
+        -1.695
+       ],
+       [
+        3.7,
+        -1.695
+       ],
+       [
+        3.7,
+        -2.67
+       ],
+       [
+        3.25,
+        -2.67
+       ]
+      ],
+      "notch_right": [
+       [
+        4.75,
+        -1.695
+       ],
+       [
+        4.3,
+        -1.695
+       ],
+       [
+        4.3,
+        -2.67
+       ],
+       [
+        4.75,
+        -2.67
+       ]
+      ]
+     },
+     "book_fractions": {
+      "sheet1_path_fx_fy": [
+       [
+        0.0,
+        0.34
+       ],
+       [
+        0.425,
+        0.245
+       ],
+       [
+        0.45,
+        0.44
+       ],
+       [
+        0.38,
+        0.56
+       ],
+       [
+        0.47,
+        0.75
+       ],
+       [
+        0.425,
+        0.81
+       ],
+       [
+        0.0,
+        0.7
+       ]
+      ],
+      "sheet2_path_fx_fy": [
+       [
+        0.0,
+        0.245
+       ],
+       [
+        0.716,
+        0.245
+       ],
+       [
+        0.41,
+        0.515
+       ],
+       [
+        0.606,
+        0.678
+       ],
+       [
+        0.0,
+        0.678
+       ]
+      ]
+     },
+     "type": "other",
+     "part_letters": {
+      "rule": "user decision 23 Nov 2026: the LP answer refers to the figures by letter, so the letters are drawn",
+      "colour": "INK",
+      "font": "48 px (0.4 unit)",
+      "coordinate_system": "canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px",
+      "placement": "Each letter sits just above and left of the top-left corner of its sheet, clear of the word fold.",
+      "items": [
+       {
+        "text": "(a)",
+        "at": [
+         -6.2,
+         4.1
+        ]
+       },
+       {
+        "text": "(b)",
+        "at": [
+         1.8,
+         4.1
+        ]
+       },
+       {
+        "text": "(c)",
+        "at": [
+         -6.2,
+         -0.1
+        ]
+       },
+       {
+        "text": "(d)",
+        "at": [
+         2.55,
+         -0.1
+        ]
+       }
+      ]
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw four folded sheets in a 2 by 2 grid: first row (a) at the left and (b) at the right, second row (c) at the left and (d) at the right. Each cut line is an INK dashed line (3 px, dashes 0.12 unit, gaps 0.08 unit). The fold edges are drawn as thicker INK lines (6 px) and each is labelled with the word fold (INK, text height 0.4 unit). Every sheet has outline INK 3 px. Sheet 1 (top left): a square, corners (-5.5, 0.75), (-2.5, 0.75), (-2.5, 3.75), (-5.5, 3.75), filled MARK_FILL; fold edge: its left edge x = -5.5; word fold centred (-6.2, 2.25). Cut line: polyline (-5.5, 2.73), (-4.225, 3.015), (-4.15, 2.43), (-4.36, 2.07), (-4.09, 1.5), (-4.225, 1.32), (-5.5, 1.65) (starts on the fold edge, goes up-right to the corner, then a wavy right side with two outward bulges and one inward notch, then back to the fold edge). Sheet 2 (top right): a square, corners (2.5, 0.75), (5.5, 0.75), (5.5, 3.75), (2.5, 3.75), filled MARK_FILL; fold edge: its left edge x = 2.5; word fold centred (1.8, 2.25). Cut line: polyline (2.5, 3.015), (4.648, 3.015), (3.73, 2.205), (4.318, 1.716), (2.5, 1.716) (a straight top edge from the fold edge, a notch at the right end, a shorter straight bottom edge back to the fold edge). Sheet 3 (bottom left): a rectangle 3.0 wide and 3.6 high, corners (-5.5, -4.05), (-2.5, -4.05), (-2.5, -0.45), (-5.5, -0.45), filled PAPER_PURPLE (#D9CCEF, a sheet tint matching the purple named in the question text); fold edges: the left edge x = -5.5 and the top edge y = -0.45; words fold centred (-6.2, -2.25) and (-4, -0.05). Cut line 1: three dashed sides of a notch open to the left edge: (-5.5, -2.07), (-4.6, -2.07), (-4.6, -2.94), (-5.5, -2.94). Cut line 2: three dashed sides of a notch open to the bottom edge: (-4.42, -4.05), (-4.42, -3.18), (-3.52, -3.18), (-3.52, -4.05). Sheet 4 (bottom right): a rectangle 1.5 wide and 3.6 high, corners (3.25, -4.05), (4.75, -4.05), (4.75, -0.45), (3.25, -0.45), filled PAPER_YELLOW (#FBE9A6, a sheet tint matching the yellow named in the question text); fold edge: the left edge x = 3.25; word fold centred (2.55, -2.25). Cut line 1: three dashed sides of a notch open to the left edge: (3.25, -1.695), (3.7, -1.695), (3.7, -2.67), (3.25, -2.67). Cut line 2: three dashed sides of a notch open to the right edge: (4.75, -1.695), (4.3, -1.695), (4.3, -2.67), (4.75, -2.67). Nothing else is drawn: no hands, no scissors, no unfolded sheet. Part letters (the LP answer names the figures by letter): write (a), (b), (c), (d) in INK, 48 px (0.4 unit), each centred on its anchor, canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px: (a) at (-6.2, 4.1); (b) at (1.8, 4.1); (c) at (-6.2, -0.1); (d) at (2.55, -0.1). Each letter sits just above and left of the top-left corner of its sheet, clear of the word fold.",
+    "visible_text": [
+     "fold",
+     "(a)",
+     "(b)",
+     "(c)",
+     "(d)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the part letters (a) to (d)",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "opened sheets or the shape of the hole",
+     "the fold-by-fold sequence panels of the book",
+     "hands or scissors"
+    ],
+    "accuracy_checks": [
+     "sheet 1: cut starts at 0.34 and ends at 0.70 of the height from the top on the fold edge (y = 2.73 and y = 1.65) and its wavy right side is between 0.38 and 0.47 of the width",
+     "sheet 2: top edge at 0.245 and bottom edge at 0.678 of the height (y = 3.015 and y = 1.716); upper tip at 0.716, notch tip at 0.41, lower tip at 0.606 of the width (upper tip further right than lower tip)",
+     "sheet 3 piece is 2.0 by 2.4 piece units drawn at scale 1.5; the left notch is 0.6 wide and from 1.08 to 1.66 down from the top; the bottom notch is 0.6 wide, from 0.72 to 1.32 across, 0.58 high; fold edges are the left and the top",
+     "sheet 4 strip is 2.0 by 4.8 strip units drawn at scale 0.75; each notch is 0.6 wide (0.45 units drawn) and from 1.66 to 2.96 down from the top; the left edge is the fold, the right notch is on the open edge",
+     "the LP text says the notches of (d) are 'along the open edge' but the book picture has one notch on the fold edge and one on the open edge: the diagram follows the book",
+     "part letters (a) to (d) are in the reading order of the LP parts and match the LP answer"
+    ],
+    "alt_text": "Four folded sheets with dashed cuts: a green sheet with a wavy-sided cut, a green sheet with a notched banner cut, a purple folded piece with a notch on its left edge and one on its bottom edge, and a yellow strip with a notch on each side edge. The figures are labelled (a) to (d).",
+    "render_note": "Panels (c) and (d) show the folded piece just before cutting (the book also shows the fold steps; they are left out). Part letters (a) to (d) added (AUDIT 23 Nov 2026): the LP answer refers to the figures by letter."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C49",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 9.1, Q4",
+   "ncert_ref": "Section 9.1 - Figure it Out Q4 (printed answer)",
+   "question_text": "After each of the following cuts, predict the shape of the hole when the paper is opened...",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The printed answer is a picture: the four sheets opened out, showing the shape of each hole (the cut together with its mirror image in each fold line).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C49.IMG1",
+   "manim_scene": "c6_9_s11_q4_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C49.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S11.T11.C48.IMG1",
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "grid": "2x2",
+     "sheet1": {
+      "opened_rect": [
+       [
+        -7,
+        0.75
+       ],
+       [
+        -1,
+        3.75
+       ]
+      ],
+      "fill": "MARK_FILL",
+      "fold_line_x": -4,
+      "hole_right_half": [
+       [
+        -4.0,
+        2.73
+       ],
+       [
+        -2.725,
+        3.015
+       ],
+       [
+        -2.65,
+        2.43
+       ],
+       [
+        -2.86,
+        2.07
+       ],
+       [
+        -2.59,
+        1.5
+       ],
+       [
+        -2.725,
+        1.32
+       ],
+       [
+        -4.0,
+        1.65
+       ]
+      ],
+      "hole_left_half": "mirror about x = -4",
+      "hole_outline": "ANSWER"
+     },
+     "sheet2": {
+      "opened_rect": [
+       [
+        1,
+        0.75
+       ],
+       [
+        7,
+        3.75
+       ]
+      ],
+      "fill": "MARK_FILL",
+      "fold_line_x": 4,
+      "hole_hexagon": [
+       [
+        1.852,
+        3.015
+       ],
+       [
+        6.148,
+        3.015
+       ],
+       [
+        5.23,
+        2.205
+       ],
+       [
+        5.818,
+        1.716
+       ],
+       [
+        2.182,
+        1.716
+       ],
+       [
+        2.77,
+        2.205
+       ]
+      ],
+      "hole_outline": "ANSWER"
+     },
+     "sheet3": {
+      "opened_rect": [
+       [
+        -5.5,
+        -4.05
+       ],
+       [
+        -2.5,
+        -0.45
+       ]
+      ],
+      "fill": "#D9CCEF",
+      "fold_lines": {
+       "x": -4,
+       "y": -2.25
+      },
+      "upper_hole": [
+       [
+        -4.45,
+        -1.44
+       ],
+       [
+        -3.55,
+        -1.44
+       ],
+       [
+        -3.55,
+        -1.005
+       ],
+       [
+        -4.45,
+        -1.005
+       ]
+      ],
+      "lower_hole": [
+       [
+        -4.45,
+        -3.495
+       ],
+       [
+        -3.55,
+        -3.495
+       ],
+       [
+        -3.55,
+        -3.06
+       ],
+       [
+        -4.45,
+        -3.06
+       ]
+      ],
+      "edge_notches": [
+       [
+        [
+         -4.99,
+         -0.885
+        ],
+        [
+         -4.54,
+         -0.885
+        ],
+        [
+         -4.54,
+         -0.45
+        ],
+        [
+         -4.99,
+         -0.45
+        ]
+       ],
+       [
+        [
+         -3.46,
+         -0.885
+        ],
+        [
+         -3.01,
+         -0.885
+        ],
+        [
+         -3.01,
+         -0.45
+        ],
+        [
+         -3.46,
+         -0.45
+        ]
+       ],
+       [
+        [
+         -4.99,
+         -4.05
+        ],
+        [
+         -4.54,
+         -4.05
+        ],
+        [
+         -4.54,
+         -3.615
+        ],
+        [
+         -4.99,
+         -3.615
+        ]
+       ],
+       [
+        [
+         -3.46,
+         -4.05
+        ],
+        [
+         -3.01,
+         -4.05
+        ],
+        [
+         -3.01,
+         -3.615
+        ],
+        [
+         -3.46,
+         -3.615
+        ]
+       ]
+      ]
+     },
+     "sheet4": {
+      "opened_rect": [
+       [
+        2.5,
+        -4.05
+       ],
+       [
+        5.5,
+        -0.45
+       ]
+      ],
+      "fill": "#FBE9A6",
+      "fold_lines": {
+       "x": 4
+      },
+      "middle_hole": [
+       [
+        3.55,
+        -2.67
+       ],
+       [
+        4.45,
+        -2.67
+       ],
+       [
+        4.45,
+        -1.695
+       ],
+       [
+        3.55,
+        -1.695
+       ]
+      ],
+      "left_notch": [
+       [
+        2.5,
+        -2.67
+       ],
+       [
+        2.95,
+        -2.67
+       ],
+       [
+        2.95,
+        -1.695
+       ],
+       [
+        2.5,
+        -1.695
+       ]
+      ],
+      "right_notch": [
+       [
+        5.05,
+        -2.67
+       ],
+       [
+        5.5,
+        -2.67
+       ],
+       [
+        5.5,
+        -1.695
+       ],
+       [
+        5.05,
+        -1.695
+       ]
+      ]
+     },
+     "type": "other",
+     "part_letters": {
+      "rule": "user decision 23 Nov 2026: the LP answer refers to the figures by letter, so the letters are drawn",
+      "colour": "INK",
+      "font": "48 px (0.4 unit)",
+      "coordinate_system": "canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px",
+      "placement": "Each letter sits just above the top-left corner of its opened sheet, clear of the fold lines.",
+      "items": [
+       {
+        "text": "(a)",
+        "at": [
+         -6.6,
+         4.15
+        ]
+       },
+       {
+        "text": "(b)",
+        "at": [
+         1.4,
+         4.15
+        ]
+       },
+       {
+        "text": "(c)",
+        "at": [
+         -5.1,
+         -0.1
+        ]
+       },
+       {
+        "text": "(d)",
+        "at": [
+         2.9,
+         -0.1
+        ]
+       }
+      ]
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw the four sheets opened out, in the same 2 by 2 grid as the question. Every cut-out is drawn as a shape filled BG with ANSWER outline 4 px; every fold line is a GUIDE dashed line (2.5 px, dashes 0.1 unit, gaps 0.07 unit) extending 0.25 unit beyond the sheet; every sheet has outline INK 3 px. Sheet 1 (top left): a rectangle 6.0 wide and 3.0 high, corners (-7, 0.75), (-1, 0.75), (-1, 3.75), (-7, 3.75), filled MARK_FILL; vertical fold line x = -4 from y = 0.5 to y = 4.0. Hole: one closed shape symmetric about x = -4. Its right half runs from the fold line: straight line from (-4, 2.73) to (-2.725, 3.015), then a smooth wavy curve through (-2.725, 3.015), (-2.65, 2.43), (-2.86, 2.07), (-2.59, 1.5), (-2.725, 1.32), then a straight line from (-2.725, 1.32) to (-4, 1.65) on the fold line. Its left half is the mirror image about x = -4 (the mirror of a point (x, y) is (-8 - x, y)). The hole is narrow at the fold line (from y = 2.73 to y = 1.65) and wider at both wavy ends. Sheet 2 (top right): a rectangle 6.0 wide and 3.0 high, corners (1, 0.75), (7, 0.75), (7, 3.75), (1, 3.75), filled MARK_FILL; vertical fold line x = 4 from y = 0.5 to y = 4.0. Hole: the closed hexagon with vertices (1.852, 3.015), (6.148, 3.015), (5.23, 2.205), (5.818, 1.716), (2.182, 1.716), (2.77, 2.205), in this order (a banner: the top edge is the longest side, a V-shaped notch at each end, the bottom edge is shorter); symmetric about x = 4. Sheet 3 (bottom left): a rectangle 3.0 wide and 3.6 high, corners (-5.5, -4.05), (-2.5, -4.05), (-2.5, -0.45), (-5.5, -0.45), filled PAPER_PURPLE (#D9CCEF); vertical fold line x = -4 from y = -4.3 to y = -0.2 and horizontal fold line y = -2.25 from x = -5.75 to x = -2.25. Six rectangular cut-outs: upper hole with x from -4.45 to -3.55, y from -1.44 to -1.005; lower hole with x from -4.45 to -3.55, y from -3.495 to -3.06; four notches that open onto the sheet edge, two on the top edge and then two on the bottom edge, with notch 1: x from -4.99 to -4.54, y from -0.885 to -0.45; notch 2: x from -3.46 to -3.01, y from -0.885 to -0.45; notch 3: x from -4.99 to -4.54, y from -4.05 to -3.615; notch 4: x from -3.46 to -3.01, y from -4.05 to -3.615. Sheet 4 (bottom right): a rectangle 3.0 wide and 3.6 high, corners (2.5, -4.05), (5.5, -4.05), (5.5, -0.45), (2.5, -0.45), filled PAPER_YELLOW (#FBE9A6); vertical fold line x = 4 from y = -4.3 to y = -0.2. Three rectangular cut-outs: middle hole with x from 3.55 to 4.45, y from -2.67 to -1.695; left notch open onto the left edge with x from 2.5 to 2.95, y from -2.67 to -1.695; right notch open onto the right edge with x from 5.05 to 5.5, y from -2.67 to -1.695. No text. Part letters (the LP answer names the figures by letter): write (a), (b), (c), (d) in INK, 48 px (0.4 unit), each centred on its anchor, canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px: (a) at (-6.6, 4.15); (b) at (1.4, 4.15); (c) at (-5.1, -0.1); (d) at (2.9, -0.1). Each letter sits just above the top-left corner of its opened sheet, clear of the fold lines.",
+    "visible_text": [
+     "(a)",
+     "(b)",
+     "(c)",
+     "(d)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the part letters (a) to (d)",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the fold-by-fold sequence panels",
+     "hands or scissors",
+     "text other than the part letters"
+    ],
+    "accuracy_checks": [
+     "every hole is the cut region of the question diagram plus its mirror image in the fold line(s): the sheet 1 and sheet 2 holes are symmetric about x = -4 and x = 4; sheet 3 holes and notches are symmetric about x = -4 and y = -2.25; sheet 4 about x = 4",
+     "sheet 1 opened width is twice the folded width (6.0 = 2 x 3.0); sheet 3 and sheet 4 opened sheets are 4.0 by 4.8 sheet units drawn at scale 0.75 (3.0 by 3.6)",
+     "sheet 3: left notch (0.6 wide, fold edge) opens to a hole 1.2 wide (0.9 drawn) centred on x = -4, above and below the horizontal fold line; the bottom-edge notch (0.6 wide) appears 4 times (2 top, 2 bottom): 2 holes + 4 notches = 6 cut-outs as printed in the book",
+     "sheet 4: fold-edge notch 0.6 opens to a middle hole 1.2 wide (0.9 drawn); the open-edge notch 0.6 appears on the left and right edges: 1 hole + 2 notches = 3 cut-outs as printed",
+     "answers agree with the LP text for (a) bow-tie with wavy sides, (b) banner with arrow-head notches, (c) notches and rectangular holes symmetric on both sides of both folds, (d) notches on left and right edges and a middle hole",
+     "part letters (a) to (d) are in the reading order of the LP parts and match the LP answer"
+    ],
+    "alt_text": "The four sheets opened out: a green sheet with a bow-tie hole with wavy ends, a green sheet with a banner hole with notched ends, a purple sheet with two rectangular holes and four edge notches, and a yellow sheet with a middle hole and two edge notches. The figures are labelled (a) to (d).",
+    "render_note": "Same 2 by 2 cells as the question diagram; the opened sheets of (c) and (d) occupy the same boxes as the question's folded pieces (drawn at half the scale). Hole shapes follow the book's printed answers; the wavy sides of (a) are a smooth curve through the listed points. Part letters (a) to (d) added (AUDIT 23 Nov 2026): the LP answer refers to the figures by letter."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C50",
+   "role": "question",
+   "lp_book_number": "Figure it Out 9.1, Q5",
+   "ncert_ref": "Section 9.1 - Figure it Out Q5",
+   "question_text": "Suppose you have to get each of these shapes with some folds and a single straight cut. How will you do it? (a) The hole in the centre is a square... (b) The hole in the centre is a square (tilted)...",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The two target sheets (a straight square hole and a tilted square hole in the centre) exist only in the pictures; the learner must work out the folds and the single cut that produce them.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C50.IMG1",
+   "manim_scene": "c6_9_s11_q5_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C50.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "sheet_side": 4.0,
+     "sheet_fill": "#D9CCEF",
+     "left_sheet": {
+      "centre": [
+       -3.5,
+       0
+      ],
+      "hole": "square side 1.2, sides parallel",
+      "hole_corners": [
+       [
+        -4.1,
+        -0.6
+       ],
+       [
+        -2.9,
+        -0.6
+       ],
+       [
+        -2.9,
+        0.6
+       ],
+       [
+        -4.1,
+        0.6
+       ]
+      ]
+     },
+     "right_sheet": {
+      "centre": [
+       3.5,
+       0
+      ],
+      "hole": "same square turned 45 degrees",
+      "hole_corners": [
+       [
+        3.5,
+        -0.849
+       ],
+       [
+        4.349,
+        0
+       ],
+       [
+        3.5,
+        0.849
+       ],
+       [
+        2.651,
+        0
+       ]
+      ]
+     },
+     "type": "other",
+     "part_letters": {
+      "rule": "user decision 23 Nov 2026: the LP answer refers to the figures by letter, so the letters are drawn",
+      "colour": "INK",
+      "font": "48 px (0.4 unit)",
+      "coordinate_system": "canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px",
+      "placement": "Each letter is centred above its sheet.",
+      "items": [
+       {
+        "text": "(a)",
+        "at": [
+         -3.5,
+         2.55
+        ]
+       },
+       {
+        "text": "(b)",
+        "at": [
+         3.5,
+         2.55
+        ]
+       }
+      ]
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw two square sheets side by side, each of side 4.0 units, filled PAPER_PURPLE (#D9CCEF, a sheet tint matching the purple named in the question text), outline INK 3 px. Left sheet centred (-3.5, 0), corners (-5.5, -2), (-1.5, -2), (-1.5, 2), (-5.5, 2); its hole is a square of side 1.2 with sides parallel to the sheet, corners (-4.1, -0.6), (-2.9, -0.6), (-2.9, 0.6), (-4.1, 0.6). Right sheet centred (3.5, 0), corners (1.5, -2), (5.5, -2), (5.5, 2), (1.5, 2); its hole is the same square turned by 45 degrees (a diamond), corners (3.5, -0.849), (4.349, 0), (3.5, 0.849), (2.651, 0). Both holes are filled BG with INK outline 3 px. Nothing else is drawn. Part letters (the LP answer names the figures by letter): write (a), (b) in INK, 48 px (0.4 unit), each centred on its anchor, canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px: (a) at (-3.5, 2.55); (b) at (3.5, 2.55). Each letter is centred above its sheet.",
+    "visible_text": [
+     "(a)",
+     "(b)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the part letters (a) and (b)",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "fold lines, cut lines or arrows",
+     "labels such as square"
+    ],
+    "accuracy_checks": [
+     "both holes are squares of the same size: side 1.2 = 0.3 x 4.0; the diamond has half-diagonal 0.849 = 0.6 x sqrt(2) (its side is 1.2)",
+     "both holes are centred on the sheet centre",
+     "holes are fully inside the sheets (largest offset 0.849 < 2.0)",
+     "part letters (a) and (b) are in the reading order of the LP parts and match the LP answer"
+    ],
+    "alt_text": "Two purple square sheets: the left has a square hole in the centre with sides parallel to the sheet, the right has a square hole in the centre turned to stand on a corner. The figures are labelled (a) and (b).",
+    "render_note": " Book colour is a pink-purple speckle; drawn flat. Part letters (a) and (b) added (AUDIT 23 Nov 2026): the LP answer refers to the figures by letter."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S11.T11.C51",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 9.1, Q5",
+   "ncert_ref": "Section 9.1 - Figure it Out Q5 (printed answer)",
+   "question_text": "Suppose you have to get each of these shapes with some folds and a single straight cut. How will you do it?...",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The printed answer is a picture: for each hole the two folds (horizontal then vertical) and the cut at the closed corner.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S11.T11.C51.IMG1",
+   "manim_scene": "c6_9_s11_q5_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S11.T11.C51.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M1.S11.T11.C50.IMG1",
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "rows": [
+      {
+       "part": "square hole",
+       "row_y": 2.3,
+       "sheet_centre": [
+        -3.5,
+        2.3
+       ],
+       "sheet_side": 2.8,
+       "piece_centre": [
+        3.2,
+        2.3
+       ],
+       "piece_side": 2.8,
+       "cut": {
+        "kind": "square",
+        "side": 0.84,
+        "corner": [
+         1.8,
+         0.9
+        ]
+       }
+      },
+      {
+       "part": "tilted square hole",
+       "row_y": -2.3,
+       "sheet_centre": [
+        -3.5,
+        -2.3
+       ],
+       "sheet_side": 2.8,
+       "piece_centre": [
+        3.2,
+        -2.3
+       ],
+       "piece_side": 2.8,
+       "cut": {
+        "kind": "right_triangle",
+        "legs": 1.187,
+        "corner": [
+         1.8,
+         -3.7
+        ]
+       }
+      }
+     ],
+     "fold_order": [
+      "horizontal fold first (label 1)",
+      "vertical fold second (label 2)"
+     ],
+     "piece_fold_edges": [
+      "left",
+      "bottom"
+     ],
+     "closed_corner": "lower-left of the piece = centre of the sheet",
+     "type": "other",
+     "part_letters": {
+      "rule": "user decision 23 Nov 2026: the LP answer refers to the figures by letter, so the letters are drawn",
+      "colour": "INK",
+      "font": "48 px (0.4 unit)",
+      "coordinate_system": "canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px",
+      "placement": "Each letter stands at the left end of its row, left of the fold lines.",
+      "items": [
+       {
+        "text": "(a)",
+        "at": [
+         -6.0,
+         2.3
+        ]
+       },
+       {
+        "text": "(b)",
+        "at": [
+         -6.0,
+         -2.3
+        ]
+       }
+      ]
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw two rows, row 1 for the square hole and row 2 for the tilted square hole; each row has, from left to right, the sheet, a green arrow and the folded piece. Row 1 (y = 2.3). Sheet: a square of side 2.8 centred (-3.5, 2.3), corners (-4.9, 0.9), (-2.1, 0.9), (-2.1, 3.7), (-4.9, 3.7), filled PAPER_PURPLE (#D9CCEF), outline INK 3 px, with its hole as in the question: a square hole of side 0.84, corners (-3.92, 1.88), (-3.08, 1.88), (-3.08, 2.72), (-3.92, 2.72), filled BG, outline INK 3 px. Two ANSWER dashed fold lines (4 px, dashes 0.14 unit, gaps 0.1 unit): the horizontal line from (-5.1, 2.3) to (-1.9, 2.3) and the vertical line from (-3.5, 0.7) to (-3.5, 3.9). Number 1 in ANSWER (text height 0.45 unit) centred at (-1.55, 2.3) and number 2 in ANSWER centred at (-3.5, 0.4): the horizontal fold is made first, the vertical fold second. ANSWER arrow (4 px) pointing right from (-0.9, 2.3) to (0.4, 2.3). Folded piece (the top-right quarter of the sheet, drawn at twice the scale): a square of side 2.8 centred (3.2, 2.3), corners (1.8, 0.9), (4.6, 0.9), (4.6, 3.7), (1.8, 3.7), filled PAPER_PURPLE, outline INK 3 px; its left edge and its bottom edge are the fold edges, drawn as thicker INK lines (6 px), with the word fold (INK, text height 0.4 unit) centred at (1.1, 2.3) and at (3.2, 0.5). The lower-left corner (1.8, 0.9) is the closed corner, the centre of the sheet. Cut at the closed corner: a square cut-out of side 0.84 with corners (1.8, 0.9), (2.64, 0.9), (2.64, 1.74), (1.8, 1.74), filled BG, its two inner sides (from (2.64, 0.9) to (2.64, 1.74) to (1.8, 1.74)) drawn ANSWER dashed 4 px. Row 2 (y = -2.3). Sheet: a square of side 2.8 centred (-3.5, -2.3), corners (-4.9, -3.7), (-2.1, -3.7), (-2.1, -0.9), (-4.9, -0.9), filled PAPER_PURPLE (#D9CCEF), outline INK 3 px, with its hole as in the question: a diamond hole with half-diagonal 0.594, corners (-3.5, -2.894), (-2.906, -2.3), (-3.5, -1.706), (-4.094, -2.3), filled BG, outline INK 3 px. Two ANSWER dashed fold lines (4 px, dashes 0.14 unit, gaps 0.1 unit): the horizontal line from (-5.1, -2.3) to (-1.9, -2.3) and the vertical line from (-3.5, -3.9) to (-3.5, -0.7). Number 1 in ANSWER (text height 0.45 unit) centred at (-1.55, -2.3) and number 2 in ANSWER centred at (-3.5, -4.2): the horizontal fold is made first, the vertical fold second. ANSWER arrow (4 px) pointing right from (-0.9, -2.3) to (0.4, -2.3). Folded piece (the top-right quarter of the sheet, drawn at twice the scale): a square of side 2.8 centred (3.2, -2.3), corners (1.8, -3.7), (4.6, -3.7), (4.6, -0.9), (1.8, -0.9), filled PAPER_PURPLE, outline INK 3 px; its left edge and its bottom edge are the fold edges, drawn as thicker INK lines (6 px), with the word fold (INK, text height 0.4 unit) centred at (1.1, -2.3) and at (3.2, -4.1). The lower-left corner (1.8, -3.7) is the closed corner, the centre of the sheet. Cut at the closed corner: a right-triangle cut-out with corners (1.8, -3.7), (2.987, -3.7), (1.8, -2.513), filled BG, its slanting side from (1.8, -2.513) to (2.987, -3.7) drawn ANSWER dashed 4 px. No other text. Part letters (the LP answer names the figures by letter): write (a), (b) in INK, 48 px (0.4 unit), each centred on its anchor, canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px: (a) at (-6, 2.3); (b) at (-6, -2.3). Each letter stands at the left end of its row, left of the fold lines.",
+    "visible_text": [
+     "1",
+     "2",
+     "fold",
+     "(a)",
+     "(b)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the part letters (a) and (b)",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the half-folded middle rectangle of the book",
+     "hands or scissors"
+    ],
+    "accuracy_checks": [
+     "the piece is the top-right quarter of the sheet, so its closed corner (lower-left) is the centre of the sheet and its two fold edges are its left and bottom edges",
+     "square cut: side 0.3 of the piece side = 0.84 of 2.8 in the magnified piece (0.42 at the scale of the sheet on the left); four such squares around the centre give the hole of side 0.84 = 0.3 of the sheet side 2.8, the hole drawn in the sheet on the left",
+     "triangle cut: both legs 0.424 of the piece side = 1.187 of 2.8 in the magnified piece (0.594 at the scale of the sheet); four such triangles around the centre give a diamond of half-diagonal 0.594 = 0.212 of 2.8, the diamond drawn in the sheet on the left (the question's diamond is 0.212 x 4.0 = 0.849)",
+     "the sheet on the left shows the same holes as the question diagram scaled from 4.0 to 2.8",
+     "part letters (a) and (b) are in the reading order of the LP parts and match the LP answer"
+    ],
+    "alt_text": "Two rows showing how to cut the hole: the sheet with its horizontal then vertical fold lines, an arrow, and the folded quarter with a square corner cut-out in the first row and a slanting corner cut in the second. The figures are labelled (a) and (b).",
+    "render_note": "The question diagram has two sheets in one row; here each hole gets its own row (sheet drawn as in the question, scaled to 2.8) next to its folded piece, because the printed answer is a fold-and-cut sequence. The piece is drawn at twice the scale of the sheet. The book's middle panel (the half-folded rectangle) is left out. Part letters (a) and (b) added (AUDIT 23 Nov 2026): the LP answer refers to the figures by letter."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C52",
+   "role": "worked_example",
+   "lp_book_number": "Rangoli and the 90 degree turn (9.1/9.2)",
+   "ncert_ref": "Section 9.2 - Rotational Symmetry (chapter opening rangoli)",
+   "question_text": "Look at the rangoli picture (a round flower-like design with a ring in the centre and four red petals around it). Can you see what repeats in it? What happens to the red petals when the rangoli is rotated by 90 degrees around the centre?",
+   "decision": "optional",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "The question says 'look at the rangoli picture' but already describes it (ring in the centre, four red petals); the same picture is concept image M2.S12.T12.C52.IMG1 in this concept. A faithful rangoli (ring, 8 green petals, 4 pink-red petals, squares, teardrops) would be decorative art, so it is not drawn.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "No new text needed: the question already states the ring in the centre and the four red petals. A picture of the rangoli with its four red petals around the central ring would help.",
+   "block_index": 0,
+   "needs_lp_text_sync": false
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C53",
+   "role": "worked_example",
+   "lp_book_number": "Windmill and angles less than 90 degrees (9.2)",
+   "ncert_ref": "Section 9.2 - Rotational Symmetry (paper windmill)",
+   "question_text": "A paper windmill with 4 equal blades looks the same when turned by 90 degrees about the red point at its centre. Will the windmill look exactly the same when rotated through an angle of less than 90 degrees?",
+   "decision": "optional",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question points at 'the windmill above' but states what matters (4 equal blades, turned by 90 degrees about the red centre point) and the answer follows from that; a picture of the 4-bladed paper windmill with its red centre dot would help, but no concept image of the windmill exists in this topic.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Question text already says: 4 equal blades, red point at the centre, looks the same after 90 degrees. A figure of the four-bladed windmill with a red centre dot would help.",
+   "block_index": 0,
+   "needs_lp_text_sync": false
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C54",
+   "role": "worked_example",
+   "lp_book_number": "Other shapes with exactly four angles of symmetry (9.2)",
+   "ncert_ref": "Section 9.2 - Rotational Symmetry",
+   "question_text": "The windmill has exactly 4 angles of symmetry: 90, 180, 270 and 360 degrees. Do you know of any other shape that has exactly four angles of symmetry?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Open question ('do you know of any other shape...'); the book gives no figure and the answer (a square, a plus sign, a pinwheel) is given in words.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C55",
+   "role": "worked_example",
+   "lp_book_number": "Angles of symmetry of a square (9.2)",
+   "ncert_ref": "Section 9.2 - Rotational Symmetry (square)",
+   "question_text": "How many angles of symmetry does a square have? How much rotation does it require to get the initial square?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "The question gives no figure (a square needs none); the answer is four numbers and a corner mapping in words. The book's labelled-square figures are the teaching figure of concept image M2.S12.T12.C55.IMG1 in this concept.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C56",
+   "role": "worked_example",
+   "lp_book_number": "Centre of rotation of a square (9.2)",
+   "ncert_ref": "Section 9.2 - Rotational Symmetry (centre of rotation)",
+   "question_text": "A square gets back onto itself after a 90 degree rotation. Do you know where to mark the centre of rotation?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "No figure given; the answer 'the centre of the square, where the diagonals cross' is one sentence, and the centre dot already appears in concept image M2.S12.T12.C55.IMG1.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C57",
+   "role": "worked_example",
+   "lp_book_number": "Other angles of symmetry of a square (9.2)",
+   "ncert_ref": "Section 9.2 - Rotational Symmetry (square)",
+   "question_text": "What are the other angles of symmetry of a square (besides 90 degrees)?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "REUSES_CONCEPT_IMAGE"
+   ],
+   "reason": "No figure given; the answer is three numbers (180, 270, 360 degrees). The book's three turned squares are the teaching figure of concept image M2.S12.T12.C55.IMG1.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C60",
+   "role": "question",
+   "lp_book_number": "Example 1: Angles of symmetry of a strip",
+   "ncert_ref": "Section 9.2 - Example 1 (strip)",
+   "question_text": "Find the angles of symmetry of the following strip. The strip is a trapezium shape (the top side is shorter than the bottom side, the two slanting sides are equal) with a dot marking its centre.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The strip (shorter side on top, longer side below, centre dot) exists only in the picture; the learner has to imagine turning it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S13.T13.C60.IMG1",
+   "manim_scene": "c6_9_s13_ex1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S13.T13.C60.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "strip": {
+      "corners": [
+       [
+        -3.97,
+        0.78
+       ],
+       [
+        3.97,
+        0.78
+       ],
+       [
+        4.8,
+        -0.78
+       ],
+       [
+        -4.8,
+        -0.78
+       ]
+      ],
+      "fill": "CELL_FILL",
+      "top_side": 7.94,
+      "bottom_side": 9.6,
+      "height": 1.56
+     },
+     "centre_dot": {
+      "at": [
+       0,
+       0
+      ],
+      "radius": 0.1,
+      "fill": "INK"
+     },
+     "type": "other"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw one strip shaped like an isosceles trapezium: corners (-3.97, 0.78), (3.97, 0.78), (4.8, -0.78), (-4.8, -0.78), filled CELL_FILL, outline INK 3 px; the shorter parallel side (7.94 long) is at the top and the longer parallel side (9.6 long) at the bottom, the two slanting sides lean outward going down. Draw a dot (filled INK circle of radius 0.1) at the centre (0, 0) of the strip. Nothing else is drawn.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the rotated copy",
+     "an arrow or an angle label"
+    ],
+    "accuracy_checks": [
+     "top side (-3.97, 0.78) to (3.97, 0.78) is 7.94 long, bottom side (-4.8, -0.78) to (4.8, -0.78) is 9.6 long: the top is shorter",
+     "the two slanting sides are equal (each has horizontal run 0.83 and height 1.56)",
+     "the dot is at the centre of the strip (0, 0), midway between the top and bottom sides",
+     "proportions from the book picture: sides about 316 and 382 px, height about 62 px (ratio 0.83 : 1 : 0.16)"
+    ],
+    "alt_text": "A strip shaped like a trapezium, shorter side on top, with a dot at its centre."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S13.T13.C61",
+   "role": "solution",
+   "lp_book_number": "Example 1: Angles of symmetry of a strip",
+   "ncert_ref": "Section 9.2 - Example 1 (strip, solution picture)",
+   "question_text": "Find the angles of symmetry of the following strip... After the strip is rotated by 180 degrees about its centre, does it overlap with the original strip? Why?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The solution adds the strip turned by 180 degrees (the book's solution picture), which is what shows that it does not overlap the original.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S13.T13.C61.IMG1",
+   "manim_scene": "c6_9_s13_ex1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S13.T13.C61.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S13.T13.C60.IMG1",
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "original": {
+      "corners": [
+       [
+        -3.97,
+        2.98
+       ],
+       [
+        3.97,
+        2.98
+       ],
+       [
+        4.8,
+        1.42
+       ],
+       [
+        -4.8,
+        1.42
+       ]
+      ],
+      "centre": [
+       0,
+       2.2
+      ],
+      "outline": "INK",
+      "fill": "CELL_FILL"
+     },
+     "rotated_180": {
+      "corners": [
+       [
+        -4.8,
+        -1.42
+       ],
+       [
+        4.8,
+        -1.42
+       ],
+       [
+        3.97,
+        -2.98
+       ],
+       [
+        -3.97,
+        -2.98
+       ]
+      ],
+      "centre": [
+       0,
+       -2.2
+      ],
+      "outline": "ANSWER",
+      "fill": "BG"
+     },
+     "turn_arrow": {
+      "arc_centre": [
+       5.4,
+       0
+      ],
+      "radius": 1.9,
+      "direction": "clockwise",
+      "label": "180°",
+      "label_at": [
+       6.2,
+       0
+      ]
+     },
+     "type": "other"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw two strips, one above the other, both the same trapezium as in the question (shorter side 7.94, longer side 9.6, height 1.56). Upper strip (the given strip, same shape and size as in the question, moved up): corners (-3.97, 2.98), (3.97, 2.98), (4.8, 1.42), (-4.8, 1.42), filled CELL_FILL, outline INK 3 px, with an INK dot of radius 0.1 at its centre (0, 2.2). Lower strip (the given strip turned by 180 degrees about its centre): corners (-4.8, -1.42), (4.8, -1.42), (3.97, -2.98), (-3.97, -2.98), so the longer side (9.6) is now at the top and the shorter side (7.94) at the bottom; filled BG, outline ANSWER 4 px, with an ANSWER dot of radius 0.1 at its centre (0, -2.2). Between and beside them draw a half-turn arrow in ANSWER (4 px): a semicircle of radius 1.9 centred (5.4, 0) running clockwise from (5.4, 1.9) through (7.3, 0) to (5.4, -1.9), with an arrowhead at (5.4, -1.9) pointing left. Write 180° in ANSWER, text height 0.45 unit, centred at (6.2, 0). No other text.",
+    "visible_text": [
+     "180°"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "overlay of the two strips",
+     "the words overlap or does not fit"
+    ],
+    "accuracy_checks": [
+     "lower strip = upper strip rotated by 180 degrees about its centre: each corner (x, y) relative to the centre goes to (-x, -y): (-3.97, 0.78) -> (3.97, -0.78) and (4.8, -0.78) -> (-4.8, 0.78)",
+     "lower strip has the 9.6 side on top and the 7.94 side below, so it does not coincide with the upper strip (top sides 7.94 vs 9.6)",
+     "both strips keep the question's size and proportions; both dots are at the strip centres"
+    ],
+    "alt_text": "The given strip above and the same strip turned upside down below it with a half-turn arrow marked 180 degrees; the long side is now on top.",
+    "render_note": "The original strip keeps the question's size and x position; it is moved up to y = 2.2 to make room for the turned copy. The book's solution picture shows only the turned strip."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C62",
+   "role": "question",
+   "lp_book_number": "Figure it Out 9.2, Q1",
+   "ncert_ref": "Section 9.2 - Figure it Out Q1",
+   "question_text": "Find the angles of symmetry for the given figures about the point marked with a dot. (a) A plus shape made of a vertical rectangle and a horizontal rectangle of the same length crossing at their middles... (b)... (c)...",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The three figures and the dot (the centre of rotation) exist only in the picture; the angles of symmetry must be found by turning them.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S14.T14.C62.IMG1",
+   "manim_scene": "c6_9_s14_q1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S14.T14.C62.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "figure1_plus": {
+      "vertical_rect": [
+       [
+        -5.7,
+        -1.72
+       ],
+       [
+        -4.9,
+        1.72
+       ]
+      ],
+      "horizontal_rect": [
+       [
+        -7.02,
+        -0.4
+       ],
+       [
+        -3.58,
+        0.4
+       ]
+      ],
+      "dot": [
+       -5.3,
+       0
+      ]
+     },
+     "figure2_line_squares": {
+      "line": [
+       [
+        -0.2,
+        -1.7
+       ],
+       [
+        -0.2,
+        1.7
+       ]
+      ],
+      "top_square": [
+       [
+        -0.2,
+        1.33
+       ],
+       [
+        0.17,
+        1.7
+       ]
+      ],
+      "bottom_square": [
+       [
+        -0.2,
+        -1.7
+       ],
+       [
+        0.17,
+        -1.33
+       ]
+      ],
+      "dot": [
+       -0.2,
+       0
+      ]
+     },
+     "figure3_H": {
+      "verticals_x": [
+       3.6,
+       7.0
+      ],
+      "y_range": [
+       -1.7,
+       1.7
+      ],
+      "bar_y": 0,
+      "dot": [
+       5.3,
+       0
+      ]
+     },
+     "type": "other",
+     "part_letters": {
+      "rule": "user decision 23 Nov 2026: the LP answer refers to the figures by letter, so the letters are drawn",
+      "colour": "INK",
+      "font": "44 px (0.37 unit)",
+      "coordinate_system": "canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px",
+      "placement": "Each letter is centred above its figure.",
+      "items": [
+       {
+        "text": "(a)",
+        "at": [
+         -5.3,
+         2.55
+        ]
+       },
+       {
+        "text": "(b)",
+        "at": [
+         -0.2,
+         2.55
+        ]
+       },
+       {
+        "text": "(c)",
+        "at": [
+         5.3,
+         2.55
+        ]
+       }
+      ]
+     }
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw three figures in a row, all lines INK 3 px, fills BG, each with a dot (filled INK circle of radius 0.09) at the marked point. Figure 1 (a plus shape made of two equal rectangles): a vertical rectangle with corners (-5.7, -1.72), (-4.9, -1.72), (-4.9, 1.72), (-5.7, 1.72) and a horizontal rectangle with corners (-7.02, -0.4), (-3.58, -0.4), (-3.58, 0.4), (-7.02, 0.4), both outlines drawn in full so that the central square (corners (-5.7, -0.4), (-4.9, -0.4), (-4.9, 0.4), (-5.7, 0.4)) shows inside the plus; dot at (-5.3, 0). Figure 2 (a vertical line with a small square on the right at each end): a vertical line x = -0.2 from y = -1.7 to y = 1.7; a square of side 0.37 on its right at the top, corners (-0.2, 1.33), (0.17, 1.33), (0.17, 1.7), (-0.2, 1.7); an identical square on its right at the bottom, corners (-0.2, -1.7), (0.17, -1.7), (0.17, -1.33), (-0.2, -1.33); the left side of each square lies on the line; dot at (-0.2, 0), the middle of the line. Figure 3 (two vertical lines joined by a horizontal bar): vertical lines x = 3.6 and x = 7.0, each from y = -1.7 to y = 1.7; a horizontal line y = 0 from x = 3.6 to x = 7.0 joining their middles; dot at (5.3, 0), the middle of the bar. No text other than the part letters. Part letters (the LP answer names the figures by letter): write (a), (b), (c) in INK, 44 px (0.37 unit), each centred on its anchor, canvas units, origin at the canvas centre, x right, y up, 1 unit = 120 px: (a) at (-5.3, 2.55); (b) at (-0.2, 2.55); (c) at (5.3, 2.55). Each letter is centred above its figure.",
+    "visible_text": [
+     "(a)",
+     "(b)",
+     "(c)"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters other than the part letters (a) to (c)",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "lines of symmetry",
+     "arrows or angle marks"
+    ],
+    "accuracy_checks": [
+     "figure 1: each rectangle is 3.44 long and 0.8 wide (length 4.3 times the width), so each arm sticks out 1.32 units (1.65 times the side of the central square 0.8) on each side; the dot is at the centre of the central square",
+     "figure 2: the dot is exactly midway on the line (y = 0) and the two squares (side 0.37) are both on the right, one at each end: a half turn would put the top square on the left of the bottom end, so it does not fit",
+     "figure 3: line length 3.4 equals the gap 3.4; the dot is at the middle of the bar (5.3, 0): a half turn fits",
+     "part letters (a) to (c) are in the reading order of the LP parts and match the LP answer"
+    ],
+    "alt_text": "Three figures each with a dot: a plus shape, a vertical line with a small square on the right at each end, and an H-like figure with a bar joining two vertical lines. The figures are labelled (a) to (c).",
+    "render_note": "Part letters (a) to (c) added (AUDIT 23 Nov 2026): the LP answer refers to the figures by letter."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C63",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 9.2, Q1",
+   "ncert_ref": "Section 9.2 - Figure it Out Q1 (printed answer is text)",
+   "question_text": "Find the angles of symmetry for the given figures about the point marked with a dot...",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The printed answer is text only (a: 90, 180, 270, 360; b: 360 only; c: 180, 360). A solution picture would only repeat the question figures.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the LaTeX answer text: (a) 90, 180, 270, 360; (b) 360 only; (c) 180, 360 degrees."
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C64",
+   "role": "question",
+   "lp_book_number": "Figure it Out 9.2, Q2",
+   "ncert_ref": "Section 9.2 - Figure it Out Q2",
+   "question_text": "Which of the following figures have more than one angle of symmetry? The seven figures are: a circle with a cross dividing it into 4 equal parts; a downward-pointing triangle with a dot inside; a circle divided into 3 equal parts by three spokes; a four-bladed pinwheel with a red cross; an X made of two crossing lines; a five-pointed star with a dot at its centre; a shape like the letter B...",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The seven figures exist only in the picture; the learner must turn each about its centre to decide.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S14.T14.C64.IMG1",
+   "manim_scene": "c6_9_s14_q2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S14.T14.C64.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "row1_y": 2.15,
+     "row2_y": -2.15,
+     "figures": [
+      {
+       "n": 1,
+       "kind": "circle_with_cross",
+       "centre": [
+        -5.4,
+        2.15
+       ],
+       "radius": 1.5
+      },
+      {
+       "n": 2,
+       "kind": "isosceles_triangle_point_down",
+       "corners": [
+        [
+         -3.2,
+         3.55
+        ],
+        [
+         -0.4,
+         3.55
+        ],
+        [
+         -1.8,
+         0.75
+        ]
+       ],
+       "dot": [
+        -1.8,
+        2.58
+       ]
+      },
+      {
+       "n": 3,
+       "kind": "circle_three_radii",
+       "centre": [
+        1.8,
+        2.15
+       ],
+       "radius": 1.5,
+       "radii_directions_deg": [
+        270,
+        30,
+        150
+       ]
+      },
+      {
+       "n": 4,
+       "kind": "pinwheel_four_blades",
+       "centre": [
+        5.4,
+        2.15
+       ],
+       "blade_length": 1.5,
+       "sagitta": 0.225,
+       "bulge": [
+        "left (up blade)",
+        "top (right blade)",
+        "right (down blade)",
+        "bottom (left blade)"
+       ]
+      },
+      {
+       "n": 5,
+       "kind": "X_two_lines",
+       "centre": [
+        -3.6,
+        -2.15
+       ],
+       "half_extent": 1.3
+      },
+      {
+       "n": 6,
+       "kind": "pentagram",
+       "centre": [
+        0.0,
+        -2.15
+       ],
+       "circumradius": 1.55,
+       "vertices": [
+        [
+         0.0,
+         -0.6
+        ],
+        [
+         -1.474,
+         -1.671
+        ],
+        [
+         -0.911,
+         -3.404
+        ],
+        [
+         0.911,
+         -3.404
+        ],
+        [
+         1.474,
+         -1.671
+        ]
+       ]
+      },
+      {
+       "n": 7,
+       "kind": "line_with_two_semicircles",
+       "line_x": 3.23,
+       "y_range": [
+        -3.65,
+        -0.65
+       ],
+       "semicircle_radius": 0.75,
+       "dot": [
+        3.23,
+        -2.15
+       ]
+      }
+     ],
+     "type": "other"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw seven figures in two rows, reading order left to right then top to bottom; all lines INK 3 px, shapes filled BG, each with a dot (filled INK circle of radius 0.09). Row 1 (y = 2.15), centres x = -5.4, -1.8, 1.8, 5.4. Row 2 (y = -2.15), centres x = -3.6, 0, 3.6. Figure 1: a circle of radius 1.5 centred (-5.4, 2.15) with a horizontal and a vertical diameter (2 px) crossing at the centre, dot at the centre. Figure 2: a downward-pointing triangle with corners (-3.2, 3.55), (-0.4, 3.55), (-1.8, 0.75) (flat side on top, apex at the bottom; flat side 2.8, height 2.8), dot at (-1.8, 2.58). Figure 3: a circle of radius 1.5 centred (1.8, 2.15) with three radii from the centre to (1.8, 0.65), (3.099, 2.9) and (0.501, 2.9) (directions 270, 30 and 150 degrees, 120 degrees apart), dot at the centre. Figure 4 (four-bladed pinwheel) centred (5.4, 2.15), dot at the centre; four blades of length 1.5, each with a straight edge along an axis and a curved edge: Up blade: straight edge from the dot (5.4, 2.15) to the tip (5.4, 3.65), curved edge an arc from the dot to the tip bulging to the left with sagitta 0.225 (arc midpoint (5.175, 2.9)); Right blade: straight edge from the dot (5.4, 2.15) to the tip (6.9, 2.15), curved edge an arc from the dot to the tip bulging to the top with sagitta 0.225 (arc midpoint (6.15, 2.375)); Down blade: straight edge from the dot (5.4, 2.15) to the tip (5.4, 0.65), curved edge an arc from the dot to the tip bulging to the right with sagitta 0.225 (arc midpoint (5.625, 1.4)); Left blade: straight edge from the dot (5.4, 2.15) to the tip (3.9, 2.15), curved edge an arc from the dot to the tip bulging to the bottom with sagitta 0.225 (arc midpoint (4.65, 1.925)). Figure 5: two line segments crossing at right angles, from (-4.9, -3.45) to (-2.3, -0.85) and from (-4.9, -0.85) to (-2.3, -3.45), dot at the crossing (-3.6, -2.15). Figure 6: a five-pointed star drawn as five straight lines of the pentagram (circumradius 1.55, one point at the top), vertices (0, -0.6), (-1.474, -1.671), (-0.911, -3.404), (0.911, -3.404), (1.474, -1.671), lines joining each vertex to the vertex two places on: (0, -0.6) to (-0.911, -3.404); (-1.474, -1.671) to (0.911, -3.404); (-0.911, -3.404) to (1.474, -1.671); (0.911, -3.404) to (0, -0.6); (1.474, -1.671) to (-1.474, -1.671); dot at the centre (0, -2.15). Figure 7: a vertical line x = 3.23 from y = -3.65 to y = -0.65, and on its right two semicircles of radius 0.75, the upper one centred (3.23, -1.4) and the lower one centred (3.23, -2.9), both bulging right; dot at the middle of the line (3.23, -2.15). No letters, no text.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "boxes, rings or ticks marking the answer",
+     "angle values",
+     "letters"
+    ],
+    "accuracy_checks": [
+     "figure 2 is isosceles, NOT equilateral: flat side 2.8 and height 2.8 (equilateral would be height 2.42), so it has only the 360 degree turn, as the LP and the book answer say",
+     "figure 3 radii are 120 degrees apart (270, 30, 150), figure 4 blades are 90 degrees apart and identical, figure 5 lines cross at 90 degrees, figure 6 has 5 lines of the pentagram with circumradius 1.55",
+     "figure 7: each semicircle has one half of the line (length 1.5) as its diameter, so its radius is 0.75; the two semicircles touch at the dot",
+     "7 figures drawn: 4 in the first row and 3 in the second"
+    ],
+    "alt_text": "Seven figures: a circle with a cross, a downward triangle with a dot, a circle with three spokes, a four-bladed pinwheel, an X, a five-pointed star with a dot, and a B-like shape of a line with two half circles.",
+    "render_note": "Part letters are not drawn: the panels are in the order of the question text, left to right (first to last). Figure 4's straight edges are brown-red in the book; drawn INK here. Figure 2 follows the book: base about equal to height, dot at 0.35 of the height below the flat side."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S14.T14.C65",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 9.2, Q2",
+   "ncert_ref": "Section 9.2 - Figure it Out Q2 (printed answer)",
+   "question_text": "Which of the following figures have more than one angle of symmetry?...",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The printed answer is a picture: the figures that have more than one angle of symmetry. The solution picture shows all seven figures with those five marked.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S14.T14.C65.IMG1",
+   "manim_scene": "c6_9_s14_q2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S14.T14.C65.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S14.T14.C64.IMG1",
+    "content": {
+     "canvas_units": [
+      16,
+      9
+     ],
+     "row1_y": 2.15,
+     "row2_y": -2.15,
+     "figures": [
+      {
+       "n": 1,
+       "kind": "circle_with_cross",
+       "centre": [
+        -5.4,
+        2.15
+       ],
+       "radius": 1.5
+      },
+      {
+       "n": 2,
+       "kind": "isosceles_triangle_point_down",
+       "corners": [
+        [
+         -3.2,
+         3.55
+        ],
+        [
+         -0.4,
+         3.55
+        ],
+        [
+         -1.8,
+         0.75
+        ]
+       ],
+       "dot": [
+        -1.8,
+        2.58
+       ]
+      },
+      {
+       "n": 3,
+       "kind": "circle_three_radii",
+       "centre": [
+        1.8,
+        2.15
+       ],
+       "radius": 1.5,
+       "radii_directions_deg": [
+        270,
+        30,
+        150
+       ]
+      },
+      {
+       "n": 4,
+       "kind": "pinwheel_four_blades",
+       "centre": [
+        5.4,
+        2.15
+       ],
+       "blade_length": 1.5,
+       "sagitta": 0.225,
+       "bulge": [
+        "left (up blade)",
+        "top (right blade)",
+        "right (down blade)",
+        "bottom (left blade)"
+       ]
+      },
+      {
+       "n": 5,
+       "kind": "X_two_lines",
+       "centre": [
+        -3.6,
+        -2.15
+       ],
+       "half_extent": 1.3
+      },
+      {
+       "n": 6,
+       "kind": "pentagram",
+       "centre": [
+        0.0,
+        -2.15
+       ],
+       "circumradius": 1.55,
+       "vertices": [
+        [
+         0.0,
+         -0.6
+        ],
+        [
+         -1.474,
+         -1.671
+        ],
+        [
+         -0.911,
+         -3.404
+        ],
+        [
+         0.911,
+         -3.404
+        ],
+        [
+         1.474,
+         -1.671
+        ]
+       ]
+      },
+      {
+       "n": 7,
+       "kind": "line_with_two_semicircles",
+       "line_x": 3.23,
+       "y_range": [
+        -3.65,
+        -0.65
+       ],
+       "semicircle_radius": 0.75,
+       "dot": [
+        3.23,
+        -2.15
+       ]
+      }
+     ],
+     "focus_boxes": {
+      "side": 3.3,
+      "centres": [
+       [
+        -5.4,
+        2.15
+       ],
+       [
+        1.8,
+        2.15
+       ],
+       [
+        5.4,
+        2.15
+       ],
+       [
+        -3.6,
+        -2.15
+       ],
+       [
+        0.0,
+        -2.15
+       ]
+      ],
+      "around_figures": [
+       1,
+       3,
+       4,
+       5,
+       6
+      ]
+     },
+     "type": "other"
+    },
+    "manim_description": "Canvas 16 by 9 units (1920 by 1080 px, 1 unit = 120 px), origin at the canvas centre, x to the right, y up, background BG. Draw seven figures in two rows, reading order left to right then top to bottom; all lines INK 3 px, shapes filled BG, each with a dot (filled INK circle of radius 0.09). Row 1 (y = 2.15), centres x = -5.4, -1.8, 1.8, 5.4. Row 2 (y = -2.15), centres x = -3.6, 0, 3.6. Figure 1: a circle of radius 1.5 centred (-5.4, 2.15) with a horizontal and a vertical diameter (2 px) crossing at the centre, dot at the centre. Figure 2: a downward-pointing triangle with corners (-3.2, 3.55), (-0.4, 3.55), (-1.8, 0.75) (flat side on top, apex at the bottom; flat side 2.8, height 2.8), dot at (-1.8, 2.58). Figure 3: a circle of radius 1.5 centred (1.8, 2.15) with three radii from the centre to (1.8, 0.65), (3.099, 2.9) and (0.501, 2.9) (directions 270, 30 and 150 degrees, 120 degrees apart), dot at the centre. Figure 4 (four-bladed pinwheel) centred (5.4, 2.15), dot at the centre; four blades of length 1.5, each with a straight edge along an axis and a curved edge: Up blade: straight edge from the dot (5.4, 2.15) to the tip (5.4, 3.65), curved edge an arc from the dot to the tip bulging to the left with sagitta 0.225 (arc midpoint (5.175, 2.9)); Right blade: straight edge from the dot (5.4, 2.15) to the tip (6.9, 2.15), curved edge an arc from the dot to the tip bulging to the top with sagitta 0.225 (arc midpoint (6.15, 2.375)); Down blade: straight edge from the dot (5.4, 2.15) to the tip (5.4, 0.65), curved edge an arc from the dot to the tip bulging to the right with sagitta 0.225 (arc midpoint (5.625, 1.4)); Left blade: straight edge from the dot (5.4, 2.15) to the tip (3.9, 2.15), curved edge an arc from the dot to the tip bulging to the bottom with sagitta 0.225 (arc midpoint (4.65, 1.925)). Figure 5: two line segments crossing at right angles, from (-4.9, -3.45) to (-2.3, -0.85) and from (-4.9, -0.85) to (-2.3, -3.45), dot at the crossing (-3.6, -2.15). Figure 6: a five-pointed star drawn as five straight lines of the pentagram (circumradius 1.55, one point at the top), vertices (0, -0.6), (-1.474, -1.671), (-0.911, -3.404), (0.911, -3.404), (1.474, -1.671), lines joining each vertex to the vertex two places on: (0, -0.6) to (-0.911, -3.404); (-1.474, -1.671) to (0.911, -3.404); (-0.911, -3.404) to (1.474, -1.671); (0.911, -3.404) to (0, -0.6); (1.474, -1.671) to (-1.474, -1.671); dot at the centre (0, -2.15). Figure 7: a vertical line x = 3.23 from y = -3.65 to y = -0.65, and on its right two semicircles of radius 0.75, the upper one centred (3.23, -1.4) and the lower one centred (3.23, -2.9), both bulging right; dot at the middle of the line (3.23, -2.15). No letters, no text. Then draw five FOCUS boxes (squares of side 3.3, outline FOCUS 4 px, no fill) around figures 1, 3, 4, 5 and 6, each centred on its figure centre: (-5.4, 2.15), (1.8, 2.15), (5.4, 2.15), (-3.6, -2.15), (0, -2.15).",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "angle values or the word order",
+     "boxes around figures 2 and 7"
+    ],
+    "accuracy_checks": [
+     "boxed figures are 1 (circle with cross, 4 equal parts, order 4), 3 (circle with 3 equal parts, order 3), 4 (pinwheel, order 4), 5 (X, order 4), 6 (five-pointed star, order 5): five figures as in the LP answer and the book",
+     "figures 2 (isosceles triangle) and 7 (B-shape) stay unboxed: they fit only after 360 degrees",
+     "figure positions are identical to the question diagram; each box (side 3.3) is centred on its figure and stays clear of its neighbours (box centres are 3.6 apart, boxes 0.3 apart)"
+    ],
+    "alt_text": "The same seven figures with a pink box around the circle with a cross, the circle with three spokes, the pinwheel, the X and the five-pointed star.",
+    "render_note": "The book's printed answer repeats only the five figures; the diagram keeps all seven (same layout as the question) and boxes the five, as the LP answer names them. The boxes (FOCUS) stand for the book's choice of the five. Order values are not drawn."
+   }
+  }
+ ]
+}

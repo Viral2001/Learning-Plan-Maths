@@ -1,0 +1,38 @@
+# Chunk D notes (Class 6 Ch 8, units 57-65)
+
+Result: required 8 (7 solutions + the house question), optional 3, none 5. Validator: errors 0, warnings 0.
+Script that wrote out_D.json (kept outside HERE): scratchpad `c6ch8_D/gen_out_D.py`.
+
+## 1. Judgement calls
+
+1. **Questions with no given figure get no figure (C120, C122, C124, C138).** The three rectangle questions and the "four equal sides" question give lengths or a yes/no in words and the book prints no figure with them. Decision `none` (TEXT_SUFFICIENT). Their solutions are required (printed answer is a picture, B2) and stand alone (`derived_from` null).
+2. **Solution figure = complete final state, not the book's step pictures.** The book walks through 8.5 Construct 2 and the house in steps (base only, base + l, circle, arc, ...). Those are intermediate states, so the single solution figure shows the finished figure plus the one short construction arc the LP steps mention. The step pictures are accounted for as `none:TEXT_SUFFICIENT` (P22-construction-1/2, P23-construction-1, P25-construction-1, P26-construction-1, P30-shape-1) or as the teaching image that already shows the idea (P24-construction-1 -> T32.C114.IMG1, P27-construction-1 -> T35.C126.IMG1, P28-construction-1 -> T35.C128.IMG1, P29-construction-1 -> T7.C20.IMG1).
+3. **Overlap with chunk C (please reconcile at merge).** Pages 22-24 (the book's solved example 2 of 8.5) are the section of both my T33 and chunk C's T32 teaching blocks (C115 to C118). Figures claimed by both: P22-shape-1, P22-construction-1, P22-construction-2, P23-construction-1, P24-construction-1, P24-construction-2. My meaning: P22-shape-1 and P24-construction-2 (rough and finished rectangle) -> my solution item C121; P24-construction-1 -> concept image T32.C114.IMG1; the other three -> none (intermediate step). If chunk C turns the finished-rectangle picture into its own item (the T32.C118 block), mine becomes the second use and should be `NEW-P24-construction-2-<suffix>`.
+4. **House question (C130) required, solution (C131) required with `derived_from`.** The book prints the house with "Recreate this figure" (p.25); the arc B-C sags downward with centre A, which the LP words do not say. The question figure is exactly what the book gives (no construction arcs). The solution adds only the two ANSWER arcs of radius 5 cm from B and from C that cross at A (the idea of the section), same layout and positions.
+5. **Bigger house (C132) is `optional`, not required.** The book prints no figure with FiO 8.6 Q1; "a bigger house" points back to Example 4's house, which sits two cards earlier and is a teaching image of an earlier topic (T35.C128.IMG1). Not added; **text sync needed** (see section 2). Its solution (C133) is required: the printed answer is the 7 cm house picture; it is drawn standalone with the same two crossing arcs as Example 4 (sibling consistency).
+6. **Artwork question (C136) is `optional`, same logic as 5.** It points at three Artwork figures printed in section 8.1, not here. One composite picture is not given by the question, so none is added.
+7. **Artwork solution (C137): one composite picture** with the three printed answer drawings (Person left, Wavy Wave top right, Eyes bottom right), because a pair gets at most one solution diagram. I followed the LP text where it differs from the printed answer: equal half circles for the wave (the print is hatched and drawn as tall half-ellipses, almost certainly stretched), no hatching, a plain square body for the person (as the LP and print say), round pupils. Wave size taken from section 8.1 (central line 8 cm, two half circles of radius 2). Eye size chosen (tips 6 apart, two arcs of radius 5, lens 2 tall, pupil radius 0.75) because the book gives no eye dimensions; the picture is to look like the print, not to carry numbers.
+8. **Rhombus (C139):** drawn as the LP builds it (A at the origin, angle 60 degrees, D found by two arcs), which is the book's own hint picture. The printed answer is an unlabelled diamond standing on a vertex (same shape, turned). The 60 degree label is the LP's own example angle ("for example 60 degrees").
+9. **Worked blocks in T35.** C126 (circles meet, how far from B and C): `none`, all data in words and the same card already shows the teaching image. C127 (was it necessary to draw two full circles): `optional`, a picture of the two short arcs crossing at A would help but the text answer is complete; text alternative written.
+10. **Computed side lengths shown on the rectangles** ("4.9 cm", "6.9 cm", "6.3 cm") in ANSWER green: the LP answers state them (about 4.9, 6.9, 6.3); recomputed as sqrt(7^2-5^2) = 4.899, sqrt(8^2-4^2) = 6.928, sqrt(7^2-3^2) = 6.325.
+11. **Aspect ratios:** the house (5 cm and 7 cm) and the two tall rectangles (4 x 6.9 and 3 x 6.3) are clearly tall, so `3:4`; the rest 16:9. The pipeline's 16:9 card will centre them.
+
+## 2. Things in the LP that look wrong or thin
+
+- **Question numbers in the LP do not match the book.** T34 is "Figure it Out 8.5, Q1/Q2" but the book numbers are Construct Q3/Q4 (ncert_refs say Q3/Q4, correct). T37 "Figure it Out 8.6, Q1" is right (book Q1). T39 C136 is labelled "Figure it Out 8.6, Q1" and C138 "Q2", but the book numbers are Q2 and Q3 (ncert_refs say Q2/Q3, correct); C136 also repeats C132's concept name "Figure it out: Q1".
+- **C132 (bigger house) text lacks the house.** The question says only "a bigger house in which all the sides are 7 cm". Suggested text (needs_lp_text_sync): "Construct a bigger house like the one in Example 4 (a square body with a door, a roof whose two sides equal the body sides, and a curved arc from B to C with centre at the roof point A), in which all the sides are 7 cm."
+- **C130 question text (house)** describes the arc only as "a curved arc from B to C"; the figure shows it sagging below the line BC. The required figure carries that.
+- **C137 answer** says the person's body is "a 4 cm by 4 cm square body in the book's solution", but the Artwork person of section 8.1 has a body whose top is a downward arc. The question asks to recreate the Artwork figures, the printed answer shows a plain square. The picture follows the printed answer and the LP.
+- **C137 answer says "half circles" for the wave**, the printed answer is hatched half-ellipses. Picture uses half circles (LP wins).
+- **Concept names:** C126 and C127 are both named "Where two circles meet"; unit 57 is called "Example 3" while the book numbers it solved example 2 (ncert_ref 8.5.ex2 is right).
+- C121/C123/C125 `s_figure` hints are fine; C131's `s_figure` ("circles around B and C crossing at A") is thinner than the LP steps, which use arcs; I followed the steps.
+- All LP numbers checked: 4.9, 6.9, 6.3 (sides); BC = DE = 5 so triangle ABC is equilateral; 7 cm house door 2 x 3 as printed.
+
+## 3. Where the book is unclear
+
+- **The printed house on p.25 is not to scale:** the arc sags about 0.22 of BC, the exact value for centre A and radius 5 is 0.134 (0.67 cm), and the door looks about 1.3 by 1.7 cm. The figures are drawn from the stated measures, not copied from the print.
+- **Step 3 circle (p.23)** is drawn with radius about 1.2 x DC instead of 1.4 x DC and B is not lettered; not copied.
+- **Door position:** the book gives only the door's size; centred on DE as printed (gaps 2.0 in the 5 cm house, 2.5 in the 7 cm house).
+- **Person neck length** is not labelled (about 2 cm by scale), eye proportions are not given (see 1.7).
+- **Rhombus printed answer** has no letters or angles; the 60 / 120 degrees are read from its proportions.
+- **Solutions p.36:** the rectangle heights are not labelled; taken as sqrt(8^2-4^2) and sqrt(7^2-3^2), which match the print's proportions (1.72 and 2.1 times the base).

@@ -1,0 +1,2875 @@
+{
+ "meta": {
+  "chapter": "The Other Side of Zero",
+  "class": 6,
+  "textbook": "Ganita Prakash, Grade 6, Chapter 10",
+  "lp_plan_id": "cbse_eng_maths6_ch10_v91",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "none": 12,
+    "required": 4,
+    "optional": 0
+   },
+   "solution": {
+    "required": 10,
+    "none": 4,
+    "optional": 2
+   },
+   "worked_example": {
+    "required": 0,
+    "optional": 0,
+    "none": 0
+   }
+  },
+  "notes": [
+   "Chunk C: topics T19, T20, T22, T23, T25, T26, T27 (16 pairs, 32 items).",
+   "Token diagrams use SET_A for positive tokens and SET_B for negative tokens (the style table has no green/red); crosses and result labels are ANSWER. The book and some teaching images use green/red.",
+   "FiO 10.2 Q2 (C116/C117): one picture holds both sets (left = part a, right = part b) because the LP keeps both parts in one concept; the book's letters a./b. are not drawn.",
+   "Hop pictures for the T19 solutions and the T23 Q2 solution have no question diagram: the book's picture under those questions already shows the answer arrows."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P11-number_line-1",
+   "source": "chapter p.11",
+   "description": "Teaching figure: the infinite lift rotated 90 degrees, a number line from −10 to 10 with an arrowhead at both ends, nothing marked. Section 'Back to the number line' (the book text the T19 questions come from); the T18 teaching image 'Lift on its side' shows the same lift-to-line idea.",
+   "mapped_to": "concept_image:M2.S18.T18.C76.IMG1"
+  },
+  {
+   "fig_id": "P11-number_line-2",
+   "source": "chapter p.11",
+   "description": "Number ray 0 to 10 with 4 hop arcs from 5 to 9, arrowheads pointing right; no arc labels. Book picture for 'from 5 to 9'.",
+   "mapped_to": "item:M2.S19.T19.C80 (solution)"
+  },
+  {
+   "fig_id": "P12-number_line-1",
+   "source": "chapter p.12",
+   "description": "Number ray 0 to 10 with 6 hop arcs from 9 to 3, arrowheads pointing left; no arc labels. Book picture for 'from 9 to 3'.",
+   "mapped_to": "item:M2.S19.T19.C82 (solution)"
+  },
+  {
+   "fig_id": "P12-number_line-2",
+   "source": "chapter p.12",
+   "description": "Number line −10 to 10 with 5 hop arcs from 3 to −2, arrowheads pointing left; no arc labels. Book picture for 'from 3 to −2'.",
+   "mapped_to": "item:M2.S19.T19.C84 (solution)"
+  },
+  {
+   "fig_id": "P12-number_line-3",
+   "source": "chapter p.12",
+   "description": "Empty number line −10 to 10 given for Figure it Out Q1 (mark 3 positive and 3 negative numbers).",
+   "mapped_to": "item:M2.S20.T20.C85 (question)"
+  },
+  {
+   "fig_id": "NEW-P12-answer_boxes-1",
+   "source": "chapter p.12",
+   "description": "NEW (missing from the base): three empty rounded boxes printed under Figure it Out Q2 'Write down the above 3 marked negative numbers in the following boxes'; blanks only, the same blanks as the solutions-page reprint SOL49-answer_boxes-1.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P13-number_line-1",
+   "source": "chapter p.13",
+   "description": "Teaching figure: a line with arrowheads at both ends and one tick labelled 0 (the unmarked number line); the sentence beside it says the same ('this line shows only the position of zero').",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P13-number_line-2",
+   "source": "chapter p.13",
+   "description": "Unmarked number line with 0, +25, +85 and an arrow −60 from +85 to +25 (Example 7). Used here as the given state without the +25 tick.",
+   "mapped_to": "item:M2.S22.T22.C97 (question)"
+  },
+  {
+   "fig_id": "NEW-P13-number_line-2-sol",
+   "source": "chapter p.13",
+   "description": "Second use of the Example 7 figure: the answer state with the +25 tick and label added (the picture exactly as the book prints it).",
+   "mapped_to": "item:M2.S22.T22.C98 (solution)"
+  },
+  {
+   "fig_id": "P13-number_line-3",
+   "source": "chapter p.13",
+   "description": "Unmarked number line with −100, 0, +250 and a long arrow from +250 to −100 with a boxed '?' (Example 8).",
+   "mapped_to": "item:M2.S22.T22.C99 (question)"
+  },
+  {
+   "fig_id": "NEW-P13-number_line-3-sol",
+   "source": "chapter p.13",
+   "description": "Second use of the Example 8 figure: the '?' replaced by −350 for the solution.",
+   "mapped_to": "item:M2.S22.T22.C100 (solution)"
+  },
+  {
+   "fig_id": "P14-number_line-1",
+   "source": "chapter p.14",
+   "description": "Number line with ticks −3, 0, 2 (to scale) and an arrow from 2 to −3 labelled −5; sits beside the 'Use unmarked number lines' list but belongs to the paragraph 'start at 2, go to −3'. The LP solution adds the second method (two arrows).",
+   "mapped_to": "item:M2.S23.T23.C106 (solution)"
+  },
+  {
+   "fig_id": "P15-token_set-1",
+   "source": "chapter p.15",
+   "description": "5 positive tokens over 3 negative tokens, columns 1 to 3 crossed out, 2 positive left (lift attendant's pocket). The T24 teaching image 'Cancel the pairs' shows the same idea; the question's answer needs its own figure.",
+   "mapped_to": "item:M3.S25.T25.C111 (solution)"
+  },
+  {
+   "fig_id": "P15-token_set-2",
+   "source": "chapter p.15",
+   "description": "5 positive tokens over 8 negative tokens, columns 1 to 5 crossed out, 3 negative left (Example: add +5 and −8).",
+   "mapped_to": "item:M3.S26.T26.C113 (solution)"
+  },
+  {
+   "fig_id": "P16-token_set-1",
+   "source": "chapter p.16",
+   "description": "Given in Figure it Out 10.2 Q2: set a, 3 positive tokens over 5 negative tokens, nothing crossed out. Drawn as the left half of the one question figure.",
+   "mapped_to": "item:M3.S27.T27.C116 (question)"
+  },
+  {
+   "fig_id": "P16-token_set-2",
+   "source": "chapter p.16",
+   "description": "Given in Figure it Out 10.2 Q2: set b, 6 positive tokens over 3 negative tokens, nothing crossed out. Drawn as the right half of the one question figure.",
+   "mapped_to": "item:M3.S27.T27.C116 (question)"
+  },
+  {
+   "fig_id": "NEW-P16-token_set-1-sol",
+   "source": "solutions p.50",
+   "description": "Second use of set a: answer state with 3 pairs crossed out and 2 negative tokens left (not printed in the book, whose answer is text; follows the LP solution).",
+   "mapped_to": "item:M3.S27.T27.C117 (solution)"
+  },
+  {
+   "fig_id": "NEW-P16-token_set-2-sol",
+   "source": "solutions p.50",
+   "description": "Second use of set b: answer state with 3 pairs crossed out and 3 positive tokens left (not printed in the book, whose answer is text; follows the LP solution).",
+   "mapped_to": "item:M3.S27.T27.C117 (solution)"
+  },
+  {
+   "fig_id": "SOL48-number_line-1",
+   "source": "solutions p.48",
+   "description": "Printed answer picture for Figure it Out Q1: number line −10 to 10 with dots R at −7, Q at −3, P at −1, A at 2, B at 5, C at 8 (checked against the page picture: description is right).",
+   "mapped_to": "item:M2.S20.T20.C86 (solution)"
+  },
+  {
+   "fig_id": "SOL49-answer_boxes-1",
+   "source": "solutions p.49",
+   "description": "Three empty rounded boxes reprinted for Figure it Out Q2; printed answer is text −7, −3, −1 (the '<' signs listed in the page text are not visible in the picture).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "SOL50-token_set-1",
+   "source": "solutions p.50",
+   "description": "Reprint of set a (3 positive over 5 negative, nothing crossed out) with the printed answer as text only; the same figure as P16-token_set-1.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  },
+  {
+   "fig_id": "SOL50-token_set-2",
+   "source": "solutions p.50",
+   "description": "Reprint of set b (6 positive over 3 negative, nothing crossed out) with the printed answer as text only; the same figure as P16-token_set-2.",
+   "mapped_to": "none:SAME_AS_QUESTION_DIAGRAM"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 22,
+  "mapped_to_items": 16,
+  "mapped_to_concept_images": 1,
+  "mapped_none": 5,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M2.S19.T19.C80.IMG1",
+   "M2.S19.T19.C82.IMG1",
+   "M2.S19.T19.C84.IMG1",
+   "M2.S20.T20.C85.IMG1",
+   "M2.S20.T20.C86.IMG1",
+   "M2.S22.T22.C97.IMG1",
+   "M2.S22.T22.C98.IMG1",
+   "M2.S22.T22.C99.IMG1",
+   "M2.S22.T22.C100.IMG1",
+   "M2.S23.T23.C106.IMG1",
+   "M3.S25.T25.C111.IMG1",
+   "M3.S26.T26.C113.IMG1",
+   "M3.S27.T27.C116.IMG1",
+   "M3.S27.T27.C117.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M2.S19.T19.C79",
+   "role": "question",
+   "lp_book_number": "Number Line Travel: from 5 to 9",
+   "ncert_ref": "10.1.q18 - 10.1 Back to the number line (chapter p.11)",
+   "question_text": "If, from 5 you wish to go over to 9, how far must you travel along the number line?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Start 5 and target 9 are in the words; the number line is only the setting, and the book's picture under the question already shows the hops (the answer), so the question gives no figure of its own.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C80",
+   "role": "solution",
+   "lp_book_number": "Number Line Travel: from 5 to 9",
+   "ncert_ref": "10.1.q18 - 10.1 Back to the number line (chapter p.11)",
+   "question_text": "If, from 5 you wish to go over to 9, how far must you travel along the number line?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The book answers this question with a picture: the number line with the 4 hops from 5 to 9 (page 11); the LP steps count those hops.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S19.T19.C80.IMG1",
+   "manim_scene": "c6_10_s19_c80_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S19.T19.C80.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "baseline_y": 640,
+     "line": {
+      "x_left": 210,
+      "x_right": 1790,
+      "left_arrowhead": false,
+      "right_arrowhead": true
+     },
+     "stroke_px": 3,
+     "tick_height_px": 24,
+     "ticks_left_to_right": [
+      {
+       "index": 1,
+       "value": 0,
+       "x": 210,
+       "label": "0"
+      },
+      {
+       "index": 2,
+       "value": 1,
+       "x": 360,
+       "label": "1"
+      },
+      {
+       "index": 3,
+       "value": 2,
+       "x": 510,
+       "label": "2"
+      },
+      {
+       "index": 4,
+       "value": 3,
+       "x": 660,
+       "label": "3"
+      },
+      {
+       "index": 5,
+       "value": 4,
+       "x": 810,
+       "label": "4"
+      },
+      {
+       "index": 6,
+       "value": 5,
+       "x": 960,
+       "label": "5"
+      },
+      {
+       "index": 7,
+       "value": 6,
+       "x": 1110,
+       "label": "6"
+      },
+      {
+       "index": 8,
+       "value": 7,
+       "x": 1260,
+       "label": "7"
+      },
+      {
+       "index": 9,
+       "value": 8,
+       "x": 1410,
+       "label": "8"
+      },
+      {
+       "index": 10,
+       "value": 9,
+       "x": 1560,
+       "label": "9"
+      },
+      {
+       "index": 11,
+       "value": 10,
+       "x": 1710,
+       "label": "10"
+      }
+     ],
+     "tick_label_height_px": 36,
+     "tick_label_centre_below_baseline_px": 62,
+     "marked_points": [],
+     "jumps": [
+      {
+       "from": 5,
+       "to": 6,
+       "x_from": 960,
+       "x_to": 1110,
+       "apex_y": 565
+      },
+      {
+       "from": 6,
+       "to": 7,
+       "x_from": 1110,
+       "x_to": 1260,
+       "apex_y": 565
+      },
+      {
+       "from": 7,
+       "to": 8,
+       "x_from": 1260,
+       "x_to": 1410,
+       "apex_y": 565
+      },
+      {
+       "from": 8,
+       "to": 9,
+       "x_from": 1410,
+       "x_to": 1560,
+       "apex_y": 565
+      }
+     ],
+     "jump_arc_radius_px": 75,
+     "jump_colour": "ANSWER",
+     "jump_arrowhead_direction": "right",
+     "jump_label": {
+      "text": "4 steps",
+      "centre_x": 1260,
+      "centre_y": 500,
+      "height_px": 40,
+      "colour": "ANSWER"
+     },
+     "to_scale": true
+    },
+    "manim_description": "Draw a horizontal number ray in INK, 3 px stroke, on baseline y = 640 of a 1920 x 1080 canvas with BG background. The line starts exactly at tick 0 (x = 210, no arrowhead on the left) and ends with a filled INK arrowhead whose tip is at x = 1790 on the right. Draw 11 vertical INK ticks, each 24 px tall and centred on the baseline, 150 px apart: tick 0 at x = 210, tick 1 at x = 360, tick 2 at x = 510, tick 3 at x = 660, tick 4 at x = 810, tick 5 at x = 960, tick 6 at x = 1110, tick 7 at x = 1260, tick 8 at x = 1410, tick 9 at x = 1560, tick 10 at x = 1710. Write the integer under each tick in INK, 36 px high, centred on the tick, label centre 62 px below the baseline, reading left to right: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Above the line draw 4 ANSWER half-circle arcs, 3 px stroke, each of radius 75 px standing on the baseline and spanning one unit (150 px): arc 1 from tick 5 (x = 960) to tick 6 (x = 1110); arc 2 from tick 6 (x = 1110) to tick 7 (x = 1260); arc 3 from tick 7 (x = 1260) to tick 8 (x = 1410); arc 4 from tick 8 (x = 1410) to tick 9 (x = 1560). The arcs touch end to end and their top points are at y = 565. At the top point of each arc draw a small filled ANSWER triangle arrowhead, 18 px long, pointing right. Centre the text '4 steps' in ANSWER, 40 px high, at x = 1260, y = 500, above the arcs. Draw nothing else.",
+    "visible_text": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "4 steps"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any dot, letter or label other than the tick numbers and the step count",
+     "arc labels other than the one step-count text"
+    ],
+    "accuracy_checks": [
+     "ticks run 0 to 10, one per integer, 150 px apart",
+     "4 arcs, each one unit wide, first arc starts at 5, last arc ends at 9",
+     "number of arcs 4 equals |9 - 5| = 4",
+     "arrowheads point right, the direction of travel"
+    ],
+    "alt_text": "A number line with 4 hops drawn right from 5 to 9, labelled 4 steps.",
+    "render_note": "Same picture as the book's figure for this question (arcs only; the book prints no label). The label '4 steps' is added because the LP solution says '4 steps'; the question has no diagram of its own."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C81",
+   "role": "question",
+   "lp_book_number": "Number Line Travel: from 9 to 3",
+   "ncert_ref": "10.1.q19 - 10.1 Back to the number line (chapter p.12)",
+   "question_text": "Now, from 9, if you wish to go to 3, how much must you travel along the number line?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Start 9 and target 3 are in the words; the number line is only the setting, and the book's picture under the question already shows the hops (the answer), so the question gives no figure of its own.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C82",
+   "role": "solution",
+   "lp_book_number": "Number Line Travel: from 9 to 3",
+   "ncert_ref": "10.1.q19 - 10.1 Back to the number line (chapter p.12)",
+   "question_text": "Now, from 9, if you wish to go to 3, how much must you travel along the number line?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The book answers this question with a picture: the number line with the 6 hops from 9 to 3 (page 12); the LP steps count those hops.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S19.T19.C82.IMG1",
+   "manim_scene": "c6_10_s19_c82_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S19.T19.C82.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "baseline_y": 640,
+     "line": {
+      "x_left": 210,
+      "x_right": 1790,
+      "left_arrowhead": false,
+      "right_arrowhead": true
+     },
+     "stroke_px": 3,
+     "tick_height_px": 24,
+     "ticks_left_to_right": [
+      {
+       "index": 1,
+       "value": 0,
+       "x": 210,
+       "label": "0"
+      },
+      {
+       "index": 2,
+       "value": 1,
+       "x": 360,
+       "label": "1"
+      },
+      {
+       "index": 3,
+       "value": 2,
+       "x": 510,
+       "label": "2"
+      },
+      {
+       "index": 4,
+       "value": 3,
+       "x": 660,
+       "label": "3"
+      },
+      {
+       "index": 5,
+       "value": 4,
+       "x": 810,
+       "label": "4"
+      },
+      {
+       "index": 6,
+       "value": 5,
+       "x": 960,
+       "label": "5"
+      },
+      {
+       "index": 7,
+       "value": 6,
+       "x": 1110,
+       "label": "6"
+      },
+      {
+       "index": 8,
+       "value": 7,
+       "x": 1260,
+       "label": "7"
+      },
+      {
+       "index": 9,
+       "value": 8,
+       "x": 1410,
+       "label": "8"
+      },
+      {
+       "index": 10,
+       "value": 9,
+       "x": 1560,
+       "label": "9"
+      },
+      {
+       "index": 11,
+       "value": 10,
+       "x": 1710,
+       "label": "10"
+      }
+     ],
+     "tick_label_height_px": 36,
+     "tick_label_centre_below_baseline_px": 62,
+     "marked_points": [],
+     "jumps": [
+      {
+       "from": 9,
+       "to": 8,
+       "x_from": 1560,
+       "x_to": 1410,
+       "apex_y": 565
+      },
+      {
+       "from": 8,
+       "to": 7,
+       "x_from": 1410,
+       "x_to": 1260,
+       "apex_y": 565
+      },
+      {
+       "from": 7,
+       "to": 6,
+       "x_from": 1260,
+       "x_to": 1110,
+       "apex_y": 565
+      },
+      {
+       "from": 6,
+       "to": 5,
+       "x_from": 1110,
+       "x_to": 960,
+       "apex_y": 565
+      },
+      {
+       "from": 5,
+       "to": 4,
+       "x_from": 960,
+       "x_to": 810,
+       "apex_y": 565
+      },
+      {
+       "from": 4,
+       "to": 3,
+       "x_from": 810,
+       "x_to": 660,
+       "apex_y": 565
+      }
+     ],
+     "jump_arc_radius_px": 75,
+     "jump_colour": "ANSWER",
+     "jump_arrowhead_direction": "left",
+     "jump_label": {
+      "text": "6 steps",
+      "centre_x": 1110,
+      "centre_y": 500,
+      "height_px": 40,
+      "colour": "ANSWER"
+     },
+     "to_scale": true
+    },
+    "manim_description": "Draw a horizontal number ray in INK, 3 px stroke, on baseline y = 640 of a 1920 x 1080 canvas with BG background. The line starts exactly at tick 0 (x = 210, no arrowhead on the left) and ends with a filled INK arrowhead whose tip is at x = 1790 on the right. Draw 11 vertical INK ticks, each 24 px tall and centred on the baseline, 150 px apart: tick 0 at x = 210, tick 1 at x = 360, tick 2 at x = 510, tick 3 at x = 660, tick 4 at x = 810, tick 5 at x = 960, tick 6 at x = 1110, tick 7 at x = 1260, tick 8 at x = 1410, tick 9 at x = 1560, tick 10 at x = 1710. Write the integer under each tick in INK, 36 px high, centred on the tick, label centre 62 px below the baseline, reading left to right: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Above the line draw 6 ANSWER half-circle arcs, 3 px stroke, each of radius 75 px standing on the baseline and spanning one unit (150 px): arc 1 from tick 9 (x = 1560) to tick 8 (x = 1410); arc 2 from tick 8 (x = 1410) to tick 7 (x = 1260); arc 3 from tick 7 (x = 1260) to tick 6 (x = 1110); arc 4 from tick 6 (x = 1110) to tick 5 (x = 960); arc 5 from tick 5 (x = 960) to tick 4 (x = 810); arc 6 from tick 4 (x = 810) to tick 3 (x = 660). The arcs touch end to end and their top points are at y = 565. At the top point of each arc draw a small filled ANSWER triangle arrowhead, 18 px long, pointing left. Centre the text '6 steps' in ANSWER, 40 px high, at x = 1110, y = 500, above the arcs. Draw nothing else.",
+    "visible_text": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "6 steps"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any dot, letter or label other than the tick numbers and the step count",
+     "arc labels other than the one step-count text"
+    ],
+    "accuracy_checks": [
+     "ticks run 0 to 10, one per integer, 150 px apart",
+     "6 arcs, each one unit wide, first arc starts at 9, last arc ends at 3",
+     "number of arcs 6 equals |3 - 9| = 6",
+     "arrowheads point left, the direction of travel"
+    ],
+    "alt_text": "A number line with 6 hops drawn left from 9 to 3, labelled 6 steps.",
+    "render_note": "Same picture as the book's figure for this question (arcs only; the book prints no label). The label '6 steps' is added because the LP solution says '6 steps'; the question has no diagram of its own."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C83",
+   "role": "question",
+   "lp_book_number": "Number Line Travel: from 3 to −2",
+   "ncert_ref": "10.1.q20 - 10.1 Back to the number line (chapter p.12)",
+   "question_text": "Now, from 3, if you wish to go to −2, how far must you travel?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Start 3 and target −2 are in the words; the number line is only the setting, and the book's picture under the question already shows the hops (the answer), so the question gives no figure of its own.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S19.T19.C84",
+   "role": "solution",
+   "lp_book_number": "Number Line Travel: from 3 to −2",
+   "ncert_ref": "10.1.q20 - 10.1 Back to the number line (chapter p.12)",
+   "question_text": "Now, from 3, if you wish to go to −2, how far must you travel?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The book answers this question with a picture: the number line with the 5 hops from 3 to −2 (page 12); the LP steps count those hops, crossing zero.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S19.T19.C84.IMG1",
+   "manim_scene": "c6_10_s19_c84_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S19.T19.C84.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "baseline_y": 640,
+     "line": {
+      "x_left": 100,
+      "x_right": 1820,
+      "left_arrowhead": true,
+      "right_arrowhead": true
+     },
+     "stroke_px": 3,
+     "tick_height_px": 24,
+     "ticks_left_to_right": [
+      {
+       "index": 1,
+       "value": -10,
+       "x": 160,
+       "label": "−10"
+      },
+      {
+       "index": 2,
+       "value": -9,
+       "x": 240,
+       "label": "−9"
+      },
+      {
+       "index": 3,
+       "value": -8,
+       "x": 320,
+       "label": "−8"
+      },
+      {
+       "index": 4,
+       "value": -7,
+       "x": 400,
+       "label": "−7"
+      },
+      {
+       "index": 5,
+       "value": -6,
+       "x": 480,
+       "label": "−6"
+      },
+      {
+       "index": 6,
+       "value": -5,
+       "x": 560,
+       "label": "−5"
+      },
+      {
+       "index": 7,
+       "value": -4,
+       "x": 640,
+       "label": "−4"
+      },
+      {
+       "index": 8,
+       "value": -3,
+       "x": 720,
+       "label": "−3"
+      },
+      {
+       "index": 9,
+       "value": -2,
+       "x": 800,
+       "label": "−2"
+      },
+      {
+       "index": 10,
+       "value": -1,
+       "x": 880,
+       "label": "−1"
+      },
+      {
+       "index": 11,
+       "value": 0,
+       "x": 960,
+       "label": "0"
+      },
+      {
+       "index": 12,
+       "value": 1,
+       "x": 1040,
+       "label": "1"
+      },
+      {
+       "index": 13,
+       "value": 2,
+       "x": 1120,
+       "label": "2"
+      },
+      {
+       "index": 14,
+       "value": 3,
+       "x": 1200,
+       "label": "3"
+      },
+      {
+       "index": 15,
+       "value": 4,
+       "x": 1280,
+       "label": "4"
+      },
+      {
+       "index": 16,
+       "value": 5,
+       "x": 1360,
+       "label": "5"
+      },
+      {
+       "index": 17,
+       "value": 6,
+       "x": 1440,
+       "label": "6"
+      },
+      {
+       "index": 18,
+       "value": 7,
+       "x": 1520,
+       "label": "7"
+      },
+      {
+       "index": 19,
+       "value": 8,
+       "x": 1600,
+       "label": "8"
+      },
+      {
+       "index": 20,
+       "value": 9,
+       "x": 1680,
+       "label": "9"
+      },
+      {
+       "index": 21,
+       "value": 10,
+       "x": 1760,
+       "label": "10"
+      }
+     ],
+     "tick_label_height_px": 34,
+     "tick_label_centre_below_baseline_px": 62,
+     "marked_points": [],
+     "jumps": [
+      {
+       "from": 3,
+       "to": 2,
+       "x_from": 1200,
+       "x_to": 1120,
+       "apex_y": 600
+      },
+      {
+       "from": 2,
+       "to": 1,
+       "x_from": 1120,
+       "x_to": 1040,
+       "apex_y": 600
+      },
+      {
+       "from": 1,
+       "to": 0,
+       "x_from": 1040,
+       "x_to": 960,
+       "apex_y": 600
+      },
+      {
+       "from": 0,
+       "to": -1,
+       "x_from": 960,
+       "x_to": 880,
+       "apex_y": 600
+      },
+      {
+       "from": -1,
+       "to": -2,
+       "x_from": 880,
+       "x_to": 800,
+       "apex_y": 600
+      }
+     ],
+     "jump_arc_radius_px": 40,
+     "jump_colour": "ANSWER",
+     "jump_arrowhead_direction": "left",
+     "jump_label": {
+      "text": "5 steps",
+      "centre_x": 1000,
+      "centre_y": 535,
+      "height_px": 40,
+      "colour": "ANSWER"
+     },
+     "to_scale": true
+    },
+    "manim_description": "Draw a horizontal number line in INK, 3 px stroke, on baseline y = 640 of a 1920 x 1080 canvas with BG background, with a filled INK arrowhead at each end: left tip at x = 100, right tip at x = 1820. Draw 21 vertical INK ticks, each 24 px tall and centred on the baseline, 80 px apart: tick −10 at x = 160, tick −9 at x = 240, tick −8 at x = 320, tick −7 at x = 400, tick −6 at x = 480, tick −5 at x = 560, tick −4 at x = 640, tick −3 at x = 720, tick −2 at x = 800, tick −1 at x = 880, tick 0 at x = 960, tick 1 at x = 1040, tick 2 at x = 1120, tick 3 at x = 1200, tick 4 at x = 1280, tick 5 at x = 1360, tick 6 at x = 1440, tick 7 at x = 1520, tick 8 at x = 1600, tick 9 at x = 1680, tick 10 at x = 1760. Write the integer under each tick in INK, 34 px high, centred on the tick, label centre 62 px below the baseline, reading left to right: −10, −9, −8, −7, −6, −5, −4, −3, −2, −1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Above the line draw 5 ANSWER half-circle arcs, 3 px stroke, each of radius 40 px standing on the baseline and spanning one unit (80 px): arc 1 from tick 3 (x = 1200) to tick 2 (x = 1120); arc 2 from tick 2 (x = 1120) to tick 1 (x = 1040); arc 3 from tick 1 (x = 1040) to tick 0 (x = 960); arc 4 from tick 0 (x = 960) to tick −1 (x = 880); arc 5 from tick −1 (x = 880) to tick −2 (x = 800). The arcs touch end to end and their top points are at y = 600. At the top point of each arc draw a small filled ANSWER triangle arrowhead, 14 px long, pointing left. Centre the text '5 steps' in ANSWER, 40 px high, at x = 1000, y = 535, above the arcs. Draw nothing else.",
+    "visible_text": [
+     "−10",
+     "−9",
+     "−8",
+     "−7",
+     "−6",
+     "−5",
+     "−4",
+     "−3",
+     "−2",
+     "−1",
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "5 steps"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any dot, letter or label other than the tick numbers and the step count",
+     "arc labels other than the one step-count text"
+    ],
+    "accuracy_checks": [
+     "ticks run −10 to 10, one per integer, 80 px apart",
+     "5 arcs, each one unit wide, first arc starts at 3, last arc ends at −2",
+     "number of arcs 5 equals |−2 - 3| = 5",
+     "arrowheads point left, the direction of travel"
+    ],
+    "alt_text": "A number line with 5 hops drawn left from 3 to −2, labelled 5 steps.",
+    "render_note": "Same picture as the book's figure for this question (arcs only; the book prints no label). The label '5 steps' is added because the LP solution says '5 steps'; the question has no diagram of its own."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C85",
+   "role": "question",
+   "lp_book_number": "Figure it Out 10.1, Q1",
+   "ncert_ref": "10.1.FiO6.Q1 - 10.1 Figure it Out (chapter p.12)",
+   "question_text": "Mark 3 positive numbers and 3 negative numbers on the number line above (number line from −10 to 10).",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The question asks the student to mark numbers on 'the number line above'; the empty line from −10 to 10 is what the student acts on.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S20.T20.C85.IMG1",
+   "manim_scene": "c6_10_s20_c85_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S20.T20.C85.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "baseline_y": 540,
+     "line": {
+      "x_left": 100,
+      "x_right": 1820,
+      "left_arrowhead": true,
+      "right_arrowhead": true
+     },
+     "stroke_px": 3,
+     "tick_height_px": 24,
+     "ticks_left_to_right": [
+      {
+       "index": 1,
+       "value": -10,
+       "x": 160,
+       "label": "−10"
+      },
+      {
+       "index": 2,
+       "value": -9,
+       "x": 240,
+       "label": "−9"
+      },
+      {
+       "index": 3,
+       "value": -8,
+       "x": 320,
+       "label": "−8"
+      },
+      {
+       "index": 4,
+       "value": -7,
+       "x": 400,
+       "label": "−7"
+      },
+      {
+       "index": 5,
+       "value": -6,
+       "x": 480,
+       "label": "−6"
+      },
+      {
+       "index": 6,
+       "value": -5,
+       "x": 560,
+       "label": "−5"
+      },
+      {
+       "index": 7,
+       "value": -4,
+       "x": 640,
+       "label": "−4"
+      },
+      {
+       "index": 8,
+       "value": -3,
+       "x": 720,
+       "label": "−3"
+      },
+      {
+       "index": 9,
+       "value": -2,
+       "x": 800,
+       "label": "−2"
+      },
+      {
+       "index": 10,
+       "value": -1,
+       "x": 880,
+       "label": "−1"
+      },
+      {
+       "index": 11,
+       "value": 0,
+       "x": 960,
+       "label": "0"
+      },
+      {
+       "index": 12,
+       "value": 1,
+       "x": 1040,
+       "label": "1"
+      },
+      {
+       "index": 13,
+       "value": 2,
+       "x": 1120,
+       "label": "2"
+      },
+      {
+       "index": 14,
+       "value": 3,
+       "x": 1200,
+       "label": "3"
+      },
+      {
+       "index": 15,
+       "value": 4,
+       "x": 1280,
+       "label": "4"
+      },
+      {
+       "index": 16,
+       "value": 5,
+       "x": 1360,
+       "label": "5"
+      },
+      {
+       "index": 17,
+       "value": 6,
+       "x": 1440,
+       "label": "6"
+      },
+      {
+       "index": 18,
+       "value": 7,
+       "x": 1520,
+       "label": "7"
+      },
+      {
+       "index": 19,
+       "value": 8,
+       "x": 1600,
+       "label": "8"
+      },
+      {
+       "index": 20,
+       "value": 9,
+       "x": 1680,
+       "label": "9"
+      },
+      {
+       "index": 21,
+       "value": 10,
+       "x": 1760,
+       "label": "10"
+      }
+     ],
+     "tick_label_height_px": 34,
+     "tick_label_centre_below_baseline_px": 60,
+     "marked_points": [],
+     "jumps": [],
+     "to_scale": true
+    },
+    "manim_description": "Draw a horizontal number line in INK, 3 px stroke, on baseline y = 540 of a 1920 x 1080 canvas with BG background, with a filled INK arrowhead at each end: left tip at x = 100, right tip at x = 1820. Draw 21 vertical INK ticks, each 24 px tall and centred on the baseline, 80 px apart: tick −10 at x = 160, tick −9 at x = 240, tick −8 at x = 320, tick −7 at x = 400, tick −6 at x = 480, tick −5 at x = 560, tick −4 at x = 640, tick −3 at x = 720, tick −2 at x = 800, tick −1 at x = 880, tick 0 at x = 960, tick 1 at x = 1040, tick 2 at x = 1120, tick 3 at x = 1200, tick 4 at x = 1280, tick 5 at x = 1360, tick 6 at x = 1440, tick 7 at x = 1520, tick 8 at x = 1600, tick 9 at x = 1680, tick 10 at x = 1760. Write the integer under each tick in INK, 34 px high, centred on the tick, label centre 60 px below the baseline, reading left to right: −10, −9, −8, −7, −6, −5, −4, −3, −2, −1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Nothing is marked, shaded or drawn above or on the line. Draw nothing else.",
+    "visible_text": [
+     "−10",
+     "−9",
+     "−8",
+     "−7",
+     "−6",
+     "−5",
+     "−4",
+     "−3",
+     "−2",
+     "−1",
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any dot, letter or highlight on the line",
+     "the numbers the student will mark"
+    ],
+    "accuracy_checks": [
+     "21 ticks, one per integer from −10 to 10, 80 px apart",
+     "line is empty: no marked point",
+     "arrowheads at both ends"
+    ],
+    "alt_text": "An empty number line from minus 10 to 10 with every whole number labelled.",
+    "render_note": "Given figure of the book question (empty line); the student marks 3 positive and 3 negative numbers on it."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C86",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 10.1, Q1",
+   "ncert_ref": "10.1.FiO6.Q1 - 10.1 Figure it Out (chapter p.12)",
+   "question_text": "Mark 3 positive numbers and 3 negative numbers on the number line above (number line from −10 to 10).",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The printed answer is a picture (solutions page 48): the line with the six marked points R, Q, P, A, B, C; the LP gives the same sample marks.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S20.T20.C86.IMG1",
+   "manim_scene": "c6_10_s20_c86_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S20.T20.C86.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S20.T20.C85.IMG1",
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "baseline_y": 540,
+     "line": {
+      "x_left": 100,
+      "x_right": 1820,
+      "left_arrowhead": true,
+      "right_arrowhead": true
+     },
+     "stroke_px": 3,
+     "tick_height_px": 24,
+     "ticks_left_to_right": [
+      {
+       "index": 1,
+       "value": -10,
+       "x": 160,
+       "label": "−10"
+      },
+      {
+       "index": 2,
+       "value": -9,
+       "x": 240,
+       "label": "−9"
+      },
+      {
+       "index": 3,
+       "value": -8,
+       "x": 320,
+       "label": "−8"
+      },
+      {
+       "index": 4,
+       "value": -7,
+       "x": 400,
+       "label": "−7"
+      },
+      {
+       "index": 5,
+       "value": -6,
+       "x": 480,
+       "label": "−6"
+      },
+      {
+       "index": 6,
+       "value": -5,
+       "x": 560,
+       "label": "−5"
+      },
+      {
+       "index": 7,
+       "value": -4,
+       "x": 640,
+       "label": "−4"
+      },
+      {
+       "index": 8,
+       "value": -3,
+       "x": 720,
+       "label": "−3"
+      },
+      {
+       "index": 9,
+       "value": -2,
+       "x": 800,
+       "label": "−2"
+      },
+      {
+       "index": 10,
+       "value": -1,
+       "x": 880,
+       "label": "−1"
+      },
+      {
+       "index": 11,
+       "value": 0,
+       "x": 960,
+       "label": "0"
+      },
+      {
+       "index": 12,
+       "value": 1,
+       "x": 1040,
+       "label": "1"
+      },
+      {
+       "index": 13,
+       "value": 2,
+       "x": 1120,
+       "label": "2"
+      },
+      {
+       "index": 14,
+       "value": 3,
+       "x": 1200,
+       "label": "3"
+      },
+      {
+       "index": 15,
+       "value": 4,
+       "x": 1280,
+       "label": "4"
+      },
+      {
+       "index": 16,
+       "value": 5,
+       "x": 1360,
+       "label": "5"
+      },
+      {
+       "index": 17,
+       "value": 6,
+       "x": 1440,
+       "label": "6"
+      },
+      {
+       "index": 18,
+       "value": 7,
+       "x": 1520,
+       "label": "7"
+      },
+      {
+       "index": 19,
+       "value": 8,
+       "x": 1600,
+       "label": "8"
+      },
+      {
+       "index": 20,
+       "value": 9,
+       "x": 1680,
+       "label": "9"
+      },
+      {
+       "index": 21,
+       "value": 10,
+       "x": 1760,
+       "label": "10"
+      }
+     ],
+     "tick_label_height_px": 34,
+     "tick_label_centre_below_baseline_px": 60,
+     "marked_points": [
+      {
+       "letter": "R",
+       "value": -7,
+       "x": 400,
+       "dot_radius_px": 14,
+       "colour": "ANSWER",
+       "letter_height_px": 40,
+       "letter_centre_above_baseline_px": 50,
+       "side": "above"
+      },
+      {
+       "letter": "Q",
+       "value": -3,
+       "x": 720,
+       "dot_radius_px": 14,
+       "colour": "ANSWER",
+       "letter_height_px": 40,
+       "letter_centre_above_baseline_px": 50,
+       "side": "above"
+      },
+      {
+       "letter": "P",
+       "value": -1,
+       "x": 880,
+       "dot_radius_px": 14,
+       "colour": "ANSWER",
+       "letter_height_px": 40,
+       "letter_centre_above_baseline_px": 50,
+       "side": "above"
+      },
+      {
+       "letter": "A",
+       "value": 2,
+       "x": 1120,
+       "dot_radius_px": 14,
+       "colour": "ANSWER",
+       "letter_height_px": 40,
+       "letter_centre_above_baseline_px": 50,
+       "side": "above"
+      },
+      {
+       "letter": "B",
+       "value": 5,
+       "x": 1360,
+       "dot_radius_px": 14,
+       "colour": "ANSWER",
+       "letter_height_px": 40,
+       "letter_centre_above_baseline_px": 50,
+       "side": "above"
+      },
+      {
+       "letter": "C",
+       "value": 8,
+       "x": 1600,
+       "dot_radius_px": 14,
+       "colour": "ANSWER",
+       "letter_height_px": 40,
+       "letter_centre_above_baseline_px": 50,
+       "side": "above"
+      }
+     ],
+     "jumps": [],
+     "to_scale": true
+    },
+    "manim_description": "Draw a horizontal number line in INK, 3 px stroke, on baseline y = 540 of a 1920 x 1080 canvas with BG background, with a filled INK arrowhead at each end: left tip at x = 100, right tip at x = 1820. Draw 21 vertical INK ticks, each 24 px tall and centred on the baseline, 80 px apart: tick −10 at x = 160, tick −9 at x = 240, tick −8 at x = 320, tick −7 at x = 400, tick −6 at x = 480, tick −5 at x = 560, tick −4 at x = 640, tick −3 at x = 720, tick −2 at x = 800, tick −1 at x = 880, tick 0 at x = 960, tick 1 at x = 1040, tick 2 at x = 1120, tick 3 at x = 1200, tick 4 at x = 1280, tick 5 at x = 1360, tick 6 at x = 1440, tick 7 at x = 1520, tick 8 at x = 1600, tick 9 at x = 1680, tick 10 at x = 1760. Write the integer under each tick in INK, 34 px high, centred on the tick, label centre 60 px below the baseline, reading left to right: −10, −9, −8, −7, −6, −5, −4, −3, −2, −1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Add 6 filled ANSWER dots of radius 14 px centred on the baseline, each covering its tick mark: the dot for R at tick −7 (x = 400); the dot for Q at tick −3 (x = 720); the dot for P at tick −1 (x = 880); the dot for A at tick 2 (x = 1120); the dot for B at tick 5 (x = 1360); the dot for C at tick 8 (x = 1600). Above each dot write its capital letter in ANSWER, bold, 40 px high, centred on the dot, letter centre 50 px above the baseline (y = 490): R above x = 400, Q above x = 720, P above x = 880, A above x = 1120, B above x = 1360, C above x = 1600. The tick numbers stay in INK. Draw nothing else.",
+    "visible_text": [
+     "−10",
+     "−9",
+     "−8",
+     "−7",
+     "−6",
+     "−5",
+     "−4",
+     "−3",
+     "−2",
+     "−1",
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "R",
+     "Q",
+     "P",
+     "A",
+     "B",
+     "C"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any dot or letter other than R, Q, P, A, B, C",
+     "the words positive or negative",
+     "the sorted list of the negative numbers"
+    ],
+    "accuracy_checks": [
+     "R, Q, P sit at −7, −3, −1 (3 negative numbers, left of 0)",
+     "A, B, C sit at 2, 5, 8 (3 positive numbers, right of 0)",
+     "dot x positions = 960 + 80 * value: 400, 720, 880, 1120, 1360, 1600",
+     "line, ticks and tick labels identical to the question figure"
+    ],
+    "alt_text": "The number line from minus 10 to 10 with dots R at minus 7, Q at minus 3, P at minus 1, A at 2, B at 5 and C at 8.",
+    "render_note": "Matches the book's printed answer picture (page 48): dots with letters R, Q, P, A, B, C at -7, -3, -1, 2, 5, 8. Dot colour is ANSWER (the book prints blue dots)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C87",
+   "role": "question",
+   "lp_book_number": "Figure it Out 10.1, Q2",
+   "ncert_ref": "10.1.FiO6.Q2 - 10.1 Figure it Out (chapter p.12)",
+   "question_text": "Write down the above 3 marked negative numbers in the following boxes: ☐ ☐ ☐",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Only three empty answer boxes are asked for and they already appear in the question text; the numbers to write depend on the marks made in Q1.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C88",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 10.1, Q2",
+   "ncert_ref": "10.1.FiO6.Q2 - 10.1 Figure it Out (chapter p.12)",
+   "question_text": "Write down the above 3 marked negative numbers in the following boxes: ☐ ☐ ☐",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The printed answer is text (−7, −3, −1). The marked line is already drawn in the Q1 solution figure; repeating it adds nothing.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the three boxes as text: −7, −3, −1."
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C89",
+   "role": "question",
+   "lp_book_number": "Figure it Out 10.1, Q3",
+   "ncert_ref": "10.1.FiO6.Q3 - 10.1 Figure it Out (chapter p.13)",
+   "question_text": "Is 2 > −3? Why? Is −2 < 3? Why?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Two yes/no comparisons with 'Why?': everything is in the words.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C90",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 10.1, Q3",
+   "ncert_ref": "10.1.FiO6.Q3 - 10.1 Figure it Out (chapter p.13)",
+   "question_text": "Is 2 > −3? Why? Is −2 < 3? Why?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The printed answer is word reasoning ('on the number line 2 is on the right of −3'); a careful student loses nothing without a picture. A number line from −3 to 3 with 2, −3, −2 and 3 marked would only make it nicer, so it is not required.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C91",
+   "role": "question",
+   "lp_book_number": "Figure it Out 10.1, Q4",
+   "ncert_ref": "10.1.FiO6.Q4 - 10.1 Figure it Out (chapter p.13)",
+   "question_text": "What are (a): −5 + 0; (b): 7 + (−7); (c): −10 + 20; (d): 10 − 20; (e): 7 − (−7); (f): −8 − (−10)?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Six plain integer calculations; all data in the text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S20.T20.C92",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 10.1, Q4",
+   "ncert_ref": "10.1.FiO6.Q4 - 10.1 Figure it Out (chapter p.13)",
+   "question_text": "What are (a): −5 + 0; (b): 7 + (−7); (c): −10 + 20; (d): 10 − 20; (e): 7 − (−7); (f): −8 − (−10)?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The printed answer is six numbers and the LP steps are arithmetic; six number lines would be a combined picture and are not needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines for (a) to (f)."
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C97",
+   "role": "question",
+   "lp_book_number": "Example 7: Unmarked Number Line: 85 + (−60)",
+   "ncert_ref": "10.1.ex7 - 10.1 Using the unmarked number line (chapter p.13)",
+   "question_text": "The unmarked number line (UNL) shows the addition problem 85 + (−60) = ?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question says 'the unmarked number line shows' this addition; the figure carries the unmarked-line idea: only 0 and +85 marked and a −60 arrow pointing left.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S22.T22.C97.IMG1",
+   "manim_scene": "c6_10_s22_c97_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S22.T22.C97.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "baseline_y": 620,
+     "line": {
+      "x_left": 200,
+      "x_right": 1760,
+      "left_arrowhead": true,
+      "right_arrowhead": true
+     },
+     "stroke_px": 3,
+     "scale_px_per_unit": 12,
+     "tick_height_px": 28,
+     "unmarked": true,
+     "tick_label_height_px": 36,
+     "tick_label_centre_below_baseline_px": 66,
+     "arrow": {
+      "colour": "INK",
+      "from_value": 85,
+      "from_x": 1580,
+      "to_value": 25,
+      "to_x": 860,
+      "peak_x": 1220,
+      "peak_y": 440,
+      "arrowhead_px": 22,
+      "label": "−60",
+      "label_centre": [
+       1220,
+       395
+      ],
+      "label_height_px": 40
+     },
+     "to_scale": true,
+     "ticks_left_to_right": [
+      {
+       "value": 0,
+       "x": 560,
+       "label": "0"
+      },
+      {
+       "value": 85,
+       "x": 1580,
+       "label": "+85"
+      }
+     ]
+    },
+    "manim_description": "Draw a horizontal unmarked number line in INK, 3 px stroke, on baseline y = 620 of a 1920 x 1080 canvas with BG background, with a filled INK arrowhead at each end: left tip at x = 200, right tip at x = 1760. The scale is 12 px per unit. Draw 2 vertical INK ticks, each 28 px tall and centred on the baseline: tick 0 at x = 560 and tick +85 at x = 1580. Write '0' under tick 0 and '+85' under tick +85 in INK, 36 px high, label centre 66 px below the baseline. Draw an INK curved arrow, 3 px stroke, starting on the line at x = 1580 (top of that tick) and ending on the line at x = 860, arching above the line with its top point at x = 1220, y = 440: it leaves tick +85 and its arrowhead (filled INK triangle, 22 px long) points down-left into the line at x = 860. Write '−60' in INK, 40 px high, centred at x = 1220, y = 395, above the arc. There is no tick and no label at x = 860: the arrow simply ends on the line there. Draw nothing else.",
+    "visible_text": [
+     "0",
+     "+85",
+     "−60"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a tick or label at the arrow's end (+25)",
+     "the result 25",
+     "an equals sign or the sum 85 + (−60)"
+    ],
+    "accuracy_checks": [
+     "tick +85 is 85 * 12 = 1020 px right of tick 0 (x 560 to 1580)",
+     "arrow length 60 * 12 = 720 px (x 1580 to 860)",
+     "arrow points left (negative movement)",
+     "no tick or label at the arrow end"
+    ],
+    "alt_text": "An unmarked number line showing only 0 and +85, with a curved arrow labelled minus 60 starting at +85 and pointing left.",
+    "render_note": "Given figure of the book example (page 13). The book prints +25 at the arrow end as part of its answer reveal; this question figure leaves the end unmarked."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C98",
+   "role": "solution",
+   "lp_book_number": "Example 7: Unmarked Number Line: 85 + (−60)",
+   "ncert_ref": "10.1.ex7 - 10.1 Using the unmarked number line (chapter p.13)",
+   "question_text": "The unmarked number line (UNL) shows the addition problem 85 + (−60) = ?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The book's picture is the answer reveal (+25 appears at the arrow end); the solution adds the +25 tick and label to the question figure.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S22.T22.C98.IMG1",
+   "manim_scene": "c6_10_s22_c98_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S22.T22.C98.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S22.T22.C97.IMG1",
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "baseline_y": 620,
+     "line": {
+      "x_left": 200,
+      "x_right": 1760,
+      "left_arrowhead": true,
+      "right_arrowhead": true
+     },
+     "stroke_px": 3,
+     "scale_px_per_unit": 12,
+     "tick_height_px": 28,
+     "unmarked": true,
+     "tick_label_height_px": 36,
+     "tick_label_centre_below_baseline_px": 66,
+     "arrow": {
+      "colour": "INK",
+      "from_value": 85,
+      "from_x": 1580,
+      "to_value": 25,
+      "to_x": 860,
+      "peak_x": 1220,
+      "peak_y": 440,
+      "arrowhead_px": 22,
+      "label": "−60",
+      "label_centre": [
+       1220,
+       395
+      ],
+      "label_height_px": 40
+     },
+     "to_scale": true,
+     "ticks_left_to_right": [
+      {
+       "value": 0,
+       "x": 560,
+       "label": "0"
+      },
+      {
+       "value": 25,
+       "x": 860,
+       "label": "+25",
+       "colour": "ANSWER"
+      },
+      {
+       "value": 85,
+       "x": 1580,
+       "label": "+85"
+      }
+     ]
+    },
+    "manim_description": "Draw a horizontal unmarked number line in INK, 3 px stroke, on baseline y = 620 of a 1920 x 1080 canvas with BG background, with a filled INK arrowhead at each end: left tip at x = 200, right tip at x = 1760. The scale is 12 px per unit. Draw 2 vertical INK ticks, each 28 px tall and centred on the baseline: tick 0 at x = 560 and tick +85 at x = 1580. Write '0' under tick 0 and '+85' under tick +85 in INK, 36 px high, label centre 66 px below the baseline. Draw an INK curved arrow, 3 px stroke, starting on the line at x = 1580 (top of that tick) and ending on the line at x = 860, arching above the line with its top point at x = 1220, y = 440: it leaves tick +85 and its arrowhead (filled INK triangle, 22 px long) points down-left into the line at x = 860. Write '−60' in INK, 40 px high, centred at x = 1220, y = 395, above the arc. Add a vertical ANSWER tick, 28 px tall and centred on the baseline, at x = 860 (the arrow end, value +25) and write '+25' in ANSWER, 40 px high, centred under it, label centre 66 px below the baseline. Everything else is exactly as listed above. Draw nothing else.",
+    "visible_text": [
+     "0",
+     "+25",
+     "+85",
+     "−60"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "an equation or the sum 85 + (−60) = 25"
+    ],
+    "accuracy_checks": [
+     "85 - 60 = 25",
+     "tick +25 at x = 560 + 25 * 12 = 860, exactly where the arrow ends",
+     "0, +85 and the arrow identical to the question figure"
+    ],
+    "alt_text": "The same unmarked number line with the arrow ending at a new tick labelled plus 25.",
+    "render_note": "Matches the book's picture (page 13), which shows 0, +25, +85 and the arrow minus 60. Same layout and positions as M2.S22.T22.C97.IMG1; only the +25 tick and label are added (ANSWER)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C99",
+   "role": "question",
+   "lp_book_number": "Example 8: Unmarked Number Line: (−100) − (+250)",
+   "ncert_ref": "10.1.ex8 - 10.1 Using the unmarked number line (chapter p.13)",
+   "question_text": "The following UNL shows a subtraction problem which can also be written as a missing addend problem: (−100) − (+250) = ? or 250 + ? = −100.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question says 'the following UNL shows' this subtraction; the figure carries the marks −100, 0, +250 and the long arrow with a boxed '?'.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S22.T22.C99.IMG1",
+   "manim_scene": "c6_10_s22_c99_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S22.T22.C99.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "baseline_y": 640,
+     "line": {
+      "x_left": 160,
+      "x_right": 1840,
+      "left_arrowhead": true,
+      "right_arrowhead": true
+     },
+     "stroke_px": 3,
+     "scale_px_per_unit": 4,
+     "tick_height_px": 28,
+     "unmarked": true,
+     "ticks_left_to_right": [
+      {
+       "value": -100,
+       "x": 300,
+       "label": "−100"
+      },
+      {
+       "value": 0,
+       "x": 700,
+       "label": "0"
+      },
+      {
+       "value": 250,
+       "x": 1700,
+       "label": "+250"
+      }
+     ],
+     "tick_label_height_px": 36,
+     "tick_label_centre_below_baseline_px": 66,
+     "arrow": {
+      "colour": "INK",
+      "from_value": 250,
+      "from_x": 1700,
+      "to_value": -100,
+      "to_x": 300,
+      "peak_x": 1000,
+      "peak_y": 440,
+      "arrowhead_px": 22
+     },
+     "to_scale": true,
+     "box": {
+      "centre": [
+       1000,
+       380
+      ],
+      "width_px": 80,
+      "height_px": 80,
+      "outline": "FOCUS",
+      "fill": "BG",
+      "text": "?",
+      "text_colour": "INK",
+      "text_height_px": 44
+     }
+    },
+    "manim_description": "Draw a horizontal unmarked number line in INK, 3 px stroke, on baseline y = 640 of a 1920 x 1080 canvas with BG background, with a filled INK arrowhead at each end: left tip at x = 160, right tip at x = 1840. The scale is 4 px per unit. Draw 3 vertical INK ticks, each 28 px tall and centred on the baseline: tick −100 at x = 300, tick 0 at x = 700 and tick +250 at x = 1700. Write '−100' under its tick, '0' under tick 0 and '+250' under its tick, in INK, 36 px high, label centre 66 px below the baseline. Draw an INK curved arrow, 3 px stroke, starting on the line at x = 1700 (top of tick +250), arching above the line over tick 0 with its top point at x = 1000, y = 440, and ending on the line at x = 300 (tick −100) with a filled INK arrowhead, 22 px long, pointing down into the line. Above the arc draw a square box, 80 x 80 px, FOCUS outline 3 px, BG fill, centred at x = 1000, y = 380, containing '?' in INK, 44 px high. Draw nothing else.",
+    "visible_text": [
+     "−100",
+     "0",
+     "+250",
+     "?"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the value −350",
+     "an equation such as 250 + ? = −100"
+    ],
+    "accuracy_checks": [
+     "tick −100 is 100 * 4 = 400 px left of tick 0 (x 300 to 700)",
+     "tick +250 is 250 * 4 = 1000 px right of tick 0 (x 700 to 1700)",
+     "arrow runs from +250 to −100 and points left",
+     "the box holds only '?'"
+    ],
+    "alt_text": "An unmarked number line with minus 100, 0 and plus 250, and a long curved arrow from plus 250 to minus 100 marked with a question mark.",
+    "render_note": "Given figure of the book example (page 13)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C100",
+   "role": "solution",
+   "lp_book_number": "Example 8: Unmarked Number Line: (−100) − (+250)",
+   "ncert_ref": "10.1.ex8 - 10.1 Using the unmarked number line (chapter p.13)",
+   "question_text": "The following UNL shows a subtraction problem which can also be written as a missing addend problem: (−100) − (+250) = ? or 250 + ? = −100.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The solution fills the unknown: the '?' on the arrow becomes −350 (the book's text states ? = −350).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S22.T22.C100.IMG1",
+   "manim_scene": "c6_10_s22_c100_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S22.T22.C100.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S22.T22.C99.IMG1",
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "baseline_y": 640,
+     "line": {
+      "x_left": 160,
+      "x_right": 1840,
+      "left_arrowhead": true,
+      "right_arrowhead": true
+     },
+     "stroke_px": 3,
+     "scale_px_per_unit": 4,
+     "tick_height_px": 28,
+     "unmarked": true,
+     "ticks_left_to_right": [
+      {
+       "value": -100,
+       "x": 300,
+       "label": "−100"
+      },
+      {
+       "value": 0,
+       "x": 700,
+       "label": "0"
+      },
+      {
+       "value": 250,
+       "x": 1700,
+       "label": "+250"
+      }
+     ],
+     "tick_label_height_px": 36,
+     "tick_label_centre_below_baseline_px": 66,
+     "arrow": {
+      "colour": "INK",
+      "from_value": 250,
+      "from_x": 1700,
+      "to_value": -100,
+      "to_x": 300,
+      "peak_x": 1000,
+      "peak_y": 440,
+      "arrowhead_px": 22
+     },
+     "to_scale": true,
+     "box": {
+      "centre": [
+       1000,
+       380
+      ],
+      "width_px": 190,
+      "height_px": 80,
+      "outline": "FOCUS",
+      "fill": "BG",
+      "text": "−350",
+      "text_colour": "ANSWER",
+      "text_height_px": 44
+     }
+    },
+    "manim_description": "Draw a horizontal unmarked number line in INK, 3 px stroke, on baseline y = 640 of a 1920 x 1080 canvas with BG background, with a filled INK arrowhead at each end: left tip at x = 160, right tip at x = 1840. The scale is 4 px per unit. Draw 3 vertical INK ticks, each 28 px tall and centred on the baseline: tick −100 at x = 300, tick 0 at x = 700 and tick +250 at x = 1700. Write '−100' under its tick, '0' under tick 0 and '+250' under its tick, in INK, 36 px high, label centre 66 px below the baseline. Draw an INK curved arrow, 3 px stroke, starting on the line at x = 1700 (top of tick +250), arching above the line over tick 0 with its top point at x = 1000, y = 440, and ending on the line at x = 300 (tick −100) with a filled INK arrowhead, 22 px long, pointing down into the line. Above the arc draw a box centred at x = 1000, y = 380, 190 px wide and 80 px high (same centre and height as in the question figure, widened to fit the text), FOCUS outline 3 px, BG fill, containing '−350' in ANSWER, 44 px high. Draw nothing else.",
+    "visible_text": [
+     "−100",
+     "0",
+     "+250",
+     "−350"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "an equation such as 250 + (−350) = −100"
+    ],
+    "accuracy_checks": [
+     "(−100) - 250 = −350",
+     "250 + (−350) = −100",
+     "ticks, scale and arrow identical to the question figure; only the box content changes from '?' to −350"
+    ],
+    "alt_text": "The same unmarked number line with the question mark replaced by minus 350 on the arrow from plus 250 to minus 100.",
+    "render_note": "Same layout and positions as M2.S22.T22.C99.IMG1; the '?' becomes −350 in ANSWER (the book states ? = −350 in its text)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C101",
+   "role": "question",
+   "lp_book_number": "Example 9: Subtraction as Addition: rewrite four subtractions",
+   "ncert_ref": "10.1.ex9 - 10.1 Using the unmarked number line (chapter p.14)",
+   "question_text": "Rewrite each subtraction as addition of the inverse: (a): (+7) − (+5); (b): (−3) − (+8); (c): (+8) − (−2); (d): (+6) − (−9)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four subtractions to rewrite as additions; text only, no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S22.T22.C102",
+   "role": "solution",
+   "lp_book_number": "Example 9: Subtraction as Addition: rewrite four subtractions",
+   "ncert_ref": "10.1.ex9 - 10.1 Using the unmarked number line (chapter p.14)",
+   "question_text": "Rewrite each subtraction as addition of the inverse: (a): (+7) − (+5); (b): (−3) − (+8); (c): (+8) − (−2); (d): (+6) − (−9)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four rewritten expressions in text; nothing visual to add.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines for (a) to (d)."
+  },
+  {
+   "lp_concept_id": "M2.S23.T23.C103",
+   "role": "question",
+   "lp_book_number": "Unmarked Number Line: four expressions",
+   "ncert_ref": "10.1.q21 - 10.1 Using the unmarked number line (chapter p.14)",
+   "question_text": "Use unmarked number lines to evaluate these expressions: (a): −125 + (−30); (b): +105 − (−55); (c): +80 − (−150); (d): −99 − (−200)",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Four expressions are given in the words; the student draws the unmarked lines, nothing is given as a figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S23.T23.C104",
+   "role": "solution",
+   "lp_book_number": "Unmarked Number Line: four expressions",
+   "ncert_ref": "10.1.q21 - 10.1 Using the unmarked number line (chapter p.14)",
+   "question_text": "Use unmarked number lines to evaluate these expressions: (a): −125 + (−30); (b): +105 − (−55); (c): +80 − (−150); (d): −99 − (−200)",
+   "decision": "optional",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The printed answer is four numbers and the LP steps (b) to (d) are arithmetic. Four small unmarked number lines (one per part, with the start, the jump and the end) would clearly show what the question asks the student to draw, but they would be four pictures for one block, so not added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines for (a) to (d)."
+  },
+  {
+   "lp_concept_id": "M2.S23.T23.C105",
+   "role": "question",
+   "lp_book_number": "Subtraction as Addition: from 2 to −3",
+   "ncert_ref": "10.1.q22 - 10.1 Using the unmarked number line (chapter p.14)",
+   "question_text": "If we start at 2 and wish to go to −3, what is the movement needed?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Start 2 and target −33 are in the words; the book's picture beside the paragraph already shows the −5 arrow (the answer), so the question gives no figure of its own.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S23.T23.C106",
+   "role": "solution",
+   "lp_book_number": "Subtraction as Addition: from 2 to −3",
+   "ncert_ref": "10.1.q22 - 10.1 Using the unmarked number line (chapter p.14)",
+   "question_text": "If we start at 2 and wish to go to −3, what is the movement needed?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE"
+   ],
+   "reason": "The book answers with a picture (page 14): the line −3, 0, 2 with the −5 arrow; the LP solution adds the second method as two arrows (2 to 0 is −2, 0 to −3 is −3).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S23.T23.C106.IMG1",
+   "manim_scene": "c6_10_s23_c106_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S23.T23.C106.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "number_line",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "number_line",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "baseline_y": 620,
+     "stroke_px": 3,
+     "scale_px_per_unit": 200,
+     "line": {
+      "x_left": 260,
+      "x_right": 1660,
+      "left_arrowhead": true,
+      "right_arrowhead": true
+     },
+     "tick_height_px": 28,
+     "ticks_left_to_right": [
+      {
+       "value": -3,
+       "x": 460,
+       "label": "−3"
+      },
+      {
+       "value": 0,
+       "x": 1060,
+       "label": "0"
+      },
+      {
+       "value": 2,
+       "x": 1460,
+       "label": "2"
+      }
+     ],
+     "tick_label_height_px": 36,
+     "tick_label_centre_below_baseline_px": 66,
+     "arcs": [
+      {
+       "name": "first method",
+       "from": 2,
+       "to": -3,
+       "from_x": 1460,
+       "to_x": 460,
+       "semi_axis_x": 500,
+       "semi_axis_y": 320,
+       "peak": [
+        960,
+        300
+       ],
+       "label": "−5",
+       "label_centre": [
+        960,
+        255
+       ]
+      },
+      {
+       "name": "second method, part 1",
+       "from": 2,
+       "to": 0,
+       "from_x": 1460,
+       "to_x": 1060,
+       "semi_axis_x": 200,
+       "semi_axis_y": 110,
+       "peak": [
+        1260,
+        510
+       ],
+       "label": "−2",
+       "label_centre": [
+        1260,
+        465
+       ]
+      },
+      {
+       "name": "second method, part 2",
+       "from": 0,
+       "to": -3,
+       "from_x": 1060,
+       "to_x": 460,
+       "semi_axis_x": 300,
+       "semi_axis_y": 150,
+       "peak": [
+        760,
+        470
+       ],
+       "label": "−3",
+       "label_centre": [
+        760,
+        425
+       ]
+      }
+     ],
+     "arc_colour": "ANSWER",
+     "arrowhead_px": 22,
+     "arc_label_height_px": 40,
+     "to_scale": true
+    },
+    "manim_description": "Draw a horizontal number line in INK, 3 px stroke, on baseline y = 620 of a 1920 x 1080 canvas with BG background, with a filled INK arrowhead at each end: left tip at x = 260, right tip at x = 1660. The scale is 200 px per unit. Draw 3 vertical INK ticks, each 28 px tall and centred on the baseline: tick −3 at x = 460, tick 0 at x = 1060 and tick 2 at x = 1460. Write '−3' under tick −3, '0' under tick 0 and '2' under tick 2 in INK, 36 px high, label centre 66 px below the baseline. Above the line draw 3 ANSWER curved arrows, 3 px stroke, each a half-ellipse standing on the baseline with a filled ANSWER arrowhead, 22 px long, at its left end pointing down-left into the line: (1) the long arrow from tick 2 (x = 1460) to tick −3 (x = 460), horizontal semi-axis 500 px, vertical semi-axis 320 px, top point at x = 960, y = 300, with the text '−5' in ANSWER, 40 px high, centred at x = 960, y = 255; (2) the short arrow from tick 2 (x = 1460) to tick 0 (x = 1060), horizontal semi-axis 200 px, vertical semi-axis 110 px, top point at x = 1260, y = 510, with the text '−2' in ANSWER, 40 px high, centred at x = 1260, y = 465; (3) the medium arrow from tick 0 (x = 1060) to tick −3 (x = 460), horizontal semi-axis 300 px, vertical semi-axis 150 px, top point at x = 760, y = 470, with the text '−3' in ANSWER, 40 px high, centred at x = 760, y = 425. Arrows (2) and (3) lie under arrow (1) and touch each other at tick 0. Draw nothing else.",
+    "visible_text": [
+     "−3",
+     "0",
+     "2",
+     "−5",
+     "−2",
+     "−3"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the equations −3 − 2 = −5 or −3 + (−2) = −5",
+     "the words first method or second method",
+     "any extra tick or label"
+    ],
+    "accuracy_checks": [
+     "0 - 2 = −2 and −3 - 0 = −3",
+     "−3 - 2 = −5 and −3 + (−2) = −5",
+     "long arrow spans x 1460 to 460 = 5 units * 200 px; the two short arrows span 2 and 3 units (400 px and 600 px)",
+     "all arrowheads point left"
+    ],
+    "alt_text": "A number line with marks minus 3, 0 and 2: one long arrow from 2 to minus 3 labelled minus 5, and two arrows under it, 2 to 0 labelled minus 2 and 0 to minus 3 labelled minus 3.",
+    "render_note": "The book's page-14 picture shows only the long arrow labelled −5 (first method). The two shorter arrows are added because the LP solution gives the second method (−2 then −3). Scale is true (200 px per unit)."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S25.T25.C110",
+   "role": "question",
+   "lp_book_number": "Token Addition: the lift attendant's pocket",
+   "ncert_ref": "10.2.q1 - 10.2 Using tokens for addition (chapter p.15)",
+   "question_text": "He starts on the ground floor (Floor 0) with an empty pocket. After one hour, he checks his pocket and finds 5 positive and 3 negative tokens. On which floor is he now?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The 5 positive and 3 negative tokens are given in the words; the book's picture under the example shows the already-cancelled state (the answer), so the question gives no figure of its own.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S25.T25.C111",
+   "role": "solution",
+   "lp_book_number": "Token Addition: the lift attendant's pocket",
+   "ncert_ref": "10.2.q1 - 10.2 Using tokens for addition (chapter p.15)",
+   "question_text": "He starts on the ground floor (Floor 0) with an empty pocket. After one hour, he checks his pocket and finds 5 positive and 3 negative tokens. On which floor is he now?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The book answers with a picture (page 15): 5 positive over 3 negative tokens with 3 zero pairs crossed out; the LP steps describe the same cancelling in words.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S25.T25.C111.IMG1",
+   "manim_scene": "c6_10_s25_c111_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S25.T25.C111.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "integer_tokens",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "integer_tokens",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "token_diameter_px": 90,
+     "column_pitch_px": 110,
+     "row_y": {
+      "top": 420,
+      "bottom": 540
+     },
+     "groups": [
+      {
+       "positive_tokens": [
+        {
+         "column": 1,
+         "x": 740,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 2,
+         "x": 850,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 3,
+         "x": 960,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 4,
+         "x": 1070,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 5,
+         "x": 1180,
+         "y": 420,
+         "sign": "+"
+        }
+       ],
+       "negative_tokens": [
+        {
+         "column": 1,
+         "x": 740,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 2,
+         "x": 850,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 3,
+         "x": 960,
+         "y": 540,
+         "sign": "−"
+        }
+       ],
+       "zero_pairs_struck": [
+        1,
+        2,
+        3
+       ],
+       "left_over": "2 positive",
+       "label": {
+        "text": "+2",
+        "centre": [
+         1125,
+         540
+        ],
+        "colour": "ANSWER",
+        "height_px": 44
+       }
+      }
+     ],
+     "strike_colour": "ANSWER",
+     "strike_stroke_px": 3
+    },
+    "manim_description": "On a 1920 x 1080 canvas with BG background draw token circles in two rows. Each token is a circle of diameter 90 px with a 3 px INK outline. A positive token is filled SET_A and shows the sign '+' in BG, 44 px high, centred. A negative token is filled SET_B and shows the sign '−' in INK, 44 px high, centred. Top row, y = 420: 5 positive tokens centred at x = 740, 850, 960, 1070, 1180 (columns 1 to 5). Bottom row, y = 540: 3 negative tokens centred at x = 740, 850, 960 (columns 1 to 3, directly under the first 3 positive tokens); the bottom row has no token under columns 4 and 5. Strike out the 3 zero pairs of columns 1, 2 and 3 with an ANSWER cross, 3 px stroke, over the positive and the negative token of each column: column at x = 740: one line from (692, 372) to (788, 588) and one line from (788, 372) to (692, 588); column at x = 850: one line from (802, 372) to (898, 588) and one line from (898, 372) to (802, 588); column at x = 960: one line from (912, 372) to (1008, 588) and one line from (1008, 372) to (912, 588). Centre the text '+2' in ANSWER, 44 px high, at x = 1125, y = 540, in the empty bottom row under columns 4 and 5. Draw nothing else.",
+    "visible_text": [
+     "+",
+     "−",
+     "+2"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the equation (+5) + (−3) = +2",
+     "the words zero pair, floor or lift",
+     "colour words"
+    ],
+    "accuracy_checks": [
+     "5 positive tokens and 3 negative tokens in total",
+     "3 struck columns, each holding one positive and one negative token = 3 zero pairs",
+     "2 positive tokens left unstruck, and 5 - 3 = 2 gives the label +2"
+    ],
+    "alt_text": "Five positive tokens over three negative tokens; the first three columns are crossed out as zero pairs and two positive tokens are left, marked plus 2.",
+    "render_note": "Same picture as the book's figure on page 15 (the lift attendant's pocket): 5 positive over 3 negative, grey crosses on 3 pairs. Cross colour ANSWER; token colours are SET_A (positive) and SET_B (negative) from the style table. The question has no diagram of its own."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C112",
+   "role": "question",
+   "lp_book_number": "Example 1: Token Addition: +5 and −8",
+   "ncert_ref": "10.2.ex1 - 10.2 Using tokens for addition (chapter p.15)",
+   "question_text": "Example: Add +5 and −8 (using tokens).",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "'Add +5 and −8 (using tokens)' is complete in the words; the book prints no starting picture, only the cancelled one (the answer), so no question figure is given.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S26.T26.C113",
+   "role": "solution",
+   "lp_book_number": "Example 1: Token Addition: +5 and −8",
+   "ncert_ref": "10.2.ex1 - 10.2 Using tokens for addition (chapter p.15)",
+   "question_text": "Example: Add +5 and −8 (using tokens).",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "The book answers with a picture (pages 15-16): 5 positive over 8 negative tokens, 5 zero pairs crossed out, 3 negative left; the LP steps describe it in words.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S26.T26.C113.IMG1",
+   "manim_scene": "c6_10_s26_c113_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S26.T26.C113.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "integer_tokens",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "integer_tokens",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "token_diameter_px": 90,
+     "column_pitch_px": 110,
+     "row_y": {
+      "top": 420,
+      "bottom": 540
+     },
+     "groups": [
+      {
+       "positive_tokens": [
+        {
+         "column": 1,
+         "x": 575,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 2,
+         "x": 685,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 3,
+         "x": 795,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 4,
+         "x": 905,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 5,
+         "x": 1015,
+         "y": 420,
+         "sign": "+"
+        }
+       ],
+       "negative_tokens": [
+        {
+         "column": 1,
+         "x": 575,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 2,
+         "x": 685,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 3,
+         "x": 795,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 4,
+         "x": 905,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 5,
+         "x": 1015,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 6,
+         "x": 1125,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 7,
+         "x": 1235,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 8,
+         "x": 1345,
+         "y": 540,
+         "sign": "−"
+        }
+       ],
+       "zero_pairs_struck": [
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "left_over": "3 negative",
+       "label": {
+        "text": "−3",
+        "centre": [
+         1235,
+         420
+        ],
+        "colour": "ANSWER",
+        "height_px": 44
+       }
+      }
+     ],
+     "strike_colour": "ANSWER",
+     "strike_stroke_px": 3
+    },
+    "manim_description": "On a 1920 x 1080 canvas with BG background draw token circles in two rows. Each token is a circle of diameter 90 px with a 3 px INK outline. A positive token is filled SET_A and shows the sign '+' in BG, 44 px high, centred. A negative token is filled SET_B and shows the sign '−' in INK, 44 px high, centred. Top row, y = 420: 5 positive tokens centred at x = 575, 685, 795, 905, 1015 (columns 1 to 5). Bottom row, y = 540: 8 negative tokens centred at x = 575, 685, 795, 905, 1015, 1125, 1235, 1345 (columns 1 to 8); columns 6, 7 and 8 have no token above them. Strike out the 5 zero pairs of columns 1 to 5 with an ANSWER cross, 3 px stroke, over the positive and the negative token of each column: column at x = 575: one line from (527, 372) to (623, 588) and one line from (623, 372) to (527, 588); column at x = 685: one line from (637, 372) to (733, 588) and one line from (733, 372) to (637, 588); column at x = 795: one line from (747, 372) to (843, 588) and one line from (843, 372) to (747, 588); column at x = 905: one line from (857, 372) to (953, 588) and one line from (953, 372) to (857, 588); column at x = 1015: one line from (967, 372) to (1063, 588) and one line from (1063, 372) to (967, 588). Centre the text '−3' in ANSWER, 44 px high, at x = 1235, y = 420, in the empty top row above columns 6, 7 and 8. Draw nothing else.",
+    "visible_text": [
+     "+",
+     "−",
+     "−3"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the equation (+5) + (−8) = −3",
+     "the words zero pair",
+     "colour words"
+    ],
+    "accuracy_checks": [
+     "5 positive and 8 negative tokens in total",
+     "5 struck columns = 5 zero pairs",
+     "3 negative tokens left unstruck, and 5 - 8 = −3 gives the label −3"
+    ],
+    "alt_text": "Five positive tokens over eight negative tokens; the first five columns are crossed out as zero pairs and three negative tokens are left, marked minus 3.",
+    "render_note": "Same picture as the book's example on page 15: 5 positive over 8 negative, crosses on 5 pairs, 3 negative left. Cross colour ANSWER; token colours SET_A (positive) and SET_B (negative). The question has no diagram of its own."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S27.T27.C114",
+   "role": "question",
+   "lp_book_number": "Figure it Out 10.2, Q1",
+   "ncert_ref": "10.2.FiO1.Q1 - 10.2 Figure it Out (chapter p.16)",
+   "question_text": "Complete the additions using tokens. (a): (+6) + (+4); (b): (−3) + (−2); (c): (+5) + (−7); (d): (−2) + (+6)",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Four additions given as expressions; the book gives no token picture for this question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S27.T27.C115",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 10.2, Q1",
+   "ncert_ref": "10.2.FiO1.Q1 - 10.2 Figure it Out (chapter p.16)",
+   "question_text": "Complete the additions using tokens. (a): (+6) + (+4); (b): (−3) + (−2); (c): (+5) + (−7); (d): (−2) + (+6)",
+   "decision": "optional",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The printed answer is four numbers (+10, −5, −2, +4). Token rows for (c) and (d) with the zero pairs crossed out would clearly help, but it would be a combined picture of four parts and the printed answer is not a picture, so not added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "LaTeX lines for (a) to (d)."
+  },
+  {
+   "lp_concept_id": "M3.S27.T27.C116",
+   "role": "question",
+   "lp_book_number": "Figure it Out 10.2, Q2",
+   "ncert_ref": "10.2.FiO1.Q2 - 10.2 Figure it Out (chapter p.16)",
+   "question_text": "Cancel the zero pairs in the following two sets of tokens. On what floor is the lift attendant in each case? What is the corresponding addition statement in each case? (a): 3 positive tokens and 5 negative tokens; (b): 6 positive tokens and 3 negative tokens",
+   "decision": "required",
+   "reason_codes": [
+    "ACTION_ON_FIGURE",
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question asks the student to cancel the zero pairs in 'the following two sets of tokens'; the book gives both sets as a picture (page 16, reprinted on solutions page 50).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S27.T27.C116.IMG1",
+   "manim_scene": "c6_10_s27_c116_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S27.T27.C116.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "integer_tokens",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "integer_tokens",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "token_diameter_px": 90,
+     "column_pitch_px": 110,
+     "row_y": {
+      "top": 420,
+      "bottom": 540
+     },
+     "groups": [
+      {
+       "name": "left set (part a)",
+       "positive_tokens": [
+        {
+         "column": 1,
+         "x": 355,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 2,
+         "x": 465,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 3,
+         "x": 575,
+         "y": 420,
+         "sign": "+"
+        }
+       ],
+       "negative_tokens": [
+        {
+         "column": 1,
+         "x": 355,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 2,
+         "x": 465,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 3,
+         "x": 575,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 4,
+         "x": 685,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 5,
+         "x": 795,
+         "y": 540,
+         "sign": "−"
+        }
+       ],
+       "zero_pairs_struck": []
+      },
+      {
+       "name": "right set (part b)",
+       "positive_tokens": [
+        {
+         "column": 1,
+         "x": 1015,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 2,
+         "x": 1125,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 3,
+         "x": 1235,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 4,
+         "x": 1345,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 5,
+         "x": 1455,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 6,
+         "x": 1565,
+         "y": 420,
+         "sign": "+"
+        }
+       ],
+       "negative_tokens": [
+        {
+         "column": 1,
+         "x": 1015,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 2,
+         "x": 1125,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 3,
+         "x": 1235,
+         "y": 540,
+         "sign": "−"
+        }
+       ],
+       "zero_pairs_struck": []
+      }
+     ]
+    },
+    "manim_description": "On a 1920 x 1080 canvas with BG background draw two token sets side by side, each in two rows. Each token is a circle of diameter 90 px with a 3 px INK outline. A positive token is filled SET_A and shows the sign '+' in BG, 44 px high, centred. A negative token is filled SET_B and shows the sign '−' in INK, 44 px high, centred. Left set, top row y = 420: 3 positive tokens centred at x = 355, 465, 575 (columns 1 to 3). Left set, bottom row y = 540: 5 negative tokens centred at x = 355, 465, 575, 685, 795 (columns 1 to 5); the top row has no token above columns 4 and 5. Right set, top row y = 420: 6 positive tokens centred at x = 1015, 1125, 1235, 1345, 1455, 1565 (columns 1 to 6). Right set, bottom row y = 540: 3 negative tokens centred at x = 1015, 1125, 1235 (columns 1 to 3); the bottom row has no token under columns 4, 5 and 6. No token is struck out and nothing else is drawn.",
+    "visible_text": [
+     "+",
+     "−"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "crosses or any struck token",
+     "the floor numbers or the addition statements",
+     "the letters a and b"
+    ],
+    "accuracy_checks": [
+     "left set: 3 positive and 5 negative tokens",
+     "right set: 6 positive and 3 negative tokens",
+     "no token struck out",
+     "left set is part (a) and right set is part (b), as in the book"
+    ],
+    "alt_text": "Two token sets: the left has 3 positive tokens over 5 negative tokens, the right has 6 positive tokens over 3 negative tokens.",
+    "render_note": "Given figure of the book question (page 16), both sets in one picture because the LP keeps parts (a) and (b) in one concept. Left set = part (a), right set = part (b); the book's letters 'a.' and 'b.' are left out (figure letters are not drawn) and the counts in the question text identify the sets. Same as the reprint on solutions page 50."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S27.T27.C117",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 10.2, Q2",
+   "ncert_ref": "10.2.FiO1.Q2 - 10.2 Figure it Out (chapter p.16)",
+   "question_text": "Cancel the zero pairs in the following two sets of tokens. On what floor is the lift attendant in each case? What is the corresponding addition statement in each case? (a): 3 positive tokens and 5 negative tokens; (b): 6 positive tokens and 3 negative tokens",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "HIGHLIGHT_MEANING"
+   ],
+   "reason": "Cancelling zero pairs is an action on the given sets; the solution figure shows the crossed pairs and what is left (2 negative, 3 positive).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M3.S27.T27.C117.IMG1",
+   "manim_scene": "c6_10_s27_c117_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S27.T27.C117.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "integer_tokens",
+    "aspect_ratio": "16:9",
+    "derived_from": "M3.S27.T27.C116.IMG1",
+    "content": {
+     "type": "integer_tokens",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "token_diameter_px": 90,
+     "column_pitch_px": 110,
+     "row_y": {
+      "top": 420,
+      "bottom": 540
+     },
+     "groups": [
+      {
+       "name": "left set (part a)",
+       "positive_tokens": [
+        {
+         "column": 1,
+         "x": 355,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 2,
+         "x": 465,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 3,
+         "x": 575,
+         "y": 420,
+         "sign": "+"
+        }
+       ],
+       "negative_tokens": [
+        {
+         "column": 1,
+         "x": 355,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 2,
+         "x": 465,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 3,
+         "x": 575,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 4,
+         "x": 685,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 5,
+         "x": 795,
+         "y": 540,
+         "sign": "−"
+        }
+       ],
+       "zero_pairs_struck": [
+        1,
+        2,
+        3
+       ],
+       "left_over": "2 negative",
+       "label": {
+        "text": "−2",
+        "centre": [
+         740,
+         420
+        ],
+        "colour": "ANSWER",
+        "height_px": 44
+       }
+      },
+      {
+       "name": "right set (part b)",
+       "positive_tokens": [
+        {
+         "column": 1,
+         "x": 1015,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 2,
+         "x": 1125,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 3,
+         "x": 1235,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 4,
+         "x": 1345,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 5,
+         "x": 1455,
+         "y": 420,
+         "sign": "+"
+        },
+        {
+         "column": 6,
+         "x": 1565,
+         "y": 420,
+         "sign": "+"
+        }
+       ],
+       "negative_tokens": [
+        {
+         "column": 1,
+         "x": 1015,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 2,
+         "x": 1125,
+         "y": 540,
+         "sign": "−"
+        },
+        {
+         "column": 3,
+         "x": 1235,
+         "y": 540,
+         "sign": "−"
+        }
+       ],
+       "zero_pairs_struck": [
+        1,
+        2,
+        3
+       ],
+       "left_over": "3 positive",
+       "label": {
+        "text": "+3",
+        "centre": [
+         1455,
+         540
+        ],
+        "colour": "ANSWER",
+        "height_px": 44
+       }
+      }
+     ],
+     "strike_colour": "ANSWER",
+     "strike_stroke_px": 3
+    },
+    "manim_description": "On a 1920 x 1080 canvas with BG background draw two token sets side by side, each in two rows. Each token is a circle of diameter 90 px with a 3 px INK outline. A positive token is filled SET_A and shows the sign '+' in BG, 44 px high, centred. A negative token is filled SET_B and shows the sign '−' in INK, 44 px high, centred. Left set, top row y = 420: 3 positive tokens centred at x = 355, 465, 575 (columns 1 to 3). Left set, bottom row y = 540: 5 negative tokens centred at x = 355, 465, 575, 685, 795 (columns 1 to 5); the top row has no token above columns 4 and 5. Right set, top row y = 420: 6 positive tokens centred at x = 1015, 1125, 1235, 1345, 1455, 1565 (columns 1 to 6). Right set, bottom row y = 540: 3 negative tokens centred at x = 1015, 1125, 1235 (columns 1 to 3); the bottom row has no token under columns 4, 5 and 6. Strike out 3 zero pairs in each set with an ANSWER cross, 3 px stroke, over the positive and the negative token of each struck column: left set column at x = 355: one line from (307, 372) to (403, 588) and one line from (403, 372) to (307, 588); column at x = 465: one line from (417, 372) to (513, 588) and one line from (513, 372) to (417, 588); column at x = 575: one line from (527, 372) to (623, 588) and one line from (623, 372) to (527, 588); right set column at x = 1015: one line from (967, 372) to (1063, 588) and one line from (1063, 372) to (967, 588); column at x = 1125: one line from (1077, 372) to (1173, 588) and one line from (1173, 372) to (1077, 588); column at x = 1235: one line from (1187, 372) to (1283, 588) and one line from (1283, 372) to (1187, 588). Centre the text '−2' in ANSWER, 44 px high, at x = 740, y = 420, in the empty top row above the 2 unstruck negative tokens of the left set. Centre the text '+3' in ANSWER, 44 px high, at x = 1455, y = 540, in the empty bottom row under the 3 unstruck positive tokens of the right set. Draw nothing else.",
+    "visible_text": [
+     "+",
+     "−",
+     "−2",
+     "+3"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the addition statements (+3) + (−5) = −2 and (+6) + (−3) = +3",
+     "the word floor",
+     "the letters a and b"
+    ],
+    "accuracy_checks": [
+     "left set: 3 pairs struck, 5 - 3 = 2 negative tokens left, label −2 (3 - 5 = −2)",
+     "right set: 3 pairs struck, 6 - 3 = 3 positive tokens left, label +3",
+     "token positions identical to the question figure; only crosses and the two labels are added"
+    ],
+    "alt_text": "The same two token sets with 3 zero pairs crossed out in each; the left set keeps 2 negative tokens marked minus 2 and the right set keeps 3 positive tokens marked plus 3.",
+    "render_note": "Same layout as M3.S27.T27.C116.IMG1. The book's solutions page 50 prints the answer as text only, so the crosses and the two labels follow the LP solution (Floor −2 and Floor +3). Cross colour ANSWER."
+   }
+  }
+ ]
+}

@@ -1,0 +1,5428 @@
+{
+ "meta": {
+  "chapter": "Patterns in Mathematics",
+  "class": 6,
+  "textbook": "Ganita Prakash, Grade 6, Chapter 1",
+  "lp_plan_id": "cbse_eng_maths6_ch1_v84",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "required": 3,
+    "optional": 1,
+    "none": 4
+   },
+   "question": {
+    "required": 2,
+    "optional": 0,
+    "none": 8
+   },
+   "solution": {
+    "required": 5,
+    "optional": 0,
+    "none": 5
+   }
+  },
+  "notes": [
+   "Chunk A: topics M1.S1.T1, M1.S2.T2, M1.S3.T3, M1.S4.T4, M2.S5.T5, M2.S6.T6, M2.S7.T7, M2.S8.T8, M2.S10.T10 (18 units, 28 items).",
+   "Required diagrams are the picture answers of Figure it Out 1.3 (Q1 to Q5 solutions), the two given figures of 1.3 Q1 (Table 2) and Q4 (hexagon clusters), and the worked examples whose answer is a drawing (3-6-9 dots, triangle of 10, 10 as triangle and rectangle).",
+   "Table 1 (plain table of sequences) is written as LaTeX, not drawn; the question text of 1.2 Q1 does not contain it and needs a text sync.",
+   "Base figure P07-pattern-1 (the odd-numbers square picture of 1.4) is left to chunk B (units 19 to 22); P06-number_pattern-2 (the odd-sums list) is claimed here as LaTeX arithmetic."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P03-table-1",
+   "source": "chapter p.03",
+   "description": "A rounded-corner rectangle with a cream fill and a thin dark outline, titled above it 'Table 1: Examples of number sequences'. Inside, plain black text, no colours, no grid lines: 10 rows, two columns. Left column = the sequence ...",
+   "mapped_to": "none:LATEX_TABLE"
+  },
+  {
+   "fig_id": "P04-pattern-1",
+   "source": "chapter p.04",
+   "description": "One of the 7 rows of Table 2 (a large cream rounded box titled 'Table 2: Pictorial representation of some number sequences'); each row shows the first 5 terms as 5 pictures side by side, each with its number printed in bold black ...",
+   "mapped_to": "item:M2.S6.T6.C18 (question)"
+  },
+  {
+   "fig_id": "P04-pattern-2",
+   "source": "chapter p.04",
+   "description": "One of the 7 rows of Table 2 (a large cream rounded box titled 'Table 2: Pictorial representation of some number sequences'); each row shows the first 5 terms as 5 pictures side by side, each with its number printed in bold black ...",
+   "mapped_to": "item:M2.S6.T6.C18 (question)"
+  },
+  {
+   "fig_id": "P04-pattern-3",
+   "source": "chapter p.04",
+   "description": "One of the 7 rows of Table 2 (a large cream rounded box titled 'Table 2: Pictorial representation of some number sequences'); each row shows the first 5 terms as 5 pictures side by side, each with its number printed in bold black ...",
+   "mapped_to": "item:M2.S6.T6.C18 (question)"
+  },
+  {
+   "fig_id": "P04-pattern-4",
+   "source": "chapter p.04",
+   "description": "One of the 7 rows of Table 2 (a large cream rounded box titled 'Table 2: Pictorial representation of some number sequences'); each row shows the first 5 terms as 5 pictures side by side, each with its number printed in bold black ...",
+   "mapped_to": "item:M2.S6.T6.C18 (question)"
+  },
+  {
+   "fig_id": "P04-pattern-5",
+   "source": "chapter p.04",
+   "description": "One of the 7 rows of Table 2 (a large cream rounded box titled 'Table 2: Pictorial representation of some number sequences'); each row shows the first 5 terms as 5 pictures side by side, each with its number printed in bold black ...",
+   "mapped_to": "item:M2.S6.T6.C18 (question)"
+  },
+  {
+   "fig_id": "P04-pattern-6",
+   "source": "chapter p.04",
+   "description": "One of the 7 rows of Table 2 (a large cream rounded box titled 'Table 2: Pictorial representation of some number sequences'); each row shows the first 5 terms as 5 pictures side by side, each with its number printed in bold black ...",
+   "mapped_to": "item:M2.S6.T6.C18 (question)"
+  },
+  {
+   "fig_id": "P04-solid-7",
+   "source": "chapter p.04",
+   "description": "One of the 7 rows of Table 2 (a large cream rounded box titled 'Table 2: Pictorial representation of some number sequences'); each row shows the first 5 terms as 5 pictures side by side, each with its number printed in bold black ...",
+   "mapped_to": "item:M2.S6.T6.C18 (question)"
+  },
+  {
+   "fig_id": "P05-pattern-1",
+   "source": "chapter p.05",
+   "description": "Four hexagon-shaped dot clusters side by side, left to right, all dots RED with a thick black outline and the same size; the clusters have rows laid out horizontally (flat top and bottom, hexagonal packing, neighbouring rows ...",
+   "mapped_to": "item:M2.S8.T8.C27 (question)"
+  },
+  {
+   "fig_id": "P06-pattern-1",
+   "source": "chapter p.06",
+   "description": "A row of five drawings, left to right, each with a bold black number below. Each step doubles the previous drawing: a copy shifted and joined to the original by thin pale-violet lines. Black dots/lines = the original copy, blue ...",
+   "mapped_to": "item:M2.S8.T8.C30 (solution)"
+  },
+  {
+   "fig_id": "P06-number_pattern-2",
+   "source": "chapter p.06",
+   "description": "A centred block of six typeset equations, plain text, each result printed in RED, the rest black, followed by a vertical row of three dots (for 'and so on'): 1 = 1; 1 + 3 = 4; 1 + 3 + 5 = 9; 1 + 3 + 5 + 7 = 16; 1 + 3 + 5 + 7 + 9 ...",
+   "mapped_to": "none:LATEX_ARITHMETIC"
+  },
+  {
+   "fig_id": "SOL14-pattern-1",
+   "source": "solutions p.14",
+   "description": "Dot-and-line pictures of the powers of 3, left to right, each labelled with its number printed below it (black font, plain dots = filled black circles). Printed in two rows because of width: first row holds 1, 3 and 9, second row ...",
+   "mapped_to": "item:M2.S8.T8.C30 (solution)"
+  },
+  {
+   "fig_id": "SOL14-pattern-2",
+   "source": "solutions p.14",
+   "description": "Dot-and-line pictures of the powers of 2, left to right, each with its number printed below (1, 2, 4, 8, 16 on one row; 32 on a row below). Black dots on black lines on white. (1) Label '1': one dot. (2) Label '2': two dots ...",
+   "mapped_to": "item:M2.S8.T8.C30 (solution)"
+  },
+  {
+   "fig_id": "NEW-P04-pattern-5-C16",
+   "source": "chapter p.04",
+   "description": "Further use of P04-pattern-5: the 10-dot triangle (fourth picture of the triangular row, rows of 1, 2, 3, 4 dots) redrawn alone with row counts for the worked example 'triangle with 4 rows'.",
+   "mapped_to": "item:M2.S5.T5.C16 (question)"
+  },
+  {
+   "fig_id": "NEW-P04-pattern-5-C22",
+   "source": "chapter p.04",
+   "description": "Further use of P04-pattern-5: the same 10-dot triangle redrawn beside a 2 by 5 rectangle of 10 dots (the rectangle is not in the book) for the worked example 'show 10 dots as a triangle and a rectangle'.",
+   "mapped_to": "item:M2.S7.T7.C22 (question)"
+  },
+  {
+   "fig_id": "NEW-P04-rows-C21",
+   "source": "chapter p.04",
+   "description": "Further use of P04-pattern-5, P04-pattern-6 and P04-solid-7: the 10-dot triangle, the 4 by 4 dot square (16) and the 4 by 4 by 4 block cube (64) of Table 2 redrawn side by side as the answer to 'why triangular, square, cube'.",
+   "mapped_to": "item:M2.S6.T6.C21 (solution)"
+  },
+  {
+   "fig_id": "NEW-P04-table2-C19",
+   "source": "chapter p.04",
+   "description": "Further use of P04-pattern-1 to P04-pattern-6 and P04-solid-7: Table 2 (all seven rows, five pictures each) repeated in the solution diagram with the sixth picture of every row added in ANSWER.",
+   "mapped_to": "item:M2.S6.T6.C19 (solution)"
+  },
+  {
+   "fig_id": "NEW-P05-pattern-1-C28",
+   "source": "chapter p.05",
+   "description": "Further use of P05-pattern-1: the four hexagon clusters (1, 7, 19, 37) repeated in the solution diagram with the fifth cluster (61 dots) added in ANSWER.",
+   "mapped_to": "item:M2.S8.T8.C28 (solution)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 18,
+  "mapped_to_items": 16,
+  "mapped_to_concept_images": 0,
+  "mapped_none": 2,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M2.S5.T5.C15.IMG2",
+   "M2.S5.T5.C16.IMG2",
+   "M2.S6.T6.C18.IMG1",
+   "M2.S6.T6.C19.IMG1",
+   "M2.S6.T6.C21.IMG1",
+   "M2.S7.T7.C22.IMG2",
+   "M2.S8.T8.C26.IMG1",
+   "M2.S8.T8.C27.IMG1",
+   "M2.S8.T8.C28.IMG1",
+   "M2.S8.T8.C30.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S1.T1.C1",
+   "role": "worked_example",
+   "ncert_ref": "Section 1.1 - worked example (why mathematics asks why)",
+   "question_text": "The Sun rises every day. Why does mathematics not stop at noticing this?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Word reasoning about the Sun and rules; nothing is shown that a picture would add.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 0,
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C3",
+   "role": "question",
+   "lp_book_number": "Figure it Out 1.1, Q1",
+   "ncert_ref": "Section 1.1 - FiO Q1",
+   "question_text": "Can you think of other examples where mathematics helps us in our everyday lives?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "Open discussion question; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C4",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 1.1, Q1",
+   "ncert_ref": "Section 1.1 - FiO Q1",
+   "question_text": "Can you think of other examples where mathematics helps us in our everyday lives?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "The printed answer is a discussion in words; there is nothing to draw.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C5",
+   "role": "question",
+   "lp_book_number": "Figure it Out 1.1, Q2",
+   "ncert_ref": "Section 1.1 - FiO Q2",
+   "question_text": "How has mathematics helped propel humanity forward? (You might think of examples involving: carrying out scientific experiments; running our economy and democracy; building bridges, houses or other complex structures; making TVs, mobile phones, computers, bicycles, trains, cars, planes, calendars, clocks, etc.)",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "Open discussion question; the book gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S2.T2.C6",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 1.1, Q2",
+   "ncert_ref": "Section 1.1 - FiO Q2",
+   "question_text": "How has mathematics helped propel humanity forward? (You might think of examples involving: carrying out scientific experiments; running our economy and democracy; building bridges, houses or other complex structures; making TVs, mobile phones, computers, bicycles, trains, cars, planes, calendars, clocks, etc.)",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "The printed answer is a discussion in words; there is nothing to draw.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C7",
+   "role": "worked_example",
+   "ncert_ref": "Section 1.2 - worked example (number sequences)",
+   "question_text": "Find the rule and the next term of 4, 7, 10, 13, 16.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The numbers are in the text and the rule is one jump of +3: text and LaTeX are enough.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 0,
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C8",
+   "role": "worked_example",
+   "ncert_ref": "Section 1.2 - worked example (number sequences)",
+   "question_text": "Find the next term of 2, 5, 9, 14, 20.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The numbers are in the text and the jumps 3, 4, 5, 6 are written in the steps: text and LaTeX are enough.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 0,
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S3.T3.C9",
+   "role": "worked_example",
+   "ncert_ref": "Section 1.2 - worked example (number sequences)",
+   "question_text": "Find the next term of 3, 4, 7, 11, 18.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The numbers are in the text and the three sums are written in the steps: text and LaTeX are enough.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 0,
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C11",
+   "role": "question",
+   "lp_book_number": "Figure it Out 1.2, Q1",
+   "ncert_ref": "Section 1.2 - FiO Q1",
+   "question_text": "Can you recognise the pattern in each of the sequences in Table 1?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE"
+   ],
+   "reason": "Table 1 is a plain table of ten sequences and their names (no colour, no picture inside): it is written as a LaTeX table, not drawn.",
+   "lp_placeholder_action": "drop_image",
+   "text_alternative": "Write Table 1 into the question text as a LaTeX array of ten rows, sequence then name: 1,1,1,1,1,1,1,... (All 1's); 1,2,3,4,5,6,7,... (Counting numbers); 1,3,5,7,9,11,13,... (Odd numbers); 2,4,6,8,10,12,14,... (Even numbers); 1,3,6,10,15,21,28,... (Triangular numbers); 1,4,9,16,25,36,49,... (Squares); 1,8,27,64,125,216,... (Cubes); 1,2,3,5,8,13,21,... (Virahanka numbers); 1,2,4,8,16,32,64,... (Powers of 2); 1,3,9,27,81,243,729,... (Powers of 3).",
+   "needs_lp_text_sync": true,
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C12",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 1.2, Q1",
+   "ncert_ref": "Section 1.2 - FiO Q1",
+   "question_text": "Can you recognise the pattern in each of the sequences in Table 1?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a rule for each sequence written in words and numbers; no figure is printed or needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C13",
+   "role": "question",
+   "lp_book_number": "Figure it Out 1.2, Q2",
+   "ncert_ref": "Section 1.2 - FiO Q2",
+   "question_text": "Rewrite each sequence of Table 1 in your notebook, along with the next three numbers in each sequence! After each sequence, write in your own words what is the rule for forming the numbers in the sequence. All 1's) 1, 1, 1, 1, 1, 1, 1, ... Counting numbers) 1, 2, 3, 4, 5, 6, 7, ... Odd numbers) 1, 3, 5, 7, 9, 11, 13, ... Even numbers) 2, 4, 6, 8, 10, 12, 14, ... Triangular numbers) 1, 3, 6, 10, 15, 21, 28, ... Squares) 1, 4, 9, 16, 25, 36, 49, ... Cubes) 1, 8, 27, 64, 125, 216, ... Virahanka numbers) 1, 2, 3, 5, 8, 13, 21, ... Powers of 2) 1, 2, 4, 8, 16, 32, 64, ... Powers of 3) 1, 3, 9, 27, 81, 243, 729, ...",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_TABLE",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question text already lists all ten sequences; a plain list of numbers stays text/LaTeX.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S4.T4.C14",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 1.2, Q2",
+   "ncert_ref": "Section 1.2 - FiO Q2",
+   "question_text": "Rewrite each sequence of Table 1 in your notebook, along with the next three numbers in each sequence! After each sequence, write in your own words what is the rule for forming the numbers in the sequence. All 1's) 1, 1, 1, 1, 1, 1, 1, ... Counting numbers) 1, 2, 3, 4, 5, 6, 7, ... Odd numbers) 1, 3, 5, 7, 9, 11, 13, ... Even numbers) 2, 4, 6, 8, 10, 12, 14, ... Triangular numbers) 1, 3, 6, 10, 15, 21, 28, ... Squares) 1, 4, 9, 16, 25, 36, 49, ... Cubes) 1, 8, 27, 64, 125, 216, ... Virahanka numbers) 1, 2, 3, 5, 8, 13, 21, ... Powers of 2) 1, 2, 4, 8, 16, 32, 64, ... Powers of 3) 1, 3, 9, 27, 81, 243, 729, ...",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the next three numbers of each sequence, computed by sums and products written in the steps.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C15",
+   "role": "worked_example",
+   "ncert_ref": "Section 1.3 - worked example (dot pictures of 3, 6, 9)",
+   "question_text": "Draw the first three pictures of the sequence 3, 6, 9 with dots, and say how the picture grows.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The example asks to draw the first three pictures of 3, 6, 9; the answer is the three dot pictures themselves, so the example needs them.",
+   "lp_placeholder_action": "add_new_image",
+   "block_index": 0,
+   "media_id": "M2.S5.T5.C15.IMG2",
+   "manim_scene": "c6_1_s13_c15_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C15.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "dot_array",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "dot_array",
+     "unit": "dot pitch 1.0, x right, y up",
+     "dot_diameter": 0.6,
+     "pictures": [
+      {
+       "picture": 1,
+       "columns": [
+        {
+         "col": 1,
+         "x": 0.0,
+         "ys": [
+          0.0,
+          1.0,
+          2.0
+         ],
+         "colour": "SET_A"
+        }
+       ],
+       "dots": 3,
+       "label": "3",
+       "label_centre": [
+        0.0,
+        -1.2
+       ],
+       "label_colour": "INK"
+      },
+      {
+       "picture": 2,
+       "columns": [
+        {
+         "col": 1,
+         "x": 3.0,
+         "ys": [
+          0.0,
+          1.0,
+          2.0
+         ],
+         "colour": "SET_A"
+        },
+        {
+         "col": 2,
+         "x": 4.0,
+         "ys": [
+          0.0,
+          1.0,
+          2.0
+         ],
+         "colour": "SET_B"
+        }
+       ],
+       "dots": 6,
+       "label": "6",
+       "label_centre": [
+        3.5,
+        -1.2
+       ],
+       "label_colour": "INK"
+      },
+      {
+       "picture": 3,
+       "columns": [
+        {
+         "col": 1,
+         "x": 7.0,
+         "ys": [
+          0.0,
+          1.0,
+          2.0
+         ],
+         "colour": "SET_A"
+        },
+        {
+         "col": 2,
+         "x": 8.0,
+         "ys": [
+          0.0,
+          1.0,
+          2.0
+         ],
+         "colour": "SET_A"
+        },
+        {
+         "col": 3,
+         "x": 9.0,
+         "ys": [
+          0.0,
+          1.0,
+          2.0
+         ],
+         "colour": "SET_B"
+        }
+       ],
+       "dots": 9,
+       "label": "9",
+       "label_centre": [
+        8.0,
+        -1.2
+       ],
+       "label_colour": "INK"
+      }
+     ]
+    },
+    "manim_description": "Three dot pictures side by side on a plain white BG, bottoms level, dot pitch 1.0, dot diameter 0.6 (filled circles). Picture 1 (left): one column of 3 dots at x = 0, y = 0, 1, 2, all SET_A. Picture 2: two columns of 3 dots at x = 3.0 and x = 4.0, y = 0, 1, 2 in each column; the left column SET_A, the right column (the newest column) SET_B. Picture 3: three columns of 3 dots at x = 7.0, 8.0, 9.0, y = 0, 1, 2 in each column; the two left columns SET_A, the right column (the newest column) SET_B. Under each picture, centred on the picture at y = -1.2, one bold INK number: '3' at x = 0, '6' at x = 3.5, '9' at x = 8.0. Nothing else is drawn. Scale uniformly to fill the 16:9 card with an even margin.",
+    "visible_text": [
+     "3",
+     "6",
+     "9"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words 'column', 'picture', '+3' or any equation",
+     "the amber colour on a picture's first column"
+    ],
+    "accuracy_checks": [
+     "dot counts of the three pictures are 3, 6 and 9 (3 per column x 1, 2, 3 columns)",
+     "each picture has exactly one SET_B column except picture 1, which has none",
+     "labels equal the dot counts: 3, 6, 9"
+    ],
+    "alt_text": "Three dot pictures: one column of 3 dots, two columns (6 dots) and three columns (9 dots), the newest column of each picture in amber.",
+    "render_note": "The concept image M2.S5.T5.C15.IMG1 shows the same idea; it is not linked (v3 rule). Colours follow the style tokens, not the concept image."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S5.T5.C16",
+   "role": "worked_example",
+   "ncert_ref": "Section 1.3 - worked example (triangle with 4 rows)",
+   "question_text": "How many dots are in a triangle with 4 rows, and why is the number called triangular?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "'Why is it called triangular' is answered by the way the 10 dots stack into rows of 1, 2, 3, 4; that arrangement is the explanation, so the example needs the picture.",
+   "lp_placeholder_action": "add_new_image",
+   "block_index": 0,
+   "media_id": "M2.S5.T5.C16.IMG2",
+   "manim_scene": "c6_1_s13_c16_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S5.T5.C16.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "dot_array",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "dot_array",
+     "unit": "dot pitch 1.0, x right, y up",
+     "dot_diameter": 0.6,
+     "dot_fill": "INK",
+     "rows": [
+      {
+       "row": 1,
+       "y": 0.0,
+       "xs": [
+        0.0
+       ]
+      },
+      {
+       "row": 2,
+       "y": -0.866,
+       "xs": [
+        -0.5,
+        0.5
+       ]
+      },
+      {
+       "row": 3,
+       "y": -1.732,
+       "xs": [
+        -1.0,
+        0.0,
+        1.0
+       ]
+      },
+      {
+       "row": 4,
+       "y": -2.598,
+       "xs": [
+        -1.5,
+        -0.5,
+        0.5,
+        1.5
+       ]
+      }
+     ],
+     "row_labels": [
+      {
+       "text": "1",
+       "x": -3.0,
+       "y": 0.0,
+       "colour": "GUIDE"
+      },
+      {
+       "text": "2",
+       "x": -3.0,
+       "y": -0.866,
+       "colour": "GUIDE"
+      },
+      {
+       "text": "3",
+       "x": -3.0,
+       "y": -1.732,
+       "colour": "GUIDE"
+      },
+      {
+       "text": "4",
+       "x": -3.0,
+       "y": -2.598,
+       "colour": "GUIDE"
+      }
+     ],
+     "total_label": {
+      "text": "10",
+      "x": 0.0,
+      "y": -3.898,
+      "colour": "INK"
+     },
+     "total_dots": 10
+    },
+    "manim_description": "One triangle of 10 dots, apex at the top, on a plain white BG. Every dot is a filled INK circle of diameter 0.6, horizontal pitch 1.0, row distance 0.866, rows centred on x = 0. Row 1 (y = 0): 1 dot at x = 0. Row 2 (y = -0.866): 2 dots at x = -0.5 and 0.5. Row 3 (y = -1.732): 3 dots at x = -1, 0, 1. Row 4 (y = -2.598): 4 dots at x = -1.5, -0.5, 0.5, 1.5. At the left, at x = -3.0 and the y of its row, one GUIDE number telling how many dots the row holds: '1' at y = 0, '2' at y = -0.866, '3' at y = -1.732, '4' at y = -2.598. Below the triangle, centred at x = 0, y = -3.9, the bold INK number '10'. Nothing else is drawn. Scale uniformly to fill the 16:9 card with an even margin.",
+    "visible_text": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "10"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "a plus-sign equation",
+     "an outline drawn around the triangle",
+     "the word 'triangular'"
+    ],
+    "accuracy_checks": [
+     "rows hold 1, 2, 3, 4 dots: 1 + 2 + 3 + 4 = 10 dots in all",
+     "each row is centred on x = 0 (symmetric triangle)",
+     "label '10' equals the dot count"
+    ],
+    "alt_text": "A triangle of 10 dots in rows of 1, 2, 3 and 4 dots with the number 10 below it.",
+    "render_note": "The concept image M2.S5.T5.C16.IMG1 shows the same triangle; it is not linked (v3 rule). The same 10-dot triangle is the fourth picture of the triangular row of the pictorial table."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C18",
+   "role": "question",
+   "lp_book_number": "Figure it Out 1.3, Q1",
+   "ncert_ref": "Section 1.3 - FiO Q1 (Table 2)",
+   "question_text": "Copy the pictorial representations of the number sequences in Table 2 in your notebook, and draw the next picture for each sequence!",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The question refers to Table 2, whose pictures live only in the book figure; the learner must see the five pictures of every row to copy them and draw the next one.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S6.T6.C18.IMG1",
+   "manim_scene": "c6_1_s13_fio1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S6.T6.C18.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "kind": "pictorial_table_of_seven_number_sequences",
+     "unit": "one dot pitch = 1.0; x to the right, y up",
+     "frame": {
+      "x_left": -7.3,
+      "x_right": 28.2,
+      "y_top": 0.0,
+      "y_bottom": -32.18,
+      "note": "the frame of the 6-column layout is used for BOTH the question and the solution diagram"
+     },
+     "dot": {
+      "diameter": 0.5,
+      "pitch": 1.0,
+      "fill": "INK (ANSWER in column 6)"
+     },
+     "cube": {
+      "block_edge": 0.5,
+      "depth_per_cube_edge_ratio": 0.4,
+      "projection": "oblique, depth vector (0.2k, 0.2k) up and to the right for a k x k x k cube",
+      "face_fill": "CELL_FILL",
+      "line": "INK (ANSWER in column 6)"
+     },
+     "label": {
+      "height": 1.05,
+      "font": "bold sans-serif",
+      "gap_below_picture": 0.3
+     },
+     "column_centres_x": [
+      0.35,
+      3.45,
+      7.45,
+      12.45,
+      18.45
+     ],
+     "column_slot_widths": [
+      0.7,
+      1.5,
+      2.5,
+      3.5,
+      4.5
+     ],
+     "row_bottom_y": [
+      -0.5,
+      -3.05,
+      -6.6,
+      -10.15,
+      -17.03,
+      -24.58,
+      -30.83
+     ],
+     "row_names": [
+      {
+       "row": 1,
+       "lines": [
+        "All 1's"
+       ],
+       "right_aligned_at_x": -1.5,
+       "centre_y": -0.925
+      },
+      {
+       "row": 2,
+       "lines": [
+        "Counting",
+        "numbers"
+       ],
+       "right_aligned_at_x": -1.5,
+       "centre_y": -3.475
+      },
+      {
+       "row": 3,
+       "lines": [
+        "Odd",
+        "numbers"
+       ],
+       "right_aligned_at_x": -1.5,
+       "centre_y": -6.525
+      },
+      {
+       "row": 4,
+       "lines": [
+        "Even",
+        "numbers"
+       ],
+       "right_aligned_at_x": -1.5,
+       "centre_y": -10.075
+      },
+      {
+       "row": 5,
+       "lines": [
+        "Triangular",
+        "numbers"
+       ],
+       "right_aligned_at_x": -1.5,
+       "centre_y": -15.29
+      },
+      {
+       "row": 6,
+       "lines": [
+        "Squares"
+       ],
+       "right_aligned_at_x": -1.5,
+       "centre_y": -22.505
+      },
+      {
+       "row": 7,
+       "lines": [
+        "Cubes"
+       ],
+       "right_aligned_at_x": -1.5,
+       "centre_y": -29.405
+      }
+     ],
+     "pictures": [
+      {
+       "value": 1,
+       "centre_x": 0.35,
+       "bottom_y": -0.5,
+       "kind": "single_dot",
+       "dots": 1,
+       "row": 1,
+       "col": 1,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -1.325
+      },
+      {
+       "value": 1,
+       "centre_x": 3.45,
+       "bottom_y": -0.5,
+       "kind": "single_dot",
+       "dots": 1,
+       "row": 1,
+       "col": 2,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -1.325
+      },
+      {
+       "value": 1,
+       "centre_x": 7.45,
+       "bottom_y": -0.5,
+       "kind": "single_dot",
+       "dots": 1,
+       "row": 1,
+       "col": 3,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -1.325
+      },
+      {
+       "value": 1,
+       "centre_x": 12.45,
+       "bottom_y": -0.5,
+       "kind": "single_dot",
+       "dots": 1,
+       "row": 1,
+       "col": 4,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -1.325
+      },
+      {
+       "value": 1,
+       "centre_x": 18.45,
+       "bottom_y": -0.5,
+       "kind": "single_dot",
+       "dots": 1,
+       "row": 1,
+       "col": 5,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -1.325
+      },
+      {
+       "value": 1,
+       "centre_x": 0.35,
+       "bottom_y": -3.05,
+       "kind": "dot_row",
+       "dots": 1,
+       "rows": 1,
+       "cols": 1,
+       "row": 2,
+       "col": 1,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -3.875
+      },
+      {
+       "value": 2,
+       "centre_x": 3.45,
+       "bottom_y": -3.05,
+       "kind": "dot_row",
+       "dots": 2,
+       "rows": 1,
+       "cols": 2,
+       "row": 2,
+       "col": 2,
+       "colour": "INK",
+       "label": "2",
+       "label_colour": "INK",
+       "label_centre_y": -3.875
+      },
+      {
+       "value": 3,
+       "centre_x": 7.45,
+       "bottom_y": -3.05,
+       "kind": "dot_row",
+       "dots": 3,
+       "rows": 1,
+       "cols": 3,
+       "row": 2,
+       "col": 3,
+       "colour": "INK",
+       "label": "3",
+       "label_colour": "INK",
+       "label_centre_y": -3.875
+      },
+      {
+       "value": 4,
+       "centre_x": 12.45,
+       "bottom_y": -3.05,
+       "kind": "dot_row",
+       "dots": 4,
+       "rows": 1,
+       "cols": 4,
+       "row": 2,
+       "col": 4,
+       "colour": "INK",
+       "label": "4",
+       "label_colour": "INK",
+       "label_centre_y": -3.875
+      },
+      {
+       "value": 5,
+       "centre_x": 18.45,
+       "bottom_y": -3.05,
+       "kind": "dot_row",
+       "dots": 5,
+       "rows": 1,
+       "cols": 5,
+       "row": 2,
+       "col": 5,
+       "colour": "INK",
+       "label": "5",
+       "label_colour": "INK",
+       "label_centre_y": -3.875
+      },
+      {
+       "value": 1,
+       "centre_x": 0.35,
+       "bottom_y": -6.6,
+       "kind": "odd_pattern",
+       "top_row_dots": 0,
+       "bottom_row_dots": 1,
+       "dots": 1,
+       "row": 3,
+       "col": 1,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -7.425
+      },
+      {
+       "value": 3,
+       "centre_x": 3.45,
+       "bottom_y": -6.6,
+       "kind": "odd_pattern",
+       "top_row_dots": 1,
+       "bottom_row_dots": 2,
+       "dots": 3,
+       "row": 3,
+       "col": 2,
+       "colour": "INK",
+       "label": "3",
+       "label_colour": "INK",
+       "label_centre_y": -7.425
+      },
+      {
+       "value": 5,
+       "centre_x": 7.45,
+       "bottom_y": -6.6,
+       "kind": "odd_pattern",
+       "top_row_dots": 2,
+       "bottom_row_dots": 3,
+       "dots": 5,
+       "row": 3,
+       "col": 3,
+       "colour": "INK",
+       "label": "5",
+       "label_colour": "INK",
+       "label_centre_y": -7.425
+      },
+      {
+       "value": 7,
+       "centre_x": 12.45,
+       "bottom_y": -6.6,
+       "kind": "odd_pattern",
+       "top_row_dots": 3,
+       "bottom_row_dots": 4,
+       "dots": 7,
+       "row": 3,
+       "col": 4,
+       "colour": "INK",
+       "label": "7",
+       "label_colour": "INK",
+       "label_centre_y": -7.425
+      },
+      {
+       "value": 9,
+       "centre_x": 18.45,
+       "bottom_y": -6.6,
+       "kind": "odd_pattern",
+       "top_row_dots": 4,
+       "bottom_row_dots": 5,
+       "dots": 9,
+       "row": 3,
+       "col": 5,
+       "colour": "INK",
+       "label": "9",
+       "label_colour": "INK",
+       "label_centre_y": -7.425
+      },
+      {
+       "value": 2,
+       "centre_x": 0.35,
+       "bottom_y": -10.15,
+       "kind": "dot_rectangle",
+       "rows": 2,
+       "cols": 1,
+       "dots": 2,
+       "row": 4,
+       "col": 1,
+       "colour": "INK",
+       "label": "2",
+       "label_colour": "INK",
+       "label_centre_y": -10.975
+      },
+      {
+       "value": 4,
+       "centre_x": 3.45,
+       "bottom_y": -10.15,
+       "kind": "dot_rectangle",
+       "rows": 2,
+       "cols": 2,
+       "dots": 4,
+       "row": 4,
+       "col": 2,
+       "colour": "INK",
+       "label": "4",
+       "label_colour": "INK",
+       "label_centre_y": -10.975
+      },
+      {
+       "value": 6,
+       "centre_x": 7.45,
+       "bottom_y": -10.15,
+       "kind": "dot_rectangle",
+       "rows": 2,
+       "cols": 3,
+       "dots": 6,
+       "row": 4,
+       "col": 3,
+       "colour": "INK",
+       "label": "6",
+       "label_colour": "INK",
+       "label_centre_y": -10.975
+      },
+      {
+       "value": 8,
+       "centre_x": 12.45,
+       "bottom_y": -10.15,
+       "kind": "dot_rectangle",
+       "rows": 2,
+       "cols": 4,
+       "dots": 8,
+       "row": 4,
+       "col": 4,
+       "colour": "INK",
+       "label": "8",
+       "label_colour": "INK",
+       "label_centre_y": -10.975
+      },
+      {
+       "value": 10,
+       "centre_x": 18.45,
+       "bottom_y": -10.15,
+       "kind": "dot_rectangle",
+       "rows": 2,
+       "cols": 5,
+       "dots": 10,
+       "row": 4,
+       "col": 5,
+       "colour": "INK",
+       "label": "10",
+       "label_colour": "INK",
+       "label_centre_y": -10.975
+      },
+      {
+       "value": 1,
+       "centre_x": 0.35,
+       "bottom_y": -17.03,
+       "kind": "dot_triangle",
+       "rows": 1,
+       "dots": 1,
+       "row": 5,
+       "col": 1,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -17.855
+      },
+      {
+       "value": 3,
+       "centre_x": 3.45,
+       "bottom_y": -17.03,
+       "kind": "dot_triangle",
+       "rows": 2,
+       "dots": 3,
+       "row": 5,
+       "col": 2,
+       "colour": "INK",
+       "label": "3",
+       "label_colour": "INK",
+       "label_centre_y": -17.855
+      },
+      {
+       "value": 6,
+       "centre_x": 7.45,
+       "bottom_y": -17.03,
+       "kind": "dot_triangle",
+       "rows": 3,
+       "dots": 6,
+       "row": 5,
+       "col": 3,
+       "colour": "INK",
+       "label": "6",
+       "label_colour": "INK",
+       "label_centre_y": -17.855
+      },
+      {
+       "value": 10,
+       "centre_x": 12.45,
+       "bottom_y": -17.03,
+       "kind": "dot_triangle",
+       "rows": 4,
+       "dots": 10,
+       "row": 5,
+       "col": 4,
+       "colour": "INK",
+       "label": "10",
+       "label_colour": "INK",
+       "label_centre_y": -17.855
+      },
+      {
+       "value": 15,
+       "centre_x": 18.45,
+       "bottom_y": -17.03,
+       "kind": "dot_triangle",
+       "rows": 5,
+       "dots": 15,
+       "row": 5,
+       "col": 5,
+       "colour": "INK",
+       "label": "15",
+       "label_colour": "INK",
+       "label_centre_y": -17.855
+      },
+      {
+       "value": 1,
+       "centre_x": 0.35,
+       "bottom_y": -24.58,
+       "kind": "dot_square",
+       "rows": 1,
+       "cols": 1,
+       "dots": 1,
+       "row": 6,
+       "col": 1,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -25.405
+      },
+      {
+       "value": 4,
+       "centre_x": 3.45,
+       "bottom_y": -24.58,
+       "kind": "dot_square",
+       "rows": 2,
+       "cols": 2,
+       "dots": 4,
+       "row": 6,
+       "col": 2,
+       "colour": "INK",
+       "label": "4",
+       "label_colour": "INK",
+       "label_centre_y": -25.405
+      },
+      {
+       "value": 9,
+       "centre_x": 7.45,
+       "bottom_y": -24.58,
+       "kind": "dot_square",
+       "rows": 3,
+       "cols": 3,
+       "dots": 9,
+       "row": 6,
+       "col": 3,
+       "colour": "INK",
+       "label": "9",
+       "label_colour": "INK",
+       "label_centre_y": -25.405
+      },
+      {
+       "value": 16,
+       "centre_x": 12.45,
+       "bottom_y": -24.58,
+       "kind": "dot_square",
+       "rows": 4,
+       "cols": 4,
+       "dots": 16,
+       "row": 6,
+       "col": 4,
+       "colour": "INK",
+       "label": "16",
+       "label_colour": "INK",
+       "label_centre_y": -25.405
+      },
+      {
+       "value": 25,
+       "centre_x": 18.45,
+       "bottom_y": -24.58,
+       "kind": "dot_square",
+       "rows": 5,
+       "cols": 5,
+       "dots": 25,
+       "row": 6,
+       "col": 5,
+       "colour": "INK",
+       "label": "25",
+       "label_colour": "INK",
+       "label_centre_y": -25.405
+      },
+      {
+       "value": 1,
+       "centre_x": 0.35,
+       "bottom_y": -30.83,
+       "kind": "block_cube",
+       "blocks_per_edge": 1,
+       "blocks": 1,
+       "edge": 0.5,
+       "depth": 0.2,
+       "row": 7,
+       "col": 1,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -31.655
+      },
+      {
+       "value": 8,
+       "centre_x": 3.45,
+       "bottom_y": -30.83,
+       "kind": "block_cube",
+       "blocks_per_edge": 2,
+       "blocks": 8,
+       "edge": 1.0,
+       "depth": 0.4,
+       "row": 7,
+       "col": 2,
+       "colour": "INK",
+       "label": "8",
+       "label_colour": "INK",
+       "label_centre_y": -31.655
+      },
+      {
+       "value": 27,
+       "centre_x": 7.45,
+       "bottom_y": -30.83,
+       "kind": "block_cube",
+       "blocks_per_edge": 3,
+       "blocks": 27,
+       "edge": 1.5,
+       "depth": 0.6,
+       "row": 7,
+       "col": 3,
+       "colour": "INK",
+       "label": "27",
+       "label_colour": "INK",
+       "label_centre_y": -31.655
+      },
+      {
+       "value": 64,
+       "centre_x": 12.45,
+       "bottom_y": -30.83,
+       "kind": "block_cube",
+       "blocks_per_edge": 4,
+       "blocks": 64,
+       "edge": 2.0,
+       "depth": 0.8,
+       "row": 7,
+       "col": 4,
+       "colour": "INK",
+       "label": "64",
+       "label_colour": "INK",
+       "label_centre_y": -31.655
+      },
+      {
+       "value": 125,
+       "centre_x": 18.45,
+       "bottom_y": -30.83,
+       "kind": "block_cube",
+       "blocks_per_edge": 5,
+       "blocks": 125,
+       "edge": 2.5,
+       "depth": 1.0,
+       "row": 7,
+       "col": 5,
+       "colour": "INK",
+       "label": "125",
+       "label_colour": "INK",
+       "label_centre_y": -31.655
+      }
+     ]
+    },
+    "manim_description": "Draw a pictorial table of seven number sequences on a plain white BG: 7 rows (top to bottom) by 5 pictures (left to right). Coordinates: unit = one dot pitch (1.0), x to the right, y up. Use the frame x from -7.3 to 28.2 and y from -32.18 to 0 (the frame of the 6-column layout) in both the question and the solution diagram, scaled uniformly to fill the 16:9 card with an even margin. Column centres x = [0.35, 3.45, 7.45, 12.45, 18.45]. Row bottom edges (the bottom of every picture in the row sits on this y) = [-0.5, -3.05, -6.6, -10.15, -17.03, -24.58, -30.83]. Every picture is centred on its column centre. Under each picture, centred on the picture at the y given for its row ([-1.325, -3.875, -7.425, -10.975, -17.855, -25.405, -31.655]), is its number as bold INK text, label height 1.05. A dot is a filled INK circle of diameter 0.5 at pitch 1.0 (centres 1.0 apart). Dot centres lie 0.25 above the row bottom edge for the lowest dots. Row 1 (name 'All 1's'): every picture is one dot; labels 1, 1, 1, 1, 1. Row 2: picture k is k dots in one horizontal line (k = 1..5); labels 1, 2, 3, 4, 5. Row 3: picture k holds 2k-1 dots in two horizontal rows, both rows left-aligned: the top row has k-1 dots, the bottom row has k dots, the rows are 1.0 apart (picture 1 is the single bottom dot); labels 1, 3, 5, 7, 9. Row 4: picture k is a rectangle of 2 rows by k columns of dots at pitch 1.0; labels 2, 4, 6, 8, 10. Row 5: picture k is a triangle of dots with apex at the top, k rows holding 1, 2, ..., k dots, each row centred, row distance 0.866, bottom row on the row bottom edge; labels 1, 3, 6, 10, 15. Row 6: picture k is a square grid of k rows by k columns of dots at pitch 1.0; labels 1, 4, 9, 16, 25. Row 7: picture k is a k by k by k cube of unit blocks drawn in oblique projection: the front face is a square of edge 0.5k with its lower-left corner at the bottom edge, the top face and the right face are parallelograms shifted by the depth vector (0.2k, 0.2k), every face is divided into k by k equal cells with thin INK grid lines, faces filled CELL_FILL, outlines INK 2 px (picture 1 is a single block with no inner lines); cubes of 1, 8, 27, 64, 125 blocks; labels 1, 8, 27, 64, 125. Row names at the left, INK, right-aligned at x = -1.5, each vertically centred at the y given: row 1 'All 1's' centre y -0.925, row 2 'Counting numbers' centre y -3.475, row 3 'Odd numbers' centre y -6.525, row 4 'Even numbers' centre y -10.075, row 5 'Triangular numbers' centre y -15.29, row 6 'Squares' centre y -22.505, row 7 'Cubes' centre y -29.405. Names with two words are written on two lines (Counting / numbers, Odd / numbers, Even / numbers, Triangular / numbers); 'All 1's', 'Squares' and 'Cubes' are one line.",
+    "visible_text": [
+     "All 1's",
+     "Counting numbers",
+     "Odd numbers",
+     "Even numbers",
+     "Triangular numbers",
+     "Squares",
+     "Cubes",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "1",
+     "3",
+     "5",
+     "7",
+     "9",
+     "2",
+     "4",
+     "6",
+     "8",
+     "10",
+     "1",
+     "3",
+     "6",
+     "10",
+     "15",
+     "1",
+     "4",
+     "9",
+     "16",
+     "25",
+     "1",
+     "8",
+     "27",
+     "64",
+     "125"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the book's row colours (red, blue, green) - every dot is INK",
+     "the title above the table",
+     "the sixth picture of any row (the sixth column slot stays empty in this diagram)"
+    ],
+    "accuracy_checks": [
+     "dots per picture: row 1 = 1 each; row 2 = 1..5; row 3 = (k-1)+k = 1, 3, 5, 7, 9; row 4 = 2k = 2, 4, 6, 8, 10; row 5 = k(k+1)/2 = 1, 3, 6, 10, 15; row 6 = k*k = 1, 4, 9, 16, 25",
+     "cube blocks per picture: k^3 = 1, 8, 27, 64, 125; every cube face is k by k cells",
+     "each label equals the count of dots or blocks in its picture",
+     "the five labels of rows 3 to 7 are the first five terms of odd, even, triangular, square and cube numbers"
+    ],
+    "alt_text": "A table of seven number sequences drawn as pictures, five pictures each: single dots, rows of dots, odd and even dot patterns, dot triangles, dot squares and block cubes, each labelled with its number.",
+    "render_note": "Question diagram: the book's Table 2 as given, in INK only. The sixth column slot is left empty so that the solution diagram can add a sixth picture in the same positions."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C19",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 1.3, Q1",
+   "ncert_ref": "Section 1.3 - FiO Q1 (Table 2)",
+   "question_text": "Copy the pictorial representations of the number sequences in Table 2 in your notebook, and draw the next picture for each sequence!",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The answer is a drawing: the sixth picture of every one of the seven sequences, added to Table 2.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S6.T6.C19.IMG1",
+   "manim_scene": "c6_1_s13_fio1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S6.T6.C19.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S6.T6.C18.IMG1",
+    "content": {
+     "type": "other",
+     "kind": "pictorial_table_of_seven_number_sequences",
+     "unit": "one dot pitch = 1.0; x to the right, y up",
+     "frame": {
+      "x_left": -7.3,
+      "x_right": 28.2,
+      "y_top": 0.0,
+      "y_bottom": -32.18,
+      "note": "the frame of the 6-column layout is used for BOTH the question and the solution diagram"
+     },
+     "dot": {
+      "diameter": 0.5,
+      "pitch": 1.0,
+      "fill": "INK (ANSWER in column 6)"
+     },
+     "cube": {
+      "block_edge": 0.5,
+      "depth_per_cube_edge_ratio": 0.4,
+      "projection": "oblique, depth vector (0.2k, 0.2k) up and to the right for a k x k x k cube",
+      "face_fill": "CELL_FILL",
+      "line": "INK (ANSWER in column 6)"
+     },
+     "label": {
+      "height": 1.05,
+      "font": "bold sans-serif",
+      "gap_below_picture": 0.3
+     },
+     "column_centres_x": [
+      0.35,
+      3.45,
+      7.45,
+      12.45,
+      18.45,
+      25.45
+     ],
+     "column_slot_widths": [
+      0.7,
+      1.5,
+      2.5,
+      3.5,
+      4.5,
+      5.5
+     ],
+     "row_bottom_y": [
+      -0.5,
+      -3.05,
+      -6.6,
+      -10.15,
+      -17.03,
+      -24.58,
+      -30.83
+     ],
+     "row_names": [
+      {
+       "row": 1,
+       "lines": [
+        "All 1's"
+       ],
+       "right_aligned_at_x": -1.5,
+       "centre_y": -0.925
+      },
+      {
+       "row": 2,
+       "lines": [
+        "Counting",
+        "numbers"
+       ],
+       "right_aligned_at_x": -1.5,
+       "centre_y": -3.475
+      },
+      {
+       "row": 3,
+       "lines": [
+        "Odd",
+        "numbers"
+       ],
+       "right_aligned_at_x": -1.5,
+       "centre_y": -6.525
+      },
+      {
+       "row": 4,
+       "lines": [
+        "Even",
+        "numbers"
+       ],
+       "right_aligned_at_x": -1.5,
+       "centre_y": -10.075
+      },
+      {
+       "row": 5,
+       "lines": [
+        "Triangular",
+        "numbers"
+       ],
+       "right_aligned_at_x": -1.5,
+       "centre_y": -15.29
+      },
+      {
+       "row": 6,
+       "lines": [
+        "Squares"
+       ],
+       "right_aligned_at_x": -1.5,
+       "centre_y": -22.505
+      },
+      {
+       "row": 7,
+       "lines": [
+        "Cubes"
+       ],
+       "right_aligned_at_x": -1.5,
+       "centre_y": -29.405
+      }
+     ],
+     "pictures": [
+      {
+       "value": 1,
+       "centre_x": 0.35,
+       "bottom_y": -0.5,
+       "kind": "single_dot",
+       "dots": 1,
+       "row": 1,
+       "col": 1,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -1.325
+      },
+      {
+       "value": 1,
+       "centre_x": 3.45,
+       "bottom_y": -0.5,
+       "kind": "single_dot",
+       "dots": 1,
+       "row": 1,
+       "col": 2,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -1.325
+      },
+      {
+       "value": 1,
+       "centre_x": 7.45,
+       "bottom_y": -0.5,
+       "kind": "single_dot",
+       "dots": 1,
+       "row": 1,
+       "col": 3,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -1.325
+      },
+      {
+       "value": 1,
+       "centre_x": 12.45,
+       "bottom_y": -0.5,
+       "kind": "single_dot",
+       "dots": 1,
+       "row": 1,
+       "col": 4,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -1.325
+      },
+      {
+       "value": 1,
+       "centre_x": 18.45,
+       "bottom_y": -0.5,
+       "kind": "single_dot",
+       "dots": 1,
+       "row": 1,
+       "col": 5,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -1.325
+      },
+      {
+       "value": 1,
+       "centre_x": 25.45,
+       "bottom_y": -0.5,
+       "kind": "single_dot",
+       "dots": 1,
+       "row": 1,
+       "col": 6,
+       "colour": "ANSWER",
+       "label": "1",
+       "label_colour": "ANSWER",
+       "label_centre_y": -1.325
+      },
+      {
+       "value": 1,
+       "centre_x": 0.35,
+       "bottom_y": -3.05,
+       "kind": "dot_row",
+       "dots": 1,
+       "rows": 1,
+       "cols": 1,
+       "row": 2,
+       "col": 1,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -3.875
+      },
+      {
+       "value": 2,
+       "centre_x": 3.45,
+       "bottom_y": -3.05,
+       "kind": "dot_row",
+       "dots": 2,
+       "rows": 1,
+       "cols": 2,
+       "row": 2,
+       "col": 2,
+       "colour": "INK",
+       "label": "2",
+       "label_colour": "INK",
+       "label_centre_y": -3.875
+      },
+      {
+       "value": 3,
+       "centre_x": 7.45,
+       "bottom_y": -3.05,
+       "kind": "dot_row",
+       "dots": 3,
+       "rows": 1,
+       "cols": 3,
+       "row": 2,
+       "col": 3,
+       "colour": "INK",
+       "label": "3",
+       "label_colour": "INK",
+       "label_centre_y": -3.875
+      },
+      {
+       "value": 4,
+       "centre_x": 12.45,
+       "bottom_y": -3.05,
+       "kind": "dot_row",
+       "dots": 4,
+       "rows": 1,
+       "cols": 4,
+       "row": 2,
+       "col": 4,
+       "colour": "INK",
+       "label": "4",
+       "label_colour": "INK",
+       "label_centre_y": -3.875
+      },
+      {
+       "value": 5,
+       "centre_x": 18.45,
+       "bottom_y": -3.05,
+       "kind": "dot_row",
+       "dots": 5,
+       "rows": 1,
+       "cols": 5,
+       "row": 2,
+       "col": 5,
+       "colour": "INK",
+       "label": "5",
+       "label_colour": "INK",
+       "label_centre_y": -3.875
+      },
+      {
+       "value": 6,
+       "centre_x": 25.45,
+       "bottom_y": -3.05,
+       "kind": "dot_row",
+       "dots": 6,
+       "rows": 1,
+       "cols": 6,
+       "row": 2,
+       "col": 6,
+       "colour": "ANSWER",
+       "label": "6",
+       "label_colour": "ANSWER",
+       "label_centre_y": -3.875
+      },
+      {
+       "value": 1,
+       "centre_x": 0.35,
+       "bottom_y": -6.6,
+       "kind": "odd_pattern",
+       "top_row_dots": 0,
+       "bottom_row_dots": 1,
+       "dots": 1,
+       "row": 3,
+       "col": 1,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -7.425
+      },
+      {
+       "value": 3,
+       "centre_x": 3.45,
+       "bottom_y": -6.6,
+       "kind": "odd_pattern",
+       "top_row_dots": 1,
+       "bottom_row_dots": 2,
+       "dots": 3,
+       "row": 3,
+       "col": 2,
+       "colour": "INK",
+       "label": "3",
+       "label_colour": "INK",
+       "label_centre_y": -7.425
+      },
+      {
+       "value": 5,
+       "centre_x": 7.45,
+       "bottom_y": -6.6,
+       "kind": "odd_pattern",
+       "top_row_dots": 2,
+       "bottom_row_dots": 3,
+       "dots": 5,
+       "row": 3,
+       "col": 3,
+       "colour": "INK",
+       "label": "5",
+       "label_colour": "INK",
+       "label_centre_y": -7.425
+      },
+      {
+       "value": 7,
+       "centre_x": 12.45,
+       "bottom_y": -6.6,
+       "kind": "odd_pattern",
+       "top_row_dots": 3,
+       "bottom_row_dots": 4,
+       "dots": 7,
+       "row": 3,
+       "col": 4,
+       "colour": "INK",
+       "label": "7",
+       "label_colour": "INK",
+       "label_centre_y": -7.425
+      },
+      {
+       "value": 9,
+       "centre_x": 18.45,
+       "bottom_y": -6.6,
+       "kind": "odd_pattern",
+       "top_row_dots": 4,
+       "bottom_row_dots": 5,
+       "dots": 9,
+       "row": 3,
+       "col": 5,
+       "colour": "INK",
+       "label": "9",
+       "label_colour": "INK",
+       "label_centre_y": -7.425
+      },
+      {
+       "value": 11,
+       "centre_x": 25.45,
+       "bottom_y": -6.6,
+       "kind": "odd_pattern",
+       "top_row_dots": 5,
+       "bottom_row_dots": 6,
+       "dots": 11,
+       "row": 3,
+       "col": 6,
+       "colour": "ANSWER",
+       "label": "11",
+       "label_colour": "ANSWER",
+       "label_centre_y": -7.425
+      },
+      {
+       "value": 2,
+       "centre_x": 0.35,
+       "bottom_y": -10.15,
+       "kind": "dot_rectangle",
+       "rows": 2,
+       "cols": 1,
+       "dots": 2,
+       "row": 4,
+       "col": 1,
+       "colour": "INK",
+       "label": "2",
+       "label_colour": "INK",
+       "label_centre_y": -10.975
+      },
+      {
+       "value": 4,
+       "centre_x": 3.45,
+       "bottom_y": -10.15,
+       "kind": "dot_rectangle",
+       "rows": 2,
+       "cols": 2,
+       "dots": 4,
+       "row": 4,
+       "col": 2,
+       "colour": "INK",
+       "label": "4",
+       "label_colour": "INK",
+       "label_centre_y": -10.975
+      },
+      {
+       "value": 6,
+       "centre_x": 7.45,
+       "bottom_y": -10.15,
+       "kind": "dot_rectangle",
+       "rows": 2,
+       "cols": 3,
+       "dots": 6,
+       "row": 4,
+       "col": 3,
+       "colour": "INK",
+       "label": "6",
+       "label_colour": "INK",
+       "label_centre_y": -10.975
+      },
+      {
+       "value": 8,
+       "centre_x": 12.45,
+       "bottom_y": -10.15,
+       "kind": "dot_rectangle",
+       "rows": 2,
+       "cols": 4,
+       "dots": 8,
+       "row": 4,
+       "col": 4,
+       "colour": "INK",
+       "label": "8",
+       "label_colour": "INK",
+       "label_centre_y": -10.975
+      },
+      {
+       "value": 10,
+       "centre_x": 18.45,
+       "bottom_y": -10.15,
+       "kind": "dot_rectangle",
+       "rows": 2,
+       "cols": 5,
+       "dots": 10,
+       "row": 4,
+       "col": 5,
+       "colour": "INK",
+       "label": "10",
+       "label_colour": "INK",
+       "label_centre_y": -10.975
+      },
+      {
+       "value": 12,
+       "centre_x": 25.45,
+       "bottom_y": -10.15,
+       "kind": "dot_rectangle",
+       "rows": 2,
+       "cols": 6,
+       "dots": 12,
+       "row": 4,
+       "col": 6,
+       "colour": "ANSWER",
+       "label": "12",
+       "label_colour": "ANSWER",
+       "label_centre_y": -10.975
+      },
+      {
+       "value": 1,
+       "centre_x": 0.35,
+       "bottom_y": -17.03,
+       "kind": "dot_triangle",
+       "rows": 1,
+       "dots": 1,
+       "row": 5,
+       "col": 1,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -17.855
+      },
+      {
+       "value": 3,
+       "centre_x": 3.45,
+       "bottom_y": -17.03,
+       "kind": "dot_triangle",
+       "rows": 2,
+       "dots": 3,
+       "row": 5,
+       "col": 2,
+       "colour": "INK",
+       "label": "3",
+       "label_colour": "INK",
+       "label_centre_y": -17.855
+      },
+      {
+       "value": 6,
+       "centre_x": 7.45,
+       "bottom_y": -17.03,
+       "kind": "dot_triangle",
+       "rows": 3,
+       "dots": 6,
+       "row": 5,
+       "col": 3,
+       "colour": "INK",
+       "label": "6",
+       "label_colour": "INK",
+       "label_centre_y": -17.855
+      },
+      {
+       "value": 10,
+       "centre_x": 12.45,
+       "bottom_y": -17.03,
+       "kind": "dot_triangle",
+       "rows": 4,
+       "dots": 10,
+       "row": 5,
+       "col": 4,
+       "colour": "INK",
+       "label": "10",
+       "label_colour": "INK",
+       "label_centre_y": -17.855
+      },
+      {
+       "value": 15,
+       "centre_x": 18.45,
+       "bottom_y": -17.03,
+       "kind": "dot_triangle",
+       "rows": 5,
+       "dots": 15,
+       "row": 5,
+       "col": 5,
+       "colour": "INK",
+       "label": "15",
+       "label_colour": "INK",
+       "label_centre_y": -17.855
+      },
+      {
+       "value": 21,
+       "centre_x": 25.45,
+       "bottom_y": -17.03,
+       "kind": "dot_triangle",
+       "rows": 6,
+       "dots": 21,
+       "row": 5,
+       "col": 6,
+       "colour": "ANSWER",
+       "label": "21",
+       "label_colour": "ANSWER",
+       "label_centre_y": -17.855
+      },
+      {
+       "value": 1,
+       "centre_x": 0.35,
+       "bottom_y": -24.58,
+       "kind": "dot_square",
+       "rows": 1,
+       "cols": 1,
+       "dots": 1,
+       "row": 6,
+       "col": 1,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -25.405
+      },
+      {
+       "value": 4,
+       "centre_x": 3.45,
+       "bottom_y": -24.58,
+       "kind": "dot_square",
+       "rows": 2,
+       "cols": 2,
+       "dots": 4,
+       "row": 6,
+       "col": 2,
+       "colour": "INK",
+       "label": "4",
+       "label_colour": "INK",
+       "label_centre_y": -25.405
+      },
+      {
+       "value": 9,
+       "centre_x": 7.45,
+       "bottom_y": -24.58,
+       "kind": "dot_square",
+       "rows": 3,
+       "cols": 3,
+       "dots": 9,
+       "row": 6,
+       "col": 3,
+       "colour": "INK",
+       "label": "9",
+       "label_colour": "INK",
+       "label_centre_y": -25.405
+      },
+      {
+       "value": 16,
+       "centre_x": 12.45,
+       "bottom_y": -24.58,
+       "kind": "dot_square",
+       "rows": 4,
+       "cols": 4,
+       "dots": 16,
+       "row": 6,
+       "col": 4,
+       "colour": "INK",
+       "label": "16",
+       "label_colour": "INK",
+       "label_centre_y": -25.405
+      },
+      {
+       "value": 25,
+       "centre_x": 18.45,
+       "bottom_y": -24.58,
+       "kind": "dot_square",
+       "rows": 5,
+       "cols": 5,
+       "dots": 25,
+       "row": 6,
+       "col": 5,
+       "colour": "INK",
+       "label": "25",
+       "label_colour": "INK",
+       "label_centre_y": -25.405
+      },
+      {
+       "value": 36,
+       "centre_x": 25.45,
+       "bottom_y": -24.58,
+       "kind": "dot_square",
+       "rows": 6,
+       "cols": 6,
+       "dots": 36,
+       "row": 6,
+       "col": 6,
+       "colour": "ANSWER",
+       "label": "36",
+       "label_colour": "ANSWER",
+       "label_centre_y": -25.405
+      },
+      {
+       "value": 1,
+       "centre_x": 0.35,
+       "bottom_y": -30.83,
+       "kind": "block_cube",
+       "blocks_per_edge": 1,
+       "blocks": 1,
+       "edge": 0.5,
+       "depth": 0.2,
+       "row": 7,
+       "col": 1,
+       "colour": "INK",
+       "label": "1",
+       "label_colour": "INK",
+       "label_centre_y": -31.655
+      },
+      {
+       "value": 8,
+       "centre_x": 3.45,
+       "bottom_y": -30.83,
+       "kind": "block_cube",
+       "blocks_per_edge": 2,
+       "blocks": 8,
+       "edge": 1.0,
+       "depth": 0.4,
+       "row": 7,
+       "col": 2,
+       "colour": "INK",
+       "label": "8",
+       "label_colour": "INK",
+       "label_centre_y": -31.655
+      },
+      {
+       "value": 27,
+       "centre_x": 7.45,
+       "bottom_y": -30.83,
+       "kind": "block_cube",
+       "blocks_per_edge": 3,
+       "blocks": 27,
+       "edge": 1.5,
+       "depth": 0.6,
+       "row": 7,
+       "col": 3,
+       "colour": "INK",
+       "label": "27",
+       "label_colour": "INK",
+       "label_centre_y": -31.655
+      },
+      {
+       "value": 64,
+       "centre_x": 12.45,
+       "bottom_y": -30.83,
+       "kind": "block_cube",
+       "blocks_per_edge": 4,
+       "blocks": 64,
+       "edge": 2.0,
+       "depth": 0.8,
+       "row": 7,
+       "col": 4,
+       "colour": "INK",
+       "label": "64",
+       "label_colour": "INK",
+       "label_centre_y": -31.655
+      },
+      {
+       "value": 125,
+       "centre_x": 18.45,
+       "bottom_y": -30.83,
+       "kind": "block_cube",
+       "blocks_per_edge": 5,
+       "blocks": 125,
+       "edge": 2.5,
+       "depth": 1.0,
+       "row": 7,
+       "col": 5,
+       "colour": "INK",
+       "label": "125",
+       "label_colour": "INK",
+       "label_centre_y": -31.655
+      },
+      {
+       "value": 216,
+       "centre_x": 25.45,
+       "bottom_y": -30.83,
+       "kind": "block_cube",
+       "blocks_per_edge": 6,
+       "blocks": 216,
+       "edge": 3.0,
+       "depth": 1.2,
+       "row": 7,
+       "col": 6,
+       "colour": "ANSWER",
+       "label": "216",
+       "label_colour": "ANSWER",
+       "label_centre_y": -31.655
+      }
+     ]
+    },
+    "manim_description": "Draw exactly the figure of M2.S6.T6.C18.IMG1 (same frame, same scale, same positions, every given picture and label unchanged in INK), and add a sixth picture to every row in ANSWER. Sixth column centre x = 25.45; every new picture is centred on it and sits on its row's bottom edge; its dots (filled circles of diameter 0.5 at pitch 1.0) or its cube lines are ANSWER; its label is bold ANSWER text centred under it. Row 1: one dot, label 1. Row 2: 6 dots in one horizontal line, label 6. Row 3: 11 dots in two left-aligned rows, top row 5 dots, bottom row 6 dots, rows 1.0 apart, label 11. Row 4: 2 rows by 6 columns of dots, 12 dots, label 12. Row 5: a triangle of dots with apex at the top and 6 rows of 1, 2, 3, 4, 5, 6 dots, 21 dots, label 21. Row 6: a 6 by 6 grid of dots, 36 dots, label 36. Row 7: a 6 by 6 by 6 cube of 216 unit blocks in oblique projection, front face a square of edge 3.0 with its lower-left corner on the row's bottom edge, depth vector (1.2, 1.2) up and to the right, every face divided into 6 by 6 cells, faces filled CELL_FILL, all outlines and grid lines ANSWER, label 216. Nothing else is added. Row bottom edges y = [-0.5, -3.05, -6.6, -10.15, -17.03, -24.58, -30.83]; column centres x = [0.35, 3.45, 7.45, 12.45, 18.45, 25.45].",
+    "visible_text": [
+     "All 1's",
+     "Counting numbers",
+     "Odd numbers",
+     "Even numbers",
+     "Triangular numbers",
+     "Squares",
+     "Cubes",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "1",
+     "3",
+     "5",
+     "7",
+     "9",
+     "11",
+     "2",
+     "4",
+     "6",
+     "8",
+     "10",
+     "12",
+     "1",
+     "3",
+     "6",
+     "10",
+     "15",
+     "21",
+     "1",
+     "4",
+     "9",
+     "16",
+     "25",
+     "36",
+     "1",
+     "8",
+     "27",
+     "64",
+     "125",
+     "216"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the book's row colours - given pictures INK, new pictures ANSWER",
+     "arrows or the word 'next'",
+     "a title above the table"
+    ],
+    "accuracy_checks": [
+     "sixth pictures: 1 dot; 6 dots; 11 dots (5 + 6); 12 dots (2 x 6); 21 dots (1+2+3+4+5+6); 36 dots (6 x 6); 216 blocks (6 x 6 x 6)",
+     "sixth terms follow the rules: counting 5+1 = 6; odd 2*6-1 = 11; even 2*6 = 12; triangular 15+6 = 21; square 6*6 = 36; cube 6*6*6 = 216",
+     "the five given columns are identical in position and colour to the question diagram"
+    ],
+    "alt_text": "The same table of seven number sequences with a sixth picture added to every row in green: 1 dot, 6 dots, 11 dots, 12 dots, a 21-dot triangle, a 36-dot square and a 216-block cube.",
+    "render_note": "Solution diagram derived from M2.S6.T6.C18.IMG1: the final state, with the 'next picture' of every sequence added in ANSWER. The book prints no answer for this question (the printed solutions start at 1.3 Q2); the LP solution is followed."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C20",
+   "role": "question",
+   "lp_book_number": "Figure it Out 1.3, Q2",
+   "ncert_ref": "Section 1.3 - FiO Q2",
+   "question_text": "Why are 1, 3, 6, 10, 15, ... called triangular numbers? Why are 1, 4, 9, 16, 25, ... called square numbers or squares? Why are 1, 8, 27, 64, 125, ... called cubes? triangular) Why called triangular numbers? square) Why called square numbers? cubes) Why called cubes?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure of its own; the book answer points to Table 2. No question diagram is invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S6.T6.C21",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 1.3, Q2",
+   "ncert_ref": "Section 1.3 - FiO Q2",
+   "question_text": "Why are 1, 3, 6, 10, 15, ... called triangular numbers? Why are 1, 4, 9, 16, 25, ... called square numbers or squares? Why are 1, 8, 27, 64, 125, ... called cubes? triangular) Why called triangular numbers? square) Why called square numbers? cubes) Why called cubes?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The book answer is a pointer to the pictures of Table 2; the reason for the names triangular, square and cube is the shape of the arrangement, so the solution needs the three shapes drawn.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S6.T6.C21.IMG1",
+   "manim_scene": "c6_1_s13_fio2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S6.T6.C21.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "kind": "triangle_square_cube_of_dots_and_blocks",
+     "unit": "dot pitch 1.0, x right, y up, bottoms of all pictures on y = 0",
+     "dot_diameter": 0.5,
+     "dot_fill": "INK",
+     "pictures": [
+      {
+       "name": "triangular number",
+       "value": 10,
+       "centre_x": 1.75,
+       "rows": [
+        {
+         "row": 1,
+         "y": 2.848,
+         "xs": [
+          1.75
+         ]
+        },
+        {
+         "row": 2,
+         "y": 1.982,
+         "xs": [
+          1.25,
+          2.25
+         ]
+        },
+        {
+         "row": 3,
+         "y": 1.116,
+         "xs": [
+          0.75,
+          1.75,
+          2.75
+         ]
+        },
+        {
+         "row": 4,
+         "y": 0.25,
+         "xs": [
+          0.25,
+          1.25,
+          2.25,
+          3.25
+         ]
+        }
+       ],
+       "dots": 10
+      },
+      {
+       "name": "square number",
+       "value": 16,
+       "centre_x": 8.25,
+       "rows": [
+        {
+         "row": 1,
+         "y": 0.25,
+         "xs": [
+          6.75,
+          7.75,
+          8.75,
+          9.75
+         ]
+        },
+        {
+         "row": 2,
+         "y": 1.25,
+         "xs": [
+          6.75,
+          7.75,
+          8.75,
+          9.75
+         ]
+        },
+        {
+         "row": 3,
+         "y": 2.25,
+         "xs": [
+          6.75,
+          7.75,
+          8.75,
+          9.75
+         ]
+        },
+        {
+         "row": 4,
+         "y": 3.25,
+         "xs": [
+          6.75,
+          7.75,
+          8.75,
+          9.75
+         ]
+        }
+       ],
+       "dots": 16
+      },
+      {
+       "name": "cube number",
+       "value": 64,
+       "centre_x": 15.1,
+       "blocks_per_edge": 4,
+       "blocks": 64,
+       "front_face": {
+        "lower_left": [
+         13.0,
+         0.0
+        ],
+        "edge": 3.0
+       },
+       "depth_vector": [
+        1.2,
+        1.2
+       ],
+       "cells_per_face_edge": 4,
+       "face_fill": "CELL_FILL",
+       "line": "INK"
+      }
+     ],
+     "labels": [
+      {
+       "text": "10",
+       "x": 1.75,
+       "y": -0.83
+      },
+      {
+       "text": "16",
+       "x": 8.25,
+       "y": -0.83
+      },
+      {
+       "text": "64",
+       "x": 15.1,
+       "y": -0.83
+      }
+     ],
+     "name_tags": [
+      {
+       "text": "triangular number",
+       "x": 1.75,
+       "y": 5.5
+      },
+      {
+       "text": "square number",
+       "x": 8.25,
+       "y": 5.5
+      },
+      {
+       "text": "cube number",
+       "x": 15.1,
+       "y": 5.5
+      }
+     ]
+    },
+    "manim_description": "Three pictures side by side on a plain white BG, all standing on the line y = 0 (unit = dot pitch 1.0, x right, y up). Picture 1 (centre x = 1.75): a triangle of 10 INK dots (filled circles, diameter 0.5, pitch 1.0, row distance 0.866), apex at the top, rows centred on x = 1.75: row 1 (y = 2.848) 1 dot; row 2 (y = 1.982) 2 dots; row 3 (y = 1.116) 3 dots; row 4 (y = 0.25) 4 dots at x = [0.25, 1.25, 2.25, 3.25]. Picture 2 (centre x = 8.25): a square grid of 4 rows by 4 columns of INK dots, 16 dots, dot centres at x = [6.75, 7.75, 8.75, 9.75] and y = 0.25, 1.25, 2.25, 3.25. Picture 3 (centre x = 15.1): a 4 by 4 by 4 cube of 64 unit blocks in oblique projection: the front face is a square of edge 3.0 with its lower-left corner at (13, 0); the top face and the right face are parallelograms shifted by the depth vector (1.2, 1.2) up and to the right; every face is divided into 4 by 4 equal cells; faces filled CELL_FILL, outline 2 px INK, inner grid lines 1.5 px INK. Under each picture, centred on it at y = -0.83, its number as bold INK text: '10', '16', '64'. Above each picture, centred on it at y = 5.5, a short INK name tag: 'triangular number', 'square number', 'cube number'. Nothing else is drawn. Scale uniformly to fill the 16:9 card with an even margin.",
+    "visible_text": [
+     "triangular number",
+     "square number",
+     "cube number",
+     "10",
+     "16",
+     "64"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "colours other than INK and CELL_FILL",
+     "an equation such as 1 + 2 + 3 + 4",
+     "an outline drawn around the dot triangle"
+    ],
+    "accuracy_checks": [
+     "triangle rows 1, 2, 3, 4 give 1 + 2 + 3 + 4 = 10 dots; 10 is in the triangular sequence 1, 3, 6, 10, 15",
+     "square grid 4 x 4 = 16 dots; 16 is in the square sequence 1, 4, 9, 16, 25",
+     "cube 4 x 4 x 4 = 64 blocks; 64 is in the cube sequence 1, 8, 27, 64, 125",
+     "every cube face is 4 by 4 cells; each label equals its picture's count"
+    ],
+    "alt_text": "A triangle of 10 dots, a square of 16 dots and a cube of 64 blocks side by side, each labelled with its number.",
+    "render_note": "No question diagram exists, so this stands alone (derived_from null). The hint s_figure in the unit file names a 3 x 3 x 3 cube of 27; the 4 x 4 x 4 cube is used instead so that all three shapes have 4 rows / 4 columns / 4 blocks per edge. The book answer only says 'Refer Table 2, page 4, and check for yourself'."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C22",
+   "role": "worked_example",
+   "ncert_ref": "Section 1.3 - worked example (10 dots as a triangle and a rectangle)",
+   "question_text": "Show 10 dots as a triangle and as a rectangle.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The example asks to show 10 dots in two arrangements; the answer is the two arrangements, so the example needs the picture.",
+   "lp_placeholder_action": "add_new_image",
+   "block_index": 0,
+   "media_id": "M2.S7.T7.C22.IMG2",
+   "manim_scene": "c6_1_s13_c22_ex",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S7.T7.C22.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "dot_array",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "dot_array",
+     "unit": "dot pitch 1.0, x right, y up",
+     "dot_diameter": 0.6,
+     "pictures": [
+      {
+       "name": "triangle",
+       "dot_fill": "SET_A",
+       "rows": [
+        {
+         "row": 1,
+         "y": 0.0,
+         "xs": [
+          0.0
+         ]
+        },
+        {
+         "row": 2,
+         "y": -0.866,
+         "xs": [
+          -0.5,
+          0.5
+         ]
+        },
+        {
+         "row": 3,
+         "y": -1.732,
+         "xs": [
+          -1.0,
+          0.0,
+          1.0
+         ]
+        },
+        {
+         "row": 4,
+         "y": -2.598,
+         "xs": [
+          -1.5,
+          -0.5,
+          0.5,
+          1.5
+         ]
+        }
+       ],
+       "dots": 10,
+       "label": {
+        "text": "10",
+        "x": 0.0,
+        "y": -3.798
+       }
+      },
+      {
+       "name": "rectangle",
+       "dot_fill": "SET_B",
+       "rows": [
+        {
+         "row": 1,
+         "y": -1.598,
+         "xs": [
+          6.0,
+          7.0,
+          8.0,
+          9.0,
+          10.0
+         ]
+        },
+        {
+         "row": 2,
+         "y": -2.598,
+         "xs": [
+          6.0,
+          7.0,
+          8.0,
+          9.0,
+          10.0
+         ]
+        }
+       ],
+       "dots": 10,
+       "label": {
+        "text": "10",
+        "x": 8.0,
+        "y": -3.798
+       }
+      }
+     ]
+    },
+    "manim_description": "Two dot pictures side by side on a plain white BG, bottoms level at y = -2.598 (unit = dot pitch 1.0, x right, y up, dots are filled circles of diameter 0.6). Left picture, SET_A dots: a triangle with apex at the top and 4 rows of 1, 2, 3, 4 dots, rows centred on x = 0, row distance 0.866: row 1 (y = 0) 1 dot at x = 0; row 2 (y = -0.866) 2 dots at x = -0.5, 0.5; row 3 (y = -1.732) 3 dots at x = -1, 0, 1; row 4 (y = -2.598) 4 dots at x = -1.5, -0.5, 0.5, 1.5. Right picture, SET_B dots: a rectangle of 2 rows by 5 columns, dots at x = 6, 7, 8, 9, 10 in each row, the lower row at y = -2.598 and the upper row at y = -1.598. Under each picture, centred on it at y = -3.8, the bold INK number '10' (at x = 0 under the triangle, at x = 8 under the rectangle). Nothing else is drawn. Scale uniformly to fill the 16:9 card with an even margin.",
+    "visible_text": [
+     "10",
+     "10"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "equations such as 1 + 2 + 3 + 4 or 2 x 5",
+     "outlines drawn around either picture",
+     "the words triangle or rectangle"
+    ],
+    "accuracy_checks": [
+     "triangle rows 1 + 2 + 3 + 4 = 10 dots",
+     "rectangle 2 x 5 = 10 dots",
+     "both pictures hold exactly 10 dots, matching the labels"
+    ],
+    "alt_text": "10 dots arranged as a triangle with rows of 1, 2, 3 and 4, and as a rectangle of 2 rows of 5.",
+    "render_note": "The concept image M2.S7.T7.C22.IMG1 shows the same pair of arrangements; it is not linked (v3 rule)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S7.T7.C23",
+   "role": "worked_example",
+   "ncert_ref": "Section 1.3 - worked example (hexagon cluster 7 + 12 = 19)",
+   "question_text": "A hexagon cluster has a centre dot and one ring of 6 dots. How many dots are there after the next ring of 12 is added?",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Every number needed (1, 6, 12) is in the text and the answer is the sum 7 + 12 = 19; a picture of the centre dot with rings of 6 and 12 dots would help but is not needed.",
+   "lp_placeholder_action": "no_image",
+   "block_index": 0,
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C25",
+   "role": "question",
+   "lp_book_number": "Figure it Out 1.3, Q1",
+   "ncert_ref": "Section 1.3 - FiO Q3",
+   "question_text": "You will have noticed that 36 is both a triangular number and a square number! That is, 36 dots can be arranged perfectly both in a triangle and in a square. Make pictures in your notebook illustrating this! (This shows that the same number can be represented differently, and play different roles, depending on the context. Try representing some other numbers pictorially in different ways!)",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure of its own (the learner makes the pictures); no question diagram is invented.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C26",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 1.3, Q1",
+   "ncert_ref": "Section 1.3 - FiO Q3",
+   "question_text": "You will have noticed that 36 is both a triangular number and a square number! That is, 36 dots can be arranged perfectly both in a triangle and in a square. Make pictures in your notebook illustrating this! (This shows that the same number can be represented differently, and play different roles, depending on the context. Try representing some other numbers pictorially in different ways!)",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The question asks for pictures and the answer is the two arrangements of the same 36 dots (triangle and square).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S8.T8.C26.IMG1",
+   "manim_scene": "c6_1_s13_fio3_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C26.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "dot_array",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "dot_array",
+     "unit": "dot pitch 1.0, x right, y up, bottoms of both pictures on y = 0",
+     "dot_diameter": 0.5,
+     "dot_fill": "INK",
+     "pictures": [
+      {
+       "name": "triangle",
+       "centre_x": 3.75,
+       "rows": [
+        {
+         "row": 1,
+         "y": 6.312,
+         "xs": [
+          3.75
+         ]
+        },
+        {
+         "row": 2,
+         "y": 5.446,
+         "xs": [
+          3.25,
+          4.25
+         ]
+        },
+        {
+         "row": 3,
+         "y": 4.58,
+         "xs": [
+          2.75,
+          3.75,
+          4.75
+         ]
+        },
+        {
+         "row": 4,
+         "y": 3.714,
+         "xs": [
+          2.25,
+          3.25,
+          4.25,
+          5.25
+         ]
+        },
+        {
+         "row": 5,
+         "y": 2.848,
+         "xs": [
+          1.75,
+          2.75,
+          3.75,
+          4.75,
+          5.75
+         ]
+        },
+        {
+         "row": 6,
+         "y": 1.982,
+         "xs": [
+          1.25,
+          2.25,
+          3.25,
+          4.25,
+          5.25,
+          6.25
+         ]
+        },
+        {
+         "row": 7,
+         "y": 1.116,
+         "xs": [
+          0.75,
+          1.75,
+          2.75,
+          3.75,
+          4.75,
+          5.75,
+          6.75
+         ]
+        },
+        {
+         "row": 8,
+         "y": 0.25,
+         "xs": [
+          0.25,
+          1.25,
+          2.25,
+          3.25,
+          4.25,
+          5.25,
+          6.25,
+          7.25
+         ]
+        }
+       ],
+       "dots": 36
+      },
+      {
+       "name": "square",
+       "centre_x": 13.25,
+       "rows": [
+        {
+         "row": 1,
+         "y": 0.25,
+         "xs": [
+          10.75,
+          11.75,
+          12.75,
+          13.75,
+          14.75,
+          15.75
+         ]
+        },
+        {
+         "row": 2,
+         "y": 1.25,
+         "xs": [
+          10.75,
+          11.75,
+          12.75,
+          13.75,
+          14.75,
+          15.75
+         ]
+        },
+        {
+         "row": 3,
+         "y": 2.25,
+         "xs": [
+          10.75,
+          11.75,
+          12.75,
+          13.75,
+          14.75,
+          15.75
+         ]
+        },
+        {
+         "row": 4,
+         "y": 3.25,
+         "xs": [
+          10.75,
+          11.75,
+          12.75,
+          13.75,
+          14.75,
+          15.75
+         ]
+        },
+        {
+         "row": 5,
+         "y": 4.25,
+         "xs": [
+          10.75,
+          11.75,
+          12.75,
+          13.75,
+          14.75,
+          15.75
+         ]
+        },
+        {
+         "row": 6,
+         "y": 5.25,
+         "xs": [
+          10.75,
+          11.75,
+          12.75,
+          13.75,
+          14.75,
+          15.75
+         ]
+        }
+       ],
+       "dots": 36
+      }
+     ],
+     "labels": [
+      {
+       "text": "36",
+       "x": 3.75,
+       "y": -0.83
+      },
+      {
+       "text": "36",
+       "x": 13.25,
+       "y": -0.83
+      }
+     ],
+     "name_tags": [
+      {
+       "text": "triangle",
+       "x": 3.75,
+       "y": 7.5
+      },
+      {
+       "text": "square",
+       "x": 13.25,
+       "y": 7.5
+      }
+     ]
+    },
+    "manim_description": "Two dot pictures side by side on a plain white BG, both standing on the line y = 0 (unit = dot pitch 1.0, x right, y up). All dots are filled INK circles of diameter 0.5. Left picture (centre x = 3.75): a triangle with apex at the top and 8 rows of 1, 2, 3, 4, 5, 6, 7, 8 dots, rows centred on x = 3.75, pitch 1.0, row distance 0.866: row 1 (y = 6.312) 1 dot; row 2 (y = 5.446) 2 dots; row 3 (y = 4.58) 3 dots; row 4 (y = 3.714) 4 dots; row 5 (y = 2.848) 5 dots; row 6 (y = 1.982) 6 dots; row 7 (y = 1.116) 7 dots; row 8 (y = 0.25) 8 dots; the bottom row (8 dots) has centres at y = 0.25. Right picture (centre x = 13.25): a square grid of 6 rows by 6 columns, 36 dots, dot centres at x = [10.75, 11.75, 12.75, 13.75, 14.75, 15.75] and y = 0.25, 1.25, 2.25, 3.25, 4.25, 5.25. Under each picture, centred on it at y = -0.83, the bold INK number '36'. Above each picture, centred on it at y = 7.5, a short INK name tag: 'triangle' over the left picture, 'square' over the right picture. Nothing else is drawn. Scale uniformly to fill the 16:9 card with an even margin.",
+    "visible_text": [
+     "triangle",
+     "square",
+     "36",
+     "36"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "equations such as 1 + 2 + ... + 8 or 6 x 6",
+     "outlines drawn around either picture",
+     "colours other than INK"
+    ],
+    "accuracy_checks": [
+     "triangle rows 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36 dots",
+     "square 6 x 6 = 36 dots",
+     "both pictures hold exactly 36 dots, matching the labels"
+    ],
+    "alt_text": "36 dots arranged as a triangle of 8 rows and as a 6 by 6 square.",
+    "render_note": "No question diagram exists, so this stands alone (derived_from null). The book answer only says 'Refer Table 2, page 4, and draw'; Table 2 stops at 15 and 25, so the 36-dot pictures follow the LP solution (8 rows, 6 by 6)."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C27",
+   "role": "question",
+   "lp_book_number": "Figure it Out 1.3, Q2",
+   "ncert_ref": "Section 1.3 - FiO Q4 (hexagonal clusters)",
+   "question_text": "What would you call the following sequence of numbers? (Pictures of dot clusters labelled 1, 7, 19, 37.) That's right, they are called hexagonal numbers! Draw these in your notebook. What is the next number in the sequence?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The book question shows four hexagon-shaped dot clusters labelled 1, 7, 19, 37; the learner draws and extends them, so the clusters must be seen.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S8.T8.C27.IMG1",
+   "manim_scene": "c6_1_s13_fio4_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C27.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "ring_pattern",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "ring_pattern",
+     "unit": "dot pitch 1.0, x right, y up",
+     "dot_diameter": 0.7,
+     "dot_fill": "INK",
+     "frame": {
+      "x_left": -0.5,
+      "x_right": 31.2,
+      "y_top": 4.2,
+      "y_bottom": -5.6,
+      "note": "the frame that holds all five clusters is used for BOTH the question and the solution diagram"
+     },
+     "clusters": [
+      {
+       "rings": 0,
+       "centre": [
+        0.35,
+        0.0
+       ],
+       "rows": [
+        {
+         "row": 1,
+         "y": 0.0,
+         "count": 1,
+         "xs": [
+          0.35
+         ]
+        }
+       ],
+       "dots": 1,
+       "label": {
+        "text": "1",
+        "x": 0.35,
+        "y": -4.7
+       }
+      },
+      {
+       "rings": 1,
+       "centre": [
+        3.85,
+        0.0
+       ],
+       "rows": [
+        {
+         "row": 1,
+         "y": 0.866,
+         "count": 2,
+         "xs": [
+          3.35,
+          4.35
+         ]
+        },
+        {
+         "row": 2,
+         "y": 0.0,
+         "count": 3,
+         "xs": [
+          2.85,
+          3.85,
+          4.85
+         ]
+        },
+        {
+         "row": 3,
+         "y": -0.866,
+         "count": 2,
+         "xs": [
+          3.35,
+          4.35
+         ]
+        }
+       ],
+       "dots": 7,
+       "label": {
+        "text": "7",
+        "x": 3.85,
+        "y": -4.7
+       }
+      },
+      {
+       "rings": 2,
+       "centre": [
+        9.35,
+        0.0
+       ],
+       "rows": [
+        {
+         "row": 1,
+         "y": 1.732,
+         "count": 3,
+         "xs": [
+          8.35,
+          9.35,
+          10.35
+         ]
+        },
+        {
+         "row": 2,
+         "y": 0.866,
+         "count": 4,
+         "xs": [
+          7.85,
+          8.85,
+          9.85,
+          10.85
+         ]
+        },
+        {
+         "row": 3,
+         "y": 0.0,
+         "count": 5,
+         "xs": [
+          7.35,
+          8.35,
+          9.35,
+          10.35,
+          11.35
+         ]
+        },
+        {
+         "row": 4,
+         "y": -0.866,
+         "count": 4,
+         "xs": [
+          7.85,
+          8.85,
+          9.85,
+          10.85
+         ]
+        },
+        {
+         "row": 5,
+         "y": -1.732,
+         "count": 3,
+         "xs": [
+          8.35,
+          9.35,
+          10.35
+         ]
+        }
+       ],
+       "dots": 19,
+       "label": {
+        "text": "19",
+        "x": 9.35,
+        "y": -4.7
+       }
+      },
+      {
+       "rings": 3,
+       "centre": [
+        16.85,
+        0.0
+       ],
+       "rows": [
+        {
+         "row": 1,
+         "y": 2.598,
+         "count": 4,
+         "xs": [
+          15.35,
+          16.35,
+          17.35,
+          18.35
+         ]
+        },
+        {
+         "row": 2,
+         "y": 1.732,
+         "count": 5,
+         "xs": [
+          14.85,
+          15.85,
+          16.85,
+          17.85,
+          18.85
+         ]
+        },
+        {
+         "row": 3,
+         "y": 0.866,
+         "count": 6,
+         "xs": [
+          14.35,
+          15.35,
+          16.35,
+          17.35,
+          18.35,
+          19.35
+         ]
+        },
+        {
+         "row": 4,
+         "y": 0.0,
+         "count": 7,
+         "xs": [
+          13.85,
+          14.85,
+          15.85,
+          16.85,
+          17.85,
+          18.85,
+          19.85
+         ]
+        },
+        {
+         "row": 5,
+         "y": -0.866,
+         "count": 6,
+         "xs": [
+          14.35,
+          15.35,
+          16.35,
+          17.35,
+          18.35,
+          19.35
+         ]
+        },
+        {
+         "row": 6,
+         "y": -1.732,
+         "count": 5,
+         "xs": [
+          14.85,
+          15.85,
+          16.85,
+          17.85,
+          18.85
+         ]
+        },
+        {
+         "row": 7,
+         "y": -2.598,
+         "count": 4,
+         "xs": [
+          15.35,
+          16.35,
+          17.35,
+          18.35
+         ]
+        }
+       ],
+       "dots": 37,
+       "label": {
+        "text": "37",
+        "x": 16.85,
+        "y": -4.7
+       }
+      }
+     ]
+    },
+    "manim_description": "Four hexagon-shaped clusters of dots side by side on a plain white BG, all centred on the horizontal line y = 0 (unit = dot pitch 1.0, x right, y up). Dots are filled INK circles of diameter 0.7; neighbouring dots in a row are 1.0 apart and neighbouring rows are 0.866 apart, each row offset by half a dot (hexagonal packing). Use the frame x from -0.5 to 31.2, y from -5.6 to 4.2 for both the question and the solution diagram, scaled uniformly to fill the 16:9 card; the fifth cluster slot at the right stays empty here. Cluster 1 (centre x = 0.35): 1 dot. Cluster 2 (centre x = 3.85): 7 dots in 3 rows, row counts from the top 2, 3, 2 (y = 0.866: 2 dots; y = 0: 3 dots; y = -0.866: 2 dots). Cluster 3 (centre x = 9.35): 19 dots in 5 rows, row counts 3, 4, 5, 4, 3 (y = 1.732: 3 dots; y = 0.866: 4 dots; y = 0: 5 dots; y = -0.866: 4 dots; y = -1.732: 3 dots). Cluster 4 (centre x = 16.85): 37 dots in 7 rows, row counts 4, 5, 6, 7, 6, 5, 4 (y = 2.598: 4 dots; y = 1.732: 5 dots; y = 0.866: 6 dots; y = 0: 7 dots; y = -0.866: 6 dots; y = -1.732: 5 dots; y = -2.598: 4 dots). Every row is centred on its cluster's centre x. Under each cluster, centred on it, all labels on the common line y = -4.7, the bold INK numbers 1, 7, 19, 37. Nothing else is drawn.",
+    "visible_text": [
+     "1",
+     "7",
+     "19",
+     "37"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words hexagonal or ring",
+     "the dots of the fifth cluster",
+     "the book's red colour - dots are INK",
+     "outlines around the clusters"
+    ],
+    "accuracy_checks": [
+     "cluster dot counts: 1, 7 (2+3+2), 19 (3+4+5+4+3), 37 (4+5+6+7+6+5+4)",
+     "each cluster has 1 + 6 + 12 + ... rings: 1, 1+6, 1+6+12, 1+6+12+18",
+     "every row is centred on its cluster's centre x (symmetric hexagon)",
+     "labels equal the dot counts"
+    ],
+    "alt_text": "Four hexagon-shaped clusters of dots with 1, 7, 19 and 37 dots, labelled with those numbers.",
+    "render_note": "The sixth/fifth slot at the right is empty so that the solution diagram can add the 61-dot cluster in the same frame. Orientation follows the book: horizontal rows, flat top and bottom."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C28",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 1.3, Q2",
+   "ncert_ref": "Section 1.3 - FiO Q4 (hexagonal clusters)",
+   "question_text": "What would you call the following sequence of numbers? (Pictures of dot clusters labelled 1, 7, 19, 37.) That's right, they are called hexagonal numbers! Draw these in your notebook. What is the next number in the sequence?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The question says 'draw these' and asks the next term; the finished answer is the four clusters plus the fifth cluster of 61 dots.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S8.T8.C28.IMG1",
+   "manim_scene": "c6_1_s13_fio4_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C28.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "ring_pattern",
+    "aspect_ratio": "16:9",
+    "derived_from": "M2.S8.T8.C27.IMG1",
+    "content": {
+     "type": "ring_pattern",
+     "unit": "dot pitch 1.0, x right, y up",
+     "dot_diameter": 0.7,
+     "dot_fill": "INK (ANSWER for the fifth cluster)",
+     "frame": {
+      "x_left": -0.5,
+      "x_right": 31.2,
+      "y_top": 4.2,
+      "y_bottom": -5.6,
+      "note": "the frame that holds all five clusters is used for BOTH the question and the solution diagram"
+     },
+     "clusters": [
+      {
+       "rings": 0,
+       "centre": [
+        0.35,
+        0.0
+       ],
+       "rows": [
+        {
+         "row": 1,
+         "y": 0.0,
+         "count": 1,
+         "xs": [
+          0.35
+         ]
+        }
+       ],
+       "dots": 1,
+       "label": {
+        "text": "1",
+        "x": 0.35,
+        "y": -4.7
+       },
+       "colour": "INK"
+      },
+      {
+       "rings": 1,
+       "centre": [
+        3.85,
+        0.0
+       ],
+       "rows": [
+        {
+         "row": 1,
+         "y": 0.866,
+         "count": 2,
+         "xs": [
+          3.35,
+          4.35
+         ]
+        },
+        {
+         "row": 2,
+         "y": 0.0,
+         "count": 3,
+         "xs": [
+          2.85,
+          3.85,
+          4.85
+         ]
+        },
+        {
+         "row": 3,
+         "y": -0.866,
+         "count": 2,
+         "xs": [
+          3.35,
+          4.35
+         ]
+        }
+       ],
+       "dots": 7,
+       "label": {
+        "text": "7",
+        "x": 3.85,
+        "y": -4.7
+       },
+       "colour": "INK"
+      },
+      {
+       "rings": 2,
+       "centre": [
+        9.35,
+        0.0
+       ],
+       "rows": [
+        {
+         "row": 1,
+         "y": 1.732,
+         "count": 3,
+         "xs": [
+          8.35,
+          9.35,
+          10.35
+         ]
+        },
+        {
+         "row": 2,
+         "y": 0.866,
+         "count": 4,
+         "xs": [
+          7.85,
+          8.85,
+          9.85,
+          10.85
+         ]
+        },
+        {
+         "row": 3,
+         "y": 0.0,
+         "count": 5,
+         "xs": [
+          7.35,
+          8.35,
+          9.35,
+          10.35,
+          11.35
+         ]
+        },
+        {
+         "row": 4,
+         "y": -0.866,
+         "count": 4,
+         "xs": [
+          7.85,
+          8.85,
+          9.85,
+          10.85
+         ]
+        },
+        {
+         "row": 5,
+         "y": -1.732,
+         "count": 3,
+         "xs": [
+          8.35,
+          9.35,
+          10.35
+         ]
+        }
+       ],
+       "dots": 19,
+       "label": {
+        "text": "19",
+        "x": 9.35,
+        "y": -4.7
+       },
+       "colour": "INK"
+      },
+      {
+       "rings": 3,
+       "centre": [
+        16.85,
+        0.0
+       ],
+       "rows": [
+        {
+         "row": 1,
+         "y": 2.598,
+         "count": 4,
+         "xs": [
+          15.35,
+          16.35,
+          17.35,
+          18.35
+         ]
+        },
+        {
+         "row": 2,
+         "y": 1.732,
+         "count": 5,
+         "xs": [
+          14.85,
+          15.85,
+          16.85,
+          17.85,
+          18.85
+         ]
+        },
+        {
+         "row": 3,
+         "y": 0.866,
+         "count": 6,
+         "xs": [
+          14.35,
+          15.35,
+          16.35,
+          17.35,
+          18.35,
+          19.35
+         ]
+        },
+        {
+         "row": 4,
+         "y": 0.0,
+         "count": 7,
+         "xs": [
+          13.85,
+          14.85,
+          15.85,
+          16.85,
+          17.85,
+          18.85,
+          19.85
+         ]
+        },
+        {
+         "row": 5,
+         "y": -0.866,
+         "count": 6,
+         "xs": [
+          14.35,
+          15.35,
+          16.35,
+          17.35,
+          18.35,
+          19.35
+         ]
+        },
+        {
+         "row": 6,
+         "y": -1.732,
+         "count": 5,
+         "xs": [
+          14.85,
+          15.85,
+          16.85,
+          17.85,
+          18.85
+         ]
+        },
+        {
+         "row": 7,
+         "y": -2.598,
+         "count": 4,
+         "xs": [
+          15.35,
+          16.35,
+          17.35,
+          18.35
+         ]
+        }
+       ],
+       "dots": 37,
+       "label": {
+        "text": "37",
+        "x": 16.85,
+        "y": -4.7
+       },
+       "colour": "INK"
+      },
+      {
+       "rings": 4,
+       "centre": [
+        26.35,
+        0.0
+       ],
+       "rows": [
+        {
+         "row": 1,
+         "y": 3.464,
+         "count": 5,
+         "xs": [
+          24.35,
+          25.35,
+          26.35,
+          27.35,
+          28.35
+         ]
+        },
+        {
+         "row": 2,
+         "y": 2.598,
+         "count": 6,
+         "xs": [
+          23.85,
+          24.85,
+          25.85,
+          26.85,
+          27.85,
+          28.85
+         ]
+        },
+        {
+         "row": 3,
+         "y": 1.732,
+         "count": 7,
+         "xs": [
+          23.35,
+          24.35,
+          25.35,
+          26.35,
+          27.35,
+          28.35,
+          29.35
+         ]
+        },
+        {
+         "row": 4,
+         "y": 0.866,
+         "count": 8,
+         "xs": [
+          22.85,
+          23.85,
+          24.85,
+          25.85,
+          26.85,
+          27.85,
+          28.85,
+          29.85
+         ]
+        },
+        {
+         "row": 5,
+         "y": 0.0,
+         "count": 9,
+         "xs": [
+          22.35,
+          23.35,
+          24.35,
+          25.35,
+          26.35,
+          27.35,
+          28.35,
+          29.35,
+          30.35
+         ]
+        },
+        {
+         "row": 6,
+         "y": -0.866,
+         "count": 8,
+         "xs": [
+          22.85,
+          23.85,
+          24.85,
+          25.85,
+          26.85,
+          27.85,
+          28.85,
+          29.85
+         ]
+        },
+        {
+         "row": 7,
+         "y": -1.732,
+         "count": 7,
+         "xs": [
+          23.35,
+          24.35,
+          25.35,
+          26.35,
+          27.35,
+          28.35,
+          29.35
+         ]
+        },
+        {
+         "row": 8,
+         "y": -2.598,
+         "count": 6,
+         "xs": [
+          23.85,
+          24.85,
+          25.85,
+          26.85,
+          27.85,
+          28.85
+         ]
+        },
+        {
+         "row": 9,
+         "y": -3.464,
+         "count": 5,
+         "xs": [
+          24.35,
+          25.35,
+          26.35,
+          27.35,
+          28.35
+         ]
+        }
+       ],
+       "dots": 61,
+       "label": {
+        "text": "61",
+        "x": 26.35,
+        "y": -4.7
+       },
+       "colour": "ANSWER"
+      }
+     ]
+    },
+    "manim_description": "Draw exactly the figure of M2.S8.T8.C27.IMG1 (same frame, same scale, same positions, the four given clusters and their labels unchanged in INK) and add a fifth cluster in ANSWER. Fifth cluster (centre x = 26.35, centre y = 0): 61 dots in 9 rows, row counts from the top 5, 6, 7, 8, 9, 8, 7, 6, 5 (y = 3.464: 5 dots; y = 2.598: 6 dots; y = 1.732: 7 dots; y = 0.866: 8 dots; y = 0: 9 dots; y = -0.866: 8 dots; y = -1.732: 7 dots; y = -2.598: 6 dots; y = -3.464: 5 dots); every row centred on x = 26.35; dots are filled ANSWER circles of diameter 0.7, pitch 1.0, row distance 0.866. Its label '61' is bold ANSWER text centred under it on the common label line y = -4.7. Nothing else is added.",
+    "visible_text": [
+     "1",
+     "7",
+     "19",
+     "37",
+     "61"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words hexagonal, ring or next",
+     "the equation 37 + 24 = 61",
+     "arrows between clusters"
+    ],
+    "accuracy_checks": [
+     "fifth cluster: rows 5+6+7+8+9+8+7+6+5 = 61 dots",
+     "61 = 1 + 6 + 12 + 18 + 24 and 37 + 24 = 61 (the next jump is 24)",
+     "the four given clusters are identical in position and colour to the question diagram",
+     "label 61 equals the dot count"
+    ],
+    "alt_text": "The four hexagon-shaped dot clusters of 1, 7, 19 and 37 dots, followed by a fifth cluster of 61 dots in green.",
+    "render_note": "Solution diagram derived from M2.S8.T8.C27.IMG1: the final state, the next cluster (61 dots, a centre dot with four rings of 6, 12, 18, 24) added in ANSWER."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C29",
+   "role": "question",
+   "lp_book_number": "Figure it Out 1.3, Q3",
+   "ncert_ref": "Section 1.3 - FiO Q5",
+   "question_text": "Can you think of pictorial ways to visualise the sequence of Powers of 2? Powers of 3?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED"
+   ],
+   "reason": "An open 'can you think of a pictorial way' question; the book gives no figure with it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C30",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 1.3, Q3",
+   "ncert_ref": "Section 1.3 - FiO Q5",
+   "question_text": "Can you think of pictorial ways to visualise the sequence of Powers of 2? Powers of 3?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The printed answer IS a picture (the powers of 2 picture of page 6 and the powers of 3 pictures); the LP solution describes them in words only.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S8.T8.C30.IMG1",
+   "manim_scene": "c6_1_s13_fio5_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C30.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "kind": "copy_and_join_pictures_of_powers_of_2_and_3",
+     "unit": "x right, y up",
+     "dot_diameter": 0.24,
+     "dot_edge_width": 0.04,
+     "frame": {
+      "x_left": -7.0,
+      "x_right": 22.1,
+      "y_top": 2.1,
+      "y_bottom": -11.1
+     },
+     "row_names": [
+      {
+       "text": "Powers of 2",
+       "right_aligned_at_x": -1.5,
+       "centre_y": 0.0
+      },
+      {
+       "text": "Powers of 3",
+       "right_aligned_at_x": -1.5,
+       "centre_y": -6.75
+      }
+     ],
+     "rows": [
+      {
+       "name": "Powers of 2",
+       "axis_y": 0.0,
+       "pictures": [
+        {
+         "label": {
+          "text": "1",
+          "x": 0.0,
+          "y": -2.625
+         },
+         "bbox": {
+          "x_min": 0.0,
+          "x_max": 0.0,
+          "y_min": 0.0,
+          "y_max": 0.0
+         },
+         "dots": [
+          {
+           "x": 0.0,
+           "y": 0.0,
+           "colour": "INK"
+          }
+         ],
+         "segments": []
+        },
+        {
+         "label": {
+          "text": "2",
+          "x": 2.7,
+          "y": -2.625
+         },
+         "bbox": {
+          "x_min": 2.0,
+          "x_max": 3.4,
+          "y_min": 0.0,
+          "y_max": 0.0
+         },
+         "dots": [
+          {
+           "x": 2.0,
+           "y": 0.0,
+           "colour": "INK"
+          },
+          {
+           "x": 3.4,
+           "y": 0.0,
+           "colour": "SET_A"
+          }
+         ],
+         "segments": [
+          {
+           "from": [
+            2.0,
+            0.0
+           ],
+           "to": [
+            3.4,
+            0.0
+           ],
+           "colour": "GUIDE"
+          }
+         ]
+        },
+        {
+         "label": {
+          "text": "4",
+          "x": 6.1,
+          "y": -2.625
+         },
+         "bbox": {
+          "x_min": 5.4,
+          "x_max": 6.8,
+          "y_min": -0.7,
+          "y_max": 0.7
+         },
+         "dots": [
+          {
+           "x": 5.4,
+           "y": 0.7,
+           "colour": "INK"
+          },
+          {
+           "x": 6.8,
+           "y": 0.7,
+           "colour": "INK"
+          },
+          {
+           "x": 5.4,
+           "y": -0.7,
+           "colour": "SET_A"
+          },
+          {
+           "x": 6.8,
+           "y": -0.7,
+           "colour": "SET_A"
+          }
+         ],
+         "segments": [
+          {
+           "from": [
+            5.4,
+            0.7
+           ],
+           "to": [
+            6.8,
+            0.7
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            5.4,
+            -0.7
+           ],
+           "to": [
+            6.8,
+            -0.7
+           ],
+           "colour": "SET_A"
+          },
+          {
+           "from": [
+            5.4,
+            0.7
+           ],
+           "to": [
+            5.4,
+            -0.7
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            6.8,
+            0.7
+           ],
+           "to": [
+            6.8,
+            -0.7
+           ],
+           "colour": "GUIDE"
+          }
+         ]
+        },
+        {
+         "label": {
+          "text": "8",
+          "x": 9.85,
+          "y": -2.625
+         },
+         "bbox": {
+          "x_min": 8.8,
+          "x_max": 10.9,
+          "y_min": -1.05,
+          "y_max": 1.05
+         },
+         "dots": [
+          {
+           "x": 8.8,
+           "y": 1.05,
+           "colour": "INK"
+          },
+          {
+           "x": 10.2,
+           "y": 1.05,
+           "colour": "INK"
+          },
+          {
+           "x": 10.2,
+           "y": -0.35,
+           "colour": "INK"
+          },
+          {
+           "x": 8.8,
+           "y": -0.35,
+           "colour": "INK"
+          },
+          {
+           "x": 9.5,
+           "y": 0.35,
+           "colour": "SET_A"
+          },
+          {
+           "x": 10.9,
+           "y": 0.35,
+           "colour": "SET_A"
+          },
+          {
+           "x": 10.9,
+           "y": -1.05,
+           "colour": "SET_A"
+          },
+          {
+           "x": 9.5,
+           "y": -1.05,
+           "colour": "SET_A"
+          }
+         ],
+         "segments": [
+          {
+           "from": [
+            8.8,
+            1.05
+           ],
+           "to": [
+            10.2,
+            1.05
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            10.2,
+            1.05
+           ],
+           "to": [
+            10.2,
+            -0.35
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            10.2,
+            -0.35
+           ],
+           "to": [
+            8.8,
+            -0.35
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            8.8,
+            -0.35
+           ],
+           "to": [
+            8.8,
+            1.05
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            9.5,
+            0.35
+           ],
+           "to": [
+            10.9,
+            0.35
+           ],
+           "colour": "SET_A"
+          },
+          {
+           "from": [
+            10.9,
+            0.35
+           ],
+           "to": [
+            10.9,
+            -1.05
+           ],
+           "colour": "SET_A"
+          },
+          {
+           "from": [
+            10.9,
+            -1.05
+           ],
+           "to": [
+            9.5,
+            -1.05
+           ],
+           "colour": "SET_A"
+          },
+          {
+           "from": [
+            9.5,
+            -1.05
+           ],
+           "to": [
+            9.5,
+            0.35
+           ],
+           "colour": "SET_A"
+          },
+          {
+           "from": [
+            8.8,
+            1.05
+           ],
+           "to": [
+            9.5,
+            0.35
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            10.2,
+            1.05
+           ],
+           "to": [
+            10.9,
+            0.35
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            10.2,
+            -0.35
+           ],
+           "to": [
+            10.9,
+            -1.05
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            8.8,
+            -0.35
+           ],
+           "to": [
+            9.5,
+            -1.05
+           ],
+           "colour": "GUIDE"
+          }
+         ]
+        },
+        {
+         "label": {
+          "text": "16",
+          "x": 15.45,
+          "y": -2.625
+         },
+         "bbox": {
+          "x_min": 12.9,
+          "x_max": 18.0,
+          "y_min": -1.8,
+          "y_max": 1.8
+         },
+         "dots": [
+          {
+           "x": 12.9,
+           "y": 1.8,
+           "colour": "INK"
+          },
+          {
+           "x": 14.3,
+           "y": 1.8,
+           "colour": "INK"
+          },
+          {
+           "x": 14.3,
+           "y": 0.4,
+           "colour": "INK"
+          },
+          {
+           "x": 12.9,
+           "y": 0.4,
+           "colour": "INK"
+          },
+          {
+           "x": 13.6,
+           "y": 1.1,
+           "colour": "INK"
+          },
+          {
+           "x": 15.0,
+           "y": 1.1,
+           "colour": "INK"
+          },
+          {
+           "x": 15.0,
+           "y": -0.3,
+           "colour": "INK"
+          },
+          {
+           "x": 13.6,
+           "y": -0.3,
+           "colour": "INK"
+          },
+          {
+           "x": 15.9,
+           "y": 0.3,
+           "colour": "SET_A"
+          },
+          {
+           "x": 17.3,
+           "y": 0.3,
+           "colour": "SET_A"
+          },
+          {
+           "x": 17.3,
+           "y": -1.1,
+           "colour": "SET_A"
+          },
+          {
+           "x": 15.9,
+           "y": -1.1,
+           "colour": "SET_A"
+          },
+          {
+           "x": 16.6,
+           "y": -0.4,
+           "colour": "SET_A"
+          },
+          {
+           "x": 18.0,
+           "y": -0.4,
+           "colour": "SET_A"
+          },
+          {
+           "x": 18.0,
+           "y": -1.8,
+           "colour": "SET_A"
+          },
+          {
+           "x": 16.6,
+           "y": -1.8,
+           "colour": "SET_A"
+          }
+         ],
+         "segments": [
+          {
+           "from": [
+            12.9,
+            1.8
+           ],
+           "to": [
+            14.3,
+            1.8
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            14.3,
+            1.8
+           ],
+           "to": [
+            14.3,
+            0.4
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            14.3,
+            0.4
+           ],
+           "to": [
+            12.9,
+            0.4
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            12.9,
+            0.4
+           ],
+           "to": [
+            12.9,
+            1.8
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            13.6,
+            1.1
+           ],
+           "to": [
+            15.0,
+            1.1
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            15.0,
+            1.1
+           ],
+           "to": [
+            15.0,
+            -0.3
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            15.0,
+            -0.3
+           ],
+           "to": [
+            13.6,
+            -0.3
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            13.6,
+            -0.3
+           ],
+           "to": [
+            13.6,
+            1.1
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            12.9,
+            1.8
+           ],
+           "to": [
+            13.6,
+            1.1
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            14.3,
+            1.8
+           ],
+           "to": [
+            15.0,
+            1.1
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            14.3,
+            0.4
+           ],
+           "to": [
+            15.0,
+            -0.3
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            12.9,
+            0.4
+           ],
+           "to": [
+            13.6,
+            -0.3
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            15.9,
+            0.3
+           ],
+           "to": [
+            17.3,
+            0.3
+           ],
+           "colour": "SET_A"
+          },
+          {
+           "from": [
+            17.3,
+            0.3
+           ],
+           "to": [
+            17.3,
+            -1.1
+           ],
+           "colour": "SET_A"
+          },
+          {
+           "from": [
+            17.3,
+            -1.1
+           ],
+           "to": [
+            15.9,
+            -1.1
+           ],
+           "colour": "SET_A"
+          },
+          {
+           "from": [
+            15.9,
+            -1.1
+           ],
+           "to": [
+            15.9,
+            0.3
+           ],
+           "colour": "SET_A"
+          },
+          {
+           "from": [
+            16.6,
+            -0.4
+           ],
+           "to": [
+            18.0,
+            -0.4
+           ],
+           "colour": "SET_A"
+          },
+          {
+           "from": [
+            18.0,
+            -0.4
+           ],
+           "to": [
+            18.0,
+            -1.8
+           ],
+           "colour": "SET_A"
+          },
+          {
+           "from": [
+            18.0,
+            -1.8
+           ],
+           "to": [
+            16.6,
+            -1.8
+           ],
+           "colour": "SET_A"
+          },
+          {
+           "from": [
+            16.6,
+            -1.8
+           ],
+           "to": [
+            16.6,
+            -0.4
+           ],
+           "colour": "SET_A"
+          },
+          {
+           "from": [
+            15.9,
+            0.3
+           ],
+           "to": [
+            16.6,
+            -0.4
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            17.3,
+            0.3
+           ],
+           "to": [
+            18.0,
+            -0.4
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            17.3,
+            -1.1
+           ],
+           "to": [
+            18.0,
+            -1.8
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            15.9,
+            -1.1
+           ],
+           "to": [
+            16.6,
+            -1.8
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            12.9,
+            1.8
+           ],
+           "to": [
+            15.9,
+            0.3
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            14.3,
+            1.8
+           ],
+           "to": [
+            17.3,
+            0.3
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            14.3,
+            0.4
+           ],
+           "to": [
+            17.3,
+            -1.1
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            12.9,
+            0.4
+           ],
+           "to": [
+            15.9,
+            -1.1
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            13.6,
+            1.1
+           ],
+           "to": [
+            16.6,
+            -0.4
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            15.0,
+            1.1
+           ],
+           "to": [
+            18.0,
+            -0.4
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            15.0,
+            -0.3
+           ],
+           "to": [
+            18.0,
+            -1.8
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            13.6,
+            -0.3
+           ],
+           "to": [
+            16.6,
+            -1.8
+           ],
+           "colour": "GUIDE"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Powers of 3",
+       "axis_y": -6.75,
+       "pictures": [
+        {
+         "label": {
+          "text": "1",
+          "x": 0.0,
+          "y": -10.275
+         },
+         "bbox": {
+          "x_min": 0.0,
+          "x_max": 0.0,
+          "y_min": -6.75,
+          "y_max": -6.75
+         },
+         "dots": [
+          {
+           "x": 0.0,
+           "y": -6.75,
+           "colour": "INK"
+          }
+         ],
+         "segments": []
+        },
+        {
+         "label": {
+          "text": "3",
+          "x": 2.6,
+          "y": -10.275
+         },
+         "bbox": {
+          "x_min": 2.0,
+          "x_max": 3.2,
+          "y_min": -7.45,
+          "y_max": -6.05
+         },
+         "dots": [
+          {
+           "x": 2.0,
+           "y": -6.05,
+           "colour": "INK"
+          },
+          {
+           "x": 2.0,
+           "y": -7.45,
+           "colour": "INK"
+          },
+          {
+           "x": 3.2,
+           "y": -6.75,
+           "colour": "INK"
+          }
+         ],
+         "segments": [
+          {
+           "from": [
+            2.0,
+            -6.05
+           ],
+           "to": [
+            2.0,
+            -7.45
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            2.0,
+            -6.05
+           ],
+           "to": [
+            3.2,
+            -6.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            2.0,
+            -7.45
+           ],
+           "to": [
+            3.2,
+            -6.75
+           ],
+           "colour": "INK"
+          }
+         ]
+        },
+        {
+         "label": {
+          "text": "9",
+          "x": 8.2,
+          "y": -10.275
+         },
+         "bbox": {
+          "x_min": 5.2,
+          "x_max": 11.2,
+          "y_min": -7.45,
+          "y_max": -6.05
+         },
+         "dots": [
+          {
+           "x": 5.2,
+           "y": -6.05,
+           "colour": "INK"
+          },
+          {
+           "x": 5.2,
+           "y": -7.45,
+           "colour": "INK"
+          },
+          {
+           "x": 6.4,
+           "y": -6.75,
+           "colour": "INK"
+          },
+          {
+           "x": 7.6,
+           "y": -6.05,
+           "colour": "INK"
+          },
+          {
+           "x": 7.6,
+           "y": -7.45,
+           "colour": "INK"
+          },
+          {
+           "x": 8.8,
+           "y": -6.75,
+           "colour": "INK"
+          },
+          {
+           "x": 10.0,
+           "y": -6.05,
+           "colour": "INK"
+          },
+          {
+           "x": 10.0,
+           "y": -7.45,
+           "colour": "INK"
+          },
+          {
+           "x": 11.2,
+           "y": -6.75,
+           "colour": "INK"
+          }
+         ],
+         "segments": [
+          {
+           "from": [
+            5.2,
+            -6.05
+           ],
+           "to": [
+            5.2,
+            -7.45
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            5.2,
+            -6.05
+           ],
+           "to": [
+            6.4,
+            -6.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            5.2,
+            -7.45
+           ],
+           "to": [
+            6.4,
+            -6.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            7.6,
+            -6.05
+           ],
+           "to": [
+            7.6,
+            -7.45
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            7.6,
+            -6.05
+           ],
+           "to": [
+            8.8,
+            -6.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            7.6,
+            -7.45
+           ],
+           "to": [
+            8.8,
+            -6.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            10.0,
+            -6.05
+           ],
+           "to": [
+            10.0,
+            -7.45
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            10.0,
+            -6.05
+           ],
+           "to": [
+            11.2,
+            -6.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            10.0,
+            -7.45
+           ],
+           "to": [
+            11.2,
+            -6.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            5.2,
+            -6.05
+           ],
+           "to": [
+            10.0,
+            -6.05
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            5.2,
+            -7.45
+           ],
+           "to": [
+            10.0,
+            -7.45
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            6.4,
+            -6.75
+           ],
+           "to": [
+            11.2,
+            -6.75
+           ],
+           "colour": "GUIDE"
+          }
+         ]
+        },
+        {
+         "label": {
+          "text": "27",
+          "x": 17.4,
+          "y": -10.275
+         },
+         "bbox": {
+          "x_min": 13.2,
+          "x_max": 21.6,
+          "y_min": -9.45,
+          "y_max": -4.05
+         },
+         "dots": [
+          {
+           "x": 13.2,
+           "y": -4.05,
+           "colour": "INK"
+          },
+          {
+           "x": 13.2,
+           "y": -5.45,
+           "colour": "INK"
+          },
+          {
+           "x": 14.4,
+           "y": -4.75,
+           "colour": "INK"
+          },
+          {
+           "x": 15.6,
+           "y": -4.05,
+           "colour": "INK"
+          },
+          {
+           "x": 15.6,
+           "y": -5.45,
+           "colour": "INK"
+          },
+          {
+           "x": 16.8,
+           "y": -4.75,
+           "colour": "INK"
+          },
+          {
+           "x": 18.0,
+           "y": -4.05,
+           "colour": "INK"
+          },
+          {
+           "x": 18.0,
+           "y": -5.45,
+           "colour": "INK"
+          },
+          {
+           "x": 19.2,
+           "y": -4.75,
+           "colour": "INK"
+          },
+          {
+           "x": 14.4,
+           "y": -6.05,
+           "colour": "INK"
+          },
+          {
+           "x": 14.4,
+           "y": -7.45,
+           "colour": "INK"
+          },
+          {
+           "x": 15.6,
+           "y": -6.75,
+           "colour": "INK"
+          },
+          {
+           "x": 16.8,
+           "y": -6.05,
+           "colour": "INK"
+          },
+          {
+           "x": 16.8,
+           "y": -7.45,
+           "colour": "INK"
+          },
+          {
+           "x": 18.0,
+           "y": -6.75,
+           "colour": "INK"
+          },
+          {
+           "x": 19.2,
+           "y": -6.05,
+           "colour": "INK"
+          },
+          {
+           "x": 19.2,
+           "y": -7.45,
+           "colour": "INK"
+          },
+          {
+           "x": 20.4,
+           "y": -6.75,
+           "colour": "INK"
+          },
+          {
+           "x": 15.6,
+           "y": -8.05,
+           "colour": "INK"
+          },
+          {
+           "x": 15.6,
+           "y": -9.45,
+           "colour": "INK"
+          },
+          {
+           "x": 16.8,
+           "y": -8.75,
+           "colour": "INK"
+          },
+          {
+           "x": 18.0,
+           "y": -8.05,
+           "colour": "INK"
+          },
+          {
+           "x": 18.0,
+           "y": -9.45,
+           "colour": "INK"
+          },
+          {
+           "x": 19.2,
+           "y": -8.75,
+           "colour": "INK"
+          },
+          {
+           "x": 20.4,
+           "y": -8.05,
+           "colour": "INK"
+          },
+          {
+           "x": 20.4,
+           "y": -9.45,
+           "colour": "INK"
+          },
+          {
+           "x": 21.6,
+           "y": -8.75,
+           "colour": "INK"
+          }
+         ],
+         "segments": [
+          {
+           "from": [
+            13.2,
+            -4.05
+           ],
+           "to": [
+            13.2,
+            -5.45
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            13.2,
+            -4.05
+           ],
+           "to": [
+            14.4,
+            -4.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            13.2,
+            -5.45
+           ],
+           "to": [
+            14.4,
+            -4.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            15.6,
+            -4.05
+           ],
+           "to": [
+            15.6,
+            -5.45
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            15.6,
+            -4.05
+           ],
+           "to": [
+            16.8,
+            -4.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            15.6,
+            -5.45
+           ],
+           "to": [
+            16.8,
+            -4.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            18.0,
+            -4.05
+           ],
+           "to": [
+            18.0,
+            -5.45
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            18.0,
+            -4.05
+           ],
+           "to": [
+            19.2,
+            -4.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            18.0,
+            -5.45
+           ],
+           "to": [
+            19.2,
+            -4.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            13.2,
+            -4.05
+           ],
+           "to": [
+            18.0,
+            -4.05
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            13.2,
+            -5.45
+           ],
+           "to": [
+            18.0,
+            -5.45
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            14.4,
+            -4.75
+           ],
+           "to": [
+            19.2,
+            -4.75
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            14.4,
+            -6.05
+           ],
+           "to": [
+            14.4,
+            -7.45
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            14.4,
+            -6.05
+           ],
+           "to": [
+            15.6,
+            -6.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            14.4,
+            -7.45
+           ],
+           "to": [
+            15.6,
+            -6.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            16.8,
+            -6.05
+           ],
+           "to": [
+            16.8,
+            -7.45
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            16.8,
+            -6.05
+           ],
+           "to": [
+            18.0,
+            -6.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            16.8,
+            -7.45
+           ],
+           "to": [
+            18.0,
+            -6.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            19.2,
+            -6.05
+           ],
+           "to": [
+            19.2,
+            -7.45
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            19.2,
+            -6.05
+           ],
+           "to": [
+            20.4,
+            -6.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            19.2,
+            -7.45
+           ],
+           "to": [
+            20.4,
+            -6.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            14.4,
+            -6.05
+           ],
+           "to": [
+            19.2,
+            -6.05
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            14.4,
+            -7.45
+           ],
+           "to": [
+            19.2,
+            -7.45
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            15.6,
+            -6.75
+           ],
+           "to": [
+            20.4,
+            -6.75
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            15.6,
+            -8.05
+           ],
+           "to": [
+            15.6,
+            -9.45
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            15.6,
+            -8.05
+           ],
+           "to": [
+            16.8,
+            -8.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            15.6,
+            -9.45
+           ],
+           "to": [
+            16.8,
+            -8.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            18.0,
+            -8.05
+           ],
+           "to": [
+            18.0,
+            -9.45
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            18.0,
+            -8.05
+           ],
+           "to": [
+            19.2,
+            -8.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            18.0,
+            -9.45
+           ],
+           "to": [
+            19.2,
+            -8.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            20.4,
+            -8.05
+           ],
+           "to": [
+            20.4,
+            -9.45
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            20.4,
+            -8.05
+           ],
+           "to": [
+            21.6,
+            -8.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            20.4,
+            -9.45
+           ],
+           "to": [
+            21.6,
+            -8.75
+           ],
+           "colour": "INK"
+          },
+          {
+           "from": [
+            15.6,
+            -8.05
+           ],
+           "to": [
+            20.4,
+            -8.05
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            15.6,
+            -9.45
+           ],
+           "to": [
+            20.4,
+            -9.45
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            16.8,
+            -8.75
+           ],
+           "to": [
+            21.6,
+            -8.75
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            13.2,
+            -4.05
+           ],
+           "to": [
+            15.6,
+            -8.05
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            13.2,
+            -5.45
+           ],
+           "to": [
+            15.6,
+            -9.45
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            14.4,
+            -4.75
+           ],
+           "to": [
+            16.8,
+            -8.75
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            15.6,
+            -4.05
+           ],
+           "to": [
+            18.0,
+            -8.05
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            15.6,
+            -5.45
+           ],
+           "to": [
+            18.0,
+            -9.45
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            16.8,
+            -4.75
+           ],
+           "to": [
+            19.2,
+            -8.75
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            18.0,
+            -4.05
+           ],
+           "to": [
+            20.4,
+            -8.05
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            18.0,
+            -5.45
+           ],
+           "to": [
+            20.4,
+            -9.45
+           ],
+           "colour": "GUIDE"
+          },
+          {
+           "from": [
+            19.2,
+            -4.75
+           ],
+           "to": [
+            21.6,
+            -8.75
+           ],
+           "colour": "GUIDE"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "dot_counts": {
+      "powers_of_2": [
+       1,
+       2,
+       4,
+       8,
+       16
+      ],
+      "powers_of_3": [
+       1,
+       3,
+       9,
+       27
+      ]
+     }
+    },
+    "manim_description": "Two rows of copy-and-join dot pictures on a plain white BG (x right, y up; frame x from -7 to 22.1, y from -11.1 to 2.1; scale uniformly to fill the 16:9 card with an even margin). Dots are filled circles of diameter 0.24; lines are 2 px. Every picture is centred vertically on its row's axis (row 1 axis y = 0, row 2 axis y = -6.75); neighbouring pictures of a row are 2.0 apart; the left edge of the first picture of each row is x = 0. Under every picture, centred on it, its bold INK number: row 1 labels at y = -2.625, row 2 labels at y = -10.275. At the left, right-aligned at x = -1.5 and centred on the row axis, the INK row names 'Powers of 2' (row 1) and 'Powers of 3' (row 2). ROW 1, powers of 2, labels 1, 2, 4, 8, 16. Each picture is a copy of the previous one placed beside it with matching dots joined. Colour code: the original copy INK (dots and lines), the new copy SET_A (dots and lines), joining lines GUIDE. Picture '1' (x 0 to 0, y 0 to 0): one INK dot at its position x = 0. Picture '2' (x 2 to 3.4, y 0 to 0): an INK dot at the left and a SET_A dot 1.4 to its right, joined by a GUIDE line. Picture '4' (x 5.4 to 6.8, y -0.7 to 0.7): a square of side 1.4: top side an INK line between two INK dots, bottom side a SET_A line between two SET_A dots, the two vertical sides GUIDE lines; 4 dots. Picture '8' (x 8.8 to 10.9, y -1.05 to 1.05): a cube of 8 dots: an INK square of side 1.4 (4 INK dots, 4 INK sides) and a SET_A square of the same size shifted by (0.7, -0.7) (4 SET_A dots, 4 SET_A sides), the 4 pairs of matching corners joined by GUIDE lines. Picture '16' (x 12.9 to 18, y -1.8 to 1.8): two such cubes, 16 dots: the first cube drawn as picture '8' (INK dots, INK edges, GUIDE joins inside), the second cube a copy of the first shifted by (3.0, -1.5) drawn in SET_A (its inner joins GUIDE), and 8 GUIDE lines joining each of the first cube's 8 dots to the matching dot of the second cube. ROW 2, powers of 3, labels 1, 3, 9, 27, all dots and edges INK, joining lines GUIDE. Picture '1' (x 0 to 0, y -6.75 to -6.75): one dot. Picture '3' (x 2 to 3.2, y -7.45 to -6.05): a triangle of 3 dots pointing right: with L the picture's left x and A the row axis y, dots at (L, A + 0.7), (L, A - 0.7) and (L + 1.2, A), joined by 3 INK edges (a vertical left edge and two slanting edges meeting at the right dot). Picture '9' (x 5.2 to 11.2, y -7.45 to -6.05): three copies of the triangle placed in a horizontal row with 2.4 between their left edges (9 dots, 9 INK edges), and 3 GUIDE horizontal lines, each running through the three matching dots of the three triangles (top-left dots, bottom-left dots, right dots). Picture '27' (x 13.2 to 21.6, y -9.45 to -4.05): three copies of picture '9' (27 dots); the first copy has its middle line (the line through the right dots) at y = -4.75 and its left edge at the picture's left x, the second copy is shifted by (1.2, -2.0) from the first and the third by (1.2, -2.0) from the second (middle lines at y = -6.75 and y = -8.75); 9 GUIDE slanting lines, each running through the three matching dots of the three copies (one line per dot position of the 9-picture). Nothing else is drawn.",
+    "visible_text": [
+     "Powers of 2",
+     "1",
+     "2",
+     "4",
+     "8",
+     "16",
+     "Powers of 3",
+     "1",
+     "3",
+     "9",
+     "27"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the sixth picture of powers of 2 (32 dots) - the figure stops at 16",
+     "axes, grids or the words 'dimension', 'cube' or 'tesseract'",
+     "arrows between pictures",
+     "any equation such as 2 x 2"
+    ],
+    "accuracy_checks": [
+     "dot counts of row 1: 1, 2, 4, 8, 16 (each picture doubles the previous: copy + shifted copy)",
+     "dot counts of row 2: 1, 3, 9, 27 (each picture triples the previous: three copies)",
+     "row 1: joins between the two copies = number of dots of one copy (1, 2, 4, 8 lines for pictures 2, 4, 8, 16)",
+     "row 2: picture 9 has 3 long lines through 3 dots each; picture 27 has 9 slanting lines through 3 dots each; every dot is on exactly one join line of the newest step",
+     "no two dots of a picture coincide"
+    ],
+    "alt_text": "Powers of 2 drawn as a dot, a segment, a square, a cube and two joined cubes with 1, 2, 4, 8 and 16 dots, and powers of 3 drawn as a dot, a triangle, three joined triangles and three joined copies of those, with 1, 3, 9 and 27 dots.",
+    "render_note": "No question diagram exists, so this stands alone (derived_from null). Powers of 2 follows the book picture on page 6 (and the same picture in the printed answer). Powers of 3 follows the printed answer: the book draws its 3-picture as an apex-up triangle and its 9- and 27-pictures with right-pointing triangles; here every triangle points right so each picture is visibly three copies of the one before. The book's 27-picture stacks three copies of a diagonal block side by side; here three copies of the 9-picture are shifted diagonally (the same dot-and-line structure, 3 x 3 x 3). The printed answer also shows 32 for powers of 2; the LP steps stop at 16, so 32 is left out."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C34",
+   "role": "question",
+   "lp_book_number": "Example 1: Adding up odd numbers",
+   "ncert_ref": "Section 1.4 - Example 1",
+   "question_text": "What happens when we start adding up odd numbers? 1 = 1; 1 + 3 = 4; 1 + 3 + 5 = 9; 1 + 3 + 5 + 7 = 16; 1 + 3 + 5 + 7 + 9 = 25; 1 + 3 + 5 + 7 + 9 + 11 = 36; ...",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The list of six sums is typeset lines of arithmetic (red results only), already in the question text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C35",
+   "role": "solution",
+   "lp_book_number": "Example 1: Adding up odd numbers",
+   "ncert_ref": "Section 1.4 - Example 1",
+   "question_text": "What happens when we start adding up odd numbers? 1 = 1; 1 + 3 = 4; 1 + 3 + 5 = 9; 1 + 3 + 5 + 7 = 16; 1 + 3 + 5 + 7 + 9 = 25; 1 + 3 + 5 + 7 + 9 + 11 = 36; ...",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is the same sums with the results 1, 4, 9, 16, 25, 36 named as squares; the book's explaining picture belongs to the next questions (1.4 'A picture can explain it').",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

@@ -1,0 +1,856 @@
+{
+ "meta": {
+  "chapter": "Prime Time",
+  "class": 6,
+  "textbook": "Ganita Prakash, Grade 6, Chapter 5",
+  "lp_plan_id": "cbse_eng_maths6_ch5_v75",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "worked_example": {
+    "required": 2,
+    "optional": 0,
+    "none": 7
+   },
+   "question": {
+    "required": 0,
+    "optional": 0,
+    "none": 11
+   },
+   "solution": {
+    "required": 0,
+    "optional": 0,
+    "none": 11
+   }
+  },
+  "notes": [
+   "Chunk D: topics M3.S16.T16 (Prime Factorisation, 7 worked blocks), M3.S17.T17 (1 pair), M3.S18.T18 (Figure it Out 5.4 Q1-Q5, 5 pairs), M3.S19.T19 (2 worked blocks), M3.S20.T20 (5 example pairs).",
+   "Only two figures are printed in this part of the book (the 36 factor tree on p.118, the 3 x 2 x 5 cuboid on p.119); both are drawn for their worked examples. Every other item is text and LaTeX; pages 11, 14, 15, 16 and the printed answers on pdf pages 29-30 carry no figure.",
+   "Teaching images C94.IMG1, C97.IMG1, C113.IMG1 and C114.IMG1 are not linked from anything."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P12-factor_tree-1",
+   "source": "chapter p.12",
+   "description": "Tree: grey circle 36 on top, four straight lines down to four chains of grey boxes (checked against the page picture, base description is right): 2×18 > 2×2×9 > 2×2×3×3; 3×12 > 3×3×4 > 3×3×2×2 > 2×2×3×3; 4×9 > 2×2×9 > 2×2×3×3; 6×6 > 2×3×6 > 2×3×2×3 > 2×3×2×3. 14 boxes plus the circle.",
+   "mapped_to": "item:M3.S16.T16.C95 (question)"
+  },
+  {
+   "fig_id": "P13-solid-1",
+   "source": "chapter p.13",
+   "description": "Cuboid of unit cubes in oblique view (checked against the page picture, base description is right): red front face 3 columns x 2 rows, yellow top face 3 across x 5 deep, green right face 5 deep x 2 high; 3 x 2 x 5 = 30 cubes; no labels.",
+   "mapped_to": "item:M3.S16.T16.C96 (question)"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 2,
+  "mapped_to_items": 2,
+  "mapped_to_concept_images": 0,
+  "mapped_none": 0,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M3.S16.T16.C95.IMG1",
+   "M3.S16.T16.C96.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M3.S16.T16.C93",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E1: One factor pair is not enough",
+   "ncert_ref": "Section 5.4 - 5.4.q2",
+   "question_text": "Try another example: 80 and 63. 80 = 40 × 2 = 20 × 4 = 10 × 8 = 16 × 5 = ??? and 63 = 9 × 7 = 3 × 21 = ??? Taking 80 = 16 × 5 and 63 = 9 × 7 there are no common factors. Can we conclude that 80 and 63 are co-prime?",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The factor-pair chains (80 = 40 x 2 = ..., 63 = 9 x 7 = ...) are plain arithmetic lines that are already in the question text; the book page prints no picture for them.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "text_alternative": "Write the two chains as two LaTeX lines: 80 = 40 x 2 = 20 x 4 = 10 x 8 = 16 x 5 = ???  and  63 = 9 x 7 = 3 x 21 = ???"
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C94",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E0: The prime factorisation is unique",
+   "ncert_ref": "Section 5.4 - 5.4.q3",
+   "question_text": "By going through different ways of breaking down the number, we wrote 63 as 3 × 3 × 7 and as 3 × 7 × 3. Are they different?",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Both products (3 x 3 x 7 and 3 x 7 x 3) are written in the question; the book prints no picture here. The teaching image C94.IMG1 stays where it is and is not linked.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C95",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E1: The prime factorisation is unique",
+   "ncert_ref": "Section 5.4 - book p.118 (pdf p.12), the four ways to factorise 36",
+   "question_text": "36 is broken in four different ways (2×18, 3×12, 4×9, 6×6) to get prime factorisations. Observe that in all four cases we get two 2s and two 3s. Multiply back to see that you get 36 in all four cases.",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "DATA_IN_FIGURE",
+    "FIG_REFERENCED"
+   ],
+   "reason": "The question says 'in all four cases' and 'multiply back in all four cases', but the four chains (for example 3×3×2×2 and 2×3×2×3) exist only in the book's tree; the text names just the four first splits. The tree is what the learner observes and multiplies back.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S16.T16.C95.IMG1",
+   "manim_scene": "c6_5_54_C95_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C95.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "factor_tree",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "factor_tree",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "font_px": 44,
+     "root": {
+      "text": "36",
+      "shape": "circle",
+      "center": [
+       960,
+       236
+      ],
+      "radius": 65,
+      "fill": "CELL_FILL",
+      "stroke": "INK"
+     },
+     "box": {
+      "height": 84,
+      "fill": "CELL_FILL",
+      "stroke": "INK",
+      "stroke_px": 3,
+      "width_by_factor_count": {
+       "2": 180,
+       "3": 210,
+       "4": 270
+      }
+     },
+     "columns": [
+      {
+       "column": 1,
+       "x_center": 330,
+       "boxes": [
+        {
+         "row": 1,
+         "y_center": 450,
+         "text": "2×18",
+         "width": 180
+        },
+        {
+         "row": 2,
+         "y_center": 580,
+         "text": "2×2×9",
+         "width": 210
+        },
+        {
+         "row": 3,
+         "y_center": 710,
+         "text": "2×2×3×3",
+         "width": 270
+        }
+       ]
+      },
+      {
+       "column": 2,
+       "x_center": 750,
+       "boxes": [
+        {
+         "row": 1,
+         "y_center": 450,
+         "text": "3×12",
+         "width": 180
+        },
+        {
+         "row": 2,
+         "y_center": 580,
+         "text": "3×3×4",
+         "width": 210
+        },
+        {
+         "row": 3,
+         "y_center": 710,
+         "text": "3×3×2×2",
+         "width": 270
+        },
+        {
+         "row": 4,
+         "y_center": 840,
+         "text": "2×2×3×3",
+         "width": 270
+        }
+       ]
+      },
+      {
+       "column": 3,
+       "x_center": 1170,
+       "boxes": [
+        {
+         "row": 1,
+         "y_center": 450,
+         "text": "4×9",
+         "width": 180
+        },
+        {
+         "row": 2,
+         "y_center": 580,
+         "text": "2×2×9",
+         "width": 210
+        },
+        {
+         "row": 3,
+         "y_center": 710,
+         "text": "2×2×3×3",
+         "width": 270
+        }
+       ]
+      },
+      {
+       "column": 4,
+       "x_center": 1590,
+       "boxes": [
+        {
+         "row": 1,
+         "y_center": 450,
+         "text": "6×6",
+         "width": 180
+        },
+        {
+         "row": 2,
+         "y_center": 580,
+         "text": "2×3×6",
+         "width": 210
+        },
+        {
+         "row": 3,
+         "y_center": 710,
+         "text": "2×3×2×3",
+         "width": 270
+        },
+        {
+         "row": 4,
+         "y_center": 840,
+         "text": "2×3×2×3",
+         "width": 270
+        }
+       ]
+      }
+     ],
+     "links_inside_column": "vertical INK line 3 px from bottom-centre of each box to top-centre of the box below it",
+     "root_links": "four straight INK lines 3 px from the circle edge to the top-centre of the row-1 box of each column",
+     "box_count": 14
+    },
+    "manim_description": "Draw on a 1920 by 1080 canvas with a BG white background. Draw a circle of radius 65 px centred at (960, 236), fill CELL_FILL, stroke INK 3 px, with the text 36 centred inside it in INK at 44 px. Draw four columns of rectangles, 14 rectangles in all; every rectangle has height 84 px, fill CELL_FILL, stroke INK 3 px and its text centred in INK at 44 px. Column centres are x = 330, 750, 1170 and 1590; rectangle centres are at y = 450 (row 1), 580 (row 2), 710 (row 3) and 840 (row 4). Rectangle width is 180 px for a text with two factors, 210 px for three factors and 270 px for four factors. Column 1 (x = 330), top to bottom: 2×18 (row 1), 2×2×9 (row 2), 2×2×3×3 (row 3). Column 2 (x = 750): 3×12 (row 1), 3×3×4 (row 2), 3×3×2×2 (row 3), 2×2×3×3 (row 4). Column 3 (x = 1170): 4×9 (row 1), 2×2×9 (row 2), 2×2×3×3 (row 3). Column 4 (x = 1590): 6×6 (row 1), 2×3×6 (row 2), 2×3×2×3 (row 3), 2×3×2×3 (row 4, the same text as row 3). Join each rectangle to the one below it in the same column with a vertical INK line of 3 px from the bottom-centre of the upper rectangle to the top-centre of the lower one. Draw four straight INK lines of 3 px from the edge of the circle to the top-centre of the row-1 rectangle of each of the four columns. Draw nothing else: no labels, no captions, no colours other than CELL_FILL, INK and BG.",
+    "visible_text": [
+     "36",
+     "2×18",
+     "2×2×9",
+     "2×2×3×3",
+     "3×12",
+     "3×3×4",
+     "3×3×2×2",
+     "2×2×3×3",
+     "4×9",
+     "2×2×9",
+     "2×2×3×3",
+     "6×6",
+     "2×3×6",
+     "2×3×2×3",
+     "2×3×2×3"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the words prime, factor or the sentence 'four different ways'",
+     "any box or circle beyond the circle 36 and the 14 boxes listed",
+     "the product 36 or any equals sign",
+     "a question mark or any hint of the answer"
+    ],
+    "accuracy_checks": [
+     "every box multiplies to 36: 2×18, 2×2×9, 2×2×3×3, 3×12, 3×3×4, 3×3×2×2, 4×9, 6×6, 2×3×6, 2×3×2×3 each equal 36",
+     "columns hold 3, 4, 3 and 4 boxes (14 boxes in all) in the order printed in the book",
+     "the last box of every column has exactly two 2s and two 3s",
+     "the last two boxes of column 4 are both 2×3×2×3, as printed"
+    ],
+    "alt_text": "A tree with 36 on top and four chains below it: 2×18 down to 2×2×3×3, 3×12 down to 2×2×3×3, 4×9 down to 2×2×3×3 and 6×6 down to 2×3×2×3, each box a product equal to 36.",
+    "render_note": "Copy of the book figure on p.118 (inventory P12-factor_tree-1); the book prints grey boxes, drawn here in CELL_FILL; the spacing is widened to the 16:9 card. The last two boxes of column 4 are identical in the book."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C96",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E2: The prime factorisation is unique",
+   "ncert_ref": "Section 5.4 - book p.119 (pdf p.13), 'Does the order matter?'",
+   "question_text": "Using this diagram, can you explain why 30 = 2 × 3 × 5, no matter which way you multiply 2, 3, and 5?",
+   "block_index": 0,
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The question starts 'Using this diagram': the learner has to look at the cuboid of unit cubes (3 wide, 2 high, 5 deep) and count it in different directions; without the picture the question has nothing to explain.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M3.S16.T16.C96.IMG1",
+   "manim_scene": "c6_5_54_C96_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M3.S16.T16.C96.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "solid_3d",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "solid_3d",
+     "projection": "oblique",
+     "canvas_px": [
+      1920,
+      1080
+     ],
+     "y_axis": "downwards from the top of the canvas",
+     "dimensions_in_cubes": {
+      "width": 3,
+      "height": 2,
+      "depth": 5
+     },
+     "unit_cube_edge_px": 120,
+     "depth_step_px_per_cube": [
+      52,
+      -66
+     ],
+     "faces": [
+      {
+       "face": "front",
+       "kind": "rectangle",
+       "corners": [
+        [
+         650,
+         825
+        ],
+        [
+         1010,
+         825
+        ],
+        [
+         1010,
+         585
+        ],
+        [
+         650,
+         585
+        ]
+       ],
+       "fill": "CELL_FILL",
+       "grid": "3 columns x 2 rows = 6 squares; vertical lines at x = 770 and 890, horizontal line at y = 705"
+      },
+      {
+       "face": "top",
+       "kind": "parallelogram",
+       "corners": [
+        [
+         650,
+         585
+        ],
+        [
+         1010,
+         585
+        ],
+        [
+         1270,
+         255
+        ],
+        [
+         910,
+         255
+        ]
+       ],
+       "fill": "MARK_FILL",
+       "grid": "3 columns x 5 rows = 15 squares; four lines parallel to the front edge, the k-th (k = 1..4) from (650+52k, 585-66k) to (1010+52k, 585-66k); two depth lines (770,585)-(1030,255) and (890,585)-(1150,255)"
+      },
+      {
+       "face": "right",
+       "kind": "parallelogram",
+       "corners": [
+        [
+         1010,
+         825
+        ],
+        [
+         1010,
+         585
+        ],
+        [
+         1270,
+         255
+        ],
+        [
+         1270,
+         495
+        ]
+       ],
+       "fill": "SET_B",
+       "fill_opacity": 0.3,
+       "grid": "5 columns x 2 rows = 10 squares; four vertical lines, the k-th (k = 1..4) from (1010+52k, 585-66k) to (1010+52k, 825-66k); one depth line (1010,705)-(1270,375)"
+      }
+     ],
+     "line": {
+      "colour": "INK",
+      "stroke_px": 3
+     },
+     "hidden_faces": [
+      "back",
+      "left",
+      "bottom"
+     ],
+     "unit_cubes_total": 30
+    },
+    "manim_description": "Draw on a 1920 by 1080 canvas with a BG white background one cuboid made of unit cubes, in oblique projection, 3 cubes wide, 2 cubes high and 5 cubes deep (30 unit cubes). The unit cube edge on the front face is 120 px; each cube step backwards moves 52 px to the right and 66 px up. y is measured downwards from the top of the canvas. All lines are INK, stroke 3 px. Draw three faces. FRONT face: rectangle with corners (650, 825), (1010, 825), (1010, 585), (650, 585), fill CELL_FILL, divided into 3 columns by vertical lines at x = 770 and x = 890 and into 2 rows by a horizontal line at y = 705, so 6 squares. TOP face: parallelogram with corners (650, 585), (1010, 585), (1270, 255), (910, 255), fill MARK_FILL, divided into 5 rows by four lines parallel to the front top edge, the k-th line (k = 1 to 4) running from (650 + 52k, 585 − 66k) to (1010 + 52k, 585 − 66k), and into 3 columns by two lines, one from (770, 585) to (1030, 255) and one from (890, 585) to (1150, 255), so 15 squares. RIGHT face: parallelogram with corners (1010, 825), (1010, 585), (1270, 255), (1270, 495), fill SET_B at 30 percent opacity, divided into 5 columns by four vertical lines, the k-th line (k = 1 to 4) running from (1010 + 52k, 585 − 66k) to (1010 + 52k, 825 − 66k), and into 2 rows by one line from (1010, 705) to (1270, 375), so 10 squares. Fill the faces first and draw the lines on top. Do not draw the hidden back, left or bottom faces, any label, any number or any text.",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any dimension label or the numbers 2, 3 and 5",
+     "the product 30 or 2 × 3 × 5",
+     "the hidden back, left and bottom edges",
+     "a count of cubes"
+    ],
+    "accuracy_checks": [
+     "front face is 3 columns x 2 rows = 6 squares",
+     "top face is 3 columns x 5 rows = 15 squares",
+     "right face is 5 columns x 2 rows = 10 squares",
+     "3 × 2 × 5 = 30 unit cubes, equal to the number in the question",
+     "the depth shift of 5 cubes is (260, -330) px: back corners of the top face are (910, 255) and (1270, 255), back corners of the right face are (1270, 255) and (1270, 495)",
+     "the top face shares the front face's top edge and the right face shares the front face's right edge"
+    ],
+    "alt_text": "A cuboid of unit cubes seen from the front, top and right: the front shows 3 by 2 squares, the top 3 by 5 and the right side 5 by 2.",
+    "render_note": "Redraws the book figure on p.119 (inventory P13-solid-1). The book colours the faces red, yellow and green; the colours carry no meaning, so the three faces are tinted CELL_FILL, MARK_FILL and SET_B at 30 percent. The book prints no labels and none are drawn; the dimensions 3, 2 and 5 are stated in the LP solution steps."
+   }
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C97",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E0: Prime factorisation of a product",
+   "ncert_ref": "Section 5.4 - 5.4.q6",
+   "question_text": "72 = 12 × 6. 12 = 2 × 2 × 3 and 6 = 2 × 3. Now, can you say what the prime factorisation of 72 is?",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "12 = 2 x 2 x 3 and 6 = 2 x 3 are given as text and the answer is one line of arithmetic; the book prints no picture here (teaching image C97.IMG1 is not linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C98",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E1: Prime factorisation of a product",
+   "ncert_ref": "Section 5.4 - 5.4.q7",
+   "question_text": "We can also write 72 as 2 × 2 × 2 × 3 × 3. Multiply and check that you get 72 back!",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "A multiplication check (2 x 2 x 2 x 3 x 3 = 8 x 9 = 72) is arithmetic that LaTeX shows in full; no picture in the book.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S16.T16.C99",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E2: Prime factorisation of a product",
+   "ncert_ref": "Section 5.4 - 5.4.q8",
+   "question_text": "Observe how many times each prime factor occurs in the factorisation of 72. Compare it with how many times it occurs in the factorisations of 12 and 6 put together.",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The comparison is about how many times 2 and 3 occur; both counts (3 and 2) are written in the steps as text and arithmetic; no picture in the book.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C101",
+   "role": "question",
+   "lp_book_number": "Prime Factorisation: where Anshu went wrong",
+   "ncert_ref": "Section 5.4 - 5.4.q1",
+   "question_text": "Teacher asks: Are 56 and 63 co-prime? Anshu writes 56 = 14 × 4 and 63 = 21 × 3 and says there are no common factors, so they are co-prime. Guna writes 56 = 7 × 8 and 63 = 9 × 7 and says 7 is a common factor, so they are not co-prime. Guna is right. But where did Anshu go wrong?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A dialogue question (Anshu and Guna) with the factorisations written in the text; the book prints no figure for it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S17.T17.C102",
+   "role": "solution",
+   "lp_book_number": "Prime Factorisation: where Anshu went wrong",
+   "ncert_ref": "Section 5.4 - 5.4.q1",
+   "question_text": "Teacher asks: Are 56 and 63 co-prime? Anshu writes 56 = 14 × 4 and 63 = 21 × 3 and says there are no common factors, so they are co-prime. Guna writes 56 = 7 × 8 and 63 = 9 × 7 and says 7 is a common factor, so they are not co-prime. Guna is right. But where did Anshu go wrong?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer is a short explanation plus the two factorisations 56 = 7 x 8 and 63 = 9 x 7, all text/LaTeX; the printed answer is not a picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C103",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.4, Q1",
+   "ncert_ref": "Section 5.4 - 5.4.FiO1.Q1",
+   "question_text": "Find the prime factorisations of the following numbers: 64, 104, 105, 243, 320, 141, 1728, 729, 1024, 1331, 1000.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A plain list of 11 numbers to factorise; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C104",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.4, Q1",
+   "ncert_ref": "Section 5.4 - 5.4.FiO1.Q1",
+   "question_text": "Find the prime factorisations of the following numbers: 64, 104, 105, 243, 320, 141, 1728, 729, 1024, 1331, 1000.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The printed answer is eleven lines of prime products (page 29), not a picture; steps_tex already lists them one per line.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the 11 LaTeX product lines of steps_tex, one number per line."
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C105",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.4, Q2",
+   "ncert_ref": "Section 5.4 - 5.4.FiO1.Q2",
+   "question_text": "The prime factorisation of a number has one 2, two 3s, and one 11. What is the number?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word question (one 2, two 3s and one 11); no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C106",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.4, Q2",
+   "ncert_ref": "Section 5.4 - 5.4.FiO1.Q2",
+   "question_text": "The prime factorisation of a number has one 2, two 3s, and one 11. What is the number?",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "One product line, 2 x 3 x 3 x 11 = 198; the printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C107",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.4, Q3",
+   "ncert_ref": "Section 5.4 - 5.4.FiO1.Q3",
+   "question_text": "Find three prime numbers, all less than 30, whose product is 1955.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word question about three primes below 30 with product 1955; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C108",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.4, Q3",
+   "ncert_ref": "Section 5.4 - 5.4.FiO1.Q3",
+   "question_text": "Find three prime numbers, all less than 30, whose product is 1955.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "One product line, 1955 = 5 x 17 x 23; the printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C109",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.4, Q4",
+   "ncert_ref": "Section 5.4 - 5.4.FiO1.Q4",
+   "question_text": "Find the prime factorisation of these numbers without multiplying first: a. 56 × 25  b. 108 × 75  c. 1000 × 81 a) 56 × 25 b) 108 × 75 c) 1000 × 81",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Three products are given as text (a, b, c); no figure in the book. The LP text lists the parts twice (see notes).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the three parts once: (a) 56 x 25, (b) 108 x 75, (c) 1000 x 81."
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C110",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.4, Q4",
+   "ncert_ref": "Section 5.4 - 5.4.FiO1.Q4",
+   "question_text": "Find the prime factorisation of these numbers without multiplying first: a. 56 × 25  b. 108 × 75  c. 1000 × 81 a) 56 × 25 b) 108 × 75 c) 1000 × 81",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The printed answers (page 29) are three product lines in text; steps_tex shows the factorisations of the two factors in each part. A factor tree would help only optionally.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C111",
+   "role": "question",
+   "lp_book_number": "Figure it Out 5.4, Q5",
+   "ncert_ref": "Section 5.4 - 5.4.FiO1.Q5",
+   "question_text": "What is the smallest number whose prime factorisation has: a. three different prime numbers? b. four different prime numbers? a) three different prime numbers b) four different prime numbers",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A word question with parts (a) and (b); no figure in the book. The LP text lists the parts twice (see notes).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Write the two parts once: (a) three different prime numbers, (b) four different prime numbers."
+  },
+  {
+   "lp_concept_id": "M3.S18.T18.C112",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 5.4, Q5",
+   "ncert_ref": "Section 5.4 - 5.4.FiO1.Q5",
+   "question_text": "What is the smallest number whose prime factorisation has: a. three different prime numbers? b. four different prime numbers? a) three different prime numbers b) four different prime numbers",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "Two product lines, 2 x 3 x 5 = 30 and 2 x 3 x 5 x 7 = 210; the printed answers are text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C113",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E0: Co-prime from prime factors",
+   "ncert_ref": "Section 5.4 - 5.4.q9",
+   "question_text": "80 = 2 × 2 × 2 × 2 × 5 and 63 = 3 × 3 × 7. There are no common prime factors. Can we conclude that they are co-prime? Suppose they have a common factor that is composite. Would the prime factors of this composite common factor appear in the prime factorisation of 80 and 63?",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Both factorisations (80 = 2 x 2 x 2 x 2 x 5, 63 = 3 x 3 x 7) are written in the text and the reasoning is in words; the book prints no picture here (teaching image C113.IMG1 is not linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S19.T19.C114",
+   "role": "worked_example",
+   "lp_book_number": "Worked example E0: Divisibility from prime factors",
+   "ncert_ref": "Section 5.4 - 5.4.q10",
+   "question_text": "We say that 48 is divisible by 12 because when we divide 48 by 12, the remainder is zero. How can we check if one number is divisible by another without carrying out long division?",
+   "block_index": 0,
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A rule in words (the prime factorisation of the second number is included in that of the first) with 48 and 12 written as products; no picture in the book (teaching image C114.IMG1 is not linked).",
+   "lp_placeholder_action": "no_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C116",
+   "role": "question",
+   "lp_book_number": "Example 2: are 40 and 231 co-prime",
+   "ncert_ref": "Section 5.4 - 5.4.ex1",
+   "question_text": "Consider 40 and 231. Their prime factorisations are 40 = 2 × 2 × 2 × 5 and 231 = 3 × 7 × 11. Are they co-prime?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Both prime factorisations (40 and 231) are given in the question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C117",
+   "role": "solution",
+   "lp_book_number": "Example 2: are 40 and 231 co-prime",
+   "ncert_ref": "Section 5.4 - 5.4.ex1",
+   "question_text": "Consider 40 and 231. Their prime factorisations are 40 = 2 × 2 × 2 × 5 and 231 = 3 × 7 × 11. Are they co-prime?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer lists the prime factors of 40 and 231 in a line each and says there is no common prime; no picture needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C118",
+   "role": "question",
+   "lp_book_number": "Example 3: are 242 and 195 co-prime",
+   "ncert_ref": "Section 5.4 - 5.4.ex2",
+   "question_text": "Consider 242 and 195. Their prime factorisations are 242 = 2 × 11 × 11 and 195 = 3 × 5 × 13. Are they co-prime?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Both prime factorisations (242 and 195) are given in the question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C119",
+   "role": "solution",
+   "lp_book_number": "Example 3: are 242 and 195 co-prime",
+   "ncert_ref": "Section 5.4 - 5.4.ex2",
+   "question_text": "Consider 242 and 195. Their prime factorisations are 242 = 2 × 11 × 11 and 195 = 3 × 5 × 13. Are they co-prime?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer lists the prime factors of 242 and 195 in a line each and says there is no common prime; no picture needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C120",
+   "role": "question",
+   "lp_book_number": "Example 4: is 168 divisible by 12",
+   "ncert_ref": "Section 5.4 - 5.4.ex3",
+   "question_text": "Is 168 divisible by 12? Find the prime factorisations of both: 168 = 2 × 2 × 2 × 3 × 7 and 12 = 2 × 2 × 3.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Both prime factorisations (168 and 12) are given in the question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C121",
+   "role": "solution",
+   "lp_book_number": "Example 4: is 168 divisible by 12",
+   "ncert_ref": "Section 5.4 - 5.4.ex3",
+   "question_text": "Is 168 divisible by 12? Find the prime factorisations of both: 168 = 2 × 2 × 2 × 3 × 7 and 12 = 2 × 2 × 3.",
+   "decision": "none",
+   "reason_codes": [
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "One line of arithmetic, 168 = 2 x 2 x 3 x 2 x 7 = 12 x 14; the printed answer is text.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C122",
+   "role": "question",
+   "lp_book_number": "Example 5: is 75 divisible by 21",
+   "ncert_ref": "Section 5.4 - 5.4.ex4",
+   "question_text": "Is 75 divisible by 21? Find the prime factorisations of both: 75 = 3 × 5 × 5 and 21 = 3 × 7.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Both prime factorisations (75 and 21) are given in the question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C123",
+   "role": "solution",
+   "lp_book_number": "Example 5: is 75 divisible by 21",
+   "ncert_ref": "Section 5.4 - 5.4.ex4",
+   "question_text": "Is 75 divisible by 21? Find the prime factorisations of both: 75 = 3 × 5 × 5 and 21 = 3 × 7.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer says 7 divides 21 but is not a prime factor of 75; it is a sentence plus factorisations, no picture needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C124",
+   "role": "question",
+   "lp_book_number": "Example 6: is 42 divisible by 12",
+   "ncert_ref": "Section 5.4 - 5.4.ex5",
+   "question_text": "Is 42 divisible by 12? Find the prime factorisations of both: 42 = 2 × 3 × 7 and 12 = 2 × 2 × 3.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "Both prime factorisations (42 and 12) are given in the question; no figure in the book.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M3.S20.T20.C125",
+   "role": "solution",
+   "lp_book_number": "Example 6: is 42 divisible by 12",
+   "ncert_ref": "Section 5.4 - 5.4.ex5",
+   "question_text": "Is 42 divisible by 12? Find the prime factorisations of both: 42 = 2 × 3 × 7 and 12 = 2 × 2 × 3.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT",
+    "LATEX_ARITHMETIC"
+   ],
+   "reason": "The answer says 2 occurs twice in 12 and once in 42; a sentence plus factorisations, no picture needed.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  }
+ ]
+}

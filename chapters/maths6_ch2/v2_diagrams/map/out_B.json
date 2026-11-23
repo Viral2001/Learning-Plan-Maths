@@ -1,0 +1,5798 @@
+{
+ "meta": {
+  "chapter": "Lines and Angles",
+  "class": 6,
+  "textbook": "Ganita Prakash, Grade 6, Chapter 2",
+  "lp_plan_id": "cbse_eng_maths6_ch2_v56",
+  "prompt": "diagram_identification_prompt.md v3",
+  "placeholder_token_format": "{{DIAGRAM:<media_id>}}",
+  "counts_by_role_and_decision": {
+   "question": {
+    "required": 5,
+    "none": 5,
+    "optional": 1
+   },
+   "solution": {
+    "none": 6,
+    "required": 4,
+    "optional": 1
+   },
+   "worked_example": {
+    "none": 4,
+    "required": 4,
+    "optional": 1
+   }
+  },
+  "notes": [
+   "Chunk B: Figure it Out 2.5, Comparing Angles, Questions: Comparing Angles, Figure it Out 2.6, Making Rotating Arms, and the 'justify why the two angles are equal' block of Straight Angles and Right Angles.",
+   "Standalone solution figures (question without a figure, answer is a drawing): FiO 2.5 Q2, Q5, Q6 and FiO 2.6 Q1; their shapes and points are all in ANSWER green, letters in INK.",
+   "FiO 2.5 Q1 asks for the four given pictures of everyday objects (bicycle, crate, ladder, bridge): drawn as schematic line art, the one judgement call that may need the user's decision (alternative: none, NOT_RENDERABLE).",
+   "Ray directions of the angle figures are visual estimates read off the book pictures, the book prints no measures."
+  ]
+ },
+ "style_tokens": {
+  "BG": "#FFFFFF",
+  "INK": "#2B2B2B",
+  "MARK_FILL": "#CDEBD9",
+  "ANSWER": "#009E73",
+  "FOCUS": "#CC79A7",
+  "WRONG": "#D55E00",
+  "GUIDE": "#6B7280",
+  "SET_A": "#0072B2",
+  "SET_B": "#E69F00",
+  "CELL_FILL": "#F1EEF6"
+ },
+ "figure_inventory": [
+  {
+   "fig_id": "P07-picture-2",
+   "source": "chapter p.07",
+   "description": "Bicycle line drawing with three black rays DA, DB, DC from the point D (pedal centre) and dots A, B, C; Figure it Out 2.5 Q1, picture 1.",
+   "mapped_to": "item:M1.S7.T7.C29 (question)"
+  },
+  {
+   "fig_id": "P07-picture-3",
+   "source": "chapter p.07",
+   "description": "Plank crate (square frame with a top bar), pinwheel of four groups of slanting planks and two long boards; Q1 picture 2.",
+   "mapped_to": "item:M1.S7.T7.C29 (question)"
+  },
+  {
+   "fig_id": "P08-picture-1",
+   "source": "chapter p.08",
+   "description": "Step ladder (A-frame) with 5 steps and rear rungs; Q1 picture 3.",
+   "mapped_to": "item:M1.S7.T7.C29 (question)"
+  },
+  {
+   "fig_id": "P08-picture-2",
+   "source": "chapter p.08",
+   "description": "Truss bridge over a river: deck beam, top beam, 2 slanted end posts, 5 vertical posts, 4 diagonals; Q1 picture 4.",
+   "mapped_to": "item:M1.S7.T7.C29 (question)"
+  },
+  {
+   "fig_id": "P08-angle-3",
+   "source": "chapter p.08",
+   "description": "Three rays PA, PB, PC from P (A upper, B middle, C lower); Q3 given figure.",
+   "mapped_to": "item:M1.S7.T7.C33 (question)"
+  },
+  {
+   "fig_id": "P08-angle-4",
+   "source": "chapter p.08",
+   "description": "Rays TR, TQ, TP from T with two curves from TR (inner to TQ, outer to TP); Q4 given figure.",
+   "mapped_to": "item:M1.S7.T7.C35 (question)"
+  },
+  {
+   "fig_id": "SOL45-shape-1",
+   "source": "solutions p.45",
+   "description": "Printed answer of Q2: angle with vertex S, arm ST horizontal, arm SR about 50 degrees up, a curve at S (printed under the Q4 heading but lettered S, T, R, so it answers Q2).",
+   "mapped_to": "item:M1.S7.T7.C32 (solution)"
+  },
+  {
+   "fig_id": "SOL45-shape-2",
+   "source": "solutions p.45",
+   "description": "Printed answer of Q5: three lines CB, CA, BA forming a triangle with a curve at each corner.",
+   "mapped_to": "item:M1.S7.T7.C38 (solution)"
+  },
+  {
+   "fig_id": "SOL46-shape-1",
+   "source": "solutions p.46",
+   "description": "Printed answer of Q6: six lines through the pairs of A, B, C, D with three curves at each point.",
+   "mapped_to": "item:M1.S7.T7.C40 (solution)"
+  },
+  {
+   "fig_id": "P09-photo_set-1",
+   "source": "chapter p.09",
+   "description": "Four colour cartoon animals (snake, fish, bird, crocodile) with open mouths; not drawable as a diagram, the idea is in the teaching image of the concept.",
+   "mapped_to": "none:NOT_RENDERABLE"
+  },
+  {
+   "fig_id": "P09-angle_set-2",
+   "source": "chapter p.09",
+   "description": "Four separate angles of about 142, 110, 52 and 67 degrees with different arm lengths, each with a curve, no letters (Math Talk 'Here are some angles').",
+   "mapped_to": "item:M2.S8.T8.C42 (question)"
+  },
+  {
+   "fig_id": "P10-angle_set-1",
+   "source": "chapter p.10",
+   "description": "Teaching figure: angle ABC, angle PQR and the two superimposed (PQR larger); no question, solution or worked example uses it and no concept image carries it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P10-angle_set-2",
+   "source": "chapter p.10",
+   "description": "Angle AOB, angle XOY (both about 60 degrees, XOY with longer arms) and the two superimposed; the two given panels are drawn for the worked example, the superimposed panel stays in the teaching image.",
+   "mapped_to": "item:M2.S8.T8.C43 (question)"
+  },
+  {
+   "fig_id": "P11-photo-1",
+   "source": "chapter p.11",
+   "description": "Photograph of a rectangular sheet with one slanting crease, no letters; only illustrates the folding task of Figure it Out 2.6 Q1.",
+   "mapped_to": "none:OPEN_ENDED"
+  },
+  {
+   "fig_id": "P11-angle_set-2",
+   "source": "chapter p.11",
+   "description": "Figure of Q2: rays OB (with C farther out), OA vertical, OX (about 60 degrees), OY (about 28 degrees) from O.",
+   "mapped_to": "item:M2.S10.T10.C54 (question)"
+  },
+  {
+   "fig_id": "P11-angle_set-3",
+   "source": "chapter p.11",
+   "description": "Figure of Q3: rays OB, OY (about 12 degrees), OA (about 55 degrees), OX (about 123 degrees) from O.",
+   "mapped_to": "item:M2.S10.T10.C56 (question)"
+  },
+  {
+   "fig_id": "P11-photo-4",
+   "source": "chapter p.11",
+   "description": "Fig. 2.10: two cartoon cranes with open beaks; cannot be drawn faithfully, the next example draws the circle on their two angles.",
+   "mapped_to": "none:NOT_RENDERABLE"
+  },
+  {
+   "fig_id": "P12-photo_set-1",
+   "source": "chapter p.12",
+   "description": "Transparent circle on the first crane's angle with marks A and B on the circle, and the circle alone with O, A, B; drawn as the left panel of the worked example.",
+   "mapped_to": "item:M2.S8.T8.C45 (question)"
+  },
+  {
+   "fig_id": "P12-photo-2",
+   "source": "chapter p.12",
+   "description": "Circle placed on the second crane's angle: O, A, X on the lower arm, Y on the upper arm just below B; drawn as the right panel of the worked example.",
+   "mapped_to": "item:M2.S8.T8.C45 (question)"
+  },
+  {
+   "fig_id": "P13-photo_set-1",
+   "source": "chapter p.13",
+   "description": "Three small pictures of two paper straws and a paper clip (steps 1 to 3); the steps are fully in words.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P14-illustration-1",
+   "source": "chapter p.14",
+   "description": "Cartoon boy peeping over a cardboard with an angle-shaped slit and four floating rotating arms; decorative.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P14-photo_set-2",
+   "source": "chapter p.14",
+   "description": "Three panels of the slit with arms narrower, wider and equal; teaching figure whose three cases are written as steps of the worked example (optional there).",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P15-illustration-1",
+   "source": "chapter p.15",
+   "description": "Three-panel cartoon: 'Reduce this angle' / snip / 'The angle is still the same!'; decorative, dialogue in the question text.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P15-illustration-2",
+   "source": "chapter p.15",
+   "description": "Two cartoon panels of Vidya turning the book cover a full turn and a half turn.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  },
+  {
+   "fig_id": "P15-straight_angle-3",
+   "source": "chapter p.15",
+   "description": "Fig. 2.11: line A-O-B with a half-turn arrow over O (straight angle); teaching figure, no item uses it.",
+   "mapped_to": "none:TEXT_SUFFICIENT"
+  },
+  {
+   "fig_id": "P16-angle_set-1",
+   "source": "chapter p.16",
+   "description": "Straight angle AOB with ray OC (two unequal angles) and the same drawing pulled apart and flipped; teaching figure of the same A-O-B-C layout as the concept image.",
+   "mapped_to": "concept_image:M2.S12.T12.C62.IMG1"
+  },
+  {
+   "fig_id": "P16-paper_fold-2",
+   "source": "chapter p.16",
+   "description": "Three sheets: flat with A, O, B and a semicircle over O; half folded; unfolded with a straight crease through O. The unfolded sheet is drawn for the worked example.",
+   "mapped_to": "item:M2.S12.T12.C63 (question)"
+  },
+  {
+   "fig_id": "SOL47-shape-1",
+   "source": "solutions p.47",
+   "description": "Printed answer of Figure it Out 2.6 Q1: rectangle C, D, B, A with crease FE and curves at F and E.",
+   "mapped_to": "item:M2.S10.T10.C53 (solution)"
+  },
+  {
+   "fig_id": "NEW-P17-cartoon-triangles",
+   "source": "chapter p.17",
+   "description": "NEW (not in the base inventory): cartoon of three smiling triangles in speech bubbles ('Why shouldn't you argue with a 90 degree angle?'); decorative joke, no mathematical marking.",
+   "mapped_to": "none:DECORATIVE_ONLY"
+  }
+ ],
+ "coverage_report": {
+  "inventory_figures": 29,
+  "mapped_to_items": 17,
+  "mapped_to_concept_images": 1,
+  "mapped_none": 11,
+  "unmapped": 0,
+  "new_media_ids_created": [
+   "M1.S7.T7.C29.IMG1",
+   "M1.S7.T7.C32.IMG1",
+   "M1.S7.T7.C33.IMG1",
+   "M1.S7.T7.C35.IMG1",
+   "M1.S7.T7.C38.IMG1",
+   "M1.S7.T7.C40.IMG1",
+   "M2.S8.T8.C42.IMG1",
+   "M2.S8.T8.C43.IMG2",
+   "M2.S8.T8.C45.IMG1",
+   "M2.S10.T10.C53.IMG1",
+   "M2.S10.T10.C54.IMG1",
+   "M2.S10.T10.C56.IMG1",
+   "M2.S12.T12.C63.IMG1"
+  ],
+  "lp_ids_dropped": []
+ },
+ "items": [
+  {
+   "lp_concept_id": "M1.S7.T7.C29",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.5, Q1",
+   "ncert_ref": "Section 2.5 - Figure it Out Q1",
+   "question_text": "Can you find the angles in the given pictures? Draw the rays forming any one of the angles and name the vertex of the angle. (Pictures: a bicycle with points A, B, C, D and arrows marked on it, a wooden crate with slanting slats, a ladder, a bridge.)",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The learner must look at the four given pictures (bicycle with points A to D, crate, ladder, bridge) to find an angle; the text only names the objects.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S7.T7.C29.IMG1",
+   "manim_scene": "c6_2_2_5_FiO1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S7.T7.C29.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "other",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "other",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "cells": "2x2: bicycle, crate / ladder, bridge"
+     },
+     "panels": [
+      {
+       "name": "bicycle",
+       "cell_centre": [
+        4.1,
+        6.75
+       ],
+       "scale": 0.91,
+       "marked_points": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "rays_at_D": [
+        "DA",
+        "DB",
+        "DC"
+       ],
+       "wheels": 2,
+       "spokes_per_wheel": 16
+      },
+      {
+       "name": "crate",
+       "cell_centre": [
+        11.9,
+        6.75
+       ],
+       "scale": 0.89,
+       "plank_lines": {
+        "top": 8,
+        "left": 9,
+        "right": 8,
+        "bottom": 6
+       },
+       "long_boards": 2
+      },
+      {
+       "name": "step ladder",
+       "cell_centre": [
+        4.1,
+        2.25
+       ],
+       "scale": 0.38,
+       "steps": 5,
+       "rear_rungs": 3,
+       "rails": 4
+      },
+      {
+       "name": "truss bridge",
+       "cell_centre": [
+        11.9,
+        2.25
+       ],
+       "scale": 0.61,
+       "vertical_posts": 5,
+       "diagonals": 4,
+       "slanted_end_posts": 2
+      }
+     ],
+     "primitives": [
+      {
+       "kind": "circle",
+       "c": [
+        2.59,
+        6.11
+       ],
+       "r": 0.91,
+       "colour": "GUIDE",
+       "fill": null,
+       "width": 3,
+       "name": null
+      },
+      {
+       "kind": "circle",
+       "c": [
+        2.59,
+        6.11
+       ],
+       "r": 0.82,
+       "colour": "GUIDE",
+       "fill": null,
+       "width": 2,
+       "name": null
+      },
+      {
+       "kind": "circle",
+       "c": [
+        2.59,
+        6.11
+       ],
+       "r": 0.09,
+       "colour": "GUIDE",
+       "fill": null,
+       "width": 2,
+       "name": null
+      },
+      {
+       "kind": "spokes",
+       "c": [
+        2.59,
+        6.11
+       ],
+       "r0": 0.09,
+       "r1": 0.82,
+       "n": 16,
+       "colour": "GUIDE",
+       "width": 2,
+       "name": null
+      },
+      {
+       "kind": "circle",
+       "c": [
+        5.61,
+        6.11
+       ],
+       "r": 0.91,
+       "colour": "GUIDE",
+       "fill": null,
+       "width": 3,
+       "name": null
+      },
+      {
+       "kind": "circle",
+       "c": [
+        5.61,
+        6.11
+       ],
+       "r": 0.82,
+       "colour": "GUIDE",
+       "fill": null,
+       "width": 2,
+       "name": null
+      },
+      {
+       "kind": "circle",
+       "c": [
+        5.61,
+        6.11
+       ],
+       "r": 0.09,
+       "colour": "GUIDE",
+       "fill": null,
+       "width": 2,
+       "name": null
+      },
+      {
+       "kind": "spokes",
+       "c": [
+        5.61,
+        6.11
+       ],
+       "r0": 0.09,
+       "r1": 0.82,
+       "n": 16,
+       "colour": "GUIDE",
+       "width": 2,
+       "name": null
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.87,
+        6.04
+       ],
+       "b": [
+        3.28,
+        7.55
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "seat tube"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.87,
+        6.04
+       ],
+       "b": [
+        5.03,
+        7.32
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "down tube"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.45,
+        7.19
+       ],
+       "b": [
+        4.96,
+        7.37
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "top tube"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        4.92,
+        7.64
+       ],
+       "b": [
+        5.03,
+        7.3
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "head tube"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        5.03,
+        7.3
+       ],
+       "b": [
+        5.61,
+        6.11
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "fork"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.87,
+        6.04
+       ],
+       "b": [
+        2.59,
+        6.11
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "chain stay"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        2.59,
+        6.11
+       ],
+       "b": [
+        3.46,
+        7.13
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "seat stay"
+      },
+      {
+       "kind": "polyline",
+       "pts": [
+        [
+         2.93,
+         7.7
+        ],
+        [
+         3.28,
+         7.84
+        ],
+        [
+         3.63,
+         7.7
+        ],
+        [
+         3.28,
+         7.63
+        ]
+       ],
+       "colour": "GUIDE",
+       "closed": true,
+       "fill": null,
+       "width": 3,
+       "name": "seat"
+      },
+      {
+       "kind": "polyline",
+       "pts": [
+        [
+         4.92,
+         7.64
+        ],
+        [
+         4.83,
+         7.92
+        ],
+        [
+         4.94,
+         8.04
+        ],
+        [
+         5.01,
+         8.19
+        ],
+        [
+         4.82,
+         8.28
+        ],
+        [
+         4.36,
+         8.3
+        ]
+       ],
+       "colour": "GUIDE",
+       "closed": false,
+       "fill": null,
+       "width": 3,
+       "name": "stem and handlebar"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        4.36,
+        8.3
+       ],
+       "b": [
+        4.68,
+        8.28
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 6,
+       "dashed": false,
+       "name": "handlebar grip"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.87,
+        6.04
+       ],
+       "b": [
+        4.03,
+        5.69
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "crank"
+      },
+      {
+       "kind": "rect",
+       "p0": [
+        3.86,
+        5.58
+       ],
+       "p1": [
+        4.21,
+        5.69
+       ],
+       "colour": "GUIDE",
+       "fill": null,
+       "width": 3,
+       "name": "pedal"
+      },
+      {
+       "kind": "circle",
+       "c": [
+        3.87,
+        6.04
+       ],
+       "r": 0.18,
+       "colour": "GUIDE",
+       "fill": null,
+       "width": 2,
+       "name": null
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.87,
+        6.04
+       ],
+       "b": [
+        2.31,
+        6.15
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray DA"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.87,
+        6.04
+       ],
+       "b": [
+        3.27,
+        7.61
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray DB"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.87,
+        6.04
+       ],
+       "b": [
+        5.03,
+        7.32
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray DC"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        2.83,
+        6.11
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "A"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        3.53,
+        6.91
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "B"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        4.76,
+        7.01
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "C"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        3.87,
+        6.04
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "D"
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "where": "below",
+       "colour": "INK",
+       "at": [
+        2.83,
+        5.66
+       ],
+       "point": [
+        2.83,
+        6.11
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "where": "right",
+       "colour": "INK",
+       "at": [
+        3.98,
+        6.91
+       ],
+       "point": [
+        3.53,
+        6.91
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "where": "left",
+       "colour": "INK",
+       "at": [
+        4.31,
+        7.01
+       ],
+       "point": [
+        4.76,
+        7.01
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "D",
+       "where": "right",
+       "colour": "INK",
+       "at": [
+        4.32,
+        6.04
+       ],
+       "point": [
+        3.87,
+        6.04
+       ]
+      },
+      {
+       "kind": "rect",
+       "p0": [
+        9.98,
+        8.14
+       ],
+       "p1": [
+        13.82,
+        8.45
+       ],
+       "colour": "GUIDE",
+       "fill": null,
+       "width": 3,
+       "name": "top bar (lintel)"
+      },
+      {
+       "kind": "rect",
+       "p0": [
+        10.12,
+        5.05
+       ],
+       "p1": [
+        13.73,
+        8.16
+       ],
+       "colour": "GUIDE",
+       "fill": null,
+       "width": 3,
+       "name": "outer frame"
+      },
+      {
+       "kind": "rect",
+       "p0": [
+        10.33,
+        5.24
+       ],
+       "p1": [
+        13.52,
+        7.99
+       ],
+       "colour": "GUIDE",
+       "fill": null,
+       "width": 3,
+       "name": "inner panel"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        10.33,
+        7.99
+       ],
+       "b": [
+        13.52,
+        5.24
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "diagonal board edge"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        12.94,
+        7.99
+       ],
+       "b": [
+        11.78,
+        6.76
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "upper long board, left edge"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        13.33,
+        7.99
+       ],
+       "b": [
+        12.07,
+        6.54
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "upper long board, right edge"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        11.05,
+        5.24
+       ],
+       "b": [
+        12.12,
+        6.38
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "lower long board, left edge"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        11.53,
+        5.24
+       ],
+       "b": [
+        12.37,
+        6.19
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "lower long board, right edge"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        10.46,
+        7.99
+       ],
+       "b": [
+        10.4,
+        7.93
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "top group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        10.63,
+        7.99
+       ],
+       "b": [
+        10.5,
+        7.85
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "top group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        10.84,
+        7.99
+       ],
+       "b": [
+        10.61,
+        7.75
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "top group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        11.1,
+        7.99
+       ],
+       "b": [
+        10.76,
+        7.63
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "top group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        11.4,
+        7.99
+       ],
+       "b": [
+        10.92,
+        7.48
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "top group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        11.76,
+        7.99
+       ],
+       "b": [
+        11.12,
+        7.31
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "top group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        12.14,
+        7.99
+       ],
+       "b": [
+        11.33,
+        7.13
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "top group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        12.54,
+        7.99
+       ],
+       "b": [
+        11.56,
+        6.94
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "top group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        10.33,
+        7.87
+       ],
+       "b": [
+        12.09,
+        6.35
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "left group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        10.33,
+        7.65
+       ],
+       "b": [
+        11.98,
+        6.23
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "left group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        10.33,
+        7.35
+       ],
+       "b": [
+        11.82,
+        6.06
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "left group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        10.33,
+        7.01
+       ],
+       "b": [
+        11.65,
+        5.87
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "left group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        10.33,
+        6.65
+       ],
+       "b": [
+        11.46,
+        5.67
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "left group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        10.33,
+        6.33
+       ],
+       "b": [
+        11.3,
+        5.5
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "left group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        10.33,
+        5.99
+       ],
+       "b": [
+        11.12,
+        5.31
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "left group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        10.33,
+        5.68
+       ],
+       "b": [
+        10.84,
+        5.24
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "left group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        10.33,
+        5.42
+       ],
+       "b": [
+        10.55,
+        5.24
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "left group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        13.52,
+        7.88
+       ],
+       "b": [
+        13.4,
+        7.99
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "right group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        13.52,
+        7.66
+       ],
+       "b": [
+        13.25,
+        7.9
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "right group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        13.52,
+        7.36
+       ],
+       "b": [
+        13.1,
+        7.73
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "right group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        13.52,
+        7.1
+       ],
+       "b": [
+        12.97,
+        7.58
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "right group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        13.52,
+        6.77
+       ],
+       "b": [
+        12.8,
+        7.39
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "right group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        13.52,
+        6.38
+       ],
+       "b": [
+        12.61,
+        7.17
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "right group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        13.52,
+        6.02
+       ],
+       "b": [
+        12.44,
+        6.96
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "right group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        13.52,
+        5.69
+       ],
+       "b": [
+        12.27,
+        6.77
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "right group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        11.93,
+        5.24
+       ],
+       "b": [
+        12.61,
+        6.02
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "bottom group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        12.34,
+        5.24
+       ],
+       "b": [
+        12.85,
+        5.82
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "bottom group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        12.68,
+        5.24
+       ],
+       "b": [
+        13.04,
+        5.65
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "bottom group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        13.0,
+        5.24
+       ],
+       "b": [
+        13.22,
+        5.5
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "bottom group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        13.19,
+        5.24
+       ],
+       "b": [
+        13.33,
+        5.4
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "bottom group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        13.3,
+        5.24
+       ],
+       "b": [
+        13.39,
+        5.35
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 2,
+       "dashed": false,
+       "name": "bottom group plank line"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.04,
+        4.05
+       ],
+       "b": [
+        2.89,
+        0.71
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 6,
+       "dashed": false,
+       "name": "front-left rail"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.18,
+        4.05
+       ],
+       "b": [
+        4.19,
+        0.45
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 6,
+       "dashed": false,
+       "name": "front-right rail"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.87,
+        3.65
+       ],
+       "b": [
+        3.93,
+        0.7
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 4,
+       "dashed": false,
+       "name": "back-left rail"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        4.1,
+        4.01
+       ],
+       "b": [
+        5.31,
+        0.49
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 6,
+       "dashed": false,
+       "name": "back-right rail"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.29,
+        3.8
+       ],
+       "b": [
+        4.14,
+        3.8
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 5,
+       "dashed": false,
+       "name": "step 1 (from the top)"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.48,
+        3.18
+       ],
+       "b": [
+        4.31,
+        3.18
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 5,
+       "dashed": false,
+       "name": "step 2 (from the top)"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.7,
+        2.5
+       ],
+       "b": [
+        4.57,
+        2.5
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 5,
+       "dashed": false,
+       "name": "step 3 (from the top)"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.97,
+        1.77
+       ],
+       "b": [
+        4.8,
+        1.77
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 5,
+       "dashed": false,
+       "name": "step 4 (from the top)"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        4.12,
+        1.13
+       ],
+       "b": [
+        5.02,
+        1.13
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 5,
+       "dashed": false,
+       "name": "step 5 (from the top)"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.14,
+        2.64
+       ],
+       "b": [
+        3.46,
+        2.64
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 4,
+       "dashed": false,
+       "name": "rear rung 1 (from the top)"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.1,
+        1.96
+       ],
+       "b": [
+        3.63,
+        1.96
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 4,
+       "dashed": false,
+       "name": "rear rung 2 (from the top)"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.06,
+        1.32
+       ],
+       "b": [
+        3.82,
+        1.32
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 4,
+       "dashed": false,
+       "name": "rear rung 3 (from the top)"
+      },
+      {
+       "kind": "polyline",
+       "pts": [
+        [
+         8.43,
+         1.82
+        ],
+        [
+         15.31,
+         1.7
+        ],
+        [
+         15.4,
+         1.45
+        ],
+        [
+         8.4,
+         1.54
+        ]
+       ],
+       "colour": "GUIDE",
+       "closed": true,
+       "fill": null,
+       "width": 3,
+       "name": "deck beam"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        9.54,
+        3.05
+       ],
+       "b": [
+        14.11,
+        2.93
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 5,
+       "dashed": false,
+       "name": "top beam"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        8.68,
+        1.84
+       ],
+       "b": [
+        9.55,
+        2.99
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 4,
+       "dashed": false,
+       "name": "left slanted end post"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        15.12,
+        1.73
+       ],
+       "b": [
+        14.08,
+        2.85
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 4,
+       "dashed": false,
+       "name": "right slanted end post"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        9.6,
+        2.99
+       ],
+       "b": [
+        9.6,
+        1.8
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "vertical post 1 (from the left)"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        10.7,
+        2.96
+       ],
+       "b": [
+        10.7,
+        1.78
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "vertical post 2 (from the left)"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        11.81,
+        2.96
+       ],
+       "b": [
+        11.81,
+        1.76
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "vertical post 3 (from the left)"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        12.94,
+        2.94
+       ],
+       "b": [
+        12.94,
+        1.75
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "vertical post 4 (from the left)"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        14.08,
+        2.89
+       ],
+       "b": [
+        14.08,
+        1.72
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "vertical post 5 (from the left)"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        9.6,
+        2.99
+       ],
+       "b": [
+        10.7,
+        1.78
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "diagonal 1"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        11.81,
+        2.96
+       ],
+       "b": [
+        10.7,
+        1.78
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "diagonal 2"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        11.81,
+        2.96
+       ],
+       "b": [
+        12.94,
+        1.75
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "diagonal 3"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        14.08,
+        2.89
+       ],
+       "b": [
+        12.94,
+        1.75
+       ],
+       "colour": "GUIDE",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "diagonal 4"
+      }
+     ]
+    },
+    "manim_description": "Canvas 16 by 9 units, origin at the bottom-left corner, y upwards, plain white BG, split into four equal cells (2 by 2) that hold four line drawings of everyday objects, in reading order: bicycle (top-left), plank crate (top-right), step ladder (bottom-left), truss bridge (bottom-right). Object outlines use GUIDE (grey), stroke 2 to 6 px as listed; the points and rays marked on the bicycle use INK. Trees, river and scenery of the book picture are not drawn. BICYCLE: Draw the circle outline with centre (2.59, 6.11) and radius 0.91 in GUIDE, stroke 3 px, no fill. Draw the circle outline with centre (2.59, 6.11) and radius 0.82 in GUIDE, stroke 2 px, no fill. Draw the circle outline with centre (2.59, 6.11) and radius 0.09 in GUIDE, stroke 2 px, no fill. Draw 16 spokes as segments from radius 0.09 to radius 0.82 around (2.59, 6.11), at angles 0, 22.5, 45, ... degrees in steps of 22.5 degrees, in GUIDE, stroke 2 px. Draw the circle outline with centre (5.61, 6.11) and radius 0.91 in GUIDE, stroke 3 px, no fill. Draw the circle outline with centre (5.61, 6.11) and radius 0.82 in GUIDE, stroke 2 px, no fill. Draw the circle outline with centre (5.61, 6.11) and radius 0.09 in GUIDE, stroke 2 px, no fill. Draw 16 spokes as segments from radius 0.09 to radius 0.82 around (5.61, 6.11), at angles 0, 22.5, 45, ... degrees in steps of 22.5 degrees, in GUIDE, stroke 2 px. Draw the segment [seat tube] from (3.87, 6.04) to (3.28, 7.55) in GUIDE, stroke 3 px. Draw the segment [down tube] from (3.87, 6.04) to (5.03, 7.32) in GUIDE, stroke 3 px. Draw the segment [top tube] from (3.45, 7.19) to (4.96, 7.37) in GUIDE, stroke 3 px. Draw the segment [head tube] from (4.92, 7.64) to (5.03, 7.3) in GUIDE, stroke 3 px. Draw the segment [fork] from (5.03, 7.3) to (5.61, 6.11) in GUIDE, stroke 3 px. Draw the segment [chain stay] from (3.87, 6.04) to (2.59, 6.11) in GUIDE, stroke 3 px. Draw the segment [seat stay] from (2.59, 6.11) to (3.46, 7.13) in GUIDE, stroke 3 px. Draw the closed polyline [seat] through (2.93, 7.7) then (3.28, 7.84) then (3.63, 7.7) then (3.28, 7.63) in GUIDE, stroke 3 px. Draw the open polyline [stem and handlebar] through (4.92, 7.64) then (4.83, 7.92) then (4.94, 8.04) then (5.01, 8.19) then (4.82, 8.28) then (4.36, 8.3) in GUIDE, stroke 3 px. Draw the segment [handlebar grip] from (4.36, 8.3) to (4.68, 8.28) in GUIDE, stroke 6 px. Draw the segment [crank] from (3.87, 6.04) to (4.03, 5.69) in GUIDE, stroke 3 px. Draw the rectangle outline [pedal] with corners (3.86, 5.58) and (4.21, 5.69) in GUIDE, stroke 3 px, no fill. Draw the circle outline with centre (3.87, 6.04) and radius 0.18 in GUIDE, stroke 2 px, no fill. Draw the segment [ray DA] from (3.87, 6.04) to (2.31, 6.15) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [ray DB] from (3.87, 6.04) to (3.27, 7.61) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [ray DC] from (3.87, 6.04) to (5.03, 7.32) in INK, stroke 3 px, arrowhead at the end point. Draw a filled dot [A] of radius 0.07 at (2.83, 6.11) in INK. Draw a filled dot [B] of radius 0.07 at (3.53, 6.91) in INK. Draw a filled dot [C] of radius 0.07 at (4.76, 7.01) in INK. Draw a filled dot [D] of radius 0.09 at (3.87, 6.04) in INK. Write the letter A in INK, text height 0.45, centred at (2.83, 5.66) (next to the point at (2.83, 6.11)). Write the letter B in INK, text height 0.45, centred at (3.98, 6.91) (next to the point at (3.53, 6.91)). Write the letter C in INK, text height 0.45, centred at (4.31, 7.01) (next to the point at (4.76, 7.01)). Write the letter D in INK, text height 0.45, centred at (4.32, 6.04) (next to the point at (3.87, 6.04)). CRATE: Draw the rectangle outline [top bar (lintel)] with corners (9.98, 8.14) and (13.82, 8.45) in GUIDE, stroke 3 px, no fill. Draw the rectangle outline [outer frame] with corners (10.12, 5.05) and (13.73, 8.16) in GUIDE, stroke 3 px, no fill. Draw the rectangle outline [inner panel] with corners (10.33, 5.24) and (13.52, 7.99) in GUIDE, stroke 3 px, no fill. Draw the segment [diagonal board edge] from (10.33, 7.99) to (13.52, 5.24) in GUIDE, stroke 3 px. Draw the segment [upper long board, left edge] from (12.94, 7.99) to (11.78, 6.76) in GUIDE, stroke 3 px. Draw the segment [upper long board, right edge] from (13.33, 7.99) to (12.07, 6.54) in GUIDE, stroke 3 px. Draw the segment [lower long board, left edge] from (11.05, 5.24) to (12.12, 6.38) in GUIDE, stroke 3 px. Draw the segment [lower long board, right edge] from (11.53, 5.24) to (12.37, 6.19) in GUIDE, stroke 3 px. Draw the segment [top group plank line] from (10.46, 7.99) to (10.4, 7.93) in GUIDE, stroke 2 px. Draw the segment [top group plank line] from (10.63, 7.99) to (10.5, 7.85) in GUIDE, stroke 2 px. Draw the segment [top group plank line] from (10.84, 7.99) to (10.61, 7.75) in GUIDE, stroke 2 px. Draw the segment [top group plank line] from (11.1, 7.99) to (10.76, 7.63) in GUIDE, stroke 2 px. Draw the segment [top group plank line] from (11.4, 7.99) to (10.92, 7.48) in GUIDE, stroke 2 px. Draw the segment [top group plank line] from (11.76, 7.99) to (11.12, 7.31) in GUIDE, stroke 2 px. Draw the segment [top group plank line] from (12.14, 7.99) to (11.33, 7.13) in GUIDE, stroke 2 px. Draw the segment [top group plank line] from (12.54, 7.99) to (11.56, 6.94) in GUIDE, stroke 2 px. Draw the segment [left group plank line] from (10.33, 7.87) to (12.09, 6.35) in GUIDE, stroke 2 px. Draw the segment [left group plank line] from (10.33, 7.65) to (11.98, 6.23) in GUIDE, stroke 2 px. Draw the segment [left group plank line] from (10.33, 7.35) to (11.82, 6.06) in GUIDE, stroke 2 px. Draw the segment [left group plank line] from (10.33, 7.01) to (11.65, 5.87) in GUIDE, stroke 2 px. Draw the segment [left group plank line] from (10.33, 6.65) to (11.46, 5.67) in GUIDE, stroke 2 px. Draw the segment [left group plank line] from (10.33, 6.33) to (11.3, 5.5) in GUIDE, stroke 2 px. Draw the segment [left group plank line] from (10.33, 5.99) to (11.12, 5.31) in GUIDE, stroke 2 px. Draw the segment [left group plank line] from (10.33, 5.68) to (10.84, 5.24) in GUIDE, stroke 2 px. Draw the segment [left group plank line] from (10.33, 5.42) to (10.55, 5.24) in GUIDE, stroke 2 px. Draw the segment [right group plank line] from (13.52, 7.88) to (13.4, 7.99) in GUIDE, stroke 2 px. Draw the segment [right group plank line] from (13.52, 7.66) to (13.25, 7.9) in GUIDE, stroke 2 px. Draw the segment [right group plank line] from (13.52, 7.36) to (13.1, 7.73) in GUIDE, stroke 2 px. Draw the segment [right group plank line] from (13.52, 7.1) to (12.97, 7.58) in GUIDE, stroke 2 px. Draw the segment [right group plank line] from (13.52, 6.77) to (12.8, 7.39) in GUIDE, stroke 2 px. Draw the segment [right group plank line] from (13.52, 6.38) to (12.61, 7.17) in GUIDE, stroke 2 px. Draw the segment [right group plank line] from (13.52, 6.02) to (12.44, 6.96) in GUIDE, stroke 2 px. Draw the segment [right group plank line] from (13.52, 5.69) to (12.27, 6.77) in GUIDE, stroke 2 px. Draw the segment [bottom group plank line] from (11.93, 5.24) to (12.61, 6.02) in GUIDE, stroke 2 px. Draw the segment [bottom group plank line] from (12.34, 5.24) to (12.85, 5.82) in GUIDE, stroke 2 px. Draw the segment [bottom group plank line] from (12.68, 5.24) to (13.04, 5.65) in GUIDE, stroke 2 px. Draw the segment [bottom group plank line] from (13, 5.24) to (13.22, 5.5) in GUIDE, stroke 2 px. Draw the segment [bottom group plank line] from (13.19, 5.24) to (13.33, 5.4) in GUIDE, stroke 2 px. Draw the segment [bottom group plank line] from (13.3, 5.24) to (13.39, 5.35) in GUIDE, stroke 2 px. STEP LADDER: Draw the segment [front-left rail] from (3.04, 4.05) to (2.89, 0.71) in GUIDE, stroke 6 px. Draw the segment [front-right rail] from (3.18, 4.05) to (4.19, 0.45) in GUIDE, stroke 6 px. Draw the segment [back-left rail] from (3.87, 3.65) to (3.93, 0.7) in GUIDE, stroke 4 px. Draw the segment [back-right rail] from (4.1, 4.01) to (5.31, 0.49) in GUIDE, stroke 6 px. Draw the segment [step 1 (from the top)] from (3.29, 3.8) to (4.14, 3.8) in GUIDE, stroke 5 px. Draw the segment [step 2 (from the top)] from (3.48, 3.18) to (4.31, 3.18) in GUIDE, stroke 5 px. Draw the segment [step 3 (from the top)] from (3.7, 2.5) to (4.57, 2.5) in GUIDE, stroke 5 px. Draw the segment [step 4 (from the top)] from (3.97, 1.77) to (4.8, 1.77) in GUIDE, stroke 5 px. Draw the segment [step 5 (from the top)] from (4.12, 1.13) to (5.02, 1.13) in GUIDE, stroke 5 px. Draw the segment [rear rung 1 (from the top)] from (3.14, 2.64) to (3.46, 2.64) in GUIDE, stroke 4 px. Draw the segment [rear rung 2 (from the top)] from (3.1, 1.96) to (3.63, 1.96) in GUIDE, stroke 4 px. Draw the segment [rear rung 3 (from the top)] from (3.06, 1.32) to (3.82, 1.32) in GUIDE, stroke 4 px. TRUSS BRIDGE: Draw the closed polyline [deck beam] through (8.43, 1.82) then (15.31, 1.7) then (15.4, 1.45) then (8.4, 1.54) in GUIDE, stroke 3 px. Draw the segment [top beam] from (9.54, 3.05) to (14.11, 2.93) in GUIDE, stroke 5 px. Draw the segment [left slanted end post] from (8.68, 1.84) to (9.55, 2.99) in GUIDE, stroke 4 px. Draw the segment [right slanted end post] from (15.12, 1.73) to (14.08, 2.85) in GUIDE, stroke 4 px. Draw the segment [vertical post 1 (from the left)] from (9.6, 2.99) to (9.6, 1.8) in GUIDE, stroke 3 px. Draw the segment [vertical post 2 (from the left)] from (10.7, 2.96) to (10.7, 1.78) in GUIDE, stroke 3 px. Draw the segment [vertical post 3 (from the left)] from (11.81, 2.96) to (11.81, 1.76) in GUIDE, stroke 3 px. Draw the segment [vertical post 4 (from the left)] from (12.94, 2.94) to (12.94, 1.75) in GUIDE, stroke 3 px. Draw the segment [vertical post 5 (from the left)] from (14.08, 2.89) to (14.08, 1.72) in GUIDE, stroke 3 px. Draw the segment [diagonal 1] from (9.6, 2.99) to (10.7, 1.78) in GUIDE, stroke 3 px. Draw the segment [diagonal 2] from (11.81, 2.96) to (10.7, 1.78) in GUIDE, stroke 3 px. Draw the segment [diagonal 3] from (11.81, 2.96) to (12.94, 1.75) in GUIDE, stroke 3 px. Draw the segment [diagonal 4] from (14.08, 2.89) to (12.94, 1.75) in GUIDE, stroke 3 px.",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "any letter other than A, B, C, D (only the bicycle is lettered)",
+     "angle curves, angle values or rays on the crate, ladder or bridge",
+     "trees, river, water lines, bushes or the book's brown colouring",
+     "the names of the objects written as text"
+    ],
+    "accuracy_checks": [
+     "bicycle: exactly three rays start at the single point D: DA to the left through A, DB up through B, DC up-right through C; each carries one dot (A, B, C) and an arrowhead at its far end",
+     "bicycle: DB points about 110 degrees from the positive x direction, DC about 48 degrees, DA about 176 degrees (measured from the book picture, not printed)",
+     "ladder: 5 steps between the front-right rail and the back-right rail, 3 rear rungs, 4 rails",
+     "bridge: 5 vertical posts, 4 diagonals (1 and 3 lean down to the right, 2 and 4 lean down to the left), 2 slanted end posts, one deck beam and one top beam",
+     "crate: 2 long boards and 4 groups of plank lines with 8, 9, 8 and 6 lines (top, left, right, bottom), read off a small picture (count may differ by one from the book)",
+     "no angle value is printed in the figure"
+    ],
+    "alt_text": "Four line drawings in a two by two grid: a bicycle with rays DA, DB and DC marked at the point D, a plank crate, a step ladder and a truss bridge.",
+    "render_note": "Schematic line-art redraw of four small book illustrations (bicycle, crate, ladder, bridge). The crate and ladder are drawn from a very small picture, plank counts and rung positions are read off by eye; keep the structure (pinwheel of four plank groups with two long boards; A-frame ladder with 5 steps; truss with 5 posts and 4 diagonals) rather than exact plank positions. Only the bicycle carries letters and rays; the other three have no marks."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C30",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.5, Q1",
+   "ncert_ref": "Section 2.5 - Figure it Out Q1",
+   "question_text": "Can you find the angles in the given pictures? Draw the rays forming any one of the angles and name the vertex of the angle. (Pictures: a bicycle with points A, B, C, D and arrows marked on it, a wooden crate with slanting slats, a ladder, a bridge.)",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM"
+   ],
+   "reason": "The printed answer is text (angle BDC, vertex D, rays DC and DB); the bicycle in the question figure already shows rays DB and DC at D, so a solution figure would only repeat it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Keep the text answer: angle BDC with vertex D, rays DC and DB (all visible in the question figure)."
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C31",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.5, Q2",
+   "ncert_ref": "Section 2.5 - Figure it Out Q2",
+   "question_text": "Draw and label an angle with arms ST and SR.",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question gives no figure: the learner is told the arms ST and SR and draws the angle themselves, so no question figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C32",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.5, Q2",
+   "ncert_ref": "Section 2.5 - Figure it Out Q2",
+   "question_text": "Draw and label an angle with arms ST and SR.",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The printed answer is a drawing (angle with vertex S, arms ST and SR, a curve at S); the question gives no figure, so this figure stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S7.T7.C32.IMG1",
+   "manim_scene": "c6_2_2_5_FiO2_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S7.T7.C32.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9
+     },
+     "to_scale": true,
+     "scale": 1.4,
+     "vertex": "S",
+     "arms": [
+      {
+       "ray": "ST",
+       "direction_deg": 0,
+       "point_T_distance": 4.4
+      },
+      {
+       "ray": "SR",
+       "direction_deg": 50,
+       "point_R_distance": 4.4
+      }
+     ],
+     "angle_deg": 50,
+     "primitives": [
+      {
+       "kind": "segment",
+       "a": [
+        4.36,
+        1.71
+       ],
+       "b": [
+        11.64,
+        1.71
+       ],
+       "colour": "ANSWER",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray ST"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        4.36,
+        1.71
+       ],
+       "b": [
+        9.04,
+        7.29
+       ],
+       "colour": "ANSWER",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray SR"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        4.36,
+        1.71
+       ],
+       "r": 1.19,
+       "a0": 0.0,
+       "a1": 50.0,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "angle curve at S"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        4.36,
+        1.71
+       ],
+       "colour": "ANSWER",
+       "r": 0.09,
+       "name": "S"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        10.52,
+        1.71
+       ],
+       "colour": "ANSWER",
+       "r": 0.07,
+       "name": "T"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        8.32,
+        6.43
+       ],
+       "colour": "ANSWER",
+       "r": 0.07,
+       "name": "R"
+      },
+      {
+       "kind": "label",
+       "text": "S",
+       "where": "below-left",
+       "colour": "INK",
+       "at": [
+        4.04,
+        1.39
+       ],
+       "point": [
+        4.36,
+        1.71
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "T",
+       "where": "below",
+       "colour": "INK",
+       "at": [
+        10.52,
+        1.26
+       ],
+       "point": [
+        10.52,
+        1.71
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "R",
+       "where": "above-left",
+       "colour": "INK",
+       "at": [
+        8.0,
+        6.75
+       ],
+       "point": [
+        8.32,
+        6.43
+       ]
+      }
+     ]
+    },
+    "manim_description": "Canvas 16 by 9 units, origin at the bottom-left corner, y upwards, plain white BG. One acute angle with vertex S, drawn entirely in ANSWER (it is the drawing the question asks for), letters in INK. Draw the segment [ray ST] from (4.36, 1.71) to (11.64, 1.71) in ANSWER, stroke 3 px, arrowhead at the end point. Draw the segment [ray SR] from (4.36, 1.71) to (9.04, 7.29) in ANSWER, stroke 3 px, arrowhead at the end point. Draw the arc [angle curve at S] of the circle with centre (4.36, 1.71) and radius 1.19, from 0 degrees to 50 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw a filled dot [S] of radius 0.09 at (4.36, 1.71) in ANSWER. Draw a filled dot [T] of radius 0.07 at (10.52, 1.71) in ANSWER. Draw a filled dot [R] of radius 0.07 at (8.32, 6.43) in ANSWER. Write the letter S in INK, text height 0.45, centred at (4.04, 1.39) (next to the point at (4.36, 1.71)). Write the letter T in INK, text height 0.45, centred at (10.52, 1.26) (next to the point at (10.52, 1.71)). Write the letter R in INK, text height 0.45, centred at (8, 6.75) (next to the point at (8.32, 6.43)).",
+    "visible_text": [
+     "S",
+     "T",
+     "R"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the angle value in degrees",
+     "arrowheads on the angle curve",
+     "the words 'angle RST' or 'vertex'"
+    ],
+    "accuracy_checks": [
+     "ST and SR start at S; T and R lie at the same distance 4.4 (local units) from S on their rays",
+     "the angle between the rays is 50 degrees (visual estimate from the book's printed answer; no measure is printed)",
+     "one arc at S between the two rays, inside the angle",
+     "letters S, T, R only"
+    ],
+    "alt_text": "An acute angle with vertex S, one arm along the ray ST to the right, the other along the ray SR up to the right, and a small curve at S between them.",
+    "render_note": "Standalone solution figure (no question figure). The book prints no measure; 50 degrees is read off its answer picture."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C33",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.5, Q3",
+   "ncert_ref": "Section 2.5 - Figure it Out Q3",
+   "question_text": "Explain why ∠APB cannot be labelled as ∠P. (Figure: vertex P with three rays going through A (upper), B (middle) and C (lower).)",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The question is about the given figure with three rays from P; the learner needs to see the three rays PA, PB, PC to explain why angle P is ambiguous.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S7.T7.C33.IMG1",
+   "manim_scene": "c6_2_2_5_FiO3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S7.T7.C33.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9
+     },
+     "to_scale": false,
+     "scale": 2.4,
+     "vertex": "P",
+     "rays": [
+      {
+       "ray": "PA",
+       "direction_deg": 34.5
+      },
+      {
+       "ray": "PB",
+       "direction_deg": 0
+      },
+      {
+       "ray": "PC",
+       "direction_deg": -33.5
+      }
+     ],
+     "primitives": [
+      {
+       "kind": "segment",
+       "a": [
+        5.78,
+        4.47
+       ],
+       "b": [
+        9.44,
+        6.98
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray PA"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        8.0,
+        5.99
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "A"
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "where": "below-right",
+       "colour": "INK",
+       "at": [
+        8.32,
+        5.67
+       ],
+       "point": [
+        8.0,
+        5.99
+       ]
+      },
+      {
+       "kind": "segment",
+       "a": [
+        5.78,
+        4.47
+       ],
+       "b": [
+        10.22,
+        4.47
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray PB"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        8.54,
+        4.47
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "B"
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "where": "below",
+       "colour": "INK",
+       "at": [
+        8.54,
+        4.02
+       ],
+       "point": [
+        8.54,
+        4.47
+       ]
+      },
+      {
+       "kind": "segment",
+       "a": [
+        5.78,
+        4.47
+       ],
+       "b": [
+        9.48,
+        2.02
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray PC"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        8.02,
+        2.98
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "C"
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "where": "below-left",
+       "colour": "INK",
+       "at": [
+        7.7,
+        2.66
+       ],
+       "point": [
+        8.02,
+        2.98
+       ]
+      },
+      {
+       "kind": "dot",
+       "a": [
+        5.78,
+        4.47
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "P"
+      },
+      {
+       "kind": "label",
+       "text": "P",
+       "where": "below-left",
+       "colour": "INK",
+       "at": [
+        5.46,
+        4.14
+       ],
+       "point": [
+        5.78,
+        4.47
+       ]
+      }
+     ]
+    },
+    "manim_description": "Canvas 16 by 9 units, origin at the bottom-left corner, y upwards, plain white BG. Three rays leave the single point P and open to the right (A upper, B middle, C lower); everything is INK. No angle curve and no angle value is drawn. Draw the segment [ray PA] from (5.78, 4.47) to (9.44, 6.98) in INK, stroke 3 px, arrowhead at the end point. Draw a filled dot [A] of radius 0.07 at (8, 5.99) in INK. Write the letter A in INK, text height 0.45, centred at (8.32, 5.67) (next to the point at (8, 5.99)). Draw the segment [ray PB] from (5.78, 4.47) to (10.22, 4.47) in INK, stroke 3 px, arrowhead at the end point. Draw a filled dot [B] of radius 0.07 at (8.54, 4.47) in INK. Write the letter B in INK, text height 0.45, centred at (8.54, 4.02) (next to the point at (8.54, 4.47)). Draw the segment [ray PC] from (5.78, 4.47) to (9.48, 2.02) in INK, stroke 3 px, arrowhead at the end point. Draw a filled dot [C] of radius 0.07 at (8.02, 2.98) in INK. Write the letter C in INK, text height 0.45, centred at (7.7, 2.66) (next to the point at (8.02, 2.98)). Draw a filled dot [P] of radius 0.09 at (5.78, 4.47) in INK. Write the letter P in INK, text height 0.45, centred at (5.46, 4.14) (next to the point at (5.78, 4.47)).",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "P"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "angle curves",
+     "angle names or angle values",
+     "the three angle names APB, BPC, APC (the answer)"
+    ],
+    "accuracy_checks": [
+     "three rays PA, PB, PC, all starting at P; PB horizontal, PA about 34.5 degrees above it, PC about 33.5 degrees below it (visual estimate, the book prints no measure)",
+     "A, B, C lie at about the same distance (1.12 to 1.15 local units) from P",
+     "no angle curve is drawn (nothing solved)"
+    ],
+    "alt_text": "Three rays leave the point P to the right, one rising through A, one level through B and one falling through C.",
+    "render_note": "Angles are visual estimates read off the book picture (no measures printed)."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C34",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.5, Q3",
+   "ncert_ref": "Section 2.5 - Figure it Out Q3",
+   "question_text": "Explain why ∠APB cannot be labelled as ∠P. (Figure: vertex P with three rays going through A (upper), B (middle) and C (lower).)",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A copy of the question figure with three curves marking APB, BPC and APC would help, but the answer is a statement and the three angle names are already written; the book's printed solutions do not draw anything for Q3.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optional figure (not added): the Q3 figure with one curve for each of the angles APB, BPC and APC."
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C35",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.5, Q4",
+   "ncert_ref": "Section 2.5 - Figure it Out Q4",
+   "question_text": "Name the angles marked in the given figure. (Figure: vertex T with rays to P, Q and R; curved marks drawn at T.)",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The marked angles live only in the picture (which two curves are drawn at T), so the figure is needed to name them.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S7.T7.C35.IMG1",
+   "manim_scene": "c6_2_2_5_FiO4_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S7.T7.C35.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9
+     },
+     "to_scale": false,
+     "scale": 0.86,
+     "vertex": "T",
+     "rays": [
+      {
+       "ray": "TR",
+       "direction_deg": 0
+      },
+      {
+       "ray": "TQ",
+       "direction_deg": 65
+      },
+      {
+       "ray": "TP",
+       "direction_deg": 104.1
+      }
+     ],
+     "marked_angles": [
+      {
+       "curve": "inner",
+       "from": "TR",
+       "to": "TQ",
+       "radius": 0.9
+      },
+      {
+       "curve": "outer",
+       "from": "TR",
+       "to": "TP",
+       "radius": 1.2
+      }
+     ],
+     "primitives": [
+      {
+       "kind": "segment",
+       "a": [
+        5.41,
+        1.45
+       ],
+       "b": [
+        12.13,
+        1.45
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray TR"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        5.41,
+        1.45
+       ],
+       "b": [
+        7.95,
+        6.91
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray TQ"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        5.41,
+        1.45
+       ],
+       "b": [
+        3.87,
+        7.55
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray TP"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        5.41,
+        1.45
+       ],
+       "r": 0.77,
+       "a0": 0.0,
+       "a1": 65.0,
+       "colour": "INK",
+       "arrow_end": true,
+       "width": 3,
+       "name": "inner curve (from TR to TQ)"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        5.41,
+        1.45
+       ],
+       "r": 1.03,
+       "a0": 0.0,
+       "a1": 104.1,
+       "colour": "INK",
+       "arrow_end": true,
+       "width": 3,
+       "name": "outer curve (from TR to TP)"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        5.41,
+        1.45
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "T"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        11.13,
+        1.45
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "R"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        7.53,
+        6.01
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "Q"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        4.06,
+        6.81
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "P"
+      },
+      {
+       "kind": "label",
+       "text": "T",
+       "where": "below",
+       "colour": "INK",
+       "at": [
+        5.41,
+        1.0
+       ],
+       "point": [
+        5.41,
+        1.45
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "R",
+       "where": "below",
+       "colour": "INK",
+       "at": [
+        11.13,
+        1.0
+       ],
+       "point": [
+        11.13,
+        1.45
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "Q",
+       "where": "right",
+       "colour": "INK",
+       "at": [
+        7.98,
+        6.01
+       ],
+       "point": [
+        7.53,
+        6.01
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "P",
+       "where": "left",
+       "colour": "INK",
+       "at": [
+        3.61,
+        6.81
+       ],
+       "point": [
+        4.06,
+        6.81
+       ]
+      }
+     ]
+    },
+    "manim_description": "Canvas 16 by 9 units, origin at the bottom-left corner, y upwards, plain white BG. Three rays from the single point T: TR horizontal to the right, TQ steeply up to the right, TP up and slightly to the left; two angle curves at T, both starting on TR; everything INK. Draw the segment [ray TR] from (5.41, 1.45) to (12.13, 1.45) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [ray TQ] from (5.41, 1.45) to (7.95, 6.91) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [ray TP] from (5.41, 1.45) to (3.87, 7.55) in INK, stroke 3 px, arrowhead at the end point. Draw the arc [inner curve (from TR to TQ)] of the circle with centre (5.41, 1.45) and radius 0.77, from 0 degrees to 65 degrees (anticlockwise, angles measured from the positive x direction), in INK, stroke 3 px, with a small arrowhead at the end angle. Draw the arc [outer curve (from TR to TP)] of the circle with centre (5.41, 1.45) and radius 1.03, from 0 degrees to 104.1 degrees (anticlockwise, angles measured from the positive x direction), in INK, stroke 3 px, with a small arrowhead at the end angle. Draw a filled dot [T] of radius 0.09 at (5.41, 1.45) in INK. Draw a filled dot [R] of radius 0.09 at (11.13, 1.45) in INK. Draw a filled dot [Q] of radius 0.09 at (7.53, 6.01) in INK. Draw a filled dot [P] of radius 0.09 at (4.06, 6.81) in INK. Write the letter T in INK, text height 0.45, centred at (5.41, 1) (next to the point at (5.41, 1.45)). Write the letter R in INK, text height 0.45, centred at (11.13, 1) (next to the point at (11.13, 1.45)). Write the letter Q in INK, text height 0.45, centred at (7.98, 6.01) (next to the point at (7.53, 6.01)). Write the letter P in INK, text height 0.45, centred at (3.61, 6.81) (next to the point at (4.06, 6.81)).",
+    "visible_text": [
+     "T",
+     "R",
+     "Q",
+     "P"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the angle names RTQ and RTP written on the figure",
+     "angle values",
+     "a curve for the unmarked angle PTQ"
+    ],
+    "accuracy_checks": [
+     "two curves only: the inner one spans TR to TQ, the outer one spans TR to TP, each with a small arrowhead at its end",
+     "the unmarked angle PTQ exists but has no curve",
+     "TQ is about 65 degrees and TP about 104 degrees from TR (visual estimates from the book picture, nothing printed)",
+     "the curves are not labelled with angle names (the learner names them)"
+    ],
+    "alt_text": "Three rays from the point T, TR to the right, TQ steeply up to the right and TP up and slightly left, with two curves at T that both start on TR.",
+    "render_note": "Curve radii 0.9 and 1.2 and the ray angles are read off the book picture."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C36",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.5, Q4",
+   "ncert_ref": "Section 2.5 - Figure it Out Q4",
+   "question_text": "Name the angles marked in the given figure. (Figure: vertex T with rays to P, Q and R; curved marks drawn at T.)",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM"
+   ],
+   "reason": "The answer only names the two angles already marked in the question figure (RTQ and RTP); a solution figure would repeat the question figure. The printed solutions page shows the picture of Q2 under Q4's heading, not a Q4 picture.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C37",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.5, Q5",
+   "ncert_ref": "Section 2.5 - Figure it Out Q5",
+   "question_text": "Mark any three points on your paper that are not on one line. Label them A, B, C. Draw all possible lines going through pairs of these points. How many lines do you get? Name them. How many angles can you name using A, B, C? Write them down, and mark each of them with a curve as in Fig. 2.9. lines) How many lines? Name them. angles) How many angles using A, B, C?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The learner marks their own three points on paper; the question gives no figure ('as in Fig. 2.9' refers to a teaching figure elsewhere).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C38",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.5, Q5",
+   "ncert_ref": "Section 2.5 - Figure it Out Q5",
+   "question_text": "Mark any three points on your paper that are not on one line. Label them A, B, C. Draw all possible lines going through pairs of these points. How many lines do you get? Name them. How many angles can you name using A, B, C? Write them down, and mark each of them with a curve as in Fig. 2.9. lines) How many lines? Name them. angles) How many angles using A, B, C?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The printed answer is a picture: three lines through pairs of A, B, C with one curve at each corner; the question gives no figure, so this figure stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S7.T7.C38.IMG1",
+   "manim_scene": "c6_2_2_5_FiO5_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S7.T7.C38.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9
+     },
+     "to_scale": true,
+     "scale": 0.67,
+     "points_local": {
+      "A": [
+       4.7,
+       -3.48
+      ],
+      "B": [
+       3.85,
+       0.35
+      ],
+      "C": [
+       0.0,
+       0.0
+      ]
+     },
+     "lines": [
+      "AB",
+      "BC",
+      "CA"
+     ],
+     "interior_angles_deg": {
+      "C": 41.71,
+      "B": 97.32,
+      "A": 40.97
+     },
+     "primitives": [
+      {
+       "kind": "segment",
+       "a": [
+        4.94,
+        5.51
+       ],
+       "b": [
+        11.06,
+        6.07
+       ],
+       "colour": "ANSWER",
+       "arrow_end": true,
+       "arrow_start": true,
+       "width": 3,
+       "dashed": false,
+       "name": "line CB"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        5.84,
+        6.4
+       ],
+       "b": [
+        10.88,
+        2.67
+       ],
+       "colour": "ANSWER",
+       "arrow_end": true,
+       "arrow_start": true,
+       "width": 3,
+       "dashed": false,
+       "name": "line CA"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        9.03,
+        7.55
+       ],
+       "b": [
+        10.38,
+        1.45
+       ],
+       "colour": "ANSWER",
+       "arrow_end": true,
+       "arrow_start": true,
+       "width": 3,
+       "dashed": false,
+       "name": "line BA"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        6.81,
+        5.68
+       ],
+       "r": 0.37,
+       "a0": 323.48,
+       "a1": 365.19,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle BCA at C"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        9.39,
+        5.91
+       ],
+       "r": 0.37,
+       "a0": 185.19,
+       "a1": 282.51,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle ABC at B"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        9.96,
+        3.35
+       ],
+       "r": 0.47,
+       "a0": 102.51,
+       "a1": 143.48,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle CAB at A"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        6.81,
+        5.68
+       ],
+       "colour": "ANSWER",
+       "r": 0.07,
+       "name": "C"
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "where": "below-left",
+       "colour": "INK",
+       "at": [
+        6.49,
+        5.36
+       ],
+       "point": [
+        6.81,
+        5.68
+       ]
+      },
+      {
+       "kind": "dot",
+       "a": [
+        9.39,
+        5.91
+       ],
+       "colour": "ANSWER",
+       "r": 0.07,
+       "name": "B"
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "where": "above-right",
+       "colour": "INK",
+       "at": [
+        9.71,
+        6.24
+       ],
+       "point": [
+        9.39,
+        5.91
+       ]
+      },
+      {
+       "kind": "dot",
+       "a": [
+        9.96,
+        3.35
+       ],
+       "colour": "ANSWER",
+       "r": 0.07,
+       "name": "A"
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "where": "below-left",
+       "colour": "INK",
+       "at": [
+        9.64,
+        3.02
+       ],
+       "point": [
+        9.96,
+        3.35
+       ]
+      }
+     ]
+    },
+    "manim_description": "Canvas 16 by 9 units, origin at the bottom-left corner, y upwards, plain white BG. Three straight lines, each through two of the points A, B, C and each with an arrowhead at both ends, form a triangle; one angle curve inside the triangle at each corner. Lines, dots and curves in ANSWER (it is the drawing the question asks for), letters in INK. Draw the segment [line CB] from (4.94, 5.51) to (11.06, 6.07) in ANSWER, stroke 3 px, arrowhead at both ends. Draw the segment [line CA] from (5.84, 6.4) to (10.88, 2.67) in ANSWER, stroke 3 px, arrowhead at both ends. Draw the segment [line BA] from (9.03, 7.55) to (10.38, 1.45) in ANSWER, stroke 3 px, arrowhead at both ends. Draw the arc [curve of angle BCA at C] of the circle with centre (6.81, 5.68) and radius 0.37, from 323.48 degrees to 5.19 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle ABC at B] of the circle with centre (9.39, 5.91) and radius 0.37, from 185.19 degrees to 282.51 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle CAB at A] of the circle with centre (9.96, 3.35) and radius 0.47, from 102.51 degrees to 143.48 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw a filled dot [C] of radius 0.07 at (6.81, 5.68) in ANSWER. Write the letter C in INK, text height 0.45, centred at (6.49, 5.36) (next to the point at (6.81, 5.68)). Draw a filled dot [B] of radius 0.07 at (9.39, 5.91) in ANSWER. Write the letter B in INK, text height 0.45, centred at (9.71, 6.24) (next to the point at (9.39, 5.91)). Draw a filled dot [A] of radius 0.07 at (9.96, 3.35) in ANSWER. Write the letter A in INK, text height 0.45, centred at (9.64, 3.02) (next to the point at (9.96, 3.35)).",
+    "visible_text": [
+     "C",
+     "B",
+     "A"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "angle values",
+     "the sentence 'three lines and three angles'",
+     "more than three curves or any point beyond A, B, C"
+    ],
+    "accuracy_checks": [
+     "three lines AB, BC, CA; A, B, C are not on one line (triangle with interior angles about 41.71, 97.32 and 40.97 degrees)",
+     "exactly 3 angle curves, one at each corner, each inside the triangle; no curve outside",
+     "each line runs past its two points and ends in an arrowhead at both ends",
+     "the interior angles sum to 180 degrees"
+    ],
+    "alt_text": "Three points A, B, C joined in pairs by the three lines AB, BC and CA that form a triangle, with one angle curve inside the triangle at each corner.",
+    "render_note": "Standalone solution figure. Corner positions are read off the printed answer picture, which draws no dots at the corners; dots are added because the question says to mark the three points."
+   }
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C39",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.5, Q6",
+   "ncert_ref": "Section 2.5 - Figure it Out Q6",
+   "question_text": "Now mark any four points on your paper so that no three of them are on one line. Label them A, B, C, D. Draw all possible lines going through pairs of these points. How many lines do you get? Name them. How many angles can you name using A, B, C, D? Write them all down, and mark each of them with a curve as in Fig. 2.9. lines) How many lines? Name them. angles) How many angles using A, B, C, D?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The learner marks their own four points; the question gives no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M1.S7.T7.C40",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.5, Q6",
+   "ncert_ref": "Section 2.5 - Figure it Out Q6",
+   "question_text": "Now mark any four points on your paper so that no three of them are on one line. Label them A, B, C, D. Draw all possible lines going through pairs of these points. How many lines do you get? Name them. How many angles can you name using A, B, C, D? Write them all down, and mark each of them with a curve as in Fig. 2.9. lines) How many lines? Name them. angles) How many angles using A, B, C, D?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The printed answer is a picture: six lines through pairs of A, B, C, D with three angle curves at each point; sibling of Q5 (same kind of answer, same decision). No question figure, so it stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M1.S7.T7.C40.IMG1",
+   "manim_scene": "c6_2_2_5_FiO6_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M1.S7.T7.C40.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9
+     },
+     "to_scale": true,
+     "scale": 0.88,
+     "points_local": {
+      "A": [
+       0.0,
+       0.0
+      ],
+      "B": [
+       3.3,
+       4.63
+      ],
+      "C": [
+       8.0,
+       2.92
+      ],
+      "D": [
+       8.68,
+       -0.87
+      ]
+     },
+     "lines": [
+      "AB",
+      "BC",
+      "CD",
+      "DA",
+      "AC",
+      "BD"
+     ],
+     "angle_curves_per_vertex": 3,
+     "curve_radii_local": {
+      "two_small": 0.6,
+      "whole_angle": 1.0
+     },
+     "angles_at_vertices": [
+      {
+       "vertex": "A",
+       "rays_anticlockwise": [
+        "D",
+        "C",
+        "B"
+       ],
+       "angle_DAC_deg": 25.78,
+       "angle_CAB_deg": 34.47,
+       "angle_DAB_deg": 60.24
+      },
+      {
+       "vertex": "B",
+       "rays_anticlockwise": [
+        "A",
+        "D",
+        "C"
+       ],
+       "angle_ABD_deg": 79.85,
+       "angle_DBC_deg": 25.64,
+       "angle_ABC_deg": 105.49
+      },
+      {
+       "vertex": "C",
+       "rays_anticlockwise": [
+        "B",
+        "A",
+        "D"
+       ],
+       "angle_BCA_deg": 40.04,
+       "angle_ACD_deg": 80.12,
+       "angle_BCD_deg": 120.16
+      },
+      {
+       "vertex": "D",
+       "rays_anticlockwise": [
+        "C",
+        "B",
+        "A"
+       ],
+       "angle_CDB_deg": 34.2,
+       "angle_BDA_deg": 39.91,
+       "angle_CDA_deg": 74.1
+      }
+     ],
+     "primitives": [
+      {
+       "kind": "segment",
+       "a": [
+        3.7,
+        2.26
+       ],
+       "b": [
+        7.54,
+        7.65
+       ],
+       "colour": "ANSWER",
+       "arrow_end": true,
+       "arrow_start": true,
+       "width": 3,
+       "dashed": false,
+       "name": "line AB"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        6.33,
+        7.27
+       ],
+       "b": [
+        11.99,
+        5.22
+       ],
+       "colour": "ANSWER",
+       "arrow_end": true,
+       "arrow_start": true,
+       "width": 3,
+       "dashed": false,
+       "name": "line BC"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        11.1,
+        6.27
+       ],
+       "b": [
+        11.98,
+        1.35
+       ],
+       "colour": "ANSWER",
+       "arrow_end": true,
+       "arrow_start": true,
+       "width": 3,
+       "dashed": false,
+       "name": "line CD"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        12.63,
+        2.05
+       ],
+       "b": [
+        3.37,
+        2.98
+       ],
+       "colour": "ANSWER",
+       "arrow_end": true,
+       "arrow_start": true,
+       "width": 3,
+       "dashed": false,
+       "name": "line DA"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.41,
+        2.63
+       ],
+       "b": [
+        11.99,
+        5.76
+       ],
+       "colour": "ANSWER",
+       "arrow_end": true,
+       "arrow_start": true,
+       "width": 3,
+       "dashed": false,
+       "name": "line AC"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        6.52,
+        7.57
+       ],
+       "b": [
+        12.4,
+        1.56
+       ],
+       "colour": "ANSWER",
+       "arrow_end": true,
+       "arrow_start": true,
+       "width": 3,
+       "dashed": false,
+       "name": "line BD"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        4.16,
+        2.9
+       ],
+       "r": 0.53,
+       "a0": 354.28,
+       "a1": 380.05,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle DAC"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        4.16,
+        2.9
+       ],
+       "r": 0.53,
+       "a0": 20.05,
+       "a1": 54.52,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle CAB"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        4.16,
+        2.9
+       ],
+       "r": 0.88,
+       "a0": 354.28,
+       "a1": 414.52,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle DAB"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        7.08,
+        7.0
+       ],
+       "r": 0.53,
+       "a0": 234.52,
+       "a1": 314.37,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle ABD"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        7.08,
+        7.0
+       ],
+       "r": 0.53,
+       "a0": 314.37,
+       "a1": 340.01,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle DBC"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        7.08,
+        7.0
+       ],
+       "r": 0.88,
+       "a0": 234.52,
+       "a1": 340.01,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle ABC"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        11.24,
+        5.49
+       ],
+       "r": 0.53,
+       "a0": 160.01,
+       "a1": 200.05,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle BCA"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        11.24,
+        5.49
+       ],
+       "r": 0.53,
+       "a0": 200.05,
+       "a1": 280.17,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle ACD"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        11.24,
+        5.49
+       ],
+       "r": 0.88,
+       "a0": 160.01,
+       "a1": 280.17,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle BCD"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        11.84,
+        2.13
+       ],
+       "r": 0.53,
+       "a0": 100.17,
+       "a1": 134.37,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle CDB"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        11.84,
+        2.13
+       ],
+       "r": 0.53,
+       "a0": 134.37,
+       "a1": 174.28,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle BDA"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        11.84,
+        2.13
+       ],
+       "r": 0.88,
+       "a0": 100.17,
+       "a1": 174.28,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle CDA"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        4.16,
+        2.9
+       ],
+       "colour": "ANSWER",
+       "r": 0.07,
+       "name": "A"
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "where": "below-left",
+       "colour": "INK",
+       "at": [
+        3.84,
+        2.58
+       ],
+       "point": [
+        4.16,
+        2.9
+       ]
+      },
+      {
+       "kind": "dot",
+       "a": [
+        7.08,
+        7.0
+       ],
+       "colour": "ANSWER",
+       "r": 0.07,
+       "name": "B"
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "where": "above",
+       "colour": "INK",
+       "at": [
+        7.08,
+        7.45
+       ],
+       "point": [
+        7.08,
+        7.0
+       ]
+      },
+      {
+       "kind": "dot",
+       "a": [
+        11.24,
+        5.49
+       ],
+       "colour": "ANSWER",
+       "r": 0.07,
+       "name": "C"
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "where": "above-right",
+       "colour": "INK",
+       "at": [
+        11.56,
+        5.81
+       ],
+       "point": [
+        11.24,
+        5.49
+       ]
+      },
+      {
+       "kind": "dot",
+       "a": [
+        11.84,
+        2.13
+       ],
+       "colour": "ANSWER",
+       "r": 0.07,
+       "name": "D"
+      },
+      {
+       "kind": "label",
+       "text": "D",
+       "where": "below-right",
+       "colour": "INK",
+       "at": [
+        12.16,
+        1.81
+       ],
+       "point": [
+        11.84,
+        2.13
+       ]
+      }
+     ]
+    },
+    "manim_description": "Canvas 16 by 9 units, origin at the bottom-left corner, y upwards, plain white BG. Four points A, B, C, D (no three on one line, ABCD a convex four-sided shape) joined in all six pairs by straight lines with arrowheads at both ends; at each point three angle curves (two small ones for the two neighbouring angles and one larger one for the whole angle). Lines, dots and curves in ANSWER (it is the drawing the question asks for), letters in INK. Draw the segment [line AB] from (3.7, 2.26) to (7.54, 7.65) in ANSWER, stroke 3 px, arrowhead at both ends. Draw the segment [line BC] from (6.33, 7.27) to (11.99, 5.22) in ANSWER, stroke 3 px, arrowhead at both ends. Draw the segment [line CD] from (11.1, 6.27) to (11.98, 1.35) in ANSWER, stroke 3 px, arrowhead at both ends. Draw the segment [line DA] from (12.63, 2.05) to (3.37, 2.98) in ANSWER, stroke 3 px, arrowhead at both ends. Draw the segment [line AC] from (3.41, 2.63) to (11.99, 5.76) in ANSWER, stroke 3 px, arrowhead at both ends. Draw the segment [line BD] from (6.52, 7.57) to (12.4, 1.56) in ANSWER, stroke 3 px, arrowhead at both ends. Draw the arc [curve of angle DAC] of the circle with centre (4.16, 2.9) and radius 0.53, from 354.28 degrees to 20.05 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle CAB] of the circle with centre (4.16, 2.9) and radius 0.53, from 20.05 degrees to 54.52 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle DAB] of the circle with centre (4.16, 2.9) and radius 0.88, from 354.28 degrees to 54.52 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle ABD] of the circle with centre (7.08, 7) and radius 0.53, from 234.52 degrees to 314.37 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle DBC] of the circle with centre (7.08, 7) and radius 0.53, from 314.37 degrees to 340.01 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle ABC] of the circle with centre (7.08, 7) and radius 0.88, from 234.52 degrees to 340.01 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle BCA] of the circle with centre (11.24, 5.49) and radius 0.53, from 160.01 degrees to 200.05 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle ACD] of the circle with centre (11.24, 5.49) and radius 0.53, from 200.05 degrees to 280.17 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle BCD] of the circle with centre (11.24, 5.49) and radius 0.88, from 160.01 degrees to 280.17 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle CDB] of the circle with centre (11.84, 2.13) and radius 0.53, from 100.17 degrees to 134.37 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle BDA] of the circle with centre (11.84, 2.13) and radius 0.53, from 134.37 degrees to 174.28 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle CDA] of the circle with centre (11.84, 2.13) and radius 0.88, from 100.17 degrees to 174.28 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw a filled dot [A] of radius 0.07 at (4.16, 2.9) in ANSWER. Write the letter A in INK, text height 0.45, centred at (3.84, 2.58) (next to the point at (4.16, 2.9)). Draw a filled dot [B] of radius 0.07 at (7.08, 7) in ANSWER. Write the letter B in INK, text height 0.45, centred at (7.08, 7.45) (next to the point at (7.08, 7)). Draw a filled dot [C] of radius 0.07 at (11.24, 5.49) in ANSWER. Write the letter C in INK, text height 0.45, centred at (11.56, 5.81) (next to the point at (11.24, 5.49)). Draw a filled dot [D] of radius 0.07 at (11.84, 2.13) in ANSWER. Write the letter D in INK, text height 0.45, centred at (12.16, 1.81) (next to the point at (11.84, 2.13)).",
+    "visible_text": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "angle values",
+     "the list of the twelve angle names",
+     "dashed lines, extra points or a fifth letter"
+    ],
+    "accuracy_checks": [
+     "6 lines: AB, BC, CD, DA (sides) and AC, BD (diagonals); the diagonals cross inside the shape",
+     "12 angle curves: 3 at each of A, B, C, D (4 x 3 = 12), matching the 12 angles in the answer",
+     "no three of A, B, C, D are collinear",
+     "at each point the whole-angle curve (radius 1.0) spans exactly the two small curves (radius 0.6) side by side",
+     "every line extends 0.9 local units beyond both its points and ends in arrowheads"
+    ],
+    "alt_text": "Four points A, B, C, D joined in all six pairs by straight lines, with three angle curves at each of the four points.",
+    "render_note": "Standalone solution figure. The book draws three concentric curves per point; here the two neighbouring angles share the small radius and the whole angle has the large radius, so each of the 12 angles is separately readable. Point positions are read off the printed answer picture."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C41",
+   "role": "worked_example",
+   "lp_book_number": "Comparing Angles: animals' mouths",
+   "ncert_ref": "Section 2.6 - first picture (animals opening their mouths)",
+   "question_text": "Look at these animals opening their mouths (snake, fish, bird, crocodile). Do you see any angles here? If yes, mark the arms and vertex of each one. Some mouths are open wider than others; the more the turning of the jaws, the larger the angle! Can you arrange the angles in this picture from smallest to largest?",
+   "decision": "none",
+   "reason_codes": [
+    "NOT_RENDERABLE",
+    "DECORATIVE_ONLY"
+   ],
+   "reason": "The given picture is four colour cartoons (snake, fish, bird, crocodile) that cannot be drawn faithfully as a diagram; the teaching image already kept on this concept shows the idea of wider mouth = larger angle.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0,
+   "text_alternative": "Keep the question text as it is; the learner compares the four cartoon mouths by eye."
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C42",
+   "role": "worked_example",
+   "lp_book_number": "Math Talk: Here are some angles",
+   "ncert_ref": "Section 2.6 - Math Talk (four angles)",
+   "question_text": "Here are some angles (four angles drawn with different openings and orientations). Label each of the angles. How will you compare them? Draw a few more angles; label them and compare.",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "ACTION_ON_FIGURE"
+   ],
+   "reason": "The four angles to be labelled and compared exist only in the picture (different openings, orientations and arm lengths).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S8.T8.C42.IMG1",
+   "manim_scene": "c6_2_2_6_E1_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C42.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "block_index": 0,
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "cells": "2x2, reading order angle 1, 2 (top row), 3, 4 (bottom row)"
+     },
+     "to_scale": true,
+     "common_scale": 0.62,
+     "angles": [
+      {
+       "name": "Angle 1 (top-left cell)",
+       "opening_deg": 142.5,
+       "arm_directions_deg": [
+        99.9,
+        -42.6
+       ],
+       "arm_lengths_book_units": [
+        3.07,
+        2.88
+       ],
+       "curve_radius_book_units": 0.85
+      },
+      {
+       "name": "Angle 2 (top-right cell)",
+       "opening_deg": 110.1,
+       "arm_directions_deg": [
+        39.5,
+        -70.6
+       ],
+       "arm_lengths_book_units": [
+        3.25,
+        3.16
+       ],
+       "curve_radius_book_units": 0.95
+      },
+      {
+       "name": "Angle 3 (bottom-left cell)",
+       "opening_deg": 52.5,
+       "arm_directions_deg": [
+        191.2,
+        243.7
+       ],
+       "arm_lengths_book_units": [
+        4.62,
+        4.46
+       ],
+       "curve_radius_book_units": 1.3
+      },
+      {
+       "name": "Angle 4 (bottom-right cell)",
+       "opening_deg": 67.1,
+       "arm_directions_deg": [
+        111.8,
+        178.9
+       ],
+       "arm_lengths_book_units": [
+        5.28,
+        5.06
+       ],
+       "curve_radius_book_units": 1.2
+      }
+     ],
+     "primitives": [
+      {
+       "kind": "segment",
+       "a": [
+        3.71,
+        6.42
+       ],
+       "b": [
+        3.38,
+        8.29
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "arm 1"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        3.71,
+        6.42
+       ],
+       "b": [
+        5.02,
+        5.21
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "arm 2"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        3.71,
+        6.42
+       ],
+       "r": 0.53,
+       "a0": 317.4,
+       "a1": 99.9,
+       "colour": "INK",
+       "arrow_end": false,
+       "width": 3,
+       "name": "angle curve"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        3.71,
+        6.42
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "vertex"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        11.42,
+        7.03
+       ],
+       "b": [
+        12.97,
+        8.31
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "arm 1"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        11.42,
+        7.03
+       ],
+       "b": [
+        12.07,
+        5.19
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "arm 2"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        11.42,
+        7.03
+       ],
+       "r": 0.59,
+       "a0": 289.4,
+       "a1": 39.5,
+       "colour": "INK",
+       "arrow_end": false,
+       "width": 3,
+       "name": "angle curve"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        11.42,
+        7.03
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "vertex"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        5.5,
+        3.49
+       ],
+       "b": [
+        2.7,
+        2.93
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "arm 1"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        5.5,
+        3.49
+       ],
+       "b": [
+        4.28,
+        1.01
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "arm 2"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        5.5,
+        3.49
+       ],
+       "r": 0.81,
+       "a0": 191.2,
+       "a1": 243.7,
+       "colour": "INK",
+       "arrow_end": false,
+       "width": 3,
+       "name": "angle curve"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        5.5,
+        3.49
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "vertex"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        13.47,
+        0.73
+       ],
+       "b": [
+        12.25,
+        3.77
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "arm 1"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        13.47,
+        0.73
+       ],
+       "b": [
+        10.33,
+        0.79
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "arm 2"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        13.47,
+        0.73
+       ],
+       "r": 0.74,
+       "a0": 111.8,
+       "a1": 178.9,
+       "colour": "INK",
+       "arrow_end": false,
+       "width": 3,
+       "name": "angle curve"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        13.47,
+        0.73
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "vertex"
+      }
+     ]
+    },
+    "manim_description": "Canvas 16 by 9 units, origin at the bottom-left corner, y upwards, plain white BG, split into four equal cells (2 by 2). Each cell holds one angle drawn in INK with a filled vertex dot, two arms with an arrowhead at the far end of each arm, and one angle curve between the arms; no letters or numbers anywhere. All four angles use the same scale (0.62 of the book's drawing), so the arm lengths keep the book's proportions. Angle 1 (top-left cell): Draw the segment [arm 1] from (3.71, 6.42) to (3.38, 8.29) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [arm 2] from (3.71, 6.42) to (5.02, 5.21) in INK, stroke 3 px, arrowhead at the end point. Draw the arc [angle curve] of the circle with centre (3.71, 6.42) and radius 0.53, from 317.4 degrees to 99.9 degrees (anticlockwise, angles measured from the positive x direction), in INK, stroke 3 px. Draw a filled dot [vertex] of radius 0.09 at (3.71, 6.42) in INK. Angle 2 (top-right cell): Draw the segment [arm 1] from (11.42, 7.03) to (12.97, 8.31) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [arm 2] from (11.42, 7.03) to (12.07, 5.19) in INK, stroke 3 px, arrowhead at the end point. Draw the arc [angle curve] of the circle with centre (11.42, 7.03) and radius 0.59, from 289.4 degrees to 39.5 degrees (anticlockwise, angles measured from the positive x direction), in INK, stroke 3 px. Draw a filled dot [vertex] of radius 0.09 at (11.42, 7.03) in INK. Angle 3 (bottom-left cell): Draw the segment [arm 1] from (5.5, 3.49) to (2.7, 2.93) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [arm 2] from (5.5, 3.49) to (4.28, 1.01) in INK, stroke 3 px, arrowhead at the end point. Draw the arc [angle curve] of the circle with centre (5.5, 3.49) and radius 0.81, from 191.2 degrees to 243.7 degrees (anticlockwise, angles measured from the positive x direction), in INK, stroke 3 px. Draw a filled dot [vertex] of radius 0.09 at (5.5, 3.49) in INK. Angle 4 (bottom-right cell): Draw the segment [arm 1] from (13.47, 0.73) to (12.25, 3.77) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [arm 2] from (13.47, 0.73) to (10.33, 0.79) in INK, stroke 3 px, arrowhead at the end point. Draw the arc [angle curve] of the circle with centre (13.47, 0.73) and radius 0.74, from 111.8 degrees to 178.9 degrees (anticlockwise, angles measured from the positive x direction), in INK, stroke 3 px. Draw a filled dot [vertex] of radius 0.09 at (13.47, 0.73) in INK. ",
+    "visible_text": [],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "letters or numbers on the angles (the learner labels them)",
+     "angle values",
+     "an ordering from smallest to largest",
+     "the angles drawn on top of each other"
+    ],
+    "accuracy_checks": [
+     "four angles with openings about 142.5, 110.1, 52.5 and 67.1 degrees (visual estimates from the book picture, nothing printed), all different",
+     "arm lengths differ between the angles on purpose (arms of angle 4 are the longest, of angle 1 the shortest) and the two arms of one angle are nearly equal",
+     "each angle has exactly one curve, drawn inside the angle on the side between the two arms",
+     "no letters and no numbers (the learner labels the angles)"
+    ],
+    "alt_text": "Four separate angles with different openings, directions and arm lengths, each with its vertex dot and one angle curve, and no labels.",
+    "render_note": "Same book picture is also shown under the Math Talk 'Is it always easy to compare two angles?' (item M2.S9.T9.C48, no diagram there). The book draws the four angles in one row; here they sit in a 2 by 2 grid so they fit the 16:9 card, reading order unchanged."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C43",
+   "role": "worked_example",
+   "lp_book_number": "Equal angles: AOB and XOY",
+   "ncert_ref": "Section 2.6 - Equal angles (AOB and XOY)",
+   "question_text": "Now consider ∠AOB and ∠XOY in the figure. Which is greater?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The question names angles AOB and XOY 'in the figure': the learner needs both angles with their different arm lengths (a referred, lettered figure is drawn even though a teaching image shows the superimposed pair).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S8.T8.C43.IMG2",
+   "manim_scene": "c6_2_2_6_E2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C43.IMG2}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "block_index": 0,
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "panels": "left AOB, right XOY"
+     },
+     "to_scale": true,
+     "common_scale": 0.8,
+     "angle_AOB": {
+      "opening_deg": 60,
+      "OB_point_distance": 5.2,
+      "OA_point_distance": 3.6,
+      "arm_end_distances": [
+       6.4,
+       4.6
+      ]
+     },
+     "angle_XOY": {
+      "opening_deg": 60,
+      "OY_point_distance": 6.1,
+      "OX_point_distance": 4.15,
+      "arm_end_distances": [
+       7.6,
+       5.3
+      ]
+     },
+     "primitives": [
+      {
+       "kind": "segment",
+       "a": [
+        1.76,
+        2.66
+       ],
+       "b": [
+        6.88,
+        2.66
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "left panel, arm OB"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        1.76,
+        2.66
+       ],
+       "b": [
+        3.6,
+        5.85
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "left panel, arm OA"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        1.76,
+        2.66
+       ],
+       "r": 0.52,
+       "a0": 0.0,
+       "a1": 60.0,
+       "colour": "INK",
+       "arrow_end": false,
+       "width": 3,
+       "name": "left panel, angle curve"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        1.76,
+        2.66
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "left panel, O"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        5.92,
+        2.66
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "left panel, B"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        3.2,
+        5.16
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "left panel, A"
+      },
+      {
+       "kind": "label",
+       "text": "O",
+       "where": "below-left",
+       "colour": "INK",
+       "at": [
+        1.44,
+        2.34
+       ],
+       "point": [
+        1.76,
+        2.66
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "where": "below",
+       "colour": "INK",
+       "at": [
+        5.92,
+        2.21
+       ],
+       "point": [
+        5.92,
+        2.66
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "where": "left",
+       "colour": "INK",
+       "at": [
+        2.75,
+        5.16
+       ],
+       "point": [
+        3.2,
+        5.16
+       ]
+      },
+      {
+       "kind": "segment",
+       "a": [
+        8.16,
+        2.66
+       ],
+       "b": [
+        14.24,
+        2.66
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "right panel, arm OY"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        8.16,
+        2.66
+       ],
+       "b": [
+        10.28,
+        6.34
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "right panel, arm OX"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        8.16,
+        2.66
+       ],
+       "r": 0.52,
+       "a0": 0.0,
+       "a1": 60.0,
+       "colour": "INK",
+       "arrow_end": false,
+       "width": 3,
+       "name": "right panel, angle curve"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        8.16,
+        2.66
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "right panel, O"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        13.04,
+        2.66
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "right panel, Y"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        9.82,
+        5.54
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "right panel, X"
+      },
+      {
+       "kind": "label",
+       "text": "O",
+       "where": "below-left",
+       "colour": "INK",
+       "at": [
+        7.84,
+        2.34
+       ],
+       "point": [
+        8.16,
+        2.66
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "Y",
+       "where": "below",
+       "colour": "INK",
+       "at": [
+        13.04,
+        2.21
+       ],
+       "point": [
+        13.04,
+        2.66
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "X",
+       "where": "left",
+       "colour": "INK",
+       "at": [
+        9.37,
+        5.54
+       ],
+       "point": [
+        9.82,
+        5.54
+       ]
+      }
+     ]
+    },
+    "manim_description": "Canvas 16 by 9 units, origin at the bottom-left corner, y upwards, plain white BG. Two separate angles side by side on one common baseline (both vertices O at the same height), all INK, drawn at 0.8 of the local units. LEFT is angle AOB, RIGHT is angle XOY. Both angles are 60 degrees; the arms of XOY are longer than the arms of AOB. Do not draw the two angles on top of each other. Draw the segment [left panel, arm OB] from (1.76, 2.66) to (6.88, 2.66) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [left panel, arm OA] from (1.76, 2.66) to (3.6, 5.85) in INK, stroke 3 px, arrowhead at the end point. Draw the arc [left panel, angle curve] of the circle with centre (1.76, 2.66) and radius 0.52, from 0 degrees to 60 degrees (anticlockwise, angles measured from the positive x direction), in INK, stroke 3 px. Draw a filled dot [left panel, O] of radius 0.09 at (1.76, 2.66) in INK. Draw a filled dot [left panel, B] of radius 0.07 at (5.92, 2.66) in INK. Draw a filled dot [left panel, A] of radius 0.07 at (3.2, 5.16) in INK. Write the letter O in INK, text height 0.45, centred at (1.44, 2.34) (next to the point at (1.76, 2.66)). Write the letter B in INK, text height 0.45, centred at (5.92, 2.21) (next to the point at (5.92, 2.66)). Write the letter A in INK, text height 0.45, centred at (2.75, 5.16) (next to the point at (3.2, 5.16)). Draw the segment [right panel, arm OY] from (8.16, 2.66) to (14.24, 2.66) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [right panel, arm OX] from (8.16, 2.66) to (10.28, 6.34) in INK, stroke 3 px, arrowhead at the end point. Draw the arc [right panel, angle curve] of the circle with centre (8.16, 2.66) and radius 0.52, from 0 degrees to 60 degrees (anticlockwise, angles measured from the positive x direction), in INK, stroke 3 px. Draw a filled dot [right panel, O] of radius 0.09 at (8.16, 2.66) in INK. Draw a filled dot [right panel, Y] of radius 0.07 at (13.04, 2.66) in INK. Draw a filled dot [right panel, X] of radius 0.07 at (9.82, 5.54) in INK. Write the letter O in INK, text height 0.45, centred at (7.84, 2.34) (next to the point at (8.16, 2.66)). Write the letter Y in INK, text height 0.45, centred at (13.04, 2.21) (next to the point at (13.04, 2.66)). Write the letter X in INK, text height 0.45, centred at (9.37, 5.54) (next to the point at (9.82, 5.54)).",
+    "visible_text": [
+     "O",
+     "B",
+     "A",
+     "O",
+     "Y",
+     "X"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "the superimposed third panel",
+     "an equals sign or the words equal / greater",
+     "angle values"
+    ],
+    "accuracy_checks": [
+     "both openings are 60 degrees (the book draws them equal, no measure printed)",
+     "OB : OA = 5.2 : 3.6 in the left panel and OY : OX = 6.1 : 4.15 in the right panel, so the right arms are about 1.17 times the left arms",
+     "the angles are NOT drawn superimposed (that panel of the book belongs to the solution)",
+     "each panel has its own vertex O, one angle curve, and the letters of its points only"
+    ],
+    "alt_text": "Two angles side by side: angle AOB with shorter arms on the left and angle XOY with longer arms on the right, both of the same opening.",
+    "render_note": "The book also draws a third panel with the two angles superimposed (O, B Y, A X on top of each other). It is the solution of the example and a teaching image (M2.S8.T8.C43.IMG1) already shows it, so it is not repeated here."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C45",
+   "role": "worked_example",
+   "lp_book_number": "Comparing with a transparent circle",
+   "ncert_ref": "Section 2.6 - transparent circle on the cranes' angles",
+   "question_text": "A transparent circle is placed on the angle of the first crane with its centre at the vertex; A and B are marked where the arms cross the circle. The circle is then placed on the second crane's angle with the vertex at the centre and one arm through OA. Can you now tell which angle is bigger?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "DATA_IN_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The comparison B against Y can only be made on the picture: the circle with the first angle's marks A and B and the second angle's arms through A and Y.",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S8.T8.C45.IMG1",
+   "manim_scene": "c6_2_2_6_E3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S8.T8.C45.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "block_index": 0,
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9,
+      "panels": "left first angle, right second angle"
+     },
+     "to_scale": true,
+     "scale": 1.0,
+     "circle_radius_local": 2.9,
+     "first_angle": {
+      "vertex": "O",
+      "lower_arm_direction_deg": -33.5,
+      "upper_arm_direction_deg": 42.5,
+      "opening_deg": 76.0
+     },
+     "second_angle": {
+      "vertex": "O",
+      "lower_arm_direction_deg": -33.8,
+      "upper_arm_direction_deg": 32.4,
+      "opening_deg": 66.2,
+      "marks_on_circle": [
+       "A at -33.5 deg",
+       "B at 42.5 deg"
+      ],
+      "arm_end_distances_in_radii": {
+       "X": 1.17,
+       "Y": 1.19
+      }
+     },
+     "primitives": [
+      {
+       "kind": "circle",
+       "c": [
+        4.54,
+        4.5
+       ],
+       "r": 2.9,
+       "colour": "INK",
+       "fill": null,
+       "width": 3,
+       "name": "transparent circle (first angle)"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        4.54,
+        4.5
+       ],
+       "b": [
+        7.25,
+        2.71
+       ],
+       "colour": "INK",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 4,
+       "dashed": false,
+       "name": "lower arm through A"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        4.54,
+        4.5
+       ],
+       "b": [
+        6.94,
+        6.69
+       ],
+       "colour": "INK",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 4,
+       "dashed": false,
+       "name": "upper arm through B"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        4.54,
+        4.5
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "O"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        6.96,
+        2.9
+       ],
+       "colour": "FOCUS",
+       "r": 0.09,
+       "name": "A"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        6.68,
+        6.46
+       ],
+       "colour": "FOCUS",
+       "r": 0.09,
+       "name": "B"
+      },
+      {
+       "kind": "label",
+       "text": "O",
+       "where": "left",
+       "colour": "INK",
+       "at": [
+        4.09,
+        4.5
+       ],
+       "point": [
+        4.54,
+        4.5
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "where": "below",
+       "colour": "INK",
+       "at": [
+        6.96,
+        2.45
+       ],
+       "point": [
+        6.96,
+        2.9
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "where": "above",
+       "colour": "INK",
+       "at": [
+        6.68,
+        6.91
+       ],
+       "point": [
+        6.68,
+        6.46
+       ]
+      },
+      {
+       "kind": "circle",
+       "c": [
+        11.44,
+        4.5
+       ],
+       "r": 2.9,
+       "colour": "INK",
+       "fill": null,
+       "width": 3,
+       "name": "transparent circle (second angle)"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        11.44,
+        4.5
+       ],
+       "b": [
+        14.26,
+        2.61
+       ],
+       "colour": "INK",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 4,
+       "dashed": false,
+       "name": "lower arm through A, ending at X"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        11.44,
+        4.5
+       ],
+       "b": [
+        14.36,
+        6.35
+       ],
+       "colour": "INK",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 4,
+       "dashed": false,
+       "name": "upper arm ending at Y"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        11.44,
+        4.5
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "O"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        13.86,
+        2.9
+       ],
+       "colour": "FOCUS",
+       "r": 0.09,
+       "name": "A"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        13.58,
+        6.46
+       ],
+       "colour": "FOCUS",
+       "r": 0.09,
+       "name": "B"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        14.26,
+        2.61
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "X"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        14.36,
+        6.35
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "Y"
+      },
+      {
+       "kind": "label",
+       "text": "O",
+       "where": "below-left",
+       "colour": "INK",
+       "at": [
+        11.12,
+        4.18
+       ],
+       "point": [
+        11.44,
+        4.5
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "where": "below-left",
+       "colour": "INK",
+       "at": [
+        13.54,
+        2.58
+       ],
+       "point": [
+        13.86,
+        2.9
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "where": "above-left",
+       "colour": "INK",
+       "at": [
+        13.26,
+        6.78
+       ],
+       "point": [
+        13.58,
+        6.46
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "X",
+       "where": "below-right",
+       "colour": "INK",
+       "at": [
+        14.59,
+        2.29
+       ],
+       "point": [
+        14.26,
+        2.61
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "Y",
+       "where": "above-right",
+       "colour": "INK",
+       "at": [
+        14.68,
+        6.67
+       ],
+       "point": [
+        14.36,
+        6.35
+       ]
+      }
+     ]
+    },
+    "manim_description": "Canvas 16 by 9 units, origin at the bottom-left corner, y upwards, plain white BG. Two panels side by side, each a transparent circle (outline only, no fill) with its centre O drawn as a dot. LEFT: the first crane's angle, two arms from O that cross the circle at A (lower right) and B (upper right). RIGHT: the same circle placed on the second crane's angle, so the second angle's lower arm passes through the mark A, the upper arm passes just below the mark B, and the arms end in the points X (lower) and Y (upper) outside the circle. Marks A and B on the circle are FOCUS dots, everything else INK.  Draw the circle outline [transparent circle (first angle)] with centre (4.54, 4.5) and radius 2.9 in INK, stroke 3 px, no fill. Draw the segment [lower arm through A] from (4.54, 4.5) to (7.25, 2.71) in INK, stroke 4 px. Draw the segment [upper arm through B] from (4.54, 4.5) to (6.94, 6.69) in INK, stroke 4 px. Draw a filled dot [O] of radius 0.09 at (4.54, 4.5) in INK. Draw a filled dot [A] of radius 0.09 at (6.96, 2.9) in FOCUS. Draw a filled dot [B] of radius 0.09 at (6.68, 6.46) in FOCUS. Write the letter O in INK, text height 0.45, centred at (4.09, 4.5) (next to the point at (4.54, 4.5)). Write the letter A in INK, text height 0.45, centred at (6.96, 2.45) (next to the point at (6.96, 2.9)). Write the letter B in INK, text height 0.45, centred at (6.68, 6.91) (next to the point at (6.68, 6.46)). Draw the circle outline [transparent circle (second angle)] with centre (11.44, 4.5) and radius 2.9 in INK, stroke 3 px, no fill. Draw the segment [lower arm through A, ending at X] from (11.44, 4.5) to (14.26, 2.61) in INK, stroke 4 px. Draw the segment [upper arm ending at Y] from (11.44, 4.5) to (14.36, 6.35) in INK, stroke 4 px. Draw a filled dot [O] of radius 0.09 at (11.44, 4.5) in INK. Draw a filled dot [A] of radius 0.09 at (13.86, 2.9) in FOCUS. Draw a filled dot [B] of radius 0.09 at (13.58, 6.46) in FOCUS. Draw a filled dot [X] of radius 0.07 at (14.26, 2.61) in INK. Draw a filled dot [Y] of radius 0.07 at (14.36, 6.35) in INK. Write the letter O in INK, text height 0.45, centred at (11.12, 4.18) (next to the point at (11.44, 4.5)). Write the letter A in INK, text height 0.45, centred at (13.54, 2.58) (next to the point at (13.86, 2.9)). Write the letter B in INK, text height 0.45, centred at (13.26, 6.78) (next to the point at (13.58, 6.46)). Write the letter X in INK, text height 0.45, centred at (14.59, 2.29) (next to the point at (14.26, 2.61)). Write the letter Y in INK, text height 0.45, centred at (14.68, 6.67) (next to the point at (14.36, 6.35)). Left angle AOB is 76 degrees; right angle XOY is 66.2 degrees; in the right panel the upper arm leaves the circle 10.1 degrees below the mark B.",
+    "visible_text": [
+     "O",
+     "A",
+     "B",
+     "O",
+     "A",
+     "B",
+     "X",
+     "Y"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "angle values",
+     "the words bigger / smaller / equal",
+     "the crane pictures or the lined paper"
+    ],
+    "accuracy_checks": [
+     "the lower arm of the second angle passes through the mark A (same direction as the first angle's lower arm, within 0.5 degrees)",
+     "first angle AOB = 42.5 - (-33.5) = 76 degrees; second angle XOY = 32.4 - (-33.8) = 66.2 degrees, so the second angle is 9.8 degrees smaller",
+     "B lies on the circle at 42.5 degrees; the second angle's upper arm crosses the circle at 32.4 degrees, 10.1 degrees below B (arc distance about 0.51 local units)",
+     "X and Y lie outside the circle at 1.17 and 1.19 radii; A and B lie exactly on the circle; O is the centre of both circles",
+     "no angle values are written in the figure"
+    ],
+    "alt_text": "Two transparent circles side by side: on the left the first angle with marks A and B on the circle, on the right the second angle on the same circle with its upper arm ending at Y just below the mark B.",
+    "render_note": "Directions are visual estimates read off the book pictures (no measures printed). The LP answer says Y is 'very close to B / nearly equal'; the book picture has Y a little short of B (second angle slightly smaller), and that is what is drawn."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S8.T8.C46",
+   "role": "worked_example",
+   "lp_book_number": "Comparing with a transparent circle: try it",
+   "ncert_ref": "Section 2.6 - Fig. 2.10 (cranes), try the circle method",
+   "question_text": "Which crane was making the bigger angle? If you can make a circular piece of transparent paper, try this method to compare the angles in Fig. 2.10 with each other.",
+   "decision": "none",
+   "reason_codes": [
+    "NOT_RENDERABLE",
+    "OPEN_ENDED"
+   ],
+   "reason": "The referred Fig. 2.10 is a cartoon of two cranes with open beaks, which cannot be drawn faithfully; the activity is hands-on with a paper circle, and the previous example already draws the circle on the cranes' two angles.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0,
+   "text_alternative": "Keep the text; the figure is Fig. 2.10 of the book (two cranes). A plain two-angle schematic of the beak openings could replace it if wanted."
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C48",
+   "role": "question",
+   "lp_book_number": "Comparing Angles: is it always easy?",
+   "ncert_ref": "Section 2.6 - Math Talk 'Is it always easy to compare two angles?'",
+   "question_text": "Is it always easy to compare two angles?",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The question can be answered from the text (89 and 91 degrees); the LP answer ends 'for the given figures, comparison is easy', which points at the four-angle picture drawn for M2.S8.T8.C42 - that same figure would help here, but it is not needed to attempt the question.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null,
+   "text_alternative": "Optional figure (not added): the four angles of M2.S8.T8.C42. Better: add '(look at the four angles above)' to the question or drop the last sentence of the answer."
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C49",
+   "role": "solution",
+   "lp_book_number": "Comparing Angles: is it always easy?",
+   "ncert_ref": "Section 2.6 - Math Talk 'Is it always easy to compare two angles?'",
+   "question_text": "Is it always easy to compare two angles?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is words and two numbers (89 and 91 degrees); nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C50",
+   "role": "question",
+   "lp_book_number": "Comparing Angles: other uses of superimposition",
+   "ncert_ref": "Section 2.6 - 'Where else do we use superimposition to compare?'",
+   "question_text": "Where else do we use superimposition to compare?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "An open question with no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S9.T9.C51",
+   "role": "solution",
+   "lp_book_number": "Comparing Angles: other uses of superimposition",
+   "ncert_ref": "Section 2.6 - 'Where else do we use superimposition to compare?'",
+   "question_text": "Where else do we use superimposition to compare?",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The answer is a short list (line segments, squares, circles); no figure.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C52",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.6, Q1",
+   "ncert_ref": "Section 2.6 - Figure it Out Q1",
+   "question_text": "Fold a rectangular sheet of paper, then draw a line along the fold created. Name and compare the angles formed between the fold and the sides of the paper. Make different angles by folding a rectangular sheet of paper and compare the angles. Which is the largest and smallest angle you made?",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A hands-on paper-folding task; the book's picture is only a photograph of a creased sheet that illustrates the activity and carries no data (no letters, no marked angles).",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C53",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.6, Q1",
+   "ncert_ref": "Section 2.6 - Figure it Out Q1",
+   "question_text": "Fold a rectangular sheet of paper, then draw a line along the fold created. Name and compare the angles formed between the fold and the sides of the paper. Make different angles by folding a rectangular sheet of paper and compare the angles. Which is the largest and smallest angle you made?",
+   "decision": "required",
+   "reason_codes": [
+    "ANSWER_IS_FIGURE",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The printed answer is a picture: the sheet with corners A, B, C, D, the crease EF and the four named angles; the LP answer names angles AEF, BEF, DFE, CFE that cannot be followed without it. No question figure, so it stands alone.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C53.IMG1",
+   "manim_scene": "c6_2_2_6_FiO1_sol",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C53.IMG1}}",
+    "insert_into": "steps_tex",
+    "position": "before_first_step"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9
+     },
+     "to_scale": true,
+     "scale": 1.5,
+     "sheet": {
+      "width_local": 8.0,
+      "height_local": 4.0,
+      "corners": {
+       "C": "top-left",
+       "D": "top-right",
+       "B": "bottom-left",
+       "A": "bottom-right"
+      }
+     },
+     "F_on_CD_fraction_from_C": 0.49,
+     "E_on_BA_fraction_from_B": 0.65,
+     "angles_deg": {
+      "CFE": 107.74,
+      "DFE": 72.26,
+      "AEF": 107.74,
+      "BEF": 72.26
+     },
+     "primitives": [
+      {
+       "kind": "rect",
+       "p0": [
+        2.0,
+        1.5
+       ],
+       "p1": [
+        14.0,
+        7.5
+       ],
+       "colour": "INK",
+       "fill": "CELL_FILL",
+       "width": 3,
+       "name": "rectangular sheet"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        7.88,
+        7.5
+       ],
+       "b": [
+        9.8,
+        1.5
+       ],
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "crease EF"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        7.88,
+        7.5
+       ],
+       "r": 0.9,
+       "a0": 180.0,
+       "a1": 287.74,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle CFE"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        7.88,
+        7.5
+       ],
+       "r": 0.9,
+       "a0": 287.74,
+       "a1": 360.0,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle DFE"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        9.8,
+        1.5
+       ],
+       "r": 0.9,
+       "a0": 0.0,
+       "a1": 107.74,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle AEF"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        9.8,
+        1.5
+       ],
+       "r": 0.9,
+       "a0": 107.74,
+       "a1": 180.0,
+       "colour": "ANSWER",
+       "arrow_end": false,
+       "width": 3,
+       "name": "curve of angle BEF"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        7.88,
+        7.5
+       ],
+       "colour": "ANSWER",
+       "r": 0.07,
+       "name": "F"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        9.8,
+        1.5
+       ],
+       "colour": "ANSWER",
+       "r": 0.07,
+       "name": "E"
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "where": "above-left",
+       "colour": "INK",
+       "at": [
+        1.68,
+        7.82
+       ],
+       "point": [
+        2.0,
+        7.5
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "D",
+       "where": "above-right",
+       "colour": "INK",
+       "at": [
+        14.32,
+        7.82
+       ],
+       "point": [
+        14.0,
+        7.5
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "where": "below-left",
+       "colour": "INK",
+       "at": [
+        1.68,
+        1.18
+       ],
+       "point": [
+        2.0,
+        1.5
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "where": "below-right",
+       "colour": "INK",
+       "at": [
+        14.32,
+        1.18
+       ],
+       "point": [
+        14.0,
+        1.5
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "F",
+       "where": "above",
+       "colour": "INK",
+       "at": [
+        7.88,
+        7.95
+       ],
+       "point": [
+        7.88,
+        7.5
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "E",
+       "where": "below",
+       "colour": "INK",
+       "at": [
+        9.8,
+        1.05
+       ],
+       "point": [
+        9.8,
+        1.5
+       ]
+      }
+     ]
+    },
+    "manim_description": "Canvas 16 by 9 units, origin at the bottom-left corner, y upwards, plain white BG. A landscape rectangle (the sheet, 2 : 1) filled CELL_FILL with an INK outline; corners C top-left, D top-right, B bottom-left, A bottom-right. F lies on the top side CD and E on the bottom side BA; the crease EF slants from F (above) down to the right to E. The crease and the four angle curves are the part the solution adds, so they are ANSWER green; letters INK. Draw the rectangle outline [rectangular sheet] with corners (2, 1.5) and (14, 7.5) in INK, stroke 3 px, filled CELL_FILL. Draw the segment [crease EF] from (7.88, 7.5) to (9.8, 1.5) in ANSWER, stroke 3 px. Draw the arc [curve of angle CFE] of the circle with centre (7.88, 7.5) and radius 0.9, from 180 degrees to 287.74 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle DFE] of the circle with centre (7.88, 7.5) and radius 0.9, from 287.74 degrees to 360 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle AEF] of the circle with centre (9.8, 1.5) and radius 0.9, from 0 degrees to 107.74 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw the arc [curve of angle BEF] of the circle with centre (9.8, 1.5) and radius 0.9, from 107.74 degrees to 180 degrees (anticlockwise, angles measured from the positive x direction), in ANSWER, stroke 3 px. Draw a filled dot [F] of radius 0.07 at (7.88, 7.5) in ANSWER. Draw a filled dot [E] of radius 0.07 at (9.8, 1.5) in ANSWER. Write the letter C in INK, text height 0.45, centred at (1.68, 7.82) (next to the point at (2, 7.5)). Write the letter D in INK, text height 0.45, centred at (14.32, 7.82) (next to the point at (14, 7.5)). Write the letter B in INK, text height 0.45, centred at (1.68, 1.18) (next to the point at (2, 1.5)). Write the letter A in INK, text height 0.45, centred at (14.32, 1.18) (next to the point at (14, 1.5)). Write the letter F in INK, text height 0.45, centred at (7.88, 7.95) (next to the point at (7.88, 7.5)). Write the letter E in INK, text height 0.45, centred at (9.8, 1.05) (next to the point at (9.8, 1.5)).",
+    "visible_text": [
+     "C",
+     "D",
+     "B",
+     "A",
+     "F",
+     "E"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "angle values",
+     "the words larger / smaller",
+     "dashed sides or the book's shading of the crease"
+    ],
+    "accuracy_checks": [
+     "F is 0.49 of the way from C to D and E is 0.65 of the way from B to A, so the crease slants down to the right",
+     "angles 107.74 degrees (CFE and AEF, the larger pair) and 72.26 degrees (DFE and BEF, the smaller pair); they add to 180 degrees on each side",
+     "four angle curves: two at F (below the top side, one each side of the crease) and two at E (above the bottom side)",
+     "the figure agrees with the LP answer: AEF and CFE are larger than BEF and DFE"
+    ],
+    "alt_text": "A rectangular sheet with corners C, D, B, A, a slanting crease EF from the top side down to the bottom side, and a curve for each of the four angles the crease makes with the sides.",
+    "render_note": "Standalone solution figure. The book's printed picture draws the left and right sides dashed and one curve per end; here all four sides are solid and the two angles at each end are marked separately, because the answer names four angles. Positions of E and F are read off the printed picture."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C54",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.6, Q2",
+   "ncert_ref": "Section 2.6 - Figure it Out Q2",
+   "question_text": "In each case, determine which angle is greater and why. a. ∠AOB or ∠XOY b. ∠AOB or ∠XOB c. ∠XOB or ∠XOC. Discuss with your friends on how you decided which one is greater. (Figure: O is the vertex; OA is vertical, OX and OY are slanting rays with OX steeper, B and C are on the same horizontal ray, B nearer O.) a) ∠AOB or ∠XOY b) ∠AOB or ∠XOB c) ∠XOB or ∠XOC",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The three comparisons (a, b, c) refer to the given figure with rays OA, OX, OY, OB, OC; the learner cannot attempt them without it.",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C54.IMG1",
+   "manim_scene": "c6_2_2_6_FiO2_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C54.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9
+     },
+     "to_scale": false,
+     "scale": 0.92,
+     "vertex": "O",
+     "rays": [
+      {
+       "ray": "OC",
+       "direction_deg": 0,
+       "points": {
+        "B": 2.6,
+        "C": 6.54
+       }
+      },
+      {
+       "ray": "OA",
+       "direction_deg": 90,
+       "points": {
+        "A": 2.82
+       }
+      },
+      {
+       "ray": "OX",
+       "direction_deg": 60,
+       "points": {
+        "X": 6.53
+       }
+      },
+      {
+       "ray": "OY",
+       "direction_deg": 28,
+       "points": {
+        "Y": 6.64
+       }
+      }
+     ],
+     "primitives": [
+      {
+       "kind": "segment",
+       "a": [
+        4.45,
+        1.35
+       ],
+       "b": [
+        11.55,
+        1.35
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray OC (through B and C)"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        4.45,
+        1.35
+       ],
+       "b": [
+        4.45,
+        5.34
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray OA"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        4.45,
+        1.35
+       ],
+       "b": [
+        8.09,
+        7.65
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray OX"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        4.45,
+        1.35
+       ],
+       "b": [
+        11.04,
+        4.85
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray OY"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        4.45,
+        1.35
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "O"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        6.85,
+        1.35
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "B"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        10.48,
+        1.35
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "C"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        4.45,
+        3.95
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "A"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        7.46,
+        6.56
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "X"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        9.85,
+        4.22
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "Y"
+      },
+      {
+       "kind": "label",
+       "text": "O",
+       "where": "below-left",
+       "colour": "INK",
+       "at": [
+        4.13,
+        1.03
+       ],
+       "point": [
+        4.45,
+        1.35
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "where": "below",
+       "colour": "INK",
+       "at": [
+        6.85,
+        0.9
+       ],
+       "point": [
+        6.85,
+        1.35
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "where": "below",
+       "colour": "INK",
+       "at": [
+        10.48,
+        0.9
+       ],
+       "point": [
+        10.48,
+        1.35
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "where": "left",
+       "colour": "INK",
+       "at": [
+        4.0,
+        3.95
+       ],
+       "point": [
+        4.45,
+        3.95
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "X",
+       "where": "right",
+       "colour": "INK",
+       "at": [
+        7.91,
+        6.56
+       ],
+       "point": [
+        7.46,
+        6.56
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "Y",
+       "where": "below-right",
+       "colour": "INK",
+       "at": [
+        10.18,
+        3.9
+       ],
+       "point": [
+        9.85,
+        4.22
+       ]
+      }
+     ]
+    },
+    "manim_description": "Canvas 16 by 9 units, origin at the bottom-left corner, y upwards, plain white BG. Four rays from the single vertex O, all INK, none carries an angle curve: OB-OC horizontal to the right (B near O, C far out on the same ray), OA straight up, OX steeply up to the right, OY at a lower slope up to the right. Draw the segment [ray OC (through B and C)] from (4.45, 1.35) to (11.55, 1.35) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [ray OA] from (4.45, 1.35) to (4.45, 5.34) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [ray OX] from (4.45, 1.35) to (8.09, 7.65) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [ray OY] from (4.45, 1.35) to (11.04, 4.85) in INK, stroke 3 px, arrowhead at the end point. Draw a filled dot [O] of radius 0.09 at (4.45, 1.35) in INK. Draw a filled dot [B] of radius 0.07 at (6.85, 1.35) in INK. Draw a filled dot [C] of radius 0.07 at (10.48, 1.35) in INK. Draw a filled dot [A] of radius 0.07 at (4.45, 3.95) in INK. Draw a filled dot [X] of radius 0.07 at (7.46, 6.56) in INK. Draw a filled dot [Y] of radius 0.07 at (9.85, 4.22) in INK. Write the letter O in INK, text height 0.45, centred at (4.13, 1.03) (next to the point at (4.45, 1.35)). Write the letter B in INK, text height 0.45, centred at (6.85, 0.9) (next to the point at (6.85, 1.35)). Write the letter C in INK, text height 0.45, centred at (10.48, 0.9) (next to the point at (10.48, 1.35)). Write the letter A in INK, text height 0.45, centred at (4, 3.95) (next to the point at (4.45, 3.95)). Write the letter X in INK, text height 0.45, centred at (7.91, 6.56) (next to the point at (7.46, 6.56)). Write the letter Y in INK, text height 0.45, centred at (10.18, 3.9) (next to the point at (9.85, 4.22)).",
+    "visible_text": [
+     "O",
+     "B",
+     "C",
+     "A",
+     "X",
+     "Y"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "angle curves",
+     "angle values",
+     "the answer (which angle is greater)"
+    ],
+    "accuracy_checks": [
+     "B and C lie on the same ray from O (B at 2.6, C at 6.54 local units), so angle XOB and angle XOC have the same arms",
+     "ray order from the horizontal: OB/OC (0 degrees), OY (about 28), OX (about 60), OA (90, vertical); angle XOY lies inside angle AOB and angle XOB lies inside angle AOB",
+     "ray directions are visual estimates read off the book picture (nothing printed)",
+     "no angle curve and no angle value is drawn"
+    ],
+    "alt_text": "Four rays from the vertex O: one horizontal ray through B and C, one vertical ray through A, and two slanting rays through X and Y with OX steeper.",
+    "render_note": "Ray directions 28 and 60 degrees and the point distances are read off the book picture."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C55",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.6, Q2",
+   "ncert_ref": "Section 2.6 - Figure it Out Q2",
+   "question_text": "In each case, determine which angle is greater and why. a. ∠AOB or ∠XOY b. ∠AOB or ∠XOB c. ∠XOB or ∠XOC. Discuss with your friends on how you decided which one is greater. (Figure: O is the vertex; OA is vertical, OX and OY are slanting rays with OX steeper, B and C are on the same horizontal ray, B nearer O.) a) ∠AOB or ∠XOY b) ∠AOB or ∠XOB c) ∠XOB or ∠XOC",
+   "decision": "none",
+   "reason_codes": [
+    "SAME_AS_QUESTION_DIAGRAM"
+   ],
+   "reason": "The printed answer is words (AOB contains XOY, XOB lies inside AOB, B and C on the same ray); the question figure already shows these nestings, so a solution figure would only repeat it.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C56",
+   "role": "question",
+   "lp_book_number": "Figure it Out 2.6, Q3",
+   "ncert_ref": "Section 2.6 - Figure it Out Q3",
+   "question_text": "Which angle is greater: ∠XOY or ∠AOB? Give reasons. (Figure: vertex O; OX up-left, OA up-right, OY nearly horizontal slightly up, OB horizontal.)",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY",
+    "DATA_IN_FIGURE"
+   ],
+   "reason": "The two angles XOY and AOB to compare are only in the picture (four rays from O with different arm lengths and directions).",
+   "lp_placeholder_action": "keep_and_replace_spec",
+   "media_id": "M2.S10.T10.C56.IMG1",
+   "manim_scene": "c6_2_2_6_FiO3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S10.T10.C56.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9
+     },
+     "to_scale": false,
+     "scale": 1.34,
+     "vertex": "O",
+     "rays": [
+      {
+       "ray": "OB",
+       "direction_deg": 0,
+       "point_B": 5.76,
+       "end": 7.51
+      },
+      {
+       "ray": "OY",
+       "direction_deg": 12,
+       "point_Y": 5.51,
+       "end": 7.43
+      },
+      {
+       "ray": "OA",
+       "direction_deg": 55,
+       "point_A": 3.62,
+       "end": 5.26
+      },
+      {
+       "ray": "OX",
+       "direction_deg": 123.5,
+       "point_X": 2.94,
+       "end": 4.36
+      }
+     ],
+     "primitives": [
+      {
+       "kind": "segment",
+       "a": [
+        4.58,
+        1.61
+       ],
+       "b": [
+        14.65,
+        1.61
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray OB"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        4.58,
+        1.61
+       ],
+       "b": [
+        14.32,
+        3.68
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray OY"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        4.58,
+        1.61
+       ],
+       "b": [
+        8.62,
+        7.39
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray OA"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        4.58,
+        1.61
+       ],
+       "b": [
+        1.35,
+        6.49
+       ],
+       "colour": "INK",
+       "arrow_end": true,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "ray OX"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        4.58,
+        1.61
+       ],
+       "colour": "INK",
+       "r": 0.09,
+       "name": "O"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        12.3,
+        1.61
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "B"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        11.81,
+        3.15
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "Y"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        7.36,
+        5.59
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "A"
+      },
+      {
+       "kind": "dot",
+       "a": [
+        2.4,
+        4.9
+       ],
+       "colour": "INK",
+       "r": 0.07,
+       "name": "X"
+      },
+      {
+       "kind": "label",
+       "text": "O",
+       "where": "below-left",
+       "colour": "INK",
+       "at": [
+        4.25,
+        1.29
+       ],
+       "point": [
+        4.58,
+        1.61
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "where": "below",
+       "colour": "INK",
+       "at": [
+        12.3,
+        1.16
+       ],
+       "point": [
+        12.3,
+        1.61
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "Y",
+       "where": "above",
+       "colour": "INK",
+       "at": [
+        11.81,
+        3.6
+       ],
+       "point": [
+        11.81,
+        3.15
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "where": "below-right",
+       "colour": "INK",
+       "at": [
+        7.69,
+        5.26
+       ],
+       "point": [
+        7.36,
+        5.59
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "X",
+       "where": "right",
+       "colour": "INK",
+       "at": [
+        2.85,
+        4.9
+       ],
+       "point": [
+        2.4,
+        4.9
+       ]
+      }
+     ]
+    },
+    "manim_description": "Canvas 16 by 9 units, origin at the bottom-left corner, y upwards, plain white BG. Four rays from the single vertex O, all INK, none carries an angle curve: OB horizontal to the right, OY just above it, OA steeply up to the right, OX up to the left. The rays OB and OY are drawn longest and OX shortest. Draw the segment [ray OB] from (4.58, 1.61) to (14.65, 1.61) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [ray OY] from (4.58, 1.61) to (14.32, 3.68) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [ray OA] from (4.58, 1.61) to (8.62, 7.39) in INK, stroke 3 px, arrowhead at the end point. Draw the segment [ray OX] from (4.58, 1.61) to (1.35, 6.49) in INK, stroke 3 px, arrowhead at the end point. Draw a filled dot [O] of radius 0.09 at (4.58, 1.61) in INK. Draw a filled dot [B] of radius 0.07 at (12.3, 1.61) in INK. Draw a filled dot [Y] of radius 0.07 at (11.81, 3.15) in INK. Draw a filled dot [A] of radius 0.07 at (7.36, 5.59) in INK. Draw a filled dot [X] of radius 0.07 at (2.4, 4.9) in INK. Write the letter O in INK, text height 0.45, centred at (4.25, 1.29) (next to the point at (4.58, 1.61)). Write the letter B in INK, text height 0.45, centred at (12.3, 1.16) (next to the point at (12.3, 1.61)). Write the letter Y in INK, text height 0.45, centred at (11.81, 3.6) (next to the point at (11.81, 3.15)). Write the letter A in INK, text height 0.45, centred at (7.69, 5.26) (next to the point at (7.36, 5.59)). Write the letter X in INK, text height 0.45, centred at (2.85, 4.9) (next to the point at (2.4, 4.9)).",
+    "visible_text": [
+     "O",
+     "B",
+     "Y",
+     "A",
+     "X"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "angle curves",
+     "angle values",
+     "the answer (which angle is greater)"
+    ],
+    "accuracy_checks": [
+     "angle AOB is about 55 degrees and angle XOY about 111.5 degrees (visual estimates read off the book picture, nothing printed)",
+     "the marked points lie at different distances on purpose: B at 5.76 and Y at 5.51 are the farthest, A at 3.62 and X at 2.94 the nearest, so OB and OY are drawn longest and OX shortest",
+     "OX leans to the left of the vertical through O, OA and OY lean to the right",
+     "no angle curve and no angle value is drawn"
+    ],
+    "alt_text": "Four rays from the vertex O: OB level to the right, OY just above it, OA rising to the upper right and OX rising to the upper left.",
+    "render_note": "Directions and lengths are visual estimates read off the book picture (nothing printed); the book's answer says the figure alone does not settle it, but the picture itself shows XOY roughly twice AOB."
+   }
+  },
+  {
+   "lp_concept_id": "M2.S10.T10.C57",
+   "role": "solution",
+   "lp_book_number": "Figure it Out 2.6, Q3",
+   "ncert_ref": "Section 2.6 - Figure it Out Q3",
+   "question_text": "Which angle is greater: ∠XOY or ∠AOB? Give reasons. (Figure: vertex O; OX up-left, OA up-right, OY nearly horizontal slightly up, OB horizontal.)",
+   "decision": "none",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The printed answer is a sentence ('we cannot say by looking; superimposition or measurement is needed'); nothing visual is added.",
+   "lp_placeholder_action": "drop_image",
+   "media_id": null
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C58",
+   "role": "worked_example",
+   "lp_book_number": "Making rotating arms",
+   "ncert_ref": "Section 2.7 - making rotating arms (steps 1-3)",
+   "question_text": "Make several 'rotating arms' (two paper straws and a paper clip) with different angles between the arms. Arrange the angles you have made from smallest to largest by comparing and using superimposition.",
+   "decision": "none",
+   "reason_codes": [
+    "OPEN_ENDED",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "A hands-on making task: the steps are fully in words and the book's three pictures only show straws and a paper clip; a teaching image is already kept on this concept.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C59",
+   "role": "worked_example",
+   "lp_book_number": "Passing through a slit",
+   "ncert_ref": "Section 2.7 - passing through a slit",
+   "question_text": "Collect a number of rotating arms with different angles (do not rotate any of them). Take a cardboard and make an angle-shaped slit by tracing and cutting out the shape of one of the rotating arms. Now shuffle and mix up all the rotating arms. Can you identify which of the rotating arms will pass through the slit?",
+   "decision": "optional",
+   "reason_codes": [
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The task is hands-on and the three cases (slit angle greater, less or equal) are already written as steps; a three-panel figure of the slit with a narrower, a wider and an equal pair of arms would help but is not needed.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0,
+   "text_alternative": "Optional figure (not added): three panels, each the same V-shaped slit with a pair of arms laid in it - narrower than the slit, wider than the slit, equal to the slit."
+  },
+  {
+   "lp_concept_id": "M2.S11.T11.C60",
+   "role": "worked_example",
+   "lp_book_number": "Challenge: reduce this angle",
+   "ncert_ref": "Section 2.7 - challenge 'Reduce this angle'",
+   "question_text": "Challenge: Reduce this angle. (A girl snips the ends of the arms of a V-shaped rotating arm with scissors: 'Angle reduced.' The boy says 'The angle is still the same!')",
+   "decision": "none",
+   "reason_codes": [
+    "DECORATIVE_ONLY",
+    "TEXT_SUFFICIENT"
+   ],
+   "reason": "The book's picture is a three-panel cartoon (boy, girl with scissors, speech bubbles) and the whole dialogue is already in the question text; a teaching image is kept on this concept.",
+   "lp_placeholder_action": "no_image",
+   "media_id": null,
+   "block_index": 0
+  },
+  {
+   "lp_concept_id": "M2.S12.T12.C63",
+   "role": "worked_example",
+   "lp_book_number": "Justify why the two angles are equal",
+   "ncert_ref": "Section 2.8 - Let's Explore (fold OB onto OA)",
+   "question_text": "Justify why the two angles are equal. Is there a way to superimpose and check? Can this superimposition be done by folding?",
+   "decision": "required",
+   "reason_codes": [
+    "FIG_REFERENCED",
+    "SPATIAL_GEOMETRY"
+   ],
+   "reason": "The question says 'the two angles' without naming them; the learner needs the sheet with A, O, B on one side and the crease through O (the figure of the previous page; a teaching image shows a similar picture but is never linked).",
+   "lp_placeholder_action": "add_new_image",
+   "media_id": "M2.S12.T12.C63.IMG1",
+   "manim_scene": "c6_2_2_8_E3_q",
+   "placeholder": {
+    "token": "{{DIAGRAM:M2.S12.T12.C63.IMG1}}",
+    "insert_into": "question_tex",
+    "position": "after_question_text"
+   },
+   "block_index": 0,
+   "diagram": {
+    "diagram_type": "geometry_figure",
+    "aspect_ratio": "16:9",
+    "derived_from": null,
+    "content": {
+     "type": "geometry_figure",
+     "canvas": {
+      "width": 16,
+      "height": 9
+     },
+     "to_scale": true,
+     "scale": 1.5,
+     "sheet": {
+      "width_local": 8.0,
+      "height_local": 4.0
+     },
+     "ticks_on_bottom_side_fraction_of_width": {
+      "A": 0.19,
+      "O": 0.49,
+      "B": 0.79
+     },
+     "crease": {
+      "from": "O",
+      "to": "C (top side)",
+      "direction_deg": 90
+     },
+     "semicircle_radius_local": 0.8,
+     "primitives": [
+      {
+       "kind": "rect",
+       "p0": [
+        2.0,
+        1.64
+       ],
+       "p1": [
+        14.0,
+        7.63
+       ],
+       "colour": "INK",
+       "fill": "CELL_FILL",
+       "width": 3,
+       "name": "rectangular sheet"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        7.88,
+        1.64
+       ],
+       "b": [
+        7.88,
+        7.63
+       ],
+       "colour": "INK",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "crease OC (a vertical line from O to the top side)"
+      },
+      {
+       "kind": "arc",
+       "c": [
+        7.88,
+        1.64
+       ],
+       "r": 1.2,
+       "a0": 0.0,
+       "a1": 180.0,
+       "colour": "INK",
+       "arrow_end": false,
+       "width": 3,
+       "name": "semicircle over O marking the straight angle AOB"
+      },
+      {
+       "kind": "segment",
+       "a": [
+        4.28,
+        1.37
+       ],
+       "b": [
+        4.28,
+        1.91
+       ],
+       "colour": "INK",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "tick at A"
+      },
+      {
+       "kind": "label",
+       "text": "A",
+       "where": "below",
+       "colour": "INK",
+       "at": [
+        4.28,
+        0.92
+       ],
+       "point": [
+        4.28,
+        1.37
+       ]
+      },
+      {
+       "kind": "segment",
+       "a": [
+        7.88,
+        1.37
+       ],
+       "b": [
+        7.88,
+        1.91
+       ],
+       "colour": "INK",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "tick at O"
+      },
+      {
+       "kind": "label",
+       "text": "O",
+       "where": "below",
+       "colour": "INK",
+       "at": [
+        7.88,
+        0.92
+       ],
+       "point": [
+        7.88,
+        1.37
+       ]
+      },
+      {
+       "kind": "segment",
+       "a": [
+        11.48,
+        1.37
+       ],
+       "b": [
+        11.48,
+        1.91
+       ],
+       "colour": "INK",
+       "arrow_end": false,
+       "arrow_start": false,
+       "width": 3,
+       "dashed": false,
+       "name": "tick at B"
+      },
+      {
+       "kind": "label",
+       "text": "B",
+       "where": "below",
+       "colour": "INK",
+       "at": [
+        11.48,
+        0.92
+       ],
+       "point": [
+        11.48,
+        1.37
+       ]
+      },
+      {
+       "kind": "label",
+       "text": "C",
+       "where": "above",
+       "colour": "INK",
+       "at": [
+        7.88,
+        8.08
+       ],
+       "point": [
+        7.88,
+        7.63
+       ]
+      }
+     ]
+    },
+    "manim_description": "Canvas 16 by 9 units, origin at the bottom-left corner, y upwards, plain white BG. A landscape rectangle (the sheet, 2 : 1) filled CELL_FILL with an INK outline. Three tick marks A, O, B sit on the bottom side with OA equal to OB (0.30 of the sheet width each); a straight crease runs from O vertically up to the top side and is named C where it meets the top side; a semicircle over O (centre O, from the bottom side on one side of O round to the bottom side on the other side) marks the straight angle AOB. Everything INK. Draw the rectangle outline [rectangular sheet] with corners (2, 1.64) and (14, 7.63) in INK, stroke 3 px, filled CELL_FILL. Draw the segment [crease OC (a vertical line from O to the top side)] from (7.88, 1.64) to (7.88, 7.63) in INK, stroke 3 px. Draw the arc [semicircle over O marking the straight angle AOB] of the circle with centre (7.88, 1.64) and radius 1.2, from 0 degrees to 180 degrees (anticlockwise, angles measured from the positive x direction), in INK, stroke 3 px. Draw the segment [tick at A] from (4.28, 1.37) to (4.28, 1.91) in INK, stroke 3 px. Write the letter A in INK, text height 0.45, centred at (4.28, 0.92) (next to the point at (4.28, 1.37)). Draw the segment [tick at O] from (7.88, 1.37) to (7.88, 1.91) in INK, stroke 3 px. Write the letter O in INK, text height 0.45, centred at (7.88, 0.92) (next to the point at (7.88, 1.37)). Draw the segment [tick at B] from (11.48, 1.37) to (11.48, 1.91) in INK, stroke 3 px. Write the letter B in INK, text height 0.45, centred at (11.48, 0.92) (next to the point at (11.48, 1.37)). Write the letter C in INK, text height 0.45, centred at (7.88, 8.08) (next to the point at (7.88, 7.63)).",
+    "visible_text": [
+     "A",
+     "O",
+     "B",
+     "C"
+    ],
+    "must_not_show": [
+     "question text or instructions",
+     "answer sentence or solution steps",
+     "headings, Q-numbers, figure letters like a. / b.",
+     "branding, page numbers, watermarks",
+     "decorative clip-art",
+     "right-angle square or the number 90",
+     "equal-angle tick marks on the two angles",
+     "the words equal / superimpose",
+     "the half-folded sheet"
+    ],
+    "accuracy_checks": [
+     "OA = OB = 0.30 of the sheet width (A at 0.19, O at 0.49, B at 0.79), so folding B onto A makes the crease through O",
+     "the crease is perpendicular to the bottom side, so the two angles AOC and COB are equal (90 degrees each); no equal-angle marks and no right-angle square are drawn",
+     "the semicircle over O marks the straight angle AOB, as in the book; the two halves are not separately marked"
+    ],
+    "alt_text": "A rectangular sheet with the points A, O, B marked on its bottom side, a straight crease from O up to the top side named C, and a semicircle over O.",
+    "render_note": "The book's paper picture does not letter the crease; the letter C is added at its top end because the LP steps name the crease OC and the angles AOC and COB."
+   }
+  }
+ ]
+}
